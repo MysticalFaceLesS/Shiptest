@@ -297,6 +297,18 @@
 	originalname = "bbq sauce"
 	list_reagents = list(/datum/reagent/consumable/bbqsauce = 10)
 
+/obj/item/reagent_containers/food/condiment/pack/creamer
+	name = "creamer pack"
+	originalname = "creamer"
+	volume = 5
+	list_reagents = list(/datum/reagent/consumable/cream = 5)
+
+/obj/item/reagent_containers/food/condiment/pack/sugar
+	name = "sugar pack"
+	originalname = "sugar"
+	volume = 5
+	list_reagents = list(/datum/reagent/consumable/sugar = 5)
+
 
 /obj/item/reagent_containers/food/condiment/ketchup
 	name = "ketchup bottle"
@@ -328,3 +340,18 @@
 	icon_state = "oliveoil"
 	list_reagents = list(/datum/reagent/consumable/cornoil = 50)
 
+
+//technically condiment packs but they are non transparent
+/obj/item/reagent_containers/condiment/creamer
+	name = "coffee creamer pack"
+	desc = "Better not think about what they're making this from."
+	icon_state = "condi_creamer"
+	volume = 5
+	list_reagents = list(/datum/reagent/consumable/creamer = 5)
+	fill_icon_thresholds = null
+
+/obj/item/reagent_containers/condiment/chocolate
+	name = "chocolate sprinkle pack"
+	desc= "The amount of sugar thats already there wasn't enough for you?"
+	icon_state = "condi_chocolate"
+	list_reagents = list(/datum/reagent/consumable/choccyshake = 10)
