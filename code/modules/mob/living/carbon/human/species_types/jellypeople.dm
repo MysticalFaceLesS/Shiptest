@@ -25,6 +25,7 @@
 	species_language_holder = /datum/language_holder/jelly
 	ass_image = 'icons/ass/assslime.png'
 	loreblurb = "Slime, itself a slime-mold like organism of unknown origin, is capable of both mutating existing biological organisms into slime, retaining most of the structure and mind of the original, and forming quick-learning gestalts capable of mimicking existing beings, including animals and humanoids. The blood of slimepeople is toxic, and the properties of poisonous and poison-healing substances are inverted for them."
+	deathsound = list('sound/voice/human/deathgasp_1.ogg', 'sound/voice/human/deathgasp_2.ogg')
 
 	species_chest = /obj/item/bodypart/chest/jelly
 	species_head = /obj/item/bodypart/head/jelly

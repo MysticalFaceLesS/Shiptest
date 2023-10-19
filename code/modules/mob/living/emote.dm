@@ -130,10 +130,7 @@
 
 	if(. && user.deathsound)
 		if(isliving(user))
-			var/mob/living/L = user
-			if(!L.can_speak_vocal() || L.oxyloss >= 50)
-				return //stop the sound if oxyloss too high/cant speak
-		playsound(user, user.deathsound, 200, TRUE, TRUE)
+			playsound(user, pick(user.deathsound), 200)
 
 /datum/emote/living/drool
 	key = "drool"
@@ -183,18 +180,32 @@
 	key_third_person = "frowns"
 	message = "frowns."
 
-/datum/emote/living/gag
-	key = "gag"
-	key_third_person = "gags"
-	message = "gags."
-	emote_type = EMOTE_AUDIBLE
-
 /datum/emote/living/gasp
-	key = "gasp"
-	key_third_person = "gasps"
-	message = "gasps!"
-	emote_type = EMOTE_AUDIBLE
-	stat_allowed = HARD_CRIT
+    key = "gasp"
+    key_third_person = "gasps"
+    message = "gasps!"
+    emote_type = EMOTE_AUDIBLE
+    stat_allowed = HARD_CRIT
+
+/datum/emote/living/gasp/can_run_emote(mob/living/user, status_check = TRUE , intentional)
+    . = ..()
+    if(. && iscarbon(user))
+        var/mob/living/carbon/C = user
+        return !C.silent
+
+/datum/emote/living/gasp/get_sound(mob/living/user)
+	var/mob/living/carbon/human/H = user
+	var/male_gasp = list('sound/voice/gasp_male1.ogg', 'sound/voice/gasp_male2.ogg', 'sound/voice/gasp_male3.ogg', 'sound/voice/gasp_male4.ogg', 'sound/voice/gasp_male5.ogg', 'sound/voice/gasp_male6.ogg', 'sound/voice/gasp_male7.ogg')
+	var/female_gasp = list('sound/voice/gasp_female1.ogg', 'sound/voice/gasp_female2.ogg', 'sound/voice/gasp_female3.ogg', 'sound/voice/gasp_female4.ogg', 'sound/voice/gasp_female5.ogg', 'sound/voice/gasp_female6.ogg', 'sound/voice/gasp_female7.ogg')
+	if(!H.mind || !H.mind.miming)
+		if(!isabductor(H))  // Если не абдуктор, то выполнить тело условия. Можно добавить к проверке другие расы.
+			if(user.gender == FEMALE)
+				return pick(female_gasp)
+			else
+				return pick(male_gasp)
+		else
+			return
+
 
 /datum/emote/living/giggle
 	key = "giggle"

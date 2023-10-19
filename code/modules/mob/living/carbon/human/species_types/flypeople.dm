@@ -11,6 +11,7 @@
 	liked_food = GORE | RAW // Sure, the raw... the bloody... but I think stuff GROSS, like baseball burgers, are liked
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
 	species_language_holder = /datum/language_holder/fly
+	deathsound = list('sound/voice/human/deathgasp_1.ogg', 'sound/voice/human/deathgasp_2.ogg')
 
 	species_chest = /obj/item/bodypart/chest/fly
 	species_head = /obj/item/bodypart/head/fly

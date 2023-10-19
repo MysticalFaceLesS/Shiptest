@@ -22,6 +22,7 @@
 	outfit_important_for_life = /datum/outfit/plasmaman
 	species_language_holder = /datum/language_holder/skeleton
 	loreblurb = "Technically a disability rather than a species, Phorids (known far more commonly as plasmamen) are a loose grouping of people fallen victim to anomalous plasma-related effects that convert tough biological matter into inorganic, biology-mimicking plasma structures. Phorids often live their lives dependent on larger organizations due to their oxygen-incompatible physiology."
+	deathsound = list('sound/voice/human/deathgasp_1.ogg', 'sound/voice/human/deathgasp_2.ogg')
 
 	species_chest = /obj/item/bodypart/chest/plasmaman
 	species_head = /obj/item/bodypart/head/plasmaman
