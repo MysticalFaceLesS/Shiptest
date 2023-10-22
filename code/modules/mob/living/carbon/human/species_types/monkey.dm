@@ -6,7 +6,6 @@
 	skinned_type = /obj/item/stack/sheet/animalhide/
 	changesource_flags = MIRROR_BADMIN
 	use_damage_color = FALSE
-	deathsound = list('sound/voice/human/deathgasp_1.ogg', 'sound/voice/human/deathgasp_2.ogg')
 
 	species_chest = /obj/item/bodypart/chest/monkey
 	species_head = /obj/item/bodypart/head/monkey

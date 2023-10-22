@@ -20,7 +20,6 @@
 	damage_overlay_type = ""
 	meat = /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/golem
 	species_language_holder = /datum/language_holder/golem
-	deathsound = list('sound/voice/human/deathgasp_1.ogg', 'sound/voice/human/deathgasp_2.ogg')
 	// To prevent golem subtypes from overwhelming the odds when random species
 	// changes, only the Random Golem type can be chosen
 

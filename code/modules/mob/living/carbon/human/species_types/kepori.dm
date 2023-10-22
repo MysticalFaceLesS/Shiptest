@@ -14,7 +14,6 @@
 	attack_verb = "slash"
 	attack_sound = 'sound/weapons/slash.ogg'
 	miss_sound = 'sound/weapons/slashmiss.ogg'
-	deathsound = list('sound/voice/human/deathgasp_1.ogg', 'sound/voice/human/deathgasp_2.ogg')
 	species_clothing_path = 'icons/mob/clothing/species/kepori.dmi'
 	species_eye_path = 'icons/mob/kepori_parts.dmi'
 	heatmod = 0.67

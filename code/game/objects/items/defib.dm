@@ -84,31 +84,20 @@
 /obj/item/defibrillator/ui_action_click()
 	toggle_paddles()
 
-//obj/item/defibrillator/alt_click_can_use_id(user)
-	toggle_paddles()
-
-
 //ATTACK HAND IGNORING PARENT RETURN VALUE
 /obj/item/defibrillator/attack_hand(mob/user)
 	if(loc == user)
 		if(slot_flags == ITEM_SLOT_BACK)
-			ui_action_click()
-			// Убрана проверка если дефиб на спине.
-			/*if(user.get_item_by_slot(ITEM_SLOT_BACK) == src)
+			if(user.get_item_by_slot(ITEM_SLOT_BACK) == src)
 				ui_action_click()
 			else
-				ui_action_click()
 				to_chat(user, "<span class='warning'>Put the defibrillator on your back first!</span>")
-			*/
+
 		else if(slot_flags == ITEM_SLOT_BELT)
-			ui_action_click()
-			// Убрана проверка если поясной дефиб на поясе.
-			/*
 			if(user.get_item_by_slot(ITEM_SLOT_BELT) == src)
 				ui_action_click()
 			else
 				to_chat(user, "<span class='warning'>Strap the defibrillator's belt on first!</span>")
-			*/
 		return
 	else if(istype(loc, /obj/machinery/defibrillator_mount))
 		ui_action_click() //checks for this are handled in defibrillator.mount.dm
