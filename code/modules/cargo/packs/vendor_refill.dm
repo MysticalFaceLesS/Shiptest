@@ -65,7 +65,7 @@
 /datum/supply_pack/vendor_refill/sectech
 	name = "SecTech ящик пополения"
 	desc = "Ящик снабжения для SecTech торгового автомата."
-	cost = 5000
+	cost = 4000
 	contains = list(/obj/item/vending_refill/security)
 	crate_name = "SecTech supply crate"
 
