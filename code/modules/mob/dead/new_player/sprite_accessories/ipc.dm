@@ -170,6 +170,9 @@
 	name = "Color Test"
 	icon_state = "tv"
 
+/datum/sprite_accessory/ipc_screens/none
+	name = "None"
+	icon_state = "none"
 // Start antennas
 
 /datum/sprite_accessory/ipc_antennas
@@ -283,3 +286,7 @@
 /datum/sprite_accessory/ipc_chassis/zenghupharmaceuticals
 	name = "Zeng-Hu Pharmaceuticals"
 	limbs_id = "zhpipc"
+
+/datum/sprite_accessory/ipc_chassis/android
+	name = "Android"
+	limbs_id = "android"
