@@ -132,9 +132,9 @@ Acquire: Anomaly
 		"A strange lizard on the outpost"
 	))
 
-	desc = "[group] has requested that a ship [pick(list("procure", "grab", "acquire", "find", "locate"))] \
-	an anomaly core for [pick(list("research", "analysis", "technical development", "closer inspection", "some reason"))]. \
-	They've offered to pay well, so we're relaying this mission to you"
+	desc = "[group] запрашивает корабль, чтобы [pick(list("добыть", "захватить", "получить", "найти", "обнаружить"))] \
+	ядро аномалии для [pick(list("исследований", "анализа", "технической разработки", "тщательного осмотра", "не названной причины"))]. \
+	Они предложили хорошо заплатить, поэтому мы передаем эту миссию вам"
 	. = ..()
 
 
@@ -146,8 +146,10 @@ Acquire: Anomaly
 
 /datum/mission/acquire/creature
 	name = "Capture a goliath"
-	desc = "I require a live goliath for research purposes. Trap one within the given \
-			Lifeform Containment Unit and return it to me and you will be paid handsomely."
+	desc = "Нам необходима сущность под названием 'Голиаф' для одного важного эксперимента над органическими тканями.\
+			 Вам потребуется поймать одну из таких сущностей специальным оборудованием 'LCU',\
+			 после чего вернуть это оборудование нам вместе с пойманным образцом.\
+			 За подобную миссию вам будет выделена щедрая оплата"
 	value = 1500
 	duration = 30 MINUTES
 	weight = 6
@@ -166,47 +168,55 @@ Acquire: Anomaly
 
 /datum/mission/acquire/creature/legion
 	name = "Capture a legion"
-	desc = "I require a live legion for research purposes. Trap one within the given \
-			Lifeform Containment Unit and return it to me and you will be paid handsomely."
+	desc = "Нам необходима сущность под названием 'Легион' для одного интересного эксперимента над оживлением тканей.\
+			 Вам потребуется поймать одну из таких сущностей специальным оборудованием 'LCU',\
+			 после чего вернуть это оборудование нам вместе с пойманным образцом.\
+			 За подобную миссию вам будет выделена щедрая оплата"
 	value = 1300
 	objective_type = /mob/living/simple_animal/hostile/asteroid/hivelord/legion
 
 /datum/mission/acquire/creature/ice_whelp
 	name = "Capture an ice whelp"
-	desc = "I require a live ice whelp for research purposes. Trap one within the given \
-			Lifeform Containment Unit and return it to me and you will be paid handsomely."
+	desc = "Нам необходима сущность под названием 'Ледяное отродье' для вскрытия.\
+			 Вам потребуется поймать одну из таких сущностей специальным оборудованием 'LCU',\
+			 после чего вернуть это оборудование нам вместе с пойманным образцом.\
+			 За подобную миссию вам будет выделена щедрая оплата"
 	value = 1700
 	weight = 2
 	objective_type = /mob/living/simple_animal/hostile/asteroid/ice_whelp
 
 /datum/mission/acquire/creature/ice_demon
 	name = "Capture an ice demon"
-	desc = "I require a live ice demon for research purposes. Trap one within the given \
-			Lifeform Containment Unit and return it to me and you will be paid handsomely."
+	desc = "Нам необходима сущность под названием 'Ледяной демон' для одного необходимого исследования БС кристаллов.\
+			 Вам потребуется поймать одну из таких сущностей специальным оборудованием 'LCU',\
+			 после чего вернуть это оборудование нам вместе с пойманным образцом.\
+			 За подобную миссию вам будет выделена щедрая оплата"
 	value = 1500
 	weight = 2
 	objective_type = /mob/living/simple_animal/hostile/asteroid/ice_demon
 
 /datum/mission/acquire/creature/migo
 	name = "Capture a live mi-go"
-	desc = "I require a live mi-go for research purposes. Trap one within the given \
-			Lifeform Containment Unit and return it to me and you will be paid handsomely."
+	desc = "Нам необходима сущность под названием 'Ми-го'. Для чего? мы не знаем. Кхм, продолжим.\
+			 Вам потребуется поймать одну из таких сущностей специальным оборудованием 'LCU',\
+			 после чего вернуть это оборудование нам вместе с пойманным образцом.\
+			 За подобную миссию вам будет выделена щедрая оплата"
 	value = 1050
 	weight = 2
 	objective_type = /mob/living/simple_animal/hostile/netherworld/migo/asteroid
 
 /datum/mission/acquire/creature/floorbot
 	name = "Detain a malfunctioning floorbot"
-	desc = "I require a functional abandoned floorbot for \"research\" purposes. Trap one within \
-			the given Lifeform Containment Unit and return it to me and you will be paid handsomely."
+	desc = "Мне нужен функциональный заброшенный напольный робот для \"исследовательской\" цели. Поймайте одного в \
+			выданный LCU и верните устройство мне, щедро оплачу вашу работу."
 	value = 1450
 	weight = 1
 	objective_type = /mob/living/simple_animal/bot/floorbot/rockplanet
 
 /datum/mission/acquire/creature/firebot
 	name = "Detain a malfunctioning firebot"
-	desc = "I require a functional abandoned firebot for \"research\" purposes. Trap one within \
-			the given Lifeform Containment Unit and return it to me and you will be paid handsomely."
+	desc = "Мне нужен функциональный забытый пожарный робот для \"исследовательской\" цели. Поймайте одного в \
+			выданный LCU и верните устройство мне, щедро оплачу вашу работу"
 	value = 1450
 	weight = 1
 	objective_type = /mob/living/simple_animal/bot/firebot/rockplanet
@@ -277,7 +287,7 @@ Acquire: Anomaly
 
 /datum/mission/acquire/fish_cook/New(...)
 	num_wanted = rand(1,3)
-	desc = "I am a chef in need of [num_wanted] fish for my latest dish. Any fish will do, just make sure they're not filleted!"
+	desc = "Я шеф-повар, нуждающийся в [num_wanted] рыба для моего последнего блюда. Подойдет любая рыба, только убедитесь, что она не разделана!"
 	value = (250*num_wanted)
 	. = ..()
 
@@ -330,11 +340,11 @@ Acquire: Anomaly
 
 /obj/item/storage/fish_case/mission
 	name = "fish delivery case"
-	desc = "A stasis case that keeps fish alive during transportation, or at least stops them from becoming more dead."
+	desc = "Стазисный контейнер, который сохраняет рыбу живой во время транспортировки или, по крайней мере, не дает ей стать еще более мертвой."
 
 /obj/item/storage/fish_case/mission/big
 	name = "large fish delivery case"
-	desc = "A specialized container for the delivering of large quatities of fish. Guarantees they stay fresh during delivery!."
+	desc = "Специализированный контейнер для доставки большого количества рыбы. Гарантирует, что они останутся свежими во время доставки!."
 
 /obj/item/storage/fish_case/mission/big/ComponentInitialize()
 	. = ..()
@@ -343,7 +353,7 @@ Acquire: Anomaly
 
 /obj/item/storage/box/anomaly
 	name = "anomaly case"
-	desc = "A metallic box made to store anomaly cores. They aren't always the safest to lug around."
+	desc = "Металлическая коробка, предназначенная для хранения ядер аномалий. Ядра не всегда безопаснее таскать с собой."
 	icon = 'icons/obj/nuke_tools.dmi'
 	icon_state = "core_container_sealed" //it'd be neat if I could figure out how to make this seal but that's a problem for me in 6 months
 	item_state = "tile"

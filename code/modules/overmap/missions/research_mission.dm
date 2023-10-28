@@ -59,9 +59,9 @@
 /* commented out until ion storms aren't literal torture
 /datum/mission/research/ion
 	name = "Ion storm research mission"
-	desc = "We require data on the behavior of ion storms in the system for an ongoing study. \
-			Please anchor the attached sensor array to your ship and fly it through the storms. \
-			It must be powered to collect the data."
+	desc = "Исследовательскому отделу нужны данные о ионных бурях в системе для текущего исследования. \
+			Пожалуйста, прикрепите присланный сенсор к вашему кораблю и пролетите на нем сквозь шторм.\
+			Для сбора данных сенсор должен быть подключен к эл. сети. "
 	value = 3500
 	objective_type = /datum/overmap/event/emp
 */
@@ -86,9 +86,9 @@
 
 /datum/mission/research/dust
 	name = "dust research mission"
-	desc = "We require data on the density of space dust for updated navcharts. \
-			Please anchor the attached sensor array to your ship and fly it through the fields. \
-			It must be powered to collect the data."
+	desc = "Нам нужны данные о плотности космической пыли для обновления навигационных карт. \
+			Пожалуйста, прикрепите присланный сенсор к вашему кораблю и пролетите на нем через облака пыли. \
+			Для сбора данных сенсор должен быть подключен к эл. сети."
 	value = 1000
 	weight = 4
 	objective_type = /datum/overmap/event/meteor/dust
