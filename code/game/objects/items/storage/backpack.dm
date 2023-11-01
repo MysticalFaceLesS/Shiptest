@@ -574,6 +574,21 @@
 	new /obj/item/clothing/mask/muzzle(src)
 	new /obj/item/mmi/syndie(src)
 
+/obj/item/storage/backpack/duffelbag/spiderclan/surgery
+	name = "surgery duffel bag"
+	desc = "Spider Clan's surgery duffel bag for holding surgery tools."
+	icon_state = "duffel-spidermed"
+	item_state = "duffel-spidermed"
+
+/obj/item/storage/backpack/duffelbag/spiderclan/surgery/PopulateContents()
+	new /obj/item/surgicaldrill/advanced(src)
+	new /obj/item/scalpel/advanced(src)
+	new /obj/item/retractor/advanced(src)
+	new /obj/item/healthanalyzer/advanced(src)
+	new /obj/item/clothing/glasses/hud/health/night(src)
+	new /obj/item/defibrillator/compact/combat/loaded/spiderclan(src)
+	new /obj/item/mmi(src)
+
 /obj/item/storage/backpack/duffelbag/syndie/ammo
 	name = "ammunition duffel bag"
 	desc = "A large duffel bag for holding extra weapons ammunition and supplies."

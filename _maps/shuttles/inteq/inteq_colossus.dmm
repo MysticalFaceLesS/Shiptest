@@ -95,7 +95,8 @@
 /area/ship/engineering)
 "bs" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Crew Quarters"
+	name = "Crew Quarters";
+	req_access_txt = "147"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -145,7 +146,7 @@
 /obj/structure/closet/secure_closet{
 	icon_state = "armory";
 	name = "armor locker";
-	req_access_txt = "1"
+	req_access_txt = "148"
 	},
 /obj/item/clothing/suit/armor/vest/alt,
 /obj/item/clothing/suit/armor/vest/alt,
@@ -671,6 +672,9 @@
 	dir = 4
 	},
 /obj/machinery/light/directional/east,
+/obj/item/stamp/inteq{
+	layer = 4
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/security)
 "hc" = (
@@ -717,7 +721,9 @@
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/hallway/port)
 "hO" = (
-/obj/machinery/door/airlock/external,
+/obj/machinery/door/airlock/external{
+	req_access_txt = "147"
+	},
 /obj/effect/turf_decal/borderfloor{
 	dir = 1
 	},
@@ -821,7 +827,7 @@
 	can_be_unanchored = 1;
 	icon_state = "warden";
 	name = "master at arms' locker";
-	req_access_txt = "3"
+	req_access_txt = "148"
 	},
 /obj/effect/turf_decal/corner/opaque/brown{
 	dir = 8
@@ -1566,7 +1572,7 @@
 	},
 /obj/machinery/light/small/directional/north,
 /obj/machinery/door/window/brigdoor/eastright{
-	req_access_txt = "3"
+	req_access_txt = "148"
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/security/armory)
@@ -1992,7 +1998,8 @@
 /area/ship/crew/office)
 "vc" = (
 /obj/machinery/door/airlock{
-	name = "Head"
+	name = "Head";
+	req_access_txt = "147"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -2394,7 +2401,8 @@
 	},
 /obj/machinery/door/airlock/public/glass{
 	dir = 4;
-	name = "Cryogenic Storage"
+	name = "Cryogenic Storage";
+	req_access_txt = "147"
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
@@ -2420,7 +2428,8 @@
 /area/ship/crew/office)
 "AZ" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Port Engines"
+	name = "Port Engines";
+	req_access_txt = "147"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -2647,7 +2656,7 @@
 	icon_state = "solgov_wall";
 	name = "vanguard's locker";
 	pixel_x = -28;
-	req_access_txt = "58"
+	req_access_txt = "149"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/item/clothing/glasses/hud/security/sunglasses/inteq,
@@ -2679,7 +2688,8 @@
 /area/ship/security/armory)
 "Dr" = (
 /obj/machinery/door/airlock/security/glass{
-	name = "Office"
+	name = "Office";
+	req_access_txt = "148"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
@@ -3431,7 +3441,8 @@
 	},
 /obj/machinery/door/airlock/maintenance{
 	dir = 4;
-	name = "Engineering"
+	name = "Engineering";
+	req_access_txt = "147"
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
@@ -3528,6 +3539,9 @@
 /obj/item/pen/fountain,
 /obj/item/gps{
 	pixel_x = 12
+	},
+/obj/item/stamp/inteq{
+	layer = 4
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
@@ -3768,7 +3782,8 @@
 /area/ship/hallway/central)
 "Qu" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Starboard Engines"
+	name = "Starboard Engines";
+	req_access_txt = "147"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -3793,7 +3808,9 @@
 /turf/open/floor/plating,
 /area/ship/maintenance/port)
 "QI" = (
-/obj/machinery/door/airlock/external,
+/obj/machinery/door/airlock/external{
+	req_access_txt = "147"
+	},
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -3812,7 +3829,7 @@
 "QL" = (
 /obj/machinery/door/airlock/command/glass{
 	name = "Bridge";
-	req_access_txt = "58"
+	req_access_txt = "149"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -3952,7 +3969,7 @@
 	dir = 4;
 	id_tag = "colossus_armory";
 	name = "Armory";
-	req_access_txt = "1"
+	req_access_txt = "148"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
@@ -4166,7 +4183,8 @@
 /area/ship/crew/office)
 "UN" = (
 /obj/machinery/door/airlock/public/glass{
-	name = "Office"
+	name = "Office";
+	req_access_txt = "147"
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -4296,7 +4314,7 @@
 /obj/structure/closet/secure_closet{
 	icon_state = "sec";
 	name = "equipment locker";
-	req_access_txt = "1"
+	req_access_txt = "148"
 	},
 /obj/item/clothing/mask/gas/sechailer/inteq,
 /obj/item/clothing/mask/gas/sechailer/inteq,
@@ -4369,7 +4387,7 @@
 "Xc" = (
 /obj/machinery/door/window/northleft{
 	dir = 8;
-	req_access_txt = "3"
+	req_access_txt = "148"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"

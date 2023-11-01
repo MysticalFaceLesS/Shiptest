@@ -279,6 +279,13 @@
 	item_state = "defibnt"
 	paddle_type = /obj/item/shockpaddles/syndicate/nanotrasen
 
+/obj/item/defibrillator/compact/combat/loaded/spiderclan
+	name = "elite spider clan defibrillator"
+	desc = "A belt-equipped state-of-the-art defibrillator. Can revive through spacesuits, has an experimental self-recharging battery, and can be utilized in combat via applying the paddles in a disarming or agressive manner."
+	icon_state = "defibsc"
+	item_state = "defibsc"
+	paddle_type = /obj/item/shockpaddles/spiderclan
+
 //paddles
 
 /obj/item/shockpaddles
@@ -669,5 +676,14 @@
 
 /obj/item/shockpaddles/syndicate/cyborg
 	req_defib = FALSE
+
+/obj/item/shockpaddles/spiderclan
+	name = "spiderclan defibrillator paddles"
+	desc = "A pair of paddles used to revive deceased operatives. They possess both the ability to penetrate armor and to deliver powerful or disabling shocks offensively."
+	combat = TRUE
+	icon = 'icons/obj/defib.dmi'
+	icon_state = "spiderpaddles0"
+	item_state = "spiderpaddles0"
+	base_icon_state = "spiderpaddles"
 
 #undef HALFWAYCRITDEATH

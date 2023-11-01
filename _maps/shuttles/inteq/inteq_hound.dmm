@@ -155,7 +155,8 @@
 /area/ship/maintenance/port)
 "eb" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Port Engines"
+	name = "Port Engines";
+	req_access_txt = "147"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
@@ -594,7 +595,7 @@
 	icon_state = "sec_wall";
 	name = "weapons lockup";
 	pixel_y = -28;
-	req_one_access_txt = "58"
+	req_one_access_txt = "148,149"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 9
@@ -614,7 +615,7 @@
 "of" = (
 /obj/machinery/door/airlock/command{
 	name = "Bridge";
-	req_access_txt = "58"
+	req_access_txt = "148,149"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/structure/cable{
@@ -1027,7 +1028,8 @@
 /area/ship/crew)
 "vC" = (
 /obj/machinery/door/airlock{
-	name = "Restroom"
+	name = "Restroom";
+	req_access_txt = "147"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
@@ -1055,7 +1057,8 @@
 "vI" = (
 /obj/machinery/door/airlock/grunge{
 	dir = 4;
-	name = "EVA Storage"
+	name = "EVA Storage";
+	req_access_txt = "147"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
@@ -1104,7 +1107,7 @@
 	icon_state = "sec_wall";
 	name = "equipment locker";
 	pixel_y = 28;
-	req_one_access_txt = "1"
+	req_one_access_txt = "148"
 	},
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/crew)
@@ -1497,7 +1500,8 @@
 "HO" = (
 /obj/machinery/door/airlock/grunge{
 	dir = 4;
-	name = "Cargo Bay"
+	name = "Cargo Bay";
+	req_access_txt = "147"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
@@ -1605,7 +1609,7 @@
 	icon_state = "solgov_wall";
 	name = "vanguard's locker";
 	pixel_x = -28;
-	req_access_txt = "58"
+	req_access_txt = "149"
 	},
 /obj/item/clothing/glasses/hud/security/sunglasses/inteq,
 /obj/item/clothing/mask/gas/sechailer/inteq,
@@ -1652,7 +1656,8 @@
 /area/ship/maintenance/port)
 "Jc" = (
 /obj/machinery/door/airlock{
-	name = "Dormitory"
+	name = "Dormitory";
+	req_access_txt = "147"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
@@ -1699,7 +1704,8 @@
 /area/ship/maintenance/port)
 "JJ" = (
 /obj/machinery/door/airlock/external{
-	dir = 4
+	dir = 4;
+	req_access_txt = "147"
 	},
 /obj/effect/turf_decal/industrial/warning/fulltile,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
@@ -1745,7 +1751,8 @@
 /area/ship/bridge)
 "Ky" = (
 /obj/machinery/door/airlock/external{
-	dir = 4
+	dir = 4;
+	req_access_txt = "147"
 	},
 /obj/effect/turf_decal/industrial/warning/fulltile,
 /obj/machinery/atmospherics/pipe/layer_manifold{
@@ -2118,7 +2125,8 @@
 /area/ship/crew/dorm)
 "Ub" = (
 /obj/machinery/door/airlock/maintenance_hatch{
-	name = "Starboard Engines"
+	name = "Starboard Engines";
+	req_access_txt = "147"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
@@ -2335,6 +2343,9 @@
 	name = "vanguard's rubber stamp"
 	},
 /obj/item/pen/fountain,
+/obj/item/stamp/inteq{
+	layer = 4
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "Yj" = (
