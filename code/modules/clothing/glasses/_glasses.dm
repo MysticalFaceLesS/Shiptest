@@ -111,7 +111,7 @@
 
 /obj/item/clothing/glasses/science/prescription/fake
 	name = "science glasses"
-	desc = "A pair of glasses fitted with an analyzer for scanning items and reagents. Someone seems to have popped out the perscription lenses... "
+	desc = "Очки с встроеным анализатором для сканирования вещей и реагентов. Кто-то выломал обычные линзы..."
 	vision_correction = 0
 
 /obj/item/clothing/glasses/night

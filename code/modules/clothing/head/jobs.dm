@@ -38,6 +38,7 @@
 	name = "general's hat"
 	desc = "A commanding white stetson adorned with a general's badge. Why this belongs to a captain is anybody's guess."
 	icon_state = "cowboycap"
+	supports_variations	= VOX_VARIATION
 
 /obj/item/clothing/head/caphat/nt
 	name = "captain's hat"

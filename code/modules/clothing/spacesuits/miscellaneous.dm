@@ -285,6 +285,21 @@ Contains:
 	flash_protect = FLASH_PROTECTION_NONE
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 100, "rad" = 20, "fire" = 50, "acid" = 65)
 
+/obj/item/clothing/suit/space/eva/evamime
+	name = "mime EVA suit"
+	icon_state = "spacemime_suit"
+	item_state = "spacemime_suit"
+	desc = ". . ."
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 100, "rad" = 20, "fire" = 50, "acid" = 65)
+
+/obj/item/clothing/head/helmet/space/eva/evamime
+	name = "mime EVA helmet"
+	icon_state = "spacemimehelmet"
+	item_state = "spacemimehelmet"
+	desc = ". . ."
+	flash_protect = FLASH_PROTECTION_NONE
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 100, "rad" = 20, "fire" = 50, "acid" = 65)
+
 /obj/item/clothing/head/helmet/space/freedom
 	name = "eagle helmet"
 	desc = "An advanced, space-proof helmet. It appears to be modeled after an old-world eagle."

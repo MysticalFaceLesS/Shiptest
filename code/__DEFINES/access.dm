@@ -111,6 +111,11 @@
 /// The non-existent CentCom Bar
 #define ACCESS_CENT_BAR 110
 
+/// InteQ Genetal acces
+#define ACESS_INTEQ_GENERAL 147
+#define ACESS_INTEQ_SECURITY 148
+#define ACESS_INTEQ_CAPTAIN 149
+
 	//The Syndicate
 /// General Syndicate Access. Includes Syndicate mechs and ruins.
 #define ACCESS_SYNDICATE 150

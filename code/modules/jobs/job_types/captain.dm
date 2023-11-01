@@ -239,6 +239,17 @@
 	suit = null
 	gloves = null
 	suit_store = null
+/datum/outfit/job/captain/inteq/naked/cardacces
+	name = "Vanguard (InteQ)"
+	id = /obj/item/card/id/inteq/vanguard
+
+/datum/outfit/job/captain/inteq/naked/cardacces/post_equip(mob/living/carbon/human/H)
+	H.faction |= list("PlayerInteQ")
+
+	var/obj/item/card/id/I = H.wear_id
+	I.registered_name = pick(GLOB.commando_names)
+	I.access = get_all_accesses()+get_inteq_acces()
+	I.update_label()
 
 /datum/outfit/job/captain/aipirate
 	name = "Nodesman (Command)"
@@ -287,3 +298,37 @@
 	satchel = /obj/item/storage/backpack/satchel/cap
 	duffelbag = /obj/item/storage/backpack/duffelbag/captain
 	courierbag = /obj/item/storage/backpack/messenger/com
+
+/datum/outfit/job/captain/syndicate/ostov
+	name = "Commander (O.S.T.O.V)"
+
+	uniform = /obj/item/clothing/under/syndicate/aclf
+	gloves = /obj/item/clothing/gloves/krav_maga/combatglovesplus
+	shoes = /obj/item/clothing/shoes/combat
+	ears = /obj/item/radio/headset/syndicate/alt/captain
+	mask = /obj/item/clothing/mask/gas/syndicate/voicechanger
+	l_pocket = /obj/item/ammo_box/a357/hp
+	suit = /obj/item/clothing/suit/armor/vest/capcarapace/syndicate
+	suit_store = /obj/item/melee/transforming/energy/sword/saber/red
+	belt = /obj/item/gun/ballistic/revolver/mateba
+	r_pocket = /obj/item/kitchen/knife/combat/survival
+	glasses = /obj/item/clothing/glasses/hud/security/sunglasses/eyepatch
+	id = /obj/item/card/id/syndicate_command
+	implants = list(/obj/item/implant/weapons_auth, /obj/item/implant/krav_maga, /obj/item/implant/explosive/macro, /obj/item/implant/freedom, /obj/item/implant/adrenalin)
+	backpack_contents = list(/obj/item/melee/classic_baton/telescopic=1, /obj/item/ammo_box/a357/hp=3, /obj/item/storage/firstaid/tactical=1)
+
+	backpack = /obj/item/storage/backpack/security
+	satchel = /obj/item/storage/backpack/satchel/sec
+	duffelbag = /obj/item/storage/backpack/duffelbag/syndie
+	courierbag = /obj/item/storage/backpack/messenger/sec
+
+	box = /obj/item/storage/box/survival/syndie
+
+/datum/outfit/job/captain/syndicate/ostov/post_equip/(mob/living/carbon/human/H)
+	H.faction = list("PlayerSyndicate")
+
+	var/obj/item/card/id/I = H.wear_id
+	I.registered_name = pick(GLOB.twinkle_names) + "-" + num2text(rand(9, 12)) // squidquest real
+	I.access = get_all_accesses()+get_all_syndicate_access()
+	I.assignment = "Commander"
+	I.update_label()

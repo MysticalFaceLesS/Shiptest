@@ -196,6 +196,73 @@
 	emote_type = EMOTE_AUDIBLE
 	stat_allowed = HARD_CRIT
 
+/datum/emote/living/gasp/can_run_emote(mob/living/user, status_check = TRUE , intentional)
+	. = ..()
+	if(. && iscarbon(user))
+		var/mob/living/carbon/C = user
+		return !C.silent
+
+/datum/emote/living/gasp/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/H = user
+	var/human_gasp = ishumanbasic(H)
+	if(human_gasp && (!H.mind || !H.mind.miming))
+		if(user.gender == FEMALE)
+			return pick('sound/voice/human/gasp_female1.ogg', 'sound/voice/human/gasp_female2.ogg', 'sound/voice/human/gasp_female3.ogg', 'sound/voice/human/gasp_female4.ogg', 'sound/voice/human/gasp_female5.ogg', 'sound/voice/human/gasp_female6.ogg', 'sound/voice/human/gasp_female7.ogg')
+		else
+			return pick('sound/voice/human/gasp_male1.ogg', 'sound/voice/human/gasp_male2.ogg', 'sound/voice/human/gasp_male3.ogg', 'sound/voice/human/gasp_male4.ogg', 'sound/voice/human/gasp_male5.ogg', 'sound/voice/human/gasp_male6.ogg', 'sound/voice/human/gasp_male7.ogg')
+	if(ismoth(H))
+		return 'sound/voice/human/gasp_female3.ogg'
+
+/datum/emote/living/warcray
+	key = "warcray"
+	key_third_person = "warcray"
+	message = "shouts an inspiring cry!"
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/warcray/can_run_emote(mob/living/user, status_check = TRUE , intentional)
+	. = ..()
+	if(. && iscarbon(user))
+		var/mob/living/carbon/C = user
+		return !C.silent
+
+/datum/emote/living/warcray/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
+	var/mob/living/carbon/human/H = user
+	var/human_warcray = ishumanbasic(H)
+	if(human_warcray && (!H.mind || !H.mind.miming))
+		if(user.gender == FEMALE)
+			return pick(
+			'sound/voice/human_female_warcry_1.ogg',
+			'sound/voice/human_female_warcry_2.ogg',
+			'sound/voice/human_female_warcry_3.ogg',
+			'sound/voice/human_female_warcry_4.ogg',
+			'sound/voice/human_female_warcry_5.ogg')
+		else
+			return pick(
+			'sound/voice/human_male_warcry_1.ogg',
+			'sound/voice/human_male_warcry_2.ogg',
+			'sound/voice/human_male_warcry_3.ogg',
+			'sound/voice/human_male_warcry_4.ogg',
+			'sound/voice/human_male_warcry_5.ogg',
+			'sound/voice/human_male_warcry_6.ogg',
+			'sound/voice/human_male_warcry_7.ogg',
+			'sound/voice/human_male_warcry_8.ogg',
+			'sound/voice/human_male_warcry_9.ogg')
+	if(ismoth(H))
+		if(prob(3))
+			message = "shouts an inspiring cry!"
+			return 'sound/voice/alastor_attack1-attackvoice.ogg'
+		else
+			message = "Aggressive wing flap!"
+			return pick(
+			'sound/voice/alastor_wing1.ogg',
+			'sound/voice/alastor_wing1_2.ogg',
+			'sound/voice/alastor_wing2.ogg',
+			'sound/voice/alastor_wing2_2.ogg')
+
 /datum/emote/living/giggle
 	key = "giggle"
 	key_third_person = "giggles"

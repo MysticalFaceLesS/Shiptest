@@ -899,3 +899,60 @@ update_label()
 	department_ID = ACCOUNT_SEC
 	department_name = ACCOUNT_SEC_NAME
 	icon_state = "sec_budget"
+
+/obj/item/card/id/inteq
+	name = "\improper InteQ ID"
+	desc = "A inteq ID with no proper access to speak of."
+	icon_state = "inteqrt"
+	access = list(ACESS_INTEQ_GENERAL)
+	uses_overlays = TRUE
+	job_icon = "iq"
+/obj/item/card/id/inteq/vanguard
+	name = "\improper Vanguard InteQ ID"
+	desc = "A inteq ID with no proper access to speak of.This one indicates a Vanguard"
+	access = list(ACESS_INTEQ_GENERAL, ACESS_INTEQ_SECURITY, ACESS_INTEQ_CAPTAIN)
+	icon_state = "inteqvanguard"
+	assignment = "Vanguard"
+	job_icon = "vanguardiq"
+/obj/item/card/id/inteq/enfco
+	name = "\improper Enforcer Class One InteQ ID"
+	desc = "A inteq ID with no proper access to speak of.This one indicates a Enforcer Class One"
+	access = list(ACESS_INTEQ_GENERAL, ACESS_INTEQ_SECURITY, ACESS_INTEQ_CAPTAIN)
+	icon_state = "inteqenfco"
+	assignment = "Enforcer Class One"
+	job_icon = "enfcoiq"
+/obj/item/card/id/inteq/maas
+	name = "\improper Master At Arms InteQ ID"
+	desc = "A inteq ID with no proper access to speak of.This one indicates a Master At Arms"
+	access = list(ACESS_INTEQ_GENERAL, ACESS_INTEQ_SECURITY)
+	icon_state = "inteqmaas"
+	assignment = "Master At Arms"
+	job_icon = "maasiq"
+/obj/item/card/id/inteq/enf
+	name = "\improper Enforcer InteQ ID"
+	desc = "A InteQ ID with no proper access to speak of. This one indicates a Enforcer."
+	access = list(ACESS_INTEQ_GENERAL, ACESS_INTEQ_SECURITY)
+	icon_state = "inteqenf"
+	assignment = "Enforcer"
+	job_icon = "enfiq"
+/obj/item/card/id/inteq/afr
+	name = "\improper Artificer InteQ ID"
+	desc = "A InteQ ID with no proper access to speak of. This one indicates a Artificer."
+	access = list(ACESS_INTEQ_GENERAL)
+	icon_state = "inteqafr"
+	assignment = "Artificer"
+	job_icon = "afriq"
+/obj/item/card/id/inteq/corspman
+	name = "\improper Corspman InteQ ID"
+	desc = "A InteQ ID with no proper access to speak of. This one indicates a Corspman."
+	access = list(ACESS_INTEQ_GENERAL)
+	icon_state = "inteqcsn"
+	assignment = "Corspman"
+	job_icon = "csniq"
+/obj/item/card/id/inteq/recruit
+	name = "\improper Recruit InteQ ID"
+	desc = "A InteQ ID with no proper access to speak of. This one indicates a Recruit."
+	access = list(ACESS_INTEQ_GENERAL)
+	icon_state = "inteqrt"
+	assignment = "Recruit"
+	job_icon = "rtiq"

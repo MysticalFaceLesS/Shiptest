@@ -1,8 +1,8 @@
 /datum/mission/research
 	name = "Electrical storm research mission"
-	desc = "We require data on the behavior of electrical storms in the system for an ongoing study. \
-			Please anchor the attached sensor array to your ship and fly it through the storms.\
-			It must be powered to collect the data. "
+	desc = "Нам нужны данные о поведении электрических бурь в системе для текущего исследования. \
+			Пожалуйста, прикрепите присланный сенсор к вашему кораблю и пролетите на нем сквозь шторм.\
+			Для сбора данных сенсор должен быть подключен к эл. сети. "
 	value = 3000 // base value, before adding bonus for number of things to fly through
 	duration = 30 MINUTES
 	weight = 8
@@ -59,7 +59,7 @@
 /* commented out until ion storms aren't literal torture
 /datum/mission/research/ion
 	name = "Ion storm research mission"
-	desc = "Исследовательскому отделу нужны данные о ионных бурях в системе для текущего исследования. \
+	desc = "Нам нужны данные о поведении ионных бурь в системе для текущего исследования. \
 			Пожалуйста, прикрепите присланный сенсор к вашему кораблю и пролетите на нем сквозь шторм.\
 			Для сбора данных сенсор должен быть подключен к эл. сети. "
 	value = 3500
@@ -67,18 +67,18 @@
 */
 /datum/mission/research/meteor
 	name = "Asteroid field research mission"
-	desc = "We require data on the behavior of asteroid fields in the system for an ongoing study. \
-			Please anchor the attached sensor array to your ship and fly it through the fields. \
-			It must be powered to collect the data."
+	desc = "Нам нужны данные о поведении астероидных полей в системе для текущего исследования. \
+			Пожалуйста, прикрепите присланный сенсор к вашему кораблю и пролетите на нем сквозь астероидные поля.\
+			Для сбора данных сенсор должен быть подключен к эл. сети."
 	value = 4000
 	weight = 4
 	objective_type = /datum/overmap/event/meteor
 
 /datum/mission/research/carp
 	name = "Carp migration research mission"
-	desc = "We require data on the migration patterns of space carp for an ongoing study. \
-			Please anchor the attached sensor array to your ship and fly it through the fields. \
-			It must be powered to collect the data."
+	desc = "Нам нужны данные о моделях миграции космических карпов для текущего исследования. \
+			Пожалуйста, прикрепите присланный сенсор к вашему кораблю и пролетите на нем сквозь место сбора карпов.\
+			Для сбора данных сенсор должен быть подключен к эл. сети."
 	value = 2000
 	weight = 4
 	num_wanted = 3
@@ -87,7 +87,7 @@
 /datum/mission/research/dust
 	name = "dust research mission"
 	desc = "Нам нужны данные о плотности космической пыли для обновления навигационных карт. \
-			Пожалуйста, прикрепите присланный сенсор к вашему кораблю и пролетите на нем через облака пыли. \
+			Пожалуйста, прикрепите присланный сенсор к вашему кораблю и пролетите на нем через . \
 			Для сбора данных сенсор должен быть подключен к эл. сети."
 	value = 1000
 	weight = 4
@@ -99,8 +99,8 @@
 
 /obj/machinery/mission_scanner
 	name = "polymodal sensor array"
-	desc = "A complicated scanning device that integrates numerous sensors, commonly used \
-			to detect and measure a wide variety of astrophysical phenomena."
+	desc = "Сложное сканирующее устройство, объединяющее множество датчиков, обычно используется \
+			для обнаружения и измерения широкого спектра астрофизических явлений."
 	icon_state = "scanner_unanchor"
 	max_integrity = 500
 	density = FALSE

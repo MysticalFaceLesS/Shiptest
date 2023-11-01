@@ -86,6 +86,22 @@
 	id = /obj/item/card/id/syndicate_command/crew_id
 	l_pocket =/obj/item/pda/chemist
 
+/datum/outfit/job/chemist/syndiesun
+	name = "Chemist Cybersun"
+
+	uniform = /obj/item/clothing/under/syndicate/intern
+	ears = /obj/item/radio/headset/syndicate
+	belt = /obj/item/storage/bag/chemistry
+	l_pocket =/obj/item/pda/chemist
+	r_pocket = /obj/item/storage/pill_bottle
+	suit = /obj/item/clothing/suit/longcoat/chemist
+	alt_suit = /obj/item/clothing/suit/toggle/labcoat/chemist/side
+	dcoat = /obj/item/clothing/suit/hooded/wintercoat/medical
+	box = /obj/item/storage/box/survival/medical
+	id = /obj/item/card/id/syndicate_command/crew_id
+	gloves = /obj/item/clothing/gloves/color/latex
+	glasses = /obj/item/clothing/glasses/sunglasses
+
 /datum/outfit/job/chemist/pharma
 	name = "Pharmacist"
 

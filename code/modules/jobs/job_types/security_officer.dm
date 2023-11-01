@@ -221,6 +221,19 @@ GLOBAL_LIST_INIT(available_depts, list(SEC_DEPT_ENGINEERING, SEC_DEPT_MEDICAL, S
 	mask = null
 	gloves = null
 
+/datum/outfit/job/security/inteq/naked/cardacces
+	name = "Enforcer (InteQ)"
+	ears = null
+	id = /obj/item/card/id/inteq/enf
+
+/datum/outfit/job/security/inteq/naked/cardacces/post_equip(mob/living/carbon/human/H)
+	H.faction |= list("PlayerInteQ")
+
+	var/obj/item/card/id/I = H.wear_id
+	I.registered_name = pick(GLOB.commando_names)
+	I.access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_COURT, ACCESS_MAINT_TUNNELS, ACCESS_MECH_SECURITY, ACCESS_MORGUE, ACCESS_WEAPONS, ACCESS_FORENSICS_LOCKERS, ACCESS_MINERAL_STOREROOM, ACCESS_EVA, ACESS_INTEQ_GENERAL, ACESS_INTEQ_SECURITY)
+	I.update_label()
+
 /datum/outfit/job/security/nanotrasen
 	name = "Security Officer (Nanotrasen)"
 
@@ -377,5 +390,37 @@ GLOBAL_LIST_INIT(available_depts, list(SEC_DEPT_ENGINEERING, SEC_DEPT_MEDICAL, S
 	satchel = /obj/item/storage/backpack/satchel/sec
 	duffelbag = /obj/item/storage/backpack/duffelbag/sec
 	courierbag = /obj/item/storage/backpack/messenger/sec
+
+/datum/outfit/job/security/syndicate/ostov
+	name = "Lieutenant (O.S.T.O.V.)"
+	uniform = /obj/item/clothing/under/syndicate/combat
+	ears = /obj/item/radio/headset/syndicate/alt
+	mask = /obj/item/clothing/mask/gas/syndicate/voicechanger
+	gloves = /obj/item/clothing/gloves/combat
+	shoes = /obj/item/clothing/shoes/combat
+	l_pocket = /obj/item/gun/ballistic/automatic/pistol
+	r_pocket = /obj/item/kitchen/knife/combat/survival
+	belt = null
+	id = /obj/item/card/id/syndicate_command/crew_id
+	implants = list(/obj/item/implant/weapons_auth, /obj/item/implant/explosive/macro, /obj/item/implant/krav_maga)
+	backpack_contents = list(/obj/item/gun_voucher/syndicate=1)
+	head = null
+
+	backpack = /obj/item/storage/backpack/security
+	satchel = /obj/item/storage/backpack/satchel/sec
+	duffelbag = /obj/item/storage/backpack/duffelbag/syndie
+	courierbag = /obj/item/storage/backpack/messenger/sec
+
+	box = /obj/item/storage/box/survival/syndie
+
+/datum/outfit/job/security/syndicate/ostov/post_equip(mob/living/carbon/human/H)
+	H.faction = list("PlayerSyndicate")
+
+	var/obj/item/card/id/I = H.wear_id
+	I.registered_name = pick(GLOB.twinkle_names) + "-" + num2text(rand(4, 8)) // squidquest real
+	I.assignment = "Lieutenant"
+	I.access |= list(ACCESS_SYNDICATE)
+	I.update_label()
+
 
 //Shiptest outfits end

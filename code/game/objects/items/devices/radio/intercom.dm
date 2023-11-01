@@ -169,6 +169,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/item/radio/intercom, 31)
 	freerange = TRUE
 	log = TRUE
 	wallframe = /obj/item/wallframe/intercom/wideband
+	log = TRUE
 
 /obj/item/radio/intercom/wideband/Initialize(mapload, ndir, building)
 	. = ..()

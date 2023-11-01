@@ -81,3 +81,39 @@
 	I.assignment = "Medic"
 	I.access |= list(ACCESS_SYNDICATE)
 	I.update_label()
+
+/datum/outfit/job/brig_phys/syndicate/ostov
+	name = "Lieutenant Junior Grade Medic (O.S.T.O.V.)"
+
+	uniform = /obj/item/clothing/under/rank/medical/doctor/red
+	gloves = /obj/item/clothing/gloves/color/latex/nitrile/evil
+	alt_uniform = /obj/item/clothing/under/syndicate/cybersun
+	glasses = /obj/item/clothing/glasses/hud/health
+	belt = /obj/item/gun/medbeam
+	back = /obj/item/storage/backpack/duffelbag/syndie/med
+	shoes = /obj/item/clothing/shoes/combat
+	suit = /obj/item/clothing/suit/longcoat/roboblack
+	alt_suit = /obj/item/clothing/suit/toggle/labcoat
+	suit_store =  null
+	head = null
+	ears = /obj/item/radio/headset/syndicate
+	mask = /obj/item/clothing/mask/gas/syndicate/voicechanger
+	id = /obj/item/card/id/syndicate_command/crew_id/med
+	implants = list(/obj/item/implant/weapons_auth, /obj/item/implant/explosive/macro, /obj/item/implant/adrenalin, /obj/item/implant/freedom, /obj/item/implant/krav_maga)
+	backpack_contents = list(/obj/item/storage/firstaid/tactical=2, /obj/item/reagent_containers/hypospray/combat/nanites, /obj/item/reagent_containers/hypospray/combat)
+
+	backpack = /obj/item/storage/backpack/security
+	satchel = /obj/item/storage/backpack/satchel/sec
+	duffelbag = /obj/item/storage/backpack/duffelbag/syndie/med
+	courierbag = /obj/item/storage/backpack/messenger/sec
+
+	box = /obj/item/storage/box/survival/syndie
+
+/datum/outfit/job/brig_phys/syndicate/ostov/post_equip(mob/living/carbon/human/H)
+	H.faction = list("PlayerSyndicate")
+
+	var/obj/item/card/id/I = H.wear_id
+	I.registered_name = pick(GLOB.twinkle_names) + "-" + num2text(rand(6, 8)) // squidquest real
+	I.assignment = "Lieutenant Junior Grade Medic"
+	I.access |= list(ACCESS_SYNDICATE)
+	I.update_label()

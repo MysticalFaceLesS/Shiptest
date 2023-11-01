@@ -1,6 +1,25 @@
 /datum/supply_pack/machinery
-	group = "Machines & Parts"
+	group = "Приборы и механизмы"
 	crate_type = /obj/structure/closet/crate/engineering
+
+//Карго падНабор специализированных плат для исследования и производства, ограниченных лицензией.
+/datum/supply_pack/machinery/rnd_beac
+	name = "Маяк Р.Н.Д."
+	desc = "Набор специализированных плат для исследования и производства, ограниченных лицензией. "
+	cost = 9000
+	contains = list(/obj/item/choice_beacon/rnd)
+	crate_name = "Стартовый набор исследователя"
+	crate_type = /obj/structure/closet/crate/science
+
+//Маяк рнд плат
+/datum/supply_pack/machinery/selling_pad_pack
+	name = "Грузовой телепорт"
+	desc = "Набор плат для специализированного грузового телепорта."
+	cost = 8000
+	contains = list(/obj/item/circuitboard/machine/selling_pad,
+					/obj/item/circuitboard/computer/selling_pad_control)
+	crate_name = "Грузовой телепорт "
+	crate_type = /obj/structure/closet/crate/science
 
 /*
 		Parts
@@ -326,3 +345,13 @@
 	contains = list(/obj/machinery/the_singularitygen/tesla)
 	crate_name = "tesla generator crate"
 	crate_type = /obj/structure/closet/crate/secure/engineering
+
+//Полное РнД
+/datum/supply_pack/machinery/rnd_full
+	name = "Набор подозрительных плат"
+	desc = "Набор специализированных плат для исследования и производства. Неизвестны умелец взломал их , теперь они не ограничены лицензией. "
+	cost = 89371
+	contains = list(/obj/item/circuitboard/machine/circuit_imprinter,
+					/obj/item/circuitboard/machine/protolathe)
+	crate_name = "Взломанный набор исследователя"
+	crate_type = /obj/structure/closet/crate/science

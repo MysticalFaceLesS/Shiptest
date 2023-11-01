@@ -1,7 +1,17 @@
 /datum/supply_pack/vendor_refill
-	group = "Vendor Refills"
+	group = "Пополнение торговых автоматов"
 	crate_type = /obj/structure/closet/crate
 
+//Плата вендомата
+/datum/supply_pack/vendor_refill/vend_circ
+	name = "Плата торгового автомата "
+	desc = "Плата для постройки собственного торгового автомата."
+	cost = 250
+	contains = list(/obj/item/circuitboard/machine/vendor,
+					/obj/item/screwdriver)
+	crate_name = "vend circuit crate"
+
+//Пополнения
 /datum/supply_pack/vendor_refill/bartending
 	name = "Booze-o-mat and Coffee Supply Crate"
 	desc = "Bring on the booze and coffee vending machine refills."
@@ -44,3 +54,24 @@
 	cost = 1000
 	contains = list(/obj/item/vending_refill/games)
 	crate_name = "games supply crate"
+
+/datum/supply_pack/vendor_refill/shaft
+	name = "Mining equipment ящик пополнения"
+	desc = "Ящик снабжения для Mining equipment торгового автомата."
+	cost = 8000
+	contains = list(/obj/item/vending_refill/mining_equipment)
+	crate_name = "miner supply crate"
+
+/datum/supply_pack/vendor_refill/sectech
+	name = "SecTech ящик пополения"
+	desc = "Ящик снабжения для SecTech торгового автомата."
+	cost = 4000
+	contains = list(/obj/item/vending_refill/security)
+	crate_name = "SecTech supply crate"
+
+/datum/supply_pack/vendor_refill/secdrobe
+	name = "SecDrobe ящик пополения"
+	desc = "Ящик снабжения для SecDrobe торгового автомата."
+	cost = 2000
+	contains = list(/obj/item/vending_refill/wardrobe/sec_wardrobe)
+	crate_name = "SecDrobe supply crate"

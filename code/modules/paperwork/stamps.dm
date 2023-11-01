@@ -12,7 +12,6 @@
 	pressure_resistance = 2
 	attack_verb = list("stamped")
 
-
 /obj/item/stamp/get_writing_implement_details()
 	var/datum/asset/spritesheet/sheet = get_asset_datum(/datum/asset/spritesheet/simple/paper)
 	return list(
@@ -94,6 +93,10 @@
 /obj/item/stamp/solgov
 	name = "SolGov rubber stamp"
 	icon_state = "stamp-solgov"
+
+/obj/item/stamp/inteq
+	name = "InteQ rubber stamp"
+	icon_state = "stamp-inteq"
 
 /obj/item/stamp/attack_paw(mob/user)
 	return attack_hand(user)

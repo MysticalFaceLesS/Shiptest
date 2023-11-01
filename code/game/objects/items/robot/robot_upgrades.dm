@@ -679,6 +679,12 @@
 	icon_state = "cyborg_upgrade3"
 	new_module = /obj/item/robot_module/clown
 
+/obj/item/borg/upgrade/transform/syndicate_medical
+	desc = "Allows you to to turn a cyborg into a... something.";
+	name = "borg module picker (Unknown)";
+	icon_state = "cyborg_upgrade3"
+	new_module = /obj/item/robot_module/syndicate_medical
+
 /obj/item/borg/upgrade/circuit_app
 	name = "circuit manipulation apparatus"
 	desc = "An engineering cyborg upgrade allowing for manipulation of circuit boards."

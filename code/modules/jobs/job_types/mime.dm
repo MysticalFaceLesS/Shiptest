@@ -37,6 +37,33 @@
 
 	chameleon_extras = /obj/item/stamp/mime
 
+/datum/outfit/job/mime/captain
+	name = "Master Mime"
+	job_icon = "mime"
+	jobtype = /datum/job/mime
+
+	belt = /obj/item/pda/mime
+	ears = /obj/item/radio/headset/alt
+	uniform = /obj/item/clothing/under/rank/civilian/mime
+	alt_uniform = /obj/item/clothing/under/rank/civilian/mime/sexy //WS Edit - Alt Uniforms
+	mask = /obj/item/clothing/mask/gas/mime
+	gloves = /obj/item/clothing/gloves/color/captain
+	shoes = /obj/item/clothing/shoes/jackboots
+	head = /obj/item/clothing/head/beret/command
+	suit = /obj/item/clothing/suit/toggle/suspenders
+
+	backpack_contents = list(
+		/obj/item/paper/fluff/mimos_captain_pt1 = 1,
+		/obj/item/stamp/mime = 1,
+		/obj/item/book/mimery = 1,
+		/obj/item/reagent_containers/food/drinks/bottle/bottleofnothing = 1
+		)
+
+	backpack = /obj/item/storage/backpack/mime
+	satchel = /obj/item/storage/backpack/mime
+
+	chameleon_extras = /obj/item/stamp/mime
+
 /datum/outfit/job/mime/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 

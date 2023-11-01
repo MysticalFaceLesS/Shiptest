@@ -81,6 +81,19 @@ Assistant
 
 	uniform = /obj/item/clothing/under/syndicate/inteq
 
+/datum/outfit/job/assistant/inteq/cardacces
+	name = "Recruit (InteQ)"
+	ears = null
+	id = /obj/item/card/id/inteq/recruit
+
+/datum/outfit/job/assistant/inteq/cardacces/post_equip(mob/living/carbon/human/H)
+	H.faction |= list("PlayerInteQ")
+
+	var/obj/item/card/id/I = H.wear_id
+	I.registered_name = pick(GLOB.commando_names)
+	I.access = list(ACESS_INTEQ_GENERAL)
+	I.update_label()
+
 /datum/outfit/job/assistant/intern
 	name = "Assistant (Intern)"
 	uniform = /obj/item/clothing/under/suit/black

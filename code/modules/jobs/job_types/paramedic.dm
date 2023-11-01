@@ -79,6 +79,28 @@
 	belt = /obj/item/storage/belt/medical/webbing/paramedic
 	ears = /obj/item/radio/headset/headset_medsec/alt
 
+/datum/outfit/job/paramedic/inteq/naked
+	name = "IRMG Corpsman (Inteq) (Naked)"
+	head = null
+	mask = null
+	glasses = null
+	belt = null
+	suit = null
+	gloves = null
+	suit_store = null
+
+/datum/outfit/job/paramedic/inteq/naked/cardacces
+	name = "Corpsman (InteQ)"
+	ears = null
+	id = /obj/item/card/id/inteq/corspman
+
+/datum/outfit/job/paramedic/inteq/naked/cardacces/post_equip(mob/living/carbon/human/H)
+	H.faction |= list("PlayerInteQ")
+
+	var/obj/item/card/id/I = H.wear_id
+	I.registered_name = pick(GLOB.commando_names)
+	I.access = list(ACCESS_MEDICAL, ACCESS_MORGUE, ACCESS_SURGERY, ACCESS_GENETICS, ACCESS_CLONING, ACCESS_MECH_MEDICAL, ACCESS_MINERAL_STOREROOM, ACCESS_MAINT_TUNNELS, ACCESS_EVA, ACESS_INTEQ_GENERAL)
+	I.update_label()
 /datum/outfit/job/paramedic/minutemen
 	name = "BARD Combat Medic (Minutemen)"
 

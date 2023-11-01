@@ -5,7 +5,8 @@
 #ifdef FULL_INIT
 	#include "map_files\generic\CentCom.dmm"
 #else
-	#include "map_files\generic\blank.dmm"
+	//#include "map_files\generic\blank.dmm"
+	#include "map_files\generic\CentCom.dmm"
 #endif
 
 #ifdef ALL_MAPS

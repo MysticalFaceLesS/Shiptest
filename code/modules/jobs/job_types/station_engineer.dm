@@ -68,6 +68,18 @@
 	head = /obj/item/clothing/head/soft/inteq
 	shoes = /obj/item/clothing/shoes/combat
 
+/datum/outfit/job/engineer/inteq/cardacces
+	name = "Artificer (InteQ)"
+	ears = null
+	id = /obj/item/card/id/inteq/afr
+
+/datum/outfit/job/engineer/inteq/cardacces/post_equip(mob/living/carbon/human/H)
+	H.faction |= list("PlayerInteQ")
+
+	var/obj/item/card/id/I = H.wear_id
+	I.registered_name = pick(GLOB.commando_names)
+	I.access = list(ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_MAINT_TUNNELS, ACCESS_MECH_ENGINE,ACCESS_EXTERNAL_AIRLOCKS, ACCESS_CONSTRUCTION, ACCESS_ATMOSPHERICS, ACCESS_TCOMSAT, ACCESS_MINERAL_STOREROOM, ACCESS_EVA, ACESS_INTEQ_GENERAL)
+	I.update_label()
 /datum/outfit/job/engineer/pirate
 	name = "Ship's Engineer (Pirate)"
 
@@ -97,6 +109,7 @@
 	name = "Station Engineer (GEC)"
 
 	uniform = /obj/item/clothing/under/syndicate/gec
+	ears = /obj/item/radio/headset/syndicate
 	suit = /obj/item/clothing/suit/toggle/hazard
 	head = /obj/item/clothing/head/hardhat
 	id = /obj/item/card/id/syndicate_command/crew_id
@@ -212,3 +225,33 @@
 	satchel = /obj/item/storage/backpack/satchel/eng
 	duffelbag = /obj/item/storage/backpack/duffelbag/engineering
 	courierbag = /obj/item/storage/backpack/messenger/engi
+
+/datum/outfit/job/engineer/syndicate/ostov
+	name = "Lieutenant Junior Grade Engineer (O.S.T.O.V.)"
+
+	uniform = /obj/item/clothing/under/syndicate/gec
+	accessory = null
+	glasses = /obj/item/clothing/glasses/meson/night
+	head = /obj/item/clothing/head/hardhat/orange
+	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
+	ears = /obj/item/radio/headset/syndicate
+	mask = /obj/item/clothing/mask/gas/syndicate/voicechanger
+	back = /obj/item/storage/backpack/industrial
+	belt = /obj/item/storage/belt/utility/syndicate
+	shoes = /obj/item/clothing/shoes/combat
+	suit = /obj/item/clothing/suit/hazardvest
+	alt_suit = /obj/item/clothing/suit/toggle/hazard
+	implants = list(/obj/item/implant/weapons_auth, /obj/item/implant/explosive/macro, /obj/item/implant/krav_maga)
+	id = /obj/item/card/id/syndicate_command/crew_id/engi
+	backpack_contents = list(/obj/item/construction/rcd/combat, /obj/item/rcd_ammo/large=3)
+
+	box = /obj/item/storage/box/survival/syndie
+
+/datum/outfit/job/engineer/syndicate/ostov/post_equip(mob/living/carbon/human/H)
+	H.faction |= list("PlayerSyndicate")
+
+	var/obj/item/card/id/I = H.wear_id
+	I.registered_name = pick(GLOB.twinkle_names) + "-" + num2text(rand(6, 8)) // squidquest real
+	I.assignment = "Lieutenant Junior Grade Engineer"
+	I.access |= list(ACCESS_SYNDICATE)
+	I.update_label()

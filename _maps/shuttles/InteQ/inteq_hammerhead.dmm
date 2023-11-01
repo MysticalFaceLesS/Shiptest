@@ -2993,10 +2993,7 @@
 	name = "weapons locker";
 	req_access_txt = "147;148"
 	},
-/obj/item/ammo_box/magazine/co9mm/rubbershot,
-/obj/item/ammo_box/magazine/co9mm/rubbershot,
 /obj/item/ammo_box/magazine/smgm10mm,
-/obj/item/ammo_box/magazine/smgm10mm/rubbershot,
 /obj/item/ammo_box/magazine/p16/g36drum,
 /turf/open/floor/engine{
 	icon_state = "plastitanium";
@@ -3637,7 +3634,11 @@
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters{
 	dir = 1;
-	id = 2
+	id = "Hamm_ext_win"
+	},
+/obj/machinery/door/poddoor/shutters/preopen{
+	explosion_block = 7;
+	id = "Armory"
 	},
 /turf/open/floor/plating,
 /area/ship/security/armory)
@@ -7707,7 +7708,8 @@
 "TM" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/machinery/door/poddoor/shutters{
-	dir = 1
+	dir = 1;
+	id = "Hamm_ext_win"
 	},
 /turf/open/floor/plating,
 /area/ship/crew)
@@ -7896,8 +7898,8 @@
 	},
 /obj/item/storage/toolbox/ammo/c9mm,
 /obj/item/storage/toolbox/ammo/c10mm,
-/obj/item/gun/ballistic/automatic/assualt/g36sh/inteq,
-/obj/item/gun/ballistic/automatic/assualt/g36/inteq,
+/obj/item/gun/ballistic/automatic/assault/g36sh/inteq,
+/obj/item/gun/ballistic/automatic/assault/g36/inteq,
 /obj/item/ammo_box/a556_box/a856,
 /obj/item/ammo_box/a556_box/a856,
 /turf/open/floor/plating,
@@ -8244,12 +8246,9 @@
 /obj/structure/closet/crate/secure/weapon{
 	req_access_txt = "147;148;3"
 	},
-/obj/item/ammo_box/magazine/co9mm/rubbershot,
-/obj/item/ammo_box/magazine/co9mm/rubbershot,
 /obj/item/ammo_box/magazine/co9mm,
 /obj/item/ammo_box/magazine/co9mm,
 /obj/item/ammo_box/magazine/co9mm,
-/obj/item/ammo_box/magazine/co9mm/rubbershot,
 /turf/open/floor/plating,
 /area/ship/cargo)
 "XK" = (

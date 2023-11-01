@@ -162,7 +162,7 @@
 		return
 	log_shuttle("[src] [REF(src)] UNDOCK: STARTED UNDOCK FROM [docked_to]")
 	var/dock_time_temp = dock_time
-	if(shuttle_port.check_transit_zone() != TRANSIT_READY)
+	if(!shuttle_port || shuttle_port.check_transit_zone() != TRANSIT_READY)
 		dock_time *= 2 // Give it double the time in order to reserve transit space
 		if(force)
 			SSshuttle.transit_requesters -= shuttle_port

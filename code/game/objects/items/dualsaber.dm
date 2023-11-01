@@ -65,9 +65,8 @@
 
 
 /obj/item/dualsaber/update_icon_state()
-	icon_state = wielded ? "dualsaber[saber_color][wielded]" : "dualsaber0"
+	icon_state = wielded ? "dualsaber[saber_color]" : "dualsaber"
 	return ..()
-
 /obj/item/dualsaber/Initialize()
 	. = ..()
 	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, .proc/on_wield)
@@ -105,7 +104,11 @@
 		INVOKE_ASYNC(src, .proc/jedi_spin, user)
 
 /obj/item/dualsaber/proc/jedi_spin(mob/living/user)
-	dance_rotate(user, CALLBACK(user, /mob.proc/dance_flip))
+	for(var/i in list(NORTH, SOUTH, EAST, WEST, EAST, SOUTH, NORTH, SOUTH, EAST))
+		user.setDir(i)
+		if(i == WEST)
+			user.SpinAnimation(7, 1)
+		sleep(1)
 
 /obj/item/dualsaber/proc/impale(mob/living/user)
 	to_chat(user, "<span class='warning'>You twirl around a bit before losing your balance and impaling yourself on [src].</span>")

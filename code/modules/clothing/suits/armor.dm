@@ -34,6 +34,14 @@
 	item_state = "armoralt"
 	supports_variations = KEPORI_VARIATION
 
+/obj/item/clothing/suit/armor/vest/inteq
+	name = "InteQ armor vest"
+	desc = "A modded InteQ Type II armored vest that provides decent protection against most types of damage."
+	icon_state = "armor_inteq"
+	item_state = "armor_inteq"
+	armor = list("melee" = 38, "bullet" = 33, "laser" = 33, "energy" = 43, "bomb" = 28, "bio" = 3, "rad" = 3, "fire" = 53, "acid" = 53)
+
+
 /obj/item/clothing/suit/armor/vest/marine
 	name = "light tactical armor vest"
 	desc = "A set of the finest mass-produced stamped plasteel armor plates money can buy."

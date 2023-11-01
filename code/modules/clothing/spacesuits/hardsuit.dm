@@ -440,6 +440,7 @@
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/syndi/scarlet
 	lightweight = 1
 	jetpack = null
+	supports_variations = DIGITIGRADE_VARIATION | VOX_VARIATION
 	armor = list("melee" = 35, "bullet" = 25, "laser" = 20,"energy" = 40, "bomb" = 10, "bio" = 100, "rad" = 50, "fire" = 75, "acid" = 75)
 	combat_slowdown = 0.5
 	jetpack = null
