@@ -1,5 +1,5 @@
 /obj/mecha/combat/honker
-	desc = "Произведенный компанией "Tyranny of Honk, INC", этот экзоскелет выполнен для поддержки клоунов. Используется для распространения веселья и радости в жизни других. HONK!"
+	desc = "Произведенный компанией 'Tyranny of Honk, INC', этот экзоскелет выполнен для поддержки клоунов. Используется для распространения веселья и радости в жизни других. HONK!"
 	name = "\improper H.O.N.K"
 	icon_state = "honker"
 	step_in = 3
@@ -24,19 +24,19 @@
 	var/tank_temperature = internal_tank ? int_tank_air.return_temperature() : "Unknown"
 	var/cabin_pressure = round(return_pressure(),0.01)
 	var/output = {"[report_internal_damage()]
-						[integrity<30?"<font color='red'><b>КРИТИЧЕСКИЙ УРОВЕНЬ ПОВРЕЖДЕНИЙ</b></font><br>":null]
-						[internal_damage&MECHA_INT_TEMP_CONTROL?"<font color='red'><b>НЕИСПРАВНОСТЬ СИСТЕМЫ ПОДДЕРЖКИ КЛОУНА</b></font><br>":null]
-						[internal_damage&MECHA_INT_TANK_BREACH?"<font color='red'><b>ГАЗОВЫЙ БАЛЛОН ХОНКНУЛСЯ</b></font><br>":null]
-						[internal_damage&MECHA_INT_CONTROL_LOST?"<font color='red'><b>УПРАВЛЕНИЕ ХОНКНУЛОСЬ</b></font> - <a href='?src=[REF(src)];repair_int_control_lost=1'>Рехонкование</a><br>":null]
-						<b>ЦелоХОНКость: </b> [integrity]%<br>
-						<b>Заряженность ХОНКА : </b>[isnull(cell_charge)?"No powercell installed":"[cell.percent()]%"]<br>
-						<b>Источник воздуха: </b>[use_internal_tank?"Internal Airtank":"Environment"]<br>
-						<b>ВоздуХОНК давление: </b>[tank_pressure]kPa<br>
-						<b>ВоздуХОНК Температура: </b>[tank_temperature]&deg;K|[tank_temperature - T0C]&deg;C<br>
-						<b>ХОНКОВОЕ давление: </b>[cabin_pressure>WARNING_HIGH_PRESSURE ? "<font color='red'>[cabin_pressure]</font>": cabin_pressure]kPa<br>
-						<b>ХОНКОВАЯ температура: </b> [return_temperature()]&deg;K|[return_temperature() - T0C]&deg;C<br>
-						<b>СВет: </b>[lights?"Включен":"Выключен"]<br>
-						[dna_lock?"<b>DNA-замок:</b><br> <span style='font-size:10px;letter-spacing:-1px;'>[dna_lock]</span> \[<a href='?src=[REF(src)];reset_dna=1'>Reset</a>\]<br>":null]
+						[integrity<30?"<font color='red'><b>DAMAGE LEVEL CRITICAL</b></font><br>":null]
+						[internal_damage&MECHA_INT_TEMP_CONTROL?"<font color='red'><b>CLOWN SUPPORT SYSTEM MALFUNCTION</b></font><br>":null]
+						[internal_damage&MECHA_INT_TANK_BREACH?"<font color='red'><b>GAS TANK HONK</b></font><br>":null]
+						[internal_damage&MECHA_INT_CONTROL_LOST?"<font color='red'><b>HONK-A-DOODLE</b></font> - <a href='?src=[REF(src)];repair_int_control_lost=1'>Recalibrate</a><br>":null]
+						<b>IntegriHONK: </b> [integrity]%<br>
+						<b>PowerHONK charge: </b>[isnull(cell_charge)?"No powercell installed":"[cell.percent()]%"]<br>
+						<b>Air source: </b>[use_internal_tank?"Internal Airtank":"Environment"]<br>
+						<b>AirHONK pressure: </b>[tank_pressure]kPa<br>
+						<b>AirHONK temperature: </b>[tank_temperature]&deg;K|[tank_temperature - T0C]&deg;C<br>
+						<b>HONK pressure: </b>[cabin_pressure>WARNING_HIGH_PRESSURE ? "<font color='red'>[cabin_pressure]</font>": cabin_pressure]kPa<br>
+						<b>HONK temperature: </b> [return_temperature()]&deg;K|[return_temperature() - T0C]&deg;C<br>
+						<b>Lights: </b>[lights?"on":"off"]<br>
+						[dna_lock?"<b>DNA-locked:</b><br> <span style='font-size:10px;letter-spacing:-1px;'>[dna_lock]</span> \[<a href='?src=[REF(src)];reset_dna=1'>Reset</a>\]<br>":null]
 					"}
 	return output
 
