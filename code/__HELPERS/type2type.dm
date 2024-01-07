@@ -328,7 +328,7 @@ GLOBAL_LIST_INIT(modulo_angle_to_dir, list(NORTH,NORTHEAST,EAST,SOUTHEAST,SOUTH,
 
 	return covered_parts
 
-/proc/slot2body_zone(slot)
+/proc/slot2body_zone(slot)		//тут что-то нужно? хз
 	switch(slot)
 		if(ITEM_SLOT_BACK, ITEM_SLOT_OCLOTHING, ITEM_SLOT_ICLOTHING, ITEM_SLOT_BELT, ITEM_SLOT_ID)
 			return BODY_ZONE_CHEST

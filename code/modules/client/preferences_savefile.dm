@@ -94,6 +94,20 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 			pref_species = new /datum/species/human
 			features["tail_human"] = "Cat"
 			features["ears"] = "Cat"
+	if(current_version < 42)
+		var/species_id
+		READ_FILE(S["species"], species_id)
+		if(species_id == "tajaran")
+			pref_species = new /datum/species/tajaran
+			READ_FILE(S["feature_tajaran_ears"]				, features["tajaran_ears"])
+			READ_FILE(S["feature_tajaran_hairs"]			, features["tajaran_hairs"])
+			READ_FILE(S["feature_tajaran_ears_markings"]	, features["tajaran_ears_markings"])
+			READ_FILE(S["feature_tajaran_head_markings"]	, features["tajaran_head_markings"])
+			READ_FILE(S["feature_tajaran_facial_hairs"]		, features["tajaran_facial_hairs"])
+			READ_FILE(S["feature_tajaran_nose_markings"]	, features["tajaran_nose_markings"])
+			READ_FILE(S["feature_tajaran_chest_markings"]	, features["tajaran_chest_markings"])
+			READ_FILE(S["feature_tajaran_body_markings"]	, features["tajaran_body_markings"])
+			READ_FILE(S["feature_tajaran_tail"]				, features["tajaran_tail"])
 
 /// checks through keybindings for outdated unbound keys and updates them
 /datum/preferences/proc/check_keybindings()
@@ -391,6 +405,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["facial_hair_color"], facial_hair_color)
 	READ_FILE(S["eye_color"], eye_color)
 	READ_FILE(S["skin_tone"], skin_tone)
+	READ_FILE(S["skin_tone_nose"], skin_tone_nose)
 	READ_FILE(S["hairstyle_name"], hairstyle)
 	READ_FILE(S["facial_style_name"], facial_hairstyle)
 	READ_FILE(S["feature_grad_style"], features["grad_style"])
@@ -442,6 +457,15 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["feature_vox_neck_quills"], features["vox_neck_quills"])
 	READ_FILE(S["feature_elzu_horns"], features["elzu_horns"])
 	READ_FILE(S["feature_tail_elzu"], features["tail_elzu"])
+	READ_FILE(S["feature_tajaran_ears"], features["tajaran_ears"])
+	READ_FILE(S["feature_tajaran_hairs"], features["tajaran_hairs"])
+	READ_FILE(S["feature_tajaran_ears_markings"], features["tajaran_ears_markings"])
+	READ_FILE(S["feature_tajaran_head_markings"], features["tajaran_head_markings"])
+	READ_FILE(S["feature_tajaran_nose_markings"], features["tajaran_nose_markings"])
+	READ_FILE(S["feature_tajaran_facial_hairs"], features["tajaran_facial_hairs"])
+	READ_FILE(S["feature_tajaran_chest_markings"], features["tajaran_chest_markings"])
+	READ_FILE(S["feature_tajaran_body_markings"], features["tajaran_body_markings"])
+	READ_FILE(S["feature_tajaran_tail"], features["tajaran_tail"])
 
 	READ_FILE(S["equipped_gear"], equipped_gear)
 	if(config) //This should *probably* always be there, but just in case.
@@ -515,6 +539,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	underwear_color		= sanitize_hexcolor(underwear_color)
 	eye_color			= sanitize_hexcolor(eye_color)
 	skin_tone			= sanitize_inlist(skin_tone, GLOB.skin_tones)
+	skin_tone_nose		= sanitize_inlist(skin_tone_nose, GLOB.skin_tones_nose)
 	backpack			= sanitize_inlist(backpack, GLOB.backpacklist, initial(backpack))
 	jumpsuit_style		= sanitize_inlist(jumpsuit_style, GLOB.jumpsuitlist, initial(jumpsuit_style))
 	exowear				= sanitize_inlist(exowear, GLOB.exowearlist, initial(exowear))
@@ -555,6 +580,16 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["tail_elzu"]				= sanitize_inlist(features["tail_elzu"], GLOB.tails_list_elzu)
 	features["flavor_text"]				= sanitize_text(features["flavor_text"], initial(features["flavor_text"]))
 
+	features["tajaran_ears"]				= sanitize_inlist(features["tajaran_ears"], GLOB.tajaran_ears_list, "plain")
+	features["tajaran_hairs"]				= sanitize_inlist(features["tajaran_hairs"], GLOB.tajaran_hairs_list, "plain")
+	features["tajaran_ears_markings"]		= sanitize_inlist(features["tajaran_ears_markings"], GLOB.tajaran_ears_markings_list, "None")
+	features["tajaran_head_markings"]		= sanitize_inlist(features["tajaran_head_markings"], GLOB.tajaran_head_markings_list, "None")
+	features["tajaran_nose_markings"]		= sanitize_inlist(features["tajaran_nose_markings"], GLOB.tajaran_nose_markings_list, "None")
+	features["tajaran_facial_hairs"]			= sanitize_inlist(features["tajaran_facial_hairs"], GLOB.tajaran_facial_hairs_list, "None")
+	features["tajaran_chest_markings"]		= sanitize_inlist(features["tajaran_chest_markings"], GLOB.tajaran_chest_markings_list, "None")
+	features["tajaran_body_markings"]		= sanitize_inlist(features["tajaran_body_markings"], GLOB.tajaran_body_markings_list, "None")
+	features["tajaran_tail"]				= sanitize_inlist(features["tajaran_tail"], GLOB.tajaran_tail_list, "Long")
+
 	all_quirks = SANITIZE_LIST(all_quirks)
 
 //Make sure all quirks are compatible
@@ -581,6 +616,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["feature_grad_color"]			, features["grad_color"])
 	WRITE_FILE(S["eye_color"]					, eye_color)
 	WRITE_FILE(S["skin_tone"]					, skin_tone)
+	WRITE_FILE(S["skin_tone_nose"]				, skin_tone_nose)
 	WRITE_FILE(S["hairstyle_name"]				, hairstyle)
 	WRITE_FILE(S["facial_style_name"]			, facial_hairstyle)
 	WRITE_FILE(S["feature_grad_style"]			, features["grad_style"])
@@ -633,6 +669,16 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["feature_elzu_horns"]			, features["elzu_horns"])
 	WRITE_FILE(S["feature_tail_elzu"]			, features["tail_elzu"])
 	WRITE_FILE(S["fbp"]							, fbp)
+
+	WRITE_FILE(S["feature_tajaran_ears"]				, features["tajaran_ears"])
+	WRITE_FILE(S["feature_tajaran_hairs"]				, features["tajaran_hairs"])
+	WRITE_FILE(S["feature_tajaran_ears_markings"]		, features["tajaran_ears_markings"])
+	WRITE_FILE(S["feature_tajaran_head_markings"]		, features["tajaran_head_markings"])
+	WRITE_FILE(S["feature_tajaran_nose_markings"]		, features["tajaran_nose_markings"])
+	WRITE_FILE(S["feature_tajaran_facial_hairs"]		, features["tajaran_facial_hairs"])
+	WRITE_FILE(S["feature_tajaran_chest_markings"]		, features["tajaran_chest_markings"])
+	WRITE_FILE(S["feature_tajaran_body_markings"]		, features["tajaran_body_markings"])
+	WRITE_FILE(S["feature_tajaran_tail"]				, features["tajaran_tail"])
 
 	//Flavor text
 	WRITE_FILE(S["feature_flavor_text"]			, features["flavor_text"])

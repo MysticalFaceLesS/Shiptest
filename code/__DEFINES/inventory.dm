@@ -78,6 +78,8 @@
 #define HAND_RIGHT (1<<10)
 #define HANDS (HAND_LEFT | HAND_RIGHT)
 #define NECK (1<<11)
+#define EXTERNAL_EARS (1<<12)
+#define TAIL (1<<13)
 #define FULL_BODY (~0)
 
 //defines for the index of hands
@@ -95,6 +97,7 @@
 #define DIGITIGRADE_VARIATION_NO_NEW_ICON (1<<2)
 #define VOX_VARIATION (1<<3)
 #define KEPORI_VARIATION (1<<4)
+#define TAJARAN_VARIATION (1<<5)
 
 #define NOT_DIGITIGRADE 0
 #define FULL_DIGITIGRADE 1

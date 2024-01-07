@@ -155,6 +155,26 @@
 	id = "lprosthetic_r_leg"
 	build_path = /obj/item/bodypart/leg/right/robot/surplus/lizard
 
+/*/datum/design/prosthetic/l_arm/tajaran
+	name = "Surplus Prosthetic tajaran Left Arm"
+	id = "lprosthetic_l_arm"
+	build_path = /obj/item/bodypart/l_arm/robot/surplus/tajaran
+
+/datum/design/prosthetic/r_arm/tajaran
+	name = "Surplus Prosthetic tajaran Right Arm"
+	id = "lprosthetic_r_arm"
+	build_path = /obj/item/bodypart/r_arm/robot/surplus/tajaran
+
+/datum/design/prosthetic/l_leg/tajaran
+	name = "Surplus Prosthetic tajaran Left Leg"
+	id = "lprosthetic_l_leg"
+	build_path = /obj/item/bodypart/leg/left/robot/surplus/tajaran
+
+/datum/design/prosthetic/r_leg/tajaran
+	name = "Surplus Prosthetic tajaran Right Leg"
+	id = "lprosthetic_r_leg"
+	build_path = /obj/item/bodypart/leg/right/robot/surplus/tajaran*/
+
 //Ripley
 /datum/design/ripley_chassis
 	name = "Exosuit Chassis (APLU \"Ripley\")"

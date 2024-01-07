@@ -66,6 +66,10 @@ const TARGET_SPECIES_LIST = [
     name: 'Kepori',
     value: 'kepori',
   },
+  {
+    name: 'Tajaran',
+    value: 'tajaran',
+  },
 ];
 
 export const ScannerGate = (props, context) => {

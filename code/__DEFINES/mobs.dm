@@ -101,6 +101,7 @@
 #define SPECIES_ZOMBIE "zombie"
 #define SPECIES_GOOFZOMBIE "krokodil_zombie"
 #define SPECIES_XENOMORPH "xenomorph"
+#define SPECIES_TAJARAN "tajaran"
 
 #define DIGITIGRADE_NEVER 0
 #define DIGITIGRADE_OPTIONAL 1
@@ -123,6 +124,7 @@
 #define FLAG_LIZARD (1<<5)
 #define FLAG_FLY (1<<6)
 #define FLAG_MONKEY (1<<7)
+#define FLAG_TAJARAN (1<<8)
 
 //Bodytype defines for how things can be worn.
 #define BODYTYPE_ORGANIC (1<<0)
@@ -132,6 +134,7 @@
 #define BODYTYPE_DIGITIGRADE (1<<4) //Cancer
 #define BODYTYPE_KEPORI (1<<5) //Just Kepori
 #define BODYTYPE_VOX (1<<6) //Big Vox
+#define BODYTYPE_TAJARAN (1<<7) //Cute Tajaran
 
 // Health/damage defines
 #define MAX_LIVING_HEALTH 100

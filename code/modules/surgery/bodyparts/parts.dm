@@ -444,3 +444,145 @@
 	can_be_disabled = FALSE
 	max_damage = 5000
 	animal_origin = DEVIL_BODYPART
+
+
+/* до лучших времён
+/obj/item/bodypart/tail
+	name = "tail"
+	desc = "tail"
+	//icon =
+	//husk_icon	??
+	//husk_type	??
+	//static_icon =
+	//icon_state =
+	max_damage = 30
+	body_zone = BODY_ZONE_TAIL
+	body_part = TAIL
+	max_stamina_damage = 20		//а скока нада ???
+	can_be_disabled = TRUE
+	plaintext_zone = "tail"
+	bone_break_threshold = 25
+
+/*/obj/item/bodypart/tail/examine(mob/user)
+	. = ..()
+	if(brute_dam > DAMAGE_PRECISION)
+		. += "<span class='warning'>This tail has [brute_dam > 15 ? "severe" : "minor"] bruising.</span>"
+	if(burn_dam > DAMAGE_PRECISION)
+		. += "<span class='warning'>This tail has [burn_dam > 15 ? "severe" : "minor"] burns.</span>"*/
+
+/obj/item/bodypart/tail/tajaran
+	name = "tajaran tail"
+	desc = "tajaran tail"
+	limb_id = SPECIES_TAJARAN
+var/timer_for_bone_in_the_tail = null
+
+/obj/item/bodypart/tail/tajaran/set_disabled(new_disabled) //если отрубили/оторвали/украли хвост
+	. = ..()					//////////////////////////////////////////////////////////////////////////////
+	if(isnull(.) || !owner)		//																			//
+		return					//   ЧЁРНАЯ МАГИЯ, КОТОРАЯ СМОТРИТ НА КОД РОДИТЕЛЯ И ГОВОРИТ "всё гуд, сэр"	//
+	if(!.)						//																			//
+		if(bodypart_disabled)	//////////////////////////////////////////////////////////////////////////////
+			owner.add_movespeed_modifier(/datum/movespeed_modifier/disabled_tail)							//насылаем на таяранскую жопу дебафы: толстую жопу и замедление на 30%
+			Loop_Dizzy_and_etc(50)																			//штормизм/шатунизм/страшное похмелье, которое будет продолжаться очень много лет
+			SEND_SIGNAL(owner, COMSIG_ADD_MOOD_EVENT, "dismembed_tail", /datum/mood_event/dismembed_tail)	//проклятье настроения в виде "ПЕЙН, У МЕНЯ НЕТ ХВОСТА!!"
+			if(owner.stat < UNCONSCIOUS)
+				to_chat(owner, "<span class='userdanger'>YOUR TAIL!!!! ITS GONE!!!!p</span>")
+	else if(!bodypart_disabled)														//если хвост решил вернуться
+		owner.remove_movespeed_modifier(/datum/movespeed_modifier/disabled_tail)	//убираем дебаф толстой и неуклюжей жопы
+		SEND_SIGNAL(owner, COMSIG_CLEAR_MOOD_EVENT, "dismembed_tail")				//убираем проклятье настроения
+
+/obj/item/bodypart/tail/tajaran/break_bone()	//если сломался хвост
+	. = ..()				//////////////////////////////
+	if(isnull(.) || !owner)	//	всё таже чёрная магия	//
+		return				//////////////////////////////
+
+	if(bone_status == BONE_FLAG_BROKEN)		//если хвост сломан
+		var/duration = pick(200,300,350,400,450,500,550,600,700) //выбираем время ("200" = 20 SECONDS)
+		timer_for_bone_in_the_tail = addtimer(CALLBACK(owner, PROC_REF(shake_and_pain)), duration, TIMER_STOPPABLE | TIMER_LOOP)//и насылаем проклятье плаксы
+		Loop_Dizzy_and_etc(10)				//а также похмелье на 10 иттераций по 5-15 секунд
+	else
+		deltimer(timer_for_bone_in_the_tail)
+
+/obj/item/bodypart/tail/tajaran/proc/shake_and_pain()
+	owner.emote(pick("scream", "cry")) //плачем/орём, от того что хвост сломан
+	owner.Knockdown(10) //падаем от дизбаланса (вроде как, число в скобках не влияет ни на что, а если и влияет, то это легко обходится. должна быть 1 секунда)
+	owner.adjustStaminaLoss(pick(5,10,15)) //хз скока нада
+
+/obj/item/bodypart/tail/tajaran/proc/Loop_Dizzy_and_etc(iteration = 0, current_iteration = 0)	//страшное похмелье
+	owner.Dizzy(pick(1,2,3,4,5,7,10))		//с какой силой нас будет качать, от 1 до 10
+	owner.Knockdown(pick(0,0,0,1))			//ой, упали! или не упали... шанс падения равен 25%
+	if(current_iteration == iteration)		//проверка иттераций
+		return								//если текущая иттерация равна общей сумме, то всо, иттераций больше не будет
+	else									//а если не равна
+		iteration++							//увеличиваем число иттераций на 1
+		var/duration = pick(50,100,150)		//выбираем время, через какое время вернётся похмелье
+		addtimer(CALLBACK(owner, PROC_REF(Loop_Dizzy_and_etc),iteration, current_iteration), duration) //засекаем время и повторяем
+
+
+/obj/item/bodypart/tail/tajaran/proc/switch_dismembed_tail_mood()									//АХТУНГ! ГОВНОКОД! переключает настроение
+	SEND_SIGNAL(owner, COMSIG_CLEAR_MOOD_EVENT, "dismembed_tail")									//удаляет старое
+	SEND_SIGNAL(owner, COMSIG_ADD_MOOD_EVENT, "dismembed_tail", /datum/mood_event/dismembed_tail2)	//и добавляет новое
+
+/datum/movespeed_modifier/disabled_tail		//проклятье толстой жопы и безхвостатости
+	multiplicative_slowdown = 0.3			//замедляет, ОЧЕНЬ УЖ НАДЕЮСЬ, на 30% процентов
+
+
+//настроение и ко
+
+/datum/mood_event/dismembed_tail
+	description = "<span class='boldwarning'>AHH! IT WAS MY TAIL!</span>\n"
+	mood_change = -10
+	timeout = 30 MINUTES
+	var/timer_for_change_mood_event
+
+/datum/mood_event/dismembed_tail/add_effects()	//добавляет таймер, после которого сменится настроение на "бездебафное"
+	timer_for_change_mood_event = addtimer(CALLBACK(owner, TYPE_PROC_REF(/obj/item/bodypart/tail/tajaran, switch_dismembed_tail_mood)), timeout)
+
+/datum/mood_event/dismembed_tail/remove_effects()	//если вдруг, хвост вернули, то убираем таймер
+	deltimer(timer_for_change_mood_event)
+
+/datum/mood_event/dismembed_tail2					//настроение без дебафов
+	description = "my tail...\n"
+	timeout = 30 MINUTES
+
+/datum/mood_event/broken_tail
+	description = "<span class='boldwarning'>OUCH!! My tail is REALLY HURT!!</span>\n"
+	mood_change = -5
+
+/obj/item/bodypart/external_ears
+	name = "External ears"
+	desc = "WTF? Where a u taked it from?"
+	//icon =
+	//husk_icon	??
+	//husk_type	??
+	//static_icon =
+	//icon_state =
+	icon = 'icons/mob/species/tajaran/tajaran_bodyparts.dmi'
+	icon_state = "ears"
+
+	max_damage = 30
+	body_zone = BODY_ZONE_EXTERNAL_EARS
+	body_part = EXTERNAL_EARS
+	max_stamina_damage = 20		//а скока нада ???
+	can_be_disabled = TRUE
+	plaintext_zone = "external_ears"
+	bone_break_threshold = 25
+
+/obj/item/bodypart/external_ears/set_disabled(new_disabled)
+	. = ..()
+	if(isnull(.) || !owner)
+		return
+
+	if(!.)
+		if(bodypart_disabled)
+			if(owner.stat < UNCONSCIOUS)
+				to_chat(owner, "<span class='userdanger'>you feel like your ears is dislimed!!!!</span>")
+	else if(!bodypart_disabled)
+		return
+
+/obj/item/bodypart/external_ears/tajaran
+	name = "tajaran ears"
+	desc = "tajaran ears"
+	limb_id = SPECIES_TAJARAN
+	icon = 'icons/mob/species/tajaran/tajaran_bodyparts.dmi'
+	icon_state = "tajaran_ears"*/

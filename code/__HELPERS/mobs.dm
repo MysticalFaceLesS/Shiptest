@@ -92,6 +92,27 @@
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/elzu_horns, GLOB.elzu_horns_list)
 	if(!GLOB.tails_list_elzu.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/elzu, GLOB.tails_list_elzu)
+	if(!GLOB.tajaran_chest_markings_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_chest_markings, GLOB.tajaran_chest_markings_list)
+	if(!GLOB.tajaran_body_markings_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_body_markings, GLOB.tajaran_body_markings_list)
+	if(!GLOB.tajaran_facial_hairs_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_facial_hairs, GLOB.tajaran_facial_hairs_list)
+	if(!GLOB.tajaran_nose_markings_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_nose_markings, GLOB.tajaran_nose_markings_list)
+	if(!GLOB.tajaran_ears_markings_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_ears_markings, GLOB.tajaran_ears_markings_list)
+	if(!GLOB.tajaran_head_markings_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_head_markings, GLOB.tajaran_head_markings_list)
+	if(!GLOB.tajaran_tail_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/tajaran, GLOB.tajaran_tail_list)
+	if(!GLOB.tajaran_animated_tail_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_tail_animated, GLOB.tajaran_animated_tail_list)
+	if(!GLOB.tajaran_hairs_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_hairs, GLOB.tajaran_hairs_list)
+	if(!GLOB.tajaran_ears_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_ears, GLOB.tajaran_ears_list)
+
 	//For now we will always return none for tail_human and ears.
 	//if you don't keep this alphabetised I'm going to personally steal your shins and sell them online
 	return list(
@@ -127,8 +148,17 @@
 		"vox_head_quills" = pick(GLOB.vox_head_quills_list),
 		"vox_neck_quills" = pick(GLOB.vox_neck_quills_list),
 		"wings" = "None",
+		"tajaran_ears" = pick(GLOB.tajaran_ears_list),
+		"tajaran_hairs" = pick(GLOB.tajaran_hairs_list),
+		"tajaran_ears_markings" = pick(GLOB.tajaran_ears_markings_list),
+		"tajaran_head_markings" = pick(GLOB.tajaran_head_markings_list),
+		"tajaran_facial_hairs" = pick(GLOB.tajaran_facial_hairs_list),
+		"tajaran_nose_markings" = pick(GLOB.tajaran_nose_markings_list),
+		"tajaran_chest_markings" = pick(GLOB.tajaran_chest_markings_list),
+		"tajaran_body_markings" = pick(GLOB.tajaran_body_markings_list),
+		"tajaran_tail" = pick(GLOB.tajaran_tail_list),
 	)
-
+/*
 /proc/random_hairstyle(gender)
 	switch(gender)
 		if(MALE)
@@ -146,7 +176,7 @@
 			return pick(GLOB.facial_hairstyles_female_list)
 		else
 			return pick(GLOB.facial_hairstyles_list)
-
+*/
 /proc/random_unique_name(gender, attempts_to_find_unique_name=10)
 	for(var/i in 1 to attempts_to_find_unique_name)
 		if(gender==FEMALE)
@@ -192,6 +222,13 @@
 		if(!findname(.))
 			break
 
+/proc/random_unique_tajaran_name(gender, attempts_to_find_unique_name=10)
+	for(var/i in 1 to attempts_to_find_unique_name)
+		. = capitalize(tajaran_name(gender))
+
+		if(!findname(.))
+			break
+
 /proc/random_skin_tone()
 	return pick(GLOB.skin_tones)
 
@@ -215,6 +252,37 @@ GLOBAL_LIST_INIT(skin_tones, sortList(list(
 		return pick(GLOB.ipc_preference_adjectives)
 	else
 		return pick(GLOB.preference_adjectives)
+
+/proc/random_skin_tone_nose()
+	return pick(GLOB.skin_tones_nose)
+
+GLOBAL_LIST_INIT(skin_tones_nose, sortList(list(
+	"beige",
+	"pink",
+	"grey",
+	"black"
+	)))
+
+/proc/random_skin_tone_tajaran()
+	return pick(GLOB.skin_tones_tajaran)
+
+GLOBAL_LIST_INIT(skin_tones_tajaran, sortList(list(
+		"Beaver Brown",
+		"Kochiba",
+		"Taupe",
+		"Blue-Grey",
+		"Dark Gray",
+		"Chocolate",
+		"Black",
+		"Orange",
+		"Cinnamon",
+		"Ruddy",
+		"Cream",
+		"White",
+		"Ivory",
+		"Wheat",
+		"Silver"
+	)))
 
 GLOBAL_LIST_EMPTY(species_list)
 

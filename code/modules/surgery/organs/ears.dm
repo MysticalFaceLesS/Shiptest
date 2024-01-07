@@ -229,3 +229,25 @@
 			owner.Dizzy(15)
 			owner.Knockdown(100)
 			to_chat(owner, "<span class='warning'>Your robotic ears buzz.</span>")
+
+/obj/item/organ/ears/tajaran
+	name = "tajaran ears"
+	icon = 'icons/obj/clothing/hats.dmi'	//пока такая хурма, но нужно будет сделать уши отдельно от головы и втыкнуть в какой-либо файл(хоть в тот же таяран_бодипартс)
+	icon_state = "kitty"					//когда будут уши в каком-то файле, тогда и поменяешь
+	damage_multiplier = 2
+
+/obj/item/organ/ears/tajaran/Insert(mob/living/carbon/human/ear_owner, special = 0, drop_if_replaced = TRUE)
+	..()
+	if(istype(ear_owner))
+		color = ear_owner.hair_color
+		ear_owner.dna.species.mutant_bodyparts |= "ears"
+		ear_owner.dna.features["ears"] = "tajaran"
+		ear_owner.update_body()
+
+/obj/item/organ/ears/tajaran/Remove(mob/living/carbon/human/ear_owner,  special = 0)
+	..()
+	if(istype(ear_owner))
+		color = ear_owner.hair_color
+		ear_owner.dna.features["ears"] = "None"
+		ear_owner.dna.species.mutant_bodyparts -= "ears"
+		ear_owner.update_body()

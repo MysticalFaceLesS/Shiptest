@@ -52,6 +52,8 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	var/blush_color = COLOR_BLUSH_PINK
 	///Does the species use skintones or not? As of now only used by humans.
 	var/use_skintones = FALSE
+	var/use_skintonesnose = FALSE
+	var/use_skintonetajaran = FALSE
 	///If your race bleeds something other than bog standard blood, change this to reagent id. For example, ethereals bleed liquid electricity.
 	var/exotic_blood = ""
 	///If your race uses a non standard bloodtype (A+, O-, AB-, etc). For example, lizards have L type blood.
@@ -245,9 +247,63 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	///For custom overrides for species ass images
 	var/icon/ass_image
 
+	//some shitcode for big shitcode
+	//var/obj/item/bodypart/tail/species_tail = null
+	//var/obj/item/bodypart/external_ears/species_external_ears = null
+	//var/obj/item/bodypart/tail/species_robotic_tail = null
+	//var/obj/item/bodypart/external_ears/species_robotic_external_ears = null
 ///////////
 // PROCS //
 ///////////
+
+//some BIG shitcoding
+/datum/species/proc/get_GLOB_hair(index = null, gender = null)
+	switch(gender)
+		if(MALE)
+			if(index)
+				return GLOB.hairstyles_male_list[index]
+			return GLOB.hairstyles_male_list
+		if(FEMALE)
+			if(index)
+				return GLOB.hairstyles_female_list[index]
+			return GLOB.hairstyles_female_list
+		else
+			if(index)
+				return GLOB.hairstyles_list[index]
+			return GLOB.hairstyles_list
+
+/datum/species/proc/get_GLOB_facial_hair(index = null, gender = null)
+	switch(gender)
+		if(MALE)
+			if(index)
+				return  GLOB.facial_hairstyles_male_list[index]
+			return GLOB.facial_hairstyles_male_list
+		if(FEMALE)
+			if(index)
+				return GLOB.facial_hairstyles_female_list[index]
+			return GLOB.facial_hairstyles_female_list
+		else
+			if(index)
+				return GLOB.facial_hairstyles_list[index]
+			return GLOB.facial_hairstyles_list
+
+/datum/species/proc/random_hairstyle(gender)
+	switch(gender)
+		if(MALE)
+			return pick(GLOB.hairstyles_male_list)
+		if(FEMALE)
+			return pick(GLOB.hairstyles_female_list)
+		else
+			return pick(GLOB.hairstyles_list)
+
+/datum/species/proc/random_facial_hairstyle(gender)
+	switch(gender)
+		if(MALE)
+			return pick(GLOB.facial_hairstyles_male_list)
+		if(FEMALE)
+			return pick(GLOB.facial_hairstyles_female_list)
+		else
+			return pick(GLOB.facial_hairstyles_list)
 
 
 /datum/species/New()
@@ -546,7 +602,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
  * * H - Human, whoever we're handling the hair for
  * * forced_colour - The colour of hair we're forcing on this human. Leave null to not change. Mind the british spelling!
  */
-/datum/species/proc/handle_hair(mob/living/carbon/human/H, forced_colour)
+/datum/species/proc/handle_hair(mob/living/carbon/human/H, forced_colour, icon/custom_hairs_extensions = 'icons/mob/hair_extensions.dmi', icon/custom_facial_hair_extensions = 'icons/mob/facialhair_extensions.dmi', icon/custom_hair = 'icons/mob/human_face.dmi')
 	H.remove_overlay(HAIR_LAYER)
 	var/obj/item/bodypart/head/HD = H.get_bodypart(BODY_ZONE_HEAD)
 	if(!HD) //Decapitated
@@ -575,11 +631,27 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		if(I.flags_inv & HIDEFACIALHAIR)
 			facialhair_hidden = TRUE
 
-	if(H.facial_hairstyle && (FACEHAIR in species_traits) && !facialhair_hidden)
-		S = GLOB.facial_hairstyles_list[H.facial_hairstyle]
+	if(H.facial_hairstyle && (FACEHAIR in species_traits) && (!facialhair_hidden || dynamic_fhair_suffix))
+		S = get_GLOB_facial_hair(H.facial_hairstyle)
 		if(S)
 
-			var/mutable_appearance/facial_overlay = mutable_appearance(S.icon, S.icon_state, -HAIR_LAYER)
+			//List of all valid dynamic_fhair_suffixes
+			var/static/list/fextensions
+			if(!fextensions)
+				var/icon/fhair_extensions = icon(custom_facial_hair_extensions)
+				fextensions = list()
+				for(var/s in fhair_extensions.IconStates(1))
+					fextensions[s] = TRUE
+				qdel(fhair_extensions)
+
+			//Is hair+dynamic_fhair_suffix a valid iconstate?
+			var/fhair_state = S.icon_state
+			var/fhair_file = S.icon
+			if(fextensions[fhair_state+dynamic_fhair_suffix])
+				fhair_state += dynamic_fhair_suffix
+				fhair_file = custom_facial_hair_extensions
+
+			var/mutable_appearance/facial_overlay = mutable_appearance(fhair_file, fhair_state, -HAIR_LAYER)
 
 			if(!forced_colour)
 				if(hair_color)
@@ -613,15 +685,28 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		var/mutable_appearance/gradient_overlay = mutable_appearance(layer = -HAIR_LAYER)
 		if(!hair_hidden && !H.getorgan(/obj/item/organ/brain)) //Applies the debrained overlay if there is no brain
 			if(!(NOBLOOD in species_traits))
-				hair_overlay.icon = 'icons/mob/human_face.dmi'
+				hair_overlay.icon = custom_hair
 				hair_overlay.icon_state = "debrained"
 
 		else if(H.hairstyle && (HAIR in species_traits))
-			S = GLOB.hairstyles_list[H.hairstyle]
+			S = get_GLOB_hair(H.hairstyle)
 			if(S)
 
+				//List of all valid dynamic_hair_suffixes
+				var/static/list/extensions
+				if(!extensions)
+					var/icon/hair_extensions = icon(custom_hairs_extensions) //hehe
+					extensions = list()
+					for(var/s in hair_extensions.IconStates(1))
+						extensions[s] = TRUE
+					qdel(hair_extensions)
+
+				//Is hair+dynamic_hair_suffix a valid iconstate?
 				var/hair_state = S.icon_state
 				var/hair_file = S.icon
+				if(extensions[hair_state+dynamic_hair_suffix])
+					hair_state += dynamic_hair_suffix
+					hair_file = custom_hairs_extensions
 
 				hair_overlay.icon = hair_file
 				hair_overlay.icon_state = hair_state
@@ -853,6 +938,42 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		if(!H.dna.features["vox_neck_quills"] || H.dna.features["vox_neck_quills"] == "None")
 			bodyparts_to_add -= "vox_neck_quills"
 
+	if("tajaran_nose_markings" in mutant_bodyparts)
+		if(!H.dna.features["tajaran_nose_markings"] || H.dna.features["tajaran_nose_markings"] == "None" || H.head && (H.head.flags_inv & HIDEFACE) || (H.wear_mask && (H.wear_mask.flags_inv & HIDEFACE)) || !HD) // || HD.status == BODYTYPE_ROBOTIC
+			bodyparts_to_add -= "tajaran_nose_markings"
+
+	if("tajaran_facial_hairs" in mutant_bodyparts)
+		if(!H.dna.features["tajaran_facial_hairs"] || H.dna.features["tajaran_facial_hairs"] == "None" || H.head && (H.head.flags_inv & HIDEFACE) || (H.wear_mask && (H.wear_mask.flags_inv & HIDEFACE)) || !HD) // || HD.status == BODYTYPE_ROBOTIC
+			bodyparts_to_add -= "tajaran_facial_hairs"
+
+	if("tajaran_ears_markings" in mutant_bodyparts)
+		if(!H.dna.features["tajaran_ears_markings"] || H.dna.features["tajaran_ears_markings"] == "None" || H.head && (H.head.flags_inv & HIDEFACE) || (H.wear_mask && (H.wear_mask.flags_inv & HIDEFACE)) || !HD) // || HD.status == BODYTYPE_ROBOTIC
+			bodyparts_to_add -= "tajaran_ears_markings"
+
+	if("tajaran_head_markings" in mutant_bodyparts)
+		if(!H.dna.features["tajaran_head_markings"] || H.dna.features["tajaran_head_markings"] == "None" || H.head && (H.head.flags_inv & HIDEFACE) || (H.wear_mask && (H.wear_mask.flags_inv & HIDEFACE)) || !HD) // || HD.status == BODYTYPE_ROBOTIC
+			bodyparts_to_add -= "tajaran_head_markings"
+
+	if("tajaran_chest_markings" in mutant_bodyparts)
+		if(!H.dna.features["tajaran_chest_markings"] || H.dna.features["tajaran_chest_markings"] == "None" || H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
+			bodyparts_to_add -= "tajaran_chest_markings"
+
+	if("tajaran_body_markings" in mutant_bodyparts)
+		if(!H.dna.features["tajaran_body_markings"] || H.dna.features["tajaran_body_markings"] == "None" || H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
+			bodyparts_to_add -= "tajaran_body_markings"
+
+	if("tajaran_hairs" in mutant_bodyparts)
+		if(!H.dna.features["tajaran_hairs"] || H.dna.features["tajaran_hairs"] == "plain" || (H.head && (H.head.flags_inv & HIDEHAIR)) || (H.wear_mask && (H.wear_mask.flags_inv & HIDEHAIR)) || !HD)
+			bodyparts_to_add -= "tajaran_hairs"
+
+	if("tajaran_tail" in mutant_bodyparts)
+		if(!H.dna.features["tajaran_tail"] || H.dna.features["tajaran_tail"] == "None" || H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
+			bodyparts_to_add -= "tajaran_tail"
+
+	if("tajaran_ears" in mutant_bodyparts)
+		if(!H.dna.features["tajaran_ears"] || H.dna.features["tajaran_ears"] == "None" || (H.head && (H.head.flags_inv & HIDEHAIR)))
+			bodyparts_to_add -= "tajaran_ears"
+
 	////PUT ALL YOUR WEIRD ASS REAL-LIMB HANDLING HERE
 
 	///Digi handling
@@ -953,6 +1074,26 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 					S = GLOB.tails_list_elzu[H.dna.features["tail_elzu"]]
 				if("waggingtail_elzu")
 					S = GLOB.animated_tails_list_elzu[H.dna.features["tail_elzu"]]
+				if("tajaran_ears")
+					S = GLOB.tajaran_ears_list[H.dna.features["tajaran_ears"]]
+				if("tajaran_hairs")
+					S = GLOB.tajaran_hairs_list[H.dna.features["tajaran_hairs"]]
+				if("tajaran_ears_markings")
+					S = GLOB.tajaran_ears_markings_list[H.dna.features["tajaran_ears_markings"]]
+				if("tajaran_head_markings")
+					S = GLOB.tajaran_head_markings_list[H.dna.features["tajaran_head_markings"]]
+				if("tajaran_nose_markings")
+					S = GLOB.tajaran_nose_markings_list[H.dna.features["tajaran_nose_markings"]]
+				if("tajaran_facial_hairs")
+					S = GLOB.tajaran_facial_hairs_list[H.dna.features["tajaran_facial_hairs"]]
+				if("tajaran_chest_markings")
+					S = GLOB.tajaran_chest_markings_list[H.dna.features["tajaran_chest_markings"]]
+				if("tajaran_body_markings")
+					S = GLOB.tajaran_body_markings_list[H.dna.features["tajaran_body_markings"]]
+				if("tajaran_tail")
+					S = GLOB.tajaran_tail_list[H.dna.features["tajaran_tail"]]
+				if("waggingtajaran_tail")
+					S = GLOB.tajaran_animated_tail_list[H.dna.features["tajaran_tail"]]
 			if(!S || S.icon_state == "none")
 				continue
 
@@ -960,9 +1101,9 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 
 			//A little rename so we don't have to use tail_lizard, tail_human, or tail_elzu when naming the sprites.
 			accessory_overlay.alpha = S.image_alpha
-			if(bodypart == "tail_lizard" || bodypart == "tail_human" || bodypart == "tail_elzu")
+			if(bodypart == "tail_lizard" || bodypart == "tail_human" || bodypart == "tail_elzu" || bodypart == "tajaran_tail")
 				bodypart = "tail"
-			else if(bodypart == "waggingtail_lizard" || bodypart == "waggingtail_human" || bodypart == "waggingtail_elzu")
+			else if(bodypart == "waggingtail_lizard" || bodypart == "waggingtail_human" || bodypart == "waggingtail_elzu" || bodypart == "waggingtajaran_tail")
 				bodypart = "waggingtail"
 
 			var/used_color_src = S.color_src
@@ -995,6 +1136,11 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 							accessory_overlay.color = "#[H.dna.features["mcolor2"]]"
 						if(SKINCOLORS)
 							accessory_overlay.color = "#[(skintone2hex(H.skin_tone))]"
+						if(SKINNOSECOLORS)
+							accessory_overlay.color = "#[(skintonenose2hex(H.skin_tone_nose))]"
+						if(SKINTAJARANCOLORS)
+							accessory_overlay.color = "#[(skintonetajaran2hex(H.skin_tone_tajaran))]"
+
 
 						if(HAIR)
 							if(hair_color == "mutcolor")
@@ -2060,7 +2206,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	return (locate(/obj/item/organ/tail) in H.internal_organs)
 
 /datum/species/proc/is_wagging_tail(mob/living/carbon/human/H)
-	return ("waggingtail_human" in mutant_bodyparts) || ("waggingtail_lizard" in mutant_bodyparts) || ("waggingtail_elzu" in mutant_bodyparts)
+	return ("waggingtail_human" in mutant_bodyparts) || ("waggingtail_lizard" in mutant_bodyparts) || ("waggingtail_elzu" in mutant_bodyparts) || ("waggingtajaran_tail" in mutant_bodyparts)
 
 /datum/species/proc/start_wagging_tail(mob/living/carbon/human/H)
 	if("tail_human" in mutant_bodyparts)
@@ -2076,6 +2222,10 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	else if("tail_elzu" in mutant_bodyparts)
 		mutant_bodyparts -= "tail_elzu"
 		mutant_bodyparts |= "waggingtail_elzu"
+
+	else if("tajaran_tail" in mutant_bodyparts)
+		mutant_bodyparts -= "tajaran_tail"
+		mutant_bodyparts |= "waggingtajaran_tail"
 
 	H.update_body()
 
@@ -2093,6 +2243,10 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	else if("waggingtail_elzu" in mutant_bodyparts)
 		mutant_bodyparts -= "waggingtail_elzu"
 		mutant_bodyparts |= "tail_elzu"
+
+	else if("waggingtajaran_tail" in mutant_bodyparts)
+		mutant_bodyparts -= "waggingtajaran_tail"
+		mutant_bodyparts |= "tajaran_tail"
 
 	H.update_body()
 

@@ -287,6 +287,10 @@
 			else if(T.dna.species.is_wagging_tail()) // lizard tail wagging is robust and can swat away assailants!
 				defense_mod += 1
 
+		if(istajaran(T))
+			if(!T.getorganslot(ORGAN_SLOT_TAIL)) // tajaran without tails are off-balance
+				defense_mod -= 1
+
 	// OF-FENSE
 	var/mob/living/carbon/sacker = parent
 

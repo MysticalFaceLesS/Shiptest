@@ -475,7 +475,7 @@
 	name = "damage zone"
 	icon_state = "zone_sel"
 	screen_loc = ui_zonesel
-	var/overlay_icon = 'icons/hud/screen_gen.dmi'
+	var/overlay_icon = 'icons/mob/species/tajaran/hud/screen_gen.dmi'
 	var/static/list/hover_overlays_cache = list()
 	var/hovering
 
@@ -537,6 +537,13 @@
 					return BODY_ZONE_R_LEG
 				if(17 to 22)
 					return BODY_ZONE_L_LEG
+		if(7 to 13)	//tail. Разбито на 2 части потому что, в противном случае хвост "загораживает" другие зоны
+			if(icon_x in 21 to 26)
+				if(icon_y in 7 to 11)
+					return BODY_ZONE_TAIL
+			if(icon_x in 25 to 26)
+				if(icon_y in 12 to 13)
+					return BODY_ZONE_TAIL
 		if(10 to 13) //Hands and groin
 			switch(icon_x)
 				if(8 to 11)
@@ -553,7 +560,7 @@
 					return BODY_ZONE_CHEST
 				if(21 to 24)
 					return BODY_ZONE_L_ARM
-		if(23 to 30) //Head, but we need to check for eye or mouth
+		if(23 to 31) //Head, but we need to check for eye or mouth
 			if(icon_x in 12 to 20)
 				switch(icon_y)
 					if(23 to 24)
@@ -565,6 +572,11 @@
 					if(25 to 27)
 						if(icon_x in 15 to 17)
 							return BODY_ZONE_PRECISE_EYES
+					if(28 to 31)	//two ears for tajaran
+						if(icon_x in 12 to 14)
+							return BODY_ZONE_EXTERNAL_EARS
+						if(icon_x in 18 to 20)
+							return BODY_ZONE_EXTERNAL_EARS
 				return BODY_ZONE_HEAD
 
 /atom/movable/screen/zone_sel/proc/set_selected_zone(choice, mob/user)
@@ -658,6 +670,12 @@
 /atom/movable/screen/healthdoll
 	name = "health doll"
 	screen_loc = ui_healthdoll
+
+/* кукла таяранская 1 штука, многа кодить
+/atom/movable/screen/healthdoll/tajaran
+	name = "health doll"
+	screen_loc = ui_healthdoll
+*/
 
 /atom/movable/screen/healthdoll/Click()
 	if (iscarbon(usr))

@@ -81,6 +81,7 @@
 #define DNA_HAIR_COLOR_BLOCK 1
 #define DNA_FACIAL_HAIR_COLOR_BLOCK 2
 #define DNA_SKIN_TONE_BLOCK 3
+#define DNA_SKIN_TONE_NOSE_BLOCK 3
 #define DNA_EYE_COLOR_BLOCK 4
 #define DNA_GENDER_BLOCK 5
 #define DNA_FACIAL_HAIRSTYLE_BLOCK 6
@@ -134,6 +135,8 @@
 #define NO_BONES 25 //! You don't have any bones for breaking
 #define MUTCOLORS_SECONDARY 26 //! A second mutant colour for other things
 #define SKINCOLORS 27 //Human skintones
+#define SKINNOSECOLORS 28 // Tajaran skin tones nose
+#define SKINTAJARANCOLORS 29 // Tajaran skin tones body
 
 //organ slots
 #define ORGAN_SLOT_BRAIN "brain"

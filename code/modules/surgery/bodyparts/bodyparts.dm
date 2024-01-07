@@ -80,6 +80,8 @@
 
 	//Coloring and proper item icon update
 	var/skin_tone = ""
+	var/skin_tone_nose = ""
+	var/skin_tone_tajaran = ""
 	///Limbs need this information as a back-up incase they are generated outside of a carbon (limbgrower)
 	var/should_draw_greyscale = TRUE
 	var/species_color = ""
@@ -542,7 +544,7 @@
 	if(mutation_color) //I hate mutations
 		draw_color = mutation_color
 	else if(should_draw_greyscale)
-		draw_color = (species_color) || (skin_tone && skintone2hex(skin_tone))
+		draw_color = (species_color) || (skin_tone && skintone2hex(skin_tone)) || (skin_tone_nose && skintonenose2hex(skin_tone_nose)) || (skin_tone_tajaran && skintonetajaran2hex(skin_tone_tajaran))
 	else
 		draw_color = null
 
@@ -563,6 +565,11 @@
 			skin_tone = H.skin_tone
 		else
 			skin_tone = ""
+
+		if(S.use_skintonetajaran)
+			skin_tone_tajaran = H.skin_tone_tajaran
+		else
+			skin_tone_tajaran = ""
 
 		use_damage_color = S.use_damage_color
 		if(((MUTCOLORS in S.species_traits) || (DYNCOLORS in S.species_traits)) && uses_mutcolor) //Ethereal code. Motherfuckers.
@@ -586,7 +593,7 @@
 
 		draw_color = mutation_color
 		if(should_draw_greyscale) //Should the limb be colored?
-			draw_color ||= (species_color) || (skin_tone && skintone2hex(skin_tone))
+			draw_color ||= (species_color) || (skin_tone && skintone2hex(skin_tone)) || (skin_tone_nose && skintonenose2hex(skin_tone_nose)) || (skin_tone_tajaran && skintonetajaran2hex(skin_tone_tajaran))
 
 		dmg_overlay_type = S.damage_overlay_type
 
@@ -683,7 +690,7 @@
 
 		draw_color = mutation_color
 		if(should_draw_greyscale) //Should the limb be colored outside of a forced color?
-			draw_color ||= (species_color) || (skin_tone && skintone2hex(skin_tone))
+			draw_color ||= (species_color) || (skin_tone && skintone2hex(skin_tone)) || (skin_tone_nose && skintonenose2hex(skin_tone_nose)) || (skin_tone_tajaran && skintonetajaran2hex(skin_tone_tajaran))
 
 		if(draw_color)
 			limb.color = "#[draw_color]"

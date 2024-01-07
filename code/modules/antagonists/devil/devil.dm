@@ -37,6 +37,7 @@ GLOBAL_LIST_INIT(lawlorify, list (
 			BAN_AVOIDWATER = "The devil seems to have some sort of aversion to water, though it does not appear to harm him.",
 			BAN_STRIKEUNCONSCIOUS = "This devil only shows interest in those who are awake.",
 			BAN_HURTlizard = "This devil will not strike a lizardman first.",
+			BAN_HURTTAJARAN = "This devil will not strike a tajaran first.",
 			BAN_HURTANIMAL = "This devil avoids hurting animals.",
 			BANISH_WATER = "To banish the devil, you must infuse its body with holy water.",
 			BANISH_COFFIN = "This devil will return to life if its remains are not placed within a coffin.",
@@ -61,6 +62,7 @@ GLOBAL_LIST_INIT(lawlorify, list (
 			BAN_AVOIDWATER = "You must never willingly touch a wet surface.",
 			BAN_STRIKEUNCONSCIOUS = "You must never strike an unconscious person.",
 			BAN_HURTlizard = "You must never harm a lizardman outside of self defense.",
+			BAN_HURTTAJARAN = "You must never harm a tajaran outside of self defense.",
 			BAN_HURTANIMAL = "You must never harm a non-sentient creature or robot outside of self defense.",
 			BANE_SILVER = "Silver, in all of its forms shall be your downfall.",
 			BANE_SALT = "Salt will disrupt your magical abilities.",
@@ -169,7 +171,7 @@ GLOBAL_LIST_INIT(devil_suffix, list(" the Red", " the Soulless", " the Master", 
 	return pick(OBLIGATION_FOOD, OBLIGATION_FIDDLE, OBLIGATION_DANCEOFF, OBLIGATION_GREET, OBLIGATION_PRESENCEKNOWN, OBLIGATION_SAYNAME, OBLIGATION_ANNOUNCEKILL, OBLIGATION_ANSWERTONAME)
 
 /proc/randomdevilban()
-	return pick(BAN_HURTWOMAN, BAN_CHAPEL, BAN_HURTPRIEST, BAN_AVOIDWATER, BAN_STRIKEUNCONSCIOUS, BAN_HURTLIZARD, BAN_HURTANIMAL)
+	return pick(BAN_HURTWOMAN, BAN_CHAPEL, BAN_HURTPRIEST, BAN_AVOIDWATER, BAN_STRIKEUNCONSCIOUS, BAN_HURTLIZARD, BAN_HURTTAJARAN, BAN_HURTANIMAL)
 
 /proc/randomdevilbane()
 	return pick(BANE_SALT, BANE_LIGHT, BANE_IRON, BANE_WHITECLOTHES, BANE_SILVER, BANE_HARVEST, BANE_TOOLBOX)

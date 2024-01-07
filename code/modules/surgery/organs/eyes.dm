@@ -149,6 +149,9 @@
 /obj/item/organ/eyes/robotic/lizard
 	eye_icon_state = "eyes_synth"
 
+/obj/item/organ/eyes/robotic/tajaran
+	eye_icon_state = "eyes_synth"
+
 /obj/item/organ/eyes/robotic/emp_act(severity)
 	. = ..()
 	if(!owner || . & EMP_PROTECT_SELF)
@@ -423,3 +426,51 @@
 	flash_protect = FLASH_PROTECTION_SENSITIVE	//Obligatory flash sensitivity for balance
 	lighting_alpha = LIGHTING_PLANE_ALPHA_NV_TRAIT - 5	//This acts as *slightly* more powerful nightvision compared to the nightvision trait, if someone chooses NV as a trait it will be overwritten by this (highest wins).
 	//This reason these eyes do not inherit from /night_vision/ is because the fullbright the night_vision subtype provides is too overpowered for a roundstart selectable race.
+
+
+/obj/item/organ/eyes/tajaran
+	name = "Tajaran eyes"
+	icon = 'icons/mob/species/tajaran/tajaran_organs.dmi'
+	icon_state = "night_eyes_off"
+	desc = "Some eyes"
+	actions_types = list(/datum/action/item_action/organ_action/toggle)
+	var/active = FALSE
+	var/current_lighting_alpha = null
+
+/obj/item/organ/eyes/tajaran/Initialize()
+	current_lighting_alpha = lighting_alpha
+	. = ..()
+
+/obj/item/organ/eyes/tajaran/Destroy()
+	if(active)
+		deactivate()
+	. = ..()
+
+/obj/item/organ/eyes/tajaran/Remove(mob/living/carbon/M, special = FALSE)
+	if(active)
+		deactivate()
+	. = ..()
+
+/obj/item/organ/eyes/tajaran/ui_action_click()
+	toggle_active()
+
+/obj/item/organ/eyes/tajaran/proc/toggle_active()
+	if(active)
+		deactivate()
+	else
+		activate()
+
+/obj/item/organ/eyes/tajaran/proc/activate()
+	active = TRUE
+	current_lighting_alpha = lighting_alpha
+	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
+	see_in_dark = 6
+	owner.add_client_colour(/datum/client_colour/monochrome)
+	owner.update_sight()
+
+/obj/item/organ/eyes/tajaran/proc/deactivate()
+	active = FALSE
+	lighting_alpha = current_lighting_alpha
+	see_in_dark = 2
+	owner.remove_client_colour(/datum/client_colour/monochrome)
+	owner.update_sight()

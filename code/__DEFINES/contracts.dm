@@ -30,6 +30,7 @@
 #define BAN_AVOIDWATER "avoidwater"
 #define BAN_STRIKEUNCONSCIOUS "strikeunconscious"
 #define BAN_HURTLIZARD "hurtlizard"
+#define BAN_HURTTAJARAN "hurttajaran"
 #define BAN_HURTANIMAL "hurtanimal"
 
 #define BANISH_WATER "water"
