@@ -1,0 +1,45 @@
+{	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
+	"map_name": "Nostromo-class Freighter",
+	"map_short_name": "Nostromo-class",
+	"map_path": "_maps/shuttles/independent/independent_nostromo.dmm",
+	"prefix": "ISV",
+	"description": "Nostromo - морально устаревшая модель грузового судна, сочетающая в себе как новшества ионных двигателей и системы фильтрации атмосферы для дозаправки, так и устаревшую схему питания, основанную на турбинном механизме, что активно в прямом смысле прожигает ресурсы.",
+	"tags": [
+		"Generalist",
+		"Mining",
+		"Cargo"
+	],
+	"namelists": [
+		"GENERAL",
+		"SPACE",
+		"NATURAL",
+		"MYTHOLOGICAL"
+	],
+
+	"roundstart": true,
+	"job_slots": {
+		"Captain": {
+			"outfit": "/datum/outfit/job/independent/captain",
+			"officer": true,
+			"slots": 1
+		},
+		"Ship's Doctor": {
+			"outfit": "/datum/outfit/job/independent/doctor",
+			"slots": 1
+		},
+		"Engine Technician": {
+			"outfit": "/datum/outfit/job/independent/atmos",
+			"slots": 1
+		},
+		"Asteroid Miner": {
+			"outfit": "/datum/outfit/job/independent/miner",
+			"slots": 2
+		},
+		"Assistant": {
+			"outfit": "/datum/outfit/job/independent/assistant",
+			"slots": 1
+		}
+	},
+	"enabled": true
+}
+
