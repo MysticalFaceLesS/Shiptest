@@ -522,3 +522,7 @@
 /obj/structure/curtain/cloth/fancy
 	icon_type = "cur_fancy"
 	icon_state = "cur_fancy-open"
+
+/obj/structure/curtain/cloth/elysim
+	icon_type = "elysim_fancy"
+	icon_state = "elysim_fancy-open"
