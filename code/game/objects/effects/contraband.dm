@@ -65,6 +65,11 @@
 	poster_type = /obj/structure/sign/poster/rilena/random
 	icon_state = "rolled_rilena"
 
+/obj/item/poster/random_elysim
+	name = "random elysim poster"
+	poster_type = /obj/structure/sign/poster/elysim/random
+	icon_state = "rolled_elysim"
+
 // The poster sign/structure
 
 /obj/structure/sign/poster
@@ -1058,7 +1063,32 @@
 	desc = "A RILENA: LMR poster split in two to represent the series' disregard for conventional timeline aspects."
 	icon_state = "poster-rilena_timeline"
 
+/obj/structure/sign/poster/elysim/random
+	name = "random elysim poster"
+	icon_state = "random_elysim"
+	never_random = TRUE
+	random_basetype = /obj/structure/sign/poster/elysim
+	random_type = POSTER_SUBTYPES
 
+/obj/structure/sign/poster/elysim/logo // \"Breathable, if it weren't so darn cold.\"
+	name = "Elysim"
+	desc = "Poster of Elysim Republic. The most common logo. Nothing noteworthy"
+	icon_state = "poster-elysim"
+
+/obj/structure/sign/poster/elysim/protest
+	name = "DownSolFed"
+	desc = "Poster of Elysim Republic. \"This poster with its entire appearance screams No deals with traitors! \""
+	icon_state = "poster-nosf"
+
+/obj/structure/sign/poster/elysim/sonofelysim
+	name = "Elysim Son"
+	desc = "Poster of the Elisima Republic depicting a stately man.The inscription reads \"God will direct his punishing hand! For the glory of Elysium!\""
+	icon_state = "poster-son_elysim"
+
+/obj/structure/sign/poster/elysim/ak47
+	name = "No SolFed"
+	desc = "Poster of the Elysim Republic depicting iconic weapons from a previous era. \"Even a child is ready to protect his home!\""
+	icon_state = "poster-ak47"
 
 #undef PLACE_SPEED
 #undef POSTER_SUBTYPES
