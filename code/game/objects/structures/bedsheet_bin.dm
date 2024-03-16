@@ -228,6 +228,13 @@ LINEN BINS
 	item_state = "sheetNT"
 	dream_messages = list("authority", "an ending")
 
+/obj/item/bedsheet/elysim
+	name = "\improper Elysim bedsheet"
+	desc = "It has the Elysim logo on it ."
+	icon_state = "sheetelysim"
+	item_state = "sheetelysim"
+	dream_messages = list("duty", "fatherland")
+
 /obj/item/bedsheet/solgov
 	name = "\improper SolGov bedsheet"
 	desc = "It has the emblem of the Solar Confederation emblazoned upon it!"
