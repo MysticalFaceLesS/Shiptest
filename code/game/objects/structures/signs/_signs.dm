@@ -215,10 +215,27 @@
 	icon_state = "nanotrasen"
 	is_editable = TRUE
 
+/obj/structure/sign/elysim
+	name = "\improper Elysim logo sign"
+	sign_change_name = "Rebel Logo - Elysim"
+	desc = "A sign with the Elysim logo on it. Glory to Human race!"
+	icon_state = "elysim"
+	is_editable = TRUE
+
+
 /obj/structure/sign/logo
 	name = "\improper Nanotrasen logo sign"
 	desc = "The Nanotrasen corporate logo."
 	icon_state = "nanotrasen_sign1"
+
+// some elysim
+
+/obj/structure/sign/elysim_seal
+	name = "Seal of the elysim government"
+	desc = "A seal emblazened with a gold trim depicting the burning star, sol."
+	icon = 'icons/obj/elysim_logos.dmi'
+	icon_state = "elysim-left"
+	pixel_y = 27
 
 // im still holding on to that syndicate city idea... my hope will never die
 /obj/structure/sign/syndicate	//based of paradise's syndicate logo. I will i was good enough to sprite the background
