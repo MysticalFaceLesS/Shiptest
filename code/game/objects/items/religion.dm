@@ -124,6 +124,9 @@
 	H.setOxyLoss(0)
 	H.reagents.add_reagent(/datum/reagent/medicine/inaprovaline, 5)
 
+/obj/item/banner/medical/mundane
+	inspiration_available = FALSE
+
 /obj/item/banner/elysim
 	name = "Elysim banner"
 	desc = "The banner of Elysim, Strengthens the faith of those who deserve."
@@ -132,9 +135,6 @@
 	lefthand_file = 'icons/mob/inhands/equipment/banners_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/equipment/banners_righthand.dmi'
 	warcry = "Glory to the nation!"
-
-/obj/item/banner/medical/mundane
-	inspiration_available = FALSE
 
 /obj/item/banner/science
 	name = "sciencia banner"
