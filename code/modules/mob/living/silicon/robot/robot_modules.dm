@@ -368,7 +368,8 @@
 		"Kodiak - 'Arachne'" = image(icon = 'icons/mob/robots.dmi', icon_state = "arachne"),
 		"Noble" = image(icon = 'icons/mob/robots.dmi', icon_state = "Noble-MED"),
 		"R34 - MED6a 'Gibbs'" = image(icon = 'icons/mob/robots.dmi', icon_state = "gibbs"),
-		"Qualified Doctor" = image(icon = 'icons/mob/robots.dmi', icon_state = "qualified_doctor")
+		"Qualified Doctor" = image(icon = 'icons/mob/robots.dmi', icon_state = "qualified_doctor"),
+		"Drake" = image(icon = 'Gardelin0/icons/mob/cyborg/drakemech.dmi', icon_state = "drakemedbox"),
 		)
 		med_icons = sortList(med_icons)
 	var/med_borg_icon = show_radial_menu(R, R , med_icons, custom_check = CALLBACK(src, PROC_REF(check_menu), R), radius = 42, require_near = TRUE)
@@ -419,6 +420,15 @@
 			cyborg_base_icon = "qualified-doctor"
 			cyborg_icon_override = 'icons/mob/robots.dmi'
 			special_light_key = "qualified-doctor"
+
+		if("Drake") // Dergborg brought to you by Gardelin0 | Commissioned Artist: deviantart.com/mizartz
+			cyborg_base_icon = "drakemed"
+			cyborg_icon_override = 'Gardelin0/icons/mob/cyborg/drakemech.dmi'
+			moduleselect_icon = "medihound"
+			hasrest = TRUE
+			R.pixel_y = -16
+			R.pixel_x = -16
+
 		else
 			return FALSE
 	return ..()
@@ -473,6 +483,7 @@
 		"Kodiak" = image(icon = 'icons/mob/robots.dmi', icon_state = "kodiak-eng"),
 		"Noble" = image(icon = 'icons/mob/robots.dmi', icon_state = "Noble-ENG"),
 		"R34 - ENG7a 'Conagher'" = image(icon = 'icons/mob/robots.dmi', icon_state = "conagher"),
+		"Drake" = image(icon = 'Gardelin0/icons/mob/cyborg/drakemech.dmi', icon_state = "drakeengbox"),
 		)
 		engi_icons = sortList(engi_icons)
 	var/engi_borg_icon = show_radial_menu(R, R , engi_icons, custom_check = CALLBACK(src, PROC_REF(check_menu), R), radius = 42, require_near = TRUE)
@@ -519,6 +530,14 @@
 			cyborg_base_icon = "conagher"
 			cyborg_icon_override = 'icons/mob/robots.dmi'
 			special_light_key = "conagher"
+
+		if("Drake") // Dergborg brought to you by Gardelin0 | Commissioned Artist: deviantart.com/mizartz
+			cyborg_base_icon = "drakeeng"
+			cyborg_icon_override = 'Gardelin0/icons/mob/cyborg/drakemech.dmi'
+			hasrest = TRUE
+			R.pixel_y = -16
+			R.pixel_x = -16
+
 		else
 			return FALSE
 	return ..()
@@ -555,6 +574,7 @@
 		"Kodiak" = image(icon = 'icons/mob/robots.dmi', icon_state = "kodiak-sec"),
 		"Noble" = image(icon = 'icons/mob/robots.dmi', icon_state = "Noble-SEC"),
 		"R34 - SEC10a 'Woody'" = image(icon = 'icons/mob/robots.dmi', icon_state = "woody"),
+		"Drake" = image(icon = 'Gardelin0/icons/mob/cyborg/drakemech.dmi', icon_state = "drakesecbox"),
 		)
 		sec_icons = sortList(sec_icons)
 	var/sec_borg_icon = show_radial_menu(R, R , sec_icons, custom_check = CALLBACK(src, PROC_REF(check_menu), R), radius = 42, require_near = TRUE)
@@ -597,6 +617,14 @@
 			cyborg_base_icon = "woody"
 			cyborg_icon_override = 'icons/mob/robots.dmi'
 			special_light_key = "woody"
+
+		if("Drake") // Dergborg brought to you by Gardelin0 | Commissioned Artist: deviantart.com/mizartz
+			cyborg_base_icon = "drakesec"
+			cyborg_icon_override = 'Gardelin0/icons/mob/cyborg/drakemech.dmi'
+			hasrest = TRUE
+			R.pixel_y = -16
+			R.pixel_x = -16
+
 		else
 			return FALSE
 	return ..()
@@ -679,6 +707,7 @@
 		"#29" = image(icon = 'icons/mob/robots.dmi', icon_state = "servbot-jani"),
 		"Noble" = image(icon = 'icons/mob/robots.dmi', icon_state = "Noble-JAN"),
 		"R34 - CUS3a 'Flynn'" = image(icon = 'icons/mob/robots.dmi', icon_state = "flynn"),
+		"Drake" = image(icon = 'Gardelin0/icons/mob/cyborg/drakemech.dmi', icon_state = "drakejanitbox"),
 		)
 		jan_icons = sortList(jan_icons)
 	var/jan_borg_icon = show_radial_menu(R, R , jan_icons, custom_check = CALLBACK(src, PROC_REF(check_menu), R), radius = 42, require_near = TRUE)
@@ -721,6 +750,14 @@
 			cyborg_base_icon = "flynn"
 			cyborg_icon_override = 'icons/mob/robots.dmi'
 			special_light_key = "flynn"
+
+		if("Drake") // Dergborg brought to you by Gardelin0 | Commissioned Artist: deviantart.com/mizartz
+			cyborg_base_icon = "drakejanit"
+			cyborg_icon_override = 'Gardelin0/icons/mob/cyborg/drakemech.dmi'
+			hasrest = TRUE
+			R.pixel_y = -16
+			R.pixel_x = -16
+
 		else
 			return FALSE
 	return ..()
@@ -915,7 +952,8 @@
 		"#31" = image(icon = 'icons/mob/robots.dmi', icon_state = "servbot-miner"),
 		"Kodiak" = image(icon = 'icons/mob/robots.dmi', icon_state = "kodiak-miner"),
 		"Noble" = image(icon = 'icons/mob/robots.dmi', icon_state = "Noble-SUP"),
-		"R34 - MIN2a 'Ishimura'" = image(icon = 'icons/mob/robots.dmi', icon_state = "ishimura")
+		"R34 - MIN2a 'Ishimura'" = image(icon = 'icons/mob/robots.dmi', icon_state = "ishimura"),
+		"Drake" = image(icon = 'Gardelin0/icons/mob/cyborg/drakemech.dmi', icon_state = "drakeminebox"),
 		)
 		mining_icons = sortList(mining_icons)
 	var/mining_borg_icon = show_radial_menu(R, R , mining_icons, custom_check = CALLBACK(src, PROC_REF(check_menu), R), radius = 42, require_near = TRUE)
@@ -958,6 +996,14 @@
 			cyborg_base_icon = "ishimura"
 			cyborg_icon_override = 'icons/mob/robots.dmi'
 			special_light_key = "ishimura"
+
+		if("Drake") // Dergborg brought to you by Gardelin0 | Commissioned Artist: deviantart.com/mizartz
+			cyborg_base_icon = "drakemine"
+			cyborg_icon_override = 'Gardelin0/icons/mob/cyborg/drakemech.dmi'
+			hasrest = TRUE
+			R.pixel_y = -16
+			R.pixel_x = -16
+
 		else
 			return FALSE
 	return ..()
