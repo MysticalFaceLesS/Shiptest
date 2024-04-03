@@ -14,7 +14,7 @@
 #define DEVILRESURRECTTIME 600
 
 GLOBAL_LIST_EMPTY(allDevils)
-GLOBAL_LIST_INIT(lawlorify, list (
+/*GLOBAL_LIST_INIT(lawlorify, list (		//CELADON-CHANGE -> mod_celadon\tajaran\code\modules\antagonists\devil\devil.dm			//увынск, с глобал листами модульно работать не умею - рублю сразу на корню
 		LORE = list(
 			OBLIGATION_FOOD = "This devil seems to always offer its victims food before slaughtering them.",
 			OBLIGATION_FIDDLE = "This devil will never turn down a musical challenge.",
@@ -77,7 +77,7 @@ GLOBAL_LIST_INIT(lawlorify, list (
 			BANISH_DESTRUCTION = "If your corpse is destroyed, you will be unable to resurrect.",
 			BANISH_FUNERAL_GARB = "If your corpse is clad in funeral garments, you will be unable to resurrect."
 		)
-	))
+	))		*/
 
 //These are also used in the codex gigas, so let's declare them globally.
 GLOBAL_LIST_INIT(devil_pre_title, list("Dark ", "Hellish ", "Fallen ", "Fiery ", "Sinful ", "Blood ", "Fluffy "))
@@ -168,8 +168,8 @@ GLOBAL_LIST_INIT(devil_suffix, list(" the Red", " the Soulless", " the Master", 
 /proc/randomdevilobligation()
 	return pick(OBLIGATION_FOOD, OBLIGATION_FIDDLE, OBLIGATION_DANCEOFF, OBLIGATION_GREET, OBLIGATION_PRESENCEKNOWN, OBLIGATION_SAYNAME, OBLIGATION_ANNOUNCEKILL, OBLIGATION_ANSWERTONAME)
 
-/proc/randomdevilban()
-	return pick(BAN_HURTWOMAN, BAN_CHAPEL, BAN_HURTPRIEST, BAN_AVOIDWATER, BAN_STRIKEUNCONSCIOUS, BAN_HURTLIZARD, BAN_HURTANIMAL)
+/*/proc/randomdevilban()		//CELADON-CHANGE -> mod_celadon\tajaran\code\modules\antagonists\devil\devil.dm		//увнск, с такими проками я тоже работать не умею модульно
+	return pick(BAN_HURTWOMAN, BAN_CHAPEL, BAN_HURTPRIEST, BAN_AVOIDWATER, BAN_STRIKEUNCONSCIOUS, BAN_HURTLIZARD, BAN_HURTANIMAL)	*/
 
 /proc/randomdevilbane()
 	return pick(BANE_SALT, BANE_LIGHT, BANE_IRON, BANE_WHITECLOTHES, BANE_SILVER, BANE_HARVEST, BANE_TOOLBOX)

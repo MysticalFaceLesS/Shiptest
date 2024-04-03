@@ -1,20 +1,8 @@
-SUBSYSTEM_DEF(traumas)
-	name = "Traumas"
-	flags = SS_NO_FIRE
-	var/list/phobia_types
-	var/list/phobia_regexes
-	var/list/phobia_mobs
-	var/list/phobia_objs
-	var/list/phobia_turfs
-	var/list/phobia_species
-
-#define PHOBIA_FILE "phobia.json"
-
-/*/datum/controller/subsystem/traumas/Initialize()		//CELADON-CHANGE -> mod_celadon\tajaran\code\controllers\subsystem\traumas.dm		//Извините, Товарищь, но иначе бы оно срало ошибками, а по-другому не придумали
+/datum/controller/subsystem/traumas/Initialize()
 	//phobia types is to pull from randomly for brain traumas, e.g. conspiracies is for special assignment only
 	phobia_types = sortList(list("spiders", "space", "security", "clowns", "greytide", "lizards",
 						"skeletons", "snakes", "robots", "doctors", "authority", "the supernatural",
-						"aliens", "strangers", "birds", "falling", "anime"))
+						"aliens", "strangers", "birds", "falling", "anime", "cats"))
 
 	phobia_regexes = list(
 		"spiders"          = construct_phobia_regex("spiders"),
@@ -180,21 +168,7 @@ SUBSYSTEM_DEF(traumas)
 		"aliens" = typecacheof(list(
 			/datum/species/abductor, /datum/species/jelly, /datum/species/pod)),
 		"spiders" = typecacheof(list(/datum/species/spider))
+		"cats" = typecacheof(list(/datum/species/tajaran)),
 	)
 
-	return ..()	*/
-
-///Creates a regular expression to match against the given phobia
-///Capture group 2 = the scary word
-///Capture group 3 = an optional suffix on the scary word
-/datum/controller/subsystem/traumas/proc/construct_phobia_regex(list/name)
-	var/list/words = strings(PHOBIA_FILE, name)
-	if(!length(words))
-		CRASH("phobia [name] has no entries")
-	var/words_match = ""
-	for(var/word in words)
-		words_match += "[REGEX_QUOTE(word)]|"
-	words_match = copytext(words_match, 1, -1)
-	return regex("(\\b|\\A)([words_match])('?s*)(\\b|\\|)", "ig")
-
-#undef PHOBIA_FILE
+	return ..()

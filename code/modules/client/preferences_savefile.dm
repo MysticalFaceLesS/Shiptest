@@ -294,7 +294,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	return TRUE
 
-/datum/preferences/proc/save_preferences()
+/*/datum/preferences/proc/save_preferences()	//CELADON-CHANGE -> mod_celadon\tajaran\code\modules\client\preferences_savefile.dm 	//вы как хотите, а я чё-та сейвами рисковать не хочу
 	if(!path)
 		return FALSE
 	var/savefile/S = new /savefile(path)
@@ -559,9 +559,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 //Make sure all quirks are compatible
 	check_quirk_compatibility()
 
-	return TRUE
+	return TRUE	*/
 
-/datum/preferences/proc/save_character()
+/*/datum/preferences/proc/save_character()		//CELADON-CHANGE -> mod_celadon\tajaran\code\modules\client\preferences_savefile.dm 	//вы как хотите, а я чё-та сейвами рисковать не хочу
 	if(!path)
 		return FALSE
 	var/savefile/S = new /savefile(path)
@@ -647,7 +647,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	//Quirks
 	WRITE_FILE(S["all_quirks"]					, all_quirks)
 
-	return TRUE
+	return TRUE	*/
 
 
 /proc/sanitize_keybindings(value)

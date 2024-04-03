@@ -770,7 +770,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
  * * H - Human, whoever we're handling the body for
  * * forced_colour - The forced color of an accessory. Leave null to use mutant color.
  */
-/datum/species/proc/handle_mutant_bodyparts(mob/living/carbon/human/H, forced_colour)
+/*/datum/species/proc/handle_mutant_bodyparts(mob/living/carbon/human/H, forced_colour)		//CELADON-CHANGE ->mod_celadon\tajaran\code\modules\mob\living\carbon\human\species.dm		//я хуй знает как это запихнуть в модуль по системе шуссойдных модпаков
 	var/list/bodyparts_to_add = mutant_bodyparts.Copy()
 	var/list/relevent_layers = list(BODY_BEHIND_LAYER, BODY_ADJ_LAYER, BODY_FRONT_LAYER)
 	var/list/standing	= list()
@@ -1028,7 +1028,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 
 	H.apply_overlay(BODY_BEHIND_LAYER)
 	H.apply_overlay(BODY_ADJ_LAYER)
-	H.apply_overlay(BODY_FRONT_LAYER)
+	H.apply_overlay(BODY_FRONT_LAYER)	*/
 
 //This exists so sprite accessories can still be per-layer without having to include that layer's
 //number in their sprite name, which causes issues when those numbers change.

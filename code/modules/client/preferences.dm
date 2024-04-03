@@ -86,7 +86,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/eye_color = "000"				//Eye color
 	var/datum/species/pref_species = new /datum/species/human()	//Mutant race
 	var/species_looking_at = "human"	 //used as a helper to keep track of in the species select thingy
-	var/list/features = list(
+/*	var/list/features = list(		//CELADON-CHANGE -> mod_celadon\tajaran\code\modules\client\preferences.dm
 							"mcolor" = "FFF",
 							"mcolor2" = "FFF",
 							"grad_style" = "None",
@@ -140,7 +140,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							RANDOM_FACIAL_HAIR_COLOR = TRUE,
 							RANDOM_SKIN_TONE = TRUE,
 							RANDOM_EYE_COLOR = TRUE,
-						)
+						)	*/
 	var/list/friendlyGenders = list(
 							"Male" = "male",
 							"Female" = "female",
