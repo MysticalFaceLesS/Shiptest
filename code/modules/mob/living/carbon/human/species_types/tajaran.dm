@@ -94,14 +94,10 @@
 ///datum/species/tajaran/replace_body(mob/living/carbon/C, datum/species/new_species, robotic = FALSE)
 //	return ..()		//ради мемов
 
-/datum/species/tajaran/get_GLOB_hair(index, gender)
-	if(index)
-		return GLOB.tajaran_hairs_list[index]
+/datum/species/tajaran/get_hair_list_by_gender(gender)
 	return GLOB.tajaran_hairs_list
 
-/datum/species/tajaran/get_GLOB_facial_hair(index, gender)
-	if(index)
-		return GLOB.tajaran_facial_hairs_list[index]
+/datum/species/tajaran/get_facial_hair_list_by_gender(gender)
 	return GLOB.tajaran_facial_hairs_list
 
 /datum/species/tajaran/random_hairstyle(gender)

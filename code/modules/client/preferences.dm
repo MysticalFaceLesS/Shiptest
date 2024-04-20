@@ -1812,13 +1812,13 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						hair_color = sanitize_hexcolor(new_hair)
 
 				if("hairstyle")
-					hairstyle =  input(user, "Choose your character's hairstyle:", "Character Preference")  as null|anything in pref_species.get_GLOB_hair(null, gender)
+					hairstyle =  input(user, "Choose your character's hairstyle:", "Character Preference")  as null|anything in pref_species.get_hair_list_by_gender(gender)
 
 				if("next_hairstyle")
-					hairstyle = next_list_item(hairstyle, pref_species.get_GLOB_hair(null, gender))
+					hairstyle = next_list_item(hairstyle, pref_species.get_hair_list_by_gender(gender))
 
 				if("previous_hairstyle")
-					hairstyle = previous_list_item(hairstyle, pref_species.get_GLOB_hair(null, gender))
+					hairstyle = previous_list_item(hairstyle, pref_species.get_hair_list_by_gender(gender))
 
 				if("facial")
 					var/new_facial = input(user, "Choose your character's facial-hair colour:", "Character Preference","#"+facial_hair_color) as color|null
@@ -1826,13 +1826,13 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						facial_hair_color = sanitize_hexcolor(new_facial)
 
 				if("facial_hairstyle")
-					facial_hairstyle = input(user, "Choose your character's facial-hairstyle:", "Character Preference")  as null|anything in pref_species.get_GLOB_facial_hair(null, gender)
+					facial_hairstyle = input(user, "Choose your character's facial-hairstyle:", "Character Preference")  as null|anything in pref_species.get_facial_hair_list_by_gender(gender)
 
 				if("next_facehairstyle")
-					facial_hairstyle = next_list_item(facial_hairstyle, pref_species.get_GLOB_facial_hair(null, gender))
+					facial_hairstyle = next_list_item(facial_hairstyle, pref_species.get_facial_hair_list_by_gender(null, gender))
 
 				if("previous_facehairstyle")
-					facial_hairstyle = previous_list_item(facial_hairstyle, pref_species.get_GLOB_facial_hair(null, gender))
+					facial_hairstyle = previous_list_item(facial_hairstyle, pref_species.get_facial_hair_list_by_gender(null, gender))
 
 				if("hair_gradient")
 					var/new_hair_gradient_color = input(user, "Choose your character's hair gradient colour:", "Character Preference","#"+features["grad_color"]) as color|null
