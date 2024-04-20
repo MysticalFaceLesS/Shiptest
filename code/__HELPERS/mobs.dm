@@ -158,6 +158,7 @@
 		"tajaran_body_markings" = pick(GLOB.tajaran_body_markings_list),
 		"tajaran_tail" = pick(GLOB.tajaran_tail_list),
 	)
+
 /*
 /proc/random_hairstyle(gender)
 	switch(gender)
@@ -177,6 +178,7 @@
 		else
 			return pick(GLOB.facial_hairstyles_list)
 */
+
 /proc/random_unique_name(gender, attempts_to_find_unique_name=10)
 	for(var/i in 1 to attempts_to_find_unique_name)
 		if(gender==FEMALE)
