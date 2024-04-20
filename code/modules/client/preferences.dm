@@ -1829,10 +1829,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					facial_hairstyle = input(user, "Choose your character's facial-hairstyle:", "Character Preference")  as null|anything in pref_species.get_facial_hair_list_by_gender(gender)
 
 				if("next_facehairstyle")
-					facial_hairstyle = next_list_item(facial_hairstyle, pref_species.get_facial_hair_list_by_gender(null, gender))
+					facial_hairstyle = next_list_item(facial_hairstyle, pref_species.get_facial_hair_list_by_gender(gender))
 
 				if("previous_facehairstyle")
-					facial_hairstyle = previous_list_item(facial_hairstyle, pref_species.get_facial_hair_list_by_gender(null, gender))
+					facial_hairstyle = previous_list_item(facial_hairstyle, pref_species.get_facial_hair_list_by_gender(gender))
 
 				if("hair_gradient")
 					var/new_hair_gradient_color = input(user, "Choose your character's hair gradient colour:", "Character Preference","#"+features["grad_color"]) as color|null

@@ -106,7 +106,7 @@
 /datum/species/tajaran/random_facial_hairstyle(gender)
 	return pick(GLOB.tajaran_facial_hairs_list)
 //some MORE shitcoding
-/datum/species/tajaran/handle_hair(mob/living/carbon/human/H, forced_colour, custom_hairs_extensions = 'icons/mob/species/tajaran/tajaran_hairs.dmi', custom_facial_hair_extensions = 'icons/mob/species/tajaran/tajaran_facial_hairs.dmi')
+/datum/species/tajaran/handle_hair(mob/living/carbon/human/H, forced_colour)
 	return ..()
 
 /datum/species/tajaran/random_name(gender,unique,lastname)

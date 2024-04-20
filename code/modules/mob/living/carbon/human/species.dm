@@ -584,7 +584,8 @@ GLOBAL_LIST_EMPTY(roundstart_races)
  * * H - Human, whoever we're handling the hair for
  * * forced_colour - The colour of hair we're forcing on this human. Leave null to not change. Mind the british spelling!
  */
-/datum/species/proc/handle_hair(mob/living/carbon/human/H, forced_colour, icon/custom_hairs_extensions = 'icons/mob/hair_extensions.dmi', icon/custom_facial_hair_extensions = 'icons/mob/facialhair_extensions.dmi', icon/custom_hair = 'icons/mob/human_face.dmi')
+ // icon/custom_hairs_extensions = 'icons/mob/hair_extensions.dmi', icon/custom_facial_hair_extensions = 'icons/mob/facialhair_extensions.dmi', icon/custom_hair = 'icons/mob/human_face.dmi'
+/datum/species/proc/handle_hair(mob/living/carbon/human/H, forced_colour)
 	H.remove_overlay(HAIR_LAYER)
 	var/obj/item/bodypart/head/HD = H.get_bodypart(BODY_ZONE_HEAD)
 	if(!HD) //Decapitated
@@ -613,27 +614,11 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		if(I.flags_inv & HIDEFACIALHAIR)
 			facialhair_hidden = TRUE
 
-	if(H.facial_hairstyle && (FACEHAIR in species_traits) && (!facialhair_hidden || dynamic_fhair_suffix))
-		S = get_facial_hair_list_by_gender(H.facial_hairstyle)
+	if(H.facial_hairstyle && (FACEHAIR in species_traits) && !facialhair_hidden)
+		S = get_facial_hair_list_by_gender()[H.facial_hairstyle]
 		if(S)
 
-			//List of all valid dynamic_fhair_suffixes
-			var/static/list/fextensions
-			if(!fextensions)
-				var/icon/fhair_extensions = icon(custom_facial_hair_extensions)
-				fextensions = list()
-				for(var/s in fhair_extensions.IconStates(1))
-					fextensions[s] = TRUE
-				qdel(fhair_extensions)
-
-			//Is hair+dynamic_fhair_suffix a valid iconstate?
-			var/fhair_state = S.icon_state
-			var/fhair_file = S.icon
-			if(fextensions[fhair_state+dynamic_fhair_suffix])
-				fhair_state += dynamic_fhair_suffix
-				fhair_file = custom_facial_hair_extensions
-
-			var/mutable_appearance/facial_overlay = mutable_appearance(fhair_file, fhair_state, -HAIR_LAYER)
+			var/mutable_appearance/facial_overlay = mutable_appearance(S.icon, S.icon_state, -HAIR_LAYER)
 
 			if(!forced_colour)
 				if(hair_color)
@@ -667,28 +652,15 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		var/mutable_appearance/gradient_overlay = mutable_appearance(layer = -HAIR_LAYER)
 		if(!hair_hidden && !H.getorgan(/obj/item/organ/brain)) //Applies the debrained overlay if there is no brain
 			if(!(NOBLOOD in species_traits))
-				hair_overlay.icon = custom_hair
+				hair_overlay.icon = 'icons/mob/human_face.dmi'
 				hair_overlay.icon_state = "debrained"
 
 		else if(H.hairstyle && (HAIR in species_traits))
 			S = get_hair_list_by_gender()[H.hairstyle]
 			if(S)
 
-				//List of all valid dynamic_hair_suffixes
-				var/static/list/extensions
-				if(!extensions)
-					var/icon/hair_extensions = icon(custom_hairs_extensions) //hehe
-					extensions = list()
-					for(var/s in hair_extensions.IconStates(1))
-						extensions[s] = TRUE
-					qdel(hair_extensions)
-
-				//Is hair+dynamic_hair_suffix a valid iconstate?
 				var/hair_state = S.icon_state
 				var/hair_file = S.icon
-				if(extensions[hair_state+dynamic_hair_suffix])
-					hair_state += dynamic_hair_suffix
-					hair_file = custom_hairs_extensions
 
 				hair_overlay.icon = hair_file
 				hair_overlay.icon_state = hair_state
