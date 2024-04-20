@@ -917,7 +917,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			bodyparts_to_add -= "tajaran_body_markings"
 
 	if("tajaran_hairs" in mutant_bodyparts)
-		if(!H.dna.features["tajaran_hairs"] || H.dna.features["tajaran_hairs"] == "plain" || (H.head && (H.head.flags_inv & HIDEHAIR)) || (H.wear_mask && (H.wear_mask.flags_inv & HIDEHAIR)) || !HD)
+		if(!H.dna.features["tajaran_hairs"] || H.dna.features["tajaran_hairs"] == "Plain" || (H.head && (H.head.flags_inv & HIDEHAIR)) || (H.wear_mask && (H.wear_mask.flags_inv & HIDEHAIR)) || !HD)
 			bodyparts_to_add -= "tajaran_hairs"
 
 	if("tajaran_tail" in mutant_bodyparts)

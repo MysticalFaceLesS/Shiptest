@@ -580,8 +580,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["tail_elzu"]				= sanitize_inlist(features["tail_elzu"], GLOB.tails_list_elzu)
 	features["flavor_text"]				= sanitize_text(features["flavor_text"], initial(features["flavor_text"]))
 
-	features["tajaran_ears"]				= sanitize_inlist(features["tajaran_ears"], GLOB.tajaran_ears_list, "plain")
-	features["tajaran_hairs"]				= sanitize_inlist(features["tajaran_hairs"], GLOB.tajaran_hairs_list, "plain")
+	features["tajaran_ears"]				= sanitize_inlist(features["tajaran_ears"], GLOB.tajaran_ears_list, "Plain")
+	features["tajaran_hairs"]				= sanitize_inlist(features["tajaran_hairs"], GLOB.tajaran_hairs_list, "Plain")
 	features["tajaran_ears_markings"]		= sanitize_inlist(features["tajaran_ears_markings"], GLOB.tajaran_ears_markings_list, "None")
 	features["tajaran_head_markings"]		= sanitize_inlist(features["tajaran_head_markings"], GLOB.tajaran_head_markings_list, "None")
 	features["tajaran_nose_markings"]		= sanitize_inlist(features["tajaran_nose_markings"], GLOB.tajaran_nose_markings_list, "None")

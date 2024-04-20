@@ -35,10 +35,10 @@
 		)
 	default_features = list(
 		"mcolor" = "0F0",
-		"tajaran_ears" = "plain",
-		"tajaran_hairs" = "plain",
-		"tajaran_ears_markings" = "none",
-		"tajaran_head_markings" = "none",
+		"tajaran_ears" = "Plain",
+		"tajaran_hairs" = "Plain",
+		"tajaran_ears_markings" = "None",
+		"tajaran_head_markings" = "None",
 		"tajaran_nose_markings" = "None",
 		"tajaran_facial_hairs" = "None",
 		"tajaran_chest_markings" = "None",
