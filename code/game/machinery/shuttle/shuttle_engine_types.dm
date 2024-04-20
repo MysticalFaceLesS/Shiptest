@@ -85,7 +85,7 @@
 			update_icon_state()
 			return TRUE
 
-/obj/machinery/power/shuttle/engine/fueled/plasma
+/* /obj/machinery/power/shuttle/engine/fueled/plasma 		// MOD_CELADON-CHANGES -> mod_celadon\balance\code\engine\enginebalance.dm
 	name = "plasma thruster"
 	desc = "A thruster that burns plasma from an adjacent heater to create thrust."
 	circuit = /obj/item/circuitboard/machine/shuttle/engine/plasma
@@ -128,7 +128,7 @@
 	desc = "An expensive variant of a standard ion thruster, using highest quality components in order to achieve much better performance."
 	thrust = 30
 	power_per_burn = 65000
-
+ */
 /obj/machinery/power/smes/shuttle
 	name = "electric engine precharger"
 	desc = "A medium-capacity, high transfer superconducting magnetic energy storage unit specially made for use with shuttle engines."
