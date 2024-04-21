@@ -1630,7 +1630,9 @@
 "qM" = (
 /obj/structure/grille,
 /obj/docking_port/stationary{
-	dir = 8
+	dwidth = 15;
+	height = 15;
+	width = 30
 	},
 /turf/open/floor/plating,
 /area/ship/external)
@@ -4891,15 +4893,16 @@
 /area/ship/engineering)
 "ZJ" = (
 /obj/structure/fans/tiny,
-/obj/docking_port/mobile{
-	launch_status = 0;
-	port_direction = 8;
-	preferred_direction = 8;
-	dir = 4
-	},
 /obj/machinery/door/poddoor/shutters{
 	dir = 4;
 	id = "shutt1"
+	},
+/obj/docking_port/mobile{
+	dir = 2;
+	launch_status = 0;
+	port_direction = 8;
+	preferred_direction = 4;
+	set_dir_on_move = 4
 	},
 /turf/open/floor/plating,
 /area/ship/cargo)

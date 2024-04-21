@@ -273,7 +273,13 @@
 /obj/effect/decal/cleanable/oil{
 	icon_state = "floor5"
 	},
-/obj/machinery/firealarm/directional/west,
+/obj/machinery/firealarm/directional/west{
+	pixel_x = -31;
+	pixel_y = -7
+	},
+/obj/structure/extinguisher_cabinet/directional/west{
+	pixel_y = 7
+	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "aD" = (
@@ -403,7 +409,6 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/effect/landmark/start/shaft_miner,
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
 	},
@@ -717,7 +722,6 @@
 /obj/effect/decal/cleanable/oil{
 	icon_state = "streak4"
 	},
-/obj/effect/landmark/start/station_engineer,
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "bp" = (
@@ -891,7 +895,12 @@
 /obj/effect/decal/cleanable/blood{
 	icon_state = "splatter4"
 	},
-/obj/machinery/firealarm/directional/south,
+/obj/machinery/firealarm/directional/south{
+	pixel_x = -7
+	},
+/obj/structure/extinguisher_cabinet/directional/south{
+	pixel_x = 6
+	},
 /turf/open/floor/plasteel/white,
 /area/ship/medical/surgery)
 "by" = (
@@ -953,7 +962,6 @@
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/generic,
-/obj/effect/landmark/start/assistant,
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew/cryo)
 "bC" = (
@@ -1176,7 +1184,6 @@
 	},
 /obj/structure/chair,
 /obj/effect/decal/cleanable/vomit,
-/obj/effect/landmark/start/assistant,
 /turf/open/floor/carpet,
 /area/ship/crew/canteen)
 "bT" = (
@@ -1221,7 +1228,6 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/effect/landmark/start/paramedic,
 /turf/open/floor/plasteel/white,
 /area/ship/medical/surgery)
 "bW" = (
@@ -1450,7 +1456,8 @@
 	dir = 4
 	},
 /obj/structure/closet/wall/blue{
-	pixel_y = 31
+	pixel_y = 31;
+	req_access_txt = "20"
 	},
 /obj/item/binoculars,
 /obj/item/kitchen/knife/combat,
@@ -1555,7 +1562,6 @@
 	icon_state = "officechair_dark";
 	dir = 8
 	},
-/obj/effect/landmark/start/station_engineer,
 /obj/machinery/firealarm/directional/south,
 /turf/open/floor/carpet/orange,
 /area/ship/engineering)
@@ -1599,7 +1605,6 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/effect/landmark/start/assistant,
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew/canteen)
 "cI" = (
@@ -1743,7 +1748,6 @@
 	dir = 6
 	},
 /obj/effect/decal/cleanable/generic,
-/obj/effect/landmark/observer_start,
 /turf/open/floor/plasteel/dark,
 /area/ship/engineering)
 "cT" = (
@@ -1854,7 +1858,6 @@
 	icon_state = "chair";
 	dir = 8
 	},
-/obj/effect/landmark/start/assistant,
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
 	},
@@ -1965,7 +1968,12 @@
 /area/ship/engineering)
 "di" = (
 /obj/effect/spawner/lootdrop/maintenance,
-/obj/machinery/firealarm/directional/south,
+/obj/machinery/firealarm/directional/south{
+	pixel_x = 5
+	},
+/obj/structure/extinguisher_cabinet/directional/south{
+	pixel_x = -8
+	},
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew/canteen)
 "dj" = (
@@ -2235,7 +2243,6 @@
 	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/generic,
-/obj/effect/landmark/start/shaft_miner,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "dD" = (
@@ -2284,7 +2291,6 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
-/obj/effect/landmark/start/captain,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
 "dJ" = (
