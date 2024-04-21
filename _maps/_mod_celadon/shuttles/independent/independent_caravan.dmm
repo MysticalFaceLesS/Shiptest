@@ -1358,7 +1358,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/computer/atmos_control/tank/oxygen_tank{
-	dir = 4
+	dir = 4;
+	sensors = list("nemo_o2_sensor"="Oxygen Tank")
 	},
 /turf/open/floor/plating,
 /area/ship/engineering/atmospherics)
@@ -1434,9 +1435,6 @@
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/plating,
 /area/ship/engineering/atmospherics)
-"Ba" = (
-/turf/closed/wall/mineral/titanium/survival/pod,
-/area/ship/cargo)
 "Be" = (
 /obj/effect/turf_decal/techfloor/orange{
 	dir = 1
@@ -2499,7 +2497,9 @@
 	dir = 8
 	},
 /obj/structure/window/plasma/reinforced/spawner,
-/obj/machinery/atmospherics/components/unary/outlet_injector/on/layer4,
+/obj/machinery/atmospherics/components/unary/outlet_injector/atmos/oxygen_input{
+	piping_layer = 4
+	},
 /turf/open/floor/engine/o2,
 /area/ship/engineering/atmospherics)
 "Uc" = (
@@ -3167,10 +3167,10 @@ bZ
 bZ
 NB
 bI
-Ba
-Ba
-Ba
-Ba
+bI
+bI
+bI
+bI
 bI
 Sp
 Fn
@@ -3191,7 +3191,7 @@ dI
 FK
 Gf
 Vk
-Ba
+bI
 WK
 tk
 WK
@@ -3211,7 +3211,7 @@ OO
 eI
 Bv
 ec
-Ba
+bI
 WK
 tk
 WK
@@ -3231,7 +3231,7 @@ ZV
 Jn
 Hf
 hG
-Ba
+bI
 UB
 tk
 UB
@@ -3246,7 +3246,7 @@ bZ
 (16,1,1) = {"
 bZ
 NB
-Ba
+bI
 uw
 yI
 MP
@@ -3266,12 +3266,12 @@ bZ
 (17,1,1) = {"
 bZ
 bZ
-Ba
+bI
 Ca
 mQ
 ah
 rV
-Ba
+bI
 iG
 tk
 iG
@@ -3286,12 +3286,12 @@ bZ
 (18,1,1) = {"
 bZ
 bZ
-Ba
+bI
 BV
 Vq
 Vq
 mk
-Ba
+bI
 WK
 tk
 WK
@@ -3306,12 +3306,12 @@ bZ
 (19,1,1) = {"
 bZ
 bZ
-Ba
+bI
 kY
 Ko
 Ak
 Ux
-Ba
+bI
 WK
 tk
 WK
@@ -3327,10 +3327,10 @@ bZ
 bZ
 NB
 bI
-Ba
-Ba
-Ba
-Ba
+bI
+bI
+bI
+bI
 bI
 Sp
 dG
