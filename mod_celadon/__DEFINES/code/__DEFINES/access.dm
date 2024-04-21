@@ -1,0 +1,4 @@
+/// InteQ General access
+#define ACCESS_INTEQ_GENERAL 147
+#define ACCESS_INTEQ_SECURITY 148
+#define ACCESS_INTEQ_CAPTAIN 149

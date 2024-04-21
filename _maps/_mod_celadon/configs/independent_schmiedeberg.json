@@ -1,0 +1,47 @@
+{
+	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
+	"map_name": "Schmiedeberg-class Pharmacology Ship",
+	"prefix": "IMV",
+	"map_short_name": "Schmiedeberg-class",
+	"description": "Интересуетесь фармакологией, но устали сидеть перед химическим дозатором и целыми днями нажимать на кнопки? Хотите совместить кулинарное искусство с наркотическим? Надеетесь совместить все эти качества с самым важным занятием - зарабатыванием толстых пачек денег? Тогда судно класса 'Schmiedeberg' для вас! В 'Schmiedeberg' находится мощная химическая лаборатория, высокопроизводительная ботаническая установка и полноценная кухня-магазин, что делает его идеальным местом для химиков и ботаников, живущих в подворотнях.",
+	"tags": [
+		"Botany",
+		"Medical",
+		"Chemistry"
+	],
+	"map_path": "_maps/_mod_celadon/shuttles/independent/independent_schmiedeberg.dmm",
+	"namelists": [
+		"SUNS",
+		"GENERAL"
+	],
+	"limit": 2,
+	"job_slots": {
+		"Chief Pharmacist": {
+			"outfit": "/datum/outfit/job/independent/cmo/pharma",
+			"officer": true,
+			"slots": 1
+		},
+		"Pharmacist": {
+			"outfit": "/datum/outfit/job/independent/chemist/pharma",
+			"officer": false,
+			"slots": 1
+		},
+		"Mixologist": {
+			"outfit": "/datum/outfit/job/independent/bartender/pharma",
+			"officer": false,
+			"slots": 1
+		},
+		"Herbalist": {
+			"outfit": "/datum/outfit/job/independent/botanist/pharma",
+			"officer": false,
+			"slots": 2
+		},
+		"Pharmacology Student": {
+			"outfit": "/datum/outfit/job/independent/assistant/pharma",
+			"officer": false,
+			"slots": 2
+		}
+	},
+	"enabled": true
+}
+

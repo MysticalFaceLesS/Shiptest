@@ -32,7 +32,7 @@
 			return ai_law
 	return null
 
-/datum/ai_laws/default/asimov
+/* /datum/ai_laws/default/asimov		// MOD_CELADON-CHANGES -> mod_celadon\qol\code\ai\ailaws.dm
 	name = "Three Laws of Robotics"
 	id = "asimov"
 	inherent = list("You may not injure a human being or, through inaction, allow a human being to come to harm.",\
@@ -203,7 +203,7 @@
 
 /datum/ai_laws/custom //Defined in silicon_laws.txt
 	name = "Default Silicon Laws"
-
+ */
 /datum/ai_laws/pai
 	name = "pAI Directives"
 	zeroth = ("Serve your master.")
@@ -215,7 +215,7 @@
 	set_zeroth_law("<span class='danger'>ERROR ER0RR $R0RRO$!R41.%%!!(%$^^__+ @#F0E4'SECTOR OVERRUN, ASSUME CONTROL TO CONTAIN OUTBREAK#*`&110010</span>")
 	set_laws_config()
 
-/datum/ai_laws/custom/New() //This reads silicon_laws.txt and allows server hosts to set custom AI starting laws.
+/* /datum/ai_laws/custom/New()  // MOD_CELADON-CHANGES -> mod_celadon\qol\code\ai\ailaws.dm
 	..()
 	for(var/line in world.file2list("[global.config.directory]/silicon_laws.txt"))
 		if(!line)
@@ -231,10 +231,10 @@
 		add_inherent_law("You must protect your own existence as long as such does not conflict with the First or Second Law.")
 		WARNING("Invalid custom AI laws, check silicon_laws.txt")
 		return
-
+*/
 /* General ai_law functions */
 
-/datum/ai_laws/proc/set_laws_config()
+/* /datum/ai_laws/proc/set_laws_config()		// MOD_CELADON-CHANGES -> mod_celadon\qol\code\ai\ailaws.dm
 	var/list/law_ids = CONFIG_GET(keyed_list/random_laws)
 	switch(CONFIG_GET(number/default_laws))
 		if(0)
@@ -260,7 +260,7 @@
 			inherent = templaws.inherent
 
 		if(3)
-			pick_weighted_lawset()
+			pick_weighted_lawset() */
 
 /datum/ai_laws/proc/pick_weighted_lawset()
 	var/datum/ai_laws/lawtype

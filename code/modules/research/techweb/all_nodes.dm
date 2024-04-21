@@ -1140,7 +1140,7 @@
 	export_price = 5000
 
 /////////////////////////shuttle tech/////////////////////////
-/datum/techweb_node/basic_shuttle_tech
+/* /datum/techweb_node/basic_shuttle_tech 		// MOD_CELADON-CHANGES -> mod_celadon\balance\code\engine\rnd.dm
 	id = "basic_shuttle"
 	display_name = "Basic Shuttle Research"
 	description = "Research the technology required to create and use basic shuttles."
@@ -1157,7 +1157,7 @@
 	design_ids = list("engine_expulsion")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
 	export_price = 2500
-
+ */
 ////////////////////// IPC Parts ///////////////////////
 /datum/techweb_node/ipc_organs
 	id = "ipc_organs"

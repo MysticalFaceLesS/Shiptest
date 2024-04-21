@@ -47,9 +47,11 @@
 	should_draw_greyscale = FALSE
 
 ///JELLY
-/obj/item/bodypart/head/jelly
+/* /obj/item/bodypart/head/jelly
 	limb_id = "jelly"
 	is_dimorphic = TRUE
+
+*/ //MOD_CELADON-CHANGES -> "mod_celadon/species_changes/code/jellypeople.dm"
 
 /obj/item/bodypart/chest/jelly
 	limb_id = "jelly"

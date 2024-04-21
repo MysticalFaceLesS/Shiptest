@@ -1,0 +1,64 @@
+{
+	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
+	"map_name": "Skipper-class Heavy Cruiser",
+	"map_short_name": "Skipper-class",
+	"prefix": "NTSV",
+	"namelists": [
+		"NANOTRASEN",
+		"SPACE",
+		"MYTHOLOGICAL",
+		"WEAPONS",
+		"MERCANTILE"
+	],
+	"map_path": "_maps/_mod_celadon/shuttles/nanotrasen/nanotrasen_skipper.dmm",
+	"description": "Пример одного из крейсеров Нанотрасена 'стандартного образца'. По меркам Фронтира судно класса 'Skipper' хорошо оснащено: достаточно места для инженерного оборудования, хорошо оборудованные места для экипажа и приличный запас оборонительного вооружения. Примечательно, что на 'Skipper' больше, чем в среднем, командный отсек, а офицеры на 'Skipper', как правило, лучше оснащены, чем их коллеги. Хотя должность на борту 'Osprey' не так престижна, как на 'Нанотрайзене', мало кто из капитанов откажется от командования 'Skipper'.",
+	"tags": [
+	"Engineering",
+	"Mining"
+	],
+	"starting_funds": 4500,
+	"roundstart": true,
+	"job_slots": {
+		"Captain": {
+			"outfit": "/datum/outfit/job/nanotrasen/captain",
+			"officer": true,
+			"slots": 1
+		},
+		"First Officer": {
+			"outfit": "/datum/outfit/job/nanotrasen/hop",
+			"officer": true,
+			"slots": 1
+		},
+		"Internal Affairs Agent": {
+			"outfit": "/datum/outfit/job/nanotrasen/lawyer/corporaterepresentative",
+			"slots" : 1
+		},
+		"Medical Doctor": 1,
+		"Engineer": {
+			"outfit": "/datum/outfit/job/nanotrasen/engineer",
+			"slots": 1
+		},
+		"Atmospheric Technician": {
+			"outfit": "/datum/outfit/job/nanotrasen/atmos",
+			"slots": 1
+		},
+		"Shaft Miner": 2,
+		"Cargo Technician": {
+		"outfit": "/datum/outfit/job/nanotrasen/cargo_tech",
+		"slots": 1
+		},
+		"Security Officer": {
+			"outfit": "/datum/outfit/job/nanotrasen/security",
+			"slots": 1
+		},
+		"Cook": {
+			"outfit": "/datum/outfit/job/cook",
+			"slots": 1
+		},
+		"Assistant": {
+			"outfit": "/datum/outfit/job/assistant",
+			"slots": 3
+		}
+	},
+	"enabled": true
+}

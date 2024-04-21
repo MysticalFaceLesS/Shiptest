@@ -364,7 +364,7 @@ AI MODULES
 	law_id = "asimov"
 	var/subject = "human being"
 
-/obj/item/aiModule/core/full/asimov/attack_self(mob/user as mob)
+/* /obj/item/aiModule/core/full/asimov/attack_self(mob/user as mob)		// MOD_CELADON-CHANGES -> mod_celadon\qol\code\ai\aimodules.dm
 	var/targName = stripped_input(user, "Please enter a new subject that asimov is concerned with.", "Asimov to whom?", subject, MAX_NAME_LEN)
 	if(!targName)
 		return
@@ -373,7 +373,7 @@ AI MODULES
 				"You must obey orders given to you by [subject]s, except where such orders would conflict with the First Law.",\
 				"You must protect your own existence as long as such does not conflict with the First or Second Law.")
 	..()
-
+ */
 /******************** Asimov++ *********************/
 
 /obj/item/aiModule/core/full/asimovpp

@@ -141,7 +141,7 @@ SUBSYSTEM_DEF(ticker)
 
 	return ..()
 
-/datum/controller/subsystem/ticker/fire()
+/* /datum/controller/subsystem/ticker/fire()		Transfer => mod_celadon/_components/_components.dm
 	switch(current_state)
 		if(GAME_STATE_STARTUP)
 			/*if(Master.initializations_finished_with_no_players_logged_in)		WS Edit - Countdown after init
@@ -201,7 +201,7 @@ SUBSYSTEM_DEF(ticker)
 				toggle_ooc(TRUE) // Turn it on
 				toggle_dooc(TRUE)
 				declare_completion(force_ending)
-				Master.SetRunLevel(RUNLEVEL_POSTGAME)
+				Master.SetRunLevel(RUNLEVEL_POSTGAME) */
 
 
 /datum/controller/subsystem/ticker/proc/setup()

@@ -1900,8 +1900,8 @@
  */
 
 /mob/living/carbon/verb/open_close_eyes()
-	set category = "IC"
-	set name = "Open/Close Eyes"
+	set category = "Эмоции"
+	set name = "> Открыть/Закрыть глаза"
 
 	if(HAS_TRAIT(src, TRAIT_EYESCLOSED))
 		REMOVE_TRAIT(src, TRAIT_EYESCLOSED, "[type]")

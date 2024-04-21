@@ -282,7 +282,7 @@
 					sleep(10)
 
 
-/mob/living/silicon/proc/checklaws() //Gives you a link-driven interface for deciding what laws the statelaws() proc will share with the crew. --NeoFite
+/* /mob/living/silicon/proc/checklaws()		//MOD_CELADON-CHANGES -> mod_celadon\qol\code\ai\silicon.dm
 
 	var/list = "<b>Which laws do you want to include when stating them for the crew?</b><br><br>"
 
@@ -337,7 +337,7 @@
 	list += {"<br><br><A href='byond://?src=[REF(src)];laws=1'>State Laws</A>"}
 
 	usr << browse(list, "window=laws")
-
+ */
 /mob/living/silicon/proc/set_autosay() //For allowing the AI and borgs to set the radio behavior of auto announcements (state laws, arrivals).
 	if(!radio)
 		to_chat(src, "<span class='alert'>Radio not detected.</span>")

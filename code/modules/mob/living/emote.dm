@@ -1,4 +1,4 @@
-
+/*			=# CELADON CHANGES => mod_celadon\_components\code\emotes\emotes_living.dm #=
 /* EMOTE DATUMS */
 /datum/emote/living
 	mob_type_allowed_typecache = /mob/living
@@ -602,4 +602,4 @@
 	key = "clack"
 	key_third_person = "clacks"
 	message = "clacks their beak."
-	emote_type = EMOTE_VISIBLE
+	emote_type = EMOTE_VISIBLE		*/

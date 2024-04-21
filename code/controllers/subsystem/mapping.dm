@@ -150,9 +150,9 @@ SUBSYSTEM_DEF(mapping)
 
 		shuttle_templates[S.file_name] = S
 
-#define CHECK_STRING_EXISTS(X) if(!istext(data[X])) { log_world("[##X] missing from json!"); continue; }
+/* #define CHECK_STRING_EXISTS(X) if(!istext(data[X])) { log_world("[##X] missing from json!"); continue; }
 #define CHECK_LIST_EXISTS(X) if(!islist(data[X])) { log_world("[##X] missing from json!"); continue; }
-/datum/controller/subsystem/mapping/proc/load_ship_templates()
+/datum/controller/subsystem/mapping/proc/load_ship_templates()		//MOD_CELADON -> mod_celadon\configs\code\configs.dm
 	maplist = list()
 	ship_purchase_list = list()
 	var/list/filelist = flist("_maps/configs/")
@@ -253,7 +253,7 @@ SUBSYSTEM_DEF(mapping)
 		shuttle_templates[S.file_name] = S
 		map_templates[S.file_name] = S
 #undef CHECK_STRING_EXISTS
-#undef CHECK_LIST_EXISTS
+#undef CHECK_LIST_EXISTS */
 
 /datum/controller/subsystem/mapping/proc/preloadShelterTemplates()
 	for(var/item in subtypesof(/datum/map_template/shelter))

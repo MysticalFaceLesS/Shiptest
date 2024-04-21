@@ -1,0 +1,43 @@
+{
+	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
+	"map_name": "Savior-class multifunctional medical ship",
+	"prefix": "NTSV",
+	"namelists": [
+		"GENERAL",
+		"SPACE",
+		"NANOTRASEN"
+	],
+	"map_short_name": "Savior-class",
+	"description": "Многофункциональное медицинское судно класса 'Savior' - относительно современная разработка НТ, предназначенная для оказания медицинской помощи.",
+	"tags": [
+		"Science",
+		"medical"
+	],
+	"map_path": "_maps/_mod_celadon/shuttles/nanotrasen/nanotrasen_savior.dmm",
+	"starting_funds": 0,
+	"job_slots": {
+		"Captain": {
+			"outfit": "/datum/outfit/job/nanotrasen/captain",
+			"officer": true,
+			"slots": 1
+		},
+		"Chief Physician": {
+			"outfit": "/datum/outfit/job/independent/cmo",
+			"officer": true,
+			"slots": 1
+		},
+		"Engineer": {
+			"outfit": "/datum/outfit/job/nanotrasen/engineer",
+			"slots": 1
+		},
+		"Medical Doctor": {
+			"outfit": "/datum/outfit/job/nanotrasen/doctor",
+			"slots": 3
+		},
+		"Paramedic": {
+			"outfit": "/datum/outfit/job/nanotrasen/paramedic",
+			"slots": 1
+		}
+	},
+	"enabled": true
+}

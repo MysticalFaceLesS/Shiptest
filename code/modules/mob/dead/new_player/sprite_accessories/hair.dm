@@ -2,9 +2,9 @@
 // Keep the names alphabetical, and capitalized.
 // You do not need to define _s or _l sub-states, game automatically does this for you //what is this
 
-/datum/sprite_accessory/hair
+/* /datum/sprite_accessory/hair 		// MOD_CELADON-CHANGES -> mod_celadon\qol\code\hair.dm
 	icon = 'icons/mob/human_face.dmi'	  // default icon for all hairs
-	body_zone = BODY_ZONE_HEAD
+	body_zone = BODY_ZONE_HEAD */
 
 /datum/sprite_accessory/hair/afro
 	name = "Afro"

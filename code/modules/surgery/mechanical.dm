@@ -1,6 +1,6 @@
 /*\ Mechanical Surgery for IPC's and the augmented \*/
 
-/datum/surgery/brain_surgery/mechanic
+/*/datum/surgery/brain_surgery/mechanic		MOD_CELADON-CHANGES -> mod_celadon/ipc_surgery/code/ipc_surgery.dm
 	name = "Mechanical brain surgery"
 	requires_bodypart_type = BODYTYPE_ROBOTIC
 	steps = list(
@@ -12,7 +12,7 @@
 		/datum/surgery_step/mechanic_close
 	)
 	lying_required = FALSE
-	self_operable = TRUE
+	self_operable = TRUE*/
 
 /datum/surgery/healing/mechanic
 	name = "Repair machinery"

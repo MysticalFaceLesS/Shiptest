@@ -1,0 +1,47 @@
+{
+	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
+	"prefix": "NTSV",
+	"map_name": "Ranger-class Aid Vessel",
+	"namelists": [
+		"NANOTRASEN",
+		"NATURAL_AGGRESSIVE",
+		"WEAPONS"
+	],
+	"map_short_name": "Ranger-class",
+	"description": "Спасательное судно Нанотрайзен судно класса 'Ranger'. Оснащено ядром ИИ, умеренным боевым снаряжением и оборудованием, пригодным для спасательных операций и оказания общей помощи. Нанотрайзен часто использует эти судна вместо полноценной группы быстрого реагирования, чтобы помочь своим союзникам во Фронтире, не задействуя всю свою мощь. Владелец корабля - лейтенант отряда предотвращения потерь, а комиссар помогает в операциях на самом корабле.",
+	"tags": [
+		"Combat",
+		"Riot",
+		"Robotics",
+		"Medical",
+		"Telecomms",
+		"Generalist"
+	],
+	"starting_funds": 4000,
+	"map_path": "_maps/_mod_celadon/shuttles/nanotrasen/nanotrasen_ranger.dmm",
+	"limit": 1,
+	"job_slots": {
+		"LP Lieutenant": {
+			"outfit": "/datum/outfit/job/nanotrasen/captain/lp",
+			"officer": true,
+			"slots": 1
+		},
+		"LP Engineering Specialist": {
+			"outfit": "/datum/outfit/job/nanotrasen/engineer/lp",
+			"slots": 1
+		},
+		"LP Security Specialist": {
+			"outfit": "/datum/outfit/job/nanotrasen/security/lp",
+			"slots": 1
+		},
+		"LP Medical Specialist": {
+			"outfit": "/datum/outfit/job/nanotrasen/doctor/lp",
+			"slots": 1
+		},
+		"Intern": {
+			"outfit": "/datum/outfit/job/nanotrasen/assistant",
+			"slots": 1
+		}
+	},
+	"enabled": true
+}

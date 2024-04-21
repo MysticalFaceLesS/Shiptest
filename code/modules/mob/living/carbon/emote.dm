@@ -1,7 +1,7 @@
 /datum/emote/living/carbon
 	mob_type_allowed_typecache = list(/mob/living/carbon)
 
-/datum/emote/living/carbon/airguitar
+/* /datum/emote/living/carbon/airguitar			// Celadon Mod => mod_celadon/_components/code/emotes.dm
 	key = "airguitar"
 	message = "is strumming the air and headbanging like a safari chimp."
 	hands_use_check = TRUE
@@ -35,7 +35,7 @@
 
 #undef BLINK_DURATION
 
-/datum/emote/living/carbon/blink_r
+ /datum/emote/living/carbon/blink_r			// Celadon Mod => mod_celadon/_components/code/emotes.dm
 	key = "blink_r"
 	message = "blinks rapidly."
 
@@ -46,7 +46,7 @@
 	muzzle_ignore = TRUE
 	hands_use_check = TRUE
 	emote_type = EMOTE_AUDIBLE
-	vary = TRUE
+	vary = TRUE */
 
 /datum/emote/living/carbon/clap/get_sound(mob/living/user)
 	if(ishuman(user))
@@ -58,19 +58,19 @@
 							'sound/misc/clap3.ogg',
 							'sound/misc/clap4.ogg')
 
-/datum/emote/living/carbon/crack
-	key = "crack"
-	key_third_person = "cracks"
-	message = "cracks their knuckles."
-	sound = 'sound/misc/knuckles.ogg'
-	cooldown = 6 SECONDS
+	// /datum/emote/living/carbon/crack			// Celadon Mod => mod_celadon/_components/code/emotes.dm
+	// 	key = "crack"
+	// 	key_third_person = "cracks"
+	// 	message = "cracks their knuckles."
+	// 	sound = 'sound/misc/knuckles.ogg'
+	// 	cooldown = 6 SECONDS
 
 /datum/emote/living/carbon/crack/can_run_emote(mob/living/carbon/user, status_check = TRUE , intentional)
 	if(user.usable_hands < 2)
 		return FALSE
 	return ..()
 
-/datum/emote/living/carbon/gnarl
+/* /datum/emote/living/carbon/gnarl			// Celadon Mod => mod_celadon/_components/code/emotes.dm
 	key = "gnarl"
 	key_third_person = "gnarls"
 	message = "gnarls and shows its teeth..."
@@ -81,7 +81,7 @@
 	key_third_person = "moans"
 	message = "moans!"
 	message_mime = "appears to moan!"
-	emote_type = EMOTE_AUDIBLE
+	emote_type = EMOTE_AUDIBLE */
 
 /datum/emote/living/carbon/roll
 	key = "roll"
@@ -90,7 +90,7 @@
 	mob_type_allowed_typecache = list(/mob/living/carbon/monkey, /mob/living/carbon/alien)
 	hands_use_check = TRUE
 
-/datum/emote/living/carbon/scratch
+/* /datum/emote/living/carbon/scratch			// Celadon Mod => mod_celadon/_components/code/emotes.dm
 	key = "scratch"
 	key_third_person = "scratches"
 	message = "scratches."
@@ -101,7 +101,7 @@
 	key = "screech"
 	key_third_person = "screeches"
 	message = "screeches."
-	mob_type_allowed_typecache = list(/mob/living/carbon/monkey, /mob/living/carbon/alien)
+	mob_type_allowed_typecache = list(/mob/living/carbon/monkey, /mob/living/carbon/alien) */
 
 /datum/emote/living/carbon/sign
 	key = "sign"
@@ -115,7 +115,7 @@
 	if(!isnum(text2num(params)))
 		return message
 
-/datum/emote/living/carbon/sign/signal
+/* /datum/emote/living/carbon/sign/signal			// Celadon Mod => mod_celadon/_components/code/emotes.dm
 	key = "signal"
 	key_third_person = "signals"
 	message_param = "raises %t fingers."
@@ -130,7 +130,7 @@
 /datum/emote/living/carbon/wink
 	key = "wink"
 	key_third_person = "winks"
-	message = "winks."
+	message = "winks." */
 
 /datum/emote/living/carbon/circle
 	key = "circle"
@@ -271,7 +271,7 @@
 	iteration++
 	noogie_loop(user, target, iteration)
 
-/obj/item/slapper
+/* /obj/item/slapper			// Celadon Mod => mod_celadon/_components/code/emotes.dm
 	name = "slapper"
 	desc = "This is how real men fight."
 	icon_state = "latexballon"
@@ -313,7 +313,7 @@
 			span_notice("You slap [M]!"),
 			span_hear("You hear a slap."))
 	playsound(M, 'sound/weapons/slap.ogg', slap_volume, TRUE, -1)
-	return
+	return */
 
 /obj/item/slapper/on_offered(mob/living/carbon/offerer)
 	. = TRUE
@@ -362,7 +362,7 @@
 	qdel(src)
 
 
-/obj/item/kisser
+/* /obj/item/kisser			// Celadon Mod => mod_celadon/_components/code/emotes.dm
 	name = "kiss"
 	desc = "I want you all to know, everyone and anyone, to seal it with a kiss."
 	icon = 'icons/mob/animal.dmi'
@@ -374,9 +374,9 @@
 	/// The kind of projectile this version of the kiss blower fires
 	var/kiss_type = /obj/projectile/kiss
 	/// TRUE if the user was aiming anywhere but the mouth when they offer the kiss, if it's offered
-	var/cheek_kiss
+	var/cheek_kiss */
 
-/obj/item/kisser/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
+/* /obj/item/kisser/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
 	. = ..()
 	var/obj/projectile/blown_kiss = new kiss_type(get_turf(user))
 	user.visible_message("<b>[user]</b> blows \a [blown_kiss] at [target]!", span_notice("You blow \a [blown_kiss] at [target]!"))
@@ -388,7 +388,7 @@
 	LAZYSET(blown_kiss.impacted, user, TRUE) // just to make sure we don't hit the wearer
 	blown_kiss.preparePixelProjectile(target, user)
 	blown_kiss.fire()
-	qdel(src)
+	qdel(src) */
 
 /obj/item/kisser/on_offered(mob/living/carbon/offerer)
 	if(!(locate(/mob/living/carbon) in orange(1, offerer)))
@@ -455,14 +455,14 @@
  * This fake hit only happens if we can deal damage and if we hit a living thing. Otherwise, we just do normal on hit effects.
  */
 /obj/projectile/kiss/proc/harmless_on_hit(mob/living/living_target)
-	playsound(get_turf(living_target), hitsound, 100, TRUE)
+	playsound(get_turf(living_target), hitsound, 50, TRUE, -12, ignore_walls = FALSE)
 	if(!suppressed)  // direct
 		living_target.visible_message(span_danger("[living_target] is hit by \a [src]."), span_userdanger("You're hit by \a [src]!"), vision_distance=COMBAT_MESSAGE_RANGE)
 
 	SEND_SIGNAL(living_target, COMSIG_ADD_MOOD_EVENT, "kiss", /datum/mood_event/kiss, firer, suppressed)
 	try_fluster(living_target)
 
-/obj/projectile/kiss/proc/try_fluster(mob/living/living_target)
+/* /obj/projectile/kiss/proc/try_fluster(mob/living/living_target)			// Celadon Mod => mod_celadon/_components/code/emotes.dm
 	// people with the social anxiety quirk can get flustered when hit by a kiss
 	if(!HAS_TRAIT(living_target, TRAIT_ANXIOUS) || (living_target.stat > SOFT_CRIT) || living_target.is_blind())
 		return
@@ -488,7 +488,7 @@
 			living_target.face_atom(firer)
 			living_target.Stun(rand(3 SECONDS, 8 SECONDS))
 
-	living_target.visible_message("<b>[living_target]</b> [other_msg]", "<span class='userdanger'>Whoa! [self_msg]<span>")
+	living_target.visible_message("<b>[living_target]</b> [other_msg]", "<span class='userdanger'>Whoa! [self_msg]<span>") */
 
 /obj/projectile/kiss/on_hit(atom/target, blocked, pierce_hit)
 	def_zone = BODY_ZONE_HEAD // let's keep it PG, people
