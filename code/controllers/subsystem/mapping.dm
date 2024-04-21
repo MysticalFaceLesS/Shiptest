@@ -387,7 +387,7 @@ SUBSYSTEM_DEF(mapping)
 	return new /datum/map_zone(new_name)
 
 /// Allocates, creates and passes a new virtual level
-/datum/controller/subsystem/mapping/proc/create_virtual_level(new_name, list/traits, datum/map_zone/mapzone, width, height, allocation_type = ALLOCATION_FREE, allocation_jump = DEFAULT_ALLOC_JUMP)
+/datum/controller/subsystem/mapping/proc/create_virtual_level(new_name, list/traits, datum/map_zone/mapzone, width, height, allocation_type = ALLOCATION_QUADRANT, allocation_jump = DEFAULT_ALLOC_JUMP)
 	/// Because we add an implicit 1 for the coordinate calcuations.
 	width--
 	height--
