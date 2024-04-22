@@ -33,3 +33,6 @@
 
 /datum/export/lavaland/gems/blood	// Origin -> code\modules\cargo\exports\lavaland.dm
 	cost = 7000
+
+/datum/export/stack/skin/gondola	// Origin -> code\modules\cargo\exports\sheets.dm
+	cost = 250
