@@ -263,7 +263,7 @@
 		if("beige")
 			. = "f2e8c9"
 		if("pink")
-			. = "ff99cc"
+			. = "cf8faf"
 		if("grey")
 			. = "808080"
 		if("black")
