@@ -26,7 +26,7 @@
 	crate_name = "hacked r&d kit"
 	crate_type = /obj/structure/closet/crate/science
 
-/datum/supply_pack/machinery/plasma_thruster	// оригинал -> code\modules\cargo\packs\machinery.dm
+/datum/supply_pack/machinery/plasma_thruster	// Origin -> code\modules\cargo\packs\machinery.dm
 	name = "Набор для создания плазменного двигателя"
 	desc = "Набор содержит одну канистру плазмы, платы плазменного двигателя, плазменного нагревателя и раздатчика труб."
 	cost = 5000
@@ -39,7 +39,7 @@
 	crate_name = "Набор для создания плазменного двигателя"
 	crate_type = /obj/structure/closet/crate/secure/engineering
 
-/datum/supply_pack/food/ration_irp		// оригинал -> нет
+/datum/supply_pack/food/ration_irp		// Origin -> no
 	name = "Набор ИРП"
 	desc = "6 расширеных ИРП наборов. Теперь с разогревом!"
 	cost = 3500
