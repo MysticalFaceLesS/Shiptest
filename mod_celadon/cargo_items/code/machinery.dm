@@ -39,7 +39,7 @@
 	crate_name = "Набор для создания плазменного двигателя"
 	crate_type = /obj/structure/closet/crate/secure/engineering
 
-/datum/supply_pack/food/ration_irp
+/datum/supply_pack/food/ration_irp		// оригинал -> нет
 	name = "Набор ИРП"
 	desc = "6 расширеных ИРП наборов. Теперь с разогревом!"
 	cost = 3500
