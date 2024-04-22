@@ -221,18 +221,18 @@
 	volume = 10
 	amount_per_transfer_from_this = 10
 	possible_transfer_amounts = list()
-	possible_states = list(
-		/datum/reagent/consumable/ketchup = list("condi_ketchup", "Ketchup", "You feel more American already."),
-		/datum/reagent/consumable/capsaicin = list("condi_hotsauce", "Hotsauce", "You can almost TASTE the stomach ulcers now!"),
-		/datum/reagent/consumable/soysauce = list("condi_soysauce", "Soy Sauce", "A salty soy-based flavoring"),
-		/datum/reagent/consumable/frostoil = list("condi_frostoil", "Coldsauce", "Leaves the tongue numb in it's passage"),
-		/datum/reagent/consumable/sodiumchloride = list("condi_salt", "Salt Shaker", "Salt. From space oceans, presumably"),
-		/datum/reagent/consumable/blackpepper = list("condi_pepper", "Pepper Mill", "Often used to flavor food or make people sneeze"),
-		/datum/reagent/consumable/cornoil = list("condi_cornoil", "Corn Oil", "A delicious oil used in cooking. Made from corn"),
-		/datum/reagent/consumable/sugar = list("condi_sugar", "Sugar", "Tasty spacey sugar!"),
-		/datum/reagent/consumable/astrotame = list("condi_astrotame", "Astrotame", "The sweetness of a thousand sugars but none of the calories."),
-		/datum/reagent/consumable/bbqsauce = list("condi_bbq", "BBQ sauce", "Hand wipes not included."),
-		)
+	// possible_states = list(		// MOD_CELADON -> mod_celadon\food_and_drinks\code\food.dm
+	// 	/datum/reagent/consumable/ketchup = list("condi_ketchup", "Ketchup", "You feel more American already."),
+	// 	/datum/reagent/consumable/capsaicin = list("condi_hotsauce", "Hotsauce", "You can almost TASTE the stomach ulcers now!"),
+	// 	/datum/reagent/consumable/soysauce = list("condi_soysauce", "Soy Sauce", "A salty soy-based flavoring"),
+	// 	/datum/reagent/consumable/frostoil = list("condi_frostoil", "Coldsauce", "Leaves the tongue numb in it's passage"),
+	// 	/datum/reagent/consumable/sodiumchloride = list("condi_salt", "Salt Shaker", "Salt. From space oceans, presumably"),
+	// 	/datum/reagent/consumable/blackpepper = list("condi_pepper", "Pepper Mill", "Often used to flavor food or make people sneeze"),
+	// 	/datum/reagent/consumable/cornoil = list("condi_cornoil", "Corn Oil", "A delicious oil used in cooking. Made from corn"),
+	// 	/datum/reagent/consumable/sugar = list("condi_sugar", "Sugar", "Tasty spacey sugar!"),
+	// 	/datum/reagent/consumable/astrotame = list("condi_astrotame", "Astrotame", "The sweetness of a thousand sugars but none of the calories."),
+	// 	/datum/reagent/consumable/bbqsauce = list("condi_bbq", "BBQ sauce", "Hand wipes not included."),
+	// 	)
 
 /obj/item/reagent_containers/food/condiment/pack/update_icon()
 	SHOULD_CALL_PARENT(FALSE)
@@ -257,19 +257,19 @@
 			src.reagents.trans_to(target, amount_per_transfer_from_this, transfered_by = user)
 			qdel(src)
 
-/obj/item/reagent_containers/food/condiment/pack/on_reagent_change(changetype)
-	if(reagents.reagent_list.len > 0)
-		var/main_reagent = reagents.get_master_reagent_id()
-		if(main_reagent in possible_states)
-			var/list/temp_list = possible_states[main_reagent]
-			icon_state = temp_list[1]
-			desc = temp_list[3]
-		else
-			icon_state = "condi_mixed"
-			desc = "A small condiment pack. The label says it contains [originalname]"
-	else
-		icon_state = "condi_empty"
-		desc = "A small condiment pack. It is empty."
+// /obj/item/reagent_containers/food/condiment/pack/on_reagent_change(changetype)		// MOD_CELADON -> mod_celadon\food_and_drinks\code\food.dm
+// 	if(reagents.reagent_list.len > 0)
+// 		var/main_reagent = reagents.get_master_reagent_id()
+// 		if(main_reagent in possible_states)
+// 			var/list/temp_list = possible_states[main_reagent]
+// 			icon_state = temp_list[1]
+// 			desc = temp_list[3]
+// 		else
+// 			icon_state = "condi_mixed"
+// 			desc = "A small condiment pack. The label says it contains [originalname]"
+// 	else
+// 		icon_state = "condi_empty"
+// 		desc = "A small condiment pack. It is empty."
 
 //Ketchup
 /obj/item/reagent_containers/food/condiment/pack/ketchup
