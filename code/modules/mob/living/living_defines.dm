@@ -1,4 +1,4 @@
-/mob/living
+/mob/living		// MOD_CELADON -> mod_celadon\qol\code\talk.dm
 	see_invisible = SEE_INVISIBLE_LIVING
 	sight = 0
 	see_in_dark = 2
