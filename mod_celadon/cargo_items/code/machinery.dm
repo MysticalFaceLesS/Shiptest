@@ -25,3 +25,16 @@
 					/obj/item/circuitboard/machine/rdserver)
 	crate_name = "hacked r&d kit"
 	crate_type = /obj/structure/closet/crate/science
+
+/datum/supply_pack/machinery/plasma_thruster	// оригинал -> code\modules\cargo\packs\machinery.dm
+	name = "Набор для создания плазменного двигателя"
+	desc = "Набор содержит одну канистру плазмы, платы плазменного двигателя, плазменного нагревателя и раздатчика труб."
+	cost = 5000
+	contains = list(
+		/obj/item/circuitboard/machine/shuttle/engine/plasma,
+		/obj/item/circuitboard/machine/shuttle/heater,
+		/obj/item/circuitboard/machine/pipedispenser,
+		/obj/machinery/portable_atmospherics/canister/toxins
+	)
+	crate_name = "Набор для создания плазменного двигателя"
+	crate_type = /obj/structure/closet/crate/secure/engineering
