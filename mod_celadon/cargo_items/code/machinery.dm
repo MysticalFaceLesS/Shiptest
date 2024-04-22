@@ -19,7 +19,7 @@
 /datum/supply_pack/machinery/rnd_full
 	name = "Suspicious circuits"
 	desc = "A set of specialized circuits for research and production. An unknown craftsman hacked them, now they are not limited by license. "
-	cost = 39999
+	cost = 89371
 	contains = list(/obj/item/circuitboard/machine/circuit_imprinter,
 					/obj/item/circuitboard/machine/protolathe,
 					/obj/item/circuitboard/machine/rdserver)
