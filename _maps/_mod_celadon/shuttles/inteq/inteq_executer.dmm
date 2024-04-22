@@ -1,7 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aq" = (
 /obj/machinery/door/airlock/highsecurity{
-	req_access = list(20);
+	req_access = "3,20";
 	name = "Armory"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
@@ -592,6 +592,9 @@
 	icon_state = "2-4";
 	tag = null
 	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/engineering/electrical)
 "gB" = (
@@ -989,6 +992,7 @@
 /obj/machinery/light/directional/south,
 /obj/item/reagent_containers/blood/universal,
 /obj/item/reagent_containers/blood/universal,
+/obj/item/reagent_containers/blood/universal,
 /turf/open/floor/plasteel/patterned/brushed,
 /area/ship/medical)
 "kx" = (
@@ -1049,16 +1053,8 @@
 	pixel_y = 11;
 	pixel_x = 3
 	},
-/obj/item/storage/firstaid/toxin{
-	pixel_y = 7;
-	pixel_x = 3
-	},
 /obj/item/storage/firstaid/advanced{
 	pixel_y = 3;
-	pixel_x = 3
-	},
-/obj/item/storage/firstaid/advanced{
-	pixel_y = -1;
 	pixel_x = 3
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
@@ -1137,7 +1133,9 @@
 /area/ship/cargo)
 "ml" = (
 /obj/machinery/suit_storage_unit/inherit/industrial,
-/obj/item/clothing/suit/space/hardsuit/medical,
+/obj/item/clothing/suit/space/inteq,
+/obj/item/clothing/head/helmet/space/inteq,
+/obj/item/clothing/mask/gas/sechailer,
 /turf/open/floor/plasteel/patterned/brushed,
 /area/ship/medical)
 "ms" = (
@@ -1231,7 +1229,6 @@
 	},
 /obj/item/clothing/suit/armor/hos/inteq,
 /obj/item/clothing/shoes/combat,
-/obj/item/shield/riot/tele,
 /obj/item/storage/belt/security/webbing/inteq,
 /obj/item/storage/belt/military/assault,
 /obj/item/clothing/gloves/tackler/combat/insulated,
@@ -1240,7 +1237,6 @@
 /obj/item/clothing/suit/poncho,
 /obj/item/clothing/glasses/hud/security/sunglasses/inteq,
 /obj/item/gun/energy/e_gun/adv_stopping,
-/obj/item/areaeditor/shuttle,
 /obj/item/stock_parts/cell/gun/upgraded,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
@@ -1363,8 +1359,6 @@
 	name = "equipment locker";
 	req_access_txt = "1"
 	},
-/obj/item/clothing/accessory/holster,
-/obj/item/clothing/accessory/holster,
 /turf/open/floor/plasteel/patterned/brushed,
 /area/ship/medical)
 "op" = (
@@ -1422,13 +1416,12 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 9
 	},
-/obj/machinery/power/ship_gravity,
 /turf/open/floor/plasteel/tech,
 /area/ship/maintenance/fore)
 "oQ" = (
 /obj/machinery/door/airlock/command{
 	name = "Bridge";
-	req_access_txt = "19"
+	req_access_txt = "20"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
@@ -1591,9 +1584,14 @@
 /turf/open/floor/carpet/orange,
 /area/ship/bridge)
 "ri" = (
-/obj/machinery/vending/engineering,
 /obj/machinery/light/directional/north,
 /obj/machinery/camera/autoname,
+/obj/machinery/power/ship_gravity,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2";
+	pixel_y = 1
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/engineering/electrical)
 "rp" = (
@@ -2253,7 +2251,7 @@
 /obj/machinery/door/airlock/command{
 	dir = 4;
 	name = "Bridge";
-	req_access_txt = "19"
+	req_access_txt = "20"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
@@ -2270,8 +2268,8 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "AW" = (
-/obj/structure/tank_dispenser,
 /obj/effect/turf_decal/industrial/outline/yellow,
+/obj/structure/tank_dispenser/oxygen,
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
 "Bj" = (
@@ -2637,7 +2635,6 @@
 	pixel_x = 22;
 	pixel_y = -3
 	},
-/obj/machinery/portable_atmospherics/canister/toxins,
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "HR" = (
@@ -2774,10 +2771,10 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "Jt" = (
-/obj/item/clothing/suit/radiation/space,
 /obj/machinery/suit_storage_unit/inherit,
 /obj/item/clothing/mask/gas/sechailer,
-/obj/item/clothing/head/radiation/space,
+/obj/item/clothing/suit/space/inteq,
+/obj/item/clothing/head/helmet/space/inteq,
 /turf/open/floor/plasteel/tech,
 /area/ship/maintenance/fore)
 "JC" = (
@@ -2895,7 +2892,6 @@
 /obj/structure/closet/cardboard,
 /obj/effect/spawner/lootdrop/maintenance/seven,
 /obj/effect/spawner/lootdrop/gloves,
-/obj/effect/spawner/lootdrop/materials,
 /turf/open/floor/plasteel/tech,
 /area/ship/maintenance/starboard)
 "KL" = (
@@ -2941,7 +2937,7 @@
 	req_access_txt = "1"
 	},
 /obj/item/melee/baton/loaded,
-/obj/item/melee/baton/loaded,
+/obj/item/clothing/accessory/holster,
 /obj/item/melee/baton/loaded,
 /obj/item/melee/classic_baton,
 /obj/item/melee/classic_baton,
@@ -2957,10 +2953,6 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 1
 	},
-/obj/item/clothing/accessory/holster,
-/obj/item/clothing/accessory/holster,
-/obj/item/clothing/accessory/holster,
-/obj/item/clothing/accessory/holster,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/security/armory)
 "Lt" = (
@@ -3360,7 +3352,6 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/engineering/electrical)
 "QW" = (
-/obj/machinery/portable_atmospherics/canister/toxins,
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "QX" = (
@@ -3602,7 +3593,6 @@
 /area/ship/engineering)
 "TQ" = (
 /obj/structure/closet/crate/trashcart,
-/obj/effect/spawner/lootdrop/maintenance/three,
 /obj/effect/spawner/lootdrop/maintenance/six,
 /obj/structure/sign/poster/official/help_others{
 	pixel_x = 32
@@ -3734,8 +3724,10 @@
 /area/ship/maintenance/starboard)
 "VV" = (
 /obj/machinery/suit_storage_unit/inherit/industrial,
-/obj/item/clothing/suit/space/hardsuit/medical,
 /obj/machinery/camera/autoname,
+/obj/item/clothing/suit/space/inteq,
+/obj/item/clothing/head/helmet/space/inteq,
+/obj/item/clothing/mask/gas/sechailer,
 /turf/open/floor/plasteel/patterned/brushed,
 /area/ship/medical)
 "Wd" = (
@@ -3959,7 +3951,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
 "Yo" = (
-/obj/machinery/vending/engivend,
+/obj/machinery/vending/tool,
 /turf/open/floor/plasteel/dark,
 /area/ship/engineering/electrical)
 "YF" = (
@@ -4078,8 +4070,8 @@
 /area/ship/cargo)
 "ZQ" = (
 /obj/structure/railing,
-/obj/structure/tank_dispenser,
 /obj/effect/turf_decal/industrial/outline/yellow,
+/obj/structure/tank_dispenser/oxygen,
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
 "ZW" = (
