@@ -1,6 +1,6 @@
 /obj/item/gun/ballistic/automatic/assault/g36sh		// Origin -> code\modules\projectiles\guns\ballistic\assault.dm
 	name = "\improper G36-SH"
-	desc = "Наследие огненной эры Союза Человечества , укороченная версия ,  калибра 5.56x45 . Технология производства восстановлена минитменами , но ввиду усложненной конструкции продана корпорации InteQ. Используется сотрудниками InteQ по сей день , как оружие для элитных наемников."
+	desc = "Наследие огненной эры Союза Человечества, укороченная версия,  калибра 5.56x45. Технология производства восстановлена минитменами, но ввиду усложненной конструкции продана корпорации InteQ. Используется сотрудниками InteQ по сей день, как оружие для элитных наемников."
 	icon = 'mod_celadon/balance/icons/guns/48x32guns.dmi'
 	lefthand_file = 'mod_celadon/balance/icons/guns/guns_lefthand.dmi'
 	righthand_file = 'mod_celadon/balance/icons/guns/guns_righthand.dmi'
@@ -37,19 +37,19 @@
 			burst_size = 1
 			fire_delay = 0
 			spread = 16
-			to_chat(user, "<span class='notice'>You switch to full automatic.</span>")
+			to_chat(user, span_notice("You switch to full automatic."))
 			SEND_SIGNAL(src,COMSIG_GUN_ENABLE_AUTOFIRE)
 		if(1)
 			select = 2
 			spread = 4
-			to_chat(user, "<span class='notice'>You switch to semi-auto.</span>")
+			to_chat(user, span_notice("You switch to semi-auto."))
 			SEND_SIGNAL(src, COMSIG_GUN_DISABLE_AUTOFIRE)
 		if(2)
 			select = 0
 			burst_size = 3
 			fire_delay = 2
 			spread = 8
-			to_chat(user, "<span class='notice'>You switch to [burst_size]-rnd Matter.</span>")
+			to_chat(user, span_notice("You switch to [burst_size]-rnd Matter."))
 			SEND_SIGNAL(src, COMSIG_GUN_DISABLE_AUTOFIRE)
 	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
 	update_icon()
