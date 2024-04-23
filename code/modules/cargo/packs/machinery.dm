@@ -206,14 +206,21 @@
 	crate_name = "ion thruster crate"
 	crate_type = /obj/structure/closet/crate/engineering
 
-// /datum/supply_pack/machinery/plasma_thruster			// MOD_CELADON-CHANGES -> mod_celadon\cargo_items\code\machinery.dm
-// 	name = "Plasma Thruster Crate"
-// 	desc = "A crate containing a plasma thruster and its heater's electronics. For when you need a lot of extra thrust."
-// 	cost = 1500
-// 	contains = list(/obj/item/circuitboard/machine/shuttle/heater,
-// 					/obj/item/circuitboard/machine/shuttle/engine/plasma)
-// 	crate_name = "plasma thruster crate"
-	// crate_type = /obj/structure/closet/crate/engineering
+/datum/supply_pack/machinery/plasma_thruster
+	name = "Plasma Thruster Crate"
+	desc = "A crate containing a plasma thruster and its heater's electronics. For when you need a lot of extra thrust."
+	// [CELADON-EDIT] - CARGO_ITEMS - Ребаланс цен и наполнения
+	// cost = 1500 // CELADON-EDIT - ORIGINAL
+	// contains = list(/obj/item/circuitboard/machine/shuttle/heater, // CELADON-EDIT - ORIGINAL
+	//				/obj/item/circuitboard/machine/shuttle/engine/plasma) // CELADON-EDIT - ORIGINAL
+	cost = 5000
+	contains = list(/obj/item/circuitboard/machine/shuttle/engine/plasma,
+					/obj/item/circuitboard/machine/shuttle/heater,
+					/obj/item/circuitboard/machine/pipedispenser,
+					/obj/machinery/portable_atmospherics/canister/toxins)
+	// [/CELADON-EDIT]
+	crate_name = "plasma thruster crate"
+	crate_type = /obj/structure/closet/crate/engineering
 
 /datum/supply_pack/machinery/drill_crate
 	name = "Heavy duty laser mining drill"
