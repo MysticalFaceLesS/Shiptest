@@ -132,11 +132,11 @@ mods/hello_world
 **Для любой системы** с установленным Python 3 - запустить файл `mods/CREATE_MOD.py`.
 
 В **Windows** можно это сделать ещё двумя способами:
-1. Открыть конмандную строку в папке SHIPTESTBay и прописать:
+1. Открыть конмандную строку в папке Shiptest и прописать:
     ```bat
     powershell mods\CREATE_MOD.ps1
     ```
-2. Открыть PowerShell в папке SHIPTESTBay и прописать:
+2. Открыть PowerShell в папке Shiptest и прописать:
     ```ps
     .\mods\CREATE_MOD.ps1
     ```
@@ -264,25 +264,25 @@ mods/hello_world
 В этом случае применяются следующие обозначения:
 - **Добавление**
   ```dm
-  // [SHIPTEST-ADD] - SHUTTLE_TOGGLE - (Необязательно - причина или комментарий)
+  // [CELADON-ADD] - SHUTTLE_TOGGLE - (Необязательно - причина или комментарий)
   var/adminEmergencyNoRecall = FALSE
   var/lastMode = SHUTTLE_IDLE
   var/lastCallTime = 6000
-  // [/SHIPTEST-ADD]
+  // [/CELADON-ADD]
   ```
 - **Удаление**
   ```dm
-  // [SHIPTEST-REMOVE] - SHUTTLE_TOGGLE - (Необязательно - причина или комментарий)
+  // [CELADON-REMOVE] - SHUTTLE_TOGGLE - (Необязательно - причина или комментарий)
   /*
   for(var/obj/docking_port/stationary/S in stationary)
   if(S.id = id)
     return S
   */
-  // [/SHIPTEST-REMOVE]
+  // [/CELADON-REMOVE]
   ```
   Для удаления с перемещением в другой файл:
   ```dm
-  // [SHIPTEST-REMOVE] - SHUTTLE_TOGGLE - (Перемещено в /mods/shuttle_toggle/randomverbs.dm)
+  // [CELADON-REMOVE] - SHUTTLE_TOGGLE - (Перемещено в /mods/shuttle_toggle/randomverbs.dm)
   /*
   /client/proc/admin_call_shuttle()
     set category = "Admin - Events"
@@ -296,14 +296,14 @@ mods/hello_world
     message_admins(span_adminnotice("[key_name_admin(usr)] admin-called the emergency shuttle."))
     return
   */
-  // [/SHIPTEST-REMOVE]
+  // [/CELADON-REMOVE]
   ```
 - **Изменение**
   ```dm
-  // [SHIPTEST-EDIT] - SHUTTLE_TOGGLE - (Optional Reason/comment)
-  // if(SHUTTLE_STRANDED, SHUTTLE_ESCAPE) // SHIPTEST-EDIT - ORIGINAL
+  // [CELADON-EDIT] - SHUTTLE_TOGGLE - (Optional Reason/comment)
+  // if(SHUTTLE_STRANDED, SHUTTLE_ESCAPE) // CELADON-EDIT - ORIGINAL
   if(SHUTTLE_STRANDED, SHUTTLE_ESCAPE, SHUTTLE_DISABLED)
-  // [SHIPTEST-EDIT]
+  // [CELADON-EDIT]
       return 1
   ```
 
