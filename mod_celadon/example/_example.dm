@@ -1,15 +1,17 @@
 /datum/modpack/example
-	/// A string name for the modpack. Used for looking up other modpacks in init.
-	name = "Name"
-	/// A string desc for the modpack. Can be used for modpack verb list as description.
-	desc = "Description"
-	/// A string with authors of this modpack.
-	author = "Yata9arasu"
+	/// Строковое имя модпака. Используется для поиска других модпаков в init.
+	name = "НАЗВАНИЕ"
+	/// Строковое описание для модпака. Может использоваться для списка глаголов модпака в качестве описания.
+	desc = "ОПИСАНИЕ"
+	/// Строка с авторами этого модпака.
+	author = "АВТОР(Ы)"
 
-/datum/modpack/example/pre_initialize()
+///**********************************************************************///
+
+/datum/modpack/example/pre_initialize() /// Эти конструкции нужны, для того чтобы в вашем модпаке что-то происходило.
 	. = ..()
 
-/datum/modpack/example/initialize()
+/datum/modpack/example/initialize() /// Если эти три конструкции не нужны, просто удалите их!
 	. = ..()
 
 /datum/modpack/example/post_initialize()
