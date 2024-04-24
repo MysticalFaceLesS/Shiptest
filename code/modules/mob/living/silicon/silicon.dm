@@ -282,9 +282,12 @@
 					sleep(10)
 
 
-/* /mob/living/silicon/proc/checklaws()		//MOD_CELADON-CHANGES -> mod_celadon\qol\code\ai\silicon.dm
+/mob/living/silicon/proc/checklaws()
 
-	var/list = "<b>Which laws do you want to include when stating them for the crew?</b><br><br>"
+	// [CELADON-EDIT] - CELADON_QOL - Перевод законов ИИ
+	// var/list = "<b>Which laws do you want to include when stating them for the crew?</b><br><br>" // CELADON-EDIT -> ORIGINAL
+	var/list = "<meta http-equiv='X-UA-Compatible' content='IE=edge' charset='UTF-8'/><b>Which laws do you want to include when stating them for the crew?</b><br><br>"
+	// [/CELADON-EDIT]
 
 	if (laws.devillaws && laws.devillaws.len)
 		for(var/index = 1, index <= laws.devillaws.len, index++)
@@ -337,7 +340,7 @@
 	list += {"<br><br><A href='byond://?src=[REF(src)];laws=1'>State Laws</A>"}
 
 	usr << browse(list, "window=laws")
- */
+
 /mob/living/silicon/proc/set_autosay() //For allowing the AI and borgs to set the radio behavior of auto announcements (state laws, arrivals).
 	if(!radio)
 		to_chat(src, "<span class='alert'>Radio not detected.</span>")
