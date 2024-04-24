@@ -1,7 +1,7 @@
 @echo off
 set /p modpackName=Enter modpack name :
 
-xcopy "example" "%modpackName%" /s /i
+xcopy "_example" "%modpackName%" /s /i
 
 ren "%modpackName%\_example.dm" "_%modpackName%.dm"
 ren "%modpackName%\_example.dme" "_%modpackName%.dme"
