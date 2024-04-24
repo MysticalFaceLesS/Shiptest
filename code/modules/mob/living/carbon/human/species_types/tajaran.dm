@@ -68,7 +68,7 @@
 	mutant_organs = list(
 		/obj/item/organ/tail/tajaran)
 
-	bodytype = BODYTYPE_TAJARAN
+	bodytype = BODYTYPE_TAJARAN | BODYTYPE_ORGANIC
 
 	species_chest = /obj/item/bodypart/chest/tajaran
 	species_head = /obj/item/bodypart/head/tajaran
