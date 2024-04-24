@@ -50,7 +50,7 @@
 	limb_id = "jelly"
 	// [CELADON-EDIT] - CELADON_SPECIES_CHANGES
 	// is_dimorphic = TRUE // CELADON-EDIT - ORIGINAL
-	is_dimorphic = TRUE
+	is_dimorphic = FALSE
 	// [/CELADON-EDIT]
 
 /obj/item/bodypart/chest/jelly
