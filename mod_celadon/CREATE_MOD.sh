@@ -45,7 +45,7 @@ if [ -d "$script_dir/$mod_name_lower" ]; then
 fi
 
 mkdir -p "$script_dir/$mod_name_lower"
-cp "$script_dir/_example/"* "$script_dir/$mod_name_lower/"
+cp -r "$script_dir/_example/"* "$script_dir/$mod_name_lower/"
 
 # Rename files
 for file in "$script_dir/$mod_name_lower"/*example*; do

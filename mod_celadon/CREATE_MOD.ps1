@@ -38,7 +38,17 @@ if (Test-Path "$modpack_dir" -PathType Container) {
 }
 
 New-Item -ItemType Directory -Path "$modpack_dir" | Out-Null
-Copy-Item -Path "$script_dir\_example\*" -Destination "$modpack_dir"
+
+Get-ChildItem -Path "$script_dir\_example" | ForEach-Object {
+    $source = $_.FullName
+    $destination = Join-Path $modpack_dir $_.Name
+
+    if ($_.PSIsContainer) {
+        Copy-Item -Path $source -Destination $destination -Recurse
+    } else {
+        Copy-Item -Path $source -Destination $destination
+    }
+}
 
 # Rename files
 Get-ChildItem "$modpack_dir" | ForEach-Object {
