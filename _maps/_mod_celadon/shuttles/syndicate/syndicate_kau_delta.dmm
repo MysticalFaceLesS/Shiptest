@@ -44,7 +44,12 @@
 	},
 /obj/structure/table/wood,
 /obj/item/toy/cards/deck/syndicate{
-	pixel_y = 3
+	pixel_y = 2;
+	pixel_x = 6
+	},
+/obj/item/storage/box/syndie_kit/sleepytime{
+	pixel_y = 12;
+	pixel_x = -5
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
@@ -126,7 +131,9 @@
 /obj/item/tank/jetpack/oxygen/security{
 	name = "Suspicious looking jetpack (oxygen)"
 	},
-/obj/item/clothing/suit/space/hardsuit/syndi/sbg,
+/obj/item/clothing/suit/space/hardsuit/syndi/sbg{
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 30, "energy" = 40, "bomb" = 35, "bio" = 100, "rad" = 50, "fire" = 50, "acid" = 90)
+	},
 /turf/open/floor/carpet/red_gold,
 /area/ship/bridge)
 "dg" = (
@@ -407,7 +414,9 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 10
 	},
-/obj/effect/spawner/lootdrop/maintenance/six,
+/obj/item/storage/toolbox/ammo/c45{
+	pixel_y = -1
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/ship/cargo/port)
 "hx" = (
@@ -717,8 +726,8 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/machinery/atmospherics/components/binary/pump/on/layer4{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
 	},
 /obj/machinery/power/port_gen/pacman,
 /turf/open/floor/circuit/red/off,
@@ -1055,6 +1064,7 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
 	dir = 1
 	},
+/obj/item/clothing/suit/space/hardsuit/ert/paranormal/inquisitor,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/hallway/central)
 "xj" = (
@@ -1145,7 +1155,6 @@
 	},
 /obj/item/storage/backpack/duffelbag/syndie/c4,
 /obj/item/storage/box/syndie_kit/signaler,
-/obj/item/storage/box/firingpins,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "xN" = (
@@ -1322,8 +1331,8 @@
 "BC" = (
 /obj/item/gun/ballistic/automatic/smg/vector{
 	projectile_damage_multiplier = 1.35;
-	name = "Suspicious Vector carbine";
-	desc = "A police carbine based on a pre-Night of Fire SMG design. Most of the complex workings have been removed for reliability. Chambered in .45 ACP. Has been modified to suit syndicate needs.";
+	name = "Special Operative Vector";
+	desc = "A carbine based on a pre-Night of Fire SMG design. Chambered in .45 ACP. Has been modified to suit syndicate needs. Has a CyberSun TM";
 	wield_slowdown = 0.25;
 	mag_type = /obj/item/ammo_box/magazine/smgm45
 	},
@@ -1349,7 +1358,7 @@
 /turf/open/floor/mineral/plastitanium,
 /area/ship/cargo)
 "Ct" = (
-/obj/machinery/atmospherics/pipe/layer_manifold{
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -1414,8 +1423,6 @@
 	name = "ammo locker"
 	},
 /obj/item/storage/backpack/duffelbag/syndie/ammo/smg,
-/obj/item/ammo_box/magazine/m12g,
-/obj/item/ammo_box/magazine/m12g,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "Dz" = (
@@ -1777,6 +1784,9 @@
 	},
 /obj/item/roller,
 /obj/item/modular_computer/laptop/preset/civilian,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/structure/table/glass,
 /turf/open/floor/plasteel/dark,
 /area/ship/maintenance/port)
 "KQ" = (
@@ -1893,7 +1903,7 @@
 /area/ship/security/armory)
 "LT" = (
 /obj/structure/catwalk/over/plated_catwalk/dark,
-/obj/machinery/atmospherics/components/unary/outlet_injector/on{
+/obj/machinery/atmospherics/components/unary/outlet_injector/on/layer4{
 	dir = 4
 	},
 /turf/open/floor/engine/hull/reinforced,
@@ -2109,14 +2119,14 @@
 /area/ship/cargo)
 "OY" = (
 /obj/structure/catwalk/over/plated_catwalk/dark,
-/obj/machinery/atmospherics/components/unary/outlet_injector/on{
-	dir = 4
-	},
 /obj/item/toy/plush/moth/error{
 	pixel_y = 2;
 	pixel_x = 1;
 	name = "Captain Error";
 	desc = "An adorable mothperson plushy. It's a BUG! Just like whole build might need some fixes"
+	},
+/obj/machinery/atmospherics/components/unary/outlet_injector/on/layer4{
+	dir = 4
 	},
 /turf/open/floor/engine/hull/reinforced,
 /area/ship/external)
@@ -2158,14 +2168,14 @@
 /obj/item/gun/ballistic/automatic/smg/c20r/sc_c20r{
 	pixel_y = 1
 	},
-/obj/item/gun/ballistic/automatic/smg/c20r/sc_c20r{
-	pixel_y = -5
-	},
-/obj/item/gun/ballistic/shotgun/bulldog/unrestricted{
-	pixel_y = -12
-	},
 /obj/item/gun/energy/ionrifle/carbine{
 	pixel_y = 8
+	},
+/obj/item/gun/ballistic/automatic/ebr{
+	mag_type = /obj/item/ammo_box/magazine/smgm45;
+	name = "Special Operative 92 EBR";
+	pixel_y = -6;
+	wield_slowdown = 0.45
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
@@ -2237,6 +2247,9 @@
 /area/ship/cargo)
 "QY" = (
 /obj/machinery/atmospherics/pipe/layer_manifold{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,

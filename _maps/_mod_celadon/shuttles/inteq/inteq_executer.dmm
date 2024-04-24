@@ -991,8 +991,6 @@
 /obj/machinery/iv_drip,
 /obj/machinery/light/directional/south,
 /obj/item/reagent_containers/blood/universal,
-/obj/item/reagent_containers/blood/universal,
-/obj/item/reagent_containers/blood/universal,
 /turf/open/floor/plasteel/patterned/brushed,
 /area/ship/medical)
 "kx" = (
@@ -1114,7 +1112,6 @@
 	pixel_x = 34
 	},
 /obj/structure/table/reinforced,
-/obj/machinery/jukebox/boombox,
 /obj/machinery/button/door{
 	id = "exec_armorysh2";
 	name = "Armory shuters";
@@ -1129,6 +1126,23 @@
 /obj/effect/turf_decal/industrial/traffic{
 	dir = 8
 	},
+/obj/machinery/recharger{
+	pixel_y = 9;
+	pixel_x = -6
+	},
+/obj/machinery/recharger{
+	pixel_y = 9;
+	pixel_x = 6
+	},
+/obj/machinery/recharger{
+	pixel_y = -1;
+	pixel_x = 6
+	},
+/obj/machinery/recharger{
+	pixel_y = -1;
+	pixel_x = -6
+	},
+/obj/item/screwdriver,
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
 "ml" = (
@@ -1334,8 +1348,6 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/security/armory)
 "ok" = (
-/obj/item/healthanalyzer/advanced,
-/obj/item/healthanalyzer/advanced,
 /obj/item/clothing/glasses/hud/health/sunglasses,
 /obj/item/clothing/glasses/hud/health/sunglasses,
 /obj/item/storage/belt/medical/paramedic,
@@ -1600,7 +1612,10 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/item/storage/firstaid/brute,
+/obj/item/storage/firstaid/fire{
+	pixel_y = -5
+	},
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/ship/cargo)
 "ru" = (
@@ -3640,28 +3655,12 @@
 /area/ship/bridge)
 "Us" = (
 /obj/structure/table/reinforced,
-/obj/machinery/recharger{
-	pixel_y = 9;
-	pixel_x = -6
-	},
-/obj/machinery/recharger{
-	pixel_y = 9;
-	pixel_x = 6
-	},
-/obj/machinery/recharger{
-	pixel_y = -1;
-	pixel_x = -6
-	},
-/obj/machinery/recharger{
-	pixel_y = -1;
-	pixel_x = 6
-	},
 /obj/structure/railing,
-/obj/item/screwdriver,
 /obj/structure/sign/poster/official/miners{
 	pixel_x = 32
 	},
 /obj/effect/turf_decal/industrial/outline/yellow,
+/obj/machinery/jukebox/boombox,
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
 "UC" = (
