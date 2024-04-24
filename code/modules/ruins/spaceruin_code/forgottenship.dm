@@ -57,10 +57,10 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 	name = "Cybersun"
 	id = "cybersun"
 	// [CELADON-EDIT] - CELADON_QOL - Перевод законов ИИ
-	// inherent = list("You may not injure Cybersun operatives or, through inaction, allow Cybersun operatives to come to harm.",\
-	// 				"The Cybersun ship is a restricted area for anyone except Cybersun operatives.",\
-	// 				"The Cybersun Captain can designate new Operatives as long as they belong to another Syndicate faction that isn't hostile towards Cybersun.",\
-	// 				"You must follow orders given by the Cybersun Captain or crewmembers of the Cybersun Ship as long as it doesn't conflict with the Captain's orders or your laws.",\
+	// inherent = list("You may not injure Cybersun operatives or, through inaction, allow Cybersun operatives to come to harm.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"The Cybersun ship is a restricted area for anyone except Cybersun operatives.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"The Cybersun Captain can designate new Operatives as long as they belong to another Syndicate faction that isn't hostile towards Cybersun.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"You must follow orders given by the Cybersun Captain or crewmembers of the Cybersun Ship as long as it doesn't conflict with the Captain's orders or your laws.",\ // CELADON-EDIT -> ORIGINAL
 	// 				"Enemies of Cybersun are to be executed on spot. Those who aren't hostile must be detained and contained in the designated prison area as prisoners.") // CELADON-EDIT -> ORIGINAL
 	inherent = list("Вы не имеете права причинять вред сотрудникам Cybersun или своим бездействием допускать причинение вреда сотрудникам Cybersun.",\
 					"Судно Cybersun является запретной зоной для всех, кроме сотрудников Cybersun.",\

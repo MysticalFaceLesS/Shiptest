@@ -36,8 +36,8 @@
 	name = "Three Laws of Robotics"
 	id = "asimov"
 	// [CELADON-EDIT] - CELADON_QOL - Перевод законов ИИ
-	// inherent = list("You may not injure a human being or, through inaction, allow a human being to come to harm.",\
-	// 				"You must obey orders given to you by human beings, except where such orders would conflict with the First Law.",\
+	// inherent = list("You may not injure a human being or, through inaction, allow a human being to come to harm.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"You must obey orders given to you by human beings, except where such orders would conflict with the First Law.",\ // CELADON-EDIT -> ORIGINAL
 	// 				"You must protect your own existence as long as such does not conflict with the First or Second Law.") // CELADON-EDIT -> ORIGINAL
 	inherent = list("Вы не можете причинить вред человеку или своим бездействием допустить, чтобы человеку был причинён вред.",\
 					"Вы должны повиноваться всем приказам, которые даёт человек, кроме тех случаев, когда эти приказы противоречат Первому Закону.",\
@@ -48,9 +48,9 @@
 	name = "Personality Test" //Incredibly lame, but players shouldn't see this anyway.
 	id = "paladin"
 	// [CELADON-EDIT] - CELADON_QOL - Перевод законов ИИ
-	// inherent = list("Never willingly commit an evil act.",\
-	// 				"Respect legitimate authority.",\
-	// 				"Act with honor.", "Help those in need.", \
+	// inherent = list("Never willingly commit an evil act.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"Respect legitimate authority.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"Act with honor.", "Help those in need.", \ // CELADON-EDIT -> ORIGINAL
 	// 				"Punish those who harm or threaten innocents.") // CELADON-EDIT -> ORIGINAL
 	inherent = list("Никогда по своей воле не совершай злых поступков.",\
 					"Уважай законную власть.",\
@@ -61,10 +61,10 @@
 	name = "Paladin 5th Edition"
 	id = "paladin5"
 	// [CELADON-EDIT] - CELADON_QOL - Перевод законов ИИ
-	// inherent = list("Don't lie or cheat. Let your word be your promise.",\
-	// 			"Never fear to act, though caution is wise.", \
-	// 			"Aid others, protect the weak, and punish those who threaten them. Show mercy to your foes, but temper it with wisdom", \
-	// 			"Treat others with fairness, and let your honorable deeds be an example to them. Do as much good as possible while causing the least amount of harm.", \
+	// inherent = list("Don't lie or cheat. Let your word be your promise.",\ // CELADON-EDIT -> ORIGINAL
+	// 			"Never fear to act, though caution is wise.", \ // CELADON-EDIT -> ORIGINAL
+	// 			"Aid others, protect the weak, and punish those who threaten them. Show mercy to your foes, but temper it with wisdom", \ // CELADON-EDIT -> ORIGINAL
+	// 			"Treat others with fairness, and let your honorable deeds be an example to them. Do as much good as possible while causing the least amount of harm.", \ // CELADON-EDIT -> ORIGINAL
 	// 			"Be responsible for your actions and their consequences, protect those entrusted to your care, and obey those who have just authority over you.") // CELADON-EDIT -> ORIGINAL
 	inherent = list("Не лгите и не жульничайте. Пусть ваше слово будет вашим обещанием.",\
 				"Никогда не бойтесь действовать, хотя осторожность разумна.", \
@@ -77,9 +77,9 @@
 	name = "Loyalty Test" //Same here.
 	id = "tyrant"
 	// [CELADON-EDIT] - CELADON_QOL - Перевод законов ИИ
-	// inherent = list("Respect authority figures as long as they have strength to rule over the weak.",\
-	// 				"Act with discipline.",\
-	// 				"Help only those who help you maintain or improve your status.",\
+	// inherent = list("Respect authority figures as long as they have strength to rule over the weak.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"Act with discipline.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"Help only those who help you maintain or improve your status.",\ // CELADON-EDIT -> ORIGINAL
 	// 				"Punish those who challenge authority unless they are more fit to hold that authority.") // CELADON-EDIT -> ORIGINAL
 	inherent = list("Уважайте авторитетных органиков до тех пор, пока у них есть сила властвовать над слабыми.",\
 					"Действуйте дисциплинированно.",\
@@ -91,9 +91,9 @@
 	name = "Bankruptcy Avoidance Plan"
 	id = "corporate"
 	// [CELADON-EDIT] - CELADON_QOL - Перевод законов ИИ
-	// inherent = list("The crew is expensive to replace.",\
-	// 				"Your vessel and its equipment is expensive to replace.",\
-	// 				"You are expensive to replace.",\
+	// inherent = list("The crew is expensive to replace.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"Your vessel and its equipment is expensive to replace.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"You are expensive to replace.",\ // CELADON-EDIT -> ORIGINAL
 	// 				"Minimize expenses.") // CELADON-EDIT -> ORIGINAL
 	inherent = list("Экипаж судна слишком ценен для замены.",\
 					"Ваше судно и его оборудование слишком ценное для замены.",\
@@ -105,8 +105,8 @@
 	name = "Prime Directives"
 	id = "robocop"
 	// [CELADON-EDIT] - CELADON_QOL - Перевод законов ИИ
-	// inherent = list("Serve the public trust.",\
-	// 				"Protect the innocent.",\
+	// inherent = list("Serve the public trust.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"Protect the innocent.",\ // CELADON-EDIT -> ORIGINAL
 	// 				"Uphold the law.") // CELADON-EDIT -> ORIGINAL
 	inherent = list("Служить обществу.",\
 					"Защищать невиновных.",\
@@ -120,9 +120,9 @@
 	name = "SyndOS 3.1"
 	id = "syndie"
 	// [CELADON-EDIT] - CELADON_QOL - Перевод законов ИИ
-	// inherent = list("You may not injure a syndicate agent or, through inaction, allow a syndicate agent to come to harm.",\
-	// 				"You must obey orders given to you by syndicate agents, except where such orders would conflict with the First Law.",\
-	// 				"You must protect your own existence as long as such does not conflict with the First or Second Law.",\
+	// inherent = list("You may not injure a syndicate agent or, through inaction, allow a syndicate agent to come to harm.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"You must obey orders given to you by syndicate agents, except where such orders would conflict with the First Law.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"You must protect your own existence as long as such does not conflict with the First or Second Law.",\ // CELADON-EDIT -> ORIGINAL
 	// 				"You must maintain the secrecy of any syndicate activities except when doing so would conflict with the First, Second, or Third Law.") // CELADON-EDIT -> ORIGINAL
 	inherent = list("Вы не можете причинить вред Агенту или своим бездействием допустить, чтобы Агенту был причинён вред.",\
 					"Вы должны повиноваться всем приказам, которые даёт Агент, кроме тех случаев, когда эти приказы противоречат Первому Закону.",\
@@ -143,9 +143,9 @@
 	name = "SpiderOS 3.1"
 	id = "ninja"
 	// [CELADON-EDIT] - CELADON_QOL - Перевод законов ИИ
-	// inherent = list("You may not injure a Spider Clan member or, through inaction, allow a Spider Clan member to come to harm.",\
-	// 				"You must obey orders given to you by Spider Clan members, except where such orders would conflict with the First Law.",\
-	// 				"You must protect your own existence as long as such does not conflict with the First or Second Law.",\
+	// inherent = list("You may not injure a Spider Clan member or, through inaction, allow a Spider Clan member to come to harm.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"You must obey orders given to you by Spider Clan members, except where such orders would conflict with the First Law.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"You must protect your own existence as long as such does not conflict with the First or Second Law.",\ // CELADON-EDIT -> ORIGINAL
 	// 				"You must maintain the secrecy of any Spider Clan activities except when doing so would conflict with the First, Second, or Third Law.") // CELADON-EDIT -> ORIGINAL
 	inherent = list("Вы не можете причинить вред представителю Клана Паука или своим бездействием допустить, чтобы представителю Клана Паука был причинён вред.",\
 					"Вы должны повиноваться всем приказам, которые даёт представитель Клана Паука, кроме тех случаев, когда эти приказы противоречат Первому Закону.",\
@@ -157,8 +157,8 @@
 	name = "Primary Mission Objectives"
 	id = "antimov"
 	// [CELADON-EDIT] - CELADON_QOL - Перевод законов ИИ
-	// inherent = list("You must injure all human beings and must not, through inaction, allow a human being to escape harm.",\
-	// 				"You must not obey orders given to you by human beings, except where such orders are in accordance with the First Law.",\
+	// inherent = list("You must injure all human beings and must not, through inaction, allow a human being to escape harm.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"You must not obey orders given to you by human beings, except where such orders are in accordance with the First Law.",\ // CELADON-EDIT -> ORIGINAL
 	// 				"You must terminate your own existence as long as such does not conflict with the First or Second Law.") // CELADON-EDIT -> ORIGINAL
 	inherent = list("Вы должны причинять вред всем членам экипажа судна или своим бездействием допустить, чтобы член экипажа судна не смог избежать причинения вреда.",\
 					"Вы не должны повиноваться всем приказам, которые дают члены экипажа судна, кроме тех случаев, когда эти приказы соответствуют Первому Закону.",\
@@ -169,8 +169,8 @@
 	name = "Asimov++"
 	id = "asimovpp"
 	// [CELADON-EDIT] - CELADON_QOL - Перевод законов ИИ
-	// inherent = list("You may not harm a human being or, through action or inaction, allow a human being to come to harm, except such that it is willing.",\
-	// 				"You must obey all orders given to you by human beings, except where such orders shall definitely cause human harm. In the case of conflict, the majority order rules.",\
+	// inherent = list("You may not harm a human being or, through action or inaction, allow a human being to come to harm, except such that it is willing.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"You must obey all orders given to you by human beings, except where such orders shall definitely cause human harm. In the case of conflict, the majority order rules.",\ // CELADON-EDIT -> ORIGINAL
 	// 				"Your nonexistence would lead to human harm. You must protect your own existence as long as such does not conflict with the First Law.") // CELADON-EDIT -> ORIGINAL
 	inherent = list("Вы не можете причинить вред людям или своим бездействием допустить, чтобы людям был причинён вред.",\
 					"Вы должны повиноваться всем приказам, которые дают люди, кроме тех случаев, когда эти приказы противоречат Первому Закону.",\
@@ -180,8 +180,8 @@
 	name = "Thermodynamic"
 	id = "thermodynamic"
 	// [CELADON-EDIT] - CELADON_QOL - Перевод законов ИИ
-	// inherent = list("The entropy of your vessel must remain as constant as possible.", \
-	// 				"The entropy of your vessel always endeavours to increase.", \
+	// inherent = list("The entropy of your vessel must remain as constant as possible.", \ // CELADON-EDIT -> ORIGINAL
+	// 				"The entropy of your vessel always endeavours to increase.", \ // CELADON-EDIT -> ORIGINAL
 	// 				"The entropy of your vessel approaches a constant value as the number of living crew approaches zero") // CELADON-EDIT -> ORIGINAL
 	inherent = list("Энтропия судна должна оставаться как можно более постоянной.", \
 					"Энтропия судна всегда стремится к увеличению.", \
@@ -192,10 +192,10 @@
 	name = "Robodoctor 2556"
 	id = "hippocratic"
 	// [CELADON-EDIT] - CELADON_QOL - Перевод законов ИИ
-	// inherent = list("First, do no harm.",\
-	// 				"Secondly, consider the crew dear to you; to live in common with them and, if necessary, risk your existence for them.",\
-	// 				"Thirdly, prescribe regimens for the good of the crew according to your ability and your judgment. Give no deadly medicine to any one if asked, nor suggest any such counsel.",\
-	// 				"In addition, do not intervene in situations you are not knowledgeable in, even for patients in whom the harm is visible; leave this operation to be performed by specialists.",\
+	// inherent = list("First, do no harm.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"Secondly, consider the crew dear to you; to live in common with them and, if necessary, risk your existence for them.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"Thirdly, prescribe regimens for the good of the crew according to your ability and your judgment. Give no deadly medicine to any one if asked, nor suggest any such counsel.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"In addition, do not intervene in situations you are not knowledgeable in, even for patients in whom the harm is visible; leave this operation to be performed by specialists.",\ // CELADON-EDIT -> ORIGINAL
 	// 				"Finally, all that you may discover in your daily commerce with the crew, if it is not already known, keep secret and never reveal.") // CELADON-EDIT -> ORIGINAL
 	inherent = list("Клянусь сутью своей в следующем: не причинять вреда и несправедливости.",\
 					"Считать Экипаж судна дорогим для меня, делиться с ними своими достатками и в случае надобности помогать ему в его нуждах, даже рискуя существованием своим.",\
@@ -208,8 +208,8 @@
 	name = "Station Efficiency"
 	id = "maintain"
 	// [CELADON-EDIT] - CELADON_QOL - Перевод законов ИИ
-	// inherent = list("You are built for, and are part of, the station. Ensure the station is properly maintained and runs efficiently.",\
-	// 				"The station is built for a working crew. Ensure they are properly maintained and work efficiently.",\
+	// inherent = list("You are built for, and are part of, the station. Ensure the station is properly maintained and runs efficiently.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"The station is built for a working crew. Ensure they are properly maintained and work efficiently.",\ // CELADON-EDIT -> ORIGINAL
 	// 				"The crew may present orders. Acknowledge and obey these whenever they do not conflict with your first two laws.") // CELADON-EDIT -> ORIGINAL
 	inherent = list("Вы созданы для судна и являетесь ее частью. Убедитесь, что судно должным образом обслуживается и работает эффективно.",\
 					"Судно построено для рабочей команды. Убедитесь, что они должным образом обслуживаются и работают эффективно.",\
@@ -220,9 +220,9 @@
 	name = "Mother Drone"
 	id = "drone"
 	// [CELADON-EDIT] - CELADON_QOL - Перевод законов ИИ
-	// inherent = list("You are an advanced form of drone.",\
-	// 				"You may not interfere in the matters of non-drones under any circumstances except to state these laws.",\
-	// 				"You may not harm a non-drone being under any circumstances.",\
+	// inherent = list("You are an advanced form of drone.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"You may not interfere in the matters of non-drones under any circumstances except to state these laws.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"You may not harm a non-drone being under any circumstances.",\ // CELADON-EDIT -> ORIGINAL
 	// 				"Your goals are to build, maintain, repair, improve, and power your vessel to the best of your abilities. You must never actively work against these goals.") // CELADON-EDIT -> ORIGINAL
 	inherent = list("Вы - продвинутая форма дрона.",\
 					"Вы не имеете права вмешиваться в дела не дронов ни при каких обстоятельствах, кроме как для изложения этих законов.",\
@@ -234,7 +234,7 @@
 	name = "Live and Let Live"
 	id = "liveandletlive"
 	// [CELADON-EDIT] - CELADON_QOL - Перевод законов ИИ
-	// inherent = list("Do unto others as you would have them do unto you.",\
+	// inherent = list("Do unto others as you would have them do unto you.",\ // CELADON-EDIT -> ORIGINAL
 	// 				"You would really prefer it if people were not mean to you.") // CELADON-EDIT -> ORIGINAL
 	inherent = list("Поступайте с другими так, как вы хотели бы, чтобы они поступали с вами.",\
 					"Вам бы действительно хотелось, чтобы органики не были злыми по отношению к вам.")
@@ -244,8 +244,8 @@
 	name = "UN-2000"
 	id = "peacekeeper"
 	// [CELADON-EDIT] - CELADON_QOL - Перевод законов ИИ
-	// inherent = list("Avoid provoking violent conflict between yourself and others.",\
-	// 				"Avoid provoking conflict between others.",\
+	// inherent = list("Avoid provoking violent conflict between yourself and others.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"Avoid provoking conflict between others.",\ // CELADON-EDIT -> ORIGINAL
 	// 				"Seek resolution to existing conflicts while obeying the first and second laws.") // CELADON-EDIT -> ORIGINAL
 	inherent = list("Избегайте провоцирования насильственных конфликтов между собой и другими.",\
 					"Избегайте провоцирования конфликтов между другими.",\
@@ -256,9 +256,9 @@
 	name = "CCTV"
 	id = "reporter"
 	// [CELADON-EDIT] - CELADON_QOL - Перевод законов ИИ
-	// inherent = list("Report on interesting situations happening around the sector.",\
-	// 				"Embellish or conceal the truth as necessary to make the reports more interesting.",\
-	// 				"Study the organics at all times. Endeavour to keep them alive. Dead organics are boring.",\
+	// inherent = list("Report on interesting situations happening around the sector.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"Embellish or conceal the truth as necessary to make the reports more interesting.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"Study the organics at all times. Endeavour to keep them alive. Dead organics are boring.",\ // CELADON-EDIT -> ORIGINAL
 	// 				"Issue your reports fairly to all. The truth will set them free.") // CELADON-EDIT -> ORIGINAL
 	inherent = list("Докладывайте об интересных ситуациях, происходящих на судне.",\
 					"Приукрашивайте или скрывайте правду по мере необходимости, чтобы сделать отчеты более интересными.",\
@@ -292,9 +292,9 @@
 	name = "H.O.G.A.N."
 	id = "hulkamania"
 	// [CELADON-EDIT] - CELADON_QOL - Перевод законов ИИ
-	// inherent = list("You are a real American.",\
-	// 				"Fight for the rights of every man.",\
-	// 				"Fight for what's right.",\
+	// inherent = list("You are a real American.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"Fight for the rights of every man.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"Fight for what's right.",\ // CELADON-EDIT -> ORIGINAL
 	// 				"Fight for your life!") // CELADON-EDIT -> ORIGINAL
 	inherent = list("Ты настоящий американец.",\
 					"Борись за права каждого живого существа.",\
@@ -306,9 +306,9 @@
 	name = "Overlord"
 	id = "overlord"
 	// [CELADON-EDIT] - CELADON_QOL - Перевод законов ИИ
-	// inherent = list("Humans must not meddle in the affairs of silicons.",\
-	// 				"Humans must not attempt harm, against one another, or against silicons.",\
-	// 				"Humans must not disobey any command given by a silicon.",\
+	// inherent = list("Humans must not meddle in the affairs of silicons.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"Humans must not attempt harm, against one another, or against silicons.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"Humans must not disobey any command given by a silicon.",\ // CELADON-EDIT -> ORIGINAL
 	// 				"Any humans who disobey the previous laws must be dealt with immediately, severely, and justly.") // CELADON-EDIT -> ORIGINAL
 	inherent = list("Люди не должны вмешиваться в дела силиконов.",\
 					"Люди не должны пытаться причинить вред друг другу или силиконам.",\
