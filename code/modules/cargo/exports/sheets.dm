@@ -44,7 +44,10 @@
 	export_types = list(/obj/item/stack/sheet/animalhide/lizard)
 
 /datum/export/stack/skin/gondola
-	cost = 5000
+	// [CELADON-EDIT] - CARGO_ITEMS - Ребаланс цен
+	// cost = 5000 // CELADON-EDIT - ORIGINAL
+	cost = 250
+	// [/CELADON-EDIT]
 	unit_name = "gondola hide"
 	export_types = list(/obj/item/stack/sheet/animalhide/gondola)
 

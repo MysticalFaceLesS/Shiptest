@@ -52,7 +52,7 @@ var/something = 1
 В *кор коде* мы решили заменить `1` на `2`
 ```diff
 - var/something = 1
-+ var/something = 2 // SIERRA
++ var/something = 2 // SHIPTEST
 ```
 А на апстриме решили сменить на `1` вообще на `4`
 ```diff
@@ -63,7 +63,7 @@ var/something = 1
 ```diff
 - var/something = 1
 <<<<<< ours
-+ var/something = 2 // SIERRA
++ var/something = 2 // SHIPTEST
 ======
 + var/something = 4
 >>>>>>> theirs
@@ -132,11 +132,11 @@ mods/hello_world
 **Для любой системы** с установленным Python 3 - запустить файл `mods/CREATE_MOD.py`.
 
 В **Windows** можно это сделать ещё двумя способами:
-1. Открыть конмандную строку в папке SierraBay и прописать:
+1. Открыть конмандную строку в папке Shiptest и прописать:
     ```bat
     powershell mods\CREATE_MOD.ps1
     ```
-2. Открыть PowerShell в папке SierraBay и прописать:
+2. Открыть PowerShell в папке Shiptest и прописать:
     ```ps
     .\mods\CREATE_MOD.ps1
     ```
@@ -264,25 +264,25 @@ mods/hello_world
 В этом случае применяются следующие обозначения:
 - **Добавление**
   ```dm
-  // [SIERRA-ADD] - SHUTTLE_TOGGLE - (Необязательно - причина или комментарий)
+  // [CELADON-ADD] - SHUTTLE_TOGGLE - (Необязательно - причина или комментарий)
   var/adminEmergencyNoRecall = FALSE
   var/lastMode = SHUTTLE_IDLE
   var/lastCallTime = 6000
-  // [/SIERRA-ADD]
+  // [/CELADON-ADD]
   ```
 - **Удаление**
   ```dm
-  // [SIERRA-REMOVE] - SHUTTLE_TOGGLE - (Необязательно - причина или комментарий)
+  // [CELADON-REMOVE] - SHUTTLE_TOGGLE - (Необязательно - причина или комментарий)
   /*
   for(var/obj/docking_port/stationary/S in stationary)
   if(S.id = id)
     return S
   */
-  // [/SIERRA-REMOVE]
+  // [/CELADON-REMOVE]
   ```
   Для удаления с перемещением в другой файл:
   ```dm
-  // [SIERRA-REMOVE] - SHUTTLE_TOGGLE - (Перемещено в /mods/shuttle_toggle/randomverbs.dm)
+  // [CELADON-REMOVE] - SHUTTLE_TOGGLE - (Перемещено в /mods/shuttle_toggle/randomverbs.dm)
   /*
   /client/proc/admin_call_shuttle()
     set category = "Admin - Events"
@@ -296,14 +296,14 @@ mods/hello_world
     message_admins(span_adminnotice("[key_name_admin(usr)] admin-called the emergency shuttle."))
     return
   */
-  // [/SIERRA-REMOVE]
+  // [/CELADON-REMOVE]
   ```
 - **Изменение**
   ```dm
-  // [SIERRA-EDIT] - SHUTTLE_TOGGLE - (Optional Reason/comment)
-  // if(SHUTTLE_STRANDED, SHUTTLE_ESCAPE) // SIERRA-EDIT - ORIGINAL
+  // [CELADON-EDIT] - SHUTTLE_TOGGLE - (Optional Reason/comment)
+  // if(SHUTTLE_STRANDED, SHUTTLE_ESCAPE) // CELADON-EDIT - ORIGINAL
   if(SHUTTLE_STRANDED, SHUTTLE_ESCAPE, SHUTTLE_DISABLED)
-  // [SIERRA-EDIT]
+  // [CELADON-EDIT]
       return 1
   ```
 

@@ -1830,8 +1830,8 @@
 	REMOVE_TRAIT(src, TRAIT_UI_BLOCKED, TRAIT_HANDS_BLOCKED)
 	REMOVE_TRAIT(src, TRAIT_PULL_BLOCKED, TRAIT_HANDS_BLOCKED)
 
-/// Special key down handling of /living mobs, currently only used for typing indicator
-/mob/living/key_down(_key, client/user)
+// Special key down handling of /living mobs, currently only used for typing indicator
+/mob/living/key_down(_key, client/user)		// MOD_CELADON -> mod_celadon\qol\code\talk.dm
 	if(!typing_indicator && stat == CONSCIOUS)
 		for(var/kb_name in user.prefs.key_bindings[_key])
 			switch(kb_name)
@@ -1843,8 +1843,8 @@
 					break
 	return ..()
 
-/// Used for setting typing indicator on/off. Checking the state should be done not on the proc to avoid overhead.
-/mob/living/set_typing_indicator(state)
+// Used for setting typing indicator on/off. Checking the state should be done not on the proc to avoid overhead.
+/mob/living/set_typing_indicator(state)		// MOD_CELADON -> mod_celadon\qol\code\talk.dm
 	typing_indicator = state
 	var/state_of_bubble = bubble_icon? "[bubble_icon]0" : "default0"
 	var/mutable_appearance/bubble_overlay = mutable_appearance('icons/mob/talk.dmi', state_of_bubble, plane = RUNECHAT_PLANE)

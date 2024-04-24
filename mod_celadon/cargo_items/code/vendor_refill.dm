@@ -16,7 +16,7 @@
 /datum/supply_pack/vendor_refill/sectech
 	name = "SecTech vendor refill"
 	desc = "SecTech vendor cartridge for replacing in SecTech vendors."
-	cost = 1500
+	cost = 4000
 	contains = list(/obj/item/vending_refill/security)
 	crate_name = "SecTech supply crate"
 
