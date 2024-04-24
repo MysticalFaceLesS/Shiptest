@@ -21,7 +21,7 @@ ID мода: CELADON_SPECIES_CHANGES
 ### Описание мода
 
 Этот мод служит для изменения особенностей рас.
-Изменены были слаймомены, отображение головы -> `mod_celadon\species_changes\code\jellypeople.dm`
+Изменены были слаймомены, отображение головы -> `mod_celadon\species_changes\code\jellypeople.dm` иконка -> `icons/jellypeople.dmi`
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
   А также любая полезная информация.
