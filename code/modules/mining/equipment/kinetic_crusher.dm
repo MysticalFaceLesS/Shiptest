@@ -753,9 +753,14 @@
 	..()
 	user.changeNext_move(CLICK_CD_MELEE * 2.0)//...slow swinga.
 
-/* /obj/item/kinetic_crusher/old/update_icon_state()		// MOD_CELADON-CHANGES -> mod_celadon\fixes\code\syndiecrusher.dm
+/obj/item/kinetic_crusher/old/update_icon_state()
+	// [CELADON-ADD] - CELADON_FIXES
+	..()
+	// [/CELADON-ADD]
 	item_state = "crusherold[wielded]" // still not supported by 2hcomponent
-	return ..() */
+	// [CELADON-REMOVE] - CELADON_FIXES
+	// return ..()
+	// [/CELADON-REMOVE]
 
 //100% original syndicate oc, plz do not steal. More effective against human targets then the typical crusher, with a bit of block chance.
 /obj/item/kinetic_crusher/syndie_crusher
@@ -812,9 +817,14 @@
 	playsound(user, 'sound/weapons/saberoff.ogg', 35, TRUE)
 	set_light_on(wielded)
 
-/* /obj/item/kinetic_crusher/syndie_crusher/update_icon_state() 		// MOD_CELADON-CHANGES -> mod_celadon\fixes\code\syndiecrusher.dm
+/obj/item/kinetic_crusher/syndie_crusher/update_icon_state()
+	// [CELADON-ADD] - CELADON_FIXES
+	..()
+	// [/CELADON-ADD]
 	item_state = "crushersyndie[wielded]" // this is not icon_state and not supported by 2hcomponent
-	return ..() */
+	// [CELADON-REMOVE] - CELADON_FIXES
+	// return ..()
+	// [/CELADON-REMOVE]
 
 /obj/item/kinetic_crusher/syndie_crusher/update_overlays()
 	. = ..()
