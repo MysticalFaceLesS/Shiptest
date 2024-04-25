@@ -44,9 +44,3 @@
 	name = ".308 M-80"
 	damage = 35
 	armour_penetration = 45
-
-// 8x58 (SG-whatever)
-
-/obj/projectile/bullet/a858		// Origin -> code\modules\projectiles\projectile\bullets\rifle.dm
-	damage = 50
-	armour_penetration = 15

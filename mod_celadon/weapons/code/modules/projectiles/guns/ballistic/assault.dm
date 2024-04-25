@@ -1,4 +1,4 @@
-/obj/item/gun/ballistic/automatic/assault/g36sh		// Origin -> code\modules\projectiles\guns\ballistic\assault.dm
+/obj/item/gun/ballistic/automatic/assault/g36sh
 	name = "\improper G36-SH"
 	desc = "Наследие огненной эры Союза Человечества, укороченная версия,  калибра 5.56x45. Технология производства восстановлена минитменами, но ввиду усложненной конструкции продана корпорации InteQ. Используется сотрудниками InteQ по сей день, как оружие для элитных наемников."
 	icon = 'mod_celadon/balance/icons/guns/48x32guns.dmi'

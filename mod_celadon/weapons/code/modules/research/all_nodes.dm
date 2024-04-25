@@ -1,4 +1,4 @@
-/datum/design/a556/surplus		// Origin -> code\modules\research\designs\weapon_designs.dm
+/datum/design/a556/surplus
 	name = "5.56 mm surplus ammo box"
 	desc = "A box full of surplus 5.56x45mm ammunition."
 	id = "a556surp"

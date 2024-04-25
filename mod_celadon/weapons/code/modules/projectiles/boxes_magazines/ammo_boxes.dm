@@ -45,7 +45,3 @@
 	icon_state = "win308new_m80"
 	ammo_type = /obj/item/ammo_casing/win308/ap
 	max_ammo = 25
-
-/obj/item/ammo_box/a308		// Origin -> code\modules\projectiles\boxes_magazines\ammo_boxes.dm
-	icon = 'mod_celadon/balance/icons/ammo/ammo.dmi'
-	icon_state = "win308new"
