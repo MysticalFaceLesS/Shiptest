@@ -10,9 +10,12 @@
 -->
 
 <!-- Название мода. Не важно на русском или на английском. -->
-## Мод-пример
+## Balance - изменение баланса
 
-ID мода: EXAMPLE
+ID мода: CELADON_BALANCE
+	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем РнД
+	// CELADON-EDIT - ORIGINAL
+	// [/CELADON-EDIT]
 <!--
   Название модпака прописными буквами, СОЕДИНЁННЫМИ_ПОДЧЁРКИВАНИЕМ,
   которое ты будешь использовать для обозначения файлов.
@@ -20,16 +23,25 @@ ID мода: EXAMPLE
 
 ### Описание мода
 
-Этот мод служит примером для разработчиков и существует лишь для того,
-чтобы его можно было легко скопировать и вставить в другое место.
+Этот мод вносит различные изменения в балансе. 
+
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
   А также любая полезная информация.
 -->
 
 ### Изменения *кор кода*
-
-- `code/modules/mob/living.dm`: `proc/overriden_proc`, `var/overriden_var`
+- Снаряжение шахтеров:
+EDIT: `code\modules\mining\equipment\explorer_gear.dm`: `/obj/item/clothing/suit/hooded/explorer` -> `allowed = list`
+- Изменены рад коллекторы:
+EDIT: `code\modules\power\singularity\collector.dm`: `#define RAD_COLLECTOR_EFFICIENCY`, `#define RAD_COLLECTOR_COEFFICIENT`, `#define RAD_COLLECTOR_OUTPUT`
+- Изменения части шатлов:
+EDIT: `code\game\machinery\shuttle\custom_shuttle.dm`: `/obj/machinery/power/shuttle` -> icon
+EDIT: `code\game\machinery\shuttle\custom_shuttle.dm`: `/obj/machinery/atmospherics/components/unary/shuttle` -> icon
+- Двигатели:
+EDIT: `code\game\machinery\shuttle\shuttle_engine_types.dm`: `fuel_use`, `thrust`
+- РнД:
+EDIT: `code\modules\research\techweb\all_nodes.dm`: `research_costs`, `export_price`, `prereq_ids`
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -40,8 +52,7 @@ ID мода: EXAMPLE
 
 ### Оверрайды
 
-- `mods/_master_files/sound/my_cool_sound.ogg`
-- `mods/_master_files/code/my_modular_override.dm`: `proc/overriden_proc`, `var/overriden_var`
+- Отсутствуют
 <!--
   Если ты добавлял новый модульный оверрайд, его нужно указать здесь.
   Здесь указываются оверрайды в твоём моде и папке `_master_files`
@@ -51,7 +62,7 @@ ID мода: EXAMPLE
 
 ### Дефайны
 
-- `code/__defines/~mods/example.dm`: `EXAMPLE_SPEED_MULTIPLIER`, `EXAMPLE_SPEED_BASE`
+- Отсутствуют
 <!--
   Если требовалось добавить какие-либо дефайны, укажи файлы,
   в которые ты их добавил, а также перечисли имена.
@@ -62,7 +73,7 @@ ID мода: EXAMPLE
 
 ### Используемые файлы, не содержащиеся в модпаке
 
-- `mods/_master_files/icons/obj/alien.dmi`
+- Отсутствуют
 <!--
   Будь то немодульный файл или модульный файл, который не содержится в папке,
   принадлежащей этому конкретному моду, он должен быть упомянут здесь.
@@ -72,7 +83,7 @@ ID мода: EXAMPLE
 
 ### Авторы:
 
-Твой никнейм
+Кинетик Крашер - Yata9arasu, двигатели, рад. коллекторы - RalseiDreemuurr
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.
