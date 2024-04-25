@@ -212,7 +212,8 @@
 	},
 /obj/structure/closet/wall/white/med{
 	name = "medical locker";
-	pixel_y = 29
+	pixel_y = 29;
+	dir = 1
 	},
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/carpet/blue,
@@ -1103,7 +1104,7 @@
 	dir = 4
 	},
 /obj/structure/closet/secure_closet/wall{
-	dir = 4;
+	dir = 8;
 	icon_state = "sec_wall";
 	name = "Armour locker";
 	req_access_txt = "1";
@@ -1896,7 +1897,8 @@
 	icon_state = "sec_wall";
 	name = "Ammo locker";
 	pixel_y = 28;
-	req_access_txt = "1"
+	req_access_txt = "1";
+	dir = 1
 	},
 /obj/structure/table/reinforced,
 /obj/item/storage/box/lethalshot,
@@ -1982,7 +1984,7 @@
 	},
 /obj/machinery/firealarm/directional/north,
 /obj/structure/closet/wall/blue{
-	dir = 4;
+	dir = 8;
 	pixel_x = -28;
 	name = "Mecha parts locker"
 	},
@@ -2170,9 +2172,9 @@
 /obj/machinery/airalarm/directional/west,
 /obj/machinery/light/directional/north,
 /obj/effect/turf_decal/industrial/traffic/full,
-/obj/item/gun/ballistic/automatic/smg/m90/unrestricted,
-/obj/item/gun/ballistic/shotgun/bulldog/unrestricted,
 /obj/item/gun/energy/ionrifle,
+/obj/item/gun/ballistic/shotgun/bulldog,
+/obj/item/gun/ballistic/automatic/smg/m90,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "Kw" = (
@@ -2657,7 +2659,8 @@
 	icon_state = "sec_wall";
 	name = "Trophy's locker";
 	pixel_y = 28;
-	req_access_txt = "1"
+	req_access_txt = "1";
+	dir = 1
 	},
 /obj/item/toy/nuke,
 /turf/open/floor/mineral/plastitanium/red,
@@ -2941,7 +2944,7 @@
 /area/ship/maintenance/starboard)
 "Yd" = (
 /obj/structure/closet/wall/red{
-	dir = 8;
+	dir = 4;
 	name = "uniform closet";
 	pixel_x = 28
 	},
