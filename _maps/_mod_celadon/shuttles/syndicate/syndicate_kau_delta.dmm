@@ -29,9 +29,7 @@
 /obj/effect/turf_decal/spline/plain/opaque/syndiered{
 	dir = 8
 	},
-/obj/machinery/computer/rdconsole/core{
-	dir = 4
-	},
+/obj/machinery/autolathe/hacked,
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo/port)
 "aS" = (
@@ -414,9 +412,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 10
 	},
-/obj/item/storage/toolbox/ammo/c45{
-	pixel_y = -1
-	},
+/obj/item/stack/sheet/glass/twenty,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/cargo/port)
 "hx" = (
@@ -531,15 +527,19 @@
 /obj/item/storage/belt/military/assault,
 /obj/item/storage/belt/military/assault,
 /obj/item/storage/belt/military/assault,
-/obj/item/clothing/suit/armor/vest/marine/medium,
-/obj/item/clothing/suit/armor/vest/marine/medium,
-/obj/item/clothing/suit/armor/vest/marine/medium,
-/obj/item/clothing/suit/armor/vest/marine/medium,
-/obj/item/clothing/head/helmet/swat,
-/obj/item/clothing/head/helmet/swat,
-/obj/item/clothing/head/helmet/swat,
-/obj/item/clothing/head/helmet/swat,
 /obj/item/storage/belt/military/assault,
+/obj/item/clothing/suit/armor/vest/marine/medium,
+/obj/item/clothing/suit/armor/vest/marine/medium,
+/obj/item/clothing/suit/armor/vest/marine/medium,
+/obj/item/clothing/suit/armor/vest/marine/medium,
+/obj/item/clothing/head/helmet/swat,
+/obj/item/clothing/head/helmet/swat,
+/obj/item/clothing/head/helmet/swat,
+/obj/item/clothing/head/helmet/swat,
+/obj/item/clothing/mask/gas/syndicate,
+/obj/item/clothing/mask/gas/syndicate,
+/obj/item/clothing/mask/gas/syndicate,
+/obj/item/clothing/mask/gas/syndicate,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "kc" = (
@@ -652,8 +652,6 @@
 	dir = 8;
 	pixel_x = -30
 	},
-/obj/item/clothing/mask/gas/syndicate,
-/obj/item/clothing/mask/gas/syndicate,
 /obj/item/pickaxe/mini,
 /obj/item/pickaxe/mini,
 /obj/effect/turf_decal/spline/plain/opaque/syndiered{
@@ -978,8 +976,6 @@
 	name = "Suspicious looking crate"
 	},
 /obj/item/stack/sheet/metal/twenty,
-/obj/item/stack/sheet/glass/twenty,
-/obj/item/stack/sheet/metal/twenty,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/cargo/port)
 "uT" = (
@@ -1071,12 +1067,6 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/blood/drip,
-/obj/machinery/door/window/northleft{
-	dir = 8;
-	name = "Punishment cell";
-	req_access = list(20);
-	req_ship_access = 1
-	},
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -1084,6 +1074,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 4
 	},
+/obj/machinery/door/window/brigdoor/security/cell/westleft,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/maintenance/port)
 "xs" = (
@@ -1154,6 +1145,7 @@
 	},
 /obj/item/storage/backpack/duffelbag/syndie/c4,
 /obj/item/storage/box/syndie_kit/signaler,
+/obj/item/melee/baton,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "xN" = (
@@ -1329,7 +1321,7 @@
 /area/ship/crew/dorm)
 "BC" = (
 /obj/item/gun/ballistic/automatic/smg/vector{
-	projectile_damage_multiplier = 1.35;
+	projectile_damage_multiplier = 1.2;
 	name = "Special Operative Vector";
 	desc = "A carbine based on a pre-Night of Fire SMG design. Chambered in .45 ACP. Has been modified to suit syndicate needs. Has a CyberSun TM";
 	wield_slowdown = 0.25;
@@ -1348,6 +1340,7 @@
 /obj/item/codespeak_manual/unlimited,
 /obj/item/clothing/gloves/combat,
 /obj/item/clothing/head/HoS/beret/syndicate,
+/obj/item/radio/headset/syndicate/alt/captain,
 /turf/open/floor/carpet/red_gold,
 /area/ship/bridge)
 "BW" = (
@@ -1732,6 +1725,17 @@
 	name = "suspicious red donut";
 	pixel_y = -17
 	},
+/obj/item/reagent_containers/food/drinks/bottle/sake{
+	pixel_x = -8;
+	pixel_y = 20;
+	name = "Fluffy Tail Sake";
+	icon_state = "sakebottle_k";
+	desc = "On the bottle is a picture of a kitsune with nine touchable tails."
+	},
+/obj/item/reagent_containers/food/drinks/drinkingglass{
+	pixel_x = -7;
+	pixel_y = 10
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
 "KJ" = (
@@ -1848,8 +1852,8 @@
 /obj/effect/turf_decal/spline/plain/opaque/syndiered{
 	dir = 5
 	},
-/obj/machinery/autolathe/hacked,
 /obj/machinery/power/apc/auto_name/directional/east,
+/obj/machinery/vending/coffee,
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
 "Lv" = (
@@ -2163,28 +2167,24 @@
 	},
 /obj/structure/guncase,
 /obj/effect/turf_decal/industrial/traffic/full,
-/obj/item/gun/ballistic/automatic/smg/c20r/sc_c20r{
-	pixel_y = 1
-	},
-<<<<<<< HEAD
-/obj/item/gun/energy/ionrifle/carbine{
-	pixel_y = 8
+/obj/item/gun/energy/ionrifle/carbine,
+/obj/item/gun/ballistic/automatic/ebr{
+	mag_type = /obj/item/ammo_box/magazine/smgm45;
+	name = "Special Operative 92 EBR";
+	wield_slowdown = 0.45;
+	desc = "Thats special operative syndicate rifle modified to be more usable in the heat of battle, chambered in .45 ACP. Effective against personnel and armor alike. Has a CyberSun TM";
+	projectile_damage_multiplier = 1.7;
+	zoom_amt = 8;
+	wield_delay = 6
 	},
 /obj/item/gun/ballistic/automatic/ebr{
 	mag_type = /obj/item/ammo_box/magazine/smgm45;
 	name = "Special Operative 92 EBR";
-	pixel_y = -6;
-	wield_slowdown = 0.45
-=======
-/obj/item/gun/ballistic/automatic/smg/c20r/sc_c20r{
-	pixel_y = -5
-	},
-/obj/item/gun/energy/ionrifle/carbine{
-	pixel_y = 8
-	},
-/obj/item/gun/ballistic/shotgun/bulldog{
-	pixel_y = -10
->>>>>>> 2234298752d9d9e6ad6de1b5b539eadcddcb0147
+	wield_slowdown = 0.45;
+	desc = "Thats special operative syndicate rifle modified to be more usable in the heat of battle, chambered in .45 ACP. Effective against personnel and armor alike. Has a CyberSun TM";
+	projectile_damage_multiplier = 1.7;
+	zoom_amt = 8;
+	wield_delay = 6
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
@@ -2254,15 +2254,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
-"QY" = (
-/obj/machinery/atmospherics/pipe/layer_manifold{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 4
-	},
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ship/engineering)
 "Rj" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 10
@@ -2748,7 +2739,7 @@ QM
 eS
 CX
 CX
-QY
+wv
 op
 op
 jv
