@@ -365,7 +365,7 @@
 	// [CELADON-EDIT] - CELADON_WEAPONS
 	// icon_state = "a308box" // CELADON-EDIT - ORIGINAL
 	// [CELADON-ADD]
-	icon = 'mod_celadon/balance/icons/ammo/ammo.dmi'
+	icon = 'mod_celadon/weapons/icons/ammo/ammo.dmi'
 	// [/CELADON-ADD]
 	icon_state = "win308new"
 	// [/CELADON-EDIT]
