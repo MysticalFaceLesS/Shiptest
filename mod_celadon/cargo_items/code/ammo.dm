@@ -1,6 +1,3 @@
-/datum/supply_pack/gun/p16		// Origin -> code\modules\cargo\packs\gun.dm
-	cost = 2500
-
 /datum/supply_pack/ammo/g36_ammo
 	name = "G-36 5.56mm Magazine Crate"
 	desc = "Содержит два магазина калибра 5,56 мм для винтовки p16, каждый из которых содержит по 30 патронов. Также в комплект входит коробка стандартных патронов."
