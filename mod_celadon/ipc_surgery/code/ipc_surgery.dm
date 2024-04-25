@@ -64,5 +64,5 @@
 	if (!.)
 		return
 
-	if (istype(target.getorganslot(ORGAN_SLOT_BRAIN), /obj/item/organ/brain/mmi_holder/posibrain/posibrain))
+	if (istype(target.getorganslot(ORGAN_SLOT_BRAIN), /obj/item/organ/brain/mmi_holder/posibrain))
 		return FALSE
