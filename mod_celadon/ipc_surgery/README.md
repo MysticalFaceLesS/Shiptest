@@ -27,6 +27,8 @@ ID мода: CELADON_IPC_SURGERY
 `ipc_surgery.dm` -> `/datum/surgery_step/fix_robo_brain/preop`
 `ipc_surgery.dm` -> `/datum/surgery_step/fix_robo_brain/success`
 `ipc_surgery.dm` -> `/datum/surgery_step/fix_robo_brain/failure`
+Дополняет кор код
+`ipc_surgery.dm` -> `/datum/surgery/brain_surgery/can_start`
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
   А также любая полезная информация.
@@ -34,7 +36,7 @@ ID мода: CELADON_IPC_SURGERY
 
 ### Изменения *кор кода*
 
-- `code\modules\surgery\brain_surgery.dm`: `/datum/surgery/brain_surgery/can_start(mob/user, mob/living/carbon/target)`
+- Отсутствуют
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.

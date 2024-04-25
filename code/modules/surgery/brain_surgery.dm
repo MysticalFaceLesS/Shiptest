@@ -26,18 +26,10 @@
 	experience_given = 0 // per_trauma
 
 /datum/surgery/brain_surgery/can_start(mob/user, mob/living/carbon/target)
-	// [CELADON-EDIT] - CELADON_IPC_SURGERY
-	// var/obj/item/organ/brain/B = target.getorganslot(ORGAN_SLOT_BRAIN) // CELADON-EDIT - ORIGINAL
-	// if(!B) // CELADON-EDIT - ORIGINAL
-	// 	return FALSE // CELADON-EDIT - ORIGINAL
-	// return TRUE // CELADON-EDIT - ORIGINAL
-	. = ..()
-	if (!.)
-		return
-
-	if (istype(target.getorganslot(BRAIN), /obj/item/brain/mmi_shit/posibrain))
+	var/obj/item/organ/brain/B = target.getorganslot(ORGAN_SLOT_BRAIN)
+	if(!B)
 		return FALSE
-	// [/CELADON-EDIT]
+	return TRUE
 
 /datum/surgery_step/fix_brain/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	display_results(user, target, "<span class='notice'>You begin to fix [target]'s brain...</span>",
