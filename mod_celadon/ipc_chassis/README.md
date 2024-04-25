@@ -10,9 +10,9 @@
 -->
 
 <!-- Название мода. Не важно на русском или на английском. -->
-## Мод-пример
+## IPC shassis - ИПС шасси
 
-ID мода: EXAMPLE
+ID мода: CELADON_IPC_CHASSIS
 <!--
   Название модпака прописными буквами, СОЕДИНЁННЫМИ_ПОДЧЁРКИВАНИЕМ,
   которое ты будешь использовать для обозначения файлов.
@@ -20,8 +20,36 @@ ID мода: EXAMPLE
 
 ### Описание мода
 
-Этот мод служит примером для разработчиков и существует лишь для того,
-чтобы его можно было легко скопировать и вставить в другое место.
+Этот мод добавляет новые шасси ИПС.
+В состав `ipc.dm` входит:
+- `none`
+- `android`
+- `bishop_android_main`
+- `bishop_android_alternative`
+- `bishop_android_rook`
+- `hephaestus_main`
+- `hephaestus_alt`
+- `hephaestus_titan`
+- `morpheus_main`
+- `morpheus_airborne`
+- `morpheus_atlantis`
+- `morpheus_blitz`
+- `morpheus_prime`
+- `morpheus_mantis`
+- `nanotrasen_main`
+- `shellg_main`
+- `shellg_alt`
+- `veymed_female`
+- `veymed_male`
+- `vox_improvised` - закомментирован
+- `wardtakahashi_main`
+- `wardtakahashi_alt`
+- `wardtakahashi_economy`
+- `xion_main`
+- `xion_alt`
+- `xion_economy`
+- `zion_main`
+- `zion_spirit`
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
   А также любая полезная информация.
@@ -29,7 +57,8 @@ ID мода: EXAMPLE
 
 ### Изменения *кор кода*
 
-- `code/modules/mob/living.dm`: `proc/overriden_proc`, `var/overriden_var`
+- `code\modules\mob\dead\new_player\sprite_accessories\ipc.dm`: `/datum/sprite_accessory/ipc_screens` -> icon
+- `code\modules\mob\dead\new_player\sprite_accessories\ipc.dm`: `/datum/sprite_accessory/ipc_chassis` -> icon
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -40,8 +69,7 @@ ID мода: EXAMPLE
 
 ### Оверрайды
 
-- `mods/_master_files/sound/my_cool_sound.ogg`
-- `mods/_master_files/code/my_modular_override.dm`: `proc/overriden_proc`, `var/overriden_var`
+- Отсутствуют
 <!--
   Если ты добавлял новый модульный оверрайд, его нужно указать здесь.
   Здесь указываются оверрайды в твоём моде и папке `_master_files`
@@ -51,7 +79,7 @@ ID мода: EXAMPLE
 
 ### Дефайны
 
-- `code/__defines/~mods/example.dm`: `EXAMPLE_SPEED_MULTIPLIER`, `EXAMPLE_SPEED_BASE`
+- Отсутствуют
 <!--
   Если требовалось добавить какие-либо дефайны, укажи файлы,
   в которые ты их добавил, а также перечисли имена.
@@ -62,7 +90,7 @@ ID мода: EXAMPLE
 
 ### Используемые файлы, не содержащиеся в модпаке
 
-- `mods/_master_files/icons/obj/alien.dmi`
+- Отсутствуют
 <!--
   Будь то немодульный файл или модульный файл, который не содержится в папке,
   принадлежащей этому конкретному моду, он должен быть упомянут здесь.
@@ -72,7 +100,7 @@ ID мода: EXAMPLE
 
 ### Авторы:
 
-Твой никнейм
+SnrBydlo
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.
