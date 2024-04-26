@@ -551,7 +551,9 @@
 /obj/machinery/light/directional/north,
 /obj/machinery/firealarm/directional/north,
 /obj/structure/table/reinforced,
-/obj/item/reagent_containers/food/snacks/fishfingers,
+/obj/item/reagent_containers/food/snacks/fishfingers{
+	pixel_y = 1
+	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
@@ -1906,7 +1908,7 @@
 /obj/item/kinetic_crusher,
 /obj/item/kinetic_crusher,
 /obj/structure/closet/wall/orange{
-	dir = 4;
+	dir = 8;
 	pixel_x = -32
 	},
 /obj/item/t_scanner/adv_mining_scanner/lesser,
@@ -2185,13 +2187,12 @@
 	dir = 8
 	},
 /obj/structure/closet/secure_closet/wall{
-	dir = 4;
+	dir = 8;
 	icon_state = "sec_wall";
 	name = "hunting locker";
-	pixel_x = -32;
+	pixel_x = -30;
 	req_access = list(30)
 	},
-/obj/item/firing_pin,
 /obj/item/kitchen/knife/hunting,
 /obj/item/gun/ballistic/shotgun/doublebarrel/beacon,
 /obj/item/ammo_box/a4570,
@@ -2216,12 +2217,12 @@
 /turf/open/floor/plating,
 /area/ship/maintenance/starboard)
 "Gx" = (
-/obj/structure/closet/wall{
-	dir = 8;
-	pixel_x = 32
-	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 5
+	},
+/obj/structure/closet/wall{
+	dir = 4;
+	pixel_x = 30
 	},
 /turf/open/floor/wood,
 /area/ship/crew/dorm)
@@ -2578,7 +2579,7 @@
 	dir = 1
 	},
 /obj/structure/closet/wall/orange{
-	dir = 4;
+	dir = 8;
 	pixel_x = -30
 	},
 /obj/item/clothing/head/hardhat/weldhat,
@@ -2939,7 +2940,7 @@
 	dir = 8
 	},
 /obj/structure/closet/wall/white/med{
-	dir = 4;
+	dir = 8;
 	pixel_x = -30
 	},
 /obj/item/defibrillator/loaded,
@@ -3026,7 +3027,7 @@
 /obj/item/holosign_creator/atmos,
 /obj/item/analyzer,
 /obj/structure/closet/wall/orange{
-	dir = 4;
+	dir = 8;
 	pixel_x = -32
 	},
 /obj/item/clothing/suit/hooded/wintercoat/engineering/atmos,
