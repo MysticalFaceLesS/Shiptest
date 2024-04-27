@@ -29,6 +29,7 @@ ID мода: CELADON_CONFIGS_MAPS
 ### Изменения *кор кода*
 
 - `code/modules/mob/living.dm`: `proc/overriden_proc`, `var/overriden_var`
+- EDIT `code\controllers\subsystem\mapping.dm`: `load_ship_templates()` -> `flist`, `file`
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
