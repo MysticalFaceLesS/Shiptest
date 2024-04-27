@@ -203,8 +203,6 @@ GLOBAL_LIST_INIT(shove_disarming_types, typecacheof(list(/obj/item/gun)))
 #define BODY_ZONE_R_ARM "r_arm"
 #define BODY_ZONE_L_LEG "l_leg"
 #define BODY_ZONE_R_LEG "r_leg"
-#define BODY_ZONE_TAIL "tail"
-#define BODY_ZONE_EXTERNAL_EARS "external_ears"
 
 #define BODY_ZONE_PRECISE_EYES "eyes"
 #define BODY_ZONE_PRECISE_MOUTH "mouth"
@@ -213,6 +211,7 @@ GLOBAL_LIST_INIT(shove_disarming_types, typecacheof(list(/obj/item/gun)))
 #define BODY_ZONE_PRECISE_R_HAND "r_hand"
 #define BODY_ZONE_PRECISE_L_FOOT "l_foot"
 #define BODY_ZONE_PRECISE_R_FOOT "r_foot"
+
 //We will round to this value in damage calculations.
 #define DAMAGE_PRECISION 0.1
 
