@@ -1,4 +1,4 @@
 /datum/modpack/accents_add
-	name = "Accents"
-	desc = "Добавление акцентов"
+	name = "Accents Sarathi"
+	desc = "Добавляет акцент для Саратхов"
 	author = "RalseiDreemuurr"

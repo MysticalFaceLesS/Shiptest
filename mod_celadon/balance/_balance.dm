@@ -1,4 +1,4 @@
 /datum/modpack/balance
-	name = "Изменения в балансе"
-	desc = "Различные изменения в балансе"
-	author = "Кинетик Крашер - Yata9arasu, двигатели, рад. коллекторы - RalseiDreemuurr"
+	name = "Balance"
+	desc = "Вносит изменения в баланс. Затронуты кинетик Крашер, двигатели, радиационные коллекторы."
+	author = "Yata9arasu, RalseiDreemuurr"

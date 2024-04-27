@@ -1,4 +1,4 @@
 /datum/modpack/_DEFINES
 	name = "DEFINES"
-	desc = "Добавляет дефайны для наших нужд"
+	desc = "Добавляет дефайны необходимые для работы модпаков."
 	author = "Voiko"
