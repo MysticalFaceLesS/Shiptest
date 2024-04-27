@@ -41,8 +41,3 @@
 #define KEPORI_UNDERWEAR_TORSO_PATH 'icons/mob/clothing/underwear/species/underwear_torso_kepori.dmi'
 #define KEPORI_UNDERWEAR_LEGS_PATH 'icons/mob/clothing/underwear/species/underwear_legs_kepori.dmi'
 #define KEPORI_UNDERWEAR_SOCKS_PATH 'icons/mob/clothing/underwear/species/underwear_socks_kepori.dmi'
-
-//TAJARAN PATHS
-#define TAJARAN_MASK_PATH 'icons/mob/species/tajaran/clothing/onmob_mask_tajaran.dmi'
-#define TAJARAN_HEAD_PATH 'icons/mob/species/tajaran/clothing/onmob_head_tajaran.dmi'
-#define TAJARAN_SUIT_PATH 'icons/mob/species/tajaran/clothing/onmob_suit_tajaran.dmi'

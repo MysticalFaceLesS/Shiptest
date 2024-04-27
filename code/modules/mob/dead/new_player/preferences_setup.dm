@@ -30,9 +30,9 @@
 	if(randomise[RANDOM_EXOWEAR_STYLE])
 		exowear = PREF_EXOWEAR
 	if(randomise[RANDOM_HAIRSTYLE])
-		hairstyle = pref_species.random_hairstyle(gender)
+		hairstyle = random_hairstyle(gender)
 	if(randomise[RANDOM_FACIAL_HAIRSTYLE])
-		facial_hairstyle = pref_species.random_facial_hairstyle(gender)
+		facial_hairstyle = random_facial_hairstyle(gender)
 	if(randomise[RANDOM_HAIR_COLOR])
 		hair_color = random_color_natural()
 	if(randomise[RANDOM_FACIAL_HAIR_COLOR])

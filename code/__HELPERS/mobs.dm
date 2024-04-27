@@ -92,6 +92,7 @@
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/elzu_horns, GLOB.elzu_horns_list)
 	if(!GLOB.tails_list_elzu.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/elzu, GLOB.tails_list_elzu)
+	// [CELADON-ADD] - TAJARAN
 	if(!GLOB.tajaran_chest_markings_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_chest_markings, GLOB.tajaran_chest_markings_list)
 	if(!GLOB.tajaran_body_markings_list.len)
@@ -112,6 +113,7 @@
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_hairs, GLOB.tajaran_hairs_list)
 	if(!GLOB.tajaran_ears_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_ears, GLOB.tajaran_ears_list)
+	// [/CELADON-ADD]
 
 	//For now we will always return none for tail_human and ears.
 	//if you don't keep this alphabetised I'm going to personally steal your shins and sell them online
@@ -148,6 +150,7 @@
 		"vox_head_quills" = pick(GLOB.vox_head_quills_list),
 		"vox_neck_quills" = pick(GLOB.vox_neck_quills_list),
 		"wings" = "None",
+		// [CELADON-ADD] - TAJARAN - ,
 		"tajaran_ears" = pick(GLOB.tajaran_ears_list),
 		"tajaran_hairs" = pick(GLOB.tajaran_hairs_list),
 		"tajaran_ears_markings" = pick(GLOB.tajaran_ears_markings_list),
@@ -157,8 +160,10 @@
 		"tajaran_chest_markings" = pick(GLOB.tajaran_chest_markings_list),
 		"tajaran_body_markings" = pick(GLOB.tajaran_body_markings_list),
 		"tajaran_tail" = pick(GLOB.tajaran_tail_list),
+		// [/CELADON-ADD] ,
 	)
 
+// [CELADON-REMOVE] - TAJARAN - Не вызовет ошибок, но будет неправильным использованием. Правильно: /datum/species/random_hairstyle()
 /*
 /proc/random_hairstyle(gender)
 	switch(gender)
@@ -178,6 +183,7 @@
 		else
 			return pick(GLOB.facial_hairstyles_list)
 */
+// [/CELADON-REMOVE]
 
 /proc/random_unique_name(gender, attempts_to_find_unique_name=10)
 	for(var/i in 1 to attempts_to_find_unique_name)

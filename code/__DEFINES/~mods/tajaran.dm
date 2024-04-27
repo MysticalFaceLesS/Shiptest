@@ -15,3 +15,14 @@
 
 // Дополнение к code/__DEFINES/mobs.dm
 #define SPECIES_TAJARAN "tajaran"
+
+
+// Дополнение к code/__DEFINES/preferences.dm
+#define RANDOM_SKIN_TONE_NOSE "random_skin_tone_nose"
+#define RANDOM_SKIN_TONE_TAJARAN "random_skin_tone_tajaran"
+
+
+// Дополнение к code/__DEFINES/species_clothing_defines.dm
+#define TAJARAN_MASK_PATH 'icons/mob/species/tajaran/clothing/onmob_mask_tajaran.dmi'
+#define TAJARAN_HEAD_PATH 'icons/mob/species/tajaran/clothing/onmob_head_tajaran.dmi'
+#define TAJARAN_SUIT_PATH 'icons/mob/species/tajaran/clothing/onmob_suit_tajaran.dmi'
