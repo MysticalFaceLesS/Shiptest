@@ -84,8 +84,13 @@
 	name = "H.V. batton";
 	desc = "A compact, specialised baton assigned to InteQ honorable vanguard's. Applies light electrical shocks to targets."
 	},
-/obj/item/clothing/suit/armor/vest/security/warden/inteq,
-/obj/item/clothing/head/warden/inteq,
+/obj/item/clothing/suit/armor/vest/security/warden/inteq{
+	name = "armored coat";
+	desc = "A brown armored coat with a bulletproof vest over it."
+	},
+/obj/item/clothing/head/warden/inteq{
+	name = "campaign hat"
+	},
 /obj/item/storage/box/inteqmaid,
 /obj/item/storage/backpack/ert/engineer{
 	name = "large vanguard backpack";
@@ -215,7 +220,7 @@
 /obj/structure/closet/secure_closet{
 	icon_state = "armory";
 	name = "weapons locker";
-	req_access_txt = "147;148"
+	req_access_txt = "2"
 	},
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 1
@@ -563,7 +568,7 @@
 	},
 /obj/machinery/disposal/bin,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
+/turf/open/floor/plasteel/tech,
 /area/ship/engineering/communications)
 "cs" = (
 /turf/closed/wall/mineral/titanium/nodiagonal,
@@ -1438,9 +1443,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
-/obj/machinery/door/airlock/public/glass{
-	name = "Дормиторий"
-	},
+/obj/machinery/door/airlock/grunge,
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew/dorm)
 "ix" = (
@@ -1573,7 +1576,8 @@
 "jR" = (
 /obj/structure/closet/secure_closet{
 	icon_state = "prisoner";
-	req_access_txt = "147"
+	req_access_txt = "3";
+	desc = ы
 	},
 /obj/effect/turf_decal/corner/opaque/yellow,
 /obj/effect/turf_decal/corner/opaque/brown{
@@ -1871,10 +1875,6 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/wall{
-	name = "uniform closet";
-	pixel_y = 28
-	},
 /obj/item/flashlight/seclite,
 /obj/item/flashlight/seclite,
 /obj/item/flashlight/seclite,
@@ -1887,6 +1887,7 @@
 /obj/item/radio,
 /obj/item/radio,
 /obj/item/radio,
+/obj/structure/closet/wall/directional/north,
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew/dorm)
 "lG" = (
@@ -1927,7 +1928,7 @@
 /obj/structure/closet/secure_closet{
 	icon_state = "armory";
 	name = "weapons locker";
-	req_access_txt = "147;148"
+	req_access_txt = "2"
 	},
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 9
@@ -1952,7 +1953,7 @@
 "md" = (
 /obj/structure/bed,
 /obj/structure/curtain/bounty,
-/obj/item/bedsheet/head_of_personnel,
+/obj/item/bedsheet/brown,
 /turf/open/floor/carpet/royalblue,
 /area/ship/crew)
 "ml" = (
@@ -2250,14 +2251,14 @@
 /obj/machinery/button/door{
 	name = "Локдаун Карго";
 	id = "cargo";
-	req_access_txt = "148";
+	req_access_txt = "20";
 	pixel_x = -9;
 	pixel_y = 10
 	},
 /obj/machinery/button/door{
 	name = "Локдаун брига";
 	id = "Brig";
-	req_access_txt = "148";
+	req_access_txt = "20";
 	pixel_x = -9
 	},
 /turf/open/floor/plasteel/dark,
@@ -2661,8 +2662,7 @@
 	dir = 1;
 	id = "Hamm_cargo_exit";
 	name = "Внешние створки карго";
-	pixel_y = -20;
-	req_access_txt = "147"
+	pixel_y = -20
 	},
 /obj/machinery/button/shieldwallgen{
 	dir = 1;
@@ -2698,7 +2698,7 @@
 	pixel_y = 22;
 	name = "Внешние створки брига";
 	id = "Brig_exit";
-	req_access_txt = "148"
+	req_access_txt = "2"
 	},
 /obj/machinery/button/shieldwallgen{
 	pixel_x = 10;
@@ -2779,11 +2779,11 @@
 	name = "weapons locker";
 	req_access_txt = "3"
 	},
-/obj/item/ammo_box/magazine/smgm10mm,
-/obj/item/ammo_box/magazine/p16,
 /obj/item/ammo_box/magazine/m12g/small,
-/obj/item/ammo_box/a308/ap,
-/obj/item/ammo_box/a308/ap,
+/obj/item/storage/toolbox/ammo/a308,
+/obj/item/storage/toolbox/ammo/a308,
+/obj/item/ammo_box/magazine/gal,
+/obj/item/ammo_box/magazine/gal,
 /turf/open/floor/engine{
 	icon_state = "plastitanium";
 	explosion_block = 7
@@ -2864,7 +2864,7 @@
 "sR" = (
 /obj/structure/closet/secure_closet{
 	icon_state = "prisoner";
-	req_access_txt = "147"
+	req_access_txt = "3"
 	},
 /obj/effect/turf_decal/corner/opaque/yellow,
 /obj/effect/turf_decal/corner/opaque/brown{
@@ -3648,7 +3648,7 @@
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "Brig"
 	},
-/turf/closed/wall/mineral/plastitanium/interior,
+/turf/open/space/basic,
 /area/ship/engineering/communications)
 "xK" = (
 /obj/structure/catwalk/over/plated_catwalk/dark,
@@ -3973,7 +3973,10 @@
 /obj/item/radio/headset/inteq/alt,
 /obj/item/clothing/suit/armor/hos/inteq,
 /obj/item/clothing/under/syndicate/inteq,
-/obj/item/clothing/head/beret/sec/hos/inteq,
+/obj/item/clothing/head/beret/sec/hos/inteq{
+	name = "inteq beret";
+	desc = "A comfortable looking brown beret. The padding inside feels thicker."
+	},
 /obj/item/storage/belt/security/webbing/inteq,
 /obj/item/storage/belt/security/webbing/inteq/alt,
 /obj/item/clothing/mask/gas/sechailer,
@@ -4097,7 +4100,7 @@
 	},
 /obj/structure/closet/secure_closet{
 	icon_state = "prisoner";
-	req_access_txt = "147"
+	req_access_txt = "3"
 	},
 /obj/item/bedsheet/random,
 /obj/item/clothing/under/rank/prisoner/skirt,
@@ -4258,15 +4261,6 @@
 /obj/item/bedsheet/brown,
 /obj/machinery/light/small/directional/west,
 /obj/item/radio/intercom/directional/south,
-/obj/machinery/button/door{
-	id = "Cabin2";
-	name = "Door Bolt";
-	pixel_x = -20;
-	pixel_y = 10;
-	dir = 4;
-	specialfunctions = 4;
-	normaldoorcontrol = 1
-	},
 /turf/open/floor/carpet/black,
 /area/ship/crew/dorm)
 "AS" = (
@@ -4518,7 +4512,10 @@
 /obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
 /obj/item/storage/belt/utility/chief/full,
 /obj/item/storage/box/stockparts/t2,
-/obj/item/clothing/under/syndicate/inteq/honorable,
+/obj/item/clothing/under/syndicate/inteq/honorable{
+	name = "good looking turtleneck";
+	desc = "a midnight black turtleneck."
+	},
 /obj/item/storage/box/inteqmaid,
 /obj/item/storage/belt/security/webbing/inteq/alt,
 /obj/item/clothing/suit/hooded/wintercoat/security/inteq/alt,
@@ -4890,14 +4887,14 @@
 	name = "Карцер";
 	pixel_x = 10;
 	pixel_y = -20;
-	req_access_txt = "148"
+	req_access_txt = "2"
 	},
 /obj/machinery/button/door{
 	dir = 1;
 	id = "Hamm_cell2";
 	name = "Общая камера";
 	pixel_y = -20;
-	req_access_txt = "148";
+	req_access_txt = "2";
 	pixel_x = -10
 	},
 /turf/open/floor/plasteel/dark,
@@ -5264,7 +5261,7 @@
 	pixel_y = 22;
 	name = "Внешние створки брига";
 	id = "Brig_exit";
-	req_access_txt = "148";
+	req_access_txt = "2";
 	pixel_x = -5
 	},
 /turf/open/floor/plasteel/dark,
@@ -5335,10 +5332,6 @@
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/cargo/office)
 "GD" = (
-/obj/structure/closet/wall{
-	dir = 1;
-	pixel_y = -28
-	},
 /obj/item/grown/log/tree,
 /obj/item/grown/log/tree,
 /obj/item/grown/log/tree,
@@ -5347,6 +5340,7 @@
 /obj/item/stack/sheet/mineral/wood/fifty,
 /obj/item/hatchet/wooden,
 /obj/item/lighter/greyscale,
+/obj/structure/closet/wall/directional/south,
 /turf/open/floor/carpet/black,
 /area/ship/crew/dorm)
 "GE" = (
@@ -5391,7 +5385,7 @@
 	pixel_y = 22;
 	name = "Оружейная брига";
 	id = "Brig_arm";
-	req_access_txt = "147;148"
+	req_access_txt = "3"
 	},
 /obj/structure/filingcabinet/chestdrawer,
 /turf/open/floor/plasteel/dark,
@@ -6148,7 +6142,7 @@
 /obj/structure/closet/secure_closet{
 	icon_state = "sec";
 	name = "equipment locker";
-	req_access_txt = "147;148"
+	req_access_txt = "3"
 	},
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 1
@@ -6601,14 +6595,10 @@
 /obj/item/clothing/head/beret/sec/inteq,
 /obj/item/clothing/head/beret/sec/inteq,
 /obj/item/clothing/head/beret/sec/inteq,
-/obj/structure/closet/wall{
-	name = "uniform closet";
-	pixel_y = -28;
-	dir = 1
-	},
 /mob/living/simple_animal/mouse/brown{
 	faction = list("InteQ")
 	},
+/obj/structure/closet/wall/directional/south,
 /turf/open/floor/carpet/black,
 /area/ship/crew/dorm)
 "Pe" = (
@@ -6898,7 +6888,7 @@
 /obj/structure/closet/secure_closet{
 	icon_state = "sec";
 	name = "equipment locker";
-	req_access_txt = "147;148"
+	req_access_txt = "2"
 	},
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 1
@@ -7074,8 +7064,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/secure_closet{
 	icon_state = "qm";
-	name = "\proper cargo locker";
-	req_access_txt = "147"
+	name = "\proper cargo locker"
 	},
 /obj/item/clothing/head/safety_helmet,
 /obj/item/megaphone/cargo,
@@ -7677,9 +7666,6 @@
 /obj/item/ammo_box/magazine/co9mm,
 /obj/item/ammo_box/magazine/co9mm,
 /obj/item/ammo_box/magazine/co9mm,
-/obj/item/ammo_box/magazine/m45,
-/obj/item/ammo_box/magazine/smgm10mm,
-/obj/item/ammo_box/magazine/m45,
 /turf/open/floor/plating,
 /area/ship/cargo)
 "XK" = (
@@ -7734,7 +7720,7 @@
 	name = "Наружные окна";
 	pixel_x = 32;
 	pixel_y = 7;
-	req_access_txt = "148"
+	req_access_txt = "20"
 	},
 /obj/machinery/button/door{
 	dir = 8;
@@ -7742,7 +7728,7 @@
 	name = "Локдаун мостика";
 	pixel_x = 32;
 	pixel_y = -7;
-	req_access_txt = "148"
+	req_access_txt = "20"
 	},
 /obj/machinery/button/door{
 	dir = 8;
@@ -7750,7 +7736,7 @@
 	name = "Локдаун центрального корридора";
 	pixel_x = 22;
 	pixel_y = 7;
-	req_access_txt = "148"
+	req_access_txt = "20"
 	},
 /obj/machinery/button/door{
 	dir = 8;
@@ -7758,7 +7744,7 @@
 	name = "Обзорные окна мостика";
 	pixel_x = 22;
 	pixel_y = -7;
-	req_access_txt = "148"
+	req_access_txt = "20"
 	},
 /obj/effect/turf_decal/corner/opaque/brown/border{
 	dir = 8
@@ -10017,7 +10003,7 @@ TO
 us
 us
 tb
-qj
+us
 GQ
 Di
 iq
