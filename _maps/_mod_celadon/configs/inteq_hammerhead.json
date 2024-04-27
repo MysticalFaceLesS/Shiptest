@@ -2,8 +2,8 @@
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
 	"map_name": "Hammerhead-Heavy Cruiser",
 	"map_short_name": "Hammerhead-class",
-	"prefix": "IRMV",
-	"description": "Тяжелый крейсер InteQ судно класса 'Hammerhead'. Бывшее исследовательское судно Нанотрейзен выкупленное перестроенное для использования в секторах без поддержки основных сил.",
+	"prefix": "BIQSV",
+	"description": "Тяжелый крейсер InteQ судно класса 'Hammerhead'. Бывшее исследовательское судно Нанотрейзен выкупленное и перестроенное для использования в секторах без поддержки основных сил. Судно преднозначено для большой и сплачённой команды от четырёх и более человек.",
 	"tags": [
 		"Combat",
 		"Riot"
@@ -15,31 +15,36 @@
 	"limit": 1,
 	"job_slots": {
 		"Vanguard": {
-			"outfit": "/datum/outfit/job/inteq/captain/geared/cardacces",
+			"outfit": "/datum/outfit/job/inteq/captain/honorable",
 			"officer": true,
 			"slots": 1
 		},
 		"Master At Arms": {
-			"outfit": "/datum/outfit/job/hos/inteq/naked/cardacces",
+			"outfit": "/datum/outfit/job/inteq/warden",
 			"officer": true,
-			"slots": 2
+			"slots": 1
+		},
+		"Artificer Class II": {
+			"outfit": "/datum/outfit/job/inteq/ce",
+			"officer": true,
+			"slots": 1
 		},
 		"Enforcer": {
-			"outfit": "/datum/outfit/job/security/inteq/naked/cardacces",
-			"slots": 8
+			"outfit": "/datum/outfit/job/inteq/security",
+			"slots": 4
 		},
 		"Artificer": {
-			"outfit": "/datum/outfit/job/engineer/inteq/cardacces",
-			"slots": 4
+			"outfit": "/datum/outfit/job/inteq/engineer",
+			"slots": 2
 		},
 		"Corspman": {
-			"outfit": "/datum/outfit/job/paramedic/inteq/naked/cardacces",
-			"slots": 4
+			"outfit": "/datum/outfit/job/inteq/paramedic",
+			"slots": 1
 		},
 		"Recruit": {
-			"outfit": "/datum/outfit/job/assistant/inteq/cardacces",
-			"slots": 16
+			"outfit": "/datum/outfit/job/inteq/assistant",
+			"slots": 4
 		}
 		},
-	"enabled": false
+	"enabled": true
 }
