@@ -463,12 +463,12 @@
 	plaintext_zone = "tail"
 	bone_break_threshold = 25
 
-/*/obj/item/bodypart/tail/examine(mob/user)
+/obj/item/bodypart/tail/examine(mob/user)
 	. = ..()
 	if(brute_dam > DAMAGE_PRECISION)
 		. += "<span class='warning'>This tail has [brute_dam > 15 ? "severe" : "minor"] bruising.</span>"
 	if(burn_dam > DAMAGE_PRECISION)
-		. += "<span class='warning'>This tail has [burn_dam > 15 ? "severe" : "minor"] burns.</span>"*/
+		. += "<span class='warning'>This tail has [burn_dam > 15 ? "severe" : "minor"] burns.</span>"
 
 /obj/item/bodypart/tail/tajaran
 	name = "tajaran tail"
@@ -585,4 +585,6 @@ var/timer_for_bone_in_the_tail = null
 	desc = "tajaran ears"
 	limb_id = SPECIES_TAJARAN
 	icon = 'icons/mob/species/tajaran/tajaran_bodyparts.dmi'
-	icon_state = "tajaran_ears"*/
+	icon_state = "tajaran_ears"
+
+*/
