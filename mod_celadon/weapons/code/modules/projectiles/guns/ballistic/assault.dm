@@ -1,9 +1,9 @@
 /obj/item/gun/ballistic/automatic/assault/g36sh
 	name = "\improper G36-SH"
 	desc = "Наследие огненной эры Союза Человечества, укороченная версия,  калибра 5.56x45. Технология производства восстановлена минитменами, но ввиду усложненной конструкции продана корпорации InteQ. Используется сотрудниками InteQ по сей день, как оружие для элитных наемников."
-	icon = 'mod_celadon/balance/icons/guns/48x32guns.dmi'
-	lefthand_file = 'mod_celadon/balance/icons/guns/guns_lefthand.dmi'
-	righthand_file = 'mod_celadon/balance/icons/guns/guns_righthand.dmi'
+	icon = 'mod_celadon/weapons/icons/guns/48x32guns.dmi'
+	lefthand_file = 'mod_celadon/weapons/icons/guns/guns_lefthand.dmi'
+	righthand_file = 'mod_celadon/weapons/icons/guns/guns_righthand.dmi'
 	fire_sound = 'mod_celadon/_components/sounds/gun/g36sh.ogg'
 	icon_state = "g36sh"
 	item_state = "g36sh"
@@ -66,7 +66,7 @@
 /obj/item/gun/ballistic/automatic/assault/g36
 	name = "\improper G36"
 	desc = "Наследие огненной эры Союза Человечества , калибра 5.56x45 . Технология производства восстановлена минитменами , но ввиду усложненной конструкции продана корпорации InteQ. Используется сотрудниками InteQ по сей день , как оружие для элитных наемников. "
-	icon = 'mod_celadon/balance/icons/guns/48x32guns.dmi'
+	icon = 'mod_celadon/weapons/icons/guns/48x32guns.dmi'
 	fire_sound = 'mod_celadon/_components/sounds/gun/g36.ogg'
 	icon_state = "g36"
 	item_state = "g36"
@@ -130,7 +130,7 @@
 /obj/item/gun/ballistic/automatic/assault/morita1
 	name = "\improper Morita MK.I"
 	desc = "Стандартная пехотная автоматическая винтовка под калибр .308. Широко применяется армейскими корпусами в Союзе Человечества. Популярность в гражданских кругах заслужила после сьемок в фильме Starboat Troopes."
-	icon = 'mod_celadon/balance/icons/guns/48x32guns.dmi'
+	icon = 'mod_celadon/weapons/icons/guns/48x32guns.dmi'
 	fire_sound = 'mod_celadon/_components/sounds/gun/morita1.ogg'
 	icon_state = "morita1"
 	item_state = "morita1"

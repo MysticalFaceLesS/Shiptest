@@ -36,6 +36,8 @@ SUBSYSTEM_DEF(modpacks)
 	if(SSdbcore.IsConnected())
 		load_admins() // To make admins always have modular added verbs
 
+	. = ..()
+
 /mob/verb/modpacks_list()
 	set name = "Modpacks List"
 	set category = "OOC"
