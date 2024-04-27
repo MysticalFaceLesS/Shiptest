@@ -65,6 +65,13 @@ ID мода: CELADON_QOL
 - EDIT `code\datums\ai_laws.dm`: `/datum/ai_laws/custom`
 - EDIT `code\datums\ai_laws.dm`: `/datum/ai_laws/custom/New()`
 - EDIT `code\datums\ai_laws.dm`: `/datum/ai_laws/proc/set_laws_config()`
+- EDIT `code\modules\mob\living\living_say.dm`: `/mob/living/send_speech` -> `image`
+- EDIT `code\modules\mob\living\living.dm`: `/mob/living/key_down` -> `set_typing_indicator`
+- EDIT `code\modules\mob\living\living.dm`: `/mob/living/set_typing_indicator` -> `state, isMe = null, isSay = null`, `var/state_of_bubble`
+- ADD `code\modules\mob\living\living.dm`: `/mob/living/set_typing_indicator` -> `if(isMe)`, `if(isSay)`, `if(!state_of_bubble)`
+- ADD `code\modules\mob\living\carbon\human\human.dm`: `/mob/living/carbon/human/species/android` -> `bubble_icon`
+- ADD `code\modules\mob\living\carbon\human\human.dm`: `/mob/living/carbon/human/species/jelly` -> `bubble_icon`
+- ADD `code\modules\mob\living\carbon\human\human.dm`: `/mob/living/carbon/human/species/ipc` -> `bubble_icon`
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
