@@ -4,3 +4,6 @@
 #define SKINNOSECOLORS 1001
 #define SKINTAJARANCOLORS 1002
 
+
+// Дополнение к code/__DEFINES/contracts.dm
+#define BAN_HURTTAJARAN "hurttajaran"
