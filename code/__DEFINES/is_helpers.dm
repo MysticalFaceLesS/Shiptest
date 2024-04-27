@@ -78,7 +78,6 @@ GLOBAL_LIST_INIT(turfs_without_ground, typecacheof(list(
 #define isdullahan(A) (is_species(A, /datum/species/dullahan))
 #define iskepori(A) (is_species(A, /datum/species/kepori))
 #define isipc(A) (is_species(A, /datum/species/ipc))
-#define istajaran(A) (is_species(A, /datum/species/tajaran))
 #define isspiderperson(A) (is_species(A, /datum/species/spider))
 #define isvox(A) (is_species(A, /datum/species/vox))
 
