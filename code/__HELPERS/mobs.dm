@@ -254,36 +254,6 @@ GLOBAL_LIST_INIT(skin_tones, sortList(list(
 	else
 		return pick(GLOB.preference_adjectives)
 
-/proc/random_skin_tone_nose()
-	return pick(GLOB.skin_tones_nose)
-
-GLOBAL_LIST_INIT(skin_tones_nose, sortList(list(
-	"beige",
-	"pink",
-	"grey",
-	"black"
-	)))
-
-/proc/random_skin_tone_tajaran()
-	return pick(GLOB.skin_tones_tajaran)
-
-GLOBAL_LIST_INIT(skin_tones_tajaran, sortList(list(
-		"Beaver Brown",
-		"Kochiba",
-		"Taupe",
-		"Blue-Grey",
-		"Dark Gray",
-		"Chocolate",
-		"Black",
-		"Orange",
-		"Cinnamon",
-		"Ruddy",
-		"Cream",
-		"White",
-		"Ivory",
-		"Wheat",
-		"Silver"
-	)))
 
 GLOBAL_LIST_EMPTY(species_list)
 
