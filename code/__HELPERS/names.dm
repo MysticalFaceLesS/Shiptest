@@ -24,12 +24,6 @@
 		. += pick(syllables)
 	. = capitalize(.)
 
-/proc/tajaran_name(gender)
-	if(gender == MALE)
-		return "[pick(GLOB.tajaran_names_male)]-[pick(GLOB.tajaran_names_male)]"
-	else
-		return "[pick(GLOB.tajaran_names_female)]-[pick(GLOB.tajaran_names_female)]"
-
 GLOBAL_VAR(command_name)
 /proc/command_name()
 	if (GLOB.command_name)
@@ -206,8 +200,10 @@ GLOBAL_DATUM(syndicate_code_response_regex, /regex)
 						else
 							if(prob(10))
 								. += pick(lizard_name(MALE),lizard_name(FEMALE))
+							// [CELADON-ADD] - TAJARAN
 							if(prob(5))
 								. += pick(tajaran_name(MALE),tajaran_name(FEMALE))
+							// [/CELADON-ADD]
 							else
 								var/new_name = pick(pick(GLOB.first_names_male,GLOB.first_names_female))
 								new_name += " "

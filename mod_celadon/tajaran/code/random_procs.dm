@@ -38,3 +38,9 @@ GLOBAL_LIST_INIT(skin_tones_tajaran, sortList(list(
 	"Wheat",
 	"Silver"
 )))
+
+/proc/tajaran_name(gender)
+	if(gender == MALE)
+		return "[pick(GLOB.tajaran_names_male)]-[pick(GLOB.tajaran_names_male)]"
+	else
+		return "[pick(GLOB.tajaran_names_female)]-[pick(GLOB.tajaran_names_female)]"

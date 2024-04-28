@@ -25,17 +25,6 @@ GLOBAL_LIST_EMPTY(frills_list)
 GLOBAL_LIST_EMPTY(spines_list)
 GLOBAL_LIST_EMPTY(legs_list)
 GLOBAL_LIST_EMPTY(animated_spines_list)
-	//tajaran Bits
-GLOBAL_LIST_EMPTY(tajaran_ears_list)
-GLOBAL_LIST_EMPTY(tajaran_hairs_list)
-GLOBAL_LIST_EMPTY(tajaran_facial_hairs_list)
-GLOBAL_LIST_EMPTY(tajaran_ears_markings_list)
-GLOBAL_LIST_EMPTY(tajaran_head_markings_list)
-GLOBAL_LIST_EMPTY(tajaran_nose_markings_list)
-GLOBAL_LIST_EMPTY(tajaran_chest_markings_list)
-GLOBAL_LIST_EMPTY(tajaran_body_markings_list)
-GLOBAL_LIST_EMPTY(tajaran_tail_list)
-GLOBAL_LIST_EMPTY(tajaran_animated_tail_list)
 
 	//Mutant Human bits
 GLOBAL_LIST_EMPTY(tails_list_human)

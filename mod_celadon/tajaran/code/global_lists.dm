@@ -1,0 +1,13 @@
+GLOBAL_LIST_EMPTY(tajaran_ears_list)
+GLOBAL_LIST_EMPTY(tajaran_hairs_list)
+GLOBAL_LIST_EMPTY(tajaran_facial_hairs_list)
+GLOBAL_LIST_EMPTY(tajaran_ears_markings_list)
+GLOBAL_LIST_EMPTY(tajaran_head_markings_list)
+GLOBAL_LIST_EMPTY(tajaran_nose_markings_list)
+GLOBAL_LIST_EMPTY(tajaran_chest_markings_list)
+GLOBAL_LIST_EMPTY(tajaran_body_markings_list)
+GLOBAL_LIST_EMPTY(tajaran_tail_list)
+GLOBAL_LIST_EMPTY(tajaran_animated_tail_list)
+
+GLOBAL_LIST_INIT(tajaran_names_male, world.file2list("strings/names/tajaran_male.txt"))
+GLOBAL_LIST_INIT(tajaran_names_female, world.file2list("strings/names/tajaran_female.txt"))

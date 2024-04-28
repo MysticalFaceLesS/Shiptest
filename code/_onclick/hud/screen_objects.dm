@@ -475,7 +475,7 @@
 	name = "damage zone"
 	icon_state = "zone_sel"
 	screen_loc = ui_zonesel
-	var/overlay_icon = 'icons/mob/species/tajaran/hud/screen_gen.dmi'
+	var/overlay_icon = 'icons/hud/screen_gen.dmi'
 	var/static/list/hover_overlays_cache = list()
 	var/hovering
 
@@ -553,7 +553,7 @@
 					return BODY_ZONE_CHEST
 				if(21 to 24)
 					return BODY_ZONE_L_ARM
-		if(23 to 31) //Head, but we need to check for eye or mouth
+		if(23 to 30) //Head, but we need to check for eye or mouth
 			if(icon_x in 12 to 20)
 				switch(icon_y)
 					if(23 to 24)
@@ -658,12 +658,6 @@
 /atom/movable/screen/healthdoll
 	name = "health doll"
 	screen_loc = ui_healthdoll
-
-/* кукла таяранская 1 штука, многа кодить
-/atom/movable/screen/healthdoll/tajaran
-	name = "health doll"
-	screen_loc = ui_healthdoll
-*/
 
 /atom/movable/screen/healthdoll/Click()
 	if (iscarbon(usr))
