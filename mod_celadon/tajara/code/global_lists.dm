@@ -9,5 +9,5 @@ GLOBAL_LIST_EMPTY(tajara_body_markings_list)
 GLOBAL_LIST_EMPTY(tajara_tail_list)
 GLOBAL_LIST_EMPTY(tajara_animated_tail_list)
 
-GLOBAL_LIST_INIT(tajara_names_male, world.file2list("strings/names/tajara_male.txt"))
-GLOBAL_LIST_INIT(tajara_names_female, world.file2list("strings/names/tajara_female.txt"))
+GLOBAL_LIST_INIT(tajara_names_male, world.file2list("mod_celadon/tajara/strings/tajara_male_names.txt"))
+GLOBAL_LIST_INIT(tajara_names_female, world.file2list("mod_celadon/tajara/strings/tajara_female_names.txt"))
