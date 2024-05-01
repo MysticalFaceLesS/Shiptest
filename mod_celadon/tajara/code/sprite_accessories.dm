@@ -1,8 +1,3 @@
-//Tajara Mutantparts
-
-//Start markings
-//Markings chest
-
 /datum/sprite_accessory/tajara_chest_markings
 	icon = 'mod_celadon/tajara/icons/tajara_markings.dmi'
 	color_src = MUTCOLORS_SECONDARY

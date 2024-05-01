@@ -192,10 +192,6 @@
 	new /obj/item/bodypart/r_arm/robot/surplus/vox(src)
 	new /obj/item/bodypart/leg/left/robot/surplus/vox(src)
 	new /obj/item/bodypart/leg/right/robot/surplus/vox(src)
-	new /obj/item/bodypart/l_arm/robot/surplus/tajara(src)
-	new /obj/item/bodypart/r_arm/robot/surplus/tajara(src)
-	new /obj/item/bodypart/leg/left/robot/surplus/tajara(src)
-	new /obj/item/bodypart/leg/right/robot/surplus/tajara(src)
 
 /obj/structure/closet/crate/freezer/surplus_limbs/organs
 	name = "organ freezer"
