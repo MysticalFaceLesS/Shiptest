@@ -51,7 +51,7 @@ ID мода: TAJARA
 
 ### Дефайны
 
-- `code/__defines/~mods/tajara.dm`: `TAJARAN_SPEED_MULTIPLIER`, `TAJARAN_SPEED_BASE`
+- `code/__defines/~mods/tajara.dm`: `TAJARA_SPEED_MULTIPLIER`, `TAJARA_SPEED_BASE`
 <!--
   Если требовалось добавить какие-либо дефайны, укажи файлы,
   в которые ты их добавил, а также перечисли имена.

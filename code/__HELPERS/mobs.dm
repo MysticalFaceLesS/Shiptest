@@ -93,26 +93,26 @@
 	if(!GLOB.tails_list_elzu.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/elzu, GLOB.tails_list_elzu)
 	// [CELADON-ADD] - TAJARA
-	if(!GLOB.tajaran_chest_markings_list.len)
-		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_chest_markings, GLOB.tajaran_chest_markings_list)
-	if(!GLOB.tajaran_body_markings_list.len)
-		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_body_markings, GLOB.tajaran_body_markings_list)
-	if(!GLOB.tajaran_facial_hairs_list.len)
-		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_facial_hairs, GLOB.tajaran_facial_hairs_list)
-	if(!GLOB.tajaran_nose_markings_list.len)
-		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_nose_markings, GLOB.tajaran_nose_markings_list)
-	if(!GLOB.tajaran_ears_markings_list.len)
-		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_ears_markings, GLOB.tajaran_ears_markings_list)
-	if(!GLOB.tajaran_head_markings_list.len)
-		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_head_markings, GLOB.tajaran_head_markings_list)
-	if(!GLOB.tajaran_tail_list.len)
-		init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/tajara, GLOB.tajaran_tail_list)
-	if(!GLOB.tajaran_animated_tail_list.len)
-		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_tail_animated, GLOB.tajaran_animated_tail_list)
-	if(!GLOB.tajaran_hairs_list.len)
-		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_hairs, GLOB.tajaran_hairs_list)
-	if(!GLOB.tajaran_ears_list.len)
-		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_ears, GLOB.tajaran_ears_list)
+	if(!GLOB.tajara_chest_markings_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_chest_markings, GLOB.tajara_chest_markings_list)
+	if(!GLOB.tajara_body_markings_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_body_markings, GLOB.tajara_body_markings_list)
+	if(!GLOB.tajara_facial_hairs_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_facial_hairs, GLOB.tajara_facial_hairs_list)
+	if(!GLOB.tajara_nose_markings_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_nose_markings, GLOB.tajara_nose_markings_list)
+	if(!GLOB.tajara_ears_markings_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_ears_markings, GLOB.tajara_ears_markings_list)
+	if(!GLOB.tajara_head_markings_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_head_markings, GLOB.tajara_head_markings_list)
+	if(!GLOB.tajara_tail_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/tajara, GLOB.tajara_tail_list)
+	if(!GLOB.tajara_animated_tail_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_tail_animated, GLOB.tajara_animated_tail_list)
+	if(!GLOB.tajara_hairs_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_hairs, GLOB.tajara_hairs_list)
+	if(!GLOB.tajara_ears_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_ears, GLOB.tajara_ears_list)
 	// [/CELADON-ADD]
 
 	//For now we will always return none for tail_human and ears.
@@ -151,15 +151,15 @@
 		"vox_neck_quills" = pick(GLOB.vox_neck_quills_list),
 		"wings" = "None",
 		// [CELADON-ADD] - TAJARA - ,
-		"tajaran_ears" = pick(GLOB.tajaran_ears_list),
-		"tajaran_hairs" = pick(GLOB.tajaran_hairs_list),
-		"tajaran_ears_markings" = pick(GLOB.tajaran_ears_markings_list),
-		"tajaran_head_markings" = pick(GLOB.tajaran_head_markings_list),
-		"tajaran_facial_hairs" = pick(GLOB.tajaran_facial_hairs_list),
-		"tajaran_nose_markings" = pick(GLOB.tajaran_nose_markings_list),
-		"tajaran_chest_markings" = pick(GLOB.tajaran_chest_markings_list),
-		"tajaran_body_markings" = pick(GLOB.tajaran_body_markings_list),
-		"tajaran_tail" = pick(GLOB.tajaran_tail_list),
+		"tajara_ears" = pick(GLOB.tajara_ears_list),
+		"tajara_hairs" = pick(GLOB.tajara_hairs_list),
+		"tajara_ears_markings" = pick(GLOB.tajara_ears_markings_list),
+		"tajara_head_markings" = pick(GLOB.tajara_head_markings_list),
+		"tajara_facial_hairs" = pick(GLOB.tajara_facial_hairs_list),
+		"tajara_nose_markings" = pick(GLOB.tajara_nose_markings_list),
+		"tajara_chest_markings" = pick(GLOB.tajara_chest_markings_list),
+		"tajara_body_markings" = pick(GLOB.tajara_body_markings_list),
+		"tajara_tail" = pick(GLOB.tajara_tail_list),
 		// [/CELADON-ADD] ,
 	)
 

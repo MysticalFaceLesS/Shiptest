@@ -208,7 +208,7 @@
 	icon_state = "hardsuit-engineering"
 	item_state = "eng_hardsuit"
 	armor = list("melee" = 30, "bullet" = 5, "laser" = 10, "energy" = 20, "bomb" = 10, "bio" = 100, "rad" = 75, "fire" = 100, "acid" = 75)
-	supports_variations = DIGITIGRADE_VARIATION | VOX_VARIATION | TAJARAN_VARIATION
+	supports_variations = DIGITIGRADE_VARIATION | VOX_VARIATION | TAJARA_VARIATION
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/engine
 	resistance_flags = FIRE_PROOF
 
@@ -282,7 +282,7 @@
 	max_heat_protection_temperature = FIRE_SUIT_MAX_TEMP_PROTECT
 	resistance_flags = FIRE_PROOF
 	armor = list("melee" = 30, "bullet" = 5, "laser" = 10, "energy" = 20, "bomb" = 50, "bio" = 100, "rad" = 50, "fire" = 50, "acid" = 75)
-	supports_variations = DIGITIGRADE_VARIATION | VOX_VARIATION | TAJARAN_VARIATION
+	supports_variations = DIGITIGRADE_VARIATION | VOX_VARIATION | TAJARA_VARIATION
 	heat_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/storage/bag/ore, /obj/item/pickaxe)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/mining
@@ -413,7 +413,7 @@
 	item_state = "syndie_hardsuit"
 	hardsuit_type = "syndi"
 	armor = list("melee" = 40, "bullet" = 50, "laser" = 30, "energy" = 40, "bomb" = 35, "bio" = 100, "rad" = 50, "fire" = 50, "acid" = 90)
-	supports_variations = DIGITIGRADE_VARIATION | VOX_VARIATION | TAJARAN_VARIATION
+	supports_variations = DIGITIGRADE_VARIATION | VOX_VARIATION | TAJARA_VARIATION
 	allowed = list(/obj/item/gun, /obj/item/ammo_box,/obj/item/ammo_casing, /obj/item/melee/baton, /obj/item/melee/transforming/energy/sword/saber, /obj/item/restraints/handcuffs, /obj/item/tank/internals)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/syndi
 	jetpack = /obj/item/tank/jetpack/suit
@@ -511,7 +511,7 @@
 	item_state = "elitesyndie_hardsuit"
 	hardsuit_type = "syndielite"
 	armor = list("melee" = 60, "bullet" = 60, "laser" = 50, "energy" = 60, "bomb" = 55, "bio" = 100, "rad" = 70, "fire" = 100, "acid" = 100)
-	supports_variations = DIGITIGRADE_VARIATION | VOX_VARIATION | TAJARAN_VARIATION
+	supports_variations = DIGITIGRADE_VARIATION | VOX_VARIATION | TAJARA_VARIATION
 	heat_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	resistance_flags = FIRE_PROOF | ACID_PROOF
@@ -528,7 +528,7 @@
 	icon_state = "hardsuit1-cybersun"
 	hardsuit_type = "cybersun"
 	armor = list("melee" = 25, "bullet" = 25, "laser" = 50, "energy" = 50, "bomb" = 25, "bio" = 100, "rad" = 60, "fire" = 60, "acid" = 60)
-	supports_variations = VOX_VARIATION | TAJARAN_VARIATION
+	supports_variations = VOX_VARIATION | TAJARA_VARIATION
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/syndi/cybersun
 
 /obj/item/clothing/head/helmet/space/hardsuit/syndi/cybersun
@@ -548,7 +548,7 @@
 	hardsuit_type = "cyberparamed"
 	armor = list("melee" = 25, "bullet" = 25, "laser" = 35, "energy" = 40, "bomb" = 10, "bio" = 100, "rad" = 65, "fire" = 75, "acid" = 40)
 	combat_slowdown = 0.4
-	supports_variations = VOX_VARIATION | TAJARAN_VARIATION
+	supports_variations = VOX_VARIATION | TAJARA_VARIATION
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/syndi/cybersun/paramed
 	jetpack = null
 
@@ -567,7 +567,7 @@
 	alt_desc = "One of Inteq's strudiest and finest combat armors. It is in combat mode. Retrofitted by the IRMG."
 	icon_state = "hardsuit1-pointman"
 	hardsuit_type = "pointman"
-	supports_variations = VOX_VARIATION | TAJARAN_VARIATION
+	supports_variations = VOX_VARIATION | TAJARA_VARIATION
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/syndi/inteq
 
 
@@ -628,7 +628,7 @@
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/storage/firstaid, /obj/item/healthanalyzer, /obj/item/stack/medical)
 	armor = list("melee" = 30, "bullet" = 5, "laser" = 10, "energy" = 20, "bomb" = 10, "bio" = 100, "rad" = 60, "fire" = 60, "acid" = 75)
 	slowdown = 0.5
-	supports_variations = DIGITIGRADE_VARIATION | VOX_VARIATION | TAJARAN_VARIATION
+	supports_variations = DIGITIGRADE_VARIATION | VOX_VARIATION | TAJARA_VARIATION
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/medical
 
 /obj/item/clothing/head/helmet/space/hardsuit/medical/cmo
@@ -691,7 +691,7 @@
 		/obj/item/hand_tele,
 		/obj/item/aicard)
 	armor = list("melee" = 30, "bullet" = 5, "laser" = 10, "energy" = 20, "bomb" = 100, "bio" = 100, "rad" = 60, "fire" = 60, "acid" = 80)
-	supports_variations = DIGITIGRADE_VARIATION | VOX_VARIATION | TAJARAN_VARIATION
+	supports_variations = DIGITIGRADE_VARIATION | VOX_VARIATION | TAJARA_VARIATION
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/rd
 
 	//Security hardsuit
@@ -710,7 +710,7 @@
 	icon_state = "hardsuit-sec"
 	item_state = "sec_hardsuit"
 	armor = list("melee" = 35, "bullet" = 15, "laser" = 30, "energy" = 40, "bomb" = 10, "bio" = 100, "rad" = 50, "fire" = 75, "acid" = 75)
-	supports_variations = DIGITIGRADE_VARIATION | VOX_VARIATION | TAJARAN_VARIATION
+	supports_variations = DIGITIGRADE_VARIATION | VOX_VARIATION | TAJARA_VARIATION
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/security
 
 /obj/item/clothing/suit/space/hardsuit/security/Initialize()
@@ -731,7 +731,7 @@
 	desc = "A special bulky suit that protects against hazardous, low pressure environments. Has an additional layer of armor."
 	icon_state = "hardsuit-hos"
 	armor = list("melee" = 45, "bullet" = 25, "laser" = 30, "energy" = 40, "bomb" = 25, "bio" = 100, "rad" = 50, "fire" = 95, "acid" = 95)
-	supports_variations = DIGITIGRADE_VARIATION | VOX_VARIATION | TAJARAN_VARIATION
+	supports_variations = DIGITIGRADE_VARIATION | VOX_VARIATION | TAJARA_VARIATION
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/security/hos
 	jetpack = /obj/item/tank/jetpack/suit
 
@@ -1090,7 +1090,7 @@
 	item_state = "independent_sec_helm"
 	hardsuit_type = "independent-sec"
 	armor = list("melee" = 35, "bullet" = 25, "laser" = 20,"energy" = 40, "bomb" = 10, "bio" = 100, "rad" = 50, "fire" = 75, "acid" = 75)
-	supports_variations = VOX_VARIATION | TAJARAN_VARIATION
+	supports_variations = VOX_VARIATION | TAJARA_VARIATION
 
 /obj/item/clothing/head/helmet/space/hardsuit/security/independent/frontier
 	name = "\improper Frontiersmen hardsuit helmet"
@@ -1106,7 +1106,7 @@
 	item_state = "independent_sec_hardsuit"
 	hardsuit_type = "independent-sec"
 	armor = list("melee" = 35, "bullet" = 25, "laser" = 20, "energy" = 40, "bomb" = 10, "bio" = 100, "rad" = 50, "fire" = 75, "acid" = 75)
-	supports_variations = VOX_VARIATION | TAJARAN_VARIATION
+	supports_variations = VOX_VARIATION | TAJARA_VARIATION
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/security/independent
 
 /obj/item/clothing/suit/space/hardsuit/security/independent/frontier
@@ -1257,7 +1257,7 @@
 	icon_state = "hardsuit-inteq"
 	item_state = "hardsuit-inteq"
 	hardsuit_type = "inteq"
-	supports_variations = DIGITIGRADE_VARIATION | VOX_VARIATION | TAJARAN_VARIATION
+	supports_variations = DIGITIGRADE_VARIATION | VOX_VARIATION | TAJARA_VARIATION
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/security/independent/inteq
 
 /obj/item/clothing/head/helmet/space/hardsuit/solgov
@@ -1275,7 +1275,7 @@
 	item_state = "hardsuit_solgov"
 	armor = list("melee" = 50, "bullet" = 45, "laser" = 40, "energy" = 30, "bomb" = 60, "bio" = 100, "rad" = 60, "fire" = 90, "acid" = 75) //intentionally the fucking strong, this is master chief-tier armor //is this really what you call the strong?? is this the best solgov has to offer??????
 	slowdown = 0
-	supports_variations = DIGITIGRADE_VARIATION | TAJARAN_VARIATION
+	supports_variations = DIGITIGRADE_VARIATION | TAJARA_VARIATION
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/solgov
 
 /obj/item/clothing/head/helmet/space/hardsuit/quixote

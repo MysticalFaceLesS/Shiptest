@@ -1,7 +1,7 @@
 
-/proc/random_unique_tajaran_name(gender, attempts_to_find_unique_name=10)
+/proc/random_unique_tajara_name(gender, attempts_to_find_unique_name=10)
 	for(var/i in 1 to attempts_to_find_unique_name)
-		. = capitalize(tajaran_name(gender))
+		. = capitalize(tajara_name(gender))
 
 		if(!findname(.))
 			break
@@ -18,10 +18,10 @@ GLOBAL_LIST_INIT(skin_tones_nose, sortList(list(
 	"black"
 )))
 
-/proc/random_skin_tone_tajaran()
-	return pick(GLOB.skin_tones_tajaran)
+/proc/random_skin_tone_tajara()
+	return pick(GLOB.skin_tones_tajara)
 
-GLOBAL_LIST_INIT(skin_tones_tajaran, sortList(list(
+GLOBAL_LIST_INIT(skin_tones_tajara, sortList(list(
 	"Beaver Brown",
 	"Kochiba",
 	"Taupe",
@@ -39,8 +39,8 @@ GLOBAL_LIST_INIT(skin_tones_tajaran, sortList(list(
 	"Silver"
 )))
 
-/proc/tajaran_name(gender)
+/proc/tajara_name(gender)
 	if(gender == MALE)
-		return "[pick(GLOB.tajaran_names_male)]-[pick(GLOB.tajaran_names_male)]"
+		return "[pick(GLOB.tajara_names_male)]-[pick(GLOB.tajara_names_male)]"
 	else
-		return "[pick(GLOB.tajaran_names_female)]-[pick(GLOB.tajaran_names_female)]"
+		return "[pick(GLOB.tajara_names_female)]-[pick(GLOB.tajara_names_female)]"

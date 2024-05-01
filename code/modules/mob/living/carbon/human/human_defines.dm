@@ -32,7 +32,7 @@
 
 	var/skin_tone = "caucasian1"		//Skin tone
 	var/skin_tone_nose = "black"		//Skin tone nose tajara
-	var/skin_tone_tajaran = "Black" 	//Skin tone tajara
+	var/skin_tone_tajara = "Black" 	//Skin tone tajara
 
 	var/lip_style = null	//no lipstick by default- arguably misleading, as it could be used for general makeup
 	var/lip_color = "white"

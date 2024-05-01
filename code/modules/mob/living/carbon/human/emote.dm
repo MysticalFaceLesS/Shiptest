@@ -406,7 +406,7 @@
 	vary = TRUE
 
 /datum/emote/living/carbon/human/pur/get_sound(mob/living/user)
-	if(istajaran(user))
+	if(istajara(user))
 		return 'sound/voice/tajara/purr.ogg'
 	else
 		return
@@ -419,7 +419,7 @@
 	vary = TRUE
 
 /datum/emote/living/carbon/human/purlong/get_sound(mob/living/user)
-	if(istajaran(user))
+	if(istajara(user))
 		return 'sound/voice/tajara/purr_long.ogg'
 	else
 		return

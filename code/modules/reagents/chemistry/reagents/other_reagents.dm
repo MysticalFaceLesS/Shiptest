@@ -669,7 +669,7 @@
 
 /datum/reagent/mutationtoxin/tajara
 	name = "Tajaran Mutation Toxin"
-	description = "A tajaraning toxin."
+	description = "A tajaraing toxin."
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	race = /datum/species/tajara
 	process_flags = ORGANIC | SYNTHETIC

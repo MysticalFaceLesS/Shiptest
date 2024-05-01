@@ -8,7 +8,7 @@
 	build_type = LIMBGROWER
 	reagents_list = list(/datum/reagent/medicine/synthflesh = 25)
 	build_path = /obj/item/bodypart/l_arm
-	category = list("initial",SPECIES_HUMAN,SPECIES_SARATHI,SPECIES_MOTH,SPECIES_PLASMAMAN,SPECIES_ELZUOSE,SPECIES_RACHNID,SPECIES_VOX,SPECIES_KEPORI,SPECIES_ABDUCTOR,SPECIES_FLYPERSON,SPECIES_POD,SPECIES_SKELETON,SPECIES_SNAIL,SPECIES_TAJARAN)
+	category = list("initial",SPECIES_HUMAN,SPECIES_SARATHI,SPECIES_MOTH,SPECIES_PLASMAMAN,SPECIES_ELZUOSE,SPECIES_RACHNID,SPECIES_VOX,SPECIES_KEPORI,SPECIES_ABDUCTOR,SPECIES_FLYPERSON,SPECIES_POD,SPECIES_SKELETON,SPECIES_SNAIL,SPECIES_TAJARA)
 
 /datum/design/rightarm
 	name = "Right Arm"
@@ -16,7 +16,7 @@
 	build_type = LIMBGROWER
 	reagents_list = list(/datum/reagent/medicine/synthflesh = 25)
 	build_path = /obj/item/bodypart/r_arm
-	category = list("initial",SPECIES_HUMAN,SPECIES_SARATHI,SPECIES_MOTH,SPECIES_PLASMAMAN,SPECIES_ELZUOSE,SPECIES_RACHNID,SPECIES_VOX,SPECIES_KEPORI,SPECIES_ABDUCTOR,SPECIES_FLYPERSON,SPECIES_POD,SPECIES_SKELETON,SPECIES_SNAIL,SPECIES_TAJARAN)
+	category = list("initial",SPECIES_HUMAN,SPECIES_SARATHI,SPECIES_MOTH,SPECIES_PLASMAMAN,SPECIES_ELZUOSE,SPECIES_RACHNID,SPECIES_VOX,SPECIES_KEPORI,SPECIES_ABDUCTOR,SPECIES_FLYPERSON,SPECIES_POD,SPECIES_SKELETON,SPECIES_SNAIL,SPECIES_TAJARA)
 
 /datum/design/leftleg
 	name = "Left Leg"
@@ -24,7 +24,7 @@
 	build_type = LIMBGROWER
 	reagents_list = list(/datum/reagent/medicine/synthflesh = 25)
 	build_path = /obj/item/bodypart/leg/left
-	category = list("initial",SPECIES_HUMAN,SPECIES_SARATHI,SPECIES_MOTH,SPECIES_PLASMAMAN,SPECIES_ELZUOSE,SPECIES_RACHNID,SPECIES_VOX,SPECIES_KEPORI,SPECIES_ABDUCTOR,SPECIES_FLYPERSON,SPECIES_POD,SPECIES_SKELETON,SPECIES_SNAIL,SPECIES_TAJARAN)
+	category = list("initial",SPECIES_HUMAN,SPECIES_SARATHI,SPECIES_MOTH,SPECIES_PLASMAMAN,SPECIES_ELZUOSE,SPECIES_RACHNID,SPECIES_VOX,SPECIES_KEPORI,SPECIES_ABDUCTOR,SPECIES_FLYPERSON,SPECIES_POD,SPECIES_SKELETON,SPECIES_SNAIL,SPECIES_TAJARA)
 
 /datum/design/rightleg
 	name = "Right Leg"
@@ -32,7 +32,7 @@
 	build_type = LIMBGROWER
 	reagents_list = list(/datum/reagent/medicine/synthflesh = 25)
 	build_path = /obj/item/bodypart/leg/right
-	category = list("initial",SPECIES_HUMAN,SPECIES_SARATHI,SPECIES_MOTH,SPECIES_PLASMAMAN,SPECIES_ELZUOSE,SPECIES_RACHNID,SPECIES_VOX,SPECIES_KEPORI,SPECIES_ABDUCTOR,SPECIES_FLYPERSON,SPECIES_POD,SPECIES_SKELETON,SPECIES_SNAIL,SPECIES_TAJARAN)
+	category = list("initial",SPECIES_HUMAN,SPECIES_SARATHI,SPECIES_MOTH,SPECIES_PLASMAMAN,SPECIES_ELZUOSE,SPECIES_RACHNID,SPECIES_VOX,SPECIES_KEPORI,SPECIES_ABDUCTOR,SPECIES_FLYPERSON,SPECIES_POD,SPECIES_SKELETON,SPECIES_SNAIL,SPECIES_TAJARA)
 
 /datum/design/digitigrade/leftleg
 	name = "Digitigrade Left Leg"
@@ -133,21 +133,21 @@
 	build_path = /obj/item/organ/tongue/lizard
 	category = list("initial",SPECIES_SARATHI)
 
-/datum/design/tajaran_tail
+/datum/design/tajara_tail
 	name = "Tajaran Tail"
 	id = "long"
 	build_type = LIMBGROWER
 	reagents_list = list(/datum/reagent/medicine/synthflesh = 20)
 	build_path = /obj/item/organ/tail/tajara/fake
-	category = list("initial",SPECIES_TAJARAN)
+	category = list("initial",SPECIES_TAJARA)
 
-/datum/design/tajaran_tongue
+/datum/design/tajara_tongue
 	name = "Forked Tongue"
 	id = "tajtongue"
 	build_type = LIMBGROWER
 	reagents_list = list(/datum/reagent/medicine/synthflesh = 10)
 	build_path = /obj/item/organ/tongue/tajara
-	category = list("initial",SPECIES_TAJARAN)
+	category = list("initial",SPECIES_TAJARA)
 
 //  someday this will get uncommented
 // /datum/design/monkey_tail
@@ -303,13 +303,13 @@
 	build_path = /obj/item/organ/tongue/vox
 	category = list("initial",SPECIES_VOX)
 
-/datum/design/tajaran_tongue
+/datum/design/tajara_tongue
 	name = "Tajaran Tongue"
-	id = "tajarantongue"
+	id = "tajaratongue"
 	build_type = LIMBGROWER
 	reagents_list = list(/datum/reagent/medicine/synthflesh = 10)
 	build_path = /obj/item/organ/tongue/tajara
-	category = list("initial",SPECIES_TAJARAN)
+	category = list("initial",SPECIES_TAJARA)
 
 /datum/design/abductor_tongue
 	name = "Abductor Tongue"

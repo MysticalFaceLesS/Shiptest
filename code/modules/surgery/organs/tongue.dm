@@ -469,7 +469,7 @@
 	say_mod = "mrowls"
 	taste_sensitivity = 10 // combined nose + tongue, extra sensitive
 	modifies_speech = TRUE
-	var/static/list/languages_possible_tajaran = typecacheof(list(
+	var/static/list/languages_possible_tajara = typecacheof(list(
 		/datum/language/common,
 		/datum/language/draconic,
 		/datum/language/codespeak,
@@ -489,18 +489,18 @@
 	if(speech_args[SPEECH_LANGUAGE] == /datum/language/siiktajr)
 		return
 
-	var/static/regex/tajaran_rr = new("r+", "g")
-	var/static/regex/tajaran_RR = new("R+", "g")
-	var/static/regex/tajaran_ru_rr = new("р+", "g")
-	var/static/regex/tajaran_ru_RR = new("Р+", "g")
+	var/static/regex/tajara_rr = new("r+", "g")
+	var/static/regex/tajara_RR = new("R+", "g")
+	var/static/regex/tajara_ru_rr = new("р+", "g")
+	var/static/regex/tajara_ru_RR = new("Р+", "g")
 	var/message = speech_args[SPEECH_MESSAGE]
 	if(message[1] != "*")
-		message = tajaran_rr.Replace(message, pick("rrr", "rr"))
-		message = tajaran_RR.Replace(message, pick("Rrr", "Rr"))
-		message = tajaran_ru_rr.Replace(message, pick("ррр", "рр"))
-		message = tajaran_ru_RR.Replace(message, pick("Ррр", "Рр"))
+		message = tajara_rr.Replace(message, pick("rrr", "rr"))
+		message = tajara_RR.Replace(message, pick("Rrr", "Rr"))
+		message = tajara_ru_rr.Replace(message, pick("ррр", "рр"))
+		message = tajara_ru_RR.Replace(message, pick("Ррр", "Рр"))
 	speech_args[SPEECH_MESSAGE] = message
 
 /obj/item/organ/tongue/tajara/Initialize(mapload)
 	. = ..()
-	languages_possible = languages_possible_tajaran
+	languages_possible = languages_possible_tajara

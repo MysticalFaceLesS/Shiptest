@@ -1,7 +1,7 @@
 //Copy-pasted kepori and lizard stuff
 /datum/species/tajara
 	name = "\improper Tajaran"
-	id = SPECIES_TAJARAN
+	id = SPECIES_TAJARA
 	loreblurb = "The Tajaran race is a species of feline-like bipeds hailing from the planet of Ahdomai in the \
 	S'randarr system. They have been brought up into the space age by the Humans and Skrell, and have been \
 	influenced heavily by their long history of Slavemaster rule. They have a structured, clan-influenced way \
@@ -10,7 +10,7 @@
 
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
 
-	use_skintonetajaran = TRUE
+	use_skintonetajara = TRUE
 
 	disliked_food = VEGETABLES | FRUIT | GRAIN | GROSS
 	liked_food = MEAT | RAW | DAIRY
@@ -20,30 +20,30 @@
 	miss_sound = 'sound/weapons/slashmiss.ogg'
 	//species_clothing_path = 'icons/mob/clothing/species/kepori.dmi'
 
-	species_traits = list(EYECOLOR, LIPS, HAIR, FACEHAIR, EMOTE_OVERLAY, MUTCOLORS, MUTCOLORS_SECONDARY, SKINNOSECOLORS, SKINTAJARANCOLORS)
+	species_traits = list(EYECOLOR, LIPS, HAIR, FACEHAIR, EMOTE_OVERLAY, MUTCOLORS, MUTCOLORS_SECONDARY, SKINNOSECOLORS, SKINTAJARACOLORS)
 
 	mutant_bodyparts = list(
-		"tajaran_ears",
-		"tajaran_hairs",
-		"tajaran_ears_markings",
-		"tajaran_head_markings",
-		"tajaran_nose_markings",
-		"tajaran_facial_hairs",
-		"tajaran_chest_markings",
-		"tajaran_body_markings",
-		"tajaran_tail"
+		"tajara_ears",
+		"tajara_hairs",
+		"tajara_ears_markings",
+		"tajara_head_markings",
+		"tajara_nose_markings",
+		"tajara_facial_hairs",
+		"tajara_chest_markings",
+		"tajara_body_markings",
+		"tajara_tail"
 		)
 	default_features = list(
 		"mcolor" = "0F0",
-		"tajaran_ears" = "Plain",
-		"tajaran_hairs" = "Plain",
-		"tajaran_ears_markings" = "None",
-		"tajaran_head_markings" = "None",
-		"tajaran_nose_markings" = "None",
-		"tajaran_facial_hairs" = "None",
-		"tajaran_chest_markings" = "None",
-		"tajaran_body_markings" = "None",
-		"tajaran_tail" = "long",
+		"tajara_ears" = "Plain",
+		"tajara_hairs" = "Plain",
+		"tajara_ears_markings" = "None",
+		"tajara_head_markings" = "None",
+		"tajara_nose_markings" = "None",
+		"tajara_facial_hairs" = "None",
+		"tajara_chest_markings" = "None",
+		"tajara_body_markings" = "None",
+		"tajara_tail" = "long",
 		"body_size" = "Normal"
 		)
 
@@ -67,7 +67,7 @@
 	mutanttongue = /obj/item/organ/tongue/tajara
 	mutant_organs = list(/obj/item/organ/tail/tajara)
 
-	bodytype = BODYTYPE_TAJARAN | BODYTYPE_ORGANIC
+	bodytype = BODYTYPE_TAJARA | BODYTYPE_ORGANIC
 
 	species_chest = /obj/item/bodypart/chest/tajara
 	species_head = /obj/item/bodypart/head/tajara
@@ -94,16 +94,16 @@
 //	return ..()		//ради мемов
 
 /datum/species/tajara/get_hair_list_by_gender(gender)
-	return GLOB.tajaran_hairs_list
+	return GLOB.tajara_hairs_list
 
 /datum/species/tajara/get_facial_hair_list_by_gender(gender)
-	return GLOB.tajaran_facial_hairs_list
+	return GLOB.tajara_facial_hairs_list
 
 /datum/species/tajara/random_hairstyle(gender)
-	return pick(GLOB.tajaran_hairs_list)
+	return pick(GLOB.tajara_hairs_list)
 
 /datum/species/tajara/random_facial_hairstyle(gender)
-	return pick(GLOB.tajaran_facial_hairs_list)
+	return pick(GLOB.tajara_facial_hairs_list)
 //some MORE shitcoding
 /datum/species/tajara/handle_hair(mob/living/carbon/human/H, forced_colour)
 	return ..()
@@ -111,12 +111,12 @@
 /datum/species/tajara/random_name(gender,unique,lastname)
 	//code by @valtor0
 	/*
-	var/static/list/tajaran_female_ru_endings_list = list("и","а","о","е","й","ь") // Customise this with ru_name_syllables changes.
+	var/static/list/tajara_female_ru_endings_list = list("и","а","о","е","й","ь") // Customise this with ru_name_syllables changes.
 	var/list/ru_name_syllables = list("кан","тай","кир","раи","кии","мир","кра","тэк","нал","вар","хар","марр","ран","дарр", \
 	"мирк","ири","дин","манг","рик","зар","раз","кель","шера","тар","кей","ар","но","маи","зир","кер","нир","ра",\
 	"ми","рир","сей","эка","гир","ари","нэй","нре","ак","таир","эрай","жин","мра","зур","рин","сар","кин","рид","эра","ри","эна")
 	*/
-	var/static/list/tajaran_female_en_endings_list = list("i","a","o","e","y","u") // Customise this with en_name_syllables changes.
+	var/static/list/tajara_female_en_endings_list = list("i","a","o","e","y","u") // Customise this with en_name_syllables changes.
 	var/list/en_name_syllables = list("kan","taj","kir","rai","kii","mir","kra","tak","nal","var","har","marr","ran","darr", \
 	"mirk","iri","din","mang","rik","zar","raz","kel","shera","tar","kai","ar","no","mai","air","ker","nir","ra",\
 	"mi","rir","sei","eka","gir","ari","nai","nre","ak","tajr","arai","jin","mra","aur","rin","sar","kin","rid","era","ri","ena")
@@ -132,7 +132,7 @@
 	full_name = "[capitalize(lowertext(new_name))]"
 	if(gender == FEMALE)
 		var/ending = copytext(full_name, -2)
-		if(!(ending in tajaran_female_en_endings_list))
+		if(!(ending in tajara_female_en_endings_list))
 			full_name += "а"
 	if(prob(75))
 		full_name += " [pick(list("Hadii","Kaitam","Jan-Hazan","Nyrir’Ahan"))]" //"Хадии","Кайтам","Жан-Хазан","Нъярир’Ахан"

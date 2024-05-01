@@ -1,3 +1,3 @@
 /obj/machinery/limbgrower/Initialize(mapload)
-	categories += SPECIES_TAJARAN
+	categories += SPECIES_TAJARA
 	return ..()

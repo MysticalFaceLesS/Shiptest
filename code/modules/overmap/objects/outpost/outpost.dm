@@ -131,7 +131,7 @@
 			if(4)
 				person_name = vox_name()
 			if(5)
-				person_name = pick(prob(50) ? GLOB.tajaran_names_male : GLOB.tajaran_names_female)
+				person_name = pick(prob(50) ? GLOB.tajara_names_male : GLOB.tajara_names_female)
 
 	return "[person_name] [pick(GLOB.station_suffixes)]"
 

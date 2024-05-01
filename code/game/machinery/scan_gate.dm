@@ -20,7 +20,7 @@
 #define SCANGATE_SQUID "squid"
 #define SCANGATE_ELZUOSE "elzuose"
 #define SCANGATE_KEPORI "kepori"
-#define SCANGATE_TAJARAN "tajara"
+#define SCANGATE_TAJARA "tajara"
 
 /obj/machinery/scanner_gate
 	name = "scanner gate"
@@ -152,7 +152,7 @@
 						scan_species = /datum/species/elzuose
 					if(SCANGATE_KEPORI)
 						scan_species = /datum/species/kepori
-					if(SCANGATE_TAJARAN)
+					if(SCANGATE_TAJARA)
 						scan_species = /datum/species/tajara
 				if(is_species(H, scan_species))
 					beep = TRUE
@@ -253,4 +253,4 @@
 #undef SCANGATE_SQUID
 #undef SCANGATE_ELZUOSE
 #undef SCANGATE_KEPORI
-#undef SCANGATE_TAJARAN
+#undef SCANGATE_TAJARA
