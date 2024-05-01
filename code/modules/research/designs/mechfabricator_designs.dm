@@ -155,25 +155,25 @@
 	id = "lprosthetic_r_leg"
 	build_path = /obj/item/bodypart/leg/right/robot/surplus/lizard
 
-/*/datum/design/prosthetic/l_arm/tajaran
-	name = "Surplus Prosthetic tajaran Left Arm"
+/*/datum/design/prosthetic/l_arm/tajara
+	name = "Surplus Prosthetic tajara Left Arm"
 	id = "lprosthetic_l_arm"
-	build_path = /obj/item/bodypart/l_arm/robot/surplus/tajaran
+	build_path = /obj/item/bodypart/l_arm/robot/surplus/tajara
 
-/datum/design/prosthetic/r_arm/tajaran
-	name = "Surplus Prosthetic tajaran Right Arm"
+/datum/design/prosthetic/r_arm/tajara
+	name = "Surplus Prosthetic tajara Right Arm"
 	id = "lprosthetic_r_arm"
-	build_path = /obj/item/bodypart/r_arm/robot/surplus/tajaran
+	build_path = /obj/item/bodypart/r_arm/robot/surplus/tajara
 
-/datum/design/prosthetic/l_leg/tajaran
-	name = "Surplus Prosthetic tajaran Left Leg"
+/datum/design/prosthetic/l_leg/tajara
+	name = "Surplus Prosthetic tajara Left Leg"
 	id = "lprosthetic_l_leg"
-	build_path = /obj/item/bodypart/leg/left/robot/surplus/tajaran
+	build_path = /obj/item/bodypart/leg/left/robot/surplus/tajara
 
-/datum/design/prosthetic/r_leg/tajaran
-	name = "Surplus Prosthetic tajaran Right Leg"
+/datum/design/prosthetic/r_leg/tajara
+	name = "Surplus Prosthetic tajara Right Leg"
 	id = "lprosthetic_r_leg"
-	build_path = /obj/item/bodypart/leg/right/robot/surplus/tajaran*/
+	build_path = /obj/item/bodypart/leg/right/robot/surplus/tajara*/
 
 //Ripley
 /datum/design/ripley_chassis

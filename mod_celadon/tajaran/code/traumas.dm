@@ -11,7 +11,7 @@
 
 	phobia_mobs["cats"] = typecacheof(list(
 		/mob/living/simple_animal/pet/cat,
-		/mob/living/carbon/human/species/tajaran
+		/mob/living/carbon/human/species/tajara
 	))
 
 	phobia_objs["cats"] = typecacheof(list(
@@ -20,8 +20,8 @@
 		/obj/item/stack/sheet/animalhide/cat,
 		/obj/item/toy/cattoy,
 		/obj/item/clothing/head/kitty,
-		/obj/item/organ/ears/tajaran,
-		/obj/item/organ/tail/tajaran
+		/obj/item/organ/ears/tajara,
+		/obj/item/organ/tail/tajara
 	))
 
 	// Хвосты и уши страшно, конечно но бояться
@@ -29,4 +29,4 @@
 
 	// Поэтому остальных органов тут и нет
 
-	phobia_species["cats"] = typecacheof(list(/datum/species/tajaran))
+	phobia_species["cats"] = typecacheof(list(/datum/species/tajara))

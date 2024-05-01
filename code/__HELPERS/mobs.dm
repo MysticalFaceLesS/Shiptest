@@ -92,7 +92,7 @@
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/elzu_horns, GLOB.elzu_horns_list)
 	if(!GLOB.tails_list_elzu.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/elzu, GLOB.tails_list_elzu)
-	// [CELADON-ADD] - TAJARAN
+	// [CELADON-ADD] - TAJARA
 	if(!GLOB.tajaran_chest_markings_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_chest_markings, GLOB.tajaran_chest_markings_list)
 	if(!GLOB.tajaran_body_markings_list.len)
@@ -106,7 +106,7 @@
 	if(!GLOB.tajaran_head_markings_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_head_markings, GLOB.tajaran_head_markings_list)
 	if(!GLOB.tajaran_tail_list.len)
-		init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/tajaran, GLOB.tajaran_tail_list)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/tajara, GLOB.tajaran_tail_list)
 	if(!GLOB.tajaran_animated_tail_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_tail_animated, GLOB.tajaran_animated_tail_list)
 	if(!GLOB.tajaran_hairs_list.len)
@@ -150,7 +150,7 @@
 		"vox_head_quills" = pick(GLOB.vox_head_quills_list),
 		"vox_neck_quills" = pick(GLOB.vox_neck_quills_list),
 		"wings" = "None",
-		// [CELADON-ADD] - TAJARAN - ,
+		// [CELADON-ADD] - TAJARA - ,
 		"tajaran_ears" = pick(GLOB.tajaran_ears_list),
 		"tajaran_hairs" = pick(GLOB.tajaran_hairs_list),
 		"tajaran_ears_markings" = pick(GLOB.tajaran_ears_markings_list),
@@ -163,7 +163,7 @@
 		// [/CELADON-ADD] ,
 	)
 
-// [CELADON-REMOVE] - TAJARAN - Не вызовет ошибок, но будет неправильным использованием. Правильно: /datum/species/random_hairstyle()
+// [CELADON-REMOVE] - TAJARA - Не вызовет ошибок, но будет неправильным использованием. Правильно: /datum/species/random_hairstyle()
 /*
 /proc/random_hairstyle(gender)
 	switch(gender)

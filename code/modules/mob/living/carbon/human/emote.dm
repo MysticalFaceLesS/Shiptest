@@ -398,7 +398,7 @@
 
 
 
-/datum/emote/living/carbon/human/pur //tajaran
+/datum/emote/living/carbon/human/pur //tajara
 	key = "pur"
 	key_third_person = "purring"
 	message = "мурчит"
@@ -407,11 +407,11 @@
 
 /datum/emote/living/carbon/human/pur/get_sound(mob/living/user)
 	if(istajaran(user))
-		return 'sound/voice/tajaran/purr.ogg'
+		return 'sound/voice/tajara/purr.ogg'
 	else
 		return
 
-/datum/emote/living/carbon/human/purlong //tajaran
+/datum/emote/living/carbon/human/purlong //tajara
 	key = "purlong"
 	key_third_person = "purring long"
 	message = "мурчит"
@@ -420,6 +420,6 @@
 
 /datum/emote/living/carbon/human/purlong/get_sound(mob/living/user)
 	if(istajaran(user))
-		return 'sound/voice/tajaran/purr_long.ogg'
+		return 'sound/voice/tajara/purr_long.ogg'
 	else
 		return

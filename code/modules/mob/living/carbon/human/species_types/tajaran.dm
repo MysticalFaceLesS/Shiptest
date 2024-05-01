@@ -1,5 +1,5 @@
 //Copy-pasted kepori and lizard stuff
-/datum/species/tajaran
+/datum/species/tajara
 	name = "\improper Tajaran"
 	id = SPECIES_TAJARAN
 	loreblurb = "The Tajaran race is a species of feline-like bipeds hailing from the planet of Ahdomai in the \
@@ -55,29 +55,29 @@
 	bodytemp_heat_damage_limit = (HUMAN_BODYTEMP_NORMAL + 30) + 10
 	bodytemp_cold_damage_limit = (HUMAN_BODYTEMP_NORMAL + 30) - 40
 
-	meat = /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/tajaran 	//нарисовать/спиздить спрайт к нему
-	//skinned_type = /obj/item/stack/sheet/animalhide/tajaran						//нужно сделать кожу из таяран и нарисовать/спиздить спрайт к нему
+	meat = /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/tajara 	//нарисовать/спиздить спрайт к нему
+	//skinned_type = /obj/item/stack/sheet/animalhide/tajara						//нужно сделать кожу из таяран и нарисовать/спиздить спрайт к нему
 
-	species_language_holder = /datum/language_holder/tajaran
+	species_language_holder = /datum/language_holder/tajara
 
 	ass_image = 'icons/ass/asscat.png'
 
-	mutantears = /obj/item/organ/ears/tajaran		//нужно отделить уши от головы. и можно кинуть их в тот же файл. потом в органе прописать путь к файлу + имя файла
-	mutanteyes = /obj/item/organ/eyes/tajaran
-	mutanttongue = /obj/item/organ/tongue/tajaran
-	mutant_organs = list(/obj/item/organ/tail/tajaran)
+	mutantears = /obj/item/organ/ears/tajara		//нужно отделить уши от головы. и можно кинуть их в тот же файл. потом в органе прописать путь к файлу + имя файла
+	mutanteyes = /obj/item/organ/eyes/tajara
+	mutanttongue = /obj/item/organ/tongue/tajara
+	mutant_organs = list(/obj/item/organ/tail/tajara)
 
 	bodytype = BODYTYPE_TAJARAN | BODYTYPE_ORGANIC
 
-	species_chest = /obj/item/bodypart/chest/tajaran
-	species_head = /obj/item/bodypart/head/tajaran
-	species_l_arm = /obj/item/bodypart/l_arm/tajaran
-	species_r_arm = /obj/item/bodypart/r_arm/tajaran
-	species_l_leg = /obj/item/bodypart/leg/left/tajaran
-	species_r_leg = /obj/item/bodypart/leg/right/tajaran
+	species_chest = /obj/item/bodypart/chest/tajara
+	species_head = /obj/item/bodypart/head/tajara
+	species_l_arm = /obj/item/bodypart/l_arm/tajara
+	species_r_arm = /obj/item/bodypart/r_arm/tajara
+	species_l_leg = /obj/item/bodypart/leg/left/tajara
+	species_r_leg = /obj/item/bodypart/leg/right/tajara
 
-//	var/obj/item/bodypart/tail/species_tail = /obj/item/bodypart/tail/tajaran
-//	var/obj/item/bodypart/external_ears/species_external_ears = /obj/item/bodypart/external_ears/tajaran
+//	var/obj/item/bodypart/tail/species_tail = /obj/item/bodypart/tail/tajara
+//	var/obj/item/bodypart/external_ears/species_external_ears = /obj/item/bodypart/external_ears/tajara
 
 
 	species_robotic_chest = /obj/item/bodypart/chest/robot
@@ -87,28 +87,28 @@
 	species_robotic_l_leg = /obj/item/bodypart/leg/left/robot/surplus
 	species_robotic_r_leg = /obj/item/bodypart/leg/right/robot/surplus
 
-//	var/obj/item/bodypart/tail/species_robotic_tail = /obj/item/bodypart/tail/tajaran/
-//	var/obj/item/bodypart/external_ears/species_robotic_external_ears = /obj/item/bodypart/external_ears/tajaran
+//	var/obj/item/bodypart/tail/species_robotic_tail = /obj/item/bodypart/tail/tajara/
+//	var/obj/item/bodypart/external_ears/species_robotic_external_ears = /obj/item/bodypart/external_ears/tajara
 
-///datum/species/tajaran/replace_body(mob/living/carbon/C, datum/species/new_species, robotic = FALSE)
+///datum/species/tajara/replace_body(mob/living/carbon/C, datum/species/new_species, robotic = FALSE)
 //	return ..()		//ради мемов
 
-/datum/species/tajaran/get_hair_list_by_gender(gender)
+/datum/species/tajara/get_hair_list_by_gender(gender)
 	return GLOB.tajaran_hairs_list
 
-/datum/species/tajaran/get_facial_hair_list_by_gender(gender)
+/datum/species/tajara/get_facial_hair_list_by_gender(gender)
 	return GLOB.tajaran_facial_hairs_list
 
-/datum/species/tajaran/random_hairstyle(gender)
+/datum/species/tajara/random_hairstyle(gender)
 	return pick(GLOB.tajaran_hairs_list)
 
-/datum/species/tajaran/random_facial_hairstyle(gender)
+/datum/species/tajara/random_facial_hairstyle(gender)
 	return pick(GLOB.tajaran_facial_hairs_list)
 //some MORE shitcoding
-/datum/species/tajaran/handle_hair(mob/living/carbon/human/H, forced_colour)
+/datum/species/tajara/handle_hair(mob/living/carbon/human/H, forced_colour)
 	return ..()
 
-/datum/species/tajaran/random_name(gender,unique,lastname)
+/datum/species/tajara/random_name(gender,unique,lastname)
 	//code by @valtor0
 	/*
 	var/static/list/tajaran_female_ru_endings_list = list("и","а","о","е","й","ь") // Customise this with ru_name_syllables changes.
@@ -142,7 +142,7 @@
 
 /* эта шляпа нужна, если мы будем давать какие-то кнопки таяранам, которые слева сверху, по типу "вкл/выкл фонарик ПДА"
 
-/datum/species/tajaran/on_species_gain(mob/living/carbon/C, datum/species/old_species, pref_load)
+/datum/species/tajara/on_species_gain(mob/living/carbon/C, datum/species/old_species, pref_load)
 	..()
 	if(ishuman(C))
 */

@@ -97,8 +97,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	if(current_version < 42)
 		var/species_id
 		READ_FILE(S["species"], species_id)
-		if(species_id == "tajaran")
-			pref_species = new /datum/species/tajaran
+		if(species_id == "tajara")
+			pref_species = new /datum/species/tajara
 			READ_FILE(S["feature_tajaran_ears"]				, features["tajaran_ears"])
 			READ_FILE(S["feature_tajaran_hairs"]			, features["tajaran_hairs"])
 			READ_FILE(S["feature_tajaran_ears_markings"]	, features["tajaran_ears_markings"])

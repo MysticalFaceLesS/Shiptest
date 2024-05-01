@@ -4,7 +4,7 @@
 //Markings chest
 
 /datum/sprite_accessory/tajaran_chest_markings
-	icon = 'mod_celadon/tajaran/icons/tajaran_markings.dmi'
+	icon = 'mod_celadon/tajara/icons/tajaran_markings.dmi'
 	color_src = MUTCOLORS_SECONDARY
 	body_zone = BODY_ZONE_CHEST
 	synthetic_icon_state = "none"
@@ -51,7 +51,7 @@
 //Markings body
 
 /datum/sprite_accessory/tajaran_body_markings
-	icon = 'mod_celadon/tajaran/icons/tajaran_markings.dmi'
+	icon = 'mod_celadon/tajara/icons/tajaran_markings.dmi'
 	color_src = MUTCOLORS_SECONDARY
 	body_zone = BODY_ZONE_CHEST
 	synthetic_icon_state = "none"
@@ -102,7 +102,7 @@
 //Markings nose
 
 /datum/sprite_accessory/tajaran_nose_markings
-	icon = 'mod_celadon/tajaran/icons/tajaran_markings.dmi'
+	icon = 'mod_celadon/tajara/icons/tajaran_markings.dmi'
 	color_src = MUTCOLORS_SECONDARY
 	body_zone = BODY_ZONE_CHEST
 	synthetic_icon_state = "none"
@@ -118,7 +118,7 @@
 
 //Markings ears
 /datum/sprite_accessory/tajaran_ears_markings
-	icon = 'mod_celadon/tajaran/icons/tajaran_markings.dmi'
+	icon = 'mod_celadon/tajara/icons/tajaran_markings.dmi'
 	color_src = MUTCOLORS_SECONDARY
 	body_zone = BODY_ZONE_HEAD
 
@@ -135,7 +135,7 @@
 
 //Markings head
 /datum/sprite_accessory/tajaran_head_markings
-	icon = 'mod_celadon/tajaran/icons/tajaran_markings.dmi'
+	icon = 'mod_celadon/tajara/icons/tajaran_markings.dmi'
 	color_src = MUTCOLORS_SECONDARY
 	body_zone = BODY_ZONE_HEAD
 
@@ -196,17 +196,17 @@
 
 //Start tails
 
-/datum/sprite_accessory/tails/tajaran
-	icon = 'mod_celadon/tajaran/icons/tajaran_tail.dmi'
+/datum/sprite_accessory/tails/tajara
+	icon = 'mod_celadon/tajara/icons/tajaran_tail.dmi'
 	body_zone = BODY_ZONE_CHEST
 	secondary_color = TRUE
 
 /datum/sprite_accessory/tajaran_tail_animated
-	icon = 'mod_celadon/tajaran/icons/tajaran_tail.dmi'
+	icon = 'mod_celadon/tajara/icons/tajaran_tail.dmi'
 	body_zone = BODY_ZONE_CHEST
 	secondary_color = TRUE
 
-/datum/sprite_accessory/tails/tajaran/longnostrips
+/datum/sprite_accessory/tails/tajara/longnostrips
 	name = "Long no strips"
 	icon_state = "longnostrips"
 
@@ -214,7 +214,7 @@
 	name = "Long no strips"
 	icon_state = "longnostrips"
 
-/datum/sprite_accessory/tails/tajaran/long
+/datum/sprite_accessory/tails/tajara/long
 	name = "Long"
 	icon_state = "long"
 
@@ -222,7 +222,7 @@
 	name = "Long"
 	icon_state = "long"
 
-/datum/sprite_accessory/tails/tajaran/middle
+/datum/sprite_accessory/tails/tajara/middle
 	name = "Middle"
 	icon_state = "middle"
 
@@ -230,7 +230,7 @@
 	name = "Middle"
 	icon_state = "middle"
 
-/datum/sprite_accessory/tails/tajaran/short
+/datum/sprite_accessory/tails/tajara/short
 	name = "Short"
 	icon_state = "short"
 
@@ -241,7 +241,7 @@
 //Face hairs
 
 /datum/sprite_accessory/tajaran_facial_hairs
-	icon = 'mod_celadon/tajaran/icons/tajaran_facial_hairs.dmi'
+	icon = 'mod_celadon/tajara/icons/tajaran_facial_hairs.dmi'
 	body_zone = BODY_ZONE_HEAD
 
 /datum/sprite_accessory/tajaran_facial_hairs/none
@@ -278,7 +278,7 @@
 //Start Hair
 
 /datum/sprite_accessory/tajaran_hairs
-	icon = 'mod_celadon/tajaran/icons/tajaran_hairs.dmi'
+	icon = 'mod_celadon/tajara/icons/tajaran_hairs.dmi'
 	body_zone = BODY_ZONE_HEAD
 
 /datum/sprite_accessory/tajaran_hairs/none
@@ -476,7 +476,7 @@
 //Start Ears
 
 /datum/sprite_accessory/tajaran_ears
-	icon = 'mod_celadon/tajaran/icons/tajaran_ears.dmi'
+	icon = 'mod_celadon/tajara/icons/tajaran_ears.dmi'
 	body_zone = BODY_ZONE_HEAD
 	secondary_color = TRUE
 

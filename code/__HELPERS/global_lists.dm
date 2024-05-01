@@ -48,14 +48,14 @@
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/elzu_horns,GLOB.elzu_horns_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/elzu, GLOB.tails_list_elzu)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tails_animated/elzu, GLOB.animated_tails_list_elzu)
-	// [CELADON-ADD] - TAJARAN
+	// [CELADON-ADD] - TAJARA
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_chest_markings, GLOB.tajaran_chest_markings_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_body_markings, GLOB.tajaran_body_markings_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_facial_hairs, GLOB.tajaran_facial_hairs_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_nose_markings, GLOB.tajaran_nose_markings_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_ears_markings, GLOB.tajaran_ears_markings_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_head_markings, GLOB.tajaran_head_markings_list)
-	init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/tajaran, GLOB.tajaran_tail_list)
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/tajara, GLOB.tajaran_tail_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_tail_animated, GLOB.tajaran_animated_tail_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_hairs, GLOB.tajaran_hairs_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tajaran_ears, GLOB.tajaran_ears_list)

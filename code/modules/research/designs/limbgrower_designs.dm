@@ -138,7 +138,7 @@
 	id = "long"
 	build_type = LIMBGROWER
 	reagents_list = list(/datum/reagent/medicine/synthflesh = 20)
-	build_path = /obj/item/organ/tail/tajaran/fake
+	build_path = /obj/item/organ/tail/tajara/fake
 	category = list("initial",SPECIES_TAJARAN)
 
 /datum/design/tajaran_tongue
@@ -146,7 +146,7 @@
 	id = "tajtongue"
 	build_type = LIMBGROWER
 	reagents_list = list(/datum/reagent/medicine/synthflesh = 10)
-	build_path = /obj/item/organ/tongue/tajaran
+	build_path = /obj/item/organ/tongue/tajara
 	category = list("initial",SPECIES_TAJARAN)
 
 //  someday this will get uncommented
@@ -308,7 +308,7 @@
 	id = "tajarantongue"
 	build_type = LIMBGROWER
 	reagents_list = list(/datum/reagent/medicine/synthflesh = 10)
-	build_path = /obj/item/organ/tongue/tajaran
+	build_path = /obj/item/organ/tongue/tajara
 	category = list("initial",SPECIES_TAJARAN)
 
 /datum/design/abductor_tongue

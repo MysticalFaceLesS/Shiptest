@@ -10,11 +10,11 @@
 
 
 // Хелпер как в code/__DEFINES/is_helpers.dm
-#define istajaran(A) (is_species(A, /datum/species/tajaran))
+#define istajaran(A) (is_species(A, /datum/species/tajara))
 
 
 // Дополнение к code/__DEFINES/mobs.dm
-#define SPECIES_TAJARAN "tajaran"
+#define SPECIES_TAJARAN "tajara"
 
 
 // Дополнение к code/__DEFINES/preferences.dm
@@ -23,6 +23,6 @@
 
 
 // Дополнение к code/__DEFINES/species_clothing_defines.dm
-#define TAJARAN_MASK_PATH 'mod_celadon/tajaran/icons/clothing/onmob_mask_tajaran.dmi'
-#define TAJARAN_HEAD_PATH 'mod_celadon/tajaran/icons/clothing/onmob_head_tajaran.dmi'
-#define TAJARAN_SUIT_PATH 'mod_celadon/tajaran/icons/clothing/onmob_suit_tajaran.dmi'
+#define TAJARAN_MASK_PATH 'mod_celadon/tajara/icons/clothing/onmob_mask_tajaran.dmi'
+#define TAJARAN_HEAD_PATH 'mod_celadon/tajara/icons/clothing/onmob_head_tajaran.dmi'
+#define TAJARAN_SUIT_PATH 'mod_celadon/tajara/icons/clothing/onmob_suit_tajaran.dmi'

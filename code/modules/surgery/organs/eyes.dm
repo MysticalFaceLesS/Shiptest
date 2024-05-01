@@ -149,7 +149,7 @@
 /obj/item/organ/eyes/robotic/lizard
 	eye_icon_state = "eyes_synth"
 
-/obj/item/organ/eyes/robotic/tajaran
+/obj/item/organ/eyes/robotic/tajara
 	eye_icon_state = "eyes_synth"
 
 /obj/item/organ/eyes/robotic/emp_act(severity)
@@ -428,39 +428,39 @@
 	//This reason these eyes do not inherit from /night_vision/ is because the fullbright the night_vision subtype provides is too overpowered for a roundstart selectable race.
 
 
-/obj/item/organ/eyes/tajaran
+/obj/item/organ/eyes/tajara
 	name = "Tajaran eyes"
-	icon = 'mod_celadon/tajaran/icons/tajaran_organs.dmi'
+	icon = 'mod_celadon/tajara/icons/tajaran_organs.dmi'
 	icon_state = "night_eyes_off"
 	desc = "Some eyes"
 	actions_types = list(/datum/action/item_action/organ_action/toggle)
 	var/active = FALSE
 	var/current_lighting_alpha = null
 
-/obj/item/organ/eyes/tajaran/Initialize()
+/obj/item/organ/eyes/tajara/Initialize()
 	current_lighting_alpha = lighting_alpha
 	. = ..()
 
-/obj/item/organ/eyes/tajaran/Destroy()
+/obj/item/organ/eyes/tajara/Destroy()
 	if(active)
 		deactivate()
 	. = ..()
 
-/obj/item/organ/eyes/tajaran/Remove(mob/living/carbon/M, special = FALSE)
+/obj/item/organ/eyes/tajara/Remove(mob/living/carbon/M, special = FALSE)
 	if(active)
 		deactivate()
 	. = ..()
 
-/obj/item/organ/eyes/tajaran/ui_action_click()
+/obj/item/organ/eyes/tajara/ui_action_click()
 	toggle_active()
 
-/obj/item/organ/eyes/tajaran/proc/toggle_active()
+/obj/item/organ/eyes/tajara/proc/toggle_active()
 	if(active)
 		deactivate()
 	else
 		activate()
 
-/obj/item/organ/eyes/tajaran/proc/activate()
+/obj/item/organ/eyes/tajara/proc/activate()
 	active = TRUE
 	current_lighting_alpha = lighting_alpha
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
@@ -468,7 +468,7 @@
 	owner.add_client_colour(/datum/client_colour/monochrome)
 	owner.update_sight()
 
-/obj/item/organ/eyes/tajaran/proc/deactivate()
+/obj/item/organ/eyes/tajara/proc/deactivate()
 	active = FALSE
 	lighting_alpha = current_lighting_alpha
 	see_in_dark = 2

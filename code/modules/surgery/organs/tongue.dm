@@ -463,7 +463,7 @@
 	. = ..()
 	languages_possible = languages_possible_vox
 
-/obj/item/organ/tongue/tajaran
+/obj/item/organ/tongue/tajara
 	name = "Tajaran tongue"
 	desc = "The traditionally employed tongue of Ahdomai, composed of expressive yowls and chirps. Native to the Tajaran."
 	say_mod = "mrowls"
@@ -485,7 +485,7 @@
 		/datum/language/siiktajr
 	))
 
-/obj/item/organ/tongue/tajaran/handle_speech(datum/source, list/speech_args)
+/obj/item/organ/tongue/tajara/handle_speech(datum/source, list/speech_args)
 	if(speech_args[SPEECH_LANGUAGE] == /datum/language/siiktajr)
 		return
 
@@ -501,6 +501,6 @@
 		message = tajaran_ru_RR.Replace(message, pick("Ррр", "Рр"))
 	speech_args[SPEECH_MESSAGE] = message
 
-/obj/item/organ/tongue/tajaran/Initialize(mapload)
+/obj/item/organ/tongue/tajara/Initialize(mapload)
 	. = ..()
 	languages_possible = languages_possible_tajaran

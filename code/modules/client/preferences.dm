@@ -83,8 +83,8 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/facial_hairstyle = "Shaved"		//Face hair type
 	var/facial_hair_color = "000"		//Facial hair color
 	var/skin_tone = "caucasian1"		//Skin color
-	var/skin_tone_nose = "black"		//Skin color nose for tajaran
-	var/skin_tone_tajaran = "Black"		//Skin color body for tajaran
+	var/skin_tone_nose = "black"		//Skin color nose for tajara
+	var/skin_tone_tajaran = "Black"		//Skin color body for tajara
 	var/eye_color = "000"				//Eye color
 	var/datum/species/pref_species = new /datum/species/human()	//Mutant race
 	var/species_looking_at = "human"	 //used as a helper to keep track of in the species select thingy

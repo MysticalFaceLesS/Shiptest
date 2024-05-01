@@ -182,7 +182,7 @@ SUBSYSTEM_DEF(traumas)
 		"spiders" = typecacheof(list(/datum/species/spider))
 	)
 
-	// [CELADON-ADD] - TAJARAN
+	// [CELADON-ADD] - TAJARA
 
 	// Мне это кажется более крутым решением, чем оверрайд Initialize
 	// делать, потому что дополнить его в начале невозможно, а при

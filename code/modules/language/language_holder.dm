@@ -383,7 +383,7 @@ Key procs
 							/datum/language/spider = list(LANGUAGE_ATOM),
 							/datum/language/buzzwords = list(LANGUAGE_ATOM))
 
-/datum/language_holder/tajaran
+/datum/language_holder/tajara
 	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
 								/datum/language/siiktajr = list(LANGUAGE_ATOM))
 	spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),

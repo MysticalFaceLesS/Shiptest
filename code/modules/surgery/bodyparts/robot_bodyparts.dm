@@ -432,8 +432,8 @@
 	bodytype = BODYTYPE_HUMANOID | BODYTYPE_ROBOTIC | BODYTYPE_DIGITIGRADE
 
 // Tajaran Robotic (Synths)
-/obj/item/bodypart/chest/robot/tajaran
-	name = "prosthetic tajaran chest"
+/obj/item/bodypart/chest/robot/tajara
+	name = "prosthetic tajara chest"
 	is_dimorphic = TRUE
 	icon = 'icons/mob/augmentation/augments_lizard.dmi'
 	should_draw_greyscale = TRUE
@@ -441,76 +441,76 @@
 	bodytype = BODYTYPE_TAJARAN | BODYTYPE_ROBOTIC
 	acceptable_bodytype = BODYTYPE_TAJARAN
 
-/obj/item/bodypart/head/robot/tajaran
-	name = "prosthetic tajaran head"
+/obj/item/bodypart/head/robot/tajara
+	name = "prosthetic tajara head"
 	icon = 'icons/mob/augmentation/augments_lizard.dmi'
 	should_draw_greyscale = TRUE
 	overlay_icon_state = TRUE
 	bodytype = BODYTYPE_TAJARAN | BODYTYPE_ROBOTIC
 
-/obj/item/bodypart/l_arm/robot/tajaran
-	name = "prosthetic tajaran left arm"
+/obj/item/bodypart/l_arm/robot/tajara
+	name = "prosthetic tajara left arm"
 	icon = 'icons/mob/augmentation/augments_lizard.dmi'
 	should_draw_greyscale = TRUE
 	overlay_icon_state = TRUE
 	bodytype = BODYTYPE_TAJARAN | BODYTYPE_ROBOTIC
 
-/obj/item/bodypart/r_arm/robot/tajaran
-	name = "prosthetic tajaran right arm"
+/obj/item/bodypart/r_arm/robot/tajara
+	name = "prosthetic tajara right arm"
 	icon = 'icons/mob/augmentation/augments_lizard.dmi'
 	should_draw_greyscale = TRUE
 	overlay_icon_state = TRUE
 	bodytype = BODYTYPE_TAJARAN | BODYTYPE_ROBOTIC
 
-/obj/item/bodypart/leg/left/robot/tajaran
-	name = "prosthetic tajaran left leg"
+/obj/item/bodypart/leg/left/robot/tajara
+	name = "prosthetic tajara left leg"
 	icon = 'icons/mob/augmentation/augments_lizard.dmi'
 	should_draw_greyscale = TRUE
 	overlay_icon_state = TRUE
 	bodytype = BODYTYPE_TAJARAN | BODYTYPE_ROBOTIC
 
-/obj/item/bodypart/leg/left/robot/tajaran
-	name = "prosthetic tajaran right leg"
+/obj/item/bodypart/leg/left/robot/tajara
+	name = "prosthetic tajara right leg"
 	icon = 'icons/mob/augmentation/augments_lizard.dmi'
 	should_draw_greyscale = TRUE
 	overlay_icon_state = TRUE
 	bodytype = BODYTYPE_TAJARAN | BODYTYPE_ROBOTIC
 
-// Surplus tajaran Robotic
-/obj/item/bodypart/l_arm/robot/surplus/tajaran
-	name = "surplus prosthetic tajaran left arm"
+// Surplus tajara Robotic
+/obj/item/bodypart/l_arm/robot/surplus/tajara
+	name = "surplus prosthetic tajara left arm"
 	icon = 'icons/mob/augmentation/augments_lizard.dmi'
 	should_draw_greyscale = TRUE
 	overlay_icon_state = TRUE
 	bodytype = BODYTYPE_TAJARAN | BODYTYPE_ROBOTIC
 
-/obj/item/bodypart/r_arm/robot/surplus/tajaran
-	name = "surplus prosthetic tajaran right arm"
+/obj/item/bodypart/r_arm/robot/surplus/tajara
+	name = "surplus prosthetic tajara right arm"
 	icon = 'icons/mob/augmentation/augments_lizard.dmi'
 	should_draw_greyscale = TRUE
 	overlay_icon_state = TRUE
 	bodytype = BODYTYPE_TAJARAN | BODYTYPE_ROBOTIC
 
-/obj/item/bodypart/leg/left/robot/surplus/tajaran
-	name = "surplus prosthetic tajaran left leg"
+/obj/item/bodypart/leg/left/robot/surplus/tajara
+	name = "surplus prosthetic tajara left leg"
 	icon = 'icons/mob/augmentation/augments_lizard.dmi'
 	should_draw_greyscale = TRUE
 	overlay_icon_state = TRUE
 	bodytype = BODYTYPE_TAJARAN | BODYTYPE_ROBOTIC
 
-/obj/item/bodypart/leg/right/robot/surplus/tajaran
-	name = "surplus prosthetic tajaran right leg"
+/obj/item/bodypart/leg/right/robot/surplus/tajara
+	name = "surplus prosthetic tajara right leg"
 	icon = 'icons/mob/augmentation/augments_lizard.dmi'
 	should_draw_greyscale = TRUE
 	overlay_icon_state = TRUE
 	bodytype = BODYTYPE_TAJARAN | BODYTYPE_ROBOTIC
 
-/obj/item/bodypart/leg/left/robot/surplus/tajaran/digitigrade
-	name = "surplus prosthetic digitigrade tajaran left leg"
+/obj/item/bodypart/leg/left/robot/surplus/tajara/digitigrade
+	name = "surplus prosthetic digitigrade tajara left leg"
 	bodytype = BODYTYPE_TAJARAN | BODYTYPE_ROBOTIC | BODYTYPE_DIGITIGRADE
 
-/obj/item/bodypart/leg/right/robot/surplus/tajaran/digitigrade
-	name = "surplus prosthetic digitigrade tajaran right leg"
+/obj/item/bodypart/leg/right/robot/surplus/tajara/digitigrade
+	name = "surplus prosthetic digitigrade tajara right leg"
 	bodytype = BODYTYPE_TAJARAN | BODYTYPE_ROBOTIC | BODYTYPE_DIGITIGRADE
 
 //Kepori Robotic

@@ -1375,5 +1375,5 @@
 /mob/living/carbon/human/species/lizard/ashwalker/kobold
 	race = /datum/species/lizard/ashwalker/kobold
 
-/mob/living/carbon/human/species/tajaran
-	race = /datum/species/tajaran
+/mob/living/carbon/human/species/tajara
+	race = /datum/species/tajara

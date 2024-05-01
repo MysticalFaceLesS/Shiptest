@@ -667,13 +667,13 @@
 	process_flags = ORGANIC | SYNTHETIC
 	taste_description = "a familiar white meat"
 
-/datum/reagent/mutationtoxin/tajaran
+/datum/reagent/mutationtoxin/tajara
 	name = "Tajaran Mutation Toxin"
 	description = "A tajaraning toxin."
 	color = "#5EFF3B" //RGB: 94, 255, 59
-	race = /datum/species/tajaran
+	race = /datum/species/tajara
 	process_flags = ORGANIC | SYNTHETIC
-	taste_description = "a tajaran meat"
+	taste_description = "a tajara meat"
 
 //BLACKLISTED RACES
 /datum/reagent/mutationtoxin/skeleton
