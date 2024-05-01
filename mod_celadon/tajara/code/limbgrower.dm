@@ -3,7 +3,7 @@
 	return ..()
 
 /datum/design/tajara_tail
-	name = "Tajaran Tail"
+	name = "Tajara Tail"
 	id = "long"
 	build_type = LIMBGROWER
 	reagents_list = list(/datum/reagent/medicine/synthflesh = 20)

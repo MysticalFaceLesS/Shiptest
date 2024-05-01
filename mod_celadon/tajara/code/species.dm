@@ -1,8 +1,8 @@
 //Copy-pasted kepori and lizard stuff
 /datum/species/tajara
-	name = "\improper Tajaran"
+	name = "\improper Tajara"
 	id = SPECIES_TAJARA
-	loreblurb = "The Tajaran race is a species of feline-like bipeds hailing from the planet of Ahdomai in the \
+	loreblurb = "The Tajara race is a species of feline-like bipeds hailing from the planet of Ahdomai in the \
 	S'randarr system. They have been brought up into the space age by the Humans and Skrell, and have been \
 	influenced heavily by their long history of Slavemaster rule. They have a structured, clan-influenced way \
 	of family and politics. They prefer colder environments, and speak a variety of languages, mostly Siik'Maas, \

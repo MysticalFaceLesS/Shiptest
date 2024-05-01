@@ -464,8 +464,8 @@
 	languages_possible = languages_possible_vox
 
 /obj/item/organ/tongue/tajara
-	name = "Tajaran tongue"
-	desc = "The traditionally employed tongue of Ahdomai, composed of expressive yowls and chirps. Native to the Tajaran."
+	name = "Tajara tongue"
+	desc = "The traditionally employed tongue of Ahdomai, composed of expressive yowls and chirps. Native to the Tajara."
 	say_mod = "mrowls"
 	taste_sensitivity = 10 // combined nose + tongue, extra sensitive
 	modifies_speech = TRUE

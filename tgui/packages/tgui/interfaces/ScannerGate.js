@@ -67,7 +67,7 @@ const TARGET_SPECIES_LIST = [
     value: 'kepori',
   },
   {
-    name: 'Tajaran',
+    name: 'Tajara',
     value: 'tajara',
   },
 ];

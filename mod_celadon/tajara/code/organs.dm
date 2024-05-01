@@ -33,7 +33,7 @@
 */
 
 /obj/item/organ/eyes/tajara
-	name = "Tajaran eyes"
+	name = "Tajara eyes"
 	icon = 'mod_celadon/tajara/icons/tajara_organs.dmi'
 	icon_state = "night_eyes_off"
 	desc = "Some eyes"
@@ -86,8 +86,8 @@
 */
 
 /obj/item/organ/tail/tajara
-	name = "\improper Tajaran tail"
-	desc = "A severed Tajaran's tail."
+	name = "\improper Tajara tail"
+	desc = "A severed Tajara's tail."
 	icon_state = "severedtail"
 	color = "#661111"
 	tail_type = "Long"

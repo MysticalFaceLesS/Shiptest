@@ -279,7 +279,7 @@
 		"IPC" = /datum/species/ipc,
 		"Kepori" = /datum/species/kepori,
 		"Rachnid" = /datum/species/spider,
-		"Tajaran" = /datum/species/tajara
+		"Tajara" = /datum/species/tajara
 	)
 
 /datum/nanite_program/sensor/species/register_extra_settings()

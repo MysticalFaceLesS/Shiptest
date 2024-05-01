@@ -431,7 +431,7 @@
 	name = "surplus prosthetic digitigrade lizard right leg"
 	bodytype = BODYTYPE_HUMANOID | BODYTYPE_ROBOTIC | BODYTYPE_DIGITIGRADE
 
-// Tajaran Robotic (Synths)
+// Tajara Robotic (Synths)
 /obj/item/bodypart/chest/robot/tajara
 	name = "prosthetic tajara chest"
 	is_dimorphic = TRUE
