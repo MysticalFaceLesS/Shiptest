@@ -152,39 +152,3 @@
 		H.dna.species.mutant_bodyparts -= "tail_human"
 		color = H.hair_color
 		H.update_body()
-
-/obj/item/organ/tail/tajara
-	name = "\improper Tajaran tail"
-	desc = "A severed Tajaran's tail."
-	icon_state = "severedtail"
-	color = "#661111"
-	tail_type = "Long"
-
-/obj/item/organ/tail/tajara/Initialize()
-	. = ..()
-	color = "#"+ random_color()
-
-/obj/item/organ/tail/tajara/Insert(mob/living/carbon/human/H, special = 0, drop_if_replaced = TRUE)
-	..()
-	if(istype(H))
-		// Checks here are necessary so it wouldn't overwrite the tail of a tajara it spawned in
-		if(!("tajara_tail" in H.dna.species.mutant_bodyparts))
-			if(!H.dna.features["tajara_tail"])
-				H.dna.features["tajara_tail"] = tail_type
-				H.dna.species.mutant_bodyparts |= "tajara_tail"
-			else
-				H.dna.species.mutant_bodyparts["tajara_tail"] = H.dna.features["tajara_tail"]
-
-		H.update_body()
-
-/obj/item/organ/tail/tajara/Remove(mob/living/carbon/human/H,  special = 0)
-	..()
-	if(istype(H))
-		H.dna.species.mutant_bodyparts -= "tajara_tail"
-		color = "#" + H.dna.features["mcolor"]
-		tail_type = H.dna.features["tajara_tail"]
-		H.update_body()
-
-/obj/item/organ/tail/tajara/fake
-	name = "fabricated tajara tail"
-	desc = "A fabricated severed tajara tail. This one's made of synthflesh."

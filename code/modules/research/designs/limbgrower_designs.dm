@@ -133,22 +133,6 @@
 	build_path = /obj/item/organ/tongue/lizard
 	category = list("initial",SPECIES_SARATHI)
 
-/datum/design/tajara_tail
-	name = "Tajaran Tail"
-	id = "long"
-	build_type = LIMBGROWER
-	reagents_list = list(/datum/reagent/medicine/synthflesh = 20)
-	build_path = /obj/item/organ/tail/tajara/fake
-	category = list("initial",SPECIES_TAJARA)
-
-/datum/design/tajara_tongue
-	name = "Forked Tongue"
-	id = "tajtongue"
-	build_type = LIMBGROWER
-	reagents_list = list(/datum/reagent/medicine/synthflesh = 10)
-	build_path = /obj/item/organ/tongue/tajara
-	category = list("initial",SPECIES_TAJARA)
-
 //  someday this will get uncommented
 // /datum/design/monkey_tail
 // 	name = "Monkey Tail"
@@ -302,14 +286,6 @@
 	reagents_list = list(/datum/reagent/medicine/synthflesh = 10)
 	build_path = /obj/item/organ/tongue/vox
 	category = list("initial",SPECIES_VOX)
-
-/datum/design/tajara_tongue
-	name = "Tajaran Tongue"
-	id = "tajaratongue"
-	build_type = LIMBGROWER
-	reagents_list = list(/datum/reagent/medicine/synthflesh = 10)
-	build_path = /obj/item/organ/tongue/tajara
-	category = list("initial",SPECIES_TAJARA)
 
 /datum/design/abductor_tongue
 	name = "Abductor Tongue"
