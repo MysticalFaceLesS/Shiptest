@@ -25,7 +25,7 @@
 	return ..()
 
 
-/datum/preferences/proc/process_link(mob/user, list/href_list)
+/datum/preferences/process_link(mob/user, list/href_list)
 	switch(href_list["task"])
 		if("random")
 			switch(href_list["preference"])
