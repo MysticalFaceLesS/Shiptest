@@ -14,7 +14,7 @@ SUBSYSTEM_DEF(traumas)
 	//phobia types is to pull from randomly for brain traumas, e.g. conspiracies is for special assignment only
 	phobia_types = sortList(list("spiders", "space", "security", "clowns", "greytide", "lizards",
 						"skeletons", "snakes", "robots", "doctors", "authority", "the supernatural",
-						"aliens", "strangers", "birds", "falling", "anime", "cats"))
+						"aliens", "strangers", "birds", "falling", "anime"))
 
 	phobia_regexes = list(
 		"spiders"          = construct_phobia_regex("spiders"),
@@ -172,7 +172,6 @@ SUBSYSTEM_DEF(traumas)
 	)
 
 	phobia_species = list(
-		"cats" = typecacheof(list(/datum/species/tajaran)),
 		"lizards" = typecacheof(list(/datum/species/lizard)),
 		"birds" = typecacheof(list(/datum/species/kepori)),
 		"skeletons" = typecacheof(list(/datum/species/skeleton, /datum/species/plasmaman)),
@@ -182,6 +181,20 @@ SUBSYSTEM_DEF(traumas)
 			/datum/species/abductor, /datum/species/jelly, /datum/species/pod)),
 		"spiders" = typecacheof(list(/datum/species/spider))
 	)
+
+	// [CELADON-ADD] - TAJARAN
+
+	// Мне это кажется более крутым решением, чем оверрайд Initialize
+	// делать, потому что дополнить его в начале невозможно, а при
+	// дополнении в конце, мы дополняем после того как отрепорчено,
+	// что подсистема успешно запустилась.
+
+	// Это единственное место где можно воткнуться после инициализации,
+	// но перед оповещением что подсистема запущена
+
+	init_tajaran_mod()
+
+	// [/CELADON-ADD]
 
 	return ..()
 

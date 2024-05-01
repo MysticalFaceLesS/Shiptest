@@ -430,7 +430,7 @@
 
 /obj/item/organ/eyes/tajaran
 	name = "Tajaran eyes"
-	icon = 'icons/mob/species/tajaran/tajaran_organs.dmi'
+	icon = 'mod_celadon/tajaran/icons/tajaran_organs.dmi'
 	icon_state = "night_eyes_off"
 	desc = "Some eyes"
 	actions_types = list(/datum/action/item_action/organ_action/toggle)

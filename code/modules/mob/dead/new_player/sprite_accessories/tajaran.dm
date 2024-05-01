@@ -4,7 +4,7 @@
 //Markings chest
 
 /datum/sprite_accessory/tajaran_chest_markings
-	icon = 'icons/mob/species/tajaran/tajaran_markings.dmi'
+	icon = 'mod_celadon/tajaran/icons/tajaran_markings.dmi'
 	color_src = MUTCOLORS_SECONDARY
 	body_zone = BODY_ZONE_CHEST
 	synthetic_icon_state = "none"
@@ -51,7 +51,7 @@
 //Markings body
 
 /datum/sprite_accessory/tajaran_body_markings
-	icon = 'icons/mob/species/tajaran/tajaran_markings.dmi'
+	icon = 'mod_celadon/tajaran/icons/tajaran_markings.dmi'
 	color_src = MUTCOLORS_SECONDARY
 	body_zone = BODY_ZONE_CHEST
 	synthetic_icon_state = "none"
@@ -102,7 +102,7 @@
 //Markings nose
 
 /datum/sprite_accessory/tajaran_nose_markings
-	icon = 'icons/mob/species/tajaran/tajaran_markings.dmi'
+	icon = 'mod_celadon/tajaran/icons/tajaran_markings.dmi'
 	color_src = MUTCOLORS_SECONDARY
 	body_zone = BODY_ZONE_CHEST
 	synthetic_icon_state = "none"
@@ -118,7 +118,7 @@
 
 //Markings ears
 /datum/sprite_accessory/tajaran_ears_markings
-	icon = 'icons/mob/species/tajaran/tajaran_markings.dmi'
+	icon = 'mod_celadon/tajaran/icons/tajaran_markings.dmi'
 	color_src = MUTCOLORS_SECONDARY
 	body_zone = BODY_ZONE_HEAD
 
@@ -135,7 +135,7 @@
 
 //Markings head
 /datum/sprite_accessory/tajaran_head_markings
-	icon = 'icons/mob/species/tajaran/tajaran_markings.dmi'
+	icon = 'mod_celadon/tajaran/icons/tajaran_markings.dmi'
 	color_src = MUTCOLORS_SECONDARY
 	body_zone = BODY_ZONE_HEAD
 
@@ -197,12 +197,12 @@
 //Start tails
 
 /datum/sprite_accessory/tails/tajaran
-	icon = 'icons/mob/species/tajaran/tajaran_tail.dmi'
+	icon = 'mod_celadon/tajaran/icons/tajaran_tail.dmi'
 	body_zone = BODY_ZONE_CHEST
 	secondary_color = TRUE
 
 /datum/sprite_accessory/tajaran_tail_animated
-	icon = 'icons/mob/species/tajaran/tajaran_tail.dmi'
+	icon = 'mod_celadon/tajaran/icons/tajaran_tail.dmi'
 	body_zone = BODY_ZONE_CHEST
 	secondary_color = TRUE
 
@@ -241,7 +241,7 @@
 //Face hairs
 
 /datum/sprite_accessory/tajaran_facial_hairs
-	icon = 'icons/mob/species/tajaran/tajaran_facial_hairs.dmi'
+	icon = 'mod_celadon/tajaran/icons/tajaran_facial_hairs.dmi'
 	body_zone = BODY_ZONE_HEAD
 
 /datum/sprite_accessory/tajaran_facial_hairs/none
@@ -278,7 +278,7 @@
 //Start Hair
 
 /datum/sprite_accessory/tajaran_hairs
-	icon = 'icons/mob/species/tajaran/tajaran_hairs.dmi'
+	icon = 'mod_celadon/tajaran/icons/tajaran_hairs.dmi'
 	body_zone = BODY_ZONE_HEAD
 
 /datum/sprite_accessory/tajaran_hairs/none
@@ -476,7 +476,7 @@
 //Start Ears
 
 /datum/sprite_accessory/tajaran_ears
-	icon = 'icons/mob/species/tajaran/tajaran_ears.dmi'
+	icon = 'mod_celadon/tajaran/icons/tajaran_ears.dmi'
 	body_zone = BODY_ZONE_HEAD
 	secondary_color = TRUE
 

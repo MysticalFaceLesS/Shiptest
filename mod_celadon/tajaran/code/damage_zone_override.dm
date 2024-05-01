@@ -1,2 +1,2 @@
 /atom/movable/screen/zone_sel
-	overlay_icon = 'icons/mob/species/tajaran/hud/screen_gen.dmi'
+	overlay_icon = 'mod_celadon/tajaran/icons/hud/screen_gen.dmi'
