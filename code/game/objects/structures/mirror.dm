@@ -204,6 +204,7 @@
 
 						else
 							to_chat(H, "<span class='notice'>Invalid color. Your secondary color is not bright enough.</span>")
+
 			H.update_body()
 			H.update_hair()
 			H.update_body_parts(TRUE)
