@@ -150,7 +150,10 @@
 /datum/supply_pack/gun/p16
 	name = "P16 Assault Rifle Crate"
 	desc = "Contains a high-powered, automatic rifle chambered in 5.56mm."
-	// cost = 5000		// MOD_CELADON -> mod_celadon\cargo_items\code\ammo.dm
+	// [CELADON-EDIT] - CELADON_CARGO_ITEMS
+	// cost = 5000		// CELADON-EDIT - ORIGINAL
+	cost = 2500
+	// [/CELADON-EDIT]
 	contains = list(/obj/item/gun/ballistic/automatic/assault/p16)
 	crate_name = "auto rifle crate"
 

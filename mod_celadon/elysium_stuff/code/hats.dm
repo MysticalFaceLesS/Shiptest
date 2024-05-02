@@ -28,12 +28,12 @@
 /obj/item/clothing/head/turban/black
 	name = "Чёрный тюрбан"
 	icon_state = "turban_black"
-	mob_overlay_icon = "turban_black"
+	mob_overlay_state = "turban_black"
 
 /obj/item/clothing/head/turban/white
 	name = "Белый тюрбан"
 	icon_state = "turban_white"
-	mob_overlay_icon = "turban_white"
+	mob_overlay_state = "turban_white"
 
 /obj/item/clothing/head/helmet/m10_elysium
 	name = "Шлем М10"

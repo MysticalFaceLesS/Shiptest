@@ -1,6 +1,6 @@
 /obj/item/card/id/inteq
 	access = list(ACCESS_INTEQ_GENERAL)
-	
+
 /obj/item/card/id/inteq/vanguard
 	access = list(ACCESS_INTEQ_GENERAL, ACCESS_INTEQ_SECURITY, ACCESS_INTEQ_CAPTAIN)
 
@@ -9,7 +9,7 @@
 
 /obj/item/card/id/inteq/maas
 	access = list(ACCESS_INTEQ_GENERAL, ACCESS_INTEQ_SECURITY)
-	
+
 /obj/item/card/id/inteq/enf
 	access = list(ACCESS_INTEQ_GENERAL, ACCESS_INTEQ_SECURITY)
 

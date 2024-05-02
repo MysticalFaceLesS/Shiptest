@@ -2,24 +2,28 @@ GLOBAL_LIST_INIT(ship_faction_to_prefixes, list(
 	"Syndicate" = list(
 		"SEV",
 		"SSV",
-		"XSV",
-	),
-	"New Gorlex Republic" = list(
-		"NGRV",
-	),
-	"CyberSun" = list(
-		"CSSV",
-	),
-	"Student-Union of Naturalistic Sciences" = list(
-		"SUNS",
+		"SMMV",
+		"PCAC",
+		"SSASV",
+		"SSSV",
+		"SOSSV",
+		"TSSV",
+		"SABSV",
+		"BSSV",
+		"ASSV",
+		"MSSV",
+		"LSSV",
+		"DSSV",
 	),
 	"SolGov" = list(
-		"SCSV",
 		"SGSV",
 		"BSFSV",
-	),
-	"Saint-Roumain Militia" = list(
-		"SRSV",
+		"ASFSV",
+		"SSFSV",
+		"MDSFSV",
+		"LSFSV",
+		"MSFSV",
+		"SPSFSV",
 	),
 	"Independent" = list(
 		"SV",
@@ -28,23 +32,26 @@ GLOBAL_LIST_INIT(ship_faction_to_prefixes, list(
 	),
 	"Inteq Risk Management Group" = list(
 		"IRMV",
-	),
-	"CLIP Minutemen" = list(
-		"CMSV",
-		"CMGSV",
+		"IQMSSV",
+		"BIQSV",
+		"LIQSV",
+		"SPIQSV",
 	),
 	"Nanotrasen" = list(
 		"NTSV",
-	),
-	"Frontiersmen Fleet" = list(
-		"FFV",
+		"NTBSV",
+		"NTASV",
+		"NTSSV",
+		"NTTSV",
+		"NTMSV",
+		"NTLSV",
+		"NTDSV",
+		"NTSPSV",
 	),
 	"Elisium" = list(
+		"EUSM",
+		"EUSQ",
 		"EUSF",
-	),
-	"Pan-Gezenan Federation" = list(
-		"PGF",
-		"PGFMC",
-		"PGFN",
+		"EUSR",
 	),
 ))

@@ -4,12 +4,15 @@
 //but instead of changing temp, it stores plasma and uses
 //it for the engine.
 //-----------------------------------------------
-/* /obj/machinery/atmospherics/components/unary/shuttle 		// MOD_CELADON-CHANGES -> mod_celadon\balance\code\engine\circuits.dm
+/obj/machinery/atmospherics/components/unary/shuttle
 	name = "shuttle atmospherics device"
 	desc = "This does something to do with shuttle atmospherics"
 	icon_state = "heater"
-	icon = 'icons/obj/shuttle.dmi'
- */
+	// [CELADON-EDIT] - CELADON_BALANCE
+	// icon = 'icons/obj/shuttle.dmi' // CELADON-EDIT - ORIGINAL
+	icon = 'mod_celadon/balance/icons/shuttle.dmi'
+	// [/CELADON-EDIT]
+
 /obj/machinery/atmospherics/components/unary/shuttle/heater
 	name = "engine heater"
 	desc = "Directs energy into compressed particles in order to power an attached thruster."

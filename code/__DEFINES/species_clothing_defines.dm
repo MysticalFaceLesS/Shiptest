@@ -10,7 +10,10 @@
 #define DEFAULT_EARS_PATH 'icons/mob/clothing/ears.dmi'
 #define DEFAULT_MASK_PATH 'icons/mob/clothing/mask.dmi'
 #define DEFAULT_HEAD_PATH 'icons/mob/clothing/head.dmi'
-// #define DEFAULT_NECK_PATH 'icons/mob/clothing/neck.dmi'		//MOD_CELADON-CHANGES -> mod_celadon\__DEFINES\code\__DEFINES\species_clothing_defines.dm
+// [CELADON-EDIT] - CELADON_QOL - В будущем сделать модульно в code/__defines/~mod_celadon/_master_defines.dm
+// #define DEFAULT_NECK_PATH 'icons/mob/clothing/neck.dmi'	// CELADON-EDIT - ORIGINAL
+#define DEFAULT_NECK_PATH 'mod_celadon/QoL/icons/neck.dmi'
+// [/CELADON-EDIT]
 #define DEFAULT_GLOVES_PATH 'icons/mob/clothing/hands.dmi'
 #define DEFAULT_GLASSES_PATH 'icons/mob/clothing/eyes.dmi'
 #define DEFAULT_BELT_PATH 'icons/mob/clothing/belt.dmi'

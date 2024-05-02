@@ -1293,6 +1293,9 @@
 
 /mob/living/carbon/human/species/android
 	race = /datum/species/android
+	// [CELADON-ADD] - CELADON_QOL
+	bubble_icon = "machine"
+	// [/CELADON-ADD]
 
 /mob/living/carbon/human/species/dullahan
 	race = /datum/species/dullahan
@@ -1305,6 +1308,9 @@
 
 /mob/living/carbon/human/species/jelly
 	race = /datum/species/jelly
+	// [CELADON-ADD] - CELADON_QOL
+	bubble_icon = "slime"
+	// [/CELADON-ADD]
 
 /mob/living/carbon/human/species/jelly/slime
 	race = /datum/species/jelly/slime
@@ -1362,6 +1368,9 @@
 
 /mob/living/carbon/human/species/ipc
 	race = /datum/species/ipc
+	// [CELADON-ADD] - CELADON_QOL
+	bubble_icon = "machine"
+	// [/CELADON-ADD]
 
 /mob/living/carbon/human/species/lizard/ashwalker/kobold
 	race = /datum/species/lizard/ashwalker/kobold

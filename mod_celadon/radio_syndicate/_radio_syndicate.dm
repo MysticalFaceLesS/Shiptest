@@ -1,4 +1,4 @@
 /datum/modpack/radio_syndicate
-	name = "syndicate radio mute"
-	desc = "Deletes hearing all radios by syndicates"
+	name = "Syndicate radio mute"
+	desc = "Удаляет прослушивание всех радиоканалов у синдиката."
 	author = "SnrBydlo"

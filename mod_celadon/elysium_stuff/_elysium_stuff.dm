@@ -1,4 +1,4 @@
 /datum/modpack/elysium_stuff
-	name = "Вещи элизиума"
-	desc = "Одежда, предметы, оружие элизиума"
+	name = "Elysium stuff"
+	desc = "Добавляет одежду, предметы, оружие элизиума."
 	author = "SnrBydlo"

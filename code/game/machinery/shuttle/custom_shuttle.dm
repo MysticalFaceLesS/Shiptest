@@ -1,15 +1,18 @@
-/* /obj/machinery/power/shuttle 		// MOD_CELADON-CHANGES -> mod_celadon\balance\code\engine\circuits.dm
+/obj/machinery/power/shuttle
 	name = "shuttle component"
 	desc = "Something for shuttles."
 	density = TRUE
 	obj_integrity = 250
 	max_integrity = 250
-	icon = 'icons/obj/shuttle.dmi'
+	// [CELADON-EDIT] - CELADON_BALANCE
+	// icon = 'icons/obj/shuttle.dmi' // CELADON-EDIT - ORIGINAL
+	icon = 'mod_celadon/balance/icons/shuttle.dmi'
+	// [/CELADON-EDIT]
 	icon_state = "burst_plasma"
 	circuit = /obj/item/circuitboard/machine/shuttle/engine
 	var/icon_state_closed = "burst_plasma"
 	var/icon_state_open = "burst_plasma_open"
-	var/icon_state_off = "burst_plasma_off" */
+	var/icon_state_off = "burst_plasma_off"
 
 /obj/machinery/power/shuttle/attackby(obj/item/I, mob/living/user, params)
 	if(default_deconstruction_screwdriver(user, icon_state_open, icon_state_closed, I))
