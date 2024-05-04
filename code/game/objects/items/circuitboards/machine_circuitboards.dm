@@ -609,7 +609,6 @@
 	build_path = /obj/machinery/rnd/production/techfab/department
 
 	// [CELADON-EDIT] - CELADON_BALANCE - Универсальная плата вендоров
-	// CELADON-EDIT - ORIGINAL/obj/item/circuitboard/machine/vendor
 	/*
 	name = "Custom Vendor (Machine Board)"
 	desc = "You can turn the \"brand selection\" dial using a screwdriver."
