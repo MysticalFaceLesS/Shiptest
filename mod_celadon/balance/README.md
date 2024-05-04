@@ -83,7 +83,7 @@ EDIT: `code\modules\research\techweb\all_nodes.dm`: `research_costs`, `export_pr
 
 ### Авторы:
 
-Кинетик Крашер - Yata9arasu, двигатели, рад. коллекторы - RalseiDreemuurr
+Кинетик Крашер, универасльная вендор плата - Yata9arasu, двигатели, рад. коллекторы - RalseiDreemuurr
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.
