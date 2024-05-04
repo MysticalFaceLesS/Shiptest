@@ -608,7 +608,9 @@
 	name = "\improper Departmental Techfab (Machine Board)"
 	build_path = /obj/machinery/rnd/production/techfab/department
 
-/obj/item/circuitboard/machine/vendor
+	// [CELADON-EDIT] - CELADON_BALANCE - Универсальная плата вендоров
+	// CELADON-EDIT - ORIGINAL/obj/item/circuitboard/machine/vendor
+	/*
 	name = "Custom Vendor (Machine Board)"
 	desc = "You can turn the \"brand selection\" dial using a screwdriver."
 	custom_premium_price = 100
@@ -656,6 +658,7 @@
 		/obj/machinery/vending/security = "SecTech",
 		/obj/machinery/vending/modularpc = "Deluxe Silicate Selections",
 		/obj/machinery/vending/custom = "Custom Vendor")
+*/	// [/CELADON-EDIT]
 
 /obj/item/circuitboard/machine/vendor/attackby(obj/item/I, mob/user, params)
 	if(I.tool_behaviour == TOOL_SCREWDRIVER)
