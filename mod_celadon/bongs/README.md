@@ -2,7 +2,7 @@
 
 #### Список PRов:
 
-- https://github.com/MysticalFaceLesS/Shiptest/pulls/#####
+- https://github.com/MysticalFaceLesS/Shiptest/pull/483
 <!--
   Ссылки на PRы, связанные с модом:
   - Создание
