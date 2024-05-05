@@ -660,7 +660,6 @@
 // [/CELADON-ADD]
 		/obj/machinery/vending/custom = "Custom Vendor")
 
-
 /obj/item/circuitboard/machine/vendor/attackby(obj/item/I, mob/user, params)
 	if(I.tool_behaviour == TOOL_SCREWDRIVER)
 		var/static/list/display_vending_names_paths
