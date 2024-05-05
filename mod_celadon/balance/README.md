@@ -43,7 +43,7 @@ EDIT: `code\game\machinery\shuttle\shuttle_engine_types.dm`: `fuel_use`, `thrust
 - РнД:
 EDIT: `code\modules\research\techweb\all_nodes.dm`: `research_costs`, `export_price`, `prereq_ids`
 - Универсальная плата вендоров:
-EDIT: `code\game\objects\items\circuitboards\machine_circuitboards.dm` : `/obj/item/circuitboard/machine/vendor`
+ADD: `code\game\objects\items\circuitboards\machine_circuitboards.dm` : `/obj/item/circuitboard/machine/vendor`
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
