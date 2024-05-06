@@ -493,6 +493,12 @@
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
+"cz" = (
+/obj/machinery/atmospherics/pipe/layer_manifold/visible{
+	dir = 4
+	},
+/turf/open/floor/plasteel/tech,
+/area/ship/engineering/engine)
 "cJ" = (
 /obj/structure/closet/secure_closet/freezer/kitchen,
 /turf/open/floor/plasteel/tech,
@@ -968,6 +974,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/hallway/port)
+"fj" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
+	dir = 1;
+	filter_types = list("o2")
+	},
+/obj/machinery/atmospherics/pipe/simple/general/hidden{
+	dir = 9
+	},
+/turf/open/floor/engine/hull/reinforced,
+/area/ship/engineering/engine)
 "fk" = (
 /obj/machinery/power/shuttle/engine/electric{
 	dir = 4
@@ -1690,12 +1706,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /turf/open/floor/plasteel/dark,
 /area/ship/storage)
-"jf" = (
-/obj/machinery/atmospherics/pipe/layer_manifold/visible{
-	dir = 4
-	},
-/turf/open/floor/plasteel/tech,
-/area/ship/engineering/engine)
 "jh" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -2175,16 +2185,6 @@
 	},
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/hallway/central)
-"mA" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
-	dir = 1;
-	filter_types = list("o2")
-	},
-/obj/machinery/atmospherics/pipe/simple/general/hidden{
-	dir = 9
-	},
-/turf/open/floor/engine/hull/reinforced,
-/area/ship/engineering/engine)
 "mB" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/trimline/opaque/yellow/warning{
@@ -3016,13 +3016,6 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/maintenance/starboard)
-"rm" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
-	dir = 4;
-	filter_types = list("n2")
-	},
-/turf/open/floor/engine/hull/reinforced,
-/area/ship/engineering/engine)
 "ro" = (
 /obj/effect/turf_decal/industrial/warning{
 	dir = 8
@@ -4512,6 +4505,8 @@
 	},
 /obj/structure/window/plasma/reinforced/plastitanium,
 /obj/structure/grille,
+/obj/machinery/atmospherics/pipe/simple/general/visible,
+/obj/machinery/atmospherics/pipe/simple/general/visible/layer4,
 /turf/open/floor/plating,
 /area/ship/engineering/engine)
 "zT" = (
@@ -4598,6 +4593,21 @@
 	},
 /turf/open/floor/plating/airless,
 /area/ship/maintenance/starboard)
+"As" = (
+/obj/machinery/power/terminal{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/general/visible{
+	dir = 6
+	},
+/turf/open/floor/plasteel/tech,
+/area/ship/engineering/engine)
 "At" = (
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 8
@@ -4904,6 +4914,13 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/canteen)
+"Cg" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer3{
+	dir = 4;
+	filter_types = list("n2")
+	},
+/turf/open/floor/engine/hull/reinforced,
+/area/ship/engineering/engine)
 "Cm" = (
 /obj/effect/turf_decal/corner/opaque/yellow,
 /obj/effect/turf_decal/corner/opaque/brown{
@@ -5385,19 +5402,6 @@
 /obj/structure/cable,
 /turf/open/floor/carpet/black,
 /area/ship/crew/dorm)
-"Fx" = (
-/obj/machinery/power/terminal{
-	dir = 8
-	},
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
-/obj/machinery/atmospherics/components/unary/portables_connector/visible/layer1{
-	dir = 4;
-	pixel_y = -5
-	},
-/turf/open/floor/plasteel/tech,
-/area/ship/engineering/engine)
 "Fy" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
@@ -7493,11 +7497,9 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/general/visible{
-	dir = 6
+/obj/machinery/atmospherics/components/unary/portables_connector/visible/layer1{
+	dir = 4;
+	pixel_y = -5
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering/engine)
@@ -8932,7 +8934,7 @@ QR
 yT
 Nh
 Nh
-rm
+Cg
 tk
 tk
 ls
@@ -8961,12 +8963,12 @@ Nh
 Nh
 FG
 nI
-Fx
 RW
+As
 mY
 AS
 zO
-mA
+fj
 tk
 tk
 ls
@@ -8996,7 +8998,7 @@ Rs
 YT
 pI
 bU
-jf
+cz
 YV
 TI
 Nh
