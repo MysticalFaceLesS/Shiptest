@@ -85,6 +85,7 @@ export const DmTarget = new Juke.Target({
     "html/**",
     "icons/**",
     "interface/**",
+    "mod_celadon/**", // CELADON
     `${DME_NAME}.dme`,
     NamedVersionFile,
   ],

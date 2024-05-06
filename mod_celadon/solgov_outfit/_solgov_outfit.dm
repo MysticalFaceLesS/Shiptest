@@ -1,4 +1,4 @@
 /datum/modpack/solgov_outfit
-	name = "solgov outfit"
-	desc = "Adds outfits for solgov"
+	name = "Solgov outfit (Снаряжение Солнечной Федерации)"
+	desc = "Добавлено снаряжение для фракции Солнечная Федерация."
 	author = "SnrBydlo"

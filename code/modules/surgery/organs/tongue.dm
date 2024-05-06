@@ -57,27 +57,47 @@
 	taste_sensitivity = 10 // combined nose + tongue, extra sensitive
 	modifies_speech = TRUE
 
-// /obj/item/organ/tongue/lizard/handle_speech(datum/source, list/speech_args)		//MOD_CELADON-CHANGES -> mod_celadon\accentsadd\code\accentsadd.dm
-// 	if(speech_args[SPEECH_LANGUAGE] == /datum/language/draconic) //lizard tongues don't hiss when speaking Draconic
-// 		return
+/obj/item/organ/tongue/lizard/handle_speech(datum/source, list/speech_args)
+	if(speech_args[SPEECH_LANGUAGE] == /datum/language/draconic) //lizard tongues don't hiss when speaking Draconic
+		return
 
-// 	var/static/regex/lizard_hiss = new("s+", "g")
-// 	var/static/regex/lizard_hiSS = new("S+", "g")
-// 	var/static/regex/lizard_kss = new(@"(\w)x", "g")
-// 	var/static/regex/lizard_kSS = new(@"(\w)X", "g")
-// 	var/static/regex/lizard_ecks = new(@"\bx([\-|r|R]|\b)", "g")
-// 	var/static/regex/lizard_eckS = new(@"\bX([\-|r|R]|\b)", "g")
+	var/static/regex/lizard_hiss = new("s+", "g")
+	var/static/regex/lizard_hiSS = new("S+", "g")
+	var/static/regex/lizard_kss = new(@"(\w)x", "g")
+	var/static/regex/lizard_kSS = new(@"(\w)X", "g")
+	var/static/regex/lizard_ecks = new(@"\bx([\-|r|R]|\b)", "g")
+	var/static/regex/lizard_eckS = new(@"\bX([\-|r|R]|\b)", "g")
+	// [CELADON-ADD] - ACCENTS_ADD
+	var/static/regex/lizard_Extended_hiss = new("с+", "g")
+	var/static/regex/lizard_Extended_hiSS = new("С+", "g")
+	var/static/regex/lizard_Extended_hich = new("ч+", "g")
+	var/static/regex/lizard_Extended_hiCH = new("Ч+", "g")
+	var/static/regex/lizard_Extended_hics = new("ш+", "g")
+	var/static/regex/lizard_Extended_hiCS = new("Ш+", "g")
+	var/static/regex/lizard_Extended_hiccc = new("щ+", "g")
+	var/static/regex/lizard_Extended_hiCCC = new("Щ+", "g")
+	// [/CELADON-ADD]
 
-// 	var/message = speech_args[SPEECH_MESSAGE]
-// 	if(message[1] != "*")
-// 		message = lizard_hiss.Replace(message, "sss")
-// 		message = lizard_hiSS.Replace(message, "SSS")
-// 		message = lizard_kss.Replace(message, "$1kss")
-// 		message = lizard_kSS.Replace(message, "$1KSS")
-// 		message = lizard_ecks.Replace(message, "ecks$1")
-// 		message = lizard_eckS.Replace(message, "ECKS$1")
+	var/message = speech_args[SPEECH_MESSAGE]
+	if(message[1] != "*")
+		message = lizard_hiss.Replace(message, "sss")
+		message = lizard_hiSS.Replace(message, "SSS")
+		message = lizard_kss.Replace(message, "$1kss")
+		message = lizard_kSS.Replace(message, "$1KSS")
+		message = lizard_ecks.Replace(message, "ecks$1")
+		message = lizard_eckS.Replace(message, "ECKS$1")
+		// [CELADON-ADD] - ACCENTS_ADD
+		message = lizard_Extended_hiss.Replace(message, pick("сссс", "ccс", "сс"))
+		message = lizard_Extended_hiSS.Replace(message, pick("СССС", "ССС", "СС"))
+		message = lizard_Extended_hich.Replace(message, pick("щщщ", "щщ", "щ"))
+		message = lizard_Extended_hiCH.Replace(message, pick("ЩЩЩ", "ЩЩ", "Щ"))
+		message = lizard_Extended_hics.Replace(message, pick("шшшш", "шшш", "шш"))
+		message = lizard_Extended_hiCS.Replace(message, pick("ШШШШ", "ШШШ", "ШШ"))
+		message = lizard_Extended_hiccc.Replace(message, pick("щщ", "щ"))
+		message = lizard_Extended_hiCCC.Replace(message, pick("ЩЩ", "Щ"))
+		// [/CELADON-ADD]
 
-// 	speech_args[SPEECH_MESSAGE] = message
+	speech_args[SPEECH_MESSAGE] = message
 
 /obj/item/organ/tongue/fly
 	name = "proboscis"

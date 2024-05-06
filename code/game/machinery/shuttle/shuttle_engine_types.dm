@@ -85,20 +85,28 @@
 			update_icon_state()
 			return TRUE
 
-/* /obj/machinery/power/shuttle/engine/fueled/plasma 		// MOD_CELADON-CHANGES -> mod_celadon\balance\code\engine\enginebalance.dm
+/obj/machinery/power/shuttle/engine/fueled/plasma
 	name = "plasma thruster"
 	desc = "A thruster that burns plasma from an adjacent heater to create thrust."
 	circuit = /obj/item/circuitboard/machine/shuttle/engine/plasma
 	fuel_type = GAS_PLASMA
-	fuel_use = 20
-	thrust = 25
+	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем движки
+	// fuel_use = 20 // CELADON-EDIT - ORIGINAL
+	// thrust = 25 // CELADON-EDIT - ORIGINAL
+	fuel_use = 30
+	thrust = 10
+	// [/CELADON-EDIT]
 
 /obj/machinery/power/shuttle/engine/fueled/expulsion
 	name = "expulsion thruster"
 	desc = "A thruster that expels gas inefficiently to create thrust."
 	circuit = /obj/item/circuitboard/machine/shuttle/engine/expulsion
-	fuel_use = 80
-	thrust = 15
+	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем движки
+	// fuel_use = 80 // CELADON-EDIT - ORIGINAL
+	// thrust = 15 // CELADON-EDIT - ORIGINAL
+	fuel_use = 90
+	thrust = 8
+	// [/CELADON-EDIT]
 	//All fuel code already handled
 
 /**
@@ -113,22 +121,33 @@
 	icon_state_off = "burst_off"
 	icon_state_closed = "burst"
 	icon_state_open = "burst_open"
-	thrust = 10
+	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем движки
+	// thrust = 10 // CELADON-EDIT - ORIGINAL
 	///Amount, in kilojoules, needed for a full burn.
-	var/power_per_burn = 50000
+	// var/power_per_burn = 50000 // CELADON-EDIT - ORIGINAL
+	thrust = 1
+	var/power_per_burn = 25000
+	// [/CELADON-EDIT]
 
 /obj/machinery/power/shuttle/engine/electric/bad
 	name = "Outdated Ion Thruster"
 	circuit = /obj/item/circuitboard/machine/shuttle/engine/electric/bad
-	thrust = 2
-	power_per_burn = 70000
+	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем движки
+	// thrust = 2 // CELADON-EDIT - ORIGINAL
+	// power_per_burn = 70000 // CELADON-EDIT - ORIGINAL
+	thrust = 0.5
+	power_per_burn = 50000
+	// [/CELADON-EDIT]
 
 /obj/machinery/power/shuttle/engine/electric/premium
 	name = "high performance ion thruster"
 	desc = "An expensive variant of a standard ion thruster, using highest quality components in order to achieve much better performance."
-	thrust = 30
-	power_per_burn = 65000
- */
+	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем движки
+	// thrust = 30 // CELADON-EDIT - ORIGINAL
+	// power_per_burn = 65000 // CELADON-EDIT - ORIGINAL
+	thrust = 10
+	power_per_burn = 30000
+	// [/CELADON-EDIT]
 /obj/machinery/power/smes/shuttle
 	name = "electric engine precharger"
 	desc = "A medium-capacity, high transfer superconducting magnetic energy storage unit specially made for use with shuttle engines."

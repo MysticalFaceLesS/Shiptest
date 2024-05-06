@@ -1,10 +1,3 @@
-/datum/sprite_accessory/ipc_chassis
-	icon = 'bodyparts.dmi'
-
-/datum/sprite_accessory/ipc_screens
-	icon = 'ipc_accessories.dmi'
-	color_src = EYECOLOR
-
 /datum/sprite_accessory/ipc_screens/none
 	name = "None"
 	icon_state = "none"

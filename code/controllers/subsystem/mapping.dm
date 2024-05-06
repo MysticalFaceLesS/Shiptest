@@ -150,14 +150,20 @@ SUBSYSTEM_DEF(mapping)
 
 		shuttle_templates[S.file_name] = S
 
-/* #define CHECK_STRING_EXISTS(X) if(!istext(data[X])) { log_world("[##X] missing from json!"); continue; }
+#define CHECK_STRING_EXISTS(X) if(!istext(data[X])) { log_world("[##X] missing from json!"); continue; }
 #define CHECK_LIST_EXISTS(X) if(!islist(data[X])) { log_world("[##X] missing from json!"); continue; }
-/datum/controller/subsystem/mapping/proc/load_ship_templates()		//MOD_CELADON -> mod_celadon\configs\code\configs.dm
+/datum/controller/subsystem/mapping/proc/load_ship_templates()
 	maplist = list()
 	ship_purchase_list = list()
-	var/list/filelist = flist("_maps/configs/")
+	// [CELADON-EDIT] - CELADON_CONFIGS_MAPS
+	// var/list/filelist = flist("_maps/configs/") // CELADON-EDIT - ORIGINAL
+	var/list/filelist = flist("_maps/_mod_celadon/configs/")
+	// [/CELADON-EDIT]
 	for(var/filename in filelist)
-		var/file = file("_maps/configs/" + filename)
+		// [CELADON-EDIT] - CELADON_CONFIGS_MAPS
+		// var/file = file("_maps/configs/" + filename) // CELADON-EDIT - ORIGINAL
+		var/file = file("_maps/_mod_celadon/configs/" + filename)
+		// [/CELADON-EDIT]
 		if(!file)
 			log_world("Could not open map config: [filename]")
 			continue
@@ -253,7 +259,7 @@ SUBSYSTEM_DEF(mapping)
 		shuttle_templates[S.file_name] = S
 		map_templates[S.file_name] = S
 #undef CHECK_STRING_EXISTS
-#undef CHECK_LIST_EXISTS */
+#undef CHECK_LIST_EXISTS
 
 /datum/controller/subsystem/mapping/proc/preloadShelterTemplates()
 	for(var/item in subtypesof(/datum/map_template/shelter))

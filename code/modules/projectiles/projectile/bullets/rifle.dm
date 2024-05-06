@@ -69,8 +69,12 @@
 /obj/projectile/bullet/a858
 	name = "8x58mm caseless bullet"
 	speed = 0.3
-	// damage = 35		// MOD_CELADON -> mod_celadon\balance\code\projectiles\projectile\bullets\rifle.dm
-	// armour_penetration = 40
+	// [CELADON-EDIT] - CELADON_WEAPONS
+	// damage = 35 // CELADON-EDIT - ORIGINAL
+	// armour_penetration = 40 // CELADON-EDIT - ORIGINAL
+	damage = 50
+	armour_penetration = 15
+	// [/CELADON-EDIT]
 
 
 // .299 Eoehoma Caseless (E-40)

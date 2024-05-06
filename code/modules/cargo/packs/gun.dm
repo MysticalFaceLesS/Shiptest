@@ -30,6 +30,12 @@
 	contains = list(/obj/item/gun/ballistic/automatic/pistol,
 					/obj/item/gun/ballistic/automatic/pistol)
 
+/datum/supply_pack/gun/candors
+	name = "Candor Pistol Crate"
+	desc = "Contains a Candor pistol, the trusty sidearm of any spacer, produced by Hunter's Pride and chambered in .45 ACP."
+	cost = 1000
+	contains = list(/obj/item/gun/ballistic/automatic/pistol/candor)
+
 /datum/supply_pack/gun/revolver
 	name = "Scarborough Revolver Crate"
 	desc = "Contains a concealable Scarborough revolver, chambered in .357."
@@ -39,7 +45,7 @@
 /datum/supply_pack/gun/detrevolver
 	name = "Hunter's Pride Detective Revolver Crate"
 	desc = "Contains a concealable Solarian revolver, chambered in .38."
-	cost = 1000
+	cost = 600
 	contains = list(/obj/item/gun/ballistic/revolver/detective)
 
 /datum/supply_pack/gun/shadowrevolver
@@ -150,7 +156,10 @@
 /datum/supply_pack/gun/p16
 	name = "P16 Assault Rifle Crate"
 	desc = "Contains a high-powered, automatic rifle chambered in 5.56mm."
-	// cost = 5000		// MOD_CELADON -> mod_celadon\cargo_items\code\ammo.dm
+	// [CELADON-EDIT] - CELADON_CARGO_ITEMS
+	// cost = 5000		// CELADON-EDIT - ORIGINAL
+	cost = 2500
+	// [/CELADON-EDIT]
 	contains = list(/obj/item/gun/ballistic/automatic/assault/p16)
 	crate_name = "auto rifle crate"
 

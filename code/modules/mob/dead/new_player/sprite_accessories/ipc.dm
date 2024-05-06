@@ -2,9 +2,12 @@
 
 // Start screens
 
-// /datum/sprite_accessory/ipc_screens 			//MOD_CELADON-CHANGES -> mod_celadon\code\modules\mob\dead\new_player\sprite_accessories\ipc.dm
-// 	icon = 'icons/mob/ipc_accessories.dmi'
-// 	color_src = EYECOLOR
+/datum/sprite_accessory/ipc_screens
+	// [CELADON-EDIT] - CELADON_IPC_CHASSIS
+	// icon = 'icons/mob/ipc_accessories.dmi' // CELADON-EDIT -> ORIGINAL
+	icon = 'mod_celadon/ipc_chassis/icons/ipc_accessories.dmi'
+	// [/CELADON-EDIT]
+	color_src = EYECOLOR
 
 /datum/sprite_accessory/ipc_screens/blank
 	name = "Blank Canvas"
@@ -291,10 +294,11 @@
 	name = "Pawsitrons Fox 2"
 	icon_state = "fox2"
 
-// Start chassis - the worst thing ever please rework this
-
 /datum/sprite_accessory/ipc_chassis // Used for changing limb icons, doesn't need to hold the actual icon. That's handled in ipc.dm
-	icon = null
+	// [CELADON-EDIT] - CELADON_IPC_CHASSIS
+	// icon = null // CELADON-EDIT -> ORIGINAL
+	icon = 'mod_celadon/ipc_chassis/icons/bodyparts.dmi'
+	// [/CELADON-EDIT]
 	icon_state = "who cares fuck you" // In order to pull the chassis correctly, we need AN icon_state(see line 36-39). It doesn't have to be useful, because it isn't used.
 	color_src = 0
 	var/use_eyes = FALSE //do we use normal robotic eyes? used when we dont want a screen but still want visible eyes
