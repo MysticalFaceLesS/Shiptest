@@ -36,8 +36,9 @@
 
 /obj/item/clothing/head/hooded/cloakhood/tajaran/gruff
 	name = "gruff cloak"
-	icon_state = "taj_cloak_t"
-	mob_overlay_state = "taj_cloak_t"
+	icon_state = "taj_cloak_full"
+	item_state = "taj_cloak_full"
+//	mob_overlay_state = "taj_cloak_t"
 	desc = "A cloak designated for the lowest classes."
 	// min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 	// cold_protection = HEAD
