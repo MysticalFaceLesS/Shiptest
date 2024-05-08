@@ -25,20 +25,30 @@
 	icon_state = "watch_taj-female"
 	item_state = "watch_taj-female"
 
+// Плащи
+
 /obj/item/clothing/suit/hooded/cloak/tajaran/gruff
 	name = "gruff cloak"
 	icon_state = "taj_cloak"
 	item_state = "taj_cloak"
 	hoodtype = /obj/item/clothing/head/hooded/cloakhood/tajaran/gruff
 	desc = "A cloak designated for the lowest classes."
-	// min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
-	// cold_protection = CHEST|GROIN|LEGS|FEET|ARMS
 
 /obj/item/clothing/head/hooded/cloakhood/tajaran/gruff
 	name = "gruff cloak"
 	icon_state = "taj_cloak_full"
 	item_state = "taj_cloak_full"
-//	mob_overlay_state = "taj_cloak_t"
 	desc = "A cloak designated for the lowest classes."
-	// min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
-	// cold_protection = HEAD
+
+/obj/item/clothing/suit/hooded/cloak/tajaran/fancy
+	name = "fancy adhomian cloak"
+	icon_state = "hb_cloak"
+	item_state = "hb_cloak"
+	hoodtype = /obj/item/clothing/head/hooded/cloakhood/tajaran/fancy
+	desc = "A fancy black Adhomian cloak."
+
+/obj/item/clothing/head/hooded/cloakhood/tajaran/fancy
+	name = "fancy adhomian cloak"
+	icon_state = "hb_cloak_hat"
+	item_state = "hb_cloak_hat"
+	desc = "A fancy black Adhomian cloak."
