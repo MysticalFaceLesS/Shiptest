@@ -4,25 +4,25 @@
 	prefix = "_maps/_mod_celadon/RandomRuins/BeachRuins/"
 
 /datum/map_template/ruin/icemoon
-	prefix = "_maps/_mod_celadon/RandomRuins/BeachRuins/"
+	prefix = "_maps/RandomRuins/IceRuins/"
 
 /datum/map_template/ruin/jungle
-	prefix = "_maps/_mod_celadon/RandomRuins/BeachRuins/"
+	prefix = "_maps/RandomRuins/JungleRuins/"
 
 /datum/map_template/ruin/lavaland
-	prefix = "_maps/_mod_celadon/RandomRuins/BeachRuins/"
+	prefix = "_maps/RandomRuins/LavaRuins/"
 
 /datum/map_template/ruin/reebe
-	prefix = "_maps/_mod_celadon/RandomRuins/BeachRuins/"
+	prefix = "_maps/RandomRuins/ReebeRuins/"
 
 /datum/map_template/ruin/rockplanet
-	prefix = "_maps/_mod_celadon/RandomRuins/BeachRuins/"
+	prefix = "_maps/RandomRuins/RockRuins/"
 
 /datum/map_template/ruin/space
-	prefix = "_maps/_mod_celadon/RandomRuins/BeachRuins/"
+	prefix = "_maps/RandomRuins/SpaceRuins/"
 
 /datum/map_template/ruin/wasteplanet
-	prefix = "_maps/_mod_celadon/RandomRuins/BeachRuins/"
+	prefix = "_maps/RandomRuins/WasteRuins/"
 
 /datum/map_template/ruin/whitesands
-	prefix = "_maps/_mod_celadon/RandomRuins/BeachRuins/"
+	prefix = "_maps/RandomRuins/SandRuins/"

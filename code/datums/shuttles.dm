@@ -400,11 +400,15 @@
 	prefix = "IRMV"
 
 /datum/map_template/shuttle/subshuttles/nail
-	file_name = "pgf_nail"
+	file_name = "pirate_nail"
 	name = "Nail-class Boarding Vessel"
+<<<<<<< HEAD
 	prefix = "PGF"
 
 /datum/map_template/shuttle/subshuttles/syndicate_jet_lancer
 	file_name = "syndicate_jet_lancer"
 	name = "Jet Lancer-class Boarding Vessel"
 	prefix = "SSV"
+=======
+	prefix = "PIRATE"
+>>>>>>> 481dac12feedd0b854bdfc957d7aeda8b0293bdf
