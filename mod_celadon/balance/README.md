@@ -42,6 +42,8 @@ EDIT: `code\game\machinery\shuttle\custom_shuttle.dm`: `/obj/machinery/atmospher
 EDIT: `code\game\machinery\shuttle\shuttle_engine_types.dm`: `fuel_use`, `thrust`
 - РнД:
 EDIT: `code\modules\research\techweb\all_nodes.dm`: `research_costs`, `export_price`, `prereq_ids`
+- Универсальная плата вендоров:
+ADD: `code\game\objects\items\circuitboards\machine_circuitboards.dm` : `/obj/item/circuitboard/machine/vendor`
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -83,7 +85,7 @@ EDIT: `code\modules\research\techweb\all_nodes.dm`: `research_costs`, `export_pr
 
 ### Авторы:
 
-Кинетик Крашер - Yata9arasu, двигатели, рад. коллекторы - RalseiDreemuurr
+Кинетик Крашер, универасльная вендор плата - Yata9arasu, двигатели, рад. коллекторы - RalseiDreemuurr
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.

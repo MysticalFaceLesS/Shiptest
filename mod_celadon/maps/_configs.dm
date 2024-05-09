@@ -1,4 +1,4 @@
 /datum/modpack/configs
 	name = "Configs and maps"
 	desc = "Добавляет наши суда и карты в игру."
-	author = "Molniz"
+	author = "Molniz, MrCat15352"

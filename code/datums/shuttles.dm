@@ -43,7 +43,10 @@
 	if(path)
 		mappath = path
 	else
-		mappath = "_maps/shuttles/[category]/[file_name].dmm"
+		// [CELADON-EDIT] - CELADON_CONFIGS_MAPS - Меняем сабшатлы на наши
+		// mappath = "_maps/shuttles/[category]/[file_name].dmm" // CELADON-EDIT - ORIGINAL
+		mappath = "_maps/_mod_celadon/shuttles/[category]/[file_name].dmm"
+		// [/CELADON-EDIT]
 	. = ..()
 
 /datum/map_template/shuttle/preload_size(path, cache)
