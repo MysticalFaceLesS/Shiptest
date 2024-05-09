@@ -93,8 +93,8 @@
 	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем движки
 	// fuel_use = 20 // CELADON-EDIT - ORIGINAL
 	// thrust = 25 // CELADON-EDIT - ORIGINAL
-	fuel_use = 15
-	thrust = 4
+	fuel_use = 20
+	thrust = 14
 	// [/CELADON-EDIT]
 
 /obj/machinery/power/shuttle/engine/fueled/expulsion
@@ -105,7 +105,7 @@
 	// fuel_use = 80 // CELADON-EDIT - ORIGINAL
 	// thrust = 15 // CELADON-EDIT - ORIGINAL
 	fuel_use = 40
-	thrust = 8
+	thrust = 7
 	// [/CELADON-EDIT]
 	//All fuel code already handled
 
@@ -125,7 +125,7 @@
 	// thrust = 10 // CELADON-EDIT - ORIGINAL
 	///Amount, in kilojoules, needed for a full burn.
 	// var/power_per_burn = 50000 // CELADON-EDIT - ORIGINAL
-	thrust = 2
+	thrust = 10
 	var/power_per_burn = 25000
 	// [/CELADON-EDIT]
 
@@ -135,7 +135,7 @@
 	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем движки
 	// thrust = 2 // CELADON-EDIT - ORIGINAL
 	// power_per_burn = 70000 // CELADON-EDIT - ORIGINAL
-	thrust = 1
+	thrust = 2
 	power_per_burn = 50000
 	// [/CELADON-EDIT]
 
@@ -145,7 +145,7 @@
 	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем движки
 	// thrust = 30 // CELADON-EDIT - ORIGINAL
 	// power_per_burn = 65000 // CELADON-EDIT - ORIGINAL
-	thrust = 10
+	thrust = 30
 	power_per_burn = 30000
 	// [/CELADON-EDIT]
 /obj/machinery/power/smes/shuttle
