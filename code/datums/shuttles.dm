@@ -403,3 +403,8 @@
 	file_name = "pgf_nail"
 	name = "Nail-class Boarding Vessel"
 	prefix = "PGF"
+
+/datum/map_template/shuttle/subshuttles/syndicate_jet_lancer
+	file_name = "syndicate_jet_lancer"
+	name = "Jet Lancer-class Boarding Vessel"
+	prefix = "SSV"
