@@ -50,18 +50,18 @@
 	dir = 9
 	},
 /obj/structure/rack,
-/obj/item/storage/toolbox/syndicate{
-	name = "syndicate toolbox";
-	pixel_x = -3;
-	pixel_y = 5
-	},
 /obj/item/geiger_counter{
 	pixel_x = 1;
-	pixel_y = 5
+	pixel_y = 9
 	},
-/obj/item/holosign_creator/atmos,
+/obj/item/holosign_creator/atmos{
+	pixel_y = 2
+	},
 /obj/machinery/atmospherics/pipe/simple/orange/hidden{
 	dir = 9
+	},
+/obj/item/pipe_dispenser{
+	pixel_y = -5
 	},
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ship/engineering)
@@ -70,10 +70,10 @@
 	dir = 1
 	},
 /obj/machinery/suit_storage_unit/inherit,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/suit/space/syndicate/black/med,
-/obj/item/clothing/head/helmet/space/syndicate/black/med,
 /obj/machinery/firealarm/directional/south,
+/obj/item/clothing/suit/space/hardsuit/syndi/cybersun/paramed,
+/obj/item/tank/internals/oxygen,
+/obj/item/clothing/mask/gas/syndicate,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/medical)
 "aL" = (
@@ -209,7 +209,9 @@
 	dir = 5;
 	layer = 2.9
 	},
-/obj/structure/bed/dogbed,
+/obj/structure/bed/dogbed{
+	anchored = 1
+	},
 /mob/living/simple_animal/hostile/asteroid/elite/broodmother_child{
 	faction = list("neutral","playerSyndicate");
 	name = "Goliath";
@@ -390,6 +392,10 @@
 /obj/item/megaphone{
 	pixel_x = -2
 	},
+/obj/item/clothing/glasses/sunglasses,
+/obj/machinery/turretid{
+	pixel_y = 35
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "eN" = (
@@ -460,11 +466,13 @@
 	pixel_x = 24;
 	pixel_y = -2
 	},
-/obj/item/clothing/suit/space/hardsuit/syndi/hl,
 /obj/item/clothing/mask/gas/syndicate,
 /obj/machinery/camera/autoname{
 	dir = 1
 	},
+/obj/item/clothing/suit/space/hardsuit/syndi/sbg,
+/obj/item/tank/internals/oxygen,
+/obj/item/clothing/mask/gas/syndicate,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/security/armory)
 "fd" = (
@@ -561,21 +569,6 @@
 /obj/item/grenade/chem_grenade/smart_metal_foam{
 	pixel_x = -2;
 	pixel_y = 6
-	},
-/obj/item/storage/belt/utility{
-	pixel_x = 3;
-	pixel_y = 5
-	},
-/obj/item/storage/belt/utility{
-	pixel_y = -3
-	},
-/obj/item/clothing/shoes/magboots/syndie{
-	pixel_x = -6;
-	pixel_y = -5
-	},
-/obj/item/clothing/head/beret/eng/hazard{
-	pixel_x = -5;
-	pixel_y = 4
 	},
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ship/engineering)
@@ -1059,9 +1052,11 @@
 /obj/effect/turf_decal/techfloor,
 /obj/structure/cable,
 /obj/machinery/suit_storage_unit/inherit,
-/obj/item/clothing/suit/space/hardsuit/syndi/hl,
 /obj/item/clothing/mask/gas/syndicate,
 /obj/machinery/power/apc/auto_name/directional/west,
+/obj/item/clothing/suit/space/hardsuit/syndi/sbg,
+/obj/item/tank/internals/oxygen,
+/obj/item/clothing/mask/gas/syndicate,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/security/armory)
 "ko" = (
@@ -1170,22 +1165,21 @@
 	name = "Engineering locker"
 	},
 /obj/item/clothing/under/syndicate/coldres,
-/obj/item/clothing/suit/toggle/industrial,
-/obj/item/clothing/shoes/workboots,
-/obj/item/clothing/head/welding,
-/obj/item/clothing/head/hardhat/red,
-/obj/item/clothing/head/hardhat/weldhat/orange{
-	pixel_x = 7;
-	pixel_y = 2
-	},
-/obj/item/clothing/glasses/meson/engine,
-/obj/item/storage/belt/utility/full/engi,
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 8;
 	name = "engine fuel pump"
 	},
 /obj/structure/cable{
 	icon_state = "1-4"
+	},
+/obj/item/clothing/shoes/combat/coldres,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/mask/gas/welding/up,
+/obj/item/storage/belt/utility/syndicate,
+/obj/item/clothing/head/HoS/beret/syndicate,
+/obj/item/clothing/suit/hooded/wintercoat/security/inteq/alt{
+	name = "hooded coat";
+	desc = "A hooded coat with a fur trim around the hood, comfy!"
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
@@ -1257,12 +1251,17 @@
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/hallway/central)
 "lz" = (
-/obj/structure/frame/computer{
-	dir = 8
-	},
 /obj/effect/turf_decal/techfloor{
 	dir = 4
 	},
+/obj/machinery/suit_storage_unit/inherit,
+/obj/item/clothing/mask/gas/syndicate,
+/obj/item/tank/internals/oxygen,
+/obj/item/clothing/shoes/magboots/syndie{
+	pixel_x = -11;
+	pixel_y = -11
+	},
+/obj/item/clothing/suit/space/hardsuit/syndi/elite/oldsst,
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "lA" = (
@@ -1417,11 +1416,10 @@
 /obj/item/pickaxe,
 /obj/item/mining_scanner,
 /obj/item/mining_scanner,
-/obj/structure/closet/wall/directional/south{
-	icon_door = "orange_wall";
-	name = "Mining equipment"
-	},
 /obj/item/gps/mining,
+/obj/structure/closet/wall{
+	pixel_y = -25
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/cargo)
 "nh" = (
@@ -1451,7 +1449,9 @@
 /obj/machinery/camera/autoname{
 	dir = 10
 	},
-/obj/machinery/mineral/ore_redemption,
+/obj/machinery/mineral/ore_redemption{
+	dir = 4
+	},
 /turf/open/floor/pod,
 /area/ship/cargo)
 "nv" = (
@@ -1788,13 +1788,11 @@
 /turf/open/floor/carpet/red_gold,
 /area/ship/crew/dorm)
 "rg" = (
-/obj/item/cautery,
 /obj/structure/table/reinforced,
-/obj/item/healthanalyzer,
+/obj/item/defibrillator/loaded,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/item/defibrillator/loaded,
 /turf/open/floor/pod/dark,
 /area/ship/medical)
 "rm" = (
@@ -2008,19 +2006,19 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/item/ammo_box/magazine/m10mm,
-/obj/item/ammo_box/magazine/m10mm,
-/obj/item/storage/toolbox/ammo/c10mm,
 /obj/structure/closet/secure_closet/wall/directional/west{
 	icon_state = "sec_wall";
 	name = "Ammo Locker";
 	req_access_txt = "1"
 	},
-/obj/item/ammo_box/magazine/m10mm,
 /obj/item/ammo_box/magazine/smgm45,
 /obj/item/ammo_box/magazine/smgm45,
 /obj/item/ammo_box/magazine/m12g,
 /obj/item/ammo_box/magazine/m12g,
+/obj/item/ammo_box/a12g/slug,
+/obj/item/ammo_box/a12g,
+/obj/item/ammo_box/c45,
+/obj/item/ammo_box/c45,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "sY" = (
@@ -2171,17 +2169,17 @@
 	pixel_y = 2;
 	pixel_x = 6
 	},
-/obj/item/gun/ballistic/automatic/smg/c20r{
-	pixel_x = 14
+/obj/item/grenade/syndieminibomb{
+	pixel_y = -4;
+	pixel_x = -6
 	},
 /turf/open/floor/pod/dark,
 /area/ship/security/armory)
 "uh" = (
-/obj/structure/reagent_dispensers/watertank,
-/obj/effect/turf_decal/techfloor,
 /obj/structure/sign/poster/official/moth/delam{
 	pixel_y = -32
 	},
+/obj/effect/turf_decal/techfloor,
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ship/engineering)
 "ul" = (
@@ -2576,10 +2574,6 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/generic,
-/obj/item/stack/cable_coil/orange{
-	pixel_x = 6;
-	pixel_y = -6
-	},
 /obj/machinery/atmospherics/pipe/simple/orange/visible{
 	dir = 9
 	},
@@ -2695,18 +2689,19 @@
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/engineering)
 "yH" = (
-/obj/item/gun/ballistic/automatic/pistol,
-/obj/item/gun/ballistic/automatic/pistol{
-	pixel_y = 3
-	},
 /obj/effect/turf_decal/industrial/fire{
 	dir = 8
 	},
 /obj/structure/guncase,
 /obj/structure/railing,
 /obj/machinery/light/directional/east,
+/obj/item/gun/ballistic/automatic/smg/c20r{
+	pixel_x = 14
+	},
+/obj/item/gun/ballistic/automatic/smg/c20r{
+	pixel_x = 14
+	},
 /obj/item/gun/ballistic/shotgun/bulldog,
-/obj/item/gun/ballistic/automatic/pistol,
 /turf/open/floor/pod/dark,
 /area/ship/security/armory)
 "yJ" = (
@@ -2761,11 +2756,16 @@
 /area/ship/hallway/central)
 "zP" = (
 /obj/machinery/suit_storage_unit/inherit/industrial,
-/obj/item/clothing/suit/space/syndicate/black/engie,
-/obj/item/clothing/head/helmet/space/syndicate/black/engie,
 /obj/effect/turf_decal/techfloor,
 /obj/machinery/light/directional/south,
 /obj/machinery/firealarm/directional/east,
+/obj/item/clothing/suit/space/hardsuit/engine,
+/obj/item/clothing/shoes/magboots/syndie{
+	pixel_x = -6;
+	pixel_y = -5
+	},
+/obj/item/tank/internals/oxygen,
+/obj/item/clothing/mask/gas/syndicate,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/engineering)
 "zZ" = (
@@ -2870,6 +2870,8 @@
 /obj/item/clothing/accessory/holster,
 /obj/item/clothing/shoes/combat,
 /obj/item/radio/headset/syndicate,
+/obj/item/clothing/glasses/hud/security/sunglasses,
+/obj/item/suppressor,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "AS" = (
@@ -2897,15 +2899,7 @@
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/maintenance/port)
 "AZ" = (
-/obj/structure/closet/toolcloset,
-/obj/structure/railing{
-	dir = 4;
-	layer = 2.8
-	},
-/obj/effect/decal/cleanable/oil{
-	icon_state = "streak5"
-	},
-/obj/effect/turf_decal/industrial/outline/yellow,
+/obj/effect/turf_decal/techfloor,
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ship/engineering)
 "Bd" = (
@@ -3097,8 +3091,6 @@
 	},
 /obj/item/clothing/under/syndicate/combat,
 /obj/item/clothing/suit/armor/vest/capcarapace/syndicate,
-/obj/item/clothing/gloves/krav_maga/combatglovesplus,
-/obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/glasses/thermal/eyepatch,
 /obj/item/clothing/head/HoS/beret/syndicate,
 /obj/item/clothing/head/HoS/syndicate,
@@ -3107,6 +3099,8 @@
 /obj/item/ammo_box/a357,
 /obj/item/radio/headset/syndicate/alt/leader,
 /obj/item/gun/ballistic/derringer/traitor,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/gloves/tackler/combat/insulated,
 /turf/open/floor/carpet/black,
 /area/ship/bridge)
 "El" = (
@@ -3403,9 +3397,9 @@
 	pixel_y = -1
 	},
 /obj/machinery/firealarm/directional/east,
-/obj/item/codespeak_manual{
-	pixel_x = 6;
-	pixel_y = 5
+/obj/item/codespeak_manual/unlimited{
+	pixel_y = 5;
+	pixel_x = 10
 	},
 /turf/open/floor/holofloor/wood,
 /area/ship/bridge)
@@ -3510,9 +3504,11 @@
 /obj/effect/turf_decal/box,
 /obj/effect/turf_decal/industrial/outline/yellow,
 /obj/effect/turf_decal/techfloor,
-/obj/item/clothing/suit/space/hardsuit/syndi/hl,
 /obj/item/clothing/mask/gas/syndicate,
 /obj/machinery/light/directional/south,
+/obj/item/clothing/suit/space/hardsuit/syndi/sbg,
+/obj/item/tank/internals/oxygen,
+/obj/item/clothing/mask/gas/syndicate,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/security/armory)
 "If" = (
@@ -3800,12 +3796,7 @@
 /turf/open/floor/mineral/plastitanium,
 /area/ship/hallway/central)
 "Lj" = (
-/obj/item/scalpel{
-	pixel_y = 6;
-	pixel_x = 10
-	},
 /obj/structure/table/reinforced,
-/obj/item/hemostat,
 /obj/machinery/light/directional/west,
 /obj/effect/spawner/lootdrop/random_prosthetic{
 	pixel_x = 6
@@ -4010,12 +4001,6 @@
 /area/ship/hallway/central)
 "Ni" = (
 /obj/effect/turf_decal/industrial/warning,
-/obj/item/clothing/suit/armor/vest/syndie,
-/obj/item/clothing/suit/armor/vest/syndie,
-/obj/item/clothing/suit/armor/vest/syndie,
-/obj/item/clothing/head/helmet/operator,
-/obj/item/clothing/head/helmet/operator,
-/obj/item/clothing/head/helmet/operator,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 4
 	},
@@ -4027,9 +4012,15 @@
 	name = "Armor Locker";
 	req_access_txt = "1"
 	},
-/obj/item/storage/belt/military,
-/obj/item/storage/belt/military,
-/obj/item/storage/belt/military,
+/obj/item/storage/belt/military/assault,
+/obj/item/storage/belt/military/assault,
+/obj/item/clothing/suit/armor/vest/syndie,
+/obj/item/clothing/suit/armor/vest/syndie,
+/obj/item/clothing/suit/armor/vest/syndie,
+/obj/item/storage/belt/military/assault,
+/obj/item/clothing/head/helmet/swat,
+/obj/item/clothing/head/helmet/swat,
+/obj/item/clothing/head/helmet/swat,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "Nj" = (
@@ -4095,9 +4086,6 @@
 /obj/structure/table/reinforced,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/airalarm/directional/north,
-/obj/machinery/turretid{
-	pixel_y = 2
-	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "Om" = (
@@ -4306,9 +4294,8 @@
 /turf/open/floor/plating,
 /area/ship/engineering)
 "PZ" = (
-/obj/structure/reagent_dispensers/fueltank,
-/obj/effect/decal/cleanable/wrapping,
-/obj/effect/turf_decal/techfloor,
+/obj/machinery/vending/tool,
+/obj/effect/turf_decal/industrial/outline/yellow,
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ship/engineering)
 "Qb" = (
@@ -4629,9 +4616,6 @@
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/hallway/central)
 "TQ" = (
-/obj/machinery/suit_storage_unit/inherit/industrial,
-/obj/item/clothing/suit/space/syndicate/black/engie,
-/obj/item/clothing/head/helmet/space/syndicate/black/engie,
 /obj/effect/turf_decal/techfloor{
 	dir = 1
 	},
@@ -4640,6 +4624,7 @@
 	pixel_x = 23;
 	pixel_y = -4
 	},
+/obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/engineering)
 "TR" = (
@@ -4790,14 +4775,6 @@
 /area/ship/engineering)
 "Vq" = (
 /obj/structure/table/reinforced,
-/obj/item/storage/box/bodybags{
-	pixel_y = 6
-	},
-/obj/item/stack/medical/gauze,
-/obj/item/stack/medical/ointment,
-/obj/item/stack/medical/bruise_pack{
-	pixel_x = 6
-	},
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -5075,11 +5052,11 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "Xp" = (
-/obj/machinery/portable_atmospherics/canister/air,
 /obj/effect/turf_decal/techfloor{
 	dir = 1
 	},
 /obj/structure/extinguisher_cabinet/directional/north,
+/obj/structure/reagent_dispensers/watertank,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/engineering)
 "Xr" = (
@@ -5134,7 +5111,6 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 5
 	},
-/obj/structure/bookcase/random/fiction,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/holofloor/wood,
 /area/ship/bridge)
@@ -5339,7 +5315,7 @@
 /area/ship/maintenance/starboard)
 "Zi" = (
 /obj/structure/closet/wall/white/med{
-	dir = 8;
+	dir = 4;
 	name = "medical locker";
 	pixel_x = 29
 	},
@@ -5349,7 +5325,6 @@
 	icon_state = "1-8"
 	},
 /obj/item/clothing/under/utility,
-/obj/item/clothing/suit/longcoat/roboblack,
 /obj/item/clothing/suit/apron/surgical,
 /obj/item/clothing/neck/stethoscope,
 /obj/item/clothing/mask/surgical,
@@ -5364,6 +5339,7 @@
 	pixel_x = -3;
 	pixel_y = 3
 	},
+/obj/item/storage/backpack/duffelbag/med/surgery,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/medical)
 "Zy" = (

@@ -54,4 +54,7 @@ GLOBAL_LIST_INIT(ship_faction_to_prefixes, list(
 		"EUSF",
 		"EUSR",
 	),
+	"Pirate" = list(
+		"PIRATE",
+	),
 ))

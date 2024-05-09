@@ -655,6 +655,9 @@
 		/obj/machinery/vending/sovietsoda = "BODA",
 		/obj/machinery/vending/security = "SecTech",
 		/obj/machinery/vending/modularpc = "Deluxe Silicate Selections",
+// [CELADON-ADD] - CELADON_BALANCE - Универсальная плата вендоров
+		/obj/machinery/vending/mining_equipment = "Mining Equipment",
+// [/CELADON-ADD]
 		/obj/machinery/vending/custom = "Custom Vendor")
 
 /obj/item/circuitboard/machine/vendor/attackby(obj/item/I, mob/user, params)
