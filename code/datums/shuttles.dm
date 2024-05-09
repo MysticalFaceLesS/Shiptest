@@ -408,7 +408,7 @@
 /datum/map_template/shuttle/subshuttles/syndicate_jet_lancer
 	file_name = "syndicate_jet_lancer"
 	name = "Jet Lancer-class Boarding Vessel"
-	prefix = "SSV"
+	prefix = "DSSV"
 =======
 	prefix = "PIRATE"
 >>>>>>> 481dac12feedd0b854bdfc957d7aeda8b0293bdf
