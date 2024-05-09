@@ -6,7 +6,7 @@
 	icon_state_off = "tech1_off"
 	icon_state_closed = "tech1"
 	icon_state_open = "tech1_open"
-	thrust = 4
+	thrust = 20
 	power_per_burn = 35000
 
 /obj/machinery/power/shuttle/engine/electric/tech2
@@ -17,7 +17,7 @@
 	icon_state_off = "tech2_off"
 	icon_state_closed = "tech2"
 	icon_state_open = "tech2_open"
-	thrust = 6
+	thrust = 25
 	power_per_burn = 50000
 
 /obj/machinery/power/shuttle/engine/electric/tech3
@@ -28,5 +28,5 @@
 	icon_state_off = "tech3_off"
 	icon_state_closed = "tech3"
 	icon_state_open = "tech3_open"
-	thrust = 8
+	thrust = 30
 	power_per_burn = 65000
