@@ -374,8 +374,10 @@ There are several things that need to be remembered:
 		if((I.supports_variations & KEPORI_VARIATION) && (dna.species.bodytype & BODYTYPE_KEPORI))
 			icon_file = KEPORI_HEAD_PATH
 
+		// [CELADON-ADD] - TAJARA
 		if((I.supports_variations & TAJARA_VARIATION) && (dna.species.bodytype & BODYTYPE_TAJARA))
 			icon_file = TAJARA_HEAD_PATH
+		// [/CELADON-ADD]
 
 		if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(I))))
 			handled_by_bodytype = FALSE
@@ -436,8 +438,8 @@ There are several things that need to be remembered:
 		var/mutable_appearance/suit_overlay
 		update_hud_wear_suit(I)
 		var/icon_file
-		var/handled_by_bodytype = TRUE
 
+		var/handled_by_bodytype = TRUE
 		if(dna.species.bodytype & BODYTYPE_DIGITIGRADE)
 			if(I.supports_variations & DIGITIGRADE_VARIATION)
 				icon_file = DIGITIGRADE_SUIT_PATH
@@ -448,8 +450,10 @@ There are several things that need to be remembered:
 		else if((dna.species.bodytype & BODYTYPE_KEPORI) && (I.supports_variations & KEPORI_VARIATION))
 			icon_file = KEPORI_SUIT_PATH
 
+		// [CELADON-ADD] - TAJARA
 		else if((dna.species.bodytype & BODYTYPE_TAJARA) && (I.supports_variations & TAJARA_VARIATION))
 			icon_file = TAJARA_SUIT_PATH
+		// [/CELADON-ADD]
 
 		if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(I))))
 			handled_by_bodytype = FALSE
@@ -512,8 +516,10 @@ There are several things that need to be remembered:
 			if((dna.species.bodytype & BODYTYPE_KEPORI) && (I.supports_variations & KEPORI_VARIATION))
 				icon_file = KEPORI_MASK_PATH
 
+			// [CELADON-ADD] - TAJARA
 			if((dna.species.bodytype & BODYTYPE_TAJARA) && (I.supports_variations & TAJARA_VARIATION))
 				icon_file = TAJARA_MASK_PATH
+			// [/CELADON-ADD]
 
 			if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(I))))
 				icon_file = DEFAULT_MASK_PATH
