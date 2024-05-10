@@ -146,3 +146,18 @@
 	qdel(C.GetComponent(/datum/component/tackler))
 	..()
 */
+
+
+/datum/species/start_wagging_tail(mob/living/carbon/human/H)
+	if("tajara_tail" in mutant_bodyparts)
+		mutant_bodyparts -= "tajara_tail"
+		mutant_bodyparts |= "waggingtajara_tail"
+
+	return ..()
+
+/datum/species/proc/stop_wagging_tail(mob/living/carbon/human/H)
+	if("waggingtajara_tail" in mutant_bodyparts)
+		mutant_bodyparts -= "waggingtajara_tail"
+		mutant_bodyparts |= "tajara_tail"
+
+	return ..()
