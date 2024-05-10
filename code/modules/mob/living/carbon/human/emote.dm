@@ -395,31 +395,3 @@
 	key = "woop"
 	key_third_person = "woops"
 	message = "woops!"
-
-
-
-/datum/emote/living/carbon/human/pur //tajara
-	key = "pur"
-	key_third_person = "purring"
-	message = "мурчит"
-	emote_type = EMOTE_AUDIBLE
-	vary = TRUE
-
-/datum/emote/living/carbon/human/pur/get_sound(mob/living/user)
-	if(istajara(user))
-		return 'sound/voice/tajara/purr.ogg'
-	else
-		return
-
-/datum/emote/living/carbon/human/purlong //tajara
-	key = "purlong"
-	key_third_person = "purring long"
-	message = "мурчит"
-	emote_type = EMOTE_AUDIBLE
-	vary = TRUE
-
-/datum/emote/living/carbon/human/purlong/get_sound(mob/living/user)
-	if(istajara(user))
-		return 'sound/voice/tajara/purr_long.ogg'
-	else
-		return
