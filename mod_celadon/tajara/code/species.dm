@@ -155,7 +155,7 @@
 
 	return ..()
 
-/datum/species/proc/stop_wagging_tail(mob/living/carbon/human/H)
+/datum/species/stop_wagging_tail(mob/living/carbon/human/H)
 	if("waggingtajara_tail" in mutant_bodyparts)
 		mutant_bodyparts -= "waggingtajara_tail"
 		mutant_bodyparts |= "tajara_tail"
