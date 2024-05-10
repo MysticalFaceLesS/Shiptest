@@ -3,8 +3,8 @@
 	desc = "A simple assault rifle magazine designed to chamber 7.62x51mm."
 	icon = 'mod_celadon/weapons/icons/ammo/ammo.dmi'
 	icon_state = "morita1_mag"
-	caliber = ".308 Winchester"
-	ammo_type = /obj/item/ammo_casing/win308
+	caliber = ".308"
+	ammo_type = /obj/item/ammo_casing/a308
 	max_ammo = 25
 
 /obj/item/ammo_box/magazine/morita1/update_icon_state()
@@ -16,7 +16,7 @@
 	desc = "A simple assault rifle magazine designed to chamber 7.62x51mm."
 	icon = 'mod_celadon/weapons/icons/ammo/ammo.dmi'
 	icon_state = "morita1_small_mag"
-	ammo_type = /obj/item/ammo_casing/win308
+	ammo_type = /obj/item/ammo_casing/a308
 	max_ammo = 10
 
 /obj/item/ammo_box/magazine/morita1/small/update_icon_state()
@@ -28,7 +28,7 @@
 	desc = "A simple assault rifle magazine designed to chamber 7.62x51mm."
 	icon = 'mod_celadon/weapons/icons/ammo/ammo.dmi'
 	icon_state = "morita1_drum_mag"
-	ammo_type = /obj/item/ammo_casing/win308
+	ammo_type = /obj/item/ammo_casing/a308
 	max_ammo = 50
 
 /obj/item/ammo_box/magazine/morita1/drum/update_icon_state()
