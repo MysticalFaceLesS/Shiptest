@@ -546,7 +546,6 @@ GLOBAL_LIST_EMPTY(roundstart_races)
  * * H - Human, whoever we're handling the hair for
  * * forced_colour - The colour of hair we're forcing on this human. Leave null to not change. Mind the british spelling!
  */
- // icon/custom_hairs_extensions = 'icons/mob/hair_extensions.dmi', icon/custom_facial_hair_extensions = 'icons/mob/facialhair_extensions.dmi', icon/custom_hair = 'icons/mob/human_face.dmi'
 /datum/species/proc/handle_hair(mob/living/carbon/human/H, forced_colour)
 	H.remove_overlay(HAIR_LAYER)
 	var/obj/item/bodypart/head/HD = H.get_bodypart(BODY_ZONE_HEAD)
