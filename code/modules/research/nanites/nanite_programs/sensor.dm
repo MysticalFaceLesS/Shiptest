@@ -278,8 +278,7 @@
 		"Jelly" = /datum/species/jelly,
 		"IPC" = /datum/species/ipc,
 		"Kepori" = /datum/species/kepori,
-		"Rachnid" = /datum/species/spider,
-		"Tajara" = /datum/species/tajara
+		"Rachnid" = /datum/species/spider
 	)
 
 /datum/nanite_program/sensor/species/register_extra_settings()
