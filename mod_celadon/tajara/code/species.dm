@@ -1,4 +1,15 @@
-//Copy-pasted kepori and lizard stuff
+/mob/living/carbon/human
+	var/skin_tone_nose = "black"    //Skin tone nose tajara
+	var/skin_tone_tajara = "Black"  //Skin tone tajara
+
+/mob/living/carbon/human/species/tajara
+	race = /datum/species/tajara
+
+/datum/species
+	/// Does the species use skintones or not?
+	var/use_skintonesnose = FALSE
+	var/use_skintonetajara = FALSE
+
 /datum/species/tajara
 	name = "\improper Tajara"
 	id = SPECIES_TAJARA
@@ -76,10 +87,6 @@
 	species_l_leg = /obj/item/bodypart/leg/left/tajara
 	species_r_leg = /obj/item/bodypart/leg/right/tajara
 
-//	var/obj/item/bodypart/tail/species_tail = /obj/item/bodypart/tail/tajara
-//	var/obj/item/bodypart/external_ears/species_external_ears = /obj/item/bodypart/external_ears/tajara
-
-
 	species_robotic_chest = /obj/item/bodypart/chest/robot
 	species_robotic_head = /obj/item/bodypart/head/robot
 	species_robotic_l_arm = /obj/item/bodypart/l_arm/robot/surplus
@@ -87,26 +94,10 @@
 	species_robotic_l_leg = /obj/item/bodypart/leg/left/robot/surplus
 	species_robotic_r_leg = /obj/item/bodypart/leg/right/robot/surplus
 
-//	var/obj/item/bodypart/tail/species_robotic_tail = /obj/item/bodypart/tail/tajara/
-//	var/obj/item/bodypart/external_ears/species_robotic_external_ears = /obj/item/bodypart/external_ears/tajara
-
-///datum/species/tajara/replace_body(mob/living/carbon/C, datum/species/new_species, robotic = FALSE)
-//	return ..()		//ради мемов
-
-/datum/species/tajara/get_hair_list_by_gender(gender)
-	return GLOB.tajara_hairs_list
-
-/datum/species/tajara/get_facial_hair_list_by_gender(gender)
-	return GLOB.tajara_facial_hairs_list
-
-/datum/species/tajara/random_hairstyle(gender)
-	return pick(GLOB.tajara_hairs_list)
-
-/datum/species/tajara/random_facial_hairstyle(gender)
-	return pick(GLOB.tajara_facial_hairs_list)
-//some MORE shitcoding
-/datum/species/tajara/handle_hair(mob/living/carbon/human/H, forced_colour)
-	return ..()
+// FIXME: TODO: Удалить, наверное не нужно
+// //some MORE shitcoding
+// /datum/species/tajara/handle_hair(mob/living/carbon/human/H, forced_colour)
+// 	return ..()
 
 /datum/species/tajara/random_name(gender,unique,lastname)
 	//code by @valtor0

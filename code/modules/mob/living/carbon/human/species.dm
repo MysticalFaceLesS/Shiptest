@@ -52,8 +52,6 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	var/blush_color = COLOR_BLUSH_PINK
 	///Does the species use skintones or not? As of now only used by humans.
 	var/use_skintones = FALSE
-	var/use_skintonesnose = FALSE
-	var/use_skintonetajara = FALSE
 	///If your race bleeds something other than bog standard blood, change this to reagent id. For example, ethereals bleed liquid electricity.
 	var/exotic_blood = ""
 	///If your race uses a non standard bloodtype (A+, O-, AB-, etc). For example, lizards have L type blood.
@@ -250,42 +248,6 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 ///////////
 // PROCS //
 ///////////
-
-/datum/species/proc/get_hair_list_by_gender(index = null, gender = null)
-	switch(gender)
-		if(MALE)
-			return GLOB.hairstyles_male_list
-		if(FEMALE)
-			return GLOB.hairstyles_female_list
-		else
-			return GLOB.hairstyles_list
-
-/datum/species/proc/get_facial_hair_list_by_gender(index = null, gender = null)
-	switch(gender)
-		if(MALE)
-			return GLOB.facial_hairstyles_male_list
-		if(FEMALE)
-			return GLOB.facial_hairstyles_female_list
-		else
-			return GLOB.facial_hairstyles_list
-
-/datum/species/proc/random_hairstyle(gender)
-	switch(gender)
-		if(MALE)
-			return pick(GLOB.hairstyles_male_list)
-		if(FEMALE)
-			return pick(GLOB.hairstyles_female_list)
-		else
-			return pick(GLOB.hairstyles_list)
-
-/datum/species/proc/random_facial_hairstyle(gender)
-	switch(gender)
-		if(MALE)
-			return pick(GLOB.facial_hairstyles_male_list)
-		if(FEMALE)
-			return pick(GLOB.facial_hairstyles_female_list)
-		else
-			return pick(GLOB.facial_hairstyles_list)
 
 
 /datum/species/New()
