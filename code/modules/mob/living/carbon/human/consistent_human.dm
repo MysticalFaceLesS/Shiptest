@@ -7,7 +7,9 @@
 
 	gender = list(MALE, FEMALE)[hex2num(copytext(seed, 1, 2)) % 2 + 1]
 	skin_tone = GLOB.skin_tones[hex2num(copytext(seed, 2, 3)) % length(GLOB.skin_tones) + 1]
+	// [CELADON-ADD] - TAJARA - Это должно быть после seed, но перед set_species, обновляющим оверлеи
 	skin_tone_nose = GLOB.skin_tones_nose[hex2num(copytext(seed, 3, 4)) % length(GLOB.skin_tones_nose)]
+	// [/CELADON-ADD]
 
 	hairstyle = GLOB.hairstyles_list[hex2num(copytext(seed, 1, 3)) % length(GLOB.hairstyles_list) + 1]
 	facial_hairstyle = GLOB.facial_hairstyles_list[hex2num(copytext(seed, 3, 6)) % length(GLOB.facial_hairstyles_list) + 1]
