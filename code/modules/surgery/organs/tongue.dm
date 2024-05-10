@@ -21,8 +21,7 @@
 		/datum/language/moffic,
 		/datum/language/sylvan,
 		/datum/language/shadowtongue,
-		/datum/language/ratvar,
-		/datum/language/siiktajr
+		/datum/language/ratvar
 	))
 
 /obj/item/organ/tongue/Initialize(mapload)
@@ -120,8 +119,7 @@
 		/datum/language/sylvan,
 		/datum/language/shadowtongue,
 		/datum/language/buzzwords,
-		/datum/language/ratvar,
-		/datum/language/siiktajr
+		/datum/language/ratvar
 	))
 
 /obj/item/organ/tongue/fly/handle_speech(datum/source, list/speech_args)
@@ -257,8 +255,7 @@
 		/datum/language/sylvan,
 		/datum/language/shadowtongue,
 		/datum/language/calcic,
-		/datum/language/ratvar,
-		/datum/language/siiktajr
+		/datum/language/ratvar
 	))
 
 /obj/item/organ/tongue/bone/Initialize()
@@ -339,8 +336,7 @@
 		/datum/language/moffic,
 		/datum/language/sylvan,
 		/datum/language/shadowtongue,
-		/datum/language/ratvar,
-		/datum/language/siiktajr
+		/datum/language/ratvar
 	))
 
 /obj/item/organ/tongue/ethereal/Initialize(mapload)
@@ -365,8 +361,7 @@
 		/datum/language/sylvan,
 		/datum/language/shadowtongue,
 		/datum/language/ratvar,
-		/datum/language/slime,
-		/datum/language/siiktajr
+		/datum/language/slime
 	))
 
 /obj/item/organ/tongue/slime/Initialize(mapload)
@@ -389,8 +384,7 @@
 		/datum/language/moffic,
 		/datum/language/sylvan,
 		/datum/language/shadowtongue,
-		/datum/language/buzzwords,
-		/datum/language/siiktajr
+		/datum/language/buzzwords
 	))
 
 /obj/item/organ/tongue/moth/Initialize(mapload)
@@ -431,8 +425,7 @@
 		/datum/language/moffic,
 		/datum/language/sylvan,
 		/datum/language/shadowtongue,
-		/datum/language/teceti_unified,
-		/datum/language/siiktajr
+		/datum/language/teceti_unified
 	))
 
 /obj/item/organ/tongue/kepori/Initialize(mapload)
@@ -455,52 +448,9 @@
 		/datum/language/moffic,
 		/datum/language/sylvan,
 		/datum/language/shadowtongue,
-		/datum/language/vox_pidgin,
-		/datum/language/siiktajr
+		/datum/language/vox_pidgin
 	))
 
 /obj/item/organ/tongue/vox/Initialize(mapload)
 	. = ..()
 	languages_possible = languages_possible_vox
-
-/obj/item/organ/tongue/tajara
-	name = "Tajara tongue"
-	desc = "The traditionally employed tongue of Ahdomai, composed of expressive yowls and chirps. Native to the Tajara."
-	say_mod = "mrowls"
-	taste_sensitivity = 10 // combined nose + tongue, extra sensitive
-	modifies_speech = TRUE
-	var/static/list/languages_possible_tajara = typecacheof(list(
-		/datum/language/common,
-		/datum/language/draconic,
-		/datum/language/codespeak,
-		/datum/language/monkey,
-		/datum/language/narsie,
-		/datum/language/beachbum,
-		/datum/language/aphasia,
-		/datum/language/piratespeak,
-		/datum/language/moffic,
-		/datum/language/sylvan,
-		/datum/language/shadowtongue,
-		/datum/language/vox_pidgin,
-		/datum/language/siiktajr
-	))
-
-/obj/item/organ/tongue/tajara/handle_speech(datum/source, list/speech_args)
-	if(speech_args[SPEECH_LANGUAGE] == /datum/language/siiktajr)
-		return
-
-	var/static/regex/tajara_rr = new("r+", "g")
-	var/static/regex/tajara_RR = new("R+", "g")
-	var/static/regex/tajara_ru_rr = new("р+", "g")
-	var/static/regex/tajara_ru_RR = new("Р+", "g")
-	var/message = speech_args[SPEECH_MESSAGE]
-	if(message[1] != "*")
-		message = tajara_rr.Replace(message, pick("rrr", "rr"))
-		message = tajara_RR.Replace(message, pick("Rrr", "Rr"))
-		message = tajara_ru_rr.Replace(message, pick("ррр", "рр"))
-		message = tajara_ru_RR.Replace(message, pick("Ррр", "Рр"))
-	speech_args[SPEECH_MESSAGE] = message
-
-/obj/item/organ/tongue/tajara/Initialize(mapload)
-	. = ..()
-	languages_possible = languages_possible_tajara

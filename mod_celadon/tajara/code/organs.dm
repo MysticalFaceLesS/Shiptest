@@ -121,3 +121,49 @@
 	name = "fabricated tajara tail"
 	desc = "A fabricated severed tajara tail. This one's made of synthflesh."
 
+/*
+	|  |  |    *
+	|  |  |    *
+	 \___/     *
+*/
+
+/obj/item/organ/tongue/tajara
+	name = "Tajara tongue"
+	desc = "The traditionally employed tongue of Ahdomai, composed of expressive yowls and chirps. Native to the Tajara."
+	say_mod = "mrowls"
+	taste_sensitivity = 10 // combined nose + tongue, extra sensitive
+	modifies_speech = TRUE
+	var/static/list/languages_possible_tajara = typecacheof(list(
+		/datum/language/common,
+		/datum/language/draconic,
+		/datum/language/codespeak,
+		/datum/language/monkey,
+		/datum/language/narsie,
+		/datum/language/beachbum,
+		/datum/language/aphasia,
+		/datum/language/piratespeak,
+		/datum/language/moffic,
+		/datum/language/sylvan,
+		/datum/language/shadowtongue,
+		/datum/language/siiktajr
+	))
+
+/obj/item/organ/tongue/tajara/handle_speech(datum/source, list/speech_args)
+	if(speech_args[SPEECH_LANGUAGE] == /datum/language/siiktajr)
+		return
+
+	var/static/regex/tajara_rr = new("r+", "g")
+	var/static/regex/tajara_RR = new("R+", "g")
+	var/static/regex/tajara_ru_rr = new("р+", "g")
+	var/static/regex/tajara_ru_RR = new("Р+", "g")
+	var/message = speech_args[SPEECH_MESSAGE]
+	if(message[1] != "*")
+		message = tajara_rr.Replace(message, pick("rrr", "rr"))
+		message = tajara_RR.Replace(message, pick("Rrr", "Rr"))
+		message = tajara_ru_rr.Replace_char(message, pick("ррр", "рр"))
+		message = tajara_ru_RR.Replace_char(message, pick("Ррр", "Рр"))
+	speech_args[SPEECH_MESSAGE] = message
+
+/obj/item/organ/tongue/tajara/Initialize(mapload)
+	. = ..()
+	languages_possible = languages_possible_tajara
