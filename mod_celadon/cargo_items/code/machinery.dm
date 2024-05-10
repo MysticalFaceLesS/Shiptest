@@ -29,7 +29,7 @@
 /datum/supply_pack/food/ration_irp
 	name = "IRP set"
 	desc = "6 expanded IRP sets. Now with warm-up!"
-	cost = 3500
+	cost = 750
 	contains = list(/obj/item/storage/ration/vegan_chili,
 					/obj/item/storage/ration/shredded_beef,
 					/obj/item/storage/ration/pork_spaghetti,
