@@ -336,7 +336,7 @@
 		/datum/language/moffic,
 		/datum/language/sylvan,
 		/datum/language/shadowtongue,
-		/datum/language/ratvar
+		/datum/language/ratvar,
 	))
 
 /obj/item/organ/tongue/ethereal/Initialize(mapload)
