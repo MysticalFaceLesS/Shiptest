@@ -365,7 +365,7 @@
 			next_in_line = BODY_ZONE_PRECISE_EYES
 		if(BODY_ZONE_PRECISE_EYES)
 			next_in_line = BODY_ZONE_PRECISE_MOUTH
-		if(BODY_ZONE_PRECISE_MOUTH)
+		else
 			next_in_line = BODY_ZONE_HEAD
 
 	var/atom/movable/screen/zone_sel/selector = mob.hud_used.zone_select
