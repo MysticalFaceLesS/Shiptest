@@ -254,7 +254,6 @@ GLOBAL_LIST_INIT(skin_tones, sortList(list(
 	else
 		return pick(GLOB.preference_adjectives)
 
-
 GLOBAL_LIST_EMPTY(species_list)
 
 /proc/age2agedescription(age)
