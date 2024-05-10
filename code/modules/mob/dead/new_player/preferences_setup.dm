@@ -39,8 +39,6 @@
 		facial_hair_color = random_color_natural()
 	if(randomise[RANDOM_SKIN_TONE])
 		skin_tone = random_skin_tone()
-	if(randomise[RANDOM_SKIN_TONE_NOSE])
-		skin_tone_nose = random_skin_tone_nose()
 	if(randomise[RANDOM_EYE_COLOR])
 		eye_color = random_eye_color()
 	if(randomise[RANDOM_PROSTHETIC])

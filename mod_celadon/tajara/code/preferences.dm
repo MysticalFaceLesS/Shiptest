@@ -99,3 +99,9 @@
 					if(new_s_tone_nose)
 						skin_tone_nose = new_s_tone_nose
 	return ..()
+
+
+/datum/preferences/random_character(gender_override, antag_override = FALSE)
+	. = ..()
+	if(randomise[RANDOM_SKIN_TONE_NOSE])
+		skin_tone_nose = random_skin_tone_nose()
