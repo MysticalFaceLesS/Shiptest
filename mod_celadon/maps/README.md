@@ -20,7 +20,8 @@ ID мода: CELADON_CONFIGS_MAPS
 
 ### Описание мода
 
-Этот мод содержит наши кастомные шипы и карты аванпостов будущих.
+Этот мод содержит наши субшатлы, руинки и аванпосты.
+В random_ruins.dm находится оверайды руинок. 
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
   А также любая полезная информация.
@@ -30,6 +31,8 @@ ID мода: CELADON_CONFIGS_MAPS
 
 - `code/modules/mob/living.dm`: `proc/overriden_proc`, `var/overriden_var`
 - EDIT `code\controllers\subsystem\mapping.dm`: `load_ship_templates()` -> `flist`, `file`
+- EDIT `code\datums\shuttles.dm` -> `mappath`: меняем пути к сабшатлам
+- EDIT `code\modules\overmap\objects\outpost\outpost_types.dm` -> `path`: меняем путь к аванпостам
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -40,8 +43,16 @@ ID мода: CELADON_CONFIGS_MAPS
 
 ### Оверрайды
 
-- `mods/_master_files/sound/my_cool_sound.ogg`
-- `mods/_master_files/code/my_modular_override.dm`: `proc/overriden_proc`, `var/overriden_var`
+- `code\datums\ruins\beachplanet.dm`
+- `code\datums\ruins\icemoon.dm`
+- `code\datums\ruins\jungle.dm`
+- `code\datums\ruins\lavaland.dm`
+- `code\datums\ruins\reebe.dm`
+- `code\datums\ruins\rockplanet.dm`
+- `code\datums\ruins\space.dm`
+- `code\datums\ruins\wasteplanet.dm`
+- `code\datums\ruins\whitesands.dm`
+
 <!--
   Если ты добавлял новый модульный оверрайд, его нужно указать здесь.
   Здесь указываются оверрайды в твоём моде и папке `_master_files`
@@ -51,7 +62,7 @@ ID мода: CELADON_CONFIGS_MAPS
 
 ### Дефайны
 
-- `code/__defines/~mods/example.dm`: `EXAMPLE_SPEED_MULTIPLIER`, `EXAMPLE_SPEED_BASE`
+- Отсутствуют
 <!--
   Если требовалось добавить какие-либо дефайны, укажи файлы,
   в которые ты их добавил, а также перечисли имена.
@@ -62,7 +73,7 @@ ID мода: CELADON_CONFIGS_MAPS
 
 ### Используемые файлы, не содержащиеся в модпаке
 
-- `mods/_master_files/icons/obj/alien.dmi`
+- `_maps\_mod_celadon\*` - все карты, кроме ships
 <!--
   Будь то немодульный файл или модульный файл, который не содержится в папке,
   принадлежащей этому конкретному моду, он должен быть упомянут здесь.
@@ -72,7 +83,7 @@ ID мода: CELADON_CONFIGS_MAPS
 
 ### Авторы:
 
-Твой никнейм
+MrCat15352
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.
