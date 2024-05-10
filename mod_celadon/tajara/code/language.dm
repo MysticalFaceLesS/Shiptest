@@ -1,3 +1,9 @@
+/datum/language_holder/tajara
+	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
+								/datum/language/siiktajr = list(LANGUAGE_ATOM))
+	spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
+							/datum/language/siiktajr = list(LANGUAGE_ATOM))
+
 /datum/language/siiktajr
 	name = "Siik'tajr"
 	desc = "The traditionally employed tongue of Ahdomai, composed of expressive yowls and chirps. Native to the Tajara."
