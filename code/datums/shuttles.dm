@@ -43,7 +43,10 @@
 	if(path)
 		mappath = path
 	else
-		mappath = "_maps/shuttles/[category]/[file_name].dmm"
+		// [CELADON-EDIT] - CELADON_CONFIGS_MAPS - Меняем сабшатлы на наши
+		// mappath = "_maps/shuttles/[category]/[file_name].dmm" // CELADON-EDIT - ORIGINAL
+		mappath = "_maps/_mod_celadon/shuttles/[category]/[file_name].dmm"
+		// [/CELADON-EDIT]
 	. = ..()
 
 /datum/map_template/shuttle/preload_size(path, cache)
@@ -397,6 +400,11 @@
 	prefix = "IRMV"
 
 /datum/map_template/shuttle/subshuttles/nail
-	file_name = "pgf_nail"
+	file_name = "pirate_nail"
 	name = "Nail-class Boarding Vessel"
-	prefix = "PGF"
+	prefix = "PIRATE"
+
+/datum/map_template/shuttle/subshuttles/syndicate_jet_lancer
+	file_name = "syndicate_jet_lancer"
+	name = "Jet Lancer-class Boarding Vessel"
+	prefix = "DSSV"
