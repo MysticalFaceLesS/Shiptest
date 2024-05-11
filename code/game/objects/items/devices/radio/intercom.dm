@@ -162,7 +162,9 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/item/radio/intercom, 31)
 	name = "wideband relay"
 	desc = "A low-gain reciever capable of sending and recieving wideband subspace messages."
 	icon_state = "intercom-wideband"
-	canhear_range = 3
+// [CELADON-CHANGE] - CELADON_BALANCE - Изменения вадйбанда
+	canhear_range = 6
+// [/CELADON-CHANGE]
 	keyslot = new /obj/item/encryptionkey/wideband
 	independent = TRUE
 	frequency = FREQ_WIDEBAND
