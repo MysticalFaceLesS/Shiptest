@@ -94,7 +94,7 @@
 	// fuel_use = 20 // CELADON-EDIT - ORIGINAL
 	// thrust = 25 // CELADON-EDIT - ORIGINAL
 	fuel_use = 20
-	thrust = 14
+	thrust = 25
 	// [/CELADON-EDIT]
 
 /obj/machinery/power/shuttle/engine/fueled/expulsion
@@ -104,8 +104,8 @@
 	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем движки
 	// fuel_use = 80 // CELADON-EDIT - ORIGINAL
 	// thrust = 15 // CELADON-EDIT - ORIGINAL
-	fuel_use = 40
-	thrust = 7
+	fuel_use = 80
+	thrust = 15
 	// [/CELADON-EDIT]
 	//All fuel code already handled
 
@@ -126,7 +126,7 @@
 	///Amount, in kilojoules, needed for a full burn.
 	// var/power_per_burn = 50000 // CELADON-EDIT - ORIGINAL
 	thrust = 10
-	var/power_per_burn = 25000
+	var/power_per_burn = 50000
 	// [/CELADON-EDIT]
 
 /obj/machinery/power/shuttle/engine/electric/bad
@@ -136,7 +136,7 @@
 	// thrust = 2 // CELADON-EDIT - ORIGINAL
 	// power_per_burn = 70000 // CELADON-EDIT - ORIGINAL
 	thrust = 2
-	power_per_burn = 50000
+	power_per_burn = 70000
 	// [/CELADON-EDIT]
 
 /obj/machinery/power/shuttle/engine/electric/premium
@@ -146,7 +146,7 @@
 	// thrust = 30 // CELADON-EDIT - ORIGINAL
 	// power_per_burn = 65000 // CELADON-EDIT - ORIGINAL
 	thrust = 30
-	power_per_burn = 30000
+	power_per_burn = 65000
 	// [/CELADON-EDIT]
 /obj/machinery/power/smes/shuttle
 	name = "electric engine precharger"
