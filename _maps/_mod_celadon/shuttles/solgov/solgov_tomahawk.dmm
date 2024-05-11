@@ -752,9 +752,6 @@
 	pixel_x = -20;
 	pixel_y = -11
 	},
-/obj/machinery/computer/cargo/express/solgov{
-	dir = 4
-	},
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/ship/cargo)
 "kp" = (
@@ -1896,18 +1893,6 @@
 /obj/effect/turf_decal/corner/opaque/solgovblue/full,
 /turf/open/floor/plasteel/white,
 /area/ship/maintenance/fore)
-"xd" = (
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/obj/machinery/power/shuttle/engine/electric/tech1{
-	dir = 4
-	},
-/obj/machinery/power/shuttle/engine/electric/tech1{
-	dir = 4
-	},
-/turf/open/floor/plating,
-/area/ship/engineering)
 "xi" = (
 /obj/structure/chair/office{
 	dir = 1
@@ -2942,10 +2927,10 @@
 /turf/closed/wall/mineral/titanium,
 /area/ship/maintenance/fore)
 "Hm" = (
-/obj/structure/table/reinforced,
 /obj/effect/turf_decal/siding/wood{
 	dir = 9
 	},
+/obj/machinery/computer/cargo/express/solgov,
 /turf/open/floor/wood,
 /area/ship/bridge)
 "Hp" = (
@@ -4021,16 +4006,16 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 1
 	},
-/obj/docking_port/mobile{
-	dir = 2;
-	launch_status = 0;
-	port_direction = 1;
-	preferred_direction = 1
-	},
 /obj/machinery/door/poddoor{
 	dir = 3;
 	name = "Cargo Bay Blast Door";
 	id = "solc_airblast"
+	},
+/obj/docking_port/mobile{
+	dir = 2;
+	launch_status = 0;
+	port_direction = 8;
+	preferred_direction = 4
 	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/port)
@@ -4372,7 +4357,6 @@
 	},
 /obj/effect/turf_decal/spline/fancy/transparent/solgovgold/corner,
 /obj/effect/turf_decal/trimline/opaque/solgovgold/corner,
-/obj/structure/sign/departments/medbay,
 /turf/open/floor/plasteel/white,
 /area/ship/storage)
 "VP" = (
@@ -4913,7 +4897,7 @@
 /obj/machinery/atmospherics/pipe/simple/orange/hidden{
 	dir = 8
 	},
-/obj/machinery/portable_atmospherics/canister/toxins,
+/obj/machinery/portable_atmospherics/canister/air,
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 
@@ -4950,7 +4934,7 @@ LX
 LX
 jy
 Iy
-xd
+Iy
 VD
 PX
 PX
