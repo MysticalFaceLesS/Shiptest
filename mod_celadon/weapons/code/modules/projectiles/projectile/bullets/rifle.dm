@@ -30,17 +30,17 @@
 
 //.308 WIN (M514)
 
-/obj/projectile/bullet/win308
-	name = ".308 Winchester"
-	damage = 30
-	armour_penetration = 40
+//obj/projectile/bullet/a308
+	//name = ".308 Winchester"
+	//damage = 30
+	//armour_penetration = 40
 
-/obj/projectile/bullet/win308/surplus
+/obj/projectile/bullet/a308/surplus
 	name = ".308 surplus"
 	damage = 25
 	armour_penetration = 30
 
-/obj/projectile/bullet/win308/ap
+/obj/projectile/bullet/a308/ap
 	name = ".308 M-80"
 	damage = 35
 	armour_penetration = 45

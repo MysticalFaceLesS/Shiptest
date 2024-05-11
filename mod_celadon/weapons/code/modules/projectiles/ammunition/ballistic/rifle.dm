@@ -19,23 +19,22 @@
 	caliber = "5.56x45mm"
 	projectile_type = /obj/projectile/bullet/a556_45/surplus
 
-/obj/item/ammo_casing/win308
-	name = "7,62x51 Winchester bullet casing"
-	desc = "A 7,62x51 Winchester bullet casing."
-	icon_state = "rifle-brass"
-	caliber = ".308 Winchester"
-	projectile_type = /obj/projectile/bullet/win308
+//Берем стандартные пули из основного кода , наши пули обновим когда будут готовы спрайты
+//obj/item/ammo_casing/a308
+	//name = "7,62x51 Winchester bullet casing"
+	//desc = "A 7,62x51 Winchester bullet casing."
+	//icon_state = "rifle-brass"
+	//caliber = ".308 Winchester"
+	//projectile_type = /obj/projectile/bullet/win308
 
-/obj/item/ammo_casing/win308/surplus
+/obj/item/ammo_casing/a308/surplus
 	name = "7,62x51 surplus bullet casing"
 	desc = "7,62x51 surplus bullet casing."
 	icon_state = "rifle-brass-surplus"
-	caliber = ".308 Winchester"
-	projectile_type = /obj/projectile/bullet/win308/surplus
+	projectile_type = /obj/projectile/bullet/a308/surplus
 
-/obj/item/ammo_casing/win308/ap
+/obj/item/ammo_casing/a308/ap
 	name = "7,62x51 M-80 bullet casing"
 	desc = "A 7,62x51 M-80 bullet casing."
 	icon_state = "rifle-brass-ap"
-	caliber = ".308 Winchester"
-	projectile_type = /obj/projectile/bullet/win308/ap
+	projectile_type = /obj/projectile/bullet/a308/ap

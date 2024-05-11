@@ -277,7 +277,8 @@
 	message_param = "beeps at %t."
 
 /datum/emote/living/carbon/human/robot_tongue/beep/run_emote(mob/user, params)
-	if(..())
+	. = ..()
+	if(.)
 		playsound(user.loc, 'sound/machines/twobeep.ogg', 50)
 
 /datum/emote/living/carbon/human/robot_tongue/buzz
@@ -287,7 +288,8 @@
 	message_param = "buzzes at %t."
 
 /datum/emote/living/carbon/human/robot_tongue/buzz/run_emote(mob/user, params)
-	if(..())
+	. = ..()
+	if(.)
 		playsound(user.loc, 'sound/machines/buzz-sigh.ogg', 50)
 
 /datum/emote/living/carbon/human/robot_tongue/buzz2
@@ -295,7 +297,8 @@
 	message = "buzzes twice."
 
 /datum/emote/living/carbon/human/robot_tongue/buzz2/run_emote(mob/user, params)
-	if(..())
+	. = ..()
+	if(.)
 		playsound(user.loc, 'sound/machines/buzz-two.ogg', 50)
 
 /datum/emote/living/carbon/human/robot_tongue/chime
@@ -304,7 +307,8 @@
 	message = "chimes."
 
 /datum/emote/living/carbon/human/robot_tongue/chime/run_emote(mob/user, params)
-	if(..())
+	. = ..()
+	if(.)
 		playsound(user.loc, 'sound/machines/chime.ogg', 50)
 
 /datum/emote/living/carbon/human/robot_tongue/no
@@ -313,7 +317,8 @@
 	message = "emits an negative blip."
 
 /datum/emote/living/carbon/human/robot_tongue/no/run_emote(mob/user, params)
-	if(..())
+	. = ..()
+	if(.)
 		playsound(user.loc, 'sound/machines/synth_no.ogg', 50)
 
 /datum/emote/living/carbon/human/robot_tongue/ping
@@ -323,7 +328,8 @@
 	message_param = "pings at %t."
 
 /datum/emote/living/carbon/human/robot_tongue/ping/run_emote(mob/user, params)
-	if(..())
+	. = ..()
+	if(.)
 		playsound(user.loc, 'sound/machines/ping.ogg', 50)
 
 /datum/emote/living/carbon/human/robot_tongue/warn
@@ -332,7 +338,8 @@
 	message = "blares an alarm!"
 
 /datum/emote/living/carbon/human/robot_tongue/warn/run_emote(mob/user, params)
-	if(..())
+	. = ..()
+	if(.)
 		playsound(user.loc, 'sound/machines/warning-buzzer.ogg', 50)
 
 /datum/emote/living/carbon/human/robot_tongue/yes
@@ -341,7 +348,8 @@
 	message = "emits an affirmative blip."
 
 /datum/emote/living/carbon/human/robot_tongue/yes/run_emote(mob/user, params)
-	if(..())
+	. = ..()
+	if(.)
 		playsound(user.loc, 'sound/machines/synth_yes.ogg', 50)
 
 // the following emote were originally clown-locked and synthetic exclusive
@@ -353,7 +361,8 @@
 	message = "plays a sad trombone..."
 
 /datum/emote/living/carbon/human/robot_tongue/sad/run_emote(mob/user, params)
-	if(..())
+	. = ..()
+	if(.)
 		playsound(user.loc, 'sound/misc/sadtrombone.ogg', 50)
 
 //kepi (plus one vox i guess)
