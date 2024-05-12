@@ -1741,6 +1741,9 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "jA" = (
@@ -1798,9 +1801,6 @@
 	name = "Window Shield"
 	},
 /obj/structure/curtain/bounty,
-/obj/machinery/door/airlock/hatch{
-	dir = 1
-	},
 /turf/open/floor/plating,
 /area/ship/hallway/port)
 "kk" = (
@@ -3487,9 +3487,6 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/turf_decal/industrial/warning/corner{
-	dir = 4
-	},
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/hallway/central)
 "uo" = (
@@ -4164,13 +4161,6 @@
 	},
 /turf/open/floor/carpet/black,
 /area/ship/crew/dorm)
-"xL" = (
-/obj/machinery/porta_turret/ship/weak{
-	dir = 5;
-	faction = list("turret")
-	},
-/turf/closed/wall/mineral/plastitanium,
-/area/ship/bridge)
 "xO" = (
 /obj/effect/turf_decal/corner/opaque/yellow{
 	dir = 4
@@ -5712,6 +5702,9 @@
 /obj/effect/turf_decal/corner/opaque/blue{
 	dir = 1
 	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "Hf" = (
@@ -6532,15 +6525,23 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/security/armory)
 "Mc" = (
-/obj/effect/turf_decal/trimline/opaque/yellow/line{
-	dir = 4
+/obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
+/obj/structure/cable{
+	icon_state = "0-2"
 	},
-/obj/effect/turf_decal/siding/thinplating{
-	dir = 4
+/obj/machinery/door/poddoor{
+	id = "talos_windows";
+	name = "Window Shield"
 	},
-/obj/effect/turf_decal/industrial/warning/corner,
-/turf/open/floor/plasteel/patterned/grid,
-/area/ship/hallway/central)
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/obj/structure/curtain/bounty,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/open/floor/plating,
+/area/ship/medical)
 "Me" = (
 /obj/item/clothing/glasses/hud/security/sunglasses/inteq,
 /obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
@@ -8074,6 +8075,9 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "UP" = (
@@ -8479,6 +8483,9 @@
 	dir = 4
 	},
 /obj/structure/curtain/cloth,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "Xd" = (
@@ -9287,7 +9294,7 @@ us
 LT
 "}
 (10,1,1) = {"
-aJ
+mn
 aJ
 au
 ug
@@ -9322,7 +9329,7 @@ oD
 "}
 (11,1,1) = {"
 tk
-xL
+Ek
 HN
 HN
 HN
@@ -9607,7 +9614,7 @@ HN
 MO
 GM
 lu
-Mc
+lu
 fH
 RN
 um
@@ -10107,7 +10114,7 @@ tk
 tk
 tk
 tk
-Rx
+Mc
 Hd
 UO
 DV
