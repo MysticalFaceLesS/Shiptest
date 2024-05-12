@@ -267,6 +267,7 @@
 	)
 	signal.send_to_receivers()
 */
+// [/CELADON-REMOVE]
 
 /datum/overmap/outpost/proc/get_hangar_template(obj/docking_port/mobile/request_port)
 	RETURN_TYPE(/datum/map_template/outpost)
