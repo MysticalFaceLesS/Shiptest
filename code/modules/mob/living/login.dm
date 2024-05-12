@@ -18,7 +18,7 @@
 
 
 	var/virtual_z = virtual_z()
-	LAZYADDASSOCLIST(SSmobs.players_by_virtual_z, "[virtual_z]", src)
+	LAZYADDASSOC(SSmobs.players_by_virtual_z, "[virtual_z]", src)
 	SSidlenpcpool.try_wakeup_virtual_z(virtual_z)
 
 	//Vents

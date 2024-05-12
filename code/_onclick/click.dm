@@ -356,6 +356,7 @@
 
 /**
  * Control+Shift click
+ * Unused except for AI
  */
 /mob/proc/CtrlShiftClickOn(atom/A)
 	A.CtrlShiftClick(src)

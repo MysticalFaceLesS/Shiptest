@@ -125,6 +125,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		addtimer(CALLBACK(src, PROC_REF(announce_conflict), notadded), 5 SECONDS)
 
 /datum/preferences/proc/announce_conflict(list/notadded)
+	// [CELADON-ADD] - MASTER_FILES
+	return
+	// [/CELADON-ADD]
+	// [CELADON-REMOVE] - MASTER_FILES - Удалено по просьбе Voiko. Его это бесит
+	/*
 	to_chat(parent, "<span class='userdanger'>KEYBINDING CONFLICT!!!\n\
 	There are new keybindings that have defaults bound to keys you already set, They will default to Unbound. You can bind them in Setup Character or Game Preferences\n\
 	<a href='?_src_=prefs;preference=tab;tab=3'>Or you can click here to go straight to the keybindings page</a></span>")
@@ -132,7 +137,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		var/datum/keybinding/conflicted = item
 		to_chat(parent, "<span class='userdanger'>[conflicted.category]: [conflicted.full_name] needs updating")
 		LAZYADD(key_bindings["Unbound"], conflicted.name) // set it to unbound to prevent this from opening up again in the future
-
+	*/
+	// [/CELADON-REMOVE]
 
 
 /datum/preferences/proc/load_path(ckey,filename="preferences.sav")
@@ -405,7 +411,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["jumpsuit_style"], jumpsuit_style)
 	READ_FILE(S["uplink_loc"], uplink_spawn_loc)
 	READ_FILE(S["phobia"], phobia)
-	READ_FILE(S["generic_adjective"], generic_adjective)
 	READ_FILE(S["randomise"],  randomise)
 	READ_FILE(S["body_size"], features["body_size"])
 	READ_FILE(S["prosthetic_limbs"], prosthetic_limbs)
@@ -595,7 +600,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["randomise"]					, randomise)
 	WRITE_FILE(S["species"]						, pref_species.id)
 	WRITE_FILE(S["phobia"]						, phobia)
-	WRITE_FILE(S["generic_adjective"]			, generic_adjective)
 	WRITE_FILE(S["body_size"]					, features["body_size"])
 	WRITE_FILE(S["prosthetic_limbs"]			, prosthetic_limbs)
 	WRITE_FILE(S["feature_mcolor"]				, features["mcolor"])
