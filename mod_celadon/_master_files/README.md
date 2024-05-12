@@ -30,6 +30,9 @@ ID мода: MASTER_FILES
 
 - REMOVE: `code\modules\overmap\objects\outpost\outpost.dm`
 
+- REMOVE: `code\modules\client\preferences_savefile.dm`
+- ADD: `code\modules\client\preferences_savefile.dm`
+
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
