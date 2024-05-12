@@ -240,7 +240,9 @@
 	signal.send_to_receivers()
 	return
 
-/* /datum/overmap/outpost/post_undocked(datum/overmap/ship/controlled/dock_requester)		// Вырезано, так как создаёт рантаймы при удалении корабля через манипулятор
+// [CELADON-REMOVE] - MASTER_FILES - Вырезано, так как создаёт рантаймы при удалении корабля через манипулятор
+/*
+/datum/overmap/outpost/post_undocked(datum/overmap/ship/controlled/dock_requester)
 	// just get an arbitrary hangar dock. for the message source. at this point,
 	// we don't have enough information to know which hangar the ship was docked to.
 	// however, so long as the speaker is an atom on a virtual_level in the right mapzone, we should be good.
@@ -263,7 +265,9 @@
 		list(SPAN_ROBOT),
 		list(MODE_CUSTOM_SAY_EMOTE = "coldly states")
 	)
-	signal.send_to_receivers() */
+	signal.send_to_receivers()
+*/
+// [/CELADON-REMOVE]
 
 /datum/overmap/outpost/proc/get_hangar_template(obj/docking_port/mobile/request_port)
 	RETURN_TYPE(/datum/map_template/outpost)
