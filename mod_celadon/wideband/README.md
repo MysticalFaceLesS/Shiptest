@@ -10,9 +10,9 @@
 -->
 
 <!-- Название мода. Не важно на русском или на английском. -->
-## Fixes - фиксы
+## Изменения вайдбанда
 
-ID мода: CELADON_FIXES
+ID мода: WIDEBAND_CHANGES
 <!--
   Название модпака прописными буквами, СОЕДИНЁННЫМИ_ПОДЧЁРКИВАНИЕМ,
   которое ты будешь использовать для обозначения файлов.
@@ -20,7 +20,7 @@ ID мода: CELADON_FIXES
 
 ### Описание мода
 
-Этот мод Фиксит различные вещи в коде, например крашеры.
+Мод включает динамик вайдбанду по дефолту, а также увеличивает дистанцию откуда можно его услышать в два раза.
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
   А также любая полезная информация.
@@ -28,14 +28,7 @@ ID мода: CELADON_FIXES
 
 ### Изменения *кор кода*
 
-- ADD: `code\modules\mining\equipment\kinetic_crusher.dm`: `/obj/item/kinetic_crusher/old/update_icon_state()` -> `..()`
-- REMOVE: `code\modules\mining\equipment\kinetic_crusher.dm`: `/obj/item/kinetic_crusher/old/update_icon_state()` -> `return ..()`
-
-- ADD: `code\modules\mining\equipment\kinetic_crusher.dm`: `/obj/item/kinetic_crusher/syndie_crusher/update_icon_state()` -> `..()`
-- REMOVE: `code\modules\mining\equipment\kinetic_crusher.dm`: `/obj/item/kinetic_crusher/syndie_crusher/update_icon_state()` -> `return ..()`
-
-- EDIT: `code\modules\projectiles\ammunition\caseless\_caseless.dm`: `/obj/item/ammo_casing/caseless/on_eject()`
-
+- CHANGE:`code/game/objects/items/radio/intercom.dm: `/obj/item/radio/intercom/wideband`
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -77,7 +70,7 @@ ID мода: CELADON_FIXES
 
 ### Авторы:
 
-RalseiDreemuurr, Mirag1993 , Корольный крыс
+Yata9arasu
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.

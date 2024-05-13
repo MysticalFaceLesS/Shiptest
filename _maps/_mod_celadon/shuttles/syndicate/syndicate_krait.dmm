@@ -458,6 +458,19 @@
 	},
 /turf/open/floor/plating,
 /area/ship/engineering)
+"dY" = (
+/obj/effect/turf_decal/corner/transparent/syndiered/border{
+	icon_state = "bordercolor";
+	dir = 8
+	},
+/obj/effect/turf_decal/industrial/traffic{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel/dark,
+/area/ship/security/dock)
 "ei" = (
 /obj/effect/turf_decal/corner/opaque/syndiered/border{
 	dir = 8
@@ -484,6 +497,10 @@
 /obj/item/ammo_box/magazine/m50,
 /obj/item/ammo_box/magazine/m50,
 /obj/item/clothing/glasses/hud/security/sunglasses/eyepatch,
+/obj/item/megaphone/sec{
+	name = "syndicate megaphone";
+	pixel_y = 1
+	},
 /turf/open/floor/carpet/red_gold,
 /area/ship/bridge)
 "eo" = (
@@ -809,6 +826,10 @@
 /obj/item/clothing/under/syndicate/sniper,
 /obj/item/autosurgeon/syndicate,
 /obj/item/organ/cyberimp/eyes/hud/diagnostic,
+/obj/item/megaphone/sec{
+	name = "syndicate megaphone";
+	pixel_y = 1
+	},
 /turf/open/floor/carpet/red_gold,
 /area/ship/bridge)
 "gN" = (
@@ -821,6 +842,15 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk/over/plated_catwalk/dark,
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
 /turf/open/floor/plating,
 /area/ship/hallway/central)
 "gP" = (
@@ -898,6 +928,7 @@
 	name = "recreation package"
 	},
 /obj/effect/turf_decal/spline/plain/opaque/syndiered,
+/obj/item/reagent_containers/food/snacks/rationpack,
 /turf/open/floor/plasteel/tech,
 /area/ship/cargo/port)
 "hp" = (
@@ -1187,13 +1218,18 @@
 /turf/open/floor/carpet/royalblack,
 /area/ship/bridge)
 "kv" = (
+/obj/structure/spider/stickyweb,
+/obj/structure/closet/crate/large{
+	name = "Suspicious looking crate"
+	},
+/obj/item/storage/fish_case,
+/obj/item/fishing_rod/tech,
 /obj/item/toy/plush/moth/error{
 	pixel_y = 2;
 	pixel_x = 1;
 	name = "Captain Error";
 	desc = "An adorable mothperson plushy. It's a BUG! Just like whole build might need some fixes"
 	},
-/obj/structure/spider/stickyweb,
 /turf/open/floor/plating,
 /area/ship/security/dock)
 "kI" = (
@@ -1271,23 +1307,21 @@
 /turf/open/floor/wood/walnut,
 /area/ship/crew/canteen)
 "ll" = (
-/obj/item/reagent_containers/food/snacks/meat/slab/monkey{
-	pixel_y = -9;
-	pixel_x = 2
-	},
-/obj/item/reagent_containers/food/snacks/meat/slab/monkey{
-	pixel_y = -5
-	},
-/obj/item/reagent_containers/food/snacks/meat/slab/monkey{
-	pixel_y = 0;
-	pixel_x = 2
-	},
 /obj/item/reagent_containers/food/condiment/flour,
 /obj/item/reagent_containers/food/condiment/sugar,
 /obj/machinery/light/small/directional/north,
 /obj/structure/closet/secure_closet/freezer,
 /obj/item/storage/fancy/egg_box,
 /obj/item/storage/fancy/egg_box,
+/obj/item/reagent_containers/food/condiment/rice,
+/obj/item/reagent_containers/food/condiment/rice,
+/obj/item/reagent_containers/food/condiment/rice,
+/obj/item/reagent_containers/food/condiment/soymilk,
+/obj/item/reagent_containers/food/condiment/soysauce,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/snacks/fishmeat,
+/obj/item/reagent_containers/food/snacks/fishmeat,
+/obj/item/reagent_containers/food/snacks/fishmeat,
 /turf/open/floor/plasteel/patterned/brushed,
 /area/ship/crew/canteen)
 "lo" = (
@@ -1525,6 +1559,14 @@
 	pixel_y = 4
 	},
 /obj/item/reagent_containers/food/condiment/saltshaker,
+/obj/item/reagent_containers/food/snacks/onigiri{
+	pixel_y = 16;
+	pixel_x = -7
+	},
+/obj/item/reagent_containers/food/snacks/onigiri{
+	pixel_y = 13;
+	pixel_x = -7
+	},
 /turf/open/floor/wood/walnut,
 /area/ship/crew/canteen)
 "nq" = (
@@ -2372,6 +2414,9 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
 /turf/open/floor/plating,
 /area/ship/hallway/central)
 "uJ" = (
@@ -2936,9 +2981,11 @@
 /area/ship/science)
 "Av" = (
 /obj/machinery/suit_storage_unit/inherit/industrial,
-/obj/item/clothing/suit/space/hardsuit/syndi/hl,
 /obj/item/tank/jetpack/oxygen/security{
 	name = "Suspicious looking jetpack (oxygen)"
+	},
+/obj/item/clothing/suit/space/hardsuit/syndi/sbg{
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 30, "energy" = 40, "bomb" = 35, "bio" = 100, "rad" = 50, "fire" = 50, "acid" = 90)
 	},
 /turf/open/floor/carpet/red_gold,
 /area/ship/bridge)
@@ -3920,6 +3967,12 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
 /turf/open/floor/plating,
 /area/ship/security/dock)
 "Kg" = (
@@ -4019,6 +4072,9 @@
 	},
 /obj/effect/turf_decal/spline/plain/opaque/syndiered{
 	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
@@ -4241,10 +4297,15 @@
 "NC" = (
 /obj/structure/table/reinforced,
 /obj/machinery/microwave{
-	pixel_y = 11
+	pixel_y = 13;
+	pixel_x = -3
 	},
 /obj/machinery/camera/autoname{
 	dir = 5
+	},
+/obj/item/kitchen/knife{
+	pixel_y = 4;
+	pixel_x = 12
 	},
 /turf/open/floor/plasteel/patterned/brushed,
 /area/ship/crew/canteen)
@@ -4566,6 +4627,22 @@
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/ship/cargo)
+"RR" = (
+/obj/structure/catwalk/over/plated_catwalk/dark,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/open/floor/plating,
+/area/ship/security/dock)
 "RT" = (
 /obj/effect/turf_decal/corner/transparent/syndiered/bordercorner{
 	icon_state = "bordercolorcorner";
@@ -4939,6 +5016,10 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 5
 	},
+/obj/machinery/reagentgrinder{
+	pixel_y = 19;
+	pixel_x = -8
+	},
 /turf/open/floor/wood/walnut,
 /area/ship/crew/canteen)
 "VQ" = (
@@ -4973,7 +5054,9 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
-/obj/item/modular_computer/laptop/preset/civilian,
+/obj/item/modular_computer/laptop/preset/civilian{
+	pixel_y = 3
+	},
 /turf/open/floor/wood/walnut,
 /area/ship/crew/canteen)
 "Wl" = (
@@ -5968,7 +6051,7 @@ GN
 UL
 dh
 Ka
-GN
+RR
 GN
 UL
 pc
@@ -6002,7 +6085,7 @@ PL
 dm
 XX
 PL
-PL
+dY
 PL
 dm
 XX
@@ -6077,7 +6160,7 @@ hg
 hg
 iM
 Hq
-YU
+kv
 xn
 ae
 ae
@@ -6111,7 +6194,7 @@ hg
 hg
 jD
 Hq
-kv
+YU
 xn
 ae
 ae
@@ -6192,7 +6275,7 @@ ae
 QL
 QL
 QL
-QL
+vA
 rz
 IK
 tr
@@ -6280,7 +6363,7 @@ hg
 hg
 hg
 My
-xn
+Ot
 xn
 ae
 ae
@@ -6442,7 +6525,7 @@ vd
 vd
 lI
 vd
-lF
+FH
 tQ
 kI
 tQ
