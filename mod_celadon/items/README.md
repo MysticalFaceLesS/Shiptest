@@ -12,7 +12,7 @@
 <!-- Название мода. Не важно на русском или на английском. -->
 ## Items
 
-ID мода: ITEMS
+ID мода: CELADON_ITEMS
 <!--
   Название модпака прописными буквами, СОЕДИНЁННЫМИ_ПОДЧЁРКИВАНИЕМ,
   которое ты будешь использовать для обозначения файлов.
@@ -28,7 +28,7 @@ ID мода: ITEMS
 
 ### Изменения *кор кода*
 
-- `code/modules/mob/living.dm`: `proc/overriden_proc`, `var/overriden_var`
+- Отсутствуют
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -39,8 +39,7 @@ ID мода: ITEMS
 
 ### Оверрайды
 
-- `mods/_master_files/sound/my_cool_sound.ogg`
-- `mods/_master_files/code/my_modular_override.dm`: `proc/overriden_proc`, `var/overriden_var`
+- Отсутствуют
 <!--
   Если ты добавлял новый модульный оверрайд, его нужно указать здесь.
   Здесь указываются оверрайды в твоём моде и папке `_master_files`
@@ -50,7 +49,12 @@ ID мода: ITEMS
 
 ### Дефайны
 
-- `code/__defines/~mods/items.dm`: `ITEMS_SPEED_MULTIPLIER`, `ITEMS_SPEED_BASE`
+Лежат в модпаке дефайнов
+- GLOBAL_VAR_INIT
+- TIME_OFFSET
+- proc/Ceiling
+- proc/worldtime2text
+
 <!--
   Если требовалось добавить какие-либо дефайны, укажи файлы,
   в которые ты их добавил, а также перечисли имена.
