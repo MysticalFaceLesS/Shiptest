@@ -20,6 +20,9 @@ ID мода: CELADON_DEFINES
 
 ### Описание мода
 
+Глобальные вещи
+`mod_celadon\_DEFINES\code\_DEFINES\_globals.dm`
+
 Этот мод нужен для хранения глобальных дефайнов или просто дефайнов модпаков, использующихся больше 1 раза
 `mod_celadon\_defines\code\_defines\cards_ids.dm`: id карты
 `mod_celadon\_defines\code\_defines\access.dm`: коды доступов
@@ -33,7 +36,11 @@ ID мода: CELADON_DEFINES
 `mod_celadon\_defines\code\_defines\fov.dm`
 `mod_celadon\_defines\code\_defines\layers.dm`
 
+Математика
+`mod_celadon\_DEFINES\code\_DEFINES\maths.dm`
 
+Время
+`mod_celadon\_DEFINES\code\_DEFINES\time.dm`
 
 
 <!--
