@@ -44,6 +44,8 @@ EDIT: `code\game\machinery\shuttle\shuttle_engine_types.dm`: `fuel_use`, `thrust
 EDIT: `code\modules\research\techweb\all_nodes.dm`: `research_costs`, `export_price`, `prereq_ids`
 - Универсальная плата вендоров:
 ADD: `code\game\objects\items\circuitboards\machine_circuitboards.dm` : `/obj/item/circuitboard/machine/vendor`
+- Уменьшение цены еды в карго:
+EDIT: `code\modules\cargo\packs\food.dm` : `/datum/supply_pack/food/`
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -85,7 +87,7 @@ ADD: `code\game\objects\items\circuitboards\machine_circuitboards.dm` : `/obj/it
 
 ### Авторы:
 
-Кинетик Крашер, универасльная вендор плата - Yata9arasu, двигатели, рад. коллекторы - RalseiDreemuurr
+Кинетик Крашер, универасльная вендор плата, цены карго - Yata9arasu, двигатели, рад. коллекторы - RalseiDreemuurr
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.
