@@ -85,7 +85,7 @@ ADD: `code\game\objects\items\circuitboards\machine_circuitboards.dm` : `/obj/it
 
 ### Авторы:
 
-Кинетик Крашер, универасльная вендор плата - Yata9arasu, двигатели, рад. коллекторы - RalseiDreemuurr
+Кинетик Крашер, универасльная вендор плата, одежда ЦК - Yata9arasu, двигатели, рад. коллекторы - RalseiDreemuurr
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.
