@@ -332,15 +332,15 @@ var/timer = 20
 	set category = "Эмоции"
 	emote_with_delay("scream", timer)
 
-/mob/living/carbon/human/proc/emote_pur()
-	set name = "~ Мурчать "
+/mob/living/carbon/human/proc/emote_purr()
+	set name = "~ Мурчать"
 	set category = "Эмоции"
-	emote_with_delay("pur", timer)
+	emote_with_delay("purr", timer)
 
-/mob/living/carbon/human/proc/emote_purlong()
-	set name = "~ Мурчать дольше "
+/mob/living/carbon/human/proc/emote_purrl()
+	set name = "~ Мурчать дольше"
 	set category = "Эмоции"
-	emote_with_delay("purlong", timer)
+	emote_with_delay("purrl", timer)
 
 /mob/living/carbon/human/verb/emote_hiss()
 	set name = "~ Шипеть"
