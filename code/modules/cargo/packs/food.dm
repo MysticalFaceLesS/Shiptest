@@ -250,7 +250,7 @@
 	desc = "Supplies for growing a great garden! Contains two bottles of ammonia, two Plant-B-Gone spray bottles, a hatchet, cultivator, plant analyzer, as well as a pair of leather gloves and a botanist's apron."
 // [CELADON-EDIT] - CELADON_BALANCE
 //	cost = 1500 - ORIGINAL
-	cost = 750
+	cost = 500
 // [CELADON-EDIT]
 	contains = list(/obj/item/reagent_containers/spray/plantbgone,
 					/obj/item/reagent_containers/spray/plantbgone,
@@ -270,7 +270,7 @@
 	desc = "Contains a scythe, gasmask, and two anti-weed defoliant grenades, for when your garden grows out of control."
 // [CELADON-EDIT] - CELADON_BALANCE
 //	cost = 1500 - ORIGINAL
-	cost = 750
+	cost = 500
 // [CELADON-EDIT]
 	contains = list(/obj/item/scythe,
 					/obj/item/clothing/mask/gas,
@@ -284,7 +284,7 @@
 	desc = "Big things have small beginnings. Contains fourteen different seeds."
 // [CELADON-EDIT] - CELADON_BALANCE
 //	cost = 2000 - ORIGINAL
-	cost = 750
+	cost = 500
 // [CELADON-EDIT]
 	contains = list(/obj/item/seeds/chili,
 					/obj/item/seeds/cotton,
@@ -308,7 +308,7 @@
 	desc = "Any entrepreneuring botanist's dream. Contains eleven different seeds, including two mystery seeds!"
 // [CELADON-EDIT] - CELADON_BALANCE
 //	cost = 3000 - ORIGINAL
-	cost = 1500
+	cost = 1000
 // [CELADON-EDIT]
 	contains = list(/obj/item/seeds/nettle,
 					/obj/item/seeds/plump,
