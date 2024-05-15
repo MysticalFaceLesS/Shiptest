@@ -23,6 +23,6 @@
 
 
 // Дополнение к code/__DEFINES/species_clothing_defines.dm
-#define TAJARA_MASK_PATH 'mod_celadon/tajara/icons/clothing/onmob_mask_tajara'
-#define TAJARA_HEAD_PATH 'mod_celadon/tajara/icons/clothing/onmob_head_tajara'
-#define TAJARA_SUIT_PATH 'mod_celadon/tajara/icons/clothing/onmob_suit_tajara'
+#define TAJARA_MASK_PATH 'mod_celadon/tajara/icons/clothing/onmob_mask_tajara.dmi'
+#define TAJARA_HEAD_PATH 'mod_celadon/tajara/icons/clothing/onmob_head_tajara.dmi'
+#define TAJARA_SUIT_PATH 'mod_celadon/tajara/icons/clothing/onmob_suit_tajara.dmi'
