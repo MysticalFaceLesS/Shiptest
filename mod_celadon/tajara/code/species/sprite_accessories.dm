@@ -196,16 +196,14 @@
 	body_zone = BODY_ZONE_CHEST
 	secondary_color = TRUE
 
-/datum/sprite_accessory/tajara_tail_animated
+/datum/sprite_accessory/tails_animated/tajara
 	icon = 'mod_celadon/tajara/icons/tajara_tail.dmi'
-	body_zone = BODY_ZONE_CHEST
-	secondary_color = TRUE
 
 /datum/sprite_accessory/tails/tajara/longnostrips
 	name = "Long no strips"
 	icon_state = "longnostrips"
 
-/datum/sprite_accessory/tajara_tail_animated/longnostrips
+/datum/sprite_accessory/tails_animated/tajara/longnostrips
 	name = "Long no strips"
 	icon_state = "longnostrips"
 
@@ -213,7 +211,7 @@
 	name = "Long"
 	icon_state = "long"
 
-/datum/sprite_accessory/tajara_tail_animated/long
+/datum/sprite_accessory/tails_animated/tajara/long
 	name = "Long"
 	icon_state = "long"
 
@@ -221,7 +219,7 @@
 	name = "Middle"
 	icon_state = "middle"
 
-/datum/sprite_accessory/tajara_tail_animated/middle
+/datum/sprite_accessory/tails_animated/tajara/middle
 	name = "Middle"
 	icon_state = "middle"
 
@@ -229,7 +227,7 @@
 	name = "Short"
 	icon_state = "short"
 
-/datum/sprite_accessory/tajara_tail_animated/short
+/datum/sprite_accessory/tails_animated/tajara/short
 	name = "Short"
 	icon_state = "short"
 

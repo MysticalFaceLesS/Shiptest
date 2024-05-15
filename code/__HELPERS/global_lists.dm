@@ -56,7 +56,7 @@
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_ears_markings, GLOB.tajara_ears_markings_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_head_markings, GLOB.tajara_head_markings_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/tajara, GLOB.tajara_tail_list)
-	init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_tail_animated, GLOB.tajara_animated_tail_list)
+	init_sprite_accessory_subtypes(/datum/sprite_accessory/tails_animated/tajara, GLOB.tajara_animated_tail_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_hairs, GLOB.tajara_hairs_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_ears, GLOB.tajara_ears_list)
 	// [/CELADON-ADD]

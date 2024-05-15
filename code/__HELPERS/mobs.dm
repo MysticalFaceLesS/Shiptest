@@ -108,7 +108,7 @@
 	if(!GLOB.tajara_tail_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/tajara, GLOB.tajara_tail_list)
 	if(!GLOB.tajara_animated_tail_list.len)
-		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_tail_animated, GLOB.tajara_animated_tail_list)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tails_animated/tajara, GLOB.tajara_animated_tail_list)
 	if(!GLOB.tajara_hairs_list.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_hairs, GLOB.tajara_hairs_list)
 	if(!GLOB.tajara_ears_list.len)
