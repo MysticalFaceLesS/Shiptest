@@ -1,7 +1,7 @@
 /mob/living/silicon/robot
 	var/sitting = 0
 	var/bellyup = 0
-	var/has_reststyle = FALSE
+	var/has_reststyle = TRUE
 
 /obj/item/robot_module
 	var/hasrest = FALSE //For the new borgs
@@ -28,6 +28,18 @@
 			bellyup = 1
 	update_icons()
 
+
+/mob/living/silicon/robot/update_resting()
+	if(sitting)
+		ADD_TRAIT(src, TRAIT_IMMOBILIZED, TRAIT_FLOORED)
+	if(bellyup)
+		ADD_TRAIT(src, TRAIT_IMMOBILIZED, TRAIT_FLOORED)
+	if(resting)
+		ADD_TRAIT(src, TRAIT_IMMOBILIZED, TRAIT_FLOORED)
+	else if (!sitting && !bellyup && !resting)
+		REMOVE_TRAIT(src, TRAIT_IMMOBILIZED, TRAIT_FLOORED)
+	return ..()
+
 /mob/living/silicon/robot/update_icons()
 	. = ..()
 	if(client && stat != DEAD && (module.hasrest == TRUE))
@@ -36,13 +48,15 @@
 				icon_state = "[module.cyborg_base_icon]-sit"
 			if(bellyup)
 				icon_state = "[module.cyborg_base_icon]-bellyup"
-			else if(!sitting && !bellyup)
+			if(resting)
 				icon_state = "[module.cyborg_base_icon]-rest"
 			cut_overlays()
 		else if(body_position == 0)
 			icon_state = "[module.cyborg_base_icon]"
 		else
 			icon_state = "[module.cyborg_base_icon]"
+	if(stat == DEAD && module.hasrest == TRUE)
+		icon_state = "[module.cyborg_base_icon]-wreck"
 
 /mob/living/silicon/robot/set_resting()
 	. = ..()
@@ -55,3 +69,10 @@
 /mob/living/silicon/robot/on_standing_up()
 	. = ..()
 	update_icons()
+
+/mob/living/silicon/death(gibbed)
+	diag_hud_set_status()
+	diag_hud_set_health()
+	update_health_hud()
+	ADD_TRAIT(src, TRAIT_IMMOBILIZED, TRAIT_FLOORED)
+	return ..()
