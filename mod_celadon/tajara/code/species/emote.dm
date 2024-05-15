@@ -1,6 +1,7 @@
 /datum/emote/living/carbon/human/tajara/can_run_emote(mob/user, status_check = TRUE , intentional)
 	if(!..())
 		return FALSE
+
 	if (!istajara(user))
 		return FALSE
 
