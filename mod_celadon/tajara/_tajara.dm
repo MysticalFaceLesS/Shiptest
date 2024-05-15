@@ -1,7 +1,7 @@
 /datum/modpack/tajara
 	name = "Раса - Таяры"
-	desc = "Добавляет кисок."
-	author = "Много авторов. А ещё SuhEugene"
+	desc = "Таяраны - это \[Данные удалены\]. Они \[Данные удалены\]. И вообще \[Данные удалены\]."
+	author = "MrCat15352, DuckNeMyDuck, SuhEugene"
 
 /datum/modpack/tajara/initialize()
 	. = ..()
