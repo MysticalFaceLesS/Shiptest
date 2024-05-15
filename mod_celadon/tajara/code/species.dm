@@ -94,11 +94,6 @@
 	species_robotic_l_leg = /obj/item/bodypart/leg/left/robot/surplus
 	species_robotic_r_leg = /obj/item/bodypart/leg/right/robot/surplus
 
-// FIXME: TODO: Удалить, наверное не нужно
-// //some MORE shitcoding
-// /datum/species/tajara/handle_hair(mob/living/carbon/human/H, forced_colour)
-// 	return ..()
-
 /datum/species/tajara/random_name(gender,unique,lastname)
 	//code by @valtor0
 	/*
@@ -130,22 +125,6 @@
 	else if(prob(80))
 		full_name += " [pick(list("Anai-Sanday","Navarr-Sanday","Roky-Sanday","Shenuar-Sanday"))]" //"Энай-Сэндай","Наварр-Сэндай","Року-Сэндай","Шенуар-Сэндай"
 	return full_name
-
-/* эта шляпа нужна, если мы будем давать какие-то кнопки таяранам, которые слева сверху, по типу "вкл/выкл фонарик ПДА"
-
-/datum/species/tajara/on_species_gain(mob/living/carbon/C, datum/species/old_species, pref_load)
-	..()
-	if(ishuman(C))
-*/
-
-/* антипод функции выше - убираем кнопки\плюшки таяранам
-
-/datum/species/kepori/on_species_loss(mob/living/carbon/human/C, datum/species/new_species, pref_load)
-	if(keptackle)
-		keptackle.Remove(C)
-	qdel(C.GetComponent(/datum/component/tackler))
-	..()
-*/
 
 
 /datum/species/start_wagging_tail(mob/living/carbon/human/H)
