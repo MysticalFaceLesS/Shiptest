@@ -217,7 +217,7 @@
 		if(!real_engine.enabled)
 			continue
 // [CELADON-EDIT] - CELADON FIXES
-//thrust_used += real_engine.burn_engine(percentage, deltatime)
+//thrust_used += real_engine.burn_engine(percentage, deltatime) // CELADON-EDIT - ORIGINAL
 		var/engine_thrust = real_engine.burn_engine(percentage, deltatime)
 		thrust_used += engine_thrust
 		if(real_engine.engine_type == "plasma")
