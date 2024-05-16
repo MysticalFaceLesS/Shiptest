@@ -109,7 +109,6 @@
 	id = "Hamm_ext_win"
 	},
 /obj/structure/curtain/bounty,
-/obj/structure/grille,
 /turf/open/floor/plating,
 /area/ship/crew/dorm)
 "as" = (
@@ -454,6 +453,9 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plasteel/stairs,
 /area/ship/maintenance/central)
 "bQ" = (
@@ -542,7 +544,6 @@
 	dir = 1;
 	id = "Hamm_ext_win"
 	},
-/obj/structure/grille,
 /turf/open/floor/plating,
 /area/ship/crew/canteen/kitchen)
 "cl" = (
@@ -604,7 +605,6 @@
 /area/ship/cargo)
 "cy" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/structure/grille,
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/cargo/office)
 "cB" = (
@@ -851,7 +851,6 @@
 	dir = 1;
 	id = "Hamm_ext_win"
 	},
-/obj/structure/grille,
 /turf/open/floor/plating,
 /area/ship/security/prison)
 "en" = (
@@ -968,6 +967,9 @@
 	name = "old wooden crate"
 	},
 /obj/item/restraints/legcuffs/bola/tactical,
+/obj/item/storage/toolbox/emergency/old{
+	layer = 4
+	},
 /turf/open/floor/plating,
 /area/ship/engineering/engine)
 "fn" = (
@@ -1159,7 +1161,8 @@
 /area/ship/crew/janitor)
 "gO" = (
 /obj/structure/window/plasma/reinforced/unanchored{
-	explosion_block = 5
+	explosion_block = 5;
+	anchored = 1
 	},
 /obj/machinery/suit_storage_unit/inherit{
 	req_access_txt = "147;148"
@@ -1963,7 +1966,6 @@
 	dir = 4;
 	id = "Hamm_ext_win"
 	},
-/obj/structure/grille,
 /turf/open/floor/plating,
 /area/ship/cargo/office)
 "lY" = (
@@ -2084,7 +2086,6 @@
 /obj/machinery/door/poddoor/shutters{
 	id = "Hamm_cell1"
 	},
-/obj/structure/grille,
 /obj/structure/cable,
 /turf/open/floor/plating,
 /area/ship/security/prison)
@@ -2340,6 +2341,9 @@
 	},
 /obj/machinery/light/directional/north,
 /obj/effect/decal/cleanable/blood/drip,
+/obj/structure/window/plasma/reinforced/unanchored{
+	explosion_block = 5
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/security/prison)
 "oN" = (
@@ -2373,7 +2377,6 @@
 	dir = 4;
 	id = "Hamm_inn_win"
 	},
-/obj/structure/grille,
 /turf/open/floor/plating,
 /area/ship/bridge)
 "oX" = (
@@ -2800,7 +2803,6 @@
 	dir = 1;
 	id = "Hamm_ext_win"
 	},
-/obj/structure/grille,
 /turf/open/floor/plating,
 /area/ship/cargo/office)
 "sl" = (
@@ -2811,7 +2813,8 @@
 /obj/structure/closet/secure_closet{
 	icon_state = "armory";
 	name = "weapons locker";
-	req_access_txt = "3"
+	req_access_txt = "3";
+	anchored = 1
 	},
 /obj/item/ammo_box/magazine/m12g/small,
 /obj/item/storage/toolbox/ammo/a308,
@@ -2951,7 +2954,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/security/prison)
 "tb" = (
-/obj/structure/frame{
+/obj/structure/frame/machine{
 	anchored = 1
 	},
 /turf/open/floor/plating,
@@ -3073,7 +3076,7 @@
 /obj/effect/turf_decal/corner/opaque/yellow/border{
 	dir = 1
 	},
-/obj/machinery/computer/security,
+/obj/machinery/computer/atmos_control,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "tU" = (
@@ -3403,15 +3406,10 @@
 /area/ship/cargo/office)
 "wi" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/shutters{
-	dir = 1;
-	id = "Hamm_ext_win"
-	},
 /obj/machinery/door/poddoor/shutters/preopen{
 	explosion_block = 7;
 	id = "Armory"
 	},
-/obj/structure/grille,
 /turf/open/floor/plating,
 /area/ship/security/armory)
 "wl" = (
@@ -4012,6 +4010,7 @@
 	desc = "A spacious backpack with lots of pockets, worn by MaA's of an IntelQ Agency.";
 	name = "large MaA backpack"
 	},
+/obj/item/clothing/gloves/krav_maga/combatglovesplus,
 /turf/open/floor/carpet/red_gold,
 /area/ship/crew/crewtwo)
 "zM" = (
@@ -4579,7 +4578,6 @@
 	dir = 1;
 	id = "Hamm_ext_win"
 	},
-/obj/structure/grille,
 /turf/open/floor/plating,
 /area/ship/medical)
 "CH" = (
@@ -4755,7 +4753,8 @@
 /obj/structure/closet/secure_closet{
 	icon_state = "armory";
 	name = "weapons locker";
-	req_access_txt = "3"
+	req_access_txt = "3";
+	anchored = 1
 	},
 /obj/machinery/light/directional/north,
 /obj/item/gun/ballistic/shotgun/bulldog/inteq,
@@ -4814,7 +4813,6 @@
 	id = "Hamm_ext_win"
 	},
 /obj/structure/curtain/bounty,
-/obj/structure/grille,
 /turf/open/floor/plating,
 /area/ship/crew/dorm)
 "DT" = (
@@ -5183,7 +5181,6 @@
 	},
 /obj/effect/spawner/structure/window/reinforced,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/grille,
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/cargo/office)
 "FQ" = (
@@ -5233,7 +5230,8 @@
 /obj/structure/closet/secure_closet{
 	icon_state = "armory";
 	name = "weapons locker";
-	req_access_txt = "3"
+	req_access_txt = "3";
+	anchored = 1
 	},
 /obj/item/grenade/flashbang,
 /obj/item/grenade/flashbang,
@@ -5318,7 +5316,7 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/structure/frame{
+/obj/structure/frame/machine{
 	anchored = 1
 	},
 /turf/open/floor/plating,
@@ -5840,7 +5838,7 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/structure/frame{
+/obj/structure/frame/machine{
 	anchored = 1
 	},
 /turf/open/floor/plating,
@@ -6138,18 +6136,9 @@
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/cargo/office)
 "LT" = (
-/obj/structure/closet/secure_closet{
-	icon_state = "sec";
-	name = "equipment locker";
-	req_access_txt = "3"
-	},
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 1
 	},
-/obj/item/clothing/head/beret/sec/warden,
-/obj/item/clothing/suit/armor/vest/security/warden/alt/nt,
-/obj/item/clothing/under/rank/security/warden/nt,
-/obj/item/clothing/gloves/krav_maga/sec,
 /turf/open/floor/plasteel/dark,
 /area/ship/security/prison)
 "LV" = (
@@ -6433,10 +6422,10 @@
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/cargo/office)
 "Or" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/siphon/on{
+/obj/structure/catwalk/over/plated_catwalk/dark,
+/obj/machinery/atmospherics/components/unary/outlet_injector/on{
 	dir = 4
 	},
-/obj/structure/catwalk/over/plated_catwalk/dark,
 /turf/open/floor/plating,
 /area/ship/engineering/electrical)
 "Ov" = (
@@ -6456,7 +6445,8 @@
 /obj/structure/closet/secure_closet{
 	icon_state = "armory";
 	name = "weapons locker";
-	req_access_txt = "3"
+	req_access_txt = "3";
+	anchored = 1
 	},
 /obj/item/gun/ballistic/shotgun/automatic/combat{
 	pixel_y = -6
@@ -6880,11 +6870,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/closed/wall/mineral/plastitanium/interior,
 /area/ship/crew/canteen/kitchen)
-"QY" = (
-/obj/machinery/pipedispenser,
-/obj/structure/catwalk/over/plated_catwalk/dark,
-/turf/open/floor/plating,
-/area/ship/engineering/atmospherics)
 "Rg" = (
 /obj/machinery/vending/boozeomat,
 /turf/open/floor/plastic,
@@ -6901,7 +6886,7 @@
 /obj/item/clothing/head/inteq_peaked,
 /obj/item/clothing/head/inteq_peaked,
 /obj/item/clothing/suit/armor/vest/inteq,
-/obj/item/clothing/suit/armor/vest/marine,
+/obj/item/clothing/suit/armor/vest/inteq,
 /turf/open/floor/plasteel/dark,
 /area/ship/security/prison)
 "Rx" = (
@@ -6927,7 +6912,6 @@
 /obj/machinery/door/poddoor/shutters{
 	id = "Hamm_inn_win"
 	},
-/obj/structure/grille,
 /turf/open/floor/plating,
 /area/ship/bridge)
 "Sp" = (
@@ -6950,6 +6934,9 @@
 /obj/structure/catwalk/over/plated_catwalk/dark,
 /obj/structure/catwalk/over/plated_catwalk/dark,
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plating,
 /area/ship/engineering/engine)
 "Ss" = (
@@ -7053,7 +7040,6 @@
 	dir = 4;
 	id = "Hamm_ext_win"
 	},
-/obj/structure/grille,
 /turf/open/floor/plating,
 /area/ship/security/prison)
 "Tg" = (
@@ -7130,7 +7116,6 @@
 	dir = 1;
 	id = "Hamm_ext_win"
 	},
-/obj/structure/grille,
 /turf/open/floor/plating,
 /area/ship/crew)
 "TN" = (
@@ -7331,9 +7316,6 @@
 	id = "Engine";
 	name = "Engine Blast Door"
 	},
-/obj/item/storage/toolbox/emergency/old{
-	layer = 4
-	},
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
@@ -7482,7 +7464,6 @@
 	dir = 4;
 	id = "Hamm_ext_win"
 	},
-/obj/structure/grille,
 /turf/open/floor/plating,
 /area/ship/engineering/communications)
 "VR" = (
@@ -7659,7 +7640,8 @@
 	},
 /obj/structure/window/plasma/reinforced/spawner/north,
 /obj/structure/window/plasma/reinforced/unanchored{
-	explosion_block = 5
+	explosion_block = 5;
+	anchored = 1
 	},
 /obj/structure/closet/crate/secure/weapon{
 	req_access_txt = "1"
@@ -8016,7 +7998,6 @@
 	dir = 1;
 	id = "Hamm_ext_win"
 	},
-/obj/structure/grille,
 /turf/open/floor/plating,
 /area/ship/crew/crewtwo)
 "Ze" = (
@@ -8473,7 +8454,7 @@ Th
 Yn
 dS
 kn
-nb
+zl
 cZ
 zl
 zl
@@ -8583,7 +8564,7 @@ hK
 Fn
 MM
 dy
-QY
+nb
 MR
 fn
 Vx

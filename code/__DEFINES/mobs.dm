@@ -132,6 +132,9 @@
 #define BODYTYPE_DIGITIGRADE (1<<4) //Cancer
 #define BODYTYPE_KEPORI (1<<5) //Just Kepori
 #define BODYTYPE_VOX (1<<6) //Big Vox
+// [CELADON-ADD] - TAJARA
+#define BODYTYPE_TAJARA (1<<7) //Fluffy Ass
+// [/CELADON-ADD]
 
 // Health/damage defines
 #define MAX_LIVING_HEALTH 100
