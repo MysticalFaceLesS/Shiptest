@@ -1,8 +1,6 @@
 // *******************
 // 		Cloaks
 //********************
-/obj/item/clothing/head/hooded/cloakhood/tajaran
-
 /obj/item/clothing/suit/hooded/cloak/tajaran
 	icon = 'mod_celadon/items/icons/obj/tajara_items.dmi'
 	mob_overlay_icon = 'mod_celadon/items/icons/overlay/tajara_items_overlay.dmi'
@@ -125,14 +123,6 @@
 	siemens_coefficient = 0.7
 	armor = list("melee" = 10, "bullet" = 10, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
-/obj/item/clothing/under/tajaran/pra_uniform
-	name = "republican army uniform"
-	desc = "A military uniform used by the forces of Grand People's Army."
-	icon_state = "prauniform"
-	item_state = "prauniform"
-	siemens_coefficient = 0.7
-	armor = list("melee" = 10, "bullet" = 10, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-
 /obj/item/clothing/under/tajaran/fancy
 	name = "fancy uniform"
 	desc = "Worn by princes, barons and lords of Adhomai, now in stores near you!"
@@ -169,16 +159,16 @@
 	icon_state = "taj_dress_red"
 	item_state = "taj_dress_red"
 
+/obj/item/clothing/under/dress/tajaran/fancy/black
+	desc = "The classical dress of the Adhomian royalty, only to be worn during the special occassions. This one is dark black."
+	icon_state = "taj_dress_fancy_dark"
+	item_state = "taj_dress_fancy_dark"
+
 /obj/item/clothing/under/dress/tajaran/fancy
 	name = "noble adhomian dress"
 	desc = "The classical dress of the Adhomian royalty, only to be worn during the special occassions. This one is crimson red."
 	icon_state = "taj_dress_fancy"
 	item_state = "taj_dress_fancy"
-
-/obj/item/clothing/under/dress/tajaran/fancy/black
-	desc = "The classical dress of the Adhomian royalty, only to be worn during the special occassions. This one is dark black."
-	icon_state = "taj_dress_fancy_dark"
-	item_state = "taj_dress_fancy_dark"
 
 // *******************
 // 		Suits
@@ -222,7 +212,7 @@
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman, /obj/item/t_scanner, /obj/item/radio)
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/exo
 	resistance_flags = NONE
-	supports_variations = DIGITIGRADE_VARIATION | VOX_VARIATION
+	supports_variations = DIGITIGRADE_VARIATION
 /*
 /obj/item/clothing/head/hooded/tajaran/wool
 	name = "adhomian wool coat"
@@ -317,7 +307,7 @@
 // 		Hand Watch
 //********************
 /obj/item/clothing/wrists/watch/tajaran
-	name = "adhomian watch"
+	name = "adhomian male watch"
 	desc = "An adhomian wrist watch made for male Tajara. Due to its use in the past wars, wrist watches are becoming more popular in Adhomai."
 	icon = 'mod_celadon/items/icons/obj/tajara_items.dmi'
 	icon_state = "watch_taj-male"
@@ -348,7 +338,7 @@
 
 /obj/item/pocketwatch/adhomai
 	name = "adhomian watch"
-	desc = "A watch made in the traditional adhomian style. It can be stored in a pocket or worn around the neck."
+	desc = "A watch made in the traditional adhomian style. It can be stored in a pocket."
 	icon_state = "adhomai_clock"
 	item_state = "adhomai_clock"
 	slot_flags = ITEM_SLOT_LPOCKET | ITEM_SLOT_RPOCKET
