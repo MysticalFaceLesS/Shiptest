@@ -199,6 +199,13 @@
 /datum/sprite_accessory/tails_animated/tajara
 	icon = 'mod_celadon/tajara/icons/tajara_tail.dmi'
 
+/datum/sprite_accessory/tails/tajara/hudge
+	name = "Hudge"
+	icon_state = "leopard"
+
+/datum/sprite_accessory/tails_animated/tajara/hudge
+	name = "Hudge"
+	icon_state = "leopard"
 /datum/sprite_accessory/tails/tajara/longnostrips
 	name = "Long no strips"
 	icon_state = "longnostrips"

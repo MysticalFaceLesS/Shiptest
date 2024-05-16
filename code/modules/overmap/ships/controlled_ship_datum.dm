@@ -216,7 +216,13 @@
 	for(var/obj/machinery/power/shuttle/engine/real_engine as anything in shuttle_port.get_engines())
 		if(!real_engine.enabled)
 			continue
-		thrust_used += real_engine.burn_engine(percentage, deltatime)
+// [CELADON-EDIT] - CELADON FIXES
+//thrust_used += real_engine.burn_engine(percentage, deltatime) // CELADON-EDIT - ORIGINAL
+		var/engine_thrust = real_engine.burn_engine(percentage, deltatime)
+		thrust_used += engine_thrust
+		if(real_engine.engine_type == "plasma")
+			thrust_used += real_engine.plasma_thrust(percentage, deltatime)
+// [/CELADON-EDIT]
 
 	thrust_used = thrust_used / (shuttle_port.turf_count * 100)
 	est_thrust = thrust_used / percentage * 100 //cheeky way of rechecking the thrust, check it every time it's used
