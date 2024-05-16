@@ -36,6 +36,7 @@ ID мода: CELADON_FIXES
 
 - EDIT: `code\modules\projectiles\ammunition\caseless\_caseless.dm`: `/obj/item/ammo_casing/caseless/on_eject()`
 
+- ADD: `code\modules\clothing\suits\hoodies.dm`: `/obj/item/clothing/suit/hooded/hoodie/rilena` -> чиним офов, пропущенный стэйт иконки.
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -77,7 +78,7 @@ ID мода: CELADON_FIXES
 
 ### Авторы:
 
-RalseiDreemuurr, Mirag1993 , Корольный крыс
+RalseiDreemuurr, Mirag1993 , Корольный крыс, MrCat15352
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.

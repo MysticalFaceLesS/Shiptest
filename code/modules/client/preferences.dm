@@ -1034,13 +1034,19 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<tr><td colspan=3><hr></td></tr>"
 
 			dat += "<tr><td colspan=3><hr></td></tr>"
-			dat += "<tr><td><b>Name</b></td>"
+			// [CELADON-EDIT] - CELADON_QOL
+			// dat += "<tr><td><b>Name</b></td>" // CELADON-EDIT - ORIGINAL
+			dat += "<tr><td align='middle'><b>Name</b></td>"
+			// [/CELADON-EDIT]
 			dat += "<td><b>Restricted Jobs</b></td>"
 			dat += "<td><b>Description</b></td>"
 			dat += "<tr><td colspan=3><hr></td></tr>"
 			for(var/gear_name in LC.gear)
 				var/datum/gear/G = LC.gear[gear_name]
-				dat += "<tr style='vertical-align:top;'><td width=20%><a style='white-space:normal;' [(G.display_name in equipped_gear) ? "class='linkOn' " : ""]href='?_src_=prefs;preference=gear;toggle_gear=[G.display_name]'>[G.display_name]</a></td><td>"
+				// [CELADON-EDIT] - CELADON_QOL
+				// dat += "<tr style='vertical-align:top;'><td width=20%><a style='white-space:normal;' [(G.display_name in equipped_gear) ? "class='linkOn' " : ""]href='?_src_=prefs;preference=gear;toggle_gear=[G.display_name]'>[G.display_name]</a></td><td>" // CELADON-EDIT - ORIGINAL
+				dat += "<tr style='vertical-align:top;'><td align='middle' width=20%><a style='white-space:normal;' [(G.display_name in equipped_gear) ? "class='linkOn' " : ""]href='?_src_=prefs;preference=gear;toggle_gear=[G.display_name]'>[G.display_name]</a><br/><img src=data:image/jpeg;base64,[G.base64icon] class='loadoutPreview'><hr></td><td>"
+				// [/CELADON-EDIT]
 				if(G.allowed_roles)
 					dat += "<font size=2>"
 					var/list/allowedroles = list()
