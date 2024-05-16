@@ -90,6 +90,9 @@
 /obj/item/clothing/suit/hooded/hoodie/rilena
 	name = "K4L1 hoodie"
 	desc = "A hoodie themed to look like K4L1 from the popular webseries RILENA. It has a comfy pocket for keeping your hands warm."
+	// [CELADON-ADD] - CELADON_FIXES - чиним код офов
+	icon_state = "hoodie_rilena"
+	// [/CELADON-ADD]
 	item_state = "hoodie_rilena"
 	hoodtype = /obj/item/clothing/head/hooded/hood/rilena
 
