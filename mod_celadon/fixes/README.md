@@ -33,6 +33,9 @@ ID мода: CELADON_FIXES
 
 - ADD: `code\modules\mining\equipment\kinetic_crusher.dm`: `/obj/item/kinetic_crusher/syndie_crusher/update_icon_state()` -> `..()`
 - REMOVE: `code\modules\mining\equipment\kinetic_crusher.dm`: `/obj/item/kinetic_crusher/syndie_crusher/update_icon_state()` -> `return ..()`
+
+- EDIT: `code\modules\projectiles\ammunition\caseless\_caseless.dm`: `/obj/item/ammo_casing/caseless/on_eject()`
+
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -74,7 +77,7 @@ ID мода: CELADON_FIXES
 
 ### Авторы:
 
-RalseiDreemuurr, Mirag1993
+RalseiDreemuurr, Mirag1993 , Корольный крыс
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.

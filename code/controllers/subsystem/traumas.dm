@@ -182,6 +182,20 @@ SUBSYSTEM_DEF(traumas)
 		"spiders" = typecacheof(list(/datum/species/spider))
 	)
 
+	// [CELADON-ADD] - TAJARA
+
+	// Мне это кажется более крутым решением, чем оверрайд Initialize
+	// делать, потому что дополнить его в начале невозможно, а при
+	// дополнении в конце, мы дополняем после того как отрепорчено,
+	// что подсистема успешно запустилась.
+
+	// Это единственное место где можно воткнуться после инициализации,
+	// но перед оповещением что подсистема запущена
+
+	init_tajara_mod()
+
+	// [/CELADON-ADD]
+
 	return ..()
 
 ///Creates a regular expression to match against the given phobia
