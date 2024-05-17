@@ -323,14 +323,24 @@ var/timer = 20
 	emote_with_delay("grumble", timer)
 
 /mob/living/carbon/human/verb/emote_mumble()
-	set name = "~ Бармотать"
+	set name = "~ Бормотать"
 	set category = "Эмоции"
 	emote_with_delay("mumble", timer)
 
 /mob/living/carbon/human/verb/emote_scream()
-	set name = "> Кричать "
+	set name = "> Кричать"
 	set category = "Эмоции"
 	emote_with_delay("scream", timer)
+
+/mob/living/carbon/human/verb/emote_purr()
+	set name = "~ Мурчать"
+	set category = "Эмоции"
+	emote_with_delay("purr", timer)
+
+/mob/living/carbon/human/verb/emote_purrl()
+	set name = "~ Мурчать дольше"
+	set category = "Эмоции"
+	emote_with_delay("purrl", timer)
 
 /mob/living/carbon/human/verb/emote_hiss()
 	set name = "~ Шипеть"
@@ -362,10 +372,10 @@ var/timer = 20
 	set category = "Эмоции"
 	emote_with_delay("shrug", timer)
 
-// /mob/living/carbon/human/verb/emote_wag() // Lizard
-// 	set name = "< Махать хвостом >"
-// 	set category = "Эмоции"
-// 	emote_with_delay("wag", timer)
+/mob/living/carbon/human/verb/emote_wag() // Lizard, Tajara
+	set name = "< Махать хвостом >"
+	set category = "Эмоции"
+	emote_with_delay("wag", timer)
 
 /mob/living/carbon/human/verb/emote_wink()
 	set name = "~ Подмигнуть"

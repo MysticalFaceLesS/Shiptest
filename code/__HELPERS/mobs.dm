@@ -92,6 +92,29 @@
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/elzu_horns, GLOB.elzu_horns_list)
 	if(!GLOB.tails_list_elzu.len)
 		init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/elzu, GLOB.tails_list_elzu)
+	// [CELADON-ADD] - TAJARA
+	if(!GLOB.tajara_chest_markings_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_chest_markings, GLOB.tajara_chest_markings_list)
+	if(!GLOB.tajara_body_markings_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_body_markings, GLOB.tajara_body_markings_list)
+	if(!GLOB.tajara_facial_hairs_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_facial_hairs, GLOB.tajara_facial_hairs_list)
+	if(!GLOB.tajara_nose_markings_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_nose_markings, GLOB.tajara_nose_markings_list)
+	if(!GLOB.tajara_ears_markings_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_ears_markings, GLOB.tajara_ears_markings_list)
+	if(!GLOB.tajara_head_markings_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_head_markings, GLOB.tajara_head_markings_list)
+	if(!GLOB.tajara_tail_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tails/tajara, GLOB.tajara_tail_list)
+	if(!GLOB.tajara_animated_tail_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tails_animated/tajara, GLOB.tajara_animated_tail_list)
+	if(!GLOB.tajara_hairs_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_hairs, GLOB.tajara_hairs_list)
+	if(!GLOB.tajara_ears_list.len)
+		init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_ears, GLOB.tajara_ears_list)
+	// [/CELADON-ADD]
+
 	//For now we will always return none for tail_human and ears.
 	//if you don't keep this alphabetised I'm going to personally steal your shins and sell them online
 	return list(
@@ -127,8 +150,21 @@
 		"vox_head_quills" = pick(GLOB.vox_head_quills_list),
 		"vox_neck_quills" = pick(GLOB.vox_neck_quills_list),
 		"wings" = "None",
+		// [CELADON-ADD] - TAJARA - ,
+		"tajara_ears" = pick(GLOB.tajara_ears_list),
+		"tajara_hairs" = pick(GLOB.tajara_hairs_list),
+		"tajara_ears_markings" = pick(GLOB.tajara_ears_markings_list),
+		"tajara_head_markings" = pick(GLOB.tajara_head_markings_list),
+		"tajara_facial_hairs" = pick(GLOB.tajara_facial_hairs_list),
+		"tajara_nose_markings" = pick(GLOB.tajara_nose_markings_list),
+		"tajara_chest_markings" = pick(GLOB.tajara_chest_markings_list),
+		"tajara_body_markings" = pick(GLOB.tajara_body_markings_list),
+		"tajara_tail" = pick(GLOB.tajara_tail_list),
+		// [/CELADON-ADD] ,
 	)
 
+// [CELADON-REMOVE] - TAJARA - Не вызовет ошибок, но будет неправильным использованием. Правильно: /datum/species/random_hairstyle()
+/*
 /proc/random_hairstyle(gender)
 	switch(gender)
 		if(MALE)
@@ -146,6 +182,8 @@
 			return pick(GLOB.facial_hairstyles_female_list)
 		else
 			return pick(GLOB.facial_hairstyles_list)
+*/
+// [/CELADON-REMOVE]
 
 /proc/random_unique_name(gender, attempts_to_find_unique_name=10)
 	for(var/i in 1 to attempts_to_find_unique_name)
