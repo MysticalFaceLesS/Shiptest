@@ -155,7 +155,10 @@ const ShipContent = (_props, context) => {
             >
               <AnimatedNumber
                 value={speed}
-                format={(value) => value.toFixed(1)}
+                // [CELADON-EDIT] - CELADON FIXES
+                // format={(value) => value.toFixed(1)} // CELADON-EDIT - ORIGINAL
+                format={(value) => value.toFixed(2)}
+                // [/CELADON-EDIT]
               />
               Gm/s
             </ProgressBar>
@@ -240,7 +243,10 @@ const ShipContent = (_props, context) => {
             <Table.Cell>Max thrust per second:</Table.Cell>
             <Table.Cell>
               <AnimatedNumber
-                value={estThrust * 500}
+                // [CELADON-EDIT] - CELADON FIXES
+                // value={estThrust * 500} // CELADON-EDIT - ORIGINAL
+                value={estThrust * 1600}
+                // [/CELADON-EDIT]
                 format={(value) => value.toFixed(2)}
               />
               Gm/s²
@@ -465,15 +471,24 @@ const ShipControlContent = (_props, context) => {
             animated
           />
           <NumberInput
-            value={(burnPercentage / 100) * estThrust * 500}
+            // [CELADON-EDIT] CELADON FIXES
+            // value={(burnPercentage / 100) * estThrust * 500} // CELADON-EDIT - ORIGINAL
+            value={(burnPercentage / 100) * estThrust * 1600}
+            // [/CELADON-EDIT]
             minValue={0.01}
             step={0.01}
             // 5 times a second, 60 seconds in a minute (5 * 60 = 300)
-            maxValue={estThrust * 500}
+            // [CELADON-EDIT] CELADON FIXES
+            // maxValue={estThrust * 500} // CELADON-EDIT - ORIGINAL
+            maxValue={estThrust * 1600}
+            // [/CELADON-EDIT]
             unit="Gm/s²"
             onDrag={(e, value) =>
               act('change_burn_percentage', {
-                percentage: Math.round((value / (estThrust * 500)) * 100),
+                // [CELADON-EDIT] CELADON FIXES
+                // percentage: Math.round((value / (estThrust * 500)) * 100), // CELADON-EDIT - ORIGINAL
+                percentage: Math.round((value / (estThrust * 1600)) * 100),
+                // [/CELADON-EDIT]
               })
             }
             format={(value) => value.toFixed(2)}
