@@ -1,6 +1,6 @@
 // Black Detective
 /obj/item/clothing/head/fedora/det_hat/black
-	name = "detective's black fedora"
+	name = "detectives black fedora"
 	desc = "A really noir hat if you're a good guy. A really lame hat if you're not."
 	icon_state = "fedora"
 	item_state = "detective"
