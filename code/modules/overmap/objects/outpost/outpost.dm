@@ -123,7 +123,7 @@
 	else
 		// [CELADON-EDIT] - TAJARA
 		// switch(rand(1, 4)) // CELADON-EDIT - ORIGINAL
-		switch(rand(1, 5))
+		switch(rand(1, 4))
 		// [/CELADON-EDIT]
 			if(1)
 				person_name = pick(prob(50) ? GLOB.lizard_names_male : GLOB.lizard_names_female)
@@ -133,9 +133,9 @@
 				person_name = kepori_name()
 			if(4)
 				person_name = vox_name()
-			// [CELADON-ADD] - TAJARA - Я не уверен что оно вообще надо, но пусть будет
-			if(5)
-				person_name = pick(prob(50) ? GLOB.tajara_names_male : GLOB.tajara_names_female)
+			// [CELADON-ADD] - TAJARA - Я не уверен что оно вообще надо, но пусть будет - TODO найти списки имен таяр
+			// if(5)
+			// 	person_name = pick(prob(50) ? GLOB.tajara_names_male : GLOB.tajara_names_female)
 			// [/CELADON-ADD]
 
 	return "[person_name] [pick(GLOB.station_suffixes)]"
