@@ -48,7 +48,7 @@
 /datum/gear/accessory/suit/hooded/cloak/tajaran/maroon
 	display_name = "adhomian maroon cloak"
 	description = "A simple maroon colored Adhomian cloak."
-	path = /obj/item/clothing/head/hooded/cloakhood/tajaran/maroon
+	path = /obj/item/clothing/suit/hooded/cloak/tajaran/maroon
 
 // *******************
 // 		Costumes
