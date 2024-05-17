@@ -372,3 +372,18 @@
 		adhomian_day = FLOOR(current_day / 2, 1)
 		to_chat(usr, "You check your [src.name], glancing over at the watch face, reading the time to be '[adhomian_time]'. Today's date is the '[adhomian_day]th day of [adhomian_month], [adhomian_year]'.")
 
+// Rings
+/obj/item/clothing/gloves/ring/diamond
+	name = "diamond ring"
+	desc = "An expensive ring, studded with a diamond. Cultures have used these rings in courtship for a millenia."
+	icon_state = "ringdiamond"
+	item_state = "dring"
+
+/obj/item/clothing/gloves/ring/diamond/attack_self(mob/user)
+	to_chat(usr, "The [usr.name] gets down on one knee, presenting \the [src].</span>","<span class='warning'>You get down on one knee, presenting \the [src].")
+
+/obj/item/clothing/gloves/ring/silver
+	name = "silver ring"
+	desc = "A tiny silver ring, sized to wrap around a finger."
+	icon_state = "ringsilver"
+	item_state = "sring"

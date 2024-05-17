@@ -12,8 +12,6 @@
 					/obj/item/clothing/under/suit/burgundy, // A pair of each "fancy suit" color for variety
 					/obj/item/clothing/under/suit/white,
 					/obj/item/clothing/under/suit/white, // white is a weird color for a groom but some people are weird
-					/obj/item/clothing/under/suit/polychromic,
-					/obj/item/clothing/under/suit/polychromic, // in case you can't be satisfied with the most fitting choices, of course.
 					/obj/item/clothing/under/dress/wedding,
 					/obj/item/clothing/under/dress/wedding, // this is what you actually bought the crate for. You can't get these anywhere else.
 					/obj/item/clothing/under/dress/wedding/orange,
@@ -27,5 +25,7 @@
 					/obj/item/reagent_containers/food/drinks/bottle/champagne, //appropriate booze for a wedding
 					/obj/item/reagent_containers/food/snacks/store/cake/vanilla_cake, // we don't have a full wedding cake but this will do
 					// /obj/item/storage/fancy/ringbox/silver,
-					// /obj/item/storage/fancy/ringbox/silver) //diamond rings cost the same price as this crate via cargo so we're not giving you two for free. Wedding rings are traditionally less valuable anyway.
+					// /obj/item/storage/fancy/ringbox/silver немного текстурка пошла по одному месту, но работает
+					/obj/item/clothing/gloves/ring/diamond,
+					/obj/item/clothing/gloves/ring/silver) //diamond rings cost the same price as this crate via cargo so we're not giving you two for free. Wedding rings are traditionally less valuable anyway.
 	crate_name = "wedding crate"
