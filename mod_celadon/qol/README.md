@@ -72,6 +72,10 @@ ID мода: CELADON_QOL
 - ADD `code\modules\mob\living\carbon\human\human.dm`: `/mob/living/carbon/human/species/android` -> `bubble_icon`
 - ADD `code\modules\mob\living\carbon\human\human.dm`: `/mob/living/carbon/human/species/jelly` -> `bubble_icon`
 - ADD `code\modules\mob\living\carbon\human\human.dm`: `/mob/living/carbon/human/species/ipc` -> `bubble_icon`
+
+- EDIT `code\modules\client\preferences.dm`: `var/datum/loadout_category/LC = GLOB.loadout_categories[gear_tab]` - меняем лодаут
+
+- ADD `html\browser\common.css` -> да-да, ксс файлик шатаем. Добавляем классы на обработку картиночек лодаута
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.

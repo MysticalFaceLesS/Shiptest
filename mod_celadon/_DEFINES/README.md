@@ -33,9 +33,6 @@ ID мода: CELADON_DEFINES
 `mod_celadon\_defines\code\_defines\fov.dm`
 `mod_celadon\_defines\code\_defines\layers.dm`
 
-
-
-
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
   А также любая полезная информация.
