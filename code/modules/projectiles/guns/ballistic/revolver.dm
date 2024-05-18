@@ -139,6 +139,11 @@
 /obj/item/gun/ballistic/revolver/proc/insert_casing(mob/living/user, obj/item/ammo_casing/casing_to_insert, allow_ejection)
 	if(!casing_to_insert)
 		return FALSE
+// [CELADON-ADD] - CELADON FIXES
+	if(casing_to_insert.caliber != magazine.caliber)
+		to_chat(user, "<span class='warning'>Этот патрон [casing_to_insert] не подходит для [src].</span>")
+		return FALSE
+// [/CELADON-ADD]
 	var/list/rounds = magazine.ammo_list()
 	var/obj/item/ammo_casing/slot = rounds[gate_offset+1] //byond arrays start at 1, so we add 1 to get the correct index
 	var/doafter_time = 0.4 SECONDS
