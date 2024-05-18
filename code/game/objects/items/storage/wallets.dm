@@ -40,7 +40,9 @@
 		/obj/item/stamp,
 		// [CELADON-ADD] - CELADON_QOL - Добавляем ключи и нож для писем
 		/obj/item/kitchen/knife/letter_opener,
-		/obj/item/key),
+		/obj/item/key,
+		/obj/item/clothing/gloves/ring/silver,
+		/obj/item/clothing/gloves/ring/diamond),
 		// [/CELADON-ADD]
 		list(/obj/item/screwdriver/power))
 

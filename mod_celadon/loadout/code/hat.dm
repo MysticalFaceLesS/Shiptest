@@ -4,7 +4,7 @@
 	path = /obj/item/clothing/head/maidheadband
 
 /datum/gear/hat/fedora/det_hat/black
-	display_name = "detective's black fedora"
+	display_name = "detectives black fedora"
 	description = "A really noir hat if you're a good guy. A really lame hat if you're not."
 	path = /obj/item/clothing/head/fedora/det_hat/black
 
