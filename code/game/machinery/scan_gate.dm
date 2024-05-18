@@ -151,6 +151,10 @@
 						scan_species = /datum/species/elzuose
 					if(SCANGATE_KEPORI)
 						scan_species = /datum/species/kepori
+					// [CELADON-ADD] - TAJARA
+					if(SPECIES_TAJARA)
+						scan_species = /datum/species/tajara
+					// [/CELADON-ADD]
 				if(is_species(H, scan_species))
 					beep = TRUE
 				if(detect_species == SCANGATE_ZOMBIE) //Can detect dormant zombies

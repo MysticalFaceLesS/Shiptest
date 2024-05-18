@@ -26,6 +26,16 @@ ID мода: CELADON_COMPONENTS, CELADON_COMPONENTS_EMOTE
   А также любая полезная информация.
 -->
 
+Глобальные вещи для FOV
+`mod_celadon\_components\code\_globals.dm`
+
+Математика для FOV
+`mod_celadon\_components\code\maths.dm`
+
+Время для FOV
+`mod_celadon\_components\code\time.dm`
+
+
 ### Изменения *кор кода*
 
 - EDIT -> `code\modules\mob\living\carbon\human\emote.dm`
