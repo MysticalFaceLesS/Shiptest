@@ -23,15 +23,15 @@
 	item_state = "taj_cloak_full"
 
 /obj/item/clothing/suit/hooded/cloak/tajaran/fancy
-	name = "fancy adhomian cloak"
-	desc = "A fancy black Adhomian cloak."
+	name = "fancy cloak"
+	desc = "A fancy black cloak."
 	icon_state = "hb_cloak"
 	item_state = "hb_cloak"
 	hoodtype = /obj/item/clothing/head/hooded/cloakhood/tajaran/fancy
 
 /obj/item/clothing/head/hooded/cloakhood/tajaran/fancy
-	name = "fancy adhomian cloak"
-	desc = "A fancy black Adhomian cloak."
+	name = "fancy cloak"
+	desc = "A fancy black cloak."
 	icon_state = "hb_cloak_hat"
 	item_state = "hb_cloak_hat"
 
@@ -49,41 +49,41 @@
 	item_state = "amohda_cloak_hat"
 
 /obj/item/clothing/suit/hooded/cloak/tajaran/winter
-	name = "adhomian winter cloak"
+	name = "winter cloak"
 	desc = "A simple wool cloak used during the early days of the lesser winter."
 	icon_state = "winter_cloak"
 	item_state = "winter_cloak"
 	hoodtype = /obj/item/clothing/head/hooded/cloakhood/tajaran/winter
 
 /obj/item/clothing/head/hooded/cloakhood/tajaran/winter
-	name = "adhomian winter cloak"
+	name = "winter cloak"
 	desc = "A simple wool cloak used during the early days of the lesser winter."
 	icon_state = "winter_cloak_hat"
 	item_state = "winter_cloak_hat"
 
 /obj/item/clothing/suit/hooded/cloak/tajaran/royalist
-	name = "adhomian royalist cloak"
-	desc = "A simple royalist colored Adhomian cloak."
+	name = "royalist cloak"
+	desc = "A simple royalist colored cloak."
 	icon_state = "royalist_cloak"
 	item_state = "royalist_cloak"
 	hoodtype = /obj/item/clothing/head/hooded/cloakhood/tajaran/royalist
 
 /obj/item/clothing/head/hooded/cloakhood/tajaran/royalist
-	name = "adhomian royalist cloak"
-	desc = "A simple royalist colored Adhomian cloak."
+	name = "royalist cloak"
+	desc = "A simple royalist colored cloak."
 	icon_state = "royalist_cloak_hat"
 	item_state = "royalist_cloak_hat"
 
 /obj/item/clothing/suit/hooded/cloak/tajaran/maroon
-	name = "adhomian maroon cloak"
-	desc = "A simple maroon colored Adhomian cloak."
+	name = "maroon cloak"
+	desc = "A simple maroon colored cloak."
 	icon_state = "maroon_cloak"
 	item_state = "maroon_cloak"
 	hoodtype = /obj/item/clothing/head/hooded/cloakhood/tajaran/maroon
 
 /obj/item/clothing/head/hooded/cloakhood/tajaran/maroon
-	name = "adhomian maroon cloak"
-	desc = "A simple maroon colored Adhomian cloak."
+	name = "maroon cloak"
+	desc = "A simple maroon colored cloak."
 	icon_state = "maroon_cloak_hat"
 	item_state = "maroon_cloak_hat"
 
@@ -95,7 +95,7 @@
 	mob_overlay_icon = 'mod_celadon/items/icons/overlay/tajara_items_overlay.dmi'
 	can_adjust = FALSE
 	name = "people's republic consular uniform"
-	desc = "An olive uniform used by the diplomatic service of the People's Republic of Adhomai."
+	desc = "An olive uniform used by the diplomatic service of the People's Republic."
 	icon_state = "pra_consular"
 	item_state = "pra_consular"
 
@@ -105,7 +105,7 @@
 
 /obj/item/clothing/under/tajaran/consular/dpra
 	name = "democratic people's republic consular uniform"
-	desc = "A grey uniform used by the diplomatic service of the Democratic People's Republic of Adhomai."
+	desc = "A grey uniform used by the diplomatic service of the Democratic People's Republic."
 	icon_state = "dpra_consular"
 	item_state = "dpra_consular"
 
@@ -121,52 +121,52 @@
 	icon_state = "prauniform"
 	item_state = "prauniform"
 	siemens_coefficient = 0.7
-	armor = list("melee" = 10, "bullet" = 10, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	// armor = list("melee" = 10, "bullet" = 10, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/under/tajaran/fancy
 	name = "fancy uniform"
-	desc = "Worn by princes, barons and lords of Adhomai, now in stores near you!"
+	desc = "Worn by princes, barons and lords, now in stores near you!"
 	icon_state = "male_taj_fancy"
 	item_state = "male_taj_fancy"
 
-// Adhomian Evening Suit
+// Evening Suit
 /obj/item/clothing/under/tajaran/fancy/evening_suit
-	name = "adhomian evening suit"
+	name = "evening suit"
 	desc = "A rich purple evening suit meant for lounging or other luxury."
 	icon_state = "evening_suit"
 	item_state = "evening_suit"
 
 /obj/item/clothing/under/dress/tajaran
-	name = "fancy adhomian dress"
-	desc = "Created for the rich and party-loving circles of Adhomai, this dress is fashioned from smooth silk and is see through at parts. This one is white."
+	name = "fancy dress"
+	desc = "Created for the rich and party-loving circles, this dress is fashioned from smooth silk and is see through at parts. This one is white."
 	mob_overlay_icon = 'mod_celadon/items/icons/overlay/tajara_items_overlay.dmi'
 	icon = 'mod_celadon/items/icons/obj/tajara_items.dmi'
 	icon_state = "taj_dress_white"
 	item_state = "taj_dress_white"
 
 /obj/item/clothing/under/dress/tajaran/blue
-	desc = "Created for the rich and party-loving circles of Adhomai, this dress is fashioned from smooth silk and is see through at parts. This one is blue."
+	desc = "Created for the rich and party-loving circles, this dress is fashioned from smooth silk and is see through at parts. This one is blue."
 	icon_state = "taj_dress_skyblue"
 	item_state = "taj_dress_skyblue"
 
 /obj/item/clothing/under/dress/tajaran/green
-	desc = "Created for the rich and party-loving circles of Adhomai, this dress is fashioned from smooth silk and is see through at parts. This one is green."
+	desc = "Created for the rich and party-loving circles, this dress is fashioned from smooth silk and is see through at parts. This one is green."
 	icon_state = "taj_dress_green"
 	item_state = "taj_dress_green"
 
 /obj/item/clothing/under/dress/tajaran/red
-	desc = "Created for the rich and party-loving circles of Adhomai, this dress is fashioned from smooth silk and is see through at parts. This one is red."
+	desc = "Created for the rich and party-loving circles, this dress is fashioned from smooth silk and is see through at parts. This one is red."
 	icon_state = "taj_dress_red"
 	item_state = "taj_dress_red"
 
 /obj/item/clothing/under/dress/tajaran/fancy/black
-	desc = "The classical dress of the Adhomian royalty, only to be worn during the special occassions. This one is dark black."
+	desc = "The classical dress of royalty, only to be worn during the special occassions. This one is dark black."
 	icon_state = "taj_dress_fancy_dark"
 	item_state = "taj_dress_fancy_dark"
 
 /obj/item/clothing/under/dress/tajaran/fancy
-	name = "noble adhomian dress"
-	desc = "The classical dress of the Adhomian royalty, only to be worn during the special occassions. This one is crimson red."
+	name = "noble dress"
+	desc = "The classical dress of royalty, only to be worn during the special occassions. This one is crimson red."
 	icon_state = "taj_dress_fancy"
 	item_state = "taj_dress_fancy"
 
@@ -181,7 +181,7 @@
 	icon_state = "snowsuit"
 	item_state = "snowsuit"
 	body_parts_covered = CHEST | GROIN | LEGS | FEET | ARMS | HANDS
-	armor = list("melee" = 20, "bullet" = 20, "laser" = 10, "energy" = 15, "bomb" = 20, "bio" = 20, "fire" = 20, "acid" = 20)
+	// armor = list("melee" = 20, "bullet" = 20, "laser" = 10, "energy" = 15, "bomb" = 20, "bio" = 20, "fire" = 20, "acid" = 20)
 	cold_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS
 	min_cold_protection_temperature = ARMOR_MIN_TEMP_PROTECT
 	heat_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS
@@ -202,8 +202,8 @@
 /obj/item/clothing/suit/toggle/tajaran/wool
 	icon = 'mod_celadon/items/icons/obj/tajara_items.dmi'
 	mob_overlay_icon = 'mod_celadon/items/icons/overlay/tajara_items_overlay.dmi'
-	name = "adhomian wool coat"
-	desc = "An adhomian coat, this one is a design commonly found among the Rhazar'Hrujmagh people."
+	name = "wool coat"
+	desc = "An coat, this one is a design commonly found among the Rhazar'Hrujmagh people."
 	icon_state = "zhan_coat"
 	item_state = "zhan_coat"
 	blood_overlay_type = "coat"
@@ -215,8 +215,8 @@
 	supports_variations = DIGITIGRADE_VARIATION
 /*
 /obj/item/clothing/head/hooded/tajaran/wool
-	name = "adhomian wool coat"
-	desc = "An adhomian coat, this one is a design commonly found among the Rhazar'Hrujmagh people."
+	name = "wool coat"
+	desc = "An coat, this one is a design commonly found among the Rhazar'Hrujmagh people."
 	icon_state = "zhan_coat"
 	item_state = "zhan_coat"
 */

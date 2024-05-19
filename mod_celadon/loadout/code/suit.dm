@@ -5,8 +5,8 @@
 	path = /obj/item/clothing/suit/tajaran
 
 /datum/gear/suit/coat/tajaran
-	display_name = "adhomian wool coat"
-	description = "An adhomian coat, this one is a design commonly found among the Rhazar'Hrujmagh people."
+	display_name = "wool coat"
+	description = "An coat, this one is a design commonly found among the Rhazar'Hrujmagh people."
 	path = /obj/item/clothing/suit/toggle/tajaran/wool
 
 // *******************
@@ -21,8 +21,8 @@
 	path = /obj/item/clothing/suit/hooded/cloak/tajaran
 
 /datum/gear/accessory/suit/hooded/cloak/tajaran/fancy
-	display_name = "fancy adhomian cloak"
-	description = "A fancy black Adhomian cloak."
+	display_name = "fancy cloak"
+	description = "A fancy black cloak."
 	path = /obj/item/clothing/suit/hooded/cloak/tajaran/fancy
 
 /datum/gear/accessory/suit/hooded/cloak/tajaran/amohda
@@ -31,18 +31,18 @@
 	path = /obj/item/clothing/suit/hooded/cloak/tajaran/amohda
 
 /datum/gear/accessory/suit/hooded/cloak/tajaran/winter
-	display_name = "adhomian winter cloak"
+	display_name = "winter cloak"
 	description = "A simple wool cloak used during the early days of the lesser winter."
 	path = /obj/item/clothing/suit/hooded/cloak/tajaran/winter
 
 /datum/gear/accessory/suit/hooded/cloak/tajaran/royalist
-	display_name = "adhomian royalist cloak"
-	description = "A simple royalist colored Adhomian cloak."
+	display_name = "royalist cloak"
+	description = "A simple royalist colored cloak."
 	path = /obj/item/clothing/suit/hooded/cloak/tajaran/royalist
 
 /datum/gear/accessory/suit/hooded/cloak/tajaran/maroon
-	display_name = "adhomian maroon cloak"
-	description = "A simple maroon colored Adhomian cloak."
+	display_name = "maroon cloak"
+	description = "A simple maroon colored cloak."
 	path = /obj/item/clothing/suit/hooded/cloak/tajaran/maroon
 
 // *******************

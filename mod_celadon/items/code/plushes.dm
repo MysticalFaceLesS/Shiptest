@@ -287,7 +287,7 @@
 	squeak_override = list('mod_celadon/items/sounds/plushes/crunchybushwhack1.ogg' = 1)
 
 /obj/item/toy/plush/celadon/fox/mia
-	name = "Mia’s fox plushie"
+	name = "Mias fox plushie"
 	desc = "A small stuffed silver fox with a collar tag that says “Eavy” and a tiny bell in its fluffy tail."
 	icon_state = "miafox"
 
@@ -306,7 +306,7 @@
 	squeak_override = list('mod_celadon/items/sounds/plushes/voice/peep_once.ogg' = 1,'mod_celadon/items/sounds/plushes/voice/caw.ogg' = 1,'mod_celadon/items/sounds/plushes/voice/bawk.ogg' = 1,'mod_celadon/items/sounds/plushes/emotes/voxscream.ogg' = 1)
 
 /obj/item/toy/plush/celadon/zapp
-	name = "Lil' Zapp"
+	name = "Lil Zapp"
 	desc = "An authentic piece of primo Pwr Game merchandise! \
 			This cuddly companion is the perfect ornament to decorate your battlestation. \
 			He sits upright unassisted, and can hold your headset, webcam, or keep your Pwr Game safe and secure. \
@@ -597,7 +597,7 @@
 
 //Donation reward for olirant
 /obj/item/toy/plush/celadon/plush_janiborg
-	name = "Friendly Janiborg Plush"
+	name = "friendly Janiborg Plush"
 	desc = "A miniature omnidroid toy straight from the Lockstep Enterprises Corporation marketing department in handsome janitorial purple. Now with real squirting action!"
 	icon_state = "plush_janiborg"
 	attack_verb = list("beep", "wash", "mop", "squirt", "soap")
@@ -666,8 +666,9 @@
 /obj/item/toy/plush/axolotlplushie
 	name = "axolotl plushie"
 	desc = "An adorable stuffed toy that resembles an axolotl. Not to be mistaken for the real thing."
+	icon = 'mod_celadon/items/icons/plushes.dmi'
 	icon_state = "plushie_axolotl"
-	item_state = "axolotl"
+	// item_state = "axolotl"
 	attack_verb = list("nibbles", "splats")
 	var/axolotlbite = 'mod_celadon/items/sounds/plushes/axolotl.ogg'
 	var/cooldown = FALSE
@@ -696,7 +697,7 @@
 	icon_state = "pig1"
 
 /obj/item/toy/plush/celadon/toolbox
-	name = "Rubber Toolbox"
+	name = "rubber toolbox"
 	desc = "Practice your robust!"
 	icon_state = "rubber_toolbox"
 	damtype = STAMINA
@@ -707,7 +708,7 @@
 	hitsound = 'mod_celadon/items/sounds/plushes/squeaktoy.ogg'
 
 /obj/item/toy/plush/celadon/shardplushie
-	name = "Shard plushie"
+	name = "shard plushie"
 	desc = "A plushie shard of supermatter crystal. Safety 100%."
 	icon_state = "plushie_shard"
 	attack_verb = list("annihilates", "scratched")
@@ -728,51 +729,69 @@
     return ..()
 
 /obj/item/toy/plush/celadon/hampter
-	name = "Hampter"
+	name = "hampter"
 	desc = "The people demand hampters!"
 	icon_state = "hampter"
 
 /obj/item/toy/plush/celadon/hampter/asisstant
-	name = "Hampter the Assitant"
+	name = "hampter the Assitant"
 	desc = "More or less helpful."
 	icon_state = "hampter_ass"
 
 /obj/item/toy/plush/celadon/hampter/security
-	name = "The anti-honk Hampter"
+	name = "The anti-honk hampter"
 	desc = "OBEY!"
 	icon_state = "hampter_sec"
 
 /obj/item/toy/plush/celadon/hampter/medic
-	name = "Hampter the Doctor"
+	name = "hampter the Doctor"
 	desc = "Don't take his pills."
 	icon_state = "hampter_med"
 
 /obj/item/toy/plush/celadon/hampter/janitor
-	name = "Hampter the Janitor"
+	name = "hampter the Janitor"
 	desc = "I'll call you - Den."
 	icon_state = "hampter_jan"
 
 /obj/item/toy/plush/celadon/hampter/captain
-	name = "Hampter the Captain"
+	name = "hampter the Captain"
 	desc = "Thinks he is the Head."
 	icon_state = "hampter_cap"
 
 /obj/item/toy/plush/celadon/hampter/captain/old
-	name = "Hampter the first Captain"
+	name = "hampter the first Captain"
 	desc = "Thinks he is the original Head."
 	icon_state = "hampter_old_cap"
 
 /obj/item/toy/plush/celadon/hampter/syndi
-	name = "Hampter the Red Baron"
+	name = "hampter the Red Baron"
 	desc = "The real Head."
 	icon_state = "hampter_sdy"
 
 /obj/item/toy/plush/celadon/hampter/death_squad
-	name = "Who?"
-	desc = "Don't call him - daddy."
+	name = "who?"
+	desc = "don't call him - daddy."
 	icon_state = "hampter_ded"
 
 /obj/item/toy/plush/celadon/hampter/ert_squad
-	name = "Hampter the Major"
+	name = "hampter the major"
 	desc = "Faces into the floor!"
 	icon_state = "hampter_ert"
+
+/obj/item/toy/plush/celadon/beaver
+	name = "Beaver plushie"
+	desc = "A cute soft toy of a beaver. Holding it in your hands, you can hardly restrain yourself from screaming with happiness."
+	icon_state = "beaver_plushie"
+	item_state = "beaver_plushie"
+	w_class = WEIGHT_CLASS_SMALL
+	gender = MALE
+	COOLDOWN_DECLARE(cooldown)
+
+/obj/item/toy/plush/celadon/beaver/attack_self(mob/user)
+
+	if(!COOLDOWN_FINISHED(src, cooldown))
+		return
+
+	playsound(loc, 'mod_celadon/items/sounds/plushes/beaver_plushie.ogg', 50, FALSE)
+	visible_message(span_boldnotice("BOBR KURWA!"))
+	COOLDOWN_START(src, cooldown, 3 SECONDS)

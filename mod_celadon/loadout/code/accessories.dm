@@ -63,27 +63,3 @@
 /datum/gear/accessory/scarf/tarajan/cream
 	display_name = "scarf, cream"
 	path = /obj/item/clothing/neck/scarf/tajaran/cream
-
-/// Plushes
-/datum/gear/accessory/plush/celadon/cat
-	display_name = "cat plushie"
-	description = "A small cat plushie with black beady eyes."
-	path = /obj/item/toy/plush/celadon/cat
-
-/datum/gear/accessory/plush/celadon/cat/tux
-	display_name = "tux cat plushie"
-	path = /obj/item/toy/plush/celadon/cat/tux
-
-/datum/gear/accessory/plush/celadon/cat/white
-	display_name = "white cat plushie"
-	path = /obj/item/toy/plush/celadon/cat/white
-
-/datum/gear/accessory/plush/celadon/cat/kotwithfunnyhat
-	display_name = "Rice Cat"
-	description = "White cat plushie with straw hat for hard work on rice field!"
-	path = /obj/item/toy/plush/celadon/kotwithfunnyhat
-
-/datum/gear/accessory/plush/celadon/cat/kotrazumist
-	display_name = "Razumist Cat"
-	description = "Cat with wanrning cone on it. Wonder what do itself so smart?"
-	path = /obj/item/toy/plush/celadon/kotrazumist
