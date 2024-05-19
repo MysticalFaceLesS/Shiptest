@@ -44,3 +44,19 @@
 	display_name = "evening suit"
 	description = "A rich purple evening suit meant for lounging or other luxury."
 	path = /obj/item/clothing/under/tajaran/fancy/evening_suit
+
+// Galaxy
+/datum/gear/uniform/galaxy
+	subtype_path = /datum/gear/uniform/galaxy
+
+/datum/gear/uniform/galaxy/blue/skirt
+	display_name = "suitskirt, blue galaxy"
+	path = /obj/item/clothing/under/suit/galaxy/skirt
+
+/datum/gear/uniform/galaxy/red
+	display_name = "suit, red galaxy"
+	path = /obj/item/clothing/under/suit/galaxy/red
+
+/datum/gear/uniform/galaxy/red/skirt
+	display_name = "suitskirt, red galaxy"
+	path = /obj/item/clothing/under/suit/galaxy/red/skirt
