@@ -1,9 +1,4 @@
 // Suits
-/datum/gear/suit/armor/vest/tajaran
-	display_name = "white light tactical armor vest"
-	description = "This tactical bulletproof vest was created for winter operations in the desert."
-	path = /obj/item/clothing/suit/armor/vest/tajaran
-
 /datum/gear/suit/robe/tajaran
 	display_name = "sun sister robe"
 	description = "A robe worn by the female priests of the S'rand'Marr religion."
@@ -59,7 +54,7 @@
 
 /datum/gear/suit/costumes/shark_costume
 	display_name = "Shark costume"
-	description = "This tactical bulletproof vest was created for winter operations in the desert."
+	description = "Finally, a costume to match your favorite plush."
 	path = /obj/item/clothing/suit/hooded/shark_costume
 
 /datum/gear/suit/costumes/shork_costume
