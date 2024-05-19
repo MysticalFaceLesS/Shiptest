@@ -698,6 +698,7 @@
 /obj/item/toy/plush/celadon/toolbox
 	name = "Rubber Toolbox"
 	desc = "Practice your robust!"
+	icon_state = "rubber_toolbox"
 	damtype = STAMINA
 	force = 10
 	throwforce = 15
