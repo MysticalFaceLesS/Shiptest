@@ -43,7 +43,7 @@
 	icon_state = "plushie_securityk9"
 	attack_verb = list("beep", "boop", "ping")
 	squeak_override = list('mod_celadon/items/sounds/plushes/beep.ogg' = 1)
-/beep.ogg
+
 /obj/item/toy/plush/celadon/medihound
 	name = "medi-hound plushie"
 	desc = "An adorable stuffed toy of a medihound."
