@@ -455,9 +455,10 @@
 /turf/open/floor/plating,
 /area/ship/maintenance/starboard)
 "ea" = (
-/obj/machinery/atmospherics/components/binary/pump/on/layer2{
+/obj/machinery/atmospherics/components/unary/portables_connector/layer2{
 	dir = 1
 	},
+/obj/machinery/portable_atmospherics/canister/air,
 /turf/open/floor/plasteel/tech,
 /area/ship/maintenance/starboard)
 "ej" = (
@@ -1409,6 +1410,9 @@
 	d2 = 2;
 	icon_state = "0-2";
 	pixel_y = 1
+	},
+/obj/machinery/camera/autoname{
+	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/fore)
@@ -2364,9 +2368,6 @@
 	pixel_x = -20;
 	pixel_y = -10
 	},
-/obj/machinery/camera/autoname{
-	dir = 4
-	},
 /obj/effect/turf_decal/trimline/opaque/yellow/filled/warning{
 	dir = 8
 	},
@@ -3127,7 +3128,9 @@
 /area/ship/engineering/electrical)
 "Nb" = (
 /obj/machinery/airalarm/directional/east,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/obj/machinery/atmospherics/components/binary/pump/on/layer2{
+	dir = 1
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/maintenance/starboard)
 "Nk" = (
@@ -3864,10 +3867,6 @@
 /obj/machinery/camera/autoname{
 	dir = 8
 	},
-/obj/machinery/atmospherics/components/unary/portables_connector/layer2{
-	dir = 1
-	},
-/obj/machinery/portable_atmospherics/canister/air,
 /turf/open/floor/plasteel/tech,
 /area/ship/maintenance/starboard)
 "WQ" = (
@@ -3928,6 +3927,9 @@
 	dir = 4
 	},
 /obj/structure/extinguisher_cabinet/directional/west,
+/obj/machinery/camera/autoname{
+	dir = 4
+	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "XV" = (
