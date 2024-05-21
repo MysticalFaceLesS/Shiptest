@@ -542,7 +542,10 @@
 	if(mutation_color) //I hate mutations
 		draw_color = mutation_color
 	else if(should_draw_greyscale)
-		draw_color = (species_color) || (skin_tone && skintone2hex(skin_tone))
+		// [CELADON-EDIT] - TAJARA
+		// draw_color = (species_color) || (skin_tone && skintone2hex(skin_tone)) // CELADON-EDIT - ORIGINAL
+		draw_color = (species_color) || (skin_tone && skintone2hex(skin_tone)) || (skin_tone_nose && skintonenose2hex(skin_tone_nose)) || (skin_tone_tajara && skintonetajara2hex(skin_tone_tajara))
+		// [/CELADON-EDIT]
 	else
 		draw_color = null
 
@@ -563,6 +566,13 @@
 			skin_tone = H.skin_tone
 		else
 			skin_tone = ""
+
+		// [CELADON-ADD] - TAJARA
+		if(S.use_skintonetajara)
+			skin_tone_tajara = H.skin_tone_tajara
+		else
+			skin_tone_tajara = ""
+		// [/CELADON-ADD]
 
 		use_damage_color = S.use_damage_color
 		if(((MUTCOLORS in S.species_traits) || (DYNCOLORS in S.species_traits)) && uses_mutcolor) //Ethereal code. Motherfuckers.
@@ -586,7 +596,10 @@
 
 		draw_color = mutation_color
 		if(should_draw_greyscale) //Should the limb be colored?
-			draw_color ||= (species_color) || (skin_tone && skintone2hex(skin_tone))
+			// [CELADON-EDIT] - TAJARA
+			// draw_color ||= (species_color) || (skin_tone && skintone2hex(skin_tone)) // CELADON-EDIT - ORIGINAL
+			draw_color ||= (species_color) || (skin_tone && skintone2hex(skin_tone)) || (skin_tone_nose && skintonenose2hex(skin_tone_nose)) || (skin_tone_tajara && skintonetajara2hex(skin_tone_tajara))
+			// [/CELADON-EDIT]
 
 		dmg_overlay_type = S.damage_overlay_type
 
@@ -683,7 +696,11 @@
 
 		draw_color = mutation_color
 		if(should_draw_greyscale) //Should the limb be colored outside of a forced color?
-			draw_color ||= (species_color) || (skin_tone && skintone2hex(skin_tone))
+			// [CELADON-EDIT] - TAJARA
+			// draw_color ||= (species_color) || (skin_tone && skintone2hex(skin_tone)) // CELADON-EDIT - ORIGINAL
+			draw_color ||= (species_color) || (skin_tone && skintone2hex(skin_tone)) || (skin_tone_nose && skintonenose2hex(skin_tone_nose)) || (skin_tone_tajara && skintonetajara2hex(skin_tone_tajara))
+			// [/CELADON-EDIT]
+
 
 		if(draw_color)
 			limb.color = "#[draw_color]"

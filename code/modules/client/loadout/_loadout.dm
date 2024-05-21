@@ -45,7 +45,10 @@ GLOBAL_LIST_EMPTY(gear_datums)
 	///Description of this gear. If left blank will default to the description of the pathed item.
 	var/description
 	///Path to item.
-	var/path
+	// [CELADON-EDIT] - CELADON_QOL
+	// var/path // CELADON-EDIT - ORIGINAL
+	var/atom/path
+	// [/CELADON-EDIT]
 	///Slot to equip to.
 	var/slot
 	///Roles that can spawn with this item.
@@ -60,12 +63,26 @@ GLOBAL_LIST_EMPTY(gear_datums)
 	var/sort_category = "General"
 	///for skipping organizational subtypes (optional)
 	var/subtype_path = /datum/gear
+	// [CELADON-ADD] - CELADON_QOL
+	//It will be generated automaticly
+	var/base64icon
+	//File of icon
+	var/icon
+	//Icon state of item
+	var/icon_state
+	// [/CELADON-ADD]
 
 /datum/gear/New()
 	..()
 	if(!description)
 		var/obj/O = path
 		description = initial(O.desc)
+	// [CELADON-ADD] - CELADON_QOL
+	if(!icon || !icon_state)
+		icon_state = initial(path.icon_state)
+		icon = initial(path.icon)
+	base64icon = icon2base64(icon(icon, icon_state, SOUTH, 1, FALSE))
+	// [/CELADON-ADD]
 
 ///Called when the gear is first purchased
 /datum/gear/proc/purchase(client/C)

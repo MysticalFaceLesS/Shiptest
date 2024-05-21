@@ -1,5 +1,5 @@
 /obj/machinery/power/shuttle/engine/electric/tech1
-	name = "1-st ion thruster"
+	name = "1st gen ion thruster"
 	desc = "A thruster that expels charged particles to generate thrust."
 	circuit = /obj/item/circuitboard/machine/shuttle/engine/electric/tech1
 	icon_state = "tech1"
@@ -10,7 +10,7 @@
 	power_per_burn = 35000
 
 /obj/machinery/power/shuttle/engine/electric/tech2
-	name = "2-st ion thruster"
+	name = "2nd gen ion thruster"
 	desc = "A thruster that expels charged particles to generate thrust."
 	circuit = /obj/item/circuitboard/machine/shuttle/engine/electric/tech2
 	icon_state = "tech2"
@@ -21,7 +21,7 @@
 	power_per_burn = 100000
 
 /obj/machinery/power/shuttle/engine/electric/tech3
-	name = "3-st ion thruster"
+	name = "3rd gen ion thruster"
 	desc = "A thruster that expels charged particles to generate thrust."
 	circuit = /obj/item/circuitboard/machine/shuttle/engine/electric/tech3
 	icon_state = "tech3"
