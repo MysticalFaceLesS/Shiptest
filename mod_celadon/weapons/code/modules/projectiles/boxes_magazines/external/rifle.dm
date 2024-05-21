@@ -71,3 +71,32 @@
 /obj/item/ammo_box/magazine/p16/g36drum/update_icon_state()
 	. = ..()
 	icon_state = "g36drum_mag-[!!ammo_count()]"
+
+
+/obj/item/ammo_box/magazine/usp45_standart
+	name = "\improper usp.45 magazine"
+	desc = "usp.45 magazine"
+	icon = 'mod_celadon/weapons/icons/ammo/ammo.dmi'
+	item_state = "usp"
+	icon_state = "usp"
+	caliber = ".45"
+	ammo_type = /obj/item/ammo_casing/c45
+	max_ammo = 12
+
+/obj/item/ammo_box/magazine/usp45_standart/update_icon_state()
+	. = ..()
+	icon_state = "usp-[!!ammo_count()]"
+
+/obj/item/ammo_box/magazine/glock_standart
+	name = "\improper Glock 9mm magazine"
+	desc = "glock 9mm magazine"
+	icon = 'mod_celadon/weapons/icons/ammo/ammo.dmi'
+	item_state = "glock"
+	icon_state = "glock"
+	caliber = "9mm"
+	ammo_type = /obj/item/ammo_casing/c9mm
+	max_ammo = 17
+
+/obj/item/ammo_box/magazine/glock_standart/update_icon_state()
+	. = ..()
+	icon_state = "glock-[!!ammo_count()]"
