@@ -1,4 +1,4 @@
 /datum/modpack/ipc_surgery
-	name = "IPC brain surgery fix"
-	desc = "Fixes author brain damage"
+	name = "IPC surgery"
+	desc = "Добавляет возможность провести операцию у поврежденого мозга ИПС."
 	author = "SnrBydlo"

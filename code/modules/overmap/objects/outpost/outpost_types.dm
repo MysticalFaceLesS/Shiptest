@@ -10,7 +10,11 @@
 	should_place_on_top = FALSE
 
 /datum/map_template/outpost/New()
-	. = ..(path = "_maps/outpost/[name].dmm")
+	// [CELADON-EDIT] - CELADON_CONFIGS_MAPS
+	// . = ..(path = "_maps/outpost/[name].dmm") // CELADON-EDIT - ORIGINAL
+	. = ..(path = "_maps/_mod_celadon/outpost/[name].dmm")
+	// [/CELADON-EDIT]
+
 
 /datum/map_template/outpost/hangar
 	var/dock_width

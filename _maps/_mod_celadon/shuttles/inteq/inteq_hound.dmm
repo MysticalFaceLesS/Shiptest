@@ -267,7 +267,6 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/effect/landmark/start/security_officer,
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/crew)
 "fS" = (
@@ -546,7 +545,6 @@
 /obj/structure/chair,
 /obj/machinery/light/directional/east,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/landmark/start/security_officer,
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/crew)
 "no" = (
@@ -651,7 +649,6 @@
 	dir = 1
 	},
 /obj/structure/closet/wall/directional/north{
-	icon_door = "orange_wall";
 	name = "uniform closet"
 	},
 /obj/item/clothing/head/soft/inteq,
@@ -713,7 +710,6 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/obj/effect/landmark/start/security_officer,
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/crew)
 "qU" = (
@@ -753,7 +749,6 @@
 /obj/effect/turf_decal/corner/opaque/brown{
 	dir = 8
 	},
-/obj/effect/landmark/start/assistant,
 /obj/structure/extinguisher_cabinet/directional/west,
 /turf/open/floor/plasteel/dark,
 /area/ship/crew)
@@ -1178,7 +1173,6 @@
 /obj/effect/turf_decal/arrows{
 	dir = 8
 	},
-/obj/effect/landmark/start/assistant,
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/ship/cargo)
 "zn" = (
@@ -1300,9 +1294,6 @@
 /turf/open/floor/carpet/orange,
 /area/ship/bridge)
 "BQ" = (
-/obj/machinery/modular_computer/console/preset/command{
-	dir = 8
-	},
 /obj/item/radio/intercom/directional/south,
 /obj/effect/turf_decal/corner/opaque/brown{
 	dir = 8
@@ -1310,6 +1301,10 @@
 /obj/effect/turf_decal/corner/opaque/yellow,
 /obj/effect/turf_decal/steeldecal/steel_decals_central4{
 	dir = 1
+	},
+/obj/machinery/computer/cargo/express{
+	dir = 8;
+	icon_state = "computer-right"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
@@ -1325,6 +1320,10 @@
 	dir = 8
 	},
 /obj/machinery/autolathe,
+/obj/item/stack/sheet/glass/five,
+/obj/item/stack/sheet/metal/five{
+	pixel_y = -3
+	},
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo)
 "DB" = (
@@ -1437,7 +1436,6 @@
 /turf/open/floor/plating,
 /area/ship/storage/eva)
 "EM" = (
-/obj/effect/landmark/start/head_of_security,
 /obj/structure/chair/comfy/shuttle{
 	dir = 4;
 	name = "Helm"
@@ -1460,7 +1458,6 @@
 /area/ship/bridge)
 "GD" = (
 /obj/item/trash/sosjerky,
-/obj/effect/landmark/start/assistant,
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/ship/cargo)
 "GG" = (
@@ -1580,11 +1577,11 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/steeldecal/steel_decals_central4,
-/obj/machinery/computer/cargo/express,
 /obj/item/radio/intercom/wideband/directional/north{
 	pixel_y = 25;
 	pixel_x = 6
 	},
+/obj/machinery/modular_computer/console/preset/command,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "HZ" = (
@@ -1766,7 +1763,8 @@
 /area/ship/storage/eva)
 "KK" = (
 /obj/machinery/computer/helm{
-	dir = 8
+	dir = 8;
+	icon_state = "computer-left"
 	},
 /obj/effect/turf_decal/borderfloor{
 	dir = 4

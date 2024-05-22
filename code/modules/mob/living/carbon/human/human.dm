@@ -1264,23 +1264,6 @@
 		return FALSE
 	return ..()
 
-/mob/living/carbon/human/CtrlShiftClick(mob/user)
-	. = ..()
-	if(isobserver(user) || !user.mind?.guestbook)
-		return
-	INVOKE_ASYNC(user.mind.guestbook, TYPE_PROC_REF(/datum/guestbook, try_add_guest), user, src, FALSE)
-
-/mob/living/carbon/human/get_screentip_name(client/hovering_client)
-	. = ..()
-	var/mob/hovering_mob = hovering_client?.mob
-	if(!hovering_mob?.mind?.guestbook)
-		return .
-	var/face_name = get_face_name("")
-	var/known_name = hovering_mob.mind.guestbook.get_known_name(hovering_mob, src, face_name)
-	if(known_name)
-		return known_name
-	return .
-
 /mob/living/carbon/human/species
 	var/race = null
 
@@ -1293,6 +1276,9 @@
 
 /mob/living/carbon/human/species/android
 	race = /datum/species/android
+	// [CELADON-ADD] - CELADON_QOL
+	bubble_icon = "machine"
+	// [/CELADON-ADD]
 
 /mob/living/carbon/human/species/dullahan
 	race = /datum/species/dullahan
@@ -1305,6 +1291,9 @@
 
 /mob/living/carbon/human/species/jelly
 	race = /datum/species/jelly
+	// [CELADON-ADD] - CELADON_QOL
+	bubble_icon = "slime"
+	// [/CELADON-ADD]
 
 /mob/living/carbon/human/species/jelly/slime
 	race = /datum/species/jelly/slime
@@ -1362,6 +1351,9 @@
 
 /mob/living/carbon/human/species/ipc
 	race = /datum/species/ipc
+	// [CELADON-ADD] - CELADON_QOL
+	bubble_icon = "machine"
+	// [/CELADON-ADD]
 
 /mob/living/carbon/human/species/lizard/ashwalker/kobold
 	race = /datum/species/lizard/ashwalker/kobold

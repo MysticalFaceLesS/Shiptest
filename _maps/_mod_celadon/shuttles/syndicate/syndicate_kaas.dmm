@@ -24,7 +24,9 @@
 /area/ship/medical)
 "aB" = (
 /obj/structure/table/wood/fancy/royalblack,
-/obj/item/folder/documents/syndicate/red,
+/obj/item/folder/documents/syndicate/red{
+	pixel_y = 1
+	},
 /turf/open/floor/carpet/red_gold,
 /area/ship/bridge)
 "aP" = (
@@ -453,10 +455,6 @@
 /turf/open/floor/carpet/royalblack,
 /area/ship/hallway/central)
 "kp" = (
-/mob/living/simple_animal/hostile/syndicate/ranged/smg/space/stormtrooper{
-	faction = list("PlayerSyndicate");
-	name = "Dorm rat"
-	},
 /obj/machinery/light_switch{
 	dir = 1;
 	pixel_y = -19;
@@ -478,7 +476,7 @@
 /area/ship/bridge)
 "mf" = (
 /obj/structure/closet/wall{
-	dir = 4;
+	dir = 8;
 	pixel_x = -28;
 	name = "uniform closet"
 	},
@@ -693,13 +691,6 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/ship/bridge)
-"rX" = (
-/mob/living/simple_animal/hostile/syndicate/ranged/space/stormtrooper{
-	faction = list("PlayerSyndicate");
-	name = "Captain's Slaver"
-	},
-/turf/open/floor/carpet/red_gold,
-/area/ship/bridge)
 "rY" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -863,7 +854,6 @@
 /area/ship/bridge)
 "uB" = (
 /obj/structure/closet/emcloset/wall{
-	dir = 1;
 	pixel_y = -28
 	},
 /obj/item/tank/internals/emergency_oxygen/double,
@@ -1186,10 +1176,6 @@
 /area/ship/engineering)
 "AK" = (
 /obj/machinery/airalarm/directional/south,
-/mob/living/simple_animal/hostile/syndicate/ranged/shotgun/space/stormtrooper{
-	faction = list("PlayerSyndicate");
-	name = "Trigger"
-	},
 /turf/open/floor/carpet/royalblack,
 /area/ship/hallway/central)
 "AL" = (
@@ -1270,8 +1256,6 @@
 /obj/item/ammo_box/magazine/pistolm9mm,
 /obj/item/ammo_box/magazine/pistolm9mm,
 /obj/item/card/emag/limited,
-/obj/item/storage/box/firingpins/syndicate,
-/obj/item/storage/box/firingpins/syndicate,
 /turf/open/floor/carpet/royalblack,
 /area/ship/bridge)
 "BP" = (
@@ -1485,7 +1469,7 @@
 /area/ship/security/armory)
 "Fr" = (
 /obj/structure/closet/wall{
-	dir = 4;
+	dir = 8;
 	pixel_x = -28;
 	name = "gear closet"
 	},
@@ -1627,23 +1611,14 @@
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/bridge)
-"Iw" = (
-/mob/living/simple_animal/hostile/syndicate/ranged/smg/space/stormtrooper{
-	faction = list("PlayerSyndicate");
-	name = "Sex Commando"
-	},
-/turf/open/floor/carpet/royalblack,
-/area/ship/bridge)
 "IC" = (
-/obj/machinery/computer/communications{
-	dir = 8;
-	req_access = list(151);
-	set_obj_flags = "EMAGGED";
-	icon_state = "computer-right"
-	},
 /obj/structure/railing,
 /obj/effect/turf_decal/industrial/warning{
 	dir = 4
+	},
+/obj/machinery/computer/communications{
+	dir = 8;
+	icon_state = "computer-right"
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/bridge)
@@ -1688,10 +1663,6 @@
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable{
 	icon_state = "0-2"
-	},
-/mob/living/simple_animal/hostile/syndicate/ranged/shotgun/space/stormtrooper{
-	faction = list("PlayerSyndicate");
-	name = "Trigger 2"
 	},
 /turf/open/floor/carpet/royalblack,
 /area/ship/hallway/central)
@@ -2083,12 +2054,12 @@
 /turf/open/floor/engine,
 /area/ship/engineering)
 "Vk" = (
+/obj/effect/turf_decal/industrial/warning{
+	dir = 4
+	},
 /obj/machinery/computer/helm{
 	dir = 8;
 	icon_state = "computer-middle"
-	},
-/obj/effect/turf_decal/industrial/warning{
-	dir = 4
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/bridge)
@@ -2651,11 +2622,11 @@ CE
 dU
 Wc
 yF
-rX
+yF
 rv
 xJ
 nD
-Iw
+ZV
 ZV
 Bq
 xQ

@@ -11,6 +11,9 @@
 	var/resize = 1 ///Badminnery resize
 	var/lastattacker = null
 	var/lastattackerckey = null
+	// [CELADON-ADD] - CELADON_QOL
+	var/last_state_of_bubble
+	// [/CELADON-ADD]
 
 	//Health and life related vars
 	/// Maximum health that should be possible.

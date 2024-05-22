@@ -17,15 +17,29 @@
 
 	var/list/allowed_directions = list("south")
 
+	// [CELADON-EDIT] - CELADON_STRUCTURES
+	// var/static/list/allowed_states = list(
+	// 	"steel", "dark", "white", "freezer", "tile_full", "cargo_one_full",
+	// 	"kafel_full", "monotile", "grid", "ridged", "stairs",
+	// 	"stairs-l", "stairs-m", "stairs-r", "stairs-old", "stairs-t", "stairs-b"
+	// ) // CELADON-EDIT - ORIGINAL
 	var/static/list/allowed_states = list(
-		"steel", "dark", "white", "freezer", "tile_full", "cargo_one_full",
-		"kafel_full", "monotile", "grid", "ridged", "stairs",
-		"stairs-l", "stairs-m", "stairs-r", "stairs-old", "stairs-t", "stairs-b"
+		"tiled_gray", "tiled_dark", "tiled_light", "freezerfloor", "tile_full",
+		"cult", "cargo_one_full", "kafel_full", "monotile_gray", "monotile_dark",
+		"monotile_light", "grid", "techmaint", "techfloor", "techfloor_grid",
+		"ridged", "stairs", "stairs-l", "stairs-m", "stairs-r", "stairs-old",
+		"stairs-t", "stairs-b", "vault", "hydrofloor", "showroomfloor",
+		"elevatorshaft", "sandstonevault", "alienvault", "concrete", "hexacrete",
+		"hexacrete_dark", "plaque", "tcomms", "titanium", "titanium_blue",
+		"titanium_yellow", "titanium_white", "plastitanium", "plastitanium_red",
+		"titanium_tiled", "titanium_tiled_blue", "titanium_tiled_yellow",
+		"titanium_tiled_white", "titanium_tiled_purple"
 	)
+	// [/CELADON-EDIT]
 
 	var/static/list/floor_four_dirs = list(
 		"stairs","stairs-l", "stairs-m", "stairs-r",
-		"stairs-old", "stairs-t", "stairs-b"
+		"stairs-old", "stairs-t", "stairs-b", "vault"
 	)
 
 /obj/item/floor_painter/afterattack(atom/A, mob/user, proximity, params)
@@ -51,7 +65,10 @@
 
 /obj/item/floor_painter/interact(mob/user as mob) //TODO: Make TGUI for this because ouch
 	if(!floor_icon)
-		floor_icon = icon('icons/turf/floors/tiles.dmi', floor_state, floor_dir)
+		// [CELADON-EDIT] - CELADON_STRUCTURES
+		// floor_icon = icon('icons/turf/floors/tiles.dmi', floor_state, floor_dir) // CELADON-EDIT - ORIGINAL
+		floor_icon = icon('mod_celadon/structures/icons/tiles.dmi', floor_state, floor_dir)
+		// [/CELADON-EDIT]
 	user << browse_rsc(floor_icon, "floor.png")
 	var/dat = {"
 		<center>
@@ -115,7 +132,10 @@
 		floor_state = allowed_states[index]
 		check_directional_tile()
 
-	floor_icon = icon('icons/turf/floors/tiles.dmi', floor_state, floor_dir)
+	// [CELADON-EDIT] - CELADON_STRUCTURES
+	// floor_icon = icon('icons/turf/floors/tiles.dmi', floor_state, floor_dir) // CELADON-EDIT - ORIGINAL
+	floor_icon = icon('mod_celadon/structures/icons/tiles.dmi', floor_state, floor_dir)
+	// [/CELADON-EDIT]
 	if(usr)
 		attack_self(usr)
 

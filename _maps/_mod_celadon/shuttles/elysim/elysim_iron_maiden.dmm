@@ -304,7 +304,7 @@
 	},
 /obj/structure/closet/wall/orange{
 	name = "fuel locker";
-	dir = 4;
+	dir = 8;
 	pixel_x = -28
 	},
 /obj/effect/decal/cleanable/insectguts,
@@ -362,7 +362,7 @@
 /obj/structure/frame/computer{
 	dir = 8
 	},
-/obj/item/circuitboard/computer/communications,
+/obj/item/circuitboard/computer/cargo/express,
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "oZ" = (
@@ -557,6 +557,10 @@
 	pixel_y = 9
 	},
 /obj/item/clothing/mask/cigarette/rollie/cannabis,
+/obj/item/bong{
+	pixel_x = 8;
+	pixel_y = 6
+	},
 /turf/open/floor/carpet/green,
 /area/ship/crew/cryo)
 "vg" = (
@@ -631,10 +635,10 @@
 "xk" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
 /obj/structure/closet/secure_closet/wall{
-	icon_door = "red_wall";
 	icon_state = "generic_wall";
 	name = "equipment locker";
-	pixel_y = 28
+	pixel_y = 28;
+	dir = 1
 	},
 /obj/effect/decal/cleanable/oil,
 /obj/item/clothing/head/bandana/elysium/green,
@@ -701,10 +705,10 @@
 /area/ship/crew/cryo)
 "yR" = (
 /obj/structure/closet/secure_closet/wall{
-	icon_door = "red_wall";
 	icon_state = "generic_wall";
 	name = "equipment locker";
-	pixel_y = 28
+	pixel_y = 28;
+	dir = 1
 	},
 /obj/item/trash/chips,
 /obj/item/clothing/head/bandana/elysium/green,
@@ -751,11 +755,9 @@
 	pixel_x = 32
 	},
 /obj/structure/closet/secure_closet/wall{
-	icon_door = "red_wall";
 	icon_state = "generic_wall";
 	name = "equipment locker";
-	pixel_y = -28;
-	dir = 1
+	pixel_y = -28
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/trash/chips,
@@ -1070,9 +1072,9 @@
 	dir = 4
 	},
 /obj/structure/closet/wall{
-	icon_door = "orange_wall";
 	name = "uniform closet";
-	pixel_y = 28
+	pixel_y = 28;
+	dir = 1
 	},
 /obj/item/radio,
 /obj/item/radio,
@@ -1123,10 +1125,10 @@
 /area/ship/crew/cryo)
 "Nm" = (
 /obj/structure/closet/secure_closet/wall{
-	icon_door = "red_wall";
 	icon_state = "generic_wall";
 	name = "equipment locker";
-	pixel_y = 28
+	pixel_y = 28;
+	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/clothing/head/bandana/elysium/green,
@@ -1302,7 +1304,8 @@
 	},
 /obj/structure/closet/wall{
 	icon_state = "emergency_wall";
-	pixel_y = 28
+	pixel_y = 28;
+	dir = 1
 	},
 /obj/item/tank/internals/oxygen,
 /obj/item/tank/internals/oxygen,
@@ -1342,7 +1345,7 @@
 /obj/structure/closet/secure_closet/wall{
 	icon_door = "med_wall";
 	name = "medical locker";
-	dir = 4;
+	dir = 8;
 	pixel_x = -28
 	},
 /obj/structure/cable{
@@ -1360,11 +1363,9 @@
 	filter_types = list("n2")
 	},
 /obj/structure/closet/secure_closet/wall{
-	icon_door = "red_wall";
 	icon_state = "generic_wall";
 	name = "equipment locker";
-	pixel_y = -28;
-	dir = 1
+	pixel_y = -28
 	},
 /obj/structure/cable{
 	icon_state = "5-9"

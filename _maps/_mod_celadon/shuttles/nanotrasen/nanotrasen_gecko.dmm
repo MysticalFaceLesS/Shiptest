@@ -377,7 +377,6 @@
 /obj/item/clothing/head/caphat/nt,
 /obj/item/stock_parts/cell/gun,
 /obj/item/gun/energy/laser,
-/obj/item/clothing/under/rank/command/captain/nt,
 /obj/item/clothing/shoes/laceup,
 /obj/item/clothing/head/caphat/parade,
 /obj/item/clothing/glasses/sunglasses,
@@ -385,6 +384,12 @@
 /obj/item/megaphone/command,
 /obj/item/binoculars,
 /obj/item/kitchen/knife/combat,
+/obj/item/clothing/suit/armor/vest/capcarapace,
+/obj/item/clothing/head/caphat/parade,
+/obj/item/clothing/head/nanotrasen/captain/peaked,
+/obj/item/clothing/under/nanotrasen/captain,
+/obj/item/clothing/under/nanotrasen/captain/skirt,
+/obj/item/clothing/suit/armor/nanotrasen/captain,
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/dorm/dormfive)
 "dp" = (
@@ -506,7 +511,11 @@
 /area/ship/engineering/engine)
 "eA" = (
 /obj/machinery/light/directional/north,
-/obj/machinery/computer/crew,
+/obj/structure/table/reinforced,
+/obj/item/binoculars{
+	pixel_y = 6;
+	pixel_x = 2
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/maintenance/central)
 "eC" = (
@@ -589,7 +598,7 @@
 /turf/open/floor/plasteel,
 /area/ship/hallway/aft)
 "fv" = (
-/obj/machinery/computer/cargo/express,
+/obj/machinery/computer/crew,
 /turf/open/floor/plasteel/tech,
 /area/ship/maintenance/central)
 "fD" = (
@@ -1325,7 +1334,7 @@
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/medical/surgery)
 "ph" = (
-/obj/machinery/computer/communications{
+/obj/machinery/computer/cargo/express{
 	dir = 8;
 	icon_state = "computer-left"
 	},
@@ -2259,7 +2268,6 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
 /obj/item/storage/bag/ore,
 /obj/item/clothing/under/rank/cargo/miner,
-/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plasteel,
 /area/ship/cargo/starboard)
 "BP" = (
@@ -2613,9 +2621,6 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/dorm/dormfive)
 "Gm" = (
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/radio,
 /obj/item/clothing/suit/armor/curator,
 /obj/item/clothing/suit/armor/curator,
 /obj/item/clothing/suit/armor/curator,
@@ -2632,12 +2637,11 @@
 /obj/item/clothing/head/fedora/white,
 /obj/item/clothing/head/fedora/white,
 /obj/item/clothing/head/fedora/white,
-/obj/structure/closet/wall/directional/north,
-/obj/item/radio,
 /obj/item/clothing/suit/jacket/letterman_nanotrasen,
 /obj/item/clothing/suit/jacket/letterman_nanotrasen,
 /obj/item/clothing/suit/jacket/letterman_nanotrasen,
 /obj/item/clothing/suit/jacket/letterman_nanotrasen,
+/obj/structure/closet,
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew)
 "Gt" = (
@@ -2712,6 +2716,11 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 5
 	},
+/obj/structure/closet/wall/directional/north,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/crew)
 "GT" = (
@@ -2946,7 +2955,6 @@
 /obj/item/mining_scanner,
 /obj/item/clothing/under/rank/cargo/miner,
 /obj/item/storage/bag/ore,
-/obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plasteel,
 /area/ship/cargo/starboard)
 "Jn" = (

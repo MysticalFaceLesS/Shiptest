@@ -1,13 +1,4 @@
 /datum/modpack/subtler
-	name = "Сабтлер анти-гост"
-	desc = "Сабтлер для активности, что не будет доступна гостам для просмотра"
+	name = "Subtler (анти-гост)"
+	desc = "Добавляет в IC -> Subtler Anti-Ghost скрывающий emote в чате для гостов."
 	author = "Yata9arasu"
-
-/datum/modpack/subtler/pre_initialize()
-	. = ..()
-
-/datum/modpack/subtler/initialize()
-	. = ..()
-
-/datum/modpack/subtler/post_initialize()
-	. = ..()

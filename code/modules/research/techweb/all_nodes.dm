@@ -632,7 +632,7 @@
 	display_name = "Weapon Development Technology"
 	description = "Our researchers have found new ways to weaponize just about everything now."
 	prereq_ids = list("engineering")
-	design_ids = list("pin_testing", "tele_shield","gun_cell")
+	design_ids = list("tele_shield","gun_cell")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
 	export_price = 5000
 
@@ -641,17 +641,8 @@
 	display_name = "Advanced Weapon Development Technology"
 	description = "Our weapons are breaking the rules of reality by now."
 	prereq_ids = list("adv_engi", "weaponry")
-	design_ids = list("pin_loyalty", "gun_cell_upgraded", "gun_cell_large")
+	design_ids = list("gun_cell_upgraded", "gun_cell_large")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
-	export_price = 5000
-
-/datum/techweb_node/firingpin
-	id = "firingpin"
-	display_name = "Pin Security Decompilation"
-	description = "A resource-intensive hacking operation, allowing for the creation of pins without a mindshield brake."
-	prereq_ids = list("adv_weaponry")
-	design_ids = list("pin_standard")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 15000)
 	export_price = 5000
 
 /datum/techweb_node/electric_weapons
@@ -722,8 +713,12 @@
 	display_name = "Advanced Ballistics"
 	description = "Refined ballistic ammunition for extra combat trauma."
 	prereq_ids = list("ballistic_weapons", "adv_engi")
-	design_ids = list("ap9mm", "ap10mm", "ap45", "hp9mm", "hp10mm", "hp45", "ap556mmHITP", "hp556mmHITP")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	// [CELADON-EDIT] - CELADON_WEAPONS - Новое пушки и патроны
+	// design_ids = list("ap9mm", "ap10mm", "ap45", "hp9mm", "hp10mm", "hp45", "ap556mmHITP", "hp556mmHITP") // CELADON-EDIT - ORIGINAL
+	// research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500) // CELADON-EDIT - ORIGINAL
+	design_ids = list("ap9mm", "ap10mm", "ap45", "hp9mm", "hp10mm", "hp45", "ap556mmHITP", "hp556mmHITP","a556surp","a308surp")
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 7500)
+	// [/CELADON-EDIT]
 
 /datum/techweb_node/exotic_ammo
 	id = "exotic_ammo"
@@ -1140,24 +1135,33 @@
 	export_price = 5000
 
 /////////////////////////shuttle tech/////////////////////////
-/* /datum/techweb_node/basic_shuttle_tech 		// MOD_CELADON-CHANGES -> mod_celadon\balance\code\engine\rnd.dm
+/datum/techweb_node/basic_shuttle_tech
 	id = "basic_shuttle"
 	display_name = "Basic Shuttle Research"
 	description = "Research the technology required to create and use basic shuttles."
 	prereq_ids = list("bluespace_travel", "adv_engi")
 	design_ids = list("engine_plasma", "engine_ion", "engine_heater", "engine_smes", "shuttle_helm", "rapid_shuttle_designator")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
-	export_price = 5000
+	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем РнД
+	// research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000) // CELADON-EDIT - ORIGINAL
+	// export_price = 5000 // CELADON-EDIT - ORIGINAL
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
+	export_price = 2500
+	// [/CELADON-EDIT]
 
 /datum/techweb_node/exp_shuttle_tech
 	id = "exp_shuttle"
 	display_name = "Experimental Shuttle Research"
 	description = "A bunch of engines and related shuttle parts that are likely not really that useful, but could be in strange situations."
-	prereq_ids = list("basic_shuttle")
+	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем РнД
+	// prereq_ids = list("basic_shuttle") // CELADON-EDIT - ORIGINAL
+	prereq_ids = list("t3_ion")
 	design_ids = list("engine_expulsion")
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
-	export_price = 2500
- */
+	// research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000) // CELADON-EDIT - ORIGINAL
+	// export_price = 2500 // CELADON-EDIT - ORIGINAL
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 7500)
+	export_price = 7500
+	// [/CELADON-EDIT]
+
 ////////////////////// IPC Parts ///////////////////////
 /datum/techweb_node/ipc_organs
 	id = "ipc_organs"

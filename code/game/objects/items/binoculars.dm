@@ -5,11 +5,14 @@
 	icon_state = "binoculars"
 	lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
-	// slot_flags = ITEM_SLOT_BELT		//MOD_CELADON-CHANGES -> mod_celadon\QoL\code\binoculars.dm
+	// [CELADON-EDIT] - CELADON_QOL - Помещаем бинокль в слот галстука
+	// slot_flags = ITEM_SLOT_BELT // CELADON-EDIT -> ORIGINAL
+	slot_flags = ITEM_SLOT_NECK
+	// [/CELADON-EDIT]
 	w_class = WEIGHT_CLASS_SMALL
-	// var/mob/listeningTo		//MOD_CELADON-CHANGES -> mod_celadon\QoL\code\binoculars.dm
-	// var/zoom_out_amt = 5.5
-	// var/zoom_amt = 10
+	var/mob/listeningTo
+	var/zoom_out_amt = 5.5
+	var/zoom_amt = 10
 
 /obj/item/binoculars/Initialize()
 	. = ..()

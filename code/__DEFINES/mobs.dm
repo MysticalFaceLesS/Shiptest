@@ -132,6 +132,9 @@
 #define BODYTYPE_DIGITIGRADE (1<<4) //Cancer
 #define BODYTYPE_KEPORI (1<<5) //Just Kepori
 #define BODYTYPE_VOX (1<<6) //Big Vox
+// [CELADON-ADD] - TAJARA
+#define BODYTYPE_TAJARA (1<<7) //Fluffy Ass
+// [/CELADON-ADD]
 
 // Health/damage defines
 #define MAX_LIVING_HEALTH 100
@@ -335,7 +338,7 @@
 #define SHADOW_SPECIES_LIGHT_THRESHOLD 0.2
 
 //MINOR TWEAKS/MISC
-#define AGE_MIN 18 //youngest a character can be
+#define AGE_MIN 17 //youngest a character can be
 #define AGE_MAX 85 //oldest a character can be
 #define AGE_MINOR 20 //legal age of space drinking and smoking
 #define WIZARD_AGE_MIN 30 //youngest a wizard can be

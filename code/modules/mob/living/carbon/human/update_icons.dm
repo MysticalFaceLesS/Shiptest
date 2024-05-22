@@ -374,6 +374,11 @@ There are several things that need to be remembered:
 		if((I.supports_variations & KEPORI_VARIATION) && (dna.species.bodytype & BODYTYPE_KEPORI))
 			icon_file = KEPORI_HEAD_PATH
 
+		// [CELADON-ADD] - TAJARA
+		if((I.supports_variations & TAJARA_VARIATION) && (dna.species.bodytype & BODYTYPE_TAJARA))
+			icon_file = TAJARA_HEAD_PATH
+		// [/CELADON-ADD]
+
 		if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(I))))
 			handled_by_bodytype = FALSE
 			icon_file = DEFAULT_HEAD_PATH
@@ -445,6 +450,11 @@ There are several things that need to be remembered:
 		else if((dna.species.bodytype & BODYTYPE_KEPORI) && (I.supports_variations & KEPORI_VARIATION))
 			icon_file = KEPORI_SUIT_PATH
 
+		// [CELADON-ADD] - TAJARA
+		else if((dna.species.bodytype & BODYTYPE_TAJARA) && (I.supports_variations & TAJARA_VARIATION))
+			icon_file = TAJARA_SUIT_PATH
+		// [/CELADON-ADD]
+
 		if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(I))))
 			handled_by_bodytype = FALSE
 			icon_file = I.mob_overlay_icon
@@ -506,6 +516,11 @@ There are several things that need to be remembered:
 			if((dna.species.bodytype & BODYTYPE_KEPORI) && (I.supports_variations & KEPORI_VARIATION))
 				icon_file = KEPORI_MASK_PATH
 
+			// [CELADON-ADD] - TAJARA
+			if((dna.species.bodytype & BODYTYPE_TAJARA) && (I.supports_variations & TAJARA_VARIATION))
+				icon_file = TAJARA_MASK_PATH
+			// [/CELADON-ADD]
+
 			if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(I))))
 				icon_file = DEFAULT_MASK_PATH
 				handled_by_bodytype = FALSE
@@ -519,28 +534,28 @@ There are several things that need to be remembered:
 
 	apply_overlay(FACEMASK_LAYER)
 
-// /mob/living/carbon/human/update_inv_neck()		////MOD_CELADON-CHANGES -> mod_celadon\QoL\code\update_icons.dm
-// 	remove_overlay(NECK_LAYER)
+/mob/living/carbon/human/update_inv_neck()
+	remove_overlay(NECK_LAYER)
 
-// 	if(client && hud_used && hud_used.inv_slots[TOBITSHIFT(ITEM_SLOT_NECK) + 1])
-// 		var/atom/movable/screen/inventory/inv = hud_used.inv_slots[TOBITSHIFT(ITEM_SLOT_NECK) + 1]
-// 		inv.update_appearance()
+	if(client && hud_used && hud_used.inv_slots[TOBITSHIFT(ITEM_SLOT_NECK) + 1])
+		var/atom/movable/screen/inventory/inv = hud_used.inv_slots[TOBITSHIFT(ITEM_SLOT_NECK) + 1]
+		inv.update_appearance()
 
-// 	if(wear_neck)
-// 		var/obj/item/I = wear_neck
-// 		update_hud_neck(I)
-// 		if(!(ITEM_SLOT_NECK in check_obscured_slots()))
-// 			var/icon_file
-// 			var/handled_by_bodytype = TRUE
+	if(wear_neck)
+		var/obj/item/I = wear_neck
+		update_hud_neck(I)
+		if(!(ITEM_SLOT_NECK in check_obscured_slots()))
+			var/icon_file
+			var/handled_by_bodytype = TRUE
 
-// 			if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(I))))
-// 				handled_by_bodytype = FALSE
-// 				icon_file = DEFAULT_NECK_PATH
+			if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(I))))
+				handled_by_bodytype = FALSE
+				icon_file = DEFAULT_NECK_PATH
 
-// 			overlays_standing[NECK_LAYER] = wear_neck.build_worn_icon(default_layer = NECK_LAYER, default_icon_file = icon_file, mob_species = CHECK_USE_AUTOGEN)
+			overlays_standing[NECK_LAYER] = wear_neck.build_worn_icon(default_layer = NECK_LAYER, default_icon_file = icon_file, mob_species = CHECK_USE_AUTOGEN)
 
 
-// 	apply_overlay(NECK_LAYER)
+	apply_overlay(NECK_LAYER)
 
 /mob/living/carbon/human/update_inv_back()
 	remove_overlay(BACK_LAYER)

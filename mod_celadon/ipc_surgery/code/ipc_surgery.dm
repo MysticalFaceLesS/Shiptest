@@ -59,14 +59,10 @@
 		user.visible_message("<span class='warning'>[user] suddenly notices that the robotic brain [user.p_they()] [user.p_were()] working on is not there anymore.</span>", "<span class='warning'>You suddenly notice that the brain you were working on is not there anymore.</span>")
 	return FALSE
 
-/* HUMANZZ */
 /datum/surgery/brain_surgery/can_start(mob/user, mob/living/carbon/target)
-	var/obj/item/organ/brain/brain = target.getorganslot(ORGAN_SLOT_BRAIN)
-	var/obj/item/organ/brain/mmi_holder/posibrain/posibrain = target.getorganslot(ORGAN_SLOT_BRAIN)
-	if(!brain)
-		return FALSE
-	else if(istype(posibrain))
-		return FALSE
-	else
-		return TRUE
+	. = ..()
+	if (!.)
+		return
 
+	if (istype(target.getorganslot(ORGAN_SLOT_BRAIN), /obj/item/organ/brain/mmi_holder/posibrain))
+		return FALSE

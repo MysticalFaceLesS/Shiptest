@@ -352,7 +352,8 @@
 /obj/item/clothing/glasses/meson/engine/tray,
 /obj/item/areaeditor/shuttle,
 /obj/structure/closet/wall/orange{
-	pixel_y = 32
+	pixel_y = 32;
+	dir = 1
 	},
 /obj/item/storage/box/metalfoam,
 /obj/item/holosign_creator/engineering,
@@ -460,23 +461,25 @@
 "go" = (
 /obj/structure/table/reinforced,
 /obj/item/paper_bin{
-	pixel_x = -13;
+	pixel_x = -9;
 	pixel_y = 8
 	},
 /obj/item/pen/fountain{
-	pixel_x = -13;
+	pixel_x = -9;
 	pixel_y = 9
 	},
 /obj/item/pen/fourcolor{
-	pixel_x = -14;
+	pixel_x = -9;
 	pixel_y = 12
 	},
-/obj/item/folder/red,
+/obj/item/folder/red{
+	pixel_x = 6
+	},
 /obj/item/folder{
-	pixel_x = 2
+	pixel_x = 8
 	},
 /obj/item/folder/blue{
-	pixel_x = 4
+	pixel_x = 10
 	},
 /obj/machinery/button/door{
 	id = "savior_bridgelockdown";
@@ -713,13 +716,12 @@
 /area/ship/crew)
 "jK" = (
 /obj/structure/table/reinforced,
-/obj/machinery/fax{
-	pixel_x = -2;
-	pixel_y = 12
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/corner/opaque/ntblue{
 	dir = 1
+	},
+/obj/machinery/fax{
+	pixel_y = 6
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
@@ -988,15 +990,20 @@
 /turf/open/floor/engine,
 /area/ship/engineering/engine)
 "mK" = (
-/obj/machinery/computer/communications{
-	dir = 8;
-	icon_state = "computer-right"
-	},
 /obj/effect/turf_decal/corner/opaque/ntblue{
 	dir = 6
 	},
 /obj/structure/railing/corner{
 	dir = 8
+	},
+/obj/structure/table/reinforced,
+/obj/item/toy/plush/slimeplushie{
+	pixel_y = 9;
+	pixel_x = 5
+	},
+/obj/item/reagent_containers/food/drinks/coffee{
+	pixel_y = 10;
+	pixel_x = -7
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
@@ -1046,7 +1053,8 @@
 /obj/machinery/chem_heater,
 /obj/machinery/light/dim/directional/east,
 /obj/structure/closet/firecloset/wall{
-	pixel_y = 32
+	pixel_y = 32;
+	dir = 1
 	},
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
@@ -1445,7 +1453,7 @@
 	dir = 9
 	},
 /obj/structure/closet/firecloset/wall{
-	dir = 8;
+	dir = 4;
 	pixel_x = 28
 	},
 /turf/open/floor/engine,
@@ -1530,7 +1538,8 @@
 	},
 /obj/structure/closet/firecloset/wall{
 	pixel_y = 32;
-	pixel_x = 32
+	pixel_x = 32;
+	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
@@ -1620,7 +1629,7 @@
 /obj/item/radio,
 /obj/item/radio,
 /obj/structure/closet/wall{
-	dir = 8;
+	dir = 4;
 	name = "Radio Storage";
 	pixel_x = 28
 	},
@@ -2182,10 +2191,6 @@
 	pixel_y = 31
 	},
 /obj/machinery/disposal/bin,
-/obj/structure/closet/emcloset/wall{
-	dir = 4;
-	pixel_x = -30
-	},
 /obj/structure/disposalpipe/trunk,
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
@@ -2508,7 +2513,7 @@
 	pixel_y = 32
 	},
 /obj/structure/closet/emcloset/wall{
-	dir = 4;
+	dir = 8;
 	pixel_x = -30
 	},
 /turf/open/floor/plasteel,
@@ -2565,7 +2570,7 @@
 	dir = 4
 	},
 /obj/structure/closet/secure_closet/wall{
-	dir = 4;
+	dir = 8;
 	name = "medicine cabinet";
 	pixel_x = -28
 	},
@@ -2958,7 +2963,7 @@
 	pixel_y = 11
 	},
 /obj/structure/closet/firecloset/wall{
-	dir = 4;
+	dir = 8;
 	pixel_x = -28
 	},
 /turf/open/floor/plasteel,
@@ -3020,6 +3025,7 @@
 /turf/open/floor/engine,
 /area/ship/engineering/engine)
 "Or" = (
+/obj/structure/sign/nanotrasen,
 /turf/closed/wall/mineral/titanium,
 /area/ship/cargo)
 "Ot" = (
@@ -3219,7 +3225,7 @@
 /area/ship/hallway/starboard)
 "PN" = (
 /obj/structure/closet/secure_closet/wall{
-	dir = 4;
+	dir = 8;
 	icon_door = "sec_wall";
 	icon_state = "sec_wall";
 	name = "gun locker";
@@ -3397,11 +3403,9 @@
 /turf/open/floor/plasteel/white,
 /area/ship/hallway/starboard)
 "QT" = (
-/obj/structure/sign/nanotrasen{
-	pixel_x = -32
-	},
-/turf/template_noop,
-/area/template_noop)
+/obj/structure/sign/nanotrasen,
+/turf/closed/wall/mineral/titanium,
+/area/ship/bridge)
 "Re" = (
 /obj/machinery/door/airlock{
 	name = "Dormitory"
@@ -3465,16 +3469,15 @@
 /turf/open/floor/plasteel,
 /area/ship/crew/canteen)
 "Rz" = (
-/obj/machinery/computer/helm{
-	dir = 8;
-	icon_state = "computer-left"
-	},
 /obj/item/radio/intercom/directional/north{
 	layer = 5;
 	pixel_x = 3
 	},
 /obj/effect/turf_decal/corner/opaque/ntblue{
 	dir = 6
+	},
+/obj/machinery/computer/helm{
+	dir = 8
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
@@ -4778,7 +4781,7 @@ Jz
 (21,1,1) = {"
 Jz
 Jz
-Jd
+QT
 PH
 jK
 PN
@@ -4787,7 +4790,7 @@ sD
 fI
 BV
 PH
-Jd
+QT
 Jz
 Or
 Fa
@@ -4805,7 +4808,7 @@ Jz
 (22,1,1) = {"
 Jz
 Jz
-QT
+Jz
 Ba
 go
 bN
@@ -4814,9 +4817,9 @@ rB
 Iv
 il
 PH
-QT
 Jz
-QT
+Jz
+Jz
 Fa
 Gi
 Mv
@@ -4825,7 +4828,7 @@ BS
 bx
 cg
 Fa
-QT
+Jz
 Jz
 Jz
 "}
@@ -4898,14 +4901,14 @@ Jz
 Jz
 Jz
 Jz
-QT
+Jz
 Ul
 Xb
 Mp
 Mp
 Xb
 Ul
-QT
+Jz
 Jz
 Jz
 Jz

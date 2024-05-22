@@ -263,8 +263,11 @@ DEFINE_BITFIELD(zap_flags, list(
 	"ZAP_OBJ_DAMAGE" = ZAP_OBJ_DAMAGE,
 ))
 
-/*	DEFINE_BITFIELD(bodytype, list(			//CELADON-CHANGE -> mod_celadon\tajaran\code\_globalvars\bitfields.dm
-	"BODYTYPE_ORGANIC" = BODYTYPE_ORGANIC,	//извините, товарищь Хост или ХедДев, но без комментирования этой шляпы, скорее всего, будут ошибки
+DEFINE_BITFIELD(bodytype, list(
+	// [CELADON-ADD] - TAJARA - ,
+	"BODYTYPE_TAJARA" = BODYTYPE_TAJARA,
+	// [/CELADON-ADD] ,
+	"BODYTYPE_ORGANIC" = BODYTYPE_ORGANIC,
 	"BODYTYPE_ROBOTIC" = BODYTYPE_ROBOTIC,
 	"BODYTYPE_HUMANOID" = BODYTYPE_HUMANOID,
 	"BODYTYPE_KEPORI" = BODYTYPE_KEPORI,

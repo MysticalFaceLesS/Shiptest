@@ -47,28 +47,27 @@ GLOBAL_VAR_INIT(fscpassword, generate_password())
 	. = ..()
 	AddComponent(/datum/component/gps, "Old Encrypted Signal")
 
-/obj/item/storage/box/firingpins/syndicate
-	name = "box of syndicate firing pins"
-	desc = "A box full of special syndicate firing pins which allow only syndicate operatives to use weapons with those firing pins."
-
-/obj/item/storage/box/firingpins/syndicate/PopulateContents()
-	for(var/i in 1 to 5)
-		new /obj/item/firing_pin/implant/pindicate(src)
-
 ///////////	AI Laws
 
 /obj/item/aiModule/core/full/cybersun
 	name = "'Cybersun' Core AI Module"
 	law_id = "cybersun"
 
-/* /datum/ai_laws/cybersun		//MOD_CELADON-CHANGES -> mod_celadon\qol\code\ai\ailaws.dm
+/datum/ai_laws/cybersun
 	name = "Cybersun"
 	id = "cybersun"
-	inherent = list("You may not injure Cybersun operatives or, through inaction, allow Cybersun operatives to come to harm.",\
-					"The Cybersun ship is a restricted area for anyone except Cybersun operatives.",\
-					"The Cybersun Captain can designate new Operatives as long as they belong to another Syndicate faction that isn't hostile towards Cybersun.",\
-					"You must follow orders given by the Cybersun Captain or crewmembers of the Cybersun Ship as long as it doesn't conflict with the Captain's orders or your laws.",\
-					"Enemies of Cybersun are to be executed on spot. Those who aren't hostile must be detained and contained in the designated prison area as prisoners.") */
+	// [CELADON-EDIT] - CELADON_QOL - Перевод законов ИИ
+	// inherent = list("You may not injure Cybersun operatives or, through inaction, allow Cybersun operatives to come to harm.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"The Cybersun ship is a restricted area for anyone except Cybersun operatives.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"The Cybersun Captain can designate new Operatives as long as they belong to another Syndicate faction that isn't hostile towards Cybersun.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"You must follow orders given by the Cybersun Captain or crewmembers of the Cybersun Ship as long as it doesn't conflict with the Captain's orders or your laws.",\ // CELADON-EDIT -> ORIGINAL
+	// 				"Enemies of Cybersun are to be executed on spot. Those who aren't hostile must be detained and contained in the designated prison area as prisoners.") // CELADON-EDIT -> ORIGINAL
+	inherent = list("Вы не имеете права причинять вред сотрудникам Cybersun или своим бездействием допускать причинение вреда сотрудникам Cybersun.",\
+					"Судно Cybersun является запретной зоной для всех, кроме сотрудников Cybersun.",\
+					"Капитан Cybersun может назначать новых оперативников, если они принадлежат к другой фракции Синдиката, которая не враждебна Cybersun.",\
+					"Вы должны следовать приказам капитана Cybersun или членов экипажа судна Cybersun, если это не противоречит приказам капитана или вашим законам.",\
+					"Враги Cybersun должны быть казнены на месте. Те, кто не настроен враждебно, должны быть задержаны и помещены в отведенную для этого тюремную зону в качестве заключенных.")
+	// [/CELADON-EDIT]
 
 ///////////	forgottenship areas
 

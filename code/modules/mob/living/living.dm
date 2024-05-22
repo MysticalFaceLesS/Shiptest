@@ -1830,24 +1830,49 @@
 	REMOVE_TRAIT(src, TRAIT_UI_BLOCKED, TRAIT_HANDS_BLOCKED)
 	REMOVE_TRAIT(src, TRAIT_PULL_BLOCKED, TRAIT_HANDS_BLOCKED)
 
-/// Special key down handling of /living mobs, currently only used for typing indicator
+// Special key down handling of /living mobs, currently only used for typing indicator
 /mob/living/key_down(_key, client/user)
 	if(!typing_indicator && stat == CONSCIOUS)
 		for(var/kb_name in user.prefs.key_bindings[_key])
 			switch(kb_name)
 				if("Say")
-					set_typing_indicator(TRUE)
+					// [CELADON-EDIT] - CELADON_QOL
+					// set_typing_indicator(TRUE)
+					set_typing_indicator(TRUE, isSay = TRUE)
+					// [/CELADON-EDIT]
 					break
 				if("Me")
-					set_typing_indicator(TRUE)
+					// [CELADON-EDIT] - CELADON_QOL
+					// set_typing_indicator(TRUE)
+					set_typing_indicator(TRUE, isMe = TRUE)
+					// [/CELADON-EDIT]
 					break
 	return ..()
 
-/// Used for setting typing indicator on/off. Checking the state should be done not on the proc to avoid overhead.
-/mob/living/set_typing_indicator(state)
+// Used for setting typing indicator on/off. Checking the state should be done not on the proc to avoid overhead.
+// [CELADON-EDIT] - CELADON_QOL
+// /mob/living/set_typing_indicator(state) // CELADON-EDIT - ORIGINAL
+/mob/living/set_typing_indicator(state, isMe = null, isSay = null)
+// [/CELADON-EDIT]
 	typing_indicator = state
-	var/state_of_bubble = bubble_icon? "[bubble_icon]0" : "default0"
-	var/mutable_appearance/bubble_overlay = mutable_appearance('icons/mob/talk.dmi', state_of_bubble, plane = RUNECHAT_PLANE)
+	// [CELADON-EDIT] - CELADON_QOL
+	// var/state_of_bubble = bubble_icon? "[bubble_icon]0" : "default0" // CELADON-EDIT - ORIGINAL
+	var/state_of_bubble
+	// [/CELADON-EDIT]
+	// [CELADON-ADD] - CELADON_QOL
+	if(isMe)
+		state_of_bubble = "emotetyping"
+	if(isSay)
+		state_of_bubble = bubble_icon? "[bubble_icon]0" : "default0"
+	if(!state_of_bubble)
+		state_of_bubble = last_state_of_bubble
+	else
+		last_state_of_bubble = state_of_bubble
+	// [/CELADON-ADD]
+	// [CELADON-EDIT] - CELADON_QOL
+	// var/mutable_appearance/bubble_overlay = mutable_appearance('mod_celadon/qol/icons/talk.dmi', state_of_bubble, plane = RUNECHAT_PLANE) // CELADON-EDIT - ORIGINAL
+	var/mutable_appearance/bubble_overlay = mutable_appearance('mod_celadon/qol/icons/talk.dmi', state_of_bubble, plane = RUNECHAT_PLANE)
+	// [/CELADON-EDIT]
 	bubble_overlay.appearance_flags = RESET_COLOR | RESET_TRANSFORM | TILE_BOUND | PIXEL_SCALE
 	if(typing_indicator)
 		add_overlay(bubble_overlay)

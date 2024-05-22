@@ -92,7 +92,7 @@ SUBSYSTEM_DEF(traumas)
 			/obj/item/clothing/under/rank/command/head_of_personnel, /obj/item/clothing/under/rank/rnd/research_director,
 			/obj/item/clothing/under/rank/security/head_of_security/alt,//WS Edit - Better security jumpsuit sprites
 			/obj/item/clothing/under/rank/rnd/research_director/alt, /obj/item/clothing/under/rank/rnd/research_director/turtleneck,
-			/obj/item/clothing/under/rank/command/captain/parade, /obj/item/clothing/under/rank/security/head_of_security/parade,
+			/obj/item/clothing/under/rank/security/head_of_security/parade,
 			/obj/item/clothing/under/rank/security/head_of_security/parade/female, //WS Edit - Better Command Uniforms
 			/obj/item/clothing/head/helmet/abductor, /obj/item/clothing/suit/armor/abductor/vest, /obj/item/melee/baton/abductor,
 			/obj/item/storage/belt/military/abductor, /obj/item/gun/energy/alien, /obj/item/abductor/silencer,
@@ -182,7 +182,21 @@ SUBSYSTEM_DEF(traumas)
 		"spiders" = typecacheof(list(/datum/species/spider))
 	)
 
-	return ..()	*/
+	// [CELADON-ADD] - TAJARA
+
+	// Мне это кажется более крутым решением, чем оверрайд Initialize
+	// делать, потому что дополнить его в начале невозможно, а при
+	// дополнении в конце, мы дополняем после того как отрепорчено,
+	// что подсистема успешно запустилась.
+
+	// Это единственное место где можно воткнуться после инициализации,
+	// но перед оповещением что подсистема запущена
+
+	init_tajara_mod()
+
+	// [/CELADON-ADD]
+
+	return ..()
 
 ///Creates a regular expression to match against the given phobia
 ///Capture group 2 = the scary word
