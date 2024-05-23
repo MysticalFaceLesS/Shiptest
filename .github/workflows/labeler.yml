@@ -1,4 +1,7 @@
-name: PR Labeler
+name: "Pull Request Labeler"
+
+permissions:
+  contents: read
 
 on:
   push:
@@ -7,7 +10,10 @@ on:
   pull_request_target:
 
 jobs:
-  Label:
+  triage:
+    permissions:
+      contents: read # may be required due to overwrite/add ambiguity
+      pull-requests: write # required to apply labels to PRs
     runs-on: ubuntu-latest
     steps:
       - name: Check for conflicting PRs

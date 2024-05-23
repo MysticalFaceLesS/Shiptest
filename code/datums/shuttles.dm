@@ -403,8 +403,3 @@
 	file_name = "pirate_nail"
 	name = "Nail-class Boarding Vessel"
 	prefix = "PIRATE"
-
-/datum/map_template/shuttle/subshuttles/syndicate_jet_lancer
-	file_name = "syndicate_jet_lancer"
-	name = "Jet Lancer-class Boarding Vessel"
-	prefix = "DSSV"

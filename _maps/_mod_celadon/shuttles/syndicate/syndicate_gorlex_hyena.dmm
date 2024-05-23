@@ -908,6 +908,7 @@
 /obj/item/clothing/glasses/welding,
 /obj/item/clothing/head/hardhat/orange,
 /obj/item/clothing/head/soft/grey,
+/obj/item/kinetic_crusher/syndie_crusher,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/storage)
 "pu" = (
@@ -1163,6 +1164,7 @@
 /obj/item/clothing/head/hardhat/orange,
 /obj/item/clothing/head/soft/grey,
 /obj/machinery/airalarm/directional/north,
+/obj/item/kinetic_crusher/syndie_crusher,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/storage)
 "tI" = (
@@ -3052,19 +3054,12 @@
 /area/ship/maintenance/port)
 "XA" = (
 /obj/structure/bed/dogbed/cayenne{
-	desc = "An ordinary dog bed, dusted with ash...";
-	name = "David's bed"
+	desc = "An ordinary cat bed";
+	name = "Seki's bed"
 	},
-/mob/living/simple_animal/hostile/asteroid/goliath/pup{
-	a_intent = "help";
-	desc = "A small goliath pup. Its tendrils have not yet fully grown. Someone, somehow, has managed to fit a large dog collar around its neck.";
-	environment_smash = 0;
+/mob/living/simple_animal/pet/cat/syndie{
 	faction = list("neutral","playerSyndicate");
-	mob_size = 2;
-	move_force = 1000;
-	move_resist = 1000;
-	name = "David";
-	pull_force = 1000
+	name = "Seki"
 	},
 /turf/open/floor/carpet/red_gold,
 /area/ship/bridge)

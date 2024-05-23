@@ -1,10 +1,9 @@
-/obj/item/clothing/suit/armor/hos/trenchcoat/cloak
+/obj/item/clothing/trenchcoat
 	icon = 'mod_celadon/items/icons/obj/suits/cloaks.dmi'
 	mob_overlay_icon = 'mod_celadon/items/icons/mob/suits/cloaks.dmi'
 	slot_flags = ITEM_SLOT_OCLOTHING | ITEM_SLOT_NECK
-	name = "armored trenchcloak"
-	desc = "This one appears to be designed to be draped over one's shoulders rather than worn normally.."
+	name = "replica armored trenchcloak"
+	desc = "This replica one appears to be designed to be draped over one's shoulders rather than worn normally.."
 	icon_state = "trenchcloak"
 	item_state = "trenchcloak"
 	body_parts_covered = CHEST | ARMS | LEGS
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0) // делаем анюслесс
