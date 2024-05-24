@@ -2675,9 +2675,8 @@
 	desc = "Cloak of the Forgotten State. This variant displays the wearer's rank as a squad commander.";
 	name = "sergeant's NanoTrasen"
 	},
-/obj/structure/closet/secure_closet/hos{
-	name = "\proper head of security's locker"d"
-	},
+/obj/structure/closet/secure_closet/security,
+/obj/structure/closet/secure_closet/security,
 /turf/open/floor/plasteel/dark,
 /area/ship/security)
 "HL" = (
@@ -2766,13 +2765,8 @@
 /obj/structure/guncase{
 	desc = "A locker that holds weapons.";
 	name = "weapon locker";
-	capacity = 5
-	},
-/obj/item/gun/energy/e_gun/hades{
-	pixel_y = -2
-	},
-/obj/item/gun/energy/e_gun/hades{
-	pixel_y = -7
+	capacity = 5;
+	anchored = 1
 	},
 /obj/item/gun/energy/e_gun/smg{
 	pixel_y = 4
@@ -2781,6 +2775,12 @@
 	pixel_y = 9
 	},
 /obj/item/gun/ballistic/automatic/powered/gauss,
+/obj/item/gun/energy/e_gun/smg{
+	pixel_y = -9
+	},
+/obj/item/gun/energy/e_gun/smg{
+	pixel_y = -5
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/security)
 "Jk" = (
@@ -3904,7 +3904,7 @@
 /area/ship/cargo)
 "Yy" = (
 /obj/effect/turf_decal/siding/wood{
-	color = "#2e211e";
+	color = "#2E211E";
 	dir = 1
 	},
 /obj/machinery/jukebox,
@@ -3928,7 +3928,7 @@
 /area/ship/engineering)
 "YV" = (
 /obj/effect/turf_decal/siding/wood{
-	color = "#2e211e";
+	color = "#2E211E";
 	dir = 5
 	},
 /mob/living/simple_animal/pet/mothroach{
