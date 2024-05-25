@@ -7,3 +7,7 @@
 	file_name = "syndicate_jet_lancer"
 	name = "Jet Lancer-class Boarding Vessel"
 	prefix = "DSSV"
+/datum/map_template/shuttle/ruin/ruin_jox
+	file_name = "synddicate_Jox"
+	name = "Jox Drop Ship"
+	prefix = "SSV"
