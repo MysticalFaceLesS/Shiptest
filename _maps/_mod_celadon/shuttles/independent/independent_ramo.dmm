@@ -2377,7 +2377,9 @@
 /turf/open/floor/plating,
 /area/ship/external)
 "dR" = (
-/obj/docking_port,
+/obj/docking_port{
+	dir = 8
+	},
 /turf/template_noop,
 /area/template_noop)
 "dS" = (
@@ -2425,8 +2427,8 @@
 /obj/docking_port/mobile{
 	dir = 2;
 	launch_status = 0;
-	port_direction = 1;
-	preferred_direction = 1
+	port_direction = 8;
+	preferred_direction = 4
 	},
 /turf/open/floor/plating,
 /area/ship/external)

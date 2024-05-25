@@ -419,16 +419,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_SKIN_TONE]'>[(randomise[RANDOM_SKIN_TONE]) ? "Lock" : "Unlock"]</A>"
 				dat += "<br>"
 
-			 // [CELADON-ADD] - TAJARA
-			if(pref_species.use_skintonetajara)
-
-				dat += "<h3>Skin Tone Body</h3>"
-
-				dat += "<a href='?_src_=prefs;preference=s_tone_tajara;task=input'>[skin_tone_tajara]</a>"
-				dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_SKIN_TONE_TAJARA]'>[(randomise[RANDOM_SKIN_TONE_TAJARA]) ? "Lock" : "Unlock"]</A>"
-				dat += "<br>"
-			// [/CELADON-ADD]
-
 			// Everyone gets mutant colors now.
 			dat += "<h3>Mutant Colors</h3>"
 
