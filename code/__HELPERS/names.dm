@@ -271,8 +271,18 @@ GLOBAL_DATUM(syndicate_code_response_regex, /regex)
 		"CMSV",
 		"CMGSV",
 	),
+	"CLIP Government" = list(
+		"LGSV",
+		"CGSV",
+	),
 	"Nanotrasen" = list(
 		"NTSV",
+	),
+	"N+S Logistics" = list(
+		"NSSV",
+	),
+	"Vigilitas Interstellar" = list(
+		"VISV",
 	),
 	"Frontiersmen Fleet" = list(
 		"FFV",
