@@ -224,29 +224,19 @@
 #define COMSIG_LIVING_GET_PULLED "living_start_pulled"
 
 /////////////////
-//from base of area/Entered(): (/area). Sent to "area-sensitive" movables, see __DEFINES/traits.dm for info.
-#define COMSIG_ENTER_AREA "enter_area"
-//from base of area/Exited(): (/area). Sent to "area-sensitive" movables, see __DEFINES/traits.dm for info.
-#define COMSIG_EXIT_AREA "exit_area"
-//from base of atom/Click(): (location, control, params, mob/user)
-#define COMSIG_CLICK "atom_click"
-//from base of atom/ShiftClick(): (/mob)
-#define COMSIG_CLICK_SHIFT "shift_click"
-//Allows the user to examinate regardless of client.eye.
-	#define COMPONENT_ALLOW_EXAMINATE 1
-//from base of atom/CtrlClickOn(): (/mob)
-#define COMSIG_CLICK_CTRL "ctrl_click"
-//from base of atom/AltClick(): (/mob)
-#define COMSIG_CLICK_ALT "alt_click"
-//from base of atom/CtrlShiftClick(/mob)
-#define COMSIG_CLICK_CTRL_SHIFT "ctrl_shift_click"
-///from base of atom/CtrlShiftRightClick(/mob)
-#define COMSIG_CLICK_CTRL_SHIFT_RIGHT "ctrl_shift_right_click"
-//from base of atom/MouseDrop(): (/atom/over, /mob/user)
-#define COMSIG_MOUSEDROP_ONTO "mousedrop_onto"
+
+#define COMSIG_ENTER_AREA "enter_area" //from base of area/Entered(): (/area). Sent to "area-sensitive" movables, see __DEFINES/traits.dm for info.
+#define COMSIG_EXIT_AREA "exit_area" //from base of area/Exited(): (/area). Sent to "area-sensitive" movables, see __DEFINES/traits.dm for info.
+
+#define COMSIG_CLICK "atom_click" //from base of atom/Click(): (location, control, params, mob/user)
+#define COMSIG_CLICK_SHIFT "shift_click" //from base of atom/ShiftClick(): (/mob)
+	#define COMPONENT_ALLOW_EXAMINATE 1 //Allows the user to examinate regardless of client.eye.
+#define COMSIG_CLICK_CTRL "ctrl_click" //from base of atom/CtrlClickOn(): (/mob)
+#define COMSIG_CLICK_ALT "alt_click" //from base of atom/AltClick(): (/mob)
+#define COMSIG_CLICK_CTRL_SHIFT "ctrl_shift_click" //from base of atom/CtrlShiftClick(/mob)
+#define COMSIG_MOUSEDROP_ONTO "mousedrop_onto" //from base of atom/MouseDrop(): (/atom/over, /mob/user)
 	#define COMPONENT_NO_MOUSEDROP 1
-//from base of atom/MouseDrop_T: (/atom/from, /mob/user)
-#define COMSIG_MOUSEDROPPED_ONTO "mousedropped_onto"
+#define COMSIG_MOUSEDROPPED_ONTO "mousedropped_onto" //from base of atom/MouseDrop_T: (/atom/from, /mob/user)
 
 ///from base of area/proc/power_change(): ()
 #define COMSIG_AREA_POWER_CHANGE "area_power_change"
@@ -549,6 +539,10 @@
 ///from [/obj/structure/closet/supplypod/proc/endlaunch]:
 #define COMSIG_SUPPLYPOD_LANDED "supplypodgoboom"
 
+// Item mouse siganls
+#define COMSIG_ITEM_MOUSE_EXIT "item_mouse_exit"				//from base of obj/item/MouseExited(): (location, control, params)
+#define COMSIG_ITEM_MOUSE_ENTER "item_mouse_enter"				//from base of obj/item/MouseEntered(): (location, control, params)
+
 ///Called when an item is being offered, from [/obj/item/proc/on_offered(mob/living/carbon/offerer)]
 #define COMSIG_ITEM_OFFERING "item_offering"
 	///Interrupts the offer proc
@@ -773,3 +767,6 @@
 
 ///called in /obj/item/gun/process_chamber (src)
 #define COMSIG_GUN_CHAMBER_PROCESSED "gun_chamber_processed"
+
+///called when an elzu should unroot
+#define COMSIG_DIGOUT "dig_out"

@@ -149,8 +149,7 @@ SUBSYSTEM_DEF(traumas)
 		"birds" = typecacheof(list(
 			/obj/item/clothing/mask/gas/plaguedoctor, /obj/item/reagent_containers/food/snacks/cracker,
 			/obj/item/clothing/suit/chickensuit, /obj/item/clothing/head/chicken,
-			/obj/item/clothing/suit/toggle/owlwings, /obj/item/clothing/under/costume/owl, /obj/item/clothing/mask/gas/owl_mask,
-			/obj/item/clothing/head/helmet/space/freedom, /obj/item/clothing/suit/space/freedom)),
+			/obj/item/clothing/suit/toggle/owlwings, /obj/item/clothing/under/costume/owl, /obj/item/clothing/mask/gas/owl_mask)),
 
 		"anime" = typecacheof(list(
 			/obj/item/clothing/under/costume/schoolgirl, /obj/item/katana, /obj/item/reagent_containers/food/snacks/sashimi,
@@ -181,6 +180,20 @@ SUBSYSTEM_DEF(traumas)
 			/datum/species/abductor, /datum/species/jelly, /datum/species/pod)),
 		"spiders" = typecacheof(list(/datum/species/spider))
 	)
+
+	// [CELADON-ADD] - TAJARA
+
+	// Мне это кажется более крутым решением, чем оверрайд Initialize
+	// делать, потому что дополнить его в начале невозможно, а при
+	// дополнении в конце, мы дополняем после того как отрепорчено,
+	// что подсистема успешно запустилась.
+
+	// Это единственное место где можно воткнуться после инициализации,
+	// но перед оповещением что подсистема запущена
+
+	init_tajara_mod()
+
+	// [/CELADON-ADD]
 
 	return ..()
 

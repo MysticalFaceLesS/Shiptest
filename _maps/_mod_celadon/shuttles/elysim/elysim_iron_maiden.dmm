@@ -635,7 +635,6 @@
 "xk" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
 /obj/structure/closet/secure_closet/wall{
-	icon_door = "red_wall";
 	icon_state = "generic_wall";
 	name = "equipment locker";
 	pixel_y = 28;
@@ -706,7 +705,6 @@
 /area/ship/crew/cryo)
 "yR" = (
 /obj/structure/closet/secure_closet/wall{
-	icon_door = "red_wall";
 	icon_state = "generic_wall";
 	name = "equipment locker";
 	pixel_y = 28;
@@ -747,9 +745,7 @@
 /obj/machinery/light/directional/south,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/industrial/outline/yellow,
-/obj/machinery/mineral/ore_redemption{
-	dir = 1
-	},
+/obj/structure/salvageable/machine,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "ze" = (
@@ -757,7 +753,6 @@
 	pixel_x = 32
 	},
 /obj/structure/closet/secure_closet/wall{
-	icon_door = "red_wall";
 	icon_state = "generic_wall";
 	name = "equipment locker";
 	pixel_y = -28
@@ -1075,7 +1070,6 @@
 	dir = 4
 	},
 /obj/structure/closet/wall{
-	icon_door = "orange_wall";
 	name = "uniform closet";
 	pixel_y = 28;
 	dir = 1
@@ -1129,7 +1123,6 @@
 /area/ship/crew/cryo)
 "Nm" = (
 /obj/structure/closet/secure_closet/wall{
-	icon_door = "red_wall";
 	icon_state = "generic_wall";
 	name = "equipment locker";
 	pixel_y = 28;
@@ -1243,6 +1236,9 @@
 	},
 /obj/effect/turf_decal/atmos/air,
 /obj/structure/extinguisher_cabinet/directional/east,
+/obj/item/binoculars{
+	pixel_x = 7
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/crew/cryo)
 "RX" = (
@@ -1368,7 +1364,6 @@
 	filter_types = list("n2")
 	},
 /obj/structure/closet/secure_closet/wall{
-	icon_door = "red_wall";
 	icon_state = "generic_wall";
 	name = "equipment locker";
 	pixel_y = -28
@@ -1388,8 +1383,9 @@
 /turf/open/floor/plating/wasteplanet/rust,
 /area/ship/cargo)
 "UU" = (
-/obj/machinery/autolathe/hacked,
 /obj/effect/turf_decal/industrial/outline/yellow,
+/obj/structure/frame,
+/obj/item/circuitboard/machine/autolathe,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "Vf" = (

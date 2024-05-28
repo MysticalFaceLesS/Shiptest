@@ -24,6 +24,7 @@ ID мода: CELADON_BALANCE
 ### Описание мода
 
 Этот мод вносит различные изменения в балансе. 
+- Изменено количество получаемого лута с элиток.
 
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
@@ -44,6 +45,12 @@ EDIT: `code\game\machinery\shuttle\shuttle_engine_types.dm`: `fuel_use`, `thrust
 EDIT: `code\modules\research\techweb\all_nodes.dm`: `research_costs`, `export_price`, `prereq_ids`
 - Универсальная плата вендоров:
 ADD: `code\game\objects\items\circuitboards\machine_circuitboards.dm` : `/obj/item/circuitboard/machine/vendor`
+- Уменьшение цены еды в карго:
+EDIT: `code\modules\cargo\packs\food.dm` : `/datum/supply_pack/food/`
+
+Ребаланс
+Лут с элиток
+EDIT: `code\modules\mob\living\simple_animal\hostile\mining_mobs\elites\elite.dm`: `/obj/structure/elite_tumor/proc/onEliteLoss()` -> var/obj/structure/closet/crate/necropolis/tendril/lootbox = new /obj/structure/closet/crate/necropolis/tendril(loc)
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -85,7 +92,7 @@ ADD: `code\game\objects\items\circuitboards\machine_circuitboards.dm` : `/obj/it
 
 ### Авторы:
 
-Кинетик Крашер, универасльная вендор плата - Yata9arasu, двигатели, рад. коллекторы - RalseiDreemuurr
+- Кинетик Крашер, универасльная вендор плата, цены карго, одежда с ЦК - Yata9arasu, двигатели, рад. коллекторы - RalseiDreemuurr
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.

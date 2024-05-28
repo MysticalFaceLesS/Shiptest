@@ -980,11 +980,8 @@
 		stoplag(1)
 	progress.end_progress()
 	to_chat(user, "<span class='notice'>You dump as much of [src_object.parent]'s contents [STR.insert_preposition]to [src] as you can.</span>")
-	STR.orient2hud(user)
-	src_object.orient2hud(user)
 	if(user.active_storage) //refresh the HUD to show the transfered contents
-		user.active_storage.close(user)
-		user.active_storage.show_to(user)
+		user.active_storage.ui_show(user)
 	return TRUE
 
 ///Get the best place to dump the items contained in the source storage item?
@@ -1685,11 +1682,7 @@
 			active_hud.screentip_text.maptext = ""
 		else
 			//We inline a MAPTEXT() here, because there's no good way to statically add to a string like this
-			active_hud.screentip_text.maptext = "<span class='maptext' style='text-align: center; font-size: 32px; color: [user.client.prefs.screentip_color]'>[get_screentip_name(client)]</span>"
-
-/// Returns the atom name that should be used on screentip
-/atom/proc/get_screentip_name(client/hovering_client)
-	return name
+			active_hud.screentip_text.maptext = "<span class='maptext' style='text-align: center; font-size: 32px; color: [user.client.prefs.screentip_color]'>[name]</span>"
 
 ///Called whenever a player is spawned on the same turf as this atom.
 /atom/proc/join_player_here(mob/M)

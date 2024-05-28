@@ -1,5 +1,5 @@
 /datum/species/ipc // im fucking lazy mk2 and cant get sprites to normally work
-	name = "\improper Positronic" //inherited from the real species, for health scanners and things
+	name = "\improper Integrated Positronic Chassis" //inherited from the real species, for health scanners and things
 	id = SPECIES_IPC
 	sexes = FALSE
 	species_age_min = 0
@@ -273,7 +273,11 @@
 
 			if(chassis_of_choice.is_digi)
 				if(istype(BP,/obj/item/bodypart/leg))
-					BP.bodytype = BODYTYPE_HUMANOID | BODYTYPE_ROBOTIC | BODYTYPE_DIGITIGRADE //i hate this so much
+					BP.bodytype |= BODYTYPE_DIGITIGRADE //i hate this so much
+
+			if(chassis_of_choice.has_snout)
+				if(istype(BP,/obj/item/bodypart/head))
+					BP.bodytype |= BODYTYPE_SNOUT //hate. hate. (tik tok tts)
 
 			if(BP.uses_mutcolor)
 				BP.should_draw_greyscale = TRUE

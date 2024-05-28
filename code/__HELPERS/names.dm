@@ -200,6 +200,10 @@ GLOBAL_DATUM(syndicate_code_response_regex, /regex)
 						else
 							if(prob(10))
 								. += pick(lizard_name(MALE),lizard_name(FEMALE))
+							// [CELADON-ADD] - TAJARA
+							if(prob(5))
+								. += pick(tajara_name(MALE),tajara_name(FEMALE))
+							// [/CELADON-ADD]
 							else
 								var/new_name = pick(pick(GLOB.first_names_male,GLOB.first_names_female))
 								new_name += " "
@@ -267,8 +271,18 @@ GLOBAL_DATUM(syndicate_code_response_regex, /regex)
 		"CMSV",
 		"CMGSV",
 	),
+	"CLIP Government" = list(
+		"LGSV",
+		"CGSV",
+	),
 	"Nanotrasen" = list(
 		"NTSV",
+	),
+	"N+S Logistics" = list(
+		"NSSV",
+	),
+	"Vigilitas Interstellar" = list(
+		"VISV",
 	),
 	"Frontiersmen Fleet" = list(
 		"FFV",

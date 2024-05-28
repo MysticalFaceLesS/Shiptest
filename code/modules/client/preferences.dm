@@ -158,7 +158,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/list/custom_names = list()
 	var/preferred_ai_core_display = "Blue"
 	var/prefered_security_department = SEC_DEPT_RANDOM
-	var/generic_adjective = "Unremarkable"
+
 	//Quirk list
 	var/list/all_quirks = list()
 
@@ -833,6 +833,95 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					dat += "</td>"
 					mutant_category = 0
 
+			// [CELADON-ADD] - TAJARA
+			if("tajara_ears" in pref_species.default_features)
+				if(!mutant_category)
+					dat += APPEARANCE_CATEGORY_COLUMN
+
+				dat += "<h3>Ears</h3>"
+				dat += "<a href='?_src_=prefs;preference=tajara_ears;task=input'>[features["tajara_ears"]]</a><BR>"
+
+				mutant_category++
+				if(mutant_category >= MAX_MUTANT_ROWS)
+					dat += "</td>"
+					mutant_category = 0
+
+			if("tajara_ears_markings" in pref_species.default_features)
+				if(!mutant_category)
+					dat += APPEARANCE_CATEGORY_COLUMN
+
+				dat += "<h3>Ears markings</h3>"
+				dat += "<a href='?_src_=prefs;preference=tajara_ears_markings;task=input'>[features["tajara_ears_markings"]]</a><BR>"
+
+				mutant_category++
+				if(mutant_category >= MAX_MUTANT_ROWS)
+					dat += "</td>"
+					mutant_category = 0
+
+			if("tajara_head_markings" in pref_species.default_features)
+				if(!mutant_category)
+					dat += APPEARANCE_CATEGORY_COLUMN
+
+				dat += "<h3>Head markings</h3>"
+				dat += "<a href='?_src_=prefs;preference=tajara_head_markings;task=input'>[features["tajara_head_markings"]]</a><BR>"
+
+				mutant_category++
+				if(mutant_category >= MAX_MUTANT_ROWS)
+					dat += "</td>"
+					mutant_category = 0
+
+			if("tajara_nose_markings" in pref_species.default_features)
+				if(!mutant_category)
+					dat += APPEARANCE_CATEGORY_COLUMN
+
+				dat += "<h3>Nose markings</h3>"
+				dat += "<a href='?_src_=prefs;preference=tajara_nose_markings;task=input'>[features["tajara_nose_markings"]]</a><BR>"
+				dat += "<h3>Skin Tone nose</h3>"
+				dat += "<a href='?_src_=prefs;preference=s_tone_nose;task=input'>[skin_tone_nose]</a>"
+				dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_SKIN_TONE_NOSE]'>[(randomise[RANDOM_SKIN_TONE_NOSE]) ? "Lock" : "Unlock"]</A>"
+
+				mutant_category++
+				if(mutant_category >= MAX_MUTANT_ROWS)
+					dat += "</td>"
+					mutant_category = 0
+
+			if("tajara_chest_markings" in pref_species.default_features)
+				if(!mutant_category)
+					dat += APPEARANCE_CATEGORY_COLUMN
+
+				dat += "<h3>Chest markings</h3>"
+				dat += "<a href='?_src_=prefs;preference=tajara_chest_markings;task=input'>[features["tajara_chest_markings"]]</a><BR>"
+
+				mutant_category++
+				if(mutant_category >= MAX_MUTANT_ROWS)
+					dat += "</td>"
+					mutant_category = 0
+
+			if("tajara_body_markings" in pref_species.default_features)
+				if(!mutant_category)
+					dat += APPEARANCE_CATEGORY_COLUMN
+
+				dat += "<h3>Body markings</h3>"
+				dat += "<a href='?_src_=prefs;preference=tajara_body_markings;task=input'>[features["tajara_body_markings"]]</a><BR>"
+
+				mutant_category++
+				if(mutant_category >= MAX_MUTANT_ROWS)
+					dat += "</td>"
+					mutant_category = 0
+
+			if("tajara_tail" in pref_species.default_features)
+				if(!mutant_category)
+					dat += APPEARANCE_CATEGORY_COLUMN
+
+				dat += "<h3>Tail</h3>"
+				dat += "<a href='?_src_=prefs;preference=tajara_tail;task=input'>[features["tajara_tail"]]</a><BR>"
+
+				mutant_category++
+				if(mutant_category >= MAX_MUTANT_ROWS)
+					dat += "</td>"
+					mutant_category = 0
+			// [/CELADON-ADD]
+
 			//Adds a thing to select which phobia because I can't be assed to put that in the quirks window
 			if("Phobia" in all_quirks)
 				dat += "<h3>Phobia</h3>"
@@ -846,11 +935,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<h3>Size</h3>"
 
 				dat += "<a href='?_src_=prefs;preference=body_size;task=input'>[features["body_size"]]</a><BR>"
-
-
-				dat += "<h3>Character Adjective</h3>"
-
-				dat += "<a href='?_src_=prefs;preference=generic_adjective;task=input'>[generic_adjective]</a><BR>"
 
 				mutant_category++
 				if(mutant_category >= MAX_MUTANT_ROWS)
@@ -940,13 +1024,19 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			dat += "<tr><td colspan=3><hr></td></tr>"
 
 			dat += "<tr><td colspan=3><hr></td></tr>"
-			dat += "<tr><td><b>Name</b></td>"
+			// [CELADON-EDIT] - CELADON_QOL
+			// dat += "<tr><td><b>Name</b></td>" // CELADON-EDIT - ORIGINAL
+			dat += "<tr><td align='middle'><b>Name</b></td>"
+			// [/CELADON-EDIT]
 			dat += "<td><b>Restricted Jobs</b></td>"
 			dat += "<td><b>Description</b></td>"
 			dat += "<tr><td colspan=3><hr></td></tr>"
 			for(var/gear_name in LC.gear)
 				var/datum/gear/G = LC.gear[gear_name]
-				dat += "<tr style='vertical-align:top;'><td width=20%><a style='white-space:normal;' [(G.display_name in equipped_gear) ? "class='linkOn' " : ""]href='?_src_=prefs;preference=gear;toggle_gear=[G.display_name]'>[G.display_name]</a></td><td>"
+				// [CELADON-EDIT] - CELADON_QOL
+				// dat += "<tr style='vertical-align:top;'><td width=20%><a style='white-space:normal;' [(G.display_name in equipped_gear) ? "class='linkOn' " : ""]href='?_src_=prefs;preference=gear;toggle_gear=[G.display_name]'>[G.display_name]</a></td><td>" // CELADON-EDIT - ORIGINAL
+				dat += "<tr style='vertical-align:top;'><td align='middle' width=20%><a style='white-space:normal;' [(G.display_name in equipped_gear) ? "class='linkOn' " : ""]href='?_src_=prefs;preference=gear;toggle_gear=[G.display_name]'>[G.display_name]</a><br/><img src=data:image/jpeg;base64,[G.base64icon] class='loadoutPreview'><hr></td><td>"
+				// [/CELADON-EDIT]
 				if(G.allowed_roles)
 					dat += "<font size=2>"
 					var/list/allowedroles = list()
@@ -1680,31 +1770,40 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						hair_color = sanitize_hexcolor(new_hair)
 
 				if("hairstyle")
-					var/new_hairstyle
-					if(gender == MALE)
-						new_hairstyle = input(user, "Choose your character's hairstyle:", "Character Preference")  as null|anything in GLOB.hairstyles_male_list
-					else if(gender == FEMALE)
-						new_hairstyle = input(user, "Choose your character's hairstyle:", "Character Preference")  as null|anything in GLOB.hairstyles_female_list
-					else
-						new_hairstyle = input(user, "Choose your character's hairstyle:", "Character Preference")  as null|anything in GLOB.hairstyles_list
-					if(new_hairstyle)
-						hairstyle = new_hairstyle
+					// [CELADON-EDIT] - TAJARA
+					// var/new_hairstyle // CELADON-EDIT - ORIGINAL
+					// if(gender == MALE) // CELADON-EDIT - ORIGINAL
+					// 	new_hairstyle = input(user, "Choose your character's hairstyle:", "Character Preference")  as null|anything in GLOB.hairstyles_male_list // CELADON-EDIT - ORIGINAL
+					// else if(gender == FEMALE) // CELADON-EDIT - ORIGINAL
+					// 	new_hairstyle = input(user, "Choose your character's hairstyle:", "Character Preference")  as null|anything in GLOB.hairstyles_female_list // CELADON-EDIT - ORIGINAL
+					// else // CELADON-EDIT - ORIGINAL
+					// 	new_hairstyle = input(user, "Choose your character's hairstyle:", "Character Preference")  as null|anything in GLOB.hairstyles_list // CELADON-EDIT - ORIGINAL
+					// if(new_hairstyle) // CELADON-EDIT - ORIGINAL
+					// 	hairstyle = new_hairstyle // CELADON-EDIT - ORIGINAL
+					hairstyle =  input(user, "Choose your character's hairstyle:", "Character Preference")  as null|anything in pref_species.get_hair_list_by_gender(gender)
+					// [/CELADON-EDIT]
 
 				if("next_hairstyle")
-					if (gender == MALE)
-						hairstyle = next_list_item(hairstyle, GLOB.hairstyles_male_list)
-					else if(gender == FEMALE)
-						hairstyle = next_list_item(hairstyle, GLOB.hairstyles_female_list)
-					else
-						hairstyle = next_list_item(hairstyle, GLOB.hairstyles_list)
+					// [CELADON-EDIT] - TAJARA
+					// if (gender == MALE) // CELADON-EDIT - ORIGINAL
+					// 	hairstyle = next_list_item(hairstyle, GLOB.hairstyles_male_list) // CELADON-EDIT - ORIGINAL
+					// else if(gender == FEMALE) // CELADON-EDIT - ORIGINAL
+					// 	hairstyle = next_list_item(hairstyle, GLOB.hairstyles_female_list) // CELADON-EDIT - ORIGINAL
+					// else // CELADON-EDIT - ORIGINAL
+					// 	hairstyle = next_list_item(hairstyle, GLOB.hairstyles_list) // CELADON-EDIT - ORIGINAL
+					hairstyle = next_list_item(hairstyle, pref_species.get_hair_list_by_gender(gender))
+					// [/CELADON-EDIT]
 
 				if("previous_hairstyle")
-					if (gender == MALE)
-						hairstyle = previous_list_item(hairstyle, GLOB.hairstyles_male_list)
-					else if(gender == FEMALE)
-						hairstyle = previous_list_item(hairstyle, GLOB.hairstyles_female_list)
-					else
-						hairstyle = previous_list_item(hairstyle, GLOB.hairstyles_list)
+					// [CELADON-EDIT] - TAJARA
+					// if (gender == MALE) // CELADON-EDIT - ORIGINAL
+					// 	hairstyle = previous_list_item(hairstyle, GLOB.hairstyles_male_list) // CELADON-EDIT - ORIGINAL
+					// else if(gender == FEMALE) // CELADON-EDIT - ORIGINAL
+					// 	hairstyle = previous_list_item(hairstyle, GLOB.hairstyles_female_list) // CELADON-EDIT - ORIGINAL
+					// else // CELADON-EDIT - ORIGINAL
+					// 	hairstyle = previous_list_item(hairstyle, GLOB.hairstyles_list) // CELADON-EDIT - ORIGINAL
+					hairstyle = previous_list_item(hairstyle, pref_species.get_hair_list_by_gender(gender))
+					// [/CELADON-EDIT]
 
 				if("facial")
 					var/new_facial = input(user, "Choose your character's facial-hair colour:", "Character Preference","#"+facial_hair_color) as color|null
@@ -1712,31 +1811,40 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						facial_hair_color = sanitize_hexcolor(new_facial)
 
 				if("facial_hairstyle")
-					var/new_facial_hairstyle
-					if(gender == MALE)
-						new_facial_hairstyle = input(user, "Choose your character's facial-hairstyle:", "Character Preference")  as null|anything in GLOB.facial_hairstyles_male_list
-					else if(gender == FEMALE)
-						new_facial_hairstyle = input(user, "Choose your character's facial-hairstyle:", "Character Preference")  as null|anything in GLOB.facial_hairstyles_female_list
-					else
-						new_facial_hairstyle = input(user, "Choose your character's facial-hairstyle:", "Character Preference")  as null|anything in GLOB.facial_hairstyles_list
-					if(new_facial_hairstyle)
-						facial_hairstyle = new_facial_hairstyle
+					// [CELADON-EDIT] - TAJARA
+					// var/new_facial_hairstyle // CELADON-EDIT - ORIGINAL
+					// if(gender == MALE) // CELADON-EDIT - ORIGINAL
+					// 	new_facial_hairstyle = input(user, "Choose your character's facial-hairstyle:", "Character Preference")  as null|anything in GLOB.facial_hairstyles_male_list // CELADON-EDIT - ORIGINAL
+					// else if(gender == FEMALE) // CELADON-EDIT - ORIGINAL
+					// 	new_facial_hairstyle = input(user, "Choose your character's facial-hairstyle:", "Character Preference")  as null|anything in GLOB.facial_hairstyles_female_list // CELADON-EDIT - ORIGINAL
+					// else // CELADON-EDIT - ORIGINAL
+					// 	new_facial_hairstyle = input(user, "Choose your character's facial-hairstyle:", "Character Preference")  as null|anything in GLOB.facial_hairstyles_list // CELADON-EDIT - ORIGINAL
+					// if(new_facial_hairstyle) // CELADON-EDIT - ORIGINAL
+					// 	facial_hairstyle = new_facial_hairstyle // CELADON-EDIT - ORIGINAL
+					facial_hairstyle = input(user, "Choose your character's facial-hairstyle:", "Character Preference")  as null|anything in pref_species.get_facial_hair_list_by_gender(gender)
+					// [/CELADON-EDIT]
 
 				if("next_facehairstyle")
-					if (gender == MALE)
-						facial_hairstyle = next_list_item(facial_hairstyle, GLOB.facial_hairstyles_male_list)
-					else if(gender == FEMALE)
-						facial_hairstyle = next_list_item(facial_hairstyle, GLOB.facial_hairstyles_female_list)
-					else
-						facial_hairstyle = next_list_item(facial_hairstyle, GLOB.facial_hairstyles_list)
+					// [CELADON-EDIT] - TAJARA
+					// if (gender == MALE) // CELADON-EDIT - ORIGINAL
+					// 	facial_hairstyle = next_list_item(facial_hairstyle, GLOB.facial_hairstyles_male_list) // CELADON-EDIT - ORIGINAL
+					// else if(gender == FEMALE) // CELADON-EDIT - ORIGINAL
+					// 	facial_hairstyle = next_list_item(facial_hairstyle, GLOB.facial_hairstyles_female_list) // CELADON-EDIT - ORIGINAL
+					// else // CELADON-EDIT - ORIGINAL
+					// 	facial_hairstyle = next_list_item(facial_hairstyle, GLOB.facial_hairstyles_list) // CELADON-EDIT - ORIGINAL
+					facial_hairstyle = next_list_item(facial_hairstyle, pref_species.get_facial_hair_list_by_gender(gender))
+					// [/CELADON-EDIT]
 
 				if("previous_facehairstyle")
-					if (gender == MALE)
-						facial_hairstyle = previous_list_item(facial_hairstyle, GLOB.facial_hairstyles_male_list)
-					else if (gender == FEMALE)
-						facial_hairstyle = previous_list_item(facial_hairstyle, GLOB.facial_hairstyles_female_list)
-					else
-						facial_hairstyle = previous_list_item(facial_hairstyle, GLOB.facial_hairstyles_list)
+					// [CELADON-EDIT] - TAJARA
+					// if (gender == MALE) // CELADON-EDIT - ORIGINAL
+					// 	facial_hairstyle = previous_list_item(facial_hairstyle, GLOB.facial_hairstyles_male_list) // CELADON-EDIT - ORIGINAL
+					// else if (gender == FEMALE) // CELADON-EDIT - ORIGINAL
+					// 	facial_hairstyle = previous_list_item(facial_hairstyle, GLOB.facial_hairstyles_female_list) // CELADON-EDIT - ORIGINAL
+					// else // CELADON-EDIT - ORIGINAL
+					// 	facial_hairstyle = previous_list_item(facial_hairstyle, GLOB.facial_hairstyles_list) // CELADON-EDIT - ORIGINAL
+					facial_hairstyle = previous_list_item(facial_hairstyle, pref_species.get_facial_hair_list_by_gender(gender))
+					// [/CELADON-EDIT]
 
 				if("hair_gradient")
 					var/new_hair_gradient_color = input(user, "Choose your character's hair gradient colour:", "Character Preference","#"+features["grad_color"]) as color|null
@@ -2079,15 +2187,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					if(phobiaType)
 						phobia = phobiaType
 
-				if("generic_adjective")
-					var/selectAdj
-					if(istype(pref_species, /datum/species/ipc))
-						selectAdj = input(user, "In one word, how would you describe your character's appereance?", "Character Preference", generic_adjective) as null|anything in GLOB.ipc_preference_adjectives
-					else
-						selectAdj = input(user, "In one word, how would you describe your character's appereance?", "Character Preference", generic_adjective) as null|anything in GLOB.preference_adjectives
-					if(selectAdj)
-						generic_adjective = selectAdj
-
 				if ("max_chat_length")
 					var/desiredlength = input(user, "Choose the max character length of shown Runechat messages. Valid range is 1 to [CHAT_MESSAGE_MAX_LENGTH] (default: [initial(max_chat_length)]))", "Character Preference", max_chat_length)  as null|num
 					if (!isnull(desiredlength))
@@ -2427,6 +2526,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 			organ_eyes.eye_color = eye_color
 		organ_eyes.old_eye_color = eye_color
 	character.skin_tone = skin_tone
+	// [CELADON-ADD] - TAJARA
+	character.skin_tone_nose = skin_tone_nose
+	character.skin_tone_tajara = skin_tone_tajara
+	// [/CELADON-ADD]
 	character.underwear = underwear
 	character.underwear_color = underwear_color
 	character.undershirt = undershirt
@@ -2487,7 +2590,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		character.set_species(chosen_species, icon_update = FALSE, pref_load = TRUE)
 	//Because of how set_species replaces all bodyparts with new ones, hair needs to be set AFTER species.
 	character.dna.real_name = character.real_name
-	character.generic_adjective = generic_adjective
 	character.hair_color = hair_color
 	character.facial_hair_color = facial_hair_color
 	character.grad_color = features["grad_color"]
@@ -2499,6 +2601,14 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	if("tail_lizard" in pref_species.default_features)
 		character.dna.species.mutant_bodyparts |= "tail_lizard"
 
+	// [CELADON-ADD] - TAJARA
+	if("tajara_tail" in pref_species.default_features)
+		character.dna.species.mutant_bodyparts |= "tajara_tail"
+
+	if("tajara_ears" in pref_species.default_features)
+		character.dna.species.mutant_bodyparts |= "tajara_ears"
+	// [/CELADON-ADD]
+
 	if(icon_updates)
 		character.update_body()
 		character.update_hair()
@@ -2507,20 +2617,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 /datum/preferences/proc/get_default_name(name_id)
 	switch(name_id)
-		if("human")
-			return random_unique_name()
 		if("ai")
 			return pick(GLOB.ai_names)
 		if("cyborg")
 			return DEFAULT_CYBORG_NAME
-		if("clown")
-			return pick(GLOB.clown_names)
-		if("mime")
-			return pick(GLOB.mime_names)
-		if("religion")
-			return DEFAULT_RELIGION
-		if("deity")
-			return DEFAULT_DEITY
 	return random_unique_name()
 
 /datum/preferences/proc/ask_for_custom_name(mob/user,name_id)

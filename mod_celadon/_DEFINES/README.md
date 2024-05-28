@@ -21,8 +21,17 @@ ID мода: CELADON_DEFINES
 ### Описание мода
 
 Этот мод нужен для хранения глобальных дефайнов или просто дефайнов модпаков, использующихся больше 1 раза
-`mod_celadon\_defines\code\_defines\cards_ids.dm`: id карты
 `mod_celadon\_defines\code\_defines\access.dm`: коды доступов
+
+Это все нужно для FOV
+`mod_celadon\_defines\code\_helpers.dm`: это хелперс
+`mod_celadon\_defines\code\_defines\dcs\signals_mob_main.dm`
+`mod_celadon\_defines\code\_defines\dcs\signals.dm`
+`mod_celadon\_defines\code\_defines\clothers.dm`
+`mod_celadon\_defines\code\_defines\declarations.dm`
+`mod_celadon\_defines\code\_defines\fov.dm`
+`mod_celadon\_defines\code\_defines\layers.dm`
+
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
   А также любая полезная информация.
@@ -72,7 +81,7 @@ ID мода: CELADON_DEFINES
 
 ### Авторы:
 
-Voiko
+Voiko, MrCat15352, Mirag1993
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.

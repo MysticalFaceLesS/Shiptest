@@ -125,6 +125,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		addtimer(CALLBACK(src, PROC_REF(announce_conflict), notadded), 5 SECONDS)
 
 /datum/preferences/proc/announce_conflict(list/notadded)
+	// [CELADON-ADD] - MASTER_FILES
+	return
+	// [/CELADON-ADD]
+	// [CELADON-REMOVE] - MASTER_FILES - Удалено по просьбе Voiko. Его это бесит
+	/*
 	to_chat(parent, "<span class='userdanger'>KEYBINDING CONFLICT!!!\n\
 	There are new keybindings that have defaults bound to keys you already set, They will default to Unbound. You can bind them in Setup Character or Game Preferences\n\
 	<a href='?_src_=prefs;preference=tab;tab=3'>Or you can click here to go straight to the keybindings page</a></span>")
@@ -132,7 +137,8 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		var/datum/keybinding/conflicted = item
 		to_chat(parent, "<span class='userdanger'>[conflicted.category]: [conflicted.full_name] needs updating")
 		LAZYADD(key_bindings["Unbound"], conflicted.name) // set it to unbound to prevent this from opening up again in the future
-
+	*/
+	// [/CELADON-REMOVE]
 
 
 /datum/preferences/proc/load_path(ckey,filename="preferences.sav")
@@ -405,7 +411,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["jumpsuit_style"], jumpsuit_style)
 	READ_FILE(S["uplink_loc"], uplink_spawn_loc)
 	READ_FILE(S["phobia"], phobia)
-	READ_FILE(S["generic_adjective"], generic_adjective)
 	READ_FILE(S["randomise"],  randomise)
 	READ_FILE(S["body_size"], features["body_size"])
 	READ_FILE(S["prosthetic_limbs"], prosthetic_limbs)
@@ -442,6 +447,18 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["feature_vox_neck_quills"], features["vox_neck_quills"])
 	READ_FILE(S["feature_elzu_horns"], features["elzu_horns"])
 	READ_FILE(S["feature_tail_elzu"], features["tail_elzu"])
+	// [CELADON-ADD] - TAJARA
+	READ_FILE(S["skin_tone_nose"], skin_tone_nose)
+	READ_FILE(S["feature_tajara_ears"], features["tajara_ears"])
+	READ_FILE(S["feature_tajara_hairs"], features["tajara_hairs"])
+	READ_FILE(S["feature_tajara_ears_markings"], features["tajara_ears_markings"])
+	READ_FILE(S["feature_tajara_head_markings"], features["tajara_head_markings"])
+	READ_FILE(S["feature_tajara_nose_markings"], features["tajara_nose_markings"])
+	READ_FILE(S["feature_tajara_facial_hairs"], features["tajara_facial_hairs"])
+	READ_FILE(S["feature_tajara_chest_markings"], features["tajara_chest_markings"])
+	READ_FILE(S["feature_tajara_body_markings"], features["tajara_body_markings"])
+	READ_FILE(S["feature_tajara_tail"], features["tajara_tail"])
+	// [/CELADON-ADD]
 
 	READ_FILE(S["equipped_gear"], equipped_gear)
 	if(config) //This should *probably* always be there, but just in case.
@@ -555,6 +572,19 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["tail_elzu"]				= sanitize_inlist(features["tail_elzu"], GLOB.tails_list_elzu)
 	features["flavor_text"]				= sanitize_text(features["flavor_text"], initial(features["flavor_text"]))
 
+	// [CELADON-ADD] - TAJARA
+	skin_tone_nose = sanitize_inlist(skin_tone_nose, GLOB.skin_tones_nose)
+	features["tajara_ears"] = sanitize_inlist(features["tajara_ears"], GLOB.tajara_ears_list, "Plain")
+	features["tajara_hairs"] = sanitize_inlist(features["tajara_hairs"], GLOB.tajara_hairs_list, "Plain")
+	features["tajara_ears_markings"] = sanitize_inlist(features["tajara_ears_markings"], GLOB.tajara_ears_markings_list, "None")
+	features["tajara_head_markings"] = sanitize_inlist(features["tajara_head_markings"], GLOB.tajara_head_markings_list, "None")
+	features["tajara_nose_markings"] = sanitize_inlist(features["tajara_nose_markings"], GLOB.tajara_nose_markings_list, "None")
+	features["tajara_facial_hairs"] = sanitize_inlist(features["tajara_facial_hairs"], GLOB.tajara_facial_hairs_list, "None")
+	features["tajara_chest_markings"] = sanitize_inlist(features["tajara_chest_markings"], GLOB.tajara_chest_markings_list, "None")
+	features["tajara_body_markings"] = sanitize_inlist(features["tajara_body_markings"], GLOB.tajara_body_markings_list, "None")
+	features["tajara_tail"] = sanitize_inlist(features["tajara_tail"], GLOB.tajara_tail_list, "Long")
+	// [/CELADON-ADD]
+
 	all_quirks = SANITIZE_LIST(all_quirks)
 
 //Make sure all quirks are compatible
@@ -595,7 +625,6 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["randomise"]					, randomise)
 	WRITE_FILE(S["species"]						, pref_species.id)
 	WRITE_FILE(S["phobia"]						, phobia)
-	WRITE_FILE(S["generic_adjective"]			, generic_adjective)
 	WRITE_FILE(S["body_size"]					, features["body_size"])
 	WRITE_FILE(S["prosthetic_limbs"]			, prosthetic_limbs)
 	WRITE_FILE(S["feature_mcolor"]				, features["mcolor"])
@@ -633,6 +662,19 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["feature_elzu_horns"]			, features["elzu_horns"])
 	WRITE_FILE(S["feature_tail_elzu"]			, features["tail_elzu"])
 	WRITE_FILE(S["fbp"]							, fbp)
+
+	// [CELADON-ADD] - TAJARA
+	WRITE_FILE(S["skin_tone_nose"], skin_tone_nose)
+	WRITE_FILE(S["feature_tajara_ears"], features["tajara_ears"])
+	WRITE_FILE(S["feature_tajara_hairs"], features["tajara_hairs"])
+	WRITE_FILE(S["feature_tajara_ears_markings"], features["tajara_ears_markings"])
+	WRITE_FILE(S["feature_tajara_head_markings"], features["tajara_head_markings"])
+	WRITE_FILE(S["feature_tajara_nose_markings"], features["tajara_nose_markings"])
+	WRITE_FILE(S["feature_tajara_facial_hairs"], features["tajara_facial_hairs"])
+	WRITE_FILE(S["feature_tajara_chest_markings"], features["tajara_chest_markings"])
+	WRITE_FILE(S["feature_tajara_body_markings"], features["tajara_body_markings"])
+	WRITE_FILE(S["feature_tajara_tail"], features["tajara_tail"])
+	// [/CELADON-ADD]
 
 	//Flavor text
 	WRITE_FILE(S["feature_flavor_text"]			, features["flavor_text"])
