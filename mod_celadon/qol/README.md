@@ -76,6 +76,8 @@ ID мода: CELADON_QOL
 - EDIT `code\modules\client\preferences.dm`: `var/datum/loadout_category/LC = GLOB.loadout_categories[gear_tab]` - меняем лодаут
 
 - ADD `html\browser\common.css` -> да-да, ксс файлик шатаем. Добавляем классы на обработку картиночек лодаута
+
+- EDIT `code\game\objects\structures\guncase.dm` -> количество слотов под оружие в сейфе оружейном изменено с 4 до 6
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
