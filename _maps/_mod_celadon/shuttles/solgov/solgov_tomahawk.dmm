@@ -2224,7 +2224,12 @@
 	input_dir = 8
 	},
 /obj/effect/turf_decal/industrial/hatch,
-/obj/machinery/door/firedoor,
+/obj/machinery/door/firedoor/border_only{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/ship/maintenance/fore)
 "Ah" = (
@@ -3452,9 +3457,6 @@
 /turf/open/floor/carpet/royalblue,
 /area/ship/crew/crewtwo)
 "Oq" = (
-/obj/machinery/atmospherics/pipe/simple/green/visible/layer4{
-	dir = 10
-	},
 /obj/effect/turf_decal/techfloor{
 	dir = 8
 	},
@@ -3462,6 +3464,9 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/green/hidden/layer4{
 	dir = 10
 	},
 /turf/open/floor/plasteel/tech,
@@ -4486,8 +4491,6 @@
 	desc = "Contains a lifetime supply of Solarian Marine Society Shark plushies!";
 	name = "plushie transport box"
 	},
-/obj/item/toy/plush/blahaj,
-/obj/item/toy/plush/blahaj,
 /obj/item/toy/plush/blahaj,
 /obj/item/toy/plush/blahaj,
 /obj/item/toy/plush/blahaj,

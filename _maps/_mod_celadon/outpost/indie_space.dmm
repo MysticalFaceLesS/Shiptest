@@ -266,9 +266,6 @@
 /obj/effect/turf_decal/corner/opaque/neutral{
 	dir = 8
 	},
-/obj/structure/sign/poster/random{
-	pixel_x = -28
-	},
 /turf/open/floor/plasteel,
 /area/outpost/hallway/port)
 "bS" = (
@@ -886,10 +883,15 @@
 /turf/open/floor/plasteel,
 /area/outpost/hallway/central)
 "gb" = (
-/obj/structure/flora/grass/jungle,
-/obj/structure/flora/grass/jungle,
-/obj/structure/flora/junglebush/large,
-/turf/open/floor/grass/ship/jungle,
+/obj/effect/turf_decal/industrial/warning{
+	dir = 1
+	},
+/obj/effect/turf_decal/industrial/warning,
+/obj/machinery/door/airlock/hatch,
+/obj/effect/landmark/outpost/elevator_machine{
+	shaft = "2"
+	},
+/turf/open/floor/plasteel/tech,
 /area/outpost/hallway/port)
 "gf" = (
 /obj/effect/turf_decal/corner/opaque/grey/full,
@@ -1546,6 +1548,10 @@
 /obj/effect/turf_decal/corner/opaque/neutral{
 	dir = 4
 	},
+/obj/structure/sign/directions/service{
+	pixel_y = 22;
+	dir = 8
+	},
 /turf/open/floor/plasteel,
 /area/outpost/hallway/central)
 "kT" = (
@@ -1824,16 +1830,11 @@
 /turf/open/floor/plasteel/tech,
 /area/outpost/maintenance/fore)
 "ms" = (
-/obj/effect/turf_decal/corner/opaque/grey/full,
-/obj/structure/sign/directions/supply{
-	pixel_y = 21;
-	dir = 4
-	},
-/obj/effect/turf_decal/corner/opaque/black{
-	dir = 10
-	},
-/turf/open/floor/plasteel,
-/area/outpost/hallway/central)
+/obj/structure/flora/grass/jungle,
+/obj/structure/flora/junglebush/b,
+/obj/machinery/light/dim/directional/west,
+/turf/open/floor/grass/ship/jungle,
+/area/outpost/hallway/port)
 "mv" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/minor/kittyears_or_rabbitears,
@@ -2254,7 +2255,15 @@
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/outpost/vacant_rooms)
 "ph" = (
-/turf/open/floor/ship/dirt/dark,
+/obj/machinery/door/firedoor,
+/obj/effect/turf_decal/industrial/warning,
+/obj/effect/turf_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/sign/poster/random{
+	pixel_x = -28
+	},
+/turf/open/floor/plasteel/tech,
 /area/outpost/hallway/port)
 "pj" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
@@ -3064,6 +3073,9 @@
 "tC" = (
 /obj/effect/turf_decal/corner/opaque/grey/full,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/poster/random{
+	pixel_x = 28
+	},
 /turf/open/floor/plasteel,
 /area/outpost/hallway/central)
 "tE" = (
@@ -3452,10 +3464,16 @@
 /turf/open/floor/plasteel/patterned,
 /area/outpost/cargo)
 "vR" = (
-/obj/structure/flora/grass/jungle,
-/obj/machinery/light/dim/directional/north,
-/turf/open/floor/grass/ship/jungle,
-/area/outpost/hallway/port)
+/obj/effect/turf_decal/corner/opaque/grey/full,
+/obj/effect/turf_decal/corner/opaque/neutral{
+	dir = 1
+	},
+/obj/structure/sign/directions/supply{
+	pixel_y = 21;
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/outpost/hallway/central)
 "vT" = (
 /obj/structure/rack,
 /mob/living/simple_animal/pet/mothroach{
@@ -3990,15 +4008,22 @@
 /area/outpost/storage)
 "zv" = (
 /obj/effect/turf_decal/corner/opaque/grey/full,
-/obj/structure/sign/directions/service{
-	pixel_y = 22;
-	dir = 8
-	},
 /obj/effect/turf_decal/corner/opaque/black{
 	dir = 10
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel,
+/area/outpost/hallway/central)
+"zw" = (
+/obj/effect/turf_decal/industrial/warning,
+/obj/effect/turf_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/door/airlock/hatch,
+/obj/effect/landmark/outpost/elevator_machine{
+	shaft = "1"
+	},
+/turf/open/floor/plasteel/tech,
 /area/outpost/hallway/central)
 "zC" = (
 /obj/machinery/conveyor{
@@ -4667,12 +4692,10 @@
 /turf/open/floor/plating,
 /area/outpost/maintenance/central)
 "CI" = (
-/obj/effect/turf_decal/corner/opaque/grey/full,
-/obj/machinery/light/dim/directional/west,
-/obj/effect/turf_decal/corner/opaque/neutral{
-	dir = 8
+/obj/effect/landmark/outpost/elevator{
+	shaft = "2"
 	},
-/turf/open/floor/plasteel,
+/turf/open/floor/plasteel/elevatorshaft,
 /area/outpost/hallway/port)
 "CK" = (
 /obj/effect/turf_decal/corner/opaque/grey/full,
@@ -4683,8 +4706,12 @@
 /turf/open/floor/plasteel,
 /area/outpost/crew/janitor)
 "CL" = (
-/obj/structure/flora/junglebush,
-/turf/open/floor/grass/ship/jungle,
+/obj/effect/turf_decal/corner/opaque/grey/full,
+/obj/effect/turf_decal/corner/opaque/neutral{
+	dir = 8
+	},
+/obj/machinery/light/dim/directional/west,
+/turf/open/floor/plasteel,
 /area/outpost/hallway/port)
 "CU" = (
 /obj/machinery/button/door{
@@ -4715,9 +4742,6 @@
 "Df" = (
 /obj/effect/turf_decal/corner/opaque/grey/full,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/poster/random{
-	pixel_x = 28
-	},
 /obj/item/kirbyplants/random,
 /obj/effect/turf_decal/corner/opaque/neutral,
 /turf/open/floor/plasteel,
@@ -4856,6 +4880,9 @@
 "Eo" = (
 /obj/effect/turf_decal/corner/opaque/grey/full,
 /obj/effect/turf_decal/corner/opaque/black,
+/obj/structure/noticeboard{
+	pixel_y = 26
+	},
 /turf/open/floor/plasteel,
 /area/outpost/hallway/central)
 "Et" = (
@@ -4871,8 +4898,7 @@
 /turf/open/floor/plating,
 /area/outpost/hallway/port)
 "EC" = (
-/obj/machinery/light/directional/south,
-/turf/open/floor/ship/dirt,
+/turf/open/floor/plating,
 /area/outpost/hallway/port)
 "ED" = (
 /obj/structure/table/wood,
@@ -5518,6 +5544,12 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/outpost/elevator_machine{
+	shaft = "2"
+	},
+/obj/machinery/elevator_call_button{
+	pixel_y = 25
+	},
 /turf/open/floor/plasteel,
 /area/outpost/hallway/central)
 "Iu" = (
@@ -5802,7 +5834,6 @@
 /area/outpost/maintenance/central)
 "Kh" = (
 /obj/effect/turf_decal/corner/opaque/grey/full,
-/obj/machinery/newscaster/directional/east,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/corner/opaque/neutral,
 /turf/open/floor/plasteel,
@@ -6118,8 +6149,7 @@
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/outpost/security)
 "LK" = (
-/obj/structure/flora/junglebush/c,
-/turf/open/floor/grass/ship/jungle,
+/turf/open/floor/plasteel/elevatorshaft,
 /area/outpost/hallway/port)
 "LL" = (
 /turf/closed/indestructible/reinforced,
@@ -6449,6 +6479,7 @@
 "Oa" = (
 /obj/structure/flora/grass/jungle,
 /obj/structure/flora/junglebush/c,
+/obj/machinery/light/dim/directional/west,
 /turf/open/floor/grass/ship/jungle,
 /area/outpost/hallway/port)
 "Oh" = (
@@ -7690,9 +7721,6 @@
 /turf/open/floor/plating,
 /area/outpost/maintenance/fore)
 "VG" = (
-/obj/structure/noticeboard{
-	pixel_y = 26
-	},
 /obj/effect/turf_decal/corner/opaque/grey/full,
 /obj/effect/turf_decal/corner/opaque/black{
 	dir = 10
@@ -7787,7 +7815,8 @@
 /area/outpost/crew/bar)
 "Wf" = (
 /obj/machinery/light/dim/directional/north,
-/turf/open/floor/ship/dirt/dark,
+/obj/structure/flora/junglebush/b,
+/turf/open/floor/grass/ship/jungle,
 /area/outpost/hallway/port)
 "Wl" = (
 /obj/structure/grille/indestructable,
@@ -7864,6 +7893,7 @@
 	dir = 9
 	},
 /obj/effect/turf_decal/corner/opaque/neutral,
+/obj/machinery/newscaster/directional/east,
 /turf/open/floor/plasteel,
 /area/outpost/hallway/central)
 "WO" = (
@@ -8236,6 +8266,11 @@
 /obj/effect/decal/cleanable/insectguts,
 /turf/open/floor/plating,
 /area/outpost/maintenance/fore)
+"YJ" = (
+/obj/structure/flora/grass/jungle,
+/obj/effect/spawner/lootdrop/chicken,
+/turf/open/floor/grass/ship/jungle,
+/area/outpost/hallway/port)
 "YL" = (
 /obj/structure/falsewall/reinforced,
 /turf/open/floor/plating,
@@ -15235,8 +15270,8 @@ IY
 vV
 tC
 LL
-LL
-LL
+Ez
+Ez
 LL
 jL
 HG
@@ -15358,9 +15393,9 @@ CU
 LL
 LL
 LL
+YJ
 XE
-XE
-Ez
+LL
 SC
 uL
 Xl
@@ -15483,7 +15518,7 @@ XE
 Oa
 XE
 Om
-Ez
+LL
 kR
 vX
 ug
@@ -15602,11 +15637,11 @@ NK
 tH
 sG
 LL
-vR
-SE
-XE
-XE
-Ez
+LL
+LL
+LL
+LL
+LL
 Eo
 jH
 Ci
@@ -15725,11 +15760,11 @@ Th
 Th
 Zx
 Th
-CL
-XE
-LK
-SE
 LL
+LK
+LK
+CI
+gb
 zv
 mA
 Qn
@@ -15848,15 +15883,15 @@ qH
 Fv
 rU
 Th
-XE
-gb
-nU
-EC
 LL
+LK
+LK
+LK
+gb
 VG
 Bp
 fE
-zg
+zw
 ks
 ks
 ks
@@ -15971,12 +16006,12 @@ MB
 KV
 Th
 Th
-XE
-CL
-XE
-XE
 LL
-ms
+LK
+LK
+LK
+gb
+VG
 Bp
 QT
 zg
@@ -16093,12 +16128,12 @@ uQ
 MB
 Xr
 Th
-SE
-SE
-XE
-SE
-CL
-Ez
+jM
+LL
+LL
+LL
+LL
+LL
 It
 wn
 Jr
@@ -16217,12 +16252,12 @@ nd
 ie
 Th
 Wf
-jM
-JX
+SE
+ms
 nU
 JX
-Ez
-AU
+LL
+vR
 ls
 uy
 cq
@@ -16339,12 +16374,12 @@ rR
 Ni
 JU
 Th
-ph
+XE
 SE
 SV
 ic
 Vp
-Ez
+LL
 UI
 Sk
 zb
@@ -16462,9 +16497,9 @@ cV
 Th
 ag
 Th
-LL
-LL
-LL
+Ez
+Ez
+EC
 GB
 LL
 LL
@@ -16582,14 +16617,14 @@ Yw
 UT
 TM
 vZ
-uj
+ph
 Ip
 IM
 bL
-CI
+GQ
 xr
 uA
-GQ
+CL
 GQ
 eq
 TA
