@@ -77,7 +77,6 @@ ID мода: CELADON_QOL
 
 - ADD `html\browser\common.css` -> да-да, ксс файлик шатаем. Добавляем классы на обработку картиночек лодаута
 
-- EDIT `code\game\objects\structures\guncase.dm` -> количество слотов под оружие в сейфе оружейном изменено с 4 до 6
 - EDIT `code\game\objects\items\storage\ration.dm` - делаем так чтобы можно хитер положить обратно
 
 <!--
@@ -121,7 +120,7 @@ ID мода: CELADON_QOL
 
 ### Авторы:
 
-RalseiDreemuurr, MrCat15352
+RalseiDreemuurr
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.

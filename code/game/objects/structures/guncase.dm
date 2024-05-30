@@ -10,10 +10,7 @@
 	var/case_type = ""
 	var/gun_category = /obj/item/gun
 	var/open = TRUE
-	// [CELADON-EDIT] - CELADON_QOL
-	// var/capacity = 4
-	var/capacity = 6
-	// [/CELADON-EDIT]
+	var/capacity = 4
 
 /obj/structure/guncase/Initialize(mapload)
 	. = ..()
