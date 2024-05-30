@@ -9,6 +9,11 @@
 	description = "An coat, this one is a design commonly found among the Rhazar'Hrujmagh people."
 	path = /obj/item/clothing/suit/toggle/tajaran/wool
 
+/datum/gear/suit/coat/replica_winter_vest
+	display_name = "replica white armor vest"
+	description = "This replica tactical bulletproof vest was created for winter operations in the desert."
+	path = /obj/item/clothing/suit/armor/vest/tajaran_replica
+
 // *******************
 // 		Cloaks
 //********************

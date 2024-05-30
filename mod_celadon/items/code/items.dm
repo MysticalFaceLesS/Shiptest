@@ -173,7 +173,7 @@
 // *******************
 // 		Suits
 //********************
-/obj/item/clothing/suit/armor/vest/tajaran
+/obj/item/clothing/suit/armor/vest/tajaran_replica
 	icon = 'mod_celadon/items/icons/obj/tajara_items.dmi'
 	mob_overlay_icon = 'mod_celadon/items/icons/overlay/tajara_items_overlay.dmi'
 	name = "white light tactical armor vest"
@@ -213,44 +213,6 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/exo
 	resistance_flags = NONE
 	supports_variations = DIGITIGRADE_VARIATION
-/*
-/obj/item/clothing/head/hooded/tajaran/wool
-	name = "wool coat"
-	desc = "An coat, this one is a design commonly found among the Rhazar'Hrujmagh people."
-	icon_state = "zhan_coat"
-	item_state = "zhan_coat"
-*/
-/*/obj/item/clothing/chest
-	name = BODY_ZONE_CHEST
-	icon = 'icons/obj/clothing/suits.dmi'
-	lefthand_file = 'icons/mob/inhands/clothing/suits_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/clothing/suits_righthand.dmi'
-	icon_state = "nun"
-	item_state = "that"
-	slot_flags = ITEM_SLOT_SUITSTORE
-	var/blockTracking = 0 //For AI tracking
-	var/can_toggle = null
-	greyscale_icon_state = "chest"
-	greyscale_colors = list(list(16,26))
-	supports_variations = VOX_VARIATION
-
-/obj/item/clothing/chest/worn_overlays(isinhands = FALSE)
-	. = list()
-	if(!isinhands)
-		if(damaged_clothes)
-			. += mutable_appearance('icons/effects/item_damage.dmi', "damagedcoat")
-		if(HAS_BLOOD_DNA(src))
-			var/mutable_appearance/bloody_coat = mutable_appearance('icons/effects/blood.dmi', "coatblood")
-			bloody_coat.color = get_blood_dna_color(return_blood_DNA())
-			. += bloody_coat
-
-/obj/item/clothing/chest/update_clothes_damaged_state(damaging = TRUE)
-	..()
-	if(ismob(loc))
-		var/mob/M = loc
-		M.update_inv_wear_suit()*/
-
-
 
 // *******************
 // 		Scarfs
