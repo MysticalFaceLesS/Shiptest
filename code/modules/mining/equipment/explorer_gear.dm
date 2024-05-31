@@ -53,7 +53,10 @@
 
 /obj/item/clothing/mask/gas/explorer/adjustmask(user)
 	..()
-	w_class = mask_adjusted ? WEIGHT_CLASS_NORMAL : WEIGHT_CLASS_SMALL
+	// [CELADON-EDIT] - CELADON_FIXES
+	// w_class = mask_adjusted ? WEIGHT_CLASS_NORMAL : WEIGHT_CLASS_SMALL // CELADON-EDIT - ORIGINAL
+	w_class = mask_adjusted ? WEIGHT_CLASS_SMALL : WEIGHT_CLASS_NORMAL
+	// [/CELADON-EDIT]
 
 /obj/item/clothing/mask/gas/explorer/folded/Initialize()
 	. = ..()

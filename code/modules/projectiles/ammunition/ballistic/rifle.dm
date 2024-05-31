@@ -33,14 +33,22 @@
 	caliber = "a300"
 	projectile_type = /obj/projectile/bullet/a300
 
-// 5.56x39mm (M-90gl Carbine & P-16)
+// 5.56x39mm (M-90gl Carbine & P-16) - хрень полная , описание калибра не сходится с указанием в коде
 
-/obj/item/ammo_casing/a556_39
-	name = "5.56x39mm bullet casing"
-	desc = "A 5.56x39mm bullet casing."
+// [CELADON-EDIT] - CELADON_FIXES
+//obj/item/ammo_casing/a556_39
+//	name = "5.56x39mm bullet casing"
+//	desc = "A 5.56x39mm bullet casing."
+//	icon_state = "rifle-brass"
+//	caliber = "5.56x45mm"
+//	projectile_type = /obj/projectile/bullet/a556_45 // CELADON-EDIT - ORIGINAL
+/obj/item/ammo_casing/a556_45
+	name = "5.56x45mm bullet casing"
+	desc = "A 5.56x45mm bullet casing."
 	icon_state = "rifle-brass"
 	caliber = "5.56x45mm"
 	projectile_type = /obj/projectile/bullet/a556_45
+// [/CELADON-EDIT]
 
 // 5.45x39mm (SKM-24v)
 

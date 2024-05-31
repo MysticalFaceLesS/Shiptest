@@ -23,43 +23,18 @@
 	description = "An adhomian wrist watch made for female Tajara. Due to its use in the past wars, wrist watches are becoming more popular in Adhomai."
 	path = /obj/item/clothing/wrists/watch/tajaran/female
 
-//Scarves
+/*
+*	RINGS
+*/
 
-/datum/gear/accessory/scarf/tarajan
-	subtype_path = /datum/gear/accessory/scarf/tarajan
+/datum/gear/accessory/gloves/silverring
+	display_name = "Silver Ring"
+	path = /obj/item/clothing/gloves/ring/silver
 
-/datum/gear/accessory/scarf/tarajan/brown
-	display_name = "scarf, brown"
-	path = /obj/item/clothing/neck/scarf/tajaran
+/datum/gear/accessory/gloves/goldring
+	display_name = "Gold Ring"
+	path = /obj/item/clothing/gloves/ring
 
-/datum/gear/accessory/scarf/tarajan/lbrown
-	display_name = "scarf, light brown"
-	path = /obj/item/clothing/neck/scarf/tajaran/lbrown
-
-/datum/gear/accessory/scarf/tarajan/cinnamon
-	display_name = "scarf, cinnamon"
-	path = /obj/item/clothing/neck/scarf/tajaran/cinnamon
-
-/datum/gear/accessory/scarf/tarajan/blue
-	display_name = "scarf, blue"
-	path = /obj/item/clothing/neck/scarf/tajaran/blue
-
-/datum/gear/accessory/scarf/tarajan/silver
-	display_name = "scarf, silver"
-	path = /obj/item/clothing/neck/scarf/tajaran/silver
-
-/datum/gear/accessory/scarf/tarajan/black
-	display_name = "scarf, black"
-	path = /obj/item/clothing/neck/scarf/tajaran/black
-
-/datum/gear/accessory/scarf/tarajan/ruddy
-	display_name = "scarf, ruddy"
-	path = /obj/item/clothing/neck/scarf/tajaran/ruddy
-
-/datum/gear/accessory/scarf/tarajan/orange
-	display_name = "scarf, orange"
-	path = /obj/item/clothing/neck/scarf/tajaran/orange
-
-/datum/gear/accessory/scarf/tarajan/cream
-	display_name = "scarf, cream"
-	path = /obj/item/clothing/neck/scarf/tajaran/cream
+/datum/gear/accessory/gloves/diamondring
+	display_name = "Diamond Ring"
+	path = /obj/item/clothing/gloves/ring/diamond
