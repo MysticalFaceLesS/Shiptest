@@ -41,8 +41,7 @@
 //	desc = "A 5.56x39mm bullet casing."
 //	icon_state = "rifle-brass"
 //	caliber = "5.56x45mm"
-//	projectile_type = /obj/projectile/bullet/a556_45
-// 												// CELADON-EDIT - ORIGINAL
+//	projectile_type = /obj/projectile/bullet/a556_45 // CELADON-EDIT - ORIGINAL
 /obj/item/ammo_casing/a556_45
 	name = "5.56x45mm bullet casing"
 	desc = "A 5.56x45mm bullet casing."
