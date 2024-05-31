@@ -150,3 +150,5 @@
 /obj/item/borg/upgrade/processor
 	module_type = list(/obj/item/robot_module/medical, /obj/item/robot_module/syndicate_medical, /obj/item/robot_module/drake/medical)
 
+/obj/item/borg/upgrade/expand
+	module_type = list(/obj/item/robot_module/standard, /obj/item/robot_module/medical, /obj/item/robot_module/engineering, /obj/item/robot_module/security, /obj/item/robot_module/peacekeeper, /obj/item/robot_module/janitor, /obj/item/robot_module/clown, /obj/item/robot_module/butler, /obj/item/robot_module/miner)

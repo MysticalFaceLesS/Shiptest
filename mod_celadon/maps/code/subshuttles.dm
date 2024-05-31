@@ -12,6 +12,6 @@
 	prefix = "PIRATE"
 //Субшатлы для руинок
 /datum/map_template/shuttle/ruin/ruin_jox
-	file_name = "synddicate_Jox"
+	file_name = "syndicate_Jox"
 	name = "Jox Drop Ship"
 	prefix = "SSV"
