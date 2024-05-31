@@ -78,6 +78,8 @@ ID мода: CELADON_QOL
 
 - ADD `html\browser\common.css` -> да-да, ксс файлик шатаем. Добавляем классы на обработку картиночек лодаута
 - EDIT `code\game\objects\items\storage\ration.dm` - делаем так чтобы можно хитер положить обратно
+
+- EDIT `code\modules\projectiles\boxes_magazines\_box_magazine.dm` -> снижена задержка загрузки патронов с коробки в магазин
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
