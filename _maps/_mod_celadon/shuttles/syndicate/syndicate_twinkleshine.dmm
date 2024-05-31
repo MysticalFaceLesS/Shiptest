@@ -101,8 +101,6 @@
 	req_access = list(3,150)
 	},
 /obj/item/clothing/under/syndicate/ngr/officer,
-/obj/item/clothing/suit/armor/vest/capcarapace/ngr_captain,
-/obj/item/clothing/head/ngrcap,
 /obj/item/clothing/shoes/combat,
 /obj/item/megaphone/sec{
 	name = "syndicate megaphone"
@@ -251,6 +249,10 @@
 /area/ship/bridge)
 "bL" = (
 /obj/structure/table/reinforced,
+/obj/item/toy/plush/moth{
+	name = "lieutenant moth plushie";
+	desc = "A plushie depicting an adorable mothperson, featuring realistic mothperson agony sounds every time you hug it. They seem to be hiding something."
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/ship/bridge)
 "bM" = (
@@ -526,6 +528,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/item/clothing/suit/space/hardsuit/syndi/ngr,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/security)
 "db" = (
@@ -2369,6 +2372,7 @@
 	suit_type = /obj/item/clothing/suit/space/hardsuit/syndi/sbg;
 	name = "lieutenant's suit storage unit"
 	},
+/obj/item/clothing/suit/space/hardsuit/syndi/ngr,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/security)
 "nw" = (
@@ -3627,10 +3631,6 @@
 "vL" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 8
-	},
-/obj/item/toy/plush/moth{
-	name = "lieutenant moth plushie";
-	desc = "A plushie depicting an adorable mothperson, featuring realistic mothperson agony sounds every time you hug it. They seem to be hiding something."
 	},
 /obj/effect/turf_decal/steeldecal/steel_decals10,
 /obj/effect/turf_decal/steeldecal/steel_decals10{
@@ -6092,10 +6092,6 @@
 	},
 /obj/machinery/camera/autoname{
 	dir = 6
-	},
-/obj/item/reagent_containers/spray/syndicate{
-	pixel_y = 11;
-	pixel_x = -2
 	},
 /turf/open/floor/wood/walnut,
 /area/ship/crew/janitor)

@@ -1,4 +1,4 @@
-/datum/species/proc/get_hair_list_by_gender(index = null, gender = null)
+/datum/species/proc/get_hair_list_by_gender(gender = null)
 	switch(gender)
 		if(MALE)
 			return GLOB.hairstyles_male_list
@@ -7,7 +7,7 @@
 		else
 			return GLOB.hairstyles_list
 
-/datum/species/proc/get_facial_hair_list_by_gender(index = null, gender = null)
+/datum/species/proc/get_facial_hair_list_by_gender(gender = null)
 	switch(gender)
 		if(MALE)
 			return GLOB.facial_hairstyles_male_list

@@ -305,6 +305,7 @@
 	var/has_screen = TRUE //do we have a screen to toggle
 	var/has_overlay = FALSE //does this chasis have a overlay icon?
 	var/is_digi = FALSE //does this chasis use digitigrade
+	var/has_snout = FALSE
 
 /datum/sprite_accessory/ipc_chassis/mcgreyscale
 	name = "Morpheus Cyberkinetics (Custom)"
@@ -358,6 +359,7 @@
 	color_src = MUTCOLORS
 	has_overlay = TRUE
 	use_eyes = TRUE
+	has_snout = TRUE
 
 /datum/sprite_accessory/ipc_chassis/pgfmechanicsdigigrade
 	name = "PGF MECHANICS TYPE-D"
@@ -367,6 +369,7 @@
 	has_overlay = TRUE
 	use_eyes = TRUE
 	is_digi = TRUE
+	has_snout = TRUE
 
 /datum/sprite_accessory/ipc_chassis/inteqsprinter
 	name = "Inteq Mothership 'Sprinter'"
