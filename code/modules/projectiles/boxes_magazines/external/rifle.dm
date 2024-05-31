@@ -17,7 +17,7 @@
 	icon_state = "5.56m-1"
 	base_icon_state = "5.56m"
 // [CELADON-EDIT] - CELADON_FIXES
-//	ammo_type = /obj/item/ammo_casing/a556_39
+//	ammo_type = /obj/item/ammo_casing/a556_39 // CELADON-EDIT - ORIGINAL
 	ammo_type = /obj/item/ammo_casing/a556_45
 // [/CELADON-EDIT]
 	caliber = "5.56x45mm"
@@ -101,7 +101,7 @@
 	icon_state = "p16_mag-1"
 	base_icon_state = "p16_mag"
 // [CELADON-EDIT] - CELADON_FIXES
-//	ammo_type = /obj/item/ammo_casing/a556_39
+//	ammo_type = /obj/item/ammo_casing/a556_39 // CELADON-EDIT - ORIGINAL
 	ammo_type = /obj/item/ammo_casing/a556_45
 // [/CELADON-EDIT]
 	caliber = "5.56x45mm"
@@ -115,7 +115,7 @@
 	icon_state = "swissmag-1"
 	base_icon_state = "swissmag"
 // [CELADON-EDIT] - CELADON_FIXES
-//	ammo_type = /obj/item/ammo_casing/a556_39
+//	ammo_type = /obj/item/ammo_casing/a556_39 // CELADON-EDIT - ORIGINAL
 	ammo_type = /obj/item/ammo_casing/a556_45
 // [/CELADON-EDIT]
 	caliber = "5.56x45mm"
