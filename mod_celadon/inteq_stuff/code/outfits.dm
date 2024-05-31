@@ -87,6 +87,7 @@
 
 /datum/outfit/job/inteq/paramedic/celadon
 	name = "Corpsman (InteQ)"
+	ears = /obj/item/radio/headset/inteq
 	id = /obj/item/card/id/inteq/corspman
 
 /datum/outfit/job/inteq/paramedic/celadon/post_equip(mob/living/carbon/human/H)
