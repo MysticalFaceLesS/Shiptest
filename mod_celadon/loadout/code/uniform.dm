@@ -60,3 +60,9 @@
 /datum/gear/uniform/galaxy/red/skirt
 	display_name = "suitskirt, red galaxy"
 	path = /obj/item/clothing/under/suit/galaxy/red/skirt
+
+// Explorer
+/datum/gear/uniform/archeologist
+	display_name = "archaeologist uniform"
+	description = "A rugged uniform used by archaeologists. It is already covered in dirt and ancient dust."
+	path = /obj/item/clothing/under/suit/archeologist

@@ -97,7 +97,7 @@
 	// fuel_use = 20 // CELADON-EDIT - ORIGINAL
 	// thrust = 25 // CELADON-EDIT - ORIGINAL
 	fuel_use = 20
-	thrust = 17.5
+	thrust = 9
 	// [/CELADON-EDIT]
 // [CELADON-ADD] - CELADON_FIXES
 	engine_type = "plasma"  // Явно указываем, что это плазменный двигатель
@@ -116,9 +116,9 @@
 	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем движки
 	// fuel_use = 80 // CELADON-EDIT - ORIGINAL
 	// thrust = 15 // CELADON-EDIT - ORIGINAL
-	fuel_use = 90
-	thrust = 8
-	// [/CELADON-EDIT]
+	fuel_use = 80
+	thrust = 5
+	// [/CELADON-EDIT] - кто вообще видел эти движки в игре ???
 	//All fuel code already handled
 
 /**
@@ -136,8 +136,7 @@
 	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем движки
 	// thrust = 10 // CELADON-EDIT - ORIGINAL
 	///Amount, in kilojoules, needed for a full burn.
-	// var/power_per_burn = 50000 // CELADON-EDIT - ORIGINAL
-	thrust = 7
+	thrust = 4
 	var/power_per_burn = 50000
 	// [/CELADON-EDIT]
 
@@ -147,7 +146,7 @@
 	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем движки
 	// thrust = 2 // CELADON-EDIT - ORIGINAL
 	// power_per_burn = 70000 // CELADON-EDIT - ORIGINAL
-	thrust = 1.4
+	thrust = 1
 	power_per_burn = 70000
 	// [/CELADON-EDIT]
 
@@ -157,7 +156,7 @@
 	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем движки
 	// thrust = 30 // CELADON-EDIT - ORIGINAL
 	// power_per_burn = 65000 // CELADON-EDIT - ORIGINAL
-	thrust = 21
+	thrust = 11
 	power_per_burn = 100000
 	// [/CELADON-EDIT]
 /obj/machinery/power/smes/shuttle

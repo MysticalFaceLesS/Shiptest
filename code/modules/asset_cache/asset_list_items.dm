@@ -121,7 +121,10 @@
 		"stamp-bard" = 'icons/stamp_icons/large_stamp-bard.png',
 		"stamp-gold" = 'icons/stamp_icons/large_stamp-gold.png',
 		"stamp-cybersun" = 'icons/stamp_icons/large_stamp-cybersun.png',
-		"stamp-donk" = 'icons/stamp_icons/large_stamp-donk.png'
+		"stamp-donk" = 'icons/stamp_icons/large_stamp-donk.png',
+		// [CELADON-ADD] - INTEQ_STUFF
+		"stamp-inteq-celadon" = 'mod_celadon/inteq_stuff/icons/obj/large_stamp-inteq.png'
+		// [/CELADON-ADD]
 	)
 
 /datum/asset/simple/fuckywucky
