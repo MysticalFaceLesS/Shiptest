@@ -37,17 +37,7 @@
 	var/id_name = get_id_name("")
 	if(name_override)
 		return name_override
-<<<<<<< ours
-	if(face_name)
-		if(id_name && (id_name != face_name))
-			return "[face_name] (as [id_name])"
-		return face_name
-	if(id_name)
-		return id_name
-	return "Unknown"
-=======
 	return get_generic_name(TRUE, lowercase = TRUE)
->>>>>>> theirs
 
 //Returns "Unknown" if facially disfigured and real_name if not. Useful for setting name when Fluacided or when updating a human's name variable
 /mob/living/carbon/human/proc/get_face_name(if_no_face="Unknown")
@@ -185,8 +175,6 @@
 	destination.socks = socks
 	destination.socks_color = socks_color
 	destination.jumpsuit_style = jumpsuit_style
-<<<<<<< ours
-=======
 
 /mob/living/carbon/human/proc/get_age()
 	var/obscured = check_obscured_slots()
@@ -245,4 +233,3 @@
 		else
 			visible_gender = "Thing"
 	return visible_gender
->>>>>>> theirs
