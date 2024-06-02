@@ -37,6 +37,7 @@
 	var/id_name = get_id_name("")
 	if(name_override)
 		return name_override
+<<<<<<< ours
 	if(face_name)
 		if(id_name && (id_name != face_name))
 			return "[face_name] (as [id_name])"
@@ -44,6 +45,9 @@
 	if(id_name)
 		return id_name
 	return "Unknown"
+=======
+	return get_generic_name(TRUE, lowercase = TRUE)
+>>>>>>> theirs
 
 //Returns "Unknown" if facially disfigured and real_name if not. Useful for setting name when Fluacided or when updating a human's name variable
 /mob/living/carbon/human/proc/get_face_name(if_no_face="Unknown")
@@ -181,3 +185,64 @@
 	destination.socks = socks
 	destination.socks_color = socks_color
 	destination.jumpsuit_style = jumpsuit_style
+<<<<<<< ours
+=======
+
+/mob/living/carbon/human/proc/get_age()
+	var/obscured = check_obscured_slots()
+	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
+	if((obscured & ITEM_SLOT_ICLOTHING) && skipface || isipc(src))
+		return FALSE
+	switch(age)
+		if(70 to INFINITY)
+			return "Geriatric"
+		if(60 to 70)
+			return "Elderly"
+		if(50 to 60)
+			return "Old"
+		if(40 to 50)
+			return "Middle-Aged"
+		if(24 to 40)
+			return FALSE //not necessary because this is basically the most common age range
+		if(18 to 24)
+			return "Young"
+		else
+			return "Puzzling"
+
+/mob/living/carbon/human/proc/get_generic_name(prefixed = FALSE, lowercase = FALSE)
+	var/final_string = ""
+	var/obscured = check_obscured_slots()
+	var/skipface = (wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE))
+	var/hide_features = (obscured & ITEM_SLOT_ICLOTHING) && skipface
+
+	if(generic_adjective && !hide_features)
+		final_string += "[generic_adjective] "
+
+	var/visible_age = get_age()
+	if(visible_age)
+		final_string += "[visible_age] "
+
+	final_string += "[dna.species.name] "
+
+	final_string += get_gender()
+
+	if(prefixed)
+		final_string = "\A [final_string]"
+
+	if(lowercase)
+		final_string = lowertext(final_string)
+	return final_string
+
+/mob/living/carbon/human/proc/get_gender()
+	var/visible_gender = p_they()
+	switch(visible_gender)
+		if("he")
+			visible_gender = "Man"
+		if("she")
+			visible_gender = "Woman"
+		if("they")
+			visible_gender = "Person"
+		else
+			visible_gender = "Thing"
+	return visible_gender
+>>>>>>> theirs

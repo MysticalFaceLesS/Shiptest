@@ -402,6 +402,7 @@
 	. = ..()
 	if ((wear_mask && (wear_mask.flags_inv & HIDEFACE)) || (head && (head.flags_inv & HIDEFACE)))
 		return
+<<<<<<< ours
 	var/age_text
 	switch(age)
 		if(-INFINITY to 25)
@@ -417,3 +418,7 @@
 		if(101 to INFINITY)
 			age_text = "withering away"
 	. += list(span_notice("[p_they(TRUE)] appear[p_s()] to be [age_text]."))
+=======
+	if(get_age())
+		. += list(span_notice("[p_they(TRUE)] appear[p_s()] to be [get_age()]."))
+>>>>>>> theirs
