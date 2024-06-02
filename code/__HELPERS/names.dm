@@ -268,7 +268,6 @@ GLOBAL_DATUM(syndicate_code_response_regex, /regex)
 #define PREFIX_INDEPENDENT list("SV", "IMV", "ISV")
 
 /// List of all ship factions to their prefixes.
-<<<<<<< ours
 /* GLOBAL_LIST_INIT(ship_faction_to_prefixes, list(
 	"Syndicate" = list(
 		"SEV",
@@ -322,7 +321,6 @@ GLOBAL_DATUM(syndicate_code_response_regex, /regex)
 		"SRSV",
 	),
 )) */
-=======
 GLOBAL_LIST_INIT(ship_faction_to_prefixes, list(
 	FACTION_SYNDICATE = PREFIX_SYNDICATE,
 	FACTION_NGR = PREFIX_NGR,
@@ -339,7 +337,6 @@ GLOBAL_LIST_INIT(ship_faction_to_prefixes, list(
 	FACTION_PGF = PREFIX_PGF,
 	FACTION_INDEPENDENT = PREFIX_INDEPENDENT
 ))
->>>>>>> theirs
 
 /proc/ship_prefix_to_faction(prefix)
 	for(var/faction in GLOB.ship_faction_to_prefixes)
