@@ -109,14 +109,6 @@ Mech Equipment
 		/obj/item/mecha_parts/mecha_equipment/drill
 	)
 
-/datum/supply_pack/mech/equipment/diamond_drill
-	name = "Mech diamond drill kit"
-	desc = "Contains mechanized diamond drill, for the enterprising prospector!"
-	cost = 750
-	contains = list(
-		/obj/item/mecha_parts/mecha_equipment/drill/diamonddrill
-	)
-
 /datum/supply_pack/mech/equipment/scanner
 	name = "Mech scanner kit"
 	desc = "An electronic mining scanner, graded to interface with a mech."
@@ -224,12 +216,7 @@ Mech Equipment
 weapons
 */
 
-/datum/supply_pack/mech/weapon
-	name = "Mech weapons crate"
-	crate_type = /obj/structure/closet/crate/secure/weapon
-	crate_name = "mech weapon crate"
-
-/datum/supply_pack/mech/weapon/pka
+/datum/supply_pack/mech/equipment/pka
 	name = "Mech Mounted Proto-Kinetic Accelerator kit"
 	desc = "A ranged mining attachment for any mech."
 	cost = 750
