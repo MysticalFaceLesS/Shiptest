@@ -412,6 +412,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["uplink_loc"], uplink_spawn_loc)
 	READ_FILE(S["phobia"], phobia)
 	READ_FILE(S["preferred_smoke_brand"], preferred_smoke_brand)
+	READ_FILE(S["generic_adjective"], generic_adjective)
 	READ_FILE(S["randomise"],  randomise)
 	READ_FILE(S["body_size"], features["body_size"])
 	READ_FILE(S["prosthetic_limbs"], prosthetic_limbs)
@@ -526,7 +527,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		facial_hairstyle						= sanitize_inlist(facial_hairstyle, GLOB.tajara_facial_hairs_list)
 		features["grad_style"]				= sanitize_inlist(features["grad_style"], GLOB.hair_gradients_list)
 		features["grad_color"]				= sanitize_hexcolor(features["grad_color"])
-	// [/CELADON-EDIT]	
+	// [/CELADON-EDIT]
 	else
 		// [CELADON-EDIT] - TAJARA
 		//	hairstyle								= sanitize_inlist(hairstyle, GLOB.hairstyles_list)
@@ -646,6 +647,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["uplink_loc"]					, uplink_spawn_loc)
 	WRITE_FILE(S["randomise"]					, randomise)
 	WRITE_FILE(S["species"]						, pref_species.id)
+	WRITE_FILE(S["preferred_smoke_brand"]		, preferred_smoke_brand)
 	WRITE_FILE(S["preferred_smoke_brand"]		, preferred_smoke_brand)
 	WRITE_FILE(S["phobia"]						, phobia)
 	WRITE_FILE(S["generic_adjective"]			, generic_adjective)

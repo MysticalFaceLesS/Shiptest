@@ -93,7 +93,7 @@ SUBSYSTEM_DEF(traumas)
 			/obj/item/clothing/under/rank/security/head_of_security/alt,
 			/obj/item/clothing/under/rank/rnd/research_director/alt, /obj/item/clothing/under/rank/rnd/research_director/turtleneck,
 			/obj/item/clothing/under/rank/security/head_of_security/parade,
-			/obj/item/clothing/under/rank/security/head_of_security/parade/female, //WS Edit - Better Command Uniforms
+			/obj/item/clothing/under/rank/security/head_of_security/parade/female,
 			/obj/item/clothing/head/helmet/abductor, /obj/item/clothing/suit/armor/abductor/vest, /obj/item/melee/baton/abductor,
 			/obj/item/storage/belt/military/abductor, /obj/item/gun/energy/alien, /obj/item/abductor/silencer,
 			/obj/item/abductor/gizmo, /obj/item/clothing/under/rank/centcom/official,
