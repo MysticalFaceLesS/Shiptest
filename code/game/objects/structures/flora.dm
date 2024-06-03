@@ -380,14 +380,20 @@
 
 /obj/item/kirbyplants/random/Initialize()
 	. = ..()
-	icon = 'icons/obj/flora/plants.dmi'
+	// [CELADON-EDIT] - CELADON_FLORA
+	// icon = 'icons/obj/flora/plants.dmi' // CELADON-EDIT - ORIGINAL
+	icon = 'mod_celadon/flora/icons/plants.dmi'
+	// [/CELADON-EDIT]
 	if(!states)
 		generate_states()
 	icon_state = pick(states)
 
 /obj/item/kirbyplants/random/proc/generate_states()
 	states = list()
-	for(var/i in 1 to 25)
+	// [CELADON-EDIT] - CELADON_FLORA
+	// for(var/i in 1 to 25) // CELADON-EDIT - ORIGINAL
+	for(var/i in 1 to 43)
+	// [/CELADON-EDIT]
 		var/number
 		if(i < 10)
 			number = "0[i]"
