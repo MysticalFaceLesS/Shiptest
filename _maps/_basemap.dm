@@ -14,4 +14,6 @@
 	#endif
 #endif
 
+// [CELADON-ADD] - CELADON_CONFIGS_MAPS
 #include "_mod_celadon\map_files\generic\blank.dmm"
+// [/CELADON-ADD]
