@@ -81,6 +81,14 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/syndicate, 32)
 
 MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/interdyne, 32)
 
+/obj/structure/sign/flag/red_star
+	name = "flag of the Red Star Pirat"
+	desc = "The flag of the Kingdom of Agurkrral."
+	icon = 'mod_celadon/flags/icons/flags.dmi'
+	icon_state = "flag_red_star"
+	item_flag = /obj/item/sign/flag/red_star
+
+// ITEM FLAGS - THE THINGS YOU HOLD AND PLACE
 /obj/item/sign/flag
 	name = "folded blank flag"
 	desc = "The folded flag of nothing. It has nothing on it. Beautiful."
@@ -88,8 +96,6 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/interdyne, 32)
 	icon_state = "folded_coder"
 	sign_path = /obj/structure/sign/flag
 	is_editable = FALSE
-
-// ITEM FLAGS - THE THINGS YOU HOLD AND PLACE
 
 /obj/item/sign/flag/nanotrasen
 	name = "folded flag of the Nanotrasen"
@@ -160,6 +166,10 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/interdyne, 32)
 	icon = 'mod_celadon/flags/icons/flags.dmi'
 	icon_state = "folded_coder"
 	sign_path = /obj/structure/sign/flag/interdyne
-	special_desc_requirement = EXAMINE_CHECK_JOB
-	special_desc_jobs = list(JOB_MIME) // this will probably never happen. but it will amuse someone when it does.
-	special_desc = "The folded flag of Interdyne Pharmaceuticals. For some reason, it reminds you of the home of the mimes."
+
+/obj/item/sign/flag/red_star
+	name = "folded flag of the Red Star Pirat"
+	desc = "The folded flag of Interdyne Pharmaceutics."
+	icon = 'mod_celadon/flags/icons/flags.dmi'
+	icon_state = "folded_red_star"
+	sign_path = /obj/structure/sign/flag/red_star
