@@ -91,7 +91,10 @@
 	desc = "Root into good soil to gain charge."
 	check_flags = AB_CHECK_CONSCIOUS
 	button_icon_state = "plant-22"
-	icon_icon = 'icons/obj/flora/plants.dmi'
+	// [CELADON-EDIT] - CELADON_FLORA
+	// icon_icon = 'icons/obj/flora/plants.dmi' // CELADON-EDIT - ORIGINAL
+	icon_icon = 'mod_celadon/flora/icons/plants.dmi'
+	// [/CELADON-EDIT]
 	background_icon_state = "bg_alien"
 
 /datum/action/innate/root/Activate()

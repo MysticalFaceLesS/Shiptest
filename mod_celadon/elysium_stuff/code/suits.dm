@@ -74,3 +74,43 @@
 	armor = list("melee" = 30, "bullet" = 20, "laser" = 30, "energy" = 30, "bomb" = 20, "bio" = 50, "rad" = 60, "fire" = 60, "acid" = 75)
 	slowdown = 0.5
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/melee/skimitar)
+
+/obj/item/clothing/under/rank/avanpost
+	icon = 'mod_celadon/elysium_stuff/icons/obj/elysium_commander.dmi'
+	mob_overlay_icon = 'mod_celadon/elysium_stuff/icons/mob/elysium_commander.dmi'
+
+/// CentCom Elyzium
+/obj/item/clothing/under/rank/avanpost/elysim_apparel
+	name = "\improper Elysium commander's apparel"
+	desc = "A traditional apparel worn by Elysium employees. It is dyed in the national color of lettuce, which symbolizes the Starbull Gardens."
+	icon_state = "apparel_elysium"
+	item_state = "apparel_elysium"
+	body_parts_covered = CHEST | GROIN | ARMS | LEGS
+
+/obj/item/clothing/under/rank/avanpost/elysim_apparel_long
+	name = "\improper Elysium commander's apparel"
+	desc = "A traditional long apparel worn by Elysium employees. It is dyed in the national color of lettuce, which symbolizes the Starbull Gardens."
+	icon_state = "long_apparel_elysium"
+	item_state = "long_apparel_elysium"
+	body_parts_covered = CHEST | GROIN | ARMS | LEGS
+
+/obj/item/clothing/head/turban_elysium
+	name = "\improper CentCom commander cap"
+	desc = "A traditional turban worn by Elysium employees. It is dyed in the national color of lettuce, which symbolizes the Starbull Gardens."
+	icon = 'mod_celadon/elysium_stuff/icons/obj/elysium_commander.dmi'
+	mob_overlay_icon = 'mod_celadon/elysium_stuff/icons/mob/elysium_commander.dmi'
+	icon_state = "turban_elysium"
+	item_state = "turban_elysium"
+	flags_inv = 0
+	strip_delay = (8 SECONDS)
+
+/obj/item/clothing/head/shemag_elysium
+	name = "\improper CentCom commander cap"
+	desc = "A traditional shemag worn by Elysium employees. It is dyed in the national color of lettuce, which symbolizes the Starbull Gardens."
+	icon = 'mod_celadon/elysium_stuff/icons/obj/elysium_commander.dmi'
+	mob_overlay_icon = 'mod_celadon/elysium_stuff/icons/mob/elysium_commander.dmi'
+	icon_state = "shemag_elysium"
+	item_state = "shemag_elysium"
+	flags_inv = 0
+	strip_delay = (8 SECONDS)
+	body_parts_covered = HEAD
