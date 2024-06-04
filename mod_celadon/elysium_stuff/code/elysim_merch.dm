@@ -60,13 +60,6 @@
 	icon = 'mod_celadon/elysium_stuff/icons/obj/Elysim_patriots.dmi'
 	icon_state = "poster-ak47"
 
-/obj/structure/sign/elysim_wall_seal
-	name = "Seal of the Elysim government"
-	desc = "A seal emblazened with a gold trim depicting the burning star, sol."
-	icon = 'mod_celadon/elysium_stuff/icons/obj/Elysim_patriots.dmi'
-	icon_state = "elysim-wall"
-	pixel_y = 27
-
 /obj/structure/sign/elysim
 	name = "\improper Elysim logo sign"
 	sign_change_name = "Rebel Logo - Elysim"
@@ -74,3 +67,10 @@
 	icon = 'mod_celadon/elysium_stuff/icons/obj/Elysim_patriots.dmi'
 	icon_state = "elysim"
 	is_editable = TRUE
+
+/obj/structure/sign/flag/elysim_wall_seal
+	name = "Seal of the Elysim government"
+	desc = "A seal emblazened with a gold trim depicting the burning star, sol."
+	icon = 'mod_celadon/elysium_stuff/icons/obj/Elysim_patriots.dmi'
+	icon_state = "elysim-wall"
+	pixel_y = 27
