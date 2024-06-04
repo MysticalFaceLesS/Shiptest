@@ -221,12 +221,14 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/obj/item/banner,
 /obj/effect/turf_decal/spline/fancy/opaque/black{
 	dir = 1
 	},
 /obj/effect/turf_decal/spline/fancy/opaque/black,
 /obj/machinery/firealarm/directional/north,
+/obj/item/banner/elysim{
+	pixel_x = 5
+	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/hallway/fore)
 "aW" = (
@@ -549,7 +551,7 @@
 	pixel_y = 24
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/poster/retro/nanotrasen_logo_70s{
+/obj/structure/sign/elysim{
 	pixel_x = -32
 	},
 /turf/open/floor/wood{
@@ -684,9 +686,6 @@
 /obj/effect/decal/cleanable/cobweb,
 /obj/machinery/newscaster/directional/north{
 	pixel_y = 33
-	},
-/obj/machinery/newscaster/directional/north{
-	pixel_x = -32
 	},
 /obj/machinery/light/directional/west,
 /turf/open/floor/wood,
@@ -1372,11 +1371,11 @@
 /turf/open/floor/wood,
 /area/outpost/crew/library)
 "fk" = (
+/obj/machinery/light/directional/south,
 /obj/effect/turf_decal/siding/wood{
-	dir = 8
+	dir = 10
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/light/directional/south,
 /turf/open/floor/wood,
 /area/outpost/vacant_rooms/office)
 "fl" = (
@@ -1818,15 +1817,14 @@
 /turf/open/floor/plasteel/sepia,
 /area/outpost/crew/canteen)
 "gL" = (
-/obj/effect/turf_decal/siding/wood{
+/obj/structure/sign/elysim{
+	pixel_x = -32
+	},
+/turf/open/floor/plasteel/stairs{
+	icon = 'icons/obj/stairs.dmi';
 	dir = 1
 	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/logo{
-	pixel_y = 32
-	},
-/turf/open/floor/concrete/slab_3,
-/area/outpost/hallway/central)
+/area/outpost/engineering)
 "gM" = (
 /obj/structure/grille,
 /turf/open/floor/plating,
@@ -2312,6 +2310,10 @@
 /obj/structure/catwalk/over/plated_catwalk,
 /turf/open/floor/plating/rust,
 /area/outpost/maintenance/aft)
+"iP" = (
+/obj/structure/sign/elysim,
+/turf/closed/indestructible/reinforced,
+/area/outpost/crew/library)
 "iQ" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 5
@@ -2329,6 +2331,10 @@
 	},
 /turf/open/floor/concrete/slab_2,
 /area/outpost/hallway/central)
+"iS" = (
+/obj/structure/sign/elysim,
+/turf/closed/indestructible/reinforced,
+/area/outpost/hallway/aft)
 "iT" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 4
@@ -2661,12 +2667,14 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/obj/item/banner,
 /obj/effect/turf_decal/spline/fancy/opaque/black{
 	dir = 1
 	},
 /obj/effect/turf_decal/spline/fancy/opaque/black,
 /obj/item/radio/intercom/directional/north,
+/obj/item/banner/elysim{
+	pixel_x = 3
+	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/hallway/fore)
 "jU" = (
@@ -3393,7 +3401,7 @@
 "mx" = (
 /obj/structure/bed,
 /obj/structure/curtain/cloth/grey,
-/obj/item/bedsheet/nanotrasen,
+/obj/item/bedsheet/elysim,
 /turf/open/floor/carpet,
 /area/outpost/crew/dorm)
 "my" = (
@@ -3455,9 +3463,6 @@
 /obj/effect/turf_decal/trimline/opaque/blue/filled/line{
 	dir = 6
 	},
-/obj/structure/sign/nanotrasen{
-	pixel_y = -32
-	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 5
 	},
@@ -3490,10 +3495,8 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
 	},
-/obj/structure/curtain{
-	color = "#363636"
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/curtain/cloth/elysim,
 /turf/open/floor/wood,
 /area/outpost/crew/dorm)
 "mJ" = (
@@ -4470,7 +4473,7 @@
 /obj/item/reagent_containers/food/drinks/bottle/pruno{
 	pixel_x = 5
 	},
-/obj/item/bedsheet/nanotrasen,
+/obj/item/bedsheet/elysim,
 /turf/open/floor/plating,
 /area/outpost/maintenance/fore)
 "qx" = (
@@ -4501,19 +4504,6 @@
 	},
 /turf/open/floor/grass,
 /area/outpost/crew/garden)
-"qA" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 1
-	},
-/obj/structure/sign/logo{
-	icon_state = "nanotrasen_sign3";
-	pixel_y = 32
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 10
-	},
-/turf/open/floor/concrete/slab_3,
-/area/outpost/hallway/central)
 "qC" = (
 /obj/machinery/light/directional/north,
 /obj/machinery/status_display/ai{
@@ -4655,6 +4645,10 @@
 	dir = 1
 	},
 /turf/open/floor/grass,
+/area/outpost/crew/lounge)
+"qY" = (
+/obj/structure/sign/elysim,
+/turf/closed/indestructible/reinforced,
 /area/outpost/crew/lounge)
 "qZ" = (
 /obj/machinery/power/apc/auto_name/directional/north,
@@ -4999,14 +4993,9 @@
 /turf/open/floor/plasteel/white,
 /area/outpost/medical)
 "rV" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 8
-	},
-/obj/structure/sign/poster/retro/nanotrasen_logo_80s{
-	pixel_y = 32
-	},
-/turf/open/floor/concrete/tiles,
-/area/outpost/crew/garden)
+/obj/structure/sign/elysim,
+/turf/closed/indestructible/reinforced,
+/area/outpost/vacant_rooms)
 "rW" = (
 /obj/effect/turf_decal/industrial/warning{
 	dir = 5
@@ -5521,6 +5510,7 @@
 /area/outpost/operations)
 "tJ" = (
 /obj/structure/table/wood/reinforced,
+/obj/item/storage/book/bible/koran,
 /turf/open/floor/wood/ebony,
 /area/outpost/crew/lounge)
 "tK" = (
@@ -6145,12 +6135,12 @@
 /turf/open/floor/carpet/red,
 /area/outpost/vacant_rooms/office)
 "vM" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 4
-	},
 /obj/item/kirbyplants{
 	icon_state = "plant-21";
 	pixel_x = 7
+	},
+/obj/effect/turf_decal/siding/wood{
+	dir = 6
 	},
 /turf/open/floor/wood,
 /area/outpost/vacant_rooms/office)
@@ -6158,7 +6148,7 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 5
 	},
-/obj/machinery/computer/bounty,
+/obj/machinery/computer,
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "vO" = (
@@ -6208,18 +6198,6 @@
 "vV" = (
 /turf/open/space/basic,
 /area/space)
-"vW" = (
-/obj/structure/sign/logo{
-	icon_state = "nanotrasen_sign5";
-	pixel_y = 32
-	},
-/turf/open/floor/plasteel/stairs{
-	barefootstep = "woodbarefoot";
-	color = "#A47449";
-	footstep = "wood";
-	dir = 4
-	},
-/area/outpost/hallway/central)
 "vY" = (
 /obj/structure/catwalk/over/plated_catwalk,
 /turf/open/floor/plating{
@@ -6379,14 +6357,9 @@
 /turf/open/floor/plating,
 /area/outpost/maintenance/fore)
 "wC" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 1
-	},
-/obj/structure/sign/poster/official/nanotrasen_logo{
-	pixel_y = 32
-	},
-/turf/open/floor/concrete/slab_3,
-/area/outpost/hallway/starboard)
+/obj/structure/sign/elysim,
+/turf/closed/indestructible/reinforced,
+/area/outpost/crew/garden)
 "wE" = (
 /turf/open/floor/concrete/reinforced,
 /area/outpost/hallway/starboard)
@@ -6473,6 +6446,9 @@
 	dir = 4
 	},
 /obj/machinery/light/small/directional/south,
+/obj/structure/sign/elysim{
+	pixel_x = 32
+	},
 /turf/open/floor/concrete/tiles,
 /area/outpost/hallway/central)
 "wS" = (
@@ -6595,7 +6571,9 @@
 /area/outpost/external)
 "xm" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/banner,
+/obj/item/banner/elysim{
+	pixel_x = 4
+	},
 /turf/open/floor/plating,
 /area/outpost/maintenance/fore)
 "xo" = (
@@ -6631,9 +6609,11 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/item/banner/command/mundane,
 /obj/effect/turf_decal/industrial/warning{
 	dir = 8
+	},
+/obj/item/banner/elysim{
+	pixel_x = 6
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/operations)
@@ -6847,7 +6827,9 @@
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 4
 	},
-/obj/item/banner,
+/obj/item/banner/elysim{
+	pixel_x = 2
+	},
 /turf/open/floor/concrete/tiles,
 /area/outpost/crew/garden)
 "yb" = (
@@ -7396,7 +7378,7 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 9
 	},
-/obj/machinery/computer/bounty,
+/obj/machinery/computer,
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "Aa" = (
@@ -7661,6 +7643,9 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/elysim_wall_seal{
+	pixel_x = 2
+	},
 /turf/open/floor/carpet/nanoweave,
 /area/outpost/crew/canteen)
 "AS" = (
@@ -8029,6 +8014,7 @@
 /obj/effect/turf_decal/box/corners{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/outpost/maintenance/fore)
 "Cj" = (
@@ -8999,9 +8985,6 @@
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 1
 	},
-/obj/structure/sign/poster/official/nanotrasen_logo{
-	pixel_y = 32
-	},
 /obj/structure/chair,
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/hallway/fore)
@@ -9056,12 +9039,14 @@
 "FR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/plasma,
-/obj/item/banner/command/mundane,
 /obj/structure/railing{
 	dir = 4
 	},
 /obj/effect/turf_decal/industrial/warning{
 	dir = 4
+	},
+/obj/item/banner/elysim{
+	pixel_x = 2
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/operations)
@@ -9772,9 +9757,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
 	},
-/obj/structure/curtain{
-	color = "#363636"
-	},
+/obj/structure/curtain/cloth/elysim,
 /turf/open/floor/wood,
 /area/outpost/crew/dorm)
 "Io" = (
@@ -9865,6 +9848,10 @@
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/wood,
 /area/outpost/crew/bar)
+"IG" = (
+/obj/structure/sign/elysim,
+/turf/closed/indestructible/reinforced,
+/area/outpost/hallway/fore)
 "IH" = (
 /obj/effect/turf_decal/industrial/warning/corner{
 	dir = 4
@@ -10447,14 +10434,8 @@
 	},
 /area/outpost/maintenance/fore)
 "Kz" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/sign/poster/official/nanotrasen_logo{
-	pixel_y = 32
-	},
-/turf/open/floor/concrete/slab_3,
+/obj/structure/sign/elysim,
+/turf/closed/indestructible/reinforced,
 /area/outpost/hallway/starboard)
 "KA" = (
 /obj/effect/turf_decal/siding/wood{
@@ -10537,7 +10518,7 @@
 /area/outpost/operations)
 "KQ" = (
 /obj/structure/barricade/security,
-/obj/structure/curtain/cloth/grey,
+/obj/structure/curtain/cloth/elysim,
 /turf/open/floor/plating,
 /area/outpost/maintenance/fore)
 "KT" = (
@@ -10576,6 +10557,10 @@
 /obj/structure/flora/grass/both,
 /turf/open/floor/plating/asteroid/snow/airless,
 /area/outpost/external)
+"Le" = (
+/obj/structure/sign/elysim,
+/turf/closed/indestructible/reinforced,
+/area/outpost/security)
 "Lf" = (
 /obj/structure/railing{
 	layer = 3.1
@@ -10602,12 +10587,11 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
-/obj/structure/sign/logo{
-	icon_state = "nanotrasen_sign2";
-	pixel_y = 32
-	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 4
+	},
+/obj/structure/sign/elysim{
+	pixel_y = 32
 	},
 /turf/open/floor/concrete/slab_3,
 /area/outpost/hallway/central)
@@ -10953,7 +10937,7 @@
 /obj/structure/bed,
 /obj/structure/curtain/cloth/grey,
 /obj/effect/decal/cleanable/cobweb,
-/obj/item/bedsheet/nanotrasen,
+/obj/item/bedsheet/elysim,
 /turf/open/floor/carpet,
 /area/outpost/crew/dorm)
 "Mp" = (
@@ -11082,6 +11066,9 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/concrete/tiles,
 /area/outpost/hallway/central)
 "MX" = (
@@ -11163,9 +11150,6 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced/spawner/east,
-/obj/structure/sign/poster/official/nanotrasen_logo{
-	pixel_y = 32
-	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
 /turf/open/floor/plasteel/dark,
 /area/outpost/crew/cryo)
@@ -11301,8 +11285,8 @@
 /area/outpost/hallway/central)
 "NI" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/curtain/cloth/grey,
 /obj/structure/catwalk/over/plated_catwalk,
+/obj/structure/curtain/cloth/elysim,
 /turf/open/floor/plating{
 	icon_state = "panelscorched"
 	},
@@ -11396,7 +11380,7 @@
 /area/outpost/cargo)
 "NT" = (
 /obj/structure/bed,
-/obj/item/bedsheet/captain,
+/obj/item/bedsheet/elysim,
 /turf/open/floor/carpet/blue,
 /area/outpost/operations)
 "NV" = (
@@ -11591,9 +11575,6 @@
 "Ov" = (
 /obj/effect/turf_decal/trimline/opaque/purple/filled/line{
 	dir = 10
-	},
-/obj/structure/sign/nanotrasen{
-	pixel_y = -32
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 9
@@ -11927,9 +11908,6 @@
 "PF" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 6
-	},
-/obj/structure/sign/nanotrasen{
-	pixel_y = -32
 	},
 /turf/open/floor/carpet/green,
 /area/outpost/hallway/aft)
@@ -12468,9 +12446,6 @@
 /obj/item/kirbyplants{
 	icon_state = "plant-09"
 	},
-/obj/structure/sign/poster/official/nanotrasen_logo{
-	pixel_y = 32
-	},
 /turf/open/floor/carpet,
 /area/outpost/crew/library)
 "RA" = (
@@ -12984,6 +12959,10 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/crew/cryo)
+"Tx" = (
+/obj/structure/sign/elysim,
+/turf/closed/indestructible/reinforced,
+/area/outpost/crew/cryo)
 "Ty" = (
 /obj/effect/turf_decal/trimline/opaque/blue/filled/line{
 	dir = 5
@@ -13184,17 +13163,12 @@
 /turf/open/floor/concrete/slab_3,
 /area/outpost/hallway/aft)
 "Uc" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 1
-	},
-/obj/structure/sign/poster/official/nanotrasen_logo{
-	pixel_y = 32
-	},
-/turf/open/floor/concrete/slab_3,
-/area/outpost/hallway/central)
+/obj/structure/sign/elysim,
+/turf/closed/indestructible/reinforced,
+/area/outpost/operations)
 "Ud" = (
 /obj/structure/barricade/security,
-/obj/structure/curtain/cloth/grey,
+/obj/structure/curtain/cloth/elysim,
 /turf/open/floor/plating/rust,
 /area/outpost/maintenance/fore)
 "Ug" = (
@@ -13388,9 +13362,6 @@
 "UQ" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
-	},
-/obj/structure/sign/poster/retro/nanotrasen_logo_80s{
-	pixel_y = 32
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -13797,7 +13768,6 @@
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 8
 	},
-/obj/machinery/light/directional/north,
 /obj/machinery/elevator_call_button{
 	dir = 4;
 	pixel_x = -25
@@ -14024,8 +13994,8 @@
 /area/outpost/maintenance/fore)
 "Xu" = (
 /obj/effect/decal/cleanable/plasma,
-/obj/structure/curtain/cloth/grey,
 /obj/structure/catwalk/over/plated_catwalk,
+/obj/structure/curtain/cloth/elysim,
 /turf/open/floor/plating/rust,
 /area/outpost/maintenance/fore)
 "Xv" = (
@@ -14181,7 +14151,9 @@
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 1
 	},
-/obj/item/banner,
+/obj/item/banner/elysim{
+	pixel_x = 6
+	},
 /turf/open/floor/concrete/tiles,
 /area/outpost/crew/garden)
 "XV" = (
@@ -14415,6 +14387,9 @@
 /area/outpost/security)
 "YI" = (
 /obj/structure/closet/secure_closet/captains,
+/obj/structure/sign/poster/contraband/lusty_xenomorph{
+	pixel_x = -32
+	},
 /turf/open/floor/carpet/blue,
 /area/outpost/operations)
 "YJ" = (
@@ -14603,16 +14578,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/concrete/tiles,
 /area/outpost/hallway/aft)
-"Zn" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 1
-	},
-/obj/structure/sign/logo{
-	icon_state = "nanotrasen_sign4";
-	pixel_y = 32
-	},
-/turf/open/floor/concrete/slab_3,
-/area/outpost/hallway/central)
 "Zp" = (
 /turf/closed/mineral/random/snow,
 /area/outpost/external)
@@ -14882,7 +14847,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/computer/bounty,
+/obj/machinery/computer,
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "ZV" = (
@@ -18801,7 +18766,7 @@ Mx
 Mx
 Mx
 lM
-Mx
+qY
 Mx
 Mx
 Mx
@@ -20644,7 +20609,7 @@ Gx
 Gx
 Gx
 TJ
-gL
+Co
 gk
 Zz
 Tn
@@ -20890,7 +20855,7 @@ Rp
 Gx
 Gx
 TJ
-qA
+jI
 TH
 Zz
 sH
@@ -21013,7 +20978,7 @@ Rp
 qZ
 jg
 TJ
-Zn
+Qp
 gk
 TS
 JX
@@ -21136,14 +21101,14 @@ Rp
 Rp
 QC
 TJ
-vW
+IW
 Fq
 IW
 Mc
 yQ
 za
-vw
-rV
+wC
+mJ
 fL
 fL
 mJ
@@ -21521,7 +21486,7 @@ rx
 rx
 jw
 zL
-Rx
+Tx
 Nh
 dq
 kt
@@ -21613,7 +21578,7 @@ Rp
 AE
 AE
 pl
-Rp
+IG
 FD
 Ko
 vZ
@@ -21634,7 +21599,7 @@ hi
 Xi
 cp
 Qm
-vw
+wC
 UQ
 fv
 fv
@@ -22101,7 +22066,7 @@ Gr
 Cp
 Yr
 LX
-wY
+gL
 an
 Yh
 px
@@ -22734,8 +22699,8 @@ Qz
 kf
 Qz
 Ns
-QT
-Uc
+rV
+Qp
 Ev
 CW
 It
@@ -23243,7 +23208,7 @@ Zm
 la
 MM
 mr
-Nr
+iP
 Rz
 zj
 Db
@@ -23481,7 +23446,7 @@ PR
 PR
 VA
 PF
-vC
+iS
 Fi
 Ux
 KM
@@ -23845,7 +23810,7 @@ jF
 Qp
 Ev
 Zz
-Mt
+Le
 yG
 zo
 tt
@@ -24579,8 +24544,8 @@ av
 Mk
 CQ
 Rq
-gs
 Kz
+KV
 uD
 oN
 Mt
@@ -25302,7 +25267,7 @@ gU
 Ty
 tI
 mF
-wS
+Uc
 wS
 wS
 wS
@@ -25437,8 +25402,8 @@ Ai
 wS
 wS
 wS
-wS
-wC
+Uc
+Ya
 tr
 Vc
 FU
@@ -26040,7 +26005,7 @@ HF
 fU
 GN
 Ov
-wS
+Uc
 wS
 wS
 LW

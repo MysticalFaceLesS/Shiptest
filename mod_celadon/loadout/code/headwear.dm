@@ -12,3 +12,8 @@
 	display_name = "television helmet"
 	description = "A mysterious headgear made from the hollowed out remains of a status display. How very retro-retro-futuristic of you."
 	path = /obj/item/clothing/head/costume/tv_head
+
+/datum/gear/hat/archeologist
+	display_name = "archaeologist hat"
+	description = "A well-worn fedora favored by explorers and archaeologists. Not very protective but still very stylish."
+	path = /obj/item/clothing/head/archeologist
