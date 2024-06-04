@@ -8,7 +8,6 @@
 	var/t_has = p_have()
 	var/t_is = p_are()
 	var/obscure_name
-
 	var/list/obscured = check_obscured_slots()
 	var/skipface = ((wear_mask?.flags_inv & HIDEFACE) || (head?.flags_inv & HIDEFACE))
 
@@ -16,10 +15,25 @@
 		var/mob/living/L = user
 		if(HAS_TRAIT(L, TRAIT_PROSOPAGNOSIA))
 			obscure_name = TRUE
-	var/apparent_species
-	if(dna?.species && !skipface)
-		apparent_species = ", \an [dna.species.name]"
-	. = list("<span class='info'>This is <EM>[!obscure_name ? name : "Unknown"][apparent_species]</EM>!")
+
+	. = list(span_info("This is <EM>[name]</EM>!"))
+
+	if(user != src)
+		if(!obscure_name && !skipface)
+			var/face_name = get_face_name("")
+			if(face_name)
+				//if we have no guestbook, we just KNOW okay?
+				var/known_name = user.mind?.guestbook ? user.mind.guestbook.get_known_name(user, src, face_name) : face_name
+				if(known_name)
+					. += "You know them as <EM>[known_name]</EM>."
+				else
+					. += "You don't recognize [t_him]. You can <B>Ctrl-Shift click</b> [t_him] to memorize their face."
+			else
+				. += "You can't see [t_his] face very well."
+		else
+			. += "You can't see [t_his] face very well."
+	else
+		. += "It's you, <EM>[real_name]</EM>."
 
 	//uniform
 	if(w_uniform && !(ITEM_SLOT_ICLOTHING in obscured))
