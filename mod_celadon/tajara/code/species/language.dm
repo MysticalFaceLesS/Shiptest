@@ -23,4 +23,5 @@
 		"rir", "khan", "jun", "dar", "rik", "kah", "hal", "ket", "jurl", "mah", "tul", "cresh", "azu", "ragh"
 	)
 	default_priority = 90
-	icon_state = "animal"
+	icon = 'mod_celadon/tajara/icons/language.dmi'
+	icon_state = "siiktajr"
