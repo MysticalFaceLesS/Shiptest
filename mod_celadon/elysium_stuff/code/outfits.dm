@@ -24,10 +24,23 @@
 	ears = /obj/item/radio/headset/heads/head_of_personnel
 	uniform = /obj/item/clothing/under/rank/avanpost/elysim_apparel
 	suit = /obj/item/clothing/suit/armor/vest/bulletproof
-	shoes = /obj/item/clothing/shoes/sneakers/black
+	shoes = /obj/item/clothing/shoes/sneakers/sandals_cc
 	head = /obj/item/clothing/head/shemag_elysium
-	glasses = /obj/item/clothing/glasses/sunglasses
+	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
 	id = /obj/item/card/id/elysium_com
+	belt = /obj/item/storage/belt/security/webbing/elisium/vest_black
+	l_pocket = /obj/item/restraints/handcuffs
+	r_pocket = /obj/item/ammo_box/a357
+	box = /obj/item/storage/box/survival/security
+	suit_store = /obj/item/gun/ballistic/revolver/mateba
+	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
+	back = /obj/item/storage/backpack/security
+
+	backpack_contents = list(/obj/item/melee/classic_baton,
+							/obj/item/restraints/handcuffs = 4,
+							/obj/item/ammo_box/a357 = 3)
+
+	implants = list(/obj/item/implant/mindshield, /obj/item/implant/krav_maga)
 
 /obj/effect/mob_spawn/human/commanderelysium
 	name = "Avanpost Commander Elysium"
@@ -44,9 +57,16 @@
 	mask = /obj/item/clothing/mask/cigarette/cigar/cohiba
 	head = /obj/item/clothing/head/shemag_elysium
 	gloves = /obj/item/clothing/gloves/tackler/combat
-	shoes = /obj/item/clothing/shoes/combat/swat
-	r_pocket = /obj/item/lighter
+	shoes = /obj/item/clothing/shoes/sneakers/sandals_cc
+	belt = /obj/item/lighter
+	l_pocket = /obj/item/restraints/handcuffs
+	r_pocket = /obj/item/ammo_box/a357
+	box = /obj/item/storage/box/survival/security
+	suit_store = /obj/item/gun/ballistic/revolver/mateba
+	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
 	id = /obj/item/card/id/elysium_com
+
+	implants = list(/obj/item/implant/mindshield)
 
 /obj/effect/mob_spawn/human/commanderelysium_alt
 	name = "Avanpost Commander Elysium (Alternative)"
@@ -63,7 +83,7 @@
 	mask = /obj/item/clothing/mask/cigarette/cigar/cohiba
 	head = /obj/item/clothing/head/turban_elysium
 	gloves = /obj/item/clothing/gloves/tackler/combat
-	shoes = /obj/item/clothing/shoes/combat/swat
+	shoes = /obj/item/clothing/shoes/sneakers/sandals_cc
 	r_pocket = /obj/item/lighter
 	id = /obj/item/card/id/elysium_com
 
@@ -94,9 +114,11 @@
 	glasses = /obj/item/clothing/glasses/eyepatch
 	mask = /obj/item/clothing/mask/cigarette/cigar/cohiba
 	gloves = /obj/item/clothing/gloves/tackler/combat
-	shoes = /obj/item/clothing/shoes/combat/swat
+	shoes = /obj/item/clothing/shoes/sneakers/sandals_cc
 	r_pocket = /obj/item/lighter
 	id = /obj/item/card/id/elysium_com
+
+	implants = list(/obj/item/implant/mindshield)
 
 /datum/outfit/avanpost/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(visualsOnly)
@@ -106,7 +128,7 @@
 	name = "Avanpost Elysium Commander"
 	uniform = /obj/item/clothing/under/rank/avanpost/elysim_apparel
 	suit = /obj/item/clothing/suit/armor/vest/bulletproof
-	shoes = /obj/item/clothing/shoes/combat/swat
+	shoes = /obj/item/clothing/shoes/sneakers/sandals_cc
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
 	ears = /obj/item/radio/headset/headset_cent/commander
 	glasses = /obj/item/clothing/glasses/eyepatch
@@ -117,6 +139,8 @@
 	l_pocket = /obj/item/ammo_box/a357
 	back = /obj/item/storage/backpack/satchel/leather
 	id = /obj/item/card/id/elysium_com
+
+	implants = list(/obj/item/implant/mindshield)
 
 /datum/outfit/avanpost/commander/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(visualsOnly)
