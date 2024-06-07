@@ -444,8 +444,13 @@
 	var/total_spread = bonus_spread
 	if(HAS_TRAIT(user, TRAIT_GUNSLINGER)) //gunslinger bonus
 		total_spread += gunslinger_bonus
+<<<<<<< ours
 		total_spread = clamp(total_spread,0,INFINITY)
 	return total_spread
+=======
+
+	return ..(user, total_spread)
+>>>>>>> theirs
 
 /obj/item/gun/ballistic/revolver/pickup(mob/user)
 	. = ..()
