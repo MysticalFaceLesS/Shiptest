@@ -8,9 +8,9 @@
 
 /obj/item/coin/day_s/attack_self(mob/user)
 	if(cooldown < world.time)
-		if(string_attached) //does the coin have a wire attached
+		if(string_attached) 	//does the coin have a wire attached
 			to_chat(user, "<span class='warning'>Монета не будет хорошо подбрасываться, если к ней что-то прикреплено!</span>" )
-			return FALSE//do not flip the coin
+			return FALSE	//do not flip the coin
 		cooldown = world.time + 15
 		flick("coin_[coinflip]_flip", src)
 		coinflip = pick(sideslist)
@@ -29,4 +29,4 @@
 					"<span class='notice'>[user] подкидывает монетку в воздухе. Она приземляется, после чего на ней виднеется буква 'M'. <b>Атака без учёта потерь!</b></span>", \
 					"<span class='notice'>Вы подкидываете монетку в воздухе. Она приземляется, после чего на ней виднеется буква 'M'. <b>Атака без учёта потерь!</b></span>", \
 					"<span class='hear'>Вы слышите звук падения мелочи.</span>")
-	return TRUE//did the coin flip?
+	return TRUE		//did the coin flip?
