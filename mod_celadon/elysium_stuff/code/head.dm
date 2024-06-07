@@ -89,3 +89,25 @@
 	mob_overlay_state = "armband"
 	armor = list("melee" = 20, "bullet" = 15, "laser" = 15, "energy" = 20, "bomb" = 35, "bio" = 100, "rad" = 75, "fire" = 50, "acid" = 100)
 
+/// CentCom Elyzium
+/obj/item/clothing/head/turban_elysium
+	name = "\improper CentCom commander cap"
+	desc = "A traditional turban worn by Elysium employees. It is dyed in the national color of lettuce, which symbolizes the Starbull Gardens."
+	icon = 'mod_celadon/elysium_stuff/icons/obj/elysium_commander.dmi'
+	mob_overlay_icon = 'mod_celadon/elysium_stuff/icons/mob/elysium_commander.dmi'
+	icon_state = "turban_elysium"
+	item_state = "turban_elysium"
+	flags_inv = 0
+	strip_delay = (8 SECONDS)
+	body_parts_covered = HEAD | HAIR
+
+/obj/item/clothing/head/shemag_elysium
+	name = "\improper CentCom commander cap"
+	desc = "A traditional shemag worn by Elysium employees. It is dyed in the national color of lettuce, which symbolizes the Starbull Gardens."
+	icon = 'mod_celadon/elysium_stuff/icons/obj/elysium_commander.dmi'
+	mob_overlay_icon = 'mod_celadon/elysium_stuff/icons/mob/elysium_commander.dmi'
+	icon_state = "shemag_elysium"
+	item_state = "shemag_elysium"
+	flags_inv = 0
+	strip_delay = (8 SECONDS)
+	body_parts_covered = HEAD | HAIR | FACEHAIR
