@@ -487,11 +487,6 @@ There are several things that need to be remembered:
 			else
 				handled_by_bodytype = TRUE
 
-		// [CELADON-ADD] - TAJARA
-		if((I.supports_variations & TAJARA_VARIATION) && (dna.species.bodytype & BODYTYPE_TAJARA))
-			icon_file = TAJARA_HEAD_PATH
-		// [/CELADON-ADD]
-
 		if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(I))))
 			handled_by_bodytype = TRUE
 			icon_file = DEFAULT_HEAD_PATH
@@ -600,11 +595,6 @@ There are several things that need to be remembered:
 			else
 				handled_by_bodytype = TRUE
 
-		// [CELADON-ADD] - TAJARA
-		else if((dna.species.bodytype & BODYTYPE_TAJARA) && (I.supports_variations & TAJARA_VARIATION))
-			icon_file = TAJARA_SUIT_PATH
-		// [/CELADON-ADD]
-
 		if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(I))))
 			handled_by_bodytype = TRUE
 			icon_file = I.mob_overlay_icon
@@ -687,11 +677,6 @@ There are several things that need to be remembered:
 						icon_file = I.kepoi_override_icon
 				else
 					handled_by_bodytype = TRUE
-
-			// [CELADON-ADD] - TAJARA
-			if((dna.species.bodytype & BODYTYPE_TAJARA) && (I.supports_variations & TAJARA_VARIATION))
-				icon_file = TAJARA_MASK_PATH
-			// [/CELADON-ADD]
 
 			if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(I))))
 				icon_file = DEFAULT_MASK_PATH

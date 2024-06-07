@@ -968,9 +968,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					dat += "</td>"
 					mutant_category = 0
 
-			// begin generic adjective
-			if(!mutant_category)
-				dat += APPEARANCE_CATEGORY_COLUMN
+			if(generic_adjective)
+				if(!mutant_category)
+					dat += APPEARANCE_CATEGORY_COLUMN
 
 			dat += "<h3>Character Adjective</h3>"
 
