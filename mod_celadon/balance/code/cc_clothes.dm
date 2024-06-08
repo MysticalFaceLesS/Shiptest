@@ -47,18 +47,18 @@
 	if(slot == ITEM_SLOT_ICLOTHING)
 		ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
 
-/obj/item/clothing/under/rank/avanpost/elysim_apparel
+/obj/item/clothing/under/rank/avanpost/elysium_apparel
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 80, "bomb" = 80, "bio" = 80, "rad" = 80, "fire" = 100, "acid" = 80)
 
-/obj/item/clothing/under/rank/avanpost/elysim_apparel/equipped(mob/user, slot)
+/obj/item/clothing/under/rank/avanpost/elysium_apparel/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_ICLOTHING)
 		ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
 
-/obj/item/clothing/under/rank/avanpost/elysim_apparel_long
+/obj/item/clothing/under/rank/avanpost/elysium_apparel_long
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 80, "bomb" = 80, "bio" = 80, "rad" = 80, "fire" = 100, "acid" = 80)
 
-/obj/item/clothing/under/rank/avanpost/elysim_apparel_long/equipped(mob/user, slot)
+/obj/item/clothing/under/rank/avanpost/elysium_apparel_long/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_ICLOTHING)
 		ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
@@ -109,6 +109,14 @@
 
 // FEET
 /obj/item/clothing/shoes/combat/swat/equipped(mob/user, slot)
+	. = ..()
+	if(slot == ITEM_SLOT_FEET)
+		ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
+
+/obj/item/clothing/shoes/sneakers/sandals_cc
+	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 80, "bomb" = 80, "bio" = 80, "rad" = 80, "fire" = 100, "acid" = 80)
+
+/obj/item/clothing/shoes/sneakers/sandals_cc/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_FEET)
 		ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)

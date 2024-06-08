@@ -96,6 +96,18 @@
 /datum/asset/spritesheet/simple/paper
 	name = "paper"
 	assets = list(
+		// [CELADON-ADD] - CELADON_STAMPS
+		"stamp-inteq-celadon" = 'mod_celadon/stamps/icons/png/large_stamp-inteq.png',
+		"inteq-mothership-stamp" = 'mod_celadon/stamps/icons/png/inteq_mothership_stamp.png',
+		"solfed-corps-commander-stamp" = 'mod_celadon/stamps/icons/png/sf_commander_stamp.png',
+		"solfed-captain" = 'mod_celadon/stamps/icons/png/sf_captain_stamp.png',
+		"elysium-brigade-captain-stamp" = 'mod_celadon/stamps/icons/png/elysium_brigade_stamp.png',
+		"elysium-republic-stamp" = 'mod_celadon/stamps/icons/png/elysium_republic_stamp.png',
+		"elysium-avanpost-stamp" = 'mod_celadon/stamps/icons/png/elysium_outpost_stamp.png',
+		"nt-cent-command-stamp" = 'mod_celadon/stamps/icons/png/nano_trasen_central_command_stamp.png',
+		"nt-captain-stamp" = 'mod_celadon/stamps/icons/png/nano_trasen_captain_stamp.png',
+		"syndicate-captain-stamp" = 'mod_celadon/stamps/icons/png/syndicate_captain_stamp.png',
+		// [/CELADON-ADD]
 		"stamp-clown" = 'icons/stamp_icons/large_stamp-clown.png',
 		"stamp-deny" = 'icons/stamp_icons/large_stamp-deny.png',
 		"stamp-ok" = 'icons/stamp_icons/large_stamp-ok.png',
@@ -121,10 +133,7 @@
 		"stamp-bard" = 'icons/stamp_icons/large_stamp-bard.png',
 		"stamp-gold" = 'icons/stamp_icons/large_stamp-gold.png',
 		"stamp-cybersun" = 'icons/stamp_icons/large_stamp-cybersun.png',
-		"stamp-donk" = 'icons/stamp_icons/large_stamp-donk.png',
-		// [CELADON-ADD] - INTEQ_STUFF
-		"stamp-inteq-celadon" = 'mod_celadon/inteq_stuff/icons/obj/large_stamp-inteq.png'
-		// [/CELADON-ADD]
+		"stamp-donk" = 'icons/stamp_icons/large_stamp-donk.png'
 	)
 
 /datum/asset/simple/fuckywucky

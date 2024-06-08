@@ -1138,6 +1138,6 @@
 	icon_state = "rolled_poster"
 
 // #undef PLACE_SPEED		MOD_CHANGES-CELADON -> REMOVED BECAUSE ITS PREVENTING NEW /random POSTERS FROM OTHER FILES
-// #undef POSTER_SUBTYPES		EXAMPLE FOR PREVENTED /random POSTER: mod_celadon/elysium_stuff/code/ElysimMerch.dm
+// #undef POSTER_SUBTYPES		EXAMPLE FOR PREVENTED /random POSTER: mod_celadon/elysium_stuff/code/elysiumMerch.dm
 // #undef POSTER_LIST		LINE 37, random_type = POSTER_SUBTYPES -> ERROR: undefined var
 // #undef POSTER_ADD_FROM_LIST
