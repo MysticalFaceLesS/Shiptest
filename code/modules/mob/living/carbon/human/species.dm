@@ -1686,8 +1686,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	var/armor_block = H.run_armor_check(affecting, "melee", I.armour_penetration, FALSE, "<span class='notice'>Your armor has protected your [hit_area]!</span>", "<span class='warning'>Your armor has softened a hit to your [hit_area]!</span>")
 	armor_block = min(90,armor_block) //cap damage reduction at 90%
 
-	var/weakness = H.check_weakness(I, user)
-	apply_damage(I.force * weakness, I.damtype, def_zone, armor_block, H, sharpness = I.get_sharpness())
+	apply_damage(I.force, I.damtype, def_zone, armor_block, H, sharpness = I.get_sharpness())
 
 	H.send_item_attack_message(I, user, hit_area)
 
