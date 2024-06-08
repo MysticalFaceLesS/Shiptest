@@ -1,7 +1,7 @@
 
 #### Список PRов
 
-- https://github.com/CeladonSS13/Shiptest/pulls/#####
+- https://github.com/CeladonSS13/Shiptest/pull/687
 <!--
   Ссылки на PRы, связанные с модом:
   - Создание
@@ -77,7 +77,7 @@ ID мода: SOLFED_STUFF
 
 ### Авторы
 
-Твой никнейм
+Kottason - спрайты, RalseiDreemuurr - код
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.
