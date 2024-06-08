@@ -54,7 +54,7 @@ EDIT: `code\modules\mob\living\simple_animal\hostile\mining_mobs\elites\elite.dm
 
 ADD: `code\modules\projectiles\ammunition\_ammunition.dm` : /obj/item/ammo_casing/attackby(obj/item/I, mob/user, params) -> добавлены звук подбора патрона в магазин с пола и задержка в 1 секунду зависящая от кликанья по патронам. Чем быстрее клики - тем быстрее загрузятся патроны.
 Очки с зомби и ксеноморфов
-EDIT: `D:\1ss\ShiptestYata\code\modules\surgery\experimental_dissection.dm`: `/datum/surgery_step/dissection/preop`
+REMOVE: `D:\1ss\ShiptestYata\code\modules\surgery\experimental_dissection.dm`: `/datum/surgery_step/dissection/preop`
 
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
