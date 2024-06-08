@@ -1,3 +1,4 @@
+//Субшатлы для кораблей
 /datum/map_template/shuttle/subshuttles/independent_pebble
 	file_name = "independent_pebble"
 	name = "Pebble-class Mining Vessel"
@@ -7,7 +8,18 @@
 	file_name = "syndicate_jet_lancer"
 	name = "Jet Lancer-class Boarding Vessel"
 	prefix = "DSSV"
+/datum/map_template/shuttle/subshuttles/independent_module_one
+	file_name = "independent_module_one"
+	name = "Module-Ship-One"
+	prefix = "IMV"
+/datum/map_template/shuttle/subshuttles/independent_module_two
+	file_name = "independent_module_two"
+	name = "Module-Ship-two"
+	prefix = "IMV"
+/datum/map_template/shuttle/subshuttles/nail
+	prefix = "PIRATE"
+//Субшатлы для руинок
 /datum/map_template/shuttle/ruin/ruin_jox
-	file_name = "synddicate_Jox"
+	file_name = "syndicate_Jox"
 	name = "Jox Drop Ship"
 	prefix = "SSV"

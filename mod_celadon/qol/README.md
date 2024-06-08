@@ -26,6 +26,7 @@ ID мода: CELADON_QOL
 - мезонные очки двух видов -> `mod_celadon\qol\code\glasses.dm`
 - бинокль -> `mod_celadon\qol\code\binoculars.dm`
 - переведены законы ИИ, см.ниже
+- изменен размер боевым дробовикам, теперь их можно ложить в слот спины и рюкзака
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
   А также любая полезная информация.
@@ -76,6 +77,11 @@ ID мода: CELADON_QOL
 - EDIT `code\modules\client\preferences.dm`: `var/datum/loadout_category/LC = GLOB.loadout_categories[gear_tab]` - меняем лодаут
 
 - ADD `html\browser\common.css` -> да-да, ксс файлик шатаем. Добавляем классы на обработку картиночек лодаута
+
+- EDIT `code\game\objects\items\storage\ration.dm` - делаем так чтобы можно хитер положить обратно
+
+- EDIT `code\modules\projectiles\boxes_magazines\_box_magazine.dm` -> снижена задержка загрузки патронов с коробки в магазин
+
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.

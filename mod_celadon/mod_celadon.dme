@@ -19,6 +19,7 @@
 // --- ICONS --- //
 #include "species_changes/_species_changes.dme"
 #include "resprite/_resprite.dme"
+#include "parallax/_parallax.dme"
 
 // --- SOUNDS --- //
 
@@ -35,6 +36,9 @@
 #include "research/_research.dme"
 #include "mechas/_mechas.dme"
 #include "items/_items.dme"
+#include "flora/_flora.dme"
+#include "musician/_musician.dme"
+#include "pizzamat/_pizzamat.dme"
 
 // --- MOBS --- //
 #include "mobs/_mobs.dme"
@@ -45,20 +49,22 @@
 #include "fixes/_fixes.dme"
 #include "ipc_surgery/_ipc_surgery.dme"
 #include "robotic_honk/_robotic_honk.dme"
+#include "ai_laws/_ai_laws.dme"
 
 // --- DONATORS --- //
-
-
-// --- UNUSED MODS --- //
 
 
 // --- MAPS --- //
 #include "maps/_configs.dme"
 
 
+// --- UNUSED MODS --- //
 /*------------------------------------------------------------------
 	Почему UNUSED MODS стоит хранить?
 	Потому что никто не проверяет использование тех или иных файлов
 	в коде, и мод просто исчезнет из поля зрения, когда находясь здесь
 	он всегда напоминает о своём существовании. Небольшая библиотека,
-	если так вообще можно выразиться.*/
+	если так вообще можно выразиться. Чтобы включить модпак, перенеси
+	его выше.*/
+
+// #include "event_td/_event_td.dme" // Ивент на атаку и защита

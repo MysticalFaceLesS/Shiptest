@@ -154,11 +154,12 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						)
 	var/fbp = FALSE
 	var/phobia = "spiders"
+	var/preferred_smoke_brand = PREF_CIG_SPACE
 	var/list/alt_titles_preferences = list()
 	var/list/custom_names = list()
 	var/preferred_ai_core_display = "Blue"
 	var/prefered_security_department = SEC_DEPT_RANDOM
-
+	var/generic_adjective = "Unremarkable"
 	//Quirk list
 	var/list/all_quirks = list()
 
@@ -928,6 +929,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 				dat += "<a href='?_src_=prefs;preference=phobia;task=input'>[phobia]</a><BR>"
 
+			if("Smoker" in all_quirks)
+				dat += "<h3>Smoker</h3>"
+
+				dat += "<a href='?_src_=prefs;preference=preferred_smoke_brand;task=input'>[preferred_smoke_brand]</a><BR>"
+
 			if("body_size" in pref_species.default_features)
 				if(!mutant_category)
 					dat += APPEARANCE_CATEGORY_COLUMN
@@ -935,6 +941,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<h3>Size</h3>"
 
 				dat += "<a href='?_src_=prefs;preference=body_size;task=input'>[features["body_size"]]</a><BR>"
+
+
+				dat += "<h3>Character Adjective</h3>"
+
+				dat += "<a href='?_src_=prefs;preference=generic_adjective;task=input'>[generic_adjective]</a><BR>"
 
 				mutant_category++
 				if(mutant_category >= MAX_MUTANT_ROWS)
@@ -1760,9 +1771,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						age = clamp(round(text2num(new_age)), pref_species.species_age_min, pref_species.species_age_max)
 
 				if("flavor_text")
-					var/msg = sanitize(stripped_multiline_input(usr, "Set the flavor text in your 'examine' verb. This can also be used for OOC notes and preferences!", "Flavor Text", features["flavor_text"], 4096, TRUE))
+					var/msg = stripped_multiline_input(usr, "A snippet of text shown when others examine you, describing what you may look like. This can also be used for OOC notes.", "Flavor Text", html_decode(features["flavor_text"]), MAX_FLAVOR_LEN, TRUE)
 					if(msg) //WS edit - "Cancel" does not clear flavor text
-						features["flavor_text"] = html_decode(msg)
+						features["flavor_text"] = msg
 
 				if("hair")
 					var/new_hair = input(user, "Choose your character's hair colour:", "Character Preference","#"+hair_color) as color|null
@@ -2186,6 +2197,19 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					var/phobiaType = input(user, "What are you scared of?", "Character Preference", phobia) as null|anything in SStraumas.phobia_types
 					if(phobiaType)
 						phobia = phobiaType
+				if("preferred_smoke_brand")
+					var/smokeBrand = input(user, "What cigarettes are your favorite?", "Character Preference", preferred_smoke_brand) as null|anything in GLOB.valid_smoke_types
+					if(smokeBrand)
+						preferred_smoke_brand = smokeBrand
+
+				if("generic_adjective")
+					var/selectAdj
+					if(istype(pref_species, /datum/species/ipc))
+						selectAdj = input(user, "In one word, how would you describe your character's appereance?", "Character Preference", generic_adjective) as null|anything in GLOB.ipc_preference_adjectives
+					else
+						selectAdj = input(user, "In one word, how would you describe your character's appereance?", "Character Preference", generic_adjective) as null|anything in GLOB.preference_adjectives
+					if(selectAdj)
+						generic_adjective = selectAdj
 
 				if ("max_chat_length")
 					var/desiredlength = input(user, "Choose the max character length of shown Runechat messages. Valid range is 1 to [CHAT_MESSAGE_MAX_LENGTH] (default: [initial(max_chat_length)]))", "Character Preference", max_chat_length)  as null|num
@@ -2590,6 +2614,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		character.set_species(chosen_species, icon_update = FALSE, pref_load = TRUE)
 	//Because of how set_species replaces all bodyparts with new ones, hair needs to be set AFTER species.
 	character.dna.real_name = character.real_name
+	character.generic_adjective = generic_adjective
 	character.hair_color = hair_color
 	character.facial_hair_color = facial_hair_color
 	character.grad_color = features["grad_color"]

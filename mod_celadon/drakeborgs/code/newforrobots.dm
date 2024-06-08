@@ -30,14 +30,12 @@
 
 
 /mob/living/silicon/robot/update_resting()
-	if(sitting)
-		ADD_TRAIT(src, TRAIT_IMMOBILIZED, TRAIT_FLOORED)
-	if(bellyup)
-		ADD_TRAIT(src, TRAIT_IMMOBILIZED, TRAIT_FLOORED)
 	if(resting)
-		ADD_TRAIT(src, TRAIT_IMMOBILIZED, TRAIT_FLOORED)
-	else if (!sitting && !bellyup && !resting)
-		REMOVE_TRAIT(src, TRAIT_IMMOBILIZED, TRAIT_FLOORED)
+		ADD_TRAIT(src, TRAIT_IMMOBILIZED, RESTING_TRAIT)
+	else
+		REMOVE_TRAIT(src, TRAIT_IMMOBILIZED, RESTING_TRAIT)
+		set_lying_angle(0)
+		set_body_position(0)
 	return ..()
 
 /mob/living/silicon/robot/update_icons()
@@ -48,11 +46,9 @@
 				icon_state = "[module.cyborg_base_icon]-sit"
 			if(bellyup)
 				icon_state = "[module.cyborg_base_icon]-bellyup"
-			if(resting)
+			else if(!sitting && !bellyup)
 				icon_state = "[module.cyborg_base_icon]-rest"
 			cut_overlays()
-		else if(body_position == 0)
-			icon_state = "[module.cyborg_base_icon]"
 		else
 			icon_state = "[module.cyborg_base_icon]"
 	if(stat == DEAD && module.hasrest == TRUE)
@@ -69,10 +65,3 @@
 /mob/living/silicon/robot/on_standing_up()
 	. = ..()
 	update_icons()
-
-/mob/living/silicon/death(gibbed)
-	diag_hud_set_status()
-	diag_hud_set_health()
-	update_health_hud()
-	ADD_TRAIT(src, TRAIT_IMMOBILIZED, TRAIT_FLOORED)
-	return ..()
