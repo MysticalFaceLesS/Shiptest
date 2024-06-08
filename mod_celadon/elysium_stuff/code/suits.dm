@@ -80,14 +80,14 @@
 	mob_overlay_icon = 'mod_celadon/elysium_stuff/icons/mob/elysium_commander.dmi'
 
 /// CentCom Elyzium
-/obj/item/clothing/under/rank/avanpost/elysim_apparel
+/obj/item/clothing/under/rank/avanpost/elysium_apparel
 	name = "\improper Elysium commander's apparel"
 	desc = "A traditional apparel worn by Elysium employees. It is dyed in the national color of lettuce, which symbolizes the Starbull Gardens."
 	icon_state = "apparel_elysium"
 	item_state = "apparel_elysium"
 	body_parts_covered = CHEST | GROIN | ARMS | LEGS
 
-/obj/item/clothing/under/rank/avanpost/elysim_apparel_long
+/obj/item/clothing/under/rank/avanpost/elysium_apparel_long
 	name = "\improper Elysium commander's apparel"
 	desc = "A traditional long apparel worn by Elysium employees. It is dyed in the national color of lettuce, which symbolizes the Starbull Gardens."
 	icon_state = "long_apparel_elysium"

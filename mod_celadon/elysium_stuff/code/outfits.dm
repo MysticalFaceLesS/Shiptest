@@ -22,13 +22,13 @@
 /datum/outfit/elysiumbridgeofficercorpse
 	name = "Avanpost Bridge Officer Elysium"
 	ears = /obj/item/radio/headset/heads/head_of_personnel
-	uniform = /obj/item/clothing/under/rank/avanpost/elysim_apparel
+	uniform = /obj/item/clothing/under/rank/avanpost/elysium_apparel
 	suit = /obj/item/clothing/suit/armor/vest/bulletproof
 	shoes = /obj/item/clothing/shoes/sneakers/sandals_cc
 	head = /obj/item/clothing/head/shemag_elysium
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
 	id = /obj/item/card/id/elysium_com
-	belt = /obj/item/storage/belt/security/webbing/elisium/vest_black
+	belt = /obj/item/storage/belt/security/webbing/elysium/vest_black
 	l_pocket = /obj/item/restraints/handcuffs
 	r_pocket = /obj/item/ammo_box/a357
 	box = /obj/item/storage/box/survival/security
@@ -50,7 +50,7 @@
 
 /datum/outfit/elysiumcommandercorpse
 	name = "\improper Avanpost Private Security Commander Elysium"
-	uniform = /obj/item/clothing/under/rank/avanpost/elysim_apparel
+	uniform = /obj/item/clothing/under/rank/avanpost/elysium_apparel
 	suit = /obj/item/clothing/suit/armor/vest/bulletproof
 	ears = /obj/item/radio/headset/heads/captain
 	glasses = /obj/item/clothing/glasses/eyepatch
@@ -76,7 +76,7 @@
 
 /datum/outfit/elysiumcommandercorpse_alt
 	name = "\improper Avanpost Private Security Commander Elysium"
-	uniform = /obj/item/clothing/under/rank/avanpost/elysim_apparel_long
+	uniform = /obj/item/clothing/under/rank/avanpost/elysium_apparel_long
 	suit = /obj/item/clothing/suit/armor/vest/bulletproof
 	ears = /obj/item/radio/headset/heads/captain
 	glasses = /obj/item/clothing/glasses/eyepatch
@@ -108,7 +108,7 @@
 
 /datum/outfit/avanpost
 	name = "Avanpost"
-	uniform = /obj/item/clothing/under/rank/avanpost/elysim_apparel
+	uniform = /obj/item/clothing/under/rank/avanpost/elysium_apparel
 	suit = /obj/item/clothing/suit/armor/vest/bulletproof
 	ears = /obj/item/radio/headset/heads/captain
 	glasses = /obj/item/clothing/glasses/eyepatch
@@ -126,7 +126,7 @@
 
 /datum/outfit/avanpost/commander
 	name = "Avanpost Elysium Commander"
-	uniform = /obj/item/clothing/under/rank/avanpost/elysim_apparel
+	uniform = /obj/item/clothing/under/rank/avanpost/elysium_apparel
 	suit = /obj/item/clothing/suit/armor/vest/bulletproof
 	shoes = /obj/item/clothing/shoes/sneakers/sandals_cc
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
