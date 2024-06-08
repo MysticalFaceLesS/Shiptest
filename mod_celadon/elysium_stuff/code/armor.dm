@@ -1,4 +1,4 @@
-/obj/item/clothing/suit/armor/vest/elisium
+/obj/item/clothing/suit/armor/vest/elysium
 	name = "Кустарная броня"
 	desc = "Самодельная защита сваренная из кусков брони, скрепленных кожей. Просто, но надежно."
 	icon = 'mod_celadon/elysium_stuff/icons/obj/accessories.dmi'

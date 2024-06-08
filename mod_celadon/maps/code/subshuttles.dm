@@ -8,6 +8,14 @@
 	file_name = "syndicate_jet_lancer"
 	name = "Jet Lancer-class Boarding Vessel"
 	prefix = "DSSV"
+/datum/map_template/shuttle/subshuttles/independent_module_one
+	file_name = "independent_module_one"
+	name = "Module-Ship-One"
+	prefix = "IMV"
+/datum/map_template/shuttle/subshuttles/independent_module_two
+	file_name = "independent_module_two"
+	name = "Module-Ship-two"
+	prefix = "IMV"
 /datum/map_template/shuttle/subshuttles/nail
 	prefix = "PIRATE"
 //Субшатлы для руинок

@@ -34,6 +34,8 @@ ID мода: CELADON_CONFIGS_MAPS
 - EDIT `code\controllers\subsystem\mapping.dm`: `load_ship_templates()` -> `flist`, `file`
 - EDIT `code\datums\shuttles.dm` -> `mappath`: меняем пути к сабшатлам
 - EDIT `code\modules\overmap\objects\outpost\outpost_types.dm` -> `path`: меняем путь к аванпостам
+
+- ADD `_maps\_basemap.dm` -> включение карты ЦК
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.

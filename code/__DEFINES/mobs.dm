@@ -28,6 +28,13 @@
 #define BLOOD_VOLUME_BAD 224
 #define BLOOD_VOLUME_SURVIVE 122
 
+// Bloodloss
+#define BLOOD_LOSS_MAXIMUM 30
+#define BLOOD_LOSS_DAMAGE_MAXIMUM 2
+#define BLOOD_LOSS_DAMAGE_BASE 0.013
+#define BLOOD_CAUTERIZATION_RATIO 10
+#define BLOOD_CAUTERIZATION_DAMAGE_RATIO 300
+
 //Sizes of mobs, used by mob/living/var/mob_size
 #define MOB_SIZE_TINY 0
 #define MOB_SIZE_SMALL 1
@@ -339,7 +346,7 @@
 #define SHADOW_SPECIES_LIGHT_THRESHOLD 0.2
 
 //MINOR TWEAKS/MISC
-#define AGE_MIN 17 //youngest a character can be
+#define AGE_MIN 18 //youngest a character can be
 #define AGE_MAX 85 //oldest a character can be
 #define AGE_MINOR 20 //legal age of space drinking and smoking
 #define WIZARD_AGE_MIN 30 //youngest a wizard can be
