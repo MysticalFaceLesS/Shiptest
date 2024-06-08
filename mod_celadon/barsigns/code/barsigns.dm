@@ -437,35 +437,35 @@
 	icon_state = "evahumanspace"
 	desc = "Безопасность - это привелегия."
 
-/datum/barsign/warpsurf
-	name = "SS220 Warp Surf"
-	icon_state = "warpsurf"
-	desc = "Welcome to the club, buddy!"
+// /datum/barsign/warpsurf
+// 	name = "SS220 Warp Surf"
+// 	icon_state = "warpsurf"
+// 	desc = "Welcome to the club, buddy!"
 
-/datum/barsign/papacafe
-	name = "SS220 Space Daddy's Cafe"
-	icon_state = "papacafe"
-	desc = "Уважай своего Космического Папу!"
+// /datum/barsign/papacafe
+// 	name = "SS220 Space Daddy's Cafe"
+// 	icon_state = "papacafe"
+// 	desc = "Уважай своего Космического Папу!"
 
-/datum/barsign/wycctide
-	name = "SS220 Wycctide"
-	icon_state = "wycctide"
-	desc = "О нет, он близится!"
+// /datum/barsign/wycctide
+// 	name = "SS220 Wycctide"
+// 	icon_state = "wycctide"
+// 	desc = "О нет, он близится!"
 
-/datum/barsign/shitcur
-	name = "SS220 Shitcur"
-	icon_state = "shitcur"
-	desc = "Невиновность ничего не доказывает."
+// /datum/barsign/shitcur
+// 	name = "SS220 Shitcur"
+// 	icon_state = "shitcur"
+// 	desc = "Невиновность ничего не доказывает."
 
 /datum/barsign/pourndot
 	name = "SS220 Pour and that's it"
 	icon_state = "pourndot"
 	desc = "Нальют и Точка. Тяжёлые времена приближаются."
 
-/datum/barsign/moonipub
-	name = "SS220 Mooniverse pub"
-	icon_state = "mooni"
-	desc = "Совершенно новый паб."
+// /datum/barsign/moonipub
+// 	name = "SS220 Mooniverse pub"
+// 	icon_state = "mooni"
+// 	desc = "Совершенно новый паб."
 
 // 3
 /datum/barsign/whiskey_implant
