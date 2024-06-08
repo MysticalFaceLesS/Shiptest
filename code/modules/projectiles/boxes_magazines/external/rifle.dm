@@ -16,7 +16,10 @@
 	desc = "An advanced, 30-round toploading magazine for the M-90gl Carbine. These rounds do moderate damage with good armor penetration."
 	icon_state = "5.56m-1"
 	base_icon_state = "5.56m"
-	ammo_type = /obj/item/ammo_casing/a556_39
+// [CELADON-EDIT] - CELADON_FIXES
+//	ammo_type = /obj/item/ammo_casing/a556_39 // CELADON-EDIT - ORIGINAL
+	ammo_type = /obj/item/ammo_casing/a556_45
+// [/CELADON-EDIT]
 	caliber = "5.56x45mm"
 	max_ammo = 30
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
@@ -97,7 +100,10 @@
 	desc = "A simple, 30-round magazine for 5.56x45mm assault rifles. These rounds do moderate damage with good armor penetration."
 	icon_state = "p16_mag-1"
 	base_icon_state = "p16_mag"
-	ammo_type = /obj/item/ammo_casing/a556_39
+// [CELADON-EDIT] - CELADON_FIXES
+//	ammo_type = /obj/item/ammo_casing/a556_39 // CELADON-EDIT - ORIGINAL
+	ammo_type = /obj/item/ammo_casing/a556_45
+// [/CELADON-EDIT]
 	caliber = "5.56x45mm"
 	max_ammo = 30
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
@@ -108,7 +114,10 @@
 	desc = "A deft, 30-round magazine for the Swiss Cheese assault rifle. These rounds do moderate damage with good armor penetration."
 	icon_state = "swissmag-1"
 	base_icon_state = "swissmag"
-	ammo_type = /obj/item/ammo_casing/a556_39
+// [CELADON-EDIT] - CELADON_FIXES
+//	ammo_type = /obj/item/ammo_casing/a556_39 // CELADON-EDIT - ORIGINAL
+	ammo_type = /obj/item/ammo_casing/a556_45
+// [/CELADON-EDIT]
 	caliber = "5.56x45mm"
 	max_ammo = 30
 	multiple_sprites = AMMO_BOX_FULL_EMPTY

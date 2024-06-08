@@ -90,7 +90,7 @@ SUBSYSTEM_DEF(traumas)
 			/obj/item/clothing/under/rank/command/captain, /obj/item/clothing/under/rank/security/head_of_security,
 			/obj/item/clothing/under/rank/engineering/chief_engineer, /obj/item/clothing/under/rank/medical/chief_medical_officer,
 			/obj/item/clothing/under/rank/command/head_of_personnel, /obj/item/clothing/under/rank/rnd/research_director,
-			/obj/item/clothing/under/rank/security/head_of_security/alt,//WS Edit - Better security jumpsuit sprites
+			/obj/item/clothing/under/rank/security/head_of_security/alt,
 			/obj/item/clothing/under/rank/rnd/research_director/alt, /obj/item/clothing/under/rank/rnd/research_director/turtleneck,
 			/obj/item/clothing/under/rank/security/head_of_security/parade,
 			/obj/item/clothing/under/rank/security/head_of_security/parade/female, //WS Edit - Better Command Uniforms
@@ -128,7 +128,7 @@ SUBSYSTEM_DEF(traumas)
 			/obj/item/melee/cultblade, /obj/item/cult_bastard,
 			/obj/item/restraints/legcuffs/bola/cult, /obj/item/clothing/suit/space/hardsuit/cult,
 			/obj/item/clothing/suit/hooded/cultrobes, /obj/item/clothing/head/hooded/cult_hoodie, /obj/effect/rune,
-			/obj/item/stack/sheet/runed_metal, /obj/machinery/door/airlock/cult, /obj/singularity/narsie,
+			/obj/machinery/door/airlock/cult, /obj/singularity/narsie,
 			/obj/item/soulstone,
 			/obj/item/clothing/suit/wizrobe, /obj/item/clothing/head/wizard, /obj/item/spellbook, /obj/item/staff,
 			/obj/item/clothing/suit/space/hardsuit/shielded/wizard, /obj/item/clothing/suit/space/hardsuit/wizard,

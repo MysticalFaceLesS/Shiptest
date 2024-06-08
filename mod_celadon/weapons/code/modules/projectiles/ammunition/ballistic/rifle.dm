@@ -1,18 +1,18 @@
-/obj/item/ammo_casing/a556_39/a856
+/obj/item/ammo_casing/a556_45/a856
 	name = "5.56mm A856 bullet casing"
 	desc = "A 5.56mm bullet casing."
-	icon_state = "rifle-brass-green"
+	icon_state = "rifle-brass-incen"
 	caliber = "5.56x45mm"
 	projectile_type = /obj/projectile/bullet/a556_45/a856
 
-/obj/item/ammo_casing/a556_39/m903
+/obj/item/ammo_casing/a556_45/m903
 	name = "5.56mm M903 bullet casing"
 	desc = "A 5.56mm bullet casing."
 	icon_state = "rifle-brass-ap"
 	caliber = "5.56x45mm"
 	projectile_type = /obj/projectile/bullet/a556_45/m903
 
-/obj/item/ammo_casing/a556_39/surplus
+/obj/item/ammo_casing/a556_45/surplus
 	name = "5.56mm surplus bullet casing"
 	desc = "A 5.56mm bullet casing."
 	icon_state = "rifle-brass-surplus"

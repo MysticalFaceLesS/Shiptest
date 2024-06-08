@@ -3,7 +3,7 @@
 	firing_effect_type = null
 	heavy_metal = FALSE
 
-/obj/item/ammo_casing/caseless/on_eject()
+/obj/item/ammo_casing/caseless/on_eject(atom/shooter)
 	// [CELADON-EDIT] - CELADON_FIXES
 	// qdel(src) // CELADON-EDIT - ORIGINAL
 	if(BB)  // Проверяем, что гильза не пустая

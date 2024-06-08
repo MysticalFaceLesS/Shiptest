@@ -411,6 +411,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["jumpsuit_style"], jumpsuit_style)
 	READ_FILE(S["uplink_loc"], uplink_spawn_loc)
 	READ_FILE(S["phobia"], phobia)
+	READ_FILE(S["preferred_smoke_brand"], preferred_smoke_brand)
 	READ_FILE(S["randomise"],  randomise)
 	READ_FILE(S["body_size"], features["body_size"])
 	READ_FILE(S["prosthetic_limbs"], prosthetic_limbs)
@@ -513,17 +514,38 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	randomise = SANITIZE_LIST(randomise)
 
-	if(gender == MALE)
-		hairstyle								= sanitize_inlist(hairstyle, GLOB.hairstyles_male_list)
-		facial_hairstyle						= sanitize_inlist(facial_hairstyle, GLOB.facial_hairstyles_male_list)
-	else if(gender == FEMALE)
-		hairstyle								= sanitize_inlist(hairstyle, GLOB.hairstyles_female_list)
-		facial_hairstyle						= sanitize_inlist(facial_hairstyle, GLOB.facial_hairstyles_female_list)
+	// [CELADON-EDIT] - TAJARA
+	//	if(gender == MALE)
+	//		hairstyle								= sanitize_inlist(hairstyle, GLOB.hairstyles_male_list)
+	//		facial_hairstyle						= sanitize_inlist(facial_hairstyle, GLOB.facial_hairstyles_male_list)
+	//	else if(gender == FEMALE)
+	//		hairstyle								= sanitize_inlist(hairstyle, GLOB.hairstyles_female_list)
+	//		facial_hairstyle						= sanitize_inlist(facial_hairstyle, GLOB.facial_hairstyles_female_list) // CELADON-EDIT - ORIGINAL
+	if(species_id == "tajara")
+		hairstyle								= sanitize_inlist(hairstyle, GLOB.tajara_hairs_list)
+		facial_hairstyle						= sanitize_inlist(facial_hairstyle, GLOB.tajara_facial_hairs_list)
+		features["grad_style"]				= sanitize_inlist(features["grad_style"], GLOB.hair_gradients_list)
+		features["grad_color"]				= sanitize_hexcolor(features["grad_color"])
+	// [/CELADON-EDIT]	
 	else
-		hairstyle								= sanitize_inlist(hairstyle, GLOB.hairstyles_list)
-		facial_hairstyle						= sanitize_inlist(facial_hairstyle, GLOB.facial_hairstyles_list)
-		underwear								= sanitize_inlist(underwear, GLOB.underwear_list)
-		undershirt 								= sanitize_inlist(undershirt, GLOB.undershirt_list)
+		// [CELADON-EDIT] - TAJARA
+		//	hairstyle								= sanitize_inlist(hairstyle, GLOB.hairstyles_list)
+		//	facial_hairstyle						= sanitize_inlist(facial_hairstyle, GLOB.facial_hairstyles_list)
+		//	underwear								= sanitize_inlist(underwear, GLOB.underwear_list)
+		//	undershirt 								= sanitize_inlist(undershirt, GLOB.undershirt_list) // CELADON-EDIT - ORIGINAL
+		if(gender == MALE)
+			hairstyle								= sanitize_inlist(hairstyle, GLOB.hairstyles_male_list)
+			facial_hairstyle						= sanitize_inlist(facial_hairstyle, GLOB.facial_hairstyles_male_list)
+		else if(gender == FEMALE)
+			hairstyle								= sanitize_inlist(hairstyle, GLOB.hairstyles_female_list)
+			facial_hairstyle						= sanitize_inlist(facial_hairstyle, GLOB.facial_hairstyles_female_list)
+		else
+			hairstyle								= sanitize_inlist(hairstyle, GLOB.hairstyles_list)
+			facial_hairstyle						= sanitize_inlist(facial_hairstyle, GLOB.facial_hairstyles_list)
+			underwear								= sanitize_inlist(underwear, GLOB.underwear_list)
+			undershirt 								= sanitize_inlist(undershirt, GLOB.undershirt_list)
+		// [/CELADON-EDIT]
+
 
 	socks				= sanitize_inlist(socks, GLOB.socks_list)
 	age					= sanitize_integer(age, pref_species.species_age_min, pref_species.species_age_max, initial(age))
@@ -624,7 +646,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["uplink_loc"]					, uplink_spawn_loc)
 	WRITE_FILE(S["randomise"]					, randomise)
 	WRITE_FILE(S["species"]						, pref_species.id)
+	WRITE_FILE(S["preferred_smoke_brand"]		, preferred_smoke_brand)
 	WRITE_FILE(S["phobia"]						, phobia)
+	WRITE_FILE(S["generic_adjective"]			, generic_adjective)
 	WRITE_FILE(S["body_size"]					, features["body_size"])
 	WRITE_FILE(S["prosthetic_limbs"]			, prosthetic_limbs)
 	WRITE_FILE(S["feature_mcolor"]				, features["mcolor"])

@@ -21,7 +21,6 @@ ID мода: CELADON_DEFINES
 ### Описание мода
 
 Этот мод нужен для хранения глобальных дефайнов или просто дефайнов модпаков, использующихся больше 1 раза
-`mod_celadon\_defines\code\_defines\cards_ids.dm`: id карты
 `mod_celadon\_defines\code\_defines\access.dm`: коды доступов
 
 Это все нужно для FOV
@@ -82,7 +81,7 @@ ID мода: CELADON_DEFINES
 
 ### Авторы:
 
-Voiko, MrCat15352
+Voiko, MrCat15352, Mirag1993
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.
