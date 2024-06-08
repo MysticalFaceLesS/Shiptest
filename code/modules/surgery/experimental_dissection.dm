@@ -10,9 +10,9 @@
 				/datum/surgery_step/retract_skin,
 				/datum/surgery_step/clamp_bleeders,
 				/datum/surgery_step/dissection,
-				// [CELADON-EDIT] - CELADON_BALANCE - Изменения диссекции
+				// [CELADON-REMOVE] - CELADON_BALANCE - Изменения диссекции
 				// /datum/surgery_step/clamp_bleeders,
-				// [/CELADON-EDIT]
+				// [/CELADON-REMOVE]
 				/datum/surgery_step/close)
 	possible_locs = list(BODY_ZONE_CHEST)
 	target_mobtypes = list(/mob/living) //Feel free to dissect devils but they're magic.
@@ -39,7 +39,7 @@
 		/obj/item/kitchen/knife = 30,
 		/obj/item/shard = 10)// special tools not only cut down time but also improve probability
 	// [CELADON-EDIT] - CELADON_BALANCE - Изменения диссекции
-	// time = 125
+	// time = 125 // CELADON-EDIT - ORIGINAL
 	time = 50
 	// [/CELADON-EDIT]
 	silicons_obey_prob = TRUE
@@ -66,10 +66,10 @@
 		cost = (MAX_DISSECTION_REWARD*38)
 	else if(isalienadult(target))
 	// [CELADON-EDIT] - CELADON_BALANCE - Изменения диссекции
-		//		cost = (MAX_DISSECTION_REWARD*30)
+		//		cost = (MAX_DISSECTION_REWARD*30) // CELADON-EDIT - ORIGINAL
 		cost = (MAX_DISSECTION_REWARD*10)
 	else if(isalien(target))
-		// cost = (MAX_DISSECTION_REWARD*14)
+		// cost = (MAX_DISSECTION_REWARD*14) // CELADON-EDIT - ORIGINAL
 		cost = (MAX_DISSECTION_REWARD*4)
 	// [/CELADON-EDIT]
 	else if(ismegafauna(target))
@@ -81,7 +81,7 @@
 				cost = (MAX_DISSECTION_REWARD*24)
 			// [CELADON-EDIT] - CELADON_BALANCE - Изменения диссекции
 			// else if(iszombie(H) || isshadow(H) || isandroid(H))
-				// cost = (MAX_DISSECTION_REWARD*30)
+				// cost = (MAX_DISSECTION_REWARD*30) // CELADON-EDIT - ORIGINAL
 			else if(isshadow(H) || isandroid(H))
 				cost = (MAX_DISSECTION_REWARD*30)
 			else if(iszombie(H))
