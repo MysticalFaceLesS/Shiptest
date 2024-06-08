@@ -38,7 +38,10 @@
 			user.visible_message("<span class='notice'>[user] begins to cut down [src] with [W].</span>","<span class='notice'>You begin to cut down [src] with [W].</span>", "<span class='hear'>You hear the sound of sawing.</span>")
 			if(do_after(user, 1000/W.force, target = src)) //5 seconds with 20 force, 8 seconds with a hatchet, 20 seconds with a shard.
 				user.visible_message("<span class='notice'>[user] fells [src] with the [W].</span>","<span class='notice'>You fell [src] with the [W].</span>", "<span class='hear'>You hear the sound of a tree falling.</span>")
-				playsound(get_turf(src), 'sound/effects/meteorimpact.ogg', 100 , FALSE, FALSE)
+				// [CELADON-EDIT] - CELADON_QOL
+				// playsound(get_turf(src), 'sound/effects/meteorimpact.ogg', 100 , FALSE, FALSE) // CELADON-EDIT - ORIGINAL
+				playsound(get_turf(src), 'mod_celadon/sound/zvuk-padayuschego-dereva.ogg', 100 , FALSE, FALSE)
+				// [/CELADON-EDIT]
 				user.log_message("cut down [src] at [AREACOORD(src)]", LOG_ATTACK)
 				for(var/i=1 to log_amount)
 					new /obj/item/grown/log/tree(get_turf(src))
