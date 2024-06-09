@@ -1107,12 +1107,6 @@
 	supports_variations = VOX_VARIATION | TAJARA_VARIATION
 	// [/CELADON-EDIT]
 
-/obj/item/clothing/head/helmet/space/hardsuit/security/independent/frontier
-	name = "\improper Frontiersmen hardsuit helmet"
-	desc = "An old hardsuit helmet based on a even older hardsuit helmet. Used prolifically by the Frontiersmen pirate fleet."
-	icon_state = "hardsuit0-frontier"
-	hardsuit_type = "frontier"
-
 /obj/item/clothing/suit/space/hardsuit/security/independent
 	icon_state = "hardsuit-independent-sec"
 	name = "security hardsuit"
@@ -1126,13 +1120,6 @@
 	// supports_variations = VOX_VARIATION // CELADON-EDIT - ORIGINAL
 	supports_variations = VOX_VARIATION | TAJARA_VARIATION
 	// [/CELADON-EDIT]
-
-/obj/item/clothing/suit/space/hardsuit/security/independent/frontier
-	name = "\improper Frontiersmen hardsuit"
-	desc = "An old hardsuit based on a even older hardsuit. Used prolifically by the Frontiersmen pirate fleet."
-	icon_state = "hardsuit_frontier"
-	hardsuit_type = "hardsuit_frontier"
-	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/security/independent/frontier
 
 	//Mining
 /obj/item/clothing/head/helmet/space/hardsuit/mining/independent

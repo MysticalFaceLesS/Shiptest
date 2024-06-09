@@ -386,7 +386,6 @@ EMPTY_GUN_HELPER(shotgun/bulldog/inteq)
 	sawn_off = TRUE
 	weapon_weight = WEAPON_MEDIUM
 	w_class = WEIGHT_CLASS_NORMAL
-	slot_flags = ITEM_SLOT_BELT
 
 	wield_slowdown = 0.25
 	wield_delay = 0.3 SECONDS //OP? maybe
@@ -745,3 +744,23 @@ EMPTY_GUN_HELPER(shotgun/bulldog/inteq)
 	if(.)
 		item_state = "beacon_factory_sawn"
 		mob_overlay_state = item_state
+
+//pre sawn off beacon
+/obj/item/gun/ballistic/shotgun/doublebarrel/beacon/presawn
+	name = "sawn-off HP Beacon"
+	sawn_desc= "A single-shot break-action pistol chambered in .45-70. A bit difficult to aim."
+	sawn_off = TRUE
+	w_class = WEIGHT_CLASS_NORMAL
+	slot_flags = ITEM_SLOT_BELT
+
+	weapon_weight = WEAPON_MEDIUM
+
+	item_state = "beacon_sawn"
+	mob_overlay_state = "beacon_sawn"
+	wield_slowdown = 0.5
+	wield_delay = 0.5 SECONDS
+
+	spread_unwielded = 20 //mostly the hunting revolver stats
+	spread = 6
+	recoil = 2
+	recoil_unwielded = 4
