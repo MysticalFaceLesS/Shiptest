@@ -53,6 +53,9 @@ EDIT: `code\modules\cargo\packs\food.dm` : `/datum/supply_pack/food/`
 EDIT: `code\modules\mob\living\simple_animal\hostile\mining_mobs\elites\elite.dm`: `/obj/structure/elite_tumor/proc/onEliteLoss()` -> var/obj/structure/closet/crate/necropolis/tendril/lootbox = new /obj/structure/closet/crate/necropolis/tendril(loc)
 
 ADD: `code\modules\projectiles\ammunition\_ammunition.dm` : /obj/item/ammo_casing/attackby(obj/item/I, mob/user, params) -> добавлены звук подбора патрона в магазин с пола и задержка в 1 секунду зависящая от кликанья по патронам. Чем быстрее клики - тем быстрее загрузятся патроны.
+Очки с зомби и ксеноморфов
+REMOVE: `D:\1ss\ShiptestYata\code\modules\surgery\experimental_dissection.dm`: `/datum/surgery_step/dissection/preop`
+
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -94,7 +97,7 @@ ADD: `code\modules\projectiles\ammunition\_ammunition.dm` : /obj/item/ammo_casin
 
 ### Авторы:
 
-- Кинетик Крашер, универасльная вендор плата, цены карго, одежда с ЦК - Yata9arasu, двигатели, рад. коллекторы - RalseiDreemuurr
+- Кинетик Крашер, универасльная вендор плата, цены карго, одежда с ЦК, нёрф очков диссекции с спец мобов и её упрощение - Yata9arasu, двигатели, рад. коллекторы - RalseiDreemuurr
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.

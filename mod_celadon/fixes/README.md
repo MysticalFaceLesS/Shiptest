@@ -55,6 +55,7 @@ ID мода: CELADON_FIXES
 - EDIT: `code\modules\projectiles\ammunition\ballistic\rifle.dm` - исправление калибра
 - EDIT: `code\modules\projectiles\boxes_magazines\external\rifle.dm` - - исправление калибра
 
+- REMOVE: `code\game\machinery\newscaster.dm` - Полная замена на переведённый файл. Пожалуйста, сделайте это нормально.
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -97,7 +98,7 @@ ID мода: CELADON_FIXES
 ### Авторы:
 
 
-RalseiDreemuurr, Mirag1993 , Корольный крыс, MrCat15352
+RalseiDreemuurr, Mirag1993 , Корольный крыс, MrCat15352, MysticalFaceLesS
 
 <!--
   Здесь находится твой никнейм
