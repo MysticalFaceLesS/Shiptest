@@ -9,21 +9,33 @@
 		"NATURAL"
 	],
 	"map_short_name": "Saber-class",
-	"description": "Корвет класса 'Cepheus' является патрульным судном Солнечной Федерации, предназначенный для поддержания порядка на территории планет NE-24774. Дополнительно оснащен роботехнической лабораторией в целях развертывания дополнительных наземных сил и оказания универсальной поддержки.",
-	"tags": [
-		"Engineering",
-		"Mining",
-		"Robotics",
-		"Combat"],
-	"map_path": "_maps/_mod_celadon/shuttles/solgov/piska_bolshai.dmm",
+	"description": "Корабль класса `Сабля` это производящийся на территории NE-24761 патрульный корабль, используемый Анти-Террористическим корпусом Солнечной Федерации-52, для поддержания порядка, борьбы с преступностью и терроризмом. Конкретно данное судно принадлежит `Бригаде Элизиума`, добровольческом полку Солнечной Федерации состоящим из граждан Элизиума. Несмотря на то что они имеют собственную униформу, они подчиняются Солнечной Федерации.",
+	"tags": ["Разведка", "Бой"],
+	"map_path": "_maps/_mod_celadon/shuttles/solgov/solgov_saber.dmm",
 	"limit": 1,
 	"job_slots": {
-		"Captain": {
-			"outfit": "/datum/outfit/job/captain/solgov/elysium",
+		"Musharif": {
+			"outfit": "/datum/outfit/job/solgov/captain/elysium_celadon",
 			"officer": true,
 			"slots": 1
+		},
+		"Mulazim": {
+			"outfit": "/datum/outfit/job/solgov/overseer/elysium_celadon",
+			"officer": true,
+			"slots": 1
+		},
+		"Haris": {
+			"outfit": "/datum/outfit/job/solgov/sonnensoldner/elysium_celadon",
+			"slots": 4
+		},
+		"Medical Doctor": {
+			"outfit": "/datum/outfit/job/solgov/doctor/elysium_celadon",
+			"slots": 1
+		},
+		"Ship Engineer": {
+			"outfit": "/datum/outfit/job/solgov/engineer/elysium_celadon",
+			"slots": 1
 		}
-
 	},
-	"enabled": false
+	"enabled": true
 }

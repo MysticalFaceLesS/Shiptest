@@ -41,10 +41,9 @@
 //		Elysium on solgov	///
 //							///
 
-/datum/outfit/job/captain/solgov/elysium
+//	Капитан	//
+/datum/outfit/job/solgov/captain/elysium_celadon
 	name = "SolGov - Elysium Musharif"
-	jobtype = /datum/job/captain
-	job_icon = "captain"
 
 	head = /obj/item/clothing/head/solfed/elysium/beret
 	uniform = /obj/item/clothing/under/solgov/elysium
@@ -53,3 +52,118 @@
 	ears = /obj/item/radio/headset/solgov/alt/captain
 	id = /obj/item/card/id/solgov
 	backpack = /obj/item/storage/backpack/messenger/com
+	gloves = null
+
+/datum/outfit/job/solgov/captain/elysium_celadon/post_equip(mob/living/carbon/human/H)
+    var/obj/item/card/id/I = H.wear_id
+    I.registered_name = H.real_name
+    I.access = list(ACCESS_SOLGOV, ACCESS_CAPTAIN, ACCESS_ENGINE, ACCESS_MEDICAL, ACCESS_ARMORY, ACCESS_BRIG, ACCESS_SECURITY)
+
+    for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
+        if (bank_account.account_id == H.account_id)
+            bank_account.bank_cards += src
+            I.registered_account = bank_account
+            to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
+            break
+
+    I.update_label()
+
+//	Хос	//
+/datum/outfit/job/solgov/overseer/elysium_celadon
+	name = "SolGov - Elysium Mulazim"
+	id_assignment = "Mulazim"
+
+	head = /obj/item/clothing/head/solfed/elysium/beret
+	uniform = /obj/item/clothing/under/solgov/elysium
+	suit = /obj/item/clothing/suit/armor/solfed/elysium/jacket
+	shoes = /obj/item/clothing/shoes/combat
+	ears = /obj/item/radio/headset/solgov/alt
+	id = /obj/item/card/id/solgov
+	neck = null
+
+/datum/outfit/job/solgov/overseer/elysium_celadon/post_equip(mob/living/carbon/human/H)
+    var/obj/item/card/id/I = H.wear_id
+    I.registered_name = H.real_name
+    I.access = list(ACCESS_ENGINE, ACCESS_MEDICAL, ACCESS_ARMORY, ACCESS_BRIG, ACCESS_SECURITY)
+
+    for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
+        if (bank_account.account_id == H.account_id)
+            bank_account.bank_cards += src
+            I.registered_account = bank_account
+            to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
+            break
+
+    I.update_label()
+
+//	Офицер	//
+/datum/outfit/job/solgov/sonnensoldner/elysium_celadon
+	name = "SolGov - Elysium Haris"
+	id_assignment = "Haris"
+
+	head = null
+	suit = null
+	gloves = null
+	shoes = /obj/item/clothing/shoes/combat
+	uniform = /obj/item/clothing/under/solfed/elysium
+
+/datum/outfit/job/solgov/sonnensoldner/elysium_celadon/post_equip(mob/living/carbon/human/H)
+    var/obj/item/card/id/I = H.wear_id
+    I.registered_name = H.real_name
+    I.access = list(ACCESS_ENGINE, ACCESS_MEDICAL, ACCESS_BRIG, ACCESS_SECURITY)
+
+    for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
+        if (bank_account.account_id == H.account_id)
+            bank_account.bank_cards += src
+            I.registered_account = bank_account
+            to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
+            break
+
+    I.update_label()
+
+//	медик	//
+/datum/outfit/job/solgov/doctor/elysium_celadon
+	name = "SolGov - Elysium Shafi"
+
+	head = null
+	suit = null
+	gloves = null
+	shoes = /obj/item/clothing/shoes/combat
+	uniform = /obj/item/clothing/under/solfed/elysium
+
+/datum/outfit/job/solgov/doctor/elysium_celadon/post_equip(mob/living/carbon/human/H)
+    var/obj/item/card/id/I = H.wear_id
+    I.registered_name = H.real_name
+    I.access = list(ACCESS_ENGINE, ACCESS_MEDICAL, ACCESS_SECURITY)
+
+    for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
+        if (bank_account.account_id == H.account_id)
+            bank_account.bank_cards += src
+            I.registered_account = bank_account
+            to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
+            break
+
+    I.update_label()
+
+//	Инженер	//
+/datum/outfit/job/solgov/engineer/elysium_celadon
+	name = "SolGov - Elysium Fanni"
+
+	head = null
+	suit = null
+	gloves = null
+	shoes = /obj/item/clothing/shoes/combat
+	uniform = /obj/item/clothing/under/solfed/elysium
+
+/datum/outfit/job/solgov/engineer/elysium_celadon/post_equip(mob/living/carbon/human/H)
+    var/obj/item/card/id/I = H.wear_id
+    I.registered_name = H.real_name
+    I.access = list(ACCESS_ENGINE, ACCESS_MEDICAL, ACCESS_SECURITY)
+
+    for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
+        if (bank_account.account_id == H.account_id)
+            bank_account.bank_cards += src
+            I.registered_account = bank_account
+            to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
+            break
+
+    I.update_label()
