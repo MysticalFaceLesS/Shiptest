@@ -172,20 +172,14 @@
 	resistance_flags = NONE
 	armor = list("melee" = 30, "bullet" = 25, "laser" = 25, "energy" = 30, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
 
-/obj/item/clothing/suit/armor/solfed/elysium/formal
+/obj/item/clothing/under/solgov/elysium
 	name = "Elysium Brigade formal form"
 	desc = "ormal uniforms worn by members of the Solar Federation Elysium Brigade. It features the Solar Federation flag on the shoulder. It is usually worn by Captains or when you want to look more dressy."
 	icon = 'mod_celadon/solfed_stuff/icons/elysium_brigade.dmi'
 	mob_overlay_icon = 'mod_celadon/solfed_stuff/icons/mob/suit.dmi'
 	icon_state = "elysium_brigade_formal"
 	item_state = "elysium_brigade_formal"
-	body_parts_covered = CHEST|GROIN|ARMS|LEGS
-	cold_protection = CHEST|GROIN|ARMS|LEGS
-	min_cold_protection_temperature = ARMOR_MIN_TEMP_PROTECT
-	heat_protection = CHEST|GROIN|ARMS|LEGS
-	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
-	resistance_flags = NONE
-	armor = list("melee" = 35, "bullet" = 30, "laser" = 30, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
+	can_adjust = FALSE
 
 /obj/item/clothing/head/helmet/space/hardsuit/solfed/elysium
 	name = "Elysium Brigade hardsuit helmet"

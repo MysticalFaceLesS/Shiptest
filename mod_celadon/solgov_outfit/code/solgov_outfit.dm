@@ -36,3 +36,20 @@
 	head = /obj/item/clothing/head/solgov
 	glasses = /obj/item/clothing/glasses/sunglasses
 	suit = /obj/item/clothing/suit/jacket/leather
+
+//							///
+//		Elysium on solgov	///
+//							///
+
+/datum/outfit/job/captain/solgov/elysium
+	name = "SolGov - Elysium Musharif"
+	jobtype = /datum/job/captain
+	job_icon = "captain"
+
+	head = /obj/item/clothing/head/solfed/elysium/beret
+	uniform = /obj/item/clothing/under/solgov/elysium
+	suit = /obj/item/clothing/suit/armor/solfed/elysium/jacket
+	shoes = /obj/item/clothing/shoes/combat
+	ears = /obj/item/radio/headset/solgov/alt/captain
+	id = /obj/item/card/id/solgov
+	backpack = /obj/item/storage/backpack/messenger/com
