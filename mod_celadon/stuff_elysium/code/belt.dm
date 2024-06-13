@@ -2,8 +2,8 @@
 /obj/item/storage/belt/security/webbing/elysium
 	name = "vest"
 	desc = "Vest, can hold security gear."
-	mob_overlay_icon = 'mod_celadon/elysium_stuff/icons/mob/accessories.dmi'
-	icon = 'mod_celadon/elysium_stuff/icons/obj/accessories.dmi'
+	mob_overlay_icon = 'mod_celadon/stuff_elysium/icons/mob/accessories.dmi'
+	icon = 'mod_celadon/stuff_elysium/icons/obj/accessories.dmi'
 	icon_state = "vest_black"
 	item_state = "vest_black"
 	lefthand_file = 'icons/mob/inhands/equipment/belt_lefthand.dmi'
