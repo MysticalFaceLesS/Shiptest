@@ -850,9 +850,7 @@
 /area/outpost/crew/garden)
 "dq" = (
 /obj/structure/window/reinforced/spawner/east,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 9
-	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /turf/open/floor/plasteel/dark,
 /area/outpost/crew/cryo)
 "dr" = (
@@ -2800,6 +2798,9 @@
 /obj/effect/turf_decal/spline/fancy/opaque/black,
 /obj/effect/turf_decal/spline/fancy/opaque/black{
 	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
+	dir = 4
 	},
 /turf/open/floor/plasteel/tech,
 /area/outpost/crew/cryo)
@@ -7927,9 +7928,6 @@
 /obj/effect/turf_decal/spline/fancy/opaque/black{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 5
-	},
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -9312,13 +9310,6 @@
 	},
 /turf/open/floor/plasteel/patterned/ridged,
 /area/outpost/crew/library)
-"GE" = (
-/obj/structure/window/reinforced/spawner/east,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 10
-	},
-/turf/open/floor/plasteel/dark,
-/area/outpost/crew/cryo)
 "GG" = (
 /obj/structure/chair/sofa/brown/directional/north,
 /obj/effect/decal/cleanable/vomit/old{
@@ -11082,6 +11073,7 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
+/obj/effect/landmark/observer_start,
 /turf/open/floor/concrete/tiles,
 /area/outpost/hallway/central)
 "MX" = (
@@ -12519,12 +12511,14 @@
 /obj/effect/turf_decal/spline/fancy/opaque/black/corner{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 9
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 5
 	},
 /turf/open/floor/plasteel/goonplaque,
 /area/outpost/crew/cryo)
@@ -14781,13 +14775,11 @@
 /obj/effect/turf_decal/spline/fancy/opaque/black{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /turf/open/floor/plasteel/tech,
 /area/outpost/crew/cryo)
 "ZO" = (
@@ -21525,7 +21517,7 @@ Rx
 Nh
 dq
 kt
-GE
+dq
 Tw
 hW
 Aa
