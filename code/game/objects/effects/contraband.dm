@@ -1137,7 +1137,9 @@
 	poster_type = /obj/structure/sign/poster/pgf/mission_accomplished_7
 	icon_state = "rolled_poster"
 
-// #undef PLACE_SPEED		MOD_CHANGES-CELADON -> REMOVED BECAUSE ITS PREVENTING NEW /random POSTERS FROM OTHER FILES
-// #undef POSTER_SUBTYPES		EXAMPLE FOR PREVENTED /random POSTER: mod_celadon/elysium_stuff/code/elysiumMerch.dm
-// #undef POSTER_LIST		LINE 37, random_type = POSTER_SUBTYPES -> ERROR: undefined var
+// [CELADON-REMOVE] - CELADON_STUFF_ELYSIUM - REMOVED BECAUSE ITS PREVENTING NEW /random POSTERS FROM OTHER FILES. EXAMPLE FOR PREVENTED /random POSTER: mod_celadon/stuff_elysium/code/elysiumMerch.dm. LINE 37, random_type = POSTER_SUBTYPES -> ERROR: undefined var
+// #undef PLACE_SPEED
+// #undef POSTER_SUBTYPES
+// #undef POSTER_LIST
 // #undef POSTER_ADD_FROM_LIST
+// [/CELADON-REMOVE]

@@ -1,6 +1,6 @@
 // Перенесено с code\__HELPERS\names.dm | Инициализация префиксов кораблей для дальнейшего использования в конфигах.
 #define FACTION_SYNDICATE "Syndicate"
-#define FACTION_SOLGOV "SolGov"
+#define FACTION_SOLGOV "SolFed"
 #define FACTION_INTEQ "Inteq Risk Management Group"
 #define FACTION_NT "Nanotrasen"
 #define FACTION_INDEPENDENT "Independent"

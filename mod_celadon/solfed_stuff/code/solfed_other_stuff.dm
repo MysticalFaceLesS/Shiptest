@@ -37,7 +37,6 @@
 	random_basetype = /obj/structure/sign/poster/solfed
 	random_type = POSTER_SUBTYPES
 
-
 /obj/structure/sign/poster/solfed/solfed
 	name = "Poster - Solar Federation"
 	desc = "The flag of the Solar Federation. As the galactic hegemony, they still haven't decided to plant their flag everywhere. Or have they?"
@@ -99,6 +98,15 @@
 	item_state = "solfed_webbing"
 	resistance_flags = FIRE_PROOF
 
+/obj/item/storage/belt/military/solfed/medical
+	name = "Solar Federation chest rig"
+	desc = "These are the military webbing of the Solar Federation. It has the Solar Federation logo on the back."
+	icon = 'mod_celadon/solfed_stuff/icons/sol_fed_patriots.dmi'
+	mob_overlay_icon = 'mod_celadon/solfed_stuff/icons/mob/belt.dmi'
+	icon_state = "solfed_webbing_med"
+	item_state = "solfed_webbing_med"
+	resistance_flags = FIRE_PROOF
+
 /obj/item/storage/belt/military/solfed/elysium
 	name = "Elysium Brigade chest rig"
 	desc = "These are the military webbing of the Solar Federation Elysium Brigade. It has the Solar Federation logo on the back."
@@ -107,6 +115,22 @@
 	icon_state = "elysium_brigade_webbing"
 	item_state = "elysium_brigade_webbing"
 	resistance_flags = FIRE_PROOF
+
+/obj/item/clothing/under/solfed/solfed_officer_formal
+	name = "Solar Federation officer form"
+	desc = "This is the standard uniform of the Solar Federation Officer. It's colored dark blue."
+	icon = 'mod_celadon/solfed_stuff/icons/Solfed_officer.dmi'
+	mob_overlay_icon = 'mod_celadon/solfed_stuff/icons/mob/Solfed_officer.dmi'
+	icon_state = "solfed_officer_formal"
+	item_state = "solfed_officer_formal"
+
+/obj/item/clothing/head/solfed/solfed_officer_beret
+	name = "Solar Federation Brigade beret"
+	desc = "This is a beret of the Solar Federation's Officer. It's colored dark blue. It has the Solar Federation flag on the front."
+	icon = 'mod_celadon/solfed_stuff/icons/Solfed_officer.dmi'
+	mob_overlay_icon = 'mod_celadon/solfed_stuff/icons/mob/Solfed_officer.dmi'
+	icon_state = "solfed_officer_beret"
+	item_state = "solfed_officer_beret"
 
 /obj/item/clothing/head/solfed/elysium/beret
 	name = "Elysium Brigade beret"
@@ -133,13 +157,21 @@
 	icon_state = "solfed_m11"
 	item_state = "solfed_m11"
 
-/obj/item/clothing/head/helmet/solfedm11/elysium
+/obj/item/clothing/head/helmet/solfedm11/elysium_helm
 	name = "Elysium Brigade m11 helmet"
 	desc = "It's an m11 helmet in Solar Federation in desert coloring. On its left side you can see the flag of the Solar Federation. It is usually worn by Solar Federation soldiers."
 	icon = 'mod_celadon/solfed_stuff/icons/elysium_brigade.dmi'
 	mob_overlay_icon = 'mod_celadon/solfed_stuff/icons/mob/head.dmi'
 	icon_state = "elysium_brigade_m11"
 	item_state = "elysium_brigade_m11"
+
+/obj/item/clothing/head/helmet/solfedm11/elysium_wraps
+	name = "Elysium brigade m11 wraps helmet"
+	desc = "This is a Solar Federation M11 helmet in desert coloring. It has the Solar Federation flag on the left side of the helmet. This particular helmet is wrapped in green cloth to have better facial protection. It is usually worn by the Solar Federation Elysium Brigade."
+	icon = 'mod_celadon/solfed_stuff/icons/elysium_brigade.dmi'
+	mob_overlay_icon = 'mod_celadon/solfed_stuff/icons/mob/head.dmi'
+	icon_state = "elysium_brigade_m10_wraps"
+	item_state = "elysium_brigade_m10_wraps"
 
 /obj/item/clothing/suit/armor/solfed/elysium/jacket
 	name = "Elysium Brigade formal jacket"
@@ -156,20 +188,14 @@
 	resistance_flags = NONE
 	armor = list("melee" = 30, "bullet" = 25, "laser" = 25, "energy" = 30, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
 
-/obj/item/clothing/suit/armor/solfed/elysium/formal
+/obj/item/clothing/under/solgov/elysium
 	name = "Elysium Brigade formal form"
 	desc = "ormal uniforms worn by members of the Solar Federation Elysium Brigade. It features the Solar Federation flag on the shoulder. It is usually worn by Captains or when you want to look more dressy."
 	icon = 'mod_celadon/solfed_stuff/icons/elysium_brigade.dmi'
 	mob_overlay_icon = 'mod_celadon/solfed_stuff/icons/mob/suit.dmi'
 	icon_state = "elysium_brigade_formal"
 	item_state = "elysium_brigade_formal"
-	body_parts_covered = CHEST|GROIN|ARMS|LEGS
-	cold_protection = CHEST|GROIN|ARMS|LEGS
-	min_cold_protection_temperature = ARMOR_MIN_TEMP_PROTECT
-	heat_protection = CHEST|GROIN|ARMS|LEGS
-	max_heat_protection_temperature = ARMOR_MAX_TEMP_PROTECT
-	resistance_flags = NONE
-	armor = list("melee" = 35, "bullet" = 30, "laser" = 30, "energy" = 40, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
+	can_adjust = FALSE
 
 /obj/item/clothing/head/helmet/space/hardsuit/solfed/elysium
 	name = "Elysium Brigade hardsuit helmet"
