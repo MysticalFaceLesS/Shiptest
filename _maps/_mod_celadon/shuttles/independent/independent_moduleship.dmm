@@ -7,7 +7,13 @@
 	dir = 8
 	},
 /obj/structure/window/plasma/reinforced,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
 /turf/open/floor/plating,
+/area/ship/bridge)
+"c" = (
+/turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
 "d" = (
 /obj/structure/window/plasma/reinforced{
@@ -19,19 +25,22 @@
 /obj/machinery/power/smes/shuttle/precharged{
 	dir = 4
 	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
 /turf/open/floor/plating,
 /area/ship/bridge)
 "f" = (
 /turf/open/floor/plating,
 /area/ship/bridge)
 "h" = (
-/obj/machinery/computer/helm{
-	dir = 8
-	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/open/floor/plasteel/patterned,
+/obj/machinery/computer/helm{
+	dir = 8
+	},
+/turf/open/floor/plating,
 /area/ship/bridge)
 "i" = (
 /obj/machinery/power/terminal{
@@ -40,21 +49,60 @@
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
-/obj/machinery/power/apc/auto_name/directional/south,
-/turf/open/floor/plasteel/patterned,
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/open/floor/plating,
 /area/ship/bridge)
 "k" = (
 /obj/structure/cable{
+	icon_state = "4-9"
+	},
+/obj/structure/cable{
+	icon_state = "4-10"
+	},
+/turf/open/floor/plating,
+/area/ship/bridge)
+"m" = (
+/obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/open/floor/plasteel/patterned,
-/area/ship/bridge)
-"p" = (
+/obj/machinery/power/shieldwallgen/atmos{
+	anchored = 1;
+	id = "module"
+	},
+/obj/structure/cable{
+	icon_state = "0-10"
+	},
 /obj/machinery/door/poddoor{
 	dir = 4;
 	id = "sgi_cargo1"
 	},
-/turf/open/floor/plasteel/patterned,
+/turf/open/floor/plating,
+/area/ship/bridge)
+"o" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating,
+/area/ship/bridge)
+"p" = (
+/obj/machinery/power/shieldwallgen/atmos{
+	dir = 1;
+	anchored = 1;
+	id = "module"
+	},
+/obj/structure/cable{
+	icon_state = "0-9"
+	},
+/obj/structure/cable{
+	icon_state = "4-9"
+	},
+/obj/machinery/door/poddoor{
+	dir = 4;
+	id = "sgi_cargo1"
+	},
+/turf/open/floor/plating,
 /area/ship/bridge)
 "q" = (
 /obj/structure/window/plasma/reinforced{
@@ -73,25 +121,43 @@
 /obj/machinery/power/shuttle/engine/electric{
 	dir = 4
 	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/turf/open/floor/plating,
+/area/ship/bridge)
+"s" = (
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/open/floor/plating,
+/area/ship/bridge)
+"u" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	icon_state = "4-9"
+	},
 /turf/open/floor/plating,
 /area/ship/bridge)
 "v" = (
-/obj/machinery/door/airlock/engineering{
-	dir = 4;
-	name = "Electrical Room";
-	req_one_access = list(10)
-	},
 /obj/docking_port/mobile{
 	can_move_docking_ports = 1;
 	dir = 8;
 	launch_status = 0;
 	port_direction = 4;
-	preferred_direction = 4
+	preferred_direction = 8
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
+/obj/machinery/door/poddoor{
+	dir = 4;
+	id = "sgi_cargo3"
 	},
-/turf/open/floor/plasteel/patterned,
+/turf/open/floor/plating,
 /area/ship/bridge)
 "w" = (
 /turf/template_noop,
@@ -100,27 +166,42 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/structure/chair/comfy/shuttle{
-	dir = 4;
-	name = "Helm"
-	},
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/turf/open/floor/plasteel/patterned,
+/obj/structure/chair/comfy/shuttle{
+	dir = 4;
+	name = "Helm"
+	},
+/turf/open/floor/plating,
+/area/ship/bridge)
+"z" = (
+/obj/machinery/power/shieldwallgen/atmos{
+	dir = 1;
+	anchored = 1;
+	id = "module2"
+	},
+/obj/structure/cable{
+	icon_state = "0-5"
+	},
+/obj/structure/cable{
+	icon_state = "5-8"
+	},
+/obj/machinery/door/poddoor{
+	dir = 4;
+	id = "sgi_cargo3"
+	},
+/turf/open/floor/plating,
 /area/ship/bridge)
 "B" = (
 /obj/machinery/door/poddoor{
 	dir = 4;
 	id = "sgi_cargo1"
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/open/floor/plasteel/patterned,
+/turf/open/floor/plating,
 /area/ship/bridge)
 "C" = (
 /obj/machinery/cryopod,
@@ -129,10 +210,32 @@
 	pixel_y = 17;
 	pixel_x = 0
 	},
-/turf/open/floor/plasteel/patterned,
+/turf/open/floor/plating,
 /area/ship/bridge)
 "D" = (
-/turf/open/floor/plasteel/patterned,
+/obj/structure/closet/wall/orange{
+	name = "fuel locker";
+	pixel_y = 30;
+	dir = 1
+	},
+/obj/item/stack/sheet/mineral/plasma/twenty,
+/turf/open/floor/plating,
+/area/ship/bridge)
+"F" = (
+/obj/machinery/power/ship_gravity,
+/obj/effect/turf_decal/industrial/outline/yellow,
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/turf/open/floor/plating,
+/area/ship/bridge)
+"G" = (
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/effect/turf_decal/industrial/outline/yellow,
+/obj/machinery/power/port_gen/pacman,
+/turf/open/floor/plating,
 /area/ship/bridge)
 "I" = (
 /obj/structure/cable{
@@ -144,11 +247,23 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/open/floor/plasteel/patterned,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating,
 /area/ship/bridge)
 "L" = (
 /obj/effect/landmark/subship{
 	subship_template = /datum/map_template/shuttle/subshuttles/independent_module_two
+	},
+/turf/template_noop,
+/area/template_noop)
+"M" = (
+/obj/structure/cable{
+	icon_state = "5-8"
+	},
+/obj/structure/cable{
+	icon_state = "6-8"
 	},
 /turf/open/floor/plating,
 /area/ship/bridge)
@@ -156,10 +271,36 @@
 /obj/effect/landmark/subship{
 	subship_template = /datum/map_template/shuttle/subshuttles/independent_module_one
 	},
+/turf/template_noop,
+/area/template_noop)
+"O" = (
+/obj/machinery/button/door{
+	id = "sgi_cargo3";
+	name = "blast door control";
+	pixel_x = -5;
+	pixel_y = 24
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/button/shieldwallgen{
+	id = "module2";
+	pixel_y = 22;
+	pixel_x = 4
+	},
 /turf/open/floor/plating,
 /area/ship/bridge)
 "P" = (
 /turf/closed/wall/mineral/titanium/nodiagonal,
+/area/ship/bridge)
+"R" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
+/turf/open/floor/plating,
 /area/ship/bridge)
 "T" = (
 /obj/machinery/button/door{
@@ -168,7 +309,15 @@
 	pixel_x = 5;
 	pixel_y = 24
 	},
-/turf/open/floor/plasteel/patterned,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/button/shieldwallgen{
+	id = "module";
+	pixel_y = 22;
+	pixel_x = -5
+	},
+/turf/open/floor/plating,
 /area/ship/bridge)
 "U" = (
 /obj/structure/window/plasma/reinforced{
@@ -185,28 +334,60 @@
 	},
 /turf/open/floor/plating,
 /area/ship/bridge)
+"V" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-6"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/open/floor/plating,
+/area/ship/bridge)
 "W" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/power/shieldwallgen/atmos{
+	anchored = 1;
+	id = "module2"
+	},
+/obj/structure/cable{
+	icon_state = "0-6"
+	},
+/obj/machinery/door/poddoor{
+	dir = 4;
+	id = "sgi_cargo3"
+	},
+/turf/open/floor/plating,
+/area/ship/bridge)
+"X" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/turf/open/floor/plasteel/patterned,
+/turf/open/floor/plating,
 /area/ship/bridge)
 "Z" = (
 /obj/machinery/power/smes/engineering,
-/turf/open/floor/plasteel/patterned,
+/obj/structure/cable{
+	icon_state = "0-1"
+	},
+/turf/open/floor/plating,
 /area/ship/bridge)
 
 (1,1,1) = {"
 w
-f
-f
-f
-f
-f
-f
+w
+w
+w
+w
+w
+w
 N
 w
 "}
@@ -215,7 +396,7 @@ w
 w
 w
 w
-f
+w
 w
 w
 w
@@ -226,7 +407,7 @@ w
 w
 w
 w
-f
+w
 w
 w
 w
@@ -237,7 +418,7 @@ w
 w
 w
 w
-f
+w
 w
 w
 w
@@ -245,13 +426,13 @@ w
 "}
 (5,1,1) = {"
 w
-f
-f
-f
-f
-f
-f
-f
+w
+w
+w
+w
+w
+w
+w
 w
 "}
 (6,1,1) = {"
@@ -259,7 +440,7 @@ w
 w
 w
 w
-f
+w
 w
 w
 w
@@ -270,7 +451,7 @@ w
 w
 w
 w
-f
+w
 w
 w
 w
@@ -280,9 +461,9 @@ w
 w
 w
 P
-P
+W
 v
-P
+z
 P
 w
 w
@@ -291,9 +472,9 @@ w
 r
 P
 P
-D
+O
 k
-D
+f
 P
 P
 r
@@ -301,43 +482,43 @@ r
 (10,1,1) = {"
 d
 f
-D
-D
-k
-D
-D
 f
+o
+o
+f
+f
+F
 b
 "}
 (11,1,1) = {"
 U
 I
-K
+I
 K
 x
-K
-W
 I
+I
+R
 q
 "}
 (12,1,1) = {"
 w
 P
 D
-D
+o
 h
-D
-k
+f
+G
 P
 w
 "}
 (13,1,1) = {"
 w
 P
-D
-D
-k
-D
+s
+V
+X
+I
 i
 P
 w
@@ -346,29 +527,29 @@ w
 w
 P
 C
-D
-k
-D
+o
+u
+I
 Z
 P
 w
 "}
 (15,1,1) = {"
 w
-P
+c
 P
 T
-k
-D
+M
+f
 P
-P
+c
 w
 "}
 (16,1,1) = {"
 w
-f
+w
 P
-p
+m
 B
 p
 P
@@ -380,7 +561,7 @@ w
 w
 w
 w
-f
+w
 w
 w
 w
@@ -391,7 +572,7 @@ w
 w
 w
 w
-f
+w
 w
 w
 w
@@ -402,7 +583,7 @@ w
 w
 w
 w
-f
+w
 w
 w
 w
@@ -413,7 +594,7 @@ w
 w
 w
 w
-f
+w
 w
 w
 w
@@ -421,13 +602,13 @@ w
 "}
 (21,1,1) = {"
 w
-f
-f
-f
-f
-f
-f
-f
+w
+w
+w
+w
+w
+w
+w
 w
 "}
 (22,1,1) = {"
@@ -435,7 +616,7 @@ w
 w
 w
 w
-f
+w
 w
 w
 w
@@ -446,7 +627,7 @@ w
 w
 w
 w
-f
+w
 w
 w
 w
@@ -457,7 +638,7 @@ w
 w
 w
 w
-f
+w
 w
 w
 w
@@ -465,12 +646,12 @@ w
 "}
 (25,1,1) = {"
 w
-f
-f
-f
-f
-f
-f
-f
+w
+w
+w
+w
+w
+w
+w
 w
 "}

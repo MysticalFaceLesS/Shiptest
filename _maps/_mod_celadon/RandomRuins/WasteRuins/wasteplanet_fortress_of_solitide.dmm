@@ -340,9 +340,19 @@
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
 "cX" = (
-/obj/structure/statue/bananium/clown,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
-/turf/open/floor/mineral/bananium,
+/obj/item/megaphone/clown,
+/obj/item/clothing/under/rank/civilian/clown/jester,
+/obj/item/clothing/shoes/clown_shoes/banana_shoes/combat,
+/obj/item/borg/upgrade/transform/clown,
+/obj/item/stamp/clown,
+/obj/item/nullrod/clown,
+/obj/structure/closet/secure_closet/freezer/cream_pie,
+/obj/effect/mob_spawn/human/clown/corpse,
+/obj/item/clothing/suit/space/hardsuit/ert/clown{
+	armor = list("melee" = 35, "bullet" = 35, "laser" = 35, "energy" = 35, "bomb" = 35, "bio" = 100, "rad" = 100, "fire" =100, "acid" = 100)
+	},
+/turf/open/floor/plating,
 /area/ruin/powered)
 "dg" = (
 /obj/structure/sign/poster/contraband/eat,
@@ -430,7 +440,7 @@
 /area/ruin/powered)
 "ed" = (
 /obj/item/trash/cheesie,
-/turf/open/floor/mineral/bananium,
+/turf/open/floor/plating/rust,
 /area/ruin/powered)
 "ee" = (
 /obj/machinery/photocopier,
@@ -504,11 +514,6 @@
 /obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
-"eL" = (
-/mob/living/simple_animal/hostile/rat,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plating,
-/area/ruin/powered)
 "eM" = (
 /obj/structure/chair/wood{
 	dir = 4
@@ -578,12 +583,11 @@
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
 "fk" = (
-/obj/machinery/door/airlock/bananium{
-	name = "Clown Embassy";
-	dir = 4
+/obj/structure/barricade/wooden/crude,
+/obj/machinery/door/airlock/maintenance{
+	name = "Detective Halligan's Office"
 	},
-/obj/item/grown/bananapeel,
-/turf/open/floor/mineral/bananium,
+/turf/open/floor/plating/rust,
 /area/ruin/powered)
 "fn" = (
 /obj/effect/gibspawner/human,
@@ -694,8 +698,11 @@
 /turf/open/floor/plating,
 /area/ruin/powered)
 "go" = (
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/mineral/bananium,
+/mob/living/simple_animal/hostile/clown/clownhulk{
+	name = "Биба";
+	health = 500
+	},
+/turf/open/floor/plating,
 /area/ruin/powered)
 "gp" = (
 /mob/living/simple_animal/hostile/rat,
@@ -735,7 +742,8 @@
 /turf/open/floor/plating,
 /area/ruin/powered)
 "gL" = (
-/turf/open/floor/mineral/bananium,
+/obj/item/grown/bananapeel,
+/turf/open/floor/plating/rust,
 /area/ruin/powered)
 "gM" = (
 /obj/structure/rack,
@@ -762,7 +770,7 @@
 /area/ruin/powered)
 "hd" = (
 /obj/item/reagent_containers/food/snacks/cakeslice/clown_slice,
-/turf/open/floor/mineral/bananium,
+/turf/open/floor/plating/rust,
 /area/ruin/powered)
 "he" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
@@ -947,10 +955,9 @@
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
 "jn" = (
-/mob/living/simple_animal/hostile/retaliate/clown/mutant/blob,
 /obj/effect/gibspawner/human,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plating,
+/turf/open/floor/plating/rust,
 /area/ruin/powered)
 "jr" = (
 /obj/structure/table/reinforced,
@@ -975,7 +982,10 @@
 /area/ruin/powered)
 "jz" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/mob_spawn/human/clown/corpse,
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/retaliate/clown/clownhulk/chlown{
+	name = "Боба"
+	},
 /turf/open/floor/plating,
 /area/ruin/powered)
 "jA" = (
@@ -1123,7 +1133,7 @@
 /obj/effect/decal/cleanable/blood,
 /obj/effect/mob_spawn/human/clown/corpse,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/mineral/bananium,
+/turf/open/floor/plating/rust,
 /area/ruin/powered)
 "kO" = (
 /obj/item/trash/chips,
@@ -1133,7 +1143,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/mineral/bananium,
+/turf/open/floor/plating/rust,
 /area/ruin/powered)
 "kS" = (
 /obj/effect/decal/cleanable/blood,
@@ -1428,7 +1438,6 @@
 /area/ruin/powered)
 "nt" = (
 /obj/effect/decal/cleanable/blood,
-/mob/living/simple_animal/hostile/rat,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/trash/cheesie,
 /turf/open/floor/plating,
@@ -1507,7 +1516,7 @@
 /obj/item/pneumatic_cannon/pie,
 /obj/item/reagent_containers/spray/waterflower/lube,
 /obj/machinery/light/small/directional/east,
-/turf/open/floor/mineral/bananium,
+/turf/open/floor/plating/rust,
 /area/ruin/powered)
 "nK" = (
 /obj/structure/table,
@@ -1953,11 +1962,6 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
-"rJ" = (
-/obj/structure/falsewall/reinforced,
-/obj/structure/sign/poster/retro/smile,
-/turf/open/floor/plating,
-/area/ruin/powered)
 "rO" = (
 /obj/structure/curtain/cloth/fancy,
 /obj/item/trash/tray,
@@ -2167,10 +2171,6 @@
 /area/ruin/powered)
 "uB" = (
 /obj/structure/table/wood,
-/obj/item/switchblade{
-	pixel_x = -3;
-	pixel_y = 4
-	},
 /obj/item/coin/antagtoken{
 	pixel_x = 4;
 	pixel_y = -2
@@ -2180,7 +2180,6 @@
 /area/ruin/powered)
 "uD" = (
 /obj/structure/rack,
-/obj/effect/mob_spawn/drone,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/trash/raisins,
 /obj/effect/spawner/lootdrop/maintenance,
@@ -2375,7 +2374,6 @@
 /obj/effect/decal/cleanable/blood,
 /obj/effect/mob_spawn/human/clown/corpse,
 /obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/mineral/bananium,
 /area/ruin/powered)
 "vX" = (
 /obj/item/ammo_casing,
@@ -2773,7 +2771,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/generic,
 /obj/item/trash/cheesie,
-/turf/open/floor/mineral/bananium,
+/turf/open/floor/plating/rust,
 /area/ruin/powered)
 "Aa" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -3113,7 +3111,6 @@
 /area/ruin/powered)
 "Cy" = (
 /obj/structure/closet/cardboard,
-/obj/item/coin/bananium,
 /obj/item/reagent_containers/food/snacks/soup/clownstears,
 /turf/open/floor/plating,
 /area/ruin/powered)
@@ -3484,7 +3481,6 @@
 /turf/open/floor/plating,
 /area/ruin/powered)
 "Gq" = (
-/mob/living/simple_animal/hostile/retaliate/clown/fleshclown,
 /obj/effect/gibspawner/human,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
@@ -3524,7 +3520,7 @@
 /obj/structure/table/wood/fancy/orange,
 /obj/item/toy/figure/clown,
 /obj/item/trash/candle,
-/turf/open/floor/plating,
+/turf/open/floor/plating/rust,
 /area/ruin/powered)
 "GF" = (
 /obj/structure/table/bronze,
@@ -3605,7 +3601,6 @@
 "HD" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/mob_spawn/human/clown/corpse,
-/mob/living/simple_animal/hostile/rat,
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
 "HH" = (
@@ -4333,7 +4328,7 @@
 "Ow" = (
 /obj/structure/table/wood/fancy/orange,
 /obj/item/clothing/under/rank/civilian/clown/rainbow,
-/turf/open/floor/mineral/bananium,
+/turf/open/floor/plating/rust,
 /area/ruin/powered)
 "Ox" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -4421,8 +4416,8 @@
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
 "Pr" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/mineral/bananium,
+/obj/item/trash/cheesie,
+/turf/open/floor/plating,
 /area/ruin/powered)
 "Px" = (
 /mob/living/simple_animal/hostile/rat,
@@ -4635,10 +4630,6 @@
 	},
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
-"Ru" = (
-/obj/effect/decal/cleanable/cobweb/cobweb2,
-/turf/open/floor/plating,
-/area/ruin/powered)
 "Rw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/glass,
@@ -4828,7 +4819,9 @@
 	name = "The Great Throne"
 	},
 /mob/living/simple_animal/hostile/regalrat{
-	dir = 8
+	dir = 8;
+	del_on_death = 1;
+	loot = list(/obj/effect/gibspawner/generic/animal)
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
@@ -5233,12 +5226,6 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/powered)
-"WN" = (
-/mob/living/simple_animal/hostile/retaliate/clown/fleshclown,
-/obj/effect/decal/cleanable/blood,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plating/rust,
-/area/ruin/powered)
 "WO" = (
 /obj/structure/sign/poster/contraband/twelve_gauge,
 /turf/closed/wall/r_wall/rust,
@@ -5582,7 +5569,6 @@
 /turf/open/floor/plating,
 /area/ruin/powered)
 "ZL" = (
-/mob/living/simple_animal/hostile/retaliate/clown/fleshclown,
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/plating,
@@ -5814,8 +5800,8 @@ xx
 ZL
 hd
 Gq
-Xe
-av
+Hp
+gL
 HD
 ff
 bC
@@ -5857,10 +5843,10 @@ vh
 bG
 jn
 KR
-WN
-bC
-Ru
-gL
+KR
+Hp
+Hp
+av
 Cy
 xx
 vD
@@ -5900,12 +5886,12 @@ er
 mh
 Xe
 xx
-rJ
-xx
-xx
-fk
-bC
-Xe
+Hp
+Hp
+Hp
+av
+Hp
+Hp
 Xe
 fJ
 bG
@@ -5948,7 +5934,7 @@ OE
 go
 Hp
 av
-zh
+jz
 ed
 xx
 ve
@@ -5988,12 +5974,12 @@ fj
 cU
 jG
 xx
-ed
-eL
-zW
 Pr
+dC
+zW
+XF
 yd
-gL
+av
 bC
 KC
 bG
@@ -6032,9 +6018,9 @@ av
 LU
 mG
 xx
-jz
-gL
-gL
+Xt
+Hp
+Hp
 wk
 dM
 kK
@@ -6124,7 +6110,7 @@ cX
 we
 VK
 nt
-Pr
+XF
 nJ
 xx
 zV

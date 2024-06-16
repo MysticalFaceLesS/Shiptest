@@ -2,9 +2,21 @@
 "a" = (
 /turf/template_noop,
 /area/template_noop)
+"d" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/open/floor/plating,
+/area/ship/bridge)
 "f" = (
 /obj/machinery/power/shuttle/engine/electric{
 	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
 	},
 /turf/open/floor/plating,
 /area/ship/bridge)
@@ -12,11 +24,20 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/open/floor/plating,
 /area/ship/bridge)
 "i" = (
 /obj/machinery/power/smes/shuttle/precharged{
 	dir = 4
+	},
+/obj/structure/window/plasma/reinforced{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
 	},
 /turf/open/floor/plating,
 /area/ship/bridge)
@@ -39,7 +60,29 @@
 /obj/machinery/computer/helm{
 	dir = 8
 	},
+/obj/machinery/button/door{
+	id = "sgi_cargo4";
+	name = "blast door control";
+	pixel_x = 24;
+	pixel_y = -4;
+	dir = 8
+	},
+/obj/machinery/button/shieldwallgen{
+	id = "module3";
+	pixel_y = 7;
+	pixel_x = 22;
+	dir = 8
+	},
 /turf/open/floor/plating,
+/area/ship/bridge)
+"q" = (
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/open/floor/plating,
+/area/ship/bridge)
+"u" = (
+/turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
 "v" = (
 /obj/machinery/power/terminal{
@@ -57,7 +100,6 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/apc/auto_name/directional/north,
 /turf/open/floor/plating,
 /area/ship/bridge)
 "x" = (
@@ -69,17 +111,40 @@
 	},
 /turf/open/floor/plating,
 /area/ship/bridge)
-"D" = (
+"C" = (
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/machinery/power/shieldwallgen/atmos{
+	anchored = 1;
+	id = "module3"
+	},
+/obj/structure/cable{
+	icon_state = "0-10"
+	},
+/obj/machinery/door/poddoor{
+	dir = 4;
+	id = "sgi_cargo4"
+	},
+/turf/open/floor/plating,
+/area/ship/bridge)
+"D" = (
 /obj/structure/cable{
 	icon_state = "1-8"
+	},
+/obj/structure/cable{
+	icon_state = "5-8"
+	},
+/obj/structure/cable{
+	icon_state = "6-8"
 	},
 /turf/open/floor/plating,
 /area/ship/bridge)
 "E" = (
 /obj/machinery/power/smes/engineering,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
 /turf/open/floor/plating,
 /area/ship/bridge)
 "F" = (
@@ -90,20 +155,25 @@
 /turf/open/floor/plating,
 /area/ship/bridge)
 "I" = (
-/obj/machinery/door/airlock/engineering{
-	dir = 4;
-	name = "Electrical Room";
-	req_one_access = list(10)
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/docking_port/mobile{
 	can_move_docking_ports = 1;
 	dir = 4;
 	launch_status = 0;
 	port_direction = 2;
 	preferred_direction = 4
+	},
+/obj/machinery/button/door{
+	id = "sgi_cargo4";
+	name = "blast door control";
+	pixel_x = 8;
+	dir = 4
+	},
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/ship/bridge)
+"S" = (
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/cable{
+	icon_state = "0-2"
 	},
 /turf/open/floor/plating,
 /area/ship/bridge)
@@ -116,6 +186,24 @@
 	},
 /obj/structure/cable{
 	icon_state = "0-2"
+	},
+/turf/open/floor/plating,
+/area/ship/bridge)
+"Z" = (
+/obj/machinery/power/shieldwallgen/atmos{
+	anchored = 1;
+	id = "module3";
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "0-9"
+	},
+/obj/structure/cable{
+	icon_state = "4-9"
+	},
+/obj/machinery/door/poddoor{
+	dir = 4;
+	id = "sgi_cargo4"
 	},
 /turf/open/floor/plating,
 /area/ship/bridge)
@@ -148,19 +236,19 @@ U
 a
 "}
 (4,1,1) = {"
+u
 U
-U
+S
+d
 x
-B
-x
 U
-U
+u
 "}
 (5,1,1) = {"
 U
 w
-g
-D
+q
+B
 x
 F
 U
@@ -168,8 +256,8 @@ U
 (6,1,1) = {"
 U
 E
-x
-B
+g
+D
 x
 l
 U
@@ -177,9 +265,9 @@ U
 (7,1,1) = {"
 U
 U
-U
+C
 I
-U
+Z
 U
 U
 "}
