@@ -886,6 +886,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					dat += "</td>"
 					mutant_category = 0
 
+<<<<<<< ours
 			if("tajara_chest_markings" in pref_species.default_features)
 				if(!mutant_category)
 					dat += APPEARANCE_CATEGORY_COLUMN
@@ -944,13 +945,21 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 
 				dat += "<h3>Character Adjective</h3>"
+=======
+			// begin generic adjective
+			if(!mutant_category)
+				dat += APPEARANCE_CATEGORY_COLUMN
 
-				dat += "<a href='?_src_=prefs;preference=generic_adjective;task=input'>[generic_adjective]</a><BR>"
+			dat += "<h3>Character Adjective</h3>"
+>>>>>>> theirs
 
-				mutant_category++
-				if(mutant_category >= MAX_MUTANT_ROWS)
-					dat += "</td>"
-					mutant_category = 0
+			dat += "<a href='?_src_=prefs;preference=generic_adjective;task=input'>[generic_adjective]</a><BR>"
+
+			mutant_category++
+			if(mutant_category >= MAX_MUTANT_ROWS)
+				dat += "</td>"
+				mutant_category = 0
+			// end generic adjective
 
 			if("wings" in pref_species.default_features && GLOB.r_wings_list.len >1)
 				if(!mutant_category)
