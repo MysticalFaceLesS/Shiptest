@@ -456,27 +456,6 @@
 	supports_variations = DIGITIGRADE_VARIATION | VOX_VARIATION
 	// [/CELADON-ADD]
 
-//Hardliner Syndie suit
-/obj/item/clothing/head/helmet/space/hardsuit/syndi/hl
-	name = "white-red hardsuit helmet"
-	desc = "An advanced dual-mode helmet derived from ICW-era advanced special operations helmets, its red partly replaced by white. It is in EVA mode. Manufactured by Second Battlegroup."
-	alt_desc = "An advanced dual-mode helmet derived from ICW-era advanced special operations helmets, its red partly replaced by white. It is in combat mode. Manufactured by Second Battlegroup."
-	icon_state = "hardsuit1-hl"
-	item_state = "hardsuit1-hl"
-	hardsuit_type = "hl"
-
-/obj/item/clothing/suit/space/hardsuit/syndi/hl
-	name = "white-red hardsuit"
-	desc = "An advanced dual-mode hardsuit derived from ICW-era advanced special operations hardsuits, its red partly replaced by white. It is in EVA mode. Manufactured by Second Battlegroup."
-	alt_desc = "An advanced dual-mode hardsuit derived from ICW-era advanced special operations hardsuits, its red partly replaced by white. It is in combat mode. Manufactured by the Second Battlegroup."
-	icon_state = "hardsuit1-hl"
-	item_state = "hardsuit1-hl"
-	hardsuit_type = "hl"
-	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/syndi/hl
-	lightweight = 1
-	jetpack = null
-
-
 //Elite Syndie suit
 /obj/item/clothing/head/helmet/space/hardsuit/syndi/elite
 	name = "elite syndicate hardsuit helmet"
