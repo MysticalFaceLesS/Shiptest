@@ -99,8 +99,8 @@
 		var/obj/item/ammo_box/attacking_box = attacking_obj
 		for(var/obj/item/ammo_casing/casing_to_insert in attacking_box.stored_ammo)
 			// [CELADON-EDIT] - CELADON_QOL
-			// if(!((instant_load && attacking_box.instant_load) || (stored_ammo.len >= max_ammo) || do_after_mob(user, list(attacking_box), 1 SECONDS))) // CELADON-EDIT - ORIGINAL
-			if(!((instant_load && attacking_box.instant_load) || (stored_ammo.len >= max_ammo) || do_after_mob(user, list(attacking_box), 0.6 SECONDS)))
+			// if(!((instant_load && attacking_box.instant_load) || (stored_ammo.len >= max_ammo) || do_after(user, 1 SECONDS, attacking_box))) // CELADON-EDIT - ORIGINAL
+			if(!((instant_load && attacking_box.instant_load) || (stored_ammo.len >= max_ammo) || do_after(user, 0.6 SECONDS, attacking_box)))
 			// [/CELADON-EDIT]
 				break
 			var/did_load = give_round(casing_to_insert, replace_spent)
