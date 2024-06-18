@@ -75,8 +75,14 @@
 		spawn_crusher_loot()
 	..(gibbed)
 
+<<<<<<< ours
 /mob/living/simple_animal/hostile/asteroid/proc/spawn_crusher_loot()
 	butcher_results[crusher_loot] = 1
+=======
+/mob/living/simple_animal/hostile/asteroid/proc/spawn_mob_trophy()
+	if(mob_trophy)
+		butcher_results[mob_trophy] = 1
+>>>>>>> theirs
 
 /mob/living/simple_animal/hostile/asteroid/handle_temperature_damage()
 	if(bodytemperature < minbodytemp)
