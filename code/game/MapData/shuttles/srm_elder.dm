@@ -30,11 +30,6 @@
 	open_sound = 'sound/machines/wooden_closet_open.ogg'
 	close_sound = 'sound/machines/wooden_closet_close.ogg'
 
-/obj/structure/closet/secure_closet/flamebearer
-	name = "flamebearer's locker"
-	desc = "The closet of equipment an ascetic Flamebearer would require."
-	icon_state = "cabinet"
-
 /obj/structure/closet/secure_closet/hunter
 	name = "hunter's locker"
 	desc = "Everything a hunter will need, held in one secure closet."
