@@ -943,15 +943,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 				dat += "<a href='?_src_=prefs;preference=body_size;task=input'>[features["body_size"]]</a><BR>"
 
-
-				dat += "<h3>Character Adjective</h3>"
-=======
 			// begin generic adjective
 			if(!mutant_category)
 				dat += APPEARANCE_CATEGORY_COLUMN
 
 			dat += "<h3>Character Adjective</h3>"
->>>>>>> theirs
 
 			dat += "<a href='?_src_=prefs;preference=generic_adjective;task=input'>[generic_adjective]</a><BR>"
 
