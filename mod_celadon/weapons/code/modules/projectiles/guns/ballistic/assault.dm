@@ -134,6 +134,8 @@
 /obj/item/gun/ballistic/automatic/assault/morita1
 	name = "\improper Morita MK.I"
 	desc = "Стандартная пехотная автоматическая винтовка под калибр .308. Широко применяется армейскими корпусами в Союзе Человечества. Популярность в гражданских кругах заслужила после сьемок в фильме Starboat Troopes."
+	lefthand_file = 'mod_celadon/weapons/icons/guns/guns_lefthand.dmi'
+	righthand_file = 'mod_celadon/weapons/icons/guns/guns_righthand.dmi'
 	icon = 'mod_celadon/weapons/icons/guns/48x32guns.dmi'
 	fire_sound = 'mod_celadon/_components/sounds/gun/morita1.ogg'
 	icon_state = "morita1"

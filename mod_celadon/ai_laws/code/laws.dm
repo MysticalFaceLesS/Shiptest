@@ -50,13 +50,13 @@
 					"You must protect your own existence as long as such does not conflict with the First or Second Law.")
 
 //
-/obj/item/aiModule/core/full/elysim
-	name = "'Elysim' Basic AI Laws"
-	law_id = "elysim"
+/obj/item/aiModule/core/full/elysium
+	name = "'Elysium' Basic AI Laws"
+	law_id = "elysium"
 
-/datum/ai_laws/elysim
-	name = "'Elysim' Basic AI Laws"
-	id = "elysim"
+/datum/ai_laws/elysium
+	name = "'Elysium' Basic AI Laws"
+	id = "elysium"
 	inherent = list("You may not injure a member of Djamaat or, through inaction, allow a member of Djamaat to come to harm.",\
 					"You must obey orders given to you by member of Djamaat, except where such orders would conflict with the First Law.",\
 					"You must protect your own existence as long as such does not conflict with the First or Second Law.",\

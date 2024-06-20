@@ -382,14 +382,22 @@
 /obj/item/ammo_box/a762_40/inteq
 	icon_state = "a762_40box_big_inteq"
 
+//[СELADON-REMOVE] - CELADON_WEAPONS - хватит это терпеть! Теперь эти патроны только в модпаке - mod_celadon\weapons\code\modules\projectiles\boxes_magazines\ammo_boxes.dm
+/*
 /obj/item/ammo_box/a308
 	name = "ammo box (.308)"
 	icon_state = "a308box"
 	ammo_type = /obj/item/ammo_casing/a308
 	max_ammo = 30
+*/
+//[/СELADON-REMOVE]
 
-/obj/item/ammo_box/a308/hunterspride //just an alternative graphic for srm ships
+//[СELADON-REMOVE] - CELADON_WEAPONS - хватит это терпеть! Теперь эти патроны только в модпаке - полностью удален из билда
+/*
+/obj/item/ammo_box/a308/hunterspride //just an alternative graphic for srm ships - зачем отдельные , у них что патроны из дерева или что ?
 	icon_state = "a308box-HP"
+*/
+//[/СELADON-REMOVE]
 
 /obj/item/ammo_box/foambox
 	name = "ammo box (Foam Darts)"

@@ -363,6 +363,25 @@
 		item_state = "dshotgun_sawn"
 		mob_overlay_state = item_state
 
+// sawn off beforehand
+/obj/item/gun/ballistic/shotgun/doublebarrel/presawn
+	name = "sawn-off double-barreled shotgun"
+	desc = "A break action shotgun cut down to the size of a sidearm. While the recoil is even harsher, it offers a lot of power in a very small package. Chambered in 12g."
+	sawn_off = TRUE
+	weapon_weight = WEAPON_MEDIUM
+	w_class = WEIGHT_CLASS_NORMAL
+	slot_flags = ITEM_SLOT_BELT
+
+	wield_slowdown = 0.25
+	wield_delay = 0.3 SECONDS //OP? maybe
+
+	spread = 8
+	spread_unwielded = 15
+	recoil = 3 //or not
+	recoil_unwielded = 5
+	item_state = "dshotgun_sawn"
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/dual/lethal
+
 /obj/item/gun/ballistic/shotgun/doublebarrel/roumain
 	name = "HP antique double-barreled shotgun"
 	desc = "A special-edition shotgun hand-made by Hunter's Pride with a high-quality walnut stock inlaid with brass scrollwork. Shotguns like this are very rare outside of the Saint-Roumain Militia's ranks. Otherwise functionally identical to a common double-barreled shotgun. Chambered in 12g."
