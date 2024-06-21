@@ -279,7 +279,12 @@
 		to_chat(user, "<span class='notice'>You rack the [bolt_wording] of \the [src].</span>")
 		playsound(src, rack_sound, rack_sound_volume, rack_sound_vary)
 
+<<<<<<< ours
 	chamber_round(TRUE)
+=======
+	if(!safety && !semi_auto)
+		chamber_round(TRUE)
+>>>>>>> theirs
 	SEND_SIGNAL(src, COMSIG_UPDATE_AMMO_HUD)
 	update_appearance()
 
