@@ -1140,7 +1140,7 @@
 	display_name = "Basic Shuttle Research"
 	description = "Research the technology required to create and use basic shuttles."
 	prereq_ids = list("bluespace_travel", "adv_engi")
-	design_ids = list("engine_plasma", "engine_ion", "engine_heater", "engine_smes", "shuttle_helm", "rapid_shuttle_designator")
+	design_ids = list("engine_plasma", "engine_fire", "engine_ion", "engine_heater", "engine_fire_heater", "engine_smes", "shuttle_helm", "rapid_shuttle_designator")
 	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем РнД
 	// research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000) // CELADON-EDIT - ORIGINAL
 	// export_price = 5000 // CELADON-EDIT - ORIGINAL
