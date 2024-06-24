@@ -5,6 +5,7 @@
 #define FACTION_NT "Nanotrasen"
 #define FACTION_INDEPENDENT "Independent"
 #define FACTION_ELYSIUM "Elysium"
+#define FACTION_GAMMA "Gamma"
 #define FACTION_EVENT "Event"
 #define FACTION_PIRATES "Pirates"
 
@@ -14,6 +15,7 @@
 #define PREFIX_NT list("NTSV", "NTBSV", "NTASV", "NTSSV", "NTTSV", "NTMSV", "NTLSV", "NTDSV", "NTSPSV",)
 #define PREFIX_INDEPENDENT list("SV", "IMV", "ISV")
 #define PREFIX_ELYSIUM list("EUSM", "EUSQ", "EUSF", "EUSR",)
+#define PREFIX_GAMMA list("GISV")
 #define PREFIX_PIRATES list("PIRATE")
 #define PREFIX_EVENT list("CLO")
 
@@ -24,6 +26,7 @@ GLOBAL_LIST_INIT(ship_faction_to_prefixes, list(
 	FACTION_NT = PREFIX_NT,
 	FACTION_INDEPENDENT = PREFIX_INDEPENDENT,
 	FACTION_ELYSIUM = PREFIX_ELYSIUM,
+	FACTION_GAMMA = PREFIX_GAMMA,
 	FACTION_PIRATES = PREFIX_PIRATES,
 	FACTION_EVENT = PREFIX_EVENT
 	))
