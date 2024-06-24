@@ -13,8 +13,8 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	spread = 16
 	actions_types = list()
-	mag_display = TRUE
-	special_mags = TRUE
+	// mag_display = TRUE
+	// special_mags = TRUE  - сломано
 	tac_reloads = TRUE
 	var/obj/item/ammo_box/magazine/p16/g36sh/alternate_magazine
 	actions_types = list(/datum/action/item_action/toggle_firemode)
@@ -29,7 +29,7 @@
 		alternate_magazine = new mag_type(src)
 	spawnwithmagazine = FALSE
 	mag_type = /obj/item/ammo_box/magazine/p16
-
+/*
 /obj/item/gun/ballistic/automatic/assault/g36sh/burst_select()
 	var/mob/living/carbon/human/user = usr
 	switch(select)
@@ -55,7 +55,7 @@
 	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
 	update_icon()
 	return
-
+*/
 /obj/item/gun/ballistic/automatic/assault/g36sh/inteq
 	name = "\improper Moded G36-SH"
 	desc = "Обширная модификация G36-SH, которая входит в стандартную комплектацию вооружения InteQ. Калибр 5,56x45 мм."
@@ -80,8 +80,8 @@
 	spread = 12
 	mag_type = /obj/item/ammo_box/magazine/p16/g36
 	actions_types = list()
-	mag_display = TRUE
-	special_mags = TRUE
+	// mag_display = TRUE
+	// special_mags = TRUE - сломано
 	tac_reloads = TRUE
 	var/obj/item/ammo_box/magazine/p16/g36/alternate_magazine
 	actions_types = list(/datum/action/item_action/toggle_firemode)
@@ -96,7 +96,7 @@
 		alternate_magazine = new mag_type(src)
 		spawnwithmagazine = FALSE
 		mag_type = /obj/item/ammo_box/magazine/p16
-
+/*
 /obj/item/gun/ballistic/automatic/assault/g36/burst_select()
 	var/mob/living/carbon/human/user = usr
 	switch(select)
@@ -122,7 +122,7 @@
 	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
 	update_icon()
 	return
-
+*/
 /obj/item/gun/ballistic/automatic/assault/g36/inteq
 	name = "\improper Moded G36"
 	desc = "Обширная модификация G36, которая входит в стандартную комплектацию вооружения InteQ. Калибр 5,56x45 мм."
@@ -141,8 +141,8 @@
 	icon_state = "morita1"
 	item_state = "morita1"
 	actions_types = list()
-	special_mags = TRUE
-	mag_display = TRUE
+	// special_mags = TRUE - сломано
+	// mag_display = TRUE
 	weapon_weight = WEAPON_MEDIUM
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
@@ -153,7 +153,7 @@
 /obj/item/gun/ballistic/automatic/assault/morita1/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/automatic_fire, 0.20 SECONDS)
-
+/*
 /obj/item/gun/ballistic/automatic/assault/morita1/burst_select()
 	var/mob/living/carbon/human/user = usr
 	switch(select)
@@ -179,7 +179,7 @@
 	playsound(user, 'sound/weapons/empty.ogg', 100, TRUE)
 	update_icon()
 	return
-
+*/
 /obj/item/gun/ballistic/automatic/assault/morita1/desert
 	name = "\improper Morita MK.I(desert)"
 	desc = "Стандартная пехотная автоматическая винтовка под калибр .308. Широко применяется армейскими корпусами в Союзе Человечества. Популярность в гражданских кругах заслужила после сьемок в фильме Starboat Troopes./Модификация с пустынным камуфляжем"

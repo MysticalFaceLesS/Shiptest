@@ -90,7 +90,6 @@
 						boolets++
 						// [CELADON-ADD] - CELADON_BALANCE
 						playsound(loc, 'sound/weapons/gun/general/mag_bullet_insert.ogg', 60, TRUE)
-						do_after_mob(user, list(loc), 1 SECONDS)
 						break
 						// [/CELADON-ADD]
 				else
