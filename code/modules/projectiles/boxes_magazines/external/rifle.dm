@@ -58,6 +58,9 @@
 	max_ammo = 20
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 
+/obj/item/ammo_box/magazine/skm_762_40/empty
+	start_empty = FALSE
+
 /obj/item/ammo_box/magazine/skm_762_40/extended
 	name = "extended assault rifle magazine (7.62x40mm CLIP)"
 	desc = "A very curved, 40-round magazine for the 7.62x40mm CLIP variants of the SKM assault rifle family. These rounds do good damage with good armor penetration."
@@ -108,6 +111,8 @@
 	max_ammo = 30
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 
+/obj/item/ammo_box/magazine/p16/empty
+	start_empty = TRUE
 
 /obj/item/ammo_box/magazine/swiss
 	name = "\improper Swiss Cheese Magazine (5.56x45mm)"
@@ -142,3 +147,6 @@
 	max_ammo = 5
 	multiple_sprites = AMMO_BOX_PER_BULLET
 	w_class = WEIGHT_CLASS_TINY
+
+/obj/item/ammo_box/magazine/illestren_a850r/empty
+	start_empty = TRUE
