@@ -20,7 +20,7 @@
 	for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
 		if (bank_account.account_id == H.account_id)
 			bank_account.bank_cards += src
-			I.registered_account = bank_account
+			// I.registered_account = bank_account
 			to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
 			break
 
@@ -48,7 +48,7 @@
 	for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
 		if (bank_account.account_id == H.account_id)
 			bank_account.bank_cards += src
-			I.registered_account = bank_account
+			// I.registered_account = bank_account
 			to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
 			break
 
@@ -77,7 +77,7 @@
 	for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
 		if (bank_account.account_id == H.account_id)
 			bank_account.bank_cards += src
-			I.registered_account = bank_account
+			// I.registered_account = bank_account
 			to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
 			break
 
@@ -100,7 +100,7 @@
 	for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
 		if (bank_account.account_id == H.account_id)
 			bank_account.bank_cards += src
-			I.registered_account = bank_account
+			// I.registered_account = bank_account
 			to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
 			break
 
@@ -122,7 +122,7 @@
 	for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
 		if (bank_account.account_id == H.account_id)
 			bank_account.bank_cards += src
-			I.registered_account = bank_account
+			// I.registered_account = bank_account
 			to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
 			break
 
@@ -144,7 +144,7 @@
 	for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
 		if (bank_account.account_id == H.account_id)
 			bank_account.bank_cards += src
-			I.registered_account = bank_account
+			// I.registered_account = bank_account
 			to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
 			break
 
@@ -166,7 +166,7 @@
 	for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
 		if (bank_account.account_id == H.account_id)
 			bank_account.bank_cards += src
-			I.registered_account = bank_account
+			// I.registered_account = bank_account
 			to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
 			break
 
@@ -188,7 +188,7 @@
 	for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
 		if (bank_account.account_id == H.account_id)
 			bank_account.bank_cards += src
-			I.registered_account = bank_account
+			// I.registered_account = bank_account
 			to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
 			break
 

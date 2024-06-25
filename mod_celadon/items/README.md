@@ -2,7 +2,7 @@
 
 #### Список PRов:
 
-- https://github.com/MysticalFaceLesS/Shiptest/pulls/#####
+- https://github.com/CeladonSS13/Shiptest/pull/759
 <!--
   Ссылки на PRы, связанные с модом:
   - Создание
@@ -30,7 +30,8 @@ ID мода: CELADON_ITEMS
 
 ### Изменения *кор кода*
 
-- Отсутствуют
+- `code/modules/surgery/organs/tongue.dm`
+	-`var/static/list/languages_possible_base = typecacheof`
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -77,7 +78,7 @@ ID мода: CELADON_ITEMS
 
 ### Авторы:
 
-MrCat15352, MysticalFaceLesS
+MrCat15352, MysticalFaceLesS, RalseiDreemuurr
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.

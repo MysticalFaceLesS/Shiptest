@@ -1,19 +1,19 @@
 /datum/design/a556/surplus
-	name = "5.56 mm surplus ammo box"
-	desc = "A box full of surplus 5.56x45mm ammunition."
+	name = "Некачественные патроны 5.56x45mm"
+	desc = "Коробка некачественных патронов 5.56x45mm."
 	id = "a556surp"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 35000, /datum/material/titanium = 3000, /datum/material/silver = 11000)
+	materials = list(/datum/material/iron = 35000, /datum/material/titanium = 3000)
 	build_path = /obj/item/ammo_box/a556_box/surplus
 	category = list("Ammo")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY
 
-/datum/design/a308/surplus
-	name = ".308 surplus ammo box"
-	desc = "A box full of surplus .308 ammunition."
-	id = "a308surp"
+/datum/design/a308/a308_brak
+	name = "Некачественные патроны .308"
+	desc = "Коробка некачественных патронов .308."
+	id = "a308_brak"
 	build_type = PROTOLATHE
-	materials = list(/datum/material/iron = 45000, /datum/material/titanium = 4000, /datum/material/silver = 12000)
-	build_path = /obj/item/ammo_box/a308/surplus
+	materials = list(/datum/material/iron = 45000, /datum/material/titanium = 4000)
+	build_path = /obj/item/ammo_box/a308/a308_brak
 	category = list("Ammo")
 	departmental_flags = DEPARTMENTAL_FLAG_SECURITY

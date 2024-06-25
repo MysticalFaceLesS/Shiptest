@@ -56,8 +56,12 @@ export const DmMapsIncludeTarget = new Juke.Target({
   executes: async () => {
     const folders = [
       ...Juke.glob("_maps/outpost/**/*.dmm"),
-      ...Juke.glob("_maps/RandomRuins/**/*.dmm"),
-      ...Juke.glob("_maps/shuttles/**/*.dmm"),
+      // [CELADON-EDIT] - CELADON_CONFIGS_MAPS
+      // ...Juke.glob("_maps/RandomRuins/**/*.dmm"),
+      // ...Juke.glob("_maps/shuttles/**/*.dmm"), // CELADON-EDIT - ORIGINAL
+      ...Juke.glob("_maps/_mod_celadon/RandomRuins/**/*.dmm"),
+      ...Juke.glob("_maps/_mod_celadon/shuttles/**/*.dmm"),
+      // [/CELADON-EDIT]
       ...Juke.glob("_maps/templates/**/*.dmm"),
     ];
     const content =

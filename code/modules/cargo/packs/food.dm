@@ -228,7 +228,7 @@
 // [/CELADON-EDIT]
 	contains = list(/obj/item/stack/sheet/mineral/coal/five,
 					/obj/machinery/grill/unwrenched,
-					/obj/item/reagent_containers/food/drinks/soda_cans/monkey_energy)
+					/obj/item/reagent_containers/food/drinks/soda_cans/xeno_energy)
 	crate_name = "grilling starter kit crate"
 	crate_type = /obj/structure/closet/crate/large
 
