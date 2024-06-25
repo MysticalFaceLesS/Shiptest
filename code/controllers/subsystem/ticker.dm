@@ -576,7 +576,10 @@ SUBSYSTEM_DEF(ticker)
 		'sound/roundend/repair.ogg',
 		'sound/roundend/boowomp.ogg',
 		'sound/roundend/shiptestingthursday.ogg',
-		'sound/roundend/gayrights.ogg'\
+//[CELADON-EDIT]- MUSIC_CELADON
+//		'sound/roundend/gayrights.ogg'\//CELADON-EDIT-ORIGINAL
+		'mod_celadon/music_celadon/sound/voiko_law.ogg'\
+//[/CELADON-EDIT]
 		)
 	///The reference to the end of round sound that we have chosen.
 	var/sound/end_of_round_sound_ref = sound(round_end_sound)
