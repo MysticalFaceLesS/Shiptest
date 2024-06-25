@@ -30,6 +30,7 @@ ID мода: MUSIC_CELADON
 
 - EDIT - strings/round_start_sounds.txt - изменены пути файлов для загрузки в лобби
 - EDIT - code\controllers\subsystem\ticker.dm - изменен один саунд для конца раунда
+- EDIT - code\controllers\subsystem\title.dm - заменено стартовое изображение в лобби
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
