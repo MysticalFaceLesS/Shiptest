@@ -1,7 +1,7 @@
 
 #### Список PRов
 
-- https://github.com/CeladonSS13/Shiptest/pulls/#####
+- https://github.com/CeladonSS13/Shiptest/pull/751
 <!--
   Ссылки на PRы, связанные с модом:
   - Создание
@@ -78,7 +78,7 @@ ID мода: MUSIC_CELADON
 
 ### Авторы
 
-Твой никнейм
+Mirag1993
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.
