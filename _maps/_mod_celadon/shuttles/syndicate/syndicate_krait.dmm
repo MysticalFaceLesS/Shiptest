@@ -514,6 +514,10 @@
 	pixel_x = -7;
 	pixel_y = 15
 	},
+/obj/item/storage/box/monkeycubes/syndicate{
+	pixel_y = 2;
+	pixel_x = -3
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/ship/science)
 "ej" = (
@@ -538,6 +542,9 @@
 /obj/item/melee/classic_baton/telescopic/contractor_baton{
 	name = "SnD baton";
 	pixel_y = 8
+	},
+/obj/item/autosurgeon/syndicate/reviver{
+	uses = 1
 	},
 /turf/open/floor/carpet/red_gold,
 /area/ship/bridge)
@@ -854,9 +861,6 @@
 /obj/item/megaphone/sec{
 	name = "syndicate megaphone";
 	pixel_y = 1
-	},
-/obj/item/autosurgeon/syndicate/reviver{
-	uses = 1
 	},
 /obj/item/organ/cyberimp/arm/surgery,
 /turf/open/floor/carpet/red_gold,
@@ -1539,11 +1543,11 @@
 	pixel_x = 3
 	},
 /obj/item/stack/cable_coil/red,
-/obj/item/borg/upgrade/ai,
 /obj/item/mmi/posibrain{
 	pixel_x = 5;
 	pixel_y = 6
 	},
+/obj/item/borg/upgrade/ai,
 /turf/open/floor/circuit/red,
 /area/ship/science/ai_chamber)
 "mT" = (
@@ -2057,6 +2061,11 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo/port)
+"pV" = (
+/obj/machinery/cryopod/syndicate,
+/obj/machinery/computer/cryopod/directional/west,
+/turf/open/floor/circuit/red,
+/area/ship/crew/dorm)
 "pW" = (
 /obj/structure/chair/stool/bar{
 	dir = 4
@@ -2498,8 +2507,8 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 8
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
+	dir = 1
 	},
 /turf/open/floor/plating,
 /area/ship/bridge)
@@ -3557,8 +3566,11 @@
 	icon_state = "bordercolor";
 	dir = 1
 	},
-/obj/structure/closet/crate/bin,
 /obj/machinery/airalarm/directional/north,
+/obj/structure/closet/crate/bin{
+	pixel_y = 18;
+	density = 0
+	},
 /obj/item/storage/box/syndimaid,
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
@@ -4876,6 +4888,10 @@
 "Su" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/cans/sixbeer,
+/obj/item/storage/fancy/cigarettes/cigpack_syndicate{
+	pixel_x = 6;
+	pixel_y = 14
+	},
 /turf/open/floor/wood/walnut,
 /area/ship/crew/canteen)
 "SA" = (
@@ -5420,10 +5436,6 @@
 /obj/item/storage/fancy/cigarettes/cigpack_syndicate{
 	pixel_x = 10;
 	pixel_y = 17
-	},
-/obj/item/storage/fancy/cigarettes/cigpack_syndicate{
-	pixel_x = 6;
-	pixel_y = 14
 	},
 /obj/item/lighter/clockwork{
 	pixel_y = 15
@@ -6109,7 +6121,7 @@ zx
 dq
 Vo
 vJ
-sK
+pV
 dz
 Xd
 fO
