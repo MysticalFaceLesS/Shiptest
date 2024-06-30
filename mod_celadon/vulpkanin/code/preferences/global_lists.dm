@@ -1,0 +1,13 @@
+GLOBAL_LIST_EMPTY(vulp_ears_list)
+GLOBAL_LIST_EMPTY(vulp_hairs_list)
+GLOBAL_LIST_EMPTY(vulp_facial_hairs_list)
+GLOBAL_LIST_EMPTY(vulp_ears_markings_list)
+GLOBAL_LIST_EMPTY(vulp_head_markings_list)
+GLOBAL_LIST_EMPTY(vulp_nose_markings_list)
+GLOBAL_LIST_EMPTY(vulp_chest_markings_list)
+GLOBAL_LIST_EMPTY(vulp_body_markings_list)
+GLOBAL_LIST_EMPTY(vulp_tail_list)
+GLOBAL_LIST_EMPTY(vulp_animated_tail_list)
+
+GLOBAL_LIST_INIT(vulp_names_male, world.file2list("mod_celadon/vulpkanin/strings/vulp_male_names.txt"))
+GLOBAL_LIST_INIT(vulp_names_female, world.file2list("mod_celadon/vulpkanin/strings/vulp_female_names.txt"))
