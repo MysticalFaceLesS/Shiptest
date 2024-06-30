@@ -60,6 +60,8 @@
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tails_animated/tajara, GLOB.tajara_animated_tail_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_hairs, GLOB.tajara_hairs_list)
 	init_sprite_accessory_subtypes(/datum/sprite_accessory/tajara_ears, GLOB.tajara_ears_list)
+	// [CELADON-ADD] - VULPKANIN
+
 	// [/CELADON-ADD]
 
 	//Species
