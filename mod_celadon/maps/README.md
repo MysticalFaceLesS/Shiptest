@@ -21,7 +21,6 @@ ID мода: CELADON_CONFIGS_MAPS
 ### Описание мода
 
 Этот мод содержит наши шатлы, субшатлы, руинки и аванпосты.
-В random_ruins.dm находится оверайды руинок.
 В файле subshuttles.dm находятся датумы новых сабшатлов. 
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
@@ -36,6 +35,19 @@ ID мода: CELADON_CONFIGS_MAPS
 - EDIT `code\modules\overmap\objects\outpost\outpost_types.dm` -> `path`: меняем путь к аванпостам
 
 - ADD `_maps\_basemap.dm` -> включение карты ЦК
+
+- EDIT:
+	`code\datums\ruins\beachplanet.dm` 	: `/datum/map_template/ruin/beachplanet.dm 	: `prefix`
+	`code\datums\ruins\icemoon.dm`		: `/datum/map_template/ruin/icemoon.dm`		: `prefix`
+	`code\datums\ruins\jungle.dm`		: `/datum/map_template/ruin/jungle.dm`		: `prefix`
+	`code\datums\ruins\lavaland.dm`		: `/datum/map_template/ruin/lavaland.dm`	: `prefix`
+	`code\datums\ruins\reebe.dm`		: `/datum/map_template/ruin/reebe.dm`		: `prefix`
+	`code\datums\ruins\rockplanet.dm`	: `/datum/map_template/ruin/rockplanet.dm` 	: `prefix`
+	`code\datums\ruins\space.dm`		: `/datum/map_template/ruin/space.dm`		: `prefix`
+	`code\datums\ruins\wasteplanet.dm`	: `/datum/map_template/ruin/wasteplanet.dm` : `prefix`
+	`code\datums\ruins\whitesands.dm`	: `/datum/map_template/ruin/whitesands.dm` 	: `prefix`
+	
+- EDIT: `tools\build\build.js` : `export const DmMapsIncludeTarget`
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -46,16 +58,7 @@ ID мода: CELADON_CONFIGS_MAPS
 
 ### Оверрайды
 
-- `code\datums\ruins\beachplanet.dm`
-- `code\datums\ruins\icemoon.dm`
-- `code\datums\ruins\jungle.dm`
-- `code\datums\ruins\lavaland.dm`
-- `code\datums\ruins\reebe.dm`
-- `code\datums\ruins\rockplanet.dm`
-- `code\datums\ruins\space.dm`
-- `code\datums\ruins\wasteplanet.dm`
-- `code\datums\ruins\whitesands.dm`
-
+- Отсутствуют
 <!--
   Если ты добавлял новый модульный оверрайд, его нужно указать здесь.
   Здесь указываются оверрайды в твоём моде и папке `_master_files`
@@ -76,7 +79,7 @@ ID мода: CELADON_CONFIGS_MAPS
 
 ### Используемые файлы, не содержащиеся в модпаке
 
-- `_maps\_mod_celadon\*` - все карты, кроме ships
+- `_maps\_mod_celadon\*`
 <!--
   Будь то немодульный файл или модульный файл, который не содержится в папке,
   принадлежащей этому конкретному моду, он должен быть упомянут здесь.

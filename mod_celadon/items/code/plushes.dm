@@ -353,15 +353,15 @@
 	say(skill_response[skill_level])
 	if(skill_level == 7)
 		playsound(src_turf, 'mod_celadon/items/sounds/plushes/can_pop.ogg', 80, TRUE)
-		new /obj/effect/abstract/liquid_turf/pwr_gamr(src_turf)
+		// new /obj/effect/abstract/liquid_turf/pwr_gamr(src_turf)
 		playsound(src_turf, 'mod_celadon/items/sounds/plushes/bubbles.ogg', 50, TRUE)
 		qdel(src)
 
 /obj/effect/abstract/liquid_turf/pwr_gamr
 	///the starting temp for the liquid
-	var/starting_temp = T20C
+	// var/starting_temp = T20C
 	///the starting mixture for the liquid
-	var/list/starting_mixture = list(/datum/reagent/consumable/pwr_game = 10)
+	// var/list/starting_mixture = list(/datum/reagent/consumable/pwr_game = 10)
 
 /obj/effect/abstract/liquid_turf/pwr_gamr/Initialize(mapload)
 	. = ..()

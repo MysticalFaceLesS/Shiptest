@@ -1,5 +1,88 @@
-// Ученые
+//										//
+//			SOLAR FEDERATION			//
+//										//
 
+/datum/outfit/job/solgov/proc/get_solfed_captain_access(mob/living/carbon/human/H)
+	H.faction |= list(FACTION_PLAYER_SOLGOV)
+	var/obj/item/storage/wallet/W = null
+	for (var/obj/item/O in H.contents)
+		if (istype(O, /obj/item/storage/wallet))
+			W = O
+			break
+	if (W)
+		var/obj/item/card/id/I = null
+		for (var/obj/item/O in W.contents)
+			if (istype(O, /obj/item/card/id))
+				I = O
+				break
+		if (I)
+			I.access = list(ACCESS_SOLGOV, ACCESS_CAPTAIN, ACCESS_ENGINE, ACCESS_MEDICAL, ACCESS_ARMORY, ACCESS_BRIG, ACCESS_SECURITY)
+			I.update_label()
+		W.combined_access = list()
+		for (var/obj/item/card/id/card in W.contents)
+			W.combined_access |= card.access
+
+/datum/outfit/job/solgov/proc/get_solfed_overseer_access(mob/living/carbon/human/H)
+	H.faction |= list(FACTION_PLAYER_SOLGOV)
+	var/obj/item/storage/wallet/W = null
+	for (var/obj/item/O in H.contents)
+		if (istype(O, /obj/item/storage/wallet))
+			W = O
+			break
+	if (W)
+		var/obj/item/card/id/I = null
+		for (var/obj/item/O in W.contents)
+			if (istype(O, /obj/item/card/id))
+				I = O
+				break
+		if (I)
+			I.access += list(ACCESS_ENGINE, ACCESS_MEDICAL, ACCESS_ARMORY, ACCESS_BRIG, ACCESS_SECURITY)
+			I.update_label()
+		W.combined_access = list()
+		for (var/obj/item/card/id/card in W.contents)
+			W.combined_access |= card.access
+
+/datum/outfit/job/solgov/proc/get_solfed_sonnensoldner_access(mob/living/carbon/human/H)
+	H.faction |= list(FACTION_PLAYER_SOLGOV)
+	var/obj/item/storage/wallet/W = null
+	for (var/obj/item/O in H.contents)
+		if (istype(O, /obj/item/storage/wallet))
+			W = O
+			break
+	if (W)
+		var/obj/item/card/id/I = null
+		for (var/obj/item/O in W.contents)
+			if (istype(O, /obj/item/card/id))
+				I = O
+				break
+		if (I)
+			I.access += list(ACCESS_ENGINE, ACCESS_MEDICAL, ACCESS_BRIG, ACCESS_SECURITY)
+			I.update_label()
+		W.combined_access = list()
+		for (var/obj/item/card/id/card in W.contents)
+			W.combined_access |= card.access
+
+/datum/outfit/job/solgov/proc/get_solfed_engineer_access(mob/living/carbon/human/H)
+	H.faction |= list(FACTION_PLAYER_SOLGOV)
+	var/obj/item/storage/wallet/W = null
+	for (var/obj/item/O in H.contents)
+		if (istype(O, /obj/item/storage/wallet))
+			W = O
+			break
+	if (W)
+		var/obj/item/card/id/I = null
+		for (var/obj/item/O in W.contents)
+			if (istype(O, /obj/item/card/id))
+				I = O
+				break
+		if (I)
+			I.access += list(ACCESS_ENGINE, ACCESS_MEDICAL, ACCESS_SECURITY)
+			I.update_label()
+		W.combined_access = list()
+		for (var/obj/item/card/id/card in W.contents)
+			W.combined_access |= card.access
+
+// Ученые
 /datum/outfit/job/solgov/scientist
 	name = "SolGov - Scientific Officer"
 	jobtype = /datum/job/scientist
@@ -55,19 +138,8 @@
 	gloves = null
 
 /datum/outfit/job/solgov/captain/elysium_celadon/post_equip(mob/living/carbon/human/H)
-    var/obj/item/card/id/I = H.wear_id
-    I.registered_name = H.real_name
-    I.assignment = "Musharif"
-    I.access = list(ACCESS_SOLGOV, ACCESS_CAPTAIN, ACCESS_ENGINE, ACCESS_MEDICAL, ACCESS_ARMORY, ACCESS_BRIG, ACCESS_SECURITY)
-
-    for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
-        if (bank_account.account_id == H.account_id)
-            bank_account.bank_cards += src
-            I.registered_account = bank_account
-            to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
-            break
-
-    I.update_label()
+	. = ..()
+	get_solfed_captain_access(H)
 
 //	Хос	//
 /datum/outfit/job/solgov/overseer/elysium_celadon
@@ -82,19 +154,8 @@
 	neck = null
 
 /datum/outfit/job/solgov/overseer/elysium_celadon/post_equip(mob/living/carbon/human/H)
-    var/obj/item/card/id/I = H.wear_id
-    I.registered_name = H.real_name
-    I.assignment = "Mulazim"
-    I.access = list(ACCESS_ENGINE, ACCESS_MEDICAL, ACCESS_ARMORY, ACCESS_BRIG, ACCESS_SECURITY)
-
-    for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
-        if (bank_account.account_id == H.account_id)
-            bank_account.bank_cards += src
-            I.registered_account = bank_account
-            to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
-            break
-
-    I.update_label()
+	. = ..()
+	get_solfed_overseer_access(H)
 
 //	Офицер	//
 /datum/outfit/job/solgov/sonnensoldner/elysium_celadon
@@ -108,19 +169,8 @@
 	uniform = /obj/item/clothing/under/solfed/elysium
 
 /datum/outfit/job/solgov/sonnensoldner/elysium_celadon/post_equip(mob/living/carbon/human/H)
-    var/obj/item/card/id/I = H.wear_id
-    I.registered_name = H.real_name
-    I.assignment = "Haris"
-    I.access = list(ACCESS_ENGINE, ACCESS_MEDICAL, ACCESS_BRIG, ACCESS_SECURITY)
-
-    for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
-        if (bank_account.account_id == H.account_id)
-            bank_account.bank_cards += src
-            I.registered_account = bank_account
-            to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
-            break
-
-    I.update_label()
+	. = ..()
+	get_solfed_sonnensoldner_access(H)
 
 //	медик	//
 /datum/outfit/job/solgov/doctor/elysium_celadon
@@ -134,19 +184,8 @@
 	uniform = /obj/item/clothing/under/solfed/elysium
 
 /datum/outfit/job/solgov/doctor/elysium_celadon/post_equip(mob/living/carbon/human/H)
-    var/obj/item/card/id/I = H.wear_id
-    I.registered_name = H.real_name
-    I.assignment = "Shafi"
-    I.access = list(ACCESS_ENGINE, ACCESS_MEDICAL, ACCESS_SECURITY)
-
-    for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
-        if (bank_account.account_id == H.account_id)
-            bank_account.bank_cards += src
-            I.registered_account = bank_account
-            to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
-            break
-
-    I.update_label()
+	. = ..()
+	get_solfed_engineer_access(H)
 
 //	Инженер	//
 /datum/outfit/job/solgov/engineer/elysium_celadon
@@ -160,16 +199,5 @@
 	uniform = /obj/item/clothing/under/solfed/elysium
 
 /datum/outfit/job/solgov/engineer/elysium_celadon/post_equip(mob/living/carbon/human/H)
-    var/obj/item/card/id/I = H.wear_id
-    I.registered_name = H.real_name
-    I.assignment = "Khabeer Fanni"
-    I.access = list(ACCESS_ENGINE, ACCESS_MEDICAL, ACCESS_SECURITY)
-
-    for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
-        if (bank_account.account_id == H.account_id)
-            bank_account.bank_cards += src
-            I.registered_account = bank_account
-            to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
-            break
-
-    I.update_label()
+	. = ..()
+	get_solfed_engineer_access(H)

@@ -5,26 +5,74 @@
 /proc/get_inteq_acces()
 	return list(ACCESS_INTEQ_GENERAL, ACCESS_INTEQ_SECURITY, ACCESS_INTEQ_CAPTAIN)
 
+/datum/outfit/job/inteq/proc/get_inteq_g_acces(mob/living/carbon/human/H)
+	H.faction |= list(FACTION_PLAYER_INTEQ)
+	var/obj/item/storage/wallet/W = null
+	for (var/obj/item/O in H.contents)
+		if (istype(O, /obj/item/storage/wallet))
+			W = O
+			break
+	if (W)
+		var/obj/item/card/id/I = null
+		for (var/obj/item/O in W.contents)
+			if (istype(O, /obj/item/card/id))
+				I = O
+				break
+		if (I)
+			I.access += list(ACCESS_INTEQ_GENERAL)
+			I.update_label()
+		W.combined_access = list()
+		for (var/obj/item/card/id/card in W.contents)
+			W.combined_access |= card.access
+
+/datum/outfit/job/inteq/proc/get_inteq_gsec_acces(mob/living/carbon/human/H)
+	H.faction |= list(FACTION_PLAYER_INTEQ)
+	var/obj/item/storage/wallet/W = null
+	for (var/obj/item/O in H.contents)
+		if (istype(O, /obj/item/storage/wallet))
+			W = O
+			break
+	if (W)
+		var/obj/item/card/id/I = null
+		for (var/obj/item/O in W.contents)
+			if (istype(O, /obj/item/card/id))
+				I = O
+				break
+		if (I)
+			I.access += list(ACCESS_INTEQ_GENERAL, ACCESS_INTEQ_SECURITY)
+			I.update_label()
+		W.combined_access = list()
+		for (var/obj/item/card/id/card in W.contents)
+			W.combined_access |= card.access
+
+/datum/outfit/job/inteq/proc/get_inteq_all_acces(mob/living/carbon/human/H)
+	H.faction |= list(FACTION_PLAYER_INTEQ)
+	var/obj/item/storage/wallet/W = null
+	for (var/obj/item/O in H.contents)
+		if (istype(O, /obj/item/storage/wallet))
+			W = O
+			break
+	if (W)
+		var/obj/item/card/id/I = null
+		for (var/obj/item/O in W.contents)
+			if (istype(O, /obj/item/card/id))
+				I = O
+				break
+		if (I)
+			I.access = get_all_accesses()+get_inteq_acces()
+			I.update_label()
+		W.combined_access = list()
+		for (var/obj/item/card/id/card in W.contents)
+			W.combined_access |= card.access
+
 //рекрут
 /datum/outfit/job/inteq/assistant/celadon
 	name = "Recruit (InteQ)"
 	id = /obj/item/card/id/inteq/recruit
 
 /datum/outfit/job/inteq/assistant/celadon/post_equip(mob/living/carbon/human/H)
-	H.faction |= list(FACTION_PLAYER_INTEQ)
-
-	var/obj/item/card/id/I = H.wear_id
-	I.registered_name = H.real_name
-	I.access += list(ACCESS_INTEQ_GENERAL)
-
-	for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
-		if (bank_account.account_id == H.account_id)
-			bank_account.bank_cards += src
-			I.registered_account = bank_account
-			to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
-			break
-
-	I.update_label()
+	. = ..()
+	get_inteq_g_acces(H)
 
 //Капитан
 
@@ -39,20 +87,8 @@
 	id = /obj/item/card/id/inteq/vanguard
 
 /datum/outfit/job/inteq/captain/celadon/post_equip(mob/living/carbon/human/H)
-	H.faction |= list(FACTION_PLAYER_INTEQ)
-
-	var/obj/item/card/id/I = H.wear_id
-	I.registered_name = H.real_name
-	I.access = get_all_accesses()+get_inteq_acces()
-
-	for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
-		if (bank_account.account_id == H.account_id)
-			bank_account.bank_cards += src
-			I.registered_account = bank_account
-			to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
-			break
-
-	I.update_label()
+	. = ..()
+	get_inteq_all_acces(H)
 
 // Лейтенант первого класса
 /datum/outfit/job/inteq/captain/enfco/celadon
@@ -68,20 +104,8 @@
 	id = /obj/item/card/id/inteq/enfco
 
 /datum/outfit/job/inteq/captain/enfco/celadon/post_equip(mob/living/carbon/human/H)
-	H.faction |= list(FACTION_PLAYER_INTEQ)
-
-	var/obj/item/card/id/I = H.wear_id
-	I.registered_name = H.real_name
-	I.access = get_all_accesses()+get_inteq_acces()
-
-	for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
-		if (bank_account.account_id == H.account_id)
-			bank_account.bank_cards += src
-			I.registered_account = bank_account
-			to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
-			break
-
-	I.update_label()
+	. = ..()
+	get_inteq_all_acces(H)
 
 //Парамедик
 
@@ -91,20 +115,8 @@
 	id = /obj/item/card/id/inteq/corspman
 
 /datum/outfit/job/inteq/paramedic/celadon/post_equip(mob/living/carbon/human/H)
-	H.faction |= list(FACTION_PLAYER_INTEQ)
-
-	var/obj/item/card/id/I = H.wear_id
-	I.registered_name = H.real_name
-	I.access += list(ACCESS_INTEQ_GENERAL)
-
-	for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
-		if (bank_account.account_id == H.account_id)
-			bank_account.bank_cards += src
-			I.registered_account = bank_account
-			to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
-			break
-
-	I.update_label()
+	. = ..()
+	get_inteq_g_acces(H)
 
 //Служба безопасности
 
@@ -113,20 +125,8 @@
 	id = /obj/item/card/id/inteq/enf
 
 /datum/outfit/job/inteq/security/celadon/post_equip(mob/living/carbon/human/H)
-	H.faction |= list(FACTION_PLAYER_INTEQ)
-
-	var/obj/item/card/id/I = H.wear_id
-	I.registered_name = H.real_name
-	I.access += list(ACCESS_INTEQ_GENERAL,ACCESS_INTEQ_SECURITY)
-
-	for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
-		if (bank_account.account_id == H.account_id)
-			bank_account.bank_cards += src
-			I.registered_account = bank_account
-			to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
-			break
-
-	I.update_label()
+	. = ..()
+	get_inteq_gsec_acces(H)
 
 // Варден
 
@@ -135,20 +135,8 @@
 	id = /obj/item/card/id/inteq/maas
 
 /datum/outfit/job/inteq/warden/celadon/post_equip(mob/living/carbon/human/H)
-	H.faction |= list(FACTION_PLAYER_INTEQ)
-
-	var/obj/item/card/id/I = H.wear_id
-	I.registered_name = H.real_name
-	I.access += list(ACCESS_INTEQ_GENERAL,ACCESS_INTEQ_SECURITY)
-
-	for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
-		if (bank_account.account_id == H.account_id)
-			bank_account.bank_cards += src
-			I.registered_account = bank_account
-			to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
-			break
-
-	I.update_label()
+	. = ..()
+	get_inteq_gsec_acces(H)
 
 // Главный инженер
 
@@ -157,20 +145,8 @@
 	id = /obj/item/card/id/inteq/afr/ce
 
 /datum/outfit/job/inteq/ce/celadon/post_equip(mob/living/carbon/human/H)
-	H.faction |= list(FACTION_PLAYER_INTEQ)
-
-	var/obj/item/card/id/I = H.wear_id
-	I.registered_name = H.real_name
-	I.access = get_all_accesses()+get_inteq_acces()
-
-	for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
-		if (bank_account.account_id == H.account_id)
-			bank_account.bank_cards += src
-			I.registered_account = bank_account
-			to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
-			break
-
-	I.update_label()
+	. = ..()
+	get_inteq_all_acces(H)
 
 //Инженегр
 
@@ -179,17 +155,5 @@
 	id = /obj/item/card/id/inteq/afr
 
 /datum/outfit/job/inteq/engineer/celadon/post_equip(mob/living/carbon/human/H)
-	H.faction |= list(FACTION_PLAYER_INTEQ)
-
-	var/obj/item/card/id/I = H.wear_id
-	I.registered_name = H.real_name
-	I.access += list(ACCESS_INTEQ_GENERAL)
-
-	for (var/datum/bank_account/bank_account in SSeconomy.bank_accounts)
-		if (bank_account.account_id == H.account_id)
-			bank_account.bank_cards += src
-			I.registered_account = bank_account
-			to_chat(H, "<span class='notice'>Your account number has been automatically assigned.</span>")
-			break
-
-	I.update_label()
+	. = ..()
+	get_inteq_g_acces(H)
