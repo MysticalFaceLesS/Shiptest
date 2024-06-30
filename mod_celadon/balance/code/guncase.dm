@@ -1,7 +1,7 @@
 //GUNCASES//
 
-/obj/structure/guncase
-	capacity = 6
+// /obj/structure/guncase
+// 	capacity = 6
 
 /obj/structure/guncase
 	armor = list("melee" = 20, "bullet" = 20, "laser" = 20, "energy" = 20, "bomb" = 20, "bio" = 0, "rad" = 0, "fire" = 70, "acid" = 60)
