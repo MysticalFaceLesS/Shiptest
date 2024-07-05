@@ -77,7 +77,13 @@ ID мода: CELADON_QOL
 - EDIT `code\modules\client\preferences.dm`: `var/datum/loadout_category/LC = GLOB.loadout_categories[gear_tab]` - меняем лодаут
 
 - ADD `html\browser\common.css` -> да-да, ксс файлик шатаем. Добавляем классы на обработку картиночек лодаута
+
 - EDIT `code\game\objects\items\storage\ration.dm` - делаем так чтобы можно хитер положить обратно
+
+- EDIT `code\modules\projectiles\boxes_magazines\_box_magazine.dm` -> снижена задержка загрузки патронов с коробки в магазин
+
+- EDIT `code/game/objects/structures/flora.dm` -> меняем звук падающего дерева с метеоритного на нормальный
+
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -119,7 +125,7 @@ ID мода: CELADON_QOL
 
 ### Авторы:
 
-RalseiDreemuurr, MrCat15352
+RalseiDreemuurr, MysticalFaceLesS, MrCat15352
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.

@@ -40,6 +40,7 @@ ID мода: CELADON_COMPONENTS, CELADON_COMPONENTS_EMOTE
 
 - EDIT -> `code\modules\mob\living\carbon\human\emote.dm`
 - EDIT -> `code\modules\mob\living\carbon\emote.dm`
+- REMOVE -> `code\__HELPERS\names.dm`
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -60,7 +61,19 @@ ID мода: CELADON_COMPONENTS, CELADON_COMPONENTS_EMOTE
 
 ### Дефайны
 
-- Отсутствуют
+- `#define FACTION_SYNDICATE "Syndicate"`
+- `#define FACTION_SOLGOV "SolGov"`
+- `#define FACTION_INTEQ "Inteq Risk Management Group"`
+- `#define FACTION_NT "Nanotrasen"`
+- `#define FACTION_INDEPENDENT "Independent"`
+- `#define FACTION_ELYSIUM "Elysium"`
+- `#define PREFIX_SYNDICATE list("SEV", "SSV", "SMMV", "PCAC", "SSASV", "SSSV", "SOSSV", "TSSV", "SABSV", "BSSV", "ASSV", "MSSV", "LSSV", "DSSV")`
+- `#define PREFIX_SOLGOV list("SGSV", "BSFSV", "ASFSV", "SSFSV", "MDSFSV", "LSFSV", "MSFSV", "SPSFSV")`
+- `#define PREFIX_INTEQ list("IRMV", "IQMSSV", "BIQSV", "LIQSV", "SPIQSV")`
+- `#define PREFIX_NT list("NTSV", "NTBSV", "NTASV", "NTSSV", "NTTSV", "NTMSV", "NTLSV", "NTDSV", "NTSPSV",)`
+- `#define PREFIX_INDEPENDENT list("SV", "IMV", "ISV")`
+- `#define PREFIX_ELYSIUM list("EUSM", "EUSQ", "EUSF", "EUSR",)`
+- `#define PREFIX_PIRATES list("PIRATE")`
 <!--
   Если требовалось добавить какие-либо дефайны, укажи файлы,
   в которые ты их добавил, а также перечисли имена.
@@ -71,7 +84,7 @@ ID мода: CELADON_COMPONENTS, CELADON_COMPONENTS_EMOTE
 
 ### Используемые файлы, не содержащиеся в модпаке
 
-- Отсутствуют
+- `code/__DEFINES/~mods/prefixes.dm`
 <!--
   Будь то немодульный файл или модульный файл, который не содержится в папке,
   принадлежащей этому конкретному моду, он должен быть упомянут здесь.
@@ -81,7 +94,7 @@ ID мода: CELADON_COMPONENTS, CELADON_COMPONENTS_EMOTE
 
 ### Авторы:
 
-Mirag1993, Voiko
+Mirag1993, Voiko, RalseiDreemuurr
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.

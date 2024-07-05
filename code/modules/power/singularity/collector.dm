@@ -2,8 +2,10 @@
 // [CELADON-EDIT] - CELADON_BALANCE - Трогаем рад коллекторы
 // #define RAD_COLLECTOR_EFFICIENCY 80 	// radiation needs to be over this amount to get power // CELADON-EDIT - ORIGINAL
 // #define RAD_COLLECTOR_COEFFICIENT 10 // CELADON-EDIT - ORIGINAL
-#define RAD_COLLECTOR_EFFICIENCY 1 	// radiation needs to be over this amount to get power
-#define RAD_COLLECTOR_COEFFICIENT 400
+// #define RAD_COLLECTOR_EFFICIENCY 1 	// radiation needs to be over this amount to get power
+// #define RAD_COLLECTOR_COEFFICIENT 400 // CELADON-EDIT - OLD_MY
+#define RAD_COLLECTOR_EFFICIENCY 300 	// radiation needs to be over this amount to get power
+#define RAD_COLLECTOR_COEFFICIENT 100
 // [/CELADON-EDIT]
 #define RAD_COLLECTOR_STORED_OUT 0.001	// (this*100)% of stored power outputted per tick. Doesn't actualy change output total, lower numbers just means collectors output for longer in absence of a source
 #define RAD_COLLECTOR_MINING_CONVERSION_RATE 0.00001 //This is gonna need a lot of tweaking to get right. This is the number used to calculate the conversion of watts to research points per process()

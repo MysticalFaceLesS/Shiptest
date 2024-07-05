@@ -28,3 +28,12 @@
 /obj/item/clothing/head/costume/tv_head/fov_less
 	desc = "A mysterious headgear made from the hollowed out remains of a status display. How very retro-retro-futuristic of you. It's very easy to see out of this one."
 	has_fov = FALSE
+
+/obj/item/clothing/head/archeologist
+	name = "archaeologist hat"
+	desc = "A well-worn fedora favored by explorers and archaeologists. Not very protective but still very stylish."
+	icon_state = "explorerhat"
+	item_state = "explorerhat"
+	icon = 'mod_celadon/items/icons/obj/tajara_items.dmi'
+	mob_overlay_icon = 'mod_celadon/items/icons/overlay/tajara_items_overlay.dmi'
+	flags_inv = 0

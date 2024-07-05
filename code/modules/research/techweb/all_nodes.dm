@@ -183,7 +183,7 @@
 	prereq_ids = list("base")
 	design_ids = list("solarcontrol", "solarassembly", "recharger", "powermonitor", "rped", "pacman", "adv_capacitor", "adv_scanning", "emitter", "high_cell", "adv_matter_bin", "scanner_gate",
 	"atmosalerts", "atmos_control", "recycler", "autolathe", "high_micro_laser", "nano_mani", "mesons", "welding_goggles", "thermomachine", "rad_collector", "tesla_coil", "grounding_rod",
-	"apc_control", "cell_charger", "power control", "airlock_board", "firelock_board", "aac_electronics", "airalarm_electronics", "firealarm_electronics", "cell_charger", "stack_console", "stack_machine",
+	"apc_control", "cell_charger", "ssu", "power control", "airlock_board", "firelock_board", "aac_electronics", "airalarm_electronics", "firealarm_electronics", "cell_charger", "stack_console", "stack_machine",
 	"oxygen_tank", "plasma_tank", "emergency_oxygen", "emergency_oxygen_engi", "plasmaman_tank_belt", "pneumatic_seal", "shieldwallgen", "shieldwallgen_atmos") //WS edit, solar assemblies from lathe
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
 	export_price = 5000
@@ -716,7 +716,7 @@
 	// [CELADON-EDIT] - CELADON_WEAPONS - Новое пушки и патроны
 	// design_ids = list("ap9mm", "ap10mm", "ap45", "hp9mm", "hp10mm", "hp45", "ap556mmHITP", "hp556mmHITP") // CELADON-EDIT - ORIGINAL
 	// research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500) // CELADON-EDIT - ORIGINAL
-	design_ids = list("ap9mm", "ap10mm", "ap45", "hp9mm", "hp10mm", "hp45", "ap556mmHITP", "hp556mmHITP","a556surp","a308surp")
+	design_ids = list("ap9mm", "ap10mm", "ap45", "hp9mm", "hp10mm", "hp45", "ap556mmHITP", "hp556mmHITP","a556surp","a308_brak")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 7500)
 	// [/CELADON-EDIT]
 
@@ -1140,7 +1140,7 @@
 	display_name = "Basic Shuttle Research"
 	description = "Research the technology required to create and use basic shuttles."
 	prereq_ids = list("bluespace_travel", "adv_engi")
-	design_ids = list("engine_plasma", "engine_ion", "engine_heater", "engine_smes", "shuttle_helm", "rapid_shuttle_designator")
+	design_ids = list("engine_plasma", "engine_fire", "engine_ion", "engine_heater", "engine_fire_heater", "engine_smes", "shuttle_helm", "rapid_shuttle_designator")
 	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем РнД
 	// research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000) // CELADON-EDIT - ORIGINAL
 	// export_price = 5000 // CELADON-EDIT - ORIGINAL

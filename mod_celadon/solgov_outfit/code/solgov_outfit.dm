@@ -1,5 +1,88 @@
-// Ученые
+//										//
+//			SOLAR FEDERATION			//
+//										//
 
+/datum/outfit/job/solgov/proc/get_solfed_captain_access(mob/living/carbon/human/H)
+	H.faction |= list(FACTION_PLAYER_SOLGOV)
+	var/obj/item/storage/wallet/W = null
+	for (var/obj/item/O in H.contents)
+		if (istype(O, /obj/item/storage/wallet))
+			W = O
+			break
+	if (W)
+		var/obj/item/card/id/I = null
+		for (var/obj/item/O in W.contents)
+			if (istype(O, /obj/item/card/id))
+				I = O
+				break
+		if (I)
+			I.access = list(ACCESS_SOLGOV, ACCESS_CAPTAIN, ACCESS_ENGINE, ACCESS_MEDICAL, ACCESS_ARMORY, ACCESS_BRIG, ACCESS_SECURITY)
+			I.update_label()
+		W.combined_access = list()
+		for (var/obj/item/card/id/card in W.contents)
+			W.combined_access |= card.access
+
+/datum/outfit/job/solgov/proc/get_solfed_overseer_access(mob/living/carbon/human/H)
+	H.faction |= list(FACTION_PLAYER_SOLGOV)
+	var/obj/item/storage/wallet/W = null
+	for (var/obj/item/O in H.contents)
+		if (istype(O, /obj/item/storage/wallet))
+			W = O
+			break
+	if (W)
+		var/obj/item/card/id/I = null
+		for (var/obj/item/O in W.contents)
+			if (istype(O, /obj/item/card/id))
+				I = O
+				break
+		if (I)
+			I.access += list(ACCESS_ENGINE, ACCESS_MEDICAL, ACCESS_ARMORY, ACCESS_BRIG, ACCESS_SECURITY)
+			I.update_label()
+		W.combined_access = list()
+		for (var/obj/item/card/id/card in W.contents)
+			W.combined_access |= card.access
+
+/datum/outfit/job/solgov/proc/get_solfed_sonnensoldner_access(mob/living/carbon/human/H)
+	H.faction |= list(FACTION_PLAYER_SOLGOV)
+	var/obj/item/storage/wallet/W = null
+	for (var/obj/item/O in H.contents)
+		if (istype(O, /obj/item/storage/wallet))
+			W = O
+			break
+	if (W)
+		var/obj/item/card/id/I = null
+		for (var/obj/item/O in W.contents)
+			if (istype(O, /obj/item/card/id))
+				I = O
+				break
+		if (I)
+			I.access += list(ACCESS_ENGINE, ACCESS_MEDICAL, ACCESS_BRIG, ACCESS_SECURITY)
+			I.update_label()
+		W.combined_access = list()
+		for (var/obj/item/card/id/card in W.contents)
+			W.combined_access |= card.access
+
+/datum/outfit/job/solgov/proc/get_solfed_engineer_access(mob/living/carbon/human/H)
+	H.faction |= list(FACTION_PLAYER_SOLGOV)
+	var/obj/item/storage/wallet/W = null
+	for (var/obj/item/O in H.contents)
+		if (istype(O, /obj/item/storage/wallet))
+			W = O
+			break
+	if (W)
+		var/obj/item/card/id/I = null
+		for (var/obj/item/O in W.contents)
+			if (istype(O, /obj/item/card/id))
+				I = O
+				break
+		if (I)
+			I.access += list(ACCESS_ENGINE, ACCESS_MEDICAL, ACCESS_SECURITY)
+			I.update_label()
+		W.combined_access = list()
+		for (var/obj/item/card/id/card in W.contents)
+			W.combined_access |= card.access
+
+// Ученые
 /datum/outfit/job/solgov/scientist
 	name = "SolGov - Scientific Officer"
 	jobtype = /datum/job/scientist
@@ -36,3 +119,85 @@
 	head = /obj/item/clothing/head/solgov
 	glasses = /obj/item/clothing/glasses/sunglasses
 	suit = /obj/item/clothing/suit/jacket/leather
+
+//							///
+//		Elysium on solgov	///
+//							///
+
+//	Капитан	//
+/datum/outfit/job/solgov/captain/elysium_celadon
+	name = "SolGov - Elysium Musharif"
+
+	head = /obj/item/clothing/head/solfed/elysium/beret
+	uniform = /obj/item/clothing/under/solgov/elysium
+	suit = /obj/item/clothing/suit/armor/solfed/elysium/jacket
+	shoes = /obj/item/clothing/shoes/combat
+	ears = /obj/item/radio/headset/solgov/alt/captain
+	id = /obj/item/card/id/solgov
+	backpack = /obj/item/storage/backpack/messenger/com
+	gloves = null
+
+/datum/outfit/job/solgov/captain/elysium_celadon/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	get_solfed_captain_access(H)
+
+//	Хос	//
+/datum/outfit/job/solgov/overseer/elysium_celadon
+	name = "SolGov - Elysium Mulazim"
+
+	head = /obj/item/clothing/head/solfed/elysium/beret
+	uniform = /obj/item/clothing/under/solgov/elysium
+	suit = /obj/item/clothing/suit/armor/solfed/elysium/jacket
+	shoes = /obj/item/clothing/shoes/combat
+	ears = /obj/item/radio/headset/solgov/alt
+	id = /obj/item/card/id/solgov
+	neck = null
+
+/datum/outfit/job/solgov/overseer/elysium_celadon/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	get_solfed_overseer_access(H)
+
+//	Офицер	//
+/datum/outfit/job/solgov/sonnensoldner/elysium_celadon
+	name = "SolGov - Elysium Haris"
+
+	id = /obj/item/card/id/solgov/elysium
+	head = null
+	suit = null
+	gloves = null
+	shoes = /obj/item/clothing/shoes/combat
+	uniform = /obj/item/clothing/under/solfed/elysium
+
+/datum/outfit/job/solgov/sonnensoldner/elysium_celadon/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	get_solfed_sonnensoldner_access(H)
+
+//	медик	//
+/datum/outfit/job/solgov/doctor/elysium_celadon
+	name = "SolGov - Elysium Shafi"
+
+	id = /obj/item/card/id/solgov/elysium
+	head = null
+	suit = null
+	gloves = null
+	shoes = /obj/item/clothing/shoes/combat
+	uniform = /obj/item/clothing/under/solfed/elysium
+
+/datum/outfit/job/solgov/doctor/elysium_celadon/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	get_solfed_engineer_access(H)
+
+//	Инженер	//
+/datum/outfit/job/solgov/engineer/elysium_celadon
+	name = "SolGov - Elysium Khabeer Fanni"
+
+	id = /obj/item/card/id/solgov/elysium
+	head = null
+	suit = null
+	gloves = null
+	shoes = /obj/item/clothing/shoes/combat
+	uniform = /obj/item/clothing/under/solfed/elysium
+
+/datum/outfit/job/solgov/engineer/elysium_celadon/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	get_solfed_engineer_access(H)

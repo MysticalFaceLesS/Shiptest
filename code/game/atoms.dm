@@ -84,9 +84,6 @@
 
 	var/list/alternate_appearances
 
-	///Mobs that are currently do_after'ing this atom, to be cleared from on Destroy()
-	var/list/targeted_by
-
 	/// Last appearance of the atom for demo saving purposes
 	var/image/demo_last_appearance
 
@@ -310,11 +307,6 @@
 	LAZYCLEARLIST(overlays)
 	LAZYCLEARLIST(managed_overlays)
 
-	for(var/i in targeted_by)
-		var/mob/M = i
-		LAZYREMOVE(M.do_afters, src)
-
-	targeted_by = null
 	QDEL_NULL(light)
 
 	if(smoothing_flags & SMOOTH_QUEUED)
@@ -976,7 +968,7 @@
 	var/list/things = src_object.contents()
 	var/datum/progressbar/progress = new(user, things.len, src)
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	while (do_after(user, 10, TRUE, src, FALSE, CALLBACK(STR, TYPE_PROC_REF(/datum/component/storage, handle_mass_item_insertion), things, src_object, user, progress)))
+	while (do_after(user, 1 SECONDS, src, NONE, FALSE, CALLBACK(STR, TYPE_PROC_REF(/datum/component/storage, handle_mass_item_insertion), things, src_object, user, progress)))
 		stoplag(1)
 	progress.end_progress()
 	to_chat(user, "<span class='notice'>You dump as much of [src_object.parent]'s contents [STR.insert_preposition]to [src] as you can.</span>")
@@ -1682,7 +1674,11 @@
 			active_hud.screentip_text.maptext = ""
 		else
 			//We inline a MAPTEXT() here, because there's no good way to statically add to a string like this
-			active_hud.screentip_text.maptext = "<span class='maptext' style='text-align: center; font-size: 32px; color: [user.client.prefs.screentip_color]'>[name]</span>"
+			active_hud.screentip_text.maptext = "<span class='maptext' style='text-align: center; font-size: 32px; color: [user.client.prefs.screentip_color]'>[get_screentip_name(client)]</span>"
+
+/// Returns the atom name that should be used on screentip
+/atom/proc/get_screentip_name(client/hovering_client)
+	return name
 
 ///Called whenever a player is spawned on the same turf as this atom.
 /atom/proc/join_player_here(mob/M)
