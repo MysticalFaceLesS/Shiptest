@@ -1,16 +1,14 @@
-//GUNCASES//
+//GUNCLOSET//
 
-/obj/structure/guncase
+/obj/structure/guncloset
 	capacity = 6
-
-/obj/structure/guncase
 	armor = list("melee" = 20, "bullet" = 20, "laser" = 20, "energy" = 20, "bomb" = 20, "bio" = 0, "rad" = 0, "fire" = 70, "acid" = 60)
 
-/obj/structure/guncase/Destroy()
+/obj/structure/guncloset/Destroy()
 	dump_contents()
 	return ..()
 
-/obj/structure/guncase/dump_contents()
+/obj/structure/guncloset/dump_contents()
 	if(!isturf(loc))
 		return
 	var/atom/L = drop_location()
