@@ -104,6 +104,20 @@
 	if(HAS_TRAIT(user, TRAIT_SOOTHED_THROAT))
 		return FALSE
 
+/datum/emote/living/cough/get_sound(mob/living/user)
+	if(ishuman(user))
+		if(user.gender == FEMALE)
+			return pick('mod_celadon/sound/voice/cough_female_1.ogg', 'mod_celadon/sound/voice/cough_female_2.ogg')
+		return pick('mod_celadon/sound/voice/cough_male_1.ogg', 'mod_celadon/sound/voice/cough_male_2.ogg', 'mod_celadon/sound/voice/cough_male_3.ogg')
+	return ..()
+
+/datum/emote/living/carbon/human/cry/get_sound(mob/living/user)
+	if(ishuman(user))
+		if(user.gender == FEMALE)
+			return pick('mod_celadon/sound/voice/cry_female_1.ogg', 'mod_celadon/sound/voice/cry_female_2.ogg', 'mod_celadon/sound/voice/cry_female_3.ogg')
+		return pick('mod_celadon/sound/voice/cry_male_1.ogg', 'mod_celadon/sound/voice/cry_male_1.ogg')
+	return ..()
+
 /datum/emote/living/dance
 	key = "dance"
 	key_third_person = "dances"
@@ -251,6 +265,13 @@
 	message_mime = "тихо хихикает!"
 	emote_type = EMOTE_AUDIBLE
 
+/datum/emote/living/giggle/get_sound(mob/living/user)
+	if(ishuman(user))
+		if(user.gender == FEMALE)
+			return pick('mod_celadon/sound/voice/giggle_female_1.ogg', 'mod_celadon/sound/voice/giggle_female_2.ogg', 'mod_celadon/sound/voice/giggle_female_3.ogg')
+		return pick('mod_celadon/sound/voice/giggle_male_1.ogg', 'mod_celadon/sound/voice/giggle_male_2.ogg')
+	return ..()
+
 /datum/emote/living/glare
 	key = "glare"
 	key_third_person = "glares"
@@ -270,6 +291,13 @@
 	message = "стонет!"
 	message_mime = "издаёт тихий стон!"
 	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/groan/get_sound(mob/living/user)
+	if(ishuman(user))
+		if(user.gender == FEMALE)
+			return pick('mod_celadon/sound/voice/moan_female_1.ogg', 'mod_celadon/sound/voice/moan_female_2.ogg', 'mod_celadon/sound/voice/moan_female_3.ogg')
+		return pick('mod_celadon/sound/voice/moan_male_1.ogg', 'mod_celadon/sound/voice/moan_male_2.ogg', 'mod_celadon/sound/voice/moan_male_3.ogg')
+	return ..()
 
 /datum/emote/living/growl
 	key = "growl"
@@ -440,6 +468,13 @@
 	message = "вздыхает."
 	emote_type = EMOTE_AUDIBLE
 
+/datum/emote/living/sigh/get_sound(mob/living/user)
+	if(ishuman(user))
+		if(user.gender == FEMALE)
+			return pick('mod_celadon/sound/voice/sigh_female.ogg')
+		return pick('mod_celadon/sound/voice/sigh_male.ogg', 'mod_celadon/sound/voice/sigh_male.ogg')
+	return ..()
+
 /datum/emote/living/sit
 	key = "sit"
 	key_third_person = "sits"
@@ -464,6 +499,13 @@
 	message = "чихает."
 	emote_type = EMOTE_AUDIBLE
 
+/datum/emote/living/sneeze/get_sound(mob/living/user)
+	if(ishuman(user))
+		if(user.gender == FEMALE)
+			return pick('mod_celadon/sound/voice/sneeze_female.ogg')
+		return pick('mod_celadon/sound/voice/sneeze.ogg')
+	return ..()
+
 /datum/emote/living/smug
 	key = "smug"
 	key_third_person = "smugs"
@@ -475,6 +517,13 @@
 	key_third_person = "sniffs"
 	message = "нюхает."
 	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/sniff/get_sound(mob/living/user)
+	if(ishuman(user))
+		if(user.gender == FEMALE)
+			return pick('mod_celadon/sound/voice/sniff_female.ogg')
+		return pick('mod_celadon/sound/voice/sniff_male.ogg')
+	return ..()
 
 #define SNORE_DURATION 5.2 SECONDS
 
@@ -505,6 +554,11 @@
 	if(!QDELETED(living_user))
 		REMOVE_TRAIT(living_user, TRAIT_SNORE, "[type]")
 		living_user.update_body()
+
+/datum/emote/living/snore/get_sound(mob/living/user)
+	if(ishuman(user))
+		return pick('mod_celadon/sound/voice/snore_1.ogg', 'mod_celadon/sound/voice/snore_2.ogg', 'mod_celadon/sound/voice/snore_3.ogg', 'mod_celadon/sound/voice/snore_4.ogg', 'mod_celadon/sound/voice/snore_5.ogg', 'mod_celadon/sound/voice/snore_6.ogg', 'mod_celadon/sound/voice/snore_7.ogg')
+	return ..()
 
 #undef SNORE_DURATION
 
@@ -593,6 +647,13 @@
 	key_third_person = "yawns"
 	message = "зевает."
 	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/yawn/get_sound(mob/living/user)
+	if(ishuman(user))
+		if(user.gender == FEMALE)
+			return pick('mod_celadon/sound/voice/yawn_female_1.ogg', 'mod_celadon/sound/voice/yawn_female_2.ogg', 'mod_celadon/sound/voice/yawn_female_3.ogg')
+		return pick('mod_celadon/sound/voice/yawn_male_1.ogg', 'mod_celadon/sound/voice/yawn_male_2.ogg')
+	return ..()
 
 /datum/emote/living/gurgle
 	key = "gurgle"
@@ -701,3 +762,15 @@
 	key_third_person = "clacks"
 	message = "щёлкает челюстью."
 	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/hoot
+	key = "hoot"
+	key_third_person = "hoots"
+	message = "свистит!"
+	message_mime = "издаёт тихий свист!"
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/hoot/get_sound(mob/living/user)
+	if(ishuman(user))
+		return pick('mod_celadon/sound/voice/whistle.ogg')
+	return ..()

@@ -166,7 +166,7 @@
 		if(L.status)
 			to_chat(user, "<span class='warning'>This bulb is too damaged to use as a replacement!</span>")
 			return
-		if(do_after(user, 50, 1, src))
+		if(do_after(user, 50, src))
 			qdel(I)
 			helmet = new helmettype(src)
 			to_chat(user, "<span class='notice'>You have successfully repaired [src]'s helmet.</span>")
@@ -455,27 +455,6 @@
 	// [CELADON-ADD] - TAJARA
 	supports_variations = DIGITIGRADE_VARIATION | VOX_VARIATION
 	// [/CELADON-ADD]
-
-//Hardliner Syndie suit
-/obj/item/clothing/head/helmet/space/hardsuit/syndi/hl
-	name = "white-red hardsuit helmet"
-	desc = "An advanced dual-mode helmet derived from ICW-era advanced special operations helmets, its red partly replaced by white. It is in EVA mode. Manufactured by Second Battlegroup."
-	alt_desc = "An advanced dual-mode helmet derived from ICW-era advanced special operations helmets, its red partly replaced by white. It is in combat mode. Manufactured by Second Battlegroup."
-	icon_state = "hardsuit1-hl"
-	item_state = "hardsuit1-hl"
-	hardsuit_type = "hl"
-
-/obj/item/clothing/suit/space/hardsuit/syndi/hl
-	name = "white-red hardsuit"
-	desc = "An advanced dual-mode hardsuit derived from ICW-era advanced special operations hardsuits, its red partly replaced by white. It is in EVA mode. Manufactured by Second Battlegroup."
-	alt_desc = "An advanced dual-mode hardsuit derived from ICW-era advanced special operations hardsuits, its red partly replaced by white. It is in combat mode. Manufactured by the Second Battlegroup."
-	icon_state = "hardsuit1-hl"
-	item_state = "hardsuit1-hl"
-	hardsuit_type = "hl"
-	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/syndi/hl
-	lightweight = 1
-	jetpack = null
-
 
 //Elite Syndie suit
 /obj/item/clothing/head/helmet/space/hardsuit/syndi/elite
@@ -1107,12 +1086,6 @@
 	supports_variations = VOX_VARIATION | TAJARA_VARIATION
 	// [/CELADON-EDIT]
 
-/obj/item/clothing/head/helmet/space/hardsuit/security/independent/frontier
-	name = "\improper Frontiersmen hardsuit helmet"
-	desc = "An old hardsuit helmet based on a even older hardsuit helmet. Used prolifically by the Frontiersmen pirate fleet."
-	icon_state = "hardsuit0-frontier"
-	hardsuit_type = "frontier"
-
 /obj/item/clothing/suit/space/hardsuit/security/independent
 	icon_state = "hardsuit-independent-sec"
 	name = "security hardsuit"
@@ -1126,13 +1099,6 @@
 	// supports_variations = VOX_VARIATION // CELADON-EDIT - ORIGINAL
 	supports_variations = VOX_VARIATION | TAJARA_VARIATION
 	// [/CELADON-EDIT]
-
-/obj/item/clothing/suit/space/hardsuit/security/independent/frontier
-	name = "\improper Frontiersmen hardsuit"
-	desc = "An old hardsuit based on a even older hardsuit. Used prolifically by the Frontiersmen pirate fleet."
-	icon_state = "hardsuit_frontier"
-	hardsuit_type = "hardsuit_frontier"
-	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/security/independent/frontier
 
 	//Mining
 /obj/item/clothing/head/helmet/space/hardsuit/mining/independent

@@ -1,14 +1,19 @@
 /obj/item/gun/energy
-	icon_state = "energy"
 	name = "energy gun"
 	desc = "A basic energy-based gun."
 	icon = 'icons/obj/guns/energy.dmi'
+	icon_state = "laser"
 
 	muzzleflash_iconstate = "muzzle_flash_laser"
 	muzzle_flash_color = COLOR_SOFT_RED
 
 	has_safety = TRUE
 	safety = TRUE
+
+	gun_firemodes = list(FIREMODE_SEMIAUTO)
+	default_firemode = FIREMODE_SEMIAUTO
+
+	fire_select_icon_state_prefix = "laser_"
 
 	var/obj/item/stock_parts/cell/gun/cell //What type of power cell this uses
 	var/cell_type = /obj/item/stock_parts/cell/gun
@@ -153,7 +158,7 @@
 	to_chat(user, span_notice("You pull the cell out of \the [src]."))
 	update_appearance()
 	if(tac_load && tac_reloads)
-		if(do_after(user, tactical_reload_delay, TRUE, src))
+		if(do_after(user, tactical_reload_delay, src, hidden = TRUE))
 			if(insert_cell(user, tac_load))
 				to_chat(user, span_notice("You perform a tactical reload on \the [src]."))
 			else
@@ -215,11 +220,6 @@
 /obj/item/gun/energy/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
 	if(!chambered && can_shoot())
 		process_chamber()	// If the gun was drained and then recharged, load a new shot.
-	return ..()
-
-/obj/item/gun/energy/process_burst(mob/living/user, atom/target, message = TRUE, params = null, zone_override="", sprd = 0, randomized_gun_spread = 0, randomized_bonus_spread = 0, rand_spr = 0, iteration = 0)
-	if(!chambered && can_shoot())
-		process_chamber()	// Ditto.
 	return ..()
 
 /obj/item/gun/energy/proc/select_fire(mob/living/user)

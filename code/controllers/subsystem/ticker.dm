@@ -282,7 +282,10 @@ SUBSYSTEM_DEF(ticker)
 
 	to_chat(world, "<span class='notice'><B>Welcome to [station_name()], enjoy your stay!</B></span>")
 	SSredbot.send_discord_message("ooc", "**A new round has begun.**")
-	SEND_SOUND(world, sound('sound/roundstart/addiguana.ogg'))
+//[CELADON-EDIT]- MUSIC_CELADON
+//	SEND_SOUND(world, sound('sound/roundstart/addiguana.ogg'))//CELADON-EDIT-ORIGINAL
+	SEND_SOUND(world, sound('mod_celadon/music_celadon/sound/sztart.ogg'))
+//[/CELADON-EDIT]
 
 	current_state = GAME_STATE_PLAYING
 	Master.SetRunLevel(RUNLEVEL_GAME)
@@ -576,7 +579,10 @@ SUBSYSTEM_DEF(ticker)
 		'sound/roundend/repair.ogg',
 		'sound/roundend/boowomp.ogg',
 		'sound/roundend/shiptestingthursday.ogg',
-		'sound/roundend/gayrights.ogg'\
+//[CELADON-EDIT]- MUSIC_CELADON
+//		'sound/roundend/gayrights.ogg'\//CELADON-EDIT-ORIGINAL
+		'mod_celadon/music_celadon/sound/voiko_law.ogg'\
+//[/CELADON-EDIT]
 		)
 	///The reference to the end of round sound that we have chosen.
 	var/sound/end_of_round_sound_ref = sound(round_end_sound)

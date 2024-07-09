@@ -17,6 +17,9 @@
 /obj/item/gun/energy/ionrifle/emp_act(severity)
 	return
 
+/obj/item/gun/energy/ionrifle/empty_cell
+	dead_cell = TRUE
+
 /obj/item/gun/energy/ionrifle/carbine
 	name = "ion carbine"
 	desc = "The MK.II Prototype Ion Projector is a lightweight carbine version of the larger ion rifle, built to be ergonomic and efficient."
@@ -98,13 +101,6 @@
 	can_flashlight = FALSE
 	max_mod_capacity = 0
 	manufacturer = MANUFACTURER_SCARBOROUGH
-
-/obj/item/gun/energy/kinetic_accelerator/crossbow/halloween
-	name = "candy corn crossbow"
-	desc = "A weapon favored by Syndicate trick-or-treaters."
-	icon_state = "crossbow_halloween"
-	item_state = "crossbow"
-	ammo_type = list(/obj/item/ammo_casing/energy/bolt/halloween)
 
 /obj/item/gun/energy/kinetic_accelerator/crossbow/large
 	name = "energy crossbow"
@@ -277,10 +273,14 @@
 	can_charge = FALSE
 	use_cyborg_cell = TRUE
 
+	fire_delay = 0.3 SECONDS
+
+	gun_firemodes = list(FIREMODE_FULLAUTO)
+	default_firemode = FIREMODE_FULLAUTO
+
 /obj/item/gun/energy/printer/ComponentInitialize()
 	. = ..()
 	AddElement(/datum/element/update_icon_blocker)
-	AddComponent(/datum/component/automatic_fire, 0.3 SECONDS)
 
 /obj/item/gun/energy/printer/emp_act()
 	return
@@ -391,9 +391,9 @@
 	shaded_charge = TRUE
 	weapon_weight = WEAPON_HEAVY
 
-/obj/item/gun/energy/tesla_cannon/ComponentInitialize()
-	. = ..()
-	AddComponent(/datum/component/automatic_fire, 0.1 SECONDS)
+	fire_delay = 0.1 SECONDS
+	gun_firemodes = list(FIREMODE_SEMIAUTO, FIREMODE_FULLAUTO)
+	default_firemode = FIREMODE_SEMIAUTO
 
 /obj/item/gun/energy/buster
 	name = "replica buster cannon"

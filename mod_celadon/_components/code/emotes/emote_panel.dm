@@ -42,10 +42,10 @@ var/timer = 20
 	set category = "Эмоции"
 	emote_with_delay("clap", timer)
 
-// /mob/living/carbon/human/verb/emote_crack()
-// 	set name = "> Хрустнуть костяшками"
-// 	set category = "Эмоции"
-// 	emote_with_delay("crack", timer)
+/mob/living/carbon/human/verb/emote_crack()
+	set name = "> Хрустнуть костяшками"
+	set category = "Эмоции"
+	emote_with_delay("crack", timer)
 
 /mob/living/carbon/human/verb/emote_cross()
 	set name = "~ Скрестить руки"
@@ -68,7 +68,7 @@ var/timer = 20
 	emote_with_delay("collapse", timer)
 
 /mob/living/carbon/human/verb/cough()
-	set name = "~ Кашлять"
+	set name = "> Кашлять"
 	set category = "Эмоции"
 	emote_with_delay("cough", timer)
 
@@ -123,7 +123,7 @@ var/timer = 20
 	emote_with_delay("warcray", timer)
 
 /mob/living/carbon/human/verb/emote_giggle()
-	set name = "~ Хихикать"
+	set name = "> Хихикать"
 	set category = "Эмоции"
 	emote_with_delay("giggle", timer)
 
@@ -133,7 +133,7 @@ var/timer = 20
 	emote_with_delay("grin", timer)
 
 /mob/living/carbon/human/verb/emote_groan()
-	set name = "~ Стонать"
+	set name = "> Стонать"
 	set category = "Эмоции"
 	emote_with_delay("groan", timer)
 
@@ -203,7 +203,7 @@ var/timer = 20
 	emote_with_delay("slap", timer)
 
 /mob/living/carbon/human/verb/emote_sigh()
-	set name = "~ Вздыхать"
+	set name = "> Вздыхать"
 	set category = "Эмоции"
 	emote_with_delay("sigh", timer)
 
@@ -213,7 +213,7 @@ var/timer = 20
 	emote_with_delay("smile", timer)
 
 /mob/living/carbon/human/verb/emote_sneeze()
-	set name = "~ Чихнуть"
+	set name = "> Чихнуть"
 	set category = "Эмоции"
 	emote_with_delay("sneeze", timer)
 
@@ -223,12 +223,12 @@ var/timer = 20
 	emote_with_delay("smug", timer)
 
 /mob/living/carbon/human/verb/emote_sniff()
-	set name = "~ Нюхать"
+	set name = "> Нюхать"
 	set category = "Эмоции"
 	emote_with_delay("sniff", timer)
 
 /mob/living/carbon/human/verb/emote_snore()
-	set name = "~ Храпеть"
+	set name = "> Храпеть"
 	set category = "Эмоции"
 	emote_with_delay("snore", timer)
 
@@ -293,7 +293,7 @@ var/timer = 20
 	emote_with_delay("wsmile", timer)
 
 /mob/living/carbon/human/verb/emote_yawn()
-	set name = "~ Зевать"
+	set name = "> Зевать"
 	set category = "Эмоции"
 	emote_with_delay("yawn", timer)
 
@@ -308,7 +308,7 @@ var/timer = 20
 //	emote_with_delay("clack", timer)
 
 /mob/living/carbon/human/verb/cry()
-	set name = "~ Плакать"
+	set name = "> Плакать"
 	set category = "Эмоции"
 	emote_with_delay("cry", timer)
 
@@ -366,6 +366,11 @@ var/timer = 20
 	set name = "~ Стыдиться"
 	set category = "Эмоции"
 	emote_with_delay("shame", timer)
+
+/mob/living/carbon/human/verb/emote_hoot()
+	set name = "> Свистеть"
+	set category = "Эмоции"
+	emote_with_delay("hoot", timer)
 
 /mob/living/carbon/human/verb/emote_shrug()
 	set name = "~ Пожать плечами"

@@ -122,8 +122,8 @@
 	pair_item = /datum/blackmarket_item/weapon/e40_mag
 
 	price_min = 7000
-	price_max = 13000
-	stock = 1
+	price_max = 15000
+	stock_max = 2
 	availability_prob = 20
 
 /datum/blackmarket_item/weapon/e40_mag
@@ -134,7 +134,7 @@
 	price_min = 750
 	price_max = 1250
 	stock_min = 2
-	stock_max = 4
+	stock_max = 6
 	availability_prob = 0
 
 /datum/blackmarket_item/weapon/e50
@@ -150,7 +150,7 @@
 /datum/blackmarket_item/weapon/saber_smg
 	name = "Saber 9mm SMG"
 	desc = "A prototype 9mm submachine gun. Most of these never got past the RND phase and into distribution. But we happen know a guy."
-	item = /obj/item/gun/ballistic/automatic/smg/proto
+	item = /obj/item/gun/ballistic/automatic/smg/skm_carbine/inteq/proto
 	pair_item = /datum/blackmarket_item/weapon/saber_mag
 
 	price_min = 2500
