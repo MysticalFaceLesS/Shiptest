@@ -9,9 +9,8 @@
 -->
 
 <!-- Название мода. Не важно на русском или на английском. -->
-## НАЗВАНИЕ_МОДА
-
-ID мода: CELADON_DONATERS
+## MAP_EXPANSION
+ID мода: MAP_EXPANSION
 <!--
   Название модпака прописными буквами, СОЕДИНЁННЫМИ_ПОДЧЁРКИВАНИЕМ,
   которое ты будешь использовать для обозначения файлов.
@@ -20,7 +19,9 @@ ID мода: CELADON_DONATERS
 
 ### Описание мода
 
-Донатная система Celadon
+Этот мод изменяет систему спавна док портов увеличивая их общее количество до 4-х, увеличивая расстояние между ними
+Увеличивает размеры планет до 191x191 (~50%) от старых 127x127
+Убирает лишнюю процедуру, которая создаёт дополнительные док порты в количестве двух штук если отсутствуют руины
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
   А также любая полезная информация.
@@ -28,7 +29,10 @@ ID мода: CELADON_DONATERS
 
 ### Изменения *кор кода*
 
-- Удалены параметры в файле - code/modules/donator/_donator.dm
+- 
+`code\controllers\subsystem\overmap.dm` : 
+`/datum/controller/subsystem/overmap/proc/spawn_dynamic_encounter(datum/overmap/dynamic/dynamic_datum, ruin_type)` -> `var/list/ruin_turfs`
+`/datum/controller/subsystem/overmap/proc/spawn_dynamic_encounter(datum/overmap/dynamic/dynamic_datum, ruin_type)` -> `var/turf/secondary_docking_turf`
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -53,14 +57,15 @@ ID мода: CELADON_DONATERS
 
 ### Дефайны
 
-- Отсутствуют
+- `code\__DEFINES\maps.dm`:
+`QUADRANT_MAP_SIZE`
 <!--
   Если требовалось добавить какие-либо дефайны, укажи файлы,
   в которые ты их добавил, а также перечисли имена.
   И то же самое, если ты используешь дефайны, определённые другим модом.
 
   Не используешь - напиши "Отсутствуют"
-  Примеры: `code/__defines/~mods/donaters.dm`: `DONATERS_SPEED_MULTIPLIER`, `DONATERS_SPEED_BASE`
+  Примеры: `code/__defines/~mods/map_expansion.dm`: `MAP_EXPANSION_SPEED_MULTIPLIER`, `MAP_EXPANSION_SPEED_BASE`
 -->
 
 ### Используемые файлы, не содержащиеся в модпаке
@@ -76,7 +81,7 @@ ID мода: CELADON_DONATERS
 
 ### Авторы
 
-MrCat15352
+molniz
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.
