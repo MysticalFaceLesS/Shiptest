@@ -8,3 +8,9 @@
 	desc = "Contains a disk with designs of basic cybernetic organs."
 	contains = list(/obj/item/disk/design_disk/cybernetic_organs_basic,)
 	cost = 2000
+
+/obj/item/disk/design_disk/t2_parts
+	name = "Advanced machine parts"
+	desc = "Contains a disk with designs of advanced machine parts."
+	contains = list(/obj/item/disk/design_disk/cybernetic_organs_basic,)
+	cost = 4000
