@@ -3,6 +3,7 @@
 	desc = "A simple assault rifle magazine designed to chamber 7.62x51mm."
 	icon = 'mod_celadon/weapons/icons/ammo/ammo.dmi'
 	icon_state = "morita1_mag"
+	base_icon_state = "morita1_mag"
 	caliber = ".308"
 	ammo_type = /obj/item/ammo_casing/a308
 	max_ammo = 25
@@ -16,6 +17,7 @@
 	desc = "A simple assault rifle magazine designed to chamber 7.62x51mm."
 	icon = 'mod_celadon/weapons/icons/ammo/ammo.dmi'
 	icon_state = "morita1_small_mag"
+	base_icon_state = "morita1_small_mag"
 	ammo_type = /obj/item/ammo_casing/a308
 	max_ammo = 10
 
@@ -28,6 +30,7 @@
 	desc = "A simple assault rifle magazine designed to chamber 7.62x51mm."
 	icon = 'mod_celadon/weapons/icons/ammo/ammo.dmi'
 	icon_state = "morita1_drum_mag"
+	base_icon_state = "morita1_drum_mag"
 	ammo_type = /obj/item/ammo_casing/a308
 	max_ammo = 50
 
@@ -40,6 +43,7 @@
 	desc = " Polymer 20-round assault rifle magazine 5.56x45mm."
 	icon = 'mod_celadon/weapons/icons/ammo/ammo.dmi'
 	icon_state = "g36sh_mag"
+	base_icon_state = "g36sh_mag"
 	ammo_type = /obj/item/ammo_casing/a556_45
 	max_ammo = 20
 
@@ -52,6 +56,7 @@
 	desc = "Polymer standart assault rifle magazine 5.56x45mm."
 	icon = 'mod_celadon/weapons/icons/ammo/ammo.dmi'
 	icon_state = "g36_mag"
+	base_icon_state = "g36_mag"
 	ammo_type = /obj/item/ammo_casing/a556_45
 	max_ammo = 30
 
@@ -63,8 +68,8 @@
 	name = "\improper G36 drum magazine"
 	desc = "Polymer high-capacyti assault rifle drum 5.56x45mm."
 	icon = 'mod_celadon/weapons/icons/ammo/ammo.dmi'
-	item_state = "g36drum_mag"
 	icon_state = "g36drum_mag"
+	base_icon_state = "g36drum_mag"
 	ammo_type = /obj/item/ammo_casing/a556_45
 	max_ammo = 75
 

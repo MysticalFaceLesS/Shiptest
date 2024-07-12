@@ -5,7 +5,7 @@
 	name = "Оружейный яшик G36-SH"
 	desc = "Содержит автоматическую винтовку G36-SH и запасную обойму. "
 	cost = 5000
-	contains = list(/obj/item/gun/ballistic/automatic/assault/g36sh,
+	contains = list(/obj/item/gun/ballistic/automatic/assault/p16/g36sh,
 					/obj/item/ammo_box/magazine/p16/g36sh)
 	crate_name = "auto rifle crate"
 
@@ -13,7 +13,7 @@
 	name = "Оружейный яшик G36"
 	desc = "Содержит автоматическую винтовку G36 и запасную обойму. "
 	cost = 5000
-	contains = list(/obj/item/gun/ballistic/automatic/assault/g36,
+	contains = list(/obj/item/gun/ballistic/automatic/assault/p16/g36,
 					/obj/item/ammo_box/magazine/p16/g36)
 	crate_name = "auto rifle crate"
 
