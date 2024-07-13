@@ -789,6 +789,8 @@
 		walk(hit_mob, 0) //stops them mid pathing even if they're stunimmune
 		hit_mob.apply_status_effect(/datum/status_effect/ice_block_talisman, 5 SECONDS)
 
+// [CELADON-REMOVE] - CRUSHER_TROPHEY - Удаляем для возвращения легенды
+/*
 /datum/status_effect/ice_block_talisman
 	id = "ice_block_talisman"
 	duration = 40
@@ -821,6 +823,9 @@
 		to_chat(owner, "<span class='notice'>The cube melts!</span>")
 	owner.cut_overlay(cube)
 	UnregisterSignal(owner, COMSIG_MOVABLE_PRE_MOVE)
+*/
+// [/CELADON-REMOVE]
+
 
 //earthquake gauntlets
 /obj/item/clothing/gloves/gauntlets

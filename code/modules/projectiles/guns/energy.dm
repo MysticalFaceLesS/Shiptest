@@ -170,17 +170,19 @@
 	user.put_in_hands(old_cell)
 	update_appearance()
 
-/obj/item/gun/energy/get_gun_attachments()
-	if(cell && !internal_cell)
-		attachment_options += list("Cell" = image(icon = cell.icon, icon_state = cell.icon_state))
-	..()
+// [CELADON-REMOVE] - CELADON_BALANCE - Ненужная часть кода создающая рантаймы и добавляющая ненужную функцию
+// /obj/item/gun/energy/get_gun_attachments()
+// 	if(cell && !internal_cell)
+// 		attachment_options += list("Cell" = image(icon = cell.icon, icon_state = cell.icon_state))
+// 	..()
 
-/obj/item/gun/energy/remove_gun_attachments(mob/living/user, obj/item/I, picked_option)
-	if(picked_option == "Cell")
-		if(I.use_tool(src, user, unscrewing_time, volume=100))
-			eject_cell(user, I)
-			return TRUE
-	..()
+// /obj/item/gun/energy/remove_gun_attachments(mob/living/user, obj/item/I, picked_option)
+// 	if(picked_option == "Cell")
+// 		if(I.use_tool(src, user, unscrewing_time, volume=100))
+// 			eject_cell(user, I)
+// 			return TRUE
+// 	..()
+// [/CELADON-REMOVE]
 
 /obj/item/gun/energy/can_shoot(visuals)
 	if(safety && !visuals)
@@ -331,7 +333,7 @@
 	. = ..()
 	var/obj/item/ammo_casing/energy/shot = ammo_type[select]
 	if(ammo_type.len > 1)
-		. += "You can switch firemodes by pressing the <b>unqiue action</b> key. By default, this is <b>space</b>"
+		. += "You can switch firemodes by pressing the <b>unique action</b> key. By default, this is <b>space</b>"
 	if(cell)
 		. += "\The [name]'s cell has [cell.percent()]% charge remaining."
 		. += "\The [name] has [round(cell.charge/shot.e_cost)] shots remaining on <b>[shot.select_name]</b> mode."

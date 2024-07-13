@@ -504,7 +504,9 @@ Difficulty: Hard
 	health = 1
 	maxHealth = 1
 	alpha = 127.5
-	mob_trophy = null
+	// [CELADON-REMOVE] - CRUSHER_TROPHEY - Выпилено и заменено в модуле
+	// mob_trophy = null
+	// [/CELADON-REMOVE]
 	loot = null
 	achievement_type = null
 	crusher_achievement_type = null

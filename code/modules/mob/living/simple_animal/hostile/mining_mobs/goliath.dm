@@ -253,7 +253,9 @@
 	pre_attack_icon = "ancient_goliath_preattack"
 	throw_message = "does nothing to the rocky hide of the"
 	guaranteed_butcher_results = list()
-	trophy_drop_mod = 75
+	// [CELADON-REMOVE] - CRUSHER_TROPHEY - Выпилено ради легенды
+	// trophy_drop_mod = 75
+	// [/CELADON-REMOVE]
 	wander = FALSE
 	bonus_tame_chance = 10
 	var/list/cached_tentacle_turfs

@@ -24,6 +24,9 @@
 	set_gun_light(new /obj/item/flashlight/seclite(src))
 	return ..()
 
+/obj/item/gun/ballistic/automatic/pistol/usp45/no_mag
+	spawnwithmagazine = FALSE
+
 /obj/item/gun/ballistic/automatic/pistol/glock
 	name = "\improper Glock 17"
 	desc = "Glock 17"
@@ -40,3 +43,6 @@
 	can_flashlight = TRUE
 	flight_x_offset = 18
 	flight_y_offset = 12
+
+/obj/item/gun/ballistic/automatic/pistol/glock/no_mag
+	spawnwithmagazine = FALSE

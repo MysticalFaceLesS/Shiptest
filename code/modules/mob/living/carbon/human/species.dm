@@ -1087,6 +1087,16 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 							accessory_overlay.color = "#[(skintonenose2hex(H.skin_tone_nose))]"
 						if(SKINTAJARACOLORS)
 							accessory_overlay.color = "#[(skintonetajara2hex(H.skin_tone_tajara))]"
+						if(EARSTAJARACOLORS)
+							accessory_overlay.color = "#[H.dna.features["tajara_ears_markings_color"]]"
+						if(HEADTAJARACOLORS)
+							accessory_overlay.color = "#[H.dna.features["tajara_head_markings_color"]]"
+						if(NOSETAJARACOLORS)
+							accessory_overlay.color = "#[H.dna.features["tajara_nose_markings_color"]]"
+						if(CHESTTAJARACOLORS)
+							accessory_overlay.color = "#[H.dna.features["tajara_chest_markings_color"]]"
+						if(BODYTAJARACOLORS)
+							accessory_overlay.color = "#[H.dna.features["tajara_body_markings_color"]]"
 						// [/CELADON-ADD]
 
 

@@ -1,3 +1,5 @@
+// [CELADON-REMOVE] - CRUSHER_TROPHEY - Вынужденное зло ради возраждения легенды
+/*
 //trophies
 /obj/item/mob_trophy
 	name = "tail spike"
@@ -182,3 +184,5 @@
 	icon_state = "armor_paw"
 	icon ='icons/obj/lavaland/elite_trophies.dmi'
 */
+*/
+// [/CELADON-REMOVE]

@@ -74,6 +74,10 @@
 		new /obj/item/assembly/signaler/anomaly/bluespace(loc)
 	if(prob(5))
 		new /obj/item/gem/fdiamond(loc)
+	// [CELADON-ADD] - CRUSHER_TROPHEY
+	if(prob(10))
+		new /obj/item/crusher_trophy/ice_wing(loc)
+	// [/CELADON-ADD]
 	return ..()
 
 /mob/living/simple_animal/hostile/asteroid/old_demon
@@ -120,7 +124,9 @@
 	footstep_type = FOOTSTEP_MOB_CLAW
 	/// Distance the demon will teleport from the target
 	var/teleport_distance = 3
-	trophy_drop_mod = 75
+	// [CELADON-REMOVE] - CRUSHER_TROPHEY - Выпилено ради легенды
+	// trophy_drop_mod = 75
+	// [/CELADON-REMOVE]
 
 /obj/projectile/temp/basilisk/ice
 	name = "ice blast"
@@ -155,6 +161,10 @@
 		new /obj/item/assembly/signaler/anomaly/bluespace(loc)
 	if(prob(20))
 		new /obj/item/gem/fdiamond(loc)
+	// [CELADON-ADD] - CRUSHER_TROPHEY
+	if(prob(50))
+		new /obj/item/crusher_trophy/ice_crystal(loc)
+	// [/CELADON-ADD]
 	return ..()
 
 /mob/living/simple_animal/hostile/asteroid/ice_demon/random/Initialize()

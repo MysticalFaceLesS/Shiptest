@@ -70,13 +70,23 @@
 
 /mob/living/simple_animal/hostile/asteroid/death(gibbed)
 	SSblackbox.record_feedback("tally", "mobs_killed_mining", 1, type)
-	if(prob(trophy_drop_mod)) //on average, you'll need to kill 4 creatures before getting the item
-		spawn_mob_trophy()
+	// [CELADON-EDIT] - CRUSHER_TROPHEY
+	// if(prob(trophy_drop_mod)) //on average, you'll need to kill 4 creatures before getting the item
+	// 	spawn_mob_trophy()		// CELADON-EDIT - ORIGINAL
+	var/datum/status_effect/crusher_damage/C = has_status_effect(STATUS_EFFECT_CRUSHERDAMAGETRACKING)
+	if(C && crusher_loot && prob((C.total_damage/maxHealth) * crusher_drop_mod)) //on average, you'll need to kill 4 creatures before getting the item
+		spawn_crusher_loot()
+	// [/CELADON-EDIT]
 	..(gibbed)
 
-/mob/living/simple_animal/hostile/asteroid/proc/spawn_mob_trophy()
-	if(mob_trophy)
-		butcher_results[mob_trophy] = 1
+// [CELADON-EDIT] - CRUSHER_TROPHEY
+// /mob/living/simple_animal/hostile/asteroid/proc/spawn_mob_trophy()
+// 	if(mob_trophy)
+// 		butcher_results[mob_trophy] = 1		// CELADON-EDIT - ORIGINAL
+/mob/living/simple_animal/hostile/asteroid/proc/spawn_crusher_loot()
+	if(crusher_loot)
+		butcher_results[crusher_loot] = 1
+// [/CELADON-EDIT]
 
 /mob/living/simple_animal/hostile/asteroid/handle_temperature_damage()
 	if(bodytemperature < minbodytemp)

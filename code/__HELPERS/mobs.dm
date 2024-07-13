@@ -135,8 +135,20 @@
 		"kepori_feathers" = pick(GLOB.kepori_feathers_list),
 		"kepori_tail_feathers" = pick(GLOB.kepori_tail_feathers_list),
 		"legs" = "Normal Legs",
-		"mcolor" = pick("FFFFFF","7F7F7F", "7FFF7F", "7F7FFF", "FF7F7F", "7FFFFF", "FF7FFF", "FFFF7F"),
-		"mcolor2" = pick("FFFFFF","7F7F7F", "7FFF7F", "7F7FFF", "FF7F7F", "7FFFFF", "FF7FFF", "FFFF7F"),
+			// [CELADON-EDIT] - TAJARA - токс цвета ремув
+		// "mcolor" = pick("FFFFFF","7F7F7F", "7FFF7F", "7F7FFF", "FF7F7F", "7FFFFF", "FF7FFF", "FFFF7F"),
+		// "mcolor2" = pick("FFFFFF","7F7F7F", "7FFF7F", "7F7FFF", "FF7F7F", "7FFFFF", "FF7FFF", "FFFF7F"),
+		// CELADON-EDIT - ORIGINAL
+		"mcolor" = pick("FFFFFF","7F7F7F", "7BBB7B", "7B7BBB", "BB7B7B", "7BBBBB", "BB7BBB", "BBBB7B"),
+		"mcolor2" = pick("FFFFFF","7F7F7F", "7BBB7B", "7B7BBB", "BB7B7B", "7BBBBB", "BB7BBB", "BBBB7B"),
+		// [/CELADON-EDIT]
+		// [CELADON-ADD] - TAJARA
+		"tajara_ears_markings_color" = pick("FFFFFF","7F7F7F", "7BBB7B", "7B7BBB", "BB7B7B", "7BBBBB", "BB7BBB", "BBBB7B"),
+		"tajara_head_markings_color" = pick("FFFFFF","7F7F7F", "7BBB7B", "7B7BBB", "BB7B7B", "7BBBBB", "BB7BBB", "BBBB7B"),
+		"tajara_nose_markings_color" = pick("FFFFFF","7F7F7F", "7BBB7B", "7B7BBB", "BB7B7B", "7BBBBB", "BB7BBB", "BBBB7B"),
+		"tajara_chest_markings_color" = pick("FFFFFF","7F7F7F", "7BBB7B", "7B7BBB", "BB7B7B", "7BBBBB", "BB7BBB", "BBBB7B"),
+		"tajara_body_markings_color" = pick("FFFFFF","7F7F7F", "7BBB7B", "7B7BBB", "BB7B7B", "7BBBBB", "BB7BBB", "BBBB7B"),
+		// [/CELADON-ADD]
 		"moth_fluff" = pick(GLOB.moth_fluff_list),
 		"moth_markings" = pick(GLOB.moth_markings_list),
 		"moth_wings" = pick(GLOB.moth_wings_list),

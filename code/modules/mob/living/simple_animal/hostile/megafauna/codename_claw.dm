@@ -58,8 +58,10 @@
 	speed = 5
 	move_to_delay = 5
 	speak_emote = list("verbalizes")
-	mob_trophy = /obj/item/nullrod/armblade/tentacle
-	loot = list(/obj/effect/spawner/clawloot)
+	// [CELADON-REMOVE] - CRUSHER_TROPHEY - Выпилено и заменено в модуле
+	// mob_trophy = /obj/item/nullrod/armblade/tentacle
+	// loot = list(/obj/effect/spawner/clawloot)
+	// [/CELADON-REMOVE]
 	health = 2250
 	maxHealth = 2250
 	shouldnt_move = TRUE //we want to show the transforming animation

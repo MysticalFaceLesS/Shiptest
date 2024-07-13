@@ -4,6 +4,8 @@
 	damage = 15
 	range = 10
 
+/obj/projectile/beam/laser/weak
+	range = 10
 // Тип патрона
 
 /obj/item/ammo_casing/energy/laser/ultima

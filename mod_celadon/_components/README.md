@@ -68,7 +68,7 @@ ID мода: CELADON_COMPONENTS, CELADON_COMPONENTS_EMOTE
 - `#define FACTION_INDEPENDENT "Independent"`
 - `#define FACTION_ELYSIUM "Elysium"`
 - `#define PREFIX_SYNDICATE list("SEV", "SSV", "SMMV", "PCAC", "SSASV", "SSSV", "SOSSV", "TSSV", "SABSV", "BSSV", "ASSV", "MSSV", "LSSV", "DSSV")`
-- `#define PREFIX_SOLGOV list("SGSV", "BSFSV", "ASFSV", "SSFSV", "MDSFSV", "LSFSV", "MSFSV", "SPSFSV")`
+- `#define PREFIX_SOLGOV list("SFSV", "BSFSV", "ASFSV", "SSFSV", "MDSFSV", "LSFSV", "MSFSV", "SPSFSV")`
 - `#define PREFIX_INTEQ list("IRMV", "IQMSSV", "BIQSV", "LIQSV", "SPIQSV")`
 - `#define PREFIX_NT list("NTSV", "NTBSV", "NTASV", "NTSSV", "NTTSV", "NTMSV", "NTLSV", "NTDSV", "NTSPSV",)`
 - `#define PREFIX_INDEPENDENT list("SV", "IMV", "ISV")`

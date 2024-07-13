@@ -38,7 +38,9 @@
 	mouse_opacity = MOUSE_OPACITY_ICON
 	deathsound = 'sound/magic/curse.ogg'
 	deathmessage = "'s arms reach out before it falls apart onto the floor, lifeless."
-	loot_drop = /obj/item/mob_trophy/legionnaire_spine
+	// [CELADON-REMOVE] - CRUSHER_TROPHEY - Выпилено ради легенды
+	// loot_drop = /obj/item/mob_trophy/legionnaire_spine
+	// [/CELADON-REMOVE]
 
 	attack_action_types = list(/datum/action/innate/elite_attack/legionnaire_charge,
 								/datum/action/innate/elite_attack/head_detach,
@@ -278,8 +280,12 @@
 	transform *= 0.33
 
 // Legionnaire's loot: Legionnaire Spine
+// [CELADON-REMOVE] - CRUSHER_TROPHEY - Выпилено ради легенды
+/*
 /obj/item/mob_trophy/legionnaire_spine
 	name = "legionnaire spine"
 	desc = "The spine of a legionnaire.  It almost feels like it's moving..."
 	icon = 'icons/obj/lavaland/elite_trophies.dmi'
 	icon_state = "legionnaire_spine"
+*/
+// [/CELADON-REMOVE]
