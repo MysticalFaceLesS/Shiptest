@@ -536,7 +536,6 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/mob/living/simple_animal/mouse/white,
 /turf/open/floor/plating,
 /area/outpost/maintenance/fore)
 "bR" = (
@@ -937,7 +936,9 @@
 	},
 /obj/machinery/power/smes/magical{
 	name = "power storage unit";
-	desc = "A high-capacity superconducting magnetic energy storage (SMES) unit."
+	desc = "A high-capacity superconducting magnetic energy storage (SMES) unit.";
+	output_level = 800000;
+	output_level_max = 800000
 	},
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -1139,13 +1140,6 @@
 	},
 /turf/open/floor/plating,
 /area/outpost/maintenance/port)
-"dx" = (
-/mob/living/simple_animal/mouse/gray,
-/turf/open/floor/plating/asteroid/icerock/temperate{
-	light_color = "#1B1D2E";
-	light_range = 2
-	},
-/area/outpost/exterior)
 "dB" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 1
@@ -1866,7 +1860,6 @@
 /obj/effect/turf_decal/siding/white{
 	dir = 1
 	},
-/mob/living/simple_animal/mouse,
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/maintenance/starboard)
 "fV" = (
@@ -3273,7 +3266,6 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/mob/living/simple_animal/mouse/brown,
 /turf/open/floor/plating,
 /area/outpost/maintenance/fore)
 "la" = (
@@ -4156,7 +4148,9 @@
 	},
 /obj/machinery/power/smes/magical{
 	name = "power storage unit";
-	desc = "A high-capacity superconducting magnetic energy storage (SMES) unit."
+	desc = "A high-capacity superconducting magnetic energy storage (SMES) unit.";
+	output_level_max = 800000;
+	output_level = 800000
 	},
 /obj/structure/cable,
 /turf/open/floor/plasteel/tech/techmaint,
@@ -5577,7 +5571,6 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/mob/living/simple_animal/mouse/white,
 /turf/open/floor/plating/rust,
 /area/outpost/maintenance/fore)
 "sw" = (
@@ -8147,7 +8140,6 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/mob/living/simple_animal/mouse/brown,
 /turf/open/floor/plating/rust,
 /area/outpost/maintenance/fore)
 "zT" = (
@@ -8409,7 +8401,6 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/mob/living/simple_animal/mouse,
 /turf/open/floor/plating{
 	icon_state = "foam_plating"
 	},
@@ -8641,7 +8632,6 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/mob/living/simple_animal/mouse,
 /turf/open/floor/plating/rust,
 /area/outpost/maintenance/starboard)
 "Bx" = (
@@ -10477,7 +10467,6 @@
 /obj/machinery/advanced_airlock_controller/internal{
 	pixel_x = 28
 	},
-/mob/living/simple_animal/mouse/brown/Tom,
 /turf/open/floor/plating,
 /area/outpost/maintenance/fore)
 "GT" = (
@@ -11037,7 +11026,6 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/mob/living/simple_animal/mouse,
 /turf/open/floor/plating,
 /area/outpost/maintenance/starboard)
 "IX" = (
@@ -15595,12 +15583,14 @@
 /turf/open/floor/plasteel/dark,
 /area/outpost/vacant_rooms/shop)
 "WT" = (
-/mob/living/simple_animal/mouse/white,
-/turf/open/floor/plating/asteroid/icerock/temperate{
-	light_color = "#1B1D2E";
-	light_range = 2
+/obj/machinery/power/smes/magical{
+	name = "power storage unit";
+	desc = "A high-capacity superconducting magnetic energy storage (SMES) unit.";
+	output_level_max = 800000;
+	output_level = 800000
 	},
-/area/outpost/exterior)
+/turf/open/floor/plasteel/white,
+/area/outpost/medical)
 "WU" = (
 /obj/effect/turf_decal/siding/wood{
 	color = "#543C30";
@@ -15626,13 +15616,6 @@
 	},
 /turf/open/floor/plasteel/tech,
 /area/outpost/crew/cryo)
-"WZ" = (
-/mob/living/simple_animal/mouse/brown,
-/turf/open/floor/plating/asteroid/icerock/temperate{
-	light_color = "#1B1D2E";
-	light_range = 2
-	},
-/area/outpost/exterior)
 "Xa" = (
 /obj/structure/catwalk/over/plated_catwalk,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
@@ -16006,6 +15989,9 @@
 	},
 /obj/structure/cable{
 	icon_state = "0-2"
+	},
+/obj/machinery/power/terminal{
+	dir = 4
 	},
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/maintenance/starboard)
@@ -31263,7 +31249,7 @@ Hf
 Hf
 Hf
 cC
-dx
+Tm
 Tm
 cC
 Hf
@@ -31443,11 +31429,11 @@ NG
 NG
 NG
 Tm
-dx
+Tm
 TW
 Tm
 Tm
-WT
+Tm
 Tm
 Tm
 Tm
@@ -31828,7 +31814,7 @@ Pm
 yR
 Tm
 TW
-WZ
+Tm
 cC
 cC
 cC
@@ -39903,7 +39889,7 @@ uW
 uW
 oQ
 uW
-uW
+WT
 uW
 vo
 Id
