@@ -29,7 +29,9 @@
 #define FESTIVE_SEASON "Festive Season"
 #define GARBAGEDAY "Garbage Day"
 #define MONKEYDAY "Monkey Day"
+/*	[CELADON-EDIT]
 #define PRIDE_WEEK "Pride Week"
+	[/CELADON-EDIT]	*/
 #define MOTH_WEEK "Moth Week"
 /*
 

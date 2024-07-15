@@ -97,7 +97,7 @@
 	icon_state = "pantyhose"
 
 //Pride Socks todo:finish the damn sprites and digi variants. ugh
-
+/*	[CELADON-EDIT]
 /datum/sprite_accessory/socks/lesbian
 	name = "Thigh-High (Lesbian)"
 	icon_state = "thigh_les"
@@ -122,3 +122,4 @@
 	name = "Thigh-High (Asexual)"
 	icon_state = "thigh_ace"
 	use_static = TRUE
+	[/CELADON-EDIT]	*/

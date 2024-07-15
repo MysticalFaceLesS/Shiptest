@@ -559,6 +559,7 @@
 						ignored_mobs = user
 				)
 
+/*	[CELADON-EDIT]
 	//cloudy sent a meme in the discord. i dont know if its true, but i made this piece of code in honor of it
 	var/mob/living/carbon/human/living_human = user
 	if(istype(living_human))
@@ -576,6 +577,7 @@
 		if(istype(living_human.wear_neck, /obj/item/clothing/neck/tie/lesbian) || living_human.wear_neck.icon_state == "lesbian")
 			var/use_space = "[living_human.generic_adjective ? " " : ""]"
 			living_human.generic_adjective = "lesbian[use_space][living_human.generic_adjective]" //i actually don't remember the meme. it was something like lesbians will stop working if they see another with a gun. or something.
+	[/CELADON-EDIT]	*/
 
 /obj/item/gun/CtrlClick(mob/user)
 	. = ..()

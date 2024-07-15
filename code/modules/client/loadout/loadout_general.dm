@@ -110,10 +110,12 @@
 	display_name = "toy, marketable hornet plushie"
 	path = /obj/item/toy/plush/hornet
 
+/*	[CELADON-EDIT]
 /datum/gear/gayhornet
 	display_name = "toy, gay hornet plushie"
 	path = /obj/item/toy/plush/hornet/gay
 	description = "Hornet says lesbian rights."
+	[/CELADON-EDIT]	*/
 
 /datum/gear/knight
 	display_name = "toy, marketable knight plushie"

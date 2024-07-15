@@ -36,17 +36,17 @@
 						"brown tie" = "browntie",
 						"rainbow tie" = "rainbow_tie",
 						"horrible tie" = "horribletie",
-						"transgender tie" = "transgender",
-						"pansexual tie" = "pansexual",
-						"nonbinary tie" = "nonbinary",
-						"bisexual tie" = "bisexual",
-						"lesbian tie" = "lesbian",
-						"intersex tie" = "intersex",
-						"gay tie" = "gay",
-						"genderfluid tie" = "genderfluid",
-						"asexual tie" = "asexual",
-						"genderfae tie" = "genderfae",
-						"ally tie" = "ally_tie"
+//						"transgender tie" = "transgender",
+//						"pansexual tie" = "pansexual",
+//						"nonbinary tie" = "nonbinary",
+//						"bisexual tie" = "bisexual",
+//						"lesbian tie" = "lesbian",
+//						"intersex tie" = "intersex",
+//						"gay tie" = "gay",
+//						"genderfluid tie" = "genderfluid",
+//						"asexual tie" = "asexual",
+//						"genderfae tie" = "genderfae",
+//						"ally tie" = "ally_tie"
 						)
 	icon_state = "rainbow_tie"
 	item_state = ""	//no inhands
@@ -107,6 +107,7 @@
 	desc = "A neckpiece for a maid costume, it smells faintly of disappointment."
 	icon_state = "maid_neck"
 
+/*	[CELADON-EDIT]
 /obj/item/clothing/neck/tie/trans
 	name = "transgender tie"
 	desc = "A neosilk clip-on tie. This one is in the colors of the trans flag."
@@ -161,6 +162,7 @@
 	name = "ally tie"
 	desc = "A neosilk clip-on tie. This one is in the colors of the ally flag."
 	icon_state = "ally_tie"
+	[/CELADON-EDIT]	*/
 
 /obj/item/clothing/neck/stethoscope
 	name = "stethoscope"

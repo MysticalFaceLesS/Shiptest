@@ -118,7 +118,7 @@
 	use_static = TRUE
 
 // Pride shirts
-
+/*	[CELADON-EDIT]
 /datum/sprite_accessory/undershirt/tank_les
 	name = "Tank Top (Pride)"
 	icon_state = "pride"
@@ -148,3 +148,4 @@
 	name = "Tank Top (Asexual)"
 	icon_state = "ace"
 	use_static = TRUE
+	[/CELADON-EDIT]	*/

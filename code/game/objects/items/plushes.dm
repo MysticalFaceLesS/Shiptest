@@ -746,10 +746,12 @@
 	squeak_override = list('sound/hornetnoises/hornet_gitgud.ogg'=1, 'sound/hornetnoises/hornet_SHAW.ogg'=10) //i have no clue how this works, the intended effect is that "git gud" will play 1 out of 11 times
 	gender = FEMALE
 
+/*	[CELADON-EDIT]
 /obj/item/toy/plush/hornet/gay
 	name = "gay bug plushie"
 	desc = "A cute, soft plush of a long-horned bug. Her cloak is in the colors of the lesbian pride flag."
 	icon_state = "plushie_gayhornet"
+	[/CELADON-EDIT]	*/
 
 /obj/item/toy/plush/knight
 	name = "odd bug plushie"
