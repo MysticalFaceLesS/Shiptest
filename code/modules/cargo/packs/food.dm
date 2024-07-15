@@ -30,7 +30,7 @@
 	name = "Pizza Crate"
 	desc = "Best prices on this side of the galaxy. All deliveries are guaranteed to be 99.5% anomaly-free!"
 // [CELADON-EDIT] - CELADON_BALANCE
-//	cost = 6000
+//	cost = 3000
 // CELADON-EDIT - ORIGINAL
 	cost = 2000 // Best prices this side of the galaxy.
 // [/CELADON-EDIT]

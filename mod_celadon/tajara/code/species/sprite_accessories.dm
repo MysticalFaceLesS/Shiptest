@@ -1,6 +1,6 @@
 /datum/sprite_accessory/tajara_chest_markings
 	icon = 'mod_celadon/tajara/icons/tajara_markings.dmi'
-	color_src = MUTCOLORS_SECONDARY
+	color_src = CHESTTAJARACOLORS
 	body_zone = BODY_ZONE_CHEST
 	synthetic_icon_state = "none"
 
@@ -47,7 +47,7 @@
 
 /datum/sprite_accessory/tajara_body_markings
 	icon = 'mod_celadon/tajara/icons/tajara_markings.dmi'
-	color_src = MUTCOLORS_SECONDARY
+	color_src = BODYTAJARACOLORS
 	body_zone = BODY_ZONE_CHEST
 	synthetic_icon_state = "none"
 
@@ -98,7 +98,7 @@
 
 /datum/sprite_accessory/tajara_nose_markings
 	icon = 'mod_celadon/tajara/icons/tajara_markings.dmi'
-	color_src = MUTCOLORS_SECONDARY
+	color_src = NOSETAJARACOLORS
 	body_zone = BODY_ZONE_CHEST
 	synthetic_icon_state = "none"
 
@@ -109,12 +109,11 @@
 	name = "Taj nose"
 	icon_state = "tajnose"
 	secondary_color = FALSE
-	color_src = SKINNOSECOLORS
 
 //Markings ears
 /datum/sprite_accessory/tajara_ears_markings
 	icon = 'mod_celadon/tajara/icons/tajara_markings.dmi'
-	color_src = MUTCOLORS_SECONDARY
+	color_src = EARSTAJARACOLORS
 	body_zone = BODY_ZONE_HEAD
 
 /datum/sprite_accessory/tajara_ears_markings/none
@@ -131,7 +130,7 @@
 //Markings head
 /datum/sprite_accessory/tajara_head_markings
 	icon = 'mod_celadon/tajara/icons/tajara_markings.dmi'
-	color_src = MUTCOLORS_SECONDARY
+	color_src = HEADTAJARACOLORS
 	body_zone = BODY_ZONE_HEAD
 
 /datum/sprite_accessory/tajara_head_markings/none

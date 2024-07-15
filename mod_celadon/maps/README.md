@@ -21,7 +21,7 @@ ID мода: CELADON_CONFIGS_MAPS
 ### Описание мода
 
 Этот мод содержит наши шатлы, субшатлы, руинки и аванпосты.
-В файле subshuttles.dm находятся датумы новых сабшатлов. 
+В файле subshuttles.dm находятся датумы новых сабшатлов.
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
   А также любая полезная информация.
@@ -37,7 +37,7 @@ ID мода: CELADON_CONFIGS_MAPS
 - ADD `_maps\_basemap.dm` -> включение карты ЦК
 
 - EDIT:
-	`code\datums\ruins\beachplanet.dm` 	: `/datum/map_template/ruin/beachplanet.dm 	: `prefix`
+	`code\datums\ruins\beachplanet.dm` 	: `/datum/map_template/ruin/beachplanet.dm`	: `prefix`
 	`code\datums\ruins\icemoon.dm`		: `/datum/map_template/ruin/icemoon.dm`		: `prefix`
 	`code\datums\ruins\jungle.dm`		: `/datum/map_template/ruin/jungle.dm`		: `prefix`
 	`code\datums\ruins\lavaland.dm`		: `/datum/map_template/ruin/lavaland.dm`	: `prefix`

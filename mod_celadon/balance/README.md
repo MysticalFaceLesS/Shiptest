@@ -55,7 +55,7 @@ EDIT: `code\modules\mob\living\simple_animal\hostile\mining_mobs\elites\elite.dm
 ADD: `code\modules\projectiles\ammunition\_ammunition.dm` : /obj/item/ammo_casing/attackby(obj/item/I, mob/user, params) -> добавлены звук подбора патрона в магазин с пола и задержка в 1 секунду зависящая от кликанья по патронам. Чем быстрее клики - тем быстрее загрузятся патроны.
 Очки с зомби и ксеноморфов
 REMOVE: `D:\1ss\ShiptestYata\code\modules\surgery\experimental_dissection.dm`: `/datum/surgery_step/dissection/preop`
-
+REMOVE^ `code\modules\projectiles\guns\energy.dm`
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -98,7 +98,7 @@ REMOVE: `D:\1ss\ShiptestYata\code\modules\surgery\experimental_dissection.dm`: `
 ### Авторы:
 
 - Кинетик Крашер, универасльная вендор плата, цены карго, одежда с ЦК, нёрф очков диссекции с спец мобов и её упрощение - Yata9arasu, двигатели, рад. коллекторы - RalseiDreemuurr
-	Затронуты проджектайлы энергетических дробовиков - Molniz
+	Затронуты проджектайлы энергетических дробовиков, батарейки в энерегетических пушках теперь можно вытаскивать руками - Molniz
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.

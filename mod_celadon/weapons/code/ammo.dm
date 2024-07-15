@@ -66,19 +66,19 @@
 
 /datum/supply_pack/ammo/box556_box
 	name = "Коробка патронов 5.56mm"
-	desc = "Содержит одну коробку патронов"
+	desc = "Содержит одну коробку патронов."
 	contains = list(/obj/item/ammo_box/a556_box)
 	cost = 500
 
 /datum/supply_pack/ammo/box556/a856_box
 	name = "Коробка патронов 5.56mm(а856)"
-	desc = "Содержит одну коробку патронов"
+	desc = "Содержит одну коробку патронов."
 	contains = list(/obj/item/ammo_box/a556_box/a856)
 	cost = 650
 
 /datum/supply_pack/ammo/box556/m903_box
 	name = "Коробка патронов 5.56mm(m903)"
-	desc = "Содержит одну коробку патронов"
+	desc = "Содержит одну коробку патронов."
 	contains = list(/obj/item/ammo_box/a556_box/m903)
 	cost = 1300
 
@@ -86,24 +86,24 @@
 
 /datum/supply_pack/ammo/a308_box
 	name = "Коробка патронов .308"
-	desc = "Содержит одну коробку патронов"
+	desc = "Содержит одну коробку патронов."
 	contains = list(/obj/item/ammo_box/a308)
 	cost = 650
 
 /datum/supply_pack/ammo/a308_rubber_box
 	name = "Коробка патронов .308(Резина)"
-	desc = "Содержит одну коробку патронов"
+	desc = "Содержит одну коробку патронов."
 	contains = list(/obj/item/ammo_box/a308/a308_rubber)
 	cost = 300
 
 /datum/supply_pack/ammo/a308_sp_box
 	name = "Коробка патронов .308(Охотничий)"
-	desc = "Содержит одну коробку патронов"
+	desc = "Содержит одну коробку патронов."
 	contains = list(/obj/item/ammo_box/a308/a308_sp)
 	cost = 800
 
 /datum/supply_pack/ammo/a308_ap_box
 	name = "Коробка патронов .308(Бронебойный)"
-	desc = "Содержит одну коробку патронов"
+	desc = "Содержит одну коробку патронов."
 	contains = list(/obj/item/ammo_box/a308/a308_ap)
 	cost = 1300

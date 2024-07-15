@@ -1,3 +1,3 @@
 /obj/item/gun/energy
-	unscrewing_time = 0.3
+	unscrewing_time = FALSE
 	tac_reloads = TRUE
