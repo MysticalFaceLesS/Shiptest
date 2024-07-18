@@ -546,7 +546,7 @@ datum/map_template/ruin/rockplanet/mining_expedition
 	description = "The Syndicate Battle Sphere, complete with guns!"
 
 //							///
-//		Whitesand ruin		///
+//		WastePlanet ruin	///
 //							///
 /datum/map_template/ruin/wasteplanet/weaponstest
 	name = "Weapons testing facility"
@@ -572,6 +572,9 @@ datum/map_template/ruin/rockplanet/mining_expedition
 	id = "abandoned_mechbay"
 	suffix = "wasteplanet_abandoned_mechbay.dmm"
 
+//							///
+//		Whitesand ruin		///
+//							///
 /datum/map_template/ruin/whitesands/medipen_plant
 	name = "Abandoned Medipen Factory"
 	id = "medipenplant"
