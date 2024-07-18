@@ -464,7 +464,90 @@ datum/map_template/ruin/rockplanet/mining_expedition
 	name = "Space Mall"
 	description = "An old shopping centre, owned by a former member of Nanotrasen's board of directors.."
 
-// Руины Wasteplanet
+
+/datum/map_template/ruin/space/excavator_DK
+	id = "Excavator-DK"
+	suffix = "excavator_DK.dmm"
+	name = "Excavator DK Class"
+	description = "A heavily damaged DK class excavator"
+
+/datum/map_template/ruin/space/crashedship
+	id = "crashedship"
+	suffix = "crashedship.dmm"
+	name = "Crashed Ship"
+	description = "Among civilian vessels the most common cause of tragedy is lack of food. \
+	This ship was outfitted with a multitude of food-generating features, then summarily ran into an asteroid shortly after takeoff."
+
+/datum/map_template/ruin/space/vaporwave
+	id = "vaporwave"
+	suffix = "vaporwave.dmm"
+	name = "Aesthetic Outpost"
+	description = "Pause and remember-- You are unique.You are special. Every mistake, trial, and hardship has helped to sculpt your real beauty. \
+	Stop hating yourself and start appreciating and loving yourself!"
+
+/datum/map_template/ruin/space/hellfactory
+	id = "hellfactory"
+	suffix = "hellfactory.dmm"
+	name = "Heck Brewery"
+	description = "An abandoned warehouse and brewing facility, which has been recently rediscovered. Reports claim that the security system entered an ultra-hard lockdown, but these reports are inconclusive."
+
+/datum/map_template/ruin/space/cryocontainment
+	id = "cryocontainment"
+	suffix = "cryocontainment.dmm"
+	name = "Cryogenic Containment Facility"
+	description = "Some old facility where they stored something in a cryotube to experiement on, obviously it got out and now the only thing it contains is Space Carps."
+
+/datum/map_template/ruin/space/dangerous_research
+	id = "dangerous_research"
+	suffix = "dangerous_research.dmm"
+	name = "Occult Research Station"
+	description = "This station was deemed unsuitable for continued experiments, and quickly abandoned."
+
+/datum/map_template/ruin/space/macspace
+	id = "fast_food"
+	suffix = "Fast_Food.dmm"
+	name = "Mac Space Restaurant"
+	description = "A fast food reataurant in space."
+
+/datum/map_template/ruin/space/scav_mining
+	id = "mining_asteroid"
+	suffix = "scav_mining.dmm"
+	name = "Mining asteroid"
+	description = "An abandoned mining operation on an asteroid that now has new ocupants that is not happy to se you"
+
+/datum/map_template/ruin/space/transport18
+	id = "transport18"
+	suffix = "transport18.dmm"
+	name = "Booze Cruise"
+	description = "A freighter, damaged beyond repair and surrounded by a cloud of aluminium and... beer foam?"
+
+/datum/map_template/ruin/space/fueldepot
+	id = "fueldepot"
+	suffix = "fueldepot.dmm"
+	name = "Fuel Depot"
+	description = "An orbital refueling station with the remains of a ship lodged among the debris."
+
+/datum/map_template/ruin/space/ntfacility
+	id = "ntfacility"
+	suffix = "ntfacility.dmm"
+	name = "Abandoned Facility"
+	description = "A NT research station. Something has gone horribly wrong here."
+
+/datum/map_template/ruin/space/glade
+	id = "dark_glade"
+	suffix = "dark_glade.dmm"
+	name = "Dark Glade"
+	description = "It's always dark in the ancient glade."
+
+/datum/map_template/ruin/space/syndicircle
+	id = "provinggrounds"
+	suffix = "provinggrounds.dmm"
+	name = "Syndicate Battle Sphere"
+	description = "The Syndicate Battle Sphere, complete with guns!"
+
+//							///
+//		Whitesand ruin		///
+//							///
 /datum/map_template/ruin/wasteplanet/weaponstest
 	name = "Weapons testing facility"
 	id = "guntested"
@@ -489,9 +572,6 @@ datum/map_template/ruin/rockplanet/mining_expedition
 	id = "abandoned_mechbay"
 	suffix = "wasteplanet_abandoned_mechbay.dmm"
 
-//							///
-//		Whitesand ruin		///
-//							///
 /datum/map_template/ruin/whitesands/medipen_plant
 	name = "Abandoned Medipen Factory"
 	id = "medipenplant"
