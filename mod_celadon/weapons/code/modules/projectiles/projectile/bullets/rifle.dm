@@ -19,7 +19,7 @@
 
 /obj/projectile/bullet/a308
 	name = ".308"
-	icon = 'mod_celadon/weapons/icons/ammo/projectiles.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/ammo/projectiles.dmi'
 	icon_state = "bullet"
 	speed = 0.3
 	damage = 30
