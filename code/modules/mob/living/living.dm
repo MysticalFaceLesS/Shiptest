@@ -1861,8 +1861,8 @@
 		last_state_of_bubble = state_of_bubble
 	// [/CELADON-ADD]
 	// [CELADON-EDIT] - CELADON_QOL
-	// var/mutable_appearance/bubble_overlay = mutable_appearance('mod_celadon/qol/icons/talk.dmi', state_of_bubble, plane = RUNECHAT_PLANE) // CELADON-EDIT - ORIGINAL
-	var/mutable_appearance/bubble_overlay = mutable_appearance('mod_celadon/qol/icons/talk.dmi', state_of_bubble, plane = RUNECHAT_PLANE)
+	// var/mutable_appearance/bubble_overlay = mutable_appearance('mod_celadon/_storge_icons/icons/qol/talk.dmi', state_of_bubble, plane = RUNECHAT_PLANE) // CELADON-EDIT - ORIGINAL
+	var/mutable_appearance/bubble_overlay = mutable_appearance('mod_celadon/_storge_icons/icons/qol/talk.dmi', state_of_bubble, plane = RUNECHAT_PLANE)
 	// [/CELADON-EDIT]
 	bubble_overlay.appearance_flags = RESET_COLOR | RESET_TRANSFORM | TILE_BOUND | PIXEL_SCALE
 	if(typing_indicator)

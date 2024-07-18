@@ -12,7 +12,7 @@
 #define DEFAULT_HEAD_PATH 'icons/mob/clothing/head.dmi'
 // [CELADON-EDIT] - CELADON_QOL - В будущем сделать модульно в code/__defines/~mod_celadon/_master_defines.dm
 // #define DEFAULT_NECK_PATH 'icons/mob/clothing/neck.dmi'	// CELADON-EDIT - ORIGINAL
-#define DEFAULT_NECK_PATH 'mod_celadon/QoL/icons/neck.dmi'
+#define DEFAULT_NECK_PATH 'mod_celadon/_storge_icons/icons/qol/neck.dmi'
 // [/CELADON-EDIT]
 #define DEFAULT_GLOVES_PATH 'icons/mob/clothing/hands.dmi'
 #define DEFAULT_GLASSES_PATH 'icons/mob/clothing/eyes.dmi'
