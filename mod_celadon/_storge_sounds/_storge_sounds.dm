@@ -3,9 +3,9 @@
 /// author - автор(ы) этого модпака.
 
 /datum/modpack/storge_sounds
-	name = "ОСМЫСЛЕННОЕ_ПОНЯТНОЕ_НАЗВАНИЕ"
-	desc = "КОРОТКОЕ_ОПИСАНИЕ_МОДПАКА"
-	author = "АВТОР(Ы)"
+	name = "Библиотека звуков"
+	desc = "Содержит в себе все звуки модуля"
+	author = "MrCat15352"
 
 /// Эти проки нужны, для того чтобы инициализировать датумы в определенный момент времени
 /// сборки билда. Инициализация обновляет данные в билде повторно, перезаписывая новыми значениями
@@ -15,13 +15,13 @@
 /// (можешь использовать все три, но запуск билда увеличится на 0.1 сек, за каждый датум в модпаке)
 
 // Инициализация ДО
-/datum/modpack/storge_sounds/pre_initialize()
-	. = ..()
+// /datum/modpack/storge_sounds/pre_initialize()
+// 	. = ..()
 
-// Инициализация ВОВРЕМЯ
-/datum/modpack/storge_sounds/initialize()
-	. = ..()
+// // Инициализация ВОВРЕМЯ
+// /datum/modpack/storge_sounds/initialize()
+// 	. = ..()
 
-// Инициализация ПОСЛЕ
-/datum/modpack/storge_sounds/post_initialize()
-	. = ..()
+// // Инициализация ПОСЛЕ
+// /datum/modpack/storge_sounds/post_initialize()
+// 	. = ..()
