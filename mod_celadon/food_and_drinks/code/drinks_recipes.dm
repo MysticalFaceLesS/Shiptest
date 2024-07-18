@@ -3,7 +3,7 @@
 	required_reagents = list(/datum/reagent/toxin/plasma = 1,
 							 /datum/reagent/fuel = 1) //"lube" = 1,
 	mix_message = "The chemicals mix to create shiny, blue substance."
-	mix_sound = 'mod_celadon/food_and_drinks/sound/drinkfizz.ogg'
+	mix_sound = 'mod_celadon/_storge_sounds/sound/drinkfizz.ogg'
 
 /datum/chemical_reaction/synthanol/robottears
 	results = list(/datum/reagent/consumable/ethanol/synthanol/robottears = 3)
