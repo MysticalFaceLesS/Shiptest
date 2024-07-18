@@ -73,6 +73,30 @@
 	description = "Safety records for early Nanotrasen Spaceworks vessels were, and always have been, top of their class. Absolutely no multi-billion credit projects have been painstakingly erased from history. (Citation Needed)"
 	suffix = "icemoon_crashed_holemaker.dmm"
 
+/datum/map_template/ruin/icemoon/engioutpost
+	name = "Engineer Outpost"
+	id = "engioutpost"
+	description = "Blown up by an unfortunate accident."
+	suffix = "icemoon_surface_engioutpost.dmm"
+
+/datum/map_template/ruin/icemoon/corpreject
+	name = "NT Security Solutions Site Gamma"
+	id = "corpreject"
+	description = "Nanotrasen Corporate Security Solutions vault site Gamma."
+	suffix = "icemoon_surface_corporate_rejects.dmm"
+
+/datum/map_template/ruin/icemoon/syndicate_outpost
+	name = "Abandoned Syndicate Outpost"
+	id = "syndicate-outpost-icemoon"
+	description = "A outpost that used to be a staging area for nuclear operatives. The Syndicate have moved to another location, but this still remains."
+	suffix = "icemoon_underground_abandoned_newcops.dmm"
+
+/datum/map_template/ruin/icemoon/drakelair
+	name = "Dragon's Lair"
+	id = "drake-lair"
+	description = "\"First the creature's Flame breathed from beneath the stone, Hot battle-fumes, and the earth rumbled.\""
+	suffix = "icemoon_underground_drakelair.dmm"
+
 // Руины Jungle
 /datum/map_template/ruin/jungle/syndicate
 	name = "Jungle Syndicate Bunker"
