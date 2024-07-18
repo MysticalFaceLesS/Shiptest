@@ -386,6 +386,37 @@
 	id = "rockplanet_nomadcrash"
 	suffix = "rockplanet_nomadcrash.dmm"
 
+/datum/map_template/ruin/rockplanet/heirophant
+	name = "Ancient Heirophant"
+	id = "rockheiro"
+	description = "something dangerous"
+	suffix = "rockplanet_heirophant.dmm"
+
+datum/map_template/ruin/rockplanet/mining_expedition
+	name = "Mining Expedition"
+	id = "expedition"
+	description = "A mining operation gone wrong."
+	suffix = "rockplanet_miningexpedition.dmm"
+
+
+/datum/map_template/ruin/rockplanet/boxsci
+	name = "Abandoned science wing"
+	id = "abandonedscience"
+	description = "A chunk of a station that broke off.."
+	suffix = "rockplanet_boxsci.dmm"
+
+/datum/map_template/ruin/rockplanet/crash_cult
+	name = "Crashed Exploration Clipper"
+	description = "A crashed exploration vessel. Hivebots are taking this ship apart for scrap."
+	id = "crash_cult"
+	suffix = "rockplanet_crash.dmm"
+
+/datum/map_template/ruin/rockplanet/saloon
+	name = "Abandoned saloon"
+	description = "For whatever reason, someone decided to make a colony with a indie style."
+	id = "rockplanet_saloon"
+	suffix = "rockplanet_saloon.dmm"
+
 //							///
 //		Space ruin			///
 //							///
