@@ -12,6 +12,12 @@
 	description = "A small fishing hut floating on the ocean."
 	suffix = "beach_fishing_hut.dmm"
 
+/datum/map_template/ruin/beachplanet/colony
+	name = "Abandoned Beachside Colony"
+	id = "beach_colony"
+	description = "A abandoned colony. It seems that this colony was abandoned, for a reason or another"
+	suffix = "beach_colony.dmm"
+
 /datum/map_template/ruin/beachplanet/ancient
 	name = "Ancient Danger"
 	id = "beach_ancient"
@@ -47,6 +53,18 @@
 	id = "beach_float_resort"
 	description = "A hidden paradise on the beach"
 	suffix = "beach_float_resort.dmm"
+
+/datum/map_template/ruin/beachplanet/fallenstar
+	name = "Crashed Starwalker"
+	id = "crashed_star"
+	description = "A Crashed Starwalker Class Pirate Ship. It's Crew is Long-Dead."
+	suffix = "beach_crashed_starwalker.dmm"
+
+/datum/map_template/ruin/beachplanet/knight
+	name = "Knight's Rest"
+	id = "knights_rest"
+	description = "An small castle holding the grave of a renowned warrior"
+	suffix = "beach_knights_rest.dmm"
 
 // Руины Icemoon
 /datum/map_template/ruin/icemoon/hydroponicslab
