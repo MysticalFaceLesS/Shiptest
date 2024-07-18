@@ -30,7 +30,7 @@
 	icon_state = "heater"
 	// [CELADON-EDIT] - CELADON_BALANCE
 	// icon = 'icons/obj/shuttle.dmi' // CELADON-EDIT - ORIGINAL
-	icon = 'mod_celadon/balance/icons/shuttle.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/shuttle.dmi'
 	// [/CELADON-EDIT]
 	dir = EAST
 
