@@ -45,7 +45,7 @@
 
 /obj/projectile/roach_spit
 	name = "Glowing bile"
-	icon = 'mod_celadon/mobs/icons/hivemind.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/mobs/hivemind.dmi'
 	icon_state = "goo_proj"
 	damage_type = list(BURN = 15)
 	irradiate = 5
