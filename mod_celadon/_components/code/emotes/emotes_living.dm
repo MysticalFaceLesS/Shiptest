@@ -107,15 +107,15 @@
 /datum/emote/living/cough/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender == FEMALE)
-			return pick('mod_celadon/_storge_sound/sound/voice/cough_female_1.ogg', 'mod_celadon/_storge_sound/sound/voice/cough_female_2.ogg')
-		return pick('mod_celadon/_storge_sound/sound/voice/cough_male_1.ogg', 'mod_celadon/_storge_sound/sound/voice/cough_male_2.ogg', 'mod_celadon/_storge_sound/sound/voice/cough_male_3.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/cough_female_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/cough_female_2.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/cough_male_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/cough_male_2.ogg', 'mod_celadon/_storge_sounds/sound/voice/cough_male_3.ogg')
 	return ..()
 
 /datum/emote/living/carbon/human/cry/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender == FEMALE)
-			return pick('mod_celadon/_storge_sound/sound/voice/cry_female_1.ogg', 'mod_celadon/_storge_sound/sound/voice/cry_female_2.ogg', 'mod_celadon/_storge_sound/sound/voice/cry_female_3.ogg')
-		return pick('mod_celadon/_storge_sound/sound/voice/cry_male_1.ogg', 'mod_celadon/_storge_sound/sound/voice/cry_male_1.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/cry_female_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/cry_female_2.ogg', 'mod_celadon/_storge_sounds/sound/voice/cry_female_3.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/cry_male_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/cry_male_1.ogg')
 	return ..()
 
 /datum/emote/living/dance
@@ -268,8 +268,8 @@
 /datum/emote/living/giggle/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender == FEMALE)
-			return pick('mod_celadon/_storge_sound/sound/voice/giggle_female_1.ogg', 'mod_celadon/_storge_sound/sound/voice/giggle_female_2.ogg', 'mod_celadon/_storge_sound/sound/voice/giggle_female_3.ogg')
-		return pick('mod_celadon/_storge_sound/sound/voice/giggle_male_1.ogg', 'mod_celadon/_storge_sound/sound/voice/giggle_male_2.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/giggle_female_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/giggle_female_2.ogg', 'mod_celadon/_storge_sounds/sound/voice/giggle_female_3.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/giggle_male_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/giggle_male_2.ogg')
 	return ..()
 
 /datum/emote/living/glare
@@ -295,8 +295,8 @@
 /datum/emote/living/groan/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender == FEMALE)
-			return pick('mod_celadon/_storge_sound/sound/voice/moan_female_1.ogg', 'mod_celadon/_storge_sound/sound/voice/moan_female_2.ogg', 'mod_celadon/_storge_sound/sound/voice/moan_female_3.ogg')
-		return pick('mod_celadon/_storge_sound/sound/voice/moan_male_1.ogg', 'mod_celadon/_storge_sound/sound/voice/moan_male_2.ogg', 'mod_celadon/_storge_sound/sound/voice/moan_male_3.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/moan_female_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/moan_female_2.ogg', 'mod_celadon/_storge_sounds/sound/voice/moan_female_3.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/moan_male_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/moan_male_2.ogg', 'mod_celadon/_storge_sounds/sound/voice/moan_male_3.ogg')
 	return ..()
 
 /datum/emote/living/growl
@@ -471,8 +471,8 @@
 /datum/emote/living/sigh/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender == FEMALE)
-			return pick('mod_celadon/_storge_sound/sound/voice/sigh_female.ogg')
-		return pick('mod_celadon/_storge_sound/sound/voice/sigh_male.ogg', 'mod_celadon/_storge_sound/sound/voice/sigh_male.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/sigh_female.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/sigh_male.ogg', 'mod_celadon/_storge_sounds/sound/voice/sigh_male.ogg')
 	return ..()
 
 /datum/emote/living/sit
@@ -502,8 +502,8 @@
 /datum/emote/living/sneeze/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender == FEMALE)
-			return pick('mod_celadon/_storge_sound/sound/voice/sneeze_female.ogg')
-		return pick('mod_celadon/_storge_sound/sound/voice/sneeze.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/sneeze_female.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/sneeze.ogg')
 	return ..()
 
 /datum/emote/living/smug
@@ -521,8 +521,8 @@
 /datum/emote/living/sniff/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender == FEMALE)
-			return pick('mod_celadon/_storge_sound/sound/voice/sniff_female.ogg')
-		return pick('mod_celadon/_storge_sound/sound/voice/sniff_male.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/sniff_female.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/sniff_male.ogg')
 	return ..()
 
 #define SNORE_DURATION 5.2 SECONDS
@@ -557,7 +557,7 @@
 
 /datum/emote/living/snore/get_sound(mob/living/user)
 	if(ishuman(user))
-		return pick('mod_celadon/_storge_sound/sound/voice/snore_1.ogg', 'mod_celadon/_storge_sound/sound/voice/snore_2.ogg', 'mod_celadon/_storge_sound/sound/voice/snore_3.ogg', 'mod_celadon/_storge_sound/sound/voice/snore_4.ogg', 'mod_celadon/_storge_sound/sound/voice/snore_5.ogg', 'mod_celadon/_storge_sound/sound/voice/snore_6.ogg', 'mod_celadon/_storge_sound/sound/voice/snore_7.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/snore_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/snore_2.ogg', 'mod_celadon/_storge_sounds/sound/voice/snore_3.ogg', 'mod_celadon/_storge_sounds/sound/voice/snore_4.ogg', 'mod_celadon/_storge_sounds/sound/voice/snore_5.ogg', 'mod_celadon/_storge_sounds/sound/voice/snore_6.ogg', 'mod_celadon/_storge_sounds/sound/voice/snore_7.ogg')
 	return ..()
 
 #undef SNORE_DURATION
@@ -651,8 +651,8 @@
 /datum/emote/living/yawn/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender == FEMALE)
-			return pick('mod_celadon/_storge_sound/sound/voice/yawn_female_1.ogg', 'mod_celadon/_storge_sound/sound/voice/yawn_female_2.ogg', 'mod_celadon/_storge_sound/sound/voice/yawn_female_3.ogg')
-		return pick('mod_celadon/_storge_sound/sound/voice/yawn_male_1.ogg', 'mod_celadon/_storge_sound/sound/voice/yawn_male_2.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/yawn_female_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/yawn_female_2.ogg', 'mod_celadon/_storge_sounds/sound/voice/yawn_female_3.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/yawn_male_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/yawn_male_2.ogg')
 	return ..()
 
 /datum/emote/living/gurgle
@@ -772,5 +772,5 @@
 
 /datum/emote/living/hoot/get_sound(mob/living/user)
 	if(ishuman(user))
-		return pick('mod_celadon/_storge_sound/sound/voice/whistle.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/whistle.ogg')
 	return ..()
