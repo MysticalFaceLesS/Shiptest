@@ -135,7 +135,7 @@ mod_celadon/_storge_icons
 
 ```
 mod_celadon/_storge_sounds
-├─ sounds
+├─ sound
 │  ├─ any_sound.ogg
 │  ╰─ some_sound.mp3
 ├─ _storge_sounds.dm
