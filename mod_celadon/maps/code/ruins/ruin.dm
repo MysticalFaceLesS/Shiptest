@@ -268,6 +268,97 @@
 	description = "A crashed pirate ship. It would seem that it's crew died a while ago."
 	suffix = "lavaland_crashed_starwalker.dmm"
 
+/datum/map_template/ruin/lavaland/sin
+	cost = 10
+	allow_duplicates = FALSE
+
+/datum/map_template/ruin/lavaland/sin/sloth
+	name = "Ruin of Sloth"
+	id = "sloth"
+	description = "..."
+	suffix = "lavaland_surface_sloth.dmm"
+	// Generates nothing but atmos runtimes and salt
+	cost = 0
+
+/datum/map_template/ruin/lavaland/hierophant
+	name = "Hierophant's Arena"
+	id = "hierophant"
+	description = "A strange, square chunk of metal of massive size. Inside awaits only death and many, many squares."
+	suffix = "lavaland_surface_hierophant.dmm"
+	allow_duplicates = FALSE
+
+/datum/map_template/ruin/lavaland/xeno_nest
+	name = "Xenomorph Nest"
+	id = "xeno-nest"
+	description = "These xenomorphs got bored of horrifically slaughtering people on space stations, and have settled down on a nice lava-filled hellscape to focus on what's really important in life. \
+	Quality memes."
+	suffix = "lavaland_surface_xeno_nest.dmm"
+	cost = 20
+
+/datum/map_template/ruin/lavaland/survivalcapsule
+	name = "Survival Capsule Ruins"
+	id = "survivalcapsule"
+	description = "What was once sanctuary to the common miner, is now their tomb."
+	suffix = "lavaland_surface_survivalpod.dmm"
+	cost = 5
+
+/datum/map_template/ruin/lavaland/pizza
+	name = "Ruined Pizza Party"
+	id = "pizza"
+	description = "Little Timmy's birthday pizza bash took a turn for the worse when a bluespace anomaly passed by."
+	suffix = "lavaland_surface_pizzaparty.dmm"
+	allow_duplicates = FALSE
+	cost = 5
+
+/datum/map_template/ruin/lavaland/hermit
+	name = "Makeshift Shelter"
+	id = "hermitcave"
+	description = "A place of shelter for a lone hermit, scraping by to live another day."
+	suffix = "lavaland_surface_hermit.dmm"
+	allow_duplicates = FALSE
+	cost = 10
+
+/datum/map_template/ruin/lavaland/miningripley
+	name = "Ripley"
+	id = "ripley"
+	description = "A heavily-damaged mining ripley, property of a very unfortunate miner. You might have to do a bit of work to fix this thing up."
+	suffix = "lavaland_surface_random_ripley.dmm"
+	allow_duplicates = FALSE
+	cost = 5
+
+/datum/map_template/ruin/lavaland/comm_outpost
+	name = "Syndicate Comm Outpost"
+	id = "commoutpost"
+	description = "A forgotten outpost home to only a tragic tale."
+	suffix = "lavaland_surface_comm_outpost.dmm"
+	allow_duplicates = FALSE
+	cost = 5
+
+/datum/map_template/ruin/lavaland/dwarffortress
+	name = "Legion infested Dwarf Fortress"
+	id = "dwarffortress"
+	description = "A forgotten fortress home to only a tragic tale and infested corpses."
+	suffix = "lavaland_surface_dwarffortress.dmm"
+	allow_duplicates = FALSE
+
+/datum/map_template/ruin/lavaland/spookycrash
+	name = "Spooky Crash"
+	id = "spooky_crash"
+	description = "A spooky looking crash."
+	suffix = "lavaland_surface_SPOOKYCRASH.dmm"
+
+/datum/map_template/ruin/lavaland/crashedpinnance
+	name = "Crashed Research Pinnance"
+	id = "crashed_pinnance"
+	description = "A crashed shuttlecraft, looks like the pilot didn't make it."
+	suffix = "lavaland_surface_crashed_pinnance.dmm"
+
+/datum/map_template/ruin/lavaland/codelab
+	name = "Nanotrasen Genetic Research Facility"
+	id = "codelab"
+	description = "A Nanotrasen genetic research facility, abandoned and ripe for looting. Whats that goo over there?"
+	suffix = "lavaland_surface_codelab.dmm"
+
 //							///
 //		Rockplanet ruin		///
 //							///
