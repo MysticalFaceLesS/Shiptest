@@ -572,6 +572,36 @@ datum/map_template/ruin/rockplanet/mining_expedition
 	id = "abandoned_mechbay"
 	suffix = "wasteplanet_abandoned_mechbay.dmm"
 
+/datum/map_template/ruin/wasteplanet/fortress
+	name = "Fortress of Solitide"
+	id = "solitude"
+	description = "A fortress, although one you are probably more familiar with."
+	suffix = "wasteplanet_fortress_of_solitide.dmm"
+
+/datum/map_template/ruin/wasteplanet/oreprocess
+	name = "Ore Processing Facility"
+	id = "oreprocess"
+	description = "A fortress, although one you are probably more familiar with.."
+	suffix = "wasteplanet_ore_proccessing_facility.dmm"
+
+/datum/map_template/ruin/wasteplanet/tradepost
+	name = "Tradepost"
+	id = "oldpod"
+	description = "An abandoned tradepost."
+	suffix = "wasteplanet_tradepost.dmm"
+
+/datum/map_template/ruin/wasteplanet/tarpit
+	name = "Tar pit"
+	id = "tarpit"
+	description = "A facility once constructed over a asphalt deposit."
+	suffix = "wasteplanet_tarpit.dmm"
+
+/datum/map_template/ruin/wasteplanet/crash_kitchen
+	name = "Crashed Kitchen"
+	description = "A crashed part of some unlucky ship."
+	id = "crash_kitchen"
+	suffix = "wasteplanet_crash_kitchen.dmm"
+
 //							///
 //		Whitesand ruin		///
 //							///
