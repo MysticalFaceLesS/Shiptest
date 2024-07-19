@@ -54,11 +54,11 @@
 	icon = 'mod_celadon/_storge_icons/icons/obj/elysium_patriots.dmi'
 	icon_state = "poster-son_elysium"
 
-/obj/structure/sign/poster/elysium/ak47
+/* /obj/structure/sign/poster/elysium/ak47 		// Закомментированно до изменения спрайтов (с) RalseiDreemuurr
 	name = "No SolFed"
 	desc = "Poster of the elysium Republic depicting iconic weapons from a previous era. \"Even a child is ready to protect his home!\""
 	icon = 'mod_celadon/_storge_icons/icons/obj/elysium_patriots.dmi'
-	icon_state = "poster-ak47"
+	icon_state = "poster-ak47" */
 
 /obj/structure/sign/elysium
 	name = "\improper elysium logo sign"

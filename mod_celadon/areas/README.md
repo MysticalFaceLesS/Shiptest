@@ -28,7 +28,11 @@ ID мода: CELADON_AREAS
 
 ### Изменения *кор кода*
 
-- Отсутствуют
+- `code/game/area/areas.dm`
+- `code/datums/weather/weather.dm`
+- `code/game/machinery/firealarm.dm`
+- `code/modules/buildmode/submodes/area_edit.dm`
+- `code/modules/admin/verbs/mapping.dm`
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
