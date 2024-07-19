@@ -256,6 +256,12 @@
 		/obj/effect/spawner/minefield = 2
 	)
 	mob_spawn_list = list( //nor organics, more biased towards hivebots though
+		// [CELADON-ADD] - RETURN_TENDRILS
+		/obj/structure/spawner/wasteplanet/hivebot/low_threat = 20,
+		/obj/structure/spawner/wasteplanet/hivebot/medium_threat = 10,
+		/obj/structure/spawner/wasteplanet/hivebot/high_threat = 5,
+		/obj/structure/spawner/wasteplanet/hivebot/extreme_threat = 2,
+		// [/CELADON-ADD]
 		/mob/living/simple_animal/hostile/hivebot/wasteplanet/strong = 80,
 		/mob/living/simple_animal/hostile/hivebot/wasteplanet/ranged = 50,
 		/mob/living/simple_animal/hostile/hivebot/wasteplanet/ranged/rapid = 50,
@@ -411,6 +417,12 @@
 		/obj/effect/spawner/minefield/manhack = 2
 	)
 	mob_spawn_list = list( //nor organics, more biased towards hivebots though
+		// [CELADON-ADD] - RETURN_TENDRILS
+		/obj/structure/spawner/wasteplanet/hivebot/low_threat = 20,
+		/obj/structure/spawner/wasteplanet/hivebot/medium_threat = 10,
+		/obj/structure/spawner/wasteplanet/hivebot/high_threat = 5,
+		/obj/structure/spawner/wasteplanet/hivebot/extreme_threat = 2,
+		// [/CELADON-ADD]
 		/mob/living/simple_animal/hostile/hivebot/wasteplanet/strong = 80,
 		/mob/living/simple_animal/hostile/hivebot/wasteplanet/ranged = 50,
 		/mob/living/simple_animal/hostile/hivebot/wasteplanet/ranged/rapid = 50,
@@ -446,6 +458,12 @@
 	)
 	mob_spawn_chance = 30
 	feature_spawn_list = list(
+		// [CELADON-ADD] - RETURN_TENDRILS
+		/obj/structure/spawner/wasteplanet/hivebot/low_threat = 20,
+		/obj/structure/spawner/wasteplanet/hivebot/medium_threat = 10,
+		/obj/structure/spawner/wasteplanet/hivebot/high_threat = 5,
+		/obj/structure/spawner/wasteplanet/hivebot/extreme_threat = 2,
+		// [/CELADON-ADD]
 		/obj/structure/spawner/hivebot = 1,
 		/obj/effect/spawner/minefield/manhack = 2
 		)

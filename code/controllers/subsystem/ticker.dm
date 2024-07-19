@@ -284,7 +284,7 @@ SUBSYSTEM_DEF(ticker)
 	SSredbot.send_discord_message("ooc", "**A new round has begun.**")
 //[CELADON-EDIT]- MUSIC_CELADON
 //	SEND_SOUND(world, sound('sound/roundstart/addiguana.ogg'))//CELADON-EDIT-ORIGINAL
-	SEND_SOUND(world, sound('mod_celadon/music_celadon/sound/sztart.ogg'))
+	SEND_SOUND(world, sound('mod_celadon/_storge_sounds/sound/lobby/sztart.ogg'))
 //[/CELADON-EDIT]
 
 	current_state = GAME_STATE_PLAYING
@@ -581,7 +581,7 @@ SUBSYSTEM_DEF(ticker)
 		'sound/roundend/shiptestingthursday.ogg',
 //[CELADON-EDIT]- MUSIC_CELADON
 //		'sound/roundend/gayrights.ogg'\//CELADON-EDIT-ORIGINAL
-		'mod_celadon/music_celadon/sound/voiko_law.ogg'\
+		'mod_celadon/_storge_sounds/sound/lobby/voiko_law.ogg'\
 //[/CELADON-EDIT]
 		)
 	///The reference to the end of round sound that we have chosen.

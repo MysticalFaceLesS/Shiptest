@@ -59,6 +59,17 @@
 	contains = list(/obj/item/ammo_box/magazine/glock_standart)
 	cost = 500
 
+/datum/supply_pack/ammo/skm762_40_drum
+	name = "Барабанный магазин для СКМ 7.52x40"
+	desc = "Барабанный магазин калибра 7.62x40мм для винтовки СКМ-44, вмещает до 75 патронов."
+	contains = list(/obj/item/ammo_box/magazine/skm_762_40/drum)
+	cost = 5000
+
+/datum/supply_pack/ammo/skm762_40_extended
+	name = "Увеличенный магазин для СКМ 7.52x40"
+	desc = "Увеличенный рожковый магазин калибра 7.62x40мм для винтовки СКМ-44, вмещает до 40 патронов."
+	contains = list(/obj/item/ammo_box/magazine/skm_762_40/extended)
+	cost = 2800
 
 //Коробки патронов
 

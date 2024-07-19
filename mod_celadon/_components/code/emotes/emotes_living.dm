@@ -73,7 +73,7 @@
 /datum/emote/living/carbon/mothchitter/get_sound(mob/living/user)
 	var/mob/living/carbon/human/H = user
 	if(ismoth(H) | (istype(H, /mob/living/simple_animal/pet/mothroach)))
-		return 'mod_celadon/_components/sounds/voice/moth/mothchitter.ogg'
+		return 'mod_celadon/_storge_sounds/sound/voice/moth/mothchitter.ogg'
 
 /datum/emote/living/chuckle
 	key = "chuckle"
@@ -107,15 +107,15 @@
 /datum/emote/living/cough/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender == FEMALE)
-			return pick('mod_celadon/sound/voice/cough_female_1.ogg', 'mod_celadon/sound/voice/cough_female_2.ogg')
-		return pick('mod_celadon/sound/voice/cough_male_1.ogg', 'mod_celadon/sound/voice/cough_male_2.ogg', 'mod_celadon/sound/voice/cough_male_3.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/cough_female_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/cough_female_2.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/cough_male_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/cough_male_2.ogg', 'mod_celadon/_storge_sounds/sound/voice/cough_male_3.ogg')
 	return ..()
 
 /datum/emote/living/carbon/human/cry/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender == FEMALE)
-			return pick('mod_celadon/sound/voice/cry_female_1.ogg', 'mod_celadon/sound/voice/cry_female_2.ogg', 'mod_celadon/sound/voice/cry_female_3.ogg')
-		return pick('mod_celadon/sound/voice/cry_male_1.ogg', 'mod_celadon/sound/voice/cry_male_1.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/cry_female_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/cry_female_2.ogg', 'mod_celadon/_storge_sounds/sound/voice/cry_female_3.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/cry_male_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/cry_male_1.ogg')
 	return ..()
 
 /datum/emote/living/dance
@@ -225,11 +225,11 @@
 	var/human_gag= ishumanbasic(H)
 	if(human_gag && (!H.mind || !H.mind.miming))
 		if(user.gender == FEMALE)
-			return pick('mod_celadon/_components/sounds/voice/human/gasp_female1.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_female2.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_female3.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_female4.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_female5.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_female6.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_female7.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/human/gasp_female1.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female2.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female3.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female4.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female5.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female6.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female7.ogg')
 		else
-			return pick('mod_celadon/_components/sounds/voice/human/gasp_male1.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_male2.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_male3.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_male4.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_male5.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_male6.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_male7.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/human/gasp_male1.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_male2.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_male3.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_male4.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_male5.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_male6.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_male7.ogg')
 	if(ismoth(H))
-		return 'mod_celadon/_components/sounds/voice/human/gasp_female3.ogg'
+		return 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female3.ogg'
 
 
 /datum/emote/living/gasp
@@ -252,11 +252,11 @@
 	var/human_gasp = ishumanbasic(H)
 	if(human_gasp && (!H.mind || !H.mind.miming))
 		if(user.gender == FEMALE)
-			return pick('mod_celadon/_components/sounds/voice/human/gasp_female1.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_female2.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_female3.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_female4.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_female5.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_female6.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_female7.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/human/gasp_female1.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female2.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female3.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female4.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female5.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female6.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female7.ogg')
 		else
-			return pick('mod_celadon/_components/sounds/voice/human/gasp_male1.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_male2.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_male3.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_male4.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_male5.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_male6.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_male7.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/human/gasp_male1.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_male2.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_male3.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_male4.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_male5.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_male6.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_male7.ogg')
 	if(ismoth(H))
-		return 'mod_celadon/_components/sounds/voice/human/gasp_female3.ogg'
+		return 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female3.ogg'
 
 /datum/emote/living/giggle
 	key = "giggle"
@@ -268,8 +268,8 @@
 /datum/emote/living/giggle/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender == FEMALE)
-			return pick('mod_celadon/sound/voice/giggle_female_1.ogg', 'mod_celadon/sound/voice/giggle_female_2.ogg', 'mod_celadon/sound/voice/giggle_female_3.ogg')
-		return pick('mod_celadon/sound/voice/giggle_male_1.ogg', 'mod_celadon/sound/voice/giggle_male_2.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/giggle_female_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/giggle_female_2.ogg', 'mod_celadon/_storge_sounds/sound/voice/giggle_female_3.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/giggle_male_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/giggle_male_2.ogg')
 	return ..()
 
 /datum/emote/living/glare
@@ -295,8 +295,8 @@
 /datum/emote/living/groan/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender == FEMALE)
-			return pick('mod_celadon/sound/voice/moan_female_1.ogg', 'mod_celadon/sound/voice/moan_female_2.ogg', 'mod_celadon/sound/voice/moan_female_3.ogg')
-		return pick('mod_celadon/sound/voice/moan_male_1.ogg', 'mod_celadon/sound/voice/moan_male_2.ogg', 'mod_celadon/sound/voice/moan_male_3.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/moan_female_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/moan_female_2.ogg', 'mod_celadon/_storge_sounds/sound/voice/moan_female_3.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/moan_male_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/moan_male_2.ogg', 'mod_celadon/_storge_sounds/sound/voice/moan_male_3.ogg')
 	return ..()
 
 /datum/emote/living/growl
@@ -361,11 +361,11 @@
 	var/human_laugh = ishumanbasic(H)
 	if(human_laugh && (!H.mind || !H.mind.miming))
 		if(user.gender == FEMALE)
-			return 'mod_celadon/_components/sounds/voice/human/womanlaugh.ogg'
+			return 'mod_celadon/_storge_sounds/sound/voice/human/womanlaugh.ogg'
 		else
-			return pick('mod_celadon/_components/sounds/voice/human/manlaugh1.ogg', 'mod_celadon/_components/sounds/voice/human/manlaugh2.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/human/manlaugh1.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/manlaugh2.ogg')
 	if(ismoth(H))
-		return 'mod_celadon/_components/sounds/voice/moth/mothlaugh.ogg'
+		return 'mod_celadon/_storge_sounds/sound/voice/moth/mothlaugh.ogg'
 
 /datum/emote/living/look
 	key = "look"
@@ -391,7 +391,7 @@
 /datum/emote/living/carbon/mothsqueak/get_sound(mob/living/user)
 	var/mob/living/carbon/human/H = user
 	if(ismoth(H) | (istype(H, /mob/living/simple_animal/pet/mothroach)))
-		return 'mod_celadon/_components/sounds/voice/moth/mothsqueak.ogg'
+		return 'mod_celadon/_storge_sounds/sound/voice/moth/mothsqueak.ogg'
 
 /datum/emote/living/peace
 	key = "peace"
@@ -471,8 +471,8 @@
 /datum/emote/living/sigh/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender == FEMALE)
-			return pick('mod_celadon/sound/voice/sigh_female.ogg')
-		return pick('mod_celadon/sound/voice/sigh_male.ogg', 'mod_celadon/sound/voice/sigh_male.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/sigh_female.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/sigh_male.ogg', 'mod_celadon/_storge_sounds/sound/voice/sigh_male.ogg')
 	return ..()
 
 /datum/emote/living/sit
@@ -502,8 +502,8 @@
 /datum/emote/living/sneeze/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender == FEMALE)
-			return pick('mod_celadon/sound/voice/sneeze_female.ogg')
-		return pick('mod_celadon/sound/voice/sneeze.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/sneeze_female.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/sneeze.ogg')
 	return ..()
 
 /datum/emote/living/smug
@@ -521,8 +521,8 @@
 /datum/emote/living/sniff/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender == FEMALE)
-			return pick('mod_celadon/sound/voice/sniff_female.ogg')
-		return pick('mod_celadon/sound/voice/sniff_male.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/sniff_female.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/sniff_male.ogg')
 	return ..()
 
 #define SNORE_DURATION 5.2 SECONDS
@@ -557,7 +557,7 @@
 
 /datum/emote/living/snore/get_sound(mob/living/user)
 	if(ishuman(user))
-		return pick('mod_celadon/sound/voice/snore_1.ogg', 'mod_celadon/sound/voice/snore_2.ogg', 'mod_celadon/sound/voice/snore_3.ogg', 'mod_celadon/sound/voice/snore_4.ogg', 'mod_celadon/sound/voice/snore_5.ogg', 'mod_celadon/sound/voice/snore_6.ogg', 'mod_celadon/sound/voice/snore_7.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/snore_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/snore_2.ogg', 'mod_celadon/_storge_sounds/sound/voice/snore_3.ogg', 'mod_celadon/_storge_sounds/sound/voice/snore_4.ogg', 'mod_celadon/_storge_sounds/sound/voice/snore_5.ogg', 'mod_celadon/_storge_sounds/sound/voice/snore_6.ogg', 'mod_celadon/_storge_sounds/sound/voice/snore_7.ogg')
 	return ..()
 
 #undef SNORE_DURATION
@@ -651,8 +651,8 @@
 /datum/emote/living/yawn/get_sound(mob/living/user)
 	if(ishuman(user))
 		if(user.gender == FEMALE)
-			return pick('mod_celadon/sound/voice/yawn_female_1.ogg', 'mod_celadon/sound/voice/yawn_female_2.ogg', 'mod_celadon/sound/voice/yawn_female_3.ogg')
-		return pick('mod_celadon/sound/voice/yawn_male_1.ogg', 'mod_celadon/sound/voice/yawn_male_2.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/yawn_female_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/yawn_female_2.ogg', 'mod_celadon/_storge_sounds/sound/voice/yawn_female_3.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/yawn_male_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/yawn_male_2.ogg')
 	return ..()
 
 /datum/emote/living/gurgle
@@ -772,5 +772,5 @@
 
 /datum/emote/living/hoot/get_sound(mob/living/user)
 	if(ishuman(user))
-		return pick('mod_celadon/sound/voice/whistle.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/whistle.ogg')
 	return ..()

@@ -40,7 +40,7 @@
 				user.visible_message("<span class='notice'>[user] fells [src] with the [W].</span>","<span class='notice'>You fell [src] with the [W].</span>", "<span class='hear'>You hear the sound of a tree falling.</span>")
 				// [CELADON-EDIT] - CELADON_QOL
 				// playsound(get_turf(src), 'sound/effects/meteorimpact.ogg', 100 , FALSE, FALSE) // CELADON-EDIT - ORIGINAL
-				playsound(get_turf(src), 'mod_celadon/sound/zvuk-padayuschego-dereva.ogg', 100 , FALSE, FALSE)
+				playsound(get_turf(src), 'mod_celadon/_storge_sounds/sound/zvuk-padayuschego-dereva.ogg', 100 , FALSE, FALSE)
 				// [/CELADON-EDIT]
 				user.log_message("cut down [src] at [AREACOORD(src)]", LOG_ATTACK)
 				for(var/i=1 to log_amount)
@@ -385,7 +385,7 @@
 	. = ..()
 	// [CELADON-EDIT] - CELADON_FLORA
 	// icon = 'icons/obj/flora/plants.dmi' // CELADON-EDIT - ORIGINAL
-	icon = 'mod_celadon/flora/icons/plants.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/plants.dmi'
 	// [/CELADON-EDIT]
 	if(!states)
 		generate_states()

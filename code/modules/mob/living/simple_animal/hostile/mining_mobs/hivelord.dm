@@ -171,6 +171,10 @@
 		if(stored_mob)
 			stored_mob.forceMove(get_turf(src))
 			stored_mob = null
+		// [CELADON-ADD] - RETURN_TENDRILS
+		else if(fromtendril)
+			new /obj/effect/mob_spawn/human/corpse/charredskeleton(T)
+		// [/CELADON-ADD]
 		else if(from_nest)
 			new /obj/effect/mob_spawn/human/corpse/charredskeleton(T)
 		else if(dwarf_mob)
@@ -332,7 +336,11 @@
 
 /mob/living/simple_animal/hostile/big_legion/Initialize()
 	.=..()
-	AddComponent(/datum/component/spawner, list(/mob/living/simple_animal/hostile/asteroid/hivelord/legion/nest), 200, faction, "peels itself off from", 3)
+	// [CELADON-EDIT] - RETURN_TENDRILS
+	// AddComponent(/datum/component/spawner, list(/mob/living/simple_animal/hostile/asteroid/hivelord/legion/nest), 200, faction, "peels itself off from", 3) // CELADON-EDIT - ORIGINAL
+	AddComponent(/datum/component/spawner, list(/mob/living/simple_animal/hostile/asteroid/hivelord/legion/nest,
+												/mob/living/simple_animal/hostile/asteroid/hivelord/legion/tendril), 200, faction, "peels itself off from", 3)
+	// [/CELADON-EDIT]
 
 // Snow Legion
 /mob/living/simple_animal/hostile/asteroid/hivelord/legion/snow

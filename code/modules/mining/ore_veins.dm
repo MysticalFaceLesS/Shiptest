@@ -40,6 +40,10 @@ GLOBAL_LIST_EMPTY(ore_veins)
 	var/max_mobs = 6
 	var/spawn_time = 150 //15 seconds
 	var/mob_types = list(
+		// [CELADON-ADD] - RETURN_TENDRILS
+		/mob/living/simple_animal/hostile/asteroid/goliath/beast/tendril = 60,
+		/mob/living/simple_animal/hostile/asteroid/hivelord/legion/tendril = 20,
+		// [/CELADON-ADD]
 		/mob/living/simple_animal/hostile/asteroid/goliath/beast/nest = 60,
 		/mob/living/simple_animal/hostile/asteroid/hivelord/legion/nest = 20,
 		/mob/living/simple_animal/hostile/asteroid/brimdemon = 20,
@@ -126,6 +130,11 @@ GLOBAL_LIST_EMPTY(ore_veins)
 	max_mobs = 6
 	spawn_time = 100
 	mob_types = list(
+		// [CELADON-ADD] - RETURN_TENDRILS
+		/mob/living/simple_animal/hostile/asteroid/goliath/beast/tendril = 60,
+		/mob/living/simple_animal/hostile/asteroid/hivelord/legion/tendril = 30,
+		/mob/living/simple_animal/hostile/asteroid/hivelord/legion/dwarf/tendril = 5,
+		// [/CELADON-ADD]
 		/mob/living/simple_animal/hostile/asteroid/goliath/beast/nest = 60,
 		/mob/living/simple_animal/hostile/asteroid/hivelord/legion/nest = 30,
 		/mob/living/simple_animal/hostile/asteroid/brimdemon = 20,
@@ -149,6 +158,11 @@ GLOBAL_LIST_EMPTY(ore_veins)
 	max_mobs = 6 //Best not to go past 6 due to balance and lag reasons
 	spawn_time = 80
 	mob_types = list(
+		// [CELADON-ADD] - RETURN_TENDRILS
+		/mob/living/simple_animal/hostile/asteroid/goliath/beast/tendril = 60,
+		/mob/living/simple_animal/hostile/asteroid/hivelord/legion/tendril = 30,
+		/mob/living/simple_animal/hostile/asteroid/hivelord/legion/dwarf/tendril = 10,
+		// [/CELADON-ADD]
 		/mob/living/simple_animal/hostile/asteroid/goliath/beast/nest = 60,
 		/mob/living/simple_animal/hostile/asteroid/hivelord/legion/nest = 30,
 		/mob/living/simple_animal/hostile/asteroid/brimdemon = 20,
@@ -158,6 +172,9 @@ GLOBAL_LIST_EMPTY(ore_veins)
 
 /obj/structure/vein/ice
 	mob_types = list(
+		// [CELADON-ADD] - RETURN_TENDRILS
+		/mob/living/simple_animal/hostile/asteroid/hivelord/legion/snow/tendril = 20,
+		// [/CELADON-ADD]
 		/mob/living/simple_animal/hostile/asteroid/wolf = 30,
 		/mob/living/simple_animal/hostile/asteroid/polarbear = 30,
 		/mob/living/simple_animal/hostile/asteroid/hivelord/legion/snow/nest = 20,

@@ -1,7 +1,7 @@
 /mob/living/simple_animal/iriska
 	name = "Iriska"
 	desc = "The captain's own cat. Fat and lazy."
-	icon = 'mod_celadon/mobs/icons/iriska.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/mobs/iriska.dmi'
 	desc = "Its said that the cat has bluespace powers, cursing anyone whom it has been angered by upon death."
 	icon_state = "iriska"
 	icon_dead = "iriska_dead"
