@@ -392,7 +392,7 @@
 	description = "something dangerous"
 	suffix = "rockplanet_heirophant.dmm"
 
-datum/map_template/ruin/rockplanet/mining_expedition
+/datum/map_template/ruin/rockplanet/mining_expedition
 	name = "Mining Expedition"
 	id = "expedition"
 	description = "A mining operation gone wrong."
