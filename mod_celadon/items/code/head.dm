@@ -8,12 +8,12 @@
 /obj/item/clothing/head/costume/tv_head
 	name = "television helmet"
 	desc = "A mysterious headgear made from the hollowed out remains of a status display. How very retro-retro-futuristic of you."
-	icon = 'mod_celadon/items/icons/obj/head/costume.dmi'
-	mob_overlay_icon = 'mod_celadon/items/icons/mob/head/costume.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/items/obj/head/costume.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/items/mob/head/costume.dmi'
 	icon_state = "IPC_helmet"
 	item_state = "syringe_kit"
-	lefthand_file = 'mod_celadon/items/icons/mob/inhands/medical_lefthand.dmi' //Grandfathered in from the wallframe for status displays.
-	righthand_file = 'mod_celadon/items/icons/mob/inhands/medical_righthand.dmi'
+	lefthand_file = 'mod_celadon/_storge_icons/icons/items/mob/inhands/medical_lefthand.dmi' //Grandfathered in from the wallframe for status displays.
+	righthand_file = 'mod_celadon/_storge_icons/icons/items/mob/inhands/medical_righthand.dmi'
 	clothing_flags = SNUG_FIT
 	flash_protect = FLASH_PROTECTION_SENSITIVE
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH | PEPPERPROOF
@@ -34,6 +34,6 @@
 	desc = "A well-worn fedora favored by explorers and archaeologists. Not very protective but still very stylish."
 	icon_state = "explorerhat"
 	item_state = "explorerhat"
-	icon = 'mod_celadon/items/icons/obj/tajara_items.dmi'
-	mob_overlay_icon = 'mod_celadon/items/icons/overlay/tajara_items_overlay.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/items/obj/tajara_items.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/items/overlay/tajara_items_overlay.dmi'
 	flags_inv = 0

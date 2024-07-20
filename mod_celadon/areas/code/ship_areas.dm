@@ -2,7 +2,6 @@
 /area/ship/general
 	name = "General"
 	icon_state = "general"
-	icon = 'mod_celadon/areas/icons/areas.dmi'
 
 /// COMMAND CREW
 /area/ship/general/command_crew

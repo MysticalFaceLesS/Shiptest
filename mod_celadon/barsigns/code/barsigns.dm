@@ -8,9 +8,9 @@
 
 	// uses modular icon file
 	if(istype(chosen_sign, /datum/barsign/celadon/large))
-		icon = 'mod_celadon/barsigns/icons/barsigns96x96.dmi'
+		icon = 'mod_celadon/_storge_icons/icons/barsigns96x96.dmi'
 	else
-		icon = 'mod_celadon/barsigns/icons/barsigns.dmi'
+		icon = 'mod_celadon/_storge_icons/icons/barsigns.dmi'
 
 /datum/barsign
 	var/neon_color /// The emission color of the neon light
@@ -19,7 +19,7 @@
 /obj/machinery/barsign // All Signs are 64 by 32 pixels, they take two tiles
 	name = "bar sign"
 	desc = "A bar sign which has not been initialized, somehow. Complain at a coder!"
-	icon = 'mod_celadon/barsigns/icons/barsigns.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/barsigns.dmi'
 	icon_state = "empty"
 	req_access = list(ACCESS_BAR)
 	max_integrity = 500
@@ -93,8 +93,8 @@
 /datum/barsign/thewretchedhive
 	icon_state = "thewretchedhive"
 
-/datum/barsign/robustacafe
-	icon_state = "robustacafe"
+// /datum/barsign/robustacafe
+// 	icon_state = "robustacafe"
 
 /datum/barsign/emergencyrumparty
 	icon_state = "emergencyrumparty"
@@ -147,17 +147,17 @@
 /// CORE CODE - END
 
 /obj/structure/sign/barsign
-	icon = 'mod_celadon/barsigns/icons/barsigns.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/barsigns.dmi'
 
 /datum/barsign/celadon/topmen
 	name = "Top Men"
 	icon_state = "topmen"
 	neon_color = "#C2AACA"
 
-/datum/barsign/celadon/spaceballgrille
-	name = "Spaceball Grille"
-	icon_state = "spaceballgrille"
-	neon_color = "#827973"
+// /datum/barsign/celadon/spaceballgrille
+// 	name = "Spaceball Grille"
+// 	icon_state = "spaceballgrille"
+// 	neon_color = "#827973"
 
 /datum/barsign/celadon/clubee
 	name = "Club Bee"
@@ -208,10 +208,10 @@
 	desc = "When you're up against a wall, it's best to have stout friends and stout liquor right there beside you."
 	neon_color = "#CC3333"
 
-/datum/barsign/celadon/whiskeyimplant
-	name = "Whiskey Implant"
-	icon_state = "whiskeyimplant"
-	neon_color = "#E9F517"
+// /datum/barsign/celadon/whiskeyimplant
+// 	name = "Whiskey Implant"
+// 	icon_state = "whiskeyimplant"
+// 	neon_color = "#E9F517"
 
 /datum/barsign/celadon/carpecarp
 	name = "Carpe Carp"
@@ -296,6 +296,7 @@
 /datum/barsign/celadon/thehive
 	name = "The Hive"
 	icon_state = "thehive"
+	desc = "A wildly known, high class eridanian cocktail bar chain."
 	neon_color = "#FFC62A"
 
 /datum/barsign/celadon/cantina
@@ -433,7 +434,7 @@
 
 // 220
 /datum/barsign/evahumanspace
-	name = "SS220 EVA Human in Space"
+	name = "EVA Human in Space"
 	icon_state = "evahumanspace"
 	desc = "Безопасность - это привелегия."
 
@@ -458,7 +459,7 @@
 // 	desc = "Невиновность ничего не доказывает."
 
 /datum/barsign/pourndot
-	name = "SS220 Pour and that's it"
+	name = "Pour and that's it"
 	icon_state = "pourndot"
 	desc = "Нальют и Точка. Тяжёлые времена приближаются."
 
@@ -473,10 +474,10 @@
 	icon_state = "Whiskey Implant"
 	desc = "A hit on modern extensive augmentations."
 
-/datum/barsign/the_drunk_carp
-	name = "The Drunk Carp"
-	icon_state = "The Drunk Carp"
-	desc = "A depiction of a stylized space carp drinking a beer."
+// /datum/barsign/the_drunk_carp
+// 	name = "The Drunk Carp"
+// 	icon_state = "The Drunk Carp"
+// 	desc = "A depiction of a stylized space carp drinking a beer."
 
 /datum/barsign/the_outer_spess
 	name = "The Outer Spess"
@@ -493,30 +494,30 @@
 	icon_state = "Hearts of Plasteel"
 	desc = "The sign of a diner from a famous TV show."
 
-/datum/barsign/chem_lab
-	name = "Chem Lab"
-	icon_state = "Chem Lab"
-	desc = "Chem Labs are the unofficial name given to some eridanian bars."
+// /datum/barsign/chem_lab
+// 	name = "Chem Lab"
+// 	icon_state = "Chem Lab"
+// 	desc = "Chem Labs are the unofficial name given to some eridanian bars."
 
 /datum/barsign/meow_mix
 	name = "Meow Mix"
 	icon_state = "Meow Mix"
 	desc = "A sign with a selection of some of the SCC's much beloved pets."
 
-/datum/barsign/the_hive
-	name = "The Hive"
-	icon_state = "The Hive"
-	desc = "A wildly known, high class eridanian cocktail bar chain."
+// /datum/barsign/the_hive
+// 	name = "The Hive"
+// 	icon_state = "The Hive"
+// 	desc = "A wildly known, high class eridanian cocktail bar chain."
 
-/datum/barsign/mead_bay
-	name = "Mead Bay"
-	icon_state = "Mead Bay"
-	desc = "The Mead Bay is the alternative for visiting an actual Medbay."
+// /datum/barsign/mead_bay
+// 	name = "Mead Bay"
+// 	icon_state = "Mead Bay"
+// 	desc = "The Mead Bay is the alternative for visiting an actual Medbay."
 
-/datum/barsign/toolbox_tavern
-	name = "Toolbox Tavern"
-	icon_state = "Toolbox Tavern"
-	desc = "A popular bar at an Hepheastus Industries shipyard."
+// /datum/barsign/toolbox_tavern
+// 	name = "Toolbox Tavern"
+// 	icon_state = "Toolbox Tavern"
+// 	desc = "A popular bar at an Hepheastus Industries shipyard."
 
 /datum/barsign/maltese_falcon
 	name = "Maltese Falcon"
@@ -528,20 +529,20 @@
 	icon_state = "Old Cock Inn"
 	desc = "The sign of a formerly well-known discotheque."
 
-/datum/barsign/event_horizon // Start of the kitchen signs. Don't mix it up.
-	name = "Event Horizon"
-	icon_state = "Event Horizon"
-	desc = "The SCCV Horizon's kitchen franchise sign."
+// /datum/barsign/event_horizon // Start of the kitchen signs. Don't mix it up.
+// 	name = "Event Horizon"
+// 	icon_state = "Event Horizon"
+// 	desc = "The SCCV Horizon's kitchen franchise sign."
 
-/datum/barsign/paradise_sands
-	name = "Paradise Sands"
-	icon_state = "Paradise Sands"
-	desc = "A take on the sign of one of Silversun's most popular cafe and bistro owned by Idris Incorporated."
+// /datum/barsign/paradise_sands
+// 	name = "Paradise Sands"
+// 	icon_state = "Paradise Sands"
+// 	desc = "A take on the sign of one of Silversun's most popular cafe and bistro owned by Idris Incorporated."
 
-/datum/barsign/city_alive
-	name = "City Alive"
-	icon_state = "City Alive"
-	desc = "City Alive is another popular restaurant chain, originating from Eridani I. It is famous for its light shows."
+// /datum/barsign/city_alive
+// 	name = "City Alive"
+// 	icon_state = "City Alive"
+// 	desc = "City Alive is another popular restaurant chain, originating from Eridani I. It is famous for its light shows."
 
 // 5
 /datum/barsign/alohasnackbar
@@ -551,7 +552,7 @@
 
 /datum/barsign/armoksbargrill
 	name = "Armok's Bar and Grill"
-	icon_state = "armoksbargrill"
+	icon_state = "armokbar"
 	desc = ""
 
 /datum/barsign/brokendrum
@@ -569,35 +570,35 @@
 	icon_state = "cavern"
 	desc = ""
 
-/datum/barsign/clownshead
-	name = "The Clown's Head"
-	icon_state = "clownshead"
-	desc = ""
+// /datum/barsign/clownshead
+// 	name = "The Clown's Head"
+// 	icon_state = "clownshead"
+// 	desc = ""
 
 /datum/barsign/coderbus
 	name = "The Coderbus"
 	icon_state = "coderbus"
 	desc = "A very controversial bar known for its wide variety of constantly-changing drinks."
 
-/datum/barsign/damnwall
-	name = "The Damn Wall"
-	icon_state = "damnwall"
-	desc = ""
+// /datum/barsign/damnwall
+// 	name = "The Damn Wall"
+// 	icon_state = "damnwall"
+// 	desc = ""
 
-/datum/barsign/drunkcarp
-	name = "The Drunk Carp"
-	icon_state = "drunkcarp"
-	desc = "Don't drink and swim."
+// /datum/barsign/drunkcarp
+// 	name = "The Drunk Carp"
+// 	icon_state = "drunkcarp"
+// 	desc = "Don't drink and swim."
 
 /datum/barsign/magmasea
 	name = "The Magma Sea"
 	icon_state = "magmasea"
 	desc = ""
 
-/datum/barsign/orchard
-	name = "The Orchard"
-	icon_state = "orchard"
-	desc = ""
+// /datum/barsign/orchard
+// 	name = "The Orchard"
+// 	icon_state = "orchard"
+// 	desc = ""
 
 /datum/barsign/pinkflamingo
 	name = "The Pink Flamingo"
@@ -609,10 +610,10 @@
 	icon_state = "rustyaxe"
 	desc = ""
 
-/datum/barsign/saucyclown
-	name = "The Saucy Clown"
-	icon_state = "saucyclown"
-	desc = ""
+// /datum/barsign/saucyclown
+// 	name = "The Saucy Clown"
+// 	icon_state = "saucyclown"
+// 	desc = ""
 
 /datum/barsign/shaken
 	name = "The Shaken"

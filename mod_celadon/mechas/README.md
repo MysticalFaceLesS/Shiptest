@@ -60,10 +60,10 @@ ID мода: MECHAS
 
 ### Используемые файлы, не содержащиеся в модпаке
 
-К модпаку относятся три файла:
 - `mod_celadon\research\code\designs\designs.dm`
 - `mod_celadon\research\code\designs\mechfabricator.dm`
 - `mod_celadon\cargo_items\code\packs\mechs.dm`
+- `mod_celadon/_storge_icons/icons`
 <!--
   Будь то немодульный файл или модульный файл, который не содержится в папке,
   принадлежащей этому конкретному моду, он должен быть упомянут здесь.

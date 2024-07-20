@@ -1,10 +1,10 @@
 // ROBOT ALCOHOL PAST THIS POINT
 // WOOO!
 // /obj/structure/aquarium
-// 	icon = 'mod_celadon/food_and_drinks/icons/drinks.dmi'
+// 	icon = 'mod_celadon/_storge_icons/icons/drinks.dmi'
 
 /obj/item/reagent_containers/food/drinks
-	icon = 'mod_celadon/food_and_drinks/icons/drinks.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/drinks.dmi'
 
 #define REAGENT_TOUCH 1
 #define REAGENT_INGEST 2

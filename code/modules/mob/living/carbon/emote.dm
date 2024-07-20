@@ -76,7 +76,7 @@
 	// [CELADON-EDIT] - CELADON_COMPONENTS_EMOTE - Эмоции
 	// message = "cracks their knuckles." - sound = 'sound/misc/crack.ogg'// CELADON-EDIT - ORIGINAL
 	message = "хрустит костяшками пальцев."
-	sound = 'mod_celadon/sound/voice/knuckles.ogg'
+	sound = 'mod_celadon/_storge_sounds/sound/voice/knuckles.ogg'
 	// [/CELADON-EDIT]
 	cooldown = 6 SECONDS
 

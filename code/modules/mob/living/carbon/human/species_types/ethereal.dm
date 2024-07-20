@@ -93,7 +93,7 @@
 	button_icon_state = "plant-22"
 	// [CELADON-EDIT] - CELADON_FLORA
 	// icon_icon = 'icons/obj/flora/plants.dmi' // CELADON-EDIT - ORIGINAL
-	icon_icon = 'mod_celadon/flora/icons/plants.dmi'
+	icon_icon = 'mod_celadon/_storge_icons/icons/plants.dmi'
 	// [/CELADON-EDIT]
 	background_icon_state = "bg_alien"
 

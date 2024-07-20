@@ -996,6 +996,7 @@
 /area/ship/security)
 "mK" = (
 /obj/effect/turf_decal/siding/wood,
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/wood/walnut,
 /area/ship/crew/dorm)
 "mS" = (
@@ -2319,6 +2320,7 @@
 	},
 /obj/effect/turf_decal/industrial/outline/yellow,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/plasteel/mono,
 /area/ship/cargo)
 "Cr" = (
@@ -2951,8 +2953,15 @@
 	name = "Bridge Lockdown";
 	id = "cepheus_bridge_lockdown"
 	},
+/obj/machinery/newscaster/directional/north{
+	pixel_x = -13
+	},
 /turf/open/floor/carpet/royalblue,
 /area/ship/bridge)
+"Ja" = (
+/obj/machinery/newscaster/directional/north,
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/ship/engineering/electrical)
 "Jb" = (
 /obj/effect/turf_decal/solgov/all/center_right,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
@@ -3232,7 +3241,12 @@
 	color = "#543C30"
 	},
 /obj/structure/table/wood,
-/obj/item/radio/intercom/directional/west,
+/obj/item/radio/intercom/directional/west{
+	pixel_y = 11
+	},
+/obj/machinery/newscaster/directional/west{
+	pixel_y = -5
+	},
 /turf/open/floor/wood,
 /area/ship/hallway/central)
 "Mr" = (
@@ -3312,6 +3326,9 @@
 /obj/structure/table/wood,
 /obj/machinery/light/directional/east{
 	pixel_y = -16
+	},
+/obj/machinery/newscaster/directional/east{
+	pixel_y = 5
 	},
 /turf/open/floor/wood,
 /area/ship/hallway/central)
@@ -3792,6 +3809,7 @@
 	pixel_x = 5;
 	pixel_y = 6
 	},
+/obj/machinery/newscaster/directional/east,
 /turf/open/floor/plasteel/white,
 /area/ship/security/armory)
 "Um" = (
@@ -4534,7 +4552,7 @@ Ob
 wN
 pV
 Nx
-Ob
+Ja
 WY
 bb
 QJ

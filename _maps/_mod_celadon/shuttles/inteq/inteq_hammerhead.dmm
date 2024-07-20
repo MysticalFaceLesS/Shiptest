@@ -760,6 +760,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/plasteel/dark,
 /area/ship/security/prison)
 "dK" = (
@@ -1076,6 +1077,10 @@
 /obj/structure/catwalk/over/plated_catwalk/dark,
 /turf/open/floor/plating,
 /area/ship/engineering/atmospherics)
+"gp" = (
+/obj/machinery/newscaster/directional/south,
+/turf/open/floor/plasteel/tech/grid,
+/area/ship/maintenance/central)
 "gr" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
 	dir = 8
@@ -2166,7 +2171,8 @@
 	freerange = 1;
 	freqlock = 1;
 	frequency = 1347;
-	name = "IRMG shortwave intercom"
+	name = "IRMG shortwave intercom";
+	pixel_y = -8
 	},
 /obj/effect/turf_decal/corner/opaque/brown/border{
 	dir = 8
@@ -2175,6 +2181,9 @@
 /obj/item/paper{
 	name = "Scrape paper";
 	default_raw_text = "Корабль не доукомплектован , прошу выслать оставшееся снаряжение."
+	},
+/obj/machinery/newscaster/directional/east{
+	pixel_y = 7
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
@@ -5983,6 +5992,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/wood,
 /area/ship/crew/canteen/kitchen)
 "KN" = (
@@ -6354,6 +6364,7 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/cargo/office)
 "NT" = (
@@ -6778,6 +6789,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/robot_debris,
+/obj/machinery/newscaster/directional/west,
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering/communications)
 "Qz" = (
@@ -8762,7 +8774,7 @@ KK
 vD
 FG
 Fs
-ul
+gp
 kn
 Qr
 bQ
@@ -9287,7 +9299,7 @@ vO
 hu
 Zr
 Kb
-ul
+gp
 rc
 tB
 OO

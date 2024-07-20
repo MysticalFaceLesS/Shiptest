@@ -1,7 +1,7 @@
 /obj/item/toy/plush/celadon/separ
 	name = "\proper Separatist plushie"
 	desc = "A cute soft toy of a Separatist. Holding it in your hands, you can hardly restrain yourself from screaming with happiness."
-	icon = 'mod_celadon/donaters/icons/plushes.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/donaters/plushes.dmi'
 	icon_state = "separ"
 	item_state = "separ"
 	w_class = WEIGHT_CLASS_SMALL
@@ -26,15 +26,15 @@
 	var/text = get_text()
 	say(text)
 	playsound(loc, pick(
-			'mod_celadon/_components/sounds/voice/human_male_warcry_1.ogg',
-			'mod_celadon/_components/sounds/voice/human_male_warcry_2.ogg',
-			'mod_celadon/_components/sounds/voice/human_male_warcry_3.ogg',
-			'mod_celadon/_components/sounds/voice/human_male_warcry_4.ogg',
-			'mod_celadon/_components/sounds/voice/human_male_warcry_5.ogg',
-			'mod_celadon/_components/sounds/voice/human_male_warcry_6.ogg',
-			'mod_celadon/_components/sounds/voice/human_male_warcry_7.ogg',
-			'mod_celadon/_components/sounds/voice/human_male_warcry_8.ogg',
-			'mod_celadon/_components/sounds/voice/human_male_warcry_9.ogg'), 50, FALSE)
+			'mod_celadon/_storge_sounds/sound/voice/human_male_warcry_1.ogg',
+			'mod_celadon/_storge_sounds/sound/voice/human_male_warcry_2.ogg',
+			'mod_celadon/_storge_sounds/sound/voice/human_male_warcry_3.ogg',
+			'mod_celadon/_storge_sounds/sound/voice/human_male_warcry_4.ogg',
+			'mod_celadon/_storge_sounds/sound/voice/human_male_warcry_5.ogg',
+			'mod_celadon/_storge_sounds/sound/voice/human_male_warcry_6.ogg',
+			'mod_celadon/_storge_sounds/sound/voice/human_male_warcry_7.ogg',
+			'mod_celadon/_storge_sounds/sound/voice/human_male_warcry_8.ogg',
+			'mod_celadon/_storge_sounds/sound/voice/human_male_warcry_9.ogg'), 50, FALSE)
 	visible_message("<span class='warning'>СМЕРТЬ КСЕНОСАМ!</span>",
 		"<span class='hear'>Никакой пощады!</span>")
 	COOLDOWN_START(src, cooldown, 2 SECONDS)

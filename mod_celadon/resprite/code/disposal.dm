@@ -1,2 +1,2 @@
 /obj/machinery/disposal
-	icon = 'mod_celadon/resprite/icons/disposals.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/resprite/disposals.dmi'

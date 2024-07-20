@@ -5,12 +5,20 @@
 // 	description = "Описание"
 // 	suffix = "Название файла"
 
-// Руины Beachplanet
+//							///
+//		Beach ruin			///
+//							///
 /datum/map_template/ruin/beachplanet/fishinghut
 	name = "Fishing Hut"
 	id = "fishinghut"
 	description = "A small fishing hut floating on the ocean."
 	suffix = "beach_fishing_hut.dmm"
+
+/datum/map_template/ruin/beachplanet/colony
+	name = "Abandoned Beachside Colony"
+	id = "beach_colony"
+	description = "A abandoned colony. It seems that this colony was abandoned, for a reason or another"
+	suffix = "beach_colony.dmm"
 
 /datum/map_template/ruin/beachplanet/ancient
 	name = "Ancient Danger"
@@ -48,7 +56,21 @@
 	description = "A hidden paradise on the beach"
 	suffix = "beach_float_resort.dmm"
 
-// Руины Icemoon
+/datum/map_template/ruin/beachplanet/fallenstar
+	name = "Crashed Starwalker"
+	id = "crashed_star"
+	description = "A Crashed Starwalker Class Pirate Ship. It's Crew is Long-Dead."
+	suffix = "beach_crashed_starwalker.dmm"
+
+/datum/map_template/ruin/beachplanet/knight
+	name = "Knight's Rest"
+	id = "knights_rest"
+	description = "An small castle holding the grave of a renowned warrior"
+	suffix = "beach_knights_rest.dmm"
+
+//							///
+//		Icemoon ruin		///
+//							///
 /datum/map_template/ruin/icemoon/hydroponicslab
 	name = "Hydroponics Lab"
 	id = "hydroponicslab"
@@ -73,7 +95,33 @@
 	description = "Safety records for early Nanotrasen Spaceworks vessels were, and always have been, top of their class. Absolutely no multi-billion credit projects have been painstakingly erased from history. (Citation Needed)"
 	suffix = "icemoon_crashed_holemaker.dmm"
 
-// Руины Jungle
+/datum/map_template/ruin/icemoon/engioutpost
+	name = "Engineer Outpost"
+	id = "engioutpost"
+	description = "Blown up by an unfortunate accident."
+	suffix = "icemoon_surface_engioutpost.dmm"
+
+/datum/map_template/ruin/icemoon/corpreject
+	name = "NT Security Solutions Site Gamma"
+	id = "corpreject"
+	description = "Nanotrasen Corporate Security Solutions vault site Gamma."
+	suffix = "icemoon_surface_corporate_rejects.dmm"
+
+/datum/map_template/ruin/icemoon/syndicate_outpost
+	name = "Abandoned Syndicate Outpost"
+	id = "syndicate-outpost-icemoon"
+	description = "A outpost that used to be a staging area for nuclear operatives. The Syndicate have moved to another location, but this still remains."
+	suffix = "icemoon_underground_abandoned_newcops.dmm"
+
+/datum/map_template/ruin/icemoon/drakelair
+	name = "Dragon's Lair"
+	id = "drake-lair"
+	description = "\"First the creature's Flame breathed from beneath the stone, Hot battle-fumes, and the earth rumbled.\""
+	suffix = "icemoon_underground_drakelair.dmm"
+
+//							///
+//		Jungle ruin			///
+//							///
 /datum/map_template/ruin/jungle/syndicate
 	name = "Jungle Syndicate Bunker"
 	id = "syndicatebunkerjungle"
@@ -116,7 +164,71 @@
 	description = "A forgotten library, with a few angry monkeys."
 	suffix = "jungle_abandoned_library.dmm"
 
-// Руины Lavaland
+/datum/map_template/ruin/jungle/jungle_botany_ruin
+	id = "jungle_botany-ruin"
+	suffix = "jungle_botany.dmm"
+	name = "Ruined Botany Research Facility"
+	description = "A research facility of great botany discoveries. Long since abandoned, willingly or not..."
+
+/datum/map_template/ruin/jungle/ai_ikea
+	name = "Space Ikea AI Shipment"
+	id = "ikea-ai"
+	description = "A Space Ikea Brand AI Core and Necessities Crate, it seems to have missed its intended target."
+	suffix = "jungle_surface_ikea_ai.dmm"
+
+/datum/map_template/ruin/jungle/coffinpirate
+	name = "Coffin-Shaped Pirate Hut"
+	id = "coffinpirate"
+	description = "An odd coffin shaped pirate hut that the inhabitant of died in."
+	suffix = "jungle_surface_coffinpirate.dmm"
+
+//far more tasteful than its predecessor...
+/datum/map_template/ruin/jungle/lessonintrickery
+	name = "Bombmaker's Cabin"
+	id = "bombmakers-cabin"
+	description = "Playing with bombs again, are we?"
+	suffix = "jungle_surface_bombmakers_cabin.dmm"
+
+/datum/map_template/ruin/jungle/weedshack
+	name = "Stoner's Cabin"
+	id = "weed-shack"
+	description = "The Industrial Revolution and its consequences have been a disaster for the human race."
+	suffix = "jungle_surface_weed_shack.dmm"
+
+//vae's jungle ruins from bungalowstation
+/datum/map_template/ruin/jungle/pizzawave
+	name = "Jungle Pizzawave"
+	id = "pizzawave"
+	description = "Get some pizza my dude."
+	suffix = "jungle_pizzawave.dmm"
+
+/datum/map_template/ruin/jungle/nest
+	name = "Jungle Xenonest"
+	id = "xenonestjungle"
+	description = "A Xeno nest crammed into the Jungle."
+	suffix = "jungle_nest.dmm"
+
+/datum/map_template/ruin/jungle/seedling
+	name = "Seedling ruin"
+	id = "seedling"
+	description = "A rare seedling plant."
+	suffix = "jungle_seedling.dmm"
+
+/datum/map_template/ruin/jungle/hangar
+	name = "Abandoned Hangar"
+	id = "hangar"
+	description = "An abandoned hangar containing exosuits."
+	suffix = "jungle_hangar.dmm"
+
+/datum/map_template/ruin/jungle/pirate
+	name = "Jungle Pirates"
+	id = "piratejungle"
+	description = "A group of pirates on a small ship in the jungle."
+	suffix = "jungle_pirate.dmm"
+
+//							///
+//		Lavaland ruin		///
+//							///
 /datum/map_template/ruin/lavaland/biodome/winter
 	name = "Solarian Winter Biodome"
 	id = "biodome-winter"
@@ -156,7 +268,100 @@
 	description = "A crashed pirate ship. It would seem that it's crew died a while ago."
 	suffix = "lavaland_crashed_starwalker.dmm"
 
-// Руины Rockplanet
+/datum/map_template/ruin/lavaland/sin
+	cost = 10
+	allow_duplicates = FALSE
+
+/datum/map_template/ruin/lavaland/sin/sloth
+	name = "Ruin of Sloth"
+	id = "sloth"
+	description = "..."
+	suffix = "lavaland_surface_sloth.dmm"
+	// Generates nothing but atmos runtimes and salt
+	cost = 0
+
+/datum/map_template/ruin/lavaland/hierophant
+	name = "Hierophant's Arena"
+	id = "hierophant"
+	description = "A strange, square chunk of metal of massive size. Inside awaits only death and many, many squares."
+	suffix = "lavaland_surface_hierophant.dmm"
+	allow_duplicates = FALSE
+
+/datum/map_template/ruin/lavaland/xeno_nest
+	name = "Xenomorph Nest"
+	id = "xeno-nest"
+	description = "These xenomorphs got bored of horrifically slaughtering people on space stations, and have settled down on a nice lava-filled hellscape to focus on what's really important in life. \
+	Quality memes."
+	suffix = "lavaland_surface_xeno_nest.dmm"
+	cost = 20
+
+/datum/map_template/ruin/lavaland/survivalcapsule
+	name = "Survival Capsule Ruins"
+	id = "survivalcapsule"
+	description = "What was once sanctuary to the common miner, is now their tomb."
+	suffix = "lavaland_surface_survivalpod.dmm"
+	cost = 5
+
+/datum/map_template/ruin/lavaland/pizza
+	name = "Ruined Pizza Party"
+	id = "pizza"
+	description = "Little Timmy's birthday pizza bash took a turn for the worse when a bluespace anomaly passed by."
+	suffix = "lavaland_surface_pizzaparty.dmm"
+	allow_duplicates = FALSE
+	cost = 5
+
+/datum/map_template/ruin/lavaland/hermit
+	name = "Makeshift Shelter"
+	id = "hermitcave"
+	description = "A place of shelter for a lone hermit, scraping by to live another day."
+	suffix = "lavaland_surface_hermit.dmm"
+	allow_duplicates = FALSE
+	cost = 10
+
+/datum/map_template/ruin/lavaland/miningripley
+	name = "Ripley"
+	id = "ripley"
+	description = "A heavily-damaged mining ripley, property of a very unfortunate miner. You might have to do a bit of work to fix this thing up."
+	suffix = "lavaland_surface_random_ripley.dmm"
+	allow_duplicates = FALSE
+	cost = 5
+
+/datum/map_template/ruin/lavaland/comm_outpost
+	name = "Syndicate Comm Outpost"
+	id = "commoutpost"
+	description = "A forgotten outpost home to only a tragic tale."
+	suffix = "lavaland_surface_comm_outpost.dmm"
+	allow_duplicates = FALSE
+	cost = 5
+
+/datum/map_template/ruin/lavaland/dwarffortress
+	name = "Legion infested Dwarf Fortress"
+	id = "dwarffortress"
+	description = "A forgotten fortress home to only a tragic tale and infested corpses."
+	suffix = "lavaland_surface_dwarffortress.dmm"
+	allow_duplicates = FALSE
+
+/datum/map_template/ruin/lavaland/spookycrash
+	name = "Spooky Crash"
+	id = "spooky_crash"
+	description = "A spooky looking crash."
+	suffix = "lavaland_surface_SPOOKYCRASH.dmm"
+
+/datum/map_template/ruin/lavaland/crashedpinnance
+	name = "Crashed Research Pinnance"
+	id = "crashed_pinnance"
+	description = "A crashed shuttlecraft, looks like the pilot didn't make it."
+	suffix = "lavaland_surface_crashed_pinnance.dmm"
+
+/datum/map_template/ruin/lavaland/codelab
+	name = "Nanotrasen Genetic Research Facility"
+	id = "codelab"
+	description = "A Nanotrasen genetic research facility, abandoned and ripe for looting. Whats that goo over there?"
+	suffix = "lavaland_surface_codelab.dmm"
+
+//							///
+//		Rockplanet ruin		///
+//							///
 /datum/map_template/ruin/rockplanet/harmfactory
 	name = "Harm Factory"
 	description = "A factory made for HARM and AGONY."
@@ -181,7 +386,40 @@
 	id = "rockplanet_nomadcrash"
 	suffix = "rockplanet_nomadcrash.dmm"
 
-// Руины Space
+/datum/map_template/ruin/rockplanet/heirophant
+	name = "Ancient Heirophant"
+	id = "rockheiro"
+	description = "something dangerous"
+	suffix = "rockplanet_heirophant.dmm"
+
+datum/map_template/ruin/rockplanet/mining_expedition
+	name = "Mining Expedition"
+	id = "expedition"
+	description = "A mining operation gone wrong."
+	suffix = "rockplanet_miningexpedition.dmm"
+
+
+/datum/map_template/ruin/rockplanet/boxsci
+	name = "Abandoned science wing"
+	id = "abandonedscience"
+	description = "A chunk of a station that broke off.."
+	suffix = "rockplanet_boxsci.dmm"
+
+/datum/map_template/ruin/rockplanet/crash_cult
+	name = "Crashed Exploration Clipper"
+	description = "A crashed exploration vessel. Hivebots are taking this ship apart for scrap."
+	id = "crash_cult"
+	suffix = "rockplanet_crash.dmm"
+
+/datum/map_template/ruin/rockplanet/saloon
+	name = "Abandoned saloon"
+	description = "For whatever reason, someone decided to make a colony with a indie style."
+	id = "rockplanet_saloon"
+	suffix = "rockplanet_saloon.dmm"
+
+//							///
+//		Space ruin			///
+//							///
 /datum/map_template/ruin/space/corporate_mining
 	id = "corporate_mining"
 	suffix = "corporate_mining.dmm"
@@ -226,7 +464,90 @@
 	name = "Space Mall"
 	description = "An old shopping centre, owned by a former member of Nanotrasen's board of directors.."
 
-// Руины Wasteplanet
+
+/datum/map_template/ruin/space/excavator_DK
+	id = "Excavator-DK"
+	suffix = "excavator_DK.dmm"
+	name = "Excavator DK Class"
+	description = "A heavily damaged DK class excavator"
+
+/datum/map_template/ruin/space/crashedship
+	id = "crashedship"
+	suffix = "crashedship.dmm"
+	name = "Crashed Ship"
+	description = "Among civilian vessels the most common cause of tragedy is lack of food. \
+	This ship was outfitted with a multitude of food-generating features, then summarily ran into an asteroid shortly after takeoff."
+
+/datum/map_template/ruin/space/vaporwave
+	id = "vaporwave"
+	suffix = "vaporwave.dmm"
+	name = "Aesthetic Outpost"
+	description = "Pause and remember-- You are unique.You are special. Every mistake, trial, and hardship has helped to sculpt your real beauty. \
+	Stop hating yourself and start appreciating and loving yourself!"
+
+/datum/map_template/ruin/space/hellfactory
+	id = "hellfactory"
+	suffix = "hellfactory.dmm"
+	name = "Heck Brewery"
+	description = "An abandoned warehouse and brewing facility, which has been recently rediscovered. Reports claim that the security system entered an ultra-hard lockdown, but these reports are inconclusive."
+
+/datum/map_template/ruin/space/cryocontainment
+	id = "cryocontainment"
+	suffix = "cryocontainment.dmm"
+	name = "Cryogenic Containment Facility"
+	description = "Some old facility where they stored something in a cryotube to experiement on, obviously it got out and now the only thing it contains is Space Carps."
+
+/datum/map_template/ruin/space/dangerous_research
+	id = "dangerous_research"
+	suffix = "dangerous_research.dmm"
+	name = "Occult Research Station"
+	description = "This station was deemed unsuitable for continued experiments, and quickly abandoned."
+
+/datum/map_template/ruin/space/macspace
+	id = "fast_food"
+	suffix = "Fast_Food.dmm"
+	name = "Mac Space Restaurant"
+	description = "A fast food reataurant in space."
+
+/datum/map_template/ruin/space/scav_mining
+	id = "mining_asteroid"
+	suffix = "scav_mining.dmm"
+	name = "Mining asteroid"
+	description = "An abandoned mining operation on an asteroid that now has new ocupants that is not happy to se you"
+
+/datum/map_template/ruin/space/transport18
+	id = "transport18"
+	suffix = "transport18.dmm"
+	name = "Booze Cruise"
+	description = "A freighter, damaged beyond repair and surrounded by a cloud of aluminium and... beer foam?"
+
+/datum/map_template/ruin/space/fueldepot
+	id = "fueldepot"
+	suffix = "fueldepot.dmm"
+	name = "Fuel Depot"
+	description = "An orbital refueling station with the remains of a ship lodged among the debris."
+
+/datum/map_template/ruin/space/ntfacility
+	id = "ntfacility"
+	suffix = "ntfacility.dmm"
+	name = "Abandoned Facility"
+	description = "A NT research station. Something has gone horribly wrong here."
+
+/datum/map_template/ruin/space/glade
+	id = "dark_glade"
+	suffix = "dark_glade.dmm"
+	name = "Dark Glade"
+	description = "It's always dark in the ancient glade."
+
+/datum/map_template/ruin/space/syndicircle
+	id = "provinggrounds"
+	suffix = "provinggrounds.dmm"
+	name = "Syndicate Battle Sphere"
+	description = "The Syndicate Battle Sphere, complete with guns!"
+
+//							///
+//		WastePlanet ruin	///
+//							///
 /datum/map_template/ruin/wasteplanet/weaponstest
 	name = "Weapons testing facility"
 	id = "guntested"
@@ -251,7 +572,39 @@
 	id = "abandoned_mechbay"
 	suffix = "wasteplanet_abandoned_mechbay.dmm"
 
-// Руины Whitesands
+/datum/map_template/ruin/wasteplanet/fortress
+	name = "Fortress of Solitide"
+	id = "solitude"
+	description = "A fortress, although one you are probably more familiar with."
+	suffix = "wasteplanet_fortress_of_solitide.dmm"
+
+/datum/map_template/ruin/wasteplanet/oreprocess
+	name = "Ore Processing Facility"
+	id = "oreprocess"
+	description = "A fortress, although one you are probably more familiar with.."
+	suffix = "wasteplanet_ore_proccessing_facility.dmm"
+
+/datum/map_template/ruin/wasteplanet/tradepost
+	name = "Tradepost"
+	id = "oldpod"
+	description = "An abandoned tradepost."
+	suffix = "wasteplanet_tradepost.dmm"
+
+/datum/map_template/ruin/wasteplanet/tarpit
+	name = "Tar pit"
+	id = "tarpit"
+	description = "A facility once constructed over a asphalt deposit."
+	suffix = "wasteplanet_tarpit.dmm"
+
+/datum/map_template/ruin/wasteplanet/crash_kitchen
+	name = "Crashed Kitchen"
+	description = "A crashed part of some unlucky ship."
+	id = "crash_kitchen"
+	suffix = "wasteplanet_crash_kitchen.dmm"
+
+//							///
+//		Whitesand ruin		///
+//							///
 /datum/map_template/ruin/whitesands/medipen_plant
 	name = "Abandoned Medipen Factory"
 	id = "medipenplant"
@@ -277,3 +630,40 @@
 	description = "A small encampment of nomadic survivors of the First Colony, and their descendants. By all accounts, feral and without allegance to anyone but themselves."
 	suffix = "whitesands_surface_camp_combination.dmm"
 	allow_duplicates = FALSE
+
+/datum/map_template/ruin/whitesands/starfury_crash
+	name = "Starfury Crash"
+	id = "starfurycrash"
+	description = "The remains of an unidentified syndicate battleship has crashed here."
+	suffix = "whitesands_surface_starfurycrash.dmm"
+	allow_duplicates = FALSE
+
+/datum/map_template/ruin/whitesands/assaultpodcrash
+	name = "Crashed Syndicate Assault Drop Pod"
+	id = "ws-assaultpodcrash"
+	description = "The fauna of desert planets can be deadly even to equipped Syndicate Operatives."
+	suffix = "whitesands_surface_assaultpodcrash.dmm"
+
+/datum/map_template/ruin/whitesands/conveniencestore
+	name = "Conveniently Abandoned Convenience Store"
+	id = "ws-conveniencestore"
+	description = "Pretty convenient that they have a convenience store out here, huh?"
+	suffix = "whitesands_surface_conveniencestore.dmm"
+
+/datum/map_template/ruin/whitesands/onlyaspoonful
+	name = "Abandoned Spoon Factory"
+	id = "ws-onlyaspoonful"
+	description = "Literally a fucking spoon factory"
+	suffix = "whitesands_surface_onlyaspoonful.dmm"
+
+/datum/map_template/ruin/whitesands/chokepoint
+	name = "Chokepoint"
+	id = "ws-chokepoint"
+	description = "Some sort of survivors, brandishing old nanotrasen security gear."
+	suffix = "whitesands_surface_chokepoint.dmm"
+
+/datum/map_template/ruin/whitesands/survivors/drugstore
+	name = "Abandoned Store"
+	id = "ws-drugstore"
+	description = "A store that once sold a variety of items and equipment."
+	suffix = "whitesands_surface_camp_drugstore.dmm"

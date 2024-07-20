@@ -15,7 +15,7 @@
 	var/mob_trophy
 	var/throw_message = "bounces off of"
 	var/throw_deflection = 20		//WS edit - Whitesands
-	var/fromtendril = FALSE
+	var/from_nest = FALSE
 	see_in_dark = 8
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
 	mob_size = MOB_SIZE_LARGE
@@ -73,11 +73,14 @@
 	// [CELADON-EDIT] - CRUSHER_TROPHEY
 	// if(prob(trophy_drop_mod)) //on average, you'll need to kill 4 creatures before getting the item
 	// 	spawn_mob_trophy()		// CELADON-EDIT - ORIGINAL
+	// ..(gibbed)
 	var/datum/status_effect/crusher_damage/C = has_status_effect(STATUS_EFFECT_CRUSHERDAMAGETRACKING)
 	if(C && crusher_loot && prob((C.total_damage/maxHealth) * crusher_drop_mod)) //on average, you'll need to kill 4 creatures before getting the item
 		spawn_crusher_loot()
 	// [/CELADON-EDIT]
+	// [CELADON-ADD] - RETURN_TENDRILS
 	..(gibbed)
+	// [/CELADON-ADD]
 
 // [CELADON-EDIT] - CRUSHER_TROPHEY
 // /mob/living/simple_animal/hostile/asteroid/proc/spawn_mob_trophy()

@@ -4,7 +4,7 @@
 /obj/item/clothing/wrists/watch/tajaran
 	name = "adhomian male watch"
 	desc = "An adhomian wrist watch made for male Tajara. Due to its use in the past wars, wrist watches are becoming more popular in Adhomai."
-	icon = 'mod_celadon/items/icons/obj/tajara_items.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/items/obj/tajara_items.dmi'
 	icon_state = "watch_taj-male"
 	item_state = "watch_taj-male"
 	slot_flags = ITEM_SLOT_LPOCKET | ITEM_SLOT_RPOCKET
@@ -16,14 +16,14 @@
 	item_state = "watch_taj-female"
 
 /obj/item/clothing/accessory/tajaran
-	icon = 'mod_celadon/items/icons/obj/tajara_items.dmi'
-	mob_overlay_icon = 'mod_celadon/items/icons/overlay/tajara_items_overlay.dmi'
-	drop_sound = 'mod_celadon/items/sounds/drop/accessory.ogg'
-	pickup_sound = 'mod_celadon/items/sounds/pickup/accessory.ogg'
+	icon = 'mod_celadon/_storge_icons/icons/items/obj/tajara_items.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/items/overlay/tajara_items_overlay.dmi'
+	drop_sound = 'mod_celadon/_storge_sounds/sound/drop/accessory.ogg'
+	pickup_sound = 'mod_celadon/_storge_sounds/sound/pickup/accessory.ogg'
 
 /obj/item/clothing/accessory/tajaran/charm/raskariim
-	icon = 'mod_celadon/items/icons/obj/tajara_items.dmi'
-	mob_overlay_icon = 'mod_celadon/items/icons/overlay/tajara_items_overlay.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/items/obj/tajara_items.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/items/overlay/tajara_items_overlay.dmi'
 	name = "metal amulet"
 	desc = "An amulet made of some light metal."
 	icon_state = "raskara_amulet"

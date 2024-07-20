@@ -1,18 +1,18 @@
 // Miscelanious
 
 /obj/structure/curtain/cloth/elysium
-	icon = 'mod_celadon/stuff_elysium/icons/obj/elysium_patriots.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/obj/elysium_patriots.dmi'
 	icon_type = "elysium_fancy"
 	icon_state = "elysium_fancy-open"
 
 /obj/item/banner/elysium
 	name = "elysium banner"
 	desc = "The banner of elysium, Strengthens the faith of those who deserve."
-	icon = 'mod_celadon/stuff_elysium/icons/obj/elysium_patriots.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/obj/elysium_patriots.dmi'
 	icon_state = "banner_elysium"
 	item_state = "banner_elysium"
-	lefthand_file = 'mod_celadon/stuff_elysium/icons/mob/elysium_banner_left.dmi'
-	righthand_file = 'mod_celadon/stuff_elysium/icons/mob/elysium_banner_right.dmi'
+	lefthand_file = 'mod_celadon/_storge_icons/icons/mob/elysium_banner_left.dmi'
+	righthand_file = 'mod_celadon/_storge_icons/icons/mob/elysium_banner_right.dmi'
 	warcry = "Glory to the nation!"
 
 /obj/item/storage/book/bible/koran
@@ -30,7 +30,7 @@
 
 /obj/structure/sign/poster/elysium/random
 	name = "random elysium poster"
-	icon = 'mod_celadon/stuff_elysium/icons/obj/elysium_patriots.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/obj/elysium_patriots.dmi'
 	icon_state = "random_elysium"
 	never_random = TRUE
 	random_basetype = /obj/structure/sign/poster/elysium
@@ -39,31 +39,31 @@
 /obj/structure/sign/poster/elysium/logo // \"Breathable, if it weren't so darn cold.\"
 	name = "elysium"
 	desc = "Poster of elysium Republic. The most common logo. Nothing noteworthy"
-	icon = 'mod_celadon/stuff_elysium/icons/obj/elysium_patriots.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/obj/elysium_patriots.dmi'
 	icon_state = "poster-elysium"
 
 /obj/structure/sign/poster/elysium/protest
 	name = "DownSolFed"
 	desc = "Poster of elysium Republic. \"This poster with its entire appearance screams No deals with traitors! \""
-	icon = 'mod_celadon/stuff_elysium/icons/obj/elysium_patriots.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/obj/elysium_patriots.dmi'
 	icon_state = "poster-nosf"
 
 /obj/structure/sign/poster/elysium/sonofelysium
 	name = "elysium Son"
 	desc = "Poster of the elysium Republic depicting a stately man.The inscription reads \"God will direct his punishing hand! For the glory of Elysium!\""
-	icon = 'mod_celadon/stuff_elysium/icons/obj/elysium_patriots.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/obj/elysium_patriots.dmi'
 	icon_state = "poster-son_elysium"
 
-/obj/structure/sign/poster/elysium/ak47
+/* /obj/structure/sign/poster/elysium/ak47 		// Закомментированно до изменения спрайтов (с) RalseiDreemuurr
 	name = "No SolFed"
 	desc = "Poster of the elysium Republic depicting iconic weapons from a previous era. \"Even a child is ready to protect his home!\""
-	icon = 'mod_celadon/stuff_elysium/icons/obj/elysium_patriots.dmi'
-	icon_state = "poster-ak47"
+	icon = 'mod_celadon/_storge_icons/icons/obj/elysium_patriots.dmi'
+	icon_state = "poster-ak47" */
 
 /obj/structure/sign/elysium
 	name = "\improper elysium logo sign"
 	sign_change_name = "Rebel Logo - elysium"
 	desc = "A sign with the elysium logo on it. Glory to Human race!"
-	icon = 'mod_celadon/stuff_elysium/icons/obj/elysium_patriots.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/obj/elysium_patriots.dmi'
 	icon_state = "elysium"
 	is_editable = TRUE

@@ -61,7 +61,8 @@ ID мода: STUFF_INTEQ
 
 ### Используемые файлы, не содержащиеся в модпаке
 
-- Иконки: `mod_celadon/stuff_elysium/icons/obj/armor_celadon.dmi`
+- `mod_celadon/_storge_icons/icons/obj/armor_celadon.dmi`
+- `mod_celadon/_storge_icons/icons`
 <!--
   Будь то немодульный файл или модульный файл, который не содержится в папке,
   принадлежащей этому конкретному моду, он должен быть упомянут здесь.

@@ -85,6 +85,7 @@ ID мода: CELADON_COMPONENTS, CELADON_COMPONENTS_EMOTE
 ### Используемые файлы, не содержащиеся в модпаке
 
 - `code/__DEFINES/~mods/prefixes.dm`
+- `mod_celadon/_storge_sounds/sound`
 <!--
   Будь то немодульный файл или модульный файл, который не содержится в папке,
   принадлежащей этому конкретному моду, он должен быть упомянут здесь.
