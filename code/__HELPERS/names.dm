@@ -234,7 +234,7 @@ GLOBAL_DATUM(syndicate_code_response_regex, /regex)
 			else
 				. += ", "
 
-// [CELADON-REMOVE] - PREFIXES - (Перемещено в code/__DEFINES/~mods/prefixes.dm)
+// [CELADON-REMOVE] - PREFIXES - (Перемещено в code/__DEFINES/~mod_celadon/prefixes.dm)
 // #define FACTION_SYNDICATE "Syndicate"
 // 	#define FACTION_NGR "New Gorlex Republic"
 // 	#define FACTION_CYBERSUN "CyberSun"

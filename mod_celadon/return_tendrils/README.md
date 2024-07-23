@@ -80,7 +80,7 @@ ID мода: RETURN_TENDRILS
   И то же самое, если ты используешь дефайны, определённые другим модом.
 
   Не используешь - напиши "Отсутствуют"
-  Примеры: `code/__defines/~mods/return_tendrils.dm`: `RETURN_TENDRILS_SPEED_MULTIPLIER`, `RETURN_TENDRILS_SPEED_BASE`
+  Примеры: `code/__defines/~mod_celadon/return_tendrils.dm`: `RETURN_TENDRILS_SPEED_MULTIPLIER`, `RETURN_TENDRILS_SPEED_BASE`
 -->
 
 ### Используемые файлы, не содержащиеся в модпаке

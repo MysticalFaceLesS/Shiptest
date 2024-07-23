@@ -53,7 +53,7 @@ ID мода: CELADON_EFFECTS
 
 ### Дефайны
 
-- `code\__DEFINES\~mods\generators.dm`
+- `code\__DEFINES\~mod_celadon\generators.dm`
 	GEN_NUM
 	GEN_VECTOR
 	GEN_BOX
@@ -69,7 +69,7 @@ ID мода: CELADON_EFFECTS
   И то же самое, если ты используешь дефайны, определённые другим модом.
 
   Не используешь - напиши "Отсутствуют"
-  Примеры: `code/__defines/~mods/effects.dm`: `EFFECTS_SPEED_MULTIPLIER`, `EFFECTS_SPEED_BASE`
+  Примеры: `code/__defines/~mod_celadon/effects.dm`: `EFFECTS_SPEED_MULTIPLIER`, `EFFECTS_SPEED_BASE`
 -->
 
 ### Используемые файлы, не содержащиеся в модпаке

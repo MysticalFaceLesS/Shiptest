@@ -60,7 +60,7 @@ ID мода: SOLFED_STUFF
   И то же самое, если ты используешь дефайны, определённые другим модом.
 
   Не используешь - напиши "Отсутствуют"
-  Примеры: `code/__defines/~mods/solfed_stuff.dm`: `SOLFED_STUFF_SPEED_MULTIPLIER`, `SOLFED_STUFF_SPEED_BASE`
+  Примеры: `code/__defines/~mod_celadon/solfed_stuff.dm`: `SOLFED_STUFF_SPEED_MULTIPLIER`, `SOLFED_STUFF_SPEED_BASE`
 -->
 
 ### Используемые файлы, не содержащиеся в модпаке

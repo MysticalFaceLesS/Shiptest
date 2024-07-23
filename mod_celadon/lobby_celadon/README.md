@@ -63,7 +63,7 @@ ID мода: LOBBY_CELADON
   И то же самое, если ты используешь дефайны, определённые другим модом.
 
   Не используешь - напиши "Отсутствуют"
-  Примеры: `code/__defines/~mods/music_celadon.dm`: `MUSIC_CELADON_SPEED_MULTIPLIER`, `MUSIC_CELADON_SPEED_BASE`
+  Примеры: `code/__defines/~mod_celadon/music_celadon.dm`: `MUSIC_CELADON_SPEED_MULTIPLIER`, `MUSIC_CELADON_SPEED_BASE`
 -->
 
 ### Используемые файлы, не содержащиеся в модпаке

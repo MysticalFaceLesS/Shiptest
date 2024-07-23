@@ -74,7 +74,7 @@ ID мода: CELADON_EXAMPLE
   И то же самое, если ты используешь дефайны, определённые другим модом.
 
   Не используешь - напиши "Отсутствуют"
-  Примеры: `code/__defines/~mods/example.dm`: `EXAMPLE_SPEED_MULTIPLIER`, `EXAMPLE_SPEED_BASE`
+  Примеры: `code/__defines/~mod_celadon/example.dm`: `EXAMPLE_SPEED_MULTIPLIER`, `EXAMPLE_SPEED_BASE`
 -->
 
 ### Используемые файлы, не содержащиеся в модпаке

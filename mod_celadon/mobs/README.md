@@ -56,8 +56,8 @@ ID мода: MOBS
 
 ### Дефайны
 
-- `code/__DEFINES/~mods/roaches.dm` : `istool(A) istype(A, /obj/item)`
-- `code/__DEFINES/~mods/roaches.dm` : `isroach(A) istype(A, /mob/living/simple_animal/hostile/asteroid/roach)`
+- `code/__DEFINES/~mod_celadon/roaches.dm` : `istool(A) istype(A, /obj/item)`
+- `code/__DEFINES/~mod_celadon/roaches.dm` : `isroach(A) istype(A, /mob/living/simple_animal/hostile/asteroid/roach)`
 <!--
   Если требовалось добавить какие-либо дефайны, укажи файлы,
   в которые ты их добавил, а также перечисли имена.

@@ -60,7 +60,7 @@ ID мода: CELADON_STAMPS
   И то же самое, если ты используешь дефайны, определённые другим модом.
 
   Не используешь - напиши "Отсутствуют"
-  Примеры: `code/__defines/~mods/stamps.dm`: `STAMPS_SPEED_MULTIPLIER`, `STAMPS_SPEED_BASE`
+  Примеры: `code/__defines/~mod_celadon/stamps.dm`: `STAMPS_SPEED_MULTIPLIER`, `STAMPS_SPEED_BASE`
 -->
 
 ### Используемые файлы, не содержащиеся в модпаке
