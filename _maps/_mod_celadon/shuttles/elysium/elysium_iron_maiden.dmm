@@ -367,7 +367,6 @@
 /obj/structure/frame/computer{
 	dir = 8
 	},
-/obj/item/circuitboard/computer/cargo/express,
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "oZ" = (
@@ -599,6 +598,7 @@
 	dir = 9
 	},
 /obj/structure/catwalk/over/plated_catwalk/dark,
+/obj/item/circuitboard/computer/cargo,
 /turf/open/floor/plating,
 /area/ship/bridge)
 "wb" = (
@@ -619,7 +619,8 @@
 /obj/structure/fluff/clockwork/alloy_shards,
 /obj/effect/decal/cleanable/dirt/dust,
 /mob/living/simple_animal/hostile/retaliate/goose{
-	name = "Khasir"
+	name = "Khasir";
+	faction = list("playerElysium")
 	},
 /turf/open/floor/plating,
 /area/ship/cargo)
@@ -757,7 +758,9 @@
 "yX" = (
 /obj/structure/catwalk,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/porta_turret,
+/obj/machinery/porta_turret{
+	faction = list("playerElysium","turret")
+	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "zc" = (
@@ -1107,7 +1110,9 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/cryo)
 "MP" = (
-/obj/machinery/porta_turret,
+/obj/machinery/porta_turret{
+	faction = list("playerElysium","turret")
+	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "MV" = (

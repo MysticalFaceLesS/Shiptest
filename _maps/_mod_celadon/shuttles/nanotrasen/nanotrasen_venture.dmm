@@ -248,7 +248,10 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
 "rX" = (
-/obj/machinery/porta_turret/ship/ballistic,
+/obj/machinery/porta_turret/ship/ballistic{
+	faction = list("playerNanotrasen","turret");
+	dir = 5
+	},
 /turf/closed/wall/mineral/titanium/exterior,
 /area/ship/bridge)
 "ts" = (
@@ -289,6 +292,13 @@
 "vm" = (
 /turf/template_noop,
 /area/template_noop)
+"xx" = (
+/obj/machinery/porta_turret/ship/ballistic{
+	faction = list("playerNanotrasen","turret");
+	dir = 6
+	},
+/turf/closed/wall/mineral/titanium/exterior,
+/area/ship/bridge)
 "xy" = (
 /obj/structure/closet/wall/white/med{
 	pixel_y = -32
@@ -850,5 +860,5 @@ vm
 Sc
 nl
 nl
-Sc
+xx
 "}

@@ -1,8 +1,7 @@
 
+#### Список PRов
 
-#### Список PRов:
-
-- https://github.com/MysticalFaceLesS/Shiptest/pulls/#####
+- https://github.com/CeladonSS13/Shiptest/pulls/#####
 <!--
   Ссылки на PRы, связанные с модом:
   - Создание
@@ -10,31 +9,35 @@
 -->
 
 <!-- Название мода. Не важно на русском или на английском. -->
-## DEFINES
+## НАЗВАНИЕ_МОДА
 
-ID мода: CELADON_DEFINES
+ID мода: CELADON_FACTION
 <!--
   Название модпака прописными буквами, СОЕДИНЁННЫМИ_ПОДЧЁРКИВАНИЕМ,
   которое ты будешь использовать для обозначения файлов.
+  При запуске скрипта выставляется автоматически.
+  Приставка CELADON гарантирует уникальность 
+  модпака. Этот ID будет использоваться для обозначения
+  изменений в кор коде, если того потребуется.
 -->
 
 ### Описание мода
 
-Этот мод нужен для хранения глобальных дефайнов или просто дефайнов модпаков, использующихся больше 1 раза
-`mod_celadon\_defines\code\_defines\access.dm`: коды доступов
-
-Это все нужно для FOV
-`mod_celadon\_defines\code\_helpers.dm`: это хелперс
-`mod_celadon\_defines\code\_defines\dcs\signals_mob_main.dm`
-`mod_celadon\_defines\code\_defines\dcs\signals.dm`
-`mod_celadon\_defines\code\_defines\clothers.dm`
-`mod_celadon\_defines\code\_defines\declarations.dm`
-`mod_celadon\_defines\code\_defines\fov.dm`
-`mod_celadon\_defines\code\_defines\layers.dm`
-
+Этот мод служит примером для разработчиков и существует лишь для того,
+чтобы его можно было легко скопировать и вставить в другое место.
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
   А также любая полезная информация.
+-->
+
+### Используется в других проектах?
+- Нет
+<!--
+  ВНИМАНИЕ!
+  Заполняется другими авторами, кто использует этот модпак или
+  его часть в других модпаках! Для Автора модпака внимательно
+  отслеживать данный пункт при изменении своего кода!
+  Пример заполнения: `Используется часть кода для модпака EXAMP_EXAM`
 -->
 
 ### Изменения *кор кода*
@@ -46,6 +49,7 @@ ID мода: CELADON_DEFINES
   Нужно указать и файл, и процедуры/переменные.
 
   Изменений нет - напиши "Отсутствуют"
+  Примеры: `code/modules/mob/living.dm`: `proc/overriden_proc`, `var/overriden_var`
 -->
 
 ### Оверрайды
@@ -56,18 +60,21 @@ ID мода: CELADON_DEFINES
   Здесь указываются оверрайды в твоём моде и папке `_master_files`
 
   Изменений нет - напиши "Отсутствуют"
+  Примеры: 
+  - `mods/_master_files/sound/my_cool_sound.ogg`
+  - `mods/_master_files/code/my_modular_override.dm`: `proc/overriden_proc`, `var/overriden_var`
 -->
 
 ### Дефайны
 
-- `mod_celadon\_defines\code\_defines\access.dm`: `ACCESS_INTEQ_GENERAL`, `ACCESS_INTEQ_SECURITY`, `ACCESS_INTEQ_CAPTAIN`
-- `mod_celadon\_DEFINES\code\_DEFINES\faction.dm`: `FACTION_PLAYER_ELYSIUM`
+- `mod_celadon\_DEFINES\code\_DEFINES\faction.dm`
 <!--
   Если требовалось добавить какие-либо дефайны, укажи файлы,
   в которые ты их добавил, а также перечисли имена.
   И то же самое, если ты используешь дефайны, определённые другим модом.
 
   Не используешь - напиши "Отсутствуют"
+  Примеры: `code/__defines/~mods/faction.dm`: `FACTION_SPEED_MULTIPLIER`, `FACTION_SPEED_BASE`
 -->
 
 ### Используемые файлы, не содержащиеся в модпаке
@@ -78,11 +85,12 @@ ID мода: CELADON_DEFINES
   принадлежащей этому конкретному моду, он должен быть упомянут здесь.
   Хорошими примерами являются иконки или звуки, которые используются одновременно
   несколькими модулями, или что-либо подобное.
+  Примеры: `mods/_master_files/icons/obj/alien.dmi`
 -->
 
-### Авторы:
+### Авторы
 
-Voiko, MrCat15352, Mirag1993, Molniz
+Molniz
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.
