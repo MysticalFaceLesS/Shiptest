@@ -61,10 +61,10 @@ ID мода: CELADON_COMPONENTS, CELADON_COMPONENTS_EMOTE
 
 ### Дефайны
 
-- `code/__DEFINES/~mods/prefixes.dm`
-- `code/__DEFINES/~mods/emote_panel.dm`
-- `code/__DEFINES/~mods/access.dm`
-- `code/__DEFINES/~mods/names.dm`
+- `code/__DEFINES/~mod_celadon/prefixes.dm`
+- `code/__DEFINES/~mod_celadon/emote_panel.dm`
+- `code/__DEFINES/~mod_celadon/access.dm`
+- `code/__DEFINES/~mod_celadon/names.dm`
 
 - `#define FACTION_SYNDICATE "Syndicate"`
 - `#define FACTION_SOLGOV "SolGov"`

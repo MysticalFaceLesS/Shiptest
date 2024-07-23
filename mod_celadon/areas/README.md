@@ -64,7 +64,7 @@ ID мода: CELADON_AREAS
   И то же самое, если ты используешь дефайны, определённые другим модом.
 
   Не используешь - напиши "Отсутствуют"
-  Примеры: `code/__defines/~mods/areas.dm`: `AREAS_SPEED_MULTIPLIER`, `AREAS_SPEED_BASE`
+  Примеры: `code/__defines/~mod_celadon/areas.dm`: `AREAS_SPEED_MULTIPLIER`, `AREAS_SPEED_BASE`
 -->
 
 ### Используемые файлы, не содержащиеся в модпаке

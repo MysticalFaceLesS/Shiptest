@@ -60,7 +60,7 @@ ID мода: CELADON_TURRETS
   И то же самое, если ты используешь дефайны, определённые другим модом.
 
   Не используешь - напиши "Отсутствуют"
-  Примеры: `code/__defines/~mods/turrets.dm`: `TURRETS_SPEED_MULTIPLIER`, `TURRETS_SPEED_BASE`
+  Примеры: `code/__defines/~mod_celadon/turrets.dm`: `TURRETS_SPEED_MULTIPLIER`, `TURRETS_SPEED_BASE`
 -->
 
 ### Используемые файлы, не содержащиеся в модпаке

@@ -60,7 +60,7 @@ ID мода: PIZZAMAT
   И то же самое, если ты используешь дефайны, определённые другим модом.
 
   Не используешь - напиши "Отсутствуют"
-  Примеры: `code/__defines/~mods/pizzamat.dm`: `PIZZAMAT_SPEED_MULTIPLIER`, `PIZZAMAT_SPEED_BASE`
+  Примеры: `code/__defines/~mod_celadon/pizzamat.dm`: `PIZZAMAT_SPEED_MULTIPLIER`, `PIZZAMAT_SPEED_BASE`
 -->
 
 ### Используемые файлы, не содержащиеся в модпаке
