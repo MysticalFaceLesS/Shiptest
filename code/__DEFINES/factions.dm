@@ -12,3 +12,6 @@
 #define FACTION_PLAYER_INTEQ "playerInteq"
 #define FACTION_PLAYER_ROUMAIN "playerRoumain"
 #define FACTION_PLAYER_GEZENA "playerGezena"
+// [CELADON-ADD] - CELADON_FACTION - Добавляем элизиум
+#define FACTION_PLAYER_ELYSIUM "playerElysium"
+// [/CELADON-ADD]
