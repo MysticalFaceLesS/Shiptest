@@ -1,3 +1,12 @@
+var/last_emote_time = 0
+var/timer = 20
+
+/proc/emote_with_delay(emote, delay)
+    if (world.time - last_emote_time < delay)
+        return
+    usr.emote(emote)
+    last_emote_time = world.time
+
 /mob/living/carbon/human/verb/emote_airguitar()
 	set name = "~ Воображаемая гитара"
 	set category = "Эмоции"
@@ -12,6 +21,16 @@
 	set name = "~ Быстро моргать"
 	set category = "Эмоции"
 	emote_with_delay("blink_r", timer)
+
+var/last_emote_time = 0
+var/timer = 20
+
+/proc/emote_with_delay(emote, delay)
+    if (world.time - last_emote_time < delay)
+        return
+    usr.emote(emote)
+    last_emote_time = world.time
+
 
 /mob/living/carbon/human/verb/emote_blush()
 	set name = "~ Краснеть"
