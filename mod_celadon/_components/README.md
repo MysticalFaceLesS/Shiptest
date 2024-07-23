@@ -61,6 +61,11 @@ ID мода: CELADON_COMPONENTS, CELADON_COMPONENTS_EMOTE
 
 ### Дефайны
 
+- `code/__DEFINES/~mods/prefixes.dm`
+- `code/__DEFINES/~mods/emote_panel.dm`
+- `code/__DEFINES/~mods/access.dm`
+- `code/__DEFINES/~mods/names.dm`
+
 - `#define FACTION_SYNDICATE "Syndicate"`
 - `#define FACTION_SOLGOV "SolGov"`
 - `#define FACTION_INTEQ "Inteq Risk Management Group"`
@@ -84,7 +89,6 @@ ID мода: CELADON_COMPONENTS, CELADON_COMPONENTS_EMOTE
 
 ### Используемые файлы, не содержащиеся в модпаке
 
-- `code/__DEFINES/~mods/prefixes.dm`
 - `mod_celadon/_storge_sounds/sound`
 <!--
   Будь то немодульный файл или модульный файл, который не содержится в папке,

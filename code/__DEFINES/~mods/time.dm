@@ -7,3 +7,9 @@ var/round_start_time
 /proc/worldtime2text(time = world.time, timeshift = 1)
 	if(!roundstart_hour) roundstart_hour = REALTIMEOFDAY - (TIMEZONE_CST HOURS)
 	return timeshift ? time2text(time+roundstart_hour, "hh:mm") : time2text(time, "hh:mm")
+
+/proc/Ceiling(x, y=1)
+	return -round(-x / y) * y
+
+// Добавляем год для игры
+GLOBAL_VAR_INIT(game_year, (text2num(time2text(world.realtime, "YYYY")) + 554))
