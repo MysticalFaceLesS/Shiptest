@@ -60,7 +60,7 @@ ID мода: CELADON_DEFINES
 
 ### Дефайны
 
-- `mod_celadon\_defines\code\_defines\access.dm`: `ACCESS_INTEQ_GENERAL`, `ACCESS_INTEQ_SECURITY`, `ACCESS_INTEQ_CAPTAIN`
+- `mod_celadon\_defines\code\_defines\access.dm`: `ACCESS_INTEQ_GENERAL`, `ACCESS_INTEQ_SECURITY`, `ACCESS_INTEQ_CAPTAIN`,`FACTION_PLAYER_ELYSIUM`
 <!--
   Если требовалось добавить какие-либо дефайны, укажи файлы,
   в которые ты их добавил, а также перечисли имена.
@@ -81,7 +81,7 @@ ID мода: CELADON_DEFINES
 
 ### Авторы:
 
-Voiko, MrCat15352, Mirag1993
+Voiko, MrCat15352, Mirag1993, Molniz
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.
