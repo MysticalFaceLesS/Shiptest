@@ -8,11 +8,38 @@
 	if(!length(C.parallax_layers_cached))
 		C.parallax_layers_cached = list()
 		C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_1(null, C.view)
-		C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_2(null, C.view)
+		// [CELADON-EDIT] - CELADON_PARALLAX
+		// C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_1(null, C.view)
+		// C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_2(null, C.view)	// CELADON-EDIT - ORIGINAL
+		// Layer 1
+		if(prob(40))
+			C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_1_0(null, C.view)
+		if(prob(40))
+			C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_1_1(null, C.view)
+		if(prob(40))
+			C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_1_2(null, C.view)
+		if(prob(40))
+			C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_1_3(null, C.view)
+		if(prob(40))
+			C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_1_4(null, C.view)
+		// Layer 2
+		if(prob(30))
+			C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_2(null, C.view)
+		if(prob(20))
+			C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_2_1(null, C.view)
+		if(prob(20))
+			C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_2_2(null, C.view)
+		// [/CELADON-EDIT]
 		C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/planet(null, C.view)
 		if(SSparallax.random_layer)
 			C.parallax_layers_cached += new SSparallax.random_layer
-		C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_3(null, C.view)
+		// [CELADON-EDIT] - CELADON_PARALLAX
+		// C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_3(null, C.view)	// CELADON-EDIT - ORIGINAL
+		if(prob(30))
+			C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_3(null, C.view)
+		if(prob(20))
+			C.parallax_layers_cached += new /atom/movable/screen/parallax_layer/layer_3_1(null, C.view)
+		// [/CELADON-EDIT]
 
 	C.parallax_layers = C.parallax_layers_cached.Copy()
 
@@ -311,3 +338,51 @@
 
 /atom/movable/screen/parallax_layer/planet/update_o()
 	icon_state = "planet"
+
+// [CELADON-ADD] - CELADON_PARALLAX
+/atom/movable/screen/parallax_layer/random/gas
+	icon_state = "gas"
+
+/atom/movable/screen/parallax_layer/random/trash
+	icon_state = "trash"
+
+/atom/movable/screen/parallax_layer/layer_1_0
+	icon_state = "layer1_0"
+	speed = 0.6
+	layer = 1
+
+/atom/movable/screen/parallax_layer/layer_1_1
+	icon_state = "layer1_1"
+	speed = 0.6
+	layer = 1
+
+/atom/movable/screen/parallax_layer/layer_1_2
+	icon_state = "layer1_2"
+	speed = 0.6
+	layer = 1
+
+/atom/movable/screen/parallax_layer/layer_1_3
+	icon_state = "layer1_3"
+	speed = 0.6
+	layer = 1
+
+/atom/movable/screen/parallax_layer/layer_1_4
+	icon_state = "layer1_4"
+	speed = 0.6
+	layer = 1
+
+/atom/movable/screen/parallax_layer/layer_2_1
+	icon_state = "layer2_1"
+	speed = 1
+	layer = 2
+
+/atom/movable/screen/parallax_layer/layer_2_2
+	icon_state = "layer2_2"
+	speed = 1
+	layer = 2
+
+/atom/movable/screen/parallax_layer/layer_3_1
+	icon_state = "layer3_1"
+	speed = 1.4
+	layer = 3
+// [/CELADON-ADD]
