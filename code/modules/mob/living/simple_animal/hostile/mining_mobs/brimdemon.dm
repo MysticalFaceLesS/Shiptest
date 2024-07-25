@@ -99,9 +99,6 @@
 	balloon_alert(src, "charging...")
 	to_chat(src, "<span class='warning'>You begin to charge up...</span>")
 	fire_laser()
-	// [CELADON-ADD] - CELADON_BALANCE_MOBS
-	addtimer(CALLBACK(src, PROC_REF(end_laser)), 3 SECONDS)
-	// [/CELADON-ADD]
 	COOLDOWN_START(src, ranged_cooldown, ranged_cooldown_time)
 
 /mob/living/simple_animal/hostile/asteroid/brimdemon/Moved(atom/old_loc, movement_dir, forced, list/old_locs, momentum_change = TRUE)
@@ -114,7 +111,7 @@
 	face_atom(target)
 	OpenFire()
 
-/// Fires a brimbeam, getting a line of turfs between it and the direction to the target and creating a brimbeam effect on every one of them, exept ones it cannot see.
+/// Fires a brimbeam, getting a line of turfs between it and the direction to the target and creating a brimbeam effect on every one of them.
 /mob/living/simple_animal/hostile/asteroid/brimdemon/proc/fire_laser()
 	if(stat == DEAD)
 		return
@@ -122,54 +119,26 @@
 	var/turf/origin_turf = get_turf(src)
 	var/list/affected_turfs = get_line(origin_turf, target_turf) - origin_turf
 	for(var/turf/affected_turf in affected_turfs)
-		// [CELADON-REMOVE] - CELADON_BALANCE_MOBS - Меняет поведение лазеру. Надо тестить
-		// var/blocked = FALSE
-		// [/CELADON-REMOVE]
-		if(affected_turf.opacity)
-		// [CELADON-EDIT] - CELADON_BALANCE_MOBS - Меняет поведение лазеру. Надо тестить
-			// blocked = TRUE	// CELADON-EDIT - ORIGINAL
-			break
 		var/blocked = FALSE
-		// [/CELADON-EDIT]
+		if(affected_turf.opacity)
+			blocked = TRUE
 		for(var/obj/potential_block in affected_turf.contents)
 			if(potential_block.opacity)
 				blocked = TRUE
 				break
 		if(blocked)
 			break
-		// [CELADON-EDIT] - CELADON_BALANCE_MOBS - Меняет поведение лазеру. Надо тестить
-		// var/atom/new_brimbeam = new /obj/effect/brimbeam(affected_turf)	// CELADON-EDIT - ORIGINAL
-		var/obj/effect/brimbeam/new_brimbeam = new(affected_turf, src)
-		new_brimbeam.dir = src.dir
-		// [/CELADON-EDIT]
+		var/atom/new_brimbeam = new /obj/effect/brimbeam(affected_turf)
 		new_brimbeam.dir = dir
 		beamparts += new_brimbeam
-	// [CELADON-ADD] - CELADON_BALANCE_MOBS - Меняет поведение лазеру. Надо тестить
-		for(var/mob/living/hit_mob in affected_turf.contents)
-			var/mob/living/carbon/C = hit_mob
-			to_chat(hit_mob, span_userdanger("You're blasted by [src]'s brimbeam!"))
-			if(iscarbon(C))
-				return C.apply_damage(25, BURN, spread_damage = TRUE)
-			else
-				return C.apply_damage(25, BURN)
-	if(!length(beamparts))
-		return FALSE
-	var/atom/last_brimbeam = beamparts[length(beamparts)]
-	last_brimbeam.icon_state = "brimbeam_end"
-	var/atom/first_brimbeam = beamparts[1]
-	first_brimbeam.icon_state = "brimbeam_start"
-	return TRUE
-	// [/CELADON-ADD]
-	// [CELADON-REMOVE]
-	// 	animate(new_brimbeam, 1 SECONDS, alpha = 255)
-	// if(length(beamparts))
-	// 	var/atom/last_brimbeam = beamparts[length(beamparts)]
-	// 	last_brimbeam.icon_state = "brimbeam_end"
-	// 	var/atom/first_brimbeam = beamparts[1]
-	// 	first_brimbeam.icon_state = "brimbeam_start"
-	// addtimer(CALLBACK(src, PROC_REF(kill_people)), 1 SECONDS)
-	// addtimer(CALLBACK(src, PROC_REF(end_laser)), 3 SECONDS)
-	// [/CELADON-REMOVE]
+		animate(new_brimbeam, 1 SECONDS, alpha = 255)
+	if(length(beamparts))
+		var/atom/last_brimbeam = beamparts[length(beamparts)]
+		last_brimbeam.icon_state = "brimbeam_end"
+		var/atom/first_brimbeam = beamparts[1]
+		first_brimbeam.icon_state = "brimbeam_start"
+	addtimer(CALLBACK(src, PROC_REF(kill_people)), 1 SECONDS)
+	addtimer(CALLBACK(src, PROC_REF(end_laser)), 3 SECONDS)
 
 /// Tells the lasers to start murdering people
 /mob/living/simple_animal/hostile/asteroid/brimdemon/proc/kill_people()
@@ -220,17 +189,8 @@
 		damage(hit_mob)
 
 /obj/effect/brimbeam/proc/damage(mob/living/hit_mob)
-	// [CELADON-EDIT] - CELADON_BALANCE_MOBS - Меняет поведение лазеру. Надо тестить
-	// hit_mob.adjustFireLoss(5)	// CELADON-EDIT - ORIGINAL
-	var/mob/living/carbon/C = hit_mob
-	// [/CELADON-EDIT]
+	hit_mob.adjustFireLoss(5)
 	to_chat(hit_mob, span_danger("You're damaged by [src]!"))
-	// [CELADON-ADD] - CELADON_BALANCE_MOBS
-	if(iscarbon(C))
-		return C.apply_damage(5, BURN, spread_damage=TRUE)
-	else
-		return C.apply_damage(5, BURN)
-	// [/CELADON-ADD]
 
 /obj/effect/decal/cleanable/brimdust
 	name = "brimdust"
