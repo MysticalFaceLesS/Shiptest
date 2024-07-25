@@ -55,7 +55,9 @@ EDIT: `code\modules\mob\living\simple_animal\hostile\mining_mobs\elites\elite.dm
 ADD: `code\modules\projectiles\ammunition\_ammunition.dm` : /obj/item/ammo_casing/attackby(obj/item/I, mob/user, params) -> добавлены звук подбора патрона в магазин с пола и задержка в 1 секунду зависящая от кликанья по патронам. Чем быстрее клики - тем быстрее загрузятся патроны.
 Очки с зомби и ксеноморфов
 REMOVE: `D:\1ss\ShiptestYata\code\modules\surgery\experimental_dissection.dm`: `/datum/surgery_step/dissection/preop`
-REMOVE^ `code\modules\projectiles\guns\energy.dm`
+REMOVE: `code\modules\projectiles\guns\energy.dm`
+
+EDIT: `code/modules/mining/equipment/regenerative_core.dm` - теперь ИПС не смогут жрать ядра для полного отхила, их лечить будет на половину.
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
