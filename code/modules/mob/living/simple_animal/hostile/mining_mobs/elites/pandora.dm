@@ -15,7 +15,7 @@
  * - Spawns a 5x5 AOE at the location of choice, spreading out from the center.
  * Pandora's fight mirrors Hierophant's closely, but has stark differences in attack effects.  Instead of long-winded dodge times and long cooldowns, Pandora constantly attacks the opponent, but leaves itself open for attack.
  */
-s
+
 /mob/living/simple_animal/hostile/asteroid/elite/pandora
 	name = "pandora"
 	desc = "A large magic box with similar power and design to the Hierophant.  Once it opens, it's not easy to close it."
