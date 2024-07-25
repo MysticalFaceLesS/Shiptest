@@ -5,6 +5,9 @@ quirks have it's own panel so we don't need them here.
 */
 GLOBAL_LIST_INIT(traits_by_type, list(
 	/mob = list(
+		// [CELADON-ADD]
+		"TRAIT_ELITE_CHALLENGER" = TRAIT_ELITE_CHALLENGER, // CELADON EDIT // Given to elite tumor fighters
+		// [/CELADON-ADD]
 		"TRAIT_KNOCKEDOUT" = TRAIT_KNOCKEDOUT,
 		"TRAIT_IMMOBILIZED" = TRAIT_IMMOBILIZED,
 		"TRAIT_FLOORED" = TRAIT_FLOORED,
