@@ -28,7 +28,7 @@
 	pixel_x = -16
 	base_pixel_x = -16
 	health_doll_icon = "herald"
-	// [CELADON-REMOVE] - CELADON_BALANCE
+	// [CELADON-REMOVE] - CELADON_BALANCE_MOBS
 	// maxHealth = 800
 	// health = 800
 	// [/CELADON-REMOVE]
@@ -156,13 +156,13 @@
 		addtimer(CALLBACK(src, PROC_REF(shoot_projectile), target_turf, angle_to_target, FALSE), 14)
 
 /mob/living/simple_animal/hostile/asteroid/elite/herald/proc/herald_circleshot()
-	// [CELADON-EDIT] - CELADON_BALANCE
+	// [CELADON-EDIT] - CELADON_BALANCE_MOBS
 	// var/static/list/directional_shot_angles = list(0, 45, 90, 135, 180, 225, 270, 315)	// CELADON-EDIT - ORIGINAL
 	var/static/list/directional_shot_angless = list(22, 67, 112, 157, 202, 247, 292, 337)
 	// [/CELADON-EDIT]
 	for(var/i in directional_shot_angles)
 		shoot_projectile(get_turf(src), i, FALSE)
-	// [CELADON-ADD] - CELADON_BALANCE
+	// [CELADON-ADD] - CELADON_BALANCE_MOBS
 	sleep(5)
 	for(var/i in directional_shot_angless)
 		shoot_projectile(get_turf(src), i, FALSE)
@@ -239,7 +239,7 @@
 
 /obj/projectile/herald/teleshot
 	name ="golden bolt"
-	// [CELADON-REMOVE] - CELADON_BALANCE
+	// [CELADON-REMOVE] - CELADON_BALANCE_MOBS
 	// damage = 0
 	// [/CELADON-REMOVE]
 	color = rgb(255,255,102)
@@ -253,7 +253,7 @@
 	else if(isliving(target))
 		var/mob/living/L = target
 		var/mob/living/F = firer
-		// [CELADON-EDIT] - CELADON_BALANCE
+		// [CELADON-EDIT] - CELADON_BALANCE_MOBS
 		// if(F != null && istype(F, /mob/living/simple_animal/hostile/asteroid/elite) && F.faction_check_mob(L))
 		// 	L.heal_overall_damage(damage)	// CELADON-EDIT - ORIGINAL
 		if(F != null && istype(F, /mob/living/simple_animal/hostile/asteroid/elite) && L.faction_check_mob(F))
@@ -275,7 +275,7 @@
 	hit_reaction_chance = 25
 
 /obj/item/clothing/neck/cloak/herald_cloak/proc/reactionshot(mob/living/carbon/owner)
-	// [CELADON-EDIT] - CELADON_BALANCE
+	// [CELADON-EDIT] - CELADON_BALANCE_MOBS
 	// var/static/list/directional_shot_angles = list(0, 45, 90, 135, 180, 225, 270, 315)	// CELADON-EDIT - ORIGINAL
 	var/static/list/directional_shot_angles
 	switch(rand(1,2))
@@ -300,7 +300,7 @@
 	if(rand(1,100) > hit_reaction_chance)
 		return
 	owner.visible_message("<span class='danger'>[owner]'s [src] emits a loud noise as [owner] is struck!</span>")
-	// [CELADON-REMOVE] - CELADON_BALANCE
+	// [CELADON-REMOVE] - CELADON_BALANCE_MOBS
 	// var/static/list/directional_shot_angles = list(0, 45, 90, 135, 180, 225, 270, 315)
 	// [/CELADON-REMOVE]
 	playsound(get_turf(owner), 'sound/magic/clockwork/invoke_general.ogg', 20, TRUE)

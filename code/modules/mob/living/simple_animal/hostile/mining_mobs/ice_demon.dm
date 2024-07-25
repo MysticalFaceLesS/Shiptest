@@ -47,7 +47,7 @@
 	nodamage = FALSE
 	temperature = -75
 
-// [CELADON-EDIT] - CELADON_BALANCE
+// [CELADON-EDIT] - CELADON_BALANCE_MOBS
 // /mob/living/simple_animal/hostile/asteroid/ice_demon/OpenFire()
 /mob/living/simple_animal/hostile/asteroid/old_demon/OpenFire()
 // [/CELADON-EDIT]

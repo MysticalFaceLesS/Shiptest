@@ -12,19 +12,18 @@
 <!-- Название мода. Не важно на русском или на английском. -->
 ## Balance - изменение баланса
 
-ID мода: CELADON_BALANCE
-	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем РнД
-	// CELADON-EDIT - ORIGINAL
-	// [/CELADON-EDIT]
+ID мода: CELADON_BALANCE, CELADON_BALANCE_MOBS
 <!--
   Название модпака прописными буквами, СОЕДИНЁННЫМИ_ПОДЧЁРКИВАНИЕМ,
-  которое ты будешь использовать для обозначения файлов.
+  которое ты будешь использовать для обозначения файлов. Добавлены
+  дополнительные ID.
 -->
 
 ### Описание мода
 
 Этот мод вносит различные изменения в балансе. 
 - Изменено количество получаемого лута с элиток.
+- Портированы изменения от Ганзы.
 
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
@@ -65,20 +64,13 @@ EDIT:
 `code/modules/mob/living/simple_animal/hostile/mining_mobs/elites/goliath_broodmother.dm`
 `code/modules/mob/living/simple_animal/hostile/mining_mobs/elites/herald.dm`
 `code/modules/mob/living/simple_animal/hostile/mining_mobs/elites/legionnaire.dm`
+`code/modules/mob/living/simple_animal/hostile/mining_mobs/elites/pandora.dm`
 
 `code/modules/projectiles/ammunition/_ammunition.dm`
 
+`code/modules/reagents/chemistry/reagents/medicine_reagents.dm`
 
-
-	// CELADON-EDIT - ORIGINAL
-// [CELADON-EDIT] - CELADON_BALANCE
-// [CELADON-ADD] - CELADON_BALANCE
-// [CELADON-REMOVE] - CELADON_BALANCE
-
-
-
-
-
+`code/modules/surgery/tools.dm`
 
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
@@ -121,8 +113,10 @@ EDIT:
 
 ### Авторы:
 
-- Кинетик Крашер, универасльная вендор плата, цены карго, одежда с ЦК, нёрф очков диссекции с спец мобов и её упрощение - Yata9arasu, двигатели, рад. коллекторы - RalseiDreemuurr
-	Затронуты проджектайлы энергетических дробовиков, батарейки в энерегетических пушках теперь можно вытаскивать руками, убрана возможность вытаскивать батарею в само-заряжающихся пушках. - Molniz
+- Кинетик Крашер, универасльная вендор плата, цены карго, одежда с ЦК, нёрф очков диссекции с спец мобов и её упрощение - Yata9arasu
+- Двигатели, рад. коллекторы - RalseiDreemuurr
+- Затронуты проджектайлы энергетических дробовиков, батарейки в энерегетических пушках теперь можно вытаскивать руками, убрана возможность вытаскивать батарею в само-заряжающихся пушках. - Molniz
+- Ganza Pain Elite Edition Deluxe: баланс трогается всех мобов элитных и простых, Пандора реально может убить вас - Ganza9991
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.

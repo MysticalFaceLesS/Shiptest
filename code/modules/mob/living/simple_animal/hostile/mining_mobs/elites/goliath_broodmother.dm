@@ -29,7 +29,7 @@
 	pixel_x = -16
 	base_pixel_x = -16
 	health_doll_icon = "broodmother"
-	// [CELADON-REMOVE] - CELADON_BALANCE
+	// [CELADON-REMOVE] - CELADON_BALANCE_MOBS
 	// maxHealth = 800
 	// health = 800
 	// [/CELADON-REMOVE]
@@ -144,7 +144,7 @@
 	ranged_cooldown = world.time + 70
 	playsound(src,'sound/spookoween/insane_low_laugh.ogg', 200, 1)
 	visible_message("<span class='warning'>[src] starts picking up speed!</span>")
-	// [CELADON-ADD] - CELADON_BALANCE
+	// [CELADON-ADD] - CELADON_BALANCE_MOBS
 	childragecall = 1
 	// [/CELADON-ADD]
 	color = "#FF0000"

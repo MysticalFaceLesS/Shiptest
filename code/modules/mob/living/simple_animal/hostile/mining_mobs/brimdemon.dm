@@ -99,7 +99,7 @@
 	balloon_alert(src, "charging...")
 	to_chat(src, "<span class='warning'>You begin to charge up...</span>")
 	fire_laser()
-	// [CELADON-ADD] - CELADON_BALANCE
+	// [CELADON-ADD] - CELADON_BALANCE_MOBS
 	addtimer(CALLBACK(src, PROC_REF(end_laser)), 3 SECONDS)
 	// [/CELADON-ADD]
 	COOLDOWN_START(src, ranged_cooldown, ranged_cooldown_time)
@@ -122,11 +122,11 @@
 	var/turf/origin_turf = get_turf(src)
 	var/list/affected_turfs = get_line(origin_turf, target_turf) - origin_turf
 	for(var/turf/affected_turf in affected_turfs)
-		// [CELADON-REMOVE] - CELADON_BALANCE - Меняет поведение лазеру. Надо тестить
+		// [CELADON-REMOVE] - CELADON_BALANCE_MOBS - Меняет поведение лазеру. Надо тестить
 		// var/blocked = FALSE
 		// [/CELADON-REMOVE]
 		if(affected_turf.opacity)
-		// [CELADON-EDIT] - CELADON_BALANCE - Меняет поведение лазеру. Надо тестить
+		// [CELADON-EDIT] - CELADON_BALANCE_MOBS - Меняет поведение лазеру. Надо тестить
 			// blocked = TRUE	// CELADON-EDIT - ORIGINAL
 			break
 		var/blocked = FALSE
@@ -137,14 +137,14 @@
 				break
 		if(blocked)
 			break
-		// [CELADON-EDIT] - CELADON_BALANCE - Меняет поведение лазеру. Надо тестить
+		// [CELADON-EDIT] - CELADON_BALANCE_MOBS - Меняет поведение лазеру. Надо тестить
 		// var/atom/new_brimbeam = new /obj/effect/brimbeam(affected_turf)	// CELADON-EDIT - ORIGINAL
 		var/obj/effect/brimbeam/new_brimbeam = new(affected_turf, src)
 		new_brimbeam.dir = src.dir
 		// [/CELADON-EDIT]
 		new_brimbeam.dir = dir
 		beamparts += new_brimbeam
-	// [CELADON-ADD] - CELADON_BALANCE - Меняет поведение лазеру. Надо тестить
+	// [CELADON-ADD] - CELADON_BALANCE_MOBS - Меняет поведение лазеру. Надо тестить
 		for(var/mob/living/hit_mob in affected_turf.contents)
 			var/mob/living/carbon/C = hit_mob
 			to_chat(hit_mob, span_userdanger("You're blasted by [src]'s brimbeam!"))
@@ -220,12 +220,12 @@
 		damage(hit_mob)
 
 /obj/effect/brimbeam/proc/damage(mob/living/hit_mob)
-	// [CELADON-EDIT] - CELADON_BALANCE - Меняет поведение лазеру. Надо тестить
+	// [CELADON-EDIT] - CELADON_BALANCE_MOBS - Меняет поведение лазеру. Надо тестить
 	// hit_mob.adjustFireLoss(5)	// CELADON-EDIT - ORIGINAL
 	var/mob/living/carbon/C = hit_mob
 	// [/CELADON-EDIT]
 	to_chat(hit_mob, span_danger("You're damaged by [src]!"))
-	// [CELADON-ADD] - CELADON_BALANCE
+	// [CELADON-ADD] - CELADON_BALANCE_MOBS
 	if(iscarbon(C))
 		return C.apply_damage(5, BURN, spread_damage=TRUE)
 	else

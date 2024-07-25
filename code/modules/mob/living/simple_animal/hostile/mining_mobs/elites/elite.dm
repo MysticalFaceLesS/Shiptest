@@ -108,7 +108,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 
 /obj/structure/elite_tumor/attack_hand(mob/user)
 	. = ..()
-	// [CELADON-EDIT] - CELADON_BALANCE
+	// [CELADON-EDIT] - CELADON_BALANCE_MOBS
 	// if(ishuman(user))
 	// 	switch(activity)
 	// 		if(TUMOR_PASSIVE)
@@ -193,7 +193,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 	mychild = new selectedspawn(loc)
 	visible_message("<span class='boldwarning'>[mychild] emerges from [src]!</span>")
 	playsound(loc,'sound/effects/phasein.ogg', 200, 0, 50, TRUE, TRUE)
-	// [CELADON-ADD] - CELADON_BALANCE
+	// [CELADON-ADD] - CELADON_BALANCE_MOBS
 	if(iselitefauna(mychild))
 		for(var/mob/living/carbon/C in range(12, src))
 			mychild.maxHealth += 150
@@ -203,7 +203,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 		mychild.key = elitemind.key
 		mychild.sentience_act()
 		notify_ghosts("\A [mychild] has been awakened in \the [get_area(src)]!", source = mychild, action = NOTIFY_ORBIT, flashwindow = FALSE, header = "Lavaland Elite awakened")
-	// [CELADON-EDIT] - CELADON_BALANCE
+	// [CELADON-EDIT] - CELADON_BALANCE_MOBS
 	// icon_state = "tumor_popped"	// CELADON-EDIT - ORIGINAL
 	icon_state = "[mfauna]tumor_popped"
 	// [/CELADON-EDIT]
@@ -227,7 +227,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 /obj/structure/elite_tumor/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	mychild = null
-	// [CELADON-EDIT] - CELADON_BALANCE
+	// [CELADON-EDIT] - CELADON_BALANCE_MOBS
 	// activator = null	// CELADON-EDIT - ORIGINAL
 	clear_activator(activator)
 	// [/CELADON-EDIT]
@@ -243,14 +243,14 @@ While using this makes the system rely on OnFire, it still gives options for tim
 
 /obj/structure/elite_tumor/attackby(obj/item/I, mob/user, params)
 	. = ..()
-	// [CELADON-EDIT] - CELADON_BALANCE
+	// [CELADON-EDIT] - CELADON_BALANCE_MOBS
 	// if(istype(I, /obj/item/organ/regenerative_core) && activity == TUMOR_INACTIVE && !boosted)	// CELADON-EDIT - ORIGINAL
 	if(istype(I, /obj/item/organ/regenerative_core) && activity == TUMOR_INACTIVE && !boosted && !doom)
 	// [/CELADON-EDIT]
 		var/obj/item/organ/regenerative_core/core = I
 		if(!core.preserved)
 			return
-		// [CELADON-EDIT] - CELADON_BALANCE
+		// [CELADON-EDIT] - CELADON_BALANCE_MOBS
 		// visible_message("<span class='boldwarning'>As [user] drops the core into [src], [src] appears to swell.</span>")		// CELADON-EDIT - ORIGINAL
 		visible_message("<span class='boldwarning'>As [user] drops the core into [src], it appears to swell.</span>")
 		// [/CELADON-EDIT]
@@ -260,7 +260,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 		desc = "[desc]  This one seems to glow with a strong intensity."
 		qdel(core)
 		return TRUE
-	// [CELADON-ADD] - CELADON_BALANCE
+	// [CELADON-ADD] - CELADON_BALANCE_MOBS
 	if(istype(I, /obj/item/gem) && activity == TUMOR_INACTIVE && !boosted && !doom)
 		var/obj/item/gem/gem = I
 		doom = TRUE
@@ -329,7 +329,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 	var/turf/T = get_turf(src)
 	if(loc == null)
 		return
-	// [CELADON-EDIT] - CELADON_BALANCE
+	// [CELADON-EDIT] - CELADON_BALANCE_MOBS
 	// for(var/t in RANGE_TURFS(12, T))
 	// 	if(get_dist(t, T) == 12)	// CELADON-EDIT - ORIGINAL
 	for(var/t in RANGE_TURFS(10, T))
@@ -341,14 +341,14 @@ While using this makes the system rely on OnFire, it still gives options for tim
 			newwall.ourelite = src.mychild
 
 /obj/structure/elite_tumor/proc/border_check()
-	// [CELADON-EDIT] - CELADON_BALANCE
+	// [CELADON-EDIT] - CELADON_BALANCE_MOBS
 	// if(activator != null && get_dist(src, activator) >= 12)	// CELADON-EDIT - ORIGINAL
 	if(activator != null && get_dist(src, activator) >= 10)
 	// [/CELADON-EDIT]
 		activator.forceMove(loc)
 		visible_message("<span class='boldwarning'>[activator] suddenly reappears above [src]!</span>")
 		playsound(loc,'sound/effects/phasein.ogg', 200, 0, 50, TRUE, TRUE)
-	// [CELADON-EDIT] - CELADON_BALANCE
+	// [CELADON-EDIT] - CELADON_BALANCE_MOBS
 	// if(mychild != null && get_dist(src, mychild) >= 12)	// CELADON-EDIT - ORIGINAL
 	if(mychild != null && get_dist(src, mychild) >= 10)
 	// [/CELADON-EDIT]
@@ -360,11 +360,11 @@ While using this makes the system rely on OnFire, it still gives options for tim
 	playsound(loc,'sound/effects/tendril_destroyed.ogg', 200, 0, 50, TRUE, TRUE)
 	visible_message("<span class='boldwarning'>[src] begins to convulse violently before beginning to dissipate.</span>")
 	visible_message("<span class='boldwarning'>As [src] closes, something is forced up from down below.</span>")
-	// [CELADON-EDIT] - CELADON_BALANCE - Меняем сундуки на обычные некрополиса
+	// [CELADON-EDIT] - CELADON_BALANCE_MOBS - Меняем сундуки на обычные некрополиса
 	// var/obj/structure/closet/crate/necropolis/tendril/greater/lootbox = new /obj/structure/closet/crate/necropolis/tendril/greater(loc) // CELADON-EDIT - ORIGINAL
 	var/obj/structure/closet/crate/necropolis/tendril/lootbox = new /obj/structure/closet/crate/necropolis/tendril(loc)
 	// [/CELADON-EDIT]
-	// [CELADON-EDIT] - CELADON_BALANCE
+	// [CELADON-EDIT] - CELADON_BALANCE_MOBS
 	// if(!boosted)
 	// 	mychild = null
 	// 	activator = null
@@ -379,7 +379,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 		else
 	// [/CELADON-EDIT]
 			new /obj/item/tumor_shard(lootbox)
-	// [CELADON-REMOVE] - CELADON_BALANCE
+	// [CELADON-REMOVE] - CELADON_BALANCE_MOBS
 	// mychild = null
 	// activator = null
 	// [/CELADON-REMOVE]
@@ -387,7 +387,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 
 /obj/structure/elite_tumor/proc/onEliteWon()
 	activity = TUMOR_PASSIVE
-	// [CELADON-EDIT] - CELADON_BALANCE
+	// [CELADON-EDIT] - CELADON_BALANCE_MOBS
 	// activator = null	// CELADON-EDIT - ORIGINAL
 	clear_activator(activator)
 	// [/CELADON-EDIT]
@@ -461,7 +461,7 @@ While using this makes the system rely on OnFire, it still gives options for tim
 /obj/effect/temp_visual/elite_tumor_wall/Destroy()
 	if(smoothing_flags & (SMOOTH_CORNERS|SMOOTH_BITMASK))
 		QUEUE_SMOOTH_NEIGHBORS(src)
-	// [CELADON-REMOVE] - CELADON_BALANCE
+	// [CELADON-REMOVE] - CELADON_BALANCE_MOBS
 	// activator = null
 	// ourelite = null
 	// [/CELADON-REMOVE]
@@ -469,13 +469,13 @@ While using this makes the system rely on OnFire, it still gives options for tim
 
 /obj/effect/temp_visual/elite_tumor_wall/CanAllowThrough(atom/movable/mover, border_dir)
 	. = ..()
-	// [CELADON-EDIT] - CELADON_BALANCE
+	// [CELADON-EDIT] - CELADON_BALANCE_MOBS
 	// if(mover == ourelite || mover == activator)
 	// 	return FALSE	// CELADON-EDIT - ORIGINAL
 	return FALSE
 	// [/CELADON-EDIT]
 
-// [CELADON-ADD] - CELADON_BALANCE
+// [CELADON-ADD] - CELADON_BALANCE_MOBS
 #undef TUMOR_ACTIVE
 #undef TUMOR_INACTIVE
 #undef TUMOR_PASSIVE

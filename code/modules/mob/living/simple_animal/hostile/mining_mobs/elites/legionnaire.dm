@@ -25,7 +25,7 @@
 	icon_dead = "legionnaire_dead"
 	icon_gib = "syndicate_gib"
 	health_doll_icon = "legionnaire"
-	// [CELADON-REMOVE] - CELADON_BALANCE
+	// [CELADON-REMOVE] - CELADON_BALANCE_MOBS
 	// maxHealth = 800
 	// health = 800
 	// [/CELADON-REMOVE]
@@ -89,7 +89,7 @@
 			if(SPEW_SMOKE)
 				spew_smoke()
 		return
-	// [CELADON-EDIT] - CELADON_BALANCE
+	// [CELADON-EDIT] - CELADON_BALANCE_MOBS
 	// var/aiattack = rand(1,4)	// CELADON-EDIT - ORIGINAL
 	var/aiattack = rand(1,3)
 	// [/CELADON-EDIT]
@@ -100,7 +100,7 @@
 			head_detach(target)
 		if(BONFIRE_TELEPORT)
 			bonfire_teleport()
-		// [CELADON-REMOVE] - CELADON_BALANCE
+		// [CELADON-REMOVE] - CELADON_BALANCE_MOBS
 		// if(SPEW_SMOKE)
 		// 	spew_smoke()
 		// [/CELADON-REMOVE]
@@ -193,7 +193,7 @@
 		var/turf/legionturf = get_turf(src)
 		var/turf/pileturf = get_turf(mypile)
 		if(legionturf == pileturf)
-			// [CELADON-EDIT] - CELADON_BALANCE
+			// [CELADON-EDIT] - CELADON_BALANCE_MOBS
 			// mypile.take_damage(100)	// CELADON-EDIT - ORIGINAL
 			mypile.take_damage(50)
 			// [/CELADON-EDIT]
@@ -268,7 +268,7 @@
 	var/mob/living/simple_animal/hostile/asteroid/elite/legionnaire/myowner = null
 
 
-// [CELADON-EDIT] - CELADON_BALANCE
+// [CELADON-EDIT] - CELADON_BALANCE_MOBS
 // /obj/structure/legionnaire_bonfire/Entered(atom/movable/mover, atom/target)
 // 	if(isliving(mover))
 // 		var/mob/living/L = mover	// CELADON-EDIT - ORIGINAL
@@ -283,7 +283,7 @@
 /obj/structure/legionnaire_bonfire/Destroy()
 	if(myowner != null)
 		myowner.mypile = null
-	// [CELADON-ADD] - CELADON_BALANCE
+	// [CELADON-ADD] - CELADON_BALANCE_MOBS
 	new /obj/item/organ/regenerative_core/legion(loc)
 	// [CELADON-ADD]
 	. = ..()

@@ -128,7 +128,7 @@
 		shell_health -= dam_amount
 		if(shell_health <= 0)
 			has_shell = FALSE
-			// [CELADON-EDIT] - CELADON_BALANCE
+			// [CELADON-EDIT] - CELADON_BALANCE_MOBS
 			// armor = null		// Armor comes from the shell	// CELADON-EDIT - ORIGINAL
 			armor = list("melee" = 20, "bullet" = 20, "laser" = 20, "energy" = 30, "bomb" = 40, "bio" = 20, "rad" = 20, "fire" = 20, "acid" = 20)		// Full armor comes from the shell
 			armor = getArmor(arglist(armor))
@@ -142,7 +142,7 @@
 				shell_snap_message = TRUE //so it doesnt repeat
 		update_appearance()
 		return TRUE
-	// [CELADON-REMOVE] - CELADON_BALANCE
+	// [CELADON-REMOVE] - CELADON_BALANCE_MOBS
 	// update_appearance()
 	// [/CELADON-REMOVE]
 	return FALSE
