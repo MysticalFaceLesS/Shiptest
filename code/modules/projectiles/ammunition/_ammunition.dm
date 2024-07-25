@@ -66,6 +66,10 @@
 
 /obj/item/ammo_casing/update_icon_state()
 	icon_state = "[initial(icon_state)][BB ? (bullet_skin ? "-[bullet_skin]" : "") : "-empty"]"
+	// [CELADON-ADD] - CELADON_BALANCE - Патроны
+	if(icon_state == "[initial(icon_state)]-empty")
+		custom_materials = list(/datum/material/iron=500)
+	// [/CELADON-ADD]
 	return ..()
 
 /obj/item/ammo_casing/update_desc()
