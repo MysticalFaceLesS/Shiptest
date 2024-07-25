@@ -30,6 +30,13 @@
 	failure_sound = 'sound/machines/defib_zap.ogg'
 	experience_given = 0 // per_trauma
 
+/datum/surgery_step/heal/mechanic
+	implements = list(TOOL_WELDER = 100,
+				TOOL_WIRECUTTER = 100,
+				TOOL_CAUTERY = 60,
+				TOOL_HEMOSTAT = 60,
+				TOOL_RETRACTOR = 60)
+
 /datum/surgery_step/fix_robo_brain/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	display_results(user, target, "<span class='notice'>You begin to fix [target]'s robotic brain...</span>",
 		"<span class='notice'>[user] begins to fix [target]'s robotic brain.</span>",
