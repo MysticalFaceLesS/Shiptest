@@ -16,10 +16,3 @@
 
 /obj/projectile/bullet/pellet/buckshot
 	damage = 14
-
-
-
-
-
-
-
