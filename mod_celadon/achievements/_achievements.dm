@@ -3,7 +3,7 @@
 /// author - автор(ы) этого модпака.
 
 /datum/modpack/achievements
-	name = "Achievments"
+	name = "Achievements"
 	desc = "Пак добавляет новые ачивки в игру"
 	author = "Ganza9991"
 
