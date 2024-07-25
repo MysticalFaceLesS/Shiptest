@@ -156,10 +156,10 @@
 		addtimer(CALLBACK(src, PROC_REF(shoot_projectile), target_turf, angle_to_target, FALSE), 14)
 
 /mob/living/simple_animal/hostile/asteroid/elite/herald/proc/herald_circleshot()
-	// [CELADON-EDIT] - CELADON_BALANCE_MOBS
-	// var/static/list/directional_shot_angles = list(0, 45, 90, 135, 180, 225, 270, 315)	// CELADON-EDIT - ORIGINAL
+	var/static/list/directional_shot_angles = list(0, 45, 90, 135, 180, 225, 270, 315)	// CELADON-EDIT - ORIGINAL
+	// [CELADON-ADD] - CELADON_BALANCE_MOBS
 	var/static/list/directional_shot_angless = list(22, 67, 112, 157, 202, 247, 292, 337)
-	// [/CELADON-EDIT]
+	// [/CELADON-ADD]
 	for(var/i in directional_shot_angles)
 		shoot_projectile(get_turf(src), i, FALSE)
 	// [CELADON-ADD] - CELADON_BALANCE_MOBS
