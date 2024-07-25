@@ -72,6 +72,7 @@ EDIT:
 
 `code/modules/surgery/tools.dm`
 
+`code/datums/status_effects/buffs.dm`
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
