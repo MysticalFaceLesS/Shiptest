@@ -58,6 +58,28 @@ REMOVE: `D:\1ss\ShiptestYata\code\modules\surgery\experimental_dissection.dm`: `
 REMOVE: `code\modules\projectiles\guns\energy.dm`
 
 EDIT: `code/modules/mining/equipment/regenerative_core.dm` - теперь ИПС не смогут жрать ядра для полного отхила, их лечить будет на половину.
+EDIT:
+`code/modules/mob/living/simple_animal/hostile/mining_mobs/basilisk.dm`
+`code/modules/mob/living/simple_animal/hostile/mining_mobs/brimdemon.dm`
+`code/modules/mob/living/simple_animal/hostile/mining_mobs/elites/elite.dm`
+`code/modules/mob/living/simple_animal/hostile/mining_mobs/elites/goliath_broodmother.dm`
+`code/modules/mob/living/simple_animal/hostile/mining_mobs/elites/herald.dm`
+`code/modules/mob/living/simple_animal/hostile/mining_mobs/elites/legionnaire.dm`
+
+`code/modules/projectiles/ammunition/_ammunition.dm`
+
+
+
+	// CELADON-EDIT - ORIGINAL
+// [CELADON-EDIT] - CELADON_BALANCE
+// [CELADON-ADD] - CELADON_BALANCE
+// [CELADON-REMOVE] - CELADON_BALANCE
+
+
+
+
+
+
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
