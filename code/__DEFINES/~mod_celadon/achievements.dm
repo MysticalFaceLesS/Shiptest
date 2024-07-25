@@ -10,4 +10,3 @@
 
 #define SWARMER_BEACON_SCORE "Swarmer Beacs Killed"
 #define TENDRIL_CLEAR_SCORE "Tendrils Killed"
-
