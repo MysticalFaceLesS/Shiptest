@@ -15,7 +15,6 @@
 	id = /obj/item/card/id/silver
 
 /datum/outfit/job/elysium/proc/get_elysium_access(mob/living/carbon/human/H)
-	H.faction |= list(FACTION_PLAYER_ELYSIUM)
 	var/obj/item/storage/wallet/W = null
 	for (var/obj/item/O in H.contents)
 		if (istype(O, /obj/item/storage/wallet))
@@ -38,6 +37,9 @@
 	. = ..()
 	get_elysium_access(H)
 
+/datum/outfit/job/elysium/post_equip(mob/living/carbon/human/H)
+	H.faction |= list(FACTION_PLAYER_ELYSIUM)
+
 //	Nanotrasen
 /datum/outfit/job/nanotrasen/post_equip(mob/living/carbon/human/H, visualsOnly)
 	. = ..()
@@ -52,4 +54,3 @@
 /datum/outfit/job/inteq/post_equip(mob/living/carbon/human/H, visualsOnly)
 	. = ..()
 	H.faction |= list(FACTION_PLAYER_INTEQ)
-
