@@ -62,7 +62,7 @@ ID мода: CELADON_FOOD_AND_DRINKS
   И то же самое, если ты используешь дефайны, определённые другим модом.
 
   Не используешь - напиши "Отсутствуют"
-  Примеры: `code/__defines/~mods/food_and_drinks.dm`: `FOOD_AND_DRINKS_SPEED_MULTIPLIER`, `FOOD_AND_DRINKS_SPEED_BASE`
+  Примеры: `code/__defines/~mod_celadon/food_and_drinks.dm`: `FOOD_AND_DRINKS_SPEED_MULTIPLIER`, `FOOD_AND_DRINKS_SPEED_BASE`
 -->
 
 ### Используемые файлы, не содержащиеся в модпаке

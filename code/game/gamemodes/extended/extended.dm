@@ -28,4 +28,10 @@
 		G.on_report()
 
 /datum/game_mode/extended/announced/send_intercept(report = 0)
-	priority_announce("Thanks to the tireless efforts of our security and intelligence divisions, there are currently no credible threats to [station_name()]. All station construction projects have been authorized. Have a secure shift!", "Security Report", 'sound/ai/commandreport.ogg')
+	// [CELADON-EDIT] - CELADON_QOL
+	// priority_announce("Thanks to the tireless efforts of our security and intelligence divisions, there are currently no credible threats to [station_name()]. All station construction projects have been authorized. Have a secure shift!", "Security Report", 'sound/ai/commandreport.ogg')		// CELADON-EDIT - ORIGINAL
+	priority_announce("The beginning of a new cycle has been successfully documented. The data of the latest sector maps has been uploaded to the general network. Thank you for visiting the <[station_name()]>. We wish you a successful cycle.", "Station Report", 'mod_celadon/_storge_sounds/sound/ai/commandreport.ogg')
+	// [/CELADON-EDIT]
+
+
+

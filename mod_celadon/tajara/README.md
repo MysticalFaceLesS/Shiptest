@@ -116,7 +116,7 @@ ID мода: TAJARA
 
 ### Дефайны
 
-- `code/__DEFINES/~mods/tajara.dm`:
+- `code/__DEFINES/~mod_celadon/tajara.dm`:
   - `DNA_SKIN_TONE_NOSE_BLOCK`
   - `SKINNOSECOLORS`
   - `SKINTAJARACOLORS`

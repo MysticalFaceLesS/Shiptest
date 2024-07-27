@@ -369,25 +369,43 @@
 			//Because a servant of medicines stops at nothing to help others, lets keep them on their toes and give them an additional boost.
 			if(itemUser.health < itemUser.maxHealth)
 				new /obj/effect/temp_visual/heal(get_turf(itemUser), "#375637")
-			itemUser.adjustBruteLoss(-1.5)
-			itemUser.adjustFireLoss(-1.5)
+			// [CELADON-EDIT] - CELADON_BALANCE
+			// itemUser.adjustBruteLoss(-1.5)
+			// itemUser.adjustFireLoss(-1.5)
+			// itemUser.adjustToxLoss(-1.5, forced = TRUE) //Because Slime People are people too
+			// itemUser.adjustOxyLoss(-1.5)
+			// itemUser.adjustStaminaLoss(-1.5)
+			// itemUser.adjustOrganLoss(ORGAN_SLOT_BRAIN, -1.5)
+			// itemUser.adjustCloneLoss(-0.5) //Becasue apparently clone damage is the bastion of all health	// CELADON-EDIT - ORIGINAL
+			itemUser.adjustBruteLoss(-1.5, forced = TRUE)
+			itemUser.adjustFireLoss(-1.5, forced = TRUE)
 			itemUser.adjustToxLoss(-1.5, forced = TRUE) //Because Slime People are people too
-			itemUser.adjustOxyLoss(-1.5)
-			itemUser.adjustStaminaLoss(-1.5)
+			itemUser.adjustOxyLoss(-1.5, forced = TRUE)
+			itemUser.adjustStaminaLoss(-1.5, forced = TRUE)
 			itemUser.adjustOrganLoss(ORGAN_SLOT_BRAIN, -1.5)
-			itemUser.adjustCloneLoss(-0.5) //Becasue apparently clone damage is the bastion of all health
+			itemUser.adjustCloneLoss(-0.5, forced = TRUE) //Becasue apparently clone damage is the bastion of all health
+			// [/CELADON-EDIT]
 		//Heal all those around you, unbiased
 		for(var/mob/living/L in view(7, owner))
 			if(L.health < L.maxHealth)
 				new /obj/effect/temp_visual/heal(get_turf(L), "#375637")
 			if(iscarbon(L))
-				L.adjustBruteLoss(-3.5)
-				L.adjustFireLoss(-3.5)
+				// [CELADON-EDIT] - CELADON_BALANCE
+				// L.adjustBruteLoss(-3.5)
+				// L.adjustFireLoss(-3.5)
+				// L.adjustToxLoss(-3.5, forced = TRUE) //Because Slime People are people too
+				// L.adjustOxyLoss(-3.5)
+				// L.adjustStaminaLoss(-3.5)
+				// L.adjustOrganLoss(ORGAN_SLOT_BRAIN, -3.5)
+				// L.adjustCloneLoss(-1) //Becasue apparently clone damage is the bastion of all health	// CELADON-EDIT - ORIGINAL
+				L.adjustBruteLoss(-3.5, forced = TRUE)
+				L.adjustFireLoss(-3.5, forced = TRUE)
 				L.adjustToxLoss(-3.5, forced = TRUE) //Because Slime People are people too
-				L.adjustOxyLoss(-3.5)
-				L.adjustStaminaLoss(-3.5)
+				L.adjustOxyLoss(-3.5, forced = TRUE)
+				L.adjustStaminaLoss(-3.5, forced = TRUE)
 				L.adjustOrganLoss(ORGAN_SLOT_BRAIN, -3.5)
-				L.adjustCloneLoss(-1) //Becasue apparently clone damage is the bastion of all health
+				L.adjustCloneLoss(-1, forced = TRUE) //Becasue apparently clone damage is the bastion of all health
+				// [/CELADON-EDIT]
 			else if(issilicon(L))
 				L.adjustBruteLoss(-3.5)
 				L.adjustFireLoss(-3.5)

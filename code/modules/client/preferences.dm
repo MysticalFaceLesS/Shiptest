@@ -1918,7 +1918,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				if("tajara_nose_markings_color")
 					var/new_tajara_nose_markings_color = input(user, "Choose your character's hair gradient colour:", "Character Preference","#"+features["new_tajara_nose_markings_color"]) as color|null
 					if(new_tajara_nose_markings_color)
-						features["new_tajara_nose_markings_color"] = sanitize_hexcolor(new_tajara_nose_markings_color)
+						features["tajara_nose_markings_color"] = sanitize_hexcolor(new_tajara_nose_markings_color)
 				if("tajara_chest_markings_color")
 					var/new_tajara_chest_markings_color = input(user, "Choose your character's hair gradient colour:", "Character Preference","#"+features["tajara_chest_markings_color"]) as color|null
 					if(new_tajara_chest_markings_color)

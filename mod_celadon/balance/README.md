@@ -12,19 +12,18 @@
 <!-- Название мода. Не важно на русском или на английском. -->
 ## Balance - изменение баланса
 
-ID мода: CELADON_BALANCE
-	// [CELADON-EDIT] - CELADON_BALANCE - Трогаем РнД
-	// CELADON-EDIT - ORIGINAL
-	// [/CELADON-EDIT]
+ID мода: CELADON_BALANCE, CELADON_BALANCE_MOBS
 <!--
   Название модпака прописными буквами, СОЕДИНЁННЫМИ_ПОДЧЁРКИВАНИЕМ,
-  которое ты будешь использовать для обозначения файлов.
+  которое ты будешь использовать для обозначения файлов. Добавлены
+  дополнительные ID.
 -->
 
 ### Описание мода
 
 Этот мод вносит различные изменения в балансе. 
 - Изменено количество получаемого лута с элиток.
+- Портированы изменения от Ганзы.
 
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
@@ -55,7 +54,25 @@ EDIT: `code\modules\mob\living\simple_animal\hostile\mining_mobs\elites\elite.dm
 ADD: `code\modules\projectiles\ammunition\_ammunition.dm` : /obj/item/ammo_casing/attackby(obj/item/I, mob/user, params) -> добавлены звук подбора патрона в магазин с пола и задержка в 1 секунду зависящая от кликанья по патронам. Чем быстрее клики - тем быстрее загрузятся патроны.
 Очки с зомби и ксеноморфов
 REMOVE: `D:\1ss\ShiptestYata\code\modules\surgery\experimental_dissection.dm`: `/datum/surgery_step/dissection/preop`
-REMOVE^ `code\modules\projectiles\guns\energy.dm`
+REMOVE: `code\modules\projectiles\guns\energy.dm`
+
+EDIT: `code/modules/mining/equipment/regenerative_core.dm` - теперь ИПС не смогут жрать ядра для полного отхила, их лечить будет на половину.
+EDIT:
+`code/modules/mob/living/simple_animal/hostile/mining_mobs/basilisk.dm`
+`code/modules/mob/living/simple_animal/hostile/mining_mobs/brimdemon.dm`
+`code/modules/mob/living/simple_animal/hostile/mining_mobs/elites/elite.dm`
+`code/modules/mob/living/simple_animal/hostile/mining_mobs/elites/goliath_broodmother.dm`
+`code/modules/mob/living/simple_animal/hostile/mining_mobs/elites/herald.dm`
+`code/modules/mob/living/simple_animal/hostile/mining_mobs/elites/legionnaire.dm`
+`code/modules/mob/living/simple_animal/hostile/mining_mobs/elites/pandora.dm`
+
+`code/modules/projectiles/ammunition/_ammunition.dm`
+
+`code/modules/reagents/chemistry/reagents/medicine_reagents.dm`
+
+`code/modules/surgery/tools.dm`
+
+`code/datums/status_effects/buffs.dm`
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -97,8 +114,10 @@ REMOVE^ `code\modules\projectiles\guns\energy.dm`
 
 ### Авторы:
 
-- Кинетик Крашер, универасльная вендор плата, цены карго, одежда с ЦК, нёрф очков диссекции с спец мобов и её упрощение - Yata9arasu, двигатели, рад. коллекторы - RalseiDreemuurr
-	Затронуты проджектайлы энергетических дробовиков, батарейки в энерегетических пушках теперь можно вытаскивать руками, убрана возможность вытаскивать батарею в само-заряжающихся пушках. - Molniz
+- Кинетик Крашер, универасльная вендор плата, цены карго, одежда с ЦК, нёрф очков диссекции с спец мобов и её упрощение - Yata9arasu
+- Двигатели, рад. коллекторы - RalseiDreemuurr
+- Затронуты проджектайлы энергетических дробовиков, батарейки в энерегетических пушках теперь можно вытаскивать руками, убрана возможность вытаскивать батарею в само-заряжающихся пушках. - Molniz
+- Ganza Pain Elite Edition Deluxe: баланс трогается всех мобов элитных и простых, Пандора реально может убить вас - Ganza9991
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.

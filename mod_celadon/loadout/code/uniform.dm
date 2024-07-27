@@ -66,3 +66,15 @@
 	display_name = "archaeologist uniform"
 	description = "A rugged uniform used by archaeologists. It is already covered in dirt and ancient dust."
 	path = /obj/item/clothing/under/suit/archeologist
+
+// Tacticool
+
+/datum/gear/uniform/tacticool_turtlneck
+	display_name = "tacticool turtlneck"
+	description = "Just looking at it makes you want to buy an SKS, go into the woods, and -operate-. This one looks a more cheaper."
+	path = /obj/item/clothing/under/syndicate/tacticool/china
+
+/datum/gear/uniform/tacticool_turtlneck/shirt
+	display_name = "tacticool skirtleneck"
+	description = "Just looking at it makes you want to buy an SKS, go into the woods, and -operate-. This one looks a more cheaper."
+	path = /obj/item/clothing/under/syndicate/tacticool/skirt/china

@@ -1,4 +1,0 @@
-/// InteQ General access
-#define ACCESS_INTEQ_GENERAL 8484
-#define ACCESS_INTEQ_SECURITY 8485
-#define ACCESS_INTEQ_CAPTAIN 8486

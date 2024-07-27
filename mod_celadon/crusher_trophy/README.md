@@ -78,7 +78,7 @@ ID мода: CRUSHER_TROPHY
   И то же самое, если ты используешь дефайны, определённые другим модом.
 
   Не используешь - напиши "Отсутствуют"
-  Примеры: `code/__defines/~mods/crusher_trophy.dm`: `CRUSHER_TROPHY_SPEED_MULTIPLIER`, `CRUSHER_TROPHY_SPEED_BASE`
+  Примеры: `code/__defines/~mod_celadon/crusher_trophy.dm`: `CRUSHER_TROPHY_SPEED_MULTIPLIER`, `CRUSHER_TROPHY_SPEED_BASE`
 -->
 
 ### Используемые файлы, не содержащиеся в модпаке

@@ -46,3 +46,21 @@
 			'mod_celadon/_storge_sounds/sound/voice/alastor_wing1_2.ogg',
 			'mod_celadon/_storge_sounds/sound/voice/alastor_wing2.ogg',
 			'mod_celadon/_storge_sounds/sound/voice/alastor_wing2_2.ogg')
+
+/**
+ * Perform a custom emote.
+ *
+ * * m_type: Type of message to send.
+ * * message: Content of the message. If none is provided, the user will be prompted to choose the input.
+ * * intentional: Whether or not the user intendeded to perform the emote.
+ */
+/mob/proc/custom_emote(m_type = EMOTE_VISIBLE, message = null, intentional = FALSE)
+	var/input = ""
+	if(!message && !client)
+		CRASH("An empty custom emote was called from a client-less mob.")
+	else if(!message)
+		input = sanitize(copytext_char(input(src,"Choose an emote to display.") as text|null, 1, MAX_MESSAGE_LEN))
+	else
+		input = message
+
+	emote("me", m_type, input, intentional)

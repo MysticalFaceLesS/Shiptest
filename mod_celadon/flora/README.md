@@ -61,7 +61,7 @@ ID мода: CELADON_FLORA
   И то же самое, если ты используешь дефайны, определённые другим модом.
 
   Не используешь - напиши "Отсутствуют"
-  Примеры: `code/__defines/~mods/flora.dm`: `FLORA_SPEED_MULTIPLIER`, `FLORA_SPEED_BASE`
+  Примеры: `code/__defines/~mod_celadon/flora.dm`: `FLORA_SPEED_MULTIPLIER`, `FLORA_SPEED_BASE`
 -->
 
 ### Используемые файлы, не содержащиеся в модпаке
