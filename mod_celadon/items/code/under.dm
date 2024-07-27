@@ -115,3 +115,6 @@
 	body_parts_covered = CHEST | ARMS | GROIN | LEGS
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small
 	supports_variations = DIGITIGRADE_VARIATION | TAJARA_VARIATION
+
+/obj/item/clothing/under/syndicate/tacticool
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
