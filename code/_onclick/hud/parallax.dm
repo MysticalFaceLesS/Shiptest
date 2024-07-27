@@ -486,12 +486,10 @@
 	speed = 1
 	layer = 2
 
-
 /atom/movable/screen/parallax_layer/layer_2_4
 	icon_state = "layer2_4"
 	speed = 1
 	layer = 2
-
 
 /atom/movable/screen/parallax_layer/layer_2_5
 	icon_state = "layer2_5"
