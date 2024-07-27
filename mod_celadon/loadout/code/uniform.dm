@@ -71,10 +71,10 @@
 
 /datum/gear/uniform/tacticool_turtlneck
 	display_name = "tacticool turtlneck"
-	desc = "Just looking at it makes you want to buy an SKS, go into the woods, and -operate-. This one looks a more cheaper."
+	description = "Just looking at it makes you want to buy an SKS, go into the woods, and -operate-. This one looks a more cheaper."
 	path = /obj/item/clothing/under/syndicate/tacticool/china
 
 /datum/gear/uniform/tacticool_turtlneck/shirt
-	name = "tacticool skirtleneck"
-	desc = "Just looking at it makes you want to buy an SKS, go into the woods, and -operate-. This one looks a more cheaper."
+	display_name = "tacticool skirtleneck"
+	description = "Just looking at it makes you want to buy an SKS, go into the woods, and -operate-. This one looks a more cheaper."
 	path = /obj/item/clothing/under/syndicate/tacticool/skirt/china
