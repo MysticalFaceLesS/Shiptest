@@ -216,7 +216,7 @@
 	if(isturf(startingloc))
 		pandora_teleport(startingloc)
 		reinforce()
-		addtimer(CALLBACK(src, PROC_REF(reinforce_end)), 55 SECONDS)
+		addtimer(CALLBACK(src, PROC_REF(reinforce_end)), 15 SECONDS)
 		blast_charges += 20
 		addtimer(CALLBACK(src, PROC_REF(blast_spam)), 1 SECONDS)
 		addtimer(CALLBACK(src, PROC_REF(conjure_hostiles), 1), 20 SECONDS)
