@@ -492,9 +492,20 @@ There are several things that need to be remembered:
 		/// Does this clothing need to be generated via greyscale?
 		var/handled_by_bodytype = FALSE
 
+		// [CELADON-EDIT] - RESPRITE
+		// var/obj/item/bodypart/head_bodypart = src.get_bodypart(BODY_ZONE_HEAD) // CELADON-EDIT - ORIGINAL
+		// if((head_bodypart.bodytype & BODYTYPE_SNOUT) && (I.supports_variations & SNOUTED_VARIATION)) // CELADON-EDIT - ORIGINAL
+		// 	target_overlay = "[target_overlay]_snouted" // CELADON-EDIT - ORIGINAL
 		var/obj/item/bodypart/head_bodypart = src.get_bodypart(BODY_ZONE_HEAD)
-		if((head_bodypart.bodytype & BODYTYPE_SNOUT) && (I.supports_variations & SNOUTED_VARIATION))
-			target_overlay = "[target_overlay]_snouted"
+		if(head_bodypart.bodytype & BODYTYPE_SNOUT)
+			if(icon_exists(SARATHI_SNOUTED_HELM_PATH, RESOLVE_ICON_STATE(I)))
+				icon_file = SARATHI_SNOUTED_HELM_PATH
+				if(I.snout_override_icon)
+					icon_file = I.snout_override_icon
+			else
+				handled_by_bodytype = TRUE
+		// [CELADON-EDIT] - RESPRITES
+
 
 		else if(dna.species.bodytype & BODYTYPE_VOX)
 			if(I.supports_variations & VOX_VARIATION)
@@ -693,9 +704,19 @@ There are several things that need to be remembered:
 		var/handled_by_bodytype = FALSE
 
 		if(!(ITEM_SLOT_MASK in check_obscured_slots()))
+			// [CELADON-EDIT] - RESPRITE
+			// var/obj/item/bodypart/head_bodypart = src.get_bodypart(BODY_ZONE_HEAD) // CELADON-EDIT - ORIGINAL
+			// if((head_bodypart.bodytype & BODYTYPE_SNOUT) && (I.supports_variations & SNOUTED_VARIATION)) // CELADON-EDIT - ORIGINAL
+			// 	target_overlay = "[target_overlay]_snouted" // CELADON-EDIT - ORIGINAL
 			var/obj/item/bodypart/head_bodypart = src.get_bodypart(BODY_ZONE_HEAD)
-			if((head_bodypart.bodytype & BODYTYPE_SNOUT) && (I.supports_variations & SNOUTED_VARIATION))
-				target_overlay = "[target_overlay]_snouted"
+			if(head_bodypart.bodytype & BODYTYPE_SNOUT)
+				if(icon_exists(SARATHI_SNOUTED_MASK_PATH, RESOLVE_ICON_STATE(I)))
+					icon_file = SARATHI_SNOUTED_MASK_PATH
+					if(I.snout_override_icon)
+						icon_file = I.snout_override_icon
+				else
+					handled_by_bodytype = TRUE
+			// [CELADON-EDIT]
 
 			if(dna.species.bodytype & BODYTYPE_VOX)
 				if(I.supports_variations & VOX_VARIATION)

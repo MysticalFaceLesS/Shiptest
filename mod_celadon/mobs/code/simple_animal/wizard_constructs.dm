@@ -8,18 +8,19 @@
 	icon_living = "juggernaut"
 	maxHealth = 150
 	health = 150
+	damage_coeff = list(BRUTE = 0.5, BURN = 2)
 	faction = list("pandora", "Wizard")
 	response_harm_continuous = "harmlessly punches"
 	response_harm_simple = "harmlessly punch"
 	harm_intent_damage = 0
 	obj_damage = 90
-	melee_damage_lower = 25
-	melee_damage_upper = 25
+	melee_damage_lower = 20
+	melee_damage_upper = 40
 	loot = list()
 	deathmessage = "vanishes into purple dust."
 	attack_verb_continuous = "smashes their armored gauntlet into"
 	attack_verb_simple = "smash your armored gauntlet into"
-	speed = 3
+	speed = -0.8
 	environment_smash = ENVIRONMENT_SMASH_WALLS
 	attack_sound = 'sound/weapons/punch3.ogg'
 	status_flags = 0
@@ -47,12 +48,14 @@
 	icon = 'mod_celadon/_storge_icons/icons/mobs/wizard_constructs.dmi'
 	icon_state = "wraith"
 	icon_living = "wraith"
-	maxHealth = 65
-	health = 65
+	maxHealth = 30
+	health = 30
+	damage_coeff = list(BRUTE = 0.8, BURN = 2)
 	faction = list("pandora", "Wizard")
 	loot = list()
-	melee_damage_lower = 20
-	melee_damage_upper = 20
+	melee_damage_lower = 40
+	melee_damage_upper = 40
+	speed = 2
 	retreat_distance = 2 //AI wraiths will move in and out of combat
 	attack_verb_continuous = "slashes"
 	attack_verb_simple = "slash"
