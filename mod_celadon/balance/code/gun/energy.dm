@@ -1,6 +1,7 @@
 /obj/item/gun/energy
 	unscrewing_time = FALSE
 	tac_reloads = TRUE
+	mag_size = MAG_SIZE_MEDIUM
 
 /obj/item/gun/energy/laser/captain
 	internal_cell = TRUE
