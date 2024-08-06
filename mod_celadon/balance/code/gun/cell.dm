@@ -18,7 +18,7 @@
 	charge = 0
 	update_appearance()
 
-/obj/item/stock_parts/cell/gun/solgov/medium
+/obj/item/stock_parts/cell/gun/medium/solgov
 	name = "SolGov power cell"
 	icon_state = "g-sg-cell"
 
@@ -222,9 +222,6 @@
 
 /datum/design/gun_cell_upgraded
 	build_path = /obj/item/stock_parts/cell/gun/medium/upgraded/empty
-
-/datum/design/gun_cell_large
-	build_path = /obj/item/stock_parts/cell/gun/medium/large/empty
 
 /obj/machinery/vending/security
 	products = list(
