@@ -180,47 +180,47 @@
 		accessory = /obj/item/clothing/accessory/armband/deputy
 
 /obj/item/gun/ballistic/automatic/assault/e40/attackby(obj/item/attack_obj, mob/user, params)
-	if(istype(attack_obj, /obj/item/stock_parts/cell/gun))
+	if(istype(attack_obj, /obj/item/stock_parts/cell/gun/medium))
 		return secondary.attackby(attack_obj, user, params)
 	if(istype(attack_obj, /obj/item/screwdriver))
 		return secondary.screwdriver_act(user, attack_obj,)
 	return ..()
 
 /obj/item/gun/ballistic/automatic/powered/gauss/modelh
-	cell_type = /obj/item/stock_parts/cell/gun/solgov
+	cell_type = /obj/item/stock_parts/cell/gun/medium/solgov
 
 /obj/item/gun/ballistic/automatic/powered/gauss/claris
-	cell_type = /obj/item/stock_parts/cell/gun/solgov
+	cell_type = /obj/item/stock_parts/cell/gun/medium/solgov
 
 /obj/item/gun/ballistic/automatic/powered/gauss/gar
-	cell_type = /obj/item/stock_parts/cell/gun/solgov
+	cell_type = /obj/item/stock_parts/cell/gun/medium/solgov
 
 /obj/item/gun/energy/e_gun/hades
-	cell_type = /obj/item/stock_parts/cell/gun/upgraded
+	cell_type = /obj/item/stock_parts/cell/gun/medium/upgraded
 
 /obj/item/gun/energy/e_gun/hos
-	cell_type = /obj/item/stock_parts/cell/gun/upgraded
+	cell_type = /obj/item/stock_parts/cell/gun/medium/upgraded
 
 /obj/item/gun/energy/temperature
-	cell_type = /obj/item/stock_parts/cell/gun/upgraded
+	cell_type = /obj/item/stock_parts/cell/gun/medium/upgraded
 
 /obj/item/gun/energy/kalix
-	cell_type = /obj/item/stock_parts/cell/gun/kalix
+	cell_type = /obj/item/stock_parts/cell/gun/medium/kalix
 
 /obj/item/gun/energy/kalix/pgf
-	cell_type = /obj/item/stock_parts/cell/gun/pgf
+	cell_type = /obj/item/stock_parts/cell/gun/medium/pgf
 
 /obj/item/gun/energy/kalix/pistol
-	cell_type = /obj/item/stock_parts/cell/gun/kalix
+	cell_type = /obj/item/stock_parts/cell/gun/medium/kalix
 
 /datum/design/gun_cell
-	build_path = /obj/item/stock_parts/cell/gun/empty
+	build_path = /obj/item/stock_parts/cell/gun/medium/empty
 
 /datum/design/gun_cell_upgraded
-	build_path = /obj/item/stock_parts/cell/gun/upgraded/empty
+	build_path = /obj/item/stock_parts/cell/gun/medium/upgraded/empty
 
 /datum/design/gun_cell_large
-	build_path = /obj/item/stock_parts/cell/gun/large/empty
+	build_path = /obj/item/stock_parts/cell/gun/medium/large/empty
 
 /obj/machinery/vending/security
 	products = list(
@@ -231,7 +231,7 @@
 		/obj/item/flashlight/seclite = 4,
 		/obj/item/ammo_box/c9mm/rubbershot = 3,
 		/obj/item/ammo_box/c9mm = 1,
-		/obj/item/stock_parts/cell/gun = 3,
+		/obj/item/stock_parts/cell/gun/medium = 3,
 		/obj/item/clothing/glasses/sunglasses = 2)
 	premium = list(
 		/obj/item/storage/belt/security/webbing = 5,
@@ -245,7 +245,7 @@
 	products = list(
 		/obj/item/restraints/handcuffs = 5,
 		/obj/item/restraints/handcuffs/cable/zipties = 10,
-		/obj/item/stock_parts/cell/gun = 3,
+		/obj/item/stock_parts/cell/gun/medium = 3,
 		)
 
 /obj/machinery/vending/security/marine
@@ -256,7 +256,7 @@
 		/obj/item/flashlight/seclite = 10,
 
 		/obj/item/storage/box/lethalshot = 6,
-		/obj/item/stock_parts/cell/gun = 5,
+		/obj/item/stock_parts/cell/gun/medium = 5,
 		/obj/item/ammo_box/magazine/uzim9mm = 5,
 
 		/obj/item/grenade/c4 = 5,
@@ -270,8 +270,8 @@
 		/obj/item/flashlight/seclite = 10,
 
 		/obj/item/screwdriver = 5,
-		/obj/item/stock_parts/cell/gun = 10,
-		/obj/item/stock_parts/cell/gun/upgraded = 5,
+		/obj/item/stock_parts/cell/gun/medium = 10,
+		/obj/item/stock_parts/cell/gun/medium/upgraded = 5,
 
 		/obj/item/grenade/c4 = 5,
 		/obj/item/grenade/frag = 5,
@@ -286,8 +286,8 @@
 		/obj/item/flashlight/seclite = 10,
 
 		/obj/item/screwdriver = 5,
-		/obj/item/stock_parts/cell/gun = 10,
-		/obj/item/stock_parts/cell/gun/upgraded = 5,
+		/obj/item/stock_parts/cell/gun/medium = 10,
+		/obj/item/stock_parts/cell/gun/medium/upgraded = 5,
 
 		/obj/item/grenade/c4 = 5,
 		/obj/item/grenade/frag = 5,
