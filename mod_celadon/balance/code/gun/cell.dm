@@ -18,6 +18,10 @@
 	charge = 0
 	update_appearance()
 
+/obj/item/stock_parts/cell/gun/solgov/medium
+	name = "SolGov power cell"
+	icon_state = "g-sg-cell"
+
 /obj/item/stock_parts/cell/gun/medium/kalix
 	name = "Etherbor EWC-5"
 	desc = "Brought to you by Etherbor Industries, proudly based within the PGF, is the EWC-5, an energy cell compatible with any Etherbor Industries energy weapons."
