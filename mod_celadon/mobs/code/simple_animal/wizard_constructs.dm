@@ -33,6 +33,10 @@
 	playstyle_string = "<b>You are a Juggernaut. Though slow, your shell can withstand heavy punishment, \
 						create shield walls, rip apart enemies and walls alike, and even deflect energy weapons.</b>"
 
+/mob/living/simple_animal/hostile/construct/juggernaut/wizard/Initialize()
+	. = ..()
+	addtimer(CALLBACK(src, PROC_REF(death)), 100)
+
 /mob/living/simple_animal/hostile/construct/juggernaut/wizard/hostile //actually hostile, will move around, hit things
 	AIStatus = AI_ON
 	environment_smash = ENVIRONMENT_SMASH_STRUCTURES //only token destruction, don't smash the cult wall NO STOP
@@ -64,6 +68,10 @@
 	runetype = /datum/action/innate/cult/create_rune/tele
 	playstyle_string = "<b>You are a Wraith. Though relatively fragile, you are fast, deadly, can phase through walls, and your attacks will lower the cooldown on phasing.</b>"
 	glowtheme = "wizard"
+
+/mob/living/simple_animal/hostile/construct/wraith/wizard/Initialize()
+	. = ..()
+	addtimer(CALLBACK(src, PROC_REF(death)), 100)
 
 /mob/living/simple_animal/hostile/construct/wraith/wizard/AttackingTarget() //refund jaunt cooldown when attacking living targets
 	var/prev_stat
