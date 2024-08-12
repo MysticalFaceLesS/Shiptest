@@ -464,7 +464,6 @@
 	name = "Space Mall"
 	description = "An old shopping centre, owned by a former member of Nanotrasen's board of directors.."
 
-
 /datum/map_template/ruin/space/excavator_DK
 	id = "Excavator-DK"
 	suffix = "excavator_DK.dmm"
@@ -544,6 +543,12 @@
 	suffix = "provinggrounds.dmm"
 	name = "Syndicate Battle Sphere"
 	description = "The Syndicate Battle Sphere, complete with guns!"
+
+/datum/map_template/ruin/space/oldstation
+	id = "oldstation"
+	suffix = "oldstation.dmm"
+	name = "Old Station"
+	description = "The old destroyed network of stations Alpha, Beta, Charlie, Tetta"
 
 //							///
 //		WastePlanet ruin	///
