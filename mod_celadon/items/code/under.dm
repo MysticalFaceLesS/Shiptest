@@ -115,3 +115,11 @@
 	body_parts_covered = CHEST | ARMS | GROIN | LEGS
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small
 	supports_variations = DIGITIGRADE_VARIATION | TAJARA_VARIATION
+
+/obj/item/clothing/under/syndicate/tacticool/china
+	desc = "Just looking at it makes you want to buy an SKS, go into the woods, and -operate-. This one looks a more cheaper."
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+
+/obj/item/clothing/under/syndicate/tacticool/skirt/china
+	desc = "Just looking at it makes you want to buy an SKS, go into the woods, and -operate-. This one looks a more cheaper."
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)

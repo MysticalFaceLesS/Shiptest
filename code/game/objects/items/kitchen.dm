@@ -88,6 +88,7 @@
 	item_flags = EYE_STAB
 	var/bayonet = FALSE	//Can this be attached to a gun?
 	custom_price = 250
+	tool_behaviour = TOOL_KNIFE
 
 /obj/item/kitchen/knife/ComponentInitialize()
 	. = ..()
@@ -215,7 +216,9 @@
 
 /obj/item/kitchen/knife/combat
 	name = "combat knife"
-	icon = 'icons/obj/world/melee.dmi'
+	// [CELADON-REMOVE] - CELADON_FIXES - Путь к правильным спрайтам уже указан у родителя.
+  	// icon = 'icons/obj/world/melee.dmi'
+  	// [/CELADON-REMOVE]
 	icon_state = "combatknife"
 	item_state = "combatknife"
 	desc = "A military combat utility survival knife."

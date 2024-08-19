@@ -40,7 +40,7 @@ SUBSYSTEM_DEF(modpacks)
 
 /mob/verb/modpacks_list()
 	set name = "Modpacks List"
-	set category = "OOC"
+	set category = "Special Verbs"
 
 	if(!SSmodpacks.initialized)
 		return

@@ -743,6 +743,10 @@
 /obj/item/melee/weebstick/on_exit_storage(datum/component/storage/concrete/S)
 	var/obj/item/storage/belt/weebstick/B = S.real_location()
 	if(istype(B))
+		// [CELADON-ADD] - CELADON_REPAIR_WEEBSTICK
+		if(B.primed == TRUE) // So we dont break our anime stick if we pull stick when primed
+			B.unprime_unlock()
+		// [/CELADON-ADD]
 		playsound(B, 'sound/items/unsheath.ogg', 25, TRUE)
 
 /obj/item/melee/weebstick/on_enter_storage(datum/component/storage/concrete/S)
@@ -783,7 +787,10 @@
 		. += "<span class='info'>Alt-click it to quickly draw the blade.</span>"
 
 /obj/item/storage/belt/weebstick/AltClick(mob/user)
-	if(!iscarbon(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)) || primed)
+	// [CELADON-EDIT] - CELADON_REPAIR_WEEBSTICK
+	// if(!iscarbon(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)) || primed)	// CELADON-EDIT - ORIGINAL
+	if(!iscarbon(user) || !user.canUseTopic(src, BE_CLOSE, ishuman(user)) || primed)
+	// [/CELADON-EDIT]
 		return
 	if(length(contents))
 		var/obj/item/I = contents[1]
@@ -795,7 +802,10 @@
 		to_chat(user, "<span class='warning'>[src] is empty!</span>")
 
 /obj/item/storage/belt/weebstick/attack_self(mob/user)
-	if(!iscarbon(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
+	// [CELADON-EDIT] - CELADON_REPAIR_WEEBSTICK
+	// if(!iscarbon(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user))) || primed)	// CELADON-EDIT - ORIGINAL
+	if(!iscarbon(user) || !user.canUseTopic(src, BE_CLOSE, ishuman(user)))
+	// [/CELADON-EDIT]
 		return
 	if(length(contents))
 		var/datum/component/storage/CP = GetComponent(/datum/component/storage)
@@ -839,10 +849,16 @@
 	var/halt = FALSE
 	// Stolen dash code
 	for(var/T in getline(start, get_turf(target)))
+		// [CELADON-ADD] - CELADON_REPAIR_WEEBSTICK
+		playsound(T, dash_sound, 15, TRUE)
+		// [/CELADON-ADD]
 		var/turf/tile = T
 		for(var/mob/living/victim in tile)
 			if(victim != user)
-				playsound(victim, 'sound/weapons/anime_slash.ogg', 10, TRUE)
+				// [CELADON-EDIT] - CELADON_REPAIR_WEEBSTICK
+				// playsound(victim, 'sound/weapons/anime_slash.ogg', 10, TRUE)		// CELADON-EDIT - ORIGINAL
+				playsound(tile, 'sound/weapons/anime_slash.ogg', 10, TRUE)
+				// [/CELADON-EDIT] 
 				victim.take_bodypart_damage(15)
 		// Unlike actual ninjas, we stop noclip-dashing here.
 		if(isclosedturf(T))
@@ -856,7 +872,9 @@
 		else
 			end = T
 	user.forceMove(end) // YEET
-	playsound(start, dash_sound, 35, TRUE)
+	// [CELADON-REMOVE] - CELADON_REPAIR_WEEBSTICK
+	// playsound(start, dash_sound, 35, TRUE)
+	// [/CELADON-REMOVE]
 	var/obj/spot2 = new phasein(end, user.dir)
 	spot1.Beam(spot2, beam_effect, time=20)
 	user.visible_message("<span class='warning'>In a flash of red, [user] draws [user.p_their()] blade!</span>", "<span class='notice'>You dash forward while drawing your weapon!</span>", "<span class='warning'>You hear a blade slice through the air at impossible speeds!</span>")

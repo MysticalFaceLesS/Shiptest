@@ -43,7 +43,7 @@
 	righthand_file = 'mod_celadon/_storge_icons/icons/items/mob/inhands/books_righthand.dmi'
 	icon_state = "alquadim_elysm"
 
-/obj/item/codespeak_manual/attack_self(mob/living/user)
+/obj/item/alquadim_manual/attack_self(mob/living/user)
 	if(!isliving(user))
 		return
 
@@ -55,7 +55,7 @@
 	user.grant_language(/datum/language/alquadim, TRUE, TRUE, LANGUAGE_MIND)
 
 
-/obj/item/codespeak_manual/attack(mob/living/M, mob/living/user)
+/obj/item/alquadim_manual/attack(mob/living/M, mob/living/user)
 	if(!istype(M) || !istype(user))
 		return
 	if(M == user)
@@ -80,7 +80,7 @@
 	righthand_file = 'mod_celadon/_storge_icons/icons/items/mob/inhands/books_righthand.dmi'
 	icon_state = "thayos_book"
 
-/obj/item/codespeak_manual/attack_self(mob/living/user)
+/obj/item/thayos_manual/attack_self(mob/living/user)
 	if(!isliving(user))
 		return
 
@@ -92,7 +92,7 @@
 	user.grant_language(/datum/language/thayoss, TRUE, TRUE, LANGUAGE_MIND)
 
 
-/obj/item/codespeak_manual/attack(mob/living/M, mob/living/user)
+/obj/item/thayos_manual/attack(mob/living/M, mob/living/user)
 	if(!istype(M) || !istype(user))
 		return
 	if(M == user)
@@ -117,7 +117,7 @@
 	righthand_file = 'mod_celadon/_storge_icons/icons/items/mob/inhands/books_righthand.dmi'
 	icon_state = "fuyo_book"
 
-/obj/item/codespeak_manual/attack_self(mob/living/user)
+/obj/item/fuyo_manual/attack_self(mob/living/user)
 	if(!isliving(user))
 		return
 
@@ -129,7 +129,7 @@
 	user.grant_language(/datum/language/fuyo, TRUE, TRUE, LANGUAGE_MIND)
 
 
-/obj/item/codespeak_manual/attack(mob/living/M, mob/living/user)
+/obj/item/fuyo_manual/attack(mob/living/M, mob/living/user)
 	if(!istype(M) || !istype(user))
 		return
 	if(M == user)

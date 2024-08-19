@@ -10,7 +10,11 @@
  */
 /client/verb/fix_tgui_panel()
 	set name = "Fix chat"
+	// [CELADON-REMOVE] - CELADON_QOL - Очистка вкладки ООС, перенос части в Special Verbs
+	/*
 	set category = "OOC"
+	*/
+	// [/CELADON-REMOVE]
 	var/action
 	log_tgui(src, "Started fixing.",
 		context = "verb/fix_tgui_panel")

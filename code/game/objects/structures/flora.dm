@@ -34,13 +34,21 @@
 	if(log_amount && (!(flags_1 & NODECONSTRUCT_1)))
 		if(W.get_sharpness() && W.force > 0)
 			if(W.hitsound)
-				playsound(get_turf(src), W.hitsound, 100, FALSE, FALSE)
+				// [CELADON-EDIT] - CELADON_QOL
+				// playsound(get_turf(src), W.hitsound, 100, FALSE, FALSE)		// CELADON-EDIT - ORIGINAL
+				playsound(get_turf(src), pick('mod_celadon/_storge_sounds/sound/trees/treechop1.ogg',
+											'mod_celadon/_storge_sounds/sound/trees/treechop2.ogg',
+											'mod_celadon/_storge_sounds/sound/trees/treechop3.ogg'), 100, FALSE, FALSE)
+				// [/CELADON-EDIT]
 			user.visible_message("<span class='notice'>[user] begins to cut down [src] with [W].</span>","<span class='notice'>You begin to cut down [src] with [W].</span>", "<span class='hear'>You hear the sound of sawing.</span>")
-			if(do_after(user, 1000/W.force, target = src)) //5 seconds with 20 force, 8 seconds with a hatchet, 20 seconds with a shard.
+			// [CELADON-EDIT] - CELADON_QOL
+			// if(do_after(user, 1000/W.force, target = src)) //5 seconds with 20 force, 8 seconds with a hatchet, 20 seconds with a shard.		// CELADON-EDIT - ORIGINAL
+			if(do_after(user, 2000/W.force, target = src)) //10 seconds with 20 force, 16 seconds with a hatchet, 40 seconds with a shard.
+			// [/CELADON-EDIT]
 				user.visible_message("<span class='notice'>[user] fells [src] with the [W].</span>","<span class='notice'>You fell [src] with the [W].</span>", "<span class='hear'>You hear the sound of a tree falling.</span>")
 				// [CELADON-EDIT] - CELADON_QOL
 				// playsound(get_turf(src), 'sound/effects/meteorimpact.ogg', 100 , FALSE, FALSE) // CELADON-EDIT - ORIGINAL
-				playsound(get_turf(src), 'mod_celadon/_storge_sounds/sound/zvuk-padayuschego-dereva.ogg', 100 , FALSE, FALSE)
+				playsound(get_turf(src), 'mod_celadon/_storge_sounds/sound/trees/zvuk-padayuschego-dereva.ogg', 100 , FALSE, FALSE)
 				// [/CELADON-EDIT]
 				user.log_message("cut down [src] at [AREACOORD(src)]", LOG_ATTACK)
 				for(var/i=1 to log_amount)

@@ -1961,7 +1961,10 @@
 	..()
 
 /datum/reagent/medicine/soulus/overdose_process(mob/living/M)
-	M.ForceContractDisease(new /datum/disease/transformation/legionvirus(), FALSE, TRUE)
+	var/mob/living/carbon/C = M
+	if(!istype(C.getorganslot(ORGAN_SLOT_REGENERATIVE_CORE), /obj/item/organ/legion_skull))
+		var/obj/item/organ/legion_skull/spare_ribs = new()
+		spare_ribs.Insert(M)
 	..()
 
 /datum/reagent/medicine/soulus/on_mob_end_metabolize(mob/living/M)
@@ -2063,14 +2066,28 @@
 	return TRUE
 
 /datum/reagent/medicine/lavaland_extract/overdose_process(mob/living/M)		// Thanks to actioninja
+	// [CELADON-ADD] - CELADON_BALANCE	
+	var/phain = 1
+	// [/CELADON-ADD]
 	if(prob(2) && iscarbon(M))
 		var/selected_part = pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG)
 		var/obj/item/bodypart/bp = M.get_bodypart(selected_part)
 		if(bp)
 			M.visible_message("<span class='warning'>[M] feels a spike of pain!!</span>", "<span class='danger'>You feel a spike of pain!!</span>")
 			bp.receive_damage(0, 0, 200)
-		else	//SUCH A LUST FOR REVENGE!!!
-			to_chat(M, "<span class='warning'>A phantom limb hurts!</span>")
+		// [CELADON-EDIT] - CELADON_BALANCE
+		// else	//SUCH A LUST FOR REVENGE!!!
+		// 	to_chat(M, "<span class='warning'>A phantom limb hurts!</span>")	// CELADON-EDIT - ORIGINAL
+		else
+			if(phain == 1)
+				if(selected_part != BODY_ZONE_R_ARM | selected_part != BODY_ZONE_L_LEG)		//SUCH A LUST FOR REVENGE!!!
+					phain = 0
+					to_chat(M, "<span class='warning'>A phantom limb hurts!</span>")
+					M.say("Why are we still here...", forced = /datum/reagent/medicine/lavaland_extract)
+					M.client.give_award(/datum/award/achievement/misc/theinnerhell, M)
+			else
+				return
+		// [/CELADON-EDIT]
 	return ..()
 
 /datum/reagent/medicine/skeletons_boon

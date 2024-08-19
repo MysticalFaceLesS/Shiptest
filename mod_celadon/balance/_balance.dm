@@ -1,4 +1,4 @@
 /datum/modpack/balance
 	name = "Balance"
 	desc = "Вносит изменения в баланс. Затронуты кинетик Крашер, проджектайлы энергетических дробовиков, двигатели, радиационные коллекторы, универсальная плата для вендоров с карго, цены в карго, одежда с ЦК. Изменено количество получаемого лута с элиток."
-	author = "Yata9arasu, RalseiDreemuurr, MrCat15352, Molniz"
+	author = "Yata9arasu, RalseiDreemuurr, MrCat15352, Molniz, Ganza9991"
