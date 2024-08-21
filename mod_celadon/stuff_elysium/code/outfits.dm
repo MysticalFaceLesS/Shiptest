@@ -103,7 +103,7 @@
 	name = "sleeper"
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
-	faction = "elysium"
+	faction = (FACTION_PLAYER_ELYSIUM)
 	short_desc = "You are a Avanpost Elysium Private Security Officer!"
 
 /datum/outfit/avanpost

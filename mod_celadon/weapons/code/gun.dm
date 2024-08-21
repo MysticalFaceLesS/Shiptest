@@ -57,3 +57,20 @@
 	cost = 1350
 	contains = list(/obj/item/storage/pistolcase/usp)
 	crate_name = "auto rifle crate"
+
+// ПР от Ганзы. Добавляет дробь для дробовиков
+// /datum/supply_pack/gun/riot_shotgun // Вроде есть уже ящик с таким оружием, и ценник там 5000
+// 	name = "Riot Shotguns Crate"
+// 	desc = "For when the greytide gets out of hand. Contains 2 pump shotguns, each with a 4-round magazine."
+// 	cost = 3000
+// 	contains = list(/obj/item/gun/ballistic/shotgun/lethal,
+// 					/obj/item/gun/ballistic/shotgun/lethal)
+// 	crate_name = "shotguns crate"
+
+/datum/supply_pack/gun/ballistic
+	name = "Combat Shotguns Crate"
+	desc = "For when the enemy absolutely needs to be replaced with lead. Contains two Aussec-designed combat shotguns."
+	cost = 5500
+	contains = list(/obj/item/gun/ballistic/shotgun/automatic/combat,
+					/obj/item/gun/ballistic/shotgun/automatic/combat)
+	crate_name = "combat shotguns crate"

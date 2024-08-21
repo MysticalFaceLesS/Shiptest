@@ -29,8 +29,8 @@
 	switch(href_list["task"])
 		if("random")
 			switch(href_list["preference"])
-				if("s_tone_nose")
-					skin_tone_nose = random_skin_tone_nose()
+				//if("s_tone_nose")
+				//	skin_tone_nose = random_skin_tone_nose()
 				if("s_tone_tajara")
 					skin_tone_tajara = random_skin_tone_tajara()
 		if("input")
@@ -94,10 +94,10 @@
 					if(new_s_tone_tajara)
 						skin_tone_tajara = new_s_tone_tajara
 
-				if("s_tone_nose")
-					var/new_s_tone_nose = input(user, "Choose your character's skin-tone nose:", "Character Preference")  as null|anything in GLOB.skin_tones_nose
-					if(new_s_tone_nose)
-						skin_tone_nose = new_s_tone_nose
+				//if("s_tone_nose")
+				//	var/new_s_tone_nose = input(user, "Choose your character's skin-tone nose:", "Character Preference")  as null|anything in GLOB.skin_tones_nose
+				//	if(new_s_tone_nose)
+				//		skin_tone_nose = new_s_tone_nose
 	return ..()
 
 

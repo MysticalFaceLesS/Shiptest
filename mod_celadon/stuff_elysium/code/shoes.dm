@@ -8,3 +8,8 @@
 	permeability_coefficient = 0.1
 	clothing_flags = NOSLIP
 	can_be_tied = FALSE
+
+/obj/item/clothing/shoes/sneakers/sandals
+	name = "sandals"
+	desc = "High speed, no drag combat boots."
+	icon_state = "cookflops"

@@ -6,7 +6,6 @@
 	return list(ACCESS_INTEQ_GENERAL, ACCESS_INTEQ_SECURITY, ACCESS_INTEQ_CAPTAIN)
 
 /datum/outfit/job/inteq/proc/get_inteq_g_acces(mob/living/carbon/human/H)
-	H.faction |= list(FACTION_PLAYER_INTEQ)
 	var/obj/item/storage/wallet/W = null
 	for (var/obj/item/O in H.contents)
 		if (istype(O, /obj/item/storage/wallet))
@@ -26,7 +25,6 @@
 			W.combined_access |= card.access
 
 /datum/outfit/job/inteq/proc/get_inteq_gsec_acces(mob/living/carbon/human/H)
-	H.faction |= list(FACTION_PLAYER_INTEQ)
 	var/obj/item/storage/wallet/W = null
 	for (var/obj/item/O in H.contents)
 		if (istype(O, /obj/item/storage/wallet))
@@ -46,7 +44,6 @@
 			W.combined_access |= card.access
 
 /datum/outfit/job/inteq/proc/get_inteq_all_acces(mob/living/carbon/human/H)
-	H.faction |= list(FACTION_PLAYER_INTEQ)
 	var/obj/item/storage/wallet/W = null
 	for (var/obj/item/O in H.contents)
 		if (istype(O, /obj/item/storage/wallet))

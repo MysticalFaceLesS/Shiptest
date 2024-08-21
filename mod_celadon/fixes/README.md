@@ -56,6 +56,8 @@ ID мода: CELADON_FIXES
 - EDIT: `code\modules\projectiles\boxes_magazines\external\rifle.dm` - - исправление калибра
 
 - REMOVE: `code\game\machinery\newscaster.dm` - Полная замена на переведённый файл. Пожалуйста, сделайте это нормально.
+
+- REMOVE: `code\game\objects\items\kitchen.dm` - Исправляет спрайт ножа.
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.

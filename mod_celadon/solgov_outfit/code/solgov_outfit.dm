@@ -3,7 +3,6 @@
 //										//
 
 /datum/outfit/job/solgov/proc/get_solfed_captain_access(mob/living/carbon/human/H)
-	H.faction |= list(FACTION_PLAYER_SOLGOV)
 	var/obj/item/storage/wallet/W = null
 	for (var/obj/item/O in H.contents)
 		if (istype(O, /obj/item/storage/wallet))
@@ -23,7 +22,6 @@
 			W.combined_access |= card.access
 
 /datum/outfit/job/solgov/proc/get_solfed_overseer_access(mob/living/carbon/human/H)
-	H.faction |= list(FACTION_PLAYER_SOLGOV)
 	var/obj/item/storage/wallet/W = null
 	for (var/obj/item/O in H.contents)
 		if (istype(O, /obj/item/storage/wallet))
@@ -43,7 +41,6 @@
 			W.combined_access |= card.access
 
 /datum/outfit/job/solgov/proc/get_solfed_sonnensoldner_access(mob/living/carbon/human/H)
-	H.faction |= list(FACTION_PLAYER_SOLGOV)
 	var/obj/item/storage/wallet/W = null
 	for (var/obj/item/O in H.contents)
 		if (istype(O, /obj/item/storage/wallet))
@@ -63,7 +60,6 @@
 			W.combined_access |= card.access
 
 /datum/outfit/job/solgov/proc/get_solfed_engineer_access(mob/living/carbon/human/H)
-	H.faction |= list(FACTION_PLAYER_SOLGOV)
 	var/obj/item/storage/wallet/W = null
 	for (var/obj/item/O in H.contents)
 		if (istype(O, /obj/item/storage/wallet))

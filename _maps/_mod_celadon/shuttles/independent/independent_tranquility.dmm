@@ -15,16 +15,6 @@
 "aq" = (
 /turf/closed/wall/mineral/titanium,
 /area/ship/engineering/engine)
-"at" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 1
-	},
-/obj/machinery/newscaster/directional/east,
-/turf/open/floor/carpet/nanoweave/beige,
-/area/ship/hallway/starboard)
 "aC" = (
 /obj/structure/table/reinforced,
 /obj/machinery/microwave,
@@ -151,12 +141,7 @@
 	color = "#792f27";
 	dir = 5
 	},
-/obj/structure/extinguisher_cabinet/directional/east{
-	pixel_y = 8
-	},
-/obj/machinery/newscaster/directional/east{
-	pixel_y = -6
-	},
+/obj/structure/extinguisher_cabinet/directional/east,
 /turf/open/floor/wood,
 /area/ship/crew/canteen)
 "bo" = (
@@ -336,7 +321,6 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 10
 	},
-/obj/machinery/newscaster/directional/south,
 /turf/open/floor/wood/walnut,
 /area/ship/crew)
 "dj" = (
@@ -1011,6 +995,9 @@
 	name = "Minifridge"
 	},
 /obj/item/reagent_containers/food/drinks/soda_cans/molten,
+/obj/item/reagent_containers/food/drinks/soda_cans/orange_soda,
+/obj/item/reagent_containers/food/drinks/soda_cans/pacfuel,
+/obj/item/reagent_containers/food/drinks/soda_cans/pacfuel,
 /obj/item/reagent_containers/food/drinks/soda_cans/random,
 /obj/item/reagent_containers/food/drinks/soda_cans/random,
 /obj/item/reagent_containers/food/drinks/soda_cans/sodawater,
@@ -1031,9 +1018,6 @@
 /obj/effect/turf_decal/siding/wood/end{
 	dir = 4
 	},
-/obj/item/reagent_containers/food/drinks/soda_cans/orange_soda,
-/obj/item/reagent_containers/food/drinks/soda_cans/space_up,
-/obj/item/reagent_containers/food/drinks/soda_cans/space_up,
 /turf/open/floor/wood/birch,
 /area/ship/crew/crewfive)
 "hu" = (
@@ -2154,7 +2138,6 @@
 	color = "#792f27";
 	dir = 1
 	},
-/obj/machinery/newscaster/directional/north,
 /turf/open/floor/wood,
 /area/ship/crew/canteen)
 "rB" = (
@@ -2342,17 +2325,6 @@
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/open/floor/grass,
 /area/ship/crew/hydroponics)
-"tj" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
-/obj/machinery/newscaster/directional/west,
-/turf/open/floor/carpet/nanoweave/beige,
-/area/ship/hallway/port)
 "ts" = (
 /obj/machinery/light_switch{
 	dir = 4;
@@ -2390,13 +2362,6 @@
 "tC" = (
 /turf/closed/wall/mineral/titanium,
 /area/ship/medical/surgery)
-"tG" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
-	dir = 8
-	},
-/obj/machinery/newscaster/directional/east,
-/turf/open/floor/carpet/nanoweave/beige,
-/area/ship/hallway/port)
 "tH" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -2770,7 +2735,7 @@
 /area/ship/crew/crewtwo)
 "wA" = (
 /obj/structure/table,
-/obj/item/reagent_containers/food/snacks/cakeslice/lime,
+/obj/item/food/cakeslice/lime,
 /obj/item/kitchen/fork/plastic{
 	pixel_x = -11
 	},
@@ -3550,7 +3515,7 @@
 /area/ship/crew/hydroponics)
 "CH" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/food/snacks/garlicbread,
+/obj/item/food/garlicbread,
 /obj/item/reagent_containers/food/snacks/grown/citrus/orange{
 	pixel_x = -8;
 	pixel_y = 7
@@ -3787,17 +3752,6 @@
 "Ef" = (
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/crew/crewtwo)
-"Ej" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
-/obj/machinery/newscaster/directional/east,
-/turf/open/floor/carpet/nanoweave/beige,
-/area/ship/hallway/starboard)
 "El" = (
 /obj/effect/spawner/structure/window/shuttle,
 /obj/machinery/door/poddoor/shutters/preopen{
@@ -3821,7 +3775,6 @@
 /obj/effect/turf_decal/spline/fancy/opaque/yellow{
 	dir = 5
 	},
-/obj/machinery/newscaster/directional/west,
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "EA" = (
@@ -4953,6 +4906,9 @@
 	name = "External Shutters";
 	pixel_x = -6
 	},
+/obj/item/areaeditor/shuttle{
+	pixel_y = 11
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
 "Nj" = (
@@ -5071,9 +5027,6 @@
 	dir = 4;
 	pixel_x = -20;
 	pixel_y = 12
-	},
-/obj/machinery/newscaster/directional/west{
-	pixel_y = -13
 	},
 /turf/open/floor/wood,
 /area/ship/crew/canteen)
@@ -6079,11 +6032,11 @@
 	pixel_x = -11;
 	pixel_y = 11
 	},
-/obj/item/reagent_containers/food/snacks/store/bread/banana{
+/obj/item/food/bread/banana{
 	pixel_x = 14;
 	pixel_y = 1
 	},
-/obj/item/reagent_containers/food/snacks/breadslice/banana,
+/obj/item/food/breadslice/banana,
 /turf/open/floor/plasteel,
 /area/ship/crew/cryo)
 "Vg" = (
@@ -6198,7 +6151,6 @@
 	color = "#792f27";
 	dir = 1
 	},
-/obj/machinery/newscaster/directional/north,
 /turf/open/floor/wood,
 /area/ship/crew/canteen)
 "Wl" = (
@@ -6222,7 +6174,6 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 8
 	},
-/obj/machinery/newscaster/directional/east,
 /turf/open/floor/carpet,
 /area/ship/crew/crewfive)
 "WL" = (
@@ -6987,7 +6938,7 @@ yE
 sG
 wt
 eN
-tj
+wt
 OE
 dQ
 jy
@@ -7034,7 +6985,7 @@ uL
 qC
 gY
 tY
-tG
+hG
 tY
 so
 op
@@ -7531,7 +7482,7 @@ Pw
 Al
 DS
 bL
-Ej
+bL
 sp
 bL
 uI
@@ -7541,7 +7492,7 @@ bL
 Lw
 tH
 eJ
-at
+HU
 HU
 HU
 HU
