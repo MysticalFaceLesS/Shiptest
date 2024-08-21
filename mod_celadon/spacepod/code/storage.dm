@@ -3,7 +3,40 @@
 // /mob/living/Move() in /modules/mob/living/living.dm - hiding storage boxes on mob movement
 // /item/attackby() in /game/objects/items.dm - use_to_pickup and allow_quick_gather functionality
 // -- c0
+/obj/screen
+	name = ""
+	icon = 'mod_celadon/_storge_icons/icons/64x64/screen_gen.dmi'
+	layer = ABOVE_HUD_LAYER
+	plane = ABOVE_HUD_PLANE
+	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
+	appearance_flags = APPEARANCE_UI
+	var/obj/master = null	//A reference to the object in the slot. Grabs or items, generally.
+	var/datum/hud/hud = null // A reference to the owner HUD, if any.
 
+/obj/screen/close
+	name = "close"
+
+/obj/screen/close/Click()
+	if(istype(master, /obj/item/storage))
+		var/obj/item/storage/S = master
+		S.close(usr)
+	return 1
+
+/obj/screen/storage
+	name = "storage"
+
+// /obj/screen/storage/Click(location, control, params)
+// 	if(world.time <= usr.next_move)
+// 		return 1
+// 	if(usr.stat || usr.IsUnconscious() || usr.IsKnockdown() || usr.IsStun())
+// 		return 1
+// 	if (istype(usr.loc, /obj/mecha)) // stops inventory actions in a mech
+// 		return 1
+// 	if(master)
+// 		var/obj/item/I = usr.get_active_held_item()
+// 		if(I)
+// 			master.attackby(I, usr, params)
+// 	return 1
 
 /obj/item/storage
 	var/silent = 0 // No message on putting items in
@@ -136,15 +169,15 @@
 // 	close_all()
 // 	return ..()
 
-// /obj/item/storage/proc/hide_from(mob/user)
-// 	if(!user.client)
-// 		return
-// 	user.client.screen -= boxes
-// 	user.client.screen -= closer
-// 	user.client.screen -= contents
-// 	if(user.s_active == src)
-// 		user.s_active = null
-// 	is_seeing -= user
+/obj/item/storage/proc/hide_from(mob/user)
+	if(!user.client)
+		return
+	user.client.screen -= boxes
+	user.client.screen -= closer
+	user.client.screen -= contents
+	if(user.s_active == src)
+		user.s_active = null
+	is_seeing -= user
 
 
 // /obj/item/storage/proc/can_see_contents()
@@ -157,9 +190,9 @@
 // 	return cansee
 
 
-// /obj/item/storage/proc/close(mob/user)
-// 	hide_from(user)
-// 	user.s_active = null
+/obj/item/storage/proc/close(mob/user)
+	hide_from(user)
+	user.s_active = null
 
 
 // /obj/item/storage/proc/close_all()
@@ -185,35 +218,35 @@
 // 	closer.screen_loc = "[mx+1],[my]"
 
 
-// //This proc draws out the inventory and places the items on it. It uses the standard position.
-// /obj/item/storage/proc/standard_orient_objs(rows, cols, list/obj/item/display_contents)
-// 	var/cx = 4
-// 	var/cy = 2+rows
-// 	boxes.screen_loc = "4:16,2:16 to [4+cols]:16,[2+rows]:16"
+//This proc draws out the inventory and places the items on it. It uses the standard position.
+/obj/item/storage/proc/standard_orient_objs(rows, cols, list/obj/item/display_contents)
+	var/cx = 4
+	var/cy = 2+rows
+	boxes.screen_loc = "4:16,2:16 to [4+cols]:16,[2+rows]:16"
 
-// 	if(display_contents_with_number)
-// 		for(var/datum/numbered_display/ND in display_contents)
-// 			ND.sample_object.mouse_opacity = 2
-// 			ND.sample_object.screen_loc = "[cx]:16,[cy]:16"
-// 			ND.sample_object.maptext = "<font color='white'>[(ND.number > 1)? "[ND.number]" : ""]</font>"
-// 			ND.sample_object.layer = ABOVE_HUD_LAYER
-// 			ND.sample_object.plane = ABOVE_HUD_PLANE
-// 			cx++
-// 			if(cx > (4+cols))
-// 				cx = 4
-// 				cy--
-// 	else
-// 		for(var/obj/O in contents)
-// 			O.mouse_opacity = 2 //This is here so storage items that spawn with contents correctly have the "click around item to equip"
-// 			O.screen_loc = "[cx]:16,[cy]:16"
-// 			O.maptext = ""
-// 			O.layer = ABOVE_HUD_LAYER
-// 			O.plane = ABOVE_HUD_PLANE
-// 			cx++
-// 			if(cx > (4+cols))
-// 				cx = 4
-// 				cy--
-// 	closer.screen_loc = "[4+cols+1]:16,2:16"
+	if(display_contents_with_number)
+		for(var/datum/numbered_display/ND in display_contents)
+			ND.sample_object.mouse_opacity = 2
+			ND.sample_object.screen_loc = "[cx]:16,[cy]:16"
+			ND.sample_object.maptext = "<font color='white'>[(ND.number > 1)? "[ND.number]" : ""]</font>"
+			ND.sample_object.layer = ABOVE_HUD_LAYER
+			ND.sample_object.plane = ABOVE_HUD_PLANE
+			cx++
+			if(cx > (4+cols))
+				cx = 4
+				cy--
+	else
+		for(var/obj/O in contents)
+			O.mouse_opacity = 2 //This is here so storage items that spawn with contents correctly have the "click around item to equip"
+			O.screen_loc = "[cx]:16,[cy]:16"
+			O.maptext = ""
+			O.layer = ABOVE_HUD_LAYER
+			O.plane = ABOVE_HUD_PLANE
+			cx++
+			if(cx > (4+cols))
+				cx = 4
+				cy--
+	closer.screen_loc = "[4+cols+1]:16,2:16"
 
 
 // /datum/numbered_display
@@ -227,32 +260,32 @@
 // 	number = 1
 
 
-// //This proc determines the size of the inventory to be displayed. Please touch it only if you know what you're doing.
-// /obj/item/storage/proc/orient2hud(mob/user)
-// 	var/adjusted_contents = contents.len
+//This proc determines the size of the inventory to be displayed. Please touch it only if you know what you're doing.
+/obj/item/storage/proc/orient2hud(mob/user)
+	var/adjusted_contents = contents.len
 
-// 	//Numbered contents display
-// 	var/list/datum/numbered_display/numbered_contents
-// 	if(display_contents_with_number)
-// 		numbered_contents = list()
-// 		adjusted_contents = 0
-// 		for(var/obj/item/I in contents)
-// 			var/found = 0
-// 			for(var/datum/numbered_display/ND in numbered_contents)
-// 				if(ND.sample_object.type == I.type)
-// 					ND.number++
-// 					found = 1
-// 					break
-// 			if(!found)
-// 				adjusted_contents++
-// 				numbered_contents.Add( new/datum/numbered_display(I) )
+	//Numbered contents display
+	var/list/datum/numbered_display/numbered_contents
+	if(display_contents_with_number)
+		numbered_contents = list()
+		adjusted_contents = 0
+		for(var/obj/item/I in contents)
+			var/found = 0
+			for(var/datum/numbered_display/ND in numbered_contents)
+				if(ND.sample_object.type == I.type)
+					ND.number++
+					found = 1
+					break
+			if(!found)
+				adjusted_contents++
+				numbered_contents.Add( new/datum/numbered_display(I) )
 
-// 	//var/mob/living/carbon/human/H = user
-// 	var/row_num = 0
-// 	var/col_count = min(7,storage_slots) -1
-// 	if(adjusted_contents > 7)
-// 		row_num = round((adjusted_contents-1) / 7) // 7 is the maximum allowed width.
-// 	standard_orient_objs(row_num, col_count, numbered_contents)
+	//var/mob/living/carbon/human/H = user
+	var/row_num = 0
+	var/col_count = min(7,storage_slots) -1
+	if(adjusted_contents > 7)
+		row_num = round((adjusted_contents-1) / 7) // 7 is the maximum allowed width.
+	standard_orient_objs(row_num, col_count, numbered_contents)
 
 
 // //This proc return 1 if the item can be picked up and 0 if it can't.

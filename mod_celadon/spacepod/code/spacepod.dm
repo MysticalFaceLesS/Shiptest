@@ -773,6 +773,7 @@ GLOBAL_LIST_INIT(spacepods_list, list())				//list of all space pods. Used by ho
 	name = "\improper security spacepod"
 	desc = "An armed security spacepod with reinforced armor plating."
 	icon_state = "pod_dece"
+	icon = 'mod_celadon/_storge_icons/icons/64x64/custom_pod.dmi'
 	health = 600
 
 /obj/spacepod/syndi
