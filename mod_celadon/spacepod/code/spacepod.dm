@@ -98,8 +98,10 @@ GLOBAL_LIST_INIT(spacepods_list, list())				//list of all space pods. Used by ho
 	// All are created free
 	return FALSE
 
+#define SPACEPOD_LOCKED 0
+#define SPACEPOD_INT_CONTROL_LOST (1<<0)
 
-
+#define DELAY_TO_GLIDE_SIZE_64(delay) (clamp(((64 / max((delay) / world.tick_lag, 1)) * GLOB.glide_size_multiplier), MIN_GLIDE_SIZE, MAX_GLIDE_SIZE))
 
 
 #define DAMAGE			1
@@ -136,11 +138,20 @@ GLOBAL_LIST_INIT(spacepods_list, list())				//list of all space pods. Used by ho
 	var/datum/spacepod/equipment/equipment_system
 
 	var/battery_type = "/obj/item/stock_parts/cell/high"
-	var/obj/item/stock_parts/cell/battery
+	var/obj/item/stock_parts/cell/battery ///Keeps track of the pod's cell
 
 	var/datum/gas_mixture/cabin_air
 	var/obj/machinery/portable_atmospherics/canister/internal_tank
 	var/use_internal_tank = 0
+
+	var/completely_disabled = FALSE //stops the pod from doing anything
+	var/dir_in = 2 //What direction will the pod face when entered/powered on? Defaults to South.
+	var/mob/living/carbon/occupant = null
+	var/last_message = 0
+	var/construction_state = SPACEPOD_LOCKED
+	var/zoom_mode = FALSE
+	var/internal_damage = 0 //contains bitflags
+	var/strafe = FALSE //If we are strafing
 
 	var/obj/item/radio/mech/radio
 
@@ -167,6 +178,7 @@ GLOBAL_LIST_INIT(spacepods_list, list())				//list of all space pods. Used by ho
 
 	var/unlocked = TRUE
 
+	// var/step_in = 1 //make a step in step_in/10 sec.
 	var/move_delay = 1.5
 	var/next_move = 0
 	var/can_paint = TRUE
@@ -1238,10 +1250,95 @@ GLOBAL_LIST_INIT(spacepods_list, list())				//list of all space pods. Used by ho
 /obj/spacepod/relaymove(mob/user, direction)
 	if(user != src.pilot)
 		return
-	handlerelaymove(user, direction)
+	if(completely_disabled)
+		return
+	if(!direction)
+		return
+	// if(user != occupant) //While not "realistic", this piece is player friendly.
+	// 	user.forceMove(get_turf(src))
+	// 	to_chat(user, "<span class='notice'>You climb out from [src].</span>")
+	// 	return 0
+	if(internal_tank?.connected_port)
+		if(world.time - last_message > 20)
+			occupant_message("<span class='warning'>Unable to move while connected to the air system port!</span>")
+			last_message = world.time
+		return 0
+	if(construction_state)
+		if(world.time - last_message > 20)
+			occupant_message("<span class='danger'>Maintenance protocols in effect.</span>")
+			last_message = world.time
+		return
+	return domove(direction)
+
+
+// /obj/spacepod/relaymove(mob/user, direction)
+// 	if(user != src.pilot)
+// 		return
+// 	handlerelaymove(user, direction)
+
+/obj/spacepod/proc/domove(direction)
+	if(next_move >= world.time)
+		return 0
+	if(!Process_Spacemove(direction))
+		return 0
+	if(!battery.charge)
+		return 0
+	if(zoom_mode)
+		if(world.time - last_message > 20)
+			occupant_message("<span class='warning'>Unable to move while in zoom mode!</span>")
+			last_message = world.time
+		return 0
+	if(!battery)
+		if(world.time - last_message > 20)
+			occupant_message("<span class='warning'>Missing power cell.</span>")
+			last_message = world.time
+		return 0
+	// if(!scanmod || !capacitor)
+	// 	if(world.time - last_message > 20)
+	// 		occupant_message("<span class='warning'>Missing [scanmod? "capacitor" : "scanning module"].</span>")
+	// 		last_message = world.time
+	// 	return 0
+
+	var/move_result = 0
+	var/oldloc = loc
+	if(internal_damage & SPACEPOD_INT_CONTROL_LOST)
+		set_glide_size(DELAY_TO_GLIDE_SIZE(move_delay))
+		move_result = podsteprand()
+	else if(dir != direction && (!strafe || occupant.client.keys_held["Alt"]))
+		move_result = podturn(direction)
+	else
+		set_glide_size(DELAY_TO_GLIDE_SIZE(move_delay))
+		move_result = podstep(direction)
+	if(move_result || loc != oldloc)// halfway done diagonal move still returns false
+		battery.charge = max(0, battery.charge - 1)
+		// use_power(step_energy_drain)
+		next_move = world.time + move_delay
+		return 1
+	return 0
+
+/obj/spacepod/proc/podturn(direction)
+	setDir(direction)
+	// if(turnsound)
+	// 	playsound(src,turnsound,40,TRUE)
+	return 1
+
+/obj/spacepod/proc/podstep(direction)
+	var/current_dir = dir
+	. = step(src, direction)
+	if(strafe)
+		setDir(current_dir)
+	// if(. && !step_silent)
+	// 	play_stepsound()
+	// step_silent = FALSE
+
+/obj/spacepod/proc/podsteprand()
+	. = step_rand(src)
+	// if(. && !step_silent)
+	// 	play_stepsound()
+	// step_silent = FALSE
 
 /obj/spacepod/proc/handlerelaymove(mob/user, direction)
-	if(world.time < next_move)
+	if(next_move >= world.time)
 		return 0
 	var/moveship = 1
 	if(battery && battery.charge >= 1 && health && empcounter == 0)
@@ -1284,6 +1381,7 @@ GLOBAL_LIST_INIT(spacepods_list, list())				//list of all space pods. Used by ho
 		return 0
 	battery.charge = max(0, battery.charge - 1)
 	next_move = world.time + move_delay
+	return 1
 
 //// Damaged spacepod
 /obj/spacepod/civilian/damaged
@@ -1293,6 +1391,33 @@ GLOBAL_LIST_INIT(spacepods_list, list())				//list of all space pods. Used by ho
 	..()
 	deal_damage(200)
 	update_icon()
+
+////////////////////////////////
+/////// Messages and Log ///////
+////////////////////////////////
+
+/obj/spacepod/proc/occupant_message(message as text)
+	if(message)
+		if(occupant && occupant.client)
+			to_chat(occupant, "[icon2html(src, occupant)] [message]")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #undef DAMAGE
 #undef FIRE_OLAY
