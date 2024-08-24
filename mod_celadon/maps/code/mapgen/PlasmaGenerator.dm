@@ -158,10 +158,6 @@
 	closed_turf_types = list(
 		/turf/closed/mineral/random/plasma_gaint = 1
 	)
-	flora_spawn_list = list(
-		/obj/structure/flora/rock/hell
-	)
-	flora_spawn_chance = 150
 
 	mob_spawn_list = list(
 		/mob/living/simple_animal/hostile/big_legion = 45,
@@ -176,10 +172,6 @@
 	closed_turf_types = list(
 		/turf/closed/mineral/random/plasma_gaint = 1
 	)
-	flora_spawn_list = list(
-		/obj/structure/flora/rock/hell
-	)
-	flora_spawn_chance = 60
 
 	open_turf_types = list(
 		/turf/open/floor/plating/asteroid/plasma_gaint = 1
@@ -189,10 +181,6 @@
 	closed_turf_types = list(
 		/turf/closed/mineral/random/plasma_gaint = 1
 	)
-	flora_spawn_list = list(
-		/obj/structure/flora/rock/hell
-	)
-	flora_spawn_chance = 250
 
 	open_turf_types = list(
 		/turf/open/floor/plating/asteroid/plasma_gaint = 1
@@ -202,10 +190,6 @@
 	closed_turf_types = list(
 		/turf/closed/mineral/random/plasma_gaint = 1
 	)
-	flora_spawn_list = list(
-		/obj/structure/flora/rock/hell
-	)
-	flora_spawn_chance = 350
 
 	open_turf_types = list(
 		/turf/open/lava/plasma_gaint = 50

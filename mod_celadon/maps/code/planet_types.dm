@@ -3,7 +3,7 @@
 	desc = "An abandoned and infected city. A place you don't want to be."
 	planet = DYNAMIC_WORLD_OLD_TOWN
 	color = COLOR_NAVY
-	mapgen = /datum/map_generator/planet_generator/oldtown
+	mapgen = null
 	gravity = GRAVITY_DAMAGE_TRESHOLD
 	default_baseturf = /turf/open/floor/plating/asteroid/wasteplanet
 	weather_controller_type = /datum/weather_controller/desert
@@ -93,10 +93,10 @@
 	initial_gas_mix = PLASMA_GIANT_ATMOS
 	defer_change = 1
 
-	mineralChance = 12
+	mineralChance = 5
 	mineralSpawnChanceList = list(
 		/obj/item/stack/ore/uranium = 10, /obj/item/stack/ore/diamond = 4, /obj/item/stack/ore/gold = 20, /obj/item/stack/ore/titanium = 33,
-		/obj/item/stack/ore/silver = 24, /obj/item/stack/ore/plasma = 50, /obj/item/stack/ore/iron = 50,
+		/obj/item/stack/ore/silver = 24, /obj/item/stack/ore/plasma = 45, /obj/item/stack/ore/iron = 45,
 		/turf/closed/mineral/gibtonite/volcanic = 8, /obj/item/stack/ore/bluespace_crystal = 5)
 
 /turf/open/floor/plating/asteroid/basalt/plasma_gaint
