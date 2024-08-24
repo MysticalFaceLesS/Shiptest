@@ -5,6 +5,6 @@
 	icon_state = "masson_kills"
 
 /turf/open/floor/plating/asteroid/sand/wet
-	icon = "icons/turf/floors.dmi"
+	icon = 'icons/turf/floors.dmi'
 	icon_state = "wet_soft0"
 	base_icon_state = "wet_soft"

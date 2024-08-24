@@ -30,3 +30,14 @@
 					"<span class='notice'>Вы подкидываете монетку в воздухе. Она приземляется, после чего на ней виднеется буква 'M'. <b>Атака без учёта потерь!</b></span>", \
 					"<span class='hear'>Вы слышите звук падения мелочи.</span>")
 	return TRUE		//did the coin flip?
+
+/obj/structure/reagent_dispensers/uranium
+	name = "Enriched uranium"
+	desc = "The Separatists of Elysium managed to steal a couple of activated uranium vaults from the Solar Federation, triggering Operation Sandstorm"
+	icon = 'mod_celadon/_storge_icons/icons/items/obj/uranium_storage.dmi'
+	icon_state = "nuclear"
+	density = TRUE
+	anchored = FALSE
+	pressure_resistance = 2*ONE_ATMOSPHERE
+	max_integrity = 100000000000
+	tank_volume = 0
