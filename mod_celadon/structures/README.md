@@ -74,7 +74,7 @@ ID мода: CELADON_STRUCTURES
 
 ### Авторы:
 
-Maybe-Anton, MrCat15352
+Maybe-Anton, MrCat15352, Molniz
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.
