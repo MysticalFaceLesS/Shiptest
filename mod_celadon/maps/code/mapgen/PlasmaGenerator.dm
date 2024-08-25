@@ -115,7 +115,7 @@
 
 /datum/biome/plasma_gaint/plains
 	open_turf_types = list(
-		/turf/open/chasm/gas_giant/plasma = 1
+		/turf/open/chasm/plasma = 1
 	)
 	flora_spawn_chance = null
 
@@ -127,7 +127,7 @@
 
 /datum/biome/plasma_gaint/plains/dense/mixed
 	open_turf_types = list(
-		/turf/open/chasm/gas_giant/plasma = 1
+		/turf/open/chasm/plasma = 1
 	)
 	flora_spawn_chance = null
 

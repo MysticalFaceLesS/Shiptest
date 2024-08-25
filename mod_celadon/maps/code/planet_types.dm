@@ -110,9 +110,11 @@
 	light_range = 0
 	light_power = 0
 
-/turf/open/chasm/gas_giant/plasma
+/turf/open/chasm/plasma
+	baseturfs = /turf/open/chasm
 	icon = 'icons/turf/floors/chasms.dmi'
 	icon_state = "chasms-255"
+	base_icon_state = "chasms"
 	light_color = COLOR_PURPLE
 	color = null
 	initial_gas_mix = PLASMA_GIANT_ATMOS
