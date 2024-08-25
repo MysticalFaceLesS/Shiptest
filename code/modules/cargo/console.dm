@@ -31,7 +31,7 @@
 	/// Area instance that cargo pods are sent to
 	var/area/landingzone
 	/// The pod type used to deliver orders
-	var/podType = /obj/structure/closet/supplypod/centcompod
+	var/podType = /obj/structure/closet/supplypod/elysiumpod
 	/// Cooldown to prevent printing supplypod beacon spam
 	var/cooldown = 0
 	/// Is the console in beacon mode? exists to let beacon know when a pod may come in
