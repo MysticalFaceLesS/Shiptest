@@ -41,7 +41,9 @@ ID мода: CELADON_ELYSIUMPOD
 
 ### Изменения *кор кода*
 
-- 'code/_DEFINES/cargo.dm' 'code/modules/asset_cache/asset_list_items.dm' 'code/modules/cargo/supplypod.dm'
+- 'code/modules/asset_cache/asset_list_items.dm'
+  'code/modules/cargo/supplypod.dm'
+  'tgui/packages/tgui/interfaces/CentComPodLauncher.js'
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -66,7 +68,7 @@ ID мода: CELADON_ELYSIUMPOD
 
 ### Дефайны
 
-- Отсутствуют
+- 'code/_DEFINES/cargo.dm'
 <!--
   Если требовалось добавить какие-либо дефайны, укажи файлы,
   в которые ты их добавил, а также перечисли имена.
