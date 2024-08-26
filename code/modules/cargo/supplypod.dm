@@ -3,7 +3,10 @@
 /obj/structure/closet/supplypod
 	name = "supply pod" //Names and descriptions are normally created with the setStyle() proc during initialization, but we have these default values here as a failsafe
 	desc = "A Nanotrasen supply drop pod."
-	icon = 'icons/obj/supplypods.dmi'
+	// [CELADON-EDIT] - CELADON_ELYSIUMPOD
+	// icon = 'icons/obj/supplypods.dmi' // CELADON-EDIT - ORIGINAL
+	icon = 'mod_celadon/_storge_icons/icons/supplypods.dmi'
+	// [CELADON-EDIT]
 	icon_state = "pod" //This is a common base sprite shared by a number of pods
 	pixel_x = SUPPLYPOD_X_OFFSET //2x2 sprite
 	layer = BELOW_OBJ_LAYER //So that the crate inside doesn't appear underneath
@@ -73,13 +76,6 @@
 
 /obj/structure/closet/supplypod/centcompod
 	style = STYLE_CENTCOM
-	bluespace = TRUE
-	explosionSize = list(0,0,0,0)
-	delays = list(POD_TRANSIT = 20, POD_FALLING = 4, POD_OPENING = 30, POD_LEAVING = 30)
-	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
-
-/obj/structure/closet/supplypod/elysiumpod
-	style = STYLE_ELYSIUM
 	bluespace = TRUE
 	explosionSize = list(0,0,0,0)
 	delays = list(POD_TRANSIT = 20, POD_FALLING = 4, POD_OPENING = 30, POD_LEAVING = 30)
