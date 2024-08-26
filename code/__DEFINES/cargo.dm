@@ -1,3 +1,18 @@
+// [CELADON-EDIT] - CELADON_ELYSIUMPOD
+// #define STYLE_STANDARD 1 // CELADON-EDIT - ORIGINAL
+// #define STYLE_BLUESPACE 2 // CELADON-EDIT - ORIGINAL
+// #define STYLE_CENTCOM 3 // CELADON-EDIT - ORIGINAL
+// #define STYLE_SYNDICATE 4 // CELADON-EDIT - ORIGINAL
+// #define STYLE_BLUE 5 // CELADON-EDIT - ORIGINAL
+// #define STYLE_CULT 6 // CELADON-EDIT - ORIGINAL
+// #define STYLE_MISSILE 7 // CELADON-EDIT - ORIGINAL
+// #define STYLE_RED_MISSILE 8 // CELADON-EDIT - ORIGINAL
+// #define STYLE_BOX 9 // CELADON-EDIT - ORIGINAL
+// #define STYLE_HONK 10 // CELADON-EDIT - ORIGINAL
+// #define STYLE_FRUIT 11 // CELADON-EDIT - ORIGINAL
+// #define STYLE_INVISIBLE 12 // CELADON-EDIT - ORIGINAL
+// #define STYLE_GONDOLA 13 // CELADON-EDIT - ORIGINAL
+// #define STYLE_SEETHROUGH 14 // CELADON-EDIT - ORIGINAL
 #define STYLE_STANDARD 1
 #define STYLE_BLUESPACE 2
 #define STYLE_ELYSIUM 3
@@ -13,6 +28,7 @@
 #define STYLE_INVISIBLE 13
 #define STYLE_GONDOLA 14
 #define STYLE_SEETHROUGH 15
+// [CELADON-EDIT]
 
 #define POD_SHAPE 1
 #define POD_BASE 2
@@ -43,7 +59,9 @@ GLOBAL_LIST_EMPTY(supplypod_loading_bays)
 GLOBAL_LIST_INIT(podstyles, list(\
 	list(POD_SHAPE_NORML, "pod",		TRUE,	"default",	"yellow",		RUBBLE_NORMAL,	"supply pod",	"A Nanotrasen supply drop pod."),\
 	list(POD_SHAPE_NORML, "advpod",		TRUE,	"bluespace",	"blue",		RUBBLE_NORMAL,	"bluespace supply pod",	"A Nanotrasen Bluespace supply pod. Teleports back to CentCom after delivery."),\
+	// [CELADON-ADD] - CELADON_ELYSIUMPOD
 	list(POD_SHAPE_NORML, "elysiumpod",		TRUE,	"elysium",	"green",		RUBBLE_NORMAL,	"\improper Elysium supply pod",	"An Elysium supply pod. Teleports back to warehouse after delivery."),\
+	// [/CELADON-ADD]
 	list(POD_SHAPE_NORML, "advpod",		TRUE,	"centcom",		"blue",		RUBBLE_NORMAL,	"\improper CentCom supply pod", "A Nanotrasen supply pod, this one has been marked with Central Command's designations. Teleports back to CentCom after delivery."),\
 	list(POD_SHAPE_NORML, "darkpod",	TRUE,	"syndicate",	"red",		RUBBLE_NORMAL,	"blood-red supply pod", "An intimidating supply pod, covered in the blood-red markings of the Syndicate. It's probably best to stand back from this."),\
 	list(POD_SHAPE_NORML, "darkpod",	TRUE,	"deathsquad",	"blue",		RUBBLE_NORMAL,	"\improper Deathsquad drop pod",	"A Nanotrasen drop pod. This one has been marked the markings of Nanotrasen's elite strike team."),\
