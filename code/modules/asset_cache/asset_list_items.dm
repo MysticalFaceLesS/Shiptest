@@ -471,7 +471,7 @@
 		// [CELADON-EDIT] - CELADON_ELYSIUMPOD
 		// var/icon_file = 'icons/obj/supplypods.dmi' // CELADON-EDIT - ORIGINAL
 		var/icon_file = 'mod_celadon/_storge_icons/icons/supplypods.dmi'
-		// [CELADON-EDIT]
+		// [/CELADON-EDIT]
 		var/states = icon_states(icon_file)
 		if (style == STYLE_SEETHROUGH)
 			Insert("pod_asset[style]", icon(icon_file, "seethrough-icon", SOUTH))

@@ -34,7 +34,7 @@
 	// [CELADON-EDIT] - CELADON_ELYSIUMPOD
 	// var/podType = /obj/structure/closet/supplypod/centcompod // CELADON-EDIT - ORIGINAL
 	var/podType = /obj/structure/closet/supplypod/elysiumpod
-	// [CELADON-EDIT]
+	// [/CELADON-EDIT]
 	/// Cooldown to prevent printing supplypod beacon spam
 	var/cooldown = 0
 	/// Is the console in beacon mode? exists to let beacon know when a pod may come in
