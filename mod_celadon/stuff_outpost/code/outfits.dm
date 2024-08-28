@@ -7,7 +7,7 @@
 	outfit = /datum/outfit/outpost/bartender
 
 /datum/outfit/outpost/bartender
-	name = "Bartender"
+	name = "Elysium Outpost Bartender"
 
 	glasses = /obj/item/clothing/glasses/sunglasses/reagent
 	belt = /obj/item/gun/ballistic/shotgun/doublebarrel/presawn
