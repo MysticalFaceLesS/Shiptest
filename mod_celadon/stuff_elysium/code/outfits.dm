@@ -147,7 +147,7 @@
 		return
 
 	var/obj/item/card/id/W = H.wear_id
-	W.access = get_all_accesses()
+	W.access = get_all_accesses()+get_all_accesses_outpost()
 	W.access += get_centcom_access("CentCom Commander")
 	W.assignment = "CentCom Commander"
 	W.registered_name = H.real_name
