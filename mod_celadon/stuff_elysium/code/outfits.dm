@@ -7,7 +7,7 @@
 	registered_age = null
 
 /obj/item/card/id/elysium_com/Initialize()
-	access = get_all_centcom_access()
+	access = get_all_centcom_access()+get_all_accesses_outpost()
 	. = ..()
 
 /obj/item/card/id/elysium_com/has_ship_access(datum/overmap/ship/controlled/ship)
