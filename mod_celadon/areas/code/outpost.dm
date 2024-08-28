@@ -86,6 +86,20 @@
 	icon_state = "lounge_cab_4"
 	sound_environment = SOUND_AREA_WOODFLOOR
 
+/// CREW
+
+/area/outpost/crew/dop_zone_1
+	name = "Dop Zone 1"
+	icon_state = "dop_zone_1"
+
+/area/outpost/crew/dop_zone_2
+	name = "Dop Zone 2"
+	icon_state = "dop_zone_2"
+
+/area/outpost/crew/dop_zone_3
+	name = "Dop Zone 3"
+	icon_state = "dop_zone_3"
+
 /// BAR
 
 /area/outpost/crew/bar/vip_elysium_zone
@@ -114,6 +128,42 @@
 	lighting_colour_tube = "#d6feff"
 	lighting_colour_bulb = "#c1ffff"
 
+/area/outpost/crew/bar/bar_zone
+	name = "Bar zone"
+	icon_state = "zone_bar"
+
+/// SECURITY
+
+/area/outpost/security/bay
+	name = "Bay"
+	icon_state = "sec_bay"
+
+/area/outpost/security/detective
+	name = "Office detective"
+	icon_state = "sec_detectiv"
+
+/area/outpost/security/sb_armory
+	name = "SB Armory"
+	icon_state = "sec_armory"
+
+/area/outpost/security/hall
+	name = "Hall"
+	icon_state = "sec_hall"
+
+/area/outpost/security/reseption
+	name = "Reseption"
+	icon_state = "sec_reseption"
+
+/area/outpost/operations/outpost_command
+	name = "Outpost Command"
+	icon_state = "outpost_command"
+
+/// VACANT
+
+/area/outpost/vacant_rooms/trash_factory
+	name = "Trash Factory"
+	icon_state = "trash_factory"
+
 /// FRACTIONS
 
 /area/outpost/fraction
@@ -122,10 +172,35 @@
 	sound_environment = SOUND_AREA_MEDIUM_SOFTFLOOR
 
 /area/outpost/fraction/syndi
-	name = "Syndicate Room"
+	name = "Faction Syndicate"
+	icon_state = "faction_syndicate"
+	sound_environment = SOUND_AREA_MEDIUM_SOFTFLOOR
+
+/area/outpost/fraction/syndi/room
+	name = "Elite Syndicate Room"
 	icon_state = "syndie_elite"
 
-/area/outpost/fraction/syndi_shop
+/area/outpost/fraction/syndi/donkco_shop
 	name = "Don Co Shop"
 	icon_state = "syndi_shop"
 	sound_environment = SOUND_AREA_SMALL_SOFTFLOOR
+
+/area/outpost/fraction/nanotrasen
+	name = "Faction NanoTrasen"
+	icon_state = "faction_nanotrasen"
+	sound_environment = SOUND_AREA_MEDIUM_SOFTFLOOR
+
+/area/outpost/fraction/solfed
+	name = "Faction Solaer Federation"
+	icon_state = "faction_solfed"
+	sound_environment = SOUND_AREA_MEDIUM_SOFTFLOOR
+
+/area/outpost/fraction/inteq
+	name = "Faction InteQ"
+	icon_state = "faction_inteq"
+	sound_environment = SOUND_AREA_MEDIUM_SOFTFLOOR
+
+/area/outpost/fraction/separatist
+	name = "Faction Separatists"
+	icon_state = "faction_separatist"
+	sound_environment = SOUND_AREA_MEDIUM_SOFTFLOOR
