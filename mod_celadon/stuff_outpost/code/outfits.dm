@@ -16,14 +16,18 @@
 	suit = /obj/item/clothing/suit/armor/vest
 	gloves = /obj/item/clothing/gloves/tackler/combat
 	back = /obj/item/storage/backpack
-	backpack_contents = list(/obj/item/storage/box/beanbag = 1,
-							/obj/item/ammo_box/a12g/slug = 1,
-							/obj/item/ammo_box/a12g/rubbershot = 1,
-							/obj/item/pda/bar = 1)
+	backpack_contents = list(/obj/item/storage/box/beanbag,
+							/obj/item/ammo_box/a12g/slug,
+							/obj/item/ammo_box/a12g/rubbershot,
+							/obj/item/barcodescanner,
+							/obj/item/barcode = 5,
+							/obj/item/reagent_containers/food/drinks/shaker)
 	shoes = /obj/item/clothing/shoes/laceup
 	box = /obj/item/storage/box/survival
 	id = /obj/item/card/id/elysium_Bartender
 	suit_store = /obj/item/gun/ballistic/shotgun/doublebarrel
+	l_pocket = /obj/item/pda/bar
+	r_pocket = /obj/item/lighter
 
 /datum/outfit/outpost/bartender/post_equip(mob/living/carbon/human/H, visualsOnly)
 	ADD_TRAIT(H, TRAIT_ALCOHOL_TOLERANCE, "status_effect")
