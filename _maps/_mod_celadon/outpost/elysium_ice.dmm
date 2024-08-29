@@ -1904,14 +1904,6 @@
 	},
 /turf/open/floor/engine,
 /area/outpost/crew/cryo)
-"eE" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/turf_decal/siding/wood{
-	color = "#543C30";
-	dir = 8
-	},
-/turf/open/floor/wood/walnut,
-/area/outpost/crew/bar)
 "eF" = (
 /obj/effect/turf_decal/borderfloor/corner{
 	dir = 8
@@ -2453,6 +2445,7 @@
 /turf/open/floor/wood/walnut,
 /area/outpost/fraction/syndi/donkco_shop)
 "fK" = (
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet/red_gold,
 /area/outpost/crew/bar/bar_zone)
 "fL" = (
@@ -3474,6 +3467,13 @@
 	},
 /turf/open/floor/plasteel/patterned,
 /area/outpost/vacant_rooms/office)
+"hX" = (
+/obj/effect/turf_decal/siding/wood{
+	color = "#543C30";
+	dir = 8
+	},
+/turf/open/floor/wood/walnut,
+/area/outpost/crew/bar)
 "hZ" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer2{
 	dir = 4
@@ -5159,7 +5159,7 @@
 	pixel_x = 14
 	},
 /obj/machinery/vending/snack/random{
-	pixel_x = -8
+	pixel_x = -14
 	},
 /turf/open/floor/plasteel/tech,
 /area/outpost/operations/outpost_command)
@@ -7703,6 +7703,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/patterned,
 /area/outpost/security/hall)
+"st" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/siding/wood{
+	color = "#543C30";
+	dir = 8
+	},
+/turf/open/floor/wood/walnut,
+/area/outpost/crew/bar)
 "su" = (
 /obj/structure/catwalk/over/plated_catwalk,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -12873,12 +12881,8 @@
 /turf/open/floor/plasteel/telecomms_floor,
 /area/outpost/operations/outpost_command)
 "DF" = (
-/obj/effect/turf_decal/siding/wood{
-	color = "#543C30";
-	dir = 8
-	},
-/turf/open/floor/wood/walnut,
-/area/outpost/crew/bar)
+/turf/open/floor/carpet/red_gold,
+/area/outpost/crew/bar/bar_zone)
 "DG" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 1
@@ -16472,8 +16476,11 @@
 /turf/open/floor/carpet/royalblack,
 /area/outpost/fraction/syndi)
 "Mq" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/carpet/red_gold,
+/obj/structure/guncloset{
+	req_one_access_txt = "8125"
+	},
+/obj/item/gun/ballistic/shotgun/doublebarrel/presawn,
+/turf/open/floor/wood/mahogany,
 /area/outpost/crew/bar/bar_zone)
 "Mr" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
@@ -20727,13 +20734,6 @@
 	light_range = 2
 	},
 /area/outpost/exterior)
-"VS" = (
-/obj/structure/guncloset{
-	req_one_access_txt = "8125"
-	},
-/obj/item/gun/ballistic/shotgun/doublebarrel/presawn,
-/turf/open/floor/wood/mahogany,
-/area/outpost/crew/bar/bar_zone)
 "VT" = (
 /obj/structure/railing{
 	dir = 1;
@@ -37076,7 +37076,7 @@ NG
 CJ
 lO
 TB
-VS
+Mq
 CJ
 Tm
 TW
@@ -37823,10 +37823,10 @@ cr
 NG
 CJ
 mE
-Mq
-Mq
 fK
-Mq
+fK
+DF
+fK
 Am
 zI
 pB
@@ -38010,10 +38010,10 @@ NG
 CJ
 CJ
 GA
-Mq
+fK
 Hv
 Qt
-fK
+DF
 Qp
 zI
 Vd
@@ -38571,10 +38571,10 @@ mr
 nV
 EC
 WN
-DF
-eE
-DF
-DF
+hX
+st
+hX
+hX
 xg
 zI
 LE
