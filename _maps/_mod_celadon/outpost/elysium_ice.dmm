@@ -5575,7 +5575,11 @@
 	dir = 8;
 	req_one_access_txt = "8125"
 	},
-/turf/open/floor/wood/walnut,
+/obj/machinery/door/poddoor/ert{
+	dir = 8;
+	id = "ice_bolt_bar"
+	},
+/turf/open/floor/wood/mahogany,
 /area/outpost/crew/bar/bar_zone)
 "nl" = (
 /obj/effect/decal/cleanable/dirt,
@@ -6373,51 +6377,31 @@
 /obj/item/reagent_containers/food/snacks/grown/cannabis/death,
 /obj/item/reagent_containers/food/snacks/grown/cannabis/death,
 /obj/item/reagent_containers/food/snacks/grown/cannabis/death,
-/obj/item/ammo_casing/shotgun/buckshot,
-/obj/item/ammo_casing/shotgun/buckshot,
-/obj/item/ammo_casing/shotgun/buckshot,
-/obj/item/ammo_casing/shotgun/buckshot,
-/obj/item/ammo_casing/shotgun/buckshot,
-/obj/item/ammo_casing/shotgun/buckshot,
-/obj/item/ammo_casing/shotgun/buckshot,
-/obj/item/ammo_casing/shotgun/buckshot,
-/obj/item/ammo_casing/shotgun/buckshot,
-/obj/item/ammo_casing/shotgun/buckshot,
-/obj/item/ammo_casing/shotgun/buckshot,
-/obj/item/ammo_casing/shotgun/buckshot,
-/obj/item/ammo_casing/shotgun/buckshot,
-/obj/item/ammo_casing/shotgun/buckshot,
-/obj/item/ammo_casing/shotgun/buckshot,
-/obj/item/ammo_casing/shotgun/buckshot,
-/obj/item/ammo_casing/shotgun/buckshot,
-/obj/item/ammo_casing/shotgun/buckshot,
-/obj/item/gun/ballistic/shotgun/doublebarrel/presawn,
+/obj/structure/closet/secure_closet/bar{
+	req_one_access_txt = "8125";
+	req_access = null
+	},
 /obj/item/ammo_box/ferroslugbox,
 /obj/item/storage/box/slugshot,
 /obj/item/storage/fancy/cigarettes/cigars,
 /obj/item/storage/fancy/cigarettes/cigars/havana,
 /obj/item/storage/fancy/cigarettes/cigars/cohiba,
-/obj/item/storage/box/matches,
-/obj/item/storage/box/matches,
-/obj/structure/closet/secure_closet/bar{
-	req_one_access_txt = "8125";
-	req_access = null
-	},
 /obj/item/storage/photo_album/bar,
-/obj/item/stamp/bard,
+/obj/item/storage/box/matches,
 /obj/item/pda/bar,
+/obj/item/stamp/bard,
 /obj/item/clothing/under/rank/civilian/bartender/skirt,
 /obj/item/clothing/under/rank/civilian/bartender/purple,
 /obj/item/clothing/under/rank/civilian/bartender,
 /obj/item/clothing/suit/apron/purple_bartender,
-/obj/item/book/granter/spell/barnyard,
 /obj/item/barcodescanner,
+/obj/item/reagent_containers/food/drinks/shaker{
+	pixel_x = 6
+	},
+/obj/item/barcode,
 /obj/item/barcode,
 /obj/item/multitool{
 	pixel_x = -10
-	},
-/obj/item/reagent_containers/food/drinks/shaker{
-	pixel_x = 6
 	},
 /turf/open/floor/wood/mahogany,
 /area/outpost/crew/bar/bar_zone)
@@ -9846,6 +9830,17 @@
 /obj/item/reagent_containers/glass/beaker/large{
 	pixel_x = -9
 	},
+/obj/machinery/button/door{
+	pixel_y = 7;
+	id = "ice_bolt_bar";
+	name = "Bolt Door Cab 1";
+	pixel_x = -22;
+	specialfunctions = 4;
+	normaldoorcontrol = 1;
+	req_one_access_txt = "8125";
+	dir = 4
+	},
+/obj/item/book/granter/spell/barnyard,
 /turf/open/floor/wood/mahogany,
 /area/outpost/crew/bar/bar_zone)
 "wJ" = (
@@ -14089,6 +14084,13 @@
 	light_range = 2
 	},
 /area/outpost/exterior)
+"GE" = (
+/obj/structure/guncloset{
+	req_one_access_txt = "8125"
+	},
+/obj/item/gun/ballistic/shotgun/doublebarrel/presawn,
+/turf/open/floor/wood/mahogany,
+/area/outpost/crew/bar/bar_zone)
 "GF" = (
 /obj/structure/filingcabinet/double/grey,
 /obj/effect/turf_decal/spline/fancy/opaque/black{
@@ -14722,9 +14724,6 @@
 	dir = 4;
 	pixel_x = -7;
 	can_be_unanchored = 1
-	},
-/obj/item/reagent_containers/food/drinks/shaker{
-	pixel_x = 6
 	},
 /turf/open/floor/wood/walnut,
 /area/outpost/crew/bar/bar_zone)
@@ -37014,7 +37013,7 @@ NG
 CJ
 lO
 TB
-yD
+GE
 CJ
 Tm
 TW
