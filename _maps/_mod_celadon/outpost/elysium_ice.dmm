@@ -2230,8 +2230,13 @@
 /turf/open/floor/plasteel/showroomfloor,
 /area/outpost/operations/outpost_command)
 "fo" = (
-/turf/open/floor/carpet/donk,
-/area/outpost/fraction/syndi/donkco_shop)
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/siding/wood{
+	color = "#543C30";
+	dir = 8
+	},
+/turf/open/floor/wood/walnut,
+/area/outpost/crew/bar)
 "fp" = (
 /obj/machinery/computer/med_data{
 	dir = 8;
@@ -3467,13 +3472,6 @@
 	},
 /turf/open/floor/plasteel/patterned,
 /area/outpost/vacant_rooms/office)
-"hX" = (
-/obj/effect/turf_decal/siding/wood{
-	color = "#543C30";
-	dir = 8
-	},
-/turf/open/floor/wood/walnut,
-/area/outpost/crew/bar)
 "hZ" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer2{
 	dir = 4
@@ -5332,8 +5330,8 @@
 /turf/open/floor/plasteel/mono,
 /area/outpost/exterior)
 "mH" = (
-/turf/closed/mineral/random/snow,
-/area/outpost/crew/cryo)
+/turf/open/floor/carpet/donk,
+/area/outpost/fraction/syndi/donkco_shop)
 "mI" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 1
@@ -7703,14 +7701,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/patterned,
 /area/outpost/security/hall)
-"st" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/turf_decal/siding/wood{
-	color = "#543C30";
-	dir = 8
-	},
-/turf/open/floor/wood/walnut,
-/area/outpost/crew/bar)
 "su" = (
 /obj/structure/catwalk/over/plated_catwalk,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -16476,12 +16466,12 @@
 /turf/open/floor/carpet/royalblack,
 /area/outpost/fraction/syndi)
 "Mq" = (
-/obj/structure/guncloset{
-	req_one_access_txt = "8125"
+/obj/effect/turf_decal/siding/wood{
+	color = "#543C30";
+	dir = 8
 	},
-/obj/item/gun/ballistic/shotgun/doublebarrel/presawn,
-/turf/open/floor/wood/mahogany,
-/area/outpost/crew/bar/bar_zone)
+/turf/open/floor/wood/walnut,
+/area/outpost/crew/bar)
 "Mr" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 1
@@ -20315,6 +20305,13 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/carpet/nanoweave/orange,
 /area/outpost/crew/canteen)
+"UT" = (
+/obj/structure/guncloset{
+	req_one_access_txt = "8125"
+	},
+/obj/item/gun/ballistic/shotgun/doublebarrel/presawn,
+/turf/open/floor/wood/mahogany,
+/area/outpost/crew/bar/bar_zone)
 "UU" = (
 /obj/effect/turf_decal/corner/opaque/lime{
 	dir = 8
@@ -33719,7 +33716,7 @@ cC
 cC
 rT
 Cx
-fo
+mH
 rz
 yZ
 Pn
@@ -33906,7 +33903,7 @@ NG
 cC
 rT
 nP
-fo
+mH
 OB
 PZ
 IZ
@@ -34093,7 +34090,7 @@ BC
 NG
 Kh
 Fl
-fo
+mH
 Cb
 ml
 Kn
@@ -34147,7 +34144,7 @@ LJ
 LJ
 LJ
 LJ
-LJ
+cC
 cC
 cC
 cC
@@ -34280,7 +34277,7 @@ NG
 NG
 Kh
 SP
-fo
+mH
 Tj
 gH
 EN
@@ -36017,7 +36014,7 @@ LJ
 LJ
 LJ
 LJ
-mH
+cC
 cC
 cC
 cC
@@ -37076,7 +37073,7 @@ NG
 CJ
 lO
 TB
-Mq
+UT
 CJ
 Tm
 TW
@@ -38571,10 +38568,10 @@ mr
 nV
 EC
 WN
-hX
-st
-hX
-hX
+Mq
+fo
+Mq
+Mq
 xg
 zI
 LE
