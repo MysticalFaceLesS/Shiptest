@@ -80,6 +80,9 @@
 	req_access_txt = "1"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/tank/internals/emergency_oxygen{
+	pixel_y = 2
+	},
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
@@ -425,6 +428,12 @@
 /obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/thetacorridor)
+"dp" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/areaeditor/shuttle,
+/obj/structure/safe/floor,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/ancientstation/hivebot)
 "dq" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -914,7 +923,9 @@
 	},
 /area/ruin/space/has_grav/ancientstation/engi)
 "hq" = (
-/obj/machinery/rnd/production/protolathe/department/science,
+/obj/machinery/rnd/production/protolathe/department/science{
+	can_be_unanchored = 1
+	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/patterned,
 /area/ruin/space/has_grav/ancientstation/rnd)
@@ -2653,6 +2664,17 @@
 	color = "#8a8a8a"
 	},
 /area/ruin/space/has_grav/ancientstation/rnd)
+"vd" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small/directional/north,
+/obj/item/tank/internals/emergency_oxygen{
+	pixel_x = 9;
+	pixel_y = 9
+	},
+/turf/open/floor/plasteel/patterned{
+	color = "#8a8a8a"
+	},
+/area/ruin/space/has_grav/ancientstation)
 "vz" = (
 /obj/structure/lattice/catwalk,
 /turf/open/floor/plating/rust,
@@ -3061,6 +3083,10 @@
 /obj/item/paper/ruins/oldstation/singwarn{
 	pixel_x = 10;
 	pixel_y = 5
+	},
+/obj/item/circuitboard/computer/shuttle/helm{
+	pixel_y = 10;
+	pixel_x = -7
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/thetacorridor)
@@ -4072,7 +4098,9 @@
 	},
 /area/ruin/space/has_grav/ancientstation/thetacorridor)
 "Hb" = (
-/obj/machinery/rnd/production/circuit_imprinter/department/science,
+/obj/machinery/rnd/production/circuit_imprinter/department/science{
+	can_be_unanchored = 1
+	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/patterned,
 /area/ruin/space/has_grav/ancientstation/rnd)
@@ -6257,7 +6285,11 @@
 "Yp" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/flashlight/pen,
+/obj/item/flashlight/pen{
+	pixel_x = -11;
+	pixel_y = 9
+	},
+/obj/item/tank/internals/oxygen/yellow,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/thetacorridor)
 "Yq" = (
@@ -9797,7 +9829,7 @@ WW
 zp
 uR
 LI
-LU
+vd
 ad
 wd
 ad
@@ -11405,7 +11437,7 @@ oh
 KN
 KN
 xe
-sW
+dp
 DQ
 tP
 aW
