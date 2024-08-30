@@ -86,24 +86,24 @@
 		/turf/open/floor/plating/asteroid/plasma_gaint/lit = 1,
 	)
 	flora_spawn_list = list(
-		/obj/structure/flora/tree/dead/tall/grey = 8,
-		/obj/structure/flora/tree/dead/barren = 8,
-		/obj/structure/flora/ausbushes/fullgrass/hell = 20,
-		/obj/structure/flora/ausbushes/sparsegrass/hell = 8
+		/obj/structure/flora/tree/dead/tall/grey = 1,
+		/obj/structure/flora/tree/dead/barren = 1,
+		/obj/structure/flora/ausbushes/fullgrass/hell = 1,
+		/obj/structure/flora/ausbushes/sparsegrass/hell = 1
 	)
-	flora_spawn_chance = 150
+	flora_spawn_chance = 85
 
 /datum/biome/plasma_gaint/forest
 	open_turf_types = list(
 		/turf/open/floor/plating/asteroid/plasma_gaint/lit = 1
 	)
 	flora_spawn_list = list(
-		/obj/structure/flora/tree/dead/tall/grey = 15,
-		/obj/structure/flora/tree/dead/barren = 15,
-		/obj/structure/flora/ausbushes/fullgrass/hell = 10,
-		/obj/structure/flora/ausbushes/sparsegrass/hell = 5
+		/obj/structure/flora/tree/dead/tall/grey = 1,
+		/obj/structure/flora/tree/dead/barren = 1,
+		/obj/structure/flora/ausbushes/fullgrass/hell = 1,
+		/obj/structure/flora/ausbushes/sparsegrass/hell = 1
 	)
-	flora_spawn_chance = 85
+	flora_spawn_chance = 170
 
 /datum/biome/plasma_gaint/forest/rocky
 	flora_spawn_list = list(
@@ -116,14 +116,14 @@
 /datum/biome/plasma_gaint/plains
 	open_turf_types = list(
 		/turf/open/chasm/plasma = 1
-	)
+	)ф
 	flora_spawn_chance = null
 
 /datum/biome/plasma_gaint/plains/dense
 	open_turf_types = list(
 		/turf/open/floor/plating/asteroid/basalt/purple/lit/plasma_gaint = 50
 	)
-	flora_spawn_chance = 80
+	flora_spawn_chance = 360
 
 /datum/biome/plasma_gaint/plains/dense/mixed
 	open_turf_types = list(
@@ -161,7 +161,8 @@
 
 	mob_spawn_list = list(
 		/mob/living/simple_animal/hostile/big_legion = 45,
-		/obj/structure/spawner/plasma_gaint/extreme_threat = 8
+		/obj/structure/spawner/plasma_gaint/extreme_threat = 16,
+		/mob/living/simple_animal/hostile/asteroid/hivelord/legion/crystal/plasma = 16
 	)
 	mob_spawn_chance = 3
 	open_turf_types = list(

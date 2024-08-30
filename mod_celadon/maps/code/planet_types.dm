@@ -22,6 +22,7 @@
 	default_baseturf = /turf/open/floor/plating/asteroid/plasma_gaint
 	icon_state = "globe"
 	weight = 20
+	ruin_type = RUINTYPE_PLASMA
 	preserve_level = TRUE
 	landing_sound = 'sound/effects/planet_landing_2.ogg'
 
