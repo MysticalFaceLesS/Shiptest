@@ -42,7 +42,6 @@ ID мода: CELADON_ELYSIUMPOD
 ### Изменения *кор кода*
 
 - 'code/modules/asset_cache/asset_list_items.dm'
-  'code/modules/cargo/supplypod.dm'
   'tgui/packages/tgui/interfaces/CentComPodLauncher.js'
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
