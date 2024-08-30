@@ -91,7 +91,7 @@
 		/obj/structure/flora/ausbushes/fullgrass/hell = 1,
 		/obj/structure/flora/ausbushes/sparsegrass/hell = 1
 	)
-	flora_spawn_chance = 85
+	flora_spawn_chance = 25
 
 /datum/biome/plasma_gaint/forest
 	open_turf_types = list(
@@ -103,7 +103,7 @@
 		/obj/structure/flora/ausbushes/fullgrass/hell = 1,
 		/obj/structure/flora/ausbushes/sparsegrass/hell = 1
 	)
-	flora_spawn_chance = 170
+	flora_spawn_chance = 35
 
 /datum/biome/plasma_gaint/forest/rocky
 	flora_spawn_list = list(
@@ -111,7 +111,7 @@
 		/obj/structure/flora/ausbushes/fullgrass/hell = 10,
 		/obj/structure/flora/ausbushes/sparsegrass/hell = 5
 	)
-	flora_spawn_chance = 160
+	flora_spawn_chance = 10
 
 /datum/biome/plasma_gaint/plains
 	open_turf_types = list(
@@ -123,7 +123,7 @@
 	open_turf_types = list(
 		/turf/open/floor/plating/asteroid/basalt/purple/lit/plasma_gaint = 50
 	)
-	flora_spawn_chance = 360
+	flora_spawn_chance = 10
 
 /datum/biome/plasma_gaint/plains/dense/mixed
 	open_turf_types = list(
