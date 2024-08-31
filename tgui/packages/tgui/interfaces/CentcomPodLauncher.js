@@ -216,6 +216,9 @@ const SOUNDS = [
 const STYLES = [
   { title: 'Standard' },
   { title: 'Advanced' },
+  // [CELADON-ADD] - CELADON_ELYSIUMPOD
+  { title: 'Elysium' },
+  // [/CELADON-ADD]
   { title: 'Nanotrasen' },
   { title: 'Syndicate' },
   { title: 'Deathsquad' },

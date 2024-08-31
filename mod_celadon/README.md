@@ -320,7 +320,7 @@ mod_celadon/_storge_sounds
   // [CELADON-EDIT] - SHUTTLE_TOGGLE - (Optional Reason/comment)
   // if(SHUTTLE_STRANDED, SHUTTLE_ESCAPE) // CELADON-EDIT - ORIGINAL
   if(SHUTTLE_STRANDED, SHUTTLE_ESCAPE, SHUTTLE_DISABLED)
-  // [CELADON-EDIT]
+  // [/CELADON-EDIT]
       return 1
   ```
 

@@ -41,3 +41,7 @@
 /datum/gear/scarf/scarfes/cream
 	display_name = "scarf, cream"
 	path = /obj/item/clothing/neck/scarf/tajaran/cream
+
+/datum/gear/scarf/scarfes/syndie
+	display_name = "scarf, syndie"
+	path = /obj/item/clothing/neck/scarf/syndie

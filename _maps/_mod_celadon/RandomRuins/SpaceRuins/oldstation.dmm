@@ -80,6 +80,9 @@
 	req_access_txt = "1"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/tank/internals/emergency_oxygen{
+	pixel_y = 2
+	},
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
@@ -425,6 +428,12 @@
 /obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/thetacorridor)
+"dp" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/item/areaeditor/shuttle,
+/obj/structure/safe/floor,
+/turf/open/floor/plating,
+/area/ruin/space/has_grav/ancientstation/hivebot)
 "dq" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -472,11 +481,13 @@
 	},
 /area/ruin/space/has_grav/ancientstation)
 "dG" = (
-/obj/machinery/door/airlock/public/glass,
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plating,
+/obj/machinery/door/airlock/public/glass,
+/turf/open/floor/plasteel/patterned{
+	color = "#8a8a8a"
+	},
 /area/ruin/space/has_grav/ancientstation)
 "dL" = (
 /obj/effect/decal/cleanable/dirt,
@@ -500,7 +511,8 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/poddoor/multi_tile/three_tile_ver{
+/obj/machinery/door/poddoor/cannothit{
+	dir = 4;
 	id = "ancient"
 	},
 /turf/open/floor/plasteel/patterned{
@@ -838,7 +850,8 @@
 	name = "Engineering";
 	dir = 8
 	},
-/obj/machinery/door/poddoor/multi_tile/three_tile_ver{
+/obj/machinery/door/poddoor/cannothit{
+	dir = 4;
 	id = "ancient"
 	},
 /turf/open/floor/plating,
@@ -910,7 +923,9 @@
 	},
 /area/ruin/space/has_grav/ancientstation/engi)
 "hq" = (
-/obj/machinery/rnd/production/protolathe/department/science,
+/obj/machinery/rnd/production/protolathe/department/science{
+	can_be_unanchored = 1
+	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/patterned,
 /area/ruin/space/has_grav/ancientstation/rnd)
@@ -1529,7 +1544,7 @@
 /obj/item/solar_assembly,
 /obj/item/solar_assembly,
 /obj/item/solar_assembly,
-/obj/item/stack/sheet/glass,
+/obj/item/stack/sheet/glass/twenty,
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
@@ -1915,13 +1930,6 @@
 	},
 /turf/open/floor/plating,
 /area/template_noop)
-"pe" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/multi_tile/three_tile_ver{
-	id = "ancient"
-	},
-/turf/open/space/basic,
-/area/ruin/space/has_grav/ancientstation)
 "pk" = (
 /obj/structure/table,
 /obj/effect/turf_decal/corner/transparent/blue/half,
@@ -1974,6 +1982,10 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/poddoor/cannothit{
+	dir = 4;
+	id = "ancient"
+	},
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
@@ -2008,11 +2020,11 @@
 /turf/open/floor/plasteel/patterned,
 /area/ruin/space/has_grav/ancientstation/rnd)
 "pO" = (
-/obj/machinery/door/airlock/maintenance{
-	dir = 8
-	},
 /obj/structure/cable{
 	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/maintenance{
+	dir = 8
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation)
@@ -2652,6 +2664,17 @@
 	color = "#8a8a8a"
 	},
 /area/ruin/space/has_grav/ancientstation/rnd)
+"vd" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small/directional/north,
+/obj/item/tank/internals/emergency_oxygen{
+	pixel_x = 9;
+	pixel_y = 9
+	},
+/turf/open/floor/plasteel/patterned{
+	color = "#8a8a8a"
+	},
+/area/ruin/space/has_grav/ancientstation)
 "vz" = (
 /obj/structure/lattice/catwalk,
 /turf/open/floor/plating/rust,
@@ -2750,13 +2773,6 @@
 /turf/open/floor/plasteel/patterned{
 	color = "#8a8a8a"
 	},
-/area/ruin/space/has_grav/ancientstation/engi)
-"wi" = (
-/obj/machinery/door/airlock/engineering{
-	name = "Engineering";
-	dir = 8
-	},
-/turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/engi)
 "wp" = (
 /obj/effect/turf_decal/industrial/warning/full,
@@ -3067,6 +3083,10 @@
 /obj/item/paper/ruins/oldstation/singwarn{
 	pixel_x = 10;
 	pixel_y = 5
+	},
+/obj/item/circuitboard/computer/shuttle/helm{
+	pixel_y = 10;
+	pixel_x = -7
 	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/thetacorridor)
@@ -4023,6 +4043,19 @@
 	color = "#8a8a8a"
 	},
 /area/ruin/space/has_grav/ancientstation/comm)
+"GB" = (
+/obj/machinery/door/airlock/command{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/poddoor/cannothit{
+	dir = 4;
+	id = "ancient"
+	},
+/turf/open/floor/plasteel/patterned{
+	color = "#8a8a8a"
+	},
+/area/ruin/space/has_grav/ancientstation)
 "GF" = (
 /obj/effect/turf_decal/corner/transparent/blue{
 	dir = 4
@@ -4065,7 +4098,9 @@
 	},
 /area/ruin/space/has_grav/ancientstation/thetacorridor)
 "Hb" = (
-/obj/machinery/rnd/production/circuit_imprinter/department/science,
+/obj/machinery/rnd/production/circuit_imprinter/department/science{
+	can_be_unanchored = 1
+	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/patterned,
 /area/ruin/space/has_grav/ancientstation/rnd)
@@ -4677,15 +4712,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/engi)
-"Lm" = (
-/obj/machinery/door/airlock/command{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel/patterned{
-	color = "#8a8a8a"
-	},
-/area/ruin/space/has_grav/ancientstation)
 "Lq" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
 	dir = 4
@@ -5246,6 +5272,10 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/poddoor/cannothit{
+	dir = 4;
+	id = "ancient"
+	},
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/engi)
 "Qo" = (
@@ -5375,13 +5405,6 @@
 "Rj" = (
 /turf/closed/wall,
 /area/ruin/space/has_grav/ancientstation/hivebot)
-"Rk" = (
-/obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/multi_tile/three_tile_hor{
-	id = "ancient"
-	},
-/turf/open/floor/plating,
-/area/ruin/space/has_grav/ancientstation/comm)
 "Rl" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/assembly/flash,
@@ -5671,7 +5694,7 @@
 /area/ruin/space/has_grav/ancientstation/engi)
 "SR" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/multi_tile/two_tile_hor{
+/obj/machinery/door/poddoor/cannothit{
 	id = "ancient"
 	},
 /turf/open/floor/plating,
@@ -5900,11 +5923,21 @@
 /area/ruin/space/has_grav/ancientstation/betanorth)
 "UZ" = (
 /obj/effect/spawner/structure/window/reinforced,
-/obj/machinery/door/poddoor/multi_tile/three_tile_ver{
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 8
+	},
+/obj/machinery/door/poddoor/cannothit{
+	dir = 4;
 	id = "ancient"
 	},
 /turf/open/floor/plating,
-/area/ruin/space/has_grav/ancientstation)
+/area/ruin/space/has_grav/ancientstation/sec)
 "Va" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
@@ -6252,7 +6285,11 @@
 "Yp" = (
 /obj/structure/table,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/flashlight/pen,
+/obj/item/flashlight/pen{
+	pixel_x = -11;
+	pixel_y = 9
+	},
+/obj/item/tank/internals/oxygen/yellow,
 /turf/open/floor/plating,
 /area/ruin/space/has_grav/ancientstation/thetacorridor)
 "Yq" = (
@@ -9244,15 +9281,15 @@ LI
 LI
 LI
 LI
-WW
-Lm
-pe
+LI
+GB
+LI
 ws
 qv
 qv
 qv
 qv
-wi
+gC
 Qj
 gC
 qv
@@ -9522,7 +9559,7 @@ tO
 tO
 tO
 tO
-ou
+SR
 Mj
 Pt
 Pt
@@ -9570,7 +9607,7 @@ tO
 tO
 tO
 tO
-Rk
+SR
 Pa
 HN
 Pt
@@ -9618,7 +9655,7 @@ tO
 tO
 tO
 tO
-ou
+SR
 FT
 Qo
 hs
@@ -9666,7 +9703,7 @@ tO
 tO
 tO
 tO
-ou
+SR
 CY
 zl
 BU
@@ -9762,7 +9799,7 @@ tO
 tO
 tO
 tO
-ou
+SR
 Az
 GF
 CZ
@@ -9792,7 +9829,7 @@ WW
 zp
 uR
 LI
-LU
+vd
 ad
 wd
 ad
@@ -10012,25 +10049,25 @@ LI
 LI
 LI
 LI
-WW
-Lm
-UZ
+LI
+GB
+LI
 ld
 Fs
 Fs
 Fs
 Fs
 pu
-Cn
+UZ
 dQ
 Fs
 Fs
 UR
 Fs
 ld
-WW
-Lm
-UZ
+LI
+GB
+LI
 LI
 LI
 LI
@@ -11400,7 +11437,7 @@ oh
 KN
 KN
 xe
-sW
+dp
 DQ
 tP
 aW

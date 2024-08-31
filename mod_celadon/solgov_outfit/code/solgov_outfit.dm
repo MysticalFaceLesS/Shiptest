@@ -116,6 +116,80 @@
 	glasses = /obj/item/clothing/glasses/sunglasses
 	suit = /obj/item/clothing/suit/jacket/leather
 
+//										//
+//	SOLAR FEDERATION - LIGHTNING BOLT	//
+//										//
+
+/datum/outfit/job/solgov/bolt/captain
+	name = "SolFed Bolt - Captain"
+	jobtype = /datum/job/captain
+	job_icon = "solgovrepresentative"
+
+	uniform = /obj/item/clothing/under/solfed
+	shoes = /obj/item/clothing/shoes/combat
+	backpack = /obj/item/storage/backpack/ert/engineer
+	id = /obj/item/card/id/solgov
+
+/datum/outfit/job/solgov/bolt/captain/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	get_solfed_captain_access(H)
+
+/datum/outfit/job/solgov/bolt/bureaucrat
+	name = "SolFed Bolt - Bureaucrat"
+	jobtype = /datum/job/head_of_personnel
+	job_icon = "headofpersonnel"
+
+	uniform = /obj/item/clothing/under/solfed
+	shoes = /obj/item/clothing/shoes/combat
+	backpack = /obj/item/storage/backpack/ert/engineer
+	id = /obj/item/card/id/solgov
+
+/datum/outfit/job/solgov/bolt/bureaucrat/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	get_solfed_overseer_access(H)
+
+/datum/outfit/job/solgov/bolt/security
+	name = "SolFed Bolt - Security"
+	jobtype = /datum/job/officer
+	job_icon = "security"
+
+	uniform = /obj/item/clothing/under/solfed
+	shoes = /obj/item/clothing/shoes/combat
+	backpack = /obj/item/storage/backpack/ert/engineer
+	id = /obj/item/card/id/solgov
+
+/datum/outfit/job/solgov/bolt/security/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	get_solfed_sonnensoldner_access(H)
+
+/datum/outfit/job/solgov/bolt/medic
+	name = "SolFed Bolt - Medic"
+	jobtype = /datum/job/paramedic
+	job_icon = "medicaldoctor"
+
+	uniform = /obj/item/clothing/under/solfed
+	shoes = /obj/item/clothing/shoes/combat
+	backpack = /obj/item/storage/backpack/ert/engineer
+	id = /obj/item/card/id/solgov
+
+/datum/outfit/job/solgov/bolt/medic/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	get_solfed_engineer_access(H)
+
+/datum/outfit/job/solgov/bolt/engineer
+	name = "SolFed Bolt - Engineer"
+	jobtype = /datum/job/engineer
+	job_icon = "stationengineer"
+
+	uniform = /obj/item/clothing/under/solfed
+	shoes = /obj/item/clothing/shoes/combat
+	backpack = /obj/item/storage/backpack/ert/engineer
+	id = /obj/item/card/id/solgov
+
+/datum/outfit/job/solgov/bolt/engineer/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	get_solfed_engineer_access(H)
+
 //							///
 //		Elysium on solgov	///
 //							///

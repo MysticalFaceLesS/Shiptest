@@ -521,7 +521,10 @@ update_label()
 	uses_overlays = FALSE
 
 /obj/item/card/id/debug/Initialize()
-	access = get_all_accesses()+get_all_centcom_access()+get_all_syndicate_access()
+	// [CELADON-EDIT] - CELADON_ACCESS
+	// access = get_all_accesses()+get_all_centcom_access()+get_all_syndicate_access() // CELADON-EDIT - ORIGINAL
+	access = get_all_accesses()+get_all_centcom_access()+get_all_syndicate_access()+get_all_accesses_outpost()
+	// [/CELADON-EDIT]
 	. = ..()
 
 /obj/item/card/id/prisoner

@@ -98,3 +98,29 @@
 	var/area/A = get_area(src)
 	if(A)
 		notify_ghosts("Обнаружен сигнал старой криогенной капсулы \the [A.name].", source = src, action=NOTIFY_ATTACK, flashwindow = FALSE)
+
+/obj/effect/mob_spawn/human/elysium_town
+	death = FALSE
+	roundstart = FALSE
+	random = FALSE
+	name = "Glory to the nation!"
+	icon = 'icons/obj/objects.dmi'
+	icon_state = "bed"
+	short_desc = "You are a Separatist of Elysium."
+	mob_species = /datum/species/human
+	assignedrole = "Separatist of Elysium"
+	outfit = /datum/outfit/job/elysium
+	flavour_text = "You must cleanse this world of xenospecies and all those who oppose it."
+
+/obj/effect/mob_spawn/human/elysium_town/Destroy()
+	new /obj/structure/bed(drop_location())
+	return ..()
+
+/obj/effect/mob_spawn/human/elysium_town/special(mob/living/new_spawn)
+	new_spawn.fully_replace_character_name(null,random_unique_name(gender))
+
+/obj/effect/mob_spawn/human/elysium_town/Initialize()
+	. = ..()
+	var/area/A = get_area(src)
+	if(A)
+		notify_ghosts("Ахмад взывает пробудиться своих соплеменников \the [A.name].", source = src, action=NOTIFY_ATTACK, flashwindow = FALSE)

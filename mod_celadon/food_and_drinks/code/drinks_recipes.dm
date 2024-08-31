@@ -46,3 +46,26 @@
 	required_reagents = list(/datum/reagent/consumable/ethanol/synthanol = 1,
 							/datum/reagent/consumable/ethanol/wine = 1)
 	mix_message = "The chemicals mix to create a fine, red substance."
+
+/datum/chemical_reaction/bacchus_blessing
+	results = list(/datum/reagent/consumable/ethanol/bacchus_blessing = 4)
+	required_reagents = list(/datum/reagent/consumable/ethanol/hooch = 1,
+							/datum/reagent/consumable/ethanol/absinthe = 1,
+							/datum/reagent/consumable/ethanol/manly_dorf = 1,
+							/datum/reagent/consumable/ethanol/syndicatebomb = 1)
+	mix_message = "The mixture turns to a sickening froth."
+
+/datum/chemical_reaction/amnesia
+	results = list(/datum/reagent/consumable/ethanol/amnesia = 2)
+	required_reagents = list(/datum/reagent/consumable/ethanol/hooch = 1,
+							/datum/reagent/consumable/ethanol/vodka = 1)
+	mix_sound = 'mod_celadon/_storge_sounds/sound/effects/drinkfizz.ogg'
+
+/datum/chemical_reaction/suicider
+	results = list(/datum/reagent/consumable/ethanol/suicider = 4)
+	required_reagents = list (/datum/reagent/consumable/ethanol/vodka = 1,
+							/datum/reagent/consumable/ethanol/hcider = 1,
+							/datum/reagent/fuel = 1,
+							/datum/reagent/medicine/epinephrine = 1)
+	mix_message = "The drinks and chemicals mix together, emitting a potent smell."
+	mix_sound = 'mod_celadon/_storge_sounds/sound/effects/drinkfizz.ogg'

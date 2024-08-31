@@ -398,6 +398,13 @@
 /obj/item/ammo_box/a762_40/inteq
 	icon_state = "a762_40box_big_inteq"
 
+/obj/item/ammo_box/a556_39
+	name = "ammo box (5.56x39mm CLIP)"
+	icon_state = "a556_39box_big"
+	ammo_type = /obj/item/ammo_casing/a556_39
+	max_ammo = 120
+	w_class = WEIGHT_CLASS_NORMAL
+
 //[СELADON-REMOVE] - CELADON_WEAPONS - хватит это терпеть! Теперь эти патроны только в модпаке - mod_celadon\weapons\code\modules\projectiles\boxes_magazines\ammo_boxes.dm
 /*
 /obj/item/ammo_box/a308
