@@ -1,10 +1,10 @@
 // ROBOT ALCOHOL PAST THIS POINT
 // WOOO!
 // /obj/structure/aquarium
-// 	icon = 'mod_celadon/_storge_icons/icons/drinks.dmi'
+// 	icon = 'mod_celadon/_storge_icons/icons/food_and_drinks/drinks.dmi'
 
 /obj/item/reagent_containers/food/drinks
-	icon = 'mod_celadon/_storge_icons/icons/drinks.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/food_and_drinks/drinks.dmi'
 
 #define REAGENT_TOUCH 1
 #define REAGENT_INGEST 2
@@ -39,7 +39,6 @@
 /datum/reagent/consumable/ethanol/synthanol/robottears
 	name = "Robot Tears"
 	description = "An oily substance that an IPC could technically consider a 'drink'."
-	reagent_state = LIQUID
 	color = "#363636"
 	boozepwr = 25
 	glass_icon_state = "robottearsglass"
@@ -51,7 +50,6 @@
 /datum/reagent/consumable/ethanol/synthanol/trinary
 	name = "Trinary"
 	description = "A fruit drink meant only for synthetics, however that works."
-	reagent_state = LIQUID
 	color = "#adb21f"
 	boozepwr = 2
 	glass_icon_state = "trinaryglass"
@@ -62,7 +60,6 @@
 /datum/reagent/consumable/ethanol/synthanol/servo
 	name = "Servo"
 	description = "A drink containing some organic ingredients, but meant only for synthetics."
-	reagent_state = LIQUID
 	color = "#5b3210"
 	boozepwr = 25
 	glass_icon_state = "servoglass"
@@ -73,7 +70,6 @@
 /datum/reagent/consumable/ethanol/synthanol/uplink
 	name = "Uplink"
 	description = "A potent mix of alcohol and synthanol. Will only work on synthetics."
-	reagent_state = LIQUID
 	color = "#e7ae04"
 	boozepwr = 15
 	glass_icon_state = "uplinkglass"
@@ -84,7 +80,6 @@
 /datum/reagent/consumable/ethanol/synthanol/synthnsoda
 	name = "Synth and Soda"
 	description = "The classic drink adjusted for a robot's tastes."
-	reagent_state = LIQUID
 	color = "#7204e7"
 	boozepwr = 25
 	glass_icon_state = "synthnsodaglass"
@@ -95,7 +90,6 @@
 /datum/reagent/consumable/ethanol/synthanol/synthignon
 	name = "Synthignon"
 	description = "Someone mixed wine and alcohol for robots. Hope you're proud of yourself."
-	reagent_state = LIQUID
 	color = "#d004e7"
 	boozepwr = 25
 	glass_icon_state = "synthignonglass"
@@ -103,6 +97,39 @@
 	glass_desc = "Someone mixed good wine and robot booze. Romantic, but atrocious."
 	taste_description = "fancy motor oil"
 
+/datum/reagent/consumable/ethanol/bacchus_blessing //An EXTREMELY powerful drink. Smashed in seconds, dead in minutes.
+	name = "Bacchus' Blessing"
+	description = "Unidentifiable mixture. Unmeasurably high alcohol content."
+	reagent_state = LIQUID
+	color = "#331303" //Sickly brown
+	// dizzy_adj = 42 SECONDS
+	boozepwr = 300 //I warned you
+	glass_icon_state = "bacchusblessing"
+	glass_name = "Bacchus' Blessing"
+	glass_desc = "You didn't think it was possible for a liquid to be so utterly revolting. Are you sure about this...?"
+	taste_description = "a wall of bricks"
+
+/datum/reagent/consumable/ethanol/amnesia
+	name = "Star Amnesia"
+	description = "Is it just a bottle of medical alcohol?"
+	reagent_state = LIQUID
+	color = "#6b0059"
+	boozepwr = 73 ////Ethanol and Hooch
+	glass_icon_state = "amnesia"
+	glass_name = "Star Amnesia"
+	glass_desc = "Is it just a bottle of medical alcohol?"
+	taste_description = "disco amnesia"
+
+/datum/reagent/consumable/ethanol/suicider //otherwise known as "I want to get so smashed my liver gives out and I die from alcohol poisoning".
+	name = "Suicider"
+	description = "An unbelievably strong and potent variety of Cider."
+	reagent_state = LIQUID
+	color = "#CF3811"
+	boozepwr = 100 //because that's a thing it's supposed to do, I guess
+	glass_icon_state = "suicider"
+	glass_name = "Suicider"
+	glass_desc = "You've really hit rock bottom now... your liver packed its bags and left last night."
+	taste_description = "approaching death"
 
 /*
 /datum/chemical_reaction/synthanol

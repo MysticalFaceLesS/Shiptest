@@ -19,16 +19,15 @@
 		/obj/item/spacecash/bundle,
 		/obj/item/holochip,
 		/obj/item/card,
-		/obj/item/clothing/mask/cigarette,
 		/obj/item/flashlight/pen,
 		/obj/item/seeds,
-		/obj/item/stack/medical,
 		/obj/item/toy/crayon,
 		/obj/item/coin,
 		/obj/item/dice,
 		/obj/item/disk,
-		/obj/item/implanter,
 		/obj/item/lighter,
+		/obj/item/key/ship,
+		/obj/item/gun/ballistic/derringer,
 		/obj/item/lipstick,
 		/obj/item/match,
 		/obj/item/paper,
@@ -43,7 +42,8 @@
 		/obj/item/key,
 		/obj/item/clothing/gloves/ring,
 		/obj/item/clothing/gloves/ring/silver,
-		/obj/item/clothing/gloves/ring/diamond),
+		/obj/item/clothing/gloves/ring/diamond,
+		/obj/item/stamp),
 		// [/CELADON-ADD]
 		list(/obj/item/screwdriver/power))
 
