@@ -29,9 +29,6 @@
 
 #define isspacepod(A) (istype(A, /obj/spacepod))
 
-///Returns the length of the list
-#define LAZYLEN(L) length(L)
-
 #define VEHICLE_LAYER 3.9
 
 /// Bright light used by default in tubes and bulbs
