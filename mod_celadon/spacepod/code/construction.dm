@@ -1,298 +1,203 @@
-#define state_next "next"
-#define state_prev "prev"
+/obj/spacepod/examine(mob/user)
+	. = ..()
+	switch(construction_state) // more construction states than r-walls!
+		if(SPACEPOD_EMPTY)
+			. += span_notice("The struts holding it together can be <b>cut</b> and it is missing <i>wires</i>.")
+		if(SPACEPOD_WIRES_LOOSE)
+			. += span_notice("The <b>wires</b> need to be <i>screwed</i> on.")
+		if(SPACEPOD_WIRES_SECURED)
+			. += span_notice("The wires are <b>screwed</b> on and need a <i>circuit board</i>.")
+		if(SPACEPOD_CIRCUIT_LOOSE)
+			. += span_notice("The circuit board is <b>loosely attached</b> and needs to be <i>screwed</i> on.")
+		if(SPACEPOD_CIRCUIT_SECURED)
+			. += span_notice("The circuit board is <b>screwed</b> on, and there is space for a <i>core</i>.")
+		if(SPACEPOD_CORE_LOOSE)
+			. += span_notice("The core is <b>loosely attached</b> and needs to be <i>bolted</i> on.")
+		if(SPACEPOD_CORE_SECURED)
+			. += span_notice("The core is <b>bolted</b> on and the <i>metal</i> bulkhead can be attached.")
+		if(SPACEPOD_BULKHEAD_LOOSE)
+			. += span_notice("The bulkhead is <b>loosely attached</b> and can be <i>bolted</i> down.")
+		if(SPACEPOD_BULKHEAD_SECURED)
+			. += span_notice("The bulkhead is <b>bolted</b> on but not <i>welded</i> on.")
+		if(SPACEPOD_BULKHEAD_WELDED)
+			. += span_notice("The bulkhead is <b>welded</b> on and <i>armor</i> can be attached.")
+		if(SPACEPOD_ARMOR_LOOSE)
+			. += span_notice("The armor is <b>loosely attached</b> and can be <i>bolted</i> down.")
+		if(SPACEPOD_ARMOR_SECURED)
+			. += span_notice("The armor is <b>bolted</b> on but not <i>welded</i> on.")
+		if(SPACEPOD_ARMOR_WELDED)
+			if(hatch_open)
+				if(cell || internal_tank || equipment.len)
+					. += span_notice("The maintenance hatch is <i>pried</i> open and there are parts inside that can be <b>removed</b>.")
+				else
+					. += span_notice("The maintenance hatch is <i>pried</i> open and the armor is <b>welded</b> on.")
+			else
+				if(locked)
+					. += span_notice("[src] is <b>locked</b>.")
+				else
+					. += span_notice("The maintenance hatch is <b>closed</b>.")
 
-/datum/component/construction
-	var/atom/holder
-
-/datum/component/construction/proc/set_desc(index as num)
-	var/list/step = steps[index]
-	holder.desc = step["desc"]
-	return
-
-/datum/component/construction/reversible2
-	var/base_icon = "durand"
-
-	New(atom)
-		..()
-		index = 1
-		return
-
-	// proc/update_index(diff as num, mob/user as mob)
-	// 	index-=diff
-	// 	if(index==steps.len+1)
-	// 		spawn_result(user)
-	// 	else
-	// 		set_desc(index)
-	// 	return
-
-	proc/update_icon()
-		holder.icon_state="[base_icon]_[index]"
-
-	is_right_key(mob/user as mob,atom/used_atom) // returns index step
-		var/list/state = steps[index]
-		if(state_next in state)
-			var/list/step = state[state_next]
-			if(istype(used_atom, step["key"]))
-				//if(L["consume"] && !try_consume(used_atom,L["consume"]))
-				//	return 0
-				return FORWARD //to the first step -> forward
-		else if(state_prev in state)
-			var/list/step = state[state_prev]
-			if(istype(used_atom, step["key"]))
-				//if(L["consume"] && !try_consume(used_atom,L["consume"]))
-				//	return 0
-				return BACKWARD //to the first step -> forward
-		return 0
-
-	check_step(atom/used_atom, mob/user as mob)
-		var/diff = is_right_key(user,used_atom)
-		if(diff)
-			if(custom_action(index, diff, used_atom, user))
-				update_index(diff,user)
-				update_icon()
-				return 1
-		return 0
-
-	proc/fixText(text,user)
-		text = replacetext(text,"{USER}","[user]")
-		text = replacetext(text,"{HOLDER}","[holder]")
-		return text
-
-	custom_action(index, diff, used_atom, var/mob/user)
-		if(!..(index,used_atom,user))
-			return 0
-
-		var/list/step = steps[index]
-		var/list/state = step[diff==FORWARD ? state_next : state_prev]
-		user.visible_message(fixText(state["vis_msg"],user),fixText(state["self_msg"],user))
-
-		if("delete" in state)
-			qdel(used_atom)
-		else if("spawn" in state)
-			var/spawntype=state["spawn"]
-			var/atom/A = new spawntype(holder.loc)
-			if("amount" in state)
-				if(istype(A,/obj/item/stack/cable_coil))
-					var/obj/item/stack/cable_coil/C=A
-					C.amount=state["amount"]
-				if(istype(A,/obj/item/stack))
-					var/obj/item/stack/S=A
-					S.amount=state["amount"]
-
-		return 1
-	// action(used_atom, user = usr)
-	// 	return check_step(used_atom,user)
-
-/obj/item/circuitboard/mecha/pod
-	name = "circuit board (Space Pod Mainboard)"
-	icon_state = "mainboard"
-
-/obj/structure/spacepod_frame
-	density = 1
-	opacity = 0
-
-	anchored = 1
-	layer = 3.9
-
-	icon = 'mod_celadon/_storge_icons/icons/64x64/pod_construction.dmi'
-	icon_state = "pod_1"
-
-	var/datum/component/construction/reversible2/construct
-
-/obj/structure/spacepod_frame/New()
-	..()
-	bound_width = 64
-	bound_height = 64
-
-	construct = new /datum/component/construction/reversible2/pod(src)
-
-	dir = EAST
-
-/obj/structure/spacepod_frame/attackby(obj/item/W as obj, mob/user as mob, params)
-	if(construct.index == 1 && istype(W, /obj/item/wirecutters))
-		visible_message(user, "[user] cuts the struts on \the [src]", "You cut the struts on \the [src]")
-		//var/obj/item/pod_parts/pod_frame/F = new /obj/item/pod_parts/pod_frame()
-		switch(dir)
-			if(NORTH)
-				new /obj/item/pod_parts/pod_frame/aft_port{dir = 1}(get_turf(src))
-				new /obj/item/pod_parts/pod_frame/aft_starboard{dir = 1}(get_step(src, EAST))
-				new /obj/item/pod_parts/pod_frame/fore_port{dir = 1}(get_step(src, NORTH))
-				new /obj/item/pod_parts/pod_frame/fore_starboard{dir = 1}(get_step(get_step(src, EAST), NORTH))
-			if(SOUTH)
-				new /obj/item/pod_parts/pod_frame/fore_starboard{dir = 2}(get_turf(src))
-				new /obj/item/pod_parts/pod_frame/fore_port{dir = 2}(get_step(src, EAST))
-				new /obj/item/pod_parts/pod_frame/aft_starboard{dir = 2}(get_step(src, NORTH))
-				new /obj/item/pod_parts/pod_frame/aft_port{dir = 2}(get_step(get_step(src, EAST), NORTH))
-			if(EAST)
-				new /obj/item/pod_parts/pod_frame/aft_starboard{dir = 4}(get_turf(src))
-				new /obj/item/pod_parts/pod_frame/fore_starboard{dir = 4}(get_step(src, EAST))
-				new /obj/item/pod_parts/pod_frame/aft_port{dir = 4}(get_step(src, NORTH))
-				new /obj/item/pod_parts/pod_frame/fore_port{dir = 4}(get_step(get_step(src, EAST), NORTH))
-			if(WEST)
-				new /obj/item/pod_parts/pod_frame/fore_port{dir = 8}(get_turf(src))
-				new /obj/item/pod_parts/pod_frame/aft_port{dir = 8}(get_step(src, EAST))
-				new /obj/item/pod_parts/pod_frame/fore_starboard{dir = 8}(get_step(src, NORTH))
-				new /obj/item/pod_parts/pod_frame/aft_starboard{dir = 8}(get_step(get_step(src, EAST), NORTH))
-		qdel(src)
-		return
-
-	if(!construct || !construct.action(W, user))
-		..()
-	return
-
-/obj/structure/spacepod_frame/attack_hand()
-	return
-
-
-
-/////////////////////////////////
-// CONSTRUCTION STEPS
-/////////////////////////////////
-/datum/component/construction/reversible2/pod
-	result = /obj/spacepod
-	base_icon = "pod"
-	//taskpath = /datum/job_objective/make_pod
-	steps = list(
-				// 1. Initial state
-				list(
-					"desc" = "An empty pod frame.",
-					state_next = list(
-						"key"      = /obj/item/stack/cable_coil,
-						"vis_msg"  = "{USER} wires the {HOLDER}.",
-						"self_msg" = "You wire the {HOLDER}."
-					)
-				),
-				// 2. Crudely Wired
-				list(
-					"desc" = "A crudely-wired pod frame.",
-					state_prev = list(
-						"key"      = /obj/item/wirecutters,
-						"vis_msg"  = "{USER} cuts out the {HOLDER}'s wiring.",
-						"self_msg" = "You remove the {HOLDER}'s wiring."
-					),
-					state_next = list(
-						"key"      = /obj/item/screwdriver,
-						"vis_msg"  = "{USER} adjusts the wiring.",
-						"self_msg" = "You adjust the {HOLDER}'s wiring."
-					)
-				),
-				// 3. Cleanly wired
-				list(
-					"desc" = "A wired pod frame.",
-					state_prev = list(
-						"key"      = /obj/item/screwdriver,
-						"vis_msg"  = "{USER} unclips {HOLDER}'s wiring harnesses.",
-						"self_msg" = "You unclip {HOLDER}'s wiring harnesses."
-					),
-					state_next = list(
-						"key"      = /obj/item/circuitboard/mecha/pod,
-						"vis_msg"  = "{USER} inserts the mainboard into the {HOLDER}.",
-						"self_msg" = "You insert the mainboard into the {HOLDER}.",
-						"delete"   = 1
-					)
-				),
-				// 4. Circuit added
-				list(
-					"desc" = "A wired pod frame with a loose mainboard.",
-					state_prev = list(
-						"key"      = /obj/item/crowbar,
-						"vis_msg"  = "{USER} pries out the mainboard.",
-						"self_msg" = "You pry out the mainboard.",
-
-						"spawn"    = /obj/item/circuitboard/mecha/pod,
-						"amount"   = 1
-					),
-					state_next = list(
-						"key"      = /obj/item/screwdriver,
-						"vis_msg"  = "{USER} secures the mainboard.",
-						"self_msg" = "You secure the mainboard."
-					)
-				),
-				// 5. Circuit secured
-				list(
-					"desc" = "A wired pod frame with a secured mainboard.",
-					state_prev = list(
-						"key"      = /obj/item/screwdriver,
-						"vis_msg"  = "{USER} unsecures the mainboard.",
-						"self_msg" = "You unscrew the mainboard from the {HOLDER}."
-					),
-					state_next = list(
-						"key"      = /obj/item/pod_parts/core,
-						,
-						"vis_msg"  = "{USER} inserts the core into the {HOLDER}.",
-						"self_msg" = "You carefully insert the core into the {HOLDER}.",
-						"delete"   = 1
-					)
-				),
-				// 6. Core inserted
-				list(
-					"desc" = "A naked space pod with a loose core.",
-					state_prev = list(
-						"key"      = /obj/item/crowbar,
-						"vis_msg"  = "{USER} delicately removes the core from the {HOLDER} with a crowbar.",
-						"self_msg" = "You delicately remove the core from the {HOLDER} with a crowbar.",
-
-						"spawn"    = /obj/item/pod_parts/core,
-						"amount"   = 1
-					),
-					state_next = list(
-						"key"      = /obj/item/wrench,
-						"vis_msg"  = "{USER} secures the core's bolts.",
-						"self_msg" = "You secure the core's bolts."
-					)
-				),
-				// 7. Core secured
-				list(
-					"desc" = "A naked space pod with an exposed core. How lewd.",
-					state_prev = list(
-						"key"      = /obj/item/wrench,
-						"vis_msg"  = "{USER} unsecures the {HOLDER}'s core.",
-						"self_msg" = "You unsecure the {HOLDER}'s core."
-					),
-					state_next = list(
-						"key"      = /obj/item/stack/sheet/metal,
-						"amount"   = 5,
-						"vis_msg"  = "{USER} frabricates a pressure bulkhead for the {HOLDER}.",
-						"self_msg" = "You frabricate a pressure bulkhead for the {HOLDER}."
-					)
-				),
-				// 8. Bulkhead added
-				list(
-					"desc" = "A space pod with loose bulkhead panelling exposed.",
-					state_prev = list(
-						"key"      = /obj/item/crowbar,
-						"vis_msg"  = "{USER} pops the {HOLDER}'s bulkhead panelling loose.",
-						"self_msg" = "You pop the {HOLDER}'s bulkhead panelling loose.",
-
-						"spawn"    = /obj/item/stack/sheet/metal,
-						"amount"   = 5,
-					),
-					state_next = list(
-						"key"      = /obj/item/wrench,
-						"vis_msg"  = "{USER} secures the {HOLDER}'s bulkhead panelling.",
-						"self_msg" = "You secure the {HOLDER}'s bulkhead panelling."
-					)
-				),
-				// 9. Bulkhead secured with bolts
-				list(
-					"desc" = "A space pod with unwelded bulkhead panelling exposed.",
-					state_prev = list(
-						"key"      = /obj/item/wrench,
-						"vis_msg"  = "{USER} unbolts the {HOLDER}'s bulkhead panelling.",
-						"self_msg" = "You unbolt the {HOLDER}'s bulkhead panelling."
-					),
-					state_next = list(
-						"key"      = /obj/item/weldingtool,
-						"vis_msg"  = "{USER} seals the {HOLDER}'s bulkhead panelling with a weld.",
-						"self_msg" = "You seal the {HOLDER}'s bulkhead panelling with a weld."
-					)
-				)
-				// EOF
-			)
-
-	spawn_result(mob/user as mob)
-		..()
-		var/obj/spacepod/M = new result(drop_location())
-
-		SSblackbox.record_feedback("tally", "spacepod_created", 1, M.name)
-		return
+/obj/spacepod/proc/handle_spacepod_construction(obj/item/W, mob/living/user)
+	// time for a construction/deconstruction process to rival r-walls
+	var/obj/item/stack/ST = W
+	switch(construction_state)
+		if(SPACEPOD_EMPTY)
+			if(W.tool_behaviour == TOOL_WIRECUTTER)
+				. = TRUE
+				user.visible_message("[user] deconstructs [src].", "You deconstruct [src].")
+				W.play_tool_sound(src)
+				deconstruct(TRUE)
+			else if(istype(W, /obj/item/stack/cable_coil))
+				. = TRUE
+				if(ST.use(10))
+					user.visible_message("[user] wires [src].", "You wire [src].")
+					construction_state++
+				else
+					to_chat(user, span_warning("You need 10 wires for this!"))
+		if(SPACEPOD_WIRES_LOOSE)
+			if(W.tool_behaviour == TOOL_WIRECUTTER)
+				. = TRUE
+				var/obj/item/stack/cable_coil/CC = new
+				CC.amount = 10
+				CC.forceMove(loc)
+				W.play_tool_sound(src)
+				construction_state--
+				user.visible_message("[user] cuts [src]'s wiring.", "You remove [src]'s wiring.")
+			else if(W.tool_behaviour == TOOL_SCREWDRIVER)
+				. = TRUE
+				W.play_tool_sound(src)
+				construction_state++
+				user.visible_message("[user] screws on [src]'s wiring harnesses.", "You screw on [src]'s wiring harnesses.")
+		if(SPACEPOD_WIRES_SECURED)
+			if(W.tool_behaviour == TOOL_SCREWDRIVER)
+				. = TRUE
+				W.play_tool_sound(src)
+				construction_state--
+				user.visible_message("[user] unclips [src]'s wiring harnesses.", "You unclip [src]'s wiring harnesses.")
+			else if(istype(W, /obj/item/circuitboard/mecha/pod))
+				. = TRUE
+				if(user.temporarilyRemoveItemFromInventory(W))
+					qdel(W)
+					construction_state++
+					user.visible_message("[user] inserts the mainboard into [src].", "You insert the mainboard into [src].")
+				else
+					to_chat(user, span_warning("[W] is stuck to your hand!"))
+		if(SPACEPOD_CIRCUIT_LOOSE)
+			if(W.tool_behaviour == TOOL_CROWBAR)
+				. = TRUE
+				W.play_tool_sound(src)
+				construction_state--
+				var/obj/item/circuitboard/mecha/pod/B = new
+				B.forceMove(loc)
+				user.visible_message("[user] pries out the mainboard from [src].", "You pry out the mainboard from [src].")
+			else if(W.tool_behaviour == TOOL_SCREWDRIVER)
+				. = TRUE
+				W.play_tool_sound(src)
+				construction_state++
+				user.visible_message("[user] secures the mainboard to [src].", "You secure the mainboard to [src].")
+		if(SPACEPOD_CIRCUIT_SECURED)
+			if(W.tool_behaviour == TOOL_SCREWDRIVER)
+				. = TRUE
+				W.play_tool_sound(src)
+				construction_state--
+				user.visible_message("[user] unsecures the mainboard.", "You unscrew the mainboard from [src].")
+			else if(istype(W, /obj/item/pod_parts/core))
+				. = TRUE
+				if(user.temporarilyRemoveItemFromInventory(W))
+					qdel(W)
+					construction_state++
+					user.visible_message("[user] inserts the core into [src].", "You carefully insert the core into [src].")
+				else
+					to_chat(user, span_warning("[W] is stuck to your hand!"))
+		if(SPACEPOD_CORE_LOOSE)
+			if(W.tool_behaviour == TOOL_CROWBAR)
+				. = TRUE
+				W.play_tool_sound(src)
+				var/obj/item/pod_parts/core/C = new
+				C.forceMove(loc)
+				construction_state--
+				user.visible_message("[user] delicately removes the core from [src].", "You delicately remove the core from [src].")
+			else if(W.tool_behaviour == TOOL_WRENCH)
+				. = TRUE
+				W.play_tool_sound(src)
+				construction_state++
+				user.visible_message("[user] secures [src]'s core bolts.", "You secure [src]'s core bolts.")
+		if(SPACEPOD_CORE_SECURED)
+			if(W.tool_behaviour == TOOL_WRENCH)
+				. = TRUE
+				W.play_tool_sound(src)
+				construction_state--
+				user.visible_message("[user] unsecures [src]'s core.", "You unsecure [src]'s core.")
+			else if(istype(W, /obj/item/stack/sheet/metal))
+				. = TRUE
+				if(ST.use(5))
+					user.visible_message("[user] fabricates a pressure bulkhead for [src].", "You frabricate a pressure bulkhead for [src].")
+					construction_state++
+				else
+					to_chat(user, span_warning("You need 5 metal for this!"))
+		if(SPACEPOD_BULKHEAD_LOOSE)
+			if(W.tool_behaviour == TOOL_CROWBAR)
+				. = TRUE
+				W.play_tool_sound(src)
+				construction_state--
+				var/obj/item/stack/sheet/metal/five/M = new
+				M.forceMove(loc)
+				user.visible_message("[user] pops [src]'s bulkhead panelling loose.", "You pop [src]'s bulkhead panelling loose.")
+			else if(W.tool_behaviour == TOOL_WRENCH)
+				. = TRUE
+				W.play_tool_sound(src)
+				construction_state++
+				user.visible_message("[user] secures [src]'s bulkhead panelling.", "You secure [src]'s bulkhead panelling.")
+		if(SPACEPOD_BULKHEAD_SECURED)
+			if(W.tool_behaviour == TOOL_WRENCH)
+				. = TRUE
+				W.play_tool_sound(src)
+				construction_state--
+				user.visible_message("[user] unbolts [src]'s bulkhead panelling.", "You unbolt [src]'s bulkhead panelling.")
+			else if(W.tool_behaviour == TOOL_WELDER)
+				. = TRUE
+				if(W.use_tool(src, user, 20, amount=3, volume = 50))
+					construction_state = SPACEPOD_BULKHEAD_WELDED
+					user.visible_message("[user] seals [src]'s bulkhead panelling.", "You seal [src]'s bulkhead panelling.")
+		if(SPACEPOD_BULKHEAD_WELDED)
+			if(W.tool_behaviour == TOOL_WELDER)
+				. = TRUE
+				if(W.use_tool(src, user, 20, amount=3, volume = 50))
+					construction_state = SPACEPOD_BULKHEAD_SECURED
+					user.visible_message("[user] cuts [src]'s bulkhead panelling loose.", "You cut [src]'s bulkhead panelling loose.")
+			if(istype(W, /obj/item/pod_parts/armor))
+				. = TRUE
+				if(user.transferItemToLoc(W, src))
+					add_armor(W)
+					construction_state++
+					user.visible_message("[user] installs [src]'s armor plating.", "You install [src]'s armor plating.")
+				else
+					to_chat(user, "[W] is stuck to your hand!")
+		if(SPACEPOD_ARMOR_LOOSE)
+			if(W.tool_behaviour == TOOL_CROWBAR)
+				. = TRUE
+				if(pod_armor)
+					pod_armor.forceMove(loc)
+					remove_armor()
+				W.play_tool_sound(src)
+				construction_state--
+				user.visible_message("[user] pries off [src]'s armor.", "You pry off [src]'s armor.")
+			if(W.tool_behaviour == TOOL_WRENCH)
+				. = TRUE
+				W.play_tool_sound(src)
+				construction_state++
+				user.visible_message("[user] bolts down [src]'s armor.", "You bolt down [src]'s armor.")
+		if(SPACEPOD_ARMOR_SECURED)
+			if(W.tool_behaviour == TOOL_WRENCH)
+				. = TRUE
+				W.play_tool_sound(src)
+				construction_state--
+				user.visible_message("[user] unsecures [src]'s armor.", "You unsecure [src]'s armor.")
+			else if(W.tool_behaviour == TOOL_WELDER)
+				. = TRUE
+				if(W.use_tool(src, user, 50, amount=3, volume = 50))
+					construction_state = SPACEPOD_ARMOR_WELDED
+					user.visible_message("[user] welds [src]'s armor.", "You weld [src]'s armor.")
+					// finally this took too fucking long
+					// somehow this takes up 40 lines less code than the original, code-less version. And it actually works
+	update_appearance(UPDATE_ICON)

@@ -1,23 +1,22 @@
-#define CONDUCT	(1<<6)
-
 /obj/item/pod_parts
-	parent_type = /obj/item/mecha_parts
-	icon = 'mod_celadon/_storge_icons/icons/64x64/pod_parts.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/spacepods/parts.dmi'
+	w_class = WEIGHT_CLASS_GIGANTIC
+	flags_1 = CONDUCT_1
 
 /obj/item/pod_parts/core
-	name="Space Pod Core"
+	name = "space pod core"
 	icon_state = "core"
-	item_flags = CONDUCT
-	origin_tech = "programming=2;materials=3;bluespace=2;engineering=3"
 
 /obj/item/pod_parts/pod_frame
-	name = "Space Pod Frame"
-	icon_state = ""
-	item_flags = CONDUCT
-	density = 0
-	anchored = 0
+	name = "space pod frame"
+	density = FALSE
+	anchored = FALSE
 	var/link_to = null
 	var/link_angle = 0
+
+/obj/item/pod_parts/pod_frame/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/simple_rotation, ROTATION_ALTCLICK | ROTATION_CLOCKWISE)
 
 /obj/item/pod_parts/pod_frame/proc/find_square()
 	/*
@@ -32,65 +31,62 @@
 	var/turf/T
 	var/obj/item/pod_parts/pod_frame/linked
 	var/obj/item/pod_parts/pod_frame/pointer
-	var/connectedparts =  list()
+	var/list/connectedparts =  list()
 	neededparts -= src
-	//log_admin("Starting with [src]")
 	linked = src
 	for(var/i = 1; i <= 4; i++)
 		T = get_turf(get_step(linked, turn(linked.dir, -linked.link_angle))) //get the next place that we want to look at
 		if(locate(linked.link_to) in T)
 			pointer = locate(linked.link_to) in T
-			//log_admin("Looking at [pointer.type]")
 		if(istype(pointer, linked.link_to) && pointer.dir == linked.dir && pointer.anchored)
 			if(!(pointer in connectedparts))
 				connectedparts += pointer
 			linked = pointer
 			pointer = null
-	//log_admin("Parts left: [neededparts.len]") //len not working
+	if(connectedparts.len < 4)
+		return FALSE
 	for(var/i = 1; i <=4; i++)
 		var/obj/item/pod_parts/pod_frame/F = connectedparts[i]
 		if(F.type in neededparts) //if one of the items can be founded in neededparts
 			neededparts -= F.type
-			log_admin("Found [F.type]")
 		else //because neededparts has 4 distinct items, this must be called if theyre not all in place and wrenched
-			return 0
+			return FALSE
 	return connectedparts
 
-/obj/item/pod_parts/pod_frame/attackby(var/obj/O, mob/user)
+/obj/item/pod_parts/pod_frame/attackby(obj/item/O, mob/user)
 	if(istype(O, /obj/item/stack/rods))
 		var/obj/item/stack/rods/R = O
 		var/list/linkedparts = find_square()
 		if(!linkedparts)
-			to_chat(user, "<span class='rose'>You cannot assemble a pod frame because you do not have the necessary assembly.</span>")
-			return
-		var/obj/structure/spacepod_frame/pod = new /obj/structure/spacepod_frame(src.loc)
-		pod.dir = src.dir
-		to_chat(user, "<span class='notice'>You strut the pod frame together.</span>")
-		R.use(10)
+			to_chat(user, span_warning("You cannot assemble a pod frame because you do not have the necessary assembly."))
+			return TRUE
+		if(!R.use(10))
+			to_chat(user, span_warning("You need 10 rods for this."))
+			return TRUE
+		var/obj/spacepod/pod = new
+		pod.forceMove(loc)
+		switch(dir)
+			if(NORTH)
+				pod.angle = 0
+			if(SOUTH)
+				pod.angle = 180
+			if(WEST)
+				pod.angle = 270
+			if(EAST)
+				pod.angle = 90
+		pod.process(2)
+		to_chat(user, span_notice("You strut the pod frame together."))
 		for(var/obj/item/pod_parts/pod_frame/F in linkedparts)
 			if(1 == turn(F.dir, -F.link_angle)) //if the part links north during construction, as the bottom left part always does
-				//log_admin("Repositioning")
-				pod.loc = F.loc
+				pod.forceMove(F.loc)
 			qdel(F)
-		playsound(get_turf(src), 'sound/items/ratchet.ogg', 50, 1)
-	if(istype(O, /obj/item/wrench))
-		to_chat(user, "<span class='notice'>You [!anchored ? "secure \the [src] in place."  : "remove the securing bolts."]</span>")
+		return TRUE
+	if(O.tool_behaviour == TOOL_WRENCH)
+		to_chat(user, span_notice("You [!anchored ? "secure \the [src] in place."  : "remove the securing bolts."]"))
 		anchored = !anchored
 		density = anchored
-		playsound(get_turf(src), 'sound/items/ratchet.ogg', 50, 1)
-
-/obj/item/pod_parts/pod_frame/verb/rotate()
-	set name = "Rotate Frame"
-	set category = "Object"
-	set src in oview(1)
-	if(anchored)
-		to_chat(usr, "\The [src] is securely bolted!")
-		return 0
-	src.dir = turn(src.dir, -90)
-	return 1
-
-/obj/item/pod_parts/pod_frame/attack_hand()
-	src.rotate()
+		O.play_tool_sound(src)
+		return TRUE
 
 /obj/item/pod_parts/pod_frame/fore_port
 	name = "fore port pod frame"
@@ -122,62 +118,60 @@
 
 /obj/item/pod_parts/armor
 	name = "civilian pod armor"
-	icon = 'mod_celadon/_storge_icons/icons/64x64/pod_parts.dmi'
 	icon_state = "pod_armor_civ"
 	desc = "Spacepod armor. This is the civilian version. It looks rather flimsy."
-	var/armor_max_health = 240
-	var/armor_health = 240
-	var/pod_desc = "A sleek civilian space pod."
+	var/pod_icon = 'mod_celadon/_storge_icons/icons/spacepods/2x2.dmi'
 	var/pod_icon_state = "pod_civ"
+	var/pod_desc = "A sleek civilian space pod."
+	var/pod_integrity = 250
 
-/obj/item/pod_parts/armor/mining
-	name = "mining pod armor"
-	icon_state = "pod_armor_mining"
-	desc = "Mining spacepod armor. Design for use in mining conditions."
-	armor_max_health = 290
-	armor_health = 290
-	pod_desc = "A spacepod designed for mining."
-	pod_icon_state = "pod_mining"
-
-/obj/item/pod_parts/armor/security
-	name = "security pod armor"
-	icon_state = "pod_armor_mil"
-	desc = "Security spacepod armor. Designed for space combat"
-	armor_max_health = 390
-	armor_health = 390
-	pod_desc = "An armed security spacepod with reinforced armor plating."
-	pod_icon_state = "pod_mil"
+/obj/item/pod_parts/armor/syndicate
+	name = "syndicate pod armor"
+	icon_state = "pod_armor_synd"
+	desc = "Tough-looking spacepod armor, with a bold \"FUCK NT\" stenciled directly into it."
+	pod_icon_state = "pod_synd"
+	pod_desc = "A menacing military space pod with \"FUCK NT\" stenciled onto the side"
+	pod_integrity = 400
 
 /obj/item/pod_parts/armor/black
 	name = "black pod armor"
 	icon_state = "pod_armor_black"
-	desc = "Spacepod armor. It is black, and has no identifications."
-	pod_desc = "An all black space pod with no insignias."
+	desc = "Plain black spacepod armor, with no logos or insignias anywhere on it."
 	pod_icon_state = "pod_black"
-
-/obj/item/pod_parts/armor/synd
-	name = "syndicate pod armor"
-	icon_state = "pod_armor_synd"
-	desc = "Spacepod armor used by syndicate spacepods."
-	armor_max_health = 340
-	armor_health = 340
-	pod_desc = "A menacing military space pod with \"Fuck NT\" stenciled onto the side."
-	pod_icon_state = "pod_synd"
+	pod_desc = "An all black space pod with no insignias."
 
 /obj/item/pod_parts/armor/gold
-	name = "gold pod armor"
+	name = "golden pod armor"
 	icon_state = "pod_armor_gold"
-	desc = "Spacepod armor made out of gold. It looks extremely weak"
-	armor_max_health = 90
-	armor_health = 90
-	pod_desc = "A civilian space pod with a gold body, must have cost somebody a pretty penny"
+	desc = "Golden spacepod armor. Looks like what a rich spessmen put on their spacepod."
 	pod_icon_state = "pod_gold"
+	pod_desc = "A civilian space pod with a gold body, must have cost somebody a pretty penny"
+	pod_integrity = 220
 
 /obj/item/pod_parts/armor/industrial
 	name = "industrial pod armor"
 	icon_state = "pod_armor_industrial"
-	desc = "Spacepod armor, meant for industrial spacepods"
-	armor_max_health = 290
-	armor_health = 290
-	pod_desc = "A rough looking space pod meant for industrial work"
+	desc = "Tough industrial-grade spacepod armor. While meant for construction work, it is commonly used in spacepod battles, too."
 	pod_icon_state = "pod_industrial"
+	pod_desc = "A rough looking space pod meant for industrial work"
+	pod_integrity = 330
+
+/obj/item/pod_parts/armor/security
+	name = "security pod armor"
+	icon_state = "pod_armor_mil"
+	desc = "Tough military-grade pod armor, meant for use by the Nanotrasen military and it's sub-divisons for space combat."
+	pod_icon_state = "pod_mil"
+	pod_desc = "An armed security spacepod with reinforced armor plating brandishing the Nanotrasen Military insignia"
+	pod_integrity = 350
+
+/obj/item/pod_parts/armor/security/red
+	name = "security pod armor"
+	icon_state = "pod_armor_synd"
+	desc = "Tough military-grade pod armor, meant for use by the Nanotrasen military and it's sub-divisons for space combat."
+	pod_icon_state = "pod_synd"
+	pod_desc = "An armed security spacepod with reinforced armor plating brandishing the Nanotrasen Military insignia"
+	pod_integrity = 350
+
+/obj/item/circuitboard/mecha/pod
+	name = "Circuit board (Space Pod Mainboard)"
+	icon_state = "mainboard"
