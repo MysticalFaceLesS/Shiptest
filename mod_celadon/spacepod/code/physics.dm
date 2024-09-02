@@ -238,7 +238,7 @@
 	if(istype(AM) && !AM.anchored && bump_velocity > 1)
 		step(AM, dir)
 	// if a bump is that fast then it's not a bump. It's a collision.
-	if(bump_velocity > 10 && !ismob(A))
+	if(bump_velocity > 100 && !ismob(A))
 		var/strength = bump_velocity / 10
 		strength = strength * strength
 		strength = min(strength, 5) // don't want the explosions *too* big
