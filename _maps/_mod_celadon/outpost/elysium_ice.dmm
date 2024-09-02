@@ -2831,6 +2831,9 @@
 	dir = 6
 	},
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/mob_spawn/human/elysium_outpost/maid{
+	dir = 8
+	},
 /turf/open/floor/wood/walnut,
 /area/outpost/crew/bar/theatre)
 "gD" = (
@@ -5025,6 +5028,7 @@
 /obj/item/reagent_containers/food/snacks/meat/slab/monkey,
 /obj/item/reagent_containers/food/snacks/meat/slab/monkey,
 /obj/item/reagent_containers/food/snacks/meat/slab/monkey,
+/obj/machinery/light/directional/east,
 /turf/open/floor/plasteel/patterned/ridged,
 /area/outpost/crew/garden)
 "lU" = (
@@ -6293,15 +6297,8 @@
 /turf/open/floor/plasteel/telecomms_floor,
 /area/outpost/security/checkpoint)
 "oL" = (
-/obj/structure/bed{
-	dir = 4;
-	pixel_y = 6;
-	pixel_x = -1
-	},
-/obj/item/bedsheet/random{
-	dir = 4;
-	pixel_y = 6;
-	pixel_x = -1
+/obj/effect/mob_spawn/human/elysium_outpost/bartender{
+	dir = 4
 	},
 /turf/open/floor/wood/mahogany,
 /area/outpost/crew/bar/bar_zone)
@@ -7338,6 +7335,10 @@
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/concrete/tiles,
 /area/outpost/crew/lounge/cab_2)
+"rk" = (
+/obj/machinery/light/directional/east,
+/turf/open/floor/plasteel/showroomfloor,
+/area/outpost/crew/garden)
 "rl" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -7603,9 +7604,11 @@
 /turf/open/floor/plating,
 /area/outpost/maintenance/port)
 "sb" = (
-/obj/structure/mecha_wreckage/mauler,
-/turf/open/floor/plating/asteroid/icerock/temperate,
-/area/outpost/exterior)
+/obj/machinery/door/airlock{
+	req_one_access_txt = "8124"
+	},
+/turf/open/floor/plasteel/showroomfloor,
+/area/outpost/crew/garden)
 "sc" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -9851,10 +9854,8 @@
 /obj/machinery/button/door{
 	pixel_y = 7;
 	id = "ice_bolt_bar";
-	name = "Bolt Door Cab 1";
+	name = "Bolt bar";
 	pixel_x = -22;
-	specialfunctions = 4;
-	normaldoorcontrol = 1;
 	req_one_access_txt = "8125";
 	dir = 4
 	},
@@ -14698,7 +14699,6 @@
 /turf/open/floor/mineral/plastitanium,
 /area/outpost/fraction/syndi)
 "Ic" = (
-/obj/machinery/light/directional/north,
 /turf/open/floor/plasteel/showroomfloor,
 /area/outpost/crew/garden)
 "Id" = (
@@ -19627,10 +19627,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/sepia,
 /area/outpost/crew/canteen)
-"TB" = (
-/obj/effect/landmark/start/bartender,
-/turf/open/floor/wood/mahogany,
-/area/outpost/crew/bar/bar_zone)
 "TC" = (
 /obj/effect/turf_decal/siding/wood{
 	color = "#543C30";
@@ -21875,6 +21871,12 @@
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/carpet/cyan,
 /area/outpost/medical/palata_1)
+"Yp" = (
+/obj/effect/mob_spawn/human/elysium_outpost/cook{
+	dir = 4
+	},
+/turf/open/floor/plasteel/showroomfloor,
+/area/outpost/crew/garden)
 "Yq" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 4
@@ -37072,7 +37074,7 @@ Fk
 NG
 CJ
 lO
-TB
+yD
 UT
 CJ
 Tm
@@ -44158,7 +44160,7 @@ cC
 cC
 cC
 cC
-sb
+Ba
 Ba
 Dq
 NG
@@ -48307,8 +48309,8 @@ cC
 cC
 cC
 cC
-cC
-cC
+Kx
+Yp
 Kx
 qj
 oU
@@ -48494,9 +48496,9 @@ cC
 cC
 cC
 cC
-cC
-cC
 Kx
+rk
+sb
 Ic
 OT
 xz
@@ -48681,8 +48683,8 @@ cC
 cC
 cC
 cC
-cC
-cC
+Kx
+Kx
 Kx
 pE
 lS
