@@ -91,6 +91,10 @@
 			toConstruct = /obj/structure/table/wood/poker
 		else if(istype(I, /obj/item/stack/sheet/plasteel))
 			toConstruct = /obj/structure/table/wood/reinforced
+		// [CELADON-ADD] - CELADON_STRUCTURES
+		else if(istype(I, /obj/item/stack/ore/salvage/scrapmetal))
+			toConstruct = /obj/structure/table/scrap
+		// [/CELADON-ADD]
 
 		if (toConstruct)
 			if(material.get_amount() < 1)
