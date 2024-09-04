@@ -3,12 +3,14 @@
 	desc = "Basic railing meant to protect idiots like you from falling."
 	icon = 'icons/obj/railing.dmi'
 	icon_state = "railing"
+	climbable = TRUE
 	flags_1 = ON_BORDER_1
-	layer = RAILING_LAYER
-	pass_flags_self = LETPASSTHROW
+	obj_flags = CAN_BE_HIT
 	density = TRUE
 	anchored = TRUE
-	climbable = TRUE
+	pass_flags_self = LETPASSTHROW
+	layer = RAILING_LAYER
+	plane = ABOVE_GAME_PLANE
 	//stack material which is dropped upon deconstruction adn it's ammount
 	var/buildstack = /obj/item/stack/rods
 	var/buildstackamount = 3
@@ -33,6 +35,12 @@
 	. = ..()
 	AddComponent(/datum/component/simple_rotation,ROTATION_ALTCLICK | ROTATION_CLOCKWISE | ROTATION_CLOCKWISE_HALF | ROTATION_COUNTERCLOCKWISE | ROTATION_COUNTERCLOCKWISE_HALF | ROTATION_VERBS ,null,CALLBACK(src, PROC_REF(can_be_rotated)),CALLBACK(src, PROC_REF(after_rotation)))
 
+
+/obj/structure/railing/corner/end //end of a segment of railing without making a loop
+	icon_state = "railing_end"
+
+/obj/structure/railing/corner/end/flip //same as above but flipped around
+	icon_state = "railing_end_flip"
 
 /obj/structure/railing/corner/ComponentInitialize()
 	. = ..(TRUE)
