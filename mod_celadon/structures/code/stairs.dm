@@ -6,16 +6,16 @@
 	color = COLOR_FLOORTILE_GRAY
 
 /turf/open/floor/plasteel/stairs/stairs_pack/left
-	icon_state = "stairs-l"
-	base_icon_state = "stairs-l"
+	icon_state = "stairs_l"
+	base_icon_state = "stairs_l"
 
 /turf/open/floor/plasteel/stairs/stairs_pack/mid
-	icon_state = "stairs-m"
-	base_icon_state = "stairs-m"
+	icon_state = "stairs_m"
+	base_icon_state = "stairs_m"
 
 /turf/open/floor/plasteel/stairs/stairs_pack/right
-	icon_state = "stairs-r"
-	base_icon_state = "stairs-r"
+	icon_state = "stairs_r"
+	base_icon_state = "stairs_r"
 
 /turf/open/floor/plasteel/stairs/stairs_pack/left_green
 	icon_state = "stairs_green_l"
@@ -31,25 +31,25 @@
 	color = COLOR_VERY_LIGHT_GRAY
 
 /turf/open/floor/plasteel/stairs/stairs_pack/medstairs/left
-	icon_state = "medstairs-l"
-	base_icon_state = "medstairs-l"
+	icon_state = "medstairs_l"
+	base_icon_state = "medstairs_l"
 
 /turf/open/floor/plasteel/stairs/stairs_pack/medstairs/mid
-	icon_state = "medstairs-m"
-	base_icon_state = "medstairs-m"
+	icon_state = "medstairs_m"
+	base_icon_state = "medstairs_m"
 
 /turf/open/floor/plasteel/stairs/stairs_pack/medstairs/right
-	icon_state = "medstairs-r"
-	base_icon_state = "medstairs-r"
+	icon_state = "medstairs_r"
+	base_icon_state = "medstairs_r"
 
 /turf/open/floor/plasteel/stairs/stairs_pack/dark
 	icon_state = "dark"
 	base_icon_state = "dark"
-	color = COLOR_ALMOST_BLACK
+	color = COLOR_WHITE
 
 /turf/open/floor/plasteel/stairs/stairs_pack/dark/other
-	icon_state = "dark-lr"
-	base_icon_state = "dark-lr"
+	icon_state = "dark_lr"
+	base_icon_state = "dark_lr"
 
 
 /turf/open/floor/plasteel/stairs/wood/stairs_pack
@@ -59,12 +59,12 @@
 	color = WOOD_COLOR_YELLOW
 
 /turf/open/floor/plasteel/stairs/wood/stairs_pack/mid
-	icon_state = "wood-m"
-	base_icon_state = "wood-m"
+	icon_state = "wood_m"
+	base_icon_state = "wood_m"
 
 /turf/open/floor/plasteel/stairs/wood/stairs_pack/other
-	icon_state = "wood-lr"
-	base_icon_state = "wood-lr"
+	icon_state = "wood_lr"
+	base_icon_state = "wood_lr"
 
 /turf/open/floor/plasteel/stairs/wood/stairs_pack/wood2
 	icon_state = "wood2"
@@ -72,12 +72,12 @@
 	color = WOOD_COLOR_RICH
 
 /turf/open/floor/plasteel/stairs/wood/stairs_pack/wood2/mid
-	icon_state = "wood2-m"
-	base_icon_state = "wood2-m"
+	icon_state = "wood2_m"
+	base_icon_state = "wood2_m"
 
 /turf/open/floor/plasteel/stairs/wood/stairs_pack/wood2/other
-	icon_state = "wood2-lr"
-	base_icon_state = "wood2-lr"
+	icon_state = "wood2_lr"
+	base_icon_state = "wood2_lr"
 
 /turf/open/floor/plasteel/stairs/wood/stairs_pack/wood3
 	icon_state = "wood3"
@@ -85,10 +85,10 @@
 	color = WOOD_COLOR_CHOCOLATE
 
 /turf/open/floor/plasteel/stairs/wood/stairs_pack/wood3/mid
-	icon_state = "wood3-m"
-	base_icon_state = "wood3-m"
+	icon_state = "wood3_m"
+	base_icon_state = "wood3_m"
 
 /turf/open/floor/plasteel/stairs/wood/stairs_pack/wood3/other
-	icon_state = "wood3-lr"
-	base_icon_state = "wood3-lr"
+	icon_state = "wood3_lr"
+	base_icon_state = "wood3_lr"
 
