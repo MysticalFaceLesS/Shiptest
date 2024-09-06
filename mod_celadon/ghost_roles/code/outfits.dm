@@ -1,3 +1,5 @@
+/// COOK
+
 /datum/job/outpost/cook
 	name = "Outpost Cook"
 	wiki_page = "Food" //WS Edit - Wikilinks/Warning
@@ -20,6 +22,7 @@
 	head = /obj/item/clothing/head/chefhat
 	mask = /obj/item/clothing/mask/fakemoustache/italian
 	gloves  =/obj/item/clothing/gloves/botanic_leather
+	shoes = /obj/item/clothing/shoes/sneakers/white
 	backpack_contents = list(/obj/item/sharpener = 1,
 							/obj/item/plant_analyzer)
 
@@ -34,6 +37,8 @@
 	var/datum/martial_art/cqc/under_siege/justacook = new
 	justacook.teach(H)
 
+
+/// BARTENDER
 
 /datum/job/outpost/bartender
 	name = "Outpost Bartender"
@@ -79,6 +84,8 @@
 		to_chat(H, "<span class='notice'>Формально вы еще не достигли совершеннолетия, чтобы иметь доступ к алкоголю или подавать его, но ваше удостоверение личности незаметно изменено, чтобы показать ваш возраст как [AGE_MINOR]. Постарайтесь сохранить это в тайне!</span>")
 
 
+/// MAID (JANITOR)
+
 /datum/job/outpost/maid
 	name = "Maid"
 	wiki_page = "Maid"
@@ -114,7 +121,8 @@
 		l_pocket = /obj/item/gun/ballistic/revolver/syndicate
 		r_pocket = /obj/item/ammo_box/a357
 
-// Artist (clown)
+
+/// ARTIST (CLOWN)
 
 /datum/job/outpost/artist
 	name = "Artist"
@@ -126,7 +134,6 @@
 	minimal_access = list(ACCESS_THEATRE)
 
 	display_order = JOB_DISPLAY_ORDER_CLOWN
-
 
 /datum/job/outpost/artist/after_spawn(mob/living/carbon/human/H, mob/M)
 	. = ..()
@@ -171,7 +178,7 @@
 	fan.add_hud_to(H)
 
 
-// Wagabond
+/// WAGABOND
 
 /datum/job/outpost/wagabond
 	name = "Wagabond"
