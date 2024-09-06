@@ -18,3 +18,4 @@
 // Исключение для бомжа
 /obj/structure/bed/outpost/wagabond
 	name = "bed a wagabond"
+	icon_state = "dirty_mattress"

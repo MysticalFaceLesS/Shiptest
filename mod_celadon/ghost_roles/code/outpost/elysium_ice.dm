@@ -115,6 +115,8 @@
 /obj/effect/mob_spawn/human/elysium_outpost/wagabond
 	name = "Wagabond"
 	id_job = "Wagabond"
+	icon = 'icons/obj/objects.dmi'
+	icon_state = "dirty_mattress"
 	faction = FACTION_ELYSIUM
 	// short_desc = "You are a artist of Elysium."
 	assignedrole = "Wagabond"
