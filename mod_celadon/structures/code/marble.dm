@@ -3,6 +3,7 @@
 	icon_state = "marble_white"
 	base_icon_state = "marble_white"
 	footstep = FOOTSTEP_WOOD
+	tiled_dirt = FALSE
 
 /turf/open/floor/marble/black
 	icon_state = "marble_black"
@@ -21,6 +22,7 @@
 	icon_state = "terrazzo_beige"
 	base_icon_state = "terrazzo_beige"
 	footstep = FOOTSTEP_WOOD
+	tiled_dirt = FALSE
 
 /turf/open/floor/terrazzo/black
 	icon_state = "terrazzo_black"
