@@ -11,6 +11,7 @@
 /obj/effect/mob_spawn/human/elysium_outpost/cook
 	name = "Outpost Cook"
 	id_job = "Cook"
+	faction = FACTION_ELYSIUM
 	// short_desc = "You are a cook of Elysium."
 	assignedrole = "Outpost Cook of Elysium"
 	outfit = /datum/outfit/outpost/cook
@@ -36,6 +37,7 @@
 /obj/effect/mob_spawn/human/elysium_outpost/bartender
 	name = "Elysium Outpost Bartender"
 	id_job = "Bartender"
+	faction = FACTION_ELYSIUM
 	// short_desc = "You are a bartender of Elysium."
 	assignedrole = "Outpost Bartender of Elysium"
 	outfit = /datum/outfit/outpost/bartender
@@ -61,6 +63,7 @@
 /obj/effect/mob_spawn/human/elysium_outpost/maid
 	name = "Elysium Outpost Maid"
 	id_job = "Maid"
+	faction = FACTION_ELYSIUM
 	// short_desc = "You are a maid of Elysium."
 	assignedrole = "Outpost Maid of Elysium"
 	outfit = /datum/outfit/outpost/maid
@@ -86,6 +89,7 @@
 /obj/effect/mob_spawn/human/elysium_outpost/artist
 	name = "Elysium Outpost Artist"
 	id_job = "Artist"
+	faction = FACTION_ELYSIUM
 	// short_desc = "You are a artist of Elysium."
 	assignedrole = "Outpost Artist of Elysium"
 	outfit = /datum/outfit/outpost/artist
@@ -111,6 +115,7 @@
 /obj/effect/mob_spawn/human/elysium_outpost/wagabond
 	name = "Wagabond"
 	id_job = "Wagabond"
+	faction = FACTION_ELYSIUM
 	// short_desc = "You are a artist of Elysium."
 	assignedrole = "Wagabond"
 	outfit = /datum/outfit/outpost/wagabond
