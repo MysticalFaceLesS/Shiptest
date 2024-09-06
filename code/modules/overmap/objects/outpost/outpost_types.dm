@@ -126,12 +126,15 @@
 /*
 	/datum/overmap/outpost subtypes
 */
-
+// [CELADON-REMOVE] - CELADON_CONFIGS_MAPS - Отправляется в щитспавн по приказу Head of Maps
+/*
 /datum/overmap/outpost/indie_space
 	token_icon_state = "station_1"
 	main_template = /datum/map_template/outpost/indie_space
 	elevator_template = /datum/map_template/outpost/elevator_indie
 	// Uses "default" hangars (indie_space).
+*/
+// [/CELADON-REMOVE]
 /*
 /datum/overmap/outpost/nanotrasen_asteroid
 	token_icon_state = "station_asteroid_0"
