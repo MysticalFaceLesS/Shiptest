@@ -3,31 +3,27 @@
 	wiki_page = "Food" //WS Edit - Wikilinks/Warning
 	var/cooks = 0 //Counts cooks amount
 
-	outfit = /datum/outfit/job/outpost/cook
+	outfit = /datum/outfit/outpost/cook
 
 	access = list(ACCESS_OUTPOST_SERVICE_COOK, ACCESS_HYDROPONICS, ACCESS_BAR, ACCESS_KITCHEN, ACCESS_MORGUE, ACCESS_MINERAL_STOREROOM)
 	minimal_access = list(ACCESS_OUTPOST_SERVICE_COOK, ACCESS_KITCHEN, ACCESS_MORGUE, ACCESS_MINERAL_STOREROOM)
 
 	display_order = JOB_DISPLAY_ORDER_COOK
 
-/datum/outfit/job/outpost/cook
+/datum/outfit/outpost/cook
 	name = "Outpost Cook"
-	job_icon = "cook"
-	jobtype = /datum/job/outpost/cook
 
 	belt = /obj/item/pda/cook
 	ears = /obj/item/radio/headset/headset_srv
 	uniform = /obj/item/clothing/under/rank/civilian/chef
-	alt_uniform = /obj/item/clothing/under/shorts/cookjorts //WS Edit - Alt Uniforms
 	suit = /obj/item/clothing/suit/toggle/chef
-	alt_suit = /obj/item/clothing/suit/apron/chef
 	head = /obj/item/clothing/head/chefhat
 	mask = /obj/item/clothing/mask/fakemoustache/italian
 	gloves  =/obj/item/clothing/gloves/botanic_leather
 	backpack_contents = list(/obj/item/sharpener = 1,
 							/obj/item/plant_analyzer)
 
-/datum/outfit/job/outpost/cook/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/outpost/cook/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	..()
 	if(visualsOnly)
 		return
@@ -107,7 +103,7 @@
 	backpack_contents = list(/obj/item/modular_computer/tablet/preset/advanced = 1)
 	shoes = /obj/item/clothing/shoes/laceup
 	box = /obj/item/storage/box/survival
-	id = /obj/item/card/id/elysium_Bartender
+	id = /obj/item/card/id/elysium_maid
 	suit_store = /obj/item/gun/ballistic/shotgun/doublebarrel
 	l_pocket = /obj/item/pda/bar
 	r_pocket = /obj/item/lighter
@@ -117,3 +113,81 @@
 	if(GARBAGEDAY in SSevents.holidays)
 		l_pocket = /obj/item/gun/ballistic/revolver/syndicate
 		r_pocket = /obj/item/ammo_box/a357
+
+// Artist (clown)
+
+/datum/job/outpost/artist
+	name = "Artist"
+	wiki_page = "Clown"
+
+	outfit = /datum/outfit/outpost/artist
+
+	access = list(ACCESS_THEATRE)
+	minimal_access = list(ACCESS_THEATRE)
+
+	display_order = JOB_DISPLAY_ORDER_CLOWN
+
+
+/datum/job/outpost/artist/after_spawn(mob/living/carbon/human/H, mob/M)
+	. = ..()
+	H.apply_pref_name("clown", M.client)
+
+/datum/outfit/outpost/artist
+	name = "Artist"
+
+	id = /obj/item/card/id/elysium_artist
+	belt = /obj/item/pda/clown
+	ears = /obj/item/radio/headset/headset_srv
+	uniform = /obj/item/clothing/under/rank/civilian/clown
+	shoes = /obj/item/clothing/shoes/clown_shoes
+	mask = /obj/item/clothing/mask/gas/clown_hat
+	l_pocket = /obj/item/bikehorn
+	backpack_contents = list(
+		/obj/item/stamp/clown = 1,
+		/obj/item/reagent_containers/spray/waterflower = 1,
+		/obj/item/reagent_containers/food/snacks/grown/banana = 1,
+		/obj/item/instrument/bikehorn = 1,
+		)
+
+	implants = list(/obj/item/implant/sad_trombone)
+
+	back = /obj/item/storage/backpack/clown
+
+	box = /obj/item/storage/box/hug/survival
+
+	chameleon_extras = /obj/item/stamp/clown
+
+/datum/outfit/outpost/artist/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+
+	H.fully_replace_character_name(H.real_name, pick(GLOB.clown_names)) //rename the mob AFTER they're equipped so their ID gets updated properly.
+	ADD_TRAIT(H, TRAIT_NAIVE, JOB_TRAIT)
+	H.dna.add_mutation(CLOWNMUT)
+	for(var/datum/mutation/human/clumsy/M in H.dna.mutations)
+		M.mutadone_proof = TRUE
+	var/datum/atom_hud/fan = GLOB.huds[DATA_HUD_FAN]
+	fan.add_hud_to(H)
+
+
+// Wagabond
+
+/datum/job/outpost/wagabond
+	name = "Wagabond"
+	access = list()			//See /datum/job/assistant/get_access()
+	minimal_access = list()	//See /datum/job/assistant/get_access()
+	outfit = /datum/outfit/outpost/wagabond
+	display_order = JOB_DISPLAY_ORDER_ASSISTANT
+	wiki_page = "Wagabond"
+
+/datum/outfit/outpost/wagabond
+	name = "Wagabond"
+
+	suit = /obj/item/clothing/suit/gothcoat
+	gloves = /obj/item/clothing/gloves/fingerless
+	head = /obj/item/clothing/head/shemag/black
+	back = /obj/item/storage/backpack/satchel
+	uniform = /obj/item/clothing/under/utility
+	shoes = /obj/item/clothing/shoes/sneakers/black
+	id = /obj/item/card/id/elysium_wagabond

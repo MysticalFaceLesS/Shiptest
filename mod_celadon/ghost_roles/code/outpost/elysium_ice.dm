@@ -13,7 +13,7 @@
 	id_job = "Cook"
 	// short_desc = "You are a cook of Elysium."
 	assignedrole = "Outpost Cook of Elysium"
-	outfit = /datum/outfit/job/outpost/cook
+	outfit = /datum/outfit/outpost/cook
 	important_info = "Не покидайте свой аванпост без разрешения администрации, кроме тех случаев, когда вас силой забрали! Вы являетесь гражданином республики Элизиум и ваш долг проявить свою гражданскую позицию!"
 	short_desc = "Готовьте еду, выращивайте растения, держите в чистоту свою кухню, разговаривайте с посетителями, поднимайте настроение им своей стряпнёй."
 	flavour_text = "Готовьте, растите различную еду. Вы должны обеспечить аванпост едой, свежими фруктами и овощами. Вам разрешается применять CQC только на территории кухни и центрального бара. Вы также являетесь гражданином республики Элизиум, и поэтому без весомой причины покидать аванпост вы не можете. Если же вас с силой заставили это сделать - выживайте, применяйте силу только для обороны, и надейтесь, что кто-то сможет вам помочь. Не мешайте другим игрокам и обслуживающему персоналу аванпоста. Вы можете работать вместе, контактировать с капитанами и членами команд на аванпосту."
@@ -80,3 +80,53 @@
 	var/area/A = get_area(src)
 	if(A)
 		notify_ghosts("Динамик в криокапсуле запиликал, извещая о том, что сон закончился, пора вставать на работу \the [A.name].", source = src, action=NOTIFY_ATTACK, flashwindow = FALSE)
+
+// Artist
+
+/obj/effect/mob_spawn/human/elysium_outpost/artist
+	name = "Elysium Outpost Artist"
+	id_job = "Artist"
+	// short_desc = "You are a artist of Elysium."
+	assignedrole = "Outpost Artist of Elysium"
+	outfit = /datum/outfit/outpost/artist
+	important_info = "Не покидайте свой аванпост без разрешения администрации, кроме тех случаев, когда вас силой забрали! Вы являетесь гражданином республики Элизиум и ваш долг проявить свою гражданскую позицию!"
+	short_desc = "Вы известный артист (ну или вы так думаете)! И ваша основная цель это веселить народ вокруг Вас! Устраивайте шоу, расказывайте анекдоты, делайте на этом деньги!"
+	flavour_text = "В прошлом вы были клоуном, но сейчас настали другие времена и ваш талант, ваши заслуги признали и сделали из вас артиста, путешествующего по разынм уголках космоса! Не мешайте другим игрокам и обслуживающему персоналу аванпоста. Вы можете работать вместе, контактировать с капитанами и членами команд на аванпосту."
+
+/obj/effect/mob_spawn/human/elysium_outpost/artist/Destroy()
+	new /obj/machinery/cryopod/outpost/artist(drop_location())
+	return ..()
+
+/obj/effect/mob_spawn/human/elysium_outpost/artist/special(mob/living/new_spawn)
+	new_spawn.fully_replace_character_name(null, random_unique_name(gender))
+
+/obj/effect/mob_spawn/human/elysium_outpost/artist/Initialize()
+	. = ..()
+	var/area/A = get_area(src)
+	if(A)
+		notify_ghosts("Динамик в криокапсуле заиграл весёлой музыкой, извещая о том, что сон закончился, пора вставать на работу и веселить народ, \the [A.name].", source = src, action=NOTIFY_ATTACK, flashwindow = FALSE)
+
+// Wagabond - он же бомж
+
+/obj/effect/mob_spawn/human/elysium_outpost/wagabond
+	name = "Wagabond"
+	id_job = "Wagabond"
+	// short_desc = "You are a artist of Elysium."
+	assignedrole = "Wagabond"
+	outfit = /datum/outfit/outpost/wagabond
+	important_info = "Не покидайте свой аванпост без разрешения администрации, кроме тех случаев, когда вас силой забрали! Вы являетесь гражданином республики Элизиум, но вы бродяга!"
+	short_desc = "Вы бродяга. Ищите еду, пытайтесь выжить на этом куске металла в космосе, погрузитесь в мир нищиты (халявной еды и пива в бесплатных автоматах)!"
+	flavour_text = "Вы бродяга. Только вы сами знаете как вы стали им, было ли это подставой или быть может не оплатили ипотеку на судно? никто не скажет уже точно, главное одно, надо как-то прожить очередной день..."
+
+/obj/effect/mob_spawn/human/elysium_outpost/wagabond/Destroy()
+	new /obj/structure/bed/outpost/wagabond(drop_location())
+	return ..()
+
+/obj/effect/mob_spawn/human/elysium_outpost/wagabond/special(mob/living/new_spawn)
+	new_spawn.fully_replace_character_name(null, random_unique_name(gender))
+
+/obj/effect/mob_spawn/human/elysium_outpost/wagabond/Initialize()
+	. = ..()
+	var/area/A = get_area(src)
+	if(A)
+		notify_ghosts("Вы просыпаетесь под собачий холод и запаха тухлых носков. Ваше сознание смутно припоминает, то кем вы были раньше, но вы точно помните чт овас зовут \the [A.name]. Пора прожить ещё один жалкий день в этом аду...", source = src, action=NOTIFY_ATTACK, flashwindow = FALSE)
