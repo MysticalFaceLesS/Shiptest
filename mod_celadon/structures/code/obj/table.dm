@@ -8,16 +8,31 @@
 	framestack = /obj/item/stack/ore/salvage/scrapmetal
 	buildstack = /obj/item/stack/ore/salvage/scrapmetal
 	resistance_flags = FLAMMABLE
-	max_integrity = 120
+	max_integrity = 60
 	buildstackamount = 10
 	smoothing_groups = list(SMOOTH_GROUP_SCRAP_TABLES) //Don't smooth with SMOOTH_GROUP_TABLES
 	canSmoothWith = list(SMOOTH_GROUP_SCRAP_TABLES)
+	flipped_table_type = /obj/structure/flippedtable/scraptable
 
 	hitsound_type = PROJECTILE_HITSOUND_WOOD
 
 /obj/structure/table/scrap/narsie_act(total_override = TRUE)
+	switch(rand(1, 2))
+		if(1)
+			icon_state = "scrap_table"
+		if(2)
+			icon_state = "scrap_table_2"
+
 	if(!total_override)
 		..()
+
+/obj/structure/flippedtable/scraptable
+	icon = 'mod_celadon/_storge_icons/icons/structures/tables/flipped_tables.dmi'
+	icon_state = "scrap_table"
+
+/obj/structure/flippedtable/scraptable2
+	icon = 'mod_celadon/_storge_icons/icons/structures/tables/flipped_tables.dmi'
+	icon_state = "scrap_table_2"
 
 /obj/structure/table/wood/reinforced/bar
 	name = "reinforced wooden bar table"
