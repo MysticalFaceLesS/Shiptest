@@ -329,8 +329,8 @@
 /turf/open/floor/wood,
 /area/outpost/security/detective)
 "aI" = (
-/obj/structure/bed/outpost/wagabond,
 /obj/structure/curtain/cloth/grey,
+/obj/effect/mob_spawn/human/elysium_outpost/wagabond,
 /turf/open/floor/plating/asteroid/icerock/temperate,
 /area/outpost/exterior)
 "aJ" = (
@@ -3143,7 +3143,6 @@
 /obj/effect/turf_decal/techfloor,
 /obj/effect/decal/cleanable/oil,
 /obj/effect/decal/fakelattice,
-/obj/structure/bed/outpost/wagabond,
 /obj/effect/decal/cleanable/garbage{
 	pixel_x = -6;
 	pixel_y = -4
@@ -3156,6 +3155,9 @@
 	pixel_x = 6
 	},
 /obj/effect/decal/cleanable/insectguts,
+/obj/effect/mob_spawn/human/elysium_outpost/wagabond{
+	layer = 2
+	},
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/maintenance/starboard)
 "gv" = (
@@ -3323,11 +3325,11 @@
 	},
 /area/outpost/exterior)
 "gL" = (
-/obj/structure/bed{
-	icon_state = "dirty_mattress"
-	},
 /obj/structure/curtain/cloth/grey,
 /obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/mob_spawn/human/elysium_outpost/wagabond{
+	layer = 2
+	},
 /turf/open/floor/plating/asteroid/icerock/temperate{
 	light_color = "#1B1D2E";
 	light_range = 2
@@ -8810,8 +8812,8 @@
 /area/outpost/maintenance/port)
 "sa" = (
 /obj/effect/decal/cleanable/glass,
-/obj/structure/bed/outpost/wagabond,
 /obj/structure/curtain/cloth/grey,
+/obj/effect/mob_spawn/human/elysium_outpost/wagabond,
 /turf/open/floor/plating/asteroid/icerock/temperate,
 /area/outpost/exterior)
 "sb" = (
@@ -12027,10 +12029,8 @@
 /turf/open/floor/plasteel/tech,
 /area/outpost/crew/cryo)
 "yp" = (
-/obj/structure/bed{
-	icon_state = "dirty_mattress"
-	},
 /obj/structure/curtain/cloth/grey,
+/obj/effect/mob_spawn/human/elysium_outpost/wagabond,
 /turf/open/floor/plating/asteroid/icerock/temperate{
 	light_color = "#1B1D2E";
 	light_range = 2
@@ -14639,7 +14639,6 @@
 "Dg" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/bed/outpost/wagabond,
 /obj/effect/decal/fakelattice{
 	layer = 4
 	},
@@ -14648,6 +14647,9 @@
 	pixel_y = -15
 	},
 /obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/mob_spawn/human/elysium_outpost/wagabond{
+	layer = 2
+	},
 /turf/open/floor/plating,
 /area/outpost/maintenance/port)
 "Dh" = (
@@ -14714,7 +14716,7 @@
 /area/outpost/maintenance/fore)
 "Do" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/cryopod/outpost/artist,
+/obj/effect/mob_spawn/human/elysium_outpost/artist,
 /turf/open/floor/carpet/orange,
 /area/outpost/crew/bar)
 "Dp" = (
@@ -20259,7 +20261,6 @@
 /turf/open/floor/carpet/green,
 /area/outpost/crew/lounge)
 "OX" = (
-/obj/structure/bed/outpost/wagabond,
 /obj/item/trash/candy{
 	pixel_x = 1
 	},
@@ -20269,6 +20270,9 @@
 /obj/item/trash/energybar,
 /obj/item/trash/tray{
 	pixel_y = 16
+	},
+/obj/effect/mob_spawn/human/elysium_outpost/wagabond{
+	layer = 2
 	},
 /turf/open/floor/plating/asteroid/icerock/temperate,
 /area/outpost/exterior)
@@ -21592,12 +21596,14 @@
 /area/outpost/maintenance/port)
 "Rr" = (
 /obj/effect/mob_spawn/human/clown/corpse{
-	short_desc = "Искусаное тараканами тело клоуна выглядит так как-будто его задушили одноцветным зеленым шарфом. Вы также замечаете что вокруг его шеи обмотан шарф в полосочку запачканый то ли грязью толи блевотиной клоуна. По цветам не скажешь, но кажется он был красно-серого цвета. Хороший был шарф, жаль его."
+	short_desc = "Искусаное тараканами тело клоуна выглядит так как-будто его задушили одноцветным зеленым шарфом. Вы также замечаете что вокруг его шеи обмотан шарф в полосочку запачканый то ли грязью толи блевотиной клоуна. По цветам не скажешь, но кажется он был красно-серого цвета. Хороший был шарф, жаль его.";
+	desc = "Искусаное тараканами тело клоуна выглядит так как-будто его задушили одноцветным зеленым шарфом. Вы также замечаете что вокруг его шеи обмотан шарф в полосочку запачканый то ли грязью толи блевотиной клоуна. По цветам не скажешь, но кажется он был красно-серого цвета. Хороший был шарф, жаль его."
 	},
 /obj/item/clothing/neck/scarf/green{
 	pixel_x = 11;
 	pixel_y = -7;
-	layer = 2
+	layer = 2;
+	desc = "Искусаное тараканами тело клоуна выглядит так будто его задушили этим одноцветным зеленым шарфом. Вы также замечаете что вокруг шеи клоуна обмотан шарф в полосочку запачканый то ли грязью толи блевотиной клоуна. По цветам не скажешь, но кажется он был красно-серого цвета. Хороший был шарф, жаль его."
 	},
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/plating/asteroid/icerock/temperate,
@@ -22536,7 +22542,6 @@
 "Tg" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/bed/outpost/wagabond,
 /obj/effect/spawner/lootdrop/maintenance{
 	pixel_x = -9
 	},
@@ -22545,6 +22550,9 @@
 	},
 /obj/effect/spawner/lootdrop/maintenance{
 	pixel_x = 11
+	},
+/obj/effect/mob_spawn/human/elysium_outpost/wagabond{
+	layer = 2
 	},
 /turf/open/floor/plating{
 	light_color = "#1B1D2E";
@@ -25752,13 +25760,11 @@
 /turf/open/floor/plasteel/dark,
 /area/outpost/cargo)
 "Zo" = (
-/obj/structure/bed{
-	icon_state = "dirty_mattress"
-	},
 /obj/structure/curtain/cloth/grey,
 /obj/item/bedsheet{
 	layer = 3.2
 	},
+/obj/effect/mob_spawn/human/elysium_outpost/wagabond,
 /turf/open/floor/plating/asteroid/icerock/temperate{
 	light_color = "#1B1D2E";
 	light_range = 2
