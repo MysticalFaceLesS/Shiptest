@@ -23,7 +23,6 @@
 	icon_state = "globe"
 	weight = 20
 	ruin_type = RUINTYPE_PLASMA
-	preserve_level = TRUE
 	landing_sound = 'sound/effects/planet_landing_2.ogg'
 
 /datum/planet_type/earthsand

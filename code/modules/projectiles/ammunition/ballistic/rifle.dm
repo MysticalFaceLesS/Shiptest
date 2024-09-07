@@ -89,8 +89,8 @@
 //[/СELADON-REMOVE]
 
 /obj/item/ammo_casing/caseless/c299
-	name = ".229 Eoehoma caseless bullet casing"
-	desc = "A .229 Eoehoma caseless bullet casing."
+	name = ".299 Eoehoma caseless bullet casing"
+	desc = "A .299 Eoehoma caseless bullet casing."
 	icon_state = "caseless"
 	caliber = ".299 caseless"
 	projectile_type = /obj/projectile/bullet/c299

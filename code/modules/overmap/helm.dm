@@ -292,7 +292,8 @@
 		// [Celadon-ADD] - Signal S.O.S. - mod_celadon\wideband\code\signal.dm
 		if("send_sos")
 			if(!current_ship.SendSos(name = "[current_ship.name]", x = "[current_ship.x || current_ship.docked_to.x]", y = "[current_ship.y || current_ship.docked_to.y]"))
-				say("Error: [COOLDOWN_TIMELEFT(current_ship, sendsos_cooldown)/10] секунд до заряда сигнала S.O.S.")
+				if(COOLDOWN_TIMELEFT(current_ship, sendsos_cooldown)/10 != 0)
+					say("Error: [COOLDOWN_TIMELEFT(current_ship, sendsos_cooldown)/10] секунд до заряда сигнала S.O.S.")
 				return
 			current_ship.SendSos(name = "[current_ship.name]", x = "[current_ship.x || current_ship.docked_to.x]", y = "[current_ship.y || current_ship.docked_to.y]")
 			return

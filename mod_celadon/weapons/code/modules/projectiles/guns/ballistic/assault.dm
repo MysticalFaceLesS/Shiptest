@@ -6,7 +6,7 @@
 	icon = 'mod_celadon/_storge_icons/icons/guns/48x32guns.dmi'
 	lefthand_file = 'mod_celadon/_storge_icons/icons/guns/guns_lefthand.dmi'
 	righthand_file = 'mod_celadon/_storge_icons/icons/guns/guns_righthand.dmi'
-	//mob_overlay_icon = 'mod_celadon/_storge_icons/icons/guns/back.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/guns/back.dmi'
 	icon_state = "g36sh"
 	item_state = "g36sh"
 //Звуки
@@ -34,7 +34,7 @@
 	desc = "Обширная модификация G36-SH, которая входит в стандартную комплектацию вооружения InteQ. Калибр 5,56x45 мм."
 	icon_state = "g36shinteq"
 	item_state = "g36shinteq"
-	//mob_overlay_icon = 'mod_celadon/_storge_icons/icons/guns/back_inteq.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/guns/back_inteq.dmi'
 	empty_indicator = TRUE
 	empty_alarm = TRUE
 	zoomable = TRUE
@@ -48,7 +48,7 @@
 	icon = 'mod_celadon/_storge_icons/icons/guns/48x32guns.dmi'
 	lefthand_file = 'mod_celadon/_storge_icons/icons/guns/guns_lefthand.dmi'
 	righthand_file = 'mod_celadon/_storge_icons/icons/guns/guns_righthand.dmi'
-	//mob_overlay_icon = 'mod_celadon/_storge_icons/icons/guns/back.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/guns/back.dmi'
 	fire_sound = 'mod_celadon/_storge_sounds/sound/gun/g36.ogg'
 	icon_state = "g36"
 	item_state = "g36"
@@ -74,7 +74,7 @@
 	desc = "Обширная модификация G36, которая входит в стандартную комплектацию вооружения InteQ. Калибр 5,56x45 мм."
 	icon_state = "g36inteq"
 	item_state = "g36inteq"
-	//mob_overlay_icon = 'mod_celadon/_storge_icons/icons/guns/back_inteq.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/guns/back_inteq.dmi'
 	empty_indicator = TRUE
 	empty_alarm = TRUE
 	zoomable = TRUE
@@ -86,6 +86,7 @@
 	righthand_file = 'mod_celadon/_storge_icons/icons/guns/guns_righthand.dmi'
 	icon = 'mod_celadon/_storge_icons/icons/guns/48x32guns.dmi'
 	fire_sound = 'mod_celadon/_storge_sounds/sound/gun/morita1.ogg'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/guns/back.dmi'
 	icon_state = "morita1"
 	item_state = "morita1"
 	spread = 3
