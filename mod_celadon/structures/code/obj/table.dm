@@ -110,8 +110,13 @@
 	base_icon_state = "plasmaglass_table"
 	buildstack = /obj/item/stack/sheet/plasmaglass
 
-/obj/item/stack/sheet/syndi
+/obj/item/stack/sheet/metal/syndi
 	name = "syndi metal"
+	icon = 'mod_celadon/_storge_icons/icons/obj/stack_objects.dmi'
+	icon_state = "sheet-metal"
+	item_state = "sheet-metal"
+	lefthand_file = 'mod_celadon/_storge_icons/icons/obj/overlay/sheets_lefthand.dmi'
+	righthand_file = 'mod_celadon/_storge_icons/icons/obj/overlay/sheets_righthand.dmi'
 	tableVariant = /obj/structure/table/syndi
 
 /obj/structure/table/syndi
@@ -120,4 +125,4 @@
 	icon = 'mod_celadon/_storge_icons/icons/structures/tables/table_syndicate.dmi'
 	icon_state = "table-0"
 	base_icon_state = "table"
-	buildstack = /obj/item/stack/sheet/syndi
+	buildstack = /obj/item/stack/sheet/metal/syndi
