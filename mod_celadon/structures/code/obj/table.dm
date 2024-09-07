@@ -45,7 +45,7 @@
 	name = "reinforced glass table"
 	desc = "A reinforced version of the four-legged glass table. Likely as easy to burn as a normal one."
 	icon = 'mod_celadon/_storge_icons/icons/structures/tables/rglass_table.dmi'
-	buildstack = /obj/item/stack/sheet/glass
+	buildstack = /obj/item/stack/sheet/rglass
 	icon_state = "rglass_table-0"
 	base_icon_state = "rglass_table"
 
@@ -109,3 +109,15 @@
 	icon_state = "plasmaglass_table-0"
 	base_icon_state = "plasmaglass_table"
 	buildstack = /obj/item/stack/sheet/plasmaglass
+
+/obj/item/stack/sheet/syndi
+	name = "syndi metal"
+	tableVariant = /obj/structure/table/syndi
+
+/obj/structure/table/syndi
+	name = "syndicate glass table"
+	desc = "What did I say about leaning on the glass tables? Now you need surgery."
+	icon = 'mod_celadon/_storge_icons/icons/structures/tables/table_syndicate.dmi'
+	icon_state = "table-0"
+	base_icon_state = "table"
+	buildstack = /obj/item/stack/sheet/syndi
