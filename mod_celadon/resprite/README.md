@@ -52,6 +52,9 @@ ID мода: RESPRITE
 					icon_file = I.snout_override_icon
 			else
 				handled_by_bodytype = TRUE
+  - `code/modules/shuttle/ripple.dm`
+    - `/obj/effect/abstract/ripple/proc/stop_animation()`
+	   - `icon_state = "landing_noanim"`
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
