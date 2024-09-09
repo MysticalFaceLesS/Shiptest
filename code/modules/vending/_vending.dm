@@ -778,17 +778,40 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 					flick(icon_deny,src)
 					vend_ready = TRUE
 					return
-				// [CELADON-ADD] - CELADON_FIXES
-				var/datum/bank_account/account = C.registered_account
-				if(price_to_use)
-					if(account.has_money(price_to_use))
-						var/datum/bank_account/owner = private_a
-						if(owner)
-							owner.transfer_money(account, price_to_use)
-						else
-							account.adjust_money(-price_to_use, "vendor_purchase")
-						SSblackbox.record_feedback("amount", "vending_spent", price_to_use)
-				// [/CELADON-ADD]
+				if(mining_point_vendor)
+					if(price_to_use > C.mining_points)
+						say("You do not possess the funds to purchase [R.name].")
+						flick(icon_deny,src)
+						vend_ready = TRUE
+						return
+					C.mining_points -= price_to_use
+				else
+					// [CELADON-EDIT] - CELADON_FIXES
+					// var/datum/bank_account/account = C.registered_account
+					// if(coin_records.Find(R) || hidden_records.Find(R))
+					// 	price_to_use = R.custom_premium_price ? R.custom_premium_price : extra_price
+					// if(price_to_use && !account.has_money(price_to_use))
+					// 	say("You do not possess the funds to purchase [R.name].")
+					// 	flick(icon_deny,src)
+					// 	vend_ready = TRUE
+					// 	return
+
+					// var/datum/bank_account/payment_account = payment_account_ref.resolve()
+					// if(payment_account)
+					// 	payment_account.transfer_money(account, price_to_use)
+					// else
+					// 	account.adjust_money(-price_to_use, "vendor_purchase")
+					// SSblackbox.record_feedback("amount", "vending_spent", price_to_use)	// CELADON-EDIT - ORIGINAL
+					var/datum/bank_account/account = C.registered_account
+					if(price_to_use)
+						if(account.has_money(price_to_use))
+							var/datum/bank_account/owner = private_a
+							if(owner)
+								owner.transfer_money(account, price_to_use)
+							else
+								account.adjust_money(-price_to_use, "vendor_purchase")
+							SSblackbox.record_feedback("amount", "vending_spent", price_to_use)
+					// [/CELADON-EDIT]
 					log_econ("[price_to_use] credits were inserted into [src] by [H] to buy [R].")
 			if(last_shopper != REF(usr) || purchase_message_cooldown < world.time)
 				say("Thank you for shopping with [src]!")
@@ -922,7 +945,7 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	refill_canister = /obj/item/vending_refill/custom
 	all_items_free = FALSE
 	/// where the money is sent
-	// [CELADON-REMOVE] - CELADON_FIXES - Перемещено в родителя
+	// [CELADON-REMOVE] - CELADON_FIXES - Перемещено в родителя через модульность
 	// var/datum/bank_account/private_a
 	// [/CELADON-REMOVE]
 	/// max number of items that the custom vendor can hold

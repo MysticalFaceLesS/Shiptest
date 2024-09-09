@@ -91,4 +91,3 @@
 /turf/open/floor/plasteel/stairs/wood/stairs_pack/wood3/other
 	icon_state = "wood3_lr"
 	base_icon_state = "wood3_lr"
-
