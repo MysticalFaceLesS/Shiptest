@@ -48,6 +48,8 @@ ID мода: CELADON_CONFIGS_MAPS
 	`code\datums\ruins\whitesands.dm`	: `/datum/map_template/ruin/whitesands.dm` 	: `prefix`
 	
 - EDIT: `tools\build\build.js` : `export const DmMapsIncludeTarget`
+
+- REMOVE: `code/modules/overmap/objects/outpost/outpost_types.dm` -> отключаем аванпост Indie, на доработку в щитспавн
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
