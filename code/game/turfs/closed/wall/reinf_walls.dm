@@ -78,8 +78,7 @@
 		to_chat(user, "<span class='notice'>You begin slicing through the [src].</span>")
 		while(W.use_tool(src,user,30,volume = 100))
 			to_chat(user, "<span class='notice'>You slice through some of the outer plating...</span>")
-			if(!alter_integrity(-(W.wall_decon_damage)))
-				return TRUE
+			alter_integrity(-(W.wall_decon_damage))
 		return 1
 
 	switch(d_state)
@@ -88,7 +87,7 @@
 				if(W.use_tool(src, user, 40, volume=100))
 					W.play_tool_sound(src, 100)
 					d_state = SUPPORT_LINES
-					update_appearance() // [CELADON-EDIT] - PR #1116
+					set_integrity(get_state_integrity(SUPPORT_LINES))
 					to_chat(user, "<span class='notice'>You cut the outer grille.</span>")
 					return 1
 
@@ -99,6 +98,7 @@
 					if(!istype(src, /turf/closed/wall/r_wall) || d_state != SUPPORT_LINES)
 						return 1
 					d_state = COVER
+					set_integrity(get_state_integrity(COVER))
 					update_appearance()
 					to_chat(user, "<span class='notice'>You unsecure the support lines.</span>")
 				return 1
@@ -107,7 +107,7 @@
 				if(W.use_tool(src, user, 40, volume=100))
 					W.play_tool_sound(src, 100)
 					d_state = INTACT
-					update_appearance() // [CELADON-EDIT] - PR #1116
+					set_integrity(get_state_integrity(INTACT))
 					to_chat(user, "<span class='notice'>You repair the outer grille.</span>")
 					return 1
 
@@ -120,7 +120,7 @@
 					if(!istype(src, /turf/closed/wall/r_wall) || d_state != COVER)
 						return 1
 					d_state = CUT_COVER
-					update_appearance() // [CELADON-EDIT] - PR #1116
+					set_integrity(get_state_integrity(CUT_COVER))
 					to_chat(user, "<span class='notice'>You press firmly on the cover, dislodging it.</span>")
 				return 1
 
@@ -130,7 +130,7 @@
 					if(!istype(src, /turf/closed/wall/r_wall) || d_state != COVER)
 						return 1
 					d_state = SUPPORT_LINES
-					update_appearance() // [CELADON-EDIT] - PR #1116
+					set_integrity(get_state_integrity(SUPPORT_LINES))
 					to_chat(user, "<span class='notice'>The support lines have been secured.</span>")
 				return 1
 
@@ -141,7 +141,7 @@
 					if(!istype(src, /turf/closed/wall/r_wall) || d_state != CUT_COVER)
 						return 1
 					d_state = ANCHOR_BOLTS
-					update_appearance() // [CELADON-EDIT] - PR #1116
+					set_integrity(get_state_integrity(ANCHOR_BOLTS))
 					to_chat(user, "<span class='notice'>You pry off the cover.</span>")
 				return 1
 
@@ -153,7 +153,7 @@
 					if(!istype(src, /turf/closed/wall/r_wall) || d_state != CUT_COVER)
 						return TRUE
 					d_state = COVER
-					update_appearance() // [CELADON-EDIT] - PR #1116
+					set_integrity(get_state_integrity(COVER))
 					to_chat(user, "<span class='notice'>The metal cover has been welded securely to the frame.</span>")
 				return 1
 
@@ -164,7 +164,7 @@
 					if(!istype(src, /turf/closed/wall/r_wall) || d_state != ANCHOR_BOLTS)
 						return 1
 					d_state = SUPPORT_RODS
-					update_appearance() // [CELADON-EDIT] - PR #1116
+					set_integrity(get_state_integrity(SUPPORT_RODS))
 					to_chat(user, "<span class='notice'>You remove the bolts anchoring the support rods.</span>")
 				return 1
 
@@ -174,7 +174,7 @@
 					if(!istype(src, /turf/closed/wall/r_wall) || d_state != ANCHOR_BOLTS)
 						return 1
 					d_state = CUT_COVER
-					update_appearance() // [CELADON-EDIT] - PR #1116
+					set_integrity(get_state_integrity(CUT_COVER))
 					to_chat(user, "<span class='notice'>The metal cover has been pried back into place.</span>")
 				return 1
 
@@ -187,7 +187,7 @@
 					if(!istype(src, /turf/closed/wall/r_wall) || d_state != SUPPORT_RODS)
 						return 1
 					d_state = SHEATH
-					update_appearance() // [CELADON-EDIT] - PR #1116
+					set_integrity(get_state_integrity(SHEATH))
 					to_chat(user, "<span class='notice'>You slice through the support rods.</span>")
 				return 1
 
@@ -198,7 +198,7 @@
 					if(!istype(src, /turf/closed/wall/r_wall) || d_state != SUPPORT_RODS)
 						return 1
 					d_state = ANCHOR_BOLTS
-					update_appearance() // [CELADON-EDIT] - PR #1116
+					set_integrity(get_state_integrity(ANCHOR_BOLTS))
 					to_chat(user, "<span class='notice'>You tighten the bolts anchoring the support rods.</span>")
 				return 1
 
@@ -220,7 +220,7 @@
 					if(!istype(src, /turf/closed/wall/r_wall) || d_state != SHEATH)
 						return TRUE
 					d_state = SUPPORT_RODS
-					update_appearance() // [CELADON-EDIT] - PR #1116
+					set_integrity(get_state_integrity(SUPPORT_RODS))
 					to_chat(user, "<span class='notice'>You weld the support rods back together.</span>")
 				return 1
 	return 0

@@ -32,6 +32,8 @@
 
 	attack_hitsound = 'sound/effects/break_stone.ogg'
 	break_sound = 'sound/effects/break_stone.ogg'
+	attack_hitsound = 'sound/effects/break_stone.ogg'
+	break_sound = 'sound/effects/break_stone.ogg'
 	hitsound_type = PROJECTILE_HITSOUND_STONE
 
 	min_dam = 5
@@ -88,10 +90,13 @@
 	if(I.tool_behaviour == TOOL_MINING)
 		if(!I.tool_start_check(user, amount=0))
 			return FALSE
+		if(!I.tool_start_check(user, amount=0))
+			return FALSE
 
 		to_chat(user, "<span class='notice'>You begin breaking through the rock...</span>")
 		while(I.use_tool(src, user, act_duration, volume=50))
 			if(ismineralturf(src))
+				to_chat(user, "<span class='notice'>You break through some of the stone...</span>")
 				to_chat(user, "<span class='notice'>You break through some of the stone...</span>")
 				SSblackbox.record_feedback("tally", "pick_used_mining", 1, I.type)
 				if(!alter_integrity(-(I.wall_decon_damage),user,FALSE,TRUE))
@@ -109,9 +114,18 @@
 		gets_drilled(user, TRUE, slagged)
 	else
 		return FALSE
+		return FALSE
 
 /turf/closed/mineral/proc/gets_drilled(user, give_exp = FALSE, slag_chance = 0)
+/turf/closed/mineral/proc/gets_drilled(user, give_exp = FALSE, slag_chance = 0)
 	if (mineralType && (mineralAmt > 0))
+		//oops, you ruined the ore
+		if(prob(slag_chance))
+			new /obj/item/stack/ore/slag(src,mineralAmt)
+			visible_message(span_warning("The ore was completely ruined!"))
+		else
+			new mineralType(src, mineralAmt)
+			SSblackbox.record_feedback("tally", "ore_mined", mineralAmt, mineralType)
 		//oops, you ruined the ore
 		if(prob(slag_chance))
 			new /obj/item/stack/ore/slag(src,mineralAmt)
@@ -133,8 +147,10 @@
 	if(defer_change) // TODO: make the defer change var a var for any changeturf flag
 		flags = CHANGETURF_DEFER_CHANGE
 	playsound(src, break_sound, 50, TRUE) //beautiful destruction
+	playsound(src, break_sound, 50, TRUE) //beautiful destruction
 	ScrapeAway(null, flags)
 	addtimer(CALLBACK(src, PROC_REF(AfterChange)), 1, TIMER_UNIQUE)
+
 
 
 /turf/closed/mineral/attack_animal(mob/living/simple_animal/user)
@@ -155,6 +171,10 @@
 		var/mob/living/carbon/human/H = AM
 		var/obj/item/I = H.is_holding_tool_quality(TOOL_MINING)
 		if(I)
+			if(last_act + (40 * I.toolspeed) > world.time)//prevents message spam
+				return
+			last_act = world.time
+			try_decon(I, H)
 			if(last_act + (40 * I.toolspeed) > world.time)//prevents message spam
 				return
 			last_act = world.time

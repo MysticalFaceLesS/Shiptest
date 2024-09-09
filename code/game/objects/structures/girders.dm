@@ -36,7 +36,26 @@
 			playsound(src, 'sound/machines/clockcult/integration_cog_install.ogg', 50, TRUE)
 	add_fingerprint(user)
 
-	if(istype(W, /obj/item/stack))
+	if(istype(W, /obj/item/gun/energy/plasmacutter))
+		to_chat(user, "<span class='notice'>You start slicing apart the girder...</span>")
+		if(W.use_tool(src, user, 10, volume=100))
+			to_chat(user, "<span class='notice'>You slice apart the girder.</span>")
+			var/obj/item/stack/sheet/metal/M = new (loc, 2)
+			M.add_fingerprint(user)
+			qdel(src)
+
+			return
+
+	else if(istype(W, /obj/item/pickaxe/drill/jackhammer))
+		to_chat(user, "<span class='notice'>You smash through the girder!</span>")
+		new /obj/item/stack/sheet/metal(get_turf(src))
+		W.play_tool_sound(src)
+		qdel(src)
+
+		return
+
+
+	else if(istype(W, /obj/item/stack))
 		if(iswallturf(loc))
 			to_chat(user, "<span class='warning'>There is already a wall present!</span>")
 			return
