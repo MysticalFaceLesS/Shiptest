@@ -236,13 +236,3 @@ GLOBAL_DATUM(syndicate_code_response_regex, /regex)
 				. += "."
 			else
 				. += ", "
-
-/proc/ship_prefix_to_faction(prefix)
-	for(var/faction in GLOB.ship_faction_to_prefixes)
-		if(prefix in GLOB.ship_faction_to_prefixes[faction])
-			return faction
-	var/static/list/screamed = list()
-	if(!(prefix in screamed))
-		screamed += prefix
-		stack_trace("attempted to get faction for unknown prefix [prefix]")
-	return "?!ERR!?"

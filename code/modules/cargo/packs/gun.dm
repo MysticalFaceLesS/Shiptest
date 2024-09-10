@@ -33,7 +33,7 @@
 	name = "Ringneck Pistol Crate"
 	desc = "Contains a civillian variant of the Ringneck pistol, produced by Scarborough Arms and chambered in 10mm."
 	cost = 1000
-	contains = list(/obj/item/storage/pistolcase/ringneck)
+	contains = list(/obj/item/storage/pistolcase/stechkin)
 	faction = FACTION_SYNDICATE
 
 /datum/supply_pack/gun/candors
@@ -195,13 +195,6 @@
 	contains = list(/obj/item/storage/guncase/scout)
 	crate_name = "rifle crate"
 	faction = FACTION_SRM
-
-/datum/supply_pack/gun/boomslang90
-	name = "Boomslang-90 Rifle Crate"
-	desc = "Contains a civillian variant of the Boomslang Sniper rifle- modified with a 2x scope, rather than a sniper scope. Chambered in the powerful 6.5x57mm CLIP."
-	cost = 5000
-	contains = list(/obj/item/storage/guncase/boomslang)
-	crate_name = "rifle crate"
 
 /datum/supply_pack/gun/cobra20
 	name = "Cobra-20 SMG Crate"
