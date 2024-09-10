@@ -21,7 +21,6 @@
 	crate_name = "donk pocket crate"
 	crate_type = /obj/structure/closet/crate/freezer
 	faction = FACTION_SYNDICATE
-	faction = FACTION_SYNDICATE
 
 /datum/supply_pack/food/donkpockets/fill(obj/structure/closet/crate/C)
 	for(var/i in 1 to 3)
@@ -397,20 +396,3 @@
 					/obj/item/melee/flyswatter)
 	crate_name = "beekeeping starter crate"
 	crate_type = /obj/structure/closet/crate/hydroponics
-
-/datum/supply_pack/food/ration
-	name = "Ration Crate"
-	desc = "6 standerd issue rations."
-// [CELADON-EDIT] - CELADON_BALANCE
-//	cost = 2000
-// CELADON-EDIT - ORIGINAL
-	cost = 750
-// [/CELADON-EDIT]
-	contains = list(/obj/effect/spawner/lootdrop/ration,
-					/obj/effect/spawner/lootdrop/ration,
-					/obj/effect/spawner/lootdrop/ration,
-					/obj/effect/spawner/lootdrop/ration,
-					/obj/effect/spawner/lootdrop/ration,
-					/obj/effect/spawner/lootdrop/ration)
-	crate_name = "ration crate"
-	crate_type = /obj/structure/closet/crate
