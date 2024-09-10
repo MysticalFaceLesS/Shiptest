@@ -261,7 +261,7 @@
 
 /datum/crafting_recipe/bonespear
 	name = "Bone Spear"
-	result = /obj/item/melee/spear/bone
+	result = /obj/item/spear/bonespear
 	time = 30
 	reqs = list(/obj/item/stack/sheet/bone = 4,
 				/obj/item/stack/sheet/sinew = 1)
@@ -270,7 +270,7 @@
 
 /datum/crafting_recipe/boneaxe
 	name = "Bone Axe"
-	result = /obj/item/melee/axe/bone
+	result = /obj/item/fireaxe/boneaxe
 	time = 50
 	reqs = list(/obj/item/stack/sheet/bone = 6,
 				/obj/item/stack/sheet/sinew = 3)
@@ -279,7 +279,7 @@
 
 /datum/crafting_recipe/bonesword
 	name = "Bone Sword"
-	result = /obj/item/melee/sword/bone
+	result = /obj/item/claymore/bone
 	time = 40
 	reqs = list(/obj/item/stack/sheet/bone = 3,
 				/obj/item/stack/sheet/sinew = 2)
