@@ -55,7 +55,7 @@ GLOBAL_LIST_INIT(rpg_scrawlings, list(
 
 /obj/item/gun/ballistic/rocketlauncher
 	name = "\improper PML-9"
-	desc = "A reusable rocket-propelled grenade launcher."
+	desc = "A reusable rocket-propelled grenade launcher. The words \"NT this way\" and an arrow have been written near the barrel."
 
 	icon_state = "rocketlauncher"
 	item_state = "rocketlauncher"
@@ -81,27 +81,8 @@ GLOBAL_LIST_INIT(rpg_scrawlings, list(
 
 	manufacturer = MANUFACTURER_SCARBOROUGH
 
-	attack_verb = list("bludgeoned", "hit", "slammed", "whacked")
-
 	valid_attachments = list()
 	slot_available = list()
-
-	var/rpg_scribble = null
-
-/obj/item/gun/ballistic/rocketlauncher/Initialize()
-	. = ..()
-	rpg_scribble = pick(GLOB.rpg_scrawlings)
-	desc += " [rpg_scribble] is scrawled on the tube"
-
-/obj/item/gun/ballistic/rocketlauncher/attackby(obj/item/A, mob/user, params)
-	. = ..()
-	if(istype(A, /obj/item/pen))
-		rpg_scribble = stripped_input(user, "What are you putting on [src]?", "Rocket Launcher Doodle")
-		if(!rpg_scribble || !length(rpg_scribble))
-			desc = "[src::desc]"
-			return
-		desc = "[src::desc] [rpg_scribble] is scribbled on the body."
-
 
 /obj/item/gun/ballistic/rocketlauncher/afterattack()
 	. = ..()

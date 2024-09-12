@@ -169,7 +169,7 @@
 	backpack_contents = list(/obj/item/storage/box/survival/syndie=1,\
 		/obj/item/tank/jetpack/oxygen/harness=1,\
 		/obj/item/gun/ballistic/automatic/pistol/ringneck=1,\
-		/obj/item/melee/knife/survival)
+		/obj/item/kitchen/knife/combat/survival)
 
 
 /datum/game_mode/nuclear/generate_credit_text()
