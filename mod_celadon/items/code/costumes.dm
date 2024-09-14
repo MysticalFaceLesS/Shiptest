@@ -59,3 +59,17 @@
 	item_state = null
 	body_parts_covered = CHEST | GROIN | LEGS | ARMS
 	supports_variations = DIGITIGRADE_VARIATION
+
+// Костюм горничной тактический белый без статов
+/obj/item/clothing/gloves/maid/white // есть проблема с тем что я не могу перекрасить красный цвет...
+	name = "maid sleeves"
+	desc = "Replica tacticute."
+	icon_state = "syndimaid_arms"
+
+/obj/item/clothing/under/costume/maid/white
+	name = "maid tacticute costume"
+	desc = "Maid tacticute in China."
+	icon = 'mod_celadon/_storge_icons/icons/items/obj/under.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/items/overlay/under.dmi'
+	icon_state = "maid"
+	item_state = "maid"

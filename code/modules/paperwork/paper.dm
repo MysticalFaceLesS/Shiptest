@@ -615,7 +615,7 @@
 
 			for(var/field_key in field_data)
 				var/field_text = field_data[field_key]
-				var/text_length = length(field_text)
+				var/text_length = length_char(field_text)
 				if(text_length > MAX_PAPER_INPUT_FIELD_LENGTH)
 					log_paper("[key_name(user)] tried to write to field [field_key] with text over the max limit ([text_length] out of [MAX_PAPER_INPUT_FIELD_LENGTH]) with the following text: [field_text]")
 					return TRUE
