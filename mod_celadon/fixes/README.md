@@ -58,6 +58,11 @@ ID мода: CELADON_FIXES
 - REMOVE: `code\game\machinery\newscaster.dm` - Полная замена на переведённый файл. Пожалуйста, сделайте это нормально.
 
 - REMOVE: `code\game\objects\items\kitchen.dm` - Исправляет спрайт ножа.
+
+- REMOVE: `code/modules/vending/_vending.dm` - вынос в родителя переменной
+
+- ADD: `code\__HELPERS\text.dm` - Добавляем возможность создания имён персонажей на кирилице.
+- EDIT: `code\modules\admin\player_panel.dm` - Фикс <meta>, исправлено отображение кирилицы на F6.
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.

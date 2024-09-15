@@ -1,5 +1,5 @@
 /mob/living/simple_animal/mouse/syndie
-	icon = 'mod_celadon/_storge_icons/icons/mobs/syndimouse.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/mobs/animal_shiptest.dmi'
 	name = "SyndiMouse"
 	body_color = "red"
 	icon_state = "mouse_red"
@@ -29,6 +29,6 @@
 	icon_dead = "mouse_[body_color]_dead"
 
 /obj/item/reagent_containers/food/snacks/deadmouse
-	icon = 'mod_celadon/_storge_icons/icons/mobs/syndimouse.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/mobs/animal_shiptest.dmi'
 	icon_state = "mouse_red_dead"
 	desc = "Dead mouse in a spacesuit. Taraja's favorite food"
