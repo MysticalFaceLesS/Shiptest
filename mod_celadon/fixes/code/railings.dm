@@ -1,5 +1,5 @@
 /obj/structure/railing
-	icon = 'mod_celadon/_storge_iconsicons/obj/railing.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/obj/railing.dmi'
 	obj_flags = CAN_BE_HIT
 	plane = ABOVE_GAME_PLANE
 
