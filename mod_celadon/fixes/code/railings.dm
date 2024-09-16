@@ -1,8 +1,5 @@
 /obj/structure/railing
-	name = "railing"
-	desc = "Basic railing meant to protect idiots like you from falling."
-	icon = 'mod_celadon/_storge_icons/icons/obj/railing.dmi'
-	icon_state = "railing"
+	icon = 'mod_celadon/_storge_iconsicons/obj/railing.dmi'
 	obj_flags = CAN_BE_HIT
 	plane = ABOVE_GAME_PLANE
 
