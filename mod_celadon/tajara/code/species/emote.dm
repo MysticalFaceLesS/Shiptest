@@ -15,7 +15,7 @@
 	vary = TRUE
 
 /datum/emote/living/carbon/human/tajara/purr/get_sound(mob/living/user)
-	return 'mod_celadon/tajara/sound/purr.ogg'
+	return 'mod_celadon/_storge_sounds/sound/purr.ogg'
 
 /datum/emote/living/carbon/human/tajara/purrl
 	key = "purrl"
@@ -25,4 +25,4 @@
 	vary = TRUE
 
 /datum/emote/living/carbon/human/tajara/purrl/get_sound(mob/living/user)
-	return 'mod_celadon/tajara/sound/purr_long.ogg'
+	return 'mod_celadon/_storge_sounds/sound/purr_long.ogg'

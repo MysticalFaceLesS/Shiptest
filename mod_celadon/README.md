@@ -102,8 +102,7 @@ var/something = 1
 - Возможных в нём подпапок:
   - `code` - содержит **только** `.dm` файлы
   - `maps` - содержит **только** `.dmm` файлы
-  - `icons` - содержит **только** файлы изображений
-  - `sounds` - содержит **только** файлы звуков
+
 
 ### Структура модпака
 Если мы условимся, что наш пак будет называется `hello_world`, то это будет выглядеть так:
@@ -112,17 +111,35 @@ mod_celadon/hello_world
 ├─ code
 │  ├─ any_file.dm
 │  ╰─ some_file.dm
-├─ icons
-│  ├─ any_icon.dmi
-│  ╰─ some_icon.png
 ├─ maps
 │  ├─ any_map.dmm
 │  ╰─ some_map.dmm
-├─ sounds
-│  ├─ any_sound.ogg
-│  ╰─ some_sound.mp3
 ├─ _hello_world.dm
 ├─ _hello_world.dme
+╰─ README.md
+```
+А вот иконки и звуки стоит хранить в двух общих паках
+  - `icons` - содержит **только** файлы изображений
+  - `sounds` - содержит **только** файлы звуков
+
+Это `_storge_icons` и `_storge_sounds` и выглядеть их структура будет так:
+```
+mod_celadon/_storge_icons
+├─ icons
+│  ├─ any_icon.dmi
+│  ╰─ some_icon.png
+├─ _storge_icons.dm
+├─ _storge_icons.dme
+╰─ README.md
+```
+
+```
+mod_celadon/_storge_sounds
+├─ sound
+│  ├─ any_sound.ogg
+│  ╰─ some_sound.mp3
+├─ _storge_sounds.dm
+├─ _storge_sounds.dme
 ╰─ README.md
 ```
 
@@ -303,7 +320,7 @@ mod_celadon/hello_world
   // [CELADON-EDIT] - SHUTTLE_TOGGLE - (Optional Reason/comment)
   // if(SHUTTLE_STRANDED, SHUTTLE_ESCAPE) // CELADON-EDIT - ORIGINAL
   if(SHUTTLE_STRANDED, SHUTTLE_ESCAPE, SHUTTLE_DISABLED)
-  // [CELADON-EDIT]
+  // [/CELADON-EDIT]
       return 1
   ```
 

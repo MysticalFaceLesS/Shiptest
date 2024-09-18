@@ -63,13 +63,22 @@ const SharedContent = (_props, context) => {
           />
         }
         buttons={
-          <Button
-            tooltip="Refresh Ship Stats"
-            tooltipPosition="left"
-            icon="sync"
-            disabled={isViewer}
-            onClick={() => act('reload_ship')}
-          />
+          <>
+            <Button
+              tooltip="Refresh Ship Stats"
+              tooltipPosition="left"
+              icon="sync"
+              disabled={isViewer}
+              onClick={() => act('reload_ship')}
+            />
+            <Button // [CELADON-ADD] - Signal S.O.S - mod_celadon\wideband\code\signal.dm
+              tooltip="Send S.O.S."
+              tooltipPosition="left"
+              icon="globe"
+              disabled={isViewer}
+              onClick={() => act('send_sos')}
+            />
+          </>
         }
       >
         <LabeledList>

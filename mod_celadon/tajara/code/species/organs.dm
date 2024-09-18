@@ -34,7 +34,7 @@
 
 /obj/item/organ/eyes/tajara
 	name = "Tajara eyes"
-	icon = 'mod_celadon/tajara/icons/tajara_organs.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/tajara/tajara_organs.dmi'
 	icon_state = "night_eyes_off"
 	desc = "Some eyes"
 	actions_types = list(/datum/action/item_action/organ_action/toggle)
@@ -46,16 +46,19 @@
 	. = ..()
 
 /obj/item/organ/eyes/tajara/Destroy()
-	if(active)
-		deactivate()
+	//if(active)
+	//	deactivate()
+	icon_state = "eyes"
 	. = ..()
 
 /obj/item/organ/eyes/tajara/Remove(mob/living/carbon/M, special = FALSE)
-	if(active)
-		deactivate()
+	//if(active)
+	//	deactivate()
+	icon_state = "eyes"
 	. = ..()
 
 /obj/item/organ/eyes/tajara/ui_action_click()
+
 	toggle_active()
 
 /obj/item/organ/eyes/tajara/proc/toggle_active()
@@ -66,18 +69,27 @@
 
 /obj/item/organ/eyes/tajara/proc/activate()
 	active = TRUE
+	icon_state = "night_eyes_on"
 	current_lighting_alpha = lighting_alpha
 	lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
 	see_in_dark = 6
 	owner.add_client_colour(/datum/client_colour/monochrome)
 	owner.update_sight()
-
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.UpdateButtonIcon()
+	return TRUE
 /obj/item/organ/eyes/tajara/proc/deactivate()
 	active = FALSE
+	icon_state = "night_eyes_off"
 	lighting_alpha = current_lighting_alpha
 	see_in_dark = 2
 	owner.remove_client_colour(/datum/client_colour/monochrome)
 	owner.update_sight()
+	for(var/X in actions)
+		var/datum/action/A = X
+		A.UpdateButtonIcon()
+	return TRUE
 
 /*
 	  ____      _     *

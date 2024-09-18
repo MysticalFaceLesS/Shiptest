@@ -114,7 +114,7 @@
 
 //did you know you can subtype /image and /mutable_appearance? // Stop telling them that they might actually do it
 /image/fov_image
-	icon = 'mod_celadon/items/icons/fov/fov_effects.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/items/fov/fov_effects.dmi'
 	layer = EFFECTS_LAYER + FOV_EFFECT_LAYER
 	appearance_flags = RESET_COLOR | RESET_TRANSFORM
 	plane = FULLSCREEN_PLANE
@@ -152,8 +152,13 @@
 		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(remove_image_from_clients), fov_image, clients_shown), time)
 
 /atom/movable/screen/fov_blocker
-	icon = 'mod_celadon/items/icons/fov/fov_effects.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/items/fov/fov_effects.dmi'
 	icon_state = "90"
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	plane = FIELD_OF_VISION_BLOCKER_PLANE
 	screen_loc = "BOTTOM,LEFT"
+
+/// Like remove_image_from_client, but will remove the image from a list of clients
+/proc/remove_image_from_clients(image/image_to_remove, list/hide_from)
+	for(var/client/remove_from in hide_from)
+		remove_from.images -= image_to_remove

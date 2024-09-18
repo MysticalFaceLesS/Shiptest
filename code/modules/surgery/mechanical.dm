@@ -44,8 +44,12 @@
 		brutehealing = 5
 		burnhealing = 0
 		repairtype = "dents"
-		preop_sound = 'sound/items/welder.ogg'
-		success_sound = 'sound/items/welder2.ogg'
+		// [CELADON-EDIT] - CELADON_IPC_SURGERY
+		// preop_sound = 'sound/items/welder.ogg'
+		// success_sound = 'sound/items/welder2.ogg'	// CELADON-EDIT - ORIGINAL
+		success_sound = pick('sound/items/welder2.ogg','sound/items/welder.ogg')
+		// [/CELADON-EDIT]
+		success_sound = pick('sound/items/welder2.ogg','sound/items/welder.ogg')
 	if(tool.tool_behaviour == TOOL_WIRECUTTER || tool.tool_behaviour == TOOL_HEMOSTAT || tool.tool_behaviour == TOOL_RETRACTOR)
 		burnhealing = 5
 		brutehealing = 0

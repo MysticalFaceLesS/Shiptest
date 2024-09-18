@@ -116,7 +116,7 @@ ID мода: TAJARA
 
 ### Дефайны
 
-- `code/__DEFINES/~mods/tajara.dm`:
+- `code/__DEFINES/~mod_celadon/tajara.dm`:
   - `DNA_SKIN_TONE_NOSE_BLOCK`
   - `SKINNOSECOLORS`
   - `SKINTAJARACOLORS`
@@ -136,6 +136,9 @@ ID мода: TAJARA
 ### Используемые файлы, не содержащиеся в модпаке
 
 - `icons/mob/augmentation/augments_lizard.dmi`
+- `mod_celadon/_storge_icons/icons`
+- `mod_celadon/_storge_icons/icons/tajara`
+- `mod_celadon/_storge_sounds/sound`
 
 ### Авторы:
 

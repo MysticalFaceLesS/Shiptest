@@ -118,8 +118,7 @@
 	icon_state = "sec_wall";
 	name = "Captain's locker";
 	pixel_y = -29;
-	req_access_txt = list(20);
-	req_ship_access = 1
+	req_access_txt = 0
 	},
 /obj/item/radio/intercom/wideband/directional/north,
 /obj/item/tank/internals/emergency_oxygen/double,
@@ -206,7 +205,9 @@
 	icon_state = "rwindow";
 	dir = 1
 	},
-/obj/machinery/door/window/brigdoor/security/cell/westleft,
+/obj/machinery/door/window/brigdoor/security/cell/westleft{
+	req_access = 0
+	},
 /obj/structure/chair/greyscale{
 	dir = 8
 	},
@@ -238,8 +239,7 @@
 /obj/machinery/door/window/northleft{
 	dir = 8;
 	name = "Captain's Bunk";
-	req_access = list(20);
-	req_ship_access = 1
+	req_access = 0
 	},
 /obj/machinery/light_switch{
 	pixel_y = -19;
@@ -249,6 +249,9 @@
 /obj/machinery/turretid{
 	pixel_y = 24;
 	pixel_x = 5
+	},
+/obj/machinery/newscaster/directional/south{
+	pixel_x = -2
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/bridge)
@@ -284,6 +287,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
+/obj/machinery/holopad,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/bridge)
 "L" = (
@@ -315,7 +319,8 @@
 	name = "jet lancer"
 	},
 /obj/machinery/door/airlock/security{
-	dir = 4
+	dir = 4;
+	req_ship_access = 0
 	},
 /obj/structure/cable{
 	icon_state = "4-8"

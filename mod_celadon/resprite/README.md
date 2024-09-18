@@ -25,6 +25,7 @@ ID мода: RESPRITE
 - Камеры охраны заменены на Эрисовские.
 - Ковбойские сапоги заменены на новые.
 - Мусорки заменены на новые.
+- Заменены спрайты шлемов и масок для сарати
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
   А также любая полезная информация.
@@ -32,7 +33,28 @@ ID мода: RESPRITE
 
 ### Изменения *кор кода*
 
-- Отсутствуют
+- ADD:
+  - `code/game/objects/items.dm`
+    - `var/snout_override_icon`
+  - `shiptest.dme`
+    - `#include "code\__DEFINES\~mod_celadon\sarathi.dm"`
+- EDIT:
+  - `code/modules/mob/living/carbon/human/update_icons.dm`
+    - if(dna.species.bodytype & BODYTYPE_SNOUT)
+			icon_file = SARATHI_SNOUTED_HELM_PATH
+			if(I.snout_override_icon)
+				icon_file = I.snout_override_icon
+			else
+				handled_by_bodytype = TRUE
+	- if(dna.species.bodytype & BODYTYPE_SNOUT)
+				icon_file = SARATHI_SNOUTED_MASK_PATH
+				if(I.snout_override_icon)
+					icon_file = I.snout_override_icon
+			else
+				handled_by_bodytype = TRUE
+  - `code/modules/shuttle/ripple.dm`
+    - `/obj/effect/abstract/ripple/proc/stop_animation()`
+	   - `icon_state = "landing_noanim"`
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -53,7 +75,9 @@ ID мода: RESPRITE
 
 ### Дефайны
 
-- Отсутствуют
+- `code/__DEFINES/~mod_celadon/sarathi.dm`:
+  - `SARATHI_SNOUTED_MASK_PATH`
+  - `SARATHI_SNOUTED_HELM_PATH`
 <!--
   Если требовалось добавить какие-либо дефайны, укажи файлы,
   в которые ты их добавил, а также перечисли имена.
@@ -64,7 +88,9 @@ ID мода: RESPRITE
 
 ### Используемые файлы, не содержащиеся в модпаке
 
-- Отсутствуют
+- `mod_celadon/_storge_icons/icons/resprite`
+- `mod_celadon/_storge_icons/icons/helms_snouted.dmi`
+- `mod_celadon/_storge_icons/icons/mask_snouted.dmi`
 <!--
   Будь то немодульный файл или модульный файл, который не содержится в папке,
   принадлежащей этому конкретному моду, он должен быть упомянут здесь.
@@ -74,7 +100,7 @@ ID мода: RESPRITE
 
 ### Авторы:
 
-MrCat15352, Yata9arsu
+MrCat15352, Yata9arsu, Kottason, RalseiDreemuurr
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.

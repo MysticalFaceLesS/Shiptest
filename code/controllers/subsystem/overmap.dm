@@ -291,17 +291,22 @@ SUBSYSTEM_DEF(overmap)
 	mapgen.generate_turfs(vlevel.get_unreserved_block())
 
 	var/list/ruin_turfs = list()
+	var/list/ruin_templates = list()
 	if(used_ruin)
 		var/turf/ruin_turf = locate(
 			rand(
 				vlevel.low_x+6 + vlevel.reserved_margin,
 				vlevel.high_x-used_ruin.width-6 - vlevel.reserved_margin
 			),
-			vlevel.high_y-used_ruin.height-6 - vlevel.reserved_margin,
+	// [CELADON-EDIT] - CELADON_MAP_EXPANSION - Координаты спавна руин
+	// 		vlevel.high_y-used_ruin.height-6 - vlevel.reserved_margin,	// CELADON-EDIT -> ORIGINAL
+			vlevel.high_y-used_ruin.height-60 - vlevel.reserved_margin,
+	// [/CELADON-EDIT]
 			vlevel.z_value
 		)
 		used_ruin.load(ruin_turf)
 		ruin_turfs[used_ruin.name] = ruin_turf
+		ruin_templates[used_ruin.name] = used_ruin
 
 	// fill in the turfs, AFTER generating the ruin. this prevents them from generating within the ruin
 	// and ALSO prevents the ruin from being spaced when it spawns in
@@ -318,11 +323,30 @@ SUBSYSTEM_DEF(overmap)
 		vlevel.z_value
 		)
 	// now we need to offset to account for the first dock
+
+	// [CELADON-EDIT] - CELADON_MAP_EXPANSION - Смещение док порта
 	var/turf/secondary_docking_turf = locate(
-		primary_docking_turf.x+RESERVE_DOCK_MAX_SIZE_LONG+RESERVE_DOCK_DEFAULT_PADDING,
+	// 	primary_docking_turf.x+RESERVE_DOCK_MAX_SIZE_LONG+RESERVE_DOCK_DEFAULT_PADDING,	// CELADON-EDIT -> ORIGINAL
+	// 	primary_docking_turf.y,	// CELADON-EDIT -> ORIGINAL
+		primary_docking_turf.x+60+RESERVE_DOCK_MAX_SIZE_LONG+RESERVE_DOCK_DEFAULT_PADDING,
+		primary_docking_turf.y+75+RESERVE_DOCK_MAX_SIZE_LONG+RESERVE_DOCK_DEFAULT_PADDING,
+		primary_docking_turf.z
+		)
+	// [/CELADON-EDIT]
+
+	// [CELADON-ADD] - CELADON_MAP_EXPANSION - Добавление координат для док портов
+	var/turf/third_docking_turf = locate(
+		primary_docking_turf.x+60+RESERVE_DOCK_MAX_SIZE_LONG+RESERVE_DOCK_DEFAULT_PADDING,
 		primary_docking_turf.y,
 		primary_docking_turf.z
 		)
+
+	var/turf/fourth_docking_turf = locate(
+		primary_docking_turf.x,
+		primary_docking_turf.y+75+RESERVE_DOCK_MAX_SIZE_LONG+RESERVE_DOCK_DEFAULT_PADDING,
+		primary_docking_turf.z
+		)
+	// [/CELADON-ADD]
 
 	var/list/docking_ports = list()
 
@@ -344,39 +368,61 @@ SUBSYSTEM_DEF(overmap)
 	secondary_dock.dwidth = 0
 	docking_ports += secondary_dock
 
-	if(!used_ruin)
-		// no ruin, so we can make more docks upward
-		var/turf/tertiary_docking_turf = locate(
-			primary_docking_turf.x,
-			primary_docking_turf.y+RESERVE_DOCK_MAX_SIZE_SHORT+RESERVE_DOCK_DEFAULT_PADDING,
-			primary_docking_turf.z
-		)
-		// rinse and repeat
-		var/turf/quaternary_docking_turf = locate(
-			secondary_docking_turf.x,
-			secondary_docking_turf.y+RESERVE_DOCK_MAX_SIZE_SHORT+RESERVE_DOCK_DEFAULT_PADDING,
-			secondary_docking_turf.z
-		)
+	// [CELADON-ADD] - CELADON_MAP_EXPANSION - Создание док порта исходя из ранее заданных координат
+	var/obj/docking_port/stationary/third_dock = new(third_docking_turf)
+	third_dock.dir = NORTH
+	third_dock.name = "[encounter_name] docking location #3"
+	third_dock.height = RESERVE_DOCK_MAX_SIZE_SHORT
+	third_dock.width = RESERVE_DOCK_MAX_SIZE_LONG
+	third_dock.dheight = 0
+	third_dock.dwidth = 0
+	docking_ports += third_dock
 
-		var/obj/docking_port/stationary/tertiary_dock = new(tertiary_docking_turf)
-		tertiary_dock.dir = NORTH
-		tertiary_dock.name = "[encounter_name] docking location #3"
-		tertiary_dock.height = RESERVE_DOCK_MAX_SIZE_SHORT
-		tertiary_dock.width = RESERVE_DOCK_MAX_SIZE_LONG
-		tertiary_dock.dheight = 0
-		tertiary_dock.dwidth = 0
-		docking_ports += tertiary_dock
+	var/obj/docking_port/stationary/fourth_dock = new(fourth_docking_turf)
+	fourth_dock.dir = NORTH
+	fourth_dock.name = "[encounter_name] docking location #4"
+	fourth_dock.height = RESERVE_DOCK_MAX_SIZE_SHORT
+	fourth_dock.width = RESERVE_DOCK_MAX_SIZE_LONG
+	fourth_dock.dheight = 0
+	fourth_dock.dwidth = 0
+	docking_ports += fourth_dock
+	// [/CELADON-ADD]
 
-		var/obj/docking_port/stationary/quaternary_dock = new(quaternary_docking_turf)
-		quaternary_dock.dir = NORTH
-		quaternary_dock.name = "[encounter_name] docking location #4"
-		quaternary_dock.height = RESERVE_DOCK_MAX_SIZE_SHORT
-		quaternary_dock.width = RESERVE_DOCK_MAX_SIZE_LONG
-		quaternary_dock.dheight = 0
-		quaternary_dock.dwidth = 0
-		docking_ports += quaternary_dock
+	// [CELADON-REMOVE] - CELADON_MAP_EXPANSION - Чтобы не возникало лишних док портов
+	// if(!used_ruin)
+	// 	// no ruin, so we can make more docks upward
+	// 	var/turf/tertiary_docking_turf = locate(
+	// 		primary_docking_turf.x,
+	// 		primary_docking_turf.y+RESERVE_DOCK_MAX_SIZE_SHORT+RESERVE_DOCK_DEFAULT_PADDING,
+	// 		primary_docking_turf.z
+	// 	)
+	// 	// rinse and repeat
+	// 	var/turf/quaternary_docking_turf = locate(
+	// 		secondary_docking_turf.x,
+	// 		secondary_docking_turf.y+RESERVE_DOCK_MAX_SIZE_SHORT+RESERVE_DOCK_DEFAULT_PADDING,
+	// 		secondary_docking_turf.z
+	// 	)
 
-	return list(mapzone, docking_ports, ruin_turfs)
+	// 	var/obj/docking_port/stationary/tertiary_dock = new(tertiary_docking_turf)
+	// 	tertiary_dock.dir = NORTH
+	// 	tertiary_dock.name = "[encounter_name] docking location #3"
+	// 	tertiary_dock.height = RESERVE_DOCK_MAX_SIZE_SHORT
+	// 	tertiary_dock.width = RESERVE_DOCK_MAX_SIZE_LONG
+	// 	tertiary_dock.dheight = 0
+	// 	tertiary_dock.dwidth = 0
+	// 	docking_ports += tertiary_dock
+
+	// 	var/obj/docking_port/stationary/quaternary_dock = new(quaternary_docking_turf)
+	// 	quaternary_dock.dir = NORTH
+	// 	quaternary_dock.name = "[encounter_name] docking location #4"
+	// 	quaternary_dock.height = RESERVE_DOCK_MAX_SIZE_SHORT
+	// 	quaternary_dock.width = RESERVE_DOCK_MAX_SIZE_LONG
+	// 	quaternary_dock.dheight = 0
+	// 	quaternary_dock.dwidth = 0
+	// 	docking_ports += quaternary_dock
+	// [/CELADON-REMOVE]
+
+	return list(mapzone, docking_ports, ruin_turfs, ruin_templates)
 
 /**
  * Returns a random, usually empty turf in the overmap
@@ -418,10 +464,10 @@ SUBSYSTEM_DEF(overmap)
  * Gets the parent overmap object (e.g. the planet the atom is on) for a given atom.
  * * source - The object you want to get the corresponding parent overmap object for.
  */
-/datum/controller/subsystem/overmap/proc/get_overmap_object_by_location(atom/source)
+/datum/controller/subsystem/overmap/proc/get_overmap_object_by_location(atom/source, exclude_ship = FALSE)
 	var/turf/T = get_turf(source)
 	var/area/ship/A = get_area(source)
-	while(istype(A) && A.mobile_port)
+	while(istype(A) && A.mobile_port && !exclude_ship)
 		if(A.mobile_port.current_ship)
 			return A.mobile_port.current_ship
 		A = A.mobile_port.underlying_turf_area[T]

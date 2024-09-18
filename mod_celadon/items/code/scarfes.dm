@@ -2,8 +2,8 @@
 // 		Scarf
 //********************
 /obj/item/clothing/neck/scarf/tajaran //Default white color, same functionality as beanies.
-	icon = 'mod_celadon/items/icons/obj/tajara_items.dmi'
-	mob_overlay_icon = 'mod_celadon/items/icons/overlay/tajara_items_overlay.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/items/obj/tajara_items.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/items/overlay/tajara_items_overlay.dmi'
 	name = "fur scarf"
 	desc = "A furred scarf, a common item, this one is brown."
 	icon_state = "furscarf_brown"
@@ -48,3 +48,9 @@
 	desc = "A furred scarf, a common item, this one is cream."
 	icon_state = "furscarf_cream"
 	item_state = "furscarf_cream"
+
+/obj/item/clothing/neck/scarf/syndie
+	name = "Grey-Red scarf"
+	icon = 'mod_celadon/_storge_icons/icons/items/obj/neck/neck.dmi'
+	icon_state = "stripedsyndiescarf"
+	item_state = "stripedsyndiescarf"

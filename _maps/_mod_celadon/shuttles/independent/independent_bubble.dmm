@@ -71,6 +71,9 @@
 	pixel_y = 23;
 	id = "thr"
 	},
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
 /turf/open/floor/plating,
 /area/ship/maintenance/aft)
 "cO" = (
@@ -112,12 +115,15 @@
 /turf/open/floor/carpet,
 /area/ship/crew/dorm)
 "eI" = (
-/obj/structure/frame/computer{
-	dir = 8
-	},
 /obj/machinery/airalarm/directional/north,
 /obj/effect/turf_decal/corner/opaque/blue/three_quarters{
 	dir = 8
+	},
+/obj/structure/table/reinforced,
+/obj/item/radio/intercom/wideband/table{
+	dir = 4;
+	pixel_y = 2;
+	pixel_x = 1
 	},
 /turf/open/floor/plasteel,
 /area/ship/bridge)
@@ -272,10 +278,6 @@
 	pixel_y = -11
 	},
 /obj/machinery/power/apc/auto_name/directional/west,
-/obj/structure/closet/wall/blue{
-	pixel_y = 32
-	},
-/obj/item/areaeditor/shuttle,
 /obj/item/spacecash/bundle/c1000,
 /obj/item/spacecash/bundle/c1000,
 /obj/item/spacecash/bundle/c1000,
@@ -287,6 +289,7 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
+/obj/structure/closet/wall/blue/directional/north,
 /turf/open/floor/plasteel,
 /area/ship/bridge)
 "lV" = (
@@ -384,12 +387,12 @@
 /turf/open/floor/plasteel/mono,
 /area/ship/cargo)
 "od" = (
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
 /obj/structure/crate_shelf,
 /obj/machinery/atmospherics/pipe/simple/orange/visible{
 	dir = 6
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
 	},
 /turf/open/floor/plating,
 /area/ship/maintenance/aft)
@@ -545,6 +548,7 @@
 "rx" = (
 /obj/machinery/vending/clothing,
 /obj/machinery/firealarm/directional/south,
+/obj/machinery/newscaster/directional/west,
 /turf/open/floor/carpet,
 /area/ship/crew/dorm)
 "rV" = (
@@ -625,14 +629,19 @@
 /turf/open/floor/plasteel/mono,
 /area/ship/engineering)
 "ws" = (
-/obj/machinery/computer/cargo/express{
+/obj/machinery/computer/cargo{
 	dir = 8
 	},
 /obj/effect/turf_decal/corner/opaque/blue/three_quarters,
 /obj/machinery/button/door{
 	dir = 1;
 	pixel_y = -23;
-	id = "bridge"
+	id = "bridge";
+	pixel_x = -6
+	},
+/obj/machinery/newscaster/directional/south{
+	pixel_x = 7;
+	pixel_y = -35
 	},
 /turf/open/floor/plasteel,
 /area/ship/bridge)
@@ -699,6 +708,7 @@
 /obj/machinery/microwave{
 	pixel_y = 5
 	},
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/plasteel,
 /area/ship/hallway/central)
 "zu" = (

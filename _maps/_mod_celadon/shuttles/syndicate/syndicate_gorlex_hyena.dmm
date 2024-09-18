@@ -62,11 +62,11 @@
 /obj/item/clothing/glasses/hud/security/sunglasses/eyepatch,
 /obj/item/clothing/head/HoS/syndicate,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/item/gun/ballistic/revolver,
 /obj/item/ammo_box/a357/match,
 /obj/item/ammo_box/a357/match,
 /obj/item/ammo_box/a357/match,
 /obj/item/pen/edagger,
+/obj/item/gun/ballistic/revolver/syndicate,
 /turf/open/floor/carpet/black,
 /area/ship/bridge)
 "bJ" = (
@@ -440,6 +440,7 @@
 /obj/effect/turf_decal/arrows{
 	dir = 1
 	},
+/obj/machinery/newscaster/directional/east,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "iI" = (
@@ -962,7 +963,7 @@
 "pI" = (
 /obj/item/radio/intercom/wideband/directional/east,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/computer/cargo/express{
+/obj/machinery/computer/cargo{
 	dir = 1
 	},
 /obj/effect/turf_decal/borderfloorblack,
@@ -1664,11 +1665,11 @@
 /obj/item/storage/toolbox/syndicate,
 /obj/item/wrench/combat,
 /obj/item/ammo_box/magazine/m10mm,
-/obj/item/gun/ballistic/automatic/pistol,
 /obj/item/clothing/accessory/holster,
 /obj/item/grenade/chem_grenade/metalfoam,
 /obj/machinery/airalarm/directional/west,
 /obj/item/tank/jetpack/suit,
+/obj/item/gun/ballistic/automatic/pistol/syndicate,
 /turf/open/floor/carpet/red,
 /area/ship/cargo/office)
 "BB" = (
@@ -1679,11 +1680,11 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/hallway/central)
 "BG" = (
-/obj/machinery/porta_turret/ship/ballistic,
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "BR" = (
-/obj/machinery/porta_turret/ship/syndicate{
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
 	dir = 1
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
@@ -1817,7 +1818,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/airalarm/directional/west,
 /obj/structure/closet/wall/white/med{
-	dir = 1;
 	name = "medicine locker";
 	pixel_y = -28
 	},
@@ -2331,7 +2331,7 @@
 /turf/open/floor/carpet/red_gold,
 /area/ship/bridge)
 "NA" = (
-/obj/machinery/porta_turret/ship/syndicate,
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "NF" = (
@@ -2498,7 +2498,7 @@
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "Qz" = (
-/obj/machinery/porta_turret/ship/syndicate{
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
 	dir = 6
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -2801,6 +2801,9 @@
 /obj/effect/landmark/start/assistant,
 /obj/structure/extinguisher_cabinet/directional/north,
 /obj/structure/extinguisher_cabinet/directional/west,
+/obj/machinery/newscaster/directional/west{
+	pixel_y = 12
+	},
 /turf/open/floor/carpet/red,
 /area/ship/crew)
 "Tu" = (
@@ -2843,6 +2846,9 @@
 /obj/effect/turf_decal/steeldecal/steel_decals_central4{
 	dir = 1
 	},
+/obj/machinery/newscaster/directional/north{
+	pixel_x = -15
+	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "Ua" = (
@@ -2875,7 +2881,7 @@
 /turf/open/floor/carpet/red_gold,
 /area/ship/bridge)
 "Up" = (
-/obj/machinery/porta_turret/ship/syndicate/heavy{
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
 	dir = 4
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -2891,7 +2897,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/crew)
 "UN" = (
-/obj/machinery/porta_turret/ship/syndicate{
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
 	dir = 1
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -2921,6 +2927,7 @@
 /obj/effect/turf_decal/borderfloorblack{
 	dir = 4
 	},
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
 "VD" = (

@@ -651,6 +651,7 @@
 /obj/item/paper{
 	default_raw_text = "Missing protolathe. Lost in transit."
 	},
+/obj/machinery/newscaster/directional/west,
 /turf/open/floor/plasteel/dark,
 /area/ship/science)
 "ih" = (
@@ -1117,8 +1118,16 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/apc/auto_name/directional/south,
+/obj/machinery/power/apc/auto_name/directional/south{
+	pixel_y = -29;
+	pixel_x = -5
+	},
 /obj/machinery/suit_storage_unit/atmos,
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = 6;
+	pixel_y = -20
+	},
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ship/engineering/atmospherics)
 "ns" = (
@@ -1588,6 +1597,23 @@
 /obj/effect/turf_decal/industrial/warning/full,
 /turf/open/floor/plating,
 /area/ship/engineering/atmospherics)
+"wp" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/obj/effect/turf_decal/siding/thinplating/dark,
+/obj/machinery/newscaster/directional/south,
+/turf/open/floor/plasteel/dark,
+/area/ship/crew/canteen)
 "wr" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -2104,7 +2130,7 @@
 /turf/open/floor/pod,
 /area/ship/hallway/central)
 "Ev" = (
-/obj/machinery/computer/cargo/express{
+/obj/machinery/computer/cargo{
 	dir = 4
 	},
 /obj/effect/turf_decal/siding/brown{
@@ -4167,7 +4193,7 @@ UK
 Yk
 gI
 TH
-tX
+wp
 dN
 iP
 sE

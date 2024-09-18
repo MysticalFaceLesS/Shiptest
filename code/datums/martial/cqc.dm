@@ -230,4 +230,12 @@
 /datum/martial_art/cqc/under_siege/can_use(mob/living/carbon/human/H) //this is used to make chef CQC only work in kitchen
 	if(!istype(get_area(H), /area/ship/crew/canteen/kitchen))
 		return FALSE
+	// [CELADON-ADD] - CELADON_GHOST_ROLES - Повар может использовать CQC дополнительно в ботанике, кафитерии и баре
+	if(!istype(get_area(H), /area/outpost/crew/garden))
+		return FALSE
+	if(!istype(get_area(H), /area/outpost/crew/canteen))
+		return FALSE
+	if(!istype(get_area(H), /area/outpost/crew/bar))
+		return FALSE
+	// [/CELADON-ADD]
 	return ..()

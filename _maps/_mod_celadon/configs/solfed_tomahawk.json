@@ -1,0 +1,51 @@
+{
+	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
+	"map_name": "Tomahawk-class Scout Vessel",
+	"faction": "/datum/faction/solgov",
+	"prefix": "SFSV",
+	"namelists": [
+		"SOLGOV",
+		"SPACE",
+		"BRITISH_NAVY",
+		"NATURAL"
+	],
+	"map_short_name": "Tomahawk-class",
+	"map_path": "_maps/_mod_celadon/shuttles/solfed/solfed_tomahawk.dmm",
+	"starting_funds": 4000,
+	"description": "Корабль Солнечной Федерации класса Томагавк служит для фронтовой разведки с боем. Данный корабль обладает хорошей скоростью, не смотря на свои габариты. На судне предусмотрены рабочие места для двух медиков, трёх полевых инженеров и одного корабельного. С консультациями капитану помогает надзиратель, у которого есть своя каюта",
+	"tags": ["Разведка", "Бой", "Шахтёрство"],
+	"limit": 1,
+	"job_slots": {
+		"Captain": {
+			"outfit": "/datum/outfit/job/solgov/captain",
+			"officer": true,
+			"slots": 1
+		},
+		"Overseer": {
+			"outfit": "/datum/outfit/job/solgov/overseer",
+			"officer": true,
+			"slots": 1
+		},
+		"Sonnensöldner": {
+			"outfit": "/datum/outfit/job/solgov/sonnensoldner",
+			"slots": 4
+		},
+		"Medical Doctor": {
+			"outfit": "/datum/outfit/job/solgov/doctor",
+			"slots": 2
+		},
+		"Ship Engineer": {
+			"outfit": "/datum/outfit/job/solgov/engineer",
+			"slots": 1
+		},
+		"Field Engineer": {
+			"outfit": "/datum/outfit/job/solgov/miner",
+			"slots": 3
+		},
+		"Scribe": {
+			"outfit": "/datum/outfit/job/solgov/assistant",
+			"slots" : 2
+		}
+	},
+	"enabled": true
+}

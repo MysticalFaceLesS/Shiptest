@@ -219,6 +219,7 @@
 	desc = "A little guy."
 	},
 /obj/effect/decal/cleanable/wrapping,
+/obj/machinery/newscaster/directional/west,
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "dJ" = (
@@ -312,7 +313,7 @@
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/hallway/central)
 "ea" = (
-/obj/machinery/porta_turret/ship/syndicate/weak{
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
 	dir = 6
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -1093,7 +1094,7 @@
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/crew/canteen)
 "kG" = (
-/obj/machinery/porta_turret/ship/syndicate/weak{
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
 	dir = 1
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -1670,7 +1671,7 @@
 /turf/open/floor/plating,
 /area/ship/engineering)
 "pN" = (
-/obj/machinery/porta_turret/ship/syndicate/weak{
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
 	dir = 9
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -1856,6 +1857,7 @@
 	pixel_y = -23;
 	pixel_x = 4
 	},
+/obj/machinery/newscaster/directional/west,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/crew/canteen)
 "rN" = (
@@ -1869,7 +1871,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "rS" = (
-/obj/machinery/porta_turret/ship/syndicate/weak{
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
 	dir = 5
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -2692,7 +2694,7 @@
 /obj/effect/turf_decal/industrial/fire{
 	dir = 8
 	},
-/obj/structure/guncase,
+/obj/structure/guncloset,
 /obj/structure/railing,
 /obj/machinery/light/directional/east,
 /obj/item/gun/ballistic/automatic/smg/c20r{
@@ -2719,7 +2721,10 @@
 /obj/machinery/light_switch{
 	dir = 8;
 	pixel_x = 23;
-	pixel_y = 12
+	pixel_y = 14
+	},
+/obj/machinery/newscaster/directional/east{
+	pixel_y = 4
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/ship/medical)
@@ -2775,6 +2780,7 @@
 /obj/effect/turf_decal/syndicateemblem/middle/left{
 	dir = 8
 	},
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/hallway/central)
 "Aa" = (
@@ -2846,9 +2852,6 @@
 /obj/effect/turf_decal/borderfloor{
 	dir = 1
 	},
-/obj/item/gun/ballistic/automatic/pistol{
-	pixel_y = 3
-	},
 /obj/item/ammo_box/magazine/m10mm,
 /obj/item/ammo_box/magazine/m10mm,
 /obj/item/ammo_box/c10mm,
@@ -2871,7 +2874,7 @@
 /obj/item/clothing/shoes/combat,
 /obj/item/radio/headset/syndicate,
 /obj/item/clothing/glasses/hud/security/sunglasses,
-/obj/item/suppressor,
+/obj/item/gun/ballistic/automatic/pistol/syndicate,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "AS" = (
@@ -2912,7 +2915,7 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "Bx" = (
-/obj/machinery/porta_turret/ship/syndicate/weak,
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic,
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
 "BK" = (
@@ -3101,6 +3104,7 @@
 /obj/item/gun/ballistic/derringer/traitor,
 /obj/item/clothing/shoes/combat,
 /obj/item/clothing/gloves/tackler/combat/insulated,
+/obj/item/gun/ballistic/revolver/syndicate,
 /turf/open/floor/carpet/black,
 /area/ship/bridge)
 "El" = (
@@ -3390,7 +3394,7 @@
 	pixel_y = 1
 	},
 /obj/item/clothing/mask/gas/syndicate{
-	pixel_x = -4
+	pixel_x = -5
 	},
 /obj/machinery/firealarm/directional/east,
 /obj/item/codespeak_manual/unlimited{
@@ -3449,7 +3453,7 @@
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/hallway/central)
 "HI" = (
-/obj/machinery/computer/cargo/express{
+/obj/machinery/computer/cargo{
 	layer = 3
 	},
 /obj/effect/turf_decal/techfloor{
@@ -4017,6 +4021,9 @@
 /obj/item/clothing/head/helmet/swat,
 /obj/item/clothing/head/helmet/swat,
 /obj/item/clothing/head/helmet/swat,
+/obj/item/attachment/silencer,
+/obj/item/attachment/silencer,
+/obj/item/attachment/silencer,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "Nj" = (
@@ -4117,7 +4124,7 @@
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/hallway/central)
 "OP" = (
-/obj/machinery/porta_turret/ship/syndicate/weak{
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
 	dir = 10
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -5108,6 +5115,7 @@
 	dir = 5
 	},
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/holofloor/wood,
 /area/ship/bridge)
 "Yb" = (

@@ -1107,7 +1107,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
 "dg" = (
-/obj/machinery/computer/cargo/express/retro{
+/obj/machinery/computer/cargo/retro{
 	dir = 8
 	},
 /obj/effect/turf_decal/corner/opaque/blue/three_quarters{
@@ -1773,6 +1773,9 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/newscaster/directional/east{
+	pixel_y = 13
+	},
 /turf/open/floor/plasteel,
 /area/ship/crew/canteen)
 "li" = (
@@ -1879,6 +1882,12 @@
 /obj/effect/decal/cleanable/garbage,
 /turf/open/floor/plating,
 /area/ship/engineering)
+"mm" = (
+/obj/machinery/porta_turret/ship/faction/nanotrasen{
+	dir = 6
+	},
+/turf/closed/wall/mineral/titanium,
+/area/ship/bridge)
 "my" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2060,6 +2069,9 @@
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/radio/intercom/wideband/directional/north,
+/obj/machinery/newscaster/directional/north{
+	pixel_x = 20
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "rU" = (
@@ -2647,7 +2659,7 @@
 /area/ship/cargo)
 "Du" = (
 /obj/effect/turf_decal/corner/transparent/neutral/full,
-/obj/machinery/computer/cargo/express/retro{
+/obj/machinery/computer/cargo/retro{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt/dust,
@@ -2799,6 +2811,7 @@
 	},
 /obj/structure/chair/sofa/brown/left/directional/south,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/wood,
 /area/ship/crew/canteen/kitchen)
 "FV" = (
@@ -2842,6 +2855,12 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel,
 /area/ship/crew/canteen)
+"Go" = (
+/obj/machinery/porta_turret/ship/faction/nanotrasen{
+	dir = 5
+	},
+/turf/closed/wall/mineral/titanium,
+/area/ship/bridge)
 "Gr" = (
 /obj/structure/table,
 /obj/machinery/reagentgrinder{
@@ -3059,7 +3078,7 @@
 /turf/open/floor/plating,
 /area/ship/engineering)
 "Lo" = (
-/obj/machinery/porta_turret/ship/weak{
+/obj/machinery/porta_turret/ship/faction/nanotrasen{
 	dir = 1
 	},
 /turf/closed/wall/mineral/titanium,
@@ -3428,6 +3447,10 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel,
 /area/ship/crew/canteen)
+"SL" = (
+/obj/machinery/porta_turret/ship/faction/nanotrasen,
+/turf/closed/wall/mineral/titanium,
+/area/ship/bridge)
 "TQ" = (
 /obj/item/reagent_containers/food/snacks/canned/beans{
 	pixel_x = -5;
@@ -3881,7 +3904,7 @@ bj
 fX
 dK
 ac
-Lo
+SL
 aa
 "}
 (7,1,1) = {"
@@ -4206,7 +4229,7 @@ sA
 Uk
 an
 bD
-Lo
+SL
 aa
 "}
 (20,1,1) = {"
@@ -4412,12 +4435,12 @@ aa
 (28,1,1) = {"
 aa
 aa
-Lo
+Go
 ai
 ai
 ai
 ai
-Lo
+mm
 aa
 aa
 aa
@@ -4425,12 +4448,12 @@ aa
 aa
 aa
 aa
-Lo
+Go
 cO
 cO
 cO
 cO
-Lo
+mm
 aa
 aa
 "}

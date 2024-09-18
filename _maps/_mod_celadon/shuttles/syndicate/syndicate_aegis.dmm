@@ -22,6 +22,9 @@
 	dir = 10
 	},
 /obj/machinery/light/small/directional/west,
+/obj/machinery/newscaster/directional/west{
+	pixel_y = 10
+	},
 /turf/open/floor/mineral/plastitanium/red{
 	icon_state = "plastitanium"
 	},
@@ -43,7 +46,7 @@
 /obj/item/clothing/neck/cloak/suns/cap,
 /obj/item/clothing/head/suns/captain,
 /obj/item/clothing/shoes/combat/suns,
-/obj/item/clothing/suit/armor/vest/bulletproof/suns/captain,
+/obj/item/clothing/suit/armor/vest/suns/captain,
 /obj/item/clothing/under/syndicate/suns/captain,
 /obj/item/clothing/shoes/laceup/suns,
 /obj/item/clothing/mask/gas/suns,
@@ -193,6 +196,7 @@
 /obj/structure/sign/poster/official/moth/hardhats{
 	pixel_y = 32
 	},
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/plating,
 /area/ship/engineering)
 "bt" = (
@@ -577,7 +581,7 @@
 /obj/item/clothing/gloves/color/latex/nitrile/suns,
 /obj/item/clothing/shoes/laceup/suns,
 /obj/item/clothing/shoes/sneakers/suns,
-/obj/item/clothing/suit/armor/vest/bulletproof/suns/xo,
+/obj/item/clothing/suit/armor/vest/suns/xo,
 /obj/item/clothing/suit/hooded/suns,
 /obj/item/clothing/suit/toggle/labcoat/suns/cmo,
 /obj/item/clothing/under/syndicate/suns/sciencejumpsuit,
@@ -870,6 +874,14 @@
 /obj/effect/spawner/lootdrop/donkpockets,
 /obj/effect/turf_decal/trimline/opaque/brown/filled/line,
 /obj/structure/table/wood/reinforced,
+/obj/item/food/cake/bscc{
+	pixel_x = -4;
+	pixel_y = 7
+	},
+/obj/item/food/cake/bsvc{
+	pixel_x = 5;
+	pixel_y = 6
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/canteen/kitchen)
 "gE" = (
@@ -1997,14 +2009,6 @@
 	pixel_x = -4;
 	pixel_y = -8
 	},
-/obj/item/reagent_containers/food/snacks/store/cake/bsvc{
-	pixel_x = 5;
-	pixel_y = 6
-	},
-/obj/item/reagent_containers/food/snacks/store/cake/bscc{
-	pixel_x = -4;
-	pixel_y = 7
-	},
 /turf/open/floor/wood/walnut,
 /area/ship/crew/office)
 "re" = (
@@ -2075,6 +2079,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/carpet/red,
 /area/ship/crew/office)
 "rO" = (
@@ -2742,7 +2747,7 @@
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/hallway/central)
 "Ae" = (
-/obj/machinery/computer/cargo/express{
+/obj/machinery/computer/cargo{
 	dir = 8
 	},
 /obj/effect/turf_decal/siding/wood{
@@ -2898,6 +2903,7 @@
 "Cd" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/newscaster/directional/west,
 /turf/open/floor/plasteel/dark,
 /area/ship/medical)
 "Ch" = (
@@ -3081,6 +3087,7 @@
 /area/ship/crew/canteen/kitchen)
 "Ee" = (
 /obj/structure/chair/sofa/brown/directional/north,
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/carpet/red,
 /area/ship/crew/canteen)
 "EJ" = (
@@ -3290,6 +3297,7 @@
 /obj/effect/turf_decal/trimline/opaque/black/line{
 	dir = 10
 	},
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/hallway/central)
 "Gc" = (
@@ -3305,6 +3313,7 @@
 /obj/effect/turf_decal/trimline/opaque/black/line{
 	dir = 1
 	},
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/hallway/central)
 "Gv" = (
@@ -3326,7 +3335,6 @@
 	icon_state = "4-8"
 	},
 /obj/structure/closet/secure_closet/freezer/kitchen/wall{
-	dir = 1;
 	pixel_y = -30
 	},
 /obj/item/storage/bag/tray,
@@ -3543,7 +3551,8 @@
 "JI" = (
 /obj/structure/closet/wall/white/med{
 	name = "medical locker";
-	pixel_y = 29
+	pixel_y = 29;
+	dir = 1
 	},
 /obj/item/clothing/gloves/color/latex/nitrile/evil,
 /obj/item/storage/belt/medical/surgery,
@@ -4711,6 +4720,7 @@
 	dir = 8
 	},
 /obj/item/seeds/potato,
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/hydroponics)
 "UH" = (
@@ -5017,6 +5027,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/item/reagent_containers/food/condiment/saltshaker,
 /obj/structure/table/wood/reinforced,
+/obj/machinery/newscaster/directional/west{
+	pixel_y = 5
+	},
 /turf/open/floor/wood/walnut,
 /area/ship/crew/canteen/kitchen)
 "Xb" = (
@@ -5232,7 +5245,8 @@
 "Zq" = (
 /obj/structure/closet/wall/orange{
 	name = "Engineering locker";
-	pixel_y = 30
+	pixel_y = 30;
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/orange/hidden{
 	dir = 8

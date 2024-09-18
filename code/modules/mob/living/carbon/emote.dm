@@ -70,15 +70,15 @@
 							'sound/misc/clap3.ogg',
 							'sound/misc/clap4.ogg')
 
-	/datum/emote/living/carbon/crack
-		key = "crack"
-		key_third_person = "cracks"
-		// [CELADON-EDIT] - CELADON_COMPONENTS_EMOTE - Эмоции
-		// message = "cracks their knuckles." // CELADON-EDIT - ORIGINAL
-		message = "хрустит костяшками пальцев."
-		// [/CELADON-EDIT]
-		sound = 'sound/misc/knuckles.ogg'
-		cooldown = 6 SECONDS
+/datum/emote/living/carbon/crack
+	key = "crack"
+	key_third_person = "cracks"
+	// [CELADON-EDIT] - CELADON_COMPONENTS_EMOTE - Эмоции
+	// message = "cracks their knuckles." - sound = 'sound/misc/crack.ogg'// CELADON-EDIT - ORIGINAL
+	message = "хрустит костяшками пальцев."
+	sound = 'mod_celadon/_storge_sounds/sound/voice/knuckles.ogg'
+	// [/CELADON-EDIT]
+	cooldown = 6 SECONDS
 
 /datum/emote/living/carbon/crack/can_run_emote(mob/living/carbon/user, status_check = TRUE , intentional)
 	if(user.usable_hands < 2)

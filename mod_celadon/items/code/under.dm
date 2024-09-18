@@ -2,8 +2,8 @@
 // 		UNDER
 //********************
 /obj/item/clothing/under/tajaran
-	icon = 'mod_celadon/items/icons/obj/tajara_items.dmi'
-	mob_overlay_icon = 'mod_celadon/items/icons/overlay/tajara_items_overlay.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/items/obj/tajara_items.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/items/overlay/tajara_items_overlay.dmi'
 	can_adjust = FALSE
 	name = "people's republic consular uniform"
 	desc = "An olive uniform used by the diplomatic service of the People's Republic."
@@ -50,8 +50,8 @@
 /obj/item/clothing/under/dress/tajaran
 	name = "fancy dress"
 	desc = "Created for the rich and party-loving circles, this dress is fashioned from smooth silk and is see through at parts. This one is white."
-	mob_overlay_icon = 'mod_celadon/items/icons/overlay/tajara_items_overlay.dmi'
-	icon = 'mod_celadon/items/icons/obj/tajara_items.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/items/overlay/tajara_items_overlay.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/items/obj/tajara_items.dmi'
 	icon_state = "taj_dress_white"
 	item_state = "taj_dress_white"
 
@@ -82,8 +82,8 @@
 	item_state = "taj_dress_fancy"
 
 /obj/item/clothing/under/suit/galaxy
-	icon = 'mod_celadon/items/icons/obj/suits/galaxy.dmi'
-	mob_overlay_icon = 'mod_celadon/items/icons/mob/suits/galaxy.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/items/obj/suits/galaxy.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/items/mob/suits/galaxy.dmi'
 	can_adjust = FALSE
 	name = "blue galaxy suit"
 	icon_state = "lawyer_galaxy_blue"
@@ -105,8 +105,8 @@
 	dying_key = DYE_REGISTRY_JUMPSKIRT
 
 /obj/item/clothing/under/suit/archeologist
-	icon = 'mod_celadon/items/icons/obj/tajara_items.dmi'
-	mob_overlay_icon = 'mod_celadon/items/icons/overlay/tajara_items_overlay.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/items/obj/tajara_items.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/items/overlay/tajara_items_overlay.dmi'
 	name = "archaeologist uniform"
 	desc = "A rugged uniform used by archaeologists. It is already covered in dirt and ancient dust."
 	icon_state = "explorer_uniform"
@@ -114,4 +114,12 @@
 	slot_flags = ITEM_SLOT_ICLOTHING
 	body_parts_covered = CHEST | ARMS | GROIN | LEGS
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small
-	supports_variations = DIGITIGRADE_VARIATION | TAJARA_VARIATION
+
+
+/obj/item/clothing/under/syndicate/tacticool/china
+	desc = "Just looking at it makes you want to buy an SKS, go into the woods, and -operate-. This one looks a more cheaper."
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+
+/obj/item/clothing/under/syndicate/tacticool/skirt/china
+	desc = "Just looking at it makes you want to buy an SKS, go into the woods, and -operate-. This one looks a more cheaper."
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)

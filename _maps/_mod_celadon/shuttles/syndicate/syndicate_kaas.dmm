@@ -333,7 +333,6 @@
 /obj/item/card/id/syndicate,
 /obj/item/card/id/syndicate,
 /obj/item/card/id/syndicate,
-/obj/item/gun/ballistic/automatic/sniper_rifle/syndicate,
 /obj/item/gun_voucher/syndicate,
 /obj/item/gun_voucher/syndicate,
 /obj/item/gun_voucher/syndicate,
@@ -363,6 +362,7 @@
 /obj/item/ammo_box/magazine/sniper_rounds/penetrator,
 /obj/item/ammo_box/magazine/sniper_rounds/penetrator,
 /obj/machinery/firealarm/directional/west,
+/obj/item/gun/ballistic/automatic/marksman/sniper_rifle,
 /turf/open/floor/wood/birch,
 /area/ship/security/armory)
 "jh" = (
@@ -593,10 +593,12 @@
 /obj/effect/turf_decal/industrial/fire{
 	dir = 10
 	},
+/obj/machinery/newscaster/security_unit/directional/west,
 /turf/open/floor/engine,
 /area/ship/engineering)
 "pL" = (
 /obj/effect/turf_decal/trimline/opaque/neutral/warning,
+/obj/machinery/newscaster/security_unit/directional/south,
 /turf/open/floor/wood/birch,
 /area/ship/security/armory)
 "pW" = (
@@ -646,6 +648,7 @@
 /obj/effect/turf_decal/trimline/opaque/neutral/warning{
 	dir = 9
 	},
+/obj/machinery/newscaster/security_unit/directional/north,
 /turf/open/floor/wood/birch,
 /area/ship/security/armory)
 "qZ" = (
@@ -716,6 +719,7 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
+/obj/machinery/holopad/emergency/command,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/bridge)
 "ta" = (
@@ -840,7 +844,7 @@
 /turf/open/floor/wood/birch,
 /area/ship/security/armory)
 "ut" = (
-/obj/machinery/computer/cargo/express{
+/obj/machinery/computer/cargo{
 	dir = 8;
 	icon_state = "computer-left"
 	},
@@ -984,6 +988,7 @@
 /area/ship/bridge)
 "wJ" = (
 /obj/machinery/nuclearbomb/syndicate,
+/obj/machinery/newscaster/security_unit/directional/south,
 /turf/open/floor/carpet/royalblack,
 /area/ship/hallway/central)
 "wN" = (
@@ -1014,7 +1019,6 @@
 	name = "operative ID card"
 	},
 /obj/structure/closet/secure_closet/wall{
-	dir = 1;
 	name = "spare cards locker";
 	req_access = list(3,150);
 	pixel_y = -30
@@ -1114,6 +1118,7 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 10
 	},
+/obj/machinery/newscaster/security_unit/directional/west,
 /turf/open/floor/wood/walnut,
 /area/ship/medical)
 "zL" = (
@@ -1442,10 +1447,6 @@
 /turf/open/floor/plating,
 /area/ship/engineering)
 "EP" = (
-/obj/machinery/door/window/brigdoor/southleft{
-	dir = 8;
-	req_access = list(3,150)
-	},
 /obj/structure/catwalk/over/plated_catwalk/dark,
 /obj/machinery/power/smes/shuttle/precharged{
 	dir = 4;
@@ -1458,6 +1459,7 @@
 	id = "twinkle_engines";
 	dir = 4
 	},
+/obj/structure/window/plasma/reinforced/spawner/west,
 /turf/open/floor/plating,
 /area/ship/engineering)
 "Fn" = (
@@ -1527,10 +1529,6 @@
 /turf/open/floor/engine,
 /area/ship/engineering)
 "FA" = (
-/obj/machinery/door/window/brigdoor/southleft{
-	dir = 8;
-	req_access = list(3,150)
-	},
 /obj/structure/catwalk/over/plated_catwalk/dark,
 /obj/machinery/atmospherics/components/unary/shuttle/heater{
 	dir = 8
@@ -1539,6 +1537,7 @@
 	id = "twinkle_engines";
 	dir = 4
 	},
+/obj/structure/window/plasma/reinforced/spawner/west,
 /turf/open/floor/plating,
 /area/ship/engineering)
 "Gv" = (
@@ -1573,6 +1572,7 @@
 /turf/open/floor/carpet/royalblack,
 /area/ship/bridge)
 "HW" = (
+/obj/machinery/newscaster/security_unit/directional/south,
 /turf/open/floor/carpet/red_gold,
 /area/ship/crew/cryo)
 "HZ" = (
@@ -1611,6 +1611,10 @@
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/bridge)
+"In" = (
+/obj/machinery/newscaster/security_unit/directional/west,
+/turf/open/floor/carpet/red_gold,
+/area/ship/bridge)
 "IC" = (
 /obj/structure/railing,
 /obj/effect/turf_decal/industrial/warning{
@@ -1642,6 +1646,7 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 10
 	},
+/obj/machinery/newscaster/security_unit/directional/south,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/bridge)
 "Jh" = (
@@ -1836,10 +1841,7 @@
 /turf/open/floor/wood/walnut,
 /area/ship/medical)
 "RC" = (
-/mob/living/simple_animal/hostile/syndicate/melee/sword/space/stormtrooper{
-	faction = list("PlayerSyndicate");
-	name = "Barnie"
-	},
+/mob/living/simple_animal/hostile/human/syndicate/melee/sword/space/stormtrooper,
 /turf/open/floor/wood/birch,
 /area/ship/security/armory)
 "RD" = (
@@ -2234,6 +2236,7 @@
 	dir = 9
 	},
 /obj/machinery/vending/tool,
+/obj/machinery/newscaster/security_unit/directional/west,
 /turf/open/floor/engine,
 /area/ship/engineering)
 "YU" = (
@@ -2605,7 +2608,7 @@ CE
 CE
 xQ
 kk
-yF
+In
 Rg
 rj
 tN

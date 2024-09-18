@@ -1,5 +1,16 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
+/obj/machinery/power/shieldwallgen/atmos{
+	anchored = 1;
+	id = "module5";
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
 /obj/machinery/door/poddoor{
 	dir = 4;
 	id = "sgi_cargo3"
@@ -10,8 +21,16 @@
 /obj/machinery/button/door{
 	id = "sgi_cargo3";
 	name = "blast door control";
-	pixel_x = 5;
+	pixel_x = -5;
 	pixel_y = 24
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/button/shieldwallgen{
+	id = "module4";
+	pixel_y = 22;
+	pixel_x = 5
 	},
 /turf/open/floor/plating,
 /area/ship/bridge)
@@ -23,28 +42,52 @@
 	dir = 8
 	},
 /obj/structure/window/plasma/reinforced,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/open/floor/plating,
+/area/ship/bridge)
+"d" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/holopad,
+/turf/open/floor/plating,
+/area/ship/bridge)
+"e" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/plating,
 /area/ship/bridge)
 "f" = (
-/obj/structure/cable{
-	icon_state = "1-4"
+/obj/machinery/button/door{
+	id = "sgi_cargo6";
+	name = "blast door control";
+	pixel_x = 5;
+	pixel_y = 24
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
+	},
+/obj/machinery/button/shieldwallgen{
+	id = "module5";
+	pixel_y = 22;
+	pixel_x = -5
 	},
 /turf/open/floor/plating,
 /area/ship/bridge)
 "g" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 4;
-	name = "Helm"
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
 	},
 /turf/open/floor/plating,
 /area/ship/bridge)
 "h" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/docking_port/mobile{
 	can_move_docking_ports = 1;
 	dir = 4;
@@ -52,11 +95,13 @@
 	port_direction = 4;
 	preferred_direction = 4
 	},
-/obj/machinery/door/poddoor{
-	dir = 4;
-	id = "sgi_cargo3"
+/obj/machinery/button/door{
+	id = "sgi_cargo3";
+	name = "blast door control";
+	pixel_x = -8;
+	dir = 8
 	},
-/turf/open/floor/plating,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/bridge)
 "p" = (
 /obj/machinery/computer/helm{
@@ -95,14 +140,56 @@
 	},
 /turf/open/floor/plating,
 /area/ship/bridge)
+"w" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/power/shieldwallgen/atmos{
+	anchored = 1;
+	id = "module4"
+	},
+/obj/structure/cable{
+	icon_state = "0-6"
+	},
+/obj/machinery/door/poddoor{
+	dir = 4;
+	id = "sgi_cargo3"
+	},
+/turf/open/floor/plating,
+/area/ship/bridge)
+"y" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/open/floor/plating,
+/area/ship/bridge)
 "z" = (
 /obj/machinery/power/terminal{
 	dir = 4
 	},
 /obj/structure/cable{
-	icon_state = "0-2"
+	icon_state = "0-8"
 	},
-/obj/machinery/power/apc/auto_name/directional/north,
+/turf/open/floor/plating,
+/area/ship/bridge)
+"A" = (
+/turf/closed/wall/mineral/titanium,
+/area/ship/bridge)
+"C" = (
+/obj/machinery/door/poddoor{
+	dir = 4;
+	id = "sgi_cargo6"
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/shieldwallgen/atmos{
+	anchored = 1;
+	id = "module5"
+	},
 /turf/open/floor/plating,
 /area/ship/bridge)
 "E" = (
@@ -110,11 +197,48 @@
 /area/ship/bridge)
 "H" = (
 /obj/machinery/power/smes/engineering,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
 /turf/open/floor/plasteel/patterned,
 /area/ship/bridge)
 "I" = (
 /obj/machinery/power/shuttle/engine/electric{
 	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/turf/open/floor/plating,
+/area/ship/bridge)
+"K" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/power/apc/auto_name/directional/east,
+/obj/structure/cable{
+	icon_state = "0-1"
+	},
+/turf/open/floor/plating,
+/area/ship/bridge)
+"M" = (
+/obj/machinery/door/poddoor{
+	dir = 4;
+	id = "sgi_cargo6"
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/shieldwallgen/atmos{
+	anchored = 1;
+	id = "module5";
+	dir = 1
+	},
+/turf/open/floor/plating,
+/area/ship/bridge)
+"N" = (
+/obj/structure/cable{
+	icon_state = "1-8"
 	},
 /turf/open/floor/plating,
 /area/ship/bridge)
@@ -128,6 +252,19 @@
 /obj/machinery/power/smes/shuttle/precharged{
 	dir = 4
 	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/open/floor/plating,
+/area/ship/bridge)
+"P" = (
+/obj/structure/cable{
+	icon_state = "2-4";
+	tag = null
+	},
+/obj/structure/cable{
+	icon_state = "4-9"
+	},
 /turf/open/floor/plating,
 /area/ship/bridge)
 "Q" = (
@@ -139,8 +276,20 @@
 "R" = (
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/bridge)
+"U" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/turf/open/floor/plating,
+/area/ship/bridge)
 "W" = (
-/obj/effect/spawner/structure/window/shuttle,
+/obj/machinery/door/poddoor{
+	dir = 4;
+	id = "sgi_cargo6"
+	},
 /turf/open/floor/plating,
 /area/ship/bridge)
 "X" = (
@@ -152,6 +301,10 @@
 	},
 /obj/structure/cable{
 	icon_state = "2-8"
+	},
+/obj/structure/chair/comfy/shuttle{
+	dir = 4;
+	name = "Helm"
 	},
 /turf/open/floor/plating,
 /area/ship/bridge)
@@ -172,20 +325,20 @@ q
 R
 "}
 (2,1,1) = {"
+A
 R
-R
-a
+w
 h
 a
 R
-R
+A
 "}
 (3,1,1) = {"
 q
 R
 b
-Q
-E
+P
+N
 R
 q
 "}
@@ -193,7 +346,7 @@ q
 q
 R
 z
-f
+Q
 E
 R
 q
@@ -202,7 +355,7 @@ q
 I
 R
 H
-Q
+g
 E
 R
 I
@@ -211,7 +364,7 @@ I
 O
 E
 E
-Q
+d
 E
 E
 c
@@ -219,36 +372,36 @@ c
 (7,1,1) = {"
 s
 Y
-Y
+y
 X
-Y
-Y
+U
+K
 u
 "}
 (8,1,1) = {"
 q
 R
-E
-g
-E
+e
+p
+Q
 R
 q
 "}
 (9,1,1) = {"
 q
 R
+f
 E
-p
-E
+Q
 R
 q
 "}
 (10,1,1) = {"
 q
 R
+C
 W
-W
-W
+M
 R
 q
 "}

@@ -197,6 +197,7 @@
 /obj/effect/turf_decal/spline/plain/opaque/blue{
 	dir = 1
 	},
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/plasteel,
 /area/ship/security/prison)
 "bu" = (
@@ -951,6 +952,7 @@
 /obj/effect/turf_decal/siding/red{
 	dir = 1
 	},
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/mineral/plastitanium/red/brig,
 /area/ship/hallway/central)
 "fq" = (
@@ -2698,12 +2700,17 @@
 /turf/open/floor/plating,
 /area/ship/engineering/atmospherics)
 "pA" = (
-/obj/item/radio/intercom/wideband/directional/west,
+/obj/item/radio/intercom/wideband/directional/west{
+	pixel_y = -9
+	},
 /obj/effect/turf_decal/steeldecal/steel_decals6{
 	dir = 6
 	},
 /obj/structure/chair/comfy/shuttle,
 /obj/effect/turf_decal/steeldecal/steel_decals9,
+/obj/item/radio/intercom/directional/west{
+	pixel_y = 11
+	},
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/bridge)
 "pG" = (
@@ -3259,6 +3266,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/siding/red,
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/plasteel/dark,
 /area/ship/security/armory)
 "sQ" = (
@@ -4024,7 +4032,7 @@
 /turf/open/floor/plasteel,
 /area/ship/security/prison)
 "xT" = (
-/obj/machinery/computer/cargo/express{
+/obj/machinery/computer/cargo{
 	dir = 8
 	},
 /turf/open/floor/plasteel/telecomms_floor,
@@ -4549,6 +4557,13 @@
 	},
 /turf/open/floor/wood,
 /area/ship/crew/hydroponics)
+"Bd" = (
+/obj/structure/chair/stool/bar,
+/obj/machinery/newscaster/directional/north{
+	pixel_x = -3
+	},
+/turf/open/floor/carpet/royalblack,
+/area/ship/crew/dorm/dormfive)
 "Be" = (
 /obj/machinery/flasher{
 	pixel_y = -24;
@@ -6489,7 +6504,8 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/closed/wall,
+/obj/structure/falsewall,
+/turf/open/floor/plating,
 /area/ship/crew/dorm/dormfive)
 "LA" = (
 /obj/machinery/light/directional/south,
@@ -7795,6 +7811,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/plasteel,
 /area/ship/security/prison)
 "TL" = (
@@ -8375,7 +8392,6 @@
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/maintenance/port)
 "Wz" = (
-/obj/item/radio/intercom/directional/west,
 /obj/machinery/button/door{
 	dir = 4;
 	name = "Shutters";
@@ -8390,6 +8406,9 @@
 	},
 /obj/effect/turf_decal/techfloor{
 	dir = 1
+	},
+/obj/machinery/newscaster/directional/west{
+	pixel_y = 7
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
@@ -8743,6 +8762,9 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/siding/wood,
+/obj/machinery/newscaster/directional/north{
+	pixel_x = -3
+	},
 /turf/open/floor/plasteel/sepia,
 /area/ship/crew/hydroponics)
 "Zg" = (
@@ -9633,7 +9655,7 @@ CR
 fA
 mU
 Ad
-gZ
+Bd
 iI
 Ik
 TY

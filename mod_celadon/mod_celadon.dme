@@ -5,31 +5,39 @@
 // #include "example/_example.dme"
 
 // --- MAINTENANCE --- //
-#include "_defines/__defines.dme"
 #include "_components/__components.dme"
+#include "_storge_sounds/_storge_sounds.dme"
+#include "_storge_icons/_storge_icons.dme"
 #include "fov/_fov.dme"
 #include "subtler/_subtler.dme"
 #include "radio_syndicate/_radio_syndicate.dme"
-#include "solgov_outfit/_solgov_outfit.dme"
 #include "ipc_chassis/_ipc_chassis.dme"
 #include "qol/_qol.dme"
 #include "loadout/_loadout.dme"
 #include "accents_add/_accents_add.dme"
+#include "areas/_areas.dme"
+#include "map_expansion/_map_expansion.dme"
+#include "faction/_faction.dme"
+#include "repairs_other/_repairs_other.dme"
+#include "achievements/_achievements.dme"
+#include "access/_access.dme"
+#include "ghost_roles/_ghost_roles.dme"
 
 // --- ICONS --- //
 #include "species_changes/_species_changes.dme"
 #include "resprite/_resprite.dme"
 #include "parallax/_parallax.dme"
+#include "stuff_solfed/_solfed_stuff.dme"
 
 // --- SOUNDS --- //
-
+#include "lobby_celadon/_lobby_celadon.dme"
 
 // --- OBJECTS --- //
 #include "cargo_items/_cargo_items.dme"
-#include "elysium_stuff/_elysium_stuff.dme"
+#include "stuff_elysium/_stuff_elysium.dme"
 #include "celadon_old_syndicate_rigs/_celadon_old_syndicate_rigs.dme"
 #include "structures/_structures.dme"
-#include "inteq_stuff/_inteq_stuff.dme"
+#include "stuff_inteq/_stuff_inteq.dme"
 #include "tajara/_tajara.dme"
 #include "weapons/_weapons.dme"
 #include "bongs/_bongs.dme"
@@ -38,7 +46,19 @@
 #include "items/_items.dme"
 #include "flora/_flora.dme"
 #include "musician/_musician.dme"
+#include "food_and_drinks/_food_and_drinks.dme"
+#include "pizzamat/_pizzamat.dme"
+#include "barsigns/_barsigns.dme"
+#include "stamps/_stamps.dme"
+#include "stuff_gamma/_stuff_gamma.dme"
+#include "turrets/_turrets.dme"
+#include "sauna/_sauna.dme"
+#include "effects/_effects.dme"
+#include "repair_weebstick/_repair_weebstick.dme"
+#include "elysiumpod/_elysiumpod.dme"
+#include "boarding/_boarding.dme"
 #include "moniq/_moniq.dme"
+
 // --- MOBS --- //
 #include "mobs/_mobs.dme"
 #include "drakeborgs/_drakeborgs.dme"
@@ -48,20 +68,31 @@
 #include "fixes/_fixes.dme"
 #include "ipc_surgery/_ipc_surgery.dme"
 #include "robotic_honk/_robotic_honk.dme"
+#include "ai_laws/_ai_laws.dme"
+#include "wideband/_wideband.dme"
+
+// --- RETURNS --- //
+#include "crusher_trophy/_crusher_trophy.dme"
+#include "return_tendrils/_return_tendrils.dme"
 
 // --- DONATORS --- //
-
-
-// --- UNUSED MODS --- //
-
+#include "donaters/_donaters.dme"
 
 // --- MAPS --- //
 #include "maps/_configs.dme"
 
 
+// --- UNUSED MODS --- //
 /*------------------------------------------------------------------
 	Почему UNUSED MODS стоит хранить?
 	Потому что никто не проверяет использование тех или иных файлов
 	в коде, и мод просто исчезнет из поля зрения, когда находясь здесь
 	он всегда напоминает о своём существовании. Небольшая библиотека,
-	если так вообще можно выразиться.*/
+	если так вообще можно выразиться. Чтобы включить модпак, перенеси
+	его выше.*/
+
+// --- EVENTS --- //
+
+#include "event_td/_event_td.dme" // Ивент на атаку и защита
+
+//#include "event_cly/_event_cly.dme"

@@ -38,7 +38,6 @@
 /obj/item/tank/jetpack/oxygen/harness,
 /obj/item/clothing/suit/space/syndicate/black/red,
 /obj/item/clothing/mask/gas/syndicate,
-/obj/machinery/light/small/directional/east,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 8
 	},
@@ -53,7 +52,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
 "bX" = (
-/obj/machinery/porta_turret/ship/syndicate/weak{
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
 	dir = 10
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -165,7 +164,6 @@
 /obj/machinery/atmospherics/components/binary/pump/on/layer4{
 	dir = 4
 	},
-/obj/machinery/light/small/directional/south,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/sign/poster/official/wtf_is_co2{
 	pixel_y = -32
@@ -382,7 +380,6 @@
 /obj/structure/sign/poster/contraband/stechkin{
 	pixel_x = 32
 	},
-/obj/machinery/light/small/directional/south,
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/office)
 "iq" = (
@@ -399,6 +396,7 @@
 	dir = 8
 	},
 /obj/machinery/space_heater,
+/obj/machinery/light/directional/west,
 /turf/open/floor/plating,
 /area/ship/engineering)
 "iS" = (
@@ -484,7 +482,12 @@
 /area/ship/bridge)
 "jZ" = (
 /obj/structure/closet/wall/directional/east,
-/obj/item/stack/sheet/mineral/uranium/twenty,
+/obj/item/stack/sheet/mineral/uranium/twenty{
+	amount = 30
+	},
+/obj/item/stack/sheet/mineral/uranium/twenty{
+	amount = 30
+	},
 /turf/open/floor/plating,
 /area/ship/engineering)
 "ky" = (
@@ -498,7 +501,7 @@
 /turf/open/floor/plating,
 /area/ship/cargo)
 "lg" = (
-/obj/machinery/porta_turret/ship/syndicate/weak{
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
 	dir = 9
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -577,7 +580,6 @@
 /area/ship/engineering)
 "mR" = (
 /obj/machinery/airalarm/directional/west,
-/obj/machinery/light/directional/west,
 /obj/effect/turf_decal/industrial/warning/corner{
 	dir = 8
 	},
@@ -806,7 +808,7 @@
 	},
 /obj/machinery/camera/autoname,
 /turf/open/floor/plating,
-/area/ship/engineering)
+/area/ship/external)
 "sF" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/structure/chair/comfy/grey/corpo{
@@ -832,9 +834,6 @@
 /turf/open/floor/plating,
 /area/ship/cargo)
 "tp" = (
-/obj/machinery/camera/autoname{
-	dir = 4
-	},
 /obj/effect/turf_decal/spline/plain/opaque/syndiered{
 	dir = 4
 	},
@@ -884,6 +883,7 @@
 	pixel_x = -7;
 	pixel_y = 3
 	},
+/obj/machinery/newscaster/directional/east,
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/office)
 "ud" = (
@@ -906,6 +906,7 @@
 	pixel_x = 10;
 	pixel_y = -20
 	},
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/plasteel/white,
 /area/ship/hallway/central)
 "uk" = (
@@ -947,9 +948,6 @@
 /obj/item/tank/jetpack/oxygen/harness,
 /obj/item/clothing/suit/space/syndicate/black/red,
 /obj/item/clothing/mask/gas/syndicate,
-/obj/machinery/light/small/directional/west{
-	pixel_x = -34
-	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 4
 	},
@@ -974,7 +972,7 @@
 	desc = "A remote control switch.";
 	id = "scbay";
 	name = "Cargo Bay Doors";
-	pixel_x = -2;
+	pixel_x = -1;
 	pixel_y = 24
 	},
 /obj/machinery/button/shieldwallgen{
@@ -985,7 +983,7 @@
 	},
 /obj/machinery/light_switch{
 	pixel_y = 23;
-	pixel_x = 6
+	pixel_x = 8
 	},
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/plasteel/tech/grid,
@@ -1003,9 +1001,9 @@
 /turf/template_noop,
 /area/template_noop)
 "xc" = (
-/obj/machinery/porta_turret/ship/syndicate/weak{
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
+	pixel_x = 7;
 	dir = 4;
-	pixel_x = 8;
 	pixel_y = 4
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -1037,10 +1035,6 @@
 /area/ship/cargo)
 "xA" = (
 /obj/effect/turf_decal/box,
-/obj/machinery/light/directional/west,
-/obj/machinery/camera/autoname{
-	dir = 4
-	},
 /obj/item/radio/intercom/directional/west{
 	pixel_x = -28;
 	pixel_y = 1
@@ -1064,6 +1058,8 @@
 	pixel_y = 4;
 	pixel_x = -1
 	},
+/obj/machinery/light/directional/west,
+/obj/machinery/camera/autoname,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/cargo)
 "xT" = (
@@ -1099,7 +1095,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/structure/extinguisher_cabinet/directional/east{
-	pixel_y = 10;
+	pixel_y = 8;
 	pixel_x = 29
 	},
 /turf/open/floor/plating,
@@ -1202,6 +1198,7 @@
 /obj/machinery/computer/secure_data/syndie{
 	dir = 1
 	},
+/obj/machinery/light/directional/south,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "BU" = (
@@ -1221,6 +1218,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/plasteel/white,
 /area/ship/crew)
 "BY" = (
@@ -1286,10 +1284,13 @@
 /obj/effect/turf_decal/spline/plain/opaque/syndiered{
 	dir = 4
 	},
+/obj/machinery/camera/autoname{
+	dir = 4
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/crew)
 "Do" = (
-/obj/machinery/porta_turret/ship/syndicate/weak{
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
 	dir = 6
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -1428,10 +1429,10 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
+/obj/machinery/power/port_gen/pacman/super,
 /obj/structure/sign/poster/contraband/energy_swords{
 	pixel_x = 31
 	},
-/obj/machinery/power/port_gen/pacman/super,
 /turf/open/floor/plating,
 /area/ship/engineering)
 "GR" = (
@@ -1521,6 +1522,7 @@
 	pixel_y = -5;
 	pixel_x = -5
 	},
+/obj/machinery/light/small/directional/east,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/cargo)
 "JA" = (
@@ -1570,9 +1572,10 @@
 /turf/open/floor/plating,
 /area/ship/engineering)
 "KS" = (
-/obj/machinery/porta_turret/ship/syndicate/weak{
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
+	pixel_x = 7;
 	dir = 4;
-	pixel_x = 8
+	pixel_y = 5
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -1618,9 +1621,6 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/light/directional/west{
-	pixel_x = -35
-	},
 /obj/machinery/firealarm/directional/west,
 /turf/open/floor/plasteel/white,
 /area/ship/bridge)
@@ -1650,11 +1650,12 @@
 /area/ship/cargo)
 "MY" = (
 /obj/machinery/airalarm/directional/north,
-/obj/structure/sign/poster/contraband/red_rum{
-	pixel_y = 32
-	},
 /obj/machinery/firealarm/directional/west,
 /obj/machinery/vending/boozeomat/syndicate_access,
+/obj/structure/sign/poster/contraband/red_rum{
+	pixel_y = 32;
+	pixel_x = -32
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/crew)
 "Nd" = (
@@ -1714,6 +1715,15 @@
 "Om" = (
 /obj/structure/table/wood,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
+/obj/item/camera,
+/obj/item/camera,
+/obj/item/camera,
+/obj/item/camera_film,
+/obj/item/camera_film,
+/obj/item/camera_film,
+/obj/item/taperecorder,
+/obj/item/taperecorder,
+/obj/item/taperecorder,
 /turf/open/floor/carpet/red_gold,
 /area/ship/crew)
 "Oq" = (
@@ -1753,9 +1763,11 @@
 /area/ship/crew)
 "Qu" = (
 /obj/effect/turf_decal/box,
-/obj/machinery/firealarm/directional/west,
+/obj/machinery/firealarm/directional/west{
+	pixel_y = -5
+	},
 /obj/structure/extinguisher_cabinet/directional/west{
-	pixel_y = 11;
+	pixel_y = 8;
 	pixel_x = -26
 	},
 /obj/item/kitchen/knife/combat/survival,
@@ -1782,7 +1794,8 @@
 /obj/effect/turf_decal/spline/fancy/transparent/grey,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/camera/autoname{
-	dir = 1
+	dir = 1;
+	pixel_x = -9
 	},
 /turf/open/floor/plating,
 /area/ship/engineering)
@@ -1797,7 +1810,7 @@
 /obj/effect/turf_decal/spline/fancy/opaque/syndiered{
 	dir = 6
 	},
-/obj/machinery/computer/cargo/express{
+/obj/machinery/computer/cargo{
 	dir = 8
 	},
 /obj/effect/turf_decal/industrial/outline/red,
@@ -1840,6 +1853,9 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/light/small/directional/south,
+/obj/machinery/newscaster/directional/south{
+	pixel_x = -11
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "SE" = (
@@ -1850,7 +1866,8 @@
 	dir = 8;
 	id = "scengine";
 	name = "Engine Blast Shutters";
-	pixel_x = -8
+	pixel_x = -8;
+	pixel_y = -3
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/engineering)
@@ -1966,7 +1983,7 @@
 /turf/open/floor/carpet/red_gold,
 /area/ship/crew)
 "WB" = (
-/obj/machinery/porta_turret/ship/syndicate/weak{
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
 	dir = 5
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -2017,6 +2034,13 @@
 /obj/item/melee/classic_baton/telescopic,
 /obj/item/melee/classic_baton,
 /obj/item/melee/classic_baton,
+/obj/item/gun/energy/disabler,
+/obj/item/gun/energy/disabler,
+/obj/item/gun/ballistic/automatic/pistol/syndicate/no_mag,
+/obj/item/ammo_box/c10mm/rubbershot,
+/obj/item/ammo_box/magazine/m10mm/rubber,
+/obj/item/ammo_box/c10mm/ap,
+/obj/item/ammo_box/magazine/m10mm/ap,
 /turf/open/floor/plasteel/stairs{
 	dir = 4
 	},
@@ -2080,6 +2104,9 @@
 	},
 /obj/structure/railing{
 	dir = 4
+	},
+/obj/machinery/light/small/directional/west{
+	pixel_x = -34
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/cargo)

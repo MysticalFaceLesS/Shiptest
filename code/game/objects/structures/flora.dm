@@ -34,11 +34,22 @@
 	if(log_amount && (!(flags_1 & NODECONSTRUCT_1)))
 		if(W.get_sharpness() && W.force > 0)
 			if(W.hitsound)
-				playsound(get_turf(src), W.hitsound, 100, FALSE, FALSE)
+				// [CELADON-EDIT] - CELADON_QOL
+				// playsound(get_turf(src), W.hitsound, 100, FALSE, FALSE)		// CELADON-EDIT - ORIGINAL
+				playsound(get_turf(src), pick('mod_celadon/_storge_sounds/sound/trees/treechop1.ogg',
+											'mod_celadon/_storge_sounds/sound/trees/treechop2.ogg',
+											'mod_celadon/_storge_sounds/sound/trees/treechop3.ogg'), 100, FALSE, FALSE)
+				// [/CELADON-EDIT]
 			user.visible_message("<span class='notice'>[user] begins to cut down [src] with [W].</span>","<span class='notice'>You begin to cut down [src] with [W].</span>", "<span class='hear'>You hear the sound of sawing.</span>")
-			if(do_after(user, 1000/W.force, target = src)) //5 seconds with 20 force, 8 seconds with a hatchet, 20 seconds with a shard.
+			// [CELADON-EDIT] - CELADON_QOL
+			// if(do_after(user, 1000/W.force, target = src)) //5 seconds with 20 force, 8 seconds with a hatchet, 20 seconds with a shard.		// CELADON-EDIT - ORIGINAL
+			if(do_after(user, 2000/W.force, target = src)) //10 seconds with 20 force, 16 seconds with a hatchet, 40 seconds with a shard.
+			// [/CELADON-EDIT]
 				user.visible_message("<span class='notice'>[user] fells [src] with the [W].</span>","<span class='notice'>You fell [src] with the [W].</span>", "<span class='hear'>You hear the sound of a tree falling.</span>")
-				playsound(get_turf(src), 'sound/effects/meteorimpact.ogg', 100 , FALSE, FALSE)
+				// [CELADON-EDIT] - CELADON_QOL
+				// playsound(get_turf(src), 'sound/effects/meteorimpact.ogg', 100 , FALSE, FALSE) // CELADON-EDIT - ORIGINAL
+				playsound(get_turf(src), 'mod_celadon/_storge_sounds/sound/trees/zvuk-padayuschego-dereva.ogg', 100 , FALSE, FALSE)
+				// [/CELADON-EDIT]
 				user.log_message("cut down [src] at [AREACOORD(src)]", LOG_ATTACK)
 				for(var/i=1 to log_amount)
 					new /obj/item/grown/log/tree(get_turf(src))
@@ -382,7 +393,7 @@
 	. = ..()
 	// [CELADON-EDIT] - CELADON_FLORA
 	// icon = 'icons/obj/flora/plants.dmi' // CELADON-EDIT - ORIGINAL
-	icon = 'mod_celadon/flora/icons/plants.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/plants.dmi'
 	// [/CELADON-EDIT]
 	if(!states)
 		generate_states()
@@ -1062,3 +1073,39 @@
 					T.air.adjust_moles(GAS_CO2, -amt)
 					T.atmos_spawn_air("o2=[amt];TEMP=293.15")
 		lastcycle = world.time
+
+/obj/structure/fluff/steam_vent
+	name = "steam vent"
+	desc = "A outlet for steam, usually for water coming in contact with steam pipes."
+	icon = 'icons/obj/structures.dmi'
+	icon_state = "steamvent"
+	deconstructible = FALSE
+	layer = GAS_PUMP_LAYER
+
+	var/particle_to_spawn = /particles/smoke/steam/vent
+	var/obj/effect/particle_holder/part_hold
+
+/obj/structure/fluff/steam_vent/Initialize()
+	. = ..()
+	part_hold = new(get_turf(src))
+	part_hold.layer = EDGED_TURF_LAYER
+	part_hold.particles = new particle_to_spawn()
+	underlays.Cut()
+
+/obj/structure/fluff/steam_vent/Destroy()
+	. = ..()
+	QDEL_NULL(part_hold)
+
+/obj/structure/fluff/steam_vent/low
+	particle_to_spawn = /particles/smoke/steam/vent/low
+
+/obj/structure/fluff/steam_vent/high
+	particle_to_spawn = /particles/smoke/steam/vent/high
+
+/obj/effect/particle_holder
+	name = ""
+	anchored = TRUE
+	mouse_opacity = 0
+
+/obj/effect/particle_emitter/Initialize(mapload, time)
+	. = ..()

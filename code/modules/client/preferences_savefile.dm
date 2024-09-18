@@ -412,6 +412,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["uplink_loc"], uplink_spawn_loc)
 	READ_FILE(S["phobia"], phobia)
 	READ_FILE(S["preferred_smoke_brand"], preferred_smoke_brand)
+	READ_FILE(S["generic_adjective"], generic_adjective)
 	READ_FILE(S["randomise"],  randomise)
 	READ_FILE(S["body_size"], features["body_size"])
 	READ_FILE(S["prosthetic_limbs"], prosthetic_limbs)
@@ -443,6 +444,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["feature_ipc_brain"], features["ipc_brain"])
 	READ_FILE(S["feature_kepori_feathers"], features["kepori_feathers"])
 	READ_FILE(S["feature_kepori_body_feathers"], features["kepori_body_feathers"])
+	READ_FILE(S["feature_kepori_head_feathers"], features["kepori_head_feathers"])
 	READ_FILE(S["feature_kepori_tail_feathers"], features["kepori_tail_feathers"])
 	READ_FILE(S["feature_vox_head_quills"], features["vox_head_quills"])
 	READ_FILE(S["feature_vox_neck_quills"], features["vox_neck_quills"])
@@ -459,14 +461,25 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["feature_tajara_chest_markings"], features["tajara_chest_markings"])
 	READ_FILE(S["feature_tajara_body_markings"], features["tajara_body_markings"])
 	READ_FILE(S["feature_tajara_tail"], features["tajara_tail"])
+	READ_FILE(S["tajara_ears_markings_color"], features["tajara_ears_markings_color"])
+	READ_FILE(S["tajara_head_markings_color"], features["tajara_head_markings_color"])
+	READ_FILE(S["tajara_nose_markings_color"], features["tajara_nose_markings_color"])
+	READ_FILE(S["tajara_chest_markings_color"], features["tajara_chest_markings_color"])
+	READ_FILE(S["tajara_body_markings_color"], features["tajara_body_markings_color"])
 	// [/CELADON-ADD]
 
 	READ_FILE(S["equipped_gear"], equipped_gear)
 	if(config) //This should *probably* always be there, but just in case.
 		if(length(equipped_gear) > CONFIG_GET(number/max_loadout_items))
-			to_chat(parent, "<span class='userdanger'>Loadout maximum items exceeded in loaded slot, Your loadout has been cleared! You had [length(equipped_gear)]/[CONFIG_GET(number/max_loadout_items)] equipped items!</span>")
+			to_chat(parent, span_userdanger("Loadout maximum items exceeded in loaded slot, Your loadout has been cleared! You had [length(equipped_gear)]/[CONFIG_GET(number/max_loadout_items)] equipped items!"))
 			equipped_gear = list()
-			WRITE_FILE(S["equipped_gear"]				, equipped_gear)
+			WRITE_FILE(S["equipped_gear"], equipped_gear)
+
+	for(var/gear in equipped_gear)
+		if(!(gear in GLOB.gear_datums))
+			to_chat(parent, span_warning("Removing nonvalid loadout item [gear] from loadout"))
+			equipped_gear -= gear //be GONE
+			WRITE_FILE(S["equipped_gear"], equipped_gear)
 
 	READ_FILE(S["feature_human_tail"], features["tail_human"])
 	READ_FILE(S["feature_human_ears"], features["ears"])
@@ -514,17 +527,41 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 
 	randomise = SANITIZE_LIST(randomise)
 
-	if(gender == MALE)
-		hairstyle								= sanitize_inlist(hairstyle, GLOB.hairstyles_male_list)
-		facial_hairstyle						= sanitize_inlist(facial_hairstyle, GLOB.facial_hairstyles_male_list)
-	else if(gender == FEMALE)
-		hairstyle								= sanitize_inlist(hairstyle, GLOB.hairstyles_female_list)
-		facial_hairstyle						= sanitize_inlist(facial_hairstyle, GLOB.facial_hairstyles_female_list)
+	// [CELADON-EDIT] - TAJARA
+	//	if(gender == MALE)
+	//		hairstyle								= sanitize_inlist(hairstyle, GLOB.hairstyles_male_list)
+	//		facial_hairstyle						= sanitize_inlist(facial_hairstyle, GLOB.facial_hairstyles_male_list)
+	//	else if(gender == FEMALE)
+	//		hairstyle								= sanitize_inlist(hairstyle, GLOB.hairstyles_female_list)
+	//		facial_hairstyle						= sanitize_inlist(facial_hairstyle, GLOB.facial_hairstyles_female_list) // CELADON-EDIT - ORIGINAL
+	if(species_id == "tajara")
+		hairstyle								= sanitize_inlist(hairstyle, GLOB.tajara_hairs_list)
+		facial_hairstyle						= sanitize_inlist(facial_hairstyle, GLOB.tajara_facial_hairs_list)
+		features["grad_style"]				= sanitize_inlist(features["grad_style"], GLOB.hair_gradients_list)
+		features["grad_color"]				= sanitize_hexcolor(features["grad_color"])
+
+
+
+	// [/CELADON-EDIT]
 	else
-		hairstyle								= sanitize_inlist(hairstyle, GLOB.hairstyles_list)
-		facial_hairstyle						= sanitize_inlist(facial_hairstyle, GLOB.facial_hairstyles_list)
-		underwear								= sanitize_inlist(underwear, GLOB.underwear_list)
-		undershirt 								= sanitize_inlist(undershirt, GLOB.undershirt_list)
+		// [CELADON-EDIT] - TAJARA
+		//	hairstyle								= sanitize_inlist(hairstyle, GLOB.hairstyles_list)
+		//	facial_hairstyle						= sanitize_inlist(facial_hairstyle, GLOB.facial_hairstyles_list)
+		//	underwear								= sanitize_inlist(underwear, GLOB.underwear_list)
+		//	undershirt 								= sanitize_inlist(undershirt, GLOB.undershirt_list) // CELADON-EDIT - ORIGINAL
+		if(gender == MALE)
+			hairstyle								= sanitize_inlist(hairstyle, GLOB.hairstyles_male_list)
+			facial_hairstyle						= sanitize_inlist(facial_hairstyle, GLOB.facial_hairstyles_male_list)
+		else if(gender == FEMALE)
+			hairstyle								= sanitize_inlist(hairstyle, GLOB.hairstyles_female_list)
+			facial_hairstyle						= sanitize_inlist(facial_hairstyle, GLOB.facial_hairstyles_female_list)
+		else
+			hairstyle								= sanitize_inlist(hairstyle, GLOB.hairstyles_list)
+			facial_hairstyle						= sanitize_inlist(facial_hairstyle, GLOB.facial_hairstyles_list)
+			underwear								= sanitize_inlist(underwear, GLOB.underwear_list)
+			undershirt 								= sanitize_inlist(undershirt, GLOB.undershirt_list)
+		// [/CELADON-EDIT]
+
 
 	socks				= sanitize_inlist(socks, GLOB.socks_list)
 	age					= sanitize_integer(age, pref_species.species_age_min, pref_species.species_age_max, initial(age))
@@ -565,8 +602,9 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["ipc_chassis"]				= sanitize_inlist(features["ipc_chassis"], GLOB.ipc_chassis_list)
 	features["ipc_brain"]				= sanitize_inlist(features["ipc_brain"], GLOB.ipc_brain_list)
 	features["kepori_feathers"]			= sanitize_inlist(features["kepori_feathers"], GLOB.kepori_feathers_list, "Plain")
-	features["kepori_body_feathers"]	= sanitize_inlist(features["kepori_body_feathers"], GLOB.kepori_body_feathers_list, "Plain")
-	features["kepori_tail_feathers"]	= sanitize_inlist(features["kepori_tail_feathers"], GLOB.kepori_tail_feathers_list, "Fan")
+	features["kepori_body_feathers"]	= sanitize_inlist(features["kepori_body_feathers"], GLOB.kepori_body_feathers_list, "None")
+	features["kepori_head_feathers"]	= sanitize_inlist(features["kepori_head_feathers"], GLOB.kepori_head_feathers_list, "None")
+	features["kepori_tail_feathers"]	= sanitize_inlist(features["kepori_tail_feathers"], GLOB.kepori_tail_feathers_list, "None")
 	features["vox_head_quills"]			= sanitize_inlist(features["vox_head_quills"], GLOB.vox_head_quills_list, "None")
 	features["vox_neck_quills"]			= sanitize_inlist(features["vox_neck_quills"], GLOB.vox_neck_quills_list, "None")
 	features["elzu_horns"]				= sanitize_inlist(features["elzu_horns"], GLOB.elzu_horns_list)
@@ -584,6 +622,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["tajara_chest_markings"] = sanitize_inlist(features["tajara_chest_markings"], GLOB.tajara_chest_markings_list, "None")
 	features["tajara_body_markings"] = sanitize_inlist(features["tajara_body_markings"], GLOB.tajara_body_markings_list, "None")
 	features["tajara_tail"] = sanitize_inlist(features["tajara_tail"], GLOB.tajara_tail_list, "Long")
+	features["tajara_ears_markings_color"]				= sanitize_hexcolor(features["tajara_ears_markings_color"])
+	features["tajara_head_markings_color"]				= sanitize_hexcolor(features["tajara_head_markings_color"])
+	features["tajara_nose_markings_color"]				= sanitize_hexcolor(features["tajara_nose_markings_color"])
+	features["tajara_chest_markings_color"]				= sanitize_hexcolor(features["tajara_chest_markings_color"])
+	features["tajara_body_markings_color"]				= sanitize_hexcolor(features["tajara_body_markings_color"])
 	// [/CELADON-ADD]
 
 	all_quirks = SANITIZE_LIST(all_quirks)
@@ -626,6 +669,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["randomise"]					, randomise)
 	WRITE_FILE(S["species"]						, pref_species.id)
 	WRITE_FILE(S["preferred_smoke_brand"]		, preferred_smoke_brand)
+	WRITE_FILE(S["preferred_smoke_brand"]		, preferred_smoke_brand)
 	WRITE_FILE(S["phobia"]						, phobia)
 	WRITE_FILE(S["generic_adjective"]			, generic_adjective)
 	WRITE_FILE(S["body_size"]					, features["body_size"])
@@ -659,6 +703,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["feature_ipc_brain"]			, features["ipc_brain"])
 	WRITE_FILE(S["feature_kepori_feathers"]		, features["kepori_feathers"])
 	WRITE_FILE(S["feature_kepori_body_feathers"], features["kepori_body_feathers"])
+	WRITE_FILE(S["feature_kepori_head_feathers"], features["feature_kepori_head_feathers"])
 	WRITE_FILE(S["feature_kepori_tail_feathers"], features["kepori_tail_feathers"])
 	WRITE_FILE(S["feature_vox_head_quills"]		, features["vox_head_quills"])
 	WRITE_FILE(S["feature_vox_neck_quills"]		, features["vox_neck_quills"])
@@ -677,6 +722,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["feature_tajara_chest_markings"], features["tajara_chest_markings"])
 	WRITE_FILE(S["feature_tajara_body_markings"], features["tajara_body_markings"])
 	WRITE_FILE(S["feature_tajara_tail"], features["tajara_tail"])
+	WRITE_FILE(S["tajara_ears_markings_color"], features["tajara_ears_markings_color"])
+	WRITE_FILE(S["tajara_head_markings_color"], features["tajara_head_markings_color"])
+	WRITE_FILE(S["tajara_nose_markings_color"], features["tajara_nose_markings_color"])
+	WRITE_FILE(S["tajara_chest_markings_color"], features["tajara_chest_markings_color"])
+	WRITE_FILE(S["tajara_body_markings_color"], features["tajara_body_markings_color"])
 	// [/CELADON-ADD]
 
 	//Flavor text

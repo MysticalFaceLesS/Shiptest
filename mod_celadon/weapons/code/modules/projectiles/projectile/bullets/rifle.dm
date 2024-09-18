@@ -1,46 +1,52 @@
+//5.56x45
 
 /obj/projectile/bullet/a556_45/a856
 	name = "5.56x45mm A856 bullet"
-	damage = 28
-	armour_penetration = 22
+	damage = 30
+	armour_penetration = 25
 
 /obj/projectile/bullet/a556_45/m903
 	name = "5.56x45mm M903 bullet"
-	damage = 15
-	armour_penetration = 60
+	damage = 20
+	armour_penetration = 40
 
 /obj/projectile/bullet/a556_45/surplus
 	name = "5.56x45mm surplus bullet"
 	damage = 20
-	armour_penetration = 15
+	armour_penetration = 10
 
-// 7.62 (Nagant Rifle)
+//.308
 
-/obj/projectile/bullet/a762
-	name = "7.62x54mmR bullet"
+/obj/projectile/bullet/a308
+	name = ".308"
+	icon = 'mod_celadon/_storge_icons/icons/ammo/projectiles.dmi'
+	icon_state = "bullet"
+	speed = 0.3
 	damage = 30
 	armour_penetration = 40
 
-//7.62x39mm (SVG-67)
+/obj/projectile/bullet/a308_sp
+	name = ".308"
+	speed = 0.3
+	damage = 60
+	armour_penetration = -10
 
-/obj/projectile/bullet/a762_39
-	name = "7.62x39mm"
-	damage = 30
-	armour_penetration = 20
+/obj/projectile/bullet/a308/a308_brak
+	name = ".308"
+	speed = 0.3
+	damage = 28
+	armour_penetration = 25
 
-//.308 WIN (M514)
+/obj/projectile/bullet/a308/a308_ap
+	name = ".308"
+	speed = 0.3
+	damage = 28
+	armour_penetration = 60
 
-//obj/projectile/bullet/a308
-	//name = ".308 Winchester"
-	//damage = 30
-	//armour_penetration = 40
-
-/obj/projectile/bullet/a308/surplus
-	name = ".308 surplus"
-	damage = 25
-	armour_penetration = 30
-
-/obj/projectile/bullet/a308/ap
-	name = ".308 M-80"
-	damage = 35
-	armour_penetration = 45
+/obj/projectile/bullet/a308/a308_rub
+	name = ".308"
+	icon_state = "rubber"
+	speed = 0.4
+	damage = 5
+	armour_penetration = -10
+	stamina = 38

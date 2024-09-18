@@ -246,8 +246,8 @@
 	icon_state = "drying_rack"
 	use_power = IDLE_POWER_USE
 	circuit = null
-	idle_power_usage = 5
-	active_power_usage = 200
+	idle_power_usage = IDLE_DRAW_MINIMAL
+	active_power_usage = ACTIVE_DRAW_MINIMAL
 	visible_contents = FALSE
 	var/drying = FALSE
 

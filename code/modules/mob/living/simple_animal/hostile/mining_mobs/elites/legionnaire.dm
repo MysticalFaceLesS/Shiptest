@@ -25,8 +25,10 @@
 	icon_dead = "legionnaire_dead"
 	icon_gib = "syndicate_gib"
 	health_doll_icon = "legionnaire"
-	maxHealth = 800
-	health = 800
+	// [CELADON-REMOVE] - CELADON_BALANCE_MOBS
+	// maxHealth = 800
+	// health = 800
+	// [/CELADON-REMOVE]
 	melee_damage_lower = 30
 	melee_damage_upper = 30
 	attack_verb_continuous = "slashes its arms at"
@@ -38,7 +40,9 @@
 	mouse_opacity = MOUSE_OPACITY_ICON
 	deathsound = 'sound/magic/curse.ogg'
 	deathmessage = "'s arms reach out before it falls apart onto the floor, lifeless."
-	loot_drop = /obj/item/crusher_trophy/legionnaire_spine
+	// [CELADON-REMOVE] - CRUSHER_TROPHEY - Выпилено ради легенды
+	// loot_drop = /obj/item/mob_trophy/legionnaire_spine
+	// [/CELADON-REMOVE]
 
 	attack_action_types = list(/datum/action/innate/elite_attack/legionnaire_charge,
 								/datum/action/innate/elite_attack/head_detach,
@@ -85,7 +89,10 @@
 			if(SPEW_SMOKE)
 				spew_smoke()
 		return
-	var/aiattack = rand(1,4)
+	// [CELADON-EDIT] - CELADON_BALANCE_MOBS
+	// var/aiattack = rand(1,4)	// CELADON-EDIT - ORIGINAL
+	var/aiattack = rand(1,3)
+	// [/CELADON-EDIT]
 	switch(aiattack)
 		if(LEGIONNAIRE_CHARGE)
 			legionnaire_charge(target)
@@ -93,8 +100,10 @@
 			head_detach(target)
 		if(BONFIRE_TELEPORT)
 			bonfire_teleport()
-		if(SPEW_SMOKE)
-			spew_smoke()
+		// [CELADON-REMOVE] - CELADON_BALANCE_MOBS
+		// if(SPEW_SMOKE)
+		// 	spew_smoke()
+		// [/CELADON-REMOVE]
 /mob/living/simple_animal/hostile/asteroid/elite/legionnaire/proc/legionnaire_charge(target)
 	ranged_cooldown = world.time + 50
 	var/dir_to_target = get_dir(get_turf(src), get_turf(target))
@@ -184,7 +193,10 @@
 		var/turf/legionturf = get_turf(src)
 		var/turf/pileturf = get_turf(mypile)
 		if(legionturf == pileturf)
-			mypile.take_damage(100)
+			// [CELADON-EDIT] - CELADON_BALANCE_MOBS
+			// mypile.take_damage(100)	// CELADON-EDIT - ORIGINAL
+			mypile.take_damage(50)
+			// [/CELADON-EDIT]
 			mypile = null
 			return
 		playsound(pileturf,'sound/items/fultext_deploy.ogg', 200, 1)
@@ -256,9 +268,14 @@
 	var/mob/living/simple_animal/hostile/asteroid/elite/legionnaire/myowner = null
 
 
-/obj/structure/legionnaire_bonfire/Entered(atom/movable/mover, atom/target)
-	if(isliving(mover))
-		var/mob/living/L = mover
+// [CELADON-EDIT] - CELADON_BALANCE_MOBS
+// /obj/structure/legionnaire_bonfire/Entered(atom/movable/mover, atom/target)
+// 	if(isliving(mover))
+// 		var/mob/living/L = mover	// CELADON-EDIT - ORIGINAL
+/obj/structure/legionnaire_bonfire/Entered(atom/movable/arrived, atom/target)
+	if(isliving(arrived))
+		var/mob/living/L = arrived
+// [/CELADON-EDIT]
 		L.adjust_fire_stacks(3)
 		L.IgniteMob()
 	. = ..()
@@ -266,6 +283,9 @@
 /obj/structure/legionnaire_bonfire/Destroy()
 	if(myowner != null)
 		myowner.mypile = null
+	// [CELADON-ADD] - CELADON_BALANCE_MOBS
+	new /obj/item/organ/regenerative_core/legion(loc)
+	// [CELADON-ADD]
 	. = ..()
 
 //The visual effect which appears in front of legionnaire when he goes to charge.
@@ -278,23 +298,12 @@
 	transform *= 0.33
 
 // Legionnaire's loot: Legionnaire Spine
-
-/obj/item/crusher_trophy/legionnaire_spine
+// [CELADON-REMOVE] - CRUSHER_TROPHEY - Выпилено ради легенды
+/*
+/obj/item/mob_trophy/legionnaire_spine
 	name = "legionnaire spine"
 	desc = "The spine of a legionnaire.  It almost feels like it's moving..."
 	icon = 'icons/obj/lavaland/elite_trophies.dmi'
 	icon_state = "legionnaire_spine"
-	denied_type = /obj/item/crusher_trophy/legionnaire_spine
-	bonus_value = 50//These skulls are a joke, so this bonus value had to be put on steroidal emergency treatment
-
-/obj/item/crusher_trophy/legionnaire_spine/effect_desc()
-	return "waveform collapse to have a <b>[bonus_value]%</b> chance to summon a loyal legion skull"
-
-/obj/item/crusher_trophy/legionnaire_spine/on_mark_detonation(mob/living/target, mob/living/user)
-	if(!rand(1, 100) <= bonus_value || target.stat == DEAD)
-		return
-	var/mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion/A = new /mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion(user.loc)
-	A.flags_1 |= (flags_1 & ADMIN_SPAWNED_1)
-	A.GiveTarget(target)
-	A.friends = user
-	A.faction = user.faction.Copy()
+*/
+// [/CELADON-REMOVE]

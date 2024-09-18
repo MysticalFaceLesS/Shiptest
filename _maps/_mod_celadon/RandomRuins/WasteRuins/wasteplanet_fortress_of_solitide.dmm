@@ -330,7 +330,7 @@
 /area/ruin/powered)
 "cS" = (
 /obj/structure/table/wood/fancy/orange,
-/obj/item/reagent_containers/food/snacks/store/cake/clown_cake,
+/obj/item/food/cake/clown_cake,
 /turf/open/floor/plating,
 /area/ruin/powered)
 "cU" = (
@@ -340,8 +340,18 @@
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
 "cX" = (
-/obj/structure/statue/bananium/clown,
 /obj/effect/decal/cleanable/cobweb/cobweb2,
+/obj/item/megaphone/clown,
+/obj/item/clothing/under/rank/civilian/clown/jester,
+/obj/item/clothing/shoes/clown_shoes/banana_shoes/combat,
+/obj/item/borg/upgrade/transform/clown,
+/obj/item/stamp/clown,
+/obj/item/nullrod/clown,
+/obj/structure/closet/secure_closet/freezer/cream_pie,
+/obj/effect/mob_spawn/human/clown/corpse,
+/obj/item/clothing/suit/space/hardsuit/ert/clown{
+	armor = list("melee" = 35, "bullet" = 35, "laser" = 35, "energy" = 35, "bomb" = 35, "bio" = 100, "rad" = 100, "fire" =100, "acid" = 100)
+	},
 /turf/open/floor/plating,
 /area/ruin/powered)
 "dg" = (
@@ -462,9 +472,9 @@
 /area/ruin/powered)
 "ep" = (
 /obj/effect/spawner/lootdrop/maintenance/two,
-/obj/item/reagent_containers/food/snacks/butterdog,
 /obj/structure/table,
 /obj/item/coin/plastic,
+/obj/item/food/butterdog,
 /turf/open/floor/plating,
 /area/ruin/powered)
 "er" = (
@@ -503,11 +513,6 @@
 "eI" = (
 /obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/plating/rust,
-/area/ruin/powered)
-"eL" = (
-/mob/living/simple_animal/hostile/rat,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plating,
 /area/ruin/powered)
 "eM" = (
 /obj/structure/chair/wood{
@@ -578,7 +583,6 @@
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
 "fk" = (
-/obj/item/grown/bananapeel,
 /obj/structure/barricade/wooden/crude,
 /obj/machinery/door/airlock/maintenance{
 	name = "Detective Halligan's Office"
@@ -694,7 +698,10 @@
 /turf/open/floor/plating,
 /area/ruin/powered)
 "go" = (
-/obj/machinery/light/small/directional/west,
+/mob/living/simple_animal/hostile/clown/clownhulk{
+	name = "Биба";
+	health = 500
+	},
 /turf/open/floor/plating,
 /area/ruin/powered)
 "gp" = (
@@ -762,7 +769,7 @@
 /turf/open/floor/plating,
 /area/ruin/powered)
 "hd" = (
-/obj/item/reagent_containers/food/snacks/cakeslice/clown_slice,
+/obj/item/food/cakeslice/clown_slice,
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
 "he" = (
@@ -948,7 +955,6 @@
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
 "jn" = (
-/mob/living/simple_animal/hostile/retaliate/clown/mutant/blob,
 /obj/effect/gibspawner/human,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating/rust,
@@ -976,7 +982,10 @@
 /area/ruin/powered)
 "jz" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/mob_spawn/human/clown/corpse,
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/retaliate/clown/clownhulk/chlown{
+	name = "Боба"
+	},
 /turf/open/floor/plating,
 /area/ruin/powered)
 "jA" = (
@@ -1395,7 +1404,7 @@
 /area/ruin/powered)
 "nc" = (
 /obj/structure/table/reinforced,
-/obj/item/reagent_containers/food/snacks/cakeslice/brain,
+/obj/item/food/cakeslice/brain,
 /turf/open/floor/plating,
 /area/ruin/powered)
 "nd" = (
@@ -1429,7 +1438,6 @@
 /area/ruin/powered)
 "nt" = (
 /obj/effect/decal/cleanable/blood,
-/mob/living/simple_animal/hostile/rat,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/trash/cheesie,
 /turf/open/floor/plating,
@@ -1954,11 +1962,6 @@
 /obj/effect/decal/cleanable/generic,
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
-"rJ" = (
-/obj/structure/falsewall/reinforced,
-/obj/structure/sign/poster/retro/smile,
-/turf/open/floor/plating,
-/area/ruin/powered)
 "rO" = (
 /obj/structure/curtain/cloth/fancy,
 /obj/item/trash/tray,
@@ -2101,7 +2104,7 @@
 /obj/structure/chair/wood{
 	dir = 8
 	},
-/mob/living/simple_animal/hostile/frontier{
+/mob/living/simple_animal/hostile/human/frontier{
 	dir = 8
 	},
 /turf/open/floor/wood,
@@ -2168,10 +2171,6 @@
 /area/ruin/powered)
 "uB" = (
 /obj/structure/table/wood,
-/obj/item/switchblade{
-	pixel_x = -3;
-	pixel_y = 4
-	},
 /obj/item/coin/antagtoken{
 	pixel_x = 4;
 	pixel_y = -2
@@ -3482,7 +3481,6 @@
 /turf/open/floor/plating,
 /area/ruin/powered)
 "Gq" = (
-/mob/living/simple_animal/hostile/retaliate/clown/fleshclown,
 /obj/effect/gibspawner/human,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
@@ -3603,7 +3601,6 @@
 "HD" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/mob_spawn/human/clown/corpse,
-/mob/living/simple_animal/hostile/rat,
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
 "HH" = (
@@ -3639,7 +3636,8 @@
 /area/ruin/powered)
 "Ib" = (
 /obj/structure/table/wood/poker,
-/obj/item/gun/ballistic/revolver/russian,
+/obj/item/gun/ballistic/revolver/shadow/no_mag,
+/obj/item/ammo_casing/a44roum,
 /turf/open/floor/wood,
 /area/ruin/powered)
 "Ie" = (
@@ -4633,10 +4631,6 @@
 	},
 /turf/open/floor/plating/rust,
 /area/ruin/powered)
-"Ru" = (
-/obj/effect/decal/cleanable/cobweb/cobweb2,
-/turf/open/floor/plating,
-/area/ruin/powered)
 "Rw" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/glass,
@@ -5233,12 +5227,6 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/powered)
-"WN" = (
-/mob/living/simple_animal/hostile/retaliate/clown/fleshclown,
-/obj/effect/decal/cleanable/blood,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plating/rust,
-/area/ruin/powered)
 "WO" = (
 /obj/structure/sign/poster/contraband/twelve_gauge,
 /turf/closed/wall/r_wall/rust,
@@ -5549,11 +5537,11 @@
 /turf/open/floor/plating,
 /area/ruin/powered)
 "Zo" = (
-/mob/living/simple_animal/hostile/cat_butcherer{
-	dir = 4
-	},
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/blood/gibs,
+/mob/living/simple_animal/hostile/human/cat_butcherer{
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/ruin/powered)
 "Zt" = (
@@ -5582,7 +5570,6 @@
 /turf/open/floor/plating,
 /area/ruin/powered)
 "ZL" = (
-/mob/living/simple_animal/hostile/retaliate/clown/fleshclown,
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/plating,
@@ -5814,8 +5801,8 @@ xx
 ZL
 hd
 Gq
-Xe
-av
+Hp
+gL
 HD
 ff
 bC
@@ -5857,9 +5844,9 @@ vh
 bG
 jn
 KR
-WN
-bC
-Ru
+KR
+Hp
+Hp
 av
 Cy
 xx
@@ -5900,12 +5887,12 @@ er
 mh
 Xe
 xx
-rJ
-xx
-xx
-gL
-bC
-Xe
+Hp
+Hp
+Hp
+av
+Hp
+Hp
 Xe
 fJ
 bG
@@ -5948,7 +5935,7 @@ OE
 go
 Hp
 av
-zh
+jz
 ed
 xx
 ve
@@ -5989,7 +5976,7 @@ cU
 jG
 xx
 Pr
-eL
+dC
 zW
 XF
 yd
@@ -6032,7 +6019,7 @@ av
 LU
 mG
 xx
-jz
+Xt
 Hp
 Hp
 wk

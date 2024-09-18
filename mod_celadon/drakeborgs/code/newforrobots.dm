@@ -44,15 +44,25 @@
 		if(body_position == LYING_DOWN)
 			if(sitting)
 				icon_state = "[module.cyborg_base_icon]-sit"
+				pixel_x = -16
+				base_pixel_x = -16
 			if(bellyup)
 				icon_state = "[module.cyborg_base_icon]-bellyup"
+				pixel_x = -16
+				base_pixel_x = -16
 			else if(!sitting && !bellyup)
 				icon_state = "[module.cyborg_base_icon]-rest"
+				pixel_x = -16
+				base_pixel_x = -16
 			cut_overlays()
 		else
 			icon_state = "[module.cyborg_base_icon]"
+			pixel_x = -16
+			base_pixel_x = -16
 	if(stat == DEAD && module.hasrest == TRUE)
 		icon_state = "[module.cyborg_base_icon]-wreck"
+		pixel_x = -16
+		base_pixel_x = -16
 
 /mob/living/silicon/robot/set_resting()
 	. = ..()

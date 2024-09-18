@@ -646,31 +646,6 @@
 	held_sausage.desc = "[held_sausage.desc] It has been cooked to perfection on \a [target]."
 	update_appearance()
 
-/obj/item/melee/cleric_mace
-	name = "cleric mace"
-	desc = "The grandson of the club, yet the grandfather of the baseball bat. Most notably used by holy orders in days past."
-	icon = 'icons/obj/items_and_weapons.dmi'
-	icon_state = "mace_greyscale"
-	item_state = "mace_greyscale"
-	lefthand_file = 'icons/mob/inhands/weapons/melee_lefthand.dmi'
-	righthand_file = 'icons/mob/inhands/weapons/melee_righthand.dmi'
-	material_flags = MATERIAL_ADD_PREFIX | MATERIAL_COLOR | MATERIAL_AFFECT_STATISTICS //Material type changes the prefix as well as the color.
-	custom_materials = list(/datum/material/iron = 12000)  //Defaults to an Iron Mace.
-	slot_flags = ITEM_SLOT_BELT
-	force = 14
-	w_class = WEIGHT_CLASS_BULKY
-	throwforce = 8
-	armour_penetration = 50
-	attack_verb = list("smacked", "struck", "cracked", "beaten")
-	var/overlay_state = "mace_handle"
-	var/mutable_appearance/overlay
-
-/obj/item/melee/cleric_mace/Initialize()
-	. = ..()
-	overlay = mutable_appearance(icon, overlay_state)
-	overlay.appearance_flags = RESET_COLOR
-	add_overlay(overlay)
-
 /obj/item/melee/greykingsword
 	name = "blade of the grey-king"
 	desc = "A legendary sword made with 3 replica katanas nailed together and dipped in heavy narcotics."
@@ -768,6 +743,10 @@
 /obj/item/melee/weebstick/on_exit_storage(datum/component/storage/concrete/S)
 	var/obj/item/storage/belt/weebstick/B = S.real_location()
 	if(istype(B))
+		// [CELADON-ADD] - CELADON_REPAIR_WEEBSTICK
+		if(B.primed == TRUE) // So we dont break our anime stick if we pull stick when primed
+			B.unprime_unlock()
+		// [/CELADON-ADD]
 		playsound(B, 'sound/items/unsheath.ogg', 25, TRUE)
 
 /obj/item/melee/weebstick/on_enter_storage(datum/component/storage/concrete/S)
@@ -808,7 +787,10 @@
 		. += "<span class='info'>Alt-click it to quickly draw the blade.</span>"
 
 /obj/item/storage/belt/weebstick/AltClick(mob/user)
-	if(!iscarbon(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)) || primed)
+	// [CELADON-EDIT] - CELADON_REPAIR_WEEBSTICK
+	// if(!iscarbon(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)) || primed)	// CELADON-EDIT - ORIGINAL
+	if(!iscarbon(user) || !user.canUseTopic(src, BE_CLOSE, ishuman(user)) || primed)
+	// [/CELADON-EDIT]
 		return
 	if(length(contents))
 		var/obj/item/I = contents[1]
@@ -820,7 +802,10 @@
 		to_chat(user, "<span class='warning'>[src] is empty!</span>")
 
 /obj/item/storage/belt/weebstick/attack_self(mob/user)
-	if(!iscarbon(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user)))
+	// [CELADON-EDIT] - CELADON_REPAIR_WEEBSTICK
+	// if(!iscarbon(user) || !user.canUseTopic(src, BE_CLOSE, ismonkey(user))) || primed)	// CELADON-EDIT - ORIGINAL
+	if(!iscarbon(user) || !user.canUseTopic(src, BE_CLOSE, ishuman(user)))
+	// [/CELADON-EDIT]
 		return
 	if(length(contents))
 		var/datum/component/storage/CP = GetComponent(/datum/component/storage)
@@ -864,10 +849,16 @@
 	var/halt = FALSE
 	// Stolen dash code
 	for(var/T in getline(start, get_turf(target)))
+		// [CELADON-ADD] - CELADON_REPAIR_WEEBSTICK
+		playsound(T, dash_sound, 15, TRUE)
+		// [/CELADON-ADD]
 		var/turf/tile = T
 		for(var/mob/living/victim in tile)
 			if(victim != user)
-				playsound(victim, 'sound/weapons/anime_slash.ogg', 10, TRUE)
+				// [CELADON-EDIT] - CELADON_REPAIR_WEEBSTICK
+				// playsound(victim, 'sound/weapons/anime_slash.ogg', 10, TRUE)		// CELADON-EDIT - ORIGINAL
+				playsound(tile, 'sound/weapons/anime_slash.ogg', 10, TRUE)
+				// [/CELADON-EDIT] 
 				victim.take_bodypart_damage(15)
 		// Unlike actual ninjas, we stop noclip-dashing here.
 		if(isclosedturf(T))
@@ -881,7 +872,9 @@
 		else
 			end = T
 	user.forceMove(end) // YEET
-	playsound(start, dash_sound, 35, TRUE)
+	// [CELADON-REMOVE] - CELADON_REPAIR_WEEBSTICK
+	// playsound(start, dash_sound, 35, TRUE)
+	// [/CELADON-REMOVE]
 	var/obj/spot2 = new phasein(end, user.dir)
 	spot1.Beam(spot2, beam_effect, time=20)
 	user.visible_message("<span class='warning'>In a flash of red, [user] draws [user.p_their()] blade!</span>", "<span class='notice'>You dash forward while drawing your weapon!</span>", "<span class='warning'>You hear a blade slice through the air at impossible speeds!</span>")
