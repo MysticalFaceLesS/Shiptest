@@ -10,10 +10,7 @@
 	var/modifies_speech = FALSE
 	var/mask_adjusted = 0
 	var/adjusted_flags = null
-	// [CELADON-EDIT] - TAJARA
-	// supports_variations = VOX_VARIATION | KEPORI_VARIATION // CELADON-EDIT - ORIGINAL
-	supports_variations = VOX_VARIATION | KEPORI_VARIATION | TAJARA_VARIATION
-	// [/CELADON-EDIT]
+	supports_variations = VOX_VARIATION | KEPORI_VARIATION
 
 /obj/item/clothing/mask/attack_self(mob/user)
 	if((clothing_flags & VOICEBOX_TOGGLABLE))
@@ -35,7 +32,7 @@
 /obj/item/clothing/mask/proc/handle_speech()
 
 /obj/item/clothing/mask/worn_overlays(isinhands = FALSE)
-	. = list()
+	. = ..()
 	if(!isinhands)
 		if(body_parts_covered & HEAD)
 			if(damaged_clothes)

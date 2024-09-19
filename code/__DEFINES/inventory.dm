@@ -46,6 +46,7 @@
 #define HIDEFACIALHAIR (1<<9)
 #define HIDENECK (1<<10)
 #define HIDEHORNS (1<<11) 	// Used for hiding Sarathi horns.
+#define HIDESNOUT (1<<11)
 
 //bitflags for clothing coverage - also used for limbs
 #define HEAD (1<<0)
@@ -83,9 +84,7 @@
 #define SNOUTED_VARIATION (1<<4) //Ex of naming: a state called "nameof_thing" can be named "nameof_thing_snouted"
 #define VOX_VARIATION (1<<5)
 #define KEPORI_VARIATION (1<<6)
-// [CELADON-ADD] - TAJARA
-#define TAJARA_VARIATION (1<<7)
-// [/CELADON-ADD]
+
 
 #define NOT_DIGITIGRADE 0
 #define FULL_DIGITIGRADE 1

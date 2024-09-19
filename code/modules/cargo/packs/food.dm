@@ -9,9 +9,9 @@
 	name = "Donk Pocket Variety Crate"
 	desc = "Featuring a line up of Donk Co.'s most popular pastry!"
 // [CELADON-EDIT] - CELADON_BALANCE
-//	cost = 2000
+//	cost = 500
 // CELADON-EDIT - ORIGINAL
-	cost = 750
+	cost = 500
 // [/CELADON-EDIT]
 	contains = list(/obj/item/storage/box/donkpockets/donkpocketspicy,
 					/obj/item/storage/box/donkpockets/donkpocketteriyaki,
@@ -20,6 +20,7 @@
 					/obj/item/storage/box/donkpockets/donkpockethonk)
 	crate_name = "donk pocket crate"
 	crate_type = /obj/structure/closet/crate/freezer
+	faction = FACTION_SYNDICATE
 
 /datum/supply_pack/food/donkpockets/fill(obj/structure/closet/crate/C)
 	for(var/i in 1 to 3)
@@ -50,6 +51,19 @@
 			fourfiveeight.boxtag = P.boxtag
 			qdel(P)
 
+/datum/supply_pack/food/ration
+	name = "Ration Crate"
+	desc = "6 standerd issue rations."
+	cost = 500
+	contains = list(/obj/effect/spawner/lootdrop/ration,
+					/obj/effect/spawner/lootdrop/ration,
+					/obj/effect/spawner/lootdrop/ration,
+					/obj/effect/spawner/lootdrop/ration,
+					/obj/effect/spawner/lootdrop/ration,
+					/obj/effect/spawner/lootdrop/ration)
+	crate_name = "ration crate"
+	crate_type = /obj/structure/closet/crate
+
 /*
 		Ingredients
 */
@@ -58,7 +72,7 @@
 	name = "Basic Ingredients Crate"
 	desc = "Get things cooking with this crate full of useful ingredients! Contains a dozen eggs, two slabs of meat, some flour, some rice, a bottle of milk, a bottle of soymilk, and a bag of sugar."
 // [CELADON-EDIT] - CELADON_BALANCE
-//	cost = 1000
+//	cost = 300
 // CELADON-EDIT - ORIGINAL
 	cost = 250
 // [/CELADON-EDIT]
@@ -83,12 +97,18 @@
 // CELADON-EDIT - ORIGINAL
 	cost = 500
 // [/CELADON-EDIT]
+
+/datum/supply_pack/food/ingredients_condiments
+	name = "Condiments Crate"
+	desc = "A variety of garnishes for topping off your dish with a little extra pizzaz. Contains a bottle of enzyme, a salt shaker, a pepper mill, a bottle of ketchup, a bottle of hot sauce, a bottle of BBQ sauce, and a bottle of cream."
+	cost = 250
 	contains = list(/obj/item/reagent_containers/food/condiment/enzyme,
 					/obj/item/reagent_containers/food/condiment/saltshaker,
 					/obj/item/reagent_containers/food/condiment/peppermill,
 					/obj/item/reagent_containers/food/condiment/ketchup,
 					/obj/item/reagent_containers/food/condiment/hotsauce,
-					/obj/item/reagent_containers/food/drinks/bottle/cream
+					/obj/item/reagent_containers/food/drinks/bottle/cream,
+					/obj/item/reagent_containers/food/condiment/bbqsauce
 	)
 	crate_name = "condiments crate"
 	crate_type = /obj/structure/closet/crate/freezer
@@ -97,9 +117,9 @@
 	name = "Exotic Meat Crate"
 	desc = "The best cuts in the whole galaxy. Probably."
 // [CELADON-EDIT] - CELADON_BALANCE
-//	cost = 1000
+//	cost = 500
 // CELADON-EDIT - ORIGINAL
-	cost = 750
+	cost = 500
 // [/CELADON-EDIT]
 	contains = list(/obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/slime,
 					/obj/item/reagent_containers/food/snacks/meat/slab/killertomato,
@@ -124,9 +144,9 @@
 	name = "Standard Meat Crate"
 	desc = "Less interesting cuts of meat, but filling nonetheless."
 // [CELADON-EDIT] - CELADON_BALANCE
-//	cost = 1500
+//	cost = 300
 // CELADON-EDIT - ORIGINAL
-	cost = 250
+	cost = 300
 // [/CELADON-EDIT]
 	contains = list(/obj/item/reagent_containers/food/snacks/meat/slab,
 					/obj/item/reagent_containers/food/snacks/meat/slab/chicken,
@@ -203,10 +223,10 @@
 // CELADON-EDIT - ORIGINAL
 	cost = 250
 // [/CELADON-EDIT]
-	contains = list(/obj/item/reagent_containers/food/snacks/store/bread/plain,
-					/obj/item/reagent_containers/food/snacks/breadslice/plain,
-					/obj/item/reagent_containers/food/snacks/breadslice/plain,
-					/obj/item/reagent_containers/food/snacks/breadslice/plain, //Weighted to be more common
+	contains = list(/obj/item/food/bread/plain,
+					/obj/item/food/breadslice/plain,
+					/obj/item/food/breadslice/plain,
+					/obj/item/food/breadslice/plain, //Weighted to be more common
 					/obj/item/reagent_containers/food/snacks/bun,
 					/obj/item/reagent_containers/food/snacks/tortilla,
 					/obj/item/reagent_containers/food/snacks/pizzabread
@@ -227,8 +247,7 @@
 	cost = 2500
 // [/CELADON-EDIT]
 	contains = list(/obj/item/stack/sheet/mineral/coal/five,
-					/obj/machinery/grill/unwrenched,
-					/obj/item/reagent_containers/food/drinks/soda_cans/xeno_energy)
+					/obj/machinery/grill/unwrenched)
 	crate_name = "grilling starter kit crate"
 	crate_type = /obj/structure/closet/crate/large
 
@@ -236,10 +255,10 @@
 	name = "Grilling Fuel Kit"
 	desc = "Contains propane and propane accessories. (Note: doesn't contain any actual propane.)"
 // [CELADON-EDIT] - CELADON_BALANCE
-//	cost = 2000
+//	cost = 250
 // CELADON-EDIT
 // CELADON-EDIT - ORIGINAL
-	cost = 1000
+	cost = 250
 // [/CELADON-EDIT]
 	contains = list(/obj/item/stack/sheet/mineral/coal/ten)
 	crate_name = "grilling fuel kit crate"
@@ -252,10 +271,10 @@
 	name = "Hydroponics Backpack Crate"
 	desc = "Bring on the flood with this high-capacity backpack crate. Contains 500 units of life-giving H2O."
 // [CELADON-EDIT] - CELADON_BALANCE
-//	cost = 1000
+//	cost = 750
 // CELADON-EDIT
 // CELADON-EDIT - ORIGINAL
-	cost = 500
+	cost = 750
 // [/CELADON-EDIT]
 	contains = list(/obj/item/watertank)
 	crate_name = "hydroponics backpack crate"

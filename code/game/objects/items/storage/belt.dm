@@ -74,7 +74,8 @@
 		/obj/item/chisel,
 		/obj/item/clothing/glasses/welding, //WS edit: ok mald sure I'll add the welding stuff to the. ok.
 		/obj/item/clothing/mask/gas/welding,
-		/obj/item/clothing/head/welding //WS end
+		/obj/item/clothing/head/welding, //WS end
+		/obj/item/gun/energy/plasmacutter
 		))
 
 /obj/item/storage/belt/utility/chief
@@ -287,7 +288,7 @@
 		/obj/item/ammo_box/a858, //oh boy stripper clips too
 		/obj/item/ammo_box/vickland_a308,
 		/obj/item/ammo_box/a300,
-		/obj/item/ammo_box/aac_300blk_stripper,
+		/obj/item/ammo_box/a762_stripper,
 		/obj/item/ammo_box/amagpellet_claris, //that's the last of the clips
 		/obj/item/reagent_containers/food/snacks/donut,
 		/obj/item/kitchen/knife/combat,
@@ -520,7 +521,7 @@
 		/obj/item/reagent_containers/food/snacks/cheesynachos,
 		/obj/item/reagent_containers/food/snacks/cubannachos,
 		/obj/item/reagent_containers/food/snacks/nugget,
-		/obj/item/reagent_containers/food/snacks/spaghetti/pastatomato,
+		/obj/item/food/spaghetti/pastatomato,
 		/obj/item/reagent_containers/food/snacks/rofflewaffles,
 		/obj/item/reagent_containers/food/snacks/donkpocket,
 		/obj/item/reagent_containers/food/drinks/soda_cans/cola,
@@ -680,7 +681,7 @@
 
 /obj/item/storage/belt/bandolier
 	name = "bandolier"
-	desc = "A bandolier for holding ammunition. Does not hold magazines"
+	desc = "A bandolier for holding ammunition. Does not hold magazines."
 	icon_state = "bandolier"
 	item_state = "bandolier"
 
@@ -693,6 +694,10 @@
 	STR.set_holdable(list(
 		/obj/item/ammo_casing
 		))
+
+/obj/item/storage/belt/bandolier/examine(mob/user)
+	. = ..()
+	. += span_notice("The bandolier can be directly loaded by clicking on it with an ammo box.")
 
 /obj/item/storage/belt/fannypack
 	name = "fannypack"

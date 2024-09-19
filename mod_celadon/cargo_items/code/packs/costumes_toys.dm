@@ -23,7 +23,7 @@
 					/obj/item/clothing/under/dress/wedding/red,
 					/obj/item/clothing/under/dress/wedding/red, // two of each
 					/obj/item/reagent_containers/food/drinks/bottle/champagne, //appropriate booze for a wedding
-					/obj/item/reagent_containers/food/snacks/store/cake/vanilla_cake, // we don't have a full wedding cake but this will do
+					/obj/item/food/cake/vanilla_cake, // we don't have a full wedding cake but this will do
 					// /obj/item/storage/fancy/ringbox/silver,
 					// /obj/item/storage/fancy/ringbox/silver немного текстурка пошла по одному месту, но работает
 					/obj/item/clothing/gloves/ring/diamond,

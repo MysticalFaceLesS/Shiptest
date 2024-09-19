@@ -159,13 +159,11 @@
 	)
 
 /datum/asset/simple/namespaced/fontawesome
-	legacy = TRUE
 	assets = list(
-		"fa-regular-400.eot"  = 'html/font-awesome/webfonts/fa-regular-400.eot',
-		"fa-regular-400.woff" = 'html/font-awesome/webfonts/fa-regular-400.woff',
-		"fa-solid-900.eot"    = 'html/font-awesome/webfonts/fa-solid-900.eot',
-		"fa-solid-900.woff"   = 'html/font-awesome/webfonts/fa-solid-900.woff',
-		"v4shim.css"          = 'html/font-awesome/css/v4-shims.min.css'
+		"fa-regular-400.ttf" = 'html/font-awesome/webfonts/fa-regular-400.ttf',
+		"fa-solid-900.ttf" = 'html/font-awesome/webfonts/fa-solid-900.ttf',
+		"fa-v4compatibility.ttf" = 'html/font-awesome/webfonts/fa-v4compatibility.ttf',
+		"v4shim.css" = 'html/font-awesome/css/v4-shims.min.css',
 	)
 	parents = list("font-awesome.css" = 'html/font-awesome/css/all.min.css')
 
@@ -468,7 +466,10 @@
 
 /datum/asset/spritesheet/supplypods/register()
 	for (var/style in 1 to length(GLOB.podstyles))
-		var/icon_file = 'icons/obj/supplypods.dmi'
+		// [CELADON-EDIT] - CELADON_ELYSIUMPOD
+		// var/icon_file = 'icons/obj/supplypods.dmi' // CELADON-EDIT - ORIGINAL
+		var/icon_file = 'mod_celadon/_storge_icons/icons/supplypods.dmi'
+		// [/CELADON-EDIT]
 		var/states = icon_states(icon_file)
 		if (style == STYLE_SEETHROUGH)
 			Insert("pod_asset[style]", icon(icon_file, "seethrough-icon", SOUTH))

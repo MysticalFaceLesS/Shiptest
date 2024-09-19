@@ -1,4 +1,4 @@
-//obj/item/elysm_manual
+/obj/item/elysm_manual
 	name = "Book of Elysm"
 	desc = "The book's cover reads: \"The national language of the Republic of Elysium, which is a mixture of Ard al-Elysm Almaveud and newly arrived settlers speaking a variation of Arabic 2378 Sol\""
 	icon = 'mod_celadon/_storge_icons/icons/items/obj/book.dmi'

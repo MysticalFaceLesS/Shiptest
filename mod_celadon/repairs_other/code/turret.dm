@@ -109,3 +109,25 @@
 	always_up = 0
 	icon_state = "turretCover"
 	base_icon_state = "standard"
+
+// PIRATE
+/obj/machinery/porta_turret/ship/faction/pirate
+	faction = list(FACTION_PLAYER_PIRATE, "turret")
+
+/obj/machinery/porta_turret/ship/faction/pirate/ballistic
+	stun_projectile = /obj/projectile/bullet/turret/rubber
+	lethal_projectile = /obj/projectile/bullet/turret
+	lethal_projectile_sound = 'sound/weapons/gun/smg/shot.ogg'
+	stun_projectile_sound = 'sound/weapons/gun/smg/shot.ogg'
+	desc = "A ballistic machine gun auto-turret."
+
+/obj/machinery/porta_turret/ship/faction/pirate/laser
+	icon_state = "standard_stun"
+	base_icon_state = "standard"
+
+/obj/machinery/porta_turret/ship/faction/pirate/laser/cover
+	installation = /obj/item/gun/energy/e_gun/turret
+	has_cover = 1
+	always_up = 0
+	icon_state = "turretCover"
+	base_icon_state = "standard"

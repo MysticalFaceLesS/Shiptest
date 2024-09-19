@@ -16,7 +16,6 @@
 /obj/machinery/atmospherics/components/unary/outlet_injector/on/layer4{
 	dir = 1
 	},
-/obj/effect/turf_decal/trimline/transparent/yellow,
 /turf/open/floor/plating,
 /area/ship/external/dark)
 "aS" = (
@@ -38,7 +37,10 @@
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/hallway/central)
 "be" = (
-/obj/machinery/jukebox/boombox,
+/obj/machinery/jukebox/boombox{
+	pixel_x = 2;
+	pixel_y = -3
+	},
 /obj/structure/table/wood,
 /obj/machinery/light/directional/east,
 /turf/open/floor/plating,
@@ -64,6 +66,11 @@
 	},
 /obj/machinery/firealarm/directional/east,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/retaliate/goose{
+	name = "Khasir";
+	faction = list("playerElysium");
+	dir = 8
+	},
 /turf/open/floor/carpet/green,
 /area/ship/hallway/central)
 "cp" = (
@@ -165,7 +172,9 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/docking_port/mobile{
-	dir = 2
+	dir = 8;
+	preferred_direction = 4;
+	name = "Kondor"
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/fluff/clockwork/alloy_shards,
@@ -282,10 +291,6 @@
 /obj/structure/sign/poster/elysium/random{
 	pixel_x = -32
 	},
-/mob/living/simple_animal/hostile/retaliate/goose{
-	name = "Khasir";
-	faction = list("playerElysium")
-	},
 /turf/open/floor/carpet/green,
 /area/ship/hallway/central)
 "iM" = (
@@ -322,7 +327,7 @@
 	pixel_y = 3
 	},
 /obj/item/reagent_containers/food/drinks/bottle/vodka{
-	pixel_x = -8;
+	pixel_x = -7;
 	pixel_y = 9
 	},
 /obj/effect/decal/cleanable/dirt/dust,
@@ -416,6 +421,10 @@
 /obj/effect/turf_decal/trimline/transparent/green/warning{
 	dir = 1
 	},
+/obj/item/tank/internals/oxygen,
+/obj/item/tank/internals/oxygen,
+/obj/item/tank/internals/oxygen,
+/obj/item/tank/internals/oxygen,
 /turf/open/floor/plasteel/dark,
 /area/ship/storage/eva)
 "ki" = (
@@ -572,6 +581,9 @@
 /obj/machinery/door/airlock{
 	name = "eva airlock"
 	},
+/obj/machinery/door/airlock{
+	name = "eva airlock"
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/storage/eva)
 "oe" = (
@@ -630,7 +642,7 @@
 /obj/item/clothing/mask/cigarette/rollie/cannabis,
 /obj/item/clothing/mask/cigarette/rollie/cannabis,
 /obj/item/bong{
-	pixel_x = 8;
+	pixel_x = 10;
 	pixel_y = 6
 	},
 /turf/open/floor/carpet/green,
@@ -723,7 +735,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
 "qa" = (
-/turf/closed/wall/mineral/plastitanium,
+/turf/closed/wall/r_wall/syndicate,
 /area/ship/bridge)
 "qq" = (
 /obj/structure/table,
@@ -964,7 +976,6 @@
 "uJ" = (
 /obj/structure/table,
 /obj/item/melee/skimitar,
-/obj/item/gun/ballistic/automatic/assault/skm,
 /obj/item/ammo_box/magazine/skm_762_40/extended,
 /obj/item/ammo_box/magazine/skm_762_40/extended,
 /obj/item/ammo_box/magazine/skm_762_40/extended,
@@ -972,6 +983,14 @@
 	color = "#758967"
 	},
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/item/gun/ballistic/automatic/assault/skm{
+	pixel_y = 4;
+	pixel_x = -10
+	},
+/obj/machinery/recharger{
+	pixel_y = 3;
+	pixel_x = 7
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/ship/bridge)
 "uM" = (
@@ -1030,8 +1049,7 @@
 /turf/closed/wall/rust,
 /area/ship/cargo)
 "xe" = (
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/closed/wall/rust,
+/turf/closed/wall/r_wall/rust,
 /area/ship/bridge)
 "xH" = (
 /obj/structure/cable{
@@ -1167,6 +1185,10 @@
 /obj/item/stack/medical/bruise_pack/herb{
 	pixel_x = -5;
 	name = "herbal pack"
+	},
+/obj/item/bodybag{
+	pixel_x = 1;
+	pixel_y = 3
 	},
 /obj/item/storage/firstaid/regular,
 /turf/open/floor/plasteel/dark,
@@ -1508,6 +1530,9 @@
 /obj/effect/decal/cleanable/oil,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering/electrical)
+"IN" = (
+/turf/closed/wall/r_wall/rust,
+/area/ship/cargo)
 "Jb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/trash/candy,
@@ -1656,10 +1681,7 @@
 /obj/structure/sign/poster/elysium/random{
 	pixel_x = -32
 	},
-/obj/item/clothing/shoes/laceup,
-/obj/item/clothing/under/solgov/formal,
 /obj/structure/spider/cocoon,
-/obj/item/radio/headset/solgov,
 /obj/structure/spider/stickyweb{
 	icon_state = "stickyweb2"
 	},
@@ -1670,6 +1692,9 @@
 /mob/living/simple_animal/hostile/poison/giant_spider{
 	health = 160
 	},
+/obj/item/clothing/shoes/laceup,
+/obj/item/clothing/under/solgov/formal,
+/obj/item/radio/headset/solgov,
 /turf/open/floor/plating,
 /area/ship/engineering/electrical)
 "Nx" = (
@@ -1730,7 +1755,6 @@
 /obj/effect/turf_decal/box,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/components/unary/outlet_injector/on/layer4,
-/obj/effect/turf_decal/trimline/transparent/yellow,
 /turf/open/floor/plating,
 /area/ship/external/dark)
 "Ok" = (
@@ -1860,7 +1884,7 @@
 	pixel_y = 7
 	},
 /obj/item/paper/crumpled/muddy{
-	default_raw_text = "Темно  буду писать на ощупт. Мне удалолсь спрятаттся в этом отсеке от этих больных фанатиков. Незнаю долго ли ещё меня будут искать...  но мне кажется что я слышал какое то движение рядом со мной...";
+	default_raw_text = "Темно буду писать на ощупт. Мне удалолсь спрятаттся в этом отсеке от этих больных фанатиков. Незнаю долго ли ещё меня будут искать...  но мне кажется что я слышал какое то движение рядом со мной...";
 	pixel_x = 3;
 	pixel_y = -2
 	},
@@ -1877,10 +1901,6 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/industrial/outline/grey,
-/obj/machinery/door/airlock/uranium{
-	dir = 8;
-	name = "bridge airlock"
-	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
 	},
@@ -1888,6 +1908,11 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/corner/transparent/green/full,
+/obj/machinery/door/airlock{
+	icon_state = "closed";
+	dir = 8;
+	name = "Bridge airlok"
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "QN" = (
@@ -2018,7 +2043,6 @@
 /obj/item/storage/toolbox/ammo/a762_40,
 /obj/item/grenade/frag,
 /obj/item/grenade/frag,
-/obj/effect/spawner/lootdrop/random_gun_protolathe_lootdrop,
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
 "Us" = (
@@ -2029,11 +2053,8 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 1
 	},
-/obj/effect/decal/cleanable/dirt,
 /obj/item/trash/syndi_cakes,
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/dirt/dust,
-/turf/open/floor/plasteel/tech/grid,
+/turf/open/floor/plating/rust,
 /area/ship/engineering/electrical)
 "UC" = (
 /obj/effect/decal/cleanable/blood/drip,
@@ -2444,7 +2465,7 @@ iV
 iV
 iV
 wA
-Et
+IN
 SL
 SL
 wA
@@ -2615,13 +2636,13 @@ iV
 iV
 iV
 iV
-qa
+aX
 qa
 qa
 Qy
 qa
 Ce
-qa
+aX
 iV
 iV
 iV

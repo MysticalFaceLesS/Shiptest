@@ -136,6 +136,9 @@
 	multiple_sprites = AMMO_BOX_PER_BULLET
 	instant_load = TRUE
 
+/obj/item/ammo_box/a858/empty
+	start_empty = TRUE
+
 // .308 Stripper Clip (Vickland)
 
 /obj/item/ammo_box/vickland_a308
@@ -149,6 +152,8 @@
 	w_class = WEIGHT_CLASS_TINY
 	instant_load = TRUE
 
+/obj/item/ammo_box/vickland_a308/empty
+	start_empty = TRUE
 
 // .300 Magnum Stripper Clip (Scout)
 
@@ -164,19 +169,22 @@
 
 /obj/item/ammo_box/a300/empty
 	start_empty = TRUE
-// .300 Blackout Stripper Clip (Polymer Survivor Rifle)
+// 7.62 Stripper Clip (Polymer Survivor Rifle)
 
-/obj/item/ammo_box/aac_300blk_stripper
-	name = "stripper clip (.300 BLK)"
+/obj/item/ammo_box/a762_stripper
+	name = "stripper clip (7.62)"
 	desc = "A 5-round stripper clip for makeshift bolt-action rifles. These rounds do good damage with good armor penetration."
-	icon_state = "300m"
-	ammo_type = /obj/item/ammo_casing/aac_300blk
-	caliber = ".300 BLK"
+	icon_state = "stripper_308-5"
+	base_icon_state = "stripper_308"
+	ammo_type = /obj/item/ammo_casing/a762_40
+	caliber = "7.62x40mm"
 	max_ammo = 5
 	multiple_sprites = AMMO_BOX_PER_BULLET
 	w_class = WEIGHT_CLASS_TINY
 	instant_load = TRUE
 
+/obj/item/ammo_box/a762_stripper/empty
+	start_empty = TRUE
 // Ferromagnetic Pellet Speed Loader (Claris)
 
 /obj/item/ammo_box/amagpellet_claris
@@ -284,7 +292,7 @@
 	name = "ammo box (10mm rubbershot)"
 	desc = "A box of 10mm rubbershot ammo, designed to disable targets without causing serious damage."
 	icon_state = "10mmbox-rubbershot"
-	ammo_type = /obj/item/ammo_casing/c9mm/rubber
+	ammo_type = /obj/item/ammo_casing/c10mm/rubber
 
 /obj/item/ammo_box/c10mm/ap
 	name = "ammo box (10mm armor-piercing)"
@@ -390,6 +398,13 @@
 /obj/item/ammo_box/a762_40/inteq
 	icon_state = "a762_40box_big_inteq"
 
+/obj/item/ammo_box/a556_39
+	name = "ammo box (5.56x39mm CLIP)"
+	icon_state = "a556_39box_big"
+	ammo_type = /obj/item/ammo_casing/a556_39
+	max_ammo = 120
+	w_class = WEIGHT_CLASS_NORMAL
+
 //[СELADON-REMOVE] - CELADON_WEAPONS - хватит это терпеть! Теперь эти патроны только в модпаке - mod_celadon\weapons\code\modules\projectiles\boxes_magazines\ammo_boxes.dm
 /*
 /obj/item/ammo_box/a308
@@ -455,7 +470,7 @@
 	desc = "A box of standard 8x50mm ammo."
 	icon_state = "8x50mmbox"
 	ammo_type = /obj/item/ammo_casing/a8_50r
-	max_ammo = 20
+	max_ammo = 25
 
 /obj/item/ammo_box/ferropelletbox
 	name = "ammo box (ferromagnetic pellets)"
@@ -512,3 +527,11 @@
 	icon_state = "a44roum-hp"
 	ammo_type = /obj/item/ammo_casing/a44roum/hp
 	max_ammo = 50
+
+/obj/item/ammo_box/c299
+	name = "ammo box (.299 Eoehoma caseless)"
+	desc = "A box of .299 Eoehoma caseless, for use with the E-40 hybrid assault rifle."
+	icon_state = "299box"
+	ammo_type = /obj/item/ammo_casing/caseless/c299
+	max_ammo = 120
+	w_class = WEIGHT_CLASS_NORMAL // This is a lot of ammo

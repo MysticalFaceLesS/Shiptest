@@ -29,6 +29,11 @@
 	head = /obj/item/clothing/head/shemag/green
 	uniform = /obj/item/clothing/under/color/darkgreen
 	shoes = /obj/item/clothing/shoes/sneakers/black
+	id = /obj/item/card/id/elysium/assistant
+
+/datum/outfit/job/elysium/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	get_elysium_access(H)
 
 /datum/outfit/job/elysium/post_equip(mob/living/carbon/human/H, visualsOnly)
 	. = ..()

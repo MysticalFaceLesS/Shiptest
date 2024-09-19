@@ -524,8 +524,13 @@ There are several things that need to be remembered:
 				handled_by_bodytype = TRUE
 
 		// [CELADON-ADD] - TAJARA
-		if((I.supports_variations & TAJARA_VARIATION) && (dna.species.bodytype & BODYTYPE_TAJARA))
-			icon_file = TAJARA_HEAD_PATH
+		else if(BODYTYPE_TAJARA)
+			if(icon_exists(SARATHI_SNOUTED_HELM_PATH, RESOLVE_ICON_STATE(I)))
+				icon_file = SARATHI_SNOUTED_HELM_PATH
+				if(I.snout_override_icon)
+					icon_file = I.snout_override_icon
+			else
+				handled_by_bodytype = TRUE
 		// [/CELADON-ADD]
 
 		if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(I))))
@@ -637,8 +642,11 @@ There are several things that need to be remembered:
 				handled_by_bodytype = TRUE
 
 		// [CELADON-ADD] - TAJARA
-		else if((dna.species.bodytype & BODYTYPE_TAJARA) && (I.supports_variations & TAJARA_VARIATION))
-			icon_file = TAJARA_SUIT_PATH
+		else if(BODYTYPE_TAJARA)
+			if(icon_exists(TAJARA_SUIT_PATH, RESOLVE_ICON_STATE(I)))
+				icon_file = TAJARA_SUIT_PATH
+			else
+				handled_by_bodytype = TRUE
 		// [/CELADON-ADD]
 
 		if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(I))))
@@ -735,8 +743,13 @@ There are several things that need to be remembered:
 					handled_by_bodytype = TRUE
 
 			// [CELADON-ADD] - TAJARA
-			if((dna.species.bodytype & BODYTYPE_TAJARA) && (I.supports_variations & TAJARA_VARIATION))
-				icon_file = TAJARA_MASK_PATH
+			else if(BODYTYPE_TAJARA)
+				if(icon_exists(SARATHI_SNOUTED_MASK_PATH, RESOLVE_ICON_STATE(I)))
+					icon_file = SARATHI_SNOUTED_MASK_PATH
+					if(I.snout_override_icon)
+						icon_file = I.snout_override_icon
+				else
+					handled_by_bodytype = TRUE
 			// [/CELADON-ADD]
 
 
@@ -778,13 +791,13 @@ There are several things that need to be remembered:
 		update_hud_neck(I)
 		if(!(ITEM_SLOT_NECK in check_obscured_slots()))
 
-			if(dna.species.bodytype & BODYTYPE_VOX) // there is neither a vox or kepori neck path, we just tell it to greyscale no matter what
-//				if(I.supports_variations & VOX_VARIATION)
-//					icon_file = VOX_NECK_PATH
-//					if(I.vox_override_icon)
-//						icon_file = I.vox_override_icon
-//				else
-				handled_by_bodytype = TRUE
+			if(dna.species.bodytype & BODYTYPE_VOX) // there is no kepori neck path, we just tell it to greyscale no matter what
+				if(I.supports_variations & VOX_VARIATION)
+					icon_file = VOX_NECK_PATH
+					if(I.vox_override_icon)
+						icon_file = I.vox_override_icon
+				else
+					handled_by_bodytype = TRUE
 
 			else if(dna.species.bodytype & BODYTYPE_KEPORI)
 //				if(I.supports_variations & KEPORI_VARIATION)
@@ -841,7 +854,7 @@ There are several things that need to be remembered:
 				handled_by_bodytype = TRUE
 
 			if(!icon_exists(icon_file, RESOLVE_ICON_STATE(I)))
-				icon_file = DEFAULT_BACK_PATH
+				icon_file = I.mob_overlay_icon ? I.mob_overlay_icon : DEFAULT_BACK_PATH
 				handled_by_bodytype = TRUE
 
 			var/use_autogen = handled_by_bodytype ? dna.species : null

@@ -27,7 +27,7 @@
 	togglename = "zhan"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small
 	resistance_flags = NONE
-	supports_variations = DIGITIGRADE_VARIATION | TAJARA_VARIATION
+	supports_variations = DIGITIGRADE_VARIATION
 
 /obj/item/clothing/suit/toggle/tajaran/naval_coat
 	icon = 'mod_celadon/_storge_icons/icons/items/obj/tajara_items.dmi'
@@ -41,7 +41,7 @@
 	togglename = "naval"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small
 	resistance_flags = NONE
-	supports_variations = DIGITIGRADE_VARIATION | TAJARA_VARIATION
+	supports_variations = DIGITIGRADE_VARIATION
 
 /obj/item/clothing/suit/toggle/tajaran/med_coat
 	icon = 'mod_celadon/_storge_icons/icons/items/obj/tajara_items.dmi'
@@ -55,7 +55,7 @@
 	togglename = "naval"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small
 	resistance_flags = NONE
-	supports_variations = DIGITIGRADE_VARIATION | TAJARA_VARIATION
+	supports_variations = DIGITIGRADE_VARIATION
 
 /obj/item/clothing/suit/hunting
 	icon = 'mod_celadon/_storge_icons/icons/items/obj/tajara_items.dmi'
@@ -67,4 +67,4 @@
 	blood_overlay_type = "coat"
 	body_parts_covered = CHEST | ARMS | GROIN
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small
-	supports_variations = DIGITIGRADE_VARIATION | TAJARA_VARIATION
+	supports_variations = DIGITIGRADE_VARIATION

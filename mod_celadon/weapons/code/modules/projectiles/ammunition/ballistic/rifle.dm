@@ -1,3 +1,24 @@
+
+// 5.56x39mm (M-90gl Carbine & P-16)
+
+/obj/item/ammo_casing/a556_39
+	name = "5.56x39mm CLIP bullet casing"
+	desc = "A 5.56x39mm CLIP bullet casing."
+	icon_state = "rifle-brass"
+	caliber = "5.56x39mm"
+	projectile_type = /obj/projectile/bullet/a556_39
+	bullet_per_box = 80
+
+// 5.56x45
+
+/obj/item/ammo_casing/a556_45
+	name = "5.56x45mm bullet casing"
+	desc = "A 5.56x45mm bullet casing."
+	icon_state = "rifle-brass"
+	caliber = "5.56x45mm"
+	projectile_type = /obj/projectile/bullet/a556_45
+	bullet_per_box = 80
+
 /obj/item/ammo_casing/a556_45/a856
 	name = "5.56mm A856 bullet casing"
 	desc = "A 5.56mm bullet casing."

@@ -15,14 +15,11 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/exo //WS Edit - Exowear Pockets
 	greyscale_colors = list(list(13, 16), list(10, 18), list(13, 21))
 	greyscale_icon_state = "coat"
-	// [CELADON-EDIT] - TAJARA
-	// supports_variations = VOX_VARIATION // CELADON-EDIT - ORIGINAL
-	supports_variations = VOX_VARIATION | TAJARA_VARIATION
-	// [/CELADON-EDIT]
+	supports_variations = VOX_VARIATION
 	mob_overlay_icon = 'icons/mob/clothing/suit.dmi'
 
 /obj/item/clothing/suit/worn_overlays(isinhands = FALSE)
-	. = list()
+	. = ..()
 	if(!isinhands)
 		if(damaged_clothes)
 			. += mutable_appearance('icons/effects/item_damage.dmi', "damageduniform")

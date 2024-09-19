@@ -125,13 +125,13 @@
 /area/outpost/maintenance/fore)
 "aE" = (
 /obj/structure/table/wood,
-/obj/item/reagent_containers/food/snacks/cakeslice/birthday{
-	pixel_x = -3;
-	pixel_y = -5
-	},
 /obj/effect/decal/cleanable/confetti{
 	pixel_x = -12;
 	pixel_y = -3
+	},
+/obj/item/food/cakeslice/birthday{
+	pixel_x = -3;
+	pixel_y = -5
 	},
 /turf/open/floor/plasteel/sepia,
 /area/outpost/crew/bar)
@@ -179,6 +179,12 @@
 "aL" = (
 /turf/closed/mineral/random/snow,
 /area/outpost/maintenance/aft)
+"aM" = (
+/obj/effect/mob_spawn/human/elysium_outpost/bartender{
+	dir = 4
+	},
+/turf/open/floor/plasteel/telecomms_floor,
+/area/outpost/crew/cryo)
 "aN" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 9
@@ -519,12 +525,6 @@
 	},
 /turf/open/floor/carpet,
 /area/outpost/crew/library)
-"cb" = (
-/obj/effect/decal/fakelattice{
-	icon_state = "lattice-12"
-	},
-/turf/open/space/basic,
-/area/outpost/external)
 "cc" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/industrial/warning{
@@ -899,9 +899,7 @@
 /turf/open/floor/plasteel/dark,
 /area/outpost/security)
 "dx" = (
-/obj/effect/decal/fakelattice{
-	icon_state = "lattice-38"
-	},
+/obj/structure/lattice/clockwork,
 /turf/open/space/basic,
 /area/outpost/external)
 "dA" = (
@@ -2020,12 +2018,6 @@
 	},
 /turf/open/floor/plasteel/sepia,
 /area/outpost/crew/canteen)
-"hH" = (
-/obj/effect/decal/fakelattice{
-	icon_state = "lattice-3"
-	},
-/turf/open/space/basic,
-/area/outpost/external)
 "hI" = (
 /obj/machinery/computer/atmos_alert{
 	dir = 1
@@ -6309,7 +6301,9 @@
 /turf/open/floor/engine/air,
 /area/outpost/engineering/atmospherics)
 "wl" = (
-/obj/machinery/cryopod,
+/obj/effect/mob_spawn/human/elysium_outpost/artist{
+	dir = 8
+	},
 /turf/open/floor/plasteel/telecomms_floor,
 /area/outpost/crew/cryo)
 "wn" = (
@@ -6861,6 +6855,13 @@
 /obj/effect/turf_decal/industrial/warning,
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/engineering/atmospherics)
+"yg" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/mob_spawn/human/elysium_outpost/cook{
+	dir = 4
+	},
+/turf/open/floor/plasteel/showroomfloor,
+/area/outpost/crew/canteen)
 "yh" = (
 /obj/structure/rack,
 /turf/open/floor/concrete/slab_1,
@@ -10693,6 +10694,10 @@
 	},
 /turf/open/floor/plating,
 /area/outpost/engineering/atmospherics)
+"LA" = (
+/obj/effect/mob_spawn/human/elysium_outpost/maid,
+/turf/open/floor/plasteel/telecomms_floor,
+/area/outpost/crew/cryo)
 "LC" = (
 /obj/structure/bed,
 /obj/structure/curtain/cloth/grey,
@@ -13757,6 +13762,12 @@
 /obj/effect/turf_decal/industrial/warning,
 /turf/closed/mineral/random/jungle,
 /area/outpost/crew/garden)
+"Wr" = (
+/obj/effect/mob_spawn/human/elysium_outpost/maid{
+	dir = 1
+	},
+/turf/open/floor/plasteel/telecomms_floor,
+/area/outpost/crew/cryo)
 "Wu" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 6
@@ -14348,12 +14359,6 @@
 /obj/machinery/light/directional/east,
 /turf/open/floor/plasteel,
 /area/outpost/operations)
-"YE" = (
-/obj/effect/decal/fakelattice{
-	icon_state = "lattice-11"
-	},
-/turf/open/space/basic,
-/area/outpost/external)
 "YF" = (
 /obj/structure/table/wood,
 /obj/item/reagent_containers/food/drinks/coffee{
@@ -27304,7 +27309,7 @@ Zp
 sN
 vV
 vV
-cb
+dx
 Ft
 OP
 wH
@@ -27491,8 +27496,8 @@ Zp
 HY
 Ft
 dx
-YE
-hH
+dx
+dx
 DD
 kc
 sn
@@ -27678,8 +27683,8 @@ Zp
 HY
 HY
 Ft
-hH
-hH
+dx
+dx
 nP
 wB
 vf
@@ -29403,7 +29408,7 @@ Pl
 Oe
 Zu
 yN
-wl
+LA
 Ou
 oh
 Rx
@@ -31085,7 +31090,7 @@ Rx
 bO
 LF
 kB
-wK
+wl
 HI
 pq
 ZS
@@ -31271,9 +31276,9 @@ vx
 Rx
 Pl
 Oe
-Zu
+Wr
 yN
-wl
+LA
 Ou
 oh
 Rx
@@ -31459,7 +31464,7 @@ Rx
 xp
 PL
 XS
-EA
+aM
 Pc
 Yf
 BQ
@@ -33110,7 +33115,7 @@ pU
 gP
 Vr
 BA
-sR
+yg
 gP
 ba
 DL
