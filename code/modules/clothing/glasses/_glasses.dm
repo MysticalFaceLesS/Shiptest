@@ -242,6 +242,14 @@
 	supports_variations = KEPORI_VARIATION | VOX_VARIATION
 	glass_colour_type = /datum/client_colour/glass_colour/lightblue
 
+/obj/item/clothing/glasses/sunglasses/ballistic
+	name = "ballistic goggles"
+	desc = "A pair of flash-proof ballistic goggles."
+	icon_state = "ballistic_goggles"
+	item_state = "ballistic_goggles"
+	supports_variations = KEPORI_VARIATION | VOX_VARIATION
+	glass_colour_type = /datum/client_colour/glass_colour/lightblue
+
 /obj/item/clothing/glasses/welding
 	name = "welding goggles"
 	desc = "Protects the eyes from bright flashes; approved by the mad scientist association."
