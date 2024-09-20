@@ -10596,10 +10596,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 8
 	},
-/obj/machinery/vending/medical/syndicate_access{
-	req_one_access_txt = "8123";
-	all_items_free = 1
-	},
+/obj/machinery/vending/snack/random,
 /turf/open/floor/plasteel/white,
 /area/outpost/medical/hall_1)
 "vp" = (
@@ -12536,12 +12533,6 @@
 "zn" = (
 /turf/closed/indestructible/reinforced,
 /area/outpost/crew/dop_zone_2)
-"zo" = (
-/obj/machinery/smartfridge/bloodbank/preloaded{
-	req_one_access_txt = "8123"
-	},
-/turf/open/floor/plasteel/white,
-/area/outpost/medical/hall_1)
 "zp" = (
 /obj/effect/turf_decal/industrial/traffic{
 	dir = 4
@@ -22460,7 +22451,9 @@
 	pixel_x = 9;
 	network = list("outpostelysium")
 	},
-/obj/machinery/vending/snack/random,
+/obj/machinery/smartfridge/bloodbank/preloaded{
+	req_one_access_txt = "8123"
+	},
 /turf/open/floor/plasteel/white,
 /area/outpost/medical/hall_1)
 "SO" = (
@@ -24667,6 +24660,7 @@
 /obj/effect/turf_decal/corner/opaque/lime/half{
 	dir = 4
 	},
+/obj/structure/fluff/hedge/opaque,
 /turf/open/floor/plasteel/white,
 /area/outpost/medical/hall_2)
 "WX" = (
@@ -48788,7 +48782,7 @@ DR
 DR
 xV
 uW
-zo
+uW
 fO
 gY
 hx
