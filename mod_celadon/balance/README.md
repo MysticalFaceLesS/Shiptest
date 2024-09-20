@@ -73,6 +73,13 @@ EDIT:
 `code/modules/surgery/tools.dm`
 
 `code/datums/status_effects/buffs.dm`
+
+ADD: 
+`code/modules/vending/_vending.dm` : Добавлена вероятность поломки автомата при уничтожение его с вероятностью в 30% что ничего не выпадет с него
+
+Хардсьюты:
+EDIT: `code/modules/clothing/spacesuits/hardsuit.dm`
+REMOVE: `code/modules/clothing/spacesuits/hardsuit.dm`
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.

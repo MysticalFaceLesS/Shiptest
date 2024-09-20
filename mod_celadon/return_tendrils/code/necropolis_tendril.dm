@@ -185,3 +185,14 @@ GLOBAL_LIST_INIT(tendrils, list())
 	)
 	max_mobs = 12
 	spawn_time = 150
+
+/obj/structure/spawner/plasma_gaint/extreme_threat
+	mob_types = list(
+		/mob/living/simple_animal/hostile/asteroid/goliath/beast/tendril = 27,
+		/mob/living/simple_animal/hostile/asteroid/hivelord/legion/tendril = 26,
+		/mob/living/simple_animal/hostile/asteroid/basilisk/watcher/tendril = 26,
+		/mob/living/simple_animal/hostile/asteroid/basilisk/watcher/icewing = 5,
+		/mob/living/simple_animal/hostile/asteroid/brimdemon = 20
+	)
+	max_mobs = 12
+	spawn_time = 120

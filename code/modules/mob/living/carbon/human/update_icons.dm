@@ -524,8 +524,11 @@ There are several things that need to be remembered:
 				handled_by_bodytype = TRUE
 
 		// [CELADON-ADD] - TAJARA
-		if((I.supports_variations & TAJARA_VARIATION) && (dna.species.bodytype & BODYTYPE_TAJARA))
-			icon_file = TAJARA_HEAD_PATH
+		else if(dna.species.bodytype & BODYTYPE_TAJARA)
+			if(icon_exists(SARATHI_SNOUTED_HELM_PATH, RESOLVE_ICON_STATE(I)))
+				icon_file = SARATHI_SNOUTED_HELM_PATH
+			else
+				handled_by_bodytype = TRUE
 		// [/CELADON-ADD]
 
 		if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(I))))
@@ -637,8 +640,11 @@ There are several things that need to be remembered:
 				handled_by_bodytype = TRUE
 
 		// [CELADON-ADD] - TAJARA
-		else if((dna.species.bodytype & BODYTYPE_TAJARA) && (I.supports_variations & TAJARA_VARIATION))
-			icon_file = TAJARA_SUIT_PATH
+		else if(dna.species.bodytype & BODYTYPE_TAJARA)
+			if(icon_exists(TAJARA_SUIT_PATH, RESOLVE_ICON_STATE(I)))
+				icon_file = TAJARA_SUIT_PATH
+			else
+				handled_by_bodytype = TRUE
 		// [/CELADON-ADD]
 
 		if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(I))))
@@ -735,8 +741,11 @@ There are several things that need to be remembered:
 					handled_by_bodytype = TRUE
 
 			// [CELADON-ADD] - TAJARA
-			if((dna.species.bodytype & BODYTYPE_TAJARA) && (I.supports_variations & TAJARA_VARIATION))
-				icon_file = TAJARA_MASK_PATH
+			else if(dna.species.bodytype & BODYTYPE_TAJARA)
+				if(icon_exists(SARATHI_SNOUTED_MASK_PATH, RESOLVE_ICON_STATE(I)))
+					icon_file = SARATHI_SNOUTED_MASK_PATH
+				else
+					handled_by_bodytype = TRUE
 			// [/CELADON-ADD]
 
 
@@ -841,7 +850,7 @@ There are several things that need to be remembered:
 				handled_by_bodytype = TRUE
 
 			if(!icon_exists(icon_file, RESOLVE_ICON_STATE(I)))
-				icon_file = DEFAULT_BACK_PATH
+				icon_file = I.mob_overlay_icon ? I.mob_overlay_icon : DEFAULT_BACK_PATH
 				handled_by_bodytype = TRUE
 
 			var/use_autogen = handled_by_bodytype ? dna.species : null

@@ -679,3 +679,23 @@
 	id = "ws-drugstore"
 	description = "A store that once sold a variety of items and equipment."
 	suffix = "whitesands_surface_camp_drugstore.dmm"
+
+//							///
+//		Plasma	 ruin		///
+//							///
+
+/datum/map_template/ruin/plasma_gaint/oldminer
+	name = "oldminer"
+	id = "ps-oldminer"
+	description = "The base of an old and experienced miner"
+	suffix = "oldminer.dmm"
+
+//							///
+//		EarthSand ruin		///
+//							///
+
+/datum/map_template/ruin/earth_sand/el_town
+	name = "eltown"
+	id = "el_town"
+	description = "Town of Elysium"
+	suffix = "el_town.dmm"

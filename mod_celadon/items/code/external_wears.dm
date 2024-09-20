@@ -15,6 +15,6 @@
 					/obj/item/radio)
 	body_parts_covered = CHEST | GROIN | ARMS
 	cold_protection = CHEST |GROIN | ARMS
-	supports_variations = DIGITIGRADE_VARIATION | TAJARA_VARIATION
+	supports_variations = DIGITIGRADE_VARIATION
 	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small

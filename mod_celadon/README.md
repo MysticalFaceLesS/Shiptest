@@ -1,6 +1,8 @@
+**это руководство по модуляризации являтеся обязательным к прочтению, но необязательным по исполнению. Некоторые моменты противоречить тому что вы делаете. За дополнительной информацией обращаться к кодерам проекта.**
+
 # Модуляризация
 
-### Если вы не будете следовать этому руководству, то с большой вероятностью ваш PR будет отклонён.
+### Если вы не будете следовать этому руководству, то с большой вероятностью ваш PR будет отклонён (или нет).
 
 <details>
 <summary><b>Содержание документа</b></summary>
@@ -320,7 +322,7 @@ mod_celadon/_storge_sounds
   // [CELADON-EDIT] - SHUTTLE_TOGGLE - (Optional Reason/comment)
   // if(SHUTTLE_STRANDED, SHUTTLE_ESCAPE) // CELADON-EDIT - ORIGINAL
   if(SHUTTLE_STRANDED, SHUTTLE_ESCAPE, SHUTTLE_DISABLED)
-  // [CELADON-EDIT]
+  // [/CELADON-EDIT]
       return 1
   ```
 

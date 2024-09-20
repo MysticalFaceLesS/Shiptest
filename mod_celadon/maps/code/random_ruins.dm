@@ -26,3 +26,11 @@
 
 /datum/map_template/ruin/whitesands
 	prefix = "_maps/_mod_celadon/RandomRuins/SandRuins/"
+
+/datum/map_template/ruin/plasma_gaint
+	prefix = "_maps/_mod_celadon/RandomRuins/PlasmaRuins/"
+	ruin_type = RUINTYPE_PLASMA
+
+/datum/map_template/ruin/earth_sand
+	prefix = "_maps/_mod_celadon/RandomRuins/EarthSandRuins/"
+	ruin_type = RUINTYPE_EARTH_SAND

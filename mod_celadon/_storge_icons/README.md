@@ -220,6 +220,7 @@ areas.dmi
 barsigns_long.dmi
 barsigns.dmi
 barsigns96x96.dmi
+boarding.dmi
 default_title.dmi
 drake.dmi
 drakeborg_vr-1.dmi

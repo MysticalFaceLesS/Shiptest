@@ -451,7 +451,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["feature_elzu_horns"], features["elzu_horns"])
 	READ_FILE(S["feature_tail_elzu"], features["tail_elzu"])
 	// [CELADON-ADD] - TAJARA
-	READ_FILE(S["skin_tone_nose"], skin_tone_nose)
+	READ_FILE(S["skin_tone_nose"], features["skin_tone_nose"])
 	READ_FILE(S["feature_tajara_ears"], features["tajara_ears"])
 	READ_FILE(S["feature_tajara_hairs"], features["tajara_hairs"])
 	READ_FILE(S["feature_tajara_ears_markings"], features["tajara_ears_markings"])
@@ -461,11 +461,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["feature_tajara_chest_markings"], features["tajara_chest_markings"])
 	READ_FILE(S["feature_tajara_body_markings"], features["tajara_body_markings"])
 	READ_FILE(S["feature_tajara_tail"], features["tajara_tail"])
-	READ_FILE(S["tajara_ears_markings_color"], tajara_ears_markings_color)
-	READ_FILE(S["tajara_head_markings_color"], tajara_head_markings_color)
-	READ_FILE(S["tajara_nose_markings_color"], tajara_nose_markings_color)
-	READ_FILE(S["tajara_chest_markings_color"], tajara_chest_markings_color)
-	READ_FILE(S["tajara_body_markings_color"], tajara_body_markings_color)
+	READ_FILE(S["tajara_ears_markings_color"], features["tajara_ears_markings_color"])
+	READ_FILE(S["tajara_head_markings_color"], features["tajara_head_markings_color"])
+	READ_FILE(S["tajara_nose_markings_color"], features["tajara_nose_markings_color"])
+	READ_FILE(S["tajara_chest_markings_color"], features["tajara_chest_markings_color"])
+	READ_FILE(S["tajara_body_markings_color"], features["tajara_body_markings_color"])
 	// [/CELADON-ADD]
 
 	READ_FILE(S["equipped_gear"], equipped_gear)
@@ -612,7 +612,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["flavor_text"]				= sanitize_text(features["flavor_text"], initial(features["flavor_text"]))
 
 	// [CELADON-ADD] - TAJARA
-	skin_tone_nose = sanitize_inlist(skin_tone_nose, GLOB.skin_tones_nose)
+	features["skin_tone_nose"] = sanitize_inlist(features["skin_tone_nose"], GLOB.skin_tones_nose)
 	features["tajara_ears"] = sanitize_inlist(features["tajara_ears"], GLOB.tajara_ears_list, "Plain")
 	features["tajara_hairs"] = sanitize_inlist(features["tajara_hairs"], GLOB.tajara_hairs_list, "Plain")
 	features["tajara_ears_markings"] = sanitize_inlist(features["tajara_ears_markings"], GLOB.tajara_ears_markings_list, "None")
@@ -712,7 +712,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["fbp"]							, fbp)
 
 	// [CELADON-ADD] - TAJARA
-	WRITE_FILE(S["skin_tone_nose"], skin_tone_nose)
+	WRITE_FILE(S["skin_tone_nose"], features["skin_tone_nose"])
 	WRITE_FILE(S["feature_tajara_ears"], features["tajara_ears"])
 	WRITE_FILE(S["feature_tajara_hairs"], features["tajara_hairs"])
 	WRITE_FILE(S["feature_tajara_ears_markings"], features["tajara_ears_markings"])
@@ -722,11 +722,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["feature_tajara_chest_markings"], features["tajara_chest_markings"])
 	WRITE_FILE(S["feature_tajara_body_markings"], features["tajara_body_markings"])
 	WRITE_FILE(S["feature_tajara_tail"], features["tajara_tail"])
-	WRITE_FILE(S["tajara_ears_markings_color"], tajara_ears_markings_color)
-	WRITE_FILE(S["tajara_head_markings_color"], tajara_head_markings_color)
-	WRITE_FILE(S["tajara_nose_markings_color"], tajara_nose_markings_color)
-	WRITE_FILE(S["tajara_chest_markings_color"], tajara_chest_markings_color)
-	WRITE_FILE(S["tajara_body_markings_color"], tajara_body_markings_color)
+	WRITE_FILE(S["tajara_ears_markings_color"], features["tajara_ears_markings_color"])
+	WRITE_FILE(S["tajara_head_markings_color"], features["tajara_head_markings_color"])
+	WRITE_FILE(S["tajara_nose_markings_color"], features["tajara_nose_markings_color"])
+	WRITE_FILE(S["tajara_chest_markings_color"], features["tajara_chest_markings_color"])
+	WRITE_FILE(S["tajara_body_markings_color"], features["tajara_body_markings_color"])
 	// [/CELADON-ADD]
 
 	//Flavor text

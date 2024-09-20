@@ -534,6 +534,7 @@ voice/yawn_male_2.ogg
 
 blade_close.ogg
 blade_open.ogg
+boarding_pad.ogg
 drinkfizz.ogg
 heatdam.ogg
 insect_battle_bite.ogg

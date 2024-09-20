@@ -2466,7 +2466,7 @@
 /area/ship/bridge)
 "ye" = (
 /obj/item/clothing/neck/cloak/overseer,
-/obj/item/clothing/suit/armor/vest/bulletproof/solgov/overseer,
+/obj/item/clothing/suit/armor/vest/solgov/overseer,
 /obj/structure/closet/secure_closet/head_of_personnel{
 	anchored = 1;
 	name = "\proper overseer's locker";
@@ -3569,7 +3569,7 @@
 /area/ship/crew/crewtwo)
 "IX" = (
 /obj/item/clothing/head/solgov/captain,
-/obj/item/clothing/suit/armor/vest/bulletproof/solgov/captain,
+/obj/item/clothing/suit/armor/vest/solgov/captain,
 /obj/item/clothing/under/solgov/formal/captain,
 /obj/item/clothing/shoes/laceup,
 /obj/item/clothing/gloves/combat,
@@ -5519,7 +5519,9 @@
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo/office)
 "ZY" = (
-/obj/machinery/vending/medical,
+/obj/machinery/vending/medical{
+	all_items_free = 1
+	},
 /obj/effect/turf_decal/trimline/opaque/solgovblue/filled/line{
 	dir = 4
 	},

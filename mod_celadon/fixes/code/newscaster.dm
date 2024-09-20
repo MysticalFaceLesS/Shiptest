@@ -564,6 +564,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/newscaster/security_unit, 30)
 				SSblackbox.record_feedback("amount", "newscaster_stories", 1)
 				screen=4
 				msg = ""
+				picture = null
 			updateUsrDialog()
 		else if(href_list["create_channel"])
 			screen=2
