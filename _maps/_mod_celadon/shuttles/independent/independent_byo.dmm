@@ -66,22 +66,16 @@
 /turf/open/floor/plating/airless,
 /area/ship/construction)
 "fF" = (
-/obj/structure/railing{
+/obj/effect/turf_decal/industrial/warning{
 	dir = 8
 	},
-/obj/effect/turf_decal/industrial/warning/corner{
-	dir = 8
+/obj/docking_port/mobile{
+	callTime = 250;
+	can_move_docking_ports = 1;
+	launch_status = 0;
+	port_direction = 8;
+	preferred_direction = 4
 	},
-/turf/open/floor/plating/airless,
-/area/ship/construction)
-"gL" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/effect/turf_decal/industrial/warning/corner{
-	dir = 4
-	},
-/obj/item/banner/engineering,
 /turf/open/floor/plating/airless,
 /area/ship/construction)
 "hS" = (
@@ -120,13 +114,7 @@
 /turf/open/floor/plating/airless,
 /area/ship/construction)
 "jj" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/effect/turf_decal/industrial/warning/corner{
-	dir = 1
-	},
-/turf/open/floor/plating/airless,
+/turf/open/floor/plating,
 /area/ship/construction)
 "ke" = (
 /obj/structure/railing{
@@ -141,12 +129,6 @@
 /area/ship/construction)
 "nq" = (
 /obj/structure/railing,
-/turf/open/floor/plating/airless,
-/area/ship/construction)
-"nv" = (
-/obj/effect/turf_decal/industrial/warning{
-	dir = 8
-	},
 /turf/open/floor/plating/airless,
 /area/ship/construction)
 "nx" = (
@@ -166,28 +148,11 @@
 	},
 /turf/open/floor/plating/airless,
 /area/ship/construction)
-"of" = (
-/obj/structure/railing,
-/obj/effect/turf_decal/industrial/warning/corner{
-	dir = 8
-	},
-/turf/open/floor/plating/airless,
-/area/ship/construction)
 "pi" = (
 /obj/structure/railing{
 	dir = 4
 	},
 /obj/effect/turf_decal/industrial/warning/corner,
-/turf/open/floor/plating/airless,
-/area/ship/construction)
-"qM" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/effect/turf_decal/industrial/warning/corner{
-	dir = 1
-	},
-/obj/item/banner/engineering,
 /turf/open/floor/plating/airless,
 /area/ship/construction)
 "rj" = (
@@ -249,11 +214,6 @@
 /obj/structure/reagent_dispensers/fueltank,
 /turf/open/floor/plating/airless,
 /area/ship/construction)
-"uC" = (
-/obj/structure/railing,
-/obj/effect/turf_decal/industrial/warning/corner,
-/turf/open/floor/plating/airless,
-/area/ship/construction)
 "vo" = (
 /obj/item/stack/tile/carpet/royalblack/fifty,
 /obj/item/stack/tile/carpet/royalblue/fifty,
@@ -283,20 +243,6 @@
 /obj/item/storage/box/stockparts/basic,
 /obj/item/circuitboard/machine/autolathe,
 /obj/item/storage/box/stockparts/basic,
-/turf/open/floor/plating/airless,
-/area/ship/construction)
-"vK" = (
-/obj/docking_port/mobile{
-	callTime = 250;
-	can_move_docking_ports = 1;
-	dir = 4;
-	launch_status = 0;
-	port_direction = 8;
-	preferred_direction = 4
-	},
-/obj/effect/turf_decal/industrial/warning{
-	dir = 1
-	},
 /turf/open/floor/plating/airless,
 /area/ship/construction)
 "wd" = (
@@ -396,7 +342,10 @@
 /turf/open/floor/plating/airless,
 /area/ship/construction)
 "HP" = (
-/turf/open/floor/plating,
+/obj/effect/turf_decal/industrial/warning{
+	dir = 1
+	},
+/turf/open/floor/plating/airless,
 /area/ship/construction)
 "Jz" = (
 /obj/machinery/power/ship_gravity/unanchored,
@@ -559,13 +508,25 @@
 zu
 Pd
 Pd
+Pd
 fF
-nv
-jj
+Pd
+Pd
 Pd
 Ct
 "}
 (2,1,1) = {"
+ke
+MA
+MA
+ck
+MA
+ND
+MA
+MA
+nq
+"}
+(3,1,1) = {"
 ke
 MA
 SN
@@ -573,29 +534,32 @@ Fj
 Fj
 Fj
 Ld
+MA
 nq
 "}
-(3,1,1) = {"
+(4,1,1) = {"
 ke
-ND
+MA
 Qz
 Fj
 Vu
 Fj
 az
+MA
 nq
 "}
-(4,1,1) = {"
+(5,1,1) = {"
 ke
-ck
+MA
 nx
 Fj
 yQ
 Fj
 FI
+MA
 nq
 "}
-(5,1,1) = {"
+(6,1,1) = {"
 ke
 MA
 Ds
@@ -603,39 +567,43 @@ Fj
 rS
 Fj
 wd
+MA
 nq
 "}
-(6,1,1) = {"
-gL
+(7,1,1) = {"
+ke
 MA
 vo
 Fj
 ev
 Fj
 RZ
-uC
+MA
+nq
 "}
-(7,1,1) = {"
-vK
-MA
-MA
-dz
+(8,1,1) = {"
 HP
+MA
+MA
 dz
+jj
+dz
+MA
 MA
 MO
 "}
-(8,1,1) = {"
-qM
+(9,1,1) = {"
+ke
 MA
 SA
 Fj
 LK
 Fj
 iE
-of
+MA
+nq
 "}
-(9,1,1) = {"
+(10,1,1) = {"
 ke
 MA
 rj
@@ -643,9 +611,10 @@ Fj
 ci
 Fj
 vs
+MA
 nq
 "}
-(10,1,1) = {"
+(11,1,1) = {"
 ke
 MA
 uq
@@ -653,9 +622,10 @@ Fj
 Fj
 Fj
 mJ
+MA
 nq
 "}
-(11,1,1) = {"
+(12,1,1) = {"
 ke
 MA
 MA
@@ -663,15 +633,17 @@ aO
 Jz
 SK
 MA
+MA
 nq
 "}
-(12,1,1) = {"
+(13,1,1) = {"
 HK
-MA
+BL
 BL
 pi
 GN
 hS
+BL
 BL
 eQ
 "}
