@@ -71,11 +71,8 @@
 	if(cooldown > 0)
 		visible_message("<span class='warning'>Устройство заряжается, подождите [cooldown] секунд.</span>")
 		return
-	if(!M)
-		visible_message("<span class='warning'>Похоже, никого нет на паде.</span>")
-		return
-	if(!M.mind)
-		visible_message("<span class='warning'>Пад не может отправить неразумное существо, это нарушает галактические соглашения.</span>")
+	if(!M || M != user)
+		visible_message("<span class='warning'>Для активации телепортера, оператору необходимо встать на него.</span>")
 		return
 
 	var/list/objects = current_ship.get_nearby_overmap_objects()
@@ -89,34 +86,42 @@
 	if(ships.len == 0)
 		visible_message("<span class='warning'>Отсутствуют корабли поблизости.</span>")
 		return
-
 	var/obj/docking_port/mobile/selected = tgui_input_list(user, "Выберите шаттл для телепортации", "Меню транслокации", ships)
+
 	var/area/target = tgui_input_list(user, "Выберите зону шаттла для телепортации", "Меню транслокации", selected.shuttle_areas)
+	if(target)
+		var/list/places = list()
+		for(var/turf/open/T in target.contents)
+			places += T
+			for(var/obj/machinery/D in T.contents)
+				if(D.density == TRUE)
+					places -= T
+					break
+		if(places.len == 0)
+			visible_message("<span class='warning'>В данной зоне отсутствует свободное место, выберите другую область.</span>")
+			return
+		balloon_alert(M, "Инициализация, не двигайтесь...")
+		playsound(src, 'sound/weapons/flash.ogg', 40, TRUE, frequency = 0.5)
+		var/turf/teleport_location = pick(places)
+		new /obj/effect/temp_visual/boarding_alert(teleport_location)
 
-	balloon_alert(M, "Инициализация, не двигайтесь...")
-	playsound(src, 'sound/weapons/flash.ogg', 40, TRUE, frequency = 0.5)
-	var/list/places = list()
-	for(var/turf/open/T in target.contents)
-		places += T
-	var/turf/teleport_location = pick(places)
-	new /obj/effect/temp_visual/boarding_alert(teleport_location)
+		if(do_after(M, 5 SECONDS, target = src))
+			new /obj/effect/temp_visual/boarding_out(get_turf(src))
+			var/obj/effect/temp_visual/boarding_in/T = new /obj/effect/temp_visual/boarding_in(teleport_location)
+			playsound(src, 'mod_celadon/_storge_sounds/sound/boarding_pad.ogg', 60, TRUE, frequency = 1)
+			playsound(T, 'mod_celadon/_storge_sounds/sound/boarding_pad.ogg', 60, TRUE, frequency = 1)
+			M.invisibility = INVISIBILITY_INVINISMIN // making boarder 1sec invisible for showing animation
 
-	if(do_after(M, 5 SECONDS, target = src))
-		new /obj/effect/temp_visual/boarding_out(get_turf(src))
-		var/obj/effect/temp_visual/boarding_in/T = new /obj/effect/temp_visual/boarding_in(teleport_location)
-		playsound(src, 'mod_celadon/_storge_sounds/sound/boarding_pad.ogg', 60, TRUE, frequency = 1)
-		playsound(T, 'mod_celadon/_storge_sounds/sound/boarding_pad.ogg', 60, TRUE, frequency = 1)
-		M.invisibility = INVISIBILITY_INVINISMIN // making boarder 1sec invisible for showing animation
+			if(do_after(M, 1 SECONDS, target = src))
+				M.forceMove(teleport_location)
 
-		if(do_after(M, 1 SECONDS, target = src))
-			M.forceMove(teleport_location)
+			cooldown = 100
 
-		cooldown = 100
-		M.invisibility = initial(M.invisibility)
-		M.add_to_all_human_data_huds()
+		icon_state = "boarding_pad_off"
+		cooldown += 20 // you may fake teleport and cooldown will be only 20 sec
 
-	icon_state = "boarding_pad_off"
-	cooldown += 20 // you may fake teleport and cooldown will be only 20 sec
+	M.invisibility = initial(M.invisibility)
+	M.add_to_all_human_data_huds()
 
 /datum/supply_pack/sec_supply/boarding_kit
 	name = "Boarding Teleporter"

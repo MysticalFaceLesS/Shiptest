@@ -1325,7 +1325,7 @@
 /turf/open/floor/grass,
 /area/outpost/hallway/fore)
 "fb" = (
-/obj/machinery/vending/boozeomat/syndicate_access,
+/obj/machinery/vending/boozeomat/outpost_access,
 /turf/open/floor/plasteel/tech,
 /area/outpost/crew/bar)
 "fc" = (
@@ -1865,7 +1865,7 @@
 /turf/closed/mineral/random/snow,
 /area/outpost/external)
 "gT" = (
-/obj/machinery/vending/boozeomat/syndicate_access,
+/obj/machinery/vending/boozeomat/outpost_access,
 /turf/open/floor/plasteel/sepia,
 /area/outpost/crew/library)
 "gU" = (
@@ -2852,7 +2852,9 @@
 /turf/open/floor/plasteel/dark,
 /area/outpost/operations)
 "kF" = (
-/obj/machinery/vending/medical/syndicate_access,
+/obj/machinery/vending/medical/syndicate_access{
+	all_items_free = 1
+	},
 /obj/effect/turf_decal/corner/opaque/blue/full,
 /obj/effect/turf_decal/techfloor{
 	dir = 1
@@ -9272,7 +9274,9 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 5
 	},
-/obj/machinery/vending/clothing,
+/obj/machinery/vending/clothing{
+	all_items_free = 1
+	},
 /obj/machinery/newscaster/directional/north{
 	pixel_y = 33
 	},
@@ -14591,7 +14595,9 @@
 /turf/closed/mineral/random/snow,
 /area/outpost/external)
 "Zr" = (
-/obj/machinery/vending/security,
+/obj/machinery/vending/security{
+	all_items_free = 1
+	},
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 6
 	},
