@@ -23,6 +23,8 @@
 	mask = /obj/item/clothing/mask/fakemoustache/italian
 	gloves  =/obj/item/clothing/gloves/botanic_leather
 	shoes = /obj/item/clothing/shoes/sneakers/white
+	id = /obj/item/card/id/elysium_cook
+	back = /obj/item/storage/backpack
 	backpack_contents = list(/obj/item/sharpener = 1,
 							/obj/item/plant_analyzer)
 
@@ -198,3 +200,4 @@
 	uniform = /obj/item/clothing/under/utility
 	shoes = /obj/item/clothing/shoes/sneakers/black
 	id = /obj/item/card/id/elysium_wagabond
+	l_pocket = /obj/item/spacecash/bundle/c500
