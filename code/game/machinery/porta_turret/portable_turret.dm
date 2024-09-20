@@ -842,44 +842,6 @@ DEFINE_BITFIELD(turret_flags, list(
 	stun_projectile_sound = 'sound/weapons/gun/smg/shot.ogg'
 	desc = "A ballistic machine gun auto-turret."
 
-//high rof, range, faster projectile speed
-/* 'Nanotrasen' turrets */
-
-/obj/machinery/porta_turret/ship/nt
-	name = "Sharplite Defense Turret"
-	desc = "A cheap and effective turret designed by Sharplite and purchased and installed on most Nanotrasen Vessels."
-	faction = list(FACTION_PLAYER_NANOTRASEN, "turret")
-	icon_state = "standard_lethal"
-	base_icon_state = "standard"
-	stun_projectile = /obj/projectile/beam/disabler/sharplite
-	lethal_projectile = /obj/projectile/beam/laser/sharplite
-	lethal_projectile_sound = 'sound/weapons/gun/laser/nt-fire.ogg'
-	stun_projectile_sound = 'sound/weapons/taser2.ogg'
-	shot_delay = 10
-	scan_range = 10
-
-/obj/machinery/porta_turret/ship/nt/light
-	name = "Sharplite LDS"
-	desc = "A cheap and effective 'defensive system' designed by Sharplite for installation on Nanotrasen vessels."
-	stun_projectile = /obj/projectile/beam/disabler/weak/sharplite
-	lethal_projectile = /obj/projectile/beam/laser/light/sharplite
-	lethal_projectile_sound = 'sound/weapons/gun/laser/nt-fire.ogg'
-	stun_projectile_sound = 'sound/weapons/taser2.ogg'
-
-
-/obj/machinery/porta_turret/ship/nt/heavy
-	name = "Sharplite Defense Cannon"
-	desc = "A heavy laser mounting designed by Sharplite for usage on Nanotrasen vessels."
-	lethal_projectile = /obj/projectile/beam/laser/heavylaser/sharplite
-	lethal_projectile_sound = 'sound/weapons/lasercannonfire.ogg'
-
-/obj/machinery/porta_turret/ship/nt/pulse
-	name = "Sharplite Pulse Cannon"
-	desc = "A pulse cannon mounting designed by Sharplite. Not sold to any purchasers and exclusively used on Nanotrasen Vessels."
-	lethal_projectile = /obj/projectile/beam/pulse/sharplite_turret
-	lethal_projectile_sound = 'sound/weapons/gun/laser/heavy_laser.ogg'
-
-
 
 /* Syndicate Turrets */
 
@@ -903,40 +865,6 @@ DEFINE_BITFIELD(turret_flags, list(
 	stun_projectile_sound = 'sound/weapons/taser.ogg'
 	lethal_projectile = /obj/projectile/beam/laser/heavylaser
 	lethal_projectile_sound = 'sound/weapons/lasercannonfire.ogg'
-
-/* Inteq Turrets */
-
-/obj/machinery/porta_turret/ship/inteq
-	name = "Vanguard Turret"
-	desc = "A turret designed by IRMG engineers for defending ships from hostile flora, fauna, and people (and Elzousa, which count as flora and people)."
-	stun_projectile = /obj/projectile/bullet/a762_40/rubber
-	stun_projectile_sound = 'sound/weapons/gun/rifle/skm.ogg'
-	lethal_projectile = /obj/projectile/bullet/a762_40
-	lethal_projectile_sound = 'sound/weapons/gun/rifle/skm.ogg'
-	scan_range = 8
-	shot_delay = 20
-	faction = list(FACTION_PLAYER_INTEQ, "turret")
-
-/obj/machinery/porta_turret/ship/inteq/light
-	name = "Close-In Vanguard Turret"
-	desc = "A light turret designed by IRMG engineers for the the task of defending from close-in encounters. Low power, high speed."
-	stun_projectile = /obj/projectile/bullet/c10mm/rubber
-	stun_projectile_sound = 'sound/weapons/gun/smg/vector_fire.ogg'
-	lethal_projectile = /obj/projectile/bullet/c10mm
-	lethal_projectile_sound = 'sound/weapons/gun/smg/vector_fire.ogg'
-	subsystem_type = /datum/controller/subsystem/processing/fastprocess //turns out if you have a shot delay below what SSmachines fires at you need to use a different subsystem
-	scan_range = 4
-	shot_delay = 5
-
-/obj/machinery/porta_turret/ship/inteq/heavy
-	name = "Vanguard Overwatch Turret"
-	desc = "A turret designed by IRMG engineers to provide long range defensive fire on their installations. Has a habit of leaving big holes."
-	stun_projectile = /obj/projectile/bullet/a308/rubber
-	stun_projectile_sound = 'sound/weapons/gun/rifle/f4.ogg'
-	lethal_projectile = /obj/projectile/bullet/a308
-	lethal_projectile_sound = 'sound/weapons/gun/rifle/f4.ogg'
-	scan_range = 12
-	shot_delay = 20
 
 /* Solcon Turrets */
 
