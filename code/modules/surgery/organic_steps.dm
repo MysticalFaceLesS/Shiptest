@@ -152,11 +152,9 @@
 	implements = list(
 		TOOL_SAW = 100,
 		/obj/item/melee/axe/fire = 50,
-		/obj/item/gear_handle/anglegrinder = 50,
 		/obj/item/melee/arm_blade = 40,
 		/obj/item/hatchet = 40,
 		/obj/item/melee/knife/butcher = 33,
-		/obj/item/gun/energy/plasmacutter = 30,
 		/obj/item = 10) //10% success (sort of) with any sharp item with a force>=10
 	time = 5.4 SECONDS
 	preop_sound = list(

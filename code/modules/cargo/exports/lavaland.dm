@@ -24,10 +24,7 @@
 						// [CELADON-ADD] - CELADON_RETURN_CONTENT
 						/obj/item/clothing/shoes/clown_shoes/banana_shoes,
 						// [/CELADON-ADD]
-						/obj/item/veilrender/vealrender,
 						/obj/item/clothing/suit/armor/ascetic)
-
-/datum/export/lavaland/major //valuable chest/ruin loot and staff of storms
 	cost = 10000
 	unit_name = "lava planet artifact"
 	export_types = list(/obj/item/guardiancreator,

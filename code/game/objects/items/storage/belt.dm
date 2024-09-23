@@ -368,7 +368,7 @@
 		/obj/item/storage/fancy/cigarettes,
 		/obj/item/reagent_containers/food/drinks/bottle,
 		/obj/item/stack/medical,
-		/obj/item/melee/knife,
+		/obj/item/melee/knife/kitchen,
 		/obj/item/reagent_containers/hypospray,
 		/obj/item/gps,
 		/obj/item/storage/bag/ore,
@@ -383,11 +383,9 @@
 		/obj/item/storage/bag/plants,
 		/obj/item/stack/marker_beacon,
 		/obj/item/restraints/legcuffs/bola/watcher,
-		/obj/item/melee/sword/bone
-		))
+		/obj/item/melee/sword/bone,))
 
 
-/obj/item/storage/belt/mining/vendor
 	contents = newlist(/obj/item/survivalcapsule)
 
 /obj/item/storage/belt/mining/alt
