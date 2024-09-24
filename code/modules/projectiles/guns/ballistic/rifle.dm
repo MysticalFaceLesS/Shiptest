@@ -123,6 +123,11 @@
 /obj/item/gun/ballistic/rifle/illestren/sawn
 	desc = "An Illestren rifle sawn down to a ridiculously small size. There was probably a reason it wasn't made this short to begin with, but it still packs a punch."
 	sawn_off = TRUE
+	weapon_weight = WEAPON_MEDIUM
+	w_class = WEIGHT_CLASS_NORMAL
+	spread = 24
+	spread_unwielded = 30
+	slot_flags = ITEM_SLOT_BELT
 
 /obj/item/gun/ballistic/rifle/solgov
 	name = "SSG-669C"
