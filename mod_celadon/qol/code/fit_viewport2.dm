@@ -24,10 +24,7 @@
 // Overrides verb to do what I want
 /client/fit_viewport()
 	set name = "Fit Viewport"
-	// [CELADON-EDIT] - CELADON_QOL - Очистка вкладки ООС, перенос части в Special Verbs
-	//	set category = "OOC" // CELADON-EDIT - ORIGINAL
 	set category = "Special Verbs"
-	// [/CELADON-EDIT]
 	set desc = "Fit the width of the map window to match the viewport"
 
 	// Fetch aspect ratio
