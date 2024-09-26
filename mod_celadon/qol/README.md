@@ -31,6 +31,7 @@ ID мода: CELADON_QOL
 - добавлена кнопка refresh TGUI
 - убраны неиспользуемые кнопки со вкладки ООС	
 - перемещены технические кнопки во вкладку Special Verbs
+- обновлён функционал Fit Viewport
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
   А также любая полезная информация.
@@ -111,6 +112,9 @@ ID мода: CELADON_QOL
 ### Оверрайды
 
 - `/datum/outfit/debug`
+- `/datum/viewData/assertFormat`
+- `/datum/viewData/resetFormat`
+- `/client/fit_viewport`
 <!--
   Если ты добавлял новый модульный оверрайд, его нужно указать здесь.
   Здесь указываются оверрайды в твоём моде и папке `_master_files`
@@ -141,7 +145,7 @@ ID мода: CELADON_QOL
 
 ### Авторы:
 
-RalseiDreemuurr, MysticalFaceLesS, MrCat15352, Yata9arasu
+RalseiDreemuurr, MysticalFaceLesS, MrCat15352, Yata9arasu, MrRomainzZ
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.
