@@ -256,7 +256,7 @@
 				new /mob/living/simple_animal/hostile/netherworld/blankbody(loc)
 				new /mob/living/simple_animal/hostile/netherworld/migo(loc)
 			if(prob(45))
-				new /obj/item/nullrod/staff(loc)
+				// new /obj/item/nullrod/staff(loc)	выпилено офами
 				new /mob/living/simple_animal/hostile/netherworld/migo(loc)
 			if(prob(30))
 				new /obj/item/clothing/suit/space/hardsuit/quixote/dimensional(loc)
@@ -295,7 +295,7 @@
 				new /mob/living/simple_animal/hostile/human/skeleton/templar(loc)
 				new /mob/living/simple_animal/hostile/human/skeleton/templar(loc)
 			if(prob(40))
-				new /obj/item/claymore(loc)
+				new /obj/item/melee/sword/claymore(loc)
 				new /mob/living/simple_animal/hostile/human/skeleton/templar(loc)
 			if(prob(45))
 				new /obj/item/gun/ballistic/bow(loc)
@@ -312,7 +312,7 @@
 				new /mob/living/simple_animal/hostile/human/skeleton(loc)
 				new /mob/living/simple_animal/hostile/human/skeleton(loc)
 			if(prob(35))
-				new /obj/item/staff/bostaff(loc)
+				// new /obj/item/staff/bostaff(loc)	выпилено офами
 				new /mob/living/simple_animal/hostile/human/skeleton(loc)
 				new /mob/living/simple_animal/hostile/human/skeleton(loc)
 			if(prob(25))
@@ -775,7 +775,7 @@
 		if(15)//the backroom freezer
 			visible_message("<span class='userdanger'>The faint hallogen glow of a faraway kitchen greets you.</span>")
 			if(prob(45))
-				new /obj/item/kitchen/knife/bloodletter(loc)
+				// new /obj/item/melee/knife/bloodletter(loc)	выпилено
 				new /mob/living/simple_animal/hostile/killertomato(loc)
 			if(prob(55))
 				new /obj/item/clothing/gloves/butchering(loc)
@@ -796,7 +796,7 @@
 				new /obj/item/reagent_containers/food/snacks/burger/roburgerbig(loc)
 				new /mob/living/simple_animal/hostile/killertomato(loc)
 			if(prob(35))
-				new /obj/item/kitchen/knife/butcher(loc)
+				new /obj/item/melee/knife/butcher(loc)
 				new /mob/living/simple_animal/hostile/killertomato(loc)
 			if(prob(35))
 				new /obj/item/flamethrower/full(loc)
