@@ -81,7 +81,7 @@
 						/obj/item/clothing/shoes/clown_shoes/banana_shoes,
 						// /obj/item/melee/knife/envy,
 						/obj/item/veilrender/vealrender,
-						// /obj/item/nullrod/scythe/talking/necro,
+						// /obj/item/scythe/necro,
 						/obj/item/clothing/suit/armor/ascetic)
 
 /datum/export/lavaland/trophycommon
