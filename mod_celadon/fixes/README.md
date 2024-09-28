@@ -63,6 +63,14 @@ ID мода: CELADON_FIXES
 
 - ADD: `code\__HELPERS\text.dm` - Добавляем возможность создания имён персонажей на кирилице.
 - EDIT: `code\modules\admin\player_panel.dm` - Фикс <meta>, исправлено отображение кирилицы на F6.
+
+- EDIT: `code\game\objects\structures.dm` - Исправляет односторониие перила путям отключения одной строчки кода.
+
+- EDIT: `code/modules/research/rdconsole.dm` - Попытка изменить абьюз, когда игрок мог внести семена сколько угодно раз, пересобирая тупо консоль. Сделано через глобальный список.
+
+- ADD: `/obj/machinery/computer/telecomms/server/ui_interact` - Добавляем поддержку UTF-8
+- ADD: `/obj/machinery/computer/telecomms/monitor/ui_interact` - Добавляем поддержку UTF-8
+
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -105,7 +113,7 @@ ID мода: CELADON_FIXES
 ### Авторы:
 
 
-RalseiDreemuurr, Mirag1993 , Корольный крыс, MrCat15352, MysticalFaceLesS
+RalseiDreemuurr, Mirag1993 , Корольный крыс, MrCat15352, MysticalFaceLesS, Burbonchik, MrRomainzZ
 
 <!--
   Здесь находится твой никнейм

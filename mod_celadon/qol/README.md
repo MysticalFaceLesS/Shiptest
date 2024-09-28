@@ -31,6 +31,10 @@ ID мода: CELADON_QOL
 - добавлена кнопка refresh TGUI
 - убраны неиспользуемые кнопки со вкладки ООС	
 - перемещены технические кнопки во вкладку Special Verbs
+- обновлён функционал Fit Viewport
+- исправлен зависающий пузырик сообщения над головой куклы
+- /stutter теперь не распространяется на русские гласные
+- /slur теперь заменяет символы кириллицы на "пьяный вариант" и пропускает пробел
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
   А также любая полезная информация.
@@ -90,6 +94,9 @@ ID мода: CELADON_QOL
 
 - EDIT `code/game/gamemodes/extended/extended.dm` -> меняем начальный репорт
 
+- EDIT `code\modules\mob\mob_helpers.dm`: `/proc/slur`
+- EDIT `code\modules\mob\mob_helpers.dm`: `/proc/stutter`
+
 ООС вкладка	
 - EDIT `code/modules/client/verbs/ooc.dm` -> Убраны неиспользуемые кнопки "Message Of The Day" "Show Policy" со вкладки ООС.Перемещена кнопка "Fit Viewport" со вкладки "ООС" во вкладку "Special Verbs"
 - EDIT `code/datums/keybinding/client.dm` -> Перемещена кнопка "Toggle Fullscreen" со вкладки "ООС" во вкладку "Special Verbs"
@@ -111,6 +118,11 @@ ID мода: CELADON_QOL
 ### Оверрайды
 
 - `/datum/outfit/debug`
+- `/datum/viewData/assertFormat`
+- `/datum/viewData/resetFormat`
+- `/client/fit_viewport`
+- `/mob/verb/me_verb`
+- `/mob/verb/say_verb`
 <!--
   Если ты добавлял новый модульный оверрайд, его нужно указать здесь.
   Здесь указываются оверрайды в твоём моде и папке `_master_files`
@@ -141,7 +153,7 @@ ID мода: CELADON_QOL
 
 ### Авторы:
 
-RalseiDreemuurr, MysticalFaceLesS, MrCat15352, Yata9arasu
+RalseiDreemuurr, MysticalFaceLesS, MrCat15352, Yata9arasu, MrRomainzZ
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.

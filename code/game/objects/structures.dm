@@ -50,8 +50,10 @@
 	. = ..()
 	if(!climbable)
 		return
-	if(get_turf(src) == O.loc) //makes so you can't drag yourself into the same structure to climb again, making you move off it.
-		return
+// [CELADON-REMOVE] - CELADON_FIXES - Удалено по причине что можно было перелезть только с одной стороны
+//	if(get_turf(src) == O.loc) //makes so you can't drag yourself into the same structure to climb again, making you move off it. I commented this out because he made the railings one-sided.
+//		return
+// [/CELADON-REMOVE]
 	if(user == O && isliving(O))
 		var/mob/living/L = O
 		if(isanimal(L))

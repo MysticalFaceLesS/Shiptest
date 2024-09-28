@@ -23,6 +23,8 @@
 	mask = /obj/item/clothing/mask/fakemoustache/italian
 	gloves  =/obj/item/clothing/gloves/botanic_leather
 	shoes = /obj/item/clothing/shoes/sneakers/white
+	id = /obj/item/card/id/elysium_cook
+	back = /obj/item/storage/backpack
 	backpack_contents = list(/obj/item/sharpener = 1,
 							/obj/item/plant_analyzer)
 
@@ -118,7 +120,7 @@
 /datum/outfit/outpost/maid/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	. = ..()
 	if(GARBAGEDAY in SSevents.holidays)
-		l_pocket = /obj/item/gun/ballistic/revolver/syndicate
+		l_pocket = /obj/item/gun/ballistic/revolver/viper
 		r_pocket = /obj/item/ammo_box/a357
 
 
@@ -198,3 +200,4 @@
 	uniform = /obj/item/clothing/under/utility
 	shoes = /obj/item/clothing/shoes/sneakers/black
 	id = /obj/item/card/id/elysium_wagabond
+	l_pocket = /obj/item/spacecash/bundle/c500

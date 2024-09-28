@@ -614,6 +614,12 @@
 	id = "crash_kitchen"
 	suffix = "wasteplanet_crash_kitchen.dmm"
 
+/datum/map_template/ruin/wasteplanet/crahsed_abductor_ship
+	name = "Crashed Abductor Ship"
+	description = "A crashed abductor ship with something horrible goi'n inside."
+	id = "crash_abductor_ship"
+	suffix = "wasteplanet_ruined_abductor_ship.dmm"
+
 //							///
 //		Whitesand ruin		///
 //							///
@@ -689,6 +695,13 @@
 	id = "ps-oldminer"
 	description = "The base of an old and experienced miner"
 	suffix = "oldminer.dmm"
+
+/datum/map_template/ruin/plasma_gaint/dragon
+	name = "dragon"
+	id = "ps-dragon"
+	description = "An ancient and terrible dragon that lived for several centuries and ate hundreds of souls."
+	suffix = "dragon.dmm"
+	allow_duplicates = FALSE
 
 //							///
 //		EarthSand ruin		///

@@ -269,8 +269,15 @@
 	playsound(src, "sound/effects/walkietalkie.ogg", 20, FALSE)			//WS Edit - Radio chatter
 
 	// If the radio is subspace-only, that's all it can do
-	if (subspace_transmission)
-		return
+	if (subspace_transmission && (freq == FREQ_WIDEBAND))
+		signal.data["compression"] = 0
+		signal.transmission_method = TRANSMISSION_SUPERSPACE
+		signal.map_zones = list(0)  // reaches all Z-levels
+		signal.broadcast()
+		playsound(src, "sound/effects/walkietalkie.ogg", 20, FALSE)
+	else
+		if (subspace_transmission)
+			return
 
 	// Non-subspace radios will check in a couple of seconds, and if the signal
 	// was never received, send a mundane broadcast (no headsets).

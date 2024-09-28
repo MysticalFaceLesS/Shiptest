@@ -39,7 +39,6 @@
 	armor = list("melee" = 30, "bullet" = 25, "laser" = 35, "energy" = 10, "bomb" = 30, "bio" = 100, "rad" = 40, "fire" = 40, "acid" = 30)
 	strip_delay = 60
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/tajaran/void_nka
-	supports_variations = TAJARA_VARIATION
 
 /obj/item/clothing/head/helmet/space/hardsuit/tajaran/void_nka
 	icon = 'mod_celadon/_storge_icons/icons/items/obj/helmet.dmi'
@@ -51,7 +50,6 @@
 	armor = list("melee" = 30, "bullet" = 25, "laser" = 35, "energy" = 10, "bomb" = 30, "bio" = 100, "rad" = 40, "fire" = 40, "acid" = 30)
 	strip_delay = 60
 	actions_types = list()
-	supports_variations = TAJARA_VARIATION
 
 /obj/item/clothing/suit/space/hardsuit/tajaran/void_dpra
 	name = "people's volunteer spacer militia voidsuit"
@@ -61,7 +59,6 @@
 	armor = list("melee" = 30, "bullet" = 25, "laser" = 35, "energy" = 10, "bomb" = 30, "bio" = 100, "rad" = 40, "fire" = 40, "acid" = 30)
 	strip_delay = 60
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/tajaran/void_dpra
-	supports_variations = TAJARA_VARIATION
 
 /obj/item/clothing/head/helmet/space/hardsuit/tajaran/void_dpra
 	icon = 'mod_celadon/_storge_icons/icons/items/obj/helmet.dmi'
@@ -73,4 +70,8 @@
 	armor = list("melee" = 30, "bullet" = 25, "laser" = 35, "energy" = 10, "bomb" = 30, "bio" = 100, "rad" = 40, "fire" = 40, "acid" = 30)
 	strip_delay = 60
 	actions_types = list()
-	supports_variations = TAJARA_VARIATION
+
+/obj/item/clothing/suit/armor/vest/trauma
+	name = "cybersun trauma team armor vest"
+	icon_state = "traumavest"
+	desc = "A set of stamped plasteel armor plates decorated with a medical cross and colors associated with the medical division of Cybersun."

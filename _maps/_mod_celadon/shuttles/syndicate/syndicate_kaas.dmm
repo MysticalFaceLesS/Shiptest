@@ -14,7 +14,8 @@
 /obj/machinery/vending/medical/syndicate_access{
 	pixel_y = 31;
 	pixel_x = 3;
-	density = 0
+	density = 0;
+	all_items_free = 1
 	},
 /obj/effect/turf_decal/industrial/warning{
 	dir = 1
@@ -63,7 +64,9 @@
 /turf/open/floor/engine,
 /area/ship/engineering)
 "bU" = (
-/obj/machinery/vending/cigarette/syndicate,
+/obj/machinery/vending/cigarette/syndicate{
+	all_items_free = 1
+	},
 /obj/machinery/light{
 	dir = 8;
 	pixel_x = -30
@@ -362,7 +365,7 @@
 /obj/item/ammo_box/magazine/sniper_rounds/penetrator,
 /obj/item/ammo_box/magazine/sniper_rounds/penetrator,
 /obj/machinery/firealarm/directional/west,
-/obj/item/gun/ballistic/automatic/marksman/sniper_rifle,
+/obj/item/gun/ballistic/automatic/marksman/taipan,
 /turf/open/floor/wood/birch,
 /area/ship/security/armory)
 "jh" = (
@@ -560,7 +563,9 @@
 /area/ship/bridge)
 "op" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on,
-/obj/machinery/vending/cola/black,
+/obj/machinery/vending/cola/black{
+	all_items_free = 1
+	},
 /turf/open/floor/carpet/royalblack,
 /area/ship/hallway/central)
 "oI" = (
@@ -911,15 +916,9 @@
 /area/ship/engineering)
 "vN" = (
 /obj/structure/rack,
-/obj/item/gun/ballistic/automatic/hmg/l6_saw,
-/obj/item/gun/ballistic/automatic/hmg/l6_saw,
-/obj/item/gun/ballistic/automatic/hmg/l6_saw,
-/obj/item/ammo_box/magazine/mm712x82/hollow,
-/obj/item/ammo_box/magazine/mm712x82/hollow,
-/obj/item/ammo_box/magazine/mm712x82/hollow,
-/obj/item/ammo_box/magazine/mm712x82/hollow,
-/obj/item/ammo_box/magazine/mm712x82/hollow,
-/obj/item/ammo_box/magazine/mm712x82/hollow,
+/obj/item/gun/ballistic/automatic/assault/hydra/lmg/extended,
+/obj/item/gun/ballistic/automatic/assault/hydra/lmg/extended,
+/obj/item/gun/ballistic/automatic/assault/hydra/lmg/extended,
 /obj/effect/turf_decal/trimline/opaque/neutral/warning{
 	dir = 8
 	},
@@ -1146,7 +1145,8 @@
 /obj/machinery/vending/medical/syndicate_access{
 	pixel_y = 31;
 	pixel_x = -2;
-	density = 0
+	density = 0;
+	all_items_free = 1
 	},
 /obj/effect/turf_decal/industrial/warning{
 	dir = 1
@@ -1256,10 +1256,10 @@
 /obj/item/ammo_box/c9mm/fire,
 /obj/item/ammo_box/c9mm/fire,
 /obj/item/ammo_box/c9mm/fire,
-/obj/item/ammo_box/magazine/pistolm9mm,
-/obj/item/ammo_box/magazine/pistolm9mm,
-/obj/item/ammo_box/magazine/pistolm9mm,
-/obj/item/ammo_box/magazine/pistolm9mm,
+/obj/item/ammo_box/magazine/m9mm_rattlesnake,
+/obj/item/ammo_box/magazine/m9mm_rattlesnake,
+/obj/item/ammo_box/magazine/m9mm_rattlesnake,
+/obj/item/ammo_box/magazine/m9mm_rattlesnake,
 /obj/item/card/emag/limited,
 /turf/open/floor/carpet/royalblack,
 /area/ship/bridge)
@@ -1405,9 +1405,9 @@
 /area/ship/engineering)
 "Er" = (
 /obj/structure/rack,
-/obj/item/gun/ballistic/shotgun/bulldog,
-/obj/item/gun/ballistic/shotgun/bulldog,
-/obj/item/gun/ballistic/shotgun/bulldog,
+/obj/item/gun/ballistic/shotgun/automatic/bulldog,
+/obj/item/gun/ballistic/shotgun/automatic/bulldog,
+/obj/item/gun/ballistic/shotgun/automatic/bulldog,
 /obj/item/storage/backpack/duffelbag/syndie/bulldogbundle,
 /obj/item/storage/backpack/duffelbag/syndie/bulldogbundle,
 /obj/item/storage/backpack/duffelbag/syndie/bulldogbundle,
@@ -1706,7 +1706,9 @@
 /turf/open/floor/wood/walnut,
 /area/ship/bridge)
 "Kt" = (
-/obj/machinery/vending/coffee,
+/obj/machinery/vending/coffee{
+	all_items_free = 1
+	},
 /turf/open/floor/carpet/royalblack,
 /area/ship/hallway/central)
 "Ly" = (
@@ -1716,7 +1718,9 @@
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "Mj" = (
-/obj/machinery/vending/security/marine/syndicate,
+/obj/machinery/vending/security/marine/syndicate{
+	all_items_free = 1
+	},
 /obj/effect/turf_decal/trimline/opaque/neutral/warning{
 	dir = 8
 	},
@@ -2235,7 +2239,9 @@
 /obj/effect/turf_decal/industrial/fire{
 	dir = 9
 	},
-/obj/machinery/vending/tool,
+/obj/machinery/vending/tool{
+	all_items_free = 1
+	},
 /obj/machinery/newscaster/security_unit/directional/west,
 /turf/open/floor/engine,
 /area/ship/engineering)

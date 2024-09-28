@@ -160,9 +160,9 @@
 	)
 
 	mob_spawn_list = list(
-		/mob/living/simple_animal/hostile/big_legion = 45,
-		/obj/structure/spawner/plasma_gaint/extreme_threat = 16,
-		/mob/living/simple_animal/hostile/asteroid/hivelord/legion/crystal/plasma = 16
+		/mob/living/simple_animal/hostile/big_plasma = 10,
+		/obj/structure/spawner/plasma_gaint/extreme_threat = 6,
+		/mob/living/simple_animal/hostile/asteroid/hivelord/legion/crystal_plasma = 20
 	)
 	mob_spawn_chance = 3
 	open_turf_types = list(

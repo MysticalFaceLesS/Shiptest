@@ -11,10 +11,7 @@
 	var/can_toggle = null
 	greyscale_icon_state = "hat"
 	greyscale_colors = list(list(16,26))
-	// [CELADON-EDIT] - TAJARA
-	// supports_variations = VOX_VARIATION // CELADON-EDIT - ORIGINAL
-	supports_variations = VOX_VARIATION | TAJARA_VARIATION
-	// [/CELADON-EDIT]
+	supports_variations = VOX_VARIATION
 
 ///Special throw_impact for hats to frisbee hats at people to place them on their heads/attempt to de-hat them.
 /obj/item/clothing/head/throw_impact(atom/hit_atom, datum/thrownthing/thrownthing)

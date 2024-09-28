@@ -5,6 +5,8 @@
 Уменьшаем размер разогревочному пакету.
 Добавлена универсальная кнопка FixChat2.
 Добавлена кнопка Refresh TGUI.
-Перемещена и удалена часть кнопок во вкладке ООС"}
-	author = "RalseiDreemuurr, MrCat15352, MysticalFaceLesS, Yata9arasu"
-
+Перемещена и удалена часть кнопок во вкладке ООС.
+Обновлён функционал Fit Viewport.
+Исправлен зависающий индикатор говорения.
+Добавлена поддержка кириллицы для пьяной и запинающейся речи"}
+	author = "RalseiDreemuurr, MrCat15352, MysticalFaceLesS, Yata9arasu, MrRomainzZ"
