@@ -332,12 +332,6 @@
 	attack_verb = list("cut", "sliced", "diced")
 	slot_flags = ITEM_SLOT_BACK
 	hitsound = 'sound/weapons/bladeslice.ogg'
-	var/wielded = FALSE // track wielded status on item
-
-/obj/item/melee/sword/vibro/Initialize()
-	. = ..()
-	RegisterSignal(src, COMSIG_TWOHANDED_WIELD, PROC_REF(on_wield))
-	RegisterSignal(src, COMSIG_TWOHANDED_UNWIELD, PROC_REF(on_unwield))
 
 /obj/item/melee/sword/vibro/ComponentInitialize()
 	. = ..()
@@ -358,9 +352,9 @@
 	icon_state = "[base_icon_state]0"
 
 /obj/item/melee/sword/vibro/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
-	if(wielded)
+	if(HAS_TRAIT(src, TRAIT_WIELDED))
 		final_block_chance *= 2
-	if(wielded || attack_type != PROJECTILE_ATTACK)
+	if(HAS_TRAIT(src, TRAIT_WIELDED) || attack_type != PROJECTILE_ATTACK)
 		if(prob(final_block_chance))
 			if(attack_type == PROJECTILE_ATTACK)
 				owner.visible_message("<span class='danger'>[owner] deflects [attack_text] with [src]!</span>")

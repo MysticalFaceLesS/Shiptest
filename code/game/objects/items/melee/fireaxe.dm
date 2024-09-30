@@ -26,7 +26,6 @@
 
 
 	wielded = TRUE
-
 /// triggered on unwield of two handed item
 /obj/item/melee/axe/proc/on_unwield(obj/item/source, mob/user)
 	SIGNAL_HANDLER
@@ -34,9 +33,6 @@
 	wielded = FALSE
 
 /obj/item/melee/axe/update_icon_state()
-	icon_state = "[base_icon_state]0"
-	return ..()
-/obj/item/melee/axe/afterattack(atom/A, mob/user, proximity)
 	. = ..()
 	if(!proximity)
 		return
