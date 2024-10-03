@@ -38,7 +38,7 @@
 
 /obj/item/reagent_containers/blood/random/Initialize()
 	icon_state = "bloodpack"
-	blood_type = pick("A+", "A-", "B+", "B-", "O+", "O-", "L", "E", "Coolant")
+	blood_type = pick("A+", "A-", "B+", "B-", "O+", "O-", "L", "Coolant")
 	return ..()
 
 /obj/item/reagent_containers/blood/APlus
@@ -63,7 +63,12 @@
 	blood_type = "L"
 
 /obj/item/reagent_containers/blood/elzuose
-	blood_type = "E"
+	name = "blood pack - Liquid Electricity"
+	icon = 'icons/obj/bloodpack.dmi'
+	icon_state = "bloodpack"
+	volume = 200
+	labelled = 1
+	list_reagents = list(/datum/reagent/consumable/liquidelectricity = 200)
 
 /obj/item/reagent_containers/blood/synthetic
 	blood_type = "Coolant"
