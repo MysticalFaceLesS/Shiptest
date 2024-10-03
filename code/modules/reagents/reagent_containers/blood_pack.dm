@@ -64,9 +64,6 @@
 
 /obj/item/reagent_containers/blood/elzuose
 	name = "blood pack - Liquid Electricity"
-	icon = 'icons/obj/bloodpack.dmi'
-	icon_state = "bloodpack"
-	volume = 200
 	labelled = 1
 	list_reagents = list(/datum/reagent/consumable/liquidelectricity = 200)
 
