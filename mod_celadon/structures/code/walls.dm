@@ -39,25 +39,12 @@
 	smoothing_flags = SMOOTH_BITMASK | SMOOTH_DIAGONAL_CORNERS
 	fixed_underlay = list("space" = TRUE)
 
-// //sub-type to be used for interior shuttle walls
-// //won't get an underlay of the destination turf on shuttle move
-// /turf/closed/wall/mineral/titanium/gold/interior/copyTurf(turf/T, copy_air, flags)
-// 	if(T.type != type)
-// 		T.ChangeTurf(type, null, flags)
-// 		if(underlays.len)
-// 			T.underlays = underlays
-// 	if(T.icon_state != icon_state)
-// 		T.icon_state = icon_state
-// 	if(T.icon != icon)
-// 		T.icon = icon
-// 	if(color)
-// 		T.atom_colours = atom_colours.Copy()
-// 		T.update_atom_colour()
-// 	if(T.dir != dir)
-// 		T.setDir(dir)
-// 	T.transform = transform
-// 	return T
+/turf/closed/indestructible/riveted/command
+	name = "command plastinum wall"
+	icon = 'mod_celadon/_storge_icons/icons/structures/walls/ref_cc_wall.dmi'
+	icon_state = "cplastitanium_wall-0"
+	base_icon_state = "cplastitanium_wall"
+	smoothing_flags = SMOOTH_BITMASK
+	smoothing_groups = list(SMOOTH_GROUP_CLOSED_TURFS, SMOOTH_GROUP_WALLS, SMOOTH_GROUP_SYNDICATE_WALLS)
+	canSmoothWith = list(SMOOTH_GROUP_SYNDICATE_WALLS, SMOOTH_GROUP_PLASTITANIUM_WALLS, SMOOTH_GROUP_AIRLOCK, SMOOTH_GROUP_SHUTTLE_PARTS)
 
-// /turf/closed/wall/mineral/titanium/copyTurf(turf/T)
-// 	. = ..()
-// 	T.transform = transform
