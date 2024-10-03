@@ -1,92 +1,93 @@
-/obj/effect/turf_decal/indestructible
+/obj/item/indestructible
 	density = TRUE
+	anchored = TRUE
 	explosion_block = 50
 	max_integrity = 10000000
 
-/obj/effect/turf_decal/indestructible/distress_shuttle
+/obj/item/indestructible/distress_shuttle
 	icon = 'mod_celadon/_storge_icons/icons/structures/shuttle/distress_shuttle.dmi'
 	icon_state = "6,4"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_1
+/obj/item/indestructible/distress_shuttle/decal_1
 	icon_state = "0,0"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_2
+/obj/item/indestructible/distress_shuttle/decal_2
 	icon_state = "1,0"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_3
+/obj/item/indestructible/distress_shuttle/decal_3
 	icon_state = "2,0"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_4
+/obj/item/indestructible/distress_shuttle/decal_4
 	icon_state = "3,0"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_5
+/obj/item/indestructible/distress_shuttle/decal_5
 	icon_state = "4,0"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_6
+/obj/item/indestructible/distress_shuttle/decal_6
 	icon_state = "5,0"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_7
+/obj/item/indestructible/distress_shuttle/decal_7
 	icon_state = "6,0"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_8
+/obj/item/indestructible/distress_shuttle/decal_8
 	icon_state = "7,0"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_9
+/obj/item/indestructible/distress_shuttle/decal_9
 	icon_state = "8,0"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_10
+/obj/item/indestructible/distress_shuttle/decal_10
 	icon_state = "9,0"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_11
+/obj/item/indestructible/distress_shuttle/decal_11
 	icon_state = "10,0"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_12
+/obj/item/indestructible/distress_shuttle/decal_12
 	icon_state = "0,1"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_13
+/obj/item/indestructible/distress_shuttle/decal_13
 	icon_state = "1,1"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_14
+/obj/item/indestructible/distress_shuttle/decal_14
 	icon_state = "2,1"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_15
+/obj/item/indestructible/distress_shuttle/decal_15
 	icon_state = "0,2"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_16
+/obj/item/indestructible/distress_shuttle/decal_16
 	icon_state = "10,2"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_17
+/obj/item/indestructible/distress_shuttle/decal_17
 	icon_state = "0,3"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_18
+/obj/item/indestructible/distress_shuttle/decal_18
 	icon_state = "1,3"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_19
+/obj/item/indestructible/distress_shuttle/decal_19
 	icon_state = "2,3"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_20
+/obj/item/indestructible/distress_shuttle/decal_20
 	icon_state = "10,3"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_21
+/obj/item/indestructible/distress_shuttle/decal_21
 	icon_state = "0,4"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_22
+/obj/item/indestructible/distress_shuttle/decal_22
 	icon_state = "1,4"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_23
+/obj/item/indestructible/distress_shuttle/decal_23
 	icon_state = "2,4"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_24
+/obj/item/indestructible/distress_shuttle/decal_24
 	icon_state = "3,4"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_25
+/obj/item/indestructible/distress_shuttle/decal_25
 	icon_state = "7,4"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_26
+/obj/item/indestructible/distress_shuttle/decal_26
 	icon_state = "8,4"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_27
+/obj/item/indestructible/distress_shuttle/decal_27
 	icon_state = "9,4"
 
-/obj/effect/turf_decal/indestructible/distress_shuttle/decal_28
+/obj/item/indestructible/distress_shuttle/decal_28
 	icon_state = "10,4"
