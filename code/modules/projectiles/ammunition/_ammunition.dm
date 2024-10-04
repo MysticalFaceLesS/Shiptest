@@ -91,6 +91,7 @@
 					break
 				// [CELADON-EDIT] - Shuffler Addition - mod_celadon\items\code\items.dm
 				if (bullet.BB || box.shuffler)
+				// [/CELADON-EDIT]
 					if (box.give_round(bullet, 0))
 						boolets++
 						// [CELADON-ADD] - CELADON_BALANCE
