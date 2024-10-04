@@ -81,42 +81,6 @@
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
 	resistance_flags = NONE
 
-/obj/item/clothing/suit/hastur
-	name = "\improper Hastur's robe"
-	desc = "Robes not meant to be worn by man."
-	icon_state = "hastur"
-	item_state = "hastur"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
-
-
-/obj/item/clothing/suit/imperium_monk
-	name = "\improper Imperium monk suit"
-	desc = "Have YOU killed a xeno today?"
-	icon_state = "imperium_monk"
-	item_state = "imperium_monk"
-	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	flags_inv = HIDESHOES|HIDEJUMPSUIT
-	allowed = list(/obj/item/storage/book/bible, /obj/item/melee/sword, /obj/item/reagent_containers/food/drinks/bottle/holywater, /obj/item/storage/fancy/candle_box, /obj/item/candle, /obj/item/tank/internals/emergency_oxygen)
-
-
-/obj/item/clothing/suit/chickensuit
-	name = "chicken suit"
-	desc = "A suit made long ago by the ancient empire KFC."
-	icon_state = "chickensuit"
-	item_state = "chickensuit"
-	body_parts_covered = CHEST|ARMS|GROIN|LEGS|FEET
-	flags_inv = HIDESHOES|HIDEJUMPSUIT
-
-
-/obj/item/clothing/suit/monkeysuit
-	name = "monkey suit"
-	desc = "A suit that looks like a primate."
-	icon_state = "monkeysuit"
-	item_state = "monkeysuit"
-	body_parts_covered = CHEST|ARMS|GROIN|LEGS|FEET|HANDS
-	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT
-
 /obj/item/clothing/suit/toggle/owlwings
 	name = "owl cloak"
 	desc = "A soft brown cloak made of synthetic feathers. Soft to the touch, stylish, and a 2 meter wing span that will drive the ladies mad."

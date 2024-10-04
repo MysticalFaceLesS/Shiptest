@@ -154,10 +154,7 @@ GLOBAL_LIST_INIT(leather_recipes, list ( \
 	new/datum/stack_recipe("leather shoes", /obj/item/clothing/shoes/laceup, 2), \
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	new/datum/stack_recipe("leather overcoat", /obj/item/clothing/suit/jacket/leather/overcoat, 10), \
-	// [/CELADON-ADD]
 	new/datum/stack_recipe("saddle", /obj/item/saddle, 5), \
-))
-
 /obj/item/stack/sheet/leather/get_main_recipes()
 	. = ..()
 	. += GLOB.leather_recipes
