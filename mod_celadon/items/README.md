@@ -32,6 +32,8 @@ ID мода: CELADON_ITEMS
 
 - `code/modules/surgery/organs/tongue.dm`
 	-`var/static/list/languages_possible_base = typecacheof`
+- ADD `code/modules/projectiles/boxes_magazines/_box_magazine.dm`: `var/shuffler`
+- EDIT `code/modules/projectiles/ammunition/_ammunition.dm`: `/obj/item/ammo_casing/attackby`
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -70,7 +72,8 @@ ID мода: CELADON_ITEMS
 
 - `mods/_master_files/icons/obj/alien.dmi`
 - `mod_celadon/_storge_icons/icons/items`
-- ``
+- `mod_celadon/_storge_icons/icons/ammo/ammo.dmi`
+- `sound/weapons/gun/shotgun/insert_shell.ogg`
 <!--
   Будь то немодульный файл или модульный файл, который не содержится в папке,
   принадлежащей этому конкретному моду, он должен быть упомянут здесь.
