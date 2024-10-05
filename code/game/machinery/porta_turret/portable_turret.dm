@@ -99,6 +99,8 @@ DEFINE_BITFIELD(turret_flags, list(
 	var/datum/action/turret_toggle/toggle_action
 	/// Mob that is remotely controlling the turret
 	var/mob/remote_controller
+	//our cooldowns
+	COOLDOWN_DECLARE(fire_cooldown)
 	/// For connecting to additional turrets
 	var/id = ""
 
@@ -863,6 +865,40 @@ DEFINE_BITFIELD(turret_flags, list(
 	stun_projectile_sound = 'sound/weapons/taser.ogg'
 	lethal_projectile = /obj/projectile/beam/laser/heavylaser
 	lethal_projectile_sound = 'sound/weapons/lasercannonfire.ogg'
+
+/* Inteq Turrets */
+
+/obj/machinery/porta_turret/ship/inteq
+	name = "Vanguard Turret"
+	desc = "A turret designed by IRMG engineers for defending ships from hostile flora, fauna, and people (and Elzousa, which count as flora and people)."
+	stun_projectile = /obj/projectile/bullet/a762_40/rubber
+	stun_projectile_sound = 'sound/weapons/gun/rifle/skm.ogg'
+	lethal_projectile = /obj/projectile/bullet/a762_40
+	lethal_projectile_sound = 'sound/weapons/gun/rifle/skm.ogg'
+	scan_range = 8
+	shot_delay = 20
+	faction = list(FACTION_PLAYER_INTEQ, "turret")
+
+/obj/machinery/porta_turret/ship/inteq/light
+	name = "Close-In Vanguard Turret"
+	desc = "A light turret designed by IRMG engineers for the the task of defending from close-in encounters. Low power, high speed."
+	stun_projectile = /obj/projectile/bullet/c10mm/rubber
+	stun_projectile_sound = 'sound/weapons/gun/smg/vector_fire.ogg'
+	lethal_projectile = /obj/projectile/bullet/c10mm
+	lethal_projectile_sound = 'sound/weapons/gun/smg/vector_fire.ogg'
+	subsystem_type = /datum/controller/subsystem/processing/fastprocess //turns out if you have a shot delay below what SSmachines fires at you need to use a different subsystem
+	scan_range = 4
+	shot_delay = 5
+
+/obj/machinery/porta_turret/ship/inteq/heavy
+	name = "Vanguard Overwatch Turret"
+	desc = "A turret designed by IRMG engineers to provide long range defensive fire on their installations. Has a habit of leaving big holes."
+	stun_projectile = /obj/projectile/bullet/a308/rubber
+	stun_projectile_sound = 'sound/weapons/gun/rifle/f4.ogg'
+	lethal_projectile = /obj/projectile/bullet/a308
+	lethal_projectile_sound = 'sound/weapons/gun/rifle/f4.ogg'
+	scan_range = 12
+	shot_delay = 20
 
 /* Solcon Turrets */
 

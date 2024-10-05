@@ -77,6 +77,13 @@
 	stamina = 50
 	armour_penetration = 40
 
+/obj/projectile/bullet/a308/rubber //"rubber"
+	name = ".308 Rubber"
+	speed = 0.3
+	damage = 25
+	stamina = 50
+	armour_penetration = 40
+
 // 8x58mm caseless (SG-669)
 
 /obj/projectile/bullet/a858
