@@ -92,6 +92,8 @@ SUBSYSTEM_DEF(garbage)
 	msg += "|F:[fail_counts.Join(",")]"
 	return ..()
 
+// [CELADON-EDIT] - CELADON_QDEL_REWORK
+
 /datum/controller/subsystem/garbage/Shutdown()
 	//Adds the del() log to the qdel log file
 	var/list/del_log = list()
@@ -431,3 +433,5 @@ SUBSYSTEM_DEF(garbage)
 			#endif
 			trash.no_hint++
 			SSgarbage.Queue(to_delete)
+
+// [/CELADON-EDIT]

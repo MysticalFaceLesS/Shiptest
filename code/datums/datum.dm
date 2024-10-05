@@ -227,6 +227,7 @@
 	else
 		return returned
 
+// [CELADON-EDIT] - CELADON_QDEL_REWORK
 
 /// Return text from this proc to provide extra context to hard deletes that happen to it
 /// Optional, you should use this for cases where replication is difficult and extra context is required
@@ -242,3 +243,5 @@ var/harddel_deets_dumped = FALSE
 		return
 	harddel_deets_dumped = TRUE
 	return "Image icon: [icon] - icon_state: [icon_state] [loc ? "loc: [loc] ([loc.x],[loc.y],[loc.z])" : ""]"
+
+// [/CELADON-EDIT]
