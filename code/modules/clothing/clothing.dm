@@ -42,6 +42,10 @@
 	/// If this can be eaten by a moth
 	var/moth_edible = TRUE
 
+	// Not used yet
+	/// Trait modification, lazylist of traits to add/take away, on equipment/drop in the correct slot
+	var/list/clothing_traits
+
 /obj/item/clothing/Initialize()
 	if((clothing_flags & VOICEBOX_TOGGLABLE))
 		actions_types += /datum/action/item_action/toggle_voice_box
@@ -111,6 +115,8 @@
 	..()
 	if(!istype(user))
 		return
+	for(var/trait in clothing_traits)
+		REMOVE_CLOTHING_TRAIT(user, trait)
 	if(LAZYLEN(user_vars_remembered))
 		for(var/variable in user_vars_remembered)
 			if(variable in user.vars)
@@ -123,11 +129,47 @@
 	if (!istype(user))
 		return
 	if(slot_flags & slot) //Was equipped to a valid slot for this item?
+		for(var/trait in clothing_traits)
+			ADD_CLOTHING_TRAIT(user, trait)
 		if (LAZYLEN(user_vars_to_edit))
 			for(var/variable in user_vars_to_edit)
 				if(variable in user.vars)
 					LAZYSET(user_vars_remembered, variable, user.vars[variable])
 					user.vv_edit_var(variable, user_vars_to_edit[variable])
+
+/**
+ * Inserts a trait (or multiple traits) into the clothing traits list
+ *
+ * If worn, then we will also give the wearer the trait as if equipped
+ *
+ * This is so you can add clothing traits without worrying about needing to equip or unequip them to gain effects
+ */
+/obj/item/clothing/proc/attach_clothing_traits(trait_or_traits)
+	if(!islist(trait_or_traits))
+		trait_or_traits = list(trait_or_traits)
+
+	LAZYOR(clothing_traits, trait_or_traits)
+	var/mob/wearer = loc
+	if(istype(wearer) && (wearer.get_slot_by_item(src) & slot_flags))
+		for(var/new_trait in trait_or_traits)
+			ADD_CLOTHING_TRAIT(wearer, new_trait)
+
+/**
+ * Removes a trait (or multiple traits) from the clothing traits list
+ *
+ * If worn, then we will also remove the trait from the wearer as if unequipped
+ *
+ * This is so you can add clothing traits without worrying about needing to equip or unequip them to gain effects
+ */
+/obj/item/clothing/proc/detach_clothing_traits(trait_or_traits)
+	if(!islist(trait_or_traits))
+		trait_or_traits = list(trait_or_traits)
+
+	LAZYREMOVE(clothing_traits, trait_or_traits)
+	var/mob/wearer = loc
+	if(istype(wearer))
+		for(var/new_trait in trait_or_traits)
+			REMOVE_CLOTHING_TRAIT(wearer, new_trait)
 
 /obj/item/clothing/examine(mob/user)
 	. = ..()
@@ -217,26 +259,48 @@
 /obj/item/clothing/proc/armor_to_protection_class(armor_value)
 	armor_value = round(armor_value,10) / 10
 	switch (armor_value)
+		// [CELADON-EDIT] - CELADON_QOL - Заменяем на числовое значение отображение класса брони
+		// if (1)
+		// 	. = "I"
+		// if (2)
+		// 	. = "II"
+		// if (3)
+		// 	. = "III"
+		// if (4)
+		// 	. = "IV"
+		// if (5)
+		// 	. = "V"
+		// if (6)
+		// 	. = "VI"
+		// if (7)
+		// 	. = "VII"
+		// if (8)
+		// 	. = "VIII"
+		// if (9)
+		// 	. = "IX"
+		// if (10 to INFINITY)
+		// 	. = "X"			// CELADON-EDIT - ORIGINAL
 		if (1)
-			. = "I"
+			. = "1"
 		if (2)
-			. = "II"
+			. = "2"
 		if (3)
-			. = "III"
+			. = "3"
 		if (4)
-			. = "IV"
+			. = "4"
 		if (5)
-			. = "V"
+			. = "5"
 		if (6)
-			. = "VI"
+			. = "6"
 		if (7)
-			. = "VII"
+			. = "7"
 		if (8)
-			. = "VIII"
+			. = "8"
 		if (9)
-			. = "IX"
+			. = "9"
 		if (10 to INFINITY)
-			. = "X"
+			. = "10"
+		// [/CELADON-EDIT]
 	return .
 
 /obj/item/clothing/obj_break(damage_flag)
@@ -286,7 +350,7 @@
 
 	if("[layer]" in mob_species.offset_clothing)
 		// This code taken from Baystation 12
-		var/icon/final_I = icon('icons/blanks/32x32.dmi', "nothing")
+		var/icon/final_I = icon('icons/blanks/64x64.dmi', "nothing")
 		var/list/shifts = mob_species.offset_clothing["[layer]"]
 
 		// Apply all pixel shifts for each direction.
@@ -294,9 +358,10 @@
 			var/list/facing_list = shifts[shift_facing]
 			var/use_dir = text2num(shift_facing)
 			var/icon/equip = icon(file2use, icon_state = state2use, dir = use_dir)
-			var/icon/canvas = icon('icons/blanks/32x32.dmi', "nothing")
+			var/icon/canvas = icon('icons/blanks/64x64.dmi', "nothing")
 			canvas.Blend(equip, ICON_OVERLAY, facing_list["x"]+1, facing_list["y"]+1)
 			final_I.Insert(canvas, dir = use_dir)
+
 		final_I = fcopy_rsc(final_I)
 		GLOB.species_clothing_icons[mob_species.id]["[file2use]-[state2use]"] = final_I
 		return TRUE

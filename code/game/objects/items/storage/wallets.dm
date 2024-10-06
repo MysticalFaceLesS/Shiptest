@@ -19,16 +19,15 @@
 		/obj/item/spacecash/bundle,
 		/obj/item/holochip,
 		/obj/item/card,
-		/obj/item/clothing/mask/cigarette,
 		/obj/item/flashlight/pen,
 		/obj/item/seeds,
-		/obj/item/stack/medical,
 		/obj/item/toy/crayon,
 		/obj/item/coin,
 		/obj/item/dice,
 		/obj/item/disk,
-		/obj/item/implanter,
 		/obj/item/lighter,
+		/obj/item/key/ship,
+		/obj/item/gun/ballistic/derringer,
 		/obj/item/lipstick,
 		/obj/item/match,
 		/obj/item/paper,
@@ -39,19 +38,21 @@
 		/obj/item/screwdriver,
 		/obj/item/stamp,
 		// [CELADON-ADD] - CELADON_QOL - Добавляем ключи и нож для писем
-		/obj/item/kitchen/knife/letter_opener,
+		/obj/item/melee/knife/letter_opener,
 		/obj/item/key,
 		/obj/item/clothing/gloves/ring,
 		/obj/item/clothing/gloves/ring/silver,
-		/obj/item/clothing/gloves/ring/diamond),
+		/obj/item/clothing/gloves/ring/diamond,
+		/obj/item/stamp),
 		// [/CELADON-ADD]
 		list(/obj/item/screwdriver/power))
 
 /obj/item/storage/wallet/Exited(atom/movable/AM)
 	. = ..()
-	refreshID()
+	UnregisterSignal(AM, COSMIG_ACCESS_UPDATED)
+	refresh_id()
 
-/obj/item/storage/wallet/proc/refreshID()
+/obj/item/storage/wallet/proc/refresh_id()
 	LAZYCLEARLIST(combined_access)
 	if(!(front_id in src))
 		front_id = null
@@ -68,7 +69,8 @@
 
 /obj/item/storage/wallet/Entered(atom/movable/AM)
 	. = ..()
-	refreshID()
+	RegisterSignal(AM, COSMIG_ACCESS_UPDATED, PROC_REF(refresh_id))
+	refresh_id()
 
 /obj/item/storage/wallet/update_overlays()
 	. = ..()
@@ -123,6 +125,11 @@
 		return combined_access
 	else
 		return ..()
+
+/obj/item/storage/wallet/GetBankCard()
+	for(var/obj/item/card/I in contents)
+		if(istype(I, /obj/item/card/bank))
+			return I
 
 /obj/item/storage/wallet/random
 	icon_state = "random_wallet"

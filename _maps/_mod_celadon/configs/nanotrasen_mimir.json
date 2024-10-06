@@ -1,22 +1,24 @@
 {
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
-	"prefix": "NTSV",
-	"namelists": [
-		"NANOTRASEN",
-		"NATURAL_AGGRESSIVE",
-		"BEASTS"
-	],
 	"map_name": "Mimir-class Rehabillitation Vessel",
-	"map_short_name": "Mimir-class",
+	"map_short_name": "Mimir",
 	"description": "Судно класса 'Mimir' - это судна Нанотрайзен для переброски и содержания 'пациентов'. Нанотрайзен размещает 'Mimir' для содержания тех, кого они интернировали, часто в разрушенных или других труднодоступных секторах. Это сводит к минимуму шансы 'пациентов' на побег и резко снижает стимул к этому, поскольку заставляет их торчать в глуши, пока Центральное командование не будет готово забрать их и обработать. Хотя 'пациентов' в основном хранятся в криогенном хранилище, правила и медицинская необходимость требуют периодического размораживания. Поэтому на 'Mimir' предусмотрено множество 'реабилитационных' мероприятий для 'пациентов', а также легкая охрана для их обслуживания.",
+	"map_path": "_maps/_mod_celadon/shuttles/nanotrasen/nanotrasen_mimir.dmm",
+	"enabled": false,
+	"limit": 1,
+	"prefix": "NTSV",
+	"faction": "/datum/faction/nt",
 	"tags": [
 		"Riot",
 		"Service",
 		"Generalist",
 		"Specialist"
 	],
-	"map_path": "_maps/_mod_celadon/shuttles/nanotrasen/nanotrasen_mimir.dmm",
-	"limit": 1,
+	"namelists": [
+		"NANOTRASEN",
+		"NATURAL_AGGRESSIVE",
+		"BEASTS"
+	],
 	"job_slots": {
 		"Warden": {
 			"outfit": "/datum/outfit/job/nanotrasen/warden",
@@ -35,6 +37,5 @@
 			"outfit": "/datum/outfit/job/prisoner",
 			"slots": 2
 		}
-	},
-	"enabled": false
+	}
 }

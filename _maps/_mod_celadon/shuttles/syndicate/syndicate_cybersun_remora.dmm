@@ -83,7 +83,7 @@
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/central)
 "aq" = (
-/obj/machinery/porta_turret/ship/ballistic{
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
 	dir = 9
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
@@ -270,7 +270,7 @@
 /turf/open/floor/plasteel/mono/white,
 /area/ship/science)
 "aK" = (
-/obj/machinery/porta_turret/ship/ballistic{
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
 	dir = 5
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
@@ -312,7 +312,7 @@
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/hallway/aft)
 "aO" = (
-/obj/machinery/porta_turret/ship/ballistic{
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
 	dir = 10
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
@@ -477,7 +477,7 @@
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
 "be" = (
-/obj/machinery/porta_turret/ship/ballistic,
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "bf" = (
@@ -509,8 +509,8 @@
 /obj/machinery/camera/xray,
 /obj/structure/AIcore,
 /obj/item/mmi/posibrain,
-/obj/item/aiModule/core/full/cybersun,
 /obj/item/circuitboard/aicore,
+/obj/item/aiModule/core/full/syndicate,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
 "bj" = (
@@ -1020,6 +1020,7 @@
 	pixel_y = -3
 	},
 /obj/effect/turf_decal/corner/opaque/green/diagonal,
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/plasteel/white,
 /area/ship/science/xenobiology)
 "cj" = (
@@ -1164,7 +1165,6 @@
 /turf/open/floor/mineral/plastitanium,
 /area/ship/bridge)
 "cw" = (
-/obj/structure/table/wood/bar,
 /obj/machinery/button/door{
 	id = 896722;
 	name = "window button";
@@ -1175,26 +1175,28 @@
 	pixel_x = -3;
 	pixel_y = -3
 	},
-/obj/item/reagent_containers/food/drinks/soda_cans/pwr_game{
-	pixel_x = -1;
-	pixel_y = 8
-	},
 /obj/item/implant/radio{
 	pixel_x = 10
 	},
+/obj/structure/table/wood,
+/obj/item/reagent_containers/food/drinks/soda_cans/space_up{
+	pixel_y = 6;
+	pixel_x = 2
+	},
+/obj/machinery/newscaster/directional/west,
 /turf/open/floor/carpet/red,
 /area/ship/crew/dorm)
 "cx" = (
-/obj/structure/table/wood/bar,
 /obj/machinery/computer/med_data/laptop,
+/obj/structure/table/wood,
 /turf/open/floor/carpet/red,
 /area/ship/crew/dorm)
 "cy" = (
-/obj/structure/table/wood/bar,
 /obj/item/storage/fancy/cigarettes/cigpack_robust,
 /obj/item/lighter{
 	pixel_x = 10
 	},
+/obj/structure/table/wood,
 /turf/open/floor/carpet/red,
 /area/ship/crew/dorm)
 "cz" = (
@@ -1443,7 +1445,9 @@
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "cY" = (
-/obj/machinery/vending/medical/syndicate_access,
+/obj/machinery/vending/medical/syndicate_access{
+	all_items_free = 1
+	},
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "cZ" = (
@@ -1747,6 +1751,7 @@
 /obj/structure/closet/crate/bin,
 /obj/machinery/firealarm/directional/north,
 /obj/effect/spawner/lootdrop/maintenance/two,
+/obj/machinery/newscaster/directional/east,
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
 "dE" = (
@@ -2143,6 +2148,7 @@
 	icon_state = "rwindow";
 	dir = 1
 	},
+/obj/machinery/newscaster/directional/west,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
 "em" = (
@@ -2473,14 +2479,14 @@
 "eT" = (
 /obj/effect/turf_decal/corner/transparent/syndiered/border,
 /obj/structure/window/reinforced,
-/obj/item/ammo_box/magazine/m10mm,
-/obj/item/ammo_box/magazine/m10mm,
-/obj/item/ammo_box/magazine/m10mm,
-/obj/item/ammo_box/magazine/m10mm,
+/obj/item/ammo_box/magazine/m10mm_ringneck,
+/obj/item/ammo_box/magazine/m10mm_ringneck,
+/obj/item/ammo_box/magazine/m10mm_ringneck,
+/obj/item/ammo_box/magazine/m10mm_ringneck,
 /obj/item/ammo_box/c10mm,
 /obj/item/ammo_box/c10mm,
-/obj/item/ammo_box/magazine/m556,
-/obj/item/ammo_box/magazine/m556,
+/obj/item/ammo_box/magazine/m556_42_hydra,
+/obj/item/ammo_box/magazine/m556_42_hydra,
 /obj/item/ammo_box/c556mmHITP,
 /obj/item/storage/box/lethalshot{
 	pixel_x = 4;
@@ -2489,9 +2495,9 @@
 /obj/structure/closet/secure_closet{
 	name = "Ammo locker"
 	},
-/obj/item/ammo_box/magazine/m12g,
-/obj/item/ammo_box/magazine/m12g/slug,
-/obj/item/ammo_box/magazine/m12g,
+/obj/item/ammo_box/magazine/m12g_bulldog/drum,
+/obj/item/ammo_box/magazine/m12g_bulldog/drum,
+/obj/item/ammo_box/magazine/m12g_bulldog/drum,
 /obj/machinery/door/window{
 	icon_state = "left";
 	dir = 8
@@ -2620,11 +2626,11 @@
 /obj/item/clothing/shoes/combat,
 /obj/item/defibrillator/compact/combat/loaded,
 /obj/item/ammo_box/c10mm,
-/obj/item/ammo_box/magazine/m10mm,
-/obj/item/ammo_box/magazine/m10mm/ap,
-/obj/item/ammo_box/magazine/m10mm/hp,
-/obj/item/gun/ballistic/automatic/pistol,
+/obj/item/ammo_box/magazine/m10mm_ringneck,
+/obj/item/ammo_box/magazine/m10mm_ringneck,
+/obj/item/ammo_box/magazine/m10mm_ringneck,
 /obj/item/implanter/explosive,
+/obj/item/gun/ballistic/automatic/pistol/ringneck,
 /turf/open/floor/plasteel/mono/white,
 /area/ship/hallway/central)
 "fe" = (
@@ -2685,18 +2691,18 @@
 /area/ship/science/robotics)
 "fj" = (
 /obj/machinery/light/directional/north,
-/obj/structure/guncase{
+/obj/structure/guncloset{
 	open = 0;
 	anchored = 1
 	},
-/obj/item/gun/ballistic/automatic/pistol,
-/obj/item/gun/ballistic/automatic/pistol,
 /obj/machinery/door/window{
 	icon_state = "left";
 	dir = 8
 	},
-/obj/item/gun/ballistic/automatic/smg/m90,
-/obj/item/gun/ballistic/shotgun/bulldog,
+/obj/item/gun/ballistic/automatic/assault/hydra,
+/obj/item/gun/ballistic/shotgun/automatic/bulldog,
+/obj/item/gun/ballistic/automatic/pistol/ringneck,
+/obj/item/gun/ballistic/automatic/pistol/ringneck,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
 "fk" = (
@@ -2758,7 +2764,7 @@
 	pixel_x = -5;
 	pixel_y = -1
 	},
-/obj/item/gun/ballistic/automatic/smg/m90,
+/obj/item/gun/ballistic/automatic/assault/hydra,
 /turf/open/floor/plasteel/white,
 /area/ship/hallway/central)
 "fo" = (
@@ -2865,12 +2871,12 @@
 /area/ship/hallway/central)
 "fy" = (
 /obj/item/mecha_parts/mecha_tracking/ai_control,
-/obj/structure/mecha_wreckage/mauler,
 /obj/effect/turf_decal/corner/transparent/syndiered/mono,
 /obj/effect/turf_decal/rechargefloor,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 4
 	},
+/obj/structure/mecha_wreckage/gygax/black,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/science/robotics)
 "fz" = (
@@ -3027,11 +3033,11 @@
 /obj/machinery/firealarm/directional/south,
 /obj/item/defibrillator/compact/combat/loaded,
 /obj/item/ammo_box/c10mm,
-/obj/item/ammo_box/magazine/m10mm,
-/obj/item/ammo_box/magazine/m10mm/ap,
-/obj/item/ammo_box/magazine/m10mm/hp,
-/obj/item/gun/ballistic/automatic/pistol,
+/obj/item/ammo_box/magazine/m10mm_ringneck,
+/obj/item/ammo_box/magazine/m10mm_ringneck,
+/obj/item/ammo_box/magazine/m10mm_ringneck,
 /obj/item/implanter/explosive,
+/obj/item/gun/ballistic/automatic/pistol/ringneck,
 /turf/open/floor/plasteel/mono/white,
 /area/ship/hallway/central)
 "fM" = (
@@ -3434,9 +3440,7 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/corner/transparent/purple/half,
-/obj/structure/closet/emcloset/wall{
-	pixel_y = 28
-	},
+/obj/structure/closet/emcloset/wall/directional/north,
 /turf/open/floor/plasteel/tech,
 /area/ship/science/robotics)
 "gt" = (
@@ -3578,7 +3582,7 @@
 /turf/open/floor/plating,
 /area/ship/engineering/electrical)
 "gF" = (
-/obj/machinery/porta_turret/ship/ballistic{
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
 	dir = 6
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
@@ -3780,6 +3784,7 @@
 	dir = 1;
 	density = 0
 	},
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/plasteel/tech,
 /area/ship/science/robotics)
 "gX" = (
@@ -4170,6 +4175,12 @@
 /obj/structure/extinguisher_cabinet/directional/north,
 /turf/open/floor/plasteel/tech,
 /area/ship/science/robotics)
+"on" = (
+/obj/effect/turf_decal/corner/transparent/syndiered/mono,
+/obj/machinery/door/firedoor/heavy,
+/obj/machinery/newscaster/directional/west,
+/turf/open/floor/plasteel/mono/dark,
+/area/ship/hallway/central)
 "oy" = (
 /obj/item/cigbutt,
 /turf/open/floor/plasteel/sepia,
@@ -4220,6 +4231,14 @@
 /obj/effect/decal/cleanable/oil,
 /turf/open/floor/plating,
 /area/ship/engineering/electrical)
+"xt" = (
+/obj/effect/turf_decal/corner/transparent/syndiered/border{
+	icon_state = "bordercolor";
+	dir = 8
+	},
+/obj/machinery/newscaster/directional/west,
+/turf/open/floor/plasteel/dark,
+/area/ship/hallway/central)
 "xM" = (
 /obj/effect/turf_decal/corner/transparent/syndiered/border{
 	icon_state = "bordercolor";
@@ -4246,6 +4265,7 @@
 	},
 /obj/item/cigbutt,
 /obj/machinery/vending/coffee,
+/obj/machinery/newscaster/directional/east,
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
 "yL" = (
@@ -4487,6 +4507,15 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/ship/science/xenobiology)
+"Ua" = (
+/obj/effect/turf_decal/corner/transparent/syndiered/border{
+	icon_state = "bordercolor";
+	dir = 1
+	},
+/obj/effect/turf_decal/corner/transparent/syndiered/border,
+/obj/machinery/newscaster/directional/south,
+/turf/open/floor/plasteel/dark,
+/area/ship/hallway/central)
 "Vl" = (
 /obj/effect/turf_decal/corner/transparent/syndiered/border{
 	icon_state = "bordercolor";
@@ -4525,7 +4554,7 @@
 /obj/item/clothing/gloves/color/latex/nitrile,
 /obj/item/organ/cyberimp/eyes/hud/medical,
 /obj/item/implanter/explosive,
-/obj/item/gun/ballistic/automatic/smg/m90,
+/obj/item/gun/ballistic/automatic/assault/hydra,
 /turf/open/floor/plasteel/mono/white,
 /area/ship/hallway/central)
 "WF" = (
@@ -4576,12 +4605,12 @@
 /obj/item/clothing/shoes/combat,
 /obj/item/defibrillator/compact/combat/loaded,
 /obj/item/ammo_box/c10mm,
-/obj/item/ammo_box/magazine/m10mm,
-/obj/item/ammo_box/magazine/m10mm/ap,
-/obj/item/ammo_box/magazine/m10mm/hp,
-/obj/item/gun/ballistic/automatic/pistol,
+/obj/item/ammo_box/magazine/m10mm_ringneck,
+/obj/item/ammo_box/magazine/m10mm_ringneck,
+/obj/item/ammo_box/magazine/m10mm_ringneck,
 /obj/item/implanter/explosive,
 /obj/machinery/light/directional/north,
+/obj/item/gun/ballistic/automatic/pistol/ringneck,
 /turf/open/floor/plasteel/mono/white,
 /area/ship/hallway/central)
 "ZF" = (
@@ -4816,7 +4845,7 @@ cF
 dc
 dt
 dN
-eh
+Ua
 aW
 bi
 el
@@ -4992,14 +5021,14 @@ ar
 al
 qS
 aS
-aS
+xt
 aS
 dK
 dg
 aS
 dN
 aS
-eJ
+on
 fb
 fm
 fv

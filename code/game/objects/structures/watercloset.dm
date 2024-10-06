@@ -40,7 +40,7 @@
 					GM.visible_message("<span class='danger'>[user] starts to give [GM] a swirlie!</span>", "<span class='userdanger'>[user] starts to give you a swirlie...</span>")
 					swirlie = GM
 					var/was_alive = (swirlie.stat != DEAD)
-					if(do_after(user, 30, 0, target = src))
+					if(do_after(user, 30, target = src, timed_action_flags = IGNORE_HELD_ITEM))
 						GM.visible_message("<span class='danger'>[user] gives [GM] a swirlie!</span>", "<span class='userdanger'>[user] gives you a swirlie!</span>", "<span class='hear'>You hear a toilet flushing.</span>")
 						if(iscarbon(GM))
 							var/mob/living/carbon/C = GM
@@ -218,7 +218,7 @@
 /obj/item/reagent_containers/food/snacks/urinalcake
 	name = "urinal cake"
 	desc = "The noble urinal cake, protecting the people's pipes from the people's pee. Edibility is suggested to be low."
-	icon = 'icons/obj/items_and_weapons.dmi'
+	icon = 'icons/obj/items.dmi'
 	icon_state = "urinalcake"
 	w_class = WEIGHT_CLASS_TINY
 	list_reagents = list(/datum/reagent/chlorine = 3, /datum/reagent/ammonia = 1)

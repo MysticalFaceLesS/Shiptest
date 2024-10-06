@@ -11,7 +11,6 @@
 	name = "\proper captain's locker";
 	req_access_txt = "20"
 	},
-/obj/item/clothing/under/rank/security/officer/frontier/admiral,
 /obj/item/clothing/gloves/combat,
 /obj/item/clothing/head/beret/sec/frontier/officer,
 /obj/item/clothing/accessory/holster/detective,
@@ -27,6 +26,7 @@
 	pixel_x = 7;
 	pixel_y = 25
 	},
+/obj/item/clothing/under/frontiersmen/admiral,
 /turf/open/floor/carpet/green,
 /area/ship/crew/office)
 "ah" = (
@@ -273,6 +273,7 @@
 /obj/structure/railing/corner{
 	dir = 4
 	},
+/obj/machinery/newscaster/directional/west,
 /turf/open/floor/plasteel/dark,
 /area/ship/security)
 "bq" = (
@@ -393,6 +394,10 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/directional/west,
+/obj/effect/spawner/lootdrop/gambling{
+	pixel_x = -5;
+	pixel_y = 4
+	},
 /turf/open/floor/concrete/tiles,
 /area/ship/crew)
 "bS" = (
@@ -1649,7 +1654,9 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 1
 	},
-/obj/item/radio/intercom/wideband/directional/north,
+/obj/item/radio/intercom/wideband/directional/north{
+	pixel_x = 3
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "iN" = (
@@ -1728,7 +1735,7 @@
 "jg" = (
 /obj/structure/table_frame/wood,
 /obj/effect/decal/cleanable/blood/old,
-/obj/item/kitchen/knife,
+/obj/item/melee/knife/kitchen,
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
@@ -1797,14 +1804,14 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 4
 	},
-/obj/item/kitchen/knife/combat/survival{
+/obj/item/melee/knife/survival{
 	pixel_x = -1
 	},
-/obj/item/kitchen/knife/combat/survival{
+/obj/item/melee/knife/survival{
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/item/kitchen/knife/combat/survival{
+/obj/item/melee/knife/survival{
 	pixel_x = -3;
 	pixel_y = 8
 	},
@@ -2258,10 +2265,6 @@
 	pixel_y = 6
 	},
 /obj/item/toy/cards/deck,
-/obj/effect/spawner/lootdrop/gambling{
-	pixel_x = -5;
-	pixel_y = 4
-	},
 /turf/open/floor/concrete/tiles,
 /area/ship/crew)
 "lm" = (
@@ -2371,6 +2374,7 @@
 /obj/structure/sign/poster/contraband/ambrosia_vulgaris{
 	pixel_y = 32
 	},
+/obj/machinery/newscaster/directional/west,
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/ship/cargo)
 "lR" = (
@@ -2792,6 +2796,7 @@
 "nJ" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/machinery/light/directional/south,
+/obj/item/clothing/head/frontier/admiral,
 /turf/open/floor/carpet/green,
 /area/ship/crew/office)
 "nL" = (
@@ -2833,7 +2838,7 @@
 	dir = 1;
 	color = "#808080"
 	},
-/obj/item/kitchen/knife/combat{
+/obj/item/melee/knife/combat{
 	pixel_x = 9;
 	pixel_y = -9
 	},
@@ -2895,6 +2900,9 @@
 	},
 /obj/effect/turf_decal/spline/fancy/opaque/black,
 /obj/machinery/light/directional/north,
+/obj/machinery/newscaster/directional/north{
+	pixel_x = 19
+	},
 /turf/open/floor/plasteel/stairs{
 	icon = 'icons/obj/stairs.dmi';
 	dir = 8
@@ -2995,11 +3003,10 @@
 	pixel_x = 5;
 	pixel_y = 4
 	},
-/obj/item/reagent_containers/food/drinks/soda_cans/efuel{
-	pixel_x = -7;
-	pixel_y = 3
-	},
 /obj/machinery/airalarm/directional/south,
+/obj/item/reagent_containers/food/drinks/soda_cans/comet_trail{
+	pixel_x = -9
+	},
 /turf/open/floor/plating/rust,
 /area/ship/engineering/communications)
 "oN" = (
@@ -3069,6 +3076,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
 	},
+/obj/machinery/newscaster/directional/west,
 /turf/open/floor/wood,
 /area/ship/crew/canteen)
 "oY" = (
@@ -4507,13 +4515,14 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/item/reagent_containers/food/snacks/breadslice/moldy{
+/obj/structure/table/wood/reinforced,
+/obj/item/food/breadslice/moldy{
 	pixel_x = -6;
 	pixel_y = 10
 	},
-/obj/structure/table/wood/reinforced,
-/obj/item/reagent_containers/food/snacks/breadslice/creamcheese{
-	pixel_x = -1
+/obj/item/food/breadslice/creamcheese{
+	pixel_x = -1;
+	pixel_y = 0
 	},
 /turf/open/floor/wood{
 	icon_state = "wood-broken5"
@@ -4777,8 +4786,8 @@
 	name = "master at arm's locker";
 	req_access_txt = "3"
 	},
-/obj/item/gun/ballistic/automatic/pistol/APS,
-/obj/item/ammo_box/magazine/pistolm9mm,
+/obj/item/gun/ballistic/automatic/pistol/deagle/gold,
+/obj/item/ammo_box/magazine/m9mm_rattlesnake,
 /obj/item/clothing/mask/gas/atmos{
 	name = "tactical gas mask";
 	desc = "Improved gas mask utilized by pirates. Still not very good at blocking gas flow, but it's flameproof!"
@@ -4793,7 +4802,7 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 4
 	},
-/obj/machinery/computer/cargo/express{
+/obj/machinery/computer/cargo{
 	dir = 8
 	},
 /obj/machinery/vending/wallmed{
@@ -5620,10 +5629,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/security/armory)
 "By" = (
-/obj/structure/guncase,
-/obj/item/gun/ballistic/automatic/smg/mini_uzi{
-	pixel_y = -3
-	},
+/obj/structure/guncloset,
 /obj/effect/turf_decal/techfloor{
 	dir = 9
 	},
@@ -5632,6 +5638,9 @@
 	},
 /obj/item/gun/ballistic/rifle/illestren{
 	pixel_y = 5
+	},
+/obj/item/gun/ballistic/automatic/smg/cm5/compact{
+	pixel_y = -3
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/security/armory)
@@ -5847,13 +5856,6 @@
 /obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/shoes/jackboots,
-/obj/item/clothing/under/rank/security/officer/frontier,
-/obj/item/clothing/under/rank/security/officer/frontier,
-/obj/item/clothing/under/rank/security/officer/frontier,
-/obj/item/clothing/under/rank/security/officer/frontier,
-/obj/item/clothing/under/rank/security/officer/frontier,
-/obj/item/clothing/under/rank/security/officer/frontier,
-/obj/item/clothing/under/rank/security/officer/frontier,
 /obj/item/clothing/head/beret/sec/frontier,
 /obj/item/clothing/head/beret/sec/frontier,
 /obj/item/clothing/head/beret/sec/frontier,
@@ -5863,6 +5865,13 @@
 /obj/item/clothing/head/beret/sec/frontier,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/obj/item/clothing/under/frontiersmen,
+/obj/item/clothing/under/frontiersmen,
+/obj/item/clothing/under/frontiersmen,
+/obj/item/clothing/under/frontiersmen,
+/obj/item/clothing/under/frontiersmen,
+/obj/item/clothing/under/frontiersmen,
+/obj/item/clothing/under/frontiersmen,
 /turf/open/floor/wood/walnut,
 /area/ship/crew)
 "CO" = (
@@ -6074,7 +6083,6 @@
 	},
 /obj/item/clothing/shoes/workboots,
 /obj/item/clothing/gloves/combat,
-/obj/item/clothing/under/rank/security/officer/frontier/officer,
 /obj/item/clothing/head/beret/sec/frontier,
 /obj/item/clothing/neck/cloak/qm,
 /obj/item/clothing/accessory/holster,
@@ -6083,6 +6091,7 @@
 	icon_state = "2-8"
 	},
 /obj/item/melee/transforming/energy/sword/saber/pirate/red,
+/obj/item/clothing/under/frontiersmen/officer,
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/fore)
 "DF" = (
@@ -6739,7 +6748,6 @@
 	pixel_y = -3
 	},
 /obj/item/taperecorder,
-/obj/item/switchblade,
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ship/engineering/atmospherics)
 "Gn" = (
@@ -8139,7 +8147,6 @@
 	},
 /obj/item/clothing/shoes/workboots,
 /obj/item/clothing/gloves/combat,
-/obj/item/clothing/under/rank/security/officer/frontier/officer,
 /obj/item/clothing/head/beret/sec/frontier,
 /obj/item/clothing/neck/cloak/qm,
 /obj/item/clothing/accessory/holster,
@@ -8151,6 +8158,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 8
 	},
+/obj/item/clothing/under/frontiersmen/officer,
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/fore)
 "LV" = (
@@ -8807,6 +8815,7 @@
 /obj/structure/sign/poster/contraband/have_a_puff{
 	pixel_y = -32
 	},
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/carpet/green,
 /area/ship/crew/office)
 "ON" = (
@@ -8916,13 +8925,6 @@
 /obj/effect/turf_decal/techfloor/hole{
 	dir = 8
 	},
-/obj/item/ammo_box/c45_speedloader{
-	pixel_y = -3
-	},
-/obj/item/ammo_box/c45_speedloader{
-	pixel_y = -1;
-	pixel_x = 1
-	},
 /obj/item/storage/box/lethalshot{
 	pixel_x = -3
 	},
@@ -8930,23 +8932,20 @@
 	pixel_y = 2;
 	pixel_x = -4
 	},
-/obj/item/ammo_box/magazine/uzim9mm{
-	pixel_y = -4
-	},
-/obj/item/ammo_box/magazine/uzim9mm,
-/obj/item/ammo_box/c45_speedloader{
-	pixel_y = -3
-	},
-/obj/item/ammo_box/c45_speedloader{
-	pixel_y = -5;
-	pixel_x = -1
-	},
 /obj/item/ammo_box/magazine/illestren_a850r,
 /obj/item/ammo_box/magazine/illestren_a850r,
 /obj/item/storage/toolbox/ammo/a850r{
 	pixel_y = -6;
 	pixel_x = 5
 	},
+/obj/item/ammo_box/a44roum_speedloader,
+/obj/item/ammo_box/a44roum_speedloader,
+/obj/item/ammo_box/a44roum_speedloader,
+/obj/item/ammo_box/a44roum_speedloader,
+/obj/item/ammo_box/magazine/cm5_9mm{
+	pixel_y = -4
+	},
+/obj/item/ammo_box/magazine/cm5_9mm,
 /turf/open/floor/plasteel/dark,
 /area/ship/security/armory)
 "Ps" = (
@@ -9700,12 +9699,12 @@
 /obj/machinery/reagentgrinder{
 	pixel_y = 5
 	},
-/obj/item/kitchen/knife{
+/obj/item/melee/knife/kitchen{
 	pixel_x = -6;
 	pixel_y = 6
 	},
 /obj/item/kitchen/rollingpin,
-/obj/item/kitchen/knife/butcher{
+/obj/item/melee/knife/butcher{
 	pixel_x = -1
 	},
 /obj/effect/turf_decal/industrial/warning{
@@ -9785,7 +9784,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
-/obj/item/vibro_weapon,
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/office)
 "Uk" = (
@@ -9846,7 +9844,7 @@
 	pixel_x = -9;
 	pixel_y = 7
 	},
-/obj/item/spear/bonespear,
+/obj/item/melee/spear/bone,
 /obj/item/scythe,
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable{
@@ -10198,7 +10196,7 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering/incinerator)
 "VP" = (
-/obj/structure/guncase,
+/obj/structure/guncloset,
 /obj/effect/turf_decal/techfloor,
 /obj/item/gun/energy/taser,
 /obj/structure/sign/poster/official/ion_carbine{
@@ -10850,6 +10848,7 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
 	dir = 4
 	},
+/obj/machinery/newscaster/directional/east,
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/fore)
 "Zn" = (

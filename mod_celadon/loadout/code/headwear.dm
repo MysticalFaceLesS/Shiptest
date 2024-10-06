@@ -17,3 +17,10 @@
 	display_name = "archaeologist hat"
 	description = "A well-worn fedora favored by explorers and archaeologists. Not very protective but still very stylish."
 	path = /obj/item/clothing/head/archeologist
+
+// Pirat Hat
+
+/datum/gear/hat/pirate
+	display_name = "pirate hat"
+	description = "Yarr."
+	path = /obj/item/clothing/head/pirate

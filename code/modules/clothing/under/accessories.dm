@@ -137,6 +137,7 @@
 	icon_state = "bronze"
 	custom_materials = list(/datum/material/iron=1000)
 	resistance_flags = FIRE_PROOF
+	attachment_slot = null
 	var/medaltype = "medal" //Sprite used for medalbox
 	var/commended = FALSE
 
@@ -381,20 +382,11 @@
 //OONGA BOONGA//
 ////////////////
 
-/obj/item/clothing/accessory/talisman
-	name = "bone talisman"
-	desc = "A hunter's talisman, some say the old gods smile on those who wear it."
-	icon_state = "talisman"
-	armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 20, "bio" = 20, "rad" = 5, "fire" = 0, "acid" = 25)
+/obj/item/clothing/accessory/bonearmlet
+	name = "bone armlet"
+	desc = "An armlet made out of animal bone and sinew. According to a common Frontier superstition, it brings good luck to its wearer."
+	icon_state = "bone_armlet"
 	attachment_slot = ARMS
-	above_suit = TRUE
-
-/obj/item/clothing/accessory/wolftalisman
-	name = "hunter's necklace"
-	desc = "A thick necklace woven from sinew and bits of wolfhide, adorned with a carved fang. Slaying such beasts is rumoured to elate the gods of old, and such an item proves your worth."
-	icon_state = "wolf_talisman"
-	armor = list("melee" = 15	, "bullet" = 15, "laser" = 10, "energy" = 10, "bomb" = 20, "bio" = 20, "rad" = 5, "fire" = 25, "acid" = 25)
-	attachment_slot = CHEST
 	above_suit = TRUE
 
 /obj/item/clothing/accessory/skullcodpiece
@@ -402,7 +394,6 @@
 	desc = "A legion skull fitted to a codpiece, intended to protect the important things in life."
 	icon_state = "skull"
 	above_suit = TRUE
-	armor = list("melee" = 10, "bullet" = 10, "laser" = 5, "energy" = 5, "bomb" = 20, "bio" = 20, "rad" = 5, "fire" = 40, "acid" = 40)
 	attachment_slot = GROIN
 
 /obj/item/clothing/accessory/skilt
@@ -411,7 +402,6 @@
 	icon_state = "skilt"
 	above_suit = TRUE
 	minimize_when_attached = FALSE
-	armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 20, "bio" = 20, "rad" = 5, "fire" = 0, "acid" = 25)
 	attachment_slot = GROIN
 
 /obj/item/clothing/accessory/holster
@@ -420,6 +410,7 @@
 	icon_state = "holster"
 	item_state = "holster"
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/holster
+	attachment_slot = null
 
 /obj/item/clothing/accessory/holster/detective
 	name = "detective's shoulder holster"
@@ -488,7 +479,7 @@
 	icon_state = "rilena_pin"
 	above_suit = FALSE
 	minimize_when_attached = TRUE
-	attachment_slot = CHEST
+	attachment_slot = null
 
 /obj/item/clothing/accessory/rilena_pin/on_uniform_equip(obj/item/clothing/under/U, user)
 	var/mob/living/L = user

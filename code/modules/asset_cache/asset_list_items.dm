@@ -96,6 +96,18 @@
 /datum/asset/spritesheet/simple/paper
 	name = "paper"
 	assets = list(
+		// [CELADON-ADD] - CELADON_STAMPS
+		"stamp-inteq-celadon" = 'mod_celadon/_storge_icons/icons/png/large_stamp-inteq.png',
+		"inteq-mothership-stamp" = 'mod_celadon/_storge_icons/icons/png/inteq_mothership_stamp.png',
+		"solfed-corps-commander-stamp" = 'mod_celadon/_storge_icons/icons/png/sf_commander_stamp.png',
+		"solfed-captain" = 'mod_celadon/_storge_icons/icons/png/sf_captain_stamp.png',
+		"elysium-brigade-captain-stamp" = 'mod_celadon/_storge_icons/icons/png/elysium_brigade_stamp.png',
+		"elysium-republic-stamp" = 'mod_celadon/_storge_icons/icons/png/elysium_republic_stamp.png',
+		"elysium-avanpost-stamp" = 'mod_celadon/_storge_icons/icons/png/elysium_outpost_stamp.png',
+		"nt-cent-command-stamp" = 'mod_celadon/_storge_icons/icons/png/nano_trasen_central_command_stamp.png',
+		"nt-captain-stamp" = 'mod_celadon/_storge_icons/icons/png/nano_trasen_captain_stamp.png',
+		"syndicate-captain-stamp" = 'mod_celadon/_storge_icons/icons/png/syndicate_captain_stamp.png',
+		// [/CELADON-ADD]
 		"stamp-clown" = 'icons/stamp_icons/large_stamp-clown.png',
 		"stamp-deny" = 'icons/stamp_icons/large_stamp-deny.png',
 		"stamp-ok" = 'icons/stamp_icons/large_stamp-ok.png',
@@ -121,10 +133,7 @@
 		"stamp-bard" = 'icons/stamp_icons/large_stamp-bard.png',
 		"stamp-gold" = 'icons/stamp_icons/large_stamp-gold.png',
 		"stamp-cybersun" = 'icons/stamp_icons/large_stamp-cybersun.png',
-		"stamp-donk" = 'icons/stamp_icons/large_stamp-donk.png',
-		// [CELADON-ADD] - INTEQ_STUFF
-		"stamp-inteq-celadon" = 'mod_celadon/inteq_stuff/icons/obj/large_stamp-inteq.png'
-		// [/CELADON-ADD]
+		"stamp-donk" = 'icons/stamp_icons/large_stamp-donk.png'
 	)
 
 /datum/asset/simple/fuckywucky
@@ -150,15 +159,22 @@
 	)
 
 /datum/asset/simple/namespaced/fontawesome
-	legacy = TRUE
 	assets = list(
-		"fa-regular-400.eot"  = 'html/font-awesome/webfonts/fa-regular-400.eot',
-		"fa-regular-400.woff" = 'html/font-awesome/webfonts/fa-regular-400.woff',
-		"fa-solid-900.eot"    = 'html/font-awesome/webfonts/fa-solid-900.eot',
-		"fa-solid-900.woff"   = 'html/font-awesome/webfonts/fa-solid-900.woff',
-		"v4shim.css"          = 'html/font-awesome/css/v4-shims.min.css'
+		"fa-regular-400.ttf" = 'html/font-awesome/webfonts/fa-regular-400.ttf',
+		"fa-solid-900.ttf" = 'html/font-awesome/webfonts/fa-solid-900.ttf',
+		"fa-v4compatibility.ttf" = 'html/font-awesome/webfonts/fa-v4compatibility.ttf',
+		"v4shim.css" = 'html/font-awesome/css/v4-shims.min.css',
 	)
 	parents = list("font-awesome.css" = 'html/font-awesome/css/all.min.css')
+
+/datum/asset/simple/namespaced/tgfont
+	assets = list(
+		"tgfont.eot" = file("tgui/packages/tgfont/static/tgfont.eot"),
+		"tgfont.woff2" = file("tgui/packages/tgfont/static/tgfont.woff2"),
+	)
+	parents = list(
+		"tgfont.css" = file("tgui/packages/tgfont/static/tgfont.css"),
+	)
 
 /datum/asset/simple/fonts
 	assets = list(
@@ -174,8 +190,8 @@
 /datum/asset/spritesheet/chat
 	name = "chat"
 
-/datum/asset/spritesheet/chat/register()
-	InsertAll("emoji", 'icons/emoji.dmi')
+/datum/asset/spritesheet/chat/create_spritesheets()
+	InsertAll("emoji", EMOJI_SET)
 	// pre-loading all lanugage icons also helps to avoid meta
 	InsertAll("language", 'icons/misc/language.dmi')
 	// catch languages which are pulling icons from another file
@@ -185,7 +201,6 @@
 		if (icon != 'icons/misc/language.dmi')
 			var/icon_state = initial(L.icon_state)
 			Insert("language-[icon_state]", icon, icon_state=icon_state)
-	..()
 
 /datum/asset/simple/lobby
 	assets = list(
@@ -251,6 +266,9 @@
 		"rule8" = 'icons/UI_Icons/Achievements/Misc/rule8.png',
 		"snail" = 'icons/UI_Icons/Achievements/Misc/snail.png',
 		"mining" = 'icons/UI_Icons/Achievements/Skills/mining.png',
+		// [CELADON-ADD] - CELADON_ACHIEVEMENTS
+		"theinnerhell" = 'mod_celadon/_storge_icons/icons/png/theinnerhell.png'
+		// [/CELADON-ADD]
 	)
 
 /datum/asset/spritesheet/simple/pills
@@ -456,7 +474,10 @@
 
 /datum/asset/spritesheet/supplypods/register()
 	for (var/style in 1 to length(GLOB.podstyles))
-		var/icon_file = 'icons/obj/supplypods.dmi'
+		// [CELADON-EDIT] - CELADON_ELYSIUMPOD
+		// var/icon_file = 'icons/obj/supplypods.dmi' // CELADON-EDIT - ORIGINAL
+		var/icon_file = 'mod_celadon/_storge_icons/icons/supplypods.dmi'
+		// [/CELADON-EDIT]
 		var/states = icon_states(icon_file)
 		if (style == STYLE_SEETHROUGH)
 			Insert("pod_asset[style]", icon(icon_file, "seethrough-icon", SOUTH))

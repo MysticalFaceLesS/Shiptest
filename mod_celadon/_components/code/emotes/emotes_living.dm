@@ -73,7 +73,7 @@
 /datum/emote/living/carbon/mothchitter/get_sound(mob/living/user)
 	var/mob/living/carbon/human/H = user
 	if(ismoth(H) | (istype(H, /mob/living/simple_animal/pet/mothroach)))
-		return 'mod_celadon/_components/sounds/voice/moth/mothchitter.ogg'
+		return 'mod_celadon/_storge_sounds/sound/voice/moth/mothchitter.ogg'
 
 /datum/emote/living/chuckle
 	key = "chuckle"
@@ -103,6 +103,20 @@
 	. = ..()
 	if(HAS_TRAIT(user, TRAIT_SOOTHED_THROAT))
 		return FALSE
+
+/datum/emote/living/cough/get_sound(mob/living/user)
+	if(ishuman(user))
+		if(user.gender == FEMALE)
+			return pick('mod_celadon/_storge_sounds/sound/voice/cough_female_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/cough_female_2.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/cough_male_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/cough_male_2.ogg', 'mod_celadon/_storge_sounds/sound/voice/cough_male_3.ogg')
+	return ..()
+
+/datum/emote/living/carbon/human/cry/get_sound(mob/living/user)
+	if(ishuman(user))
+		if(user.gender == FEMALE)
+			return pick('mod_celadon/_storge_sounds/sound/voice/cry_female_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/cry_female_2.ogg', 'mod_celadon/_storge_sounds/sound/voice/cry_female_3.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/cry_male_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/cry_male_1.ogg')
+	return ..()
 
 /datum/emote/living/dance
 	key = "dance"
@@ -211,11 +225,11 @@
 	var/human_gag= ishumanbasic(H)
 	if(human_gag && (!H.mind || !H.mind.miming))
 		if(user.gender == FEMALE)
-			return pick('mod_celadon/_components/sounds/voice/human/gasp_female1.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_female2.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_female3.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_female4.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_female5.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_female6.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_female7.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/human/gasp_female1.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female2.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female3.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female4.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female5.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female6.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female7.ogg')
 		else
-			return pick('mod_celadon/_components/sounds/voice/human/gasp_male1.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_male2.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_male3.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_male4.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_male5.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_male6.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_male7.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/human/gasp_male1.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_male2.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_male3.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_male4.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_male5.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_male6.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_male7.ogg')
 	if(ismoth(H))
-		return 'mod_celadon/_components/sounds/voice/human/gasp_female3.ogg'
+		return 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female3.ogg'
 
 
 /datum/emote/living/gasp
@@ -238,11 +252,11 @@
 	var/human_gasp = ishumanbasic(H)
 	if(human_gasp && (!H.mind || !H.mind.miming))
 		if(user.gender == FEMALE)
-			return pick('mod_celadon/_components/sounds/voice/human/gasp_female1.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_female2.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_female3.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_female4.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_female5.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_female6.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_female7.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/human/gasp_female1.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female2.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female3.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female4.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female5.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female6.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female7.ogg')
 		else
-			return pick('mod_celadon/_components/sounds/voice/human/gasp_male1.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_male2.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_male3.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_male4.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_male5.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_male6.ogg', 'mod_celadon/_components/sounds/voice/human/gasp_male7.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/human/gasp_male1.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_male2.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_male3.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_male4.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_male5.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_male6.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/gasp_male7.ogg')
 	if(ismoth(H))
-		return 'mod_celadon/_components/sounds/voice/human/gasp_female3.ogg'
+		return 'mod_celadon/_storge_sounds/sound/voice/human/gasp_female3.ogg'
 
 /datum/emote/living/giggle
 	key = "giggle"
@@ -250,6 +264,13 @@
 	message = "хихикает."
 	message_mime = "тихо хихикает!"
 	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/giggle/get_sound(mob/living/user)
+	if(ishuman(user))
+		if(user.gender == FEMALE)
+			return pick('mod_celadon/_storge_sounds/sound/voice/giggle_female_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/giggle_female_2.ogg', 'mod_celadon/_storge_sounds/sound/voice/giggle_female_3.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/giggle_male_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/giggle_male_2.ogg')
+	return ..()
 
 /datum/emote/living/glare
 	key = "glare"
@@ -270,6 +291,13 @@
 	message = "стонет!"
 	message_mime = "издаёт тихий стон!"
 	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/groan/get_sound(mob/living/user)
+	if(ishuman(user))
+		if(user.gender == FEMALE)
+			return pick('mod_celadon/_storge_sounds/sound/voice/moan_female_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/moan_female_2.ogg', 'mod_celadon/_storge_sounds/sound/voice/moan_female_3.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/moan_male_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/moan_male_2.ogg', 'mod_celadon/_storge_sounds/sound/voice/moan_male_3.ogg')
+	return ..()
 
 /datum/emote/living/growl
 	key = "growl"
@@ -333,11 +361,11 @@
 	var/human_laugh = ishumanbasic(H)
 	if(human_laugh && (!H.mind || !H.mind.miming))
 		if(user.gender == FEMALE)
-			return 'mod_celadon/_components/sounds/voice/human/womanlaugh.ogg'
+			return 'mod_celadon/_storge_sounds/sound/voice/human/womanlaugh.ogg'
 		else
-			return pick('mod_celadon/_components/sounds/voice/human/manlaugh1.ogg', 'mod_celadon/_components/sounds/voice/human/manlaugh2.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/voice/human/manlaugh1.ogg', 'mod_celadon/_storge_sounds/sound/voice/human/manlaugh2.ogg')
 	if(ismoth(H))
-		return 'mod_celadon/_components/sounds/voice/moth/mothlaugh.ogg'
+		return 'mod_celadon/_storge_sounds/sound/voice/moth/mothlaugh.ogg'
 
 /datum/emote/living/look
 	key = "look"
@@ -363,7 +391,7 @@
 /datum/emote/living/carbon/mothsqueak/get_sound(mob/living/user)
 	var/mob/living/carbon/human/H = user
 	if(ismoth(H) | (istype(H, /mob/living/simple_animal/pet/mothroach)))
-		return 'mod_celadon/_components/sounds/voice/moth/mothsqueak.ogg'
+		return 'mod_celadon/_storge_sounds/sound/voice/moth/mothsqueak.ogg'
 
 /datum/emote/living/peace
 	key = "peace"
@@ -440,6 +468,13 @@
 	message = "вздыхает."
 	emote_type = EMOTE_AUDIBLE
 
+/datum/emote/living/sigh/get_sound(mob/living/user)
+	if(ishuman(user))
+		if(user.gender == FEMALE)
+			return pick('mod_celadon/_storge_sounds/sound/voice/sigh_female.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/sigh_male.ogg', 'mod_celadon/_storge_sounds/sound/voice/sigh_male.ogg')
+	return ..()
+
 /datum/emote/living/sit
 	key = "sit"
 	key_third_person = "sits"
@@ -464,6 +499,13 @@
 	message = "чихает."
 	emote_type = EMOTE_AUDIBLE
 
+/datum/emote/living/sneeze/get_sound(mob/living/user)
+	if(ishuman(user))
+		if(user.gender == FEMALE)
+			return pick('mod_celadon/_storge_sounds/sound/voice/sneeze_female.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/sneeze.ogg')
+	return ..()
+
 /datum/emote/living/smug
 	key = "smug"
 	key_third_person = "smugs"
@@ -475,6 +517,13 @@
 	key_third_person = "sniffs"
 	message = "нюхает."
 	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/sniff/get_sound(mob/living/user)
+	if(ishuman(user))
+		if(user.gender == FEMALE)
+			return pick('mod_celadon/_storge_sounds/sound/voice/sniff_female.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/sniff_male.ogg')
+	return ..()
 
 #define SNORE_DURATION 5.2 SECONDS
 
@@ -505,6 +554,11 @@
 	if(!QDELETED(living_user))
 		REMOVE_TRAIT(living_user, TRAIT_SNORE, "[type]")
 		living_user.update_body()
+
+/datum/emote/living/snore/get_sound(mob/living/user)
+	if(ishuman(user))
+		return pick('mod_celadon/_storge_sounds/sound/voice/snore_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/snore_2.ogg', 'mod_celadon/_storge_sounds/sound/voice/snore_3.ogg', 'mod_celadon/_storge_sounds/sound/voice/snore_4.ogg', 'mod_celadon/_storge_sounds/sound/voice/snore_5.ogg', 'mod_celadon/_storge_sounds/sound/voice/snore_6.ogg', 'mod_celadon/_storge_sounds/sound/voice/snore_7.ogg')
+	return ..()
 
 #undef SNORE_DURATION
 
@@ -594,6 +648,13 @@
 	message = "зевает."
 	emote_type = EMOTE_AUDIBLE
 
+/datum/emote/living/yawn/get_sound(mob/living/user)
+	if(ishuman(user))
+		if(user.gender == FEMALE)
+			return pick('mod_celadon/_storge_sounds/sound/voice/yawn_female_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/yawn_female_2.ogg', 'mod_celadon/_storge_sounds/sound/voice/yawn_female_3.ogg')
+		return pick('mod_celadon/_storge_sounds/sound/voice/yawn_male_1.ogg', 'mod_celadon/_storge_sounds/sound/voice/yawn_male_2.ogg')
+	return ..()
+
 /datum/emote/living/gurgle
 	key = "gurgle"
 	key_third_person = "gurgles"
@@ -626,7 +687,7 @@
 	else if(user.client && user.client.prefs.muted & MUTE_IC)
 		to_chat(user, "<span class='boldwarning'>You cannot send IC messages (muted).</span>")
 		return FALSE
-	else if(!params)
+	else if(params == ".")
 		var/custom_emote = copytext(sanitize(input("Choose an emote to display.") as text|null), 1, MAX_MESSAGE_LEN)
 		if(custom_emote && !check_invalid(user, custom_emote))
 			var/type = input("Is this a visible or hearable emote?") as null|anything in list("Visible", "Hearable")
@@ -701,3 +762,15 @@
 	key_third_person = "clacks"
 	message = "щёлкает челюстью."
 	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/hoot
+	key = "hoot"
+	key_third_person = "hoots"
+	message = "свистит!"
+	message_mime = "издаёт тихий свист!"
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/hoot/get_sound(mob/living/user)
+	if(ishuman(user))
+		return pick('mod_celadon/_storge_sounds/sound/voice/whistle.ogg')
+	return ..()

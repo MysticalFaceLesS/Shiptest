@@ -282,7 +282,10 @@ SUBSYSTEM_DEF(ticker)
 
 	to_chat(world, "<span class='notice'><B>Welcome to [station_name()], enjoy your stay!</B></span>")
 	SSredbot.send_discord_message("ooc", "**A new round has begun.**")
-	SEND_SOUND(world, sound('sound/roundstart/addiguana.ogg'))
+//[CELADON-EDIT]- MUSIC_CELADON
+//	SEND_SOUND(world, sound('sound/roundstart/addiguana.ogg'))//CELADON-EDIT-ORIGINAL
+	SEND_SOUND(world, sound('mod_celadon/_storge_sounds/sound/lobby/sztart.ogg'))
+//[/CELADON-EDIT]
 
 	current_state = GAME_STATE_PLAYING
 	Master.SetRunLevel(RUNLEVEL_GAME)
@@ -300,8 +303,6 @@ SUBSYSTEM_DEF(ticker)
 /datum/controller/subsystem/ticker/proc/PostSetup()
 	set waitfor = FALSE
 	mode.post_setup()
-	GLOB.start_state = new /datum/station_state()
-	GLOB.start_state.count()
 
 	var/list/adm = get_admin_counts()
 	var/list/allmins = adm["present"]
@@ -444,12 +445,6 @@ SUBSYSTEM_DEF(ticker)
 				news_message = "[station_name()] has been evacuated after transmitting the following distress beacon:\n\n[emergency_reason]"
 			else
 				news_message = "The crew of [station_name()] has been evacuated amid unconfirmed reports of enemy activity."
-		if(BLOB_WIN)
-			news_message = "[station_name()] was overcome by an unknown biological outbreak, killing all crew on board. Don't let it happen to you! Remember, a clean work station is a safe work station."
-		if(BLOB_NUKE)
-			news_message = "[station_name()] is currently undergoing decontanimation after a controlled burst of radiation was used to remove a biological ooze. All employees were safely evacuated prior, and are enjoying a relaxing vacation."
-		if(BLOB_DESTROYED)
-			news_message = "[station_name()] is currently undergoing decontamination procedures after the destruction of a biological hazard. As a reminder, any crew members experiencing cramps or bloating should report immediately to security for incineration."
 		if(CULT_ESCAPE)
 			news_message = "Security Alert: A group of religious fanatics have escaped from [station_name()]."
 		if(CULT_FAILURE)
@@ -576,7 +571,10 @@ SUBSYSTEM_DEF(ticker)
 		'sound/roundend/repair.ogg',
 		'sound/roundend/boowomp.ogg',
 		'sound/roundend/shiptestingthursday.ogg',
-		'sound/roundend/gayrights.ogg'\
+//[CELADON-EDIT]- MUSIC_CELADON
+//		'sound/roundend/gayrights.ogg'\//CELADON-EDIT-ORIGINAL
+		'mod_celadon/_storge_sounds/sound/lobby/voiko_law.ogg'\
+//[/CELADON-EDIT]
 		)
 	///The reference to the end of round sound that we have chosen.
 	var/sound/end_of_round_sound_ref = sound(round_end_sound)

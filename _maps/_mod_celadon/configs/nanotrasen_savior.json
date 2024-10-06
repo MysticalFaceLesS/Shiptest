@@ -1,20 +1,22 @@
 {
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
 	"map_name": "Savior-class multifunctional medical ship",
+	"map_short_name": "Savior",
+	"description": "Многофункциональное медицинское судно класса 'Savior' является одной из новейших разработок компании Nanotrasen. Оно спроектировано для оказания всесторонней медицинской помощи в условиях космоса. Судно оснащено современным медицинским оборудованием и системами жизнеобеспечения, что позволяет оперативно и эффективно реагировать на различные медицинские чрезвычайные ситуации. Благодаря своей универсальности, судно 'Savior' может использоваться как для спасательных операций, так и для проведения длительных медицинских экспедиций.",
+	"map_path": "_maps/_mod_celadon/shuttles/nanotrasen/nanotrasen_savior.dmm",
+	"enabled": true,
+	"limit": 1,
 	"prefix": "NTMSV",
+	"faction": "/datum/faction/nt",
+	"tags": [
+		"Science",
+		"Medical"
+	],
 	"namelists": [
 		"GENERAL",
 		"SPACE",
 		"NANOTRASEN"
 	],
-	"map_short_name": "Savior-class",
-	"description": "Многофункциональное медицинское судно класса 'Savior' - относительно современная разработка НТ, предназначенная для оказания медицинской помощи.",
-	"tags": [
-		"Science",
-		"medical"
-	],
-	"map_path": "_maps/_mod_celadon/shuttles/nanotrasen/nanotrasen_savior.dmm",
-	"starting_funds": 0,
 	"job_slots": {
 		"Captain": {
 			"outfit": "/datum/outfit/job/nanotrasen/captain",
@@ -38,6 +40,5 @@
 			"outfit": "/datum/outfit/job/nanotrasen/paramedic",
 			"slots": 1
 		}
-	},
-	"enabled": true
+	}
 }

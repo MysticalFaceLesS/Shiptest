@@ -53,10 +53,6 @@
 	dir = 8
 	},
 /obj/structure/cable,
-/obj/structure/closet/wall{
-	name = "Tools";
-	pixel_y = -30
-	},
 /obj/item/storage/toolbox/mechanical,
 /obj/item/storage/toolbox/electrical,
 /obj/item/storage/firstaid/advanced,
@@ -70,6 +66,9 @@
 /obj/item/clothing/head/welding,
 /obj/item/stack/sheet/glass/five,
 /obj/item/stack/sheet/metal/five,
+/obj/structure/closet/wall/directional/south{
+	name = "Tools"
+	},
 /turf/open/floor/plasteel,
 /area/ship/bridge)
 "jd" = (
@@ -121,6 +120,7 @@
 /obj/item/spacecash/bundle/c1000,
 /obj/item/spacecash/bundle/c1000,
 /mob/living/simple_animal/pet/mothroach,
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "pn" = (
@@ -163,11 +163,6 @@
 /obj/item/reagent_containers/spray/cleaner,
 /obj/item/mop,
 /obj/item/reagent_containers/glass/bucket,
-/obj/structure/closet/wall{
-	dir = 1;
-	name = "Cleaning tools";
-	pixel_y = -30
-	},
 /obj/machinery/shower{
 	dir = 8
 	},
@@ -178,10 +173,13 @@
 /obj/structure/window/reinforced/spawner{
 	dir = 1
 	},
+/obj/structure/closet/wall/directional/south{
+	name = "Cleaning tools"
+	},
 /turf/open/floor/plasteel/freezer,
 /area/ship/bridge)
 "ut" = (
-/obj/machinery/computer/cargo/express{
+/obj/machinery/computer/cargo{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt/dust,
@@ -250,15 +248,13 @@
 /obj/item/storage/box/donkpockets,
 /obj/item/storage/box/donkpockets/donkpocketpizza,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/closet/wall{
-	pixel_y = 30
-	},
 /obj/structure/table,
 /obj/item/reagent_containers/food/snacks/chips,
 /obj/item/reagent_containers/food/snacks/chips,
 /obj/item/reagent_containers/food/snacks/chips,
 /obj/item/reagent_containers/food/snacks/chips,
 /obj/item/reagent_containers/food/snacks/chips,
+/obj/structure/closet/wall/directional/north,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "Hy" = (
@@ -306,11 +302,11 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "Ta" = (
-/obj/docking_port{
+/obj/docking_port/stationary{
 	dwidth = 15;
-	dir = 8;
+	height = 15;
 	width = 30;
-	height = 15
+	dir = 8
 	},
 /turf/template_noop,
 /area/template_noop)
@@ -427,8 +423,8 @@
 pz
 hw
 pz
-Ta
 hw
+Ta
 pz
 hw
 pz

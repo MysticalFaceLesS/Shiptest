@@ -126,12 +126,15 @@
 /*
 	/datum/overmap/outpost subtypes
 */
-
+// [CELADON-REMOVE] - CELADON_CONFIGS_MAPS - Отправляется в щитспавн по приказу Head of Maps
+/*
 /datum/overmap/outpost/indie_space
 	token_icon_state = "station_1"
 	main_template = /datum/map_template/outpost/indie_space
 	elevator_template = /datum/map_template/outpost/elevator_indie
 	// Uses "default" hangars (indie_space).
+*/
+// [/CELADON-REMOVE]
 /*
 /datum/overmap/outpost/nanotrasen_asteroid
 	token_icon_state = "station_asteroid_0"
@@ -146,17 +149,19 @@
 		/datum/map_template/outpost/hangar/nt_asteroid_56x40
 	)
 */
-/datum/overmap/outpost/nanotrasen_ice
-	token_icon_state = "station_asteroid_0"
-	main_template = /datum/map_template/outpost/nanotrasen_ice
-	elevator_template = /datum/map_template/outpost/elevator_ice
-	hangar_templates = list(
-		/datum/map_template/outpost/hangar/nt_ice_20x20,
-		/datum/map_template/outpost/hangar/nt_ice_40x20,
-		/datum/map_template/outpost/hangar/nt_ice_40x40,
-		/datum/map_template/outpost/hangar/nt_ice_56x20,
-		/datum/map_template/outpost/hangar/nt_ice_56x40
-	)
+// [CELADON-REMOVE] - CELADON_CONFIGS_MAPS - Перенесено в модуль в maps
+// /datum/overmap/outpost/nanotrasen_ice
+// 	token_icon_state = "station_asteroid_0"
+// 	main_template = /datum/map_template/outpost/nanotrasen_ice
+// 	elevator_template = /datum/map_template/outpost/elevator_ice
+// 	hangar_templates = list(
+// 		/datum/map_template/outpost/hangar/nt_ice_20x20,
+// 		/datum/map_template/outpost/hangar/nt_ice_40x20,
+// 		/datum/map_template/outpost/hangar/nt_ice_40x40,
+// 		/datum/map_template/outpost/hangar/nt_ice_56x20,
+// 		/datum/map_template/outpost/hangar/nt_ice_56x40
+// 	)
+// [/CELADON-REMOVE]
 
 /datum/overmap/outpost/no_main_level // For example and adminspawn.
 	main_template = null

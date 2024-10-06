@@ -181,7 +181,7 @@
 	dir = 4
 	},
 /obj/machinery/light/floor,
-/obj/machinery/computer/cargo/express{
+/obj/machinery/computer/cargo{
 	dir = 8
 	},
 /obj/machinery/door/firedoor/border_only{
@@ -248,7 +248,9 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
 "rX" = (
-/obj/machinery/porta_turret/ship/ballistic,
+/obj/machinery/porta_turret/ship/faction/nanotrasen{
+	dir = 8
+	},
 /turf/closed/wall/mineral/titanium/exterior,
 /area/ship/bridge)
 "ts" = (
@@ -257,13 +259,14 @@
 	pixel_x = -32
 	},
 /obj/item/stock_parts/cell/gun,
-/obj/item/kitchen/knife/combat/survival,
+/obj/item/melee/knife/survival,
 /obj/item/clothing/suit/jacket/miljacket,
 /obj/item/storage/backpack/messenger/com,
 /obj/item/storage/backpack/duffelbag/captain,
 /obj/item/gun/energy/disabler,
 /obj/item/circuitboard/machine/fax,
 /obj/item/clothing/head/beret/captain,
+/obj/machinery/holopad/emergency/command,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "uk" = (
@@ -288,6 +291,12 @@
 "vm" = (
 /turf/template_noop,
 /area/template_noop)
+"xx" = (
+/obj/machinery/porta_turret/ship/faction/nanotrasen{
+	dir = 6
+	},
+/turf/closed/wall/mineral/titanium/exterior,
+/area/ship/bridge)
 "xy" = (
 /obj/structure/closet/wall/white/med{
 	pixel_y = -32
@@ -662,6 +671,7 @@
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
 	},
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "Wz" = (
@@ -848,5 +858,5 @@ vm
 Sc
 nl
 nl
-Sc
+xx
 "}

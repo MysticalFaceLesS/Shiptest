@@ -48,7 +48,12 @@
 /obj/structure/railing,
 /obj/effect/landmark/start/captain,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/item/radio/intercom/wideband/directional/east,
+/obj/item/radio/intercom/wideband/directional/east{
+	pixel_y = 7
+	},
+/obj/machinery/newscaster/directional/east{
+	pixel_y = -9
+	},
 /turf/open/floor/pod/light,
 /area/ship/bridge)
 "br" = (
@@ -563,11 +568,11 @@
 /area/ship/security)
 "sI" = (
 /obj/machinery/firealarm/directional/south,
-/obj/item/kitchen/knife/hunting{
+/obj/item/melee/knife/hunting{
 	pixel_y = 5
 	},
-/obj/item/kitchen/knife/hunting,
-/obj/item/kitchen/knife/hunting{
+/obj/item/melee/knife/hunting,
+/obj/item/melee/knife/hunting{
 	pixel_y = -5
 	},
 /obj/item/storage/belt/security/webbing,
@@ -710,6 +715,9 @@
 	},
 /obj/machinery/light_switch{
 	pixel_y = 20
+	},
+/obj/machinery/newscaster/directional/north{
+	pixel_x = 11
 	},
 /turf/open/floor/pod/light,
 /area/ship/crew)
@@ -1244,6 +1252,9 @@
 	pixel_y = -10
 	},
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/newscaster/directional/east{
+	pixel_y = 4
+	},
 /turf/open/floor/plasteel/stairs/left,
 /area/ship/cargo)
 "KV" = (

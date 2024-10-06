@@ -19,6 +19,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	RADIO_KEY_PGF = RADIO_CHANNEL_PGF,
 	RADIO_KEY_INTEQ = RADIO_CHANNEL_INTEQ,
 	RADIO_KEY_PIRATE = RADIO_CHANNEL_PIRATE,
+	RADIO_KEY_WIDEBAND = RADIO_CHANNEL_WIDEBAND,
 
 	// Admin
 	MODE_KEY_ADMIN = MODE_ADMIN,
@@ -54,7 +55,8 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 
 	// Misc
 	"ù" = RADIO_CHANNEL_AI_PRIVATE,
-	"÷" = MODE_VOCALCORDS
+	"÷" = MODE_VOCALCORDS,
+	"ö" = RADIO_CHANNEL_WIDEBAND
 ))
 
 /mob/living/proc/Ellipsis(original_msg, chance = 50, keep_words)
@@ -302,7 +304,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 			speech_bubble_recipients.Add(M.client)
 	// [CELADON-EDIT] - CELADON_QOL - Меняем бабл эмоута
 	// var/image/I = image('icons/mob/talk.dmi', src, "[bubble_type][say_test(message)]", FLY_LAYER) // CELADON-EDIT -> ORIGIN
-	var/image/I = image('mod_celadon/qol/icons/talk.dmi', src, "[bubble_type][say_test(message)]", FLY_LAYER)
+	var/image/I = image('mod_celadon/_storge_icons/icons/qol/talk.dmi', src, "[bubble_type][say_test(message)]", FLY_LAYER)
 	// [/CELADON-EDIT]
 	I.appearance_flags = APPEARANCE_UI_IGNORE_ALPHA
 	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(flick_overlay), I, speech_bubble_recipients, 30)

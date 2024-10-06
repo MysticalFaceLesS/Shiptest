@@ -1,24 +1,25 @@
 {
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
 	"map_name": "Riggs-class Sloop",
-	"prefix": "ISV",
-	"namelists": [
-		"GENERAL",
-		"SPACE",
-		"NATURAL",
-		"NATURAL_AGGRESSIVE"
-	],
-	"map_short_name": "Riggs-class",
+	"map_short_name": "Riggs",
 	"description": "Судно класса 'Riggs' - основной представитель компании Kasagi-Fischer Partnership на рынке независимых суден. Просторные, доступные и универсальные, 'Riggs' предлагают базовые возможности для всего, что может понадобиться космодесантнику во Фронтире, в удобной, легко модифицируемой платформе, и по умолчанию оснащены базовым медблоком, небольшим офисом безопасности, системой переработки атмосферы и оборудованием для поддержки утилитарного мехи APLU. Благодаря такой универсальности Riggs стали чрезвычайно популярны среди независимых капитанов с умеренным достатком, и их можно встретить на всех работах - от добычи полезных ископаемых до морских перевозок и исследования планет Приграничья.",
+	"map_path": "_maps/_mod_celadon/shuttles/independent/independent_rigger.dmm",
+	"enabled": true,
+	"limit": 1,
+	"prefix": "ISV",
+	"faction": "/datum/faction/independent",
 	"tags": [
 		"Mining",
 		"Medical",
 		"Robotics",
 		"Generalist"
 	],
-	"map_path": "_maps/_mod_celadon/shuttles/independent/independent_rigger.dmm",
-	"roundstart": true,
-	"limit": 1,
+	"namelists": [
+		"GENERAL",
+		"SPACE",
+		"NATURAL",
+		"NATURAL_AGGRESSIVE"
+	],
 	"job_slots": {
 		"Captain": {
 			"outfit": "/datum/outfit/job/independent/captain/western",
@@ -54,6 +55,5 @@
 			"outfit": "/datum/outfit/job/independent/assistant",
 			"slots": 4
 		}
-	},
-	"enabled": true
+	}
 }

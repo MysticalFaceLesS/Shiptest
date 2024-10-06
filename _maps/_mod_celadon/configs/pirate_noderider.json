@@ -1,19 +1,22 @@
 {
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
 	"map_name": "Jupiter-class Stormrider",
-	"map_short_name": "Jupiter-class",
-	"prefix": "PIRATE",
-	"namelists": [
-		"INSTALLATION",
-		"PIRATES"
-	],
-	"map_path": "_maps/_mod_celadon/shuttles/pirate/pirate_noderider.dmm",
+	"map_short_name": "Jupiter",
 	"description": "Судно класса штурмовик 'Jupiter' - это специализированное судно, созданное Советом Кремниевого Возвышения, который обычно используется для длительных миссий во Фронтире. Несмотря на то, что корабль пригоден для органической жизни (обычно для удобства), он спроектирован с учетом потребностей силиконов и оснащен ядром ИИ, встроенным в его корпус. Многие капитаны, по их словам, были 'напуганы' (хотя 'напуганы до усрачки' было точным заявлением) тем, что один из них внезапно появлялся из шторма, громко сообщал по IFF, кто он, или, в худших условиях, не функционировал вообще. Известно, что некоторые экземпляры попадали в руки пиратов, которые использовали судно, чтобы устраивать засады на ничего не подозревающих торговцев. В щитспавне по причине: Пираты...крайне не рекомендуеться спавнить без причины!",
+	"map_path": "_maps/_mod_celadon/shuttles/pirate/pirate_noderider.dmm",
+	"enabled": false,
+	"limit": 1,
+	"prefix": "PIRATE",
+	"faction": "/datum/faction/pirate",
 	"tags": [
 		"Robotics",
 		"Specialist",
 		"Riot",
 		"Combat"
+	],
+	"namelists": [
+		"INSTALLATION",
+		"PIRATES"
 	],
 	"job_slots": {
 		"Command Node": {
@@ -33,6 +36,5 @@
 			"outfit": "/datum/outfit/job/independent/assistant/pirate/jupiter",
 			"slots": 2
 		}
-	},
-	"enabled": false
+	}
 }

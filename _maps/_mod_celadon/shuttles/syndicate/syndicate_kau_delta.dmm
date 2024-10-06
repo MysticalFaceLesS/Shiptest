@@ -199,7 +199,7 @@
 /turf/open/floor/plating,
 /area/ship/engineering)
 "ee" = (
-/obj/machinery/porta_turret/ship/syndicate,
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic,
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
 "en" = (
@@ -212,6 +212,7 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
 	dir = 4
 	},
+/obj/machinery/newscaster/directional/east,
 /turf/open/floor/plating,
 /area/ship/engineering)
 "eC" = (
@@ -302,6 +303,7 @@
 /obj/item/storage/backpack/duffelbag/syndie,
 /obj/item/storage/backpack/duffelbag/syndie,
 /obj/item/storage/backpack/duffelbag/syndie,
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/carpet/black,
 /area/ship/crew/dorm)
 "ge" = (
@@ -417,7 +419,7 @@
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "hC" = (
-/obj/machinery/computer/cargo/express{
+/obj/machinery/computer/cargo{
 	dir = 8
 	},
 /obj/effect/turf_decal/corner/opaque/syndiered/border{
@@ -690,9 +692,6 @@
 	pixel_y = 10;
 	pixel_x = 6
 	},
-/obj/item/suppressor{
-	pixel_y = 3
-	},
 /obj/item/stock_parts/cell/high{
 	pixel_y = 11;
 	pixel_x = 7
@@ -938,7 +937,7 @@
 /turf/open/floor/mineral/plastitanium,
 /area/ship/hallway/central)
 "ud" = (
-/obj/machinery/porta_turret/ship/syndicate{
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
 	dir = 8
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -1158,7 +1157,7 @@
 /obj/effect/turf_decal/spline/plain/opaque/syndiered,
 /obj/structure/table/reinforced,
 /obj/item/documents/syndicate/red{
-	pixel_y = 4
+	pixel_y = 3
 	},
 /turf/open/floor/carpet/black,
 /area/ship/bridge)
@@ -1323,7 +1322,7 @@
 	name = "Special Operative Vector";
 	desc = "A carbine based on a pre-Night of Fire SMG design. Chambered in .45 ACP. Has been modified to suit syndicate needs. Has a CyberSun TM";
 	wield_slowdown = 0.25;
-	mag_type = /obj/item/ammo_box/magazine/smgm45
+	mag_type = /obj/item/ammo_box/magazine/m45_cobra
 	},
 /obj/structure/closet/secure_closet/wall{
 	icon_state = "sec_wall";
@@ -1444,7 +1443,7 @@
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/hallway/central)
 "Ei" = (
-/obj/machinery/porta_turret/ship/syndicate{
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
 	dir = 4
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -1803,12 +1802,17 @@
 /obj/effect/turf_decal/spline/plain/opaque/syndiered{
 	dir = 9
 	},
-/obj/item/radio/intercom/wideband/directional/south,
+/obj/item/radio/intercom/wideband/directional/south{
+	pixel_x = 6
+	},
 /obj/machinery/computer/crew/syndie{
 	dir = 8
 	},
 /obj/effect/turf_decal/corner/opaque/syndiered/border{
 	dir = 6
+	},
+/obj/machinery/newscaster/directional/south{
+	pixel_x = -8
 	},
 /turf/open/floor/carpet/black,
 /area/ship/bridge)
@@ -1882,10 +1886,6 @@
 	pixel_x = 4;
 	pixel_y = 14
 	},
-/obj/item/reagent_containers/food/drinks/soda_cans/grey_bull{
-	pixel_x = -11;
-	pixel_y = 15
-	},
 /obj/item/clothing/glasses/night{
 	pixel_x = -10
 	},
@@ -1899,6 +1899,10 @@
 	pixel_x = 35
 	},
 /obj/effect/turf_decal/industrial/traffic/full,
+/obj/item/reagent_containers/food/drinks/soda_cans/comet_trail{
+	pixel_y = 10;
+	pixel_x = -9
+	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "LT" = (
@@ -2163,26 +2167,26 @@
 /obj/machinery/light/directional/west{
 	pixel_x = -35
 	},
-/obj/structure/guncase,
+/obj/structure/guncloset,
 /obj/effect/turf_decal/industrial/traffic/full,
 /obj/item/gun/energy/ionrifle/carbine,
-/obj/item/gun/ballistic/automatic/ebr{
-	mag_type = /obj/item/ammo_box/magazine/smgm45;
+/obj/item/gun/ballistic/automatic/assault/hydra/dmr{
 	name = "Special Operative 92 EBR";
-	wield_slowdown = 0.45;
 	desc = "Thats special operative syndicate rifle modified to be more usable in the heat of battle, chambered in .45 ACP. Effective against personnel and armor alike. Has a CyberSun TM";
+	mag_type = /obj/item/ammo_box/magazine/m45_cobra;
 	projectile_damage_multiplier = 1.7;
-	zoom_amt = 8;
-	wield_delay = 6
+	wield_delay = 6;
+	wield_slowdown = 0.45;
+	zoom_amt = 8
 	},
-/obj/item/gun/ballistic/automatic/ebr{
-	mag_type = /obj/item/ammo_box/magazine/smgm45;
+/obj/item/gun/ballistic/automatic/assault/hydra/dmr{
 	name = "Special Operative 92 EBR";
-	wield_slowdown = 0.45;
 	desc = "Thats special operative syndicate rifle modified to be more usable in the heat of battle, chambered in .45 ACP. Effective against personnel and armor alike. Has a CyberSun TM";
+	mag_type = /obj/item/ammo_box/magazine/m45_cobra;
 	projectile_damage_multiplier = 1.7;
-	zoom_amt = 8;
-	wield_delay = 6
+	wield_delay = 6;
+	wield_slowdown = 0.45;
+	zoom_amt = 8
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
@@ -2474,7 +2478,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/maintenance/port)
 "Xk" = (
-/obj/machinery/porta_turret/ship/syndicate{
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
 	dir = 1
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -2581,6 +2585,7 @@
 /obj/item/storage/box/donkpockets/donkpocketteriyaki,
 /obj/item/storage/box/donkpockets/donkpocketteriyaki,
 /obj/item/storage/cans/sixbeer,
+/obj/machinery/newscaster/directional/east,
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
 "Zo" = (

@@ -1,8 +1,13 @@
 {
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
 	"map_name": "Vaquero-class Light Frigate",
-	"prefix": "LIQSV",
+	"map_short_name": "Vaquero",
 	"description": "'Vaquero' - это гибкая и дешевая военная модификация легкого коммерческого грузового судна, широко используемая InteQ Risk Management Group для пикетов, разведки и легкого сопровождения, а также для контрактов, которые не требуют более крупного и специализированного судна. В отличие от большинства суден InteQ, Vaquero оснащен базовым медицинским, инженерным и военным оборудованием, а его минимальные требования к экипажу отлично подходят для Vanguards с небольшим командованием и для учебных миссий. Как и аналогичные корабли, он оснащен большим грузовым отсеком, который может быть изменен по мере необходимости.",
+	"map_path": "_maps/_mod_celadon/shuttles/inteq/inteq_vaquero.dmm",
+	"enabled": true,
+	"limit": 1,
+	"prefix": "LIQSV",
+	"faction": "/datum/faction/inteq",
 	"tags": [
 		"Generalist"
 	],
@@ -10,9 +15,6 @@
 		"BEASTS",
 		"INTEQ"
 	],
-	"map_short_name": "Vaquero-class",
-	"map_path": "_maps/_mod_celadon/shuttles/inteq/inteq_vaquero.dmm",
-	"limit": 1,
 	"job_slots": {
 		"Vanguard": {
 			"outfit": "/datum/outfit/job/inteq/captain/celadon",
@@ -40,6 +42,5 @@
 			"outfit": "/datum/outfit/job/inteq/assistant/celadon",
 			"slots": 2
 		}
-	},
-	"enabled": true
+	}
 }

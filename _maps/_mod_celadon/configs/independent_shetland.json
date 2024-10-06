@@ -1,21 +1,23 @@
 {
 	"map_name": "Shetland-class Multipurpose Frigate",
-	"prefix": "SV",
-	"namelists": [
-		"GENERAL",
-		"SPACE",
-		"NATURAL"
-	],
-	"map_short_name": "Shetland-class",
+	"map_short_name": "Shetland",
 	"description": "Судно класса 'Shetland' - флагманское предложение компании Miskilamo Spacefaring и один из ее единственных по-настоящему оригинальных проектов: Огромный фрегат, предлагающий широкий спектр возможностей и широкие возможности для расширения, по цене в разы ниже конкурентов. Оптимистично настроенные покупатели вскоре обнаруживают бессистемное изготовление и крайние меры по сокращению расходов, характерные для суден Мискиламо. Хотя на Shetland много места и теоретически разнообразный набор оборудования, они поставляются с минимальным количеством необходимого для них оборудования, а широкий спектр конструктивных недостатков создал им мрачную репутацию, доводящую их экипажи до параноидальных крайностей. Катапульта для утилизации отходов часто фигурирует в таких историях, и, предположительно, очень многие члены экипажа 'Shetland' покончили с жизнью в результате катапультирования.",
+	"map_path": "_maps/_mod_celadon/shuttles/independent/independent_shetland.dmm",
+	"map_id": "independent_shetland",
+	"enabled": true,
+	"limit": 1,
+	"prefix": "SV",
+	"faction": "/datum/faction/independent",
 	"tags": [
 		"Generalist",
 		"Service",
 		"Medical"
 	],
-	"map_path": "_maps/_mod_celadon/shuttles/independent/independent_shetland.dmm",
-	"map_id": "independent_shetland",
-	"roundstart": true,
+	"namelists": [
+		"GENERAL",
+		"SPACE",
+		"NATURAL"
+	],
 	"job_slots": {
 		"Captain": {
 			"outfit": "/datum/outfit/job/independent/captain",
@@ -44,7 +46,7 @@
 			"slots": 1
 		},
 		"Asteroid Miner": {
-			"outfit": "/datum/outfit/job/independent",
+			"outfit": "/datum/outfit/job/independent/miner",
 			"slots": 2
 		},
 		"Security Detail": {
@@ -63,6 +65,5 @@
 			"outfit": "/datum/outfit/job/independent/assistant",
 			"slots": 5
 		}
-	},
-	"enabled": true
+	}
 }

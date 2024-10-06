@@ -2,20 +2,22 @@
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
 	"map_name": "Bulk track ship",
 	"map_short_name": "Bulk",
-	"map_path": "_maps/_mod_celadon/shuttles/misc/independent_bulk.dmm",
-	"prefix": "ISV",
 	"description": "Судно типа Bulk, предназначено для перевозки жидкостей, газов, на дальние растояния. По сути, это космический дальнобойщик. На данном судне также есть небольшой грузовой отсек для иных грузоперевозок. Компания делающая данные судна, вскоре после продажи пары суден Bulk, обанкротилась и закрылась, после нескольких судов о несоблюдении технологии постройки суден и нарушения электробезопасности. В щитспавне по причине: Эксперементальный шип!",
+	"map_path": "_maps/_mod_celadon/shuttles/misc/independent_bulk.dmm",
+	"enabled": false,
+	"limit": 1,
+	"prefix": "ISV",
+	"faction": "/datum/faction/independent",
 	"tags": [
-			"Survival",
-			"Transportation"
+		"Survival",
+		"Transportation"
 		],
-		"limit": 3,
-		"namelists": [
-			"GENERAL",
-			"SPACE",
-			"MYTHOLOGICAL"
+	"namelists": [
+		"GENERAL",
+		"SPACE",
+		"MYTHOLOGICAL"
 		],
-		"job_slots": {
+	"job_slots": {
 			"Driver": {
 				"outfit": "/datum/outfit/job/independent/captain/masinyane",
 				"slots": 1
@@ -24,6 +26,5 @@
 				"outfit": "/datum/outfit/job/independent/cargo_tech",
 				"slots": 1
 			}
-		},
-		"enabled": false
+		}
 	}

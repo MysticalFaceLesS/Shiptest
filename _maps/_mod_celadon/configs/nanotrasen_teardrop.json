@@ -1,8 +1,13 @@
 {
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
-	"map_name": "TearDrop-class Scout Vessel ",
+	"map_name": "TearDrop-class Scout Vessel",
+	"map_short_name": "TearDrop",
+	"description": " 'TearDrop', разведывательный космический корабль под управлением NanoTrasen. Был получен НТ от СФ как одно из докозательств союза. Был немного переделан под нужды НТ.  Первостепенная его задача информирование НТ о действиях в секторе, а не война с другими фракциями. Корабль оснащён лазерным вооружением, туррелями, функционирующим медблоком, генератором энергии на алмазах и небольшой зоне отдыха.",
+	"map_path": "_maps/_mod_celadon/shuttles/nanotrasen/nanotrasen_teardrop.dmm",
+	"enabled": true,
+	"limit": 1,
 	"prefix": "NTASV",
-	"description": " 'TearDrop', разведывательный космический корабль под управлением NanoTrasen. Сам корабль построен в форме слезы. Хоть он и немного потёрт, но вполне справляется со своими задачами. Первостепенная его задача информирование НТ о действиях в секторе, а не война с другими фракциями. Если у вас есть какие-то замечания в сторону данного корабля, вы можете обратиться к нашим специалистам на официальном сайте.",
+	"faction": "/datum/faction/nt",
 	"tags": [
 		"Combat",
 		"Scout"
@@ -10,34 +15,29 @@
 	"namelists": [
 		"NANOTRASEN",
 		"WEAPONS"
-
 	],
-	"map_short_name": "TearDrop-class",
-	"map_path": "_maps/_mod_celadon/shuttles/nanotrasen/nanotrasen_teardrop.dmm",
-	"limit": 1,
 	"job_slots": {
-		"Капитан": {
+		"Lieutenant": {
 			"outfit": "/datum/outfit/job/nanotrasen/captain/lp",
 			"officer": true,
 			"slots": 1
 		},
-		"Командир вылетной группы": {
+		"Flight group commander": {
 			"outfit": "/datum/outfit/job/nanotrasen/hos",
 			"officer": true,
 			"slots": 1
 		},
-		"Судовой техник": {
+		"Military technician": {
 			"outfit": "/datum/outfit/job/nanotrasen/engineer/lp",
 			"slots": 2
 		},
-		"Офицер вылетной группы": {
+		"Flight group officer": {
 			"outfit": "/datum/outfit/job/nanotrasen/security/lp",
 			"slots": 3
 		},
-		"Военный хирург": {
+		"Military surgeon": {
 			"outfit": "/datum/outfit/job/nanotrasen/paramedic",
 			"slots": 1
 		}
-	},
-	"enabled": true
+	}
 }

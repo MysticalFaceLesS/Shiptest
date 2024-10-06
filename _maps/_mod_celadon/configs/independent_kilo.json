@@ -1,19 +1,20 @@
 {
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
 	"map_name": "Kilo-class Mining Ship",
+	"map_short_name": "Kilo",
 	"description": "Судно класса 'Kilo' - это миниатюрное шахтерское судно, которое не поддается определению как самостоятельное космическое судно. Начав свою жизнь давным-давно как серия специально построенных шахтерских челноков, предназначенных для использования на аванпостах Фронтира, прогрессивные циклы перепроектирования для увеличения продолжительности миссии в конечном итоге привели к появлению громоздкого, клаустрофобного 'Kilo', который мы видим сегодня. Когда-то довольно многочисленные, 'Kilo' до сих пор часто встречаются на заброшенных станциях и в забытых складских отсеках, а их предельный возраст и плохие условия хранения обычно приводят их в особенно плачевное состояние. Экипажи 'Kilo' часто считаются довольно эксцентричными даже по стандартам Фронтира, а некоторые космонавты настаивают, что даже хорошо сбалансированный космонавт быстро станет неуклюжим в 'уникальной' среде 'Kilo'.",
-	"tags": [
-		"Generalist"
-	],
+	"map_path": "_maps/_mod_celadon/shuttles/independent/independent_kilo.dmm",
+	"enabled": true,
+	"limit": 1,
+	"starting_funds": 1500,
 	"prefix": "ISV",
+	"faction": "/datum/faction/independent",
+	"tags": ["Generalist"],
 	"namelists": [
 		"GENERAL",
 		"SPACE",
 		"NATURAL"
 	],
-	"map_short_name": "Kilo-class",
-	"starting_funds": 1500,
-	"map_path": "_maps/_mod_celadon/shuttles/independent/independent_kilo.dmm",
 	"job_slots": {
 		"Captain": {
 			"outfit": "/datum/outfit/job/independent/captain/western",
@@ -36,6 +37,5 @@
 			"outfit": "/datum/outfit/job/independent/assistant",
 			"slots": 1
 		}
-	},
-	"enabled": true
+	}
 }

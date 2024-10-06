@@ -1,22 +1,24 @@
 {
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
-	"prefix": "SSV",
-	"namelists": [
-		"CYBERSUN",
-		"SPACE",
-		"NATURAL_AGGRESSIVE"
-	],
 	"map_name": "Remora Research and Heal ship",
+	"map_short_name": "Remora",
 	"description": "Судно класса «Remora» - является огромной летающей лабораторией и при этом опасным судном поддержки. Судно было разработано для спасения подразделений ядерной команды из горячей точки, когда тем удавалось захватить особо ценные данные за которые их нужно было вытащить любой ценой. Remora снаряжена Мех-частью, Научно Исследовательским Отделом, Мед-отсеком с химией, Вирусологией, инженерной частью и достаточно серьёзным арсеналом в руках парамедиков. Полная команда Реморы стосит из: 1 главного директора биологических исследований, 1 директора исследований и разработок, 4 парамедиков, 3 докторов, 1 химика-фармацевта, 3 инженеров ГИК, 1 вирусолога био-террориста и 4 интернов. В щитспавне по причине: Требуется капитальный маперский ремонт.",
+	"map_path": "_maps/_mod_celadon/shuttles/syndicate/syndicate_cybersun_remora.dmm",
+	"map_id": "cybersun_remora",
+	"enabled": false,
+	"limit": 1,
+	"prefix": "SSV",
+	"faction": "/datum/faction/syndicate",
 	"tags": [
 		"Медицинский",
 		"Научный",
 		"Боевой"
 	],
-	"map_short_name": "Remora-class",
-	"map_path": "_maps/_mod_celadon/shuttles/syndicate/syndicate_cybersun_remora.dmm",
-	"map_id": "cybersun_remora",
-	"limit": 1,
+	"namelists": [
+		"CYBERSUN",
+		"SPACE",
+		"NATURAL_AGGRESSIVE"
+	],
 	"job_slots": {
 		"Chief Biology Research Director": {
 			"outfit": "/datum/outfit/job/syndicate/captain/cybersun",
@@ -56,6 +58,5 @@
 			"outfit": "/datum/outfit/job/syndicate/assistant/cybersun",
 			"slots": 4
 		}
-	},
-	"enabled": false
+	}
 }

@@ -21,6 +21,7 @@ ID мода: WIDEBAND_CHANGES
 ### Описание мода
 
 Мод включает динамик вайдбанду по дефолту, а также увеличивает дистанцию откуда можно его услышать в два раза.
+Также добавляет сигнал S.O.S. и отправку с помощью репорта, wideband и Discord.
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
   А также любая полезная информация.
@@ -28,7 +29,9 @@ ID мода: WIDEBAND_CHANGES
 
 ### Изменения *кор кода*
 
-- CHANGE:`code/game/objects/items/radio/intercom.dm: `/obj/item/radio/intercom/wideband`
+- CHANGE:`code/game/objects/items/radio/intercom.dm: `/obj/item/radio/intercom/wideband
+- ADD:`code\modules\overmap\helm.dm: ` /obj/machinery/computer/helm/ui_act
+- ADD:`tgui\packages\tgui\interfaces\HelmConsole.js:` ADD new button S.O.S. 
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -60,7 +63,7 @@ ID мода: WIDEBAND_CHANGES
 
 ### Используемые файлы, не содержащиеся в модпаке
 
-- Отсутствуют
+- mod_celadon/_storge_sounds/sound/announce/sos.ogg
 <!--
   Будь то немодульный файл или модульный файл, который не содержится в папке,
   принадлежащей этому конкретному моду, он должен быть упомянут здесь.
@@ -70,7 +73,7 @@ ID мода: WIDEBAND_CHANGES
 
 ### Авторы:
 
-Yata9arasu
+Yata9arasu, Voiko
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.

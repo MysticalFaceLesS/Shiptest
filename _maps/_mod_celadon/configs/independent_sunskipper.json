@@ -1,0 +1,37 @@
+{
+	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
+	"map_name": "Sunskipper-class Culinary Vessel",
+	"map_short_name": "Sunskipper",
+	"description": "Sunskipper-class — это современное кулинарное судно, найденное на границе. Sunskipper с распростертыми объятиями встречают усталые космонавты с более высокими зарплатами, которые утомлены однообразием своих повседневных приемов пищи. На судне есть самоподдерживающаяся кухня с гидропоникой и большой, роскошный обеденный зал, предназначенный для обслуживания голодных путешественников. Он также оснащен полностью укомплектованной баром, который позволяет им выпить свои проблемы, хотя бы на короткое время.",
+	"map_path": "_maps/_mod_celadon/shuttles/independent/independent_sunskipper.dmm",
+	"enabled": true,
+	"limit": 1,
+	"starting_funds": 3000,
+	"prefix": "SV",
+	"faction": "/datum/faction/independent",
+	"tags": [
+		"RP Focus",
+		"Service",
+		"Specialist"
+	],
+	"namelists": ["CRUISE", "NATURAL"],
+	"job_slots": {
+		"Manager": {
+			"outfit": "/datum/outfit/job/independent/captain/manager",
+			"slots": 1,
+			"officer": true
+		},
+		"Bartender": {
+			"outfit": "/datum/outfit/job/independent/bartender/disarmed",
+			"slots": 1
+		},
+		"Cook": {
+			"outfit": "/datum/outfit/job/independent/cook",
+			"slots": 2
+		},
+		"Waiter": {
+			"outfit": "/datum/outfit/job/independent/assistant/waiter",
+			"slots": 2
+		}
+	}
+}

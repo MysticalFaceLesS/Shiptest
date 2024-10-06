@@ -150,7 +150,6 @@
 	flick("station_intact_fade_red",screen)
 	screen.icon_state = "summary_nukefail"
 
-//Also used for blob
 /datum/cinematic/nuke_selfdestruct
 	id = CINEMATIC_SELFDESTRUCT
 
@@ -286,3 +285,4 @@ Nuke.Explosion()
 Narsie()
 	-> Cinematic(CULT,world)
 */
+

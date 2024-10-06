@@ -360,6 +360,21 @@
 	message_admins("[key_name_admin(src)] has changed Central Command's name to [input]")
 	log_admin("[key_name(src)] has changed the Central Command name to: [input]")
 
+/client/proc/cmd_admin_distress_signal()
+	set category = "Event"
+	set name = "Create Distress Signal"
+
+	var/datum/overmap/ship/ship = SSshuttle.get_ship(usr)
+	if(!ship)
+		return
+	var/confirm = alert(src, "Do you want to create a distress signal for [ship.name]", "Distress Signal", "Yes", "Cancel")
+
+	switch(confirm)
+		if("Yes")
+			create_distress_beacon(ship)
+		if("Cancel")
+			return
+
 /client/proc/cmd_admin_delete(atom/A as obj|mob|turf in world)
 	set category = "Debug"
 	set name = "Delete"
@@ -734,8 +749,6 @@
 
 		M.audible_message("<span class='hear'>...wabbajack...wabbajack...</span>")
 		playsound(M.loc, 'sound/magic/staff_change.ogg', 50, TRUE, -1)
-
-		wabbajack(M)
 
 	message_admins("Mass polymorph started by [who_did_it] is complete.")
 

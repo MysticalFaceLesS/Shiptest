@@ -49,6 +49,8 @@
 
 /obj/machinery/computer/helm/Initialize(mapload, obj/item/circuitboard/C)
 	. = ..()
+	if(!viewer)
+		SSpoints_of_interest.make_point_of_interest(src)
 	jump_allowed = world.time + CONFIG_GET(number/bluespace_jump_wait)
 	ntnet_relay = new(src)
 
@@ -76,6 +78,7 @@
 	SStgui.close_uis(src)
 	ASSERT(length(concurrent_users) == 0)
 	QDEL_NULL(ntnet_relay)
+	SSpoints_of_interest.remove_point_of_interest(src)
 	if(current_ship)
 		current_ship.helms -= src
 		current_ship = null
@@ -289,7 +292,15 @@
 			allow_ai_control = !allow_ai_control
 			say(allow_ai_control ? "AI Control has been enabled." : "AI Control is now disabled.")
 			return
-
+		// [Celadon-ADD] - Signal S.O.S. - mod_celadon\wideband\code\signal.dm
+		if("send_sos")
+			if(!current_ship.SendSos(name = "[current_ship.name]", x = "[current_ship.x || current_ship.docked_to.x]", y = "[current_ship.y || current_ship.docked_to.y]"))
+				if(COOLDOWN_TIMELEFT(current_ship, sendsos_cooldown)/10 != 0)
+					say("Error: [COOLDOWN_TIMELEFT(current_ship, sendsos_cooldown)/10] секунд до заряда сигнала S.O.S.")
+				return
+			current_ship.SendSos(name = "[current_ship.name]", x = "[current_ship.x || current_ship.docked_to.x]", y = "[current_ship.y || current_ship.docked_to.y]")
+			return
+		// [/Celadon-ADD]
 	if(jump_state != JUMP_STATE_OFF)
 		say("Bluespace Jump in progress. Controls suspended.")
 		return
@@ -388,11 +399,11 @@
 		return
 
 	to_chat(user, "<span class='warning'>You begin to manually override the local database...</span>")
-	if(!do_after_mob(user, list(src), 2 SECONDS))
+	if(!do_after(user, 2 SECONDS, list(src)))
 		return COMPONENT_BLOCK_TOOL_ATTACK
 
 	priority_announce("Illegal access to local ship database detected.", sender_override="[src.name]", zlevel=virtual_z())
-	if(!do_after_mob(user, list(src), 10 SECONDS))
+	if(!do_after(user, 10 SECONDS, list(src)))
 		return COMPONENT_BLOCK_TOOL_ATTACK
 
 	say("Warning, database corruption present, resetting local database state.")

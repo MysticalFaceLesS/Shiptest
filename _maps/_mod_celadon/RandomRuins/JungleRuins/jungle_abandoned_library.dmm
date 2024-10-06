@@ -193,12 +193,6 @@
 	pixel_x = 6;
 	pixel_y = -6
 	},
-/obj/item/gun/ballistic/automatic/pistol/no_mag{
-	name = "bible gun";
-	pixel_x = -7;
-	pixel_y = -8;
-	desc = "A small, easily concealable 10mm handgun. Has a threaded barrel for suppressors. Does not fire holy ammo."
-	},
 /obj/effect/turf_decal/siding/wood,
 /obj/item/ammo_casing/c10mm{
 	icon_state = "magnum-brass-nagant";
@@ -212,6 +206,12 @@
 	desc = "A 10mm bullet casing. It is spent.";
 	pixel_x = 7;
 	pixel_y = -7
+	},
+/obj/item/gun/ballistic/automatic/pistol/ringneck{
+	desc = "A small, easily concealable 10mm handgun. Has a threaded barrel for suppressors. Does not fire holy ammo.";
+	name = "bible gun";
+	pixel_x = -7;
+	pixel_y = -8
 	},
 /turf/open/floor/plasteel/grimy,
 /area/ruin/jungle)
@@ -3198,8 +3198,8 @@
 /obj/structure/closet/wardrobe/chaplain_black{
 	populate = 0
 	},
-/obj/item/ammo_box/magazine/m10mm,
-/obj/item/ammo_box/magazine/m10mm,
+/obj/item/ammo_box/magazine/m10mm_ringneck,
+/obj/item/ammo_box/magazine/m10mm_ringneck,
 /obj/structure/spacevine{
 	name = "vines"
 	},

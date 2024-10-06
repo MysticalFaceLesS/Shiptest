@@ -2,8 +2,8 @@
 // 		Cloaks
 //********************
 /obj/item/clothing/suit/hooded/cloak/tajaran
-	icon = 'mod_celadon/items/icons/obj/tajara_items.dmi'
-	mob_overlay_icon = 'mod_celadon/items/icons/overlay/tajara_items_overlay.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/items/obj/tajara_items.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/items/overlay/tajara_items_overlay.dmi'
 	lefthand_file = 'icons/mob/inhands/clothing/suits_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/clothing/suits_righthand.dmi'
 	slot_flags = ITEM_SLOT_OCLOTHING | ITEM_SLOT_NECK
@@ -14,8 +14,8 @@
 	hoodtype = /obj/item/clothing/head/hooded/cloakhood/tajaran
 
 /obj/item/clothing/head/hooded/cloakhood/tajaran
-	icon = 'mod_celadon/items/icons/obj/tajara_items.dmi'
-	mob_overlay_icon = 'mod_celadon/items/icons/overlay/tajara_items_overlay.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/items/obj/tajara_items.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/items/overlay/tajara_items_overlay.dmi'
 	flags_inv = HIDEEARS | HIDEEYES |HIDEHAIR | HIDEFACIALHAIR
 	name = "gruff cloak"
 	desc = "A cloak designated for the lowest classes."
@@ -88,8 +88,8 @@
 	item_state = "maroon_cloak_hat"
 
 /obj/item/clothing/replica_trenchcoat
-	icon = 'mod_celadon/items/icons/obj/suits/cloaks.dmi'
-	mob_overlay_icon = 'mod_celadon/items/icons/mob/suits/cloaks.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/items/obj/suits/cloaks.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/items/mob/suits/cloaks.dmi'
 	slot_flags = ITEM_SLOT_OCLOTHING | ITEM_SLOT_NECK
 	name = "replica armored trenchcloak"
 	desc = "This replica one appears to be designed to be draped over one's shoulders rather than worn normally.."

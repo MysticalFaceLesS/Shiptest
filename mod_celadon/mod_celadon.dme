@@ -2,35 +2,62 @@
 #include "_modpacks.dm"
 
 
-// #include "example/_example.dme"
+// Соблюдаем алфавитный порядок при добавлении путей!
+// Пример пути: #include "example/_example.dme"
 
 // --- MAINTENANCE --- //
-#include "_defines/__defines.dme"
 #include "_components/__components.dme"
-#include "fov/_fov.dme"
-#include "subtler/_subtler.dme"
-#include "radio_syndicate/_radio_syndicate.dme"
-#include "solgov_outfit/_solgov_outfit.dme"
-#include "ipc_chassis/_ipc_chassis.dme"
-#include "qol/_qol.dme"
-#include "loadout/_loadout.dme"
+#include "_storge_sounds/_storge_sounds.dme"
+#include "_storge_icons/_storge_icons.dme"
 #include "accents_add/_accents_add.dme"
+#include "access/_access.dme"
+#include "achievements/_achievements.dme"
+#include "areas/_areas.dme"
+#include "faction/_faction.dme"
+#include "fov/_fov.dme"
+#include "ghost_roles/_ghost_roles.dme"
+#include "ipc_chassis/_ipc_chassis.dme"
+#include "loadout/_loadout.dme"
+#include "map_expansion/_map_expansion.dme"
+#include "qol/_qol.dme"
+#include "radio_syndicate/_radio_syndicate.dme"
+#include "repairs_other/_repairs_other.dme"
+#include "subtler/_subtler.dme"
 
 // --- ICONS --- //
-#include "species_changes/_species_changes.dme"
-#include "resprite/_resprite.dme"
 #include "parallax/_parallax.dme"
+#include "resprite/_resprite.dme"
+#include "species_changes/_species_changes.dme"
+#include "stuff_solfed/_solfed_stuff.dme"
 
 // --- SOUNDS --- //
-
+#include "lobby_celadon/_lobby_celadon.dme"
 
 // --- OBJECTS --- //
+#include "barsigns/_barsigns.dme"
+#include "boarding/_boarding.dme"
+#include "bongs/_bongs.dme"
 #include "cargo_items/_cargo_items.dme"
-#include "elysium_stuff/_elysium_stuff.dme"
 #include "celadon_old_syndicate_rigs/_celadon_old_syndicate_rigs.dme"
+#include "effects/_effects.dme"
+#include "elysiumpod/_elysiumpod.dme"
+#include "flora/_flora.dme"
+#include "food_and_drinks/_food_and_drinks.dme"
+#include "items/_items.dme"
+#include "mechas/_mechas.dme"
+#include "moniq/_moniq.dme"
+#include "musician/_musician.dme"
+#include "pizzamat/_pizzamat.dme"
+#include "repair_weebstick/_repair_weebstick.dme"
+#include "research/_research.dme"
+#include "sauna/_sauna.dme"
+#include "stamps/_stamps.dme"
 #include "structures/_structures.dme"
-#include "inteq_stuff/_inteq_stuff.dme"
+#include "stuff_elysium/_stuff_elysium.dme"
+#include "stuff_gamma/_stuff_gamma.dme"
+#include "stuff_inteq/_stuff_inteq.dme"
 #include "tajara/_tajara.dme"
+#include "turrets/_turrets.dme"
 #include "weapons/_weapons.dme"
 #include "bongs/_bongs.dme"
 #include "research/_research.dme"
@@ -41,29 +68,39 @@
 
 
 // --- MOBS --- //
-#include "mobs/_mobs.dme"
 #include "drakeborgs/_drakeborgs.dme"
 #include "lanius/_lanius.dme"
 
 // --- MISC --- //
+#include "ai_laws/_ai_laws.dme"
 #include "balance/_balance.dme"
 #include "fixes/_fixes.dme"
 #include "ipc_surgery/_ipc_surgery.dme"
 #include "robotic_honk/_robotic_honk.dme"
+#include "wideband/_wideband.dme"
+
+// --- RETURNS --- //
+#include "crusher_trophy/_crusher_trophy.dme"
+#include "return_content/_return_content.dme"
 
 // --- DONATORS --- //
-
-
-// --- UNUSED MODS --- //
-
+#include "donaters/_donaters.dme"
 
 // --- MAPS --- //
 #include "maps/_configs.dme"
 
 
+// --- UNUSED MODS --- //
 /*------------------------------------------------------------------
 	Почему UNUSED MODS стоит хранить?
 	Потому что никто не проверяет использование тех или иных файлов
 	в коде, и мод просто исчезнет из поля зрения, когда находясь здесь
 	он всегда напоминает о своём существовании. Небольшая библиотека,
-	если так вообще можно выразиться.*/
+	если так вообще можно выразиться. Чтобы включить модпак, перенеси
+	его выше.*/
+
+// --- EVENTS --- //
+
+#include "event_td/_event_td.dme" // Ивент на атаку и защита
+
+//#include "event_cly/_event_cly.dme"

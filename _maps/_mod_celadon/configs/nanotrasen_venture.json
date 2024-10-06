@@ -1,16 +1,16 @@
 {
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
 	"map_name": "Venture-class Exploration Shuttle",
-	"prefix": "NTDSV",
-	"namelists": [
-		"NANOTRASEN"
-	],
-	"map_short_name": "Venture-class",
-	"map_path": "_maps/_mod_celadon/shuttles/nanotrasen/nanotrasen_venture.dmm",
+	"map_short_name": "Venture",
 	"description": "Небольшой шахтерский шатл для поддержки флота. Создан для обслуживания и технической поддержки более крупных судов. Данный экземпляр производства Нанотрейзен. Расчитан для кофмортной работы экипажа из двух человек.",
-	"tags": ["Cargo", "Generalist"],
-	"limit": 4,
+	"map_path": "_maps/_mod_celadon/shuttles/nanotrasen/nanotrasen_venture.dmm",
+	"enabled": true,
+	"limit": 1,
 	"starting_funds": 2000,
+	"prefix": "NTDSV",
+	"faction": "/datum/faction/nt",
+	"tags": ["Cargo", "Generalist"],
+	"namelists": ["NANOTRASEN"],
 	"job_slots": {
 		"Captain": {
 			"outfit": "/datum/outfit/job/nanotrasen/captain",
@@ -21,6 +21,5 @@
 			"outfit": "/datum/outfit/job/nanotrasen/assistant",
 			"slots": 1
 		}
-	},
-	"enabled": true
+	}
 }

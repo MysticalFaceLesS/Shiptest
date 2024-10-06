@@ -2,7 +2,7 @@
 
 #### Список PRов:
 
-- https://github.com/MysticalFaceLesS/Shiptest/pulls/#####
+- https://github.com/CeladonSS13/Shiptest/pull/759
 <!--
   Ссылки на PRы, связанные с модом:
   - Создание
@@ -30,7 +30,8 @@ ID мода: CELADON_ITEMS
 
 ### Изменения *кор кода*
 
-- Отсутствуют
+- `code/modules/surgery/organs/tongue.dm`
+	-`var/static/list/languages_possible_base = typecacheof`
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -68,6 +69,8 @@ ID мода: CELADON_ITEMS
 ### Используемые файлы, не содержащиеся в модпаке
 
 - `mods/_master_files/icons/obj/alien.dmi`
+- `mod_celadon/_storge_icons/icons/items`
+- ``
 <!--
   Будь то немодульный файл или модульный файл, который не содержится в папке,
   принадлежащей этому конкретному моду, он должен быть упомянут здесь.
@@ -77,7 +80,7 @@ ID мода: CELADON_ITEMS
 
 ### Авторы:
 
-MrCat15352, MysticalFaceLesS
+MrCat15352, MysticalFaceLesS, RalseiDreemuurr
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.

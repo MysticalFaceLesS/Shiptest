@@ -1,8 +1,18 @@
 {
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
 	"map_name": "Skipper-class Heavy Cruiser",
-	"map_short_name": "Skipper-class",
+	"map_short_name": "Skipper",
+	"description": "Пример одного из крейсеров Нанотрасена 'стандартного образца'. По меркам Фронтира судно класса 'Skipper' хорошо оснащено: достаточно места для инженерного оборудования, хорошо оборудованные места для экипажа и приличный запас оборонительного вооружения. Примечательно, что на 'Skipper' больше, чем в среднем, командный отсек, а офицеры на 'Skipper', как правило, лучше оснащены, чем их коллеги. Хотя должность на борту 'Osprey' не так престижна, как на 'Нанотрайзене', мало кто из капитанов откажется от командования 'Skipper'.",
+	"map_path": "_maps/_mod_celadon/shuttles/nanotrasen/nanotrasen_skipper.dmm",
+	"enabled": true,
+	"limit": 1,
+	"starting_funds": 4500,
 	"prefix": "NTSV",
+	"faction": "/datum/faction/nt",
+	"tags": [
+		"Engineering",
+		"Mining"
+	],
 	"namelists": [
 		"NANOTRASEN",
 		"SPACE",
@@ -10,14 +20,6 @@
 		"WEAPONS",
 		"MERCANTILE"
 	],
-	"map_path": "_maps/_mod_celadon/shuttles/nanotrasen/nanotrasen_skipper.dmm",
-	"description": "Пример одного из крейсеров Нанотрасена 'стандартного образца'. По меркам Фронтира судно класса 'Skipper' хорошо оснащено: достаточно места для инженерного оборудования, хорошо оборудованные места для экипажа и приличный запас оборонительного вооружения. Примечательно, что на 'Skipper' больше, чем в среднем, командный отсек, а офицеры на 'Skipper', как правило, лучше оснащены, чем их коллеги. Хотя должность на борту 'Osprey' не так престижна, как на 'Нанотрайзене', мало кто из капитанов откажется от командования 'Skipper'.",
-	"tags": [
-	"Engineering",
-	"Mining"
-	],
-	"starting_funds": 4500,
-	"roundstart": true,
 	"job_slots": {
 		"Captain": {
 			"outfit": "/datum/outfit/job/nanotrasen/captain",
@@ -59,6 +61,5 @@
 			"outfit": "/datum/outfit/job/assistant",
 			"slots": 3
 		}
-	},
-	"enabled": true
+	}
 }

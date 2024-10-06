@@ -200,9 +200,8 @@
 /obj/item/clothing/suit/armor/vest/marine/medium{
 	name = "medium medical armor vest"
 	},
-/obj/item/gun/ballistic/automatic/pistol,
-/obj/item/ammo_box/magazine/m10mm,
-/obj/item/ammo_box/magazine/m10mm,
+/obj/item/ammo_box/magazine/m10mm_ringneck,
+/obj/item/ammo_box/magazine/m10mm_ringneck,
 /obj/item/defibrillator/compact/combat/loaded,
 /obj/item/clothing/accessory/holster,
 /obj/machinery/light_switch{
@@ -216,6 +215,7 @@
 	dir = 1
 	},
 /obj/machinery/light/small/directional/west,
+/obj/item/gun/ballistic/automatic/pistol/ringneck,
 /turf/open/floor/carpet/blue,
 /area/ship/medical)
 "dI" = (
@@ -435,6 +435,9 @@
 	icon_state = "bordercolor";
 	dir = 1
 	},
+/obj/machinery/newscaster/directional/north{
+	pixel_x = 9
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/science)
 "ig" = (
@@ -484,7 +487,7 @@
 /turf/open/floor/carpet/blue,
 /area/ship/crew/dorm)
 "iT" = (
-/obj/machinery/porta_turret/ship/syndicate{
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
 	dir = 1
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
@@ -886,7 +889,7 @@
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "pB" = (
-/obj/machinery/porta_turret/ship/syndicate,
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "pH" = (
@@ -1199,6 +1202,7 @@
 	dir = 4
 	},
 /obj/item/analyzer,
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/plasteel/tech,
 /area/ship/cargo)
 "ve" = (
@@ -1904,15 +1908,15 @@
 /obj/item/storage/box/lethalshot,
 /obj/item/storage/box/lethalshot,
 /obj/item/storage/backpack/duffelbag/syndie/c4,
-/obj/item/ammo_box/magazine/m12g,
-/obj/item/ammo_box/magazine/m12g,
+/obj/item/ammo_box/magazine/m12g_bulldog/drum,
+/obj/item/ammo_box/magazine/m12g_bulldog/drum,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
 /obj/effect/turf_decal/industrial/traffic/full,
 /obj/item/stock_parts/cell/gun,
 /obj/item/stock_parts/cell/gun,
-/obj/item/ammo_box/magazine/m556,
-/obj/item/ammo_box/magazine/m556,
-/obj/item/ammo_box/magazine/m556,
+/obj/item/ammo_box/magazine/m556_42_hydra,
+/obj/item/ammo_box/magazine/m556_42_hydra,
+/obj/item/ammo_box/magazine/m556_42_hydra,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "Gm" = (
@@ -1976,6 +1980,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/effect/turf_decal/trimline/opaque/red/filled/corner,
+/obj/machinery/newscaster/directional/east,
 /turf/open/floor/plasteel/dark,
 /area/ship/crew)
 "Hp" = (
@@ -2104,6 +2109,9 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 10
 	},
+/obj/machinery/newscaster/directional/north{
+	pixel_x = 9
+	},
 /turf/open/floor/carpet/blue,
 /area/ship/crew/dorm)
 "Je" = (
@@ -2116,6 +2124,7 @@
 /obj/effect/turf_decal/corner/opaque/syndiered/border{
 	dir = 1
 	},
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/carpet/black,
 /area/ship/bridge)
 "JA" = (
@@ -2167,18 +2176,18 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/science)
 "Kh" = (
-/obj/structure/guncase,
+/obj/structure/guncloset,
 /obj/item/gun/ballistic/shotgun/automatic/combat/compact,
 /obj/machinery/airalarm/directional/west,
 /obj/machinery/light/directional/north,
 /obj/effect/turf_decal/industrial/traffic/full,
 /obj/item/gun/energy/ionrifle,
-/obj/item/gun/ballistic/shotgun/bulldog,
-/obj/item/gun/ballistic/automatic/smg/m90,
+/obj/item/gun/ballistic/shotgun/automatic/bulldog,
+/obj/item/gun/ballistic/automatic/assault/hydra,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "Kw" = (
-/obj/machinery/computer/cargo/express{
+/obj/machinery/computer/cargo{
 	dir = 8
 	},
 /obj/effect/turf_decal/corner/opaque/syndiered/border,
@@ -2249,7 +2258,7 @@
 /turf/open/floor/carpet/black,
 /area/ship/medical)
 "Mm" = (
-/obj/machinery/porta_turret/ship/syndicate{
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
 	dir = 4
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
@@ -2477,7 +2486,7 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/hallway/central)
 "QN" = (
-/obj/machinery/porta_turret/ship/ballistic,
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "QU" = (
@@ -2772,6 +2781,9 @@
 	},
 /obj/structure/table/reinforced,
 /obj/item/storage/backpack/duffelbag/syndie/surgery,
+/obj/machinery/newscaster/directional/north{
+	pixel_x = 6
+	},
 /turf/open/floor/carpet/black,
 /area/ship/medical)
 "VA" = (

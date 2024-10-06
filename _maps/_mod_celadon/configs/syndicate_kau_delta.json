@@ -1,18 +1,16 @@
 {
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
-	"prefix": "BSSV",
-	"namelists": [
-		"CYBERSUN"
-	],
-	"map_name": "Kau-Delta class ship",
+	"map_name": "Kau-Delta-class ship",
+	"map_short_name": "Kau-Delta",
 	"description": "Боевой корвет класса Кау-Дельта. Нацелен на подрыв деятельности НТ в секторе, в спешке был переоборудован для самообеспечения на протяжение продолжительного времени. Несмотря на причастность киберсан к созданию корабля, экипаж состоит из разных подразделений Синдиката.",
-	"tags": [
-		"Specialist"
-	],
-	"map_short_name": "Kau-class",
 	"map_path": "_maps/_mod_celadon/shuttles/syndicate/syndicate_kau_delta.dmm",
 	"map_id": "cybersun_kau",
+	"enabled": true,
 	"limit": 1,
+	"prefix": "BSSV",
+	"faction": "/datum/faction/syndicate",
+	"tags": ["Specialist"],
+	"namelists": ["CYBERSUN"],
 	"job_slots": {
 		"Captain": {
 			"outfit": "/datum/outfit/job/syndicate/captain/cybersun",
@@ -36,6 +34,5 @@
 			"outfit": "/datum/outfit/job/syndicate/assistant",
 			"slots": 2
 		}
-	},
-	"enabled": true
+	}
 }

@@ -1,21 +1,23 @@
 {
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
 	"map_name": "Module-Ship",
-	"map_short_name": "Module-class",
+	"map_short_name": "Module",
 	"description": "Секретная разработчка. Только щитспавн.",
-	"tags": ["Engineering", "Construction"],
 	"map_path": "_maps/_mod_celadon/shuttles/independent/independent_moduleship.dmm",
+	"enabled": false,
+	"limit": 1,
+	"prefix": "IMV",
+	"faction": "/datum/faction/independent",
+	"tags": ["Engineering", "Construction"],
 	"namelists": [
 		"GENERAL",
 		"SPACE",
 		"NATURAL"
 	],
-	"prefix": "IMV",
 	"job_slots": {
 		"ERT": {
 			"outfit": "/datum/outfit/centcom/ert/engineer",
 			"slots": 3
 		}
-	},
-	"enabled": false
+	}
 }

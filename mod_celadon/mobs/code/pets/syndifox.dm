@@ -1,5 +1,5 @@
 /mob/living/simple_animal/pet/dog/fox/syndifox
-	icon = 'mod_celadon/mobs/icons/pets.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/mobs/syndie_pets.dmi'
 	name = "Syndifox"
 	desc = "Syndifox, the Syndicate's most respected mascot. I wonder what it says?"
 	icon_state = "syndifox"

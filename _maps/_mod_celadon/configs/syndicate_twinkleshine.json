@@ -1,21 +1,24 @@
 {
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
-	"prefix": "SSV",
-	"namelists": [
-		"GORLEX",
-		"SPACE",
-		"ACLF"
-	],
 	"map_name": "Twinkleshine-class Battle Cruiser",
+	"map_short_name": "Twinkleshine",
 	"description": "После уничтожения более крупных линейных крейсеров класса 'Starfury' во время межкорпоративной войны Cybersun спроектировала 'Twinkleshine' в качестве замены, чтобы занять освободившуюся теперь роль флагмана. Однако война подошла к концу, прежде чем какие-либо образцы этого класса смогли увидеть бои. Теперь они хранятся как ценный символ могущества и единства Синдиката. В теории. Как и в случае с классом 'Starfury', экипажи 'Twinkleshine' состоят из представителей всех фракций членов Синдиката. В силу политической необходимости никто не согласился бы, чтобы Cybersun управлял такими мощными кораблями в одиночку. В то время как экипажи 'Twinkleshine', предположительно отбираются за более дипломатичные наклонности, чем можно было бы ожидать политическая ситуация на борту 'Twinkleshine' часто бывает деликатной, особенно по мере того, как напряженность между корпоративными и антикорпоративными элементами Синдиката продолжает нарастать. Тем не менее, они остаются самыми мощными единичными активами в объединенном арсенале Синдиката и часто выполняют роль изображения силы в пограничном пространстве. В щитспавне по причине: Эксперементальный шип! ",
+	"map_path": "_maps/_mod_celadon/shuttles/syndicate/syndicate_twinkleshine.dmm",
+	"enabled" : false,
+	"limit": 1,
+	"faction": "/datum/faction/syndicate",
+	"prefix": "SSV",
 	"tags": [
 		"Инженерный",
 		"Боевой",
 		"Сервис",
 		"Медицинский"
 	],
-	"map_short_name": "Twinkleshine-class",
-	"map_path": "_maps/_mod_celadon/shuttles/syndicate/syndicate_twinkleshine.dmm",
+	"namelists": [
+		"GORLEX",
+		"SPACE",
+		"ACLF"
+	],
 	"job_slots": {
 		"Flotilla Admiral": {
 			"outfit": "/datum/outfit/job/syndicate/captain/twink",
@@ -56,6 +59,5 @@
 			"outfit": "/datum/outfit/job/syndicate/assistant/twink",
 			"slots": 2
 		}
-	},
-	"enabled" : false
+	}
 }

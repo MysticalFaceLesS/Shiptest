@@ -29,15 +29,15 @@
 /turf/open/floor/plating,
 /area/ship/bridge)
 "dw" = (
-/obj/machinery/door/airlock/external/glass{
-	dir = 4
-	},
 /obj/docking_port/mobile{
 	dir = 8;
 	name = "ancon dock";
 	preferred_direction = 4
 	},
 /obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 4
+	},
+/obj/machinery/door/airlock/external/glass{
 	dir = 4
 	},
 /turf/open/floor/plating,
@@ -112,6 +112,15 @@
 	},
 /obj/machinery/light/directional/west,
 /turf/open/floor/plasteel/white,
+/area/ship/bridge)
+"py" = (
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 8
+	},
+/obj/machinery/door/airlock/external/glass{
+	dir = 4
+	},
+/turf/open/floor/plating,
 /area/ship/bridge)
 "te" = (
 /obj/effect/turf_decal/corner/opaque/green/diagonal,
@@ -195,12 +204,16 @@
 	name = "Engine Shutters";
 	dir = 4
 	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
 /turf/open/floor/plating,
 /area/ship/bridge)
 "yi" = (
 /obj/effect/turf_decal/corner/opaque/green/border{
 	dir = 4
 	},
+/obj/machinery/holopad/emergency/command,
 /turf/open/floor/plasteel,
 /area/ship/bridge)
 "yp" = (
@@ -234,6 +247,9 @@
 "zJ" = (
 /obj/machinery/power/shuttle/engine/electric/premium{
 	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "2-5"
 	},
 /turf/open/floor/plating/airless,
 /area/ship/external/dark)
@@ -291,6 +307,15 @@
 	},
 /turf/open/floor/wood,
 /area/ship/bridge)
+"JS" = (
+/obj/machinery/power/shuttle/engine/electric/premium{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/turf/open/floor/plating/airless,
+/area/ship/external/dark)
 "KF" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 9
@@ -379,10 +404,11 @@
 /obj/effect/turf_decal/corner/opaque/green/border{
 	dir = 4
 	},
-/obj/structure/chair/comfy{
+/obj/effect/landmark/ert_shuttle_spawn,
+/obj/machinery/newscaster/directional/north,
+/obj/structure/chair/comfy/grey{
 	dir = 4
 	},
-/obj/effect/landmark/ert_shuttle_spawn,
 /turf/open/floor/plasteel,
 /area/ship/bridge)
 "Th" = (
@@ -394,6 +420,9 @@
 	id = "ancon_engine";
 	name = "Engine Shutters";
 	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
 	},
 /turf/open/floor/plating,
 /area/ship/bridge)
@@ -460,14 +489,14 @@ LV
 vV
 Zr
 LV
-zJ
+JS
 tk
 "}
 (3,1,1) = {"
 LV
 xZ
 LV
-Om
+py
 Om
 LV
 Th

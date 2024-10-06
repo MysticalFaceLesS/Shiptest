@@ -145,7 +145,6 @@
 "ed" = (
 /obj/structure/table/glass,
 /obj/item/paper/pamphlet/violent_video_games,
-/obj/item/paper/pamphlet/ruin/spacehotel,
 /turf/open/floor/wood,
 /area/ruin/unpowered/corprejectrooms)
 "em" = (
@@ -321,10 +320,9 @@
 /area/ruin/unpowered/corprejectrooms)
 "io" = (
 /obj/structure/closet/wall/red/directional/west,
-/obj/item/keycard/office{
-	desc = "Only Elite level employees are authorized to handle this keycard. All other employees may face termination if found in possession.";
-	name = "Vault Card";
-	puzzle_id = "NTB5"
+/obj/item/card/id{
+	req_access = 4;
+	name = "Four"
 	},
 /turf/open/floor/vault,
 /area/ruin/unpowered/corprejectrooms)
@@ -334,9 +332,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
-/obj/machinery/door/keycard{
+/obj/machinery/door/airlock/hatch{
 	name = "Vault Unit Gamma";
-	puzzle_id = "NTB5"
+	dir = 1;
+	req_access = 4
 	},
 /turf/open/floor/vault,
 /area/ruin/unpowered/corprejectvault)
@@ -363,9 +362,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
-/obj/machinery/door/keycard{
-	name = "WorkSpaces";
-	puzzle_id = "NTB3"
+/obj/machinery/door/airlock/hatch{
+	name = "Break Room";
+	dir = 1;
+	req_access = 2
 	},
 /turf/open/floor/plasteel/sepia,
 /area/ruin/unpowered/corprejectrooms)
@@ -424,9 +424,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 4
 	},
-/obj/machinery/door/keycard{
+/obj/machinery/door/airlock/hatch{
 	name = "Engineering and Sciences";
-	puzzle_id = "NTB3"
+	dir = 8;
+	req_access = 2
 	},
 /turf/open/floor/plasteel/tech,
 /area/ruin/unpowered/corprejectengineering)
@@ -517,11 +518,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 9
 	},
-/mob/living/simple_animal/hostile/nanotrasen/ranged/assault{
-	desc = "No longer a member of Nanotrasen's more militaristic forces. Seems grumpy.";
-	faction = list("DeserterNT");
-	name = "Benny Bleighch"
-	},
 /turf/open/floor/plasteel/tech,
 /area/ruin/unpowered/corprejectengineering)
 "nl" = (
@@ -565,11 +561,6 @@
 /turf/open/floor/vault,
 /area/ruin/unpowered/corprejectrooms)
 "or" = (
-/mob/living/simple_animal/hostile/nanotrasen/elite{
-	desc = "A former major player for Nanotrasen militaristic needs. He doesn't seem like someone who'd want to talk over tea.";
-	faction = list("DeserterNT");
-	name = "Sam the Sharp"
-	},
 /obj/machinery/light/directional/north,
 /turf/open/floor/vault,
 /area/ruin/unpowered/corprejectrooms)
@@ -696,9 +687,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
-/obj/machinery/door/keycard{
+/obj/machinery/door/airlock/hatch{
 	name = "Vault Access";
-	puzzle_id = "NTB5"
+	dir = 1;
+	req_access = 4
 	},
 /turf/open/floor/vault,
 /area/ruin/unpowered/corprejectrooms)
@@ -759,9 +751,9 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
-/obj/machinery/door/keycard{
+/obj/machinery/door/airlock/hatch{
 	name = "Employees Only";
-	puzzle_id = "NTB2"
+	req_access = 1
 	},
 /turf/open/floor/wood,
 /area/ruin/unpowered/corprejectrooms)
@@ -775,15 +767,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
 /obj/machinery/light/directional/west,
-/turf/open/floor/mineral/titanium/tiled/blue,
-/area/ruin/unpowered/corprejectrooms)
-"tb" = (
-/obj/effect/turf_decal/corner/opaque/white/diagonal,
-/mob/living/simple_animal/hostile/nanotrasen/ranged/smg{
-	desc = "An officer no longer part of Nanotrasen's private security force, he seems rather unpleased to meet you.";
-	faction = list("DeserterNT");
-	name = "Rebecca Slouch"
-	},
 /turf/open/floor/mineral/titanium/tiled/blue,
 /area/ruin/unpowered/corprejectrooms)
 "tD" = (
@@ -835,9 +818,9 @@
 /area/ruin/unpowered/corprejectvault)
 "uE" = (
 /obj/structure/fans/tiny,
-/obj/machinery/door/keycard{
-	name = "Nanotrasen Secure Solutions";
-	puzzle_id = "NTB1"
+/obj/machinery/door/airlock/hatch{
+	dir = 4;
+	name = "Nanotrasen Secure Solutions"
 	},
 /turf/open/floor/wood,
 /area/ruin/unpowered/corprejectrooms)
@@ -982,10 +965,9 @@
 	},
 /obj/machinery/door/window/westright,
 /obj/item/storage/belt,
-/obj/item/keycard/swordfish{
-	desc = "Nanotrasen Corporate Security Solutions, no place safer in the galaxy!";
-	name = "Secure Solutions Card";
-	puzzle_id = "NTB4"
+/obj/item/card/id{
+	req_access = 3;
+	name = "Three"
 	},
 /turf/open/floor/plasteel/mono,
 /area/ruin/unpowered/corprejectengineering)
@@ -1046,14 +1028,6 @@
 	},
 /turf/open/floor/vault,
 /area/ruin/unpowered/corprejectvault)
-"yD" = (
-/obj/item/keycard/entry{
-	desc = "Nanotrasen Corporate Security Solutions, no place safer in the galaxy!";
-	name = "Keycard to NT Secure Solutions";
-	puzzle_id = "NTB1"
-	},
-/turf/open/floor/plating/snowed/temperatre,
-/area/ruin/unpowered/corprejectrooms)
 "yI" = (
 /obj/machinery/vending/sustenance,
 /turf/open/floor/plasteel/sepia,
@@ -1062,11 +1036,6 @@
 /obj/structure/chair/stool/bar,
 /obj/structure/cable/blue{
 	icon_state = "4-9"
-	},
-/mob/living/simple_animal/hostile/nanotrasen/ranged/smg{
-	desc = "An officer no longer part of Nanotrasen's private security force, he seems rather unpleased to meet you.";
-	faction = list("DeserterNT");
-	name = "Gloria the Glorious"
 	},
 /turf/open/floor/plasteel/grimy,
 /area/ruin/unpowered/corprejectrooms)
@@ -1105,11 +1074,6 @@
 /obj/structure/chair{
 	dir = 8
 	},
-/mob/living/simple_animal/hostile/nanotrasen/screaming{
-	desc = "An officer no longer part of Nanotrasen's private security force, he seems rather unpleased to meet you.";
-	faction = list("DeserterNT");
-	name = "Jimmy Firecracker"
-	},
 /turf/open/floor/wood,
 /area/ruin/unpowered/corprejectrooms)
 "zh" = (
@@ -1120,10 +1084,9 @@
 /obj/structure/cable/blue{
 	icon_state = "6-8"
 	},
-/obj/item/keycard/stockroom{
-	desc = "Nanotrasen Corporate Security Solutions, no place safer in the galaxy!";
-	name = "Science and Medine Workspaces Card";
-	puzzle_id = "NTB3"
+/obj/item/card/id{
+	req_access = 2;
+	name = "Two"
 	},
 /turf/open/floor/plasteel/grimy,
 /area/ruin/unpowered/corprejectrooms)
@@ -1189,9 +1152,10 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
-/obj/machinery/door/keycard{
+/obj/machinery/door/airlock/hatch{
 	name = "Medical and Solutions";
-	puzzle_id = "NTB3"
+	dir = 1;
+	req_access = 3
 	},
 /turf/open/floor/plasteel/tech,
 /area/ruin/unpowered/corprejectengineering)
@@ -1205,9 +1169,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 4
 	},
-/obj/machinery/door/keycard{
+/obj/machinery/door/airlock/hatch{
 	name = "Secure Solutions";
-	puzzle_id = "NTB4"
+	dir = 8;
+	req_access = 3
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/unpowered/corprejectrooms)
@@ -1321,8 +1286,8 @@
 /turf/open/floor/plating/asteroid/snow/icemoon,
 /area/ruin/unpowered/corprejectrooms)
 "En" = (
-/obj/item/gun/ballistic/automatic/smg/proto,
 /obj/structure/rack,
+/obj/item/gun/ballistic/automatic/smg/skm_carbine/inteq/proto,
 /turf/open/floor/vault,
 /area/ruin/unpowered/corprejectvault)
 "Er" = (
@@ -1335,9 +1300,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 4
 	},
-/obj/machinery/door/keycard{
-	name = "Break Room";
-	puzzle_id = "NTB2"
+/obj/machinery/door/airlock/hatch{
+	name = "WorkSpaces";
+	dir = 8;
+	req_access = 1
 	},
 /turf/open/floor/plasteel/sepia,
 /area/ruin/unpowered/corprejectrooms)
@@ -1483,9 +1449,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 4
 	},
-/obj/machinery/door/keycard{
+/obj/machinery/door/airlock/hatch{
 	name = "Secure Solutions";
-	puzzle_id = "NTB4"
+	dir = 8;
+	req_access = 3
 	},
 /turf/open/floor/mineral/titanium/tiled/blue,
 /area/ruin/unpowered/corprejectrooms)
@@ -1687,7 +1654,7 @@
 /area/ruin/unpowered/corprejectrooms)
 "Mc" = (
 /obj/structure/table/glass,
-/obj/item/fireaxe,
+/obj/item/melee/axe/fire,
 /turf/open/floor/vault,
 /area/ruin/unpowered/corprejectvault)
 "Md" = (
@@ -1728,7 +1695,6 @@
 /obj/item/stack/sheet/mineral/gold/twenty,
 /obj/item/toy/figure/captain,
 /obj/item/organ/cyberimp/brain/anti_stun,
-/obj/item/disk/design_disk/adv/knight_gear,
 /turf/open/floor/vault,
 /area/ruin/unpowered/corprejectvault)
 "NJ" = (
@@ -1784,9 +1750,10 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
-/obj/machinery/door/keycard{
+/obj/machinery/door/airlock/hatch{
 	name = "Medical and Solutions";
-	puzzle_id = "NTB3"
+	dir = 1;
+	req_access = 3
 	},
 /turf/open/floor/mineral/titanium/tiled/blue,
 /area/ruin/unpowered/corprejectrooms)
@@ -1874,11 +1841,6 @@
 /obj/structure/cable/blue{
 	icon_state = "4-9"
 	},
-/mob/living/simple_animal/hostile/nanotrasen/ranged/smg{
-	desc = "An officer no longer part of Nanotrasen's private security force, he seems rather unpleased to meet you.";
-	faction = list("DeserterNT");
-	name = "Todd Clorox"
-	},
 /obj/structure/cable/blue{
 	icon_state = "6-9"
 	},
@@ -1897,11 +1859,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 4
 	},
-/mob/living/simple_animal/hostile/nanotrasen/elite{
-	desc = "A former major player for Nanotrasen militaristic needs. He doesn't seem like someone who'd want to talk over tea.";
-	faction = list("DeserterNT");
-	name = "Max the Maniac"
-	},
 /turf/open/floor/vault,
 /area/ruin/unpowered/corprejectrooms)
 "Ri" = (
@@ -1919,15 +1876,6 @@
 	dir = 10
 	},
 /turf/open/floor/mineral/plastitanium/red,
-/area/ruin/unpowered/corprejectrooms)
-"Rp" = (
-/obj/effect/turf_decal/corner/opaque/white/diagonal,
-/mob/living/simple_animal/hostile/nanotrasen/ranged/assault{
-	desc = "No longer a member of Nanotrasen's more militaristic forces. Seems grumpy.";
-	faction = list("DeserterNT");
-	name = "Gordon Lary"
-	},
-/turf/open/floor/mineral/titanium/tiled/blue,
 /area/ruin/unpowered/corprejectrooms)
 "Rs" = (
 /obj/structure/fence{
@@ -1997,11 +1945,6 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 4
-	},
-/mob/living/simple_animal/hostile/nanotrasen/ranged/assault{
-	desc = "No longer a member of Nanotrasen's more militaristic forces. Seems grumpy.";
-	faction = list("DeserterNT");
-	name = "Gary Larson"
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/unpowered/corprejectrooms)
@@ -2074,28 +2017,6 @@
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ruin/unpowered/corprejectrooms)
-"Uq" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
-	dir = 4
-	},
-/mob/living/simple_animal/hostile/nanotrasen/ranged/assault{
-	desc = "No longer a member of Nanotrasen's more militaristic forces. Seems grumpy.";
-	faction = list("DeserterNT");
-	name = "Nancy Drew"
-	},
-/turf/open/floor/mineral/plastitanium/red,
-/area/ruin/unpowered/corprejectrooms)
-"Us" = (
-/mob/living/simple_animal/hostile/nanotrasen/ranged/smg{
-	desc = "An officer no longer part of Nanotrasen's private security force, he seems rather unpleased to meet you.";
-	faction = list("DeserterNT");
-	name = "Larry Liessahl"
-	},
-/turf/open/floor/plasteel/tech,
-/area/ruin/unpowered/corprejectengineering)
 "Ut" = (
 /obj/machinery/vending/security,
 /obj/machinery/light/directional/south,
@@ -2160,10 +2081,9 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 10
 	},
-/obj/item/keycard/cheese{
-	desc = "Nanotrasen Corporate Security Solutions, no place safer in the galaxy!";
-	name = "Employee Card";
-	puzzle_id = "NTB2"
+/obj/item/card/id{
+	req_access = 1;
+	name = "One"
 	},
 /turf/open/floor/wood,
 /area/ruin/unpowered/corprejectrooms)
@@ -2226,11 +2146,6 @@
 /obj/structure/cable/blue{
 	icon_state = "0-4"
 	},
-/mob/living/simple_animal/hostile/nanotrasen/screaming{
-	desc = "An officer no longer part of Nanotrasen's private security force, he seems rather unpleased to meet you.";
-	faction = list("DeserterNT");
-	name = "Wendy Wallaby"
-	},
 /turf/open/floor/wood,
 /area/ruin/unpowered/corprejectrooms)
 "Ym" = (
@@ -2280,11 +2195,6 @@
 "ZV" = (
 /obj/structure/cable/blue{
 	icon_state = "4-5"
-	},
-/mob/living/simple_animal/hostile/nanotrasen/screaming{
-	desc = "An officer no longer part of Nanotrasen's private security force, he seems rather unpleased to meet you.";
-	faction = list("DeserterNT");
-	name = "Wetzel the Pretzel"
 	},
 /turf/open/floor/plasteel/grimy,
 /area/ruin/unpowered/corprejectrooms)
@@ -2356,7 +2266,7 @@ Al
 ZM
 ZM
 ZM
-yD
+ZM
 ZM
 Al
 Al
@@ -3270,7 +3180,7 @@ hn
 Qf
 hz
 yS
-Uq
+oP
 wB
 hn
 EL
@@ -3334,7 +3244,7 @@ nk
 Sy
 Sy
 nW
-Us
+UN
 Hs
 UF
 hn
@@ -3400,9 +3310,9 @@ Al
 hn
 hn
 kY
-tb
 LA
-Rp
+LA
+LA
 jY
 hn
 hn

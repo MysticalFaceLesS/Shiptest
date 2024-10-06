@@ -32,7 +32,7 @@
 
 	var/pellets = 1								//Pellets for spreadshot
 	var/variance = 0							//Variance for inaccuracy fundamental to the casing
-	var/randomspread = 0						//Randomspread for automatics
+	var/randomspread = FALSE						//Randomspread for automatics
 	var/delay = 0								//Delay for energy weapons
 	var/click_cooldown_override = 0				//Override this to make your gun have a faster fire rate, in tenths of a second. 4 is the default gun cooldown.
 
@@ -66,6 +66,10 @@
 
 /obj/item/ammo_casing/update_icon_state()
 	icon_state = "[initial(icon_state)][BB ? (bullet_skin ? "-[bullet_skin]" : "") : "-empty"]"
+	// [CELADON-ADD] - CELADON_BALANCE - Патроны
+	if(icon_state == "[initial(icon_state)]-empty")
+		custom_materials = list(/datum/material/iron=500)
+	// [/CELADON-ADD]
 	return ..()
 
 /obj/item/ammo_casing/update_desc()
@@ -90,7 +94,6 @@
 						boolets++
 						// [CELADON-ADD] - CELADON_BALANCE
 						playsound(loc, 'sound/weapons/gun/general/mag_bullet_insert.ogg', 60, TRUE)
-						do_after_mob(user, list(loc), 1 SECONDS)
 						break
 						// [/CELADON-ADD]
 				else

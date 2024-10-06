@@ -63,6 +63,7 @@
 	},
 /obj/effect/turf_decal/box,
 /obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/structure/closet/crate/large,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "dx" = (
@@ -115,6 +116,7 @@
 	pixel_x = -3
 	},
 /obj/item/stack/sheet/mineral/plastitanium/twenty,
+/obj/item/stock_parts/matter_bin,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "gd" = (
@@ -280,6 +282,7 @@
 /obj/effect/turf_decal/siding/brown{
 	dir = 6
 	},
+/obj/machinery/newscaster/directional/east,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "mO" = (
@@ -329,7 +332,7 @@
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/external)
 "oo" = (
-/obj/machinery/computer/cargo/express{
+/obj/machinery/computer/cargo{
 	dir = 8
 	},
 /obj/effect/turf_decal/corner/opaque/brown{
@@ -377,6 +380,9 @@
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
 /obj/structure/catwalk/over/plated_catwalk/dark,
+/obj/machinery/newscaster/directional/west{
+	pixel_y = -8
+	},
 /turf/open/floor/plating,
 /area/ship/bridge)
 "qh" = (
@@ -569,12 +575,13 @@
 /obj/structure/closet/crate/secure/weapon{
 	req_access_txt = "3"
 	},
-/obj/item/ammo_box/a762_40/inteq,
-/obj/item/ammo_box/a762_40/inteq,
-/obj/item/ammo_box/a762_40/inteq,
-/obj/item/ammo_box/a762_40/inteq,
-/obj/item/ammo_box/a12g,
-/obj/item/ammo_box/a12g,
+/obj/item/ammo_box/a556_box,
+/obj/item/ammo_box/a556_box,
+/obj/item/ammo_box/a556_box/a856,
+/obj/item/ammo_box/a556_box/m903,
+/obj/item/ammo_box/c10mm,
+/obj/item/ammo_box/c10mm,
+/obj/item/ammo_box/c10mm,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "xk" = (
@@ -592,16 +599,16 @@
 /obj/item/clothing/suit/armor/vest/inteq,
 /obj/item/clothing/head/helmet/swat/inteq,
 /obj/item/clothing/head/beret/sec/inteq,
-/obj/item/ammo_box/magazine/co9mm,
 /obj/item/flashlight/seclite,
-/obj/item/ammo_box/magazine/co9mm,
-/obj/item/gun/ballistic/automatic/pistol/commander/inteq/no_mag,
 /obj/structure/closet/secure_closet/wall{
 	icon_state = "generic_wall";
 	name = "equipment locker";
 	pixel_y = 28;
 	dir = 1
 	},
+/obj/item/gun/ballistic/automatic/pistol/glock,
+/obj/item/ammo_box/magazine/glock_standart,
+/obj/item/ammo_box/magazine/glock_standart,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "xA" = (
@@ -659,20 +666,16 @@
 /obj/item/clothing/suit/armor/vest/inteq,
 /obj/item/clothing/head/helmet/swat/inteq,
 /obj/item/clothing/head/beret/sec/inteq,
-/obj/item/ammo_box/magazine/co9mm,
 /obj/item/flashlight/seclite,
-/obj/item/ammo_box/magazine/co9mm,
-/obj/item/gun/ballistic/automatic/pistol/commander/inteq/no_mag,
-/obj/item/gun/ballistic/shotgun/bulldog/inteq,
-/obj/item/ammo_box/magazine/m12g,
-/obj/item/ammo_box/magazine/m12g,
 /obj/structure/closet/secure_closet/wall{
 	icon_state = "generic_wall";
 	name = "equipment locker";
 	pixel_y = 28;
-	req_access_txt = "3";
 	dir = 1
 	},
+/obj/item/gun/ballistic/automatic/pistol/glock,
+/obj/item/ammo_box/magazine/glock_standart,
+/obj/item/ammo_box/magazine/glock_standart,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "yV" = (
@@ -697,7 +700,7 @@
 "yX" = (
 /obj/structure/catwalk,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/porta_turret,
+/obj/machinery/porta_turret/ship/faction/inteq/laser/cover,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "zc" = (
@@ -715,10 +718,7 @@
 /obj/machinery/light/directional/south{
 	pixel_x = 32
 	},
-/obj/item/gun/ballistic/automatic/pistol/commander/inteq/no_mag,
 /obj/effect/turf_decal/siding/brown,
-/obj/item/ammo_box/magazine/co9mm,
-/obj/item/ammo_box/magazine/co9mm,
 /obj/item/flashlight/seclite,
 /obj/item/clothing/head/beret/sec/inteq,
 /obj/item/clothing/head/helmet/swat/inteq,
@@ -735,6 +735,9 @@
 	name = "equipment locker";
 	pixel_y = -28
 	},
+/obj/item/gun/ballistic/automatic/pistol/glock,
+/obj/item/ammo_box/magazine/glock_standart,
+/obj/item/ammo_box/magazine/glock_standart,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "Bq" = (
@@ -781,14 +784,14 @@
 /obj/structure/closet/crate/secure/weapon{
 	req_access_txt = "3"
 	},
-/obj/item/ammo_box/magazine/skm_762_40,
-/obj/item/ammo_box/magazine/skm_762_40,
-/obj/item/ammo_box/magazine/skm_762_40,
-/obj/item/ammo_box/magazine/skm_762_40,
-/obj/item/ammo_box/magazine/skm_762_40,
-/obj/item/ammo_box/magazine/skm_762_40,
-/obj/item/ammo_box/magazine/skm_762_40,
-/obj/item/ammo_box/magazine/skm_762_40,
+/obj/item/ammo_box/magazine/smgm10mm,
+/obj/item/ammo_box/magazine/smgm10mm,
+/obj/item/ammo_box/magazine/smgm10mm,
+/obj/item/ammo_box/magazine/smgm10mm,
+/obj/item/ammo_box/magazine/g36,
+/obj/item/ammo_box/magazine/g36,
+/obj/item/ammo_box/magazine/g36,
+/obj/item/ammo_box/magazine/g36,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "EH" = (
@@ -985,7 +988,7 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/cryo)
 "LV" = (
-/obj/machinery/porta_turret{
+/obj/machinery/porta_turret/ship/faction/inteq/laser/cover{
 	density = 0
 	},
 /obj/structure/catwalk/over/plated_catwalk/dark,
@@ -1051,21 +1054,23 @@
 	pixel_y = 28;
 	dir = 1
 	},
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/radio,
 /obj/effect/turf_decal/trimline/opaque/brown/warning{
 	dir = 4
 	},
+/obj/item/clothing/head/beret/sec/inteq,
+/obj/item/clothing/head/beret/sec/inteq,
+/obj/item/clothing/head/inteq_peaked,
+/obj/item/clothing/head/inteq_peaked,
+/obj/item/clothing/suit/hooded/wintercoat/security/inteq,
+/obj/item/clothing/suit/hooded/wintercoat/security/inteq,
+/obj/item/clothing/under/syndicate/inteq,
+/obj/item/clothing/under/syndicate/inteq,
+/obj/item/clothing/under/syndicate/inteq,
+/obj/item/clothing/under/syndicate/inteq/skirt,
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/cryo)
 "MP" = (
-/obj/machinery/porta_turret,
+/obj/machinery/porta_turret/ship/faction/inteq/laser/cover,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "MV" = (
@@ -1098,15 +1103,14 @@
 	name = "Двигательные задвижки";
 	pixel_x = -23
 	},
+/obj/item/stack/cable_coil/red,
+/obj/item/clothing/under/syndicate/inteq/artificer,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/crew/cryo)
 "Nm" = (
-/obj/item/gun/ballistic/automatic/pistol/commander/inteq/no_mag,
 /obj/effect/turf_decal/siding/brown{
 	dir = 1
 	},
-/obj/item/ammo_box/magazine/co9mm,
-/obj/item/ammo_box/magazine/co9mm,
 /obj/item/flashlight/seclite,
 /obj/item/clothing/head/beret/sec/inteq,
 /obj/item/clothing/head/helmet/swat/inteq,
@@ -1124,6 +1128,9 @@
 	pixel_y = 28;
 	dir = 1
 	},
+/obj/item/gun/ballistic/automatic/pistol/glock,
+/obj/item/ammo_box/magazine/glock_standart,
+/obj/item/ammo_box/magazine/glock_standart,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "NX" = (
@@ -1237,17 +1244,23 @@
 	name = "vanguard's locker";
 	req_access_txt = "20"
 	},
-/obj/item/kitchen/knife/combat,
+/obj/item/melee/knife/combat,
 /obj/item/ammo_box/a357,
 /obj/item/ammo_box/a357,
 /obj/item/ammo_box/a357,
 /obj/item/melee/baton/loaded,
 /obj/item/storage/belt/military/assault,
-/obj/item/clothing/head/beret/sec/inteq,
-/obj/item/gun/ballistic/revolver/mateba,
 /obj/structure/sign/poster/contraband/inteq{
 	pixel_x = 32
 	},
+/obj/item/gun/ballistic/automatic/pistol/usp45,
+/obj/item/ammo_box/magazine/usp45_standart,
+/obj/item/ammo_box/magazine/usp45_standart,
+/obj/item/clothing/head/beret/sec/hos/inteq,
+/obj/item/clothing/suit/armor/hos/inteq,
+/obj/item/clothing/accessory/holster,
+/obj/item/clothing/suit/armor/vest/security/warden/inteq,
+/obj/item/clothing/head/warden/inteq,
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "Sv" = (
@@ -1255,8 +1268,7 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
-	dir = 1;
-	filter_types = list("n2")
+	dir = 1
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/cryo)
@@ -1311,11 +1323,10 @@
 /obj/structure/closet/crate/secure/weapon{
 	req_access_txt = "3"
 	},
-/obj/item/gun/ballistic/automatic/assault/skm/inteq,
-/obj/item/gun/ballistic/automatic/assault/skm/inteq,
-/obj/item/gun/ballistic/automatic/gal/inteq,
 /obj/item/gun/ballistic/automatic/smg/skm_carbine/inteq,
 /obj/item/gun/ballistic/automatic/smg/skm_carbine/inteq,
+/obj/item/gun/ballistic/automatic/assault/g36/inteq,
+/obj/item/gun/ballistic/automatic/assault/g36/inteq,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "UC" = (
@@ -1365,8 +1376,7 @@
 /area/ship/crew/cryo)
 "UR" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
-	dir = 1;
-	filter_types = list("n2")
+	dir = 1
 	},
 /obj/effect/turf_decal/siding/brown,
 /obj/item/storage/backpack/messenger/inteq,
@@ -1379,15 +1389,15 @@
 /obj/item/clothing/suit/armor/vest/inteq,
 /obj/item/clothing/head/helmet/swat/inteq,
 /obj/item/clothing/head/beret/sec/inteq,
-/obj/item/ammo_box/magazine/co9mm,
 /obj/item/flashlight/seclite,
-/obj/item/ammo_box/magazine/co9mm,
-/obj/item/gun/ballistic/automatic/pistol/commander/inteq/no_mag,
 /obj/structure/closet/secure_closet/wall{
 	icon_state = "generic_wall";
 	name = "equipment locker";
 	pixel_y = -28
 	},
+/obj/item/gun/ballistic/automatic/pistol/glock,
+/obj/item/ammo_box/magazine/glock_standart,
+/obj/item/ammo_box/magazine/glock_standart,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "UU" = (
@@ -1402,15 +1412,15 @@
 /obj/item/clothing/suit/armor/vest/inteq,
 /obj/item/clothing/head/helmet/swat/inteq,
 /obj/item/clothing/head/beret/sec/inteq,
-/obj/item/ammo_box/magazine/co9mm,
 /obj/item/flashlight/seclite,
-/obj/item/ammo_box/magazine/co9mm,
-/obj/item/gun/ballistic/automatic/pistol/commander/inteq/no_mag,
 /obj/structure/closet/secure_closet/wall{
 	icon_state = "generic_wall";
 	name = "equipment locker";
 	pixel_y = -28
 	},
+/obj/item/gun/ballistic/automatic/pistol/glock,
+/obj/item/ammo_box/magazine/glock_standart,
+/obj/item/ammo_box/magazine/glock_standart,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "Vf" = (
@@ -1620,7 +1630,8 @@
 /obj/item/ammo_box/c9mm,
 /obj/item/ammo_box/c9mm,
 /obj/item/ammo_box/c9mm,
-/obj/item/ammo_box/c9mm,
+/obj/item/ammo_box/c45,
+/obj/item/ammo_box/c45,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "ZZ" = (

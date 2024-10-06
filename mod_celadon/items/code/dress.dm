@@ -1,6 +1,6 @@
 /obj/item/clothing/under/dress/flower
-	mob_overlay_icon = 'mod_celadon/items/icons/mob/suits/dress.dmi'
-	icon = 'mod_celadon/items/icons/obj/suits/dress.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/items/mob/suits/dress.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/items/obj/suits/dress.dmi'
 	name = "flower dress"
 	desc = "Lovely dress."
 	icon_state = "flower_dress"
@@ -9,8 +9,8 @@
 	can_adjust = FALSE
 
 /obj/item/clothing/under/dress/wedding
-	mob_overlay_icon = 'mod_celadon/items/icons/mob/suits/dress.dmi'
-	icon = 'mod_celadon/items/icons/obj/suits/dress.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/items/mob/suits/dress.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/items/obj/suits/dress.dmi'
 	name = "white wedding dress"
 	desc = "A white wedding gown made from the finest silk."
 	icon_state = "bride_white"

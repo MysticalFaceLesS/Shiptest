@@ -1,0 +1,34 @@
+{
+	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
+	"map_name": "Kondor-class ship",
+	"map_short_name": "Kondor",
+	"description": "«Kondor» является одной из разновидностей небольших суден. Судно создано одной из компаний синдиката по заказу влиятельного шейха для сепаратистов Элизиума. В настоящее время корабль был переоборудован для транспортировки грузов что бы снабжать сепаратисткие формирования",
+	"map_path": "_maps/_mod_celadon/shuttles/elysium/elysium_kondor.dmm",
+	"enabled": true,
+	"limit": 2,
+	"prefix": "EUSM",
+	"faction": "/datum/faction/elysium",
+	"tags": [
+		"Универсальный",
+		"Боевой"
+	],
+	"namelists": [
+		"WEAPONS",
+		"BEASTS"
+	],
+	"job_slots": {
+		"Каид": {
+			"outfit": "/datum/outfit/job/elysium/captain",
+			"officer": true,
+			"slots": 1
+		},
+		"Ахиса'и": {
+			"outfit": "/datum/outfit/job/elysium/assistant",
+			"slots": 1
+		},
+		"Мукатэлл": {
+			"outfit": "/datum/outfit/job/elysium/security",
+			"slots" : 2
+		}
+	}
+}

@@ -621,10 +621,10 @@
 /area/ship/bridge)
 "cr" = (
 /obj/effect/turf_decal/industrial/hatch/yellow,
-/obj/machinery/atmospherics/components/unary/portables_connector/layer2,
 /obj/structure/cable{
 	icon_state = "6-8"
 	},
+/obj/machinery/atmospherics/components/unary/portables_connector/layer2,
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/open/floor/plating,
 /area/ship/engineering)
@@ -1241,15 +1241,13 @@
 /obj/item/clothing/suit/longcoat/chemist,
 /obj/item/reagent_containers/dropper,
 /obj/item/storage/box/pillbottles,
-/obj/structure/closet/wall/white/chem{
-	pixel_y = 32
-	},
 /obj/effect/turf_decal/spline/fancy/opaque/bottlegreen{
 	dir = 1
 	},
 /obj/effect/turf_decal/spline/fancy/opaque/bottlegreen/corner{
 	dir = 8
 	},
+/obj/structure/closet/wall/white/directional/north,
 /turf/open/floor/plasteel/showroomfloor,
 /area/ship/crew/toilet)
 "iv" = (
@@ -1318,7 +1316,9 @@
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/cargo)
 "jG" = (
-/obj/machinery/vending/medical,
+/obj/machinery/vending/medical{
+	all_items_free = 1
+	},
 /obj/machinery/light/directional/east,
 /obj/effect/turf_decal/box,
 /turf/open/floor/plasteel/mono/dark,
@@ -1516,7 +1516,6 @@
 /turf/open/floor/plating,
 /area/ship/cargo)
 "qD" = (
-/obj/structure/catwalk/over,
 /obj/effect/turf_decal/trimline/opaque/yellow/filled/warning{
 	dir = 1
 	},
@@ -1526,6 +1525,10 @@
 /obj/structure/sign/warning/electricshock{
 	pixel_x = 32
 	},
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/structure/catwalk/over,
 /turf/open/floor/plating,
 /area/ship/engineering)
 "qX" = (
@@ -1615,7 +1618,6 @@
 /turf/open/floor/plating/airless,
 /area/ship/engineering)
 "tz" = (
-/obj/structure/catwalk/over,
 /obj/effect/turf_decal/trimline/opaque/yellow/filled/warning{
 	dir = 1
 	},
@@ -1623,8 +1625,9 @@
 	dir = 9
 	},
 /obj/structure/cable/yellow{
-	icon_state = "2-5"
+	icon_state = "2-4"
 	},
+/obj/structure/catwalk/over,
 /turf/open/floor/plating,
 /area/ship/engineering)
 "tD" = (
@@ -1661,6 +1664,9 @@
 /obj/machinery/light_switch{
 	pixel_x = -13;
 	pixel_y = 21
+	},
+/obj/machinery/newscaster/directional/west{
+	pixel_y = -9
 	},
 /turf/open/floor/carpet/nanoweave/blue,
 /area/ship/bridge)
@@ -1802,7 +1808,7 @@
 /obj/effect/turf_decal/corner/opaque/blue{
 	dir = 4
 	},
-/obj/machinery/computer/cargo/express{
+/obj/machinery/computer/cargo{
 	dir = 1
 	},
 /obj/machinery/firealarm/directional/south,
@@ -2135,6 +2141,7 @@
 /area/ship/medical)
 "By" = (
 /obj/machinery/light/built/directional/south,
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/plasteel/white,
 /area/ship/cargo)
 "BR" = (
@@ -2375,11 +2382,12 @@
 /obj/machinery/power/terminal{
 	dir = 4
 	},
+/obj/machinery/firealarm/directional/north,
 /obj/structure/cable/yellow{
-	icon_state = "0-10"
+	icon_state = "0-2"
 	},
+/obj/item/bot_assembly/hygienebot,
 /obj/effect/spawner/lootdrop/maintenance/three,
-/obj/structure/rack,
 /obj/item/areaeditor/shuttle,
 /obj/item/flashlight{
 	pixel_x = 3;
@@ -2388,8 +2396,7 @@
 /obj/item/storage/toolbox/mechanical{
 	pixel_y = 4
 	},
-/obj/item/bot_assembly/hygienebot,
-/obj/machinery/firealarm/directional/north,
+/obj/structure/rack,
 /turf/open/floor/plating,
 /area/ship/engineering)
 "Ic" = (
@@ -2499,6 +2506,9 @@
 /obj/machinery/microwave,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
 /obj/machinery/light/small/directional/north,
+/obj/machinery/newscaster/directional/north{
+	pixel_x = 13
+	},
 /turf/open/floor/wood,
 /area/ship/crew)
 "Ln" = (
@@ -2651,6 +2661,9 @@
 	dir = 4
 	},
 /obj/machinery/light/small/built/directional/west,
+/obj/machinery/newscaster/directional/west{
+	pixel_y = 9
+	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/medical)
 "Rx" = (

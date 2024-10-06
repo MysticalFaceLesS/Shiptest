@@ -11,7 +11,8 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	RADIO_CHANNEL_INTEQ = RADIO_TOKEN_INTEQ,
 	RADIO_CHANNEL_PIRATE = RADIO_TOKEN_PIRATE,
 	MODE_BINARY = MODE_TOKEN_BINARY,
-	RADIO_CHANNEL_AI_PRIVATE = RADIO_TOKEN_AI_PRIVATE
+	RADIO_CHANNEL_AI_PRIVATE = RADIO_TOKEN_AI_PRIVATE,
+	RADIO_CHANNEL_WIDEBAND = RADIO_TOKEN_WIDEBAND
 ))
 
 /obj/item/radio/headset
@@ -116,6 +117,26 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 
 /obj/item/radio/headset/syndicate/alt/leader
 	name = "team leader headset"
+	command = TRUE
+
+/obj/item/radio/headset/syndicate/suns
+	name = "SUNS headset"
+	icon_state = "suns_headset"
+	desc = "A headset worn by staff and students of SUNS, both in the frontier and elsewhere."
+
+/obj/item/radio/headset/syndicate/suns/command
+	name = "SUNS command headset"
+	desc = "A headset worn by staff and students of SUNS, both in the frontier and elsewhere. This one is worn by command staff."
+	command = TRUE
+
+/obj/item/radio/headset/syndicate/alt/suns
+	name = "SUNS bowman headset"
+	icon_state = "suns_headset_alt"
+	desc = "A headset worn by staff and students of SUNS, both in the frontier and elsewhere. Protects ears from distractions during exams."
+
+/obj/item/radio/headset/syndicate/alt/suns/command
+	name = "SUNS bowman command headset"
+	desc = "A headset worn by staff and students of SUNS, both in the frontier and elsewhere. This one is worn by command staff. Protects ears from distractions during exams."
 	command = TRUE
 
 //nanotrasen

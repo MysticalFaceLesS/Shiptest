@@ -1,18 +1,22 @@
 {
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
 	"map_name": "Escape Pod X-03",
+	"map_short_name": "EscapePod",
 	"description": "Ваше основное судно было уничтожено, теперь вам нужно выжить.",
+	"map_path": "_maps/_mod_celadon/shuttles/independent/independent_escapepod.dmm",
+	"enabled": true,
+	"limit": 1,
+	"space_spawn": true,
+	"prefix": "ISV",
+	"faction": "/datum/faction/independent",
 	"tags": [
 		"Survival"
 	],
-	"prefix": "ISV",
 	"namelists": [
 		"GENERAL",
 		"SPACE",
 		"NATURAL"
 	],
-	"map_short_name": "Escape Pod",
-	"map_path": "_maps/_mod_celadon/shuttles/independent/independent_escapepod.dmm",
 	"job_slots": {
 		"Captain": {
 			"outfit": "/datum/outfit/job/independent/captain/western",
@@ -35,7 +39,5 @@
 			"outfit": "/datum/outfit/job/independent/assistant",
 			"slots": 1
 		}
-	},
-        "space_spawn": true,
-	"enabled": true
+	}
 }

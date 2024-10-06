@@ -386,6 +386,7 @@
 /obj/machinery/firealarm/directional/west,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/vending/cigarette,
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/hallway/central)
 "eC" = (
@@ -643,6 +644,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/bridge)
 "gJ" = (
@@ -851,7 +853,7 @@
 /area/ship/hallway/fore)
 "iX" = (
 /obj/item/radio/intercom/wideband/directional/south,
-/obj/machinery/computer/cargo/express{
+/obj/machinery/computer/cargo{
 	dir = 1
 	},
 /obj/effect/turf_decal/borderfloor,
@@ -1024,6 +1026,11 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/tech/grid,
+/area/ship/cargo)
+"lf" = (
+/obj/structure/weightmachine/weightlifter,
+/obj/machinery/newscaster/directional/west,
+/turf/open/floor/plasteel/patterned/cargo_one,
 /area/ship/cargo)
 "lg" = (
 /obj/effect/turf_decal/box/corners{
@@ -1424,9 +1431,8 @@
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/crew/cryo)
 "qJ" = (
-/obj/machinery/porta_turret/ship/ballistic{
-	dir = 9;
-	faction = list("turret")
+/obj/machinery/porta_turret/ship/faction/inteq/ballistic{
+	dir = 9
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
@@ -1592,6 +1598,7 @@
 	frequency = 1347;
 	name = "IRMG shortwave intercom"
 	},
+/obj/machinery/newscaster/directional/east,
 /turf/open/floor/plasteel/dark,
 /area/ship/security)
 "sb" = (
@@ -2126,9 +2133,8 @@
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/hallway/central)
 "xh" = (
-/obj/machinery/porta_turret/ship/ballistic{
-	dir = 5;
-	faction = list("turret")
+/obj/machinery/porta_turret/ship/faction/inteq/ballistic{
+	dir = 5
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -2993,9 +2999,8 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "Hu" = (
-/obj/machinery/porta_turret/ship/ballistic{
-	dir = 6;
-	faction = list("turret")
+/obj/machinery/porta_turret/ship/faction/inteq/ballistic{
+	dir = 6
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
@@ -3272,9 +3277,8 @@
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/security/armory)
 "Ll" = (
-/obj/machinery/porta_turret/ship/ballistic{
-	dir = 5;
-	faction = list("turret")
+/obj/machinery/porta_turret/ship/faction/inteq/ballistic{
+	dir = 5
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
@@ -3418,20 +3422,20 @@
 /obj/effect/turf_decal/trimline/opaque/yellow/line{
 	dir = 8
 	},
-/obj/item/ammo_box/magazine/gal{
-	pixel_x = -5
-	},
-/obj/item/ammo_box/magazine/gal{
-	pixel_x = 5
-	},
-/obj/item/gun/ballistic/automatic/gal/inteq{
-	pixel_x = -8;
-	pixel_y = 3
-	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 4
 	},
 /obj/machinery/light/small/directional/north,
+/obj/item/gun/ballistic/automatic/marksman/f4/inteq{
+	pixel_y = 3;
+	pixel_x = -8
+	},
+/obj/item/ammo_box/magazine/f4_308{
+	pixel_x = -5
+	},
+/obj/item/ammo_box/magazine/f4_308{
+	pixel_x = 5
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/security/armory)
 "MU" = (
@@ -3521,9 +3525,8 @@
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo)
 "Oa" = (
-/obj/machinery/porta_turret/ship/ballistic{
-	dir = 6;
-	faction = list("turret")
+/obj/machinery/porta_turret/ship/faction/inteq/ballistic{
+	dir = 6
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -3712,6 +3715,9 @@
 /obj/effect/turf_decal/corner/opaque/brown{
 	dir = 8
 	},
+/obj/machinery/newscaster/directional/south{
+	pixel_x = -5
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/office)
 "Qm" = (
@@ -3804,9 +3810,8 @@
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/hallway/central)
 "QZ" = (
-/obj/machinery/porta_turret/ship/ballistic{
-	dir = 10;
-	faction = list("turret")
+/obj/machinery/porta_turret/ship/faction/inteq/ballistic{
+	dir = 10
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
@@ -4286,10 +4291,10 @@
 /obj/item/reagent_containers/spray/pepper,
 /obj/item/reagent_containers/spray/pepper,
 /obj/item/reagent_containers/spray/pepper,
-/obj/item/kitchen/knife/combat/survival,
-/obj/item/kitchen/knife/combat/survival,
-/obj/item/kitchen/knife/combat/survival,
-/obj/item/kitchen/knife/combat/survival,
+/obj/item/melee/knife/survival,
+/obj/item/melee/knife/survival,
+/obj/item/melee/knife/survival,
+/obj/item/melee/knife/survival,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/security/armory)
 "WG" = (
@@ -4772,7 +4777,7 @@ om
 kV
 XQ
 ah
-Ve
+lf
 hZ
 vH
 rh

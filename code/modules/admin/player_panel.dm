@@ -2,7 +2,7 @@
 	if(!check_rights())
 		return
 	log_admin("[key_name(usr)] checked the player panel.")
-	var/dat = "<html><head><meta http-equiv='X-UA-Compatible' content='IE=edge; charset=UTF-8'/><title>Player Panel</title></head>"
+	var/dat = "<html><head><meta http-equiv='X-UA-Compatible' content='IE=edge' charset='UTF-8'/><title>Player Panel</title></head>"
 
 	//javascript, the part that does most of the work~
 	dat += {"
@@ -216,9 +216,10 @@
 		<span id='maintable_data_archive'>
 		<table width='560' align='center' cellspacing='0' cellpadding='5' id='maintable_data'>"}
 
-	var/list/mobs = sortmobs()
+	var/list/mobs = SSpoints_of_interest.get_mob_pois()
 	var/i = 1
-	for(var/mob/M in mobs)
+	for(var/mob_name in mobs)
+		var/mob/M = mobs[mob_name]
 		if(M.ckey)
 
 			var/color = "#e6e6e6"
@@ -254,12 +255,7 @@
 						M_job = "Silicon-based"
 
 				else if(isanimal(M)) //simple animals
-					if(iscorgi(M))
-						M_job = "Corgi"
-					else if(isslime(M))
-						M_job = "slime"
-					else
-						M_job = "Animal"
+					M_job = "Animal"
 
 				else
 					M_job = "Living"

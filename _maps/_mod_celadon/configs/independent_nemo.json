@@ -1,21 +1,24 @@
 {
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
 	"map_name": "Nemo-class Fauna Research Vessel",
-	"prefix": "ISV",
-	"namelists": [
-		"NATURAL",
-		"NATURAL_AGGRESSIVE",
-		"SPACE"
-	],
-	"map_short_name": "Nemo-class",
+	"map_short_name": "Nemo",
 	"description": "Судно класса 'Nemo' - это судно мечты эксцентричного коллекционера, идеально подходящий для всех журналистов, антикваров и чудаков Фронтира. Здесь есть удобный кабинет, полноценная робототехническая мастерская (идеально подходящая для создания себе помощников!) и множество эзотерического оружия, подходящего для охоты на существ, которое можно установить над камином. Кроме того, на судне есть компактный, но функциональный медицинский отсек, достаточно хорошо спроектированный инженерный отсек и большое количество оборудования для добычи полезных ископаемых.",
+	"map_path": "_maps/_mod_celadon/shuttles/independent/independent_nemo.dmm",
+	"enabled": true,
+	"limit": 1,
+	"starting_funds": 500,
+	"prefix": "ISV",
+	"faction": "/datum/faction/independent",
 	"tags": [
 		"Engineering",
 		"Mining",
 		"Robotics"
 	],
-	"starting_funds": 500,
-	"map_path": "_maps/_mod_celadon/shuttles/independent/independent_nemo.dmm",
+	"namelists": [
+		"NATURAL",
+		"NATURAL_AGGRESSIVE",
+		"SPACE"
+	],
 	"job_slots": {
 		"Research Director": {
 			"outfit": "/datum/outfit/job/independent/rd",
@@ -53,6 +56,5 @@
 			"outfit": "/datum/outfit/job/independent/assistant",
 			"slots": 1
 		}
-	},
-	"enabled": true
+	}
 }

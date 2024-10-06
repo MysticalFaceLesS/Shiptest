@@ -143,7 +143,7 @@
 /obj/item/clothing/glasses/hud/security/sunglasses/inteq,
 /obj/item/storage/belt/security/webbing/inteq/alt,
 /obj/item/storage/belt/security/webbing/inteq,
-/obj/item/kitchen/knife/combat/survival,
+/obj/item/melee/knife/survival,
 /obj/item/reagent_containers/spray/pepper{
 	pixel_x = -1;
 	pixel_y = 3
@@ -564,7 +564,7 @@
 /obj/item/storage/belt/security/webbing/inteq,
 /obj/item/storage/box/handcuffs,
 /obj/item/storage/belt/security/webbing/inteq/alt,
-/obj/item/kitchen/knife/combat/survival,
+/obj/item/melee/knife/survival,
 /obj/item/reagent_containers/spray/pepper{
 	pixel_x = -1;
 	pixel_y = 3
@@ -857,8 +857,8 @@
 /obj/effect/turf_decal/trimline/opaque/yellow/line{
 	dir = 8
 	},
-/obj/item/kitchen/knife/combat/survival,
-/obj/item/kitchen/knife/combat/survival,
+/obj/item/melee/knife/survival,
+/obj/item/melee/knife/survival,
 /obj/item/reagent_containers/spray/pepper{
 	pixel_x = -1;
 	pixel_y = 3
@@ -1997,7 +1997,7 @@
 /obj/item/clothing/glasses/hud/security/sunglasses/inteq,
 /obj/item/storage/belt/security/webbing/inteq/alt,
 /obj/item/storage/belt/security/webbing/inteq,
-/obj/item/kitchen/knife/combat/survival,
+/obj/item/melee/knife/survival,
 /obj/item/reagent_containers/spray/pepper{
 	pixel_x = -1;
 	pixel_y = 3
@@ -3134,18 +3134,18 @@
 /obj/structure/sign/poster/official/ion_carbine{
 	pixel_x = -32
 	},
-/obj/item/ammo_box/magazine/m12g/small{
+/obj/item/ammo_box/magazine/m12g_bulldog/drum{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/ammo_box/magazine/m12g/small{
+/obj/item/ammo_box/magazine/m12g_bulldog/drum{
 	pixel_x = 5;
 	pixel_y = 5
 	},
-/obj/item/ammo_box/magazine/m12g/small{
+/obj/item/ammo_box/magazine/m12g_bulldog/drum{
 	pixel_x = -5
 	},
-/obj/item/ammo_box/magazine/m12g/small{
+/obj/item/ammo_box/magazine/m12g_bulldog/drum{
 	pixel_x = -5
 	},
 /obj/item/ammo_box/magazine/co9mm{
@@ -3769,12 +3769,12 @@
 /obj/effect/turf_decal/siding/thinplating/dark,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/gun/ballistic/shotgun/bulldog/inteq{
+/obj/item/gun/ballistic/shotgun/automatic/bulldog/inteq{
 	pixel_x = -8;
 	pixel_y = 8;
 	spawnwithmagazine = 0
 	},
-/obj/item/gun/ballistic/shotgun/bulldog/inteq{
+/obj/item/gun/ballistic/shotgun/automatic/bulldog/inteq{
 	pixel_x = -12;
 	spawnwithmagazine = 0
 	},
@@ -4990,6 +4990,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/newscaster/directional/west,
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/hallway/central)
 "Cs" = (
@@ -5300,7 +5301,7 @@
 /turf/open/floor/plating,
 /area/ship/engineering/engine)
 "Ek" = (
-/obj/machinery/porta_turret/ship/weak{
+/obj/machinery/porta_turret/ship/faction/inteq{
 	dir = 5
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -5335,7 +5336,7 @@
 /turf/open/floor/carpet/black,
 /area/ship/crew/dorm)
 "Ez" = (
-/obj/machinery/porta_turret/ship/weak{
+/obj/machinery/porta_turret/ship/faction/inteq{
 	dir = 9
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -5776,6 +5777,7 @@
 	pixel_x = -22;
 	pixel_y = 6
 	},
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/carpet/black,
 /area/ship/crew/dorm)
 "HB" = (
@@ -5911,6 +5913,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo)
 "IB" = (
@@ -5929,7 +5932,7 @@
 	frequency = 1347;
 	name = "IRMG shortwave intercom";
 	pixel_x = 31;
-	pixel_y = 0
+	pixel_y = -13
 	},
 /obj/machinery/modular_computer/console/preset/command{
 	dir = 8
@@ -6094,7 +6097,7 @@
 /turf/open/floor/plating/airless,
 /area/ship/cargo/starboard)
 "JL" = (
-/obj/machinery/porta_turret/ship/weak{
+/obj/machinery/porta_turret/ship/faction/inteq{
 	dir = 6
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -6435,7 +6438,7 @@
 	},
 /obj/effect/turf_decal/corner/opaque/yellow,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/computer/cargo/express{
+/obj/machinery/computer/cargo{
 	dir = 8
 	},
 /obj/item/radio/intercom/directional/north{
@@ -6445,7 +6448,10 @@
 	frequency = 1347;
 	name = "IRMG shortwave intercom";
 	pixel_x = 31;
-	pixel_y = 0
+	pixel_y = 13
+	},
+/obj/machinery/newscaster/security_unit/directional/east{
+	pixel_y = -3
 	},
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/bridge)
@@ -7210,6 +7216,7 @@
 	pixel_y = -32
 	},
 /obj/machinery/photocopier,
+/obj/machinery/newscaster/directional/east,
 /turf/open/floor/plasteel/dark,
 /area/ship/security)
 "QF" = (
@@ -7867,7 +7874,12 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/corner/opaque/yellow,
-/obj/item/radio/intercom/directional/south,
+/obj/item/radio/intercom/directional/south{
+	pixel_x = 7
+	},
+/obj/machinery/newscaster/directional/south{
+	pixel_x = -10
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/canteen)
 "Tl" = (
@@ -8016,6 +8028,23 @@
 "Uo" = (
 /obj/structure/sign/warning/vacuum/external,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/hallway/central)
+"Up" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/turf_decal/trimline/opaque/yellow/line,
+/obj/effect/turf_decal/siding/thinplating,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/machinery/newscaster/directional/south{
+	pixel_x = -10
+	},
+/turf/open/floor/plasteel/patterned/grid,
 /area/ship/hallway/central)
 "UA" = (
 /obj/machinery/light/directional/south,
@@ -8954,7 +8983,7 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "ZH" = (
-/obj/machinery/porta_turret/ship/weak{
+/obj/machinery/porta_turret/ship/faction/inteq{
 	dir = 10
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -9890,7 +9919,7 @@ Lk
 qD
 gs
 VN
-BD
+Up
 ip
 JN
 Pf

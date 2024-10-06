@@ -30,6 +30,9 @@
 	bodytemp_heat_damage_limit = FIRE_MINIMUM_TEMPERATURE_TO_SPREAD // about 150C
 	// Cold temperatures hurt faster as it is harder to move with out the heat energy
 	bodytemp_cold_damage_limit = (T20C - 10) // about 10c
+
+	max_temp_comfortable = HUMAN_BODYTEMP_NORMAL + 100
+
 	hair_color = "fixedmutcolor"
 	hair_alpha = 140
 	mutant_bodyparts = list("elzu_horns", "tail_elzu")
@@ -93,7 +96,7 @@
 	button_icon_state = "plant-22"
 	// [CELADON-EDIT] - CELADON_FLORA
 	// icon_icon = 'icons/obj/flora/plants.dmi' // CELADON-EDIT - ORIGINAL
-	icon_icon = 'mod_celadon/flora/icons/plants.dmi'
+	icon_icon = 'mod_celadon/_storge_icons/icons/plants.dmi'
 	// [/CELADON-EDIT]
 	background_icon_state = "bg_alien"
 
@@ -274,7 +277,7 @@
 	var/static/mutable_appearance/overcharge //shameless copycode from lightning spell
 	overcharge = overcharge || mutable_appearance('icons/effects/effects.dmi', "electricity", EFFECTS_LAYER)
 	_human.add_overlay(overcharge)
-	if(do_mob(_human, _human, 50, 1))
+	if(do_after(_human, 50, _human, TRUE))
 		_human.flash_lighting_fx(5, 7, current_color)
 		var/obj/item/organ/stomach/ethereal/stomach = _human.getorganslot(ORGAN_SLOT_STOMACH)
 		playsound(_human, 'sound/magic/lightningshock.ogg', 100, TRUE, extrarange = 5)

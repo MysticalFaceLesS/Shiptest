@@ -14,7 +14,7 @@
 "ae" = (
 /obj/effect/spawner/structure/window/shuttle,
 /obj/machinery/door/poddoor/preopen{
-	id = up1
+	id = "up1"
 	},
 /turf/open/floor/plating,
 /area/ship/medical)
@@ -496,7 +496,7 @@
 /area/ship/medical)
 "bd" = (
 /obj/machinery/button/door{
-	id = up1;
+	id = "up1";
 	name = "window button";
 	pixel_y = 35
 	},
@@ -504,6 +504,7 @@
 	dir = 8
 	},
 /obj/structure/closet/l3closet/virology,
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "be" = (
@@ -859,10 +860,6 @@
 /obj/item/flashlight,
 /obj/item/flashlight,
 /obj/item/flashlight,
-/obj/structure/closet/wall/white/med{
-	dir = 4;
-	pixel_x = -28
-	},
 /obj/item/clothing/under/color/grey,
 /obj/item/clothing/under/color/grey,
 /obj/item/clothing/under/color/grey,
@@ -880,6 +877,7 @@
 /obj/item/storage/backpack/duffelbag/med,
 /obj/item/storage/backpack/duffelbag/med,
 /obj/item/storage/backpack/duffelbag/med,
+/obj/structure/closet/wall/white/directional/west,
 /turf/open/floor/plastic,
 /area/ship/crew/cryo)
 "bS" = (
@@ -1419,6 +1417,7 @@
 	dir = 4;
 	pixel_x = -20
 	},
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/plasteel/white,
 /area/ship/hallway/central)
 "cV" = (
@@ -1583,6 +1582,7 @@
 /area/ship/medical)
 "dj" = (
 /obj/structure/railing,
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/plasteel/stairs/left{
 	dir = 8
 	},
@@ -1953,7 +1953,7 @@
 	},
 /obj/machinery/airalarm/directional/west,
 /obj/machinery/firealarm/directional/north,
-/obj/machinery/computer/cargo/express,
+/obj/machinery/computer/cargo,
 /turf/open/floor/plasteel/mono/white,
 /area/ship/bridge)
 "dR" = (
@@ -2467,6 +2467,7 @@
 /obj/machinery/computer/med_data{
 	dir = 8
 	},
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/plasteel/mono/white,
 /area/ship/bridge)
 "eM" = (
@@ -2564,13 +2565,13 @@
 /area/ship/bridge)
 "eS" = (
 /obj/structure/rack,
-/obj/item/kitchen/knife/hunting{
+/obj/item/melee/knife/hunting{
 	pixel_y = -4
 	},
-/obj/item/kitchen/knife/hunting{
+/obj/item/melee/knife/hunting{
 	pixel_y = -1
 	},
-/obj/item/kitchen/knife/hunting{
+/obj/item/melee/knife/hunting{
 	pixel_y = 2
 	},
 /turf/open/floor/plasteel/tech,
@@ -3377,7 +3378,9 @@
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "gq" = (
-/obj/machinery/vending/medical,
+/obj/machinery/vending/medical{
+	all_items_free = 1
+	},
 /obj/machinery/airalarm/directional/east{
 	pixel_y = -4
 	},
@@ -3775,7 +3778,7 @@
 /area/ship/crew/cryo)
 "oY" = (
 /obj/machinery/door/poddoor/preopen{
-	id = up1
+	id = "up1"
 	},
 /obj/effect/spawner/structure/window/shuttle,
 /turf/open/floor/plating,
@@ -3916,6 +3919,7 @@
 /area/ship/crew/dorm)
 "QD" = (
 /obj/structure/closet/firecloset,
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/plasteel/tech,
 /area/ship/hallway/central)
 "RM" = (

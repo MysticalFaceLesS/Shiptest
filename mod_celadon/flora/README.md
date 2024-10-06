@@ -61,12 +61,13 @@ ID мода: CELADON_FLORA
   И то же самое, если ты используешь дефайны, определённые другим модом.
 
   Не используешь - напиши "Отсутствуют"
-  Примеры: `code/__defines/~mods/flora.dm`: `FLORA_SPEED_MULTIPLIER`, `FLORA_SPEED_BASE`
+  Примеры: `code/__defines/~mod_celadon/flora.dm`: `FLORA_SPEED_MULTIPLIER`, `FLORA_SPEED_BASE`
 -->
 
 ### Используемые файлы, не содержащиеся в модпаке
 
-- Отсутствуют
+- `mod_celadon/_storge_sounds/sound`
+- `mod_celadon/_storge_icons/icons`
 <!--
   Будь то немодульный файл или модульный файл, который не содержится в папке,
   принадлежащей этому конкретному моду, он должен быть упомянут здесь.

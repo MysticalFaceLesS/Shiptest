@@ -53,9 +53,13 @@
 
 	head = /obj/item/clothing/head/nanotrasen/cap/supply
 	uniform = /obj/item/clothing/under/nanotrasen/supply/qm
+	suit = null
+	alt_suit = null
 	dcoat = /obj/item/clothing/suit/hooded/wintercoat/cargo
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 	glasses = /obj/item/clothing/glasses/sunglasses
+	gloves = null
+	neck = null
 	l_hand = /obj/item/clipboard
 
 	chameleon_extras = /obj/item/stamp/qm
@@ -220,7 +224,6 @@
 
 	id = /obj/item/card/id/silver
 	belt = /obj/item/storage/belt/utility/chief/full
-	l_pocket = /obj/item/storage/wallet
 	ears = /obj/item/radio/headset/headset_com
 	uniform = /obj/item/clothing/under/nanotrasen/engineering/director
 	dcoat = /obj/item/clothing/suit/hooded/wintercoat/engineering
@@ -313,7 +316,7 @@
 
 	backpack_contents = list(
 						/obj/item/flashlight/seclite=1,
-						/obj/item/kitchen/knife/combat/survival=1,
+						/obj/item/melee/knife/survival=1,
 						/obj/item/stack/marker_beacon/ten=1,
 						/obj/item/radio/weather_monitor=1,
 						)
@@ -469,10 +472,10 @@
 	accessory = /obj/item/clothing/accessory/holster
 	head = /obj/item/clothing/head/beret/command
 
-// Mech Pilot
+// Exosuit Pilot
 /datum/outfit/job/nanotrasen/security/mech_pilot
-	name = "Nanotrasen - Mech Pilot"
-	id_assignment = "Mech Pilot"
+	name = "Nanotrasen - Exosuit Pilot"
+	id_assignment = "Exosuit Pilot"
 
 	uniform = /obj/item/clothing/under/rank/security/officer/military/eng
 	head = /obj/item/clothing/head/beret/sec/officer
@@ -566,7 +569,7 @@
 	backpack = /obj/item/storage/backpack/ert/security
 	belt = /obj/item/storage/belt/military
 	id = /obj/item/card/id/ert/security
-	r_pocket = /obj/item/kitchen/knife/combat/survival
+	r_pocket = /obj/item/melee/knife/survival
 	backpack_contents = list(/obj/item/radio, /obj/item/flashlight/seclite)
 
 /datum/outfit/job/nanotrasen/security/ert/engi
@@ -577,7 +580,7 @@
 	backpack = /obj/item/storage/backpack/ert/engineer
 	belt = /obj/item/storage/belt/utility/full/ert
 	id = /obj/item/card/id/ert/security
-	r_pocket = /obj/item/kitchen/knife/combat/survival
+	r_pocket = /obj/item/melee/knife/survival
 	backpack_contents = list(/obj/item/radio, /obj/item/flashlight/seclite)
 	accessory = /obj/item/clothing/accessory/armband/engine
 	glasses = /obj/item/clothing/glasses/hud/diagnostic/sunglasses
@@ -590,7 +593,7 @@
 	backpack = /obj/item/storage/backpack/ert/medical
 	belt = /obj/item/storage/belt/medical/webbing/paramedic
 	id = /obj/item/card/id/ert/security
-	r_pocket = /obj/item/kitchen/knife/combat/survival
+	r_pocket = /obj/item/melee/knife/survival
 	backpack_contents = list(/obj/item/radio, /obj/item/flashlight/seclite)
 	accessory = /obj/item/clothing/accessory/armband/med
 	glasses = /obj/item/clothing/glasses/hud/health/night

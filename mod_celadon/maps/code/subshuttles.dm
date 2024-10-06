@@ -18,6 +18,11 @@
 	prefix = "IMV"
 /datum/map_template/shuttle/subshuttles/nail
 	prefix = "PIRATE"
+/datum/map_template/shuttle/subshuttles/solfed_feather
+	file_name = "solfed_feather"
+	name = "Feather-class Supply Vessel"
+	prefix = "SSFSV"
+	name_categories = list("GENERAL", "SPACE", "BRITISH_NAVY", "NATURAL")
 //Субшатлы для руинок
 /datum/map_template/shuttle/ruin/ruin_jox
 	file_name = "syndicate_Jox"

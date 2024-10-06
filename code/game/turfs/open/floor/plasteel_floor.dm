@@ -1,7 +1,7 @@
 /turf/open/floor/plasteel
 	// [CELADON-EDIT] - CELADON_STRUCTURES
 	// icon = 'icons/turf/floors/tiles.dmi' // CELADON-EDIT - ORIGINAL
-	icon = 'mod_celadon/structures/icons/tiles.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/structures/tiles.dmi'
 	// [/CELADON-EDIT]
 	base_icon_state = "tiled_gray"
 	icon_state = "tiled_gray"
@@ -335,6 +335,3 @@
 	icon_state = "tiled_light"
 	base_icon_state = "tiled_light"
 	color = "#938170"
-
-/turf/open/floor/plasteel/icecropolis
-	baseturfs = /turf/open/indestructible/necropolis/air

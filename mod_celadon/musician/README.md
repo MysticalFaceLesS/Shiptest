@@ -61,12 +61,12 @@ ID мода: CELADON_MUSICIAN
   И то же самое, если ты используешь дефайны, определённые другим модом.
 
   Не используешь - напиши "Отсутствуют"
-  Примеры: `code/__defines/~mods/musician.dm`: `MUSICIAN_SPEED_MULTIPLIER`, `MUSICIAN_SPEED_BASE`
+  Примеры: `code/__defines/~mod_celadon/musician.dm`: `MUSICIAN_SPEED_MULTIPLIER`, `MUSICIAN_SPEED_BASE`
 -->
 
 ### Используемые файлы, не содержащиеся в модпаке
 
-- Отсутствуют
+- `mod_celadon/_storge_icons/icons`
 <!--
   Будь то немодульный файл или модульный файл, который не содержится в папке,
   принадлежащей этому конкретному моду, он должен быть упомянут здесь.

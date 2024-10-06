@@ -153,6 +153,9 @@
 /obj/machinery/firealarm/directional/west{
 	pixel_y = 7
 	},
+/obj/machinery/newscaster/directional/west{
+	pixel_y = 19
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "dJ" = (
@@ -284,6 +287,9 @@
 /obj/item/storage/pill_bottle/iron,
 /obj/effect/turf_decal/industrial/hatch/blue,
 /obj/machinery/airalarm/directional/west,
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/brute,
+/obj/item/storage/firstaid/fire,
 /turf/open/floor/plasteel/tech,
 /area/ship/medical)
 "eF" = (
@@ -738,7 +744,7 @@
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/machinery/light_switch{
 	dir = 8;
-	pixel_x = 20;
+	pixel_x = 19;
 	pixel_y = -12
 	},
 /turf/open/floor/carpet/nanoweave,
@@ -806,6 +812,12 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 8
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 4
 	},
 /turf/open/floor/plasteel/patterned,
 /area/ship/hallway/central)
@@ -878,17 +890,22 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 6
 	},
-/obj/item/gun/ballistic/automatic/smg/vector{
-	pixel_y = 7
+/obj/structure/guncloset{
+	anchored = 1
 	},
-/obj/structure/guncase,
-/obj/item/gun/ballistic/automatic/smg/vector,
-/obj/item/gun/ballistic/automatic/smg/vector{
+/obj/item/gun/energy/e_gun/smg{
+	pixel_y = 10
+	},
+/obj/item/gun/energy/e_gun/smg{
+	pixel_y = 4
+	},
+/obj/item/gun/energy/e_gun/iot{
+	pixel_y = -1
+	},
+/obj/item/gun/energy/e_gun/iot{
 	pixel_y = -7
 	},
-/obj/item/gun/ballistic/automatic/smg/vector{
-	pixel_y = -13
-	},
+/obj/item/gun/energy/ionrifle,
 /turf/open/floor/plasteel/tech,
 /area/ship/security)
 "qb" = (
@@ -917,7 +934,7 @@
 /obj/effect/turf_decal/siding/thinplating/dark,
 /obj/machinery/light/small/directional/south,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/computer/cargo/express{
+/obj/machinery/computer/cargo{
 	dir = 1
 	},
 /turf/open/floor/plasteel/patterned,
@@ -1013,7 +1030,7 @@
 /obj/machinery/light_switch{
 	dir = 1;
 	pixel_x = -12;
-	pixel_y = -16
+	pixel_y = -15
 	},
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -1079,7 +1096,7 @@
 "sy" = (
 /obj/machinery/light_switch{
 	pixel_x = -12;
-	pixel_y = 23
+	pixel_y = 21
 	},
 /obj/effect/turf_decal/techfloor{
 	dir = 1
@@ -1196,6 +1213,12 @@
 "uF" = (
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/medical)
+"uH" = (
+/obj/machinery/porta_turret/ship/faction/nanotrasen{
+	dir = 5
+	},
+/turf/closed/wall/mineral/titanium,
+/area/ship/bridge)
 "vo" = (
 /obj/docking_port/stationary{
 	dwidth = 4;
@@ -1298,6 +1321,7 @@
 	},
 /obj/structure/bed,
 /obj/item/bedsheet/grey,
+/obj/item/radio/intercom/directional/west,
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
 "yE" = (
@@ -1517,37 +1541,64 @@
 	pixel_x = -7;
 	dir = 1
 	},
-/obj/item/ammo_box/magazine/smgm9mm{
+/obj/item/stock_parts/cell/gun{
+	pixel_x = -4;
+	maxcharge = 20000;
+	pixel_y = -4;
+	name = "special weapon power cell"
+	},
+/obj/item/stock_parts/cell/gun{
+	pixel_x = 4;
+	maxcharge = 20000;
+	pixel_y = -4;
+	name = "special weapon power cell"
+	},
+/obj/item/stock_parts/cell/gun{
+	pixel_x = 10;
+	maxcharge = 20000;
+	pixel_y = 5;
+	name = "special weapon power cell"
+	},
+/obj/item/stock_parts/cell/gun{
+	maxcharge = 20000;
+	pixel_y = 5;
+	name = "special weapon power cell"
+	},
+/obj/item/stock_parts/cell/gun{
+	maxcharge = 20000;
+	pixel_y = 5;
+	name = "special weapon power cell";
+	pixel_x = -8
+	},
+/obj/item/stock_parts/cell/gun{
+	maxcharge = 20000;
+	pixel_y = -5;
+	name = "special weapon power cell";
+	pixel_x = -8
+	},
+/obj/item/stock_parts/cell/gun{
+	maxcharge = 20000;
+	pixel_y = -5;
+	name = "special weapon power cell";
+	pixel_x = 11
+	},
+/obj/item/stock_parts/cell/gun{
+	maxcharge = 20000;
 	pixel_y = 7;
-	pixel_x = 5
+	name = "special weapon power cell";
+	pixel_x = 11
 	},
-/obj/item/ammo_box/magazine/smgm9mm{
+/obj/item/stock_parts/cell/gun{
+	maxcharge = 20000;
 	pixel_y = 7;
-	pixel_x = -2
-	},
-/obj/item/ammo_box/magazine/smgm9mm{
-	pixel_y = 11;
-	pixel_x = -2
-	},
-/obj/item/ammo_box/magazine/smgm9mm{
-	pixel_y = 5;
+	name = "special weapon power cell";
 	pixel_x = -6
 	},
-/obj/item/ammo_box/magazine/smgm9mm{
-	pixel_y = 5;
-	pixel_x = -6
-	},
-/obj/item/ammo_box/magazine/smgm9mm{
-	pixel_y = 5;
-	pixel_x = -6
-	},
-/obj/item/ammo_box/magazine/smgm9mm{
-	pixel_y = 5;
-	pixel_x = -6
-	},
-/obj/item/ammo_box/magazine/smgm9mm{
-	pixel_y = 4;
-	pixel_x = -2
+/obj/item/stock_parts/cell/gun{
+	maxcharge = 20000;
+	pixel_y = 7;
+	name = "special weapon power cell";
+	pixel_x = 1
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/security)
@@ -1643,7 +1694,7 @@
 	},
 /obj/machinery/light_switch{
 	dir = 8;
-	pixel_x = 20;
+	pixel_x = 19;
 	pixel_y = -12
 	},
 /obj/effect/decal/cleanable/dirt/dust,
@@ -1669,10 +1720,10 @@
 /obj/item/clothing/shoes/combat,
 /obj/item/clothing/shoes/combat,
 /obj/item/clothing/shoes/combat,
-/obj/item/kitchen/knife/combat/survival,
-/obj/item/kitchen/knife/combat/survival,
-/obj/item/kitchen/knife/combat/survival,
-/obj/item/kitchen/knife/combat/survival,
+/obj/item/melee/knife/survival,
+/obj/item/melee/knife/survival,
+/obj/item/melee/knife/survival,
+/obj/item/melee/knife/survival,
 /obj/item/storage/backpack/security,
 /obj/item/storage/backpack/security,
 /obj/item/storage/backpack/security,
@@ -1757,7 +1808,7 @@
 /turf/open/floor/plasteel/patterned/ridged,
 /area/ship/cargo)
 "EW" = (
-/obj/machinery/porta_turret/ship/ballistic{
+/obj/machinery/porta_turret/ship/faction/nanotrasen{
 	dir = 9
 	},
 /turf/closed/wall/mineral/titanium,
@@ -1850,8 +1901,8 @@
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ship/engineering)
 "Gu" = (
-/obj/machinery/porta_turret/ship/ballistic{
-	dir = 5
+/obj/machinery/porta_turret/ship/faction/nanotrasen{
+	dir = 6
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -2217,8 +2268,6 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 10
 	},
-/obj/machinery/vending/medical,
-/obj/effect/turf_decal/industrial/hatch/blue,
 /turf/open/floor/plasteel/tech,
 /area/ship/medical)
 "Ok" = (
@@ -2234,16 +2283,12 @@
 /obj/item/clothing/suit/jacket/leather/duster/command,
 /obj/item/clothing/suit/jacket/miljacket,
 /obj/item/clothing/shoes/jackboots,
-/obj/item/gun/ballistic/revolver/mateba,
-/obj/item/ammo_box/a357,
-/obj/item/ammo_box/a357,
-/obj/item/ammo_box/a357,
-/obj/item/ammo_box/a357,
-/obj/item/tank/jetpack/suit,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/siding/wood/end{
 	dir = 4
 	},
+/obj/item/gun/energy/laser/captain,
+/obj/item/tank/jetpack/suit,
 /turf/open/floor/wood,
 /area/ship/bridge)
 "OG" = (
@@ -2299,16 +2344,16 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/security)
 "QS" = (
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
 /obj/structure/closet/wall{
 	name = "radio locker";
 	pixel_y = -28
 	},
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/radio,
 /turf/open/floor/plasteel/patterned,
 /area/ship/hallway/central)
 "QY" = (
@@ -2422,9 +2467,6 @@
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo)
 "Um" = (
-/obj/machinery/door/airlock/medical{
-	name = "Surgery"
-	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 1
 	},
@@ -2436,6 +2478,13 @@
 	},
 /obj/effect/turf_decal/siding/thinplating/dark/end{
 	dir = 1
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/medical{
+	name = "Surgery"
 	},
 /turf/open/floor/plasteel/patterned,
 /area/ship/medical)
@@ -2510,7 +2559,6 @@
 /obj/item/door_seal,
 /obj/item/door_seal,
 /obj/item/door_seal,
-/obj/item/disk/design_disk/ammo_c9mm,
 /turf/open/floor/plasteel/tech,
 /area/ship/security)
 "WR" = (
@@ -2763,7 +2811,7 @@
 /turf/open/floor/carpet/nanoweave,
 /area/ship/hallway/central)
 "YT" = (
-/obj/machinery/porta_turret/ship/ballistic{
+/obj/machinery/porta_turret/ship/faction/nanotrasen{
 	dir = 10
 	},
 /turf/closed/wall/mineral/titanium,
@@ -2973,7 +3021,7 @@ yI
 Co
 ze
 yI
-Gu
+YT
 "}
 (13,1,1) = {"
 pN
@@ -3105,7 +3153,7 @@ bA
 "}
 (21,1,1) = {"
 bA
-Gu
+uH
 Sn
 Sn
 Sn
@@ -3186,7 +3234,7 @@ bA
 (26,1,1) = {"
 bA
 bA
-Gu
+uH
 bX
 Ok
 cR
@@ -3221,7 +3269,7 @@ bA
 bA
 bA
 bA
-Gu
+uH
 Gm
 Gm
 qL

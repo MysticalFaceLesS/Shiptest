@@ -48,7 +48,8 @@
 #define RADIO_TOKEN_PIRATE ":y"
 
 #define RADIO_CHANNEL_WIDEBAND "Wideband"
-//WS End
+#define RADIO_KEY_WIDEBAND "w"
+#define RADIO_TOKEN_WIDEBAND ":w"	//WS End
 
 #define RADIO_CHANNEL_CTF_RED "Red Team"
 #define RADIO_CHANNEL_CTF_BLUE "Blue Team"

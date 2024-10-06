@@ -5,7 +5,10 @@
  */
 /area
 	name = "Space"
-	icon = 'icons/turf/areas.dmi'
+	// [CELADON-EDIT] - CELADON_AREAS - Иначе никак не подсунуть свои зоны
+	// icon = 'icons/turf/areas.dmi' // CELADON-EDIT - ORIGINAL
+	icon = 'mod_celadon/_storge_icons/icons/areas.dmi'
+	// [CELADON-EDIT]
 	icon_state = "unknown"
 	layer = AREA_LAYER
 	//Keeping this on the default plane, GAME_PLANE, will make area overlays fail to render on FLOOR_PLANE.
@@ -13,7 +16,7 @@
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	invisibility = INVISIBILITY_LIGHTING
 
-	var/area_flags = VALID_TERRITORY | BLOBS_ALLOWED | UNIQUE_AREA
+	var/area_flags = VALID_TERRITORY | UNIQUE_AREA
 
 	var/fire = null
 	///Whether there is an atmos alarm in this area
@@ -633,7 +636,6 @@ GLOBAL_LIST_EMPTY(teleportlocs)
 	power_environ = FALSE
 	always_unpowered = FALSE
 	area_flags &= ~VALID_TERRITORY
-	area_flags &= ~BLOBS_ALLOWED
 	addSorted()
 /**
  * Set the area size of the area

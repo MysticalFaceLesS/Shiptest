@@ -20,7 +20,14 @@
 	if(!istype(sign))
 		return
 
-	icon_state = sign.icon
+	// [CELADON-ADD] - CELADON_BARSIGNS
+	icon_state = sign.icon_state
+
+	if(sign.icon_state == "cyberslyph")
+		icon = 'mod_celadon/_storge_icons/icons/barsigns96x96.dmi'
+	else
+		icon = 'mod_celadon/_storge_icons/icons/barsigns.dmi'
+	// [/CELADON-ADD]
 
 	if(sign.name)
 		name = "[initial(name)] ([sign.name])"

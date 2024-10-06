@@ -46,7 +46,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
 "aw" = (
-/obj/structure/guncase,
+/obj/structure/guncloset,
 /obj/effect/turf_decal/techfloor{
 	dir = 6
 	},
@@ -303,9 +303,8 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/security/armory)
 "cM" = (
-/obj/machinery/porta_turret/ship/ballistic{
-	dir = 5;
-	faction = list("turret")
+/obj/machinery/porta_turret/ship/faction/inteq/ballistic{
+	dir = 5
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -462,9 +461,8 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/maintenance/starboard)
 "ej" = (
-/obj/machinery/porta_turret/ship/ballistic{
-	dir = 6;
-	faction = list("turret")
+/obj/machinery/porta_turret/ship/faction/inteq/ballistic{
+	dir = 6
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -1332,6 +1330,7 @@
 	pixel_y = 9;
 	pixel_x = 4
 	},
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "oj" = (
@@ -1974,7 +1973,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/structure/guncase,
+/obj/structure/guncloset,
 /obj/effect/turf_decal/techfloor{
 	dir = 10
 	},
@@ -2144,10 +2143,11 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/plasteel,
 /area/ship/crew/office)
 "ze" = (
-/obj/machinery/computer/cargo/express{
+/obj/machinery/computer/cargo{
 	dir = 8
 	},
 /obj/machinery/firealarm/directional/east,
@@ -2169,6 +2169,7 @@
 "zs" = (
 /obj/machinery/rnd/production/techfab/department/security,
 /obj/effect/turf_decal/industrial/traffic/fulltile,
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/security/armory)
 "zz" = (
@@ -2227,6 +2228,7 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 10
 	},
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "Ai" = (
@@ -2312,6 +2314,7 @@
 /obj/effect/turf_decal/industrial/traffic{
 	dir = 4
 	},
+/obj/machinery/newscaster/directional/west,
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
 "Cj" = (
@@ -2968,10 +2971,10 @@
 /obj/item/melee/classic_baton,
 /obj/item/melee/classic_baton,
 /obj/item/melee/classic_baton,
-/obj/item/kitchen/knife/combat/survival,
-/obj/item/kitchen/knife/combat/survival,
-/obj/item/kitchen/knife/combat/survival,
-/obj/item/kitchen/knife/combat/survival,
+/obj/item/melee/knife/survival,
+/obj/item/melee/knife/survival,
+/obj/item/melee/knife/survival,
+/obj/item/melee/knife/survival,
 /obj/item/storage/belt/security/webbing/inteq,
 /obj/item/storage/belt/security/webbing/inteq,
 /obj/item/storage/belt/security/webbing/inteq,
@@ -3149,6 +3152,7 @@
 /area/ship/maintenance/starboard)
 "Ny" = (
 /obj/effect/turf_decal/corner/opaque/yellow,
+/obj/machinery/newscaster/directional/west,
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/office)
 "NC" = (
@@ -3194,7 +3198,6 @@
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/maintenance/starboard)
 "Os" = (
-/obj/machinery/vending/medical,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 5
 	},
@@ -3206,6 +3209,10 @@
 	pixel_x = 11;
 	pixel_y = -19
 	},
+/obj/structure/closet/crate/medical,
+/obj/item/storage/firstaid/fire,
+/obj/item/storage/firstaid/brute,
+/obj/item/storage/firstaid/o2,
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "Ou" = (

@@ -73,8 +73,8 @@
 "ak" = (
 /obj/structure/table,
 /obj/item/chainsaw,
-/obj/item/kitchen/knife,
-/obj/item/kitchen/knife/pizza_cutter,
+/obj/item/melee/knife/kitchen,
+/obj/item/melee/knife/pizza_cutter,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/mono,
 /area/ship/crew/toilet)
@@ -123,7 +123,7 @@
 /area/ship/crew/toilet)
 "aq" = (
 /obj/structure/table,
-/obj/item/kitchen/knife,
+/obj/item/melee/knife/kitchen,
 /obj/item/reagent_containers/food/condiment/saltshaker{
 	pixel_x = -10;
 	pixel_y = 8
@@ -205,9 +205,9 @@
 "ay" = (
 /obj/structure/table,
 /obj/item/melee/baseball_bat/ablative,
-/obj/item/melee/roastingstick,
+/obj/item/roastingstick,
 /obj/item/stack/cable_coil,
-/obj/item/spear,
+/obj/item/melee/spear,
 /turf/open/floor/plasteel/mono,
 /area/ship/crew/toilet)
 "az" = (
@@ -358,6 +358,7 @@
 	name = "Broken  PML-9";
 	desc = "A broken reusable rocket propelled grenade launcher. The words 'NT this way' and an arrow have been written near the barrel. "
 	},
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/wood/walnut,
 /area/ship/crew/canteen)
 "aS" = (
@@ -506,7 +507,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/item/kitchen/knife/hunting,
+/obj/item/melee/knife/hunting,
 /obj/item/pneumatic_cannon/speargun,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/gun/energy/taser,
@@ -548,13 +549,13 @@
 /area/ship/cargo)
 "bm" = (
 /obj/structure/table,
-/obj/item/ammo_box/magazine/uzim9mm,
 /obj/item/clothing/head/helmet/riot,
 /obj/item/ammo_box/magazine/co9mm{
 	pixel_x = 7;
 	pixel_y = -2
 	},
 /obj/item/melee/baton/loaded,
+/obj/item/ammo_box/magazine/cm5_9mm,
 /turf/open/floor/plasteel/mono,
 /area/ship/security/armory)
 "bn" = (
@@ -565,7 +566,7 @@
 /obj/structure/railing,
 /obj/item/mecha_parts/mecha_equipment/drill,
 /obj/item/mecha_parts/part/ripley_right_arm,
-/obj/machinery/computer/cargo/express{
+/obj/machinery/computer/cargo{
 	icon_state = "computer";
 	dir = 8
 	},
@@ -575,7 +576,7 @@
 "bp" = (
 /obj/structure/table,
 /obj/item/kitchen/fork,
-/obj/item/kitchen/knife/shiv,
+/obj/item/melee/knife/shiv,
 /obj/item/laser_pointer,
 /obj/item/lipstick/random,
 /obj/item/restraints/handcuffs/cable,
@@ -781,18 +782,18 @@
 /obj/item/clothing/head/helmet/swat,
 /obj/structure/closet/secure_closet,
 /obj/item/camera,
-/obj/item/kitchen/knife/combat,
+/obj/item/melee/knife/combat,
 /obj/item/stack/telecrystal,
 /obj/item/storage/box/donkpockets/donkpocketspicy{
 	desc = "Produced personally be CHUVAK TM. Ultra-spicy";
 	name = "CHUVAK TM Donk-pockets"
 	},
 /obj/item/clothing/head/beret/durathread,
-/obj/item/clothing/head/caphat/frontier/admiral,
 /obj/item/clothing/head/pirate/captain,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/reagent_containers/food/snacks/grown/tobacco,
 /obj/item/melee/transforming/energy/sword/saber/pirate/red,
+/obj/item/clothing/head/frontier/admiral,
 /turf/open/floor/wood/ebony,
 /area/ship/bridge)
 "bS" = (
@@ -947,13 +948,13 @@
 	},
 /area/ship/crew/dorm)
 "cg" = (
-/obj/structure/table/wood/bar,
 /obj/item/storage/cans/sixbeer,
 /obj/item/storage/cans/sixbeer,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light_switch{
 	pixel_y = 27
 	},
+/obj/structure/table/wood,
 /turf/open/floor/wood/walnut,
 /area/ship/crew/dorm)
 "ch" = (
@@ -984,8 +985,8 @@
 /area/ship/security/armory)
 "ck" = (
 /obj/structure/rack,
-/obj/item/gun/ballistic/automatic/smg/mini_uzi,
 /obj/item/clothing/suit/pirate,
+/obj/item/gun/ballistic/automatic/smg/cm5/compact,
 /turf/open/floor/plasteel/mono,
 /area/ship/security/armory)
 "cl" = (
@@ -1084,6 +1085,7 @@
 	desc = "D'aaawwww. Have CHUVAK TM on collar.";
 	name = "Cok"
 	},
+/obj/machinery/holopad/emergency/command,
 /turf/open/floor/wood/ebony,
 /area/ship/bridge)
 "cy" = (
@@ -1139,7 +1141,7 @@
 	pixel_x = 20;
 	pixel_y = -10
 	},
-/obj/item/ammo_box/magazine/pistolm9mm{
+/obj/item/ammo_box/magazine/m9mm_rattlesnake{
 	pixel_x = -7
 	},
 /obj/item/circuitboard/mecha/ripley/main,
@@ -1151,6 +1153,7 @@
 /area/ship/medical)
 "cF" = (
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/wood/walnut,
 /area/ship/crew/dorm)
 "cG" = (
@@ -1208,7 +1211,7 @@
 /area/ship/medical)
 "cL" = (
 /obj/structure/rack,
-/obj/item/gun/ballistic/automatic/pistol/APS,
+/obj/item/gun/ballistic/automatic/pistol/deagle/gold,
 /obj/machinery/light/small/directional/south,
 /obj/item/gun/ballistic/automatic/pistol/candor{
 	pixel_y = 5
@@ -1344,6 +1347,7 @@
 	icon_state = "floor6"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/wood/ebony,
 /area/ship/hallway/central)
 "da" = (
@@ -1503,6 +1507,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/newscaster/directional/east,
 /turf/open/floor/plasteel/mono,
 /area/ship/bridge)
 "ds" = (
@@ -1638,7 +1643,6 @@
 /turf/open/floor/plating,
 /area/ship/hallway/central)
 "dH" = (
-/obj/structure/table/wood/bar,
 /obj/item/clothing/mask/cigarette/pipe/cobpipe,
 /obj/item/lighter/greyscale,
 /obj/item/reagent_containers/food/snacks/grown/tobacco{
@@ -1649,6 +1653,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/structure/table/wood,
 /turf/open/floor/wood/walnut,
 /area/ship/crew/dorm)
 "dI" = (
@@ -1726,9 +1731,13 @@
 /turf/open/floor/wood/walnut,
 /area/ship/crew/dorm)
 "dT" = (
-/obj/structure/table/wood/bar,
-/obj/item/gun/ballistic/revolver/russian,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/table/wood,
+/obj/item/gun/ballistic/revolver/shadow/no_mag{
+	pixel_x = 2;
+	pixel_y = 6
+	},
+/obj/item/ammo_casing/a44roum,
 /turf/open/floor/wood/walnut,
 /area/ship/crew/dorm)
 "dU" = (
@@ -1882,7 +1891,6 @@
 /turf/open/floor/plating,
 /area/ship/medical)
 "iU" = (
-/obj/structure/table/wood/bar,
 /obj/item/storage/fancy/cigarettes/cigars/havana,
 /obj/item/storage/fancy/cigarettes/cigars/cohiba{
 	pixel_x = -8;
@@ -1892,6 +1900,7 @@
 /obj/item/reagent_containers/food/snacks/grown/tobacco,
 /obj/effect/decal/cleanable/dirt,
 /obj/item/spacecash/bundle/c50,
+/obj/structure/table/wood,
 /turf/open/floor/wood/walnut,
 /area/ship/crew/dorm)
 "us" = (

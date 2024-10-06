@@ -534,8 +534,8 @@
 /obj/item/megaphone/sec,
 /obj/item/clothing/suit/armor/vest/alt,
 /obj/item/clothing/suit/armor/vest/alt,
-/obj/item/kitchen/knife/combat/survival,
-/obj/item/kitchen/knife/combat/survival,
+/obj/item/melee/knife/survival,
+/obj/item/melee/knife/survival,
 /turf/open/floor/plasteel/dark,
 /area/ship/security)
 "ey" = (
@@ -2110,6 +2110,7 @@
 /obj/effect/turf_decal/corner/opaque/yellow,
 /obj/machinery/modular_computer/console/preset/command,
 /obj/machinery/light/directional/east,
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/bridge)
 "sZ" = (
@@ -2652,6 +2653,7 @@
 /obj/item/reagent_containers/food/snacks/hotdog,
 /obj/effect/spawner/lootdrop/donkpockets,
 /obj/effect/spawner/lootdrop/donkpockets,
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/canteen)
 "yu" = (
@@ -3048,6 +3050,7 @@
 	desc = "A poster encouraging you to work for your future.";
 	pixel_y = 32
 	},
+/obj/machinery/newscaster/directional/west,
 /turf/open/floor/plasteel/dark,
 /area/ship/medical)
 "Bc" = (
@@ -3544,6 +3547,13 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/canteen)
+"FS" = (
+/obj/effect/turf_decal/trimline/opaque/yellow/filled/warning{
+	dir = 4
+	},
+/obj/machinery/newscaster/directional/north,
+/turf/open/floor/plasteel/dark,
+/area/ship/crew/canteen)
 "FY" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/stairs,
@@ -3940,7 +3950,7 @@
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo)
 "Ko" = (
-/obj/machinery/computer/cargo/express{
+/obj/machinery/computer/cargo{
 	dir = 1
 	},
 /obj/effect/turf_decal/corner/opaque/brown{
@@ -5149,7 +5159,8 @@
 	dir = 1
 	},
 /obj/machinery/vending/medical/syndicate_access{
-	name = "\improper InteqMed Plus"
+	name = "\improper InteqMed Plus";
+	all_items_free = 1
 	},
 /obj/machinery/light/directional/north,
 /turf/open/floor/plasteel/mono/dark,
@@ -5172,6 +5183,9 @@
 	dir = 4;
 	pixel_x = -20;
 	pixel_y = 5
+	},
+/obj/machinery/newscaster/directional/west{
+	pixel_y = -7
 	},
 /turf/open/floor/carpet/black,
 /area/ship/crew/dorm)
@@ -5410,12 +5424,14 @@
 /obj/effect/turf_decal/borderfloor{
 	dir = 4
 	},
+/obj/machinery/newscaster/directional/north,
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo)
 "Zu" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/security)
 "ZF" = (
+/obj/machinery/newscaster/directional/south,
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo)
 "ZG" = (
@@ -6379,7 +6395,7 @@ Td
 Td
 Td
 HK
-Gd
+FS
 cZ
 xb
 OD
