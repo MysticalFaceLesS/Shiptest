@@ -3,7 +3,7 @@
 
 - https://github.com/CeladonSS13/Shiptest/pulls/1037
 
-## НАЗВАНИЕ_МОДА
+## Ланиусы
 
 ID мода: CELADON_LANIUS
 
@@ -27,7 +27,7 @@ ID мода: CELADON_LANIUS
 
 ### Дефайны
 
-- code\__DEFINES\~mod_celadon\lanius.dm
+- code/__DEFINES/~mod_celadon/lanius.dm
 
 
 ### Используемые файлы, не содержащиеся в модпаке
@@ -39,7 +39,7 @@ ID мода: CELADON_LANIUS
 - mod_celadon/_storge_sounds/sound/lanius/bp_sfx_RockMan_Thud2_01.ogg
 - mod_celadon/_storge_sounds/sound/lanius/bp_sfx_RockMan_Thud2_01.ogg
 - config/game_options.txt
-- code\__DEFINES\~mod_celadon\lanius.dm
+- code/__DEFINES/~mod_celadon/lanius.dm
 
 
 

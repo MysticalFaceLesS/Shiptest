@@ -1,5 +1,3 @@
-
-
 /mob/living/carbon/human/species/lanius
 	race = /datum/species/lanius
 ///
@@ -20,7 +18,7 @@
 	species_eye_path = 'mod_celadon/_storge_icons/icons/lanius/lanius_organs.dmi'
 	species_traits = list(EYECOLOR, EMOTE_OVERLAY, NOBLOOD, MUTCOLORS, NO_UNDERWEAR, NOHUSK, NO_BONES) //TRAIT_NOBREATH
 	inherent_traits = list(TRAIT_NOBREATH, TRAIT_RESISTHEAT,TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,TRAIT_NOFIRE,TRAIT_CHUNKYFINGERS,TRAIT_RADIMMUNE,TRAIT_PIERCEIMMUNE,TRAIT_NODISMEMBER)
-	inherent_biotypes = MOB_HUMANOID|MOB_MINERAL
+	inherent_biotypes = MOB_HUMANOID | MOB_MINERAL
 	toxic_food = VEGETABLES | DAIRY | CLOTH | GROSS | MEAT | RAW
 	//armor = 55
 	brutemod = 0.75

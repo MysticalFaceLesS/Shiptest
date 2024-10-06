@@ -1,5 +1,5 @@
 // ration menu list for no reason
-var/ration=list(/obj/item/stack/sheet/metal,
+var/ration = list( /obj/item/stack/sheet/metal,
 			/obj/item/stack/rods,
 			/obj/item/stack/sheet/plasteel,
 			/datum/reagent/iron,
@@ -111,7 +111,7 @@ var/ration=list(/obj/item/stack/sheet/metal,
 	timeout = 300
 
 /datum/species/lanius/handle_digestion(mob/living/carbon/human/species/lanius/H)
-	.=..()
+	. = ..()
 	switch(H.nutrition)
 		if(NUTRITION_LEVEL_WELL_FED to INFINITY)
 			H.throw_alert("nutrition", /atom/movable/screen/alert/fat/lanius)

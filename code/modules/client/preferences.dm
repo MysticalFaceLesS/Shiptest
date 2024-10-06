@@ -1017,7 +1017,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "</td>"
 				mutant_category = 0
 			dat += "</tr></table>"
-			if(!istype(pref_species, /datum/species/lanius))
+			if(!istype(pref_species, /datum/species/lanius)) // [CELADON - EDIT] LANIUS
 				dat += "<h3>Prosthetic Limbs</h3>"
 				dat += "<a href='?_src_=prefs;preference=fbp'>Full Body Prosthesis: [fbp ? "Yes" : "No"]</a><br>"
 
