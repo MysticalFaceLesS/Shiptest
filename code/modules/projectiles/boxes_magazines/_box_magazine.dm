@@ -36,10 +36,6 @@
 	///cost of the materials in the magazine/box itself
 	var/list/base_cost
 
-	// [CELADON-ADD] - Shuffler Addition - mod_celadon\items\code\items.dm
-	var/shuffler = FALSE
-	// [/CELADON-ADD]
-
 /obj/item/ammo_box/Initialize()
 	. = ..()
 	if(!base_icon_state)

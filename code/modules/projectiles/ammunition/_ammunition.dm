@@ -89,10 +89,7 @@
 			for(var/obj/item/ammo_casing/bullet in loc)
 				if (box.stored_ammo.len >= box.max_ammo)
 					break
-				// [CELADON-EDIT] - CELADON_ITEMS - Shuffler Addition / mod_celadon\items\code\items.dm
-				// if (bullet.BB) //CELADON-EDIT - ORIGINAL
-				if (bullet.BB || box.shuffler)
-				// [/CELADON-EDIT]
+				if (bullet.BB)
 					if (box.give_round(bullet, 0))
 						boolets++
 						// [CELADON-ADD] - CELADON_BALANCE
