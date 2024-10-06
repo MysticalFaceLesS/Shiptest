@@ -32,8 +32,6 @@ ID мода: CELADON_ITEMS
 
 - `code/modules/surgery/organs/tongue.dm`
 	-`var/static/list/languages_possible_base = typecacheof`
-- ADD `code/modules/projectiles/boxes_magazines/_box_magazine.dm`: `var/shuffler`
-- EDIT `code/modules/projectiles/ammunition/_ammunition.dm`: `/obj/item/ammo_casing/attackby`
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -44,7 +42,7 @@ ID мода: CELADON_ITEMS
 
 ### Оверрайды
 
-- Отсутствуют
+- `/obj/item/ammo_casing/attackby`
 <!--
   Если ты добавлял новый модульный оверрайд, его нужно указать здесь.
   Здесь указываются оверрайды в твоём моде и папке `_master_files`
@@ -83,7 +81,7 @@ ID мода: CELADON_ITEMS
 
 ### Авторы:
 
-MrCat15352, MysticalFaceLesS, RalseiDreemuurr
+MrCat15352, MysticalFaceLesS, RalseiDreemuurr, MrRomainzZ
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.
