@@ -1,9 +1,13 @@
 {
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
 	"map_name": "BYO-class Do-It-Yourself Enthusiast Special",
-	"map_short_name": "BYO-class",
-	"map_path": "_maps/_mod_celadon/shuttles/independent/independent_byo.dmm",
+	"map_short_name": "BYO",
 	"description": "При первоначальном развертывании BYO едва ли можно считать 'судном'; скорее это строительная платформа, запущенная в опасный космос. Единственное, что отделяет экипаж судна BYO от дышащей безопасности и холодного вакуума космоса, - это, как правило, маленькие герметичные заслонки из пластика. Оснащенные множеством строительных материалов и инструментов, пригодных для строительства, судна BYO имеют самые разные формы и размеры, но почти никогда не отличаются постоянством формы.",
+	"map_path": "_maps/_mod_celadon/shuttles/independent/independent_byo.dmm",
+	"enabled": true,
+	"limit": 1,
+	"prefix": "ISV",
+	"faction": "/datum/faction/independent",
 	"tags": [
 		"Engineering",
 		"Construction"
@@ -12,9 +16,6 @@
 		"ENGINEERING",
 		"GENERAL"
 	],
-	"faction": "/datum/faction/independent",
-	"prefix": "ISV",
-	"limit": 1,
 	"job_slots": {
 		"Architect": {
 			"outfit": "/datum/outfit/job/independent/ce",
@@ -24,6 +25,5 @@
 			"outfit": "/datum/outfit/job/independent/engineer",
 			"slots": 3
 		}
-	},
-	"enabled": true
+	}
 }
