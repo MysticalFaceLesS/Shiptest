@@ -19,7 +19,7 @@
 #define BOSS_MEDAL_DRAKE	  "Drake Killer"
 #define BOSS_MEDAL_HIEROPHANT "Hierophant Killer"
 #define BOSS_MEDAL_LEGION	  "Legion Killer"
-// [CELADON-ADD] - RETURN_TENDRILS
+// [CELADON-ADD] - RETURN_CONTENT
 #define BOSS_MEDAL_TENDRIL	  "Tendril Exterminator"
 #define BOSS_MEDAL_SWARMERS   "Swarmer Beacon Killer"
 // [/CELADON-ADD]
@@ -31,7 +31,7 @@
 #define BOSS_MEDAL_DRAKE_CRUSHER	  	"Drake Crusher"
 #define BOSS_MEDAL_HIEROPHANT_CRUSHER 	"Hierophant Crusher"
 #define BOSS_MEDAL_LEGION_CRUSHER	 	"Legion Crusher"
-// [CELADON-ADD] - RETURN_TENDRILS
+// [CELADON-ADD] - RETURN_CONTENT
 #define BOSS_MEDAL_SWARMERS_CRUSHER		"Swarmer Beacon Crusher"
 // [/CELADON-ADD]
 
@@ -43,7 +43,7 @@
 #define DRAKE_SCORE 	     "Drakes Killed"
 #define HIEROPHANT_SCORE 	 "Hierophants Killed"
 #define LEGION_SCORE 	     "Legion Killed"
-// [CELADON-ADD] - RETURN_TENDRILS
+// [CELADON-ADD] - RETURN_CONTENT
 #define SWARMER_BEACON_SCORE "Swarmer Beacs Killed"
 #define TENDRIL_CLEAR_SCORE	 "Tendrils Killed"
 // [/CELADON-ADD]
@@ -60,7 +60,7 @@
 	var/hub_password = "REPLACEME"
 
 	var/list/valid_medals = list(
-						// [CELADON-ADD] - RETURN_TENDRILS
+						// [CELADON-ADD] - RETURN_CONTENT
 						BOSS_MEDAL_TENDRIL,
 						BOSS_MEDAL_SWARMERS,
 						BOSS_MEDAL_LEGION_CRUSHER,
@@ -90,7 +90,7 @@
 						BOSS_MEDAL_LEGION_CRUSHER)
 
 	var/list/valid_scores = list(
-						// [CELADON-ADD] - RETURN_TENDRILS
+						// [CELADON-ADD] - RETURN_CONTENT
 						SWARMER_BEACON_SCORE,
 						TENDRIL_CLEAR_SCORE,
 						// [/CELADON-ADD]

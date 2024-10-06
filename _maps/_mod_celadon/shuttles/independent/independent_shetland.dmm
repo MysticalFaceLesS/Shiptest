@@ -1900,7 +1900,7 @@
 /area/ship/crew/canteen)
 "th" = (
 /obj/structure/table,
-/obj/item/kitchen/knife,
+/obj/item/melee/knife/kitchen,
 /obj/item/cutting_board,
 /turf/open/floor/plasteel,
 /area/ship/crew/canteen)
@@ -2867,7 +2867,7 @@
 /area/ship/crew/canteen)
 "Dd" = (
 /obj/machinery/button/door{
-	name = "Windowa Lockdown";
+	name = "Windows Lockdown";
 	pixel_x = 0;
 	id = "shetland_windows";
 	pixel_y = 25
@@ -2962,6 +2962,9 @@
 	},
 /obj/effect/turf_decal/spline/fancy/opaque/beige/corner{
 	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
 	},
 /turf/open/floor/plasteel/sepia,
 /area/ship/engineering/electrical)
@@ -3461,8 +3464,9 @@
 /obj/structure/cable/orange{
 	icon_state = "5-8"
 	},
+/obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 10
+	dir = 8
 	},
 /obj/machinery/door/poddoor/shutters{
 	id = "starboard_engines";
@@ -3553,6 +3557,10 @@
 /obj/effect/turf_decal/spline/fancy/opaque/beige{
 	dir = 10
 	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/ship_gravity,
 /turf/open/floor/plasteel/sepia,
 /area/ship/engineering/electrical)
 "KM" = (
@@ -3895,7 +3903,10 @@
 "Nz" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
-	dir = 5
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
 	},
 /obj/machinery/door/poddoor/shutters{
 	id = "starboard_engines";
@@ -4343,7 +4354,10 @@
 	icon_state = "6-8"
 	},
 /obj/structure/window/reinforced{
-	dir = 9
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
 	},
 /obj/machinery/door/poddoor/shutters{
 	id = "port_engines";
@@ -4505,7 +4519,10 @@
 	icon_state = "4-8"
 	},
 /obj/structure/window/reinforced{
-	dir = 9
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
 	},
 /obj/machinery/door/poddoor/shutters{
 	id = "port_engines";
@@ -4964,6 +4981,9 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/spline/fancy/opaque/beige,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/open/floor/plasteel/sepia,
 /area/ship/engineering/electrical)
 "WC" = (
@@ -5191,10 +5211,10 @@
 /turf/open/floor/plating,
 /area/ship/security/weapons_control)
 "YY" = (
-/obj/machinery/light/small/directional/south,
 /obj/effect/turf_decal/trimline/opaque/red/line{
 	dir = 6
 	},
+/obj/item/radio/intercom/wideband/directional/south,
 /turf/open/floor/plasteel/mono/white,
 /area/ship/bridge)
 "Zb" = (

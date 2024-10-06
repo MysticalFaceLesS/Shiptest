@@ -10,21 +10,21 @@
 /datum/supply_pack/ammo/g36_sh
 	name = "Набор магазинов для G36-SH 5.56mm"
 	desc = "Содержит два магазина калибра 5,56 мм для винтовки G36-SH, каждый из которых содержит по 20 патронов."
-	contains = list(/obj/item/ammo_box/magazine/p16/g36sh,
-					/obj/item/ammo_box/magazine/p16/g36sh)
+	contains = list(/obj/item/ammo_box/magazine/g36/sh,
+					/obj/item/ammo_box/magazine/g36/sh)
 	cost = 1400
 
 /datum/supply_pack/ammo/g36
 	name = "Набор магазинов для G36 5.56mm"
 	desc = "Содержит два магазина калибра 5,56 мм для винтовки G36, каждый из которых содержит по 30 патронов."
-	contains = list(/obj/item/ammo_box/magazine/p16/g36,
-					/obj/item/ammo_box/magazine/p16/g36)
+	contains = list(/obj/item/ammo_box/magazine/g36,
+					/obj/item/ammo_box/magazine/g36)
 	cost = 1950
 
 /datum/supply_pack/ammo/g36_drum
 	name = "Барабанный магазин для G36 5.56mm"
 	desc = "Барабанный магазин калибра 5,56 мм для винтовки G36, вмещает до 75 патронов."
-	contains = list(/obj/item/ammo_box/magazine/p16/g36drum)
+	contains = list(/obj/item/ammo_box/magazine/g36/drum)
 	cost = 5000
 
 /datum/supply_pack/ammo/morita_ammo_small

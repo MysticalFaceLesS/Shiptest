@@ -6,11 +6,11 @@
 	implements = list(
 		TOOL_SCREWDRIVER		= 100,
 		TOOL_SCALPEL 			= 75, // med borgs could try to unscrew shell with scalpel
-		/obj/item/kitchen/knife	= 50)
+		/obj/item/melee/knife	= 50)
 
 //close shell
 /datum/surgery_step/mechanic_close
 	implements = list(
 		TOOL_SCREWDRIVER		= 100,
 		TOOL_SCALPEL 			= 75,
-		/obj/item/kitchen/knife	= 50)
+		/obj/item/melee/knife	= 50)

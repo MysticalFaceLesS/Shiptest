@@ -78,3 +78,16 @@
 	desc = "Патроны с резиновой пулей , не смертельны но все еще наносят травмы."
 	icon_state = "308_rub"
 	ammo_type = /obj/item/ammo_casing/a308/a308_rubber
+
+//
+//     8x58
+//
+
+//Стандартные безгильзовые патроны калибра 8x58
+/obj/item/ammo_box/a858_ammo_box
+	name = "Ammo box (8x58mm Caseless)"
+	desc = "A box of standard 8x58mm ammo."
+	icon = 'mod_celadon/_storge_icons/icons/ammo/ammo.dmi'
+	icon_state = "a858box"
+	ammo_type = /obj/item/ammo_casing/caseless/a858
+	max_ammo = 50

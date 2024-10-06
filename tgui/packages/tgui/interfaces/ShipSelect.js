@@ -298,14 +298,37 @@ export const ShipSelect = (props, context) => {
                       data.autoMeet
                     )}
                   </LabeledList.Item>
-                  <LabeledList.Item label="Wiki Link">
-                    <a
-                      href={'https://shiptest.net/wiki/' + template.name}
+                  <LabeledList.Item label="Map Link">
+                    <a /* Добавляем внешнюю ссылку для детального осмотра корабля */
+                      href={
+                        'https://map.celadon.pro/Shiptest/' +
+                        template.faction +
+                        '/' +
+                        template.shortName
+                      }
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Here
+                      [Детальная карта корабля]
                     </a>
+                  </LabeledList.Item>
+                  <LabeledList.Item>
+                    <Collapsible title={'Map'} key={'Map'}>
+                      <img /* Добавляем отображение корабля под спойлером */
+                        src={
+                          'https://map.celadon.pro/Shiptest/Shuttles/' +
+                          template.shortName +
+                          '.png'
+                        }
+                        alt={
+                          '[Данные о карте не были получены. Обратитесь к Хосту (Voiko).]'
+                        }
+                        style={{
+                          width: template.width || '600px',
+                          height: template.height || 'auto',
+                        }}
+                      />
+                    </Collapsible>
                   </LabeledList.Item>
                 </LabeledList>
               </Collapsible>

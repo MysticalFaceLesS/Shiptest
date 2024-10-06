@@ -16,3 +16,16 @@
 
 /obj/projectile/bullet/pellet/buckshot
 	damage = 14
+
+/obj/projectile/bullet/a357
+	damage = 45
+	armour_penetration = 10 	//Ребаланс по предложке, для усиления револьверов
+
+/obj/projectile/bullet/a44roum
+	damage = 35
+
+/obj/projectile/bullet/a44roum/hp
+	damage = 50 	//Изменения по предложке, общее увеличение урона у .44 и HP на 10
+
+/obj/projectile/bullet/slug
+	armour_penetration = 10 // Усиление слагов, ввиду их бесполезности против брони

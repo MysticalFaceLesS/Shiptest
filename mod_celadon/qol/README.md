@@ -35,6 +35,7 @@ ID мода: CELADON_QOL
 - исправлен зависающий пузырик сообщения над головой куклы
 - /stutter теперь не распространяется на русские гласные
 - /slur теперь заменяет символы кириллицы на "пьяный вариант" и пропускает пробел
+- /check_for_custom_say_emote теперь нормально работает с кириллицей
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
   А также любая полезная информация.
@@ -42,7 +43,7 @@ ID мода: CELADON_QOL
 
 ### Изменения *кор кода*
 
-- ADD `code/game/objects/items/storage/wallets.dm`: `/obj/item/storage/wallet/ComponentInitialize()`: `STR.set_holdable`: `/obj/item/kitchen/knife/letter_opener,`, `/obj/item/key`
+- ADD `code/game/objects/items/storage/wallets.dm`: `/obj/item/storage/wallet/ComponentInitialize()`: `STR.set_holdable`: `/obj/item/melee/knife/letter_opener,`, `/obj/item/key`
 - EDIT `code/modules/mob/dead/new_player/sprite_accessories/hair.dm`: `/datum/sprite_accessory/hair`: `icon` = `mod_celadon/_storge_icons/icons/qol/human_face.dmi`
 - EDIT `code/game/objects/items/binoculars.dm`: `/obj/item/binoculars`: `slot_flags` = `ITEM_SLOT_NECK`
 - EDIT `code/modules/mob/living/silicon/silicon.dm`: `/mob/living/silicon/proc/checklaws()`
@@ -107,6 +108,12 @@ ID мода: CELADON_QOL
 - REMOVE `code/modules/discord/toggle_notify.dm` Убрана неиспользуемая кнопка "Notify Restart" со вкладки "ООС"
 - REMOVE `code/modules/tgui_panel/external.dm` Убрана кнопка "Fix chat" со вкладки "ООС". Устаревшая функция.
 
+- EDIT `code/modules/clothing/clothing.dm` -> `armor_to_protection_class` -> Замена римских цифр на числовые значения
+
+- ADD `code\modules\mob\dead\new_player\ship_select.dm` -> Добавлено подтягивание short_name для шаблона.
+- ADD `tgui\packages\tgui\interfaces\ShipSelect.js` -> Добавлена подвкладка при покупке корабля с отображением карты.
+
+
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -123,6 +130,7 @@ ID мода: CELADON_QOL
 - `/client/fit_viewport`
 - `/mob/verb/me_verb`
 - `/mob/verb/say_verb`
+- `/mob/proc/check_for_custom_say_emote`
 <!--
   Если ты добавлял новый модульный оверрайд, его нужно указать здесь.
   Здесь указываются оверрайды в твоём моде и папке `_master_files`

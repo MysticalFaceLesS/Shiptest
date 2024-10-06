@@ -35,9 +35,14 @@
 	hitsound_type = PROJECTILE_HITSOUND_STONE
 
 	min_dam = 5
-	max_integrity = MINERAL_WALL_INTEGRITY
-	brute_mod = 1
-	burn_mod = 1
+	// [CELADON-EDIT] - CELADON_BALANCE - Делаем из картонного камня скалу!
+	// max_integrity = MINERAL_WALL_INTEGRITY
+	// brute_mod = 1
+	// burn_mod = 1	// CELADON-EDIT - ORIGINAL
+	max_integrity = 1200
+	brute_mod = 0.3
+	burn_mod = 0.3
+	// [/CELADON-EDIT]
 
 	mob_smash_flags = ENVIRONMENT_SMASH_MINERALS
 	proj_bonus_damage_flags = PROJECTILE_BONUS_DAMAGE_MINERALS
@@ -79,16 +84,20 @@
 	return ..()
 
 /turf/closed/mineral/try_decon(obj/item/I, mob/user, turf/T)
+	var/act_duration = breakdown_duration
 	if(I.tool_behaviour == TOOL_MINING)
 		if(!I.tool_start_check(user, amount=0))
 			return FALSE
 
 		to_chat(user, "<span class='notice'>You begin breaking through the rock...</span>")
-		while(I.use_tool(src, user, breakdown_duration, volume=50))
+		while(I.use_tool(src, user, act_duration, volume=50))
 			if(ismineralturf(src))
 				to_chat(user, "<span class='notice'>You break through some of the stone...</span>")
 				SSblackbox.record_feedback("tally", "pick_used_mining", 1, I.type)
-				alter_integrity(-(I.wall_decon_damage),user,FALSE,TRUE)
+				if(!alter_integrity(-(I.wall_decon_damage),user,FALSE,TRUE))
+					return TRUE
+			else
+				break
 
 	return FALSE
 

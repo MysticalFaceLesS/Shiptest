@@ -59,7 +59,7 @@
 	move_to_delay = 5
 	speak_emote = list("verbalizes")
 	// [CELADON-REMOVE] - CRUSHER_TROPHEY - Выпилено и заменено в модуле
-	// mob_trophy = /obj/item/nullrod/armblade/tentacle
+	// mob_trophy = /obj/item/melee/synthetic_arm_blade
 	// loot = list(/obj/effect/spawner/clawloot)
 	// [/CELADON-REMOVE]
 	health = 2250

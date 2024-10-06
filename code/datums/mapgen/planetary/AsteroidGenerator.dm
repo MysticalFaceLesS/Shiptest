@@ -111,11 +111,6 @@
 	)
 
 	feature_spawn_list = list(
-		// [CELADON-ADD] - RETURN_TENDRILS
-		/obj/structure/spawner/mining/goliath = 1,
-		/obj/structure/spawner/mining = 1,
-		/obj/structure/spawner/mining/hivelord = 1,
-		// [/CELADON-ADD]
 		/obj/structure/spawner/burrow/asteroid = 3,
 		/obj/structure/geyser/random = 1,
 		/obj/structure/vein/asteroid = 5,

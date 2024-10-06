@@ -1,20 +1,21 @@
 {
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
 	"map_name": "Bolt-class Scout Vessel",
-	"faction": "/datum/faction/solgov",
+	"map_short_name": "Bolt",
+	"description": "Корабль Солнечной Федерации класса Bolt служит для фронтовой разведки с боем.",
+	"map_path": "_maps/_mod_celadon/shuttles/solfed/solfed_lightning_bolt.dmm",
+	"enabled": false,
+	"limit": 1,
+	"starting_funds": 0,
 	"prefix": "SFSV",
+	"faction": "/datum/faction/solgov",
+	"tags": ["Разведка", "Бой", "Шахтёрство"],
 	"namelists": [
 		"SOLGOV",
 		"SPACE",
 		"BRITISH_NAVY",
 		"NATURAL"
 	],
-	"map_short_name": "Tomahawk-class",
-	"map_path": "_maps/_mod_celadon/shuttles/solfed/solfed_lightning_bolt.dmm",
-	"starting_funds": 0,
-	"description": "Корабль Солнечной Федерации класса Bolt служит для фронтовой разведки с боем.",
-	"tags": ["Разведка", "Бой", "Шахтёрство"],
-	"limit": 1,
 	"job_slots": {
 		"Juggernaut": {
 			"outfit": "/datum/outfit/job/solgov/bolt/captain",
@@ -42,6 +43,5 @@
 			"outfit": "/datum/outfit/job/solgov/bolt/engineer",
 			"slots": 1
 		}
-	},
-	"enabled": false
+	}
 }

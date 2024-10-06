@@ -1412,6 +1412,12 @@
 	},
 /turf/open/floor/plasteel/tech,
 /area/outpost/crew/dop_zone_2)
+"db" = (
+/obj/effect/turf_decal/siding/blue,
+/obj/structure/chair/office/dark,
+/mob/living/simple_animal/pet/cat/space/alta,
+/turf/open/floor/plasteel/tech,
+/area/outpost/operations/outpost_command)
 "dc" = (
 /obj/effect/turf_decal/techfloor{
 	dir = 8
@@ -1872,11 +1878,14 @@
 /turf/open/floor/plasteel/white,
 /area/outpost/crew/garden)
 "dU" = (
-/obj/structure/closet/crate/freezer/surplus_limbs/organs,
 /obj/effect/turf_decal/corner/opaque/mauve/three_quarters{
 	dir = 8
 	},
 /obj/item/radio/intercom/directional/north,
+/obj/machinery/vending/medical/syndicate_access{
+	req_one_access_txt = "8123";
+	all_items_free = 1
+	},
 /turf/open/floor/plasteel/white,
 /area/outpost/medical/storage)
 "dV" = (
@@ -2072,10 +2081,7 @@
 	pixel_x = -9;
 	network = list("outpostelysium")
 	},
-/obj/machinery/vending/medical/syndicate_access{
-	req_one_access_txt = "8123";
-	all_items_free = 1
-	},
+/obj/machinery/vending/medical,
 /turf/open/floor/plasteel/white,
 /area/outpost/medical/hall_1)
 "ep" = (
@@ -4967,6 +4973,7 @@
 	dir = 8
 	},
 /obj/machinery/airalarm/directional/west,
+/obj/structure/closet/crate/freezer/surplus_limbs/organs,
 /turf/open/floor/plasteel/white,
 /area/outpost/medical/storage)
 "jU" = (
@@ -5657,7 +5664,7 @@
 	pixel_x = -4;
 	pixel_y = 6
 	},
-/obj/item/kitchen/knife{
+/obj/item/melee/knife/kitchen{
 	pixel_y = 6;
 	pixel_x = 9
 	},
@@ -6124,6 +6131,7 @@
 /obj/effect/turf_decal/corner/opaque/black/mono,
 /obj/effect/turf_decal/corner/opaque/neutral/diagonal,
 /obj/machinery/firealarm/directional/north,
+/mob/living/simple_animal/pet/cat/moro,
 /turf/open/floor/plasteel/white,
 /area/outpost/crew/canteen)
 "mq" = (
@@ -7064,7 +7072,9 @@
 /turf/open/floor/mineral/plastitanium,
 /area/outpost/fraction/syndi)
 "nY" = (
-/obj/effect/spawner/structure/window/plasma/reinforced/shutters,
+/obj/effect/spawner/structure/window/plasma/reinforced/shutters{
+	anchored = 1
+	},
 /obj/structure/grille/indestructable,
 /turf/open/floor/plating{
 	light_color = "#1B1D2E";
@@ -7779,7 +7789,9 @@
 	},
 /area/outpost/exterior)
 "pI" = (
-/obj/effect/spawner/structure/window/plasma/reinforced/shutters,
+/obj/effect/spawner/structure/window/plasma/reinforced/shutters{
+	anchored = 1
+	},
 /obj/structure/grille/indestructable,
 /obj/structure/sign/barsign{
 	icon_state = "cyberslyph";
@@ -9249,6 +9261,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/pet/fox/emma,
 /turf/open/floor/plasteel/patterned,
 /area/outpost/security/reseption)
 "sT" = (
@@ -9531,20 +9544,6 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/outpost/medical/surgery_1)
-"tv" = (
-/obj/machinery/button/door{
-	pixel_y = -21;
-	id = "ice_cabinka_bar_3";
-	name = "Bolt Door Cab 3";
-	specialfunctions = 4;
-	normaldoorcontrol = 1;
-	dir = 1
-	},
-/turf/open/floor/plating/asteroid/snow/temperatre{
-	light_color = "#1B1D2E";
-	light_range = 2
-	},
-/area/outpost/exterior)
 "tw" = (
 /obj/effect/turf_decal/techfloor/corner,
 /turf/open/floor/plasteel/tech,
@@ -9836,6 +9835,8 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/structure/bed/dogbed,
+/mob/living/simple_animal/pet/dog/corgi/Lisa/ada,
 /turf/open/floor/wood,
 /area/outpost/security/detective)
 "tU" = (
@@ -10476,6 +10477,7 @@
 /area/outpost/exterior)
 "vd" = (
 /obj/structure/table/glass,
+/mob/living/simple_animal/pet/fox/fennec,
 /turf/open/floor/carpet/red_gold,
 /area/outpost/medical/cmo)
 "ve" = (
@@ -16301,6 +16303,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 10
 	},
+/mob/living/simple_animal/pet/dog/corgi/Lisa/zlatchek,
 /turf/open/floor/plasteel/tech,
 /area/outpost/cargo/office)
 "Gy" = (
@@ -16323,10 +16326,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
 /turf/open/floor/wood/walnut,
 /area/outpost/crew/bar)
-"GC" = (
-/obj/structure/statue/bronze/masson_kills,
-/turf/closed/indestructible/reinforced,
-/area/outpost/cargo/smeltery)
 "GD" = (
 /obj/effect/turf_decal/borderfloor{
 	dir = 1
@@ -16529,11 +16528,8 @@
 /obj/effect/turf_decal/corner/opaque/blue/half{
 	dir = 8
 	},
-/obj/machinery/vending/medical/syndicate_access{
-	req_one_access_txt = "8123";
-	all_items_free = 1
-	},
 /obj/machinery/newscaster/directional/west,
+/obj/machinery/vending/medical,
 /turf/open/floor/plasteel/white,
 /area/outpost/medical/hall_1)
 "Hh" = (
@@ -16765,6 +16761,7 @@
 /obj/structure/chair/office{
 	dir = 1
 	},
+/mob/living/simple_animal/pet/cat/alta,
 /turf/open/floor/plasteel/tech,
 /area/outpost/security/checkpoint)
 "HH" = (
@@ -17032,9 +17029,6 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock,
-/obj/machinery/door/poddoor/ert{
-	id = "ice_general_shop"
-	},
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel/tech,
 /area/outpost/crew/dop_zone_2)
@@ -19513,6 +19507,8 @@
 /area/outpost/exterior)
 "No" = (
 /obj/structure/table/wood,
+/obj/item/storage/fancy/cigarettes/derringer,
+/obj/item/clothing/mask/cigarette/pipe,
 /turf/open/floor/wood,
 /area/outpost/security/detective)
 "Np" = (
@@ -19594,6 +19590,10 @@
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/effect/turf_decal/corner/opaque/mauve/three_quarters{
 	dir = 4
+	},
+/obj/machinery/vending/medical/syndicate_access{
+	req_one_access_txt = "8123";
+	all_items_free = 1
 	},
 /turf/open/floor/plasteel/white,
 /area/outpost/medical/storage)
@@ -20842,7 +20842,6 @@
 /obj/item/reagent_containers/food/drinks/drinkingglass/shotglass,
 /obj/item/reagent_containers/food/drinks/drinkingglass/shotglass,
 /obj/item/reagent_containers/food/drinks/flask/det,
-/obj/item/storage/fancy/cigarettes/cigars,
 /obj/item/storage/box/matches,
 /obj/item/ammo_box/a357_box/match,
 /obj/item/ammo_box/a357_box/hp,
@@ -20866,6 +20865,11 @@
 /obj/item/camera/detective,
 /obj/item/gun/ballistic/revolver/viper,
 /obj/item/ammo_box/c38_box,
+/obj/item/storage/pistolcase/detective,
+/obj/item/detective_scanner,
+/obj/item/camera_film,
+/obj/item/camera_film,
+/obj/item/toy/crayon/white,
 /turf/open/floor/wood,
 /area/outpost/security/detective)
 "PZ" = (
@@ -42041,7 +42045,7 @@ nF
 QV
 qe
 nK
-nI
+db
 vK
 mZ
 lh
@@ -45181,7 +45185,7 @@ NG
 BC
 NG
 NG
-tv
+NG
 NG
 NG
 ST
@@ -47826,7 +47830,7 @@ Qx
 bJ
 yM
 td
-GC
+Ak
 Mz
 Ol
 Oj

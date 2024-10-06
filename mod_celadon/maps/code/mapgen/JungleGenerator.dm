@@ -179,7 +179,7 @@
 	)
 	feature_spawn_chance = 0.5
 	feature_spawn_list = list(
-		// [CELADON-ADD] - RETURN_TENDRILS
+		// [CELADON-ADD] - RETURN_CONTENT
 		/obj/structure/spawner/ice_moon = 1,
 		// [/CELADON-ADD]
 		/obj/item/pickaxe/rusted = 1,

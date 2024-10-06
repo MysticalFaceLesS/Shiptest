@@ -1,0 +1,46 @@
+{
+	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
+	"map_name": "Elegia-class Battle Schnau",
+	"map_short_name": "Elegia",
+	"description": "Боевой шахтёрский корвет под названием Elegia предназначен для диверсионных патрульных заданий, где он может находиться длительное время на самообеспечении. Основной целью является подрыв исследовательских и шахтёрских миссий NT. Для этого он оснащен шахтёрским инвентарём, боевым оружием и средствами стабилизации полевых оперативников.",
+	"map_path": "_maps/_mod_celadon/shuttles/syndicate/syndicate_elegia.dmm",
+	"enabled": true,
+	"limit": 1,
+	"prefix": "DSSV",
+	"faction": "/datum/faction/syndicate",
+	"tags": ["Шахтёрский", "Боевой"],
+	"namelists": [
+		"GORLEX",
+		"NATURAL_AGGRESSIVE",
+		"BEASTS",
+		"WEAPONS"
+	],
+	"job_slots": {
+		"Captain": {
+			"outfit": "/datum/outfit/job/syndicate/captain/gorlex",
+			"officer": true,
+			"slots": 1
+		},
+		"CyberSun paramedic": {
+			"outfit": "/datum/outfit/job/syndicate/paramedic/cybersun",
+			"slots": 1
+		},
+		"Mechanic": {
+			"outfit": "/datum/outfit/job/syndicate/engineer/gorlex",
+			"slots": 1
+
+		},
+				"Trooper": {
+			"outfit": "/datum/outfit/job/syndicate/security/gorlex",
+			"slots": 2
+		},
+		"Wrecker": {
+			"outfit": "/datum/outfit/job/syndicate/miner/gorlex",
+			"slots": 2
+		},
+		"Junior Agent": {
+			"outfit": "/datum/outfit/job/syndicate/assistant/gorlex",
+			"slots": 2
+		}
+	}
+}

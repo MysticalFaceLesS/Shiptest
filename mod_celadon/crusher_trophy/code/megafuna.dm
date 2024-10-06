@@ -15,14 +15,14 @@
 	loot = list(/obj/effect/spawner/clawloot/crusher)
 
 /obj/effect/spawner/clawloot/crusher/spawn_loot()
-	new /obj/item/nullrod/armblade/tentacle(get_turf(src)) //idk what to put here, memed is the loot person
+	new /obj/item/nullrod/tribal_knife(get_turf(src)) //idk what to put here, memed is the loot person // Заменено с армблейда на ритуальный нож
 	return ..()
 
 /mob/living/simple_animal/hostile/megafauna/colossus
 	crusher_loot = list(/obj/structure/closet/crate/necropolis/colossus/crusher)
 
-/mob/living/simple_animal/hostile/megafauna/cult_templar
-	crusher_loot = list(/obj/item/claymore/cursed, /obj/item/clothing/suit/space/hardsuit/cult/enchanted, /obj/item/upgradescroll)
+/mob/living/simple_animal/hostile/megafauna/cult_templar // Офы выпилили курсед клэймор
+	crusher_loot = list(/obj/item/melee/sword/claymore, /obj/item/clothing/suit/space/hardsuit/cult/enchanted, /obj/item/upgradescroll)
 
 /mob/living/simple_animal/hostile/megafauna/demonic_frost_miner
 	crusher_loot = list(/obj/effect/decal/remains/plasma, /obj/item/crusher_trophy/ice_block_talisman)

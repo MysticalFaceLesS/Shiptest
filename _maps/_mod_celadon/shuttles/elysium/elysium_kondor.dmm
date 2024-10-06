@@ -552,7 +552,9 @@
 	dir = 10
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/components/binary/pump/layer2,
+/obj/machinery/atmospherics/components/binary/pump/layer2{
+	dir = 1
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/closet/secure_closet/engineering_personal{
@@ -578,9 +580,6 @@
 	},
 /obj/effect/turf_decal/corner/transparent/green/full,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/door/airlock{
-	name = "eva airlock"
-	},
 /obj/machinery/door/airlock{
 	name = "eva airlock"
 	},
@@ -2056,6 +2055,15 @@
 /obj/item/trash/syndi_cakes,
 /turf/open/floor/plating/rust,
 /area/ship/engineering/electrical)
+"UB" = (
+/obj/docking_port/stationary{
+	dwidth = 15;
+	height = 15;
+	width = 30;
+	dir = 8
+	},
+/turf/template_noop,
+/area/template_noop)
 "UC" = (
 /obj/effect/decal/cleanable/blood/drip,
 /mob/living/simple_animal/hostile/cockroach,
@@ -2316,7 +2324,7 @@ iV
 "}
 (5,1,1) = {"
 iV
-iV
+UB
 iV
 iV
 Og
@@ -2332,7 +2340,7 @@ tC
 aF
 iV
 iV
-iV
+UB
 iV
 "}
 (6,1,1) = {"

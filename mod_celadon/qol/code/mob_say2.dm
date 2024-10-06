@@ -35,3 +35,17 @@
 	//by queuing this for next tick the mc can compensate for its cost instead of having speech delay the start of the next tick
 	if(message)
 		QUEUE_OR_CALL_VERB_FOR(VERB_CALLBACK(src, TYPE_PROC_REF(/atom/movable, say), message), SSspeech_controller)
+
+// Overrides proc to use _char variants of findtext and copytext
+/mob/check_for_custom_say_emote(message, list/mods)
+	var/customsaypos = findtext_char(message, "*")
+	if(!customsaypos)
+		return message
+	if (is_banned_from(ckey, "Emote"))
+		return copytext(message, customsaypos + 1)
+	mods[MODE_CUSTOM_SAY_EMOTE] = lowertext(copytext_char(message, 1, customsaypos))
+	message = copytext_char(message, customsaypos + 1)
+	if (!message)
+		mods[MODE_CUSTOM_SAY_ERASE_INPUT] = TRUE
+		message = "an interesting thing to say"
+	return message

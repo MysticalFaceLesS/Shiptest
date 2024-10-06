@@ -24,6 +24,7 @@
 	icon = 'mod_celadon/_storge_icons/icons/mob/projectile.dmi'
 	name = "Crystalline Shard"
 	icon_state = "crystal_shard"
+	range = 2
 	damage = 6
 	damage_type = BRUTE
 	speed = 3
@@ -61,10 +62,10 @@
 	name = "Legate"
 	desc = "A rare and incredibly dangerous legion mutation, forming from a plethora of legion joined in union around a young necropolis spire. It's looking particularly self-confident."
 	icon = 'mod_celadon/_storge_icons/icons/mob/64x64mehafauna.dmi'
-	icon_state = "legion"
-	icon_living = "legion"
-	icon_dead = "legion"
-	health_doll_icon = "legion"
+	icon_state = "plasma"
+	icon_living = "plasma"
+	icon_dead = "plasma"
+	health_doll_icon = "plasma"
 	health = 500
 	maxHealth = 500
 	melee_damage_lower = 30
@@ -99,10 +100,11 @@
 	pull_force = PULL_FORCE_DEFAULT
 	visible_message("<span class='userwarning'>[src] falls over with a mighty crash, the remaining legions within it falling apart!</span>")
 	new /mob/living/simple_animal/hostile/asteroid/hivelord/legion/crystal_plasma(loc)
-	new /mob/living/simple_animal/hostile/asteroid/hivelord/legion/crystal_plasma(loc)
-	new /mob/living/simple_animal/hostile/asteroid/hivelord/legion/crystal_plasma(loc)
 	..(gibbed)
 
 /mob/living/simple_animal/hostile/big_plasma/Initialize()
 	.=..()
 	AddComponent(/datum/component/spawner, list(/mob/living/simple_animal/hostile/asteroid/hivelord/legion/crystal_plasma), 200, faction, "peels itself off from", 3)
+
+/mob/living/simple_animal/hostile/big_legion
+	icon = 'mod_celadon/_storge_icons/icons/mob/64x64mehafauna.dmi'

@@ -173,5 +173,8 @@
 			"limit" = T.limit,
 			"curNum" = template_num_lookup[T] || 0,
 			"minTime" = T.get_req_spawn_minutes(),
+			// [CELADON-ADD] - mod_celadon/qol - Берём значение из конфига корабликов.
+			"shortName" = T.short_name,
+			// [/CELADON-ADD]
 		)
 		.["templates"] += list(ship_data)

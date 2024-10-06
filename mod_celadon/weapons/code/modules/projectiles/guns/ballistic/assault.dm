@@ -1,4 +1,4 @@
-/obj/item/gun/ballistic/automatic/assault/p16/g36sh
+/obj/item/gun/ballistic/automatic/assault/g36sh
 //Описание
 	name = "\improper G36-SH"
 	desc = "Наследие огненной эры Союза Человечества, укороченная версия,  калибра 5.56x45. Технология производства восстановлена минитменами, но ввиду усложненной конструкции продана корпорации InteQ. Используется сотрудниками InteQ по сей день, как оружие для элитных наемников."
@@ -18,18 +18,18 @@
 	weapon_weight = WEAPON_MEDIUM
 	w_class = WEIGHT_CLASS_NORMAL
 	unique_mag_sprites_for_variants = TRUE
-	mag_type = /obj/item/ammo_box/magazine/p16/g36sh
+	mag_type = /obj/item/ammo_box/magazine/g36/sh
 //Прочее
-	var/obj/item/ammo_box/magazine/p16/g36sh/alternate_magazine
+	var/obj/item/ammo_box/magazine/g36/sh/alternate_magazine
 
-/obj/item/gun/ballistic/automatic/assault/p16/g36sh/Initialize()
+/obj/item/gun/ballistic/automatic/assault/g36sh/Initialize()
 	. = ..()
 	if (!alternate_magazine)
 		alternate_magazine = new mag_type(src)
 	spawnwithmagazine = FALSE
-	mag_type = /obj/item/ammo_box/magazine/p16
+	mag_type = /obj/item/ammo_box/magazine/g36
 
-/obj/item/gun/ballistic/automatic/assault/p16/g36sh/inteq
+/obj/item/gun/ballistic/automatic/assault/g36sh/inteq
 	name = "\improper Moded G36-SH"
 	desc = "Обширная модификация G36-SH, которая входит в стандартную комплектацию вооружения InteQ. Калибр 5,56x45 мм."
 	icon_state = "g36shinteq"
@@ -39,10 +39,10 @@
 	empty_alarm = TRUE
 	zoomable = TRUE
 
-/obj/item/gun/ballistic/automatic/assault/p16/g36sh/no_mag
+/obj/item/gun/ballistic/automatic/assault/g36sh/no_mag
 	spawnwithmagazine = FALSE
 
-/obj/item/gun/ballistic/automatic/assault/p16/g36
+/obj/item/gun/ballistic/automatic/assault/g36
 	name = "\improper G36"
 	desc = "Наследие огненной эры Союза Человечества , калибра 5.56x45 . Технология производства восстановлена минитменами , но ввиду усложненной конструкции продана корпорации InteQ. Используется сотрудниками InteQ по сей день , как оружие для элитных наемников. "
 	icon = 'mod_celadon/_storge_icons/icons/guns/48x32guns.dmi'
@@ -56,20 +56,20 @@
 	wield_delay = 0.5 SECONDS
 	fire_delay = 0.14 SECONDS
 	unique_mag_sprites_for_variants = TRUE
-	mag_type = /obj/item/ammo_box/magazine/p16/g36
-	var/obj/item/ammo_box/magazine/p16/g36/alternate_magazine
+	mag_type = /obj/item/ammo_box/magazine/g36
+	var/obj/item/ammo_box/magazine/g36/alternate_magazine
 
-/obj/item/gun/ballistic/automatic/assault/p16/g36/Initialize()
+/obj/item/gun/ballistic/automatic/assault/g36/Initialize()
 	. = ..()
 	if (!alternate_magazine)
 		alternate_magazine = new mag_type(src)
-		spawnwithmagazine = FALSE
-		mag_type = /obj/item/ammo_box/magazine/p16
+	spawnwithmagazine = FALSE
+	mag_type = /obj/item/ammo_box/magazine/g36
 
-/obj/item/gun/ballistic/automatic/assault/p16/g36/no_mag
+/obj/item/gun/ballistic/automatic/assault/g36/no_mag
 		spawnwithmagazine = FALSE
 
-/obj/item/gun/ballistic/automatic/assault/p16/g36/inteq
+/obj/item/gun/ballistic/automatic/assault/g36/inteq
 	name = "\improper Moded G36"
 	desc = "Обширная модификация G36, которая входит в стандартную комплектацию вооружения InteQ. Калибр 5,56x45 мм."
 	icon_state = "g36inteq"
