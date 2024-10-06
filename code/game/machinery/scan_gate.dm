@@ -151,9 +151,11 @@
 						scan_species = /datum/species/elzuose
 					if(SCANGATE_KEPORI)
 						scan_species = /datum/species/kepori
-					// [CELADON-ADD] - TAJARA
+					// [CELADON-ADD] - TAJARA - LANIUS
 					if(SPECIES_TAJARA)
 						scan_species = /datum/species/tajara
+					if(SPECIES_LANIUS)
+						scan_species = /datum/species/lanius
 					// [/CELADON-ADD]
 				if(is_species(H, scan_species))
 					beep = TRUE
