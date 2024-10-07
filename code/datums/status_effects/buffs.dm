@@ -85,6 +85,7 @@
 	desc = "You are being resurrected!"
 	icon_state = "wish_granter"
 
+<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 /datum/status_effect/cult_master
 	id = "The Cult Master"
@@ -116,6 +117,8 @@
 	. = ..()
 // [/CELADON-ADD]
 
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 /datum/status_effect/blooddrunk
 	id = "blooddrunk"
 	duration = 10

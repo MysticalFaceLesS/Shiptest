@@ -76,9 +76,12 @@
 #define MONKEY_BODYPART "monkey"
 #define ALIEN_BODYPART "alien"
 #define LARVA_BODYPART "larva"
+<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 #define DEVIL_BODYPART "devil"
 // [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 
 //Defines for Species IDs
 #define SPECIES_ABDUCTOR "abductor"
@@ -423,10 +426,13 @@
 
 #define SILENCE_RANGED_MESSAGE (1<<0)
 
+<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT - Swarmer flags
 #define SWARMER_LIGHT_ON (1<<0)
 // [/CELADON-ADD]
 
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 /// Returns whether or not the given mob can succumb
 #define CAN_SUCCUMB(target) (HAS_TRAIT(target, TRAIT_CRITICAL_CONDITION) && !HAS_TRAIT(target, TRAIT_NODEATH))
 

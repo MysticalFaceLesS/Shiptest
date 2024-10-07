@@ -248,9 +248,13 @@
 		qdel(B)
 		new /obj/effect/temp_visual/revenant(T)
 
+<<<<<<< HEAD
 	// [CELADON-EDIT] - CELADON_RETURN_CONTENT - if(!isplatingturf(T) && isfloorturf(T) && prob(15))
 	if(!isplatingturf(T) && !istype(T, /turf/open/floor/engine/cult) && isfloorturf(T) && prob(15))
 	// [/CELADON-EDIT]
+=======
+	if(!isplatingturf(T) && isfloorturf(T) && prob(15))
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 		var/turf/open/floor/floor = T
 		if(floor.intact && floor.floor_tile)
 			new floor.floor_tile(floor)

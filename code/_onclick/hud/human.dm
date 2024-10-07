@@ -33,6 +33,7 @@
 	var/mob/living/carbon/human/H = usr
 	H.quick_equip()
 
+<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 /atom/movable/screen/devil
 	icon = 'icons/hud/screen_devil.dmi'
@@ -64,6 +65,8 @@
 	invisibility = INVISIBILITY_ABSTRACT
 // [/CELADON-ADD]
 
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 /atom/movable/screen/ling
 	icon = 'icons/hud/screen_changeling.dmi'
 	invisibility = INVISIBILITY_ABSTRACT
@@ -340,12 +343,15 @@
 	lingstingdisplay.hud = src
 	infodisplay += lingstingdisplay
 
+<<<<<<< HEAD
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	devilsouldisplay = new /atom/movable/screen/devil/soul_counter
 	devilsouldisplay.hud = src
 	infodisplay += devilsouldisplay
 	// [/CELADON-ADD]
 
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 	zone_select =  new /atom/movable/screen/zone_sel()
 	zone_select.icon = ui_style
 	zone_select.hud = src

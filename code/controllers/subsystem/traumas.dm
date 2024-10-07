@@ -44,6 +44,7 @@ SUBSYSTEM_DEF(traumas)
 		"skeletons" = typecacheof(list(/mob/living/simple_animal/hostile/human/skeleton)),
 		"snakes"   = typecacheof(list(/mob/living/simple_animal/hostile/retaliate/poison/snake)),
 		"robots"   = typecacheof(list(/mob/living/silicon/robot, /mob/living/silicon/ai,
+<<<<<<< HEAD
 		/mob/living/simple_animal/drone,
 		// [CELADON-ADD] - CELADON_RETURN_CONTENT
 		/mob/living/simple_animal/hostile/swarmer,
@@ -56,6 +57,11 @@ SUBSYSTEM_DEF(traumas)
 		/mob/living/simple_animal/shade
 		// [/CELADON-ADD]
 		)),
+=======
+		/mob/living/simple_animal/drone, /mob/living/simple_animal/bot)),
+		"doctors"   = typecacheof(list(/mob/living/simple_animal/bot/medbot)),
+		"the supernatural"   = typecacheof(list(/mob/living/simple_animal/revenant)),
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 		"aliens" = typecacheof(list(/mob/living/carbon/alien, /mob/living/simple_animal/slime, /mob/living/simple_animal/hostile/facehugger)),
 		"conspiracies" = typecacheof(list(/mob/living/simple_animal/bot/secbot, /mob/living/simple_animal/drone,
 		/mob/living/simple_animal/pet/penguin)),
@@ -111,6 +117,7 @@ SUBSYSTEM_DEF(traumas)
 			/obj/machinery/door/airlock/centcom)),
 
 		"robots"   = typecacheof(list(
+<<<<<<< HEAD
 			/obj/machinery/computer/upload, /obj/item/aiModule/, /obj/machinery/recharge_station, /obj/item/aicard,
 			// [CELADON-ADD] - CELADON_RETURN_CONTENT
 			/mob/living/simple_animal/hostile/swarmer,
@@ -118,6 +125,10 @@ SUBSYSTEM_DEF(traumas)
 			/obj/effect/mob_spawn/swarmer
 			// [/CELADON-ADD]
 		)),
+=======
+			/obj/machinery/computer/upload, /obj/item/aiModule/, /obj/machinery/recharge_station,
+			/obj/item/aicard)),
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 
 		"doctors"   = typecacheof(list(
 			/obj/item/clothing/under/rank/medical,

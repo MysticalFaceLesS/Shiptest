@@ -1133,6 +1133,7 @@
 /mob/living/carbon/alien/update_stamina()
 	return
 
+<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 /mob/living/proc/owns_soul()
 	if(mind)
@@ -1153,6 +1154,8 @@
 	return FALSE
 // [/CELADON-ADD]
 
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 /mob/living/throw_at(atom/target, range, speed, mob/thrower, spin=1, diagonals_first = 0, datum/callback/callback, force, gentle = FALSE, quickstart = TRUE)
 	stop_pulling()
 	. = ..()

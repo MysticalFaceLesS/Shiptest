@@ -135,12 +135,15 @@
 				if(istype(paper_copy, /obj/item/paper))
 					do_copy_loop(CALLBACK(src, PROC_REF(make_paper_copy)), usr)
 					return TRUE
+<<<<<<< HEAD
 				// [CELADON-ADD] - CELADON_RETURN_CONTENT
 				// Devil contract paper.
 				if(istype(paper_copy, /obj/item/paper/contract/employment))
 					do_copy_loop(CALLBACK(src, PROC_REF(make_devil_paper_copy)), usr)
 					return TRUE
 				// [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 			// Copying photo.
 			if(photo_copy)
 				do_copy_loop(CALLBACK(src, PROC_REF(make_photo_copy)), usr)
@@ -272,6 +275,7 @@
 
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 /**
+<<<<<<< HEAD
  * Handles the copying of devil contract paper. Transfers all the text, stamps and so on from the old paper, to the copy.
  *
  * Checks first if `paper_copy` exists. Since this proc is called from a timer, it's possible that it was removed.
@@ -289,6 +293,8 @@
 // [/CELADON-ADD]
 
 /**
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
  * Handles the copying of paper. Transfers all the text, stamps and so on from the old paper, to the copy.
  *
  * Checks first if `paper_copy` exists. Since this proc is called from a timer, it's possible that it was removed.
@@ -412,6 +418,7 @@
 /obj/machinery/photocopier/attackby(obj/item/O, mob/user, params)
 	if(istype(O, /obj/item/paper))
 		if(copier_empty())
+<<<<<<< HEAD
 		// [CELADON-ADD] - CELADON_RETURN_CONTENT
 			if(istype(O, /obj/item/paper/contract/infernal))
 				to_chat(user, "<span class='warning'>[src] smokes, smelling of brimstone!</span>")
@@ -423,6 +430,12 @@
 					return
 				paper_copy = O
 				do_insertion(O, user)
+=======
+			if(!user.dropItemToGround(O))
+				return
+			paper_copy = O
+			do_insertion(O, user)
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 		else
 			to_chat(user, "<span class='warning'>There is already something in [src]!</span>")
 

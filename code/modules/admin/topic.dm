@@ -78,6 +78,7 @@
 				else
 					message_admins("[key_name_admin(usr)] tried to create changelings. Unfortunately, there were no candidates available.")
 					log_admin("[key_name(usr)] failed to create changelings.")
+<<<<<<< HEAD
 			// [CELADON-ADD] - CELADON_RETURN_CONTENT
 			if("cult")
 				if(src.makeCult())
@@ -87,6 +88,8 @@
 					message_admins("[key_name_admin(usr)] tried to start a cult. Unfortunately, there were no candidates available.")
 					log_admin("[key_name(usr)] failed to start a cult.")
 			// [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 			if("wizard")
 				message_admins("[key_name(usr)] is creating a wizard...")
 				if(src.makeWizard())
@@ -352,6 +355,7 @@
 				M.change_mob_type(/mob/living/simple_animal/parrot , null, null, delmob)
 			if("polyparrot")
 				M.change_mob_type(/mob/living/simple_animal/parrot/Polly , null, null, delmob)
+<<<<<<< HEAD
 			// [CELADON-ADD] - CELADON_RETURN_CONTENT
 			if("constructjuggernaut")
 				M.change_mob_type(/mob/living/simple_animal/hostile/construct/juggernaut , null, null, delmob)
@@ -362,6 +366,8 @@
 			if("shade")
 				M.change_mob_type(/mob/living/simple_animal/shade , null, null, delmob)
 			// [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 
 	else if(href_list["boot2"])
 		if(!check_rights(R_ADMIN))
@@ -1144,6 +1150,7 @@
 			return
 		output_ai_laws()
 
+<<<<<<< HEAD
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	else if(href_list["admincheckdevilinfo"])
 		if(!check_rights(R_ADMIN))
@@ -1152,6 +1159,8 @@
 		output_devil_info(M)
 	// [/CELADON-ADD]
 
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 	else if(href_list["adminmoreinfo"])
 		var/mob/M = locate(href_list["adminmoreinfo"]) in GLOB.mob_list
 		if(!ismob(M))

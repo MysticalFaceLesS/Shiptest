@@ -40,6 +40,7 @@
 	var/datum/ai_laws/master = connected_ai ? connected_ai.laws : null
 	var/temp
 	if (master)
+<<<<<<< HEAD
 		// [CELADON-ADD] - CELADON_RETURN_CONTENT
 		laws.devillaws.len = master.devillaws.len
 		for (var/index = 1, index <= master.devillaws.len, index++)
@@ -48,6 +49,8 @@
 				laws.devillaws[index] = temp
 		// [/CELADON-ADD]
 
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 		laws.ion.len = master.ion.len
 		for (var/index = 1, index <= master.ion.len, index++)
 			temp = master.ion[index]

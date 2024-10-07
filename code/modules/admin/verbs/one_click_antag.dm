@@ -113,6 +113,7 @@
 	new_character.mind.make_Wizard()
 	return TRUE
 
+<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 /datum/admins/proc/makeCult()
 	var/datum/game_mode/cult/temp = new
@@ -144,6 +145,8 @@
 	return 0
 // [/CELADON-ADD]
 
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 /datum/admins/proc/makeNukeTeam()
 	var/datum/game_mode/nuclear/temp = new
 	var/list/mob/dead/observer/candidates = pollGhostCandidates("Do you wish to be considered for a nuke team being sent in?", ROLE_OPERATIVE, temp)

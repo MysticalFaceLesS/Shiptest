@@ -35,10 +35,13 @@
 		/obj/machinery/power/shuttle/engine/liquid,
 		//needs a template
 		/obj/effect/landmark/subship,
+<<<<<<< HEAD
 		// [CELADON-ADD] - CELADON_RETURN_CONTENT
 		//needs a friend :(
 		/obj/effect/mob_spawn/human/demonic_friend,
 		// [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 		//needs a derg
 		/obj/structure/carp_rift,
 		//doesn't have icons
