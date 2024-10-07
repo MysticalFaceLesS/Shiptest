@@ -29,9 +29,12 @@
 #define HANDS_LAYER 4
 #define BODY_FRONT_LAYER 3
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 #define HALO_LAYER 2 //blood cult ascended halo, because there's currently no better solution for adding/removing
 // [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 #define FIRE_LAYER 1 //If you're on fire
@@ -283,11 +286,14 @@ GLOBAL_LIST_INIT(ghost_others_options, list(GHOST_OTHERS_SIMPLE, GHOST_OTHERS_DE
 #define STATION_DESTROYED_NUKE 4
 #define STATION_EVACUATED 5
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 #define CULT_ESCAPE 11
 #define CULT_FAILURE 12
 #define CULT_SUMMON 13
 // [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 #define NUKE_MISS 14
@@ -389,9 +395,12 @@ GLOBAL_LIST_INIT(ghost_others_options, list(GHOST_OTHERS_SIMPLE, GHOST_OTHERS_DE
 #define TELEPORT_CHANNEL_WORMHOLE "wormhole"	//Wormhole teleportation, is not disrupted by bluespace fluctuations but tends to be very random or unsafe
 #define TELEPORT_CHANNEL_MAGIC "magic" //Magic teleportation, does whatever it wants (unless there's antimagic)
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 #define TELEPORT_CHANNEL_CULT "cult" //Cult teleportation, does whatever it wants (unless there's holiness)
 // [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 #define TELEPORT_CHANNEL_FREE "free" //Anything else

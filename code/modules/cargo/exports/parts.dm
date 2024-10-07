@@ -16,6 +16,7 @@
 	export_types = list(/obj/item/circuitboard/computer/solar_control)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /datum/export/swarmer
 	cost = 2000
 	unit_name = "deactivated alien deconstruction drone"
@@ -23,6 +24,8 @@
 
 //[CELADON-REMOVE] - CELADON_FIXES - говорят экономику ломают
 /*
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 //Computer Tablets and Parts

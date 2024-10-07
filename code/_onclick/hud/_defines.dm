@@ -38,9 +38,12 @@
 #define ui_lingchemdisplay "WEST,CENTER-1:15"
 #define ui_lingstingdisplay "WEST:6,CENTER-3:11"
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 #define ui_devilsouldisplay "WEST:6,CENTER-1:15"
 // [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 

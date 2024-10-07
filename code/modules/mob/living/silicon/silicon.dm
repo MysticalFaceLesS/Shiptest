@@ -33,10 +33,13 @@
 	var/ioncheck[1]
 	var/hackedcheck[1]
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	var/devillawcheck[5]
 	// [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 
@@ -213,6 +216,7 @@
 		checklaws()
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	if (href_list["lawdevil"]) // Toggling whether or not a law gets stated by the State Laws verb --NeoFite
 		var/L = text2num(href_list["lawdevil"])
@@ -224,6 +228,8 @@
 		checklaws()
 	// [/CELADON-ADD]
 
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 	if (href_list["laws"]) // With how my law selection code works, I changed statelaws from a verb to a proc, and call it through my law selection panel. --NeoFite
@@ -245,6 +251,7 @@
 	sleep(10)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	if (laws.devillaws && laws.devillaws.len)
 		for(var/index = 1, index <= laws.devillaws.len, index++)
@@ -253,6 +260,8 @@
 				sleep(10)
 	// [/CELADON-ADD]
 
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 	if (laws.zeroth)
@@ -304,6 +313,7 @@
 	// [/CELADON-EDIT]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	if (laws.devillaws && laws.devillaws.len)
 		for(var/index = 1, index <= laws.devillaws.len, index++)
@@ -312,6 +322,8 @@
 			list += {"<A href='byond://?src=[REF(src)];lawdevil=[index]'>[devillawcheck[index]] 666:</A> <font color='#cc5500'>[laws.devillaws[index]]</font><BR>"}
 	// [/CELADON-ADD]
 
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 	if (laws.zeroth)

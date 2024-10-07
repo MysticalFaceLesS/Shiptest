@@ -101,12 +101,15 @@
 
 /datum/saymode/binary/handle_message(mob/living/user, message, datum/language/language)
 <<<<<<< HEAD
+<<<<<<< HEAD
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	if(isswarmer(user))
 		var/mob/living/simple_animal/hostile/swarmer/S = user
 		S.swarmer_chat(message)
 		return FALSE
 	// [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 	if(isdrone(user))

@@ -371,6 +371,7 @@
 	update_appearance()
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 /obj/machinery/door/airlock/narsie_act()
 	var/turf/T = get_turf(src)
@@ -393,6 +394,8 @@
 	qdel(src)
 // [/CELADON-ADD]
 
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 /obj/machinery/door/airlock/Destroy()

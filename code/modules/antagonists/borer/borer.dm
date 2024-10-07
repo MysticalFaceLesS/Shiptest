@@ -684,11 +684,14 @@ GLOBAL_VAR_INIT(total_borer_hosts_needed, 3)
 		to_chat(src, "<span class='warning'>You are feeling far too docile to do that.</span>")
 		return
 <<<<<<< HEAD
+<<<<<<< HEAD
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	if(iscultist(victim) || HAS_TRAIT(victim, TRAIT_MINDSHIELD))
 		to_chat(src, "<span class='warning'>[victim]'s mind seems to be blocked by some unknown force!</span>")
 		return
 	// [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 	else

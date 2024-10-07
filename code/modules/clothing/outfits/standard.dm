@@ -97,6 +97,7 @@
 	..()
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 /datum/outfit/ghost_cultist
 	name = "Cultist Ghost"
@@ -106,6 +107,8 @@
 	shoes = /obj/item/clothing/shoes/cult/alt/ghost
 // [/CELADON-ADD]
 
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 /datum/outfit/wizard

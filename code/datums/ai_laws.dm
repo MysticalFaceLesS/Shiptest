@@ -1,7 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 #define LAW_DEVIL "devil"
 // [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 #define LAW_ZEROTH "zeroth"
@@ -21,9 +24,12 @@
 	var/list/hacked = list()
 	var/mob/living/silicon/owner
 <<<<<<< HEAD
+<<<<<<< HEAD
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	var/list/devillaws = list()
 	// [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 	var/id = DEFAULT_AI_LAWID
@@ -419,10 +425,13 @@
 /datum/ai_laws/proc/get_law_amount(groups)
 	var/law_amount = 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	if(devillaws && (LAW_DEVIL in groups))
 		law_amount++
 	// [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 	if(zeroth && (LAW_ZEROTH in groups))
@@ -441,12 +450,15 @@
 	return law_amount
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 /datum/ai_laws/proc/set_law_sixsixsix(laws)
 	devillaws = laws
 // [/CELADON-ADD]
 
 
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 /datum/ai_laws/proc/set_zeroth_law(law, law_borg = null)
@@ -586,12 +598,15 @@
 	zeroth_borg = null
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 /datum/ai_laws/proc/clear_law_sixsixsix(force)
 	if(force || !is_devil(owner))
 		devillaws = null
 // [/CELADON-ADD]
 
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 /datum/ai_laws/proc/associate(mob/living/silicon/M)
@@ -610,12 +625,15 @@
 	var/list/data = list()
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	if (include_zeroth && devillaws)
 		for(var/law in devillaws)
 			data += "[show_numbers ? "666:" : ""] [render_html ? "<font color='#cc5500'>[law]</font>" : law]"
 	// [/CELADON-ADD]
 
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 	if (include_zeroth && zeroth)

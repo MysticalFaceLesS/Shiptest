@@ -13,9 +13,12 @@
 #define LANGUAGE_CULTIST "cultist"
 #define LANGUAGE_CURATOR "curator"
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 #define LANGUAGE_DEVIL "devil"
 // [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 #define LANGUAGE_GLAND "gland"

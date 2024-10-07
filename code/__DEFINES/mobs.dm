@@ -77,9 +77,12 @@
 #define ALIEN_BODYPART "alien"
 #define LARVA_BODYPART "larva"
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 #define DEVIL_BODYPART "devil"
 // [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 
@@ -427,10 +430,13 @@
 #define SILENCE_RANGED_MESSAGE (1<<0)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT - Swarmer flags
 #define SWARMER_LIGHT_ON (1<<0)
 // [/CELADON-ADD]
 
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 /// Returns whether or not the given mob can succumb

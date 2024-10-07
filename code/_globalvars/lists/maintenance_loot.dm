@@ -244,9 +244,12 @@ GLOBAL_LIST_INIT(uncommon_loot, list(//uncommon: useful items
 
 GLOBAL_LIST_INIT(oddity_loot, list(//oddity: strange or crazy items
 <<<<<<< HEAD
+<<<<<<< HEAD
 		// [CELADON-ADD] - CELADON_RETURN_CONTENT
 		/obj/effect/rune/teleport = 1,
 		// [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 		/obj/item/clothing/gloves/color/yellow = 1,

@@ -159,6 +159,7 @@
 	if(!..(user))
 		return FALSE
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 	if(obj_flags & EMAGGED)
 		if(active)
@@ -184,5 +185,7 @@
 	if(active)
 		change_meteor_chance(2)
 // [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))

@@ -152,6 +152,7 @@
 			R.reveal(100)
 			R.adjustHealth(50)
 <<<<<<< HEAD
+<<<<<<< HEAD
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 			addtimer(CALLBACK(src, PROC_REF(divine_explosion), round(created_volume/48,1),get_turf(holder.my_atom)), 2 SECONDS)
 	..()
@@ -165,6 +166,10 @@
 			C.IgniteMob()
 	// [/CELADON-ADD]
 
+=======
+	..()
+
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 	..()
 

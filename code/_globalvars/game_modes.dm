@@ -7,11 +7,14 @@ GLOBAL_VAR(survivor_report) //Contains shared survivor report for roundend repor
 GLOBAL_VAR_INIT(wavesecret, 0) // meteor mode, delays wave progression, terrible name
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 //TODO clear this one up too
 GLOBAL_DATUM(cult_narsie, /obj/singularity/narsie/large/cult)
 // [/CELADON-ADD]
 
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 GLOBAL_DATUM(sac_mind, /datum/mind) // So Cryo can modify sac stuff

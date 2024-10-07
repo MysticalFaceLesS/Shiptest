@@ -446,6 +446,7 @@ SUBSYSTEM_DEF(ticker)
 			else
 				news_message = "The crew of [station_name()] has been evacuated amid unconfirmed reports of enemy activity."
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 		if(CULT_ESCAPE)
 			news_message = "Security Alert: A group of religious fanatics have escaped from [station_name()]."
@@ -454,6 +455,8 @@ SUBSYSTEM_DEF(ticker)
 		if(CULT_SUMMON)
 			news_message = "Company officials would like to clarify that [station_name()] was scheduled to be decommissioned following meteor damage earlier this year. Earlier reports of an unknowable eldritch horror were made in error."
 // [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 		if(NUKE_MISS)

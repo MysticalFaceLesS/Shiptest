@@ -118,11 +118,14 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 
 	var/clothes_req = TRUE //see if it requires clothes
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	var/cult_req = FALSE //SPECIAL SNOWFLAKE clothes required for cult only spells
 	// [/CELADON-ADD]
 
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 	var/human_req = FALSE //spell can only be cast by humans
@@ -217,6 +220,7 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 				to_chat(H, "<span class='warning'>You don't feel strong enough without your hat!</span>")
 				return FALSE
 <<<<<<< HEAD
+<<<<<<< HEAD
 		// [CELADON-ADD] - CELADON_RETURN_CONTENT
 		if(cult_req) //CULT_REQ CLOTHES CHECK
 			if(!istype(H.wear_suit, /obj/item/clothing/suit/magusred) && !istype(H.wear_suit, /obj/item/clothing/suit/space/hardsuit/cult))
@@ -226,6 +230,8 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 				to_chat(H, "<span class='warning'>You don't feel strong enough without your helmet.</span>")
 				return FALSE
 		// [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 	else

@@ -12,9 +12,12 @@
 #define POLL_IGNORE_SPIDER "spider"
 #define POLL_IGNORE_ASHWALKER "ashwalker"
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 #define POLL_IGNORE_SWARMER "swarmer"
 // [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 #define POLL_IGNORE_DRONE "drone"
@@ -41,9 +44,12 @@ GLOBAL_LIST_INIT(poll_ignore_desc, list(
 	POLL_IGNORE_SPIDER = "Spiders",
 	POLL_IGNORE_ASHWALKER = "Ashwalker eggs",
 <<<<<<< HEAD
+<<<<<<< HEAD
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	POLL_IGNORE_SWARMER = "Swarmer shells",
 	// [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 	POLL_IGNORE_DRONE = "Drone shells",

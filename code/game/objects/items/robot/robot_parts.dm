@@ -290,9 +290,12 @@
 					O.make_laws()
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 			// [CELADON-ADD] - CELADON_RETURN_CONTENT
 			SSticker.mode.remove_antag_for_borging(B.mind)
 			// [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 			O.job = "Cyborg"

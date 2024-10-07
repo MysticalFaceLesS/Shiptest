@@ -393,6 +393,7 @@
 	return 20
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 /mob/living/narsie_act()
 	if(status_flags & GODMODE || QDELETED(src))
@@ -421,6 +422,8 @@
 	return TRUE
 // [/CELADON-ADD]
 
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 //called when the mob receives a bright flash

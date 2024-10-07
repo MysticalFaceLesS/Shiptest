@@ -20,6 +20,7 @@
 		last_lawchange_announce = world.time
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 /mob/living/silicon/proc/set_law_sixsixsix(law, announce = TRUE)
 	laws_sanity_check()
@@ -32,6 +33,8 @@
 	post_lawchange(announce)
 // [/CELADON-ADD]
 
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 /mob/living/silicon/proc/set_zeroth_law(law, law_borg, announce = TRUE)

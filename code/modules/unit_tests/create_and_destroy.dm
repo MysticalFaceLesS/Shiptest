@@ -36,10 +36,13 @@
 		//needs a template
 		/obj/effect/landmark/subship,
 <<<<<<< HEAD
+<<<<<<< HEAD
 		// [CELADON-ADD] - CELADON_RETURN_CONTENT
 		//needs a friend :(
 		/obj/effect/mob_spawn/human/demonic_friend,
 		// [/CELADON-ADD]
+=======
+>>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 =======
 >>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 		//needs a derg
