@@ -289,22 +289,6 @@
 // [/CELADON-ADD]
 
 /**
- * Handles the copying of devil contract paper. Transfers all the text, stamps and so on from the old paper, to the copy.
- *
- * Checks first if `paper_copy` exists. Since this proc is called from a timer, it's possible that it was removed.
- * Does not check if it has enough toner because devil contracts cost no toner to print.
- */
-/obj/machinery/photocopier/proc/make_devil_paper_copy(obj/item/paper/contract/employment/to_copy)
-	if(!paper_copy && !to_copy)
-		return
-	to_copy = to_copy ? to_copy : paper_copy
-	var/obj/item/paper/contract/employment/E = to_copy
-	var/obj/item/paper/contract/employment/C = new(loc, E.target.current)
-	give_pixel_offset(C)
-
-	return C
-
-/**
  * Handles the copying of paper. Transfers all the text, stamps and so on from the old paper, to the copy.
  *
  * Checks first if `paper_copy` exists. Since this proc is called from a timer, it's possible that it was removed.

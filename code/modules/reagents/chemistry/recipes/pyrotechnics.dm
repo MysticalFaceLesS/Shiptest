@@ -175,7 +175,6 @@
 	modifier = 1
 	mix_message = "<span class='boldannounce'>Sparks start flying around the gunpowder!</span>"
 
-
 /datum/chemical_reaction/reagent_explosion/gunpowder_explosion/on_reaction(datum/reagents/holder, created_volume)
 	addtimer(CALLBACK(src, PROC_REF(explode), holder, created_volume), rand(5,10) SECONDS)
 

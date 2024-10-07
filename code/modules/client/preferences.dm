@@ -2644,8 +2644,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				// [/CELADON-ADD]
 				if("toggle_deadmin_silicon")
 					toggles ^= DEADMIN_POSITION_SILICON
-				if("toggle_ignore_cult_ghost")
-					toggles ^= ADMIN_IGNORE_CULT_GHOST
 
 				if("be_special")
 					var/be_special_type = href_list["be_special_type"]

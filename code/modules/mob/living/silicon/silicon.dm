@@ -32,7 +32,6 @@
 	var/lawcheck[1]
 	var/ioncheck[1]
 	var/hackedcheck[1]
-	var/devillawcheck[5]
 
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	var/devillawcheck[5]

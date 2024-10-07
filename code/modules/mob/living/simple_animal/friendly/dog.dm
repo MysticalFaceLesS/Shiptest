@@ -481,7 +481,6 @@
 	fdel(json_file)
 	WRITE_FILE(json_file, json_encode(file_data))
 
-
 /mob/living/simple_animal/pet/dog/corgi/regenerate_icons()
 	..()
 	if(inventory_head)

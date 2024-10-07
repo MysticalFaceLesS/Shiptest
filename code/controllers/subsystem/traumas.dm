@@ -137,11 +137,6 @@ SUBSYSTEM_DEF(traumas)
 			/obj/item/card/id/captains_spare, /obj/item/card/id/centcom, /obj/machinery/door/airlock/command)),
 
 		"the supernatural"  = typecacheof(list(
-			/obj/structure/destructible/cult, /obj/item/tome,
-			/obj/item/restraints/legcuffs/bola/cult, /obj/item/clothing/suit/space/hardsuit/cult,
-			/obj/effect/rune,
-			/obj/machinery/door/airlock/cult, /obj/singularity/narsie,
-			/obj/item/soulstone,
 			/obj/item/clothing/suit/wizrobe, /obj/item/clothing/head/wizard, /obj/item/spellbook, /obj/item/staff,
 			/obj/item/clothing/suit/space/hardsuit/shielded/wizard, /obj/item/clothing/suit/space/hardsuit/wizard,
 			// [CELADON-ADD] - CELADON_RETURN_CONTENT
@@ -179,7 +174,7 @@ SUBSYSTEM_DEF(traumas)
 
 	phobia_turfs = list(
 		"space" = typecacheof(list(/turf/open/space, /turf/open/floor/holofloor/space, /turf/open/floor/fakespace)),
-		"the supernatural" = typecacheof(list(/turf/open/floor/plasteel/cult, /turf/closed/wall/mineral/cult)),
+		"the supernatural" = typecacheof(/turf/closed/wall/mineral/cult, /turf/open/floor/plasteel/cult),
 		"aliens" = typecacheof(list(
 			/turf/open/floor/plating/abductor, /turf/open/floor/plating/abductor2,
 			/turf/open/floor/mineral/abductor, /turf/closed/wall/mineral/abductor)),

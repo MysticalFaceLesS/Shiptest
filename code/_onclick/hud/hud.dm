@@ -114,7 +114,6 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	healthdoll = null
 	internals = null
 	lingchemdisplay = null
-	devilsouldisplay = null
 	lingstingdisplay = null
 	alien_plasma_display = null
 	alien_queen_finder = null

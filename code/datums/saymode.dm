@@ -95,7 +95,7 @@
 	return FALSE
 
 
-/datum/saymode/binary //everything that uses .b (silicons, drones, swarmers)
+/datum/saymode/binary //everything that uses .b (silicons, drones)
 	key = MODE_KEY_BINARY
 	mode = MODE_BINARY
 
