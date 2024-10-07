@@ -10,6 +10,7 @@
 #define CINEMATIC_NUKE_NO_CORE 10
 #define CINEMATIC_NUKE_FAR 11
 #define CINEMATIC_NUKE_CLOWNOP 12
+// [CELADON-ADD] - Возвзрат того, что было удалено Оффами.
 #define CINEMATIC_CULT_NUKE 13
 #define CINEMATIC_CULT_FAIL 14
-
+// [/CELADON-ADD]
