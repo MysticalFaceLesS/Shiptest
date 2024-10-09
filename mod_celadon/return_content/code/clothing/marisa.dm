@@ -2,7 +2,7 @@
 	name = "witch hat"
 	desc = "Strange-looking hat-wear. Makes you want to cast fireballs."
 	icon = 'mod_celadon/_storge_icons/icons/clothing/obj/marisa_obj.dmi'
-	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/clothing/overlay/marisa_mob.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/clothing/onmob_head_tajara.dmi'
 	icon_state = "marisa_hat"
 	item_state = "marisa_hat"
 	dog_fashion = null
@@ -11,7 +11,7 @@
 	name = "witch robe"
 	desc = "Magic is all about the spell power, ZE!"
 	icon = 'mod_celadon/_storge_icons/icons/clothing/obj/marisa_obj.dmi'
-	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/clothing/overlay/marisa_mob.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/clothing/onmob_suit_tajara.dmi'
 	icon_state = "marisa_suit"
 	item_state = "marisa_suit"
 
