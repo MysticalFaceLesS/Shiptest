@@ -1017,7 +1017,20 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "</td>"
 				mutant_category = 0
 			dat += "</tr></table>"
-			if(!istype(pref_species, /datum/species/lanius)) // [CELADON - EDIT] LANIUS
+			// [CELADON - EDIT] - CELADON_LANIUS
+			//dat += "<h3>Prosthetic Limbs</h3>" [CELADON - EDIT] - ORIGINAL
+			//dat += "<a href='?_src_=prefs;preference=fbp'>Full Body Prosthesis: [fbp ? "Yes" : "No"]</a><br>"
+
+			//if(!fbp)
+				//dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_PROSTHETIC]'>Random Prosthetic: [(randomise[RANDOM_PROSTHETIC]) ? "Yes" : "No"]</a><br>"
+
+				//dat += "<table>"
+				//for(var/index in prosthetic_limbs)
+					//var/bodypart_name = parse_zone(index)
+					//dat += "<tr><td><b>[bodypart_name]:</b></td>"
+					//dat += "<td><a href='?_src_=prefs;preference=limbs;customize_limb=[index]'>[prosthetic_limbs[index]]</a></td></tr>"
+				//dat += "</table><br>" [/CELADON - EDIT] - ORIGINAL END
+			if(!istype(pref_species, /datum/species/lanius))
 				dat += "<h3>Prosthetic Limbs</h3>"
 				dat += "<a href='?_src_=prefs;preference=fbp'>Full Body Prosthesis: [fbp ? "Yes" : "No"]</a><br>"
 
@@ -1030,7 +1043,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						dat += "<tr><td><b>[bodypart_name]:</b></td>"
 						dat += "<td><a href='?_src_=prefs;preference=limbs;customize_limb=[index]'>[prosthetic_limbs[index]]</a></td></tr>"
 					dat += "</table><br>"
-
+					//[/CELADON - EDIT]
 		if(2) //Loadout
 			if(path)
 				var/savefile/S = new /savefile(path)
