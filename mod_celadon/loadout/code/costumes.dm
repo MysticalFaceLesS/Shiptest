@@ -25,3 +25,8 @@
 	display_name = "decker hoodie"
 	description = "Based? Based on what?"
 	path = /obj/item/clothing/suit/costume/deckers
+
+/datum/gear/costume/costumes/marisa
+	display_name = "marisa suit"
+	description = "wizard? No, it's Marisa"
+	path = /obj/item/clothing/suit/wizrobe/marisa/fake

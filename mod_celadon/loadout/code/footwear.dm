@@ -61,3 +61,7 @@
 /datum/gear/footwear/sandals/caligae
 	display_name = "caligae"
 	path = /obj/item/clothing/shoes/sandals/caligae
+
+/datum/gear/footwear/sandals/marisa
+	display_name = "caligae marisa"
+	path = /obj/item/clothing/shoes/wizrobe/marisa

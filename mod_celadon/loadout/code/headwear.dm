@@ -24,3 +24,9 @@
 	display_name = "pirate hat"
 	description = "Yarr."
 	path = /obj/item/clothing/head/pirate
+
+// Marisa
+/datum/gear/hat/marisa
+	display_name = "marisa hat"
+	description = "wizard? No, it's Marisa"
+	path = /obj/item/clothing/head/wizard/marisa/fake
