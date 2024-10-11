@@ -18,7 +18,7 @@
 	 whose biological composition somehow drains oxygen from atmosphere."
 	species_eye_path = 'mod_celadon/_storge_icons/icons/lanius/lanius_organs.dmi'
 	species_traits = list(EYECOLOR, EMOTE_OVERLAY, NOBLOOD, MUTCOLORS, NO_UNDERWEAR, NOHUSK, NO_BONES)
-	inherent_traits = list(TRAIT_NOBREATH, TRAIT_RESISTHEAT,TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,TRAIT_NOFIRE,TRAIT_CHUNKYFINGERS,TRAIT_VIRUSIMMUNE,TRAIT_PIERCEIMMUNE,TRAIT_NODISMEMBER,TRAIT_SHOCKIMMUNE,TRAIT_GENELESS,TRAIT_NOLIMBDISABLE,TRAIT_STABLELIVER,TRAIT_STABLEHEART)
+	inherent_traits = list(TRAIT_NOBREATH, TRAIT_RESISTHEAT,TRAIT_RESISTCOLD,TRAIT_RESISTHIGHPRESSURE,TRAIT_RESISTLOWPRESSURE,TRAIT_NOFIRE,TRAIT_CHUNKYFINGERS,TRAIT_VIRUSIMMUNE,TRAIT_PIERCEIMMUNE,TRAIT_NODISMEMBER,TRAIT_SHOCKIMMUNE,TRAIT_GENELESS,TRAIT_STABLELIVER,TRAIT_STABLEHEART)
 	inherent_biotypes = MOB_HUMANOID | MOB_ORGANIC | MOB_MINERAL
 	toxic_food = VEGETABLES | DAIRY | CLOTH | GROSS | MEAT | RAW
 	meat = /obj/item/stack/sheet/plasteel{amount = 5}
@@ -37,7 +37,7 @@
 	mutanteyes = /obj/item/organ/eyes/lanius
 	mutantheart = null
 	mutantliver = null
-	mutantstomach = null
+	mutantstomach = /obj/item/organ/stomach/lanius
 	mutantears = /obj/item/organ/ears/lanius
 	mutantlungs = null
 	mutantappendix = null

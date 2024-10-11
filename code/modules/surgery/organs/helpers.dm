@@ -39,7 +39,8 @@
 
 	for(var/X in internal_organs)
 		var/obj/item/organ/O = X
-		if(zone == O.zone)
+		//if(zone == O.zone)
+		if((zone == O.zone) && (O.useable)) // [CELADON - EDIT] - LANIUS
 			returnorg += O
 	return returnorg
 
