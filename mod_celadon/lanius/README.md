@@ -25,6 +25,7 @@ ID мода: CELADON_LANIUS
 - handle body species.dm
 - spawn gibs death.dm
 - on hit projectile.dm
+- getorganzone helpers.dm
 
 ### Дефайны
 
