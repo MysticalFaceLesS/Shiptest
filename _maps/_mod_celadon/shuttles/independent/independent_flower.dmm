@@ -182,6 +182,10 @@
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
+/obj/machinery/door/poddoor{
+	dir = 4;
+	id = "flowerengines"
+	},
 /turf/open/floor/plating,
 /area/ship/engineering)
 "kb" = (
@@ -748,6 +752,10 @@
 /obj/effect/turf_decal/corner/opaque/blue/half{
 	dir = 4
 	},
+/obj/machinery/door/airlock/command/glass{
+	dir = 4;
+	req_access_txt = "35"
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "Mu" = (
@@ -960,10 +968,6 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/machinery/door/poddoor{
-	dir = 4;
-	id = "flowerengines"
-	},
 /turf/open/floor/plating,
 /area/ship/engineering)
 "Sy" = (
@@ -1069,6 +1073,9 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/firedoor/border_only{
+	dir = 1
+	},
+/obj/effect/turf_decal/corner/opaque/brown/half{
 	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
