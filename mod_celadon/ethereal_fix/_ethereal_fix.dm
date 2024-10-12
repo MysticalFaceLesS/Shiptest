@@ -16,12 +16,12 @@
 
 // Инициализация ДО
 //datum/modpack/ethereal_fix/pre_initialize()
-	. = ..()
+//	. = ..()
 
 // Инициализация ВОВРЕМЯ
 //datum/modpack/ethereal_fix/initialize()
-	. = ..()
+//	. = ..()
 
 // Инициализация ПОСЛЕ
 //datum/modpack/ethereal_fix/post_initialize()
-	. = ..()
+//	. = ..()
