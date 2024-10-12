@@ -496,8 +496,6 @@
 "aX" = (
 /obj/effect/turf_decal/siding/thinplating/dark,
 /obj/structure/closet/secure_closet/freezer/meat,
-/obj/item/reagent_containers/food/condiment/hotsauce,
-/obj/item/reagent_containers/food/condiment/ketchup,
 /obj/machinery/newscaster/directional/north,
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew/canteen)
@@ -803,7 +801,6 @@
 	icon_state = "vent_map_on-2";
 	dir = 1
 	},
-/obj/item/clothing/head/sombrero,
 /obj/item/storage/toolbox/electrical,
 /obj/item/storage/toolbox/electrical,
 /obj/item/storage/toolbox/mechanical,
@@ -1475,9 +1472,7 @@
 	icon_state = "pipe11-4";
 	dir = 10
 	},
-/obj/item/clothing/glasses/monocle,
 /obj/item/clothing/mask/fakemoustache,
-/obj/item/clothing/head/bowler,
 /obj/item/clothing/suit/armor/vest/alt,
 /obj/item/clothing/gloves/color/white,
 /obj/item/clothing/under/suit/burgundy,
@@ -1485,7 +1480,6 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/obj/item/clothing/glasses/thermal/monocle,
 /obj/item/spacecash/bundle/c1000,
 /obj/item/spacecash/bundle/c500,
 /obj/item/areaeditor/blueprints,
@@ -1813,11 +1807,6 @@
 	pixel_x = -1;
 	pixel_y = 3
 	},
-/obj/item/storage/backpack/magspear_quiver{
-	pixel_x = -1;
-	pixel_y = -7
-	},
-/obj/item/storage/backpack/magspear_quiver,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/maintenance/external)
 "cX" = (
@@ -1890,14 +1879,6 @@
 	pixel_x = -4;
 	pixel_y = -3
 	},
-/obj/item/reagent_containers/food/condiment/saltshaker{
-	pixel_x = -7;
-	pixel_y = 12
-	},
-/obj/item/reagent_containers/food/condiment/peppermill{
-	pixel_x = -2;
-	pixel_y = 12
-	},
 /obj/item/spacecash/bundle/c10{
 	pixel_x = 5;
 	pixel_y = 8
@@ -1940,7 +1921,6 @@
 	},
 /obj/item/kitchen/rollingpin,
 /obj/item/melee/knife/butcher,
-/obj/item/reagent_containers/food/condiment/enzyme,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -2112,7 +2092,6 @@
 	icon_state = "siding_wood_line";
 	dir = 4
 	},
-/obj/item/reagent_containers/food/condiment/milk,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	icon_state = "scrub_map_on-4";
 	dir = 1
@@ -2379,8 +2358,11 @@
 /turf/open/floor/plating,
 /area/ship/external)
 "dR" = (
-/obj/docking_port{
-	dir = 8
+/obj/docking_port/stationary{
+	width = 30;
+	height = 15;
+	dwidth = 15;
+	dir = 4
 	},
 /turf/template_noop,
 /area/template_noop)
@@ -2533,6 +2515,10 @@
 	},
 /turf/open/floor/plating,
 /area/ship/external)
+"Pk" = (
+/obj/structure/grille,
+/turf/template_noop,
+/area/template_noop)
 "Wq" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -3081,7 +3067,7 @@ bL
 bL
 "}
 (25,1,1) = {"
-dR
+aa
 dD
 aG
 aR
@@ -3136,10 +3122,10 @@ ci
 cj
 ca
 dW
-aa
-aa
-aa
-aa
+ca
+ca
+ca
+dW
 bW
 ca
 aa
@@ -3153,14 +3139,14 @@ bX
 bX
 aa
 bW
+Pk
+aa
+dR
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
+Pk
+Pk
 aa
 bW
 aa
@@ -3175,7 +3161,7 @@ aa
 bX
 bX
 bX
-bX
+aa
 aa
 aa
 aa
