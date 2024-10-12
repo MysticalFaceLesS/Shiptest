@@ -16,9 +16,9 @@
 	siemens_coeff = 0.5 //They thrive on energy
 	brutemod = 1.25 //They're weak to punches
 	attack_type = BURN //burn bish
-	// [CELADON-EDIT] - CELADON_FIXES
+	// CELADON-EDIT - CELADON_ETHEREAL_FIX
 	// exotic_bloodtype = "E" // CELADON-EDIT - ORIGINAL
-	exotic_blood = /datum/reagent/consumable/liquidelectricity
+	exotic_bloodtype = /datum/reagent/consumable/liquidelectricity
 	// [/CELADON-EDIT]
 	damage_overlay_type = "" //We are too cool for regular damage overlays
 	species_age_max = 300

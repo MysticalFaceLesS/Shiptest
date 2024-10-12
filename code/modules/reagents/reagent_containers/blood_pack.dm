@@ -38,7 +38,10 @@
 
 /obj/item/reagent_containers/blood/random/Initialize()
 	icon_state = "bloodpack"
+	// [CELADON-EDIT] - CELADON_ETHEREAL_FIX
+	// blood_type = pick("A+", "A-", "B+", "B-", "O+", "O-", "L", "E", "Coolant")
 	blood_type = pick("A+", "A-", "B+", "B-", "O+", "O-", "L", "Coolant")
+	// [/CELADON-EDIT]
 	return ..()
 
 /obj/item/reagent_containers/blood/APlus
@@ -63,9 +66,12 @@
 	blood_type = "L"
 
 /obj/item/reagent_containers/blood/elzuose
+// [CELADON-EDIT] - CELADON_ETHEREAL_FIX
+// blood_type = "E" // CELADON-EDIT - ORIGINAL
 	name = "blood pack - Liquid Electricity"
 	labelled = 1
 	list_reagents = list(/datum/reagent/consumable/liquidelectricity = 200)
+// [/CELADON-EDIT]
 
 /obj/item/reagent_containers/blood/synthetic
 	blood_type = "Coolant"
