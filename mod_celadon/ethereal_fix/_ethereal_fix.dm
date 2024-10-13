@@ -15,13 +15,13 @@
 /// (можешь использовать все три, но запуск билда увеличится на 0.1 сек, за каждый датум в модпаке)
 
 // Инициализация ДО
-//datum/modpack/ethereal_fix/pre_initialize()
-//	. = ..()
+/datum/modpack/ethereal_fix/pre_initialize()
+	. = ..()
 
 // Инициализация ВОВРЕМЯ
-//datum/modpack/ethereal_fix/initialize()
-//	. = ..()
+/datum/modpack/ethereal_fix/initialize()
+	. = ..()
 
 // Инициализация ПОСЛЕ
-//datum/modpack/ethereal_fix/post_initialize()
-//	. = ..()
+/datum/modpack/ethereal_fix/post_initialize()
+	. = ..()

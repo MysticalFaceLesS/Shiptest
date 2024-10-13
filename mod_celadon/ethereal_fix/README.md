@@ -16,7 +16,10 @@ ID мода: CELADON_ETHEREAL_FIX
 
 ### Изменения *кор кода*
 
-- Отсутствуют
+- REMOVE: `code\modules\mob\living\carbon\human\species_types\ethereal.dm`: `var/exotic_bloodtype`
+- REMOVE: `code\modules\reagents\reagent_containers\blood_pack.dm`: `/obj/item/reagent_containers/blood/elzuose`
+- EDIT: `code\modules\reagents\reagent_containers\blood_pack.dm`: `/obj/item/reagent_containers/blood/random/Initialize()`, `var/blood_type`
+- REMOVE: `code\datums\blood_type.dm`: `/datum/blood_type/elzuose`
 
 ### Оверрайды
 
