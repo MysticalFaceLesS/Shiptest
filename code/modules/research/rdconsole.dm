@@ -679,6 +679,13 @@ Nothing else in the console has ID requirements.
 		if(istype(i, /datum/design))
 			var/datum/design/D = i
 			// [/CELADON-EDIT]
+			l += "[D.icon_html(usr)] <A href='?src=[REF(src)];view_design=[D.id]'>[D.name]</A>"
+			l += "Operations: <A href='?src=[REF(src)];updt_design=[i]'>Upload to database</A> <A href='?src=[REF(src)];clear_design=[i]'>Clear Slot</A>"
+		else
+			l += "Empty Slot Operations: <A href='?src=[REF(src)];switch_screen=[RDSCREEN_DESIGNDISK_UPLOAD];disk_slot=[i]'>Load Design to Slot</A>"
+		l += "</div>"
+	return l
+
 /obj/machinery/computer/rdconsole/proc/ui_designdisk_upload()	//Legacy code
 	RDSCREEN_UI_DDISK_CHECK
 	var/list/l = list()
