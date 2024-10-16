@@ -91,3 +91,31 @@
 	icon_state = "a858box"
 	ammo_type = /obj/item/ammo_casing/caseless/a858
 	max_ammo = 50
+
+//
+//     410x76mm
+//
+/obj/item/ammo_box/a410_ammo_box
+	name = "Ammo box (410x76mm buckshot)"
+	desc = "Дробь он же бакшот 8 металлических шаров, сняражённых в патрон, урон большой по целям в малой броне и без брони, при средних и больших показателях брони урон ниже. В коробке 75 пуль."
+	icon = 'mod_celadon/_storge_icons/icons/weapons/obj/saiga.dmi'
+	icon_state = "ammo_box"
+	ammo_type = /obj/item/ammo_casing/a410
+	max_ammo = 75
+
+/obj/item/ammo_box/a410_slug_ammo_box
+	name = "Ammo box (410x76mm slug)"
+	desc = "Жакан - пулевой патрон - slug, повышенный урон по не бронированным целям и немного пониженный по целям в броне. В коробке 65 пуль."
+	icon = 'mod_celadon/_storge_icons/icons/weapons/obj/saiga.dmi'
+	icon_state = "ammo_box"
+	ammo_type = /obj/item/ammo_casing/a410/a410_slug
+	max_ammo = 65
+
+/obj/item/ammo_box/a410_flashet_ammo_box
+	name = "Ammo box (410x76mm flashet)"
+	desc = "Флешшет - дротик с повышенной пробиваемостью из-за своей формы, но меньшим уроном, чем пулевой патрон. В коробке 55 пуль."
+	icon = 'mod_celadon/_storge_icons/icons/weapons/obj/saiga.dmi'
+	icon_state = "ammo_box"
+	ammo_type = /obj/item/ammo_casing/a410/a410_flashet
+	max_ammo = 55
+

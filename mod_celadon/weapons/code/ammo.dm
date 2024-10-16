@@ -189,21 +189,3 @@
 		/datum/material/plasma = 2000,
 		/datum/material/gold = 2000,
 	)
-
-// 410
-/obj/projectile/bullet/pellet/bof/saiga
-	name = "bof pellet"
-	damage = 8
-	var/bof = 17
-	armour_penetration = -10
-	tile_dropoff = 0.2
-
-/obj/item/ammo_casing/shotgun/bof/saiga
-	name = "fauna-hunting buckshot shell"
-	desc = "An anti-fauna buckshot shell for exotic hunting."
-	icon = 'mod_celadon/_storge_icons/icons/obj/bof_bullets.dmi' //ПЕРЕДЕЛАТЬ
-	icon_state = "bof"
-	pellets = 5
-	variance = 20
-	custom_materials = list(/datum/material/titanium=4000, /datum/material/plasma=3000, /datum/material/gold=3000)
-	projectile_type = /obj/projectile/bullet/pellet/bof/saiga

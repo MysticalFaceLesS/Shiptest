@@ -23,15 +23,16 @@
 		qdel(src)
 
 // 410 калибр
-/obj/projectile/bullet/slug/a410
-	name = "12g shotgun slug"
-	damage = 70
-	armour_penetration = -20
 
 /obj/projectile/bullet/pellet/a410
 	name = "rubbershot pellet"
 	damage = 15
 	armour_penetration = -35
+
+/obj/projectile/bullet/slug/a410
+	name = "12g shotgun slug"
+	damage = 70
+	armour_penetration = -20
 
 /obj/projectile/bullet/flashet/a410
 	name = "flashet"
