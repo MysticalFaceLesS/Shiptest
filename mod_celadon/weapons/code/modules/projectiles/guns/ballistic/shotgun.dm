@@ -15,8 +15,8 @@
 	mag_type = /obj/item/ammo_box/magazine/saiga
 	fire_sound = 'sound/weapons/gun/shotgun/bulldog.ogg'
 	show_magazine_on_sprite = TRUE
-//	empty_indicator = TRUE
-	empty_alarm = TRUE
+	// empty_indicator = TRUE
+	// empty_alarm = TRUE
 	unique_mag_sprites_for_variants = TRUE
 	show_ammo_capacity_on_magazine_sprite = FALSE
 	internal_magazine = FALSE
@@ -27,8 +27,8 @@
 
 	w_class = WEIGHT_CLASS_BULKY
 
-	gun_firemodes = list(FIREMODE_SEMIAUTO)
-	default_firemode = FIREMODE_SEMIAUTO
+	gun_firenames = list(FIREMODE_SEMIAUTO = "matter semi-auto", FIREMODE_FULLAUTO = "matter full auto")
+	gun_firemodes = list(FIREMODE_SEMIAUTO, FIREMODE_FULLAUTO)
 	semi_auto = TRUE
 	vary_fire_sound = FALSE
 	suppressed_sound = 'sound/weapons/gun/smg/shot_suppressed.ogg'
@@ -49,6 +49,8 @@
 	wield_slowdown = 0.6
 	wield_delay = 0.65 SECONDS
 
+	// var/obj/item/ammo_box/magazine/g36/sh/alternate_magazine
+
 	// valid_attachments = list(
 	// 	/obj/item/attachment/silencer,
 	// )
@@ -66,6 +68,13 @@
 	// 		"y" = 24,
 	// 	)
 	// )
+
+/obj/item/gun/ballistic/automatic/assault/saiga/Initialize()
+	. = ..()
+	// if (!alternate_magazine)
+	// 	alternate_magazine = new mag_type(src)
+	// spawnwithmagazine = FALSE
+	// mag_type = /obj/item/ammo_box/magazine/saiga/medium
 
 /obj/item/gun/ballistic/automatic/assault/saiga/no_mag
 	spawnwithmagazine = FALSE
