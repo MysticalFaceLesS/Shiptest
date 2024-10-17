@@ -15,9 +15,6 @@
 	mag_type = /obj/item/ammo_box/magazine/saiga
 	fire_sound = 'sound/weapons/gun/shotgun/bulldog.ogg'
 	show_magazine_on_sprite = TRUE
-	// empty_indicator = TRUE
-	// empty_alarm = TRUE
-	unique_mag_sprites_for_variants = TRUE
 	show_ammo_capacity_on_magazine_sprite = FALSE
 	internal_magazine = FALSE
 	casing_ejector = TRUE
@@ -49,42 +46,10 @@
 	wield_slowdown = 0.6
 	wield_delay = 0.65 SECONDS
 
-	// var/obj/item/ammo_box/magazine/g36/sh/alternate_magazine
-
-	// valid_attachments = list(
-	// 	/obj/item/attachment/silencer,
-	// )
-	// slot_available = list(
-	// 	ATTACHMENT_SLOT_MUZZLE = 1,
-	// 	ATTACHMENT_SLOT_SCOPE = 1
-	// )
-	// slot_offsets = list(
-	// 	ATTACHMENT_SLOT_MUZZLE = list(
-	// 		"x" = 44,
-	// 		"y" = 19,
-	// 	),
-	// 	ATTACHMENT_SLOT_SCOPE = list(
-	// 		"x" = 25,
-	// 		"y" = 24,
-	// 	)
-	// )
-
 /obj/item/gun/ballistic/automatic/assault/saiga/Initialize()
 	. = ..()
-	// if (!alternate_magazine)
-	// 	alternate_magazine = new mag_type(src)
-	// spawnwithmagazine = FALSE
-	// mag_type = /obj/item/ammo_box/magazine/saiga/medium
 
 /obj/item/gun/ballistic/automatic/assault/saiga/no_mag
 	spawnwithmagazine = FALSE
 
 EMPTY_GUN_HELPER(automatic/assault/saiga)
-
-// /obj/item/gun/ballistic/shotgun/automatic/saiga/no_mag
-// 	spawnwithmagazine = FALSE
-
-// EMPTY_GUN_HELPER(shotgun/automatic/saiga)
-
-
-
