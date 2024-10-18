@@ -2,6 +2,7 @@
 	var/blacklist_area = list(
 		/area/space,
 		/area/outpost,
+		/area/hangar,
 	)
 
 /obj/item/survey_handheld/attack_self(mob/user)
