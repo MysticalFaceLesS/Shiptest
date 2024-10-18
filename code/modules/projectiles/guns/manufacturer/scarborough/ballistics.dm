@@ -812,7 +812,7 @@ EMPTY_GUN_HELPER(automatic/assault/hydra/dmr)
 
 /obj/item/gun/ballistic/automatic/assault/hydra/dmr/Initialize()
 	. = ..()
-	// [CELADON-EDIT] - фиксим неподходящий магазин (вагабага дырдырдыр)
+	// [CELADON-EDIT] -- CELADON_FIXES -- фиксим неподходящий магазин (вагабага дырдырдыр)
 	// magazine = new /obj/item/ammo_box/magazine/m556_42_hydra/small(src)
 	magazine = new mag_type(src)
 	// [/CELADON-EDIT]
