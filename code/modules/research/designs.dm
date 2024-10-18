@@ -109,7 +109,7 @@ other types of metals and chemistry for reagents).
 	pixel_y = base_pixel_y + rand(-5, 5)
 	if(design_name)
 		name = jointext(list(disk_name, design_name), " - ")
-	//[CELADON-EDIT] - Превращаем обычный список в ассоциативный. Люммох пидарас. Вагабонд боженька. Чиним диски пупупу
+	//[CELADON-EDIT] -- CELADON_FIXES -- Превращаем обычный список в ассоциативный. Люммох пидарас. Вагабонд боженька. Чиним диски пупупу
 	// if(length(starting_blueprints))
 		// for(var/design in starting_blueprints)
 			// blueprints += new design()

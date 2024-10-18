@@ -671,7 +671,7 @@ Nothing else in the console has ID requirements.
 	for(var/i in 1 to d_disk.max_blueprints)
 		l += "<div class='statusDisplay'>"
 		if(d_disk.blueprints[i])
-			var/datum/design/D = d_disk.blueprints[i] // CELADON-EDIT - ORIGINAL
+			var/datum/design/D = d_disk.blueprints[i]
 			l += "[D.icon_html(usr)] <A href='?src=[REF(src)];view_design=[D.id]'>[D.name]</A>"
 			l += "Operations: <A href='?src=[REF(src)];updt_design=[i]'>Upload to database</A> <A href='?src=[REF(src)];clear_design=[i]'>Clear Slot</A>"
 		else
