@@ -52,7 +52,7 @@
 //	color_vary = 0.25
 
 // /datum/overmap/star/dwarf/brown
-//	token_desc = "Clocking in at only several dozen septillion tons, this body is much lighter than true stars. " +\
+//	token_desc = "Clocking in at only several dozen septillion tons, this body is much lighter than true stars. "
 //				"Known as a \"brown dwarf\", it is unable to sustain hydrogen fusion, and is warmed by deuterium fusion instead."
 //	spectral_type = STAR_T
 //	color_vary = 1
@@ -73,7 +73,7 @@
 //	color_vary = 0.25
 
 // /datum/overmap/star/medium/alter_token_appearance()
-//	token.icon = 'icons/misc/overmap_large.dmi'
+//	token.icon = 'mod_celadon/_storge_icons/icons/overmap/overmap_large.dmi'
 //	token.bound_height = 64
 //	token.bound_width = 64
 //	token.pixel_x = -16
@@ -240,7 +240,10 @@
 	token_desc = "A yellow main-sequence star. Deep beneath the surface, its core churns violently in fusion, so dense as to be utterly impenetrable to light or sound." // or Say It Ain't So
 
 /datum/overmap/star/medium/alter_token_appearance()
-	token.icon = 'icons/misc/overmap_large.dmi'
+	// [CELADON-EDIT]
+	// token.icon = 'icons/misc/overmap_large.dmi'	// CELADON-EDIT - ORIGINAL
+	token.icon = 'mod_celadon/_storge_icons/icons/overmap/overmap_large.dmi'
+	// [/CELADON-EDIT]
 	token.bound_height = 64
 	token.bound_width = 64
 	token.pixel_x = -16
@@ -278,7 +281,10 @@
 
 
 /datum/overmap/star/giant/alter_token_appearance()
-	token.icon = 'icons/misc/overmap_larger.dmi'
+	// [CELADON-EDIT]
+	// token.icon = 'icons/misc/overmap_larger.dmi'	// CELADON-EDIT - ORIGINAL
+	token.icon = 'mod_celadon/_storge_icons/icons/overmap/overmap_larger.dmi'
+	// [/CELADON-EDIT]
 	token.bound_height = 96
 	token.bound_width = 96
 	token.pixel_x = -32
@@ -308,7 +314,7 @@
 	return (..() + " AB")
 
 /datum/overmap/star/binary/alter_token_appearance()
-	token.icon = 'icons/misc/overmap_larger.dmi'
+	token.icon = 'mod_celadon/_storge_icons/icons/overmap/overmap_larger.dmi'
 	token.bound_height = 96
 	token.bound_width = 96
 	token.pixel_x = -32
@@ -324,7 +330,7 @@
 	token_icon_state = "blackhole"
 
 /datum/overmap/star/singularity/alter_token_appearance()
-	token.icon = 'icons/misc/overmap_larger.dmi'
+	token.icon = 'mod_celadon/_storge_icons/icons/overmap/overmap_larger.dmi'
 	token.bound_height = 96
 	token.bound_width = 96
 	token.pixel_x = -32
