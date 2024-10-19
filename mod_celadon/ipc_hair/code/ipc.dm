@@ -40,3 +40,27 @@
 /datum/sprite_accessory/ipc_hair/slightlymessy
 	name = "Slightly messy"
 	icon_state = "slightlymessy"
+
+/datum/sprite_accessory/ipc_hair/doublebun
+	name = "Double Bun"
+	icon_state = "hair_doublebun"
+
+/datum/sprite_accessory/ipc_hair/longer
+	name = "Very Long Hair"
+	icon_state = "hair_vlong"
+
+/datum/sprite_accessory/ipc_hair/longest
+	name = "Very Long Hair 2"
+	icon_state = "hair_longest"
+
+/datum/sprite_accessory/ipc_hair/longest2
+	name = "Very Long Over Eye"
+	icon_state = "hair_longest2"
+
+/datum/sprite_accessory/ipc_hair/veryshortovereye
+	name = "Very Short Over Eye"
+	icon_state = "hair_veryshortovereyealternate"
+
+/datum/sprite_accessory/ipc_hair/longestalt
+	name = "Very Long with Fringe"
+	icon_state = "hair_vlongfringe"
