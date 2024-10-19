@@ -500,13 +500,3 @@
 
 	master_ship.attempt_key_usage(user, src, src) // hello I am a helm console I promise
 	return TRUE
-
-//[CELADON-ADD] - перегрузка
-/datum/overmap/ship/controlled/adjust_speed(n_x, n_y)
-	. = ..()
-	var/overload = ((abs(n_x) + abs(n_y))/acceleration_speed)
-	for(var/mob/living/M in GLOB.player_list)
-		if(M.client)
-			var/obj/check = pick(helms)
-			if(M.virtual_z() == check.virtual_z())
-				shake_camera(M, 5, overload/10)
