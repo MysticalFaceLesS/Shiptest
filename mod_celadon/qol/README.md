@@ -113,6 +113,7 @@ ID мода: CELADON_QOL
 - ADD `code\modules\mob\dead\new_player\ship_select.dm` -> Добавлено подтягивание short_name для шаблона.
 - ADD `tgui\packages\tgui\interfaces\ShipSelect.js` -> Добавлена подвкладка при покупке корабля с отображением карты.
 
+- EDIT `code\__HELPERS\roundend.dm` -> Изменён вывод гринтекста на более правильный для последующего вывода в Discord.
 
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
