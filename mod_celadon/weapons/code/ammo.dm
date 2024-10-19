@@ -189,3 +189,25 @@
 		/datum/material/plasma = 2000,
 		/datum/material/gold = 2000,
 	)
+
+// 410x76
+//Магазины для оружия
+
+/datum/supply_pack/ammo/a410_saiga
+	name = "Набор магазинов для Saiga 410"
+	desc = "магазины калибра 410. для автоматического дробовика Saiga, вмещает 6 патронов."
+	contains = list(/obj/item/ammo_box/magazine/saiga,
+					/obj/item/ammo_box/magazine/saiga)
+	cost = 1800
+
+/datum/supply_pack/ammo/a410_saiga_medium
+    name = "Увеличенный магазин для Saiga 410"
+    desc = "Увеличенный магазин калибра 410. для автоматического дробовика Saiga, вмещает 9 патронов."
+    contains = list(/obj/item/ammo_box/magazine/saiga/medium)
+    cost = 2800
+
+/datum/supply_pack/ammo/a410_saiga_drum
+    name = "Барабанный магазин для Saiga 410"
+    desc = "Барабанный магазин калибра 410. для автоматического дробовика Saiga, вмещает 14 патронов."
+    contains = list (/obj/item/ammo_box/magazine/saiga/drum)
+    cost = 5000
