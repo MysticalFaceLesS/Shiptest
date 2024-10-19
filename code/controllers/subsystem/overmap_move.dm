@@ -21,6 +21,10 @@ TIMER_SUBSYSTEM_DEF(overmap_movement)
 	else
 		return 0
 
+/datum/overmap/ship/controlled
+	var/last_proximity_alert = 0
+	var/last_collision_alert = 0
+
 /proc/calculate_cpa(datum/overmap/ship/controlled/A, datum/overmap/ship/controlled/B, info = FALSE)
 	var/cpa = -1
 	var/tcpa = -1
@@ -56,30 +60,32 @@ TIMER_SUBSYSTEM_DEF(overmap_movement)
 		if(cpa != -1 && tcpa != -1)
 			if(tcpa/SSovermap_stuff.wait <= 5 && cpa <= 8)
 				var/arpdequeue_pointer = 0
-				while (arpdequeue_pointer++ < A.helms.len)
-					var/obj/machinery/computer/helm/a = A.helms[arpdequeue_pointer]
-					a.say("Proximity alarm! Possible collision situation.")
-					playsound(a, 'sound/machines/engine_alert1.ogg', 50, FALSE)
+				if(world.time - A.last_proximity_alert >= 20)
+					A.last_proximity_alert = world.time
+					while (arpdequeue_pointer++ < A.helms.len)
+						var/obj/machinery/computer/helm/a = A.helms[arpdequeue_pointer]
+						a.say("Proximity alarm! Possible collision situation.")
+						playsound(a, 'sound/machines/engine_alert1.ogg', 50, FALSE)
 			if(get_pixel_distance(A.token, B.token) <= 4 && cpa != -1 && (A.get_speed() != 0 || B.get_speed() != 0))
 				var/arpdequeue_pointer = 0
-				while (arpdequeue_pointer++ < A.helms.len)
-					var/obj/machinery/computer/helm/a = A.helms[arpdequeue_pointer]
-					a.say("Collision impact with vessel \"[B.name]\".")
-					playsound(a, 'sound/machines/engine_alert2.ogg', 50, FALSE)
-					var/opposite_x = sin(SIMPLIFY_DEGREES(bearing+180))*(B.shuttle_port.turf_count/A.shuttle_port.turf_count)*max(0.002, max(B.speed_x, -B.speed_x))
-					var/opposite_y = cos(SIMPLIFY_DEGREES(bearing+180))*(B.shuttle_port.turf_count/A.shuttle_port.turf_count)*max(0.002, max(B.speed_y, -B.speed_y))
-					if(!(A.datum_flags & DF_ISPROCESSING))
-						A.adjust_speed(-A.speed_x/2 + opposite_x, -A.speed_y/2 + opposite_y)
-					else
-						A.vector_to_add = list("x" = -A.speed_x/2 + opposite_x, "y" = -A.speed_y/2 + opposite_y)
-
-					if(!(B.datum_flags & DF_ISPROCESSING))
-						B.adjust_speed(-B.speed_x/2 + opposite_x, -B.speed_y/2 + opposite_y)
-					else
-						B.vector_to_add = list("x" = -B.speed_x/2 + -opposite_x, "y" = -B.speed_y/2 + -opposite_y)
-
-					spawn_meteors_alt(round(A.get_speed()+B.get_speed())+1, list(/obj/effect/meteor/invisible), A.shuttle_port.get_virtual_level(), angle2dir_cardinal(SIMPLIFY_DEGREES((bearing+90+A.bow_heading))))
-					spawn_meteors_alt(round(A.get_speed()+B.get_speed())+1, list(/obj/effect/meteor/invisible), B.shuttle_port.get_virtual_level(), angle2dir_cardinal(SIMPLIFY_DEGREES((bearing+270+B.bow_heading))))
+				if(world.time - A.last_collision_alert >= 20)
+					A.last_collision_alert = world.time
+					while (arpdequeue_pointer++ < A.helms.len)
+						var/obj/machinery/computer/helm/a = A.helms[arpdequeue_pointer]
+						a.say("Collision impact with vessel \"[B.name]\".")
+						playsound(a, 'sound/machines/engine_alert2.ogg', 50, FALSE)
+				var/opposite_x = sin(SIMPLIFY_DEGREES(bearing+180))*(B.shuttle_port.turf_count/A.shuttle_port.turf_count)*max(0.002, max(B.speed_x, -B.speed_x))
+				var/opposite_y = cos(SIMPLIFY_DEGREES(bearing+180))*(B.shuttle_port.turf_count/A.shuttle_port.turf_count)*max(0.002, max(B.speed_y, -B.speed_y))
+				if(!(A.datum_flags & DF_ISPROCESSING))
+					A.adjust_speed(-A.speed_x/2 + opposite_x, -A.speed_y/2 + opposite_y)
+				else
+					A.vector_to_add = list("x" = -A.speed_x/2 + opposite_x, "y" = -A.speed_y/2 + opposite_y)
+				if(!(B.datum_flags & DF_ISPROCESSING))
+					B.adjust_speed(-B.speed_x/2 + opposite_x, -B.speed_y/2 + opposite_y)
+				else
+					B.vector_to_add = list("x" = -B.speed_x/2 + -opposite_x, "y" = -B.speed_y/2 + -opposite_y)
+				spawn_meteors_alt(round(60 SECONDS * MAGNITUDE(relative_motion_x, relative_motion_y)), list(/obj/effect/meteor/invisible), A.shuttle_port.get_virtual_level(), angle2dir_cardinal(SIMPLIFY_DEGREES((bearing-A.bow_heading+180))))
+				spawn_meteors_alt(round(60 SECONDS * MAGNITUDE(relative_motion_x, relative_motion_y)), list(/obj/effect/meteor/invisible), B.shuttle_port.get_virtual_level(), angle2dir_cardinal(SIMPLIFY_DEGREES((bearing-A.bow_heading))))
 
 	return list("cpa" = round(cpa), "tcpa" = round(tcpa/10), "brg" = round(SIMPLIFY_DEGREES(bearing-A.bow_heading)))
 
