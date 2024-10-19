@@ -16,15 +16,21 @@
 		if(M.client)
 			var/obj/check = pick(helms)
 			if(M.virtual_z() == check.virtual_z())
-				var/speeding_angle = get_angle_raw(round((speed_x/acceleration_speed)*world.icon_size*10), round((speed_x/acceleration_speed)*world.icon_size*10), 0, 0, round(((speed_x+n_x)/acceleration_speed)*world.icon_size*10), round(((speed_y+n_y)/acceleration_speed)*world.icon_size*10), 0, 0)
-				var/ang = SIMPLIFY_DEGREES(speeding_angle+bow_heading+90)
+				var/speeding_angle = get_angle_raw(0, 0, 0, 0, round(((n_x)/acceleration_speed)*world.icon_size*10), round(((n_y)/acceleration_speed)*world.icon_size*10), 0, 0)
+				var/ang = SIMPLIFY_DEGREES(speeding_angle-bow_heading+270)
 				var/overload_st = 10*world.icon_size*overload
 				M.client.pixel_x = round(overload_st*sin(ang))
 				M.client.pixel_y = round(overload_st*cos(ang))
 				animate(M.client, pixel_x = 0, pixel_y = 0, 10, 1)
 				if(iscarbon(M))
 					var/mob/living/carbon/C = M
-					C.adjust_disgust(round(overload*world.icon_size))
+					var/bezbab = 30
+					if(!C.resting)
+						bezbab = bezbab+30
+					if(!C.buckled)
+						bezbab = bezbab+30
+					if(prob(bezbab))
+						C.adjust_disgust(round(overload*world.icon_size))
 					if(round(overload*world.icon_size) > 0)
 						if(world.time-last_overload_throw > 20 && !M.anchored && !M.buckled)
 							last_overload_throw = world.time
