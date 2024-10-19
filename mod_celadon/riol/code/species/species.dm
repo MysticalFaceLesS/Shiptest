@@ -13,11 +13,7 @@
 /datum/species/riol
 	name = "\improper Riol"
 	id = SPECIES_RIOL
-	loreblurb = "The Riol race is a species of feline-like bipeds hailing from the planet of Ahdomai in the \
-	S'randarr system. They have been brought up into the space age by the Humans and Skrell, and have been \
-	influenced heavily by their long history of Slavemaster rule. They have a structured, clan-influenced way \
-	of family and politics. They prefer colder environments, and speak a variety of languages, mostly Siik'Maas, \
-	using unique inflections their mouths form."
+	loreblurb = "Риолы - это вид гуманоидных лисиц. Риолы родом из -ДАННЫЕ УДАЛЕНЫ-, ныне проживают на частной торговой станции Мирмунвильнир, хотя их первоначальной родиной была -ДАННЫЕ УДАЛЕНЫ-, на текущий момент утеряно местонахождение."
 
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
 
