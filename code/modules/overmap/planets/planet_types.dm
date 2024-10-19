@@ -13,7 +13,7 @@
 	var/preserve_level = FALSE
 	var/landing_sound
 	// [CELADON-ADD] - OVERMAP ICON - Это вагабонд насрал
-	var/icon = 'icons/misc/overmap.dmi'
+	var/icon = 'mod_celadon/_storge_icons/icons/overmap/overmap.dmi'
 	var/pixel_w = 0
 	var/pixel_z = 0
 	// [/CELADON-ADD]
@@ -181,7 +181,7 @@
 	icon_state = "planet-giant"
 	// [CELADON-EDIT] - OVERMAP ICON - Это вагабонд насрал
 	//	color = COLOR_DARK_MODERATE_ORANGE
-	icon = 'icons/misc/overmap_large.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/overmap/overmap_large.dmi'
 	pixel_w = -8
 	pixel_z = -8
 	// [/CELADON-EDIT]
@@ -200,7 +200,7 @@
 	planet = DYNAMIC_WORLD_PLASMA_GIANT
 	// [CELADON-EDIT] - OVERMAP ICON - Это вагабонд насрал
 	//	color = COLOR_PURPLE
-	icon = 'icons/misc/overmap_large.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/overmap/overmap_large.dmi'
 	pixel_w = -8
 	pixel_z = -8
 	// [/CELADON-EDIT]

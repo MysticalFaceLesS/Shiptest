@@ -7,7 +7,7 @@
 
 // [CELADON-ADD] - OVERMAP STUFF - Это вагабонд насрал
 /obj/shiptrail
-	icon = 'icons/misc/overmap.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/overmap/overmap.dmi'
 	icon_state = "ship_trail"
 	alpha = 200
 	glide_size = 32

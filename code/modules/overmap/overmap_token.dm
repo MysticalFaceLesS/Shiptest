@@ -1,5 +1,8 @@
 /obj/overmap
-	icon = 'icons/misc/overmap.dmi'
+	// [CELADON-EDIT] - OVERMAP ICON
+	// icon = 'icons/misc/overmap.dmi' // CELADON-EDIT - ORIGINAL
+	icon = 'mod_celadon/_storge_icons/icons/overmap/overmap.dmi'
+	// [/CELADON-EDIT]
 	// [CELADON-ADD] - OVERMAP ICON - Это вагабонд насрал
 	glide_size = 32
 	// [/CELADON-ADD]
@@ -34,12 +37,12 @@
 		if(istype(parent, /datum/overmap/ship/controlled))
 			if(!move_vec)
 				move_vec = new (loc)
-				move_vec.icon = 'icons/misc/overmap.dmi'
+				move_vec.icon = 'mod_celadon/_storge_icons/icons/overmap/overmap.dmi'
 				move_vec.icon_state = "movement_vector"
 				move_vec.layer = move_vec.layer+1
 			if(!ship_image)
 				ship_image = new (loc)
-				ship_image.icon = 'icons/misc/overmap.dmi'
+				ship_image.icon = 'mod_celadon/_storge_icons/icons/overmap/overmap.dmi'
 				ship_image.icon_state = "ship"
 				ship_image.layer = ship_image.layer+2
 		// [/CELADON-ADD]

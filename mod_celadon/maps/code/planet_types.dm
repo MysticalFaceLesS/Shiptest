@@ -21,7 +21,7 @@
 	planet = DYNAMIC_WORLD_PLASMA_GIANT
 	// [CELADON-EDIT] -- OVERMAP ICON -- вагагагагагагагагагагага
 	//	color = COLOR_PURPLE
-	icon = 'icons/misc/overmap_large.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/overmap/overmap_large.dmi'
 	pixel_w = -8
 	pixel_z = -8
 	// [/CELADON-EDIT]
@@ -57,8 +57,8 @@
 	name = "frozen planet"
 	desc = "A frozen planet covered in thick snow, thicker ice, and dangerous predators."
 	planet = DYNAMIC_WORLD_ICE_NIGHT
-	icon_state = "globe_2"
-	color = COLOR_BLUE_LIGHT
+	icon_state = "snow"
+	// color = COLOR_BLUE_LIGHT
 	mapgen = /datum/map_generator/planet_generator/snow/night
 	default_baseturf = /turf/open/floor/plating/asteroid/snow/icemoon
 	gravity = STANDARD_GRAVITY
@@ -70,8 +70,8 @@
 	name = "jungle planet"
 	desc = "A densely forested world, filled with vines, animals, and underbrush. Surprisingly habitable with a machete."
 	planet = DYNAMIC_WORLD_JUNGLE_NIGHT
-	icon_state = "globe_2"
-	color = COLOR_LIME
+	icon_state = "jungle"
+	// color = COLOR_LIME
 	mapgen = /datum/map_generator/planet_generator/jungle/night
 	default_baseturf = /turf/open/floor/plating/dirt/jungle
 	gravity = STANDARD_GRAVITY
@@ -84,8 +84,8 @@
 	name = "rock planet"
 	desc = "A rocky red world in the midst of terraforming. While some plants have taken hold, it is widely hostile to life."
 	planet = DYNAMIC_WORLD_ROCKPLANET_NIGHT
-	icon_state = "globe_2"
-	color = "#bd1313"
+	icon_state = "red"
+	// color = "#bd1313"
 	mapgen = /datum/map_generator/planet_generator/rock/night
 	default_baseturf = /turf/open/floor/plating/asteroid
 	gravity = STANDARD_GRAVITY
@@ -98,8 +98,8 @@
 	name = "beach planet"
 	desc = "The platonic ideal of vacation spots. Warm, comfortable temperatures, and a breathable atmosphere."
 	planet = DYNAMIC_WORLD_BEACHPLANET_NIGHT
-	icon_state = "globe"
-	color = "#c6b597"
+	icon_state = "beach"
+	// color = "#c6b597"
 	mapgen = /datum/map_generator/planet_generator/beach/night
 	default_baseturf = /turf/open/floor/plating/asteroid/sand/lit
 	gravity = STANDARD_GRAVITY
