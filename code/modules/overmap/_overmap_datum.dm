@@ -372,8 +372,10 @@
 	while(container && !container.x || !container.y)
 		container = container.docked_to
 	SSovermap.overmap_container[container.x][container.y] += src
+	//[CELADON-ADD] - CELADON_FIXES
 	token.pixel_w = container.token.pixel_w+(pick(6, -6))
 	token.pixel_z = container.token.pixel_z+(pick(6, -6))
+	//[/CELADON-ADD]
 	x = container.x
 	y = container.y
 	docked_to.contents -= src
