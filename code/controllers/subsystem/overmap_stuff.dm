@@ -112,9 +112,9 @@ SUBSYSTEM_DEF(overmap_rotation_velocity)
 /datum/overmap/ship/complete_undock()
 	if(token)
 		if(token.ship_image)
-			token.ship_image.forceMove(docked_to.token.loc)
+			token.ship_image.forceMove(get_turf(docked_to.token))
 		if(token.move_vec)
-			token.move_vec.forceMove(docked_to.token.loc)
+			token.move_vec.forceMove(get_turf(docked_to.token))
 	. = ..()
 
 // [/CELADON-ADD]
