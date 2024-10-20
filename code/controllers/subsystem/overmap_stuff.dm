@@ -95,9 +95,9 @@ SUBSYSTEM_DEF(overmap_rotation_velocity)
 		if(!i.docked_to)
 			if(i.token)
 				if(i.token.ship_image)
-					i.token.ship_image.alpha = 255
+					i.token.ship_image.forceMove(i.token.loc)
 				if(i.token.move_vec)
-					i.token.move_vec.alpha = 255
+					i.token.move_vec.forceMove(i.token.loc)
 			if(i.rotating == 1)
 				i.bow_heading = SIMPLIFY_DEGREES(i.bow_heading+i.rotation_velocity)
 				i.rotation_velocity = min(90, i.rotation_velocity+1)
@@ -112,8 +112,8 @@ SUBSYSTEM_DEF(overmap_rotation_velocity)
 		else
 			if(i.token)
 				if(i.token.ship_image)
-					i.token.ship_image.alpha = 0
+					i.token.ship_image.forceMove(i.token)
 				if(i.token.move_vec)
-					i.token.move_vec.alpha = 0
+					i.token.move_vec.forceMove(i.token)
 
 // [/CELADON-ADD]
