@@ -220,7 +220,7 @@
 					if(!istype(src, /turf/closed/wall/r_wall) || d_state != SHEATH)
 						return TRUE
 					d_state = SUPPORT_RODS
-					update_appearance()
+					update_appearance() // [CELADON-EDIT] - PR #1116
 					to_chat(user, "<span class='notice'>You weld the support rods back together.</span>")
 				return 1
 	return 0
