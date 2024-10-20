@@ -74,16 +74,18 @@ TIMER_SUBSYSTEM_DEF(overmap_movement)
 						var/obj/machinery/computer/helm/a = A.helms[arpdequeue_pointer]
 						a.say("Collision impact with vessel \"[B.name]\".")
 						playsound(a, 'sound/machines/engine_alert2.ogg', 50, FALSE)
-				var/opposite_x = sin(SIMPLIFY_DEGREES(bearing+180))*(B.shuttle_port.turf_count/A.shuttle_port.turf_count)*max(0.002, max(B.speed_x, -B.speed_x))
-				var/opposite_y = cos(SIMPLIFY_DEGREES(bearing+180))*(B.shuttle_port.turf_count/A.shuttle_port.turf_count)*max(0.002, max(B.speed_y, -B.speed_y))
+				var/opposite_x = sin(SIMPLIFY_DEGREES(bearing+180))*(B.shuttle_port.turf_count/A.shuttle_port.turf_count)*max(0.002, abs(B.speed_x))
+				var/opposite_y = cos(SIMPLIFY_DEGREES(bearing+180))*(B.shuttle_port.turf_count/A.shuttle_port.turf_count)*max(0.002, abs(B.speed_y))
+				var/alt_opposite_x = sin(SIMPLIFY_DEGREES(bearing))*(B.shuttle_port.turf_count/A.shuttle_port.turf_count)*max(0.002, abs(B.speed_x))
+				var/alt_opposite_y = cos(SIMPLIFY_DEGREES(bearing))*(B.shuttle_port.turf_count/A.shuttle_port.turf_count)*max(0.002, abs(B.speed_y))
 				if(!(A.datum_flags & DF_ISPROCESSING))
 					A.adjust_speed(-A.speed_x/2 + opposite_x, -A.speed_y/2 + opposite_y)
 				else
 					A.vector_to_add = list("x" = -A.speed_x/2 + opposite_x, "y" = -A.speed_y/2 + opposite_y)
 				if(!(B.datum_flags & DF_ISPROCESSING))
-					B.adjust_speed(-B.speed_x/2 + opposite_x, -B.speed_y/2 + opposite_y)
+					B.adjust_speed(-B.speed_x/2 + alt_opposite_x, -B.speed_y/2 + alt_opposite_y)
 				else
-					B.vector_to_add = list("x" = -B.speed_x/2 + -opposite_x, "y" = -B.speed_y/2 + -opposite_y)
+					B.vector_to_add = list("x" = -B.speed_x/2 + alt_opposite_x, "y" = -B.speed_y/2 + alt_opposite_y)
 				spawn_meteors_alt(round(60 SECONDS * MAGNITUDE(relative_motion_x, relative_motion_y))+1, list(/obj/effect/meteor/invisible), A.shuttle_port.get_virtual_level(), angle2dir_cardinal(SIMPLIFY_DEGREES((bearing-A.bow_heading+90))))
 				spawn_meteors_alt(round(60 SECONDS * MAGNITUDE(relative_motion_x, relative_motion_y))+1, list(/obj/effect/meteor/invisible), B.shuttle_port.get_virtual_level(), angle2dir_cardinal(SIMPLIFY_DEGREES((bearing-A.bow_heading+270))))
 
