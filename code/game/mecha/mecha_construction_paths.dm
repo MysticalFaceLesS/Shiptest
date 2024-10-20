@@ -750,6 +750,12 @@
 			"key" = /obj/item/stock_parts/cell,
 			"action" = ITEM_MOVE_INSIDE
 		),
+		// [CELADON-ADD] - CELADON_RETURN_CONTENT
+		list(
+			"key" = /obj/item/clothing/shoes/clown_shoes,
+			"action" = ITEM_DELETE
+		),
+		// [/CELADON-ADD]
 		list(
 			"key" = /obj/item/bikehorn
 		),
@@ -759,10 +765,6 @@
 		),
 		list(
 			"key" = /obj/item/bikehorn
-		),
-		list(
-			"key" = /obj/item/clothing/shoes/clown_shoes,
-			"action" = ITEM_DELETE
 		),
 		list(
 			"key" = /obj/item/bikehorn

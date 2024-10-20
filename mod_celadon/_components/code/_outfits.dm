@@ -46,7 +46,7 @@
 	ears = /obj/item/radio/headset/headset_srv
 	uniform = /obj/item/clothing/under/rank/civilian/clown
 	alt_uniform = /obj/item/clothing/under/rank/civilian/clown/green //WS Edit - Alt Uniforms
-	shoes = /obj/item/clothing/shoes/clown_shoes
+	shoes = /obj/item/clothing/shoes/galoshes // Clown shoes удалены оффами. Отличная замена. Отличная ведь?
 	mask = /obj/item/clothing/mask/gas/clown_hat
 	head = /obj/item/clothing/head/hardhat/dblue
 	gloves = /obj/item/clothing/gloves/color/yellow
@@ -59,10 +59,14 @@
 
 	implants = list(/obj/item/implant/sad_trombone)
 
-	backpack = /obj/item/storage/backpack/clown
-	satchel = /obj/item/storage/backpack/clown
+	// backpack = /obj/item/storage/backpack/clown - Вырезано оффами.
+	// satchel = /obj/item/storage/backpack/clown - Вырезано оффами.
 	duffelbag = /obj/item/storage/backpack/duffelbag/clown //strangely has a duffel
 
 	box = /obj/item/storage/box/hug/survival
 
 	chameleon_extras = /obj/item/stamp/clown
+
+// DEBUG OUTFIT
+/datum/outfit/debug //Даем изолиррованность перчаткам
+	gloves = /obj/item/clothing/gloves/combat{siemens_coefficient = 0}

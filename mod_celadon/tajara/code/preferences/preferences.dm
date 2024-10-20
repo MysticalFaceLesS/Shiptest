@@ -33,6 +33,8 @@
 				//	skin_tone_nose = random_skin_tone_nose()
 				if("s_tone_tajara")
 					skin_tone_tajara = random_skin_tone_tajara()
+				if("s_tone_riol")
+					skin_tone_riol = random_skin_tone_riol()
 		if("input")
 			switch(href_list["preference"])
 				if("tajara_ears")

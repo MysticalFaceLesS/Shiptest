@@ -228,7 +228,7 @@
 			if(prob(35))
 				new /mob/living/simple_animal/hostile/clown/fleshclown(loc)
 			if(prob(25))
-				new /obj/item/clothing/shoes/clown_shoes/banana_shoes/combat(loc)
+				// new /obj/item/clothing/shoes/clown_shoes/banana_shoes/combat(loc) - Вырезано оффами.
 				new /mob/living/simple_animal/hostile/clown/fleshclown(loc)
 			if(prob(25))//you lost
 				new /obj/item/circlegame(loc)
@@ -237,7 +237,7 @@
 			visible_message("<span class='userdanger'>You glimpse an indescribable abyss in the portal. Horrifying monsters appear in a gout of flame.</span>")
 			playsound(loc,'sound/hallucinations/wail.ogg', 200, FALSE, 50, TRUE, TRUE)
 			if(prob(35))
-				new /obj/item/clothing/glasses/godeye(loc)
+				// new /obj/item/clothing/glasses/godeye(loc)  - Вырезано оффами.
 				new /mob/living/simple_animal/hostile/netherworld/migo(loc)
 				new /mob/living/simple_animal/hostile/netherworld/blankbody(loc)
 			if(prob(45))
@@ -453,7 +453,7 @@
 				new /obj/item/warp_cube/red(loc)
 				new /mob/living/simple_animal/hostile/asteroid/ice_demon(loc)
 			if(prob(45))
-				new /obj/item/clothing/suit/drfreeze_coat(loc)
+				// new /obj/item/clothing/suit/drfreeze_coat(loc)  - Вырезано оффами.
 				new /obj/item/clothing/under/costume/drfreeze(loc)
 				new /mob/living/simple_animal/hostile/asteroid/ice_demon(loc)
 			if(prob(35))
@@ -555,7 +555,7 @@
 				new /obj/item/storage/fancy/cigarettes/cigpack_robustgold(loc)
 				new /mob/living/simple_animal/hostile/faithless(loc)
 			if(prob(35))
-				new /obj/item/clothing/head/collectable/petehat(loc)
+				// new /obj/item/clothing/head/collectable/petehat(loc)  - Вырезано оффами.
 				new /mob/living/simple_animal/hostile/faithless(loc)
 			new /mob/living/simple_animal/hostile/faithless(loc)
 			new /mob/living/simple_animal/hostile/faithless(loc)
@@ -680,7 +680,7 @@
 				new /obj/item/clothing/under/costume/sailor(loc)
 			if(prob(50))
 				new /obj/item/pneumatic_cannon/speargun(loc)
-				new /obj/item/storage/backpack/magspear_quiver(loc)
+				// new /obj/item/storage/backpack/magspear_quiver(loc)  - Вырезано оффами.
 				new /obj/item/throwing_star/magspear(loc)
 				new /obj/item/throwing_star/magspear(loc)
 				new /obj/item/throwing_star/magspear(loc)

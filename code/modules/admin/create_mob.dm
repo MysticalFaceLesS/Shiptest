@@ -17,7 +17,7 @@
 	H.underwear = random_underwear(H.gender)
 	H.underwear_color = random_color()
 	H.skin_tone = random_skin_tone()
-	// [CELADON-EDIT] - TAJARA
+	// [CELADON-EDIT] - TAJARA - изменения базы
 	// H.hairstyle = random_hairstyle(H.gender) // CELADON-EDIT - ORIGINAL
 	// H.facial_hairstyle = random_facial_hairstyle(H.gender) // CELADON-EDIT - ORIGINAL
 	H.hairstyle = H.dna.species.random_hairstyle(H.gender)
@@ -64,6 +64,18 @@
 	H.dna.features["tajara_chest_markings"] = pick(GLOB.tajara_chest_markings_list)
 	H.dna.features["tajara_body_markings"] = pick(GLOB.tajara_body_markings_list)
 	H.dna.features["tajara_tail"] = pick(GLOB.tajara_tail_list)
+	// [CELADON-ADD] - CELADON_RIOL
+	H.dna.features["riol_ears"] = pick(GLOB.riol_ears_list)
+	H.dna.features["riol_hairs"] = pick(GLOB.riol_hairs_list)
+	H.dna.features["riol_ears_markings"] = pick(GLOB.riol_ears_markings_list)
+	H.dna.features["riol_head_markings"] = pick(GLOB.riol_head_markings_list)
+	H.dna.features["riol_nose_markings"] = pick(GLOB.riol_nose_markings_list)
+	H.dna.features["riol_facial_hairs"] = pick(GLOB.riol_facial_hairs_list)
+	H.dna.features["riol_chest_markings"] = pick(GLOB.riol_chest_markings_list)
+	H.dna.features["riol_body_markings"] = pick(GLOB.riol_body_markings_list)
+	H.dna.features["riol_tail_markings"] = pick(GLOB.riol_tail_markings_list)
+	H.dna.features["riol_tail"] = pick(GLOB.riol_tail_list)
+	H.dna.features["riol_legs"] = pick(GLOB.riol_legs_list)
 	// [/CELADON-ADD]
 
 	H.update_body()

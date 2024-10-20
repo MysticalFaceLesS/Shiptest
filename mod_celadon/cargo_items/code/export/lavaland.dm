@@ -67,7 +67,7 @@
 						/obj/item/wisp_lantern,
 						/obj/item/reagent_containers/glass/bottle/potion/flight,
 						/obj/item/melee/sword/katana,
-						/obj/item/clothing/glasses/godeye,
+						// /obj/item/clothing/glasses/godeye,  - Вырезано оффами.
 						// /obj/item/melee/ghost_sword,
 						/obj/item/clothing/suit/space/hardsuit/cult,
 						/obj/item/voodoo,
@@ -78,7 +78,7 @@
 						/obj/item/dragons_blood,
 						/obj/item/lava_staff,
 						/obj/item/ship_in_a_bottle,
-						/obj/item/clothing/shoes/clown_shoes/banana_shoes,
+						// /obj/item/clothing/shoes/clown_shoes/banana_shoes, - Вырезано оффами.
 						// /obj/item/melee/knife/envy,
 						/obj/item/veilrender/vealrender,
 						// /obj/item/scythe/necro,

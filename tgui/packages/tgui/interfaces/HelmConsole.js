@@ -9,6 +9,7 @@ import {
   Knob,
   LabeledControls,
   NumberInput,
+  Divider,
 } from '../components';
 import { Window } from '../layouts';
 import { Table } from '../components/Table';
@@ -91,6 +92,20 @@ const SharedContent = (_props, context) => {
             >
               <AnimatedNumber value={shipInfo.sensor_range} />
             </ProgressBar>
+            <Table.Cell>
+              <Button
+                tooltip="Decrease Signal Length"
+                tooltipPosition="right"
+                icon="arrow-left"
+                onClick={() => act('sensor_decrease')}
+              />
+              <Button
+                tooltip="Increase Signal Length"
+                tooltipPosition="right"
+                icon="arrow-right"
+                onClick={() => act('sensor_increase')}
+              />
+            </Table.Cell>
           </LabeledList.Item>
           {shipInfo.mass && (
             <LabeledList.Item label="Mass">
@@ -143,10 +158,12 @@ const ShipContent = (_props, context) => {
     estThrust,
     burnPercentage,
     speed,
+    course,
     heading,
     eta,
     x,
     y,
+    arpa_ships = [],
   } = data;
   return (
     <>
@@ -175,6 +192,9 @@ const ShipContent = (_props, context) => {
           <LabeledList.Item label="Heading">
             <AnimatedNumber value={heading} />
           </LabeledList.Item>
+          <LabeledList.Item label="Course">
+            <AnimatedNumber value={course} />
+          </LabeledList.Item>
           <LabeledList.Item label="Position">
             X
             <AnimatedNumber value={x} />
@@ -185,6 +205,17 @@ const ShipContent = (_props, context) => {
             <AnimatedNumber value={eta} />
           </LabeledList.Item>
         </LabeledList>
+      </Section>
+      <Section title="ARPA">
+        {arpa_ships.map((ship) => (
+          <Table.Row key={ship.name}>
+            <Table.Cell>{ship.name}</Table.Cell>
+            <Divider vertical hidden />
+            <Table.Cell>BRG:{ship.brg}°</Table.Cell>
+            <Table.Cell>T/CPA:{ship.cpa}m {ship.tcpa}s</Table.Cell>
+          </Table.Row>
+        ))}
+
       </Section>
       <Section
         title="Engines"
@@ -278,6 +309,7 @@ const ShipControlContent = (_props, context) => {
     burnPercentage,
     speed,
     estThrust,
+    rotating,
   } = data;
   let flyable = !data.docking && !data.docked;
 
@@ -309,7 +341,7 @@ const ShipControlContent = (_props, context) => {
             tooltip="Dock in Empty Space"
             tooltipPosition="left"
             icon="sign-in-alt"
-            disabled={!flyable}
+            disabled={!flyable || speed}
             onClick={() => act('dock_empty')}
           />
           <Button
@@ -340,12 +372,10 @@ const ShipControlContent = (_props, context) => {
                   icon="arrow-left"
                   iconRotation={45}
                   mb={1}
-                  color={burnDirection === DIRECTIONS.northwest && 'good'}
+                  color={rotating === -1 && 'good'}
                   disabled={!flyable}
                   onClick={() =>
-                    act('change_heading', {
-                      dir: DIRECTIONS.northwest,
-                    })
+                    act('rotate_left')
                   }
                 />
               </Table.Cell>
@@ -367,30 +397,15 @@ const ShipControlContent = (_props, context) => {
                   icon="arrow-right"
                   iconRotation={-45}
                   mb={1}
-                  color={burnDirection === DIRECTIONS.northeast && 'good'}
+                  color={rotating === 1 && 'good'}
                   disabled={!flyable}
                   onClick={() =>
-                    act('change_heading', {
-                      dir: DIRECTIONS.northeast,
-                    })
+                    act('rotate_right')
                   }
                 />
               </Table.Cell>
             </Table.Row>
             <Table.Row height={1}>
-              <Table.Cell width={1}>
-                <Button
-                  icon="arrow-left"
-                  mb={1}
-                  color={burnDirection === DIRECTIONS.west && 'good'}
-                  disabled={!flyable}
-                  onClick={() =>
-                    act('change_heading', {
-                      dir: DIRECTIONS.west,
-                    })
-                  }
-                />
-              </Table.Cell>
               <Table.Cell width={1}>
                 <Button
                   tooltip={burnDirection === 0 ? 'Slow down' : 'Stop thrust'}
@@ -407,35 +422,6 @@ const ShipControlContent = (_props, context) => {
               </Table.Cell>
               <Table.Cell width={1}>
                 <Button
-                  icon="arrow-right"
-                  mb={1}
-                  color={burnDirection === DIRECTIONS.east && 'good'}
-                  disabled={!flyable}
-                  onClick={() =>
-                    act('change_heading', {
-                      dir: DIRECTIONS.east,
-                    })
-                  }
-                />
-              </Table.Cell>
-            </Table.Row>
-            <Table.Row height={1}>
-              <Table.Cell width={1}>
-                <Button
-                  icon="arrow-left"
-                  iconRotation={-45}
-                  mb={1}
-                  color={burnDirection === DIRECTIONS.southwest && 'good'}
-                  disabled={!flyable}
-                  onClick={() =>
-                    act('change_heading', {
-                      dir: DIRECTIONS.southwest,
-                    })
-                  }
-                />
-              </Table.Cell>
-              <Table.Cell width={1}>
-                <Button
                   icon="arrow-down"
                   mb={1}
                   color={burnDirection === DIRECTIONS.south && 'good'}
@@ -443,20 +429,6 @@ const ShipControlContent = (_props, context) => {
                   onClick={() =>
                     act('change_heading', {
                       dir: DIRECTIONS.south,
-                    })
-                  }
-                />
-              </Table.Cell>
-              <Table.Cell width={1}>
-                <Button
-                  icon="arrow-right"
-                  iconRotation={45}
-                  mb={1}
-                  color={burnDirection === DIRECTIONS.southeast && 'good'}
-                  disabled={!flyable}
-                  onClick={() =>
-                    act('change_heading', {
-                      dir: DIRECTIONS.southeast,
                     })
                   }
                 />

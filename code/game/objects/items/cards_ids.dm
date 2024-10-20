@@ -523,7 +523,7 @@ update_label()
 /obj/item/card/id/debug/Initialize()
 	// [CELADON-EDIT] - CELADON_ACCESS
 	// access = get_all_accesses()+get_all_centcom_access()+get_all_syndicate_access() // CELADON-EDIT - ORIGINAL
-	access = get_all_accesses()+get_all_centcom_access()+get_all_syndicate_access()+get_all_accesses_outpost()
+	access = get_all_accesses()+get_all_centcom_access()+get_all_syndicate_access()+get_all_accesses_outpost()+get_faction_access_outpost()
 	// [/CELADON-EDIT]
 	. = ..()
 

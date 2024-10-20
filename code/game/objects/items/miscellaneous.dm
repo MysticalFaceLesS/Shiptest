@@ -116,7 +116,9 @@
 
 /obj/item/storage/box/hero/ghostbuster/PopulateContents()
 	new /obj/item/choice_beacon/ouija(src)
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	new /obj/item/clothing/glasses/welding/ghostbuster(src)
+	// [/CELADON-ADD]
 	new /obj/item/storage/belt/fannypack/bustin(src)
 	new /obj/item/clothing/gloves/color/black(src)
 	new /obj/item/clothing/shoes/jackboots(src)

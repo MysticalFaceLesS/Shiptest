@@ -496,8 +496,8 @@
 "aX" = (
 /obj/effect/turf_decal/siding/thinplating/dark,
 /obj/structure/closet/secure_closet/freezer/meat,
-/obj/item/reagent_containers/food/condiment/hotsauce,
-/obj/item/reagent_containers/food/condiment/ketchup,
+/obj/item/reagent_containers/condiment/hotsauce,
+/obj/item/reagent_containers/condiment/ketchup,
 /obj/machinery/newscaster/directional/north,
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew/canteen)
@@ -1805,19 +1805,28 @@
 /area/ship/bridge)
 "cW" = (
 /obj/structure/table/reinforced,
-/obj/item/pneumatic_cannon/speargun{
-	pixel_x = -3;
-	pixel_y = 7
+/obj/item/throwing_star/magspear{
+	pixel_x = 4
 	},
-/obj/item/pneumatic_cannon/speargun{
-	pixel_x = -1;
-	pixel_y = 3
+/obj/item/throwing_star/magspear{
+	pixel_x = 1;
+	pixel_y = -3
 	},
-/obj/item/storage/backpack/magspear_quiver{
-	pixel_x = -1;
-	pixel_y = -7
+/obj/item/throwing_star/magspear{
+	pixel_y = 12
 	},
-/obj/item/storage/backpack/magspear_quiver,
+/obj/item/throwing_star/magspear{
+	pixel_y = 10
+	},
+/obj/item/throwing_star/magspear{
+	pixel_y = 8
+	},
+/obj/item/throwing_star/magspear{
+	pixel_y = 6
+	},
+/obj/item/throwing_star/magspear{
+	pixel_y = 4
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/maintenance/external)
 "cX" = (
@@ -1890,11 +1899,11 @@
 	pixel_x = -4;
 	pixel_y = -3
 	},
-/obj/item/reagent_containers/food/condiment/saltshaker{
+/obj/item/reagent_containers/condiment/saltshaker{
 	pixel_x = -7;
 	pixel_y = 12
 	},
-/obj/item/reagent_containers/food/condiment/peppermill{
+/obj/item/reagent_containers/condiment/peppermill{
 	pixel_x = -2;
 	pixel_y = 12
 	},
@@ -1940,7 +1949,7 @@
 	},
 /obj/item/kitchen/rollingpin,
 /obj/item/melee/knife/butcher,
-/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/condiment/enzyme,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -2112,7 +2121,7 @@
 	icon_state = "siding_wood_line";
 	dir = 4
 	},
-/obj/item/reagent_containers/food/condiment/milk,
+/obj/item/reagent_containers/condiment/milk,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	icon_state = "scrub_map_on-4";
 	dir = 1
@@ -2379,10 +2388,7 @@
 /turf/open/floor/plating,
 /area/ship/external)
 "dR" = (
-/obj/docking_port{
-	dir = 8
-	},
-/turf/template_noop,
+/turf/open/floor/plating,
 /area/template_noop)
 "dS" = (
 /obj/structure/table/reinforced,
@@ -2398,6 +2404,14 @@
 	},
 /obj/machinery/light/small/directional/south,
 /obj/machinery/firealarm/directional/west,
+/obj/item/pneumatic_cannon/speargun{
+	pixel_x = -1;
+	pixel_y = 11
+	},
+/obj/item/pneumatic_cannon/speargun{
+	pixel_x = -3;
+	pixel_y = 7
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/maintenance/external)
 "dT" = (
@@ -2487,6 +2501,15 @@
 	},
 /turf/open/floor/plating,
 /area/ship/maintenance/external)
+"xU" = (
+/obj/docking_port/stationary{
+	width = 30;
+	height = 15;
+	dwidth = 15;
+	dir = 4
+	},
+/turf/template_noop,
+/area/template_noop)
 "BG" = (
 /obj/machinery/atmospherics/pipe/simple{
 	icon_state = "pipe11-3";
@@ -3081,7 +3104,7 @@ bL
 bL
 "}
 (25,1,1) = {"
-dR
+aa
 dD
 aG
 aR
@@ -3136,9 +3159,9 @@ ci
 cj
 ca
 dW
-aa
-aa
-aa
+dR
+dR
+dR
 aa
 bW
 ca
@@ -3155,7 +3178,7 @@ aa
 bW
 aa
 aa
-aa
+xU
 aa
 aa
 aa
@@ -3175,7 +3198,7 @@ aa
 bX
 bX
 bX
-bX
+ca
 aa
 aa
 aa

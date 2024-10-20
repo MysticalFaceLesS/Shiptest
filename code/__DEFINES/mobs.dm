@@ -142,6 +142,8 @@
 #define BODYTYPE_VOX (1<<7) //Big Vox
 // [CELADON-ADD] - TAJARA
 #define BODYTYPE_TAJARA (1<<8) //Fluffy Ass
+// [CELADON-ADD] - RIOL
+#define BODYTYPE_RIOL (1<<9)
 // [/CELADON-ADD]
 
 // Health/damage defines

@@ -74,3 +74,16 @@
 	icon_state = "fuyo"
 	default_priority = 90
 
+/datum/language/lanius_rattle
+	name = "Lanius Rattle"
+	desc = "Click-Clack"
+	flags = NO_STUTTER
+	key = "l"
+	syllables = list("click", "clack", "clickity click", " сhecklichick", " tichetich", "snick", "scknt", "sni snoo", "tskt", "ch-ch", "tink", "clank", "snap")
+	icon = "mod_celadon/_storge_icons/icons/items/obj/language.dmi"
+	icon_state = "lanrattle"
+
+/datum/language_holder/lanius
+	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
+								/datum/language/lanius_rattle = list(LANGUAGE_ATOM))
+	spoken_languages = list(/datum/language/lanius_rattle = list(LANGUAGE_ATOM))

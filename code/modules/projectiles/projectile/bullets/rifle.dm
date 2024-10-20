@@ -49,6 +49,13 @@
 	damage = 30
 	armour_penetration = 20
 
+/obj/projectile/bullet/a762_40/rubber //"rubber"
+	name = "7.62x40mm CLIP Rubber"
+	damage = 15
+	stamina = 40
+	armour_penetration = 20
+
+
 //.308 WIN (M514 & GAL DMRs)
 
 
@@ -62,6 +69,13 @@
 */
 //[/СELADON-REMOVE]
 
+
+/obj/projectile/bullet/a308/rubber //"rubber"
+	name = ".308 Rubber"
+	speed = 0.3
+	damage = 25
+	stamina = 50
+	armour_penetration = 40
 
 // 8x58mm caseless (SG-669)
 

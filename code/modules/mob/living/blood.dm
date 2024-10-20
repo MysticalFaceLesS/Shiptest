@@ -15,7 +15,7 @@
 // Takes care blood loss and regeneration
 /mob/living/carbon/human/handle_blood()
 
-	if(NOBLOOD in dna.species.species_traits)
+	if(NOBLOOD in dna.species.species_traits) //  [CELADON - EDIT] Lanius
 		return
 
 	if(bodytemperature >= TCRYO && !(HAS_TRAIT(src, TRAIT_HUSK))) //cryosleep or husked people do not pump the blood.
@@ -155,6 +155,8 @@
  */
 /mob/living/carbon/proc/spray_blood(splatter_direction, splatter_strength = 3)
 	if(!isturf(loc))
+		return
+	if((NOBLOOD in dna.species.species_traits)) // [CELADON - ADD] LANIUS
 		return
 	var/obj/effect/decal/cleanable/blood/hitsplatter/our_splatter = new(loc)
 

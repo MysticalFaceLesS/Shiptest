@@ -210,10 +210,16 @@ GLOBAL_LIST_INIT(spells, typesof(/obj/effect/proc_holder/spell)) //needed for th
 				to_chat(H, "<span class='warning'>You don't feel strong enough without your hat!</span>")
 				return FALSE
 		if(cult_req) //CULT_REQ CLOTHES CHECK
+			// [CELADON-EDIT] - CELADON_RETURN_CONTENT
+			// if(!istype(H.wear_suit, /obj/item/clothing/suit/space/hardsuit/cult))	// CELADON-EDIT - ORIGINAL
 			if(!istype(H.wear_suit, /obj/item/clothing/suit/magusred) && !istype(H.wear_suit, /obj/item/clothing/suit/space/hardsuit/cult))
+			// [/CELADON-EDIT]
 				to_chat(H, "<span class='warning'>You don't feel strong enough without your armor.</span>")
 				return FALSE
+			// [CELADON-EDIT] - CELADON_RETURN_CONTENT
+			// if(!istype(H.head, /obj/item/clothing/head/helmet/space/hardsuit/cult))	// CELADON-EDIT - ORIGINAL
 			if(!istype(H.head, /obj/item/clothing/head/magus) && !istype(H.head, /obj/item/clothing/head/helmet/space/hardsuit/cult))
+			// [/CELADON-EDIT]
 				to_chat(H, "<span class='warning'>You don't feel strong enough without your helmet.</span>")
 				return FALSE
 	else

@@ -15,6 +15,9 @@
 	righthand_file = 'mod_celadon/_storge_icons/icons/mob/elysium_banner_right.dmi'
 	warcry = "Glory to the nation!"
 
+/obj/item/banner/elysium/mundane
+	inspiration_available = FALSE	//Отключаем лечение людей флагом
+
 /obj/item/storage/book/bible/koran
 	name = "Koran"
 	icon_state = "koran"

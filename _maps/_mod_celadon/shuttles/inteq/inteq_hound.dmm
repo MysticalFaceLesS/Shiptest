@@ -167,6 +167,11 @@
 /obj/effect/turf_decal/corner_techfloor_gray{
 	dir = 6
 	},
+/obj/machinery/light_switch{
+	dir = 8;
+	pixel_x = 21;
+	pixel_y = 9
+	},
 /turf/open/floor/plating,
 /area/ship/maintenance/port)
 "dV" = (
@@ -223,8 +228,8 @@
 	},
 /obj/machinery/light_switch{
 	dir = 8;
-	pixel_x = 25;
-	pixel_y = 7
+	pixel_x = 21;
+	pixel_y = 10
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/storage/eva)
@@ -376,15 +381,6 @@
 "ih" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/maintenance/port)
-"iw" = (
-/obj/machinery/button/door{
-	id = "hound_windows";
-	name = "Window Lockdown";
-	pixel_x = -6;
-	pixel_y = 25
-	},
-/turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ship/bridge)
 "jb" = (
 /obj/structure/table,
 /obj/effect/turf_decal/corner/opaque/yellow,
@@ -1111,13 +1107,16 @@
 /turf/open/floor/plating,
 /area/ship/cargo)
 "wu" = (
-/obj/machinery/suit_storage_unit/standard_unit,
 /obj/machinery/advanced_airlock_controller{
 	pixel_x = 25;
 	req_access = null
 	},
 /obj/machinery/light/small/directional/south,
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/suit_storage_unit,
+/obj/item/clothing/suit/space/inteq,
+/obj/item/clothing/head/helmet/space/inteq,
+/obj/item/tank/internals/oxygen/yellow,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/storage/eva)
 "wX" = (
@@ -1407,6 +1406,11 @@
 	icon_state = "1-2"
 	},
 /obj/effect/turf_decal/corner_techfloor_gray/diagonal,
+/obj/machinery/light_switch{
+	dir = 8;
+	pixel_x = 21;
+	pixel_y = -10
+	},
 /turf/open/floor/plating,
 /area/ship/maintenance/starboard)
 "EE" = (
@@ -2877,7 +2881,7 @@ pe
 HV
 KK
 BQ
-iw
+pe
 ib
 ib
 ib

@@ -1,7 +1,7 @@
 // Офы написали турели говна и сидят радуются поэтому мы их переписываем
 
 /obj/machinery/porta_turret/ship/faction
-	turret_flags = TURRET_FLAG_SHOOT_HEADS | TURRET_FLAG_SHOOT_CRIMINALS
+	turret_flags = TURRET_FLAG_SHOOT_HEADS | TURRET_FLAG_SHOOT_CRIMINALS | TURRET_FLAG_SHOOT_ANOMALOUS
 
 // SOLGOV
 /obj/machinery/porta_turret/ship/faction/solgov

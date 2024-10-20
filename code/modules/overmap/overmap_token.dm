@@ -1,5 +1,11 @@
 /obj/overmap
-	icon = 'icons/misc/overmap.dmi'
+	// [CELADON-EDIT] - OVERMAP ICON
+	// icon = 'icons/misc/overmap.dmi' // CELADON-EDIT - ORIGINAL
+	icon = 'mod_celadon/_storge_icons/icons/overmap/overmap.dmi'
+	// [/CELADON-EDIT]
+	// [CELADON-ADD] - OVERMAP ICON - Это вагабонд насрал
+	glide_size = 32
+	// [/CELADON-ADD]
 	///~~If we need to render a map for cameras and helms for this object~~ basically can you look at and use this as a ship or station.
 	var/render_map = FALSE
 	/// The parent overmap datum for this overmap token that has all of the actual functionality.
@@ -10,6 +16,14 @@
 	var/atom/movable/screen/plane_master/lighting/cam_plane_master
 	var/atom/movable/screen/background/cam_background
 
+	// [CELADON-ADD] - OVERMAP ICON - Это вагабонд насрал
+	var/obj/token_visuals/move_vec
+	var/obj/token_visuals/ship_image
+
+/obj/token_visuals
+	glide_size = 32
+	// [/CELADON-ADD]
+
 /obj/overmap/rendered
 	render_map = TRUE
 
@@ -19,6 +33,19 @@
 	name = parent.name
 	icon_state = parent.token_icon_state
 	if(render_map)	// Initialize map objects
+		// [CELADON-ADD] - OVERMAP ICON - Это вагабонд насрал
+		if(istype(parent, /datum/overmap/ship/controlled))
+			if(!move_vec)
+				move_vec = new (src)
+				move_vec.icon = 'mod_celadon/_storge_icons/icons/overmap/overmap.dmi'
+				move_vec.icon_state = "movement_vector"
+				move_vec.layer = move_vec.layer+1
+			if(!ship_image)
+				ship_image = new (src)
+				ship_image.icon = 'mod_celadon/_storge_icons/icons/overmap/overmap.dmi'
+				ship_image.icon_state = "ship"
+				ship_image.layer = ship_image.layer+2
+		// [/CELADON-ADD]
 		map_name = "overmap_[REF(src)]_map"
 		cam_screen = new
 		cam_screen.name = "screen"
@@ -44,6 +71,12 @@
 		QDEL_NULL(cam_screen)
 		QDEL_NULL(cam_plane_master)
 		QDEL_NULL(cam_background)
+	// [CELADON-ADD] - OVERMAP ICON - Это вагабонд насрал
+	if(ship_image)
+		QDEL_NULL(ship_image)
+	if(move_vec)
+		QDEL_NULL(move_vec)
+	// [/CELADON-ADD]
 	return ..()
 
 /obj/overmap/attack_ghost(mob/user)
@@ -90,7 +123,10 @@
 /obj/overmap/proc/update_screen()
 	if(render_map)
 		var/list/visible_turfs = list()
-		for(var/turf/T in view(4, get_turf(src)))
+		// [CELADON-EDIT] - OVERMAP SENSOR - Это вагабонд насрал
+		// for(var/turf/T in view(4, get_turf(src)))
+		for(var/turf/T in view(parent.sensor_range, get_turf(src)))
+		// [/CELADON-EDIT]
 			visible_turfs += T
 
 		var/list/bbox = get_bbox_of_atoms(visible_turfs)

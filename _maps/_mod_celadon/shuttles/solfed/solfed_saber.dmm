@@ -48,7 +48,7 @@
 /obj/effect/turf_decal/steeldecal/steel_decals_central6{
 	pixel_y = -4
 	},
-/obj/item/banner/elysium{
+/obj/item/banner/elysium/mundane{
 	pixel_x = 4;
 	anchored = 1
 	},
@@ -365,12 +365,12 @@
 	dir = 1
 	},
 /obj/item/melee/knife/kitchen,
-/obj/item/reagent_containers/food/condiment/peppermill{
+/obj/item/reagent_containers/condiment/peppermill{
 	desc = "Often used to flavor food or make people sneeze. Fashionably moved to the left side of the table.";
 	pixel_x = -8;
 	pixel_y = 2
 	},
-/obj/item/reagent_containers/food/condiment/saltshaker{
+/obj/item/reagent_containers/condiment/saltshaker{
 	pixel_x = 4;
 	pixel_y = 10
 	},
@@ -381,7 +381,7 @@
 /obj/effect/turf_decal/corner_steel_grid{
 	dir = 5
 	},
-/obj/item/banner/elysium{
+/obj/item/banner/elysium/mundane{
 	pixel_x = 4;
 	morale_cooldown = 50000;
 	anchored = 1
@@ -1019,6 +1019,9 @@
 	pixel_x = -5;
 	pixel_y = -8
 	},
+/obj/machinery/jukebox/boombox{
+	pixel_y = 5
+	},
 /turf/open/floor/plasteel/grimy,
 /area/ship/hallway/central)
 "hE" = (
@@ -1170,6 +1173,9 @@
 	},
 /obj/effect/turf_decal/industrial/outline/yellow,
 /obj/machinery/power/ship_gravity,
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
 "iW" = (
@@ -1936,6 +1942,9 @@
 	dir = 1
 	},
 /obj/machinery/portable_atmospherics/canister/toxins,
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
 "oV" = (
@@ -2420,19 +2429,13 @@
 	pixel_x = 11;
 	pixel_y = 2
 	},
-/obj/item/stock_parts/cell{
-	pixel_x = 5;
-	pixel_y = 2
-	},
-/obj/item/stock_parts/cell{
-	pixel_x = -7;
-	pixel_y = 10
-	},
-/obj/item/stock_parts/cell{
-	pixel_x = -9;
-	pixel_y = 5
-	},
 /obj/effect/turf_decal/box/red,
+/obj/item/stock_parts/cell/gun{
+	pixel_x = 7;
+	pixel_y = -6
+	},
+/obj/item/stock_parts/cell/gun,
+/obj/item/stock_parts/cell/gun,
 /turf/open/floor/wood/ebony,
 /area/ship/security/armory)
 "tn" = (
@@ -2773,10 +2776,6 @@
 /obj/structure/cable{
 	icon_state = "0-5"
 	},
-/obj/item/weldingtool{
-	pixel_x = -5;
-	pixel_y = -6
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 1
 	},
@@ -2874,10 +2873,6 @@
 	},
 /obj/effect/turf_decal/steeldecal/steel_decals_central6,
 /obj/machinery/airalarm/directional/east,
-/obj/structure/chair/office{
-	dir = 8;
-	name = "tactical swivel chair"
-	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/sign/solfed/elysium{
 	pixel_x = 32;
@@ -2999,18 +2994,11 @@
 /turf/open/floor/plasteel/mono/white,
 /area/ship/medical/surgery)
 "xz" = (
-/obj/item/ammo_box/a556_box,
 /obj/structure/rack,
 /obj/effect/turf_decal/box/red,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/corner/opaque/bar{
 	dir = 5
-	},
-/obj/item/ammo_box/a556_box{
-	pixel_y = 10
-	},
-/obj/item/ammo_box/a556_box{
-	pixel_y = 19
 	},
 /obj/structure/window/reinforced{
 	dir = 4
@@ -3019,6 +3007,9 @@
 	dir = 2;
 	req_one_access_txt = "2"
 	},
+/obj/item/ammo_box/a556_42,
+/obj/item/ammo_box/a556_42,
+/obj/item/ammo_box/a556_42,
 /turf/open/floor/wood/ebony,
 /area/ship/security/armory)
 "xH" = (
@@ -3056,7 +3047,7 @@
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/hallway/central)
 "xY" = (
-/obj/item/banner/elysium{
+/obj/item/banner/elysium/mundane{
 	pixel_x = 4;
 	morale_cooldown = 50000;
 	anchored = 1
@@ -3662,7 +3653,11 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 1
 	},
-/obj/machinery/modular_computer/console/preset/id,
+/obj/item/banner/elysium/mundane{
+	pixel_x = 4;
+	morale_cooldown = 50000;
+	anchored = 1
+	},
 /turf/open/floor/wood/walnut,
 /area/ship/bridge)
 "CC" = (
@@ -3732,7 +3727,7 @@
 	pixel_x = -5;
 	pixel_y = -9
 	},
-/obj/structure/fireaxecabinet{
+/obj/structure/cabinet/fireaxe{
 	pixel_y = 27
 	},
 /obj/structure/plaque/static_plaque/atmos{
@@ -3902,6 +3897,15 @@
 /obj/item/ammo_box/magazine/p16,
 /obj/item/ammo_box/magazine/p16,
 /obj/effect/turf_decal/box/red,
+/obj/item/ammo_box/a858{
+	pixel_x = 6;
+	pixel_y = -8
+	},
+/obj/item/ammo_box/a858{
+	pixel_x = 3;
+	pixel_y = -4
+	},
+/obj/item/ammo_box/a858,
 /turf/open/floor/wood/ebony,
 /area/ship/security/armory)
 "DW" = (
@@ -3931,7 +3935,7 @@
 /turf/open/floor/wood/walnut,
 /area/ship/security)
 "Ei" = (
-/obj/item/banner/elysium{
+/obj/item/banner/elysium/mundane{
 	pixel_x = 4;
 	morale_cooldown = 4000;
 	anchored = 1
@@ -4224,6 +4228,13 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/pipe/simple/brown/hidden/layer5,
+/obj/item/weldingtool{
+	pixel_x = -5;
+	pixel_y = -6
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
 "GB" = (
@@ -4286,7 +4297,7 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 4
 	},
-/obj/item/banner/elysium{
+/obj/item/banner/elysium/mundane{
 	pixel_x = 4;
 	morale_cooldown = 50000;
 	anchored = 1
@@ -4387,13 +4398,6 @@
 	pixel_x = 6;
 	pixel_y = 6
 	},
-/obj/item/radio{
-	desc = "An old handheld radio. You could use it, if you really wanted to.";
-	icon_state = "radio";
-	name = "old radio";
-	pixel_x = 2;
-	pixel_y = -7
-	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
@@ -4455,6 +4459,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
+/obj/structure/chair/office{
+	dir = 8;
+	name = "tactical swivel chair"
+	},
 /turf/open/floor/wood/walnut,
 /area/ship/bridge)
 "Ic" = (
@@ -4511,6 +4519,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/brown/hidden/layer5{
 	dir = 6
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
@@ -4988,10 +4999,8 @@
 /obj/effect/turf_decal/corner/opaque/bar/three_quarters{
 	dir = 8
 	},
-/obj/item/banner/elysium{
-	pixel_x = 4
-	},
 /obj/effect/turf_decal/box/red,
+/obj/machinery/rnd/server,
 /turf/open/floor/wood/ebony,
 /area/ship/security/armory)
 "LQ" = (
@@ -5659,8 +5668,8 @@
 "SP" = (
 /obj/effect/turf_decal/solgov/all/bottom_left,
 /obj/item/banner/solfed{
-	pixel_x = -2;
-	morale_cooldown = 50000
+	morale_cooldown = 50000;
+	anchored = 1
 	},
 /turf/open/floor/wood/walnut,
 /area/ship/security/prison)
@@ -6019,15 +6028,6 @@
 	req_one_access_txt = "3"
 	},
 /obj/item/gun/ballistic/rifle/solgov,
-/obj/item/ammo_box/a858,
-/obj/item/ammo_box/a858{
-	pixel_x = 3;
-	pixel_y = -4
-	},
-/obj/item/ammo_box/a858{
-	pixel_x = 6;
-	pixel_y = -8
-	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/corner/opaque/bar{
 	dir = 6
@@ -6159,7 +6159,7 @@
 /obj/structure/closet/secure_closet{
 	icon_state = "med";
 	name = "Shafi locker";
-	req_access_txt = "20"
+	req_access_txt = "69"
 	},
 /obj/item/clothing/gloves/color/latex/nitrile,
 /obj/effect/turf_decal/trimline/opaque/blue/warning{
@@ -6301,7 +6301,7 @@
 /turf/open/floor/wood/yew,
 /area/ship/hallway/central)
 "XM" = (
-/obj/item/banner/elysium{
+/obj/item/banner/elysium/mundane{
 	pixel_x = 4;
 	morale_cooldown = 50000;
 	anchored = 1

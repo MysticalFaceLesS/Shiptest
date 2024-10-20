@@ -10,8 +10,10 @@
 
 /obj/item/pda/clown/ComponentInitialize()
 	. = ..()
+	// [CELADON-EDIT] - CELADON_RETURN_CONTENT
+	// AddComponent(/datum/component/wearertargeting/sitcomlaughter, CALLBACK(src, PROC_REF(after_sitcom_laugh)))	// CELADON-EDIT - ORIGINAL
 	AddComponent(/datum/component/slippery/clowning, 120, NO_SLIP_WHEN_WALKING, CALLBACK(src, PROC_REF(AfterSlip)))
-	AddComponent(/datum/component/wearertargeting/sitcomlaughter, CALLBACK(src, PROC_REF(after_sitcom_laugh)))
+	// [/CELADON-EDIT]
 
 /obj/item/pda/clown/proc/AfterSlip(mob/living/carbon/human/M)
 	if (istype(M) && (M.real_name != owner))

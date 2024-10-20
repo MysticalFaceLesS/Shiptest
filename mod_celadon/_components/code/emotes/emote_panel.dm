@@ -342,6 +342,26 @@ var/timer = 20
 	set category = "Эмоции"
 	emote_with_delay("purrl", timer)
 
+/mob/living/carbon/human/verb/emote_fpurr()
+	set name = "~ Урчать"
+	set category = "Эмоции"
+	emote_with_delay("fox_purr", timer)
+
+/mob/living/carbon/human/verb/emote_bark()
+	set name = "~ Гавкнуть"
+	set category = "Эмоции"
+	emote_with_delay("bark", timer)
+
+/mob/living/carbon/human/verb/emote_wbark()
+	set name = "~ Дважды гавкнуть"
+	set category = "Эмоции"
+	emote_with_delay("wbark", timer)
+
+/mob/living/carbon/human/verb/emote_fhowl()
+	set name = "~ Выть"
+	set category = "Эмоции"
+	emote_with_delay("howl", timer)
+
 /mob/living/carbon/human/verb/emote_hiss()
 	set name = "~ Шипеть"
 	set category = "Эмоции"

@@ -16,7 +16,11 @@
 	siemens_coeff = 0.5 //They thrive on energy
 	brutemod = 1.25 //They're weak to punches
 	attack_type = BURN //burn bish
+	// [CELADON-REMOVE] - CELADON_ETHEREAL_FIX - Тип крови им больше не нужен ибо теперь у них жидкое электричество, перенёс в мод mod_celadon\ethereal_fix\code\ethereal.dm
+	/*
 	exotic_bloodtype = "E"
+	*/
+	// [/CELADON-REMOVE]
 	damage_overlay_type = "" //We are too cool for regular damage overlays
 	species_age_max = 300
 	species_traits = list(DYNCOLORS, EYECOLOR, HAIR, FACEHAIR)
