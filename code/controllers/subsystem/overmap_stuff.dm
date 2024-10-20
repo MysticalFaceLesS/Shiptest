@@ -50,14 +50,10 @@ SUBSYSTEM_DEF(overmap_stuff)
 
 				animate(i.token, pixel_w = smooth_anim["x"], pixel_z = smooth_anim["y"], wait, 1)
 				if(i.token.ship_image)
-					if(i.token.ship_image.loc != i.token.loc)
-						i.token.ship_image.forceMove(i.token.loc)
 					i.token.ship_image.pixel_w = i.last_anim["x"]
 					i.token.ship_image.pixel_z = i.last_anim["y"]
 					animate(i.token.ship_image, pixel_w = smooth_anim["x"], pixel_z = smooth_anim["y"], wait, 1)
 				if(i.token.move_vec)
-					if(i.token.move_vec.loc != i.token.loc)
-						i.token.move_vec.forceMove(i.token.loc)
 					i.token.move_vec.pixel_w = i.last_anim["x"]
 					i.token.move_vec.pixel_z = i.last_anim["y"]
 					animate(i.token.move_vec, pixel_w = smooth_anim["x"], pixel_z = smooth_anim["y"], wait, 1)
