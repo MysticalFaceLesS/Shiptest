@@ -204,8 +204,8 @@
 	vector_to_add["y"] = 0
 
 	if(60 SECONDS * MAGNITUDE(speed_x, speed_y) >= 60)
-		speed_x = speed_x*0.5
-		speed_y = speed_y*0.5
+		speed_x = speed_x*0.98
+		speed_y = speed_y*0.98
 
 // [/CELADON-EDIT]
 
