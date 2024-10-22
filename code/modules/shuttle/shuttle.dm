@@ -416,7 +416,7 @@
 			if(!cur_area.mobile_port)
 				cur_area.link_to_shuttle(src)
 		//[CELADON-ADD] - CELADON_FIXES - убираем спавн карпов при создании шипа
-		for(var/mob/living/simple_animal/hostile/hostie in curT.contents)
+		for(var/mob/living/simple_animal/hostile/carp/hostie in curT.contents)
 			if(hostie)
 //				to_chat(world, "qdeling [hostie]")
 				qdel(hostie)
