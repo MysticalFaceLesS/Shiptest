@@ -34,7 +34,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/structure/cable{
+/obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
 /turf/open/floor/mineral/titanium/blue,
@@ -43,7 +43,7 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/obj/structure/cable{
+/obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
 /turf/open/floor/mineral/titanium,
@@ -72,17 +72,10 @@
 /obj/structure/cable{
 	icon_state = "2-6"
 	},
-/obj/structure/cable{
+/obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
 /turf/open/floor/mineral/titanium,
-/area/ship/bridge)
-"m" = (
-/obj/machinery/turretid{
-	pixel_x = 5;
-	pixel_y = 5
-	},
-/turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
 "n" = (
 /obj/structure/cable{
@@ -160,13 +153,11 @@
 /area/ship/bridge)
 "x" = (
 /obj/structure/cable{
-	icon_state = "1-8"
-	},
-/obj/structure/cable{
 	icon_state = "0-8"
 	},
-/obj/machinery/power/apc{
-	dir = 1
+/obj/machinery/power/apc/auto_name/directional/north{
+	pixel_x = 5;
+	pixel_y = 26
 	},
 /obj/machinery/computer/crew{
 	dir = 8
@@ -256,6 +247,7 @@
 	dir = 2;
 	name = "tactical chair"
 	},
+/obj/machinery/airalarm/directional/north,
 /turf/open/floor/mineral/titanium/blue,
 /area/ship/bridge)
 "K" = (
@@ -267,10 +259,10 @@
 	id = "Torpedo_holofield"
 	},
 /obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/structure/cable{
 	icon_state = "0-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
@@ -295,6 +287,10 @@
 /obj/structure/cable{
 	icon_state = "1-9"
 	},
+/obj/machinery/turretid{
+	pixel_x = 2;
+	pixel_y = -27
+	},
 /turf/open/floor/mineral/titanium/blue,
 /area/ship/bridge)
 "N" = (
@@ -308,12 +304,6 @@
 	dir = 4
 	},
 /turf/open/floor/mineral/titanium/blue,
-/area/ship/bridge)
-"P" = (
-/obj/machinery/airalarm/directional{
-	dir = 1
-	},
-/turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
 "Q" = (
 /obj/machinery/computer/helm{
@@ -339,7 +329,7 @@
 /obj/structure/cable{
 	icon_state = "2-10"
 	},
-/obj/structure/cable{
+/obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
 /turf/open/floor/mineral/titanium,
@@ -397,11 +387,11 @@ N
 U
 "}
 (3,1,1) = {"
-P
+R
 J
 l
 L
-m
+R
 "}
 (4,1,1) = {"
 A
@@ -440,7 +430,7 @@ h
 "}
 (9,1,1) = {"
 R
-j
+Y
 Y
 j
 R
