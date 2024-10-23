@@ -291,7 +291,13 @@
 /proc/get_blood_dna_color(list/blood_dna)
 	var/blood_print = blood_dna[length(blood_dna)]
 	var/datum/blood_type/blood_type = blood_dna[blood_print]
-	return blood_type.color
+	//[CELADON-EDIT] - CELADON_FIXES - я думал ИПЦ специально сделали кам вместо крови, а это оказывается рантайм... Моя любовь разрушена
+	//return blood_type.color
+	if(blood_type)
+		return blood_type.color
+	else
+		return COLOR_WHITE
+	//[/CELADON-EDIT]
 
 //to add a splatter of blood or other mob liquid.
 /mob/living/proc/add_splatter_floor(turf/T, small_drip, amt)
