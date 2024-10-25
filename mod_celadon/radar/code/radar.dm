@@ -13,7 +13,7 @@
 		var/overall_sensor = -4
 		for(var/obj/machinery/space_radar/R in radars)
 			if(R)
-				if(R.is_operational)
+				if(R.is_operational && R.check_outside())
 					if(R.efficiency > overall_sensor)
 						overall_sensor = R.efficiency
 		max_sensor = overall_sensor
@@ -55,6 +55,12 @@
 	var/datum/looping_sound/space_radar/soundloop
 	var/datum/overmap/ship/controlled/current_ship
 
+/obj/machinery/space_radar/proc/check_outside()
+	for(var/turf/T in range(1, get_turf(src)))
+		if(istype(T, /turf/open/space))
+			return TRUE
+	return FALSE
+
 /obj/machinery/space_radar/proc/reload_ship()
 	var/obj/docking_port/mobile/port = SSshuttle.get_containing_shuttle(src)
 	if(port?.current_ship)
@@ -80,25 +86,28 @@
 	efficiency = 0
 	for(var/obj/item/stock_parts/M in component_parts)
 		efficiency += M.rating
+	update_icon_state()
 	..()
 
 /obj/machinery/space_radar/update_icon_state()
-	if(is_operational)
+	if(panel_open)
+		icon_state = "radar-open"
+		efficiency = -4
+		if(soundloop.started)
+			soundloop.started = FALSE
+			soundloop.stop()
+			current_ship.recalculate_radars()
+		return ..()
+	else if(is_operational && check_outside())
 		icon_state = "radar-on"
 		if(!soundloop.started)
 			soundloop.started = TRUE
 			soundloop.start()
 			current_ship.recalculate_radars()
 		return ..()
-	else if(panel_open)
-		icon_state = "radar-open"
-		if(soundloop.started)
-			soundloop.started = FALSE
-			soundloop.stop()
-			current_ship.recalculate_radars()
-		return ..()
 	else
 		icon_state = "radar-off"
+		efficiency = -4
 		if(soundloop.started)
 			soundloop.started = FALSE
 			soundloop.stop()
@@ -108,6 +117,7 @@
 /obj/machinery/space_radar/attackby(obj/item/I, mob/user, params)
 	if(default_deconstruction_screwdriver(user, icon_state, icon_state, I))
 		update_appearance()
-		return
+		return ..()
 	if(default_deconstruction_crowbar(I))
-		return
+		return ..()
+	update_appearance()
