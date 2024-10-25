@@ -2,10 +2,10 @@
 /// desc - описание для модпака. Может использоваться для списка глаголов модпака в качестве описания.
 /// author - автор(ы) этого модпака.
 
-/datum/modpack/example
-	name = "ОСМЫСЛЕННОЕ_ПОНЯТНОЕ_НАЗВАНИЕ"
-	desc = "КОРОТКОЕ_ОПИСАНИЕ_МОДПАКА"
-	author = "АВТОР(Ы)"
+/datum/modpack/radar
+	name = "RADAR"
+	desc = "Радары."
+	author = "Vagabond05"
 
 /// Эти проки нужны, для того чтобы инициализировать датумы в определенный момент времени
 /// сборки билда. Инициализация обновляет данные в билде повторно, перезаписывая новыми значениями
@@ -15,13 +15,13 @@
 /// (можешь использовать все три, но запуск билда увеличится на 0.1 сек, за каждый датум в модпаке)
 
 // Инициализация ДО
-/datum/modpack/example/pre_initialize()
+/datum/modpack/radar/pre_initialize()
 	. = ..()
 
 // Инициализация ВОВРЕМЯ
-/datum/modpack/example/initialize()
+/datum/modpack/radar/initialize()
 	. = ..()
 
 // Инициализация ПОСЛЕ
-/datum/modpack/example/post_initialize()
+/datum/modpack/radar/post_initialize()
 	. = ..()

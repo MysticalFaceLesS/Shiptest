@@ -125,7 +125,10 @@
 		var/list/visible_turfs = list()
 		// [CELADON-EDIT] - OVERMAP SENSOR - Это вагабонд насрал
 		// for(var/turf/T in view(4, get_turf(src)))
-		for(var/turf/T in view(parent.sensor_range, get_turf(src)))
+		if(istype(parent, /datum/overmap/ship/controlled))
+			var/datum/overmap/ship/controlled/C = parent
+			C.recalculate_radars()
+		for(var/turf/T in view(min(max(1, parent.max_sensor), parent.sensor_range), get_turf(src)))
 		// [/CELADON-EDIT]
 			visible_turfs += T
 
@@ -134,6 +137,16 @@
 		var/size_y = bbox[4] - bbox[2] + 1
 
 		cam_screen?.vis_contents = visible_turfs
-		cam_background.icon_state = "clear"
+		//[CELADON-EDIT] - RADAR
+		//cam_background.icon_state = "clear"
+		if(parent.sensor_range > parent.max_sensor)
+			cam_background.icon = 'icons/effects/effects.dmi'
+			cam_background.icon_state = "static_base"
+			cam_screen.alpha = max(0, 255-abs(parent.max_sensor-parent.sensor_range)*128)
+		else
+			cam_background.icon_state = "clear"
+			cam_background.icon = initial(cam_background.icon)
+			cam_screen.alpha = 255
+		//[/CELADON-EDIT]
 		cam_background.fill_rect(1, 1, size_x, size_y)
 		return TRUE
