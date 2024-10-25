@@ -57,7 +57,7 @@
 
 /obj/machinery/space_radar/proc/check_outside()
 	for(var/turf/T in range(1, get_turf(src)))
-		if(istype(T, /turf/open/space))
+		if(get_area(T) != get_area(src))
 			return TRUE
 	return FALSE
 
@@ -73,7 +73,8 @@
 	. = ..()
 	soundloop = new(list(src), FALSE)
 	reload_ship()
-	current_ship.recalculate_radars()
+	if(current_ship)
+		current_ship.recalculate_radars()
 
 /obj/machinery/space_radar/Destroy()
 	QDEL_NULL(soundloop)
