@@ -13,6 +13,7 @@
 	mag_type = /obj/item/ammo_box/magazine/saiga
 	fire_sound = 'sound/weapons/gun/shotgun/bulldog.ogg'
 	show_magazine_on_sprite = TRUE
+	unique_mag_sprites_for_variants = TRUE
 	show_ammo_capacity_on_magazine_sprite = FALSE
 	internal_magazine = FALSE
 	casing_ejector = TRUE
