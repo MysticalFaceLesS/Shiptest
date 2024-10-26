@@ -500,11 +500,11 @@
 		// [CELADON-EDIT] - CELADON_BALANCE - Делаем шансы на попадания
 		// if(direct_target)
 		//		return TRUE 	// CELADON-EDIT - ORIGINAL
-		if(direct_target && !L.density && firer.density && prob(50)) // 50% что пуля попадет в лежащую цель от стоящего стрелка
+		if(direct_target && !L.density && firer.density && prob(85)) // 85% что пуля попадет в лежащую цель от стоящего стрелка
 			return TRUE
-		if(direct_target && !L.density && !firer.density && prob(25)) // 25% что пуля попадет в лежащую цель от лежащего стрелка
+		if(direct_target && !L.density && !firer.density && prob(70)) // 70% что пуля попадет в лежащую цель от лежащего стрелка
 			return TRUE
-		if(direct_target && L.density && !firer.density) // 100% пуля попадет в стоящую цель от лежачего стрелка
+		if(direct_target && L.density && !firer.density && prob(90)) // 90% пуля попадет в стоящую цель от лежачего стрелка
 			return TRUE
 		// [/CELADON-EDIT]
 		// If target not able to use items, move and stand - or if they're just dead, pass over.
@@ -512,7 +512,7 @@
 			return FALSE
 	// [CELADON-EDIT] - CELADON_BALANCE - Делаем шансы на попадания
 	// return TRUE 	// CELADON-EDIT - ORIGINAL
-	if(prob(10))	// С вероятность 10% шальная пуля зацепит лежащего
+	if(prob(25))	// С вероятность 20% шальная пуля зацепит лежащего
 		return TRUE
 	return FALSE
 	// [/CELADON-EDIT]
