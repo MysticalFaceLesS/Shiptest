@@ -4,7 +4,7 @@
 
 /datum/design/riol_tail
 	name = "Riol Tail"
-	id = "long"
+	id = "riollong"
 	build_type = LIMBGROWER
 	reagents_list = list(/datum/reagent/medicine/synthflesh = 20)
 	build_path = /obj/item/organ/tail/riol/fake
