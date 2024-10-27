@@ -373,7 +373,8 @@
 	dir = 4
 	},
 /obj/machinery/vending/wallmed{
-	pixel_x = 23
+	pixel_x = 23;
+	all_items_free = 0
 	},
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/security/checkpoint)
@@ -704,13 +705,6 @@
 	},
 /turf/open/floor/wood/walnut,
 /area/outpost/fraction/syndi/donkco_shop)
-"by" = (
-/obj/item/reagent_containers/food/snacks/grown/pumpkin/blumpkin,
-/turf/open/floor/plating/asteroid/snow/temperatre{
-	light_color = "#1B1D2E";
-	light_range = 2
-	},
-/area/outpost/exterior)
 "bz" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/cyan/visible/layer2{
@@ -884,13 +878,6 @@
 /obj/machinery/newscaster/directional/west,
 /turf/open/floor/plasteel/patterned,
 /area/outpost/security/hall)
-"bS" = (
-/obj/item/reagent_containers/food/snacks/grown/pumpkin,
-/turf/open/floor/plating/asteroid/snow/temperatre{
-	light_color = "#1B1D2E";
-	light_range = 2
-	},
-/area/outpost/exterior)
 "bT" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -1933,9 +1920,8 @@
 	dir = 8
 	},
 /obj/item/radio/intercom/directional/north,
-/obj/machinery/vending/medical/syndicate_access{
-	req_one_access_txt = "8123";
-	all_items_free = 1
+/obj/machinery/smartfridge/bloodbank/preloaded{
+	req_one_access_txt = "8123"
 	},
 /turf/open/floor/plasteel/white,
 /area/outpost/medical/storage)
@@ -2034,7 +2020,8 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/vending/wallmed{
-	pixel_x = 23
+	pixel_x = 23;
+	all_items_free = 0
 	},
 /turf/open/floor/plasteel/patterned,
 /area/outpost/security/hall)
@@ -3340,7 +3327,8 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/vending/wallmed{
-	pixel_x = 23
+	pixel_x = 23;
+	all_items_free = 0
 	},
 /turf/open/floor/plasteel/white,
 /area/outpost/medical/hall_2)
@@ -4663,7 +4651,8 @@
 	},
 /obj/structure/bed/dogbed,
 /mob/living/simple_animal/pet/cat/syndie{
-	dir = 8
+	dir = 8;
+	faction = list("Syndicate")
 	},
 /turf/open/floor/carpet/red_gold,
 /area/outpost/fraction/syndi)
@@ -6781,7 +6770,7 @@
 	dir = 4
 	},
 /obj/machinery/vending/wallmed{
-	pixel_x = -27
+	pixel_x = -25
 	},
 /turf/open/floor/plasteel/tech,
 /area/outpost/operations/outpost_command)
@@ -9792,7 +9781,8 @@
 /obj/effect/turf_decal/corner/opaque/green/diagonal,
 /obj/structure/closet/crate/hydroponics,
 /obj/machinery/vending/wallmed{
-	pixel_x = 23
+	pixel_x = 23;
+	all_items_free = 0
 	},
 /obj/item/spacecash/bundle/c10000,
 /turf/open/floor/plasteel/white,
@@ -14239,7 +14229,8 @@
 /obj/effect/turf_decal/corner/opaque/neutral/diagonal,
 /obj/machinery/vending/wallmed{
 	pixel_x = -1;
-	pixel_y = 31
+	all_items_free = 0;
+	pixel_y = 26
 	},
 /turf/open/floor/plasteel/white,
 /area/outpost/crew/canteen)
@@ -14587,7 +14578,8 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
 /obj/machinery/vending/wallmed{
-	pixel_x = 23
+	pixel_x = 23;
+	all_items_free = 0
 	},
 /turf/open/floor/wood/walnut,
 /area/outpost/crew/bar)
@@ -16715,13 +16707,6 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/outpost/medical/reseption)
-"GL" = (
-/obj/item/clothing/head/hardhat/pumpkinhead/blumpkin,
-/turf/open/floor/plating/asteroid/snow/temperatre{
-	light_color = "#1B1D2E";
-	light_range = 2
-	},
-/area/outpost/exterior)
 "GM" = (
 /obj/effect/mob_spawn/human/doctor,
 /obj/item/spacecash/bundle/c100,
@@ -22880,9 +22865,6 @@
 	pixel_x = 9;
 	network = list("outpostelysium")
 	},
-/obj/machinery/smartfridge/bloodbank/preloaded{
-	req_one_access_txt = "8123"
-	},
 /turf/open/floor/plasteel/white,
 /area/outpost/medical/hall_1)
 "SO" = (
@@ -24507,7 +24489,7 @@
 /area/outpost/crew/bar)
 "VL" = (
 /obj/machinery/vending/wallmed{
-	pixel_x = -27
+	pixel_x = -26
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/tech,
@@ -24593,7 +24575,8 @@
 "VT" = (
 /obj/structure/railing{
 	dir = 1;
-	layer = 4.1
+	layer = 4.1;
+	pixel_y = 10
 	},
 /turf/open/floor/plasteel/white,
 /area/outpost/medical/hall_1)
@@ -45313,7 +45296,7 @@ NG
 NG
 NG
 NG
-aO
+NG
 NG
 NG
 NG
@@ -45500,7 +45483,7 @@ NG
 NG
 NG
 NG
-bS
+NG
 NG
 NG
 NG
@@ -45687,8 +45670,8 @@ NG
 wr
 BC
 NG
-GL
-by
+NG
+NG
 NG
 NG
 ST
