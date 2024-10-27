@@ -190,6 +190,9 @@ SUBSYSTEM_DEF(traumas)
 
 	init_tajara_mod()
 
+	// [CELADON-ADD] - CELADON_RIOL
+	init_riol_mod()
+
 	// [/CELADON-ADD]
 
 	return ..()

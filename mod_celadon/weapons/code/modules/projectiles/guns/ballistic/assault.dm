@@ -127,3 +127,47 @@
 
 /obj/item/gun/ballistic/automatic/assault/morita1/swamp/no_mag
 	spawnwithmagazine = FALSE
+
+// СВД 7.62x54mmR
+/obj/item/gun/ballistic/automatic/marksman/svd
+	name = "\improper SR-33 Dragunov sniper rifle"
+	desc = "A semiautomatic sniper rifle, famed for it's marksmanship, and is built from the ground up for it. Fires 7.62x54mmR rounds."
+	icon = 'mod_celadon/_storge_icons/icons/weapons/obj/svd.dmi'
+	lefthand_file = 'mod_celadon/_storge_icons/icons/weapons/obj/svd_lefthand.dmi'
+	righthand_file = 'mod_celadon/_storge_icons/icons/weapons/obj/svd_righthand.dmi'
+	mob_overlay_icon = 'icons/obj/guns/manufacturer/hunterspride/onmob.dmi'
+	inhand_x_dimension = 64
+	inhand_y_dimension = 32
+
+	fire_sound = "svd_fire"
+	icon_state = "svd"
+	item_state = "svd"
+	weapon_weight = WEAPON_MEDIUM
+	w_class = WEIGHT_CLASS_BULKY
+	internal_magazine = FALSE
+	show_magazine_on_sprite = TRUE
+	mag_type = /obj/item/ammo_box/magazine/svd_rounds
+
+	manufacturer = MANUFACTURER_NONE
+	zoomable = FALSE
+
+	rack_sound = 'mod_celadon/_storge_sounds/sound/gun/svd/svd_cocked.ogg'
+
+	fire_delay = 0.8 SECONDS
+
+	spread_unwielded = 25
+	recoil = 0
+	recoil_unwielded = 4
+	wield_slowdown = 0.75
+
+/obj/item/ammo_box/magazine/svd_rounds
+	name = "\improper SVD magazine (7.62x54mmR)"
+	desc = "A large caliber magazine for the SVD sniper rifle."
+	icon = 'mod_celadon/_storge_icons/icons/weapons/obj/svd_ammo.dmi'
+	icon_state = "10_bullet-1"
+	base_icon_state = "10_bullet"
+	ammo_type = /obj/item/ammo_casing/x762
+	max_ammo = 10
+	caliber = "7.62x54"
+	w_class = WEIGHT_CLASS_NORMAL
+	multiple_sprites = AMMO_BOX_FULL_EMPTY

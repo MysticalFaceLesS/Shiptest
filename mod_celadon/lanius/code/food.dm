@@ -95,30 +95,12 @@ var/ration = list( /obj/item/stack/sheet/metal,
 	name = "Hungry"
 	desc = "Some food would be good right about now."
 	icon_state = "hungry"
-	timeout = 300
+
 
 /atom/movable/screen/alert/starving/lanius
 	icon = 'mod_celadon/_storge_icons/icons/lanius/screen_alert.dmi'
 	name = "Starving"
 	desc = "You're severely malnourished. The hunger pains make moving around a chore."
 	icon_state = "starving"
-	timeout = 300
 
-/atom/movable/screen/alert/fat/lanius
-	icon = 'mod_celadon/_storge_icons/icons/lanius/screen_alert.dmi'
-	name = "Fat"
-	desc = "You're severely malnourished. The hunger pains make moving around a chore."
-	icon_state = "fat"
-	timeout = 300
 
-/datum/species/lanius/handle_digestion(mob/living/carbon/human/species/lanius/H)
-	. = ..()
-	switch(H.nutrition)
-		if(NUTRITION_LEVEL_WELL_FED to INFINITY)
-			H.throw_alert("nutrition", /atom/movable/screen/alert/fat/lanius)
-		if(NUTRITION_LEVEL_HUNGRY to NUTRITION_LEVEL_WELL_FED)
-			H.clear_alert("nutrition")
-		if(NUTRITION_LEVEL_STARVING to NUTRITION_LEVEL_HUNGRY)
-			H.throw_alert("nutrition", /atom/movable/screen/alert/hungry/lanius)
-		if(0 to NUTRITION_LEVEL_STARVING)
-			H.throw_alert("nutrition", /atom/movable/screen/alert/starving/lanius)

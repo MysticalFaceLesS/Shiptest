@@ -200,6 +200,9 @@ GLOBAL_DATUM(syndicate_code_response_regex, /regex)
 							// [CELADON-ADD] - TAJARA
 							if(prob(5))
 								. += pick(tajara_name(MALE),tajara_name(FEMALE))
+							// [CELADON-ADD] - CELADON_RIOL
+							if(prob(5))
+								. += pick(riol_name(MALE),riol_name(FEMALE))
 							// [/CELADON-ADD]
 							else
 								var/new_name = pick(pick(GLOB.first_names_male,GLOB.first_names_female))

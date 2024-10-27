@@ -154,6 +154,9 @@
 					// [CELADON-ADD] - TAJARA, LANIUS
 					if(SPECIES_TAJARA)
 						scan_species = /datum/species/tajara
+					// [CELADON-ADD] - CELADON_RIOL, CELADON_LANIUS
+					if(SPECIES_RIOL)
+						scan_species = /datum/species/riol
 					if(SPECIES_LANIUS)
 						scan_species = /datum/species/lanius
 					// [/CELADON-ADD]

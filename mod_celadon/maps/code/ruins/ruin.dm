@@ -704,3 +704,9 @@
 	id = "el_town"
 	description = "Town of Elysium"
 	suffix = "el_town.dmm"
+
+/datum/map_template/ruin/earth_sand/el_citadel
+	name = "elcitadel"
+	id = "el_citadel"
+	description = "Fortress of Elysium"
+	suffix = "el_citadel.dmm"
