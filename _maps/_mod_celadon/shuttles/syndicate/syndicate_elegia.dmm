@@ -322,7 +322,11 @@
 "fw" = (
 /obj/effect/turf_decal/corner/transparent/purple/mono,
 /obj/structure/table/reinforced,
-/obj/machinery/cell_charger,
+/obj/machinery/cell_charger{
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/obj/item/stock_parts/cell/high/plus,
 /turf/open/floor/plasteel/tech,
 /area/ship/science)
 "fH" = (
@@ -487,7 +491,10 @@
 /obj/item/assembly/flash,
 /obj/item/assembly/prox_sensor,
 /obj/machinery/light/directional/west,
-/obj/item/analyzer,
+/obj/item/analyzer{
+	pixel_x = -2;
+	pixel_y = 3
+	},
 /obj/effect/turf_decal/corner/transparent/purple/mono,
 /obj/machinery/button/door{
 	dir = 1;
@@ -495,7 +502,10 @@
 	name = "Windows";
 	pixel_y = -24
 	},
-/obj/item/stock_parts/cell/high/plus,
+/obj/item/assembly/signaler{
+	pixel_x = 11;
+	pixel_y = 10
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/science)
 "jo" = (
@@ -1375,10 +1385,6 @@
 /obj/machinery/smartfridge/bloodbank/preloaded,
 /turf/open/floor/carpet/black,
 /area/ship/medical)
-"xU" = (
-/obj/effect/turf_decal/industrial/traffic/full,
-/turf/template_noop,
-/area/template_noop)
 "xV" = (
 /obj/effect/turf_decal/trimline/opaque/black/line{
 	dir = 8
@@ -3141,7 +3147,7 @@ lm
 lm
 "}
 (2,1,1) = {"
-xU
+lm
 lm
 Pf
 Pf
