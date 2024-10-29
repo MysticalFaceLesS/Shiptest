@@ -480,4 +480,414 @@
 /datum/outfit/generic/security
 	name = "Security Officer (Legion)"
 	box = /obj/item/storage/box/survival/security
+// [CELADON-ADD] - CELADON_RETURN_LEGION_CORPSES
+/datum/outfit/generic/oldminer
+	name = "Old miner (Legion)"
 
+/datum/outfit/generic/oldminer/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	. = ..()
+	if(prob(100))
+		suit = /obj/item/clothing/suit/hooded/explorer/old
+		mask = /obj/item/clothing/mask/gas/explorer/old
+	if(prob(95))
+		glasses = /obj/item/clothing/glasses/meson
+	else if (prob(75))
+		glasses = /obj/item/clothing/glasses/meson
+		suit_store = /obj/item/tank/internals/oxygen
+		gloves = /obj/item/clothing/gloves/explorer/old
+		uniform = /obj/item/clothing/under/rank/cargo/miner/lavaland/old
+	if(prob(85))
+		back = /obj/item/storage/backpack/explorer
+		backpack_contents = list()
+	if(prob(70))
+		backpack_contents += pickweight(list(
+		/obj/item/borg/upgrade/modkit/damage = 1,
+		/obj/item/borg/upgrade/modkit/trigger_guard = 1,
+		/obj/item/soap/nanotrasen = 1,
+		/obj/item/wormhole_jaunter = 1,
+		/obj/item/fulton_core = 1,
+		/obj/item/extraction_pack = 2,
+		/obj/item/stack/sheet/animalhide/goliath_hide = 3,
+		/obj/item/hivelordstabilizer = 2,
+		/obj/item/stack/marker_beacon/ten = 2,
+		/obj/item/mining_scanner = 2,
+		/obj/item/extinguisher/mini = 2,
+		/obj/item/melee/knife/survival = 3,
+		/obj/item/flashlight/seclite=3,
+		/obj/item/stack/sheet/sinew = 3,
+		/obj/item/stack/sheet/bone = 3
+			)
+		)
+	if(prob(70))
+		backpack_contents += pickweight(list(
+		/obj/item/borg/upgrade/modkit/damage = 1,
+		/obj/item/borg/upgrade/modkit/trigger_guard = 1,
+		/obj/item/soap/nanotrasen = 1,
+		/obj/item/wormhole_jaunter = 1,
+		/obj/item/fulton_core = 1,
+		/obj/item/extraction_pack = 2,
+		/obj/item/stack/sheet/animalhide/goliath_hide = 3,
+		/obj/item/hivelordstabilizer = 2,
+		/obj/item/stack/marker_beacon/ten = 2,
+		/obj/item/mining_scanner = 2,
+		/obj/item/extinguisher/mini = 2,
+		/obj/item/melee/knife/survival = 3,
+		/obj/item/flashlight/seclite=3,
+		/obj/item/stack/sheet/sinew = 3,
+		/obj/item/stack/sheet/bone = 3
+		)
+	)
+	if(prob(70))
+		backpack_contents += pickweight(list(
+		/obj/item/borg/upgrade/modkit/damage = 1,
+		/obj/item/borg/upgrade/modkit/trigger_guard = 1,
+		/obj/item/soap/nanotrasen = 1,
+		/obj/item/wormhole_jaunter = 1,
+		/obj/item/fulton_core = 1,
+		/obj/item/extraction_pack = 2,
+		/obj/item/stack/sheet/animalhide/goliath_hide = 3,
+		/obj/item/hivelordstabilizer = 2,
+		/obj/item/stack/marker_beacon/ten = 2,
+		/obj/item/mining_scanner = 2,
+		/obj/item/extinguisher/mini = 2,
+		/obj/item/melee/knife/survival = 3,
+		/obj/item/flashlight/seclite=3,
+		/obj/item/stack/sheet/sinew = 3,
+		/obj/item/stack/sheet/bone = 3
+		)
+	)
+	if(prob(30))
+		backpack_contents += list(
+			/obj/item/reagent_containers/hypospray/medipen/survival = pickweight(list(
+				1 = 3,
+				2 = 2,
+				3 = 1
+				)
+			)
+		)
+	else
+		back = /obj/item/kinetic_crusher/old
+	if(prob(30))
+		belt = /obj/item/gun/energy/kinetic_accelerator/old
+	if(prob(30))
+		r_pocket = pickweight(list(
+		/obj/item/stack/marker_beacon = 20,
+		/obj/item/spacecash/bundle/mediumrand = 7,
+		/obj/item/reagent_containers/hypospray/medipen/survival = 2,
+		/obj/item/borg/upgrade/modkit/damage = 1
+		)
+	)
+	if(prob(30))
+	l_pocket = pickweight(list(
+		/obj/item/spacecash/bundle/mediumrand = 5,
+		/obj/item/reagent_containers/hypospray/medipen/survival = 2,
+		/obj/item/borg/upgrade/modkit/cooldown = 1
+		)
+	)
+
+/datum/outfit/generic/ashwalker
+	name = "Ashwalker (Legion)"
+
+/datum/outfit/generic/ashwalker/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	. = ..()
+	mob_species = /datum/species/lizard/ashwalker
+	uniform = /obj/item/clothing/under/costume/gladiator/ash_walker
+	if(prob(95))
+		head = /obj/item/clothing/head/helmet/gladiator
+	else
+		head = /obj/item/clothing/head/helmet/skull
+		suit = /obj/item/clothing/suit/armor/bone
+		gloves = /obj/item/clothing/gloves/bracer
+	if(prob(45))
+		back = pickweight(list(
+			/obj/item/melee/spear/bone = 3,
+			/obj/item/melee/axe/bone = 2
+			)
+		)
+	if(prob(10))
+		belt = /obj/item/storage/belt/mining/primitive
+	if(prob(30))
+		r_pocket = /obj/item/restraints/legcuffs/bola/watcher
+	if(prob(30))
+		l_pocket = /obj/item/melee/knife/bone
+
+/datum/outfit/generic/soldier
+	name = "Soldier (Legion)"
+/datum/outfit/generic/soldier/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	. = ..()
+	if(prob(90))
+		uniform = /obj/item/clothing/under/solgov
+		suit = /obj/item/clothing/suit/armor/vest/solgov
+		shoes = /obj/item/clothing/shoes/jackboots
+		gloves = /obj/item/clothing/gloves/color/black
+		mask = /obj/item/clothing/mask/gas/sechailer
+		head = /obj/item/clothing/head/solgov/sonnensoldner
+		id = /obj/item/card/id/solgov
+	else
+		uniform = /obj/item/clothing/under/solgov
+		suit = /obj/item/clothing/suit/space/hardsuit/solgov
+		shoes = /obj/item/clothing/shoes/combat
+		gloves = /obj/item/clothing/gloves/combat
+		mask = /obj/item/clothing/mask/gas/sechailer/swat
+		id = /obj/item/card/id/solgov
+	if(prob(85))
+		back = /obj/item/storage/backpack
+		backpack_contents = list()
+		if(prob(75))
+			backpack_contents += pickweight(list(
+				/obj/item/reagent_containers/hypospray/medipen/stimpack/traitor = 1,
+				/obj/item/storage/firstaid/tactical = 1,
+				/obj/item/gun/ballistic/automatic/pistol/solgov = 1,
+				/obj/item/gps = 1,
+				/obj/item/stock_parts/cell/gun/upgraded = 2,
+				/obj/item/ammo_box/magazine/pistol556mm = 3,
+				/obj/item/desk_flag/solgov = 3,
+				/obj/item/stack/marker_beacon/ten = 3,
+				/obj/item/detective_scanner = 2,
+				/obj/item/extinguisher/mini = 3,
+				/obj/item/melee/knife/combat = 3,
+				/obj/item/flashlight/seclite=3,
+				/obj/item/ammo_casing/shotgun = 3,
+				/obj/item/binoculars = 3,
+				/obj/item/clipboard = 3
+				)
+			)
+		if(prob(75))
+			backpack_contents += pickweight(list(
+				/obj/item/reagent_containers/hypospray/medipen/stimpack/traitor = 1,
+				/obj/item/storage/firstaid/tactical = 1,
+				/obj/item/gun/ballistic/automatic/pistol/solgov = 1,
+				/obj/item/gps = 1,
+				/obj/item/stock_parts/cell/gun/upgraded = 2,
+				/obj/item/ammo_box/magazine/pistol556mm = 3,
+				/obj/item/desk_flag/solgov = 3,
+				/obj/item/stack/marker_beacon/ten = 3,
+				/obj/item/detective_scanner = 2,
+				/obj/item/extinguisher/mini = 3,
+				/obj/item/melee/knife/combat = 3,
+				/obj/item/flashlight/seclite=3,
+				/obj/item/ammo_casing/shotgun = 3,
+				/obj/item/binoculars = 3,
+				/obj/item/clipboard = 3
+				)
+			)
+		if(prob(75))
+			backpack_contents += pickweight(list(
+				/obj/item/reagent_containers/hypospray/medipen/stimpack/traitor = 1,
+				/obj/item/storage/firstaid/tactical = 1,
+				/obj/item/gun/ballistic/automatic/pistol/solgov = 1,
+				/obj/item/gps = 1,
+				/obj/item/stock_parts/cell/gun/upgraded = 2,
+				/obj/item/ammo_box/magazine/pistol556mm = 3,
+				/obj/item/desk_flag/solgov = 3,
+				/obj/item/stack/marker_beacon/ten = 3,
+				/obj/item/detective_scanner = 2,
+				/obj/item/extinguisher/mini = 3,
+				/obj/item/melee/knife/combat = 3,
+				/obj/item/flashlight/seclite=3,
+				/obj/item/ammo_casing/shotgun = 3,
+				/obj/item/binoculars = 3,
+				/obj/item/clipboard = 3
+				)
+			)
+	else
+		back = pickweight(list(
+			/obj/item/energyhalberd = 5,
+			/obj/item/gun/ballistic/rocketlauncher = 5
+			)
+		)
+	if(prob(25))
+		belt = /obj/item/storage/belt/military
+	if(prob(50))
+		r_pocket = pickweight(list(
+			/obj/item/reagent_containers/hypospray/medipen/stimpack = 1,
+			/obj/item/melee/knife/letter_opener = 3,
+			/obj/item/radio = 3,
+			/obj/item/grenade/syndieminibomb/concussion = 1,
+			/obj/item/melee/transforming/energy/ctf/solgov = 1
+			)
+		)
+	if(prob(50))
+		l_pocket = pickweight(list(
+			/obj/item/reagent_containers/hypospray/medipen/stimpack = 1,
+			/obj/item/melee/knife/letter_opener = 3,
+			/obj/item/radio = 3,
+			/obj/item/grenade/syndieminibomb/concussion = 1,
+			/obj/item/melee/transforming/energy/ctf/solgov = 1
+			)
+		)
+	if(prob(70))
+		glasses = pickweight(list(
+			/obj/item/clothing/glasses/sunglasses = 3,
+			/obj/item/clothing/glasses/hud/health = 3,
+			/obj/item/clothing/glasses/hud/health/night = 1,
+			/obj/item/clothing/glasses/night = 2
+			)
+		)
+
+/datum/outfit/generic/kobold
+	name = "Kobold (Legion)"
+/datum/outfit/generic/kobold/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	. = ..()
+	mob_species = /datum/species/lizard/ashwalker/kobold
+	uniform = /obj/item/clothing/under/costume/gladiator/ash_walker
+	if(prob(95))
+		head = /obj/item/clothing/head/helmet/gladiator
+	else
+		head = /obj/item/clothing/head/helmet/skull
+		suit = /obj/item/clothing/suit/armor/bone
+		gloves = /obj/item/clothing/gloves/bracer
+	if(prob(5))
+		back = pickweight(list(
+			/obj/item/melee/spear/bone = 3,
+			/obj/item/melee/axe/bone = 2
+			)
+		)
+	if(prob(10))
+		belt = /obj/item/storage/belt/mining/primitive
+	if(prob(30))
+		r_pocket = /obj/item/melee/knife/bone
+	if(prob(30))
+		l_pocket = /obj/item/melee/knife/bone
+
+/datum/outfit/generic/YeOlde
+	name = "YeOlde (Legion)"
+/datum/outfit/generic/YeOlde/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	. = ..()
+	mob_gender = FEMALE
+	uniform = /obj/item/clothing/under/costume/maid
+	gloves = /obj/item/clothing/gloves/color/white
+	shoes = /obj/item/clothing/shoes/laceup
+	head = /obj/item/clothing/head/helmet/knight
+	suit = /obj/item/clothing/suit/armor/riot/knight
+	back = /obj/item/shield/riot/buckler
+	belt = /obj/item/melee/sword/claymore
+	r_pocket = /obj/item/tank/internals/emergency_oxygen
+	mask = /obj/item/clothing/mask/breath
+
+/datum/outfit/generic/operative
+	name = "Operative (Legion)"
+/datum/outfit/generic/operative/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	. = ..()
+	if(prob(40))
+		outfit = /datum/outfit/syndicatecommandocorpse
+	else if(prob(5))
+		outfit = /datum/outfit/syndicatestormtroopercorpse
+	else
+		outfit = /datum/outfit/syndicateramzicorpse
+
+/datum/outfit/generic/waldo
+	name = "Waldo (Legion)"
+/datum/outfit/generic/waldo/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	. = ..()
+	name = "Waldo"
+	uniform = /obj/item/clothing/under/pants/jeans
+	suit = /obj/item/clothing/suit/striped_sweater
+	head = /obj/item/clothing/head/beanie/waldo
+	shoes = /obj/item/clothing/shoes/sneakers/brown
+	ears = /obj/item/radio/headset
+	glasses = /obj/item/clothing/glasses/regular/circle
+	back = /obj/item/storage/backpack/satchel/leather
+	backpack_contents = list()
+	if(prob(50))
+		backpack_contents += pickweight(list(
+			/obj/item/book/granter/spell/knock = 1,
+			/obj/item/book/granter/spell/blind = 1,
+			/obj/item/shadowcloak = 1,
+			/obj/item/book/granter/spell/smoke = 2,
+			/obj/item/reagent_containers/syringe/mulligan = 2,
+			/obj/item/dice/d20 = 3,
+			/obj/item/dice/d20/fate/stealth/one_use = 1,
+			/obj/item/clothing/head/chameleon/broken = 3,
+			/obj/item/stack/marker_beacon/ten = 3,
+			/obj/item/grenade/smokebomb = 3,
+			/obj/item/grenade/flashbang = 3
+			)
+		)
+	if(prob(50))
+		backpack_contents += pickweight(list(
+			/obj/item/book/granter/spell/knock = 1,
+			/obj/item/book/granter/spell/blind = 1,
+			/obj/item/shadowcloak = 1,
+			/obj/item/book/granter/spell/smoke = 2,
+			/obj/item/reagent_containers/syringe/mulligan = 2,
+			/obj/item/dice/d20/fate/stealth/one_use = 1,
+			/obj/item/dice/d20 = 3,
+			/obj/item/clothing/head/chameleon/broken = 3,
+			/obj/item/stack/marker_beacon/ten = 3,
+			/obj/item/grenade/smokebomb = 3,
+			/obj/item/grenade/flashbang = 3
+			)
+		)
+	if(prob(50))
+		backpack_contents += pickweight(list(
+			/obj/item/book/granter/spell/knock = 1,
+			/obj/item/book/granter/spell/blind = 1,
+			/obj/item/shadowcloak = 1,
+			/obj/item/book/granter/spell/smoke = 2,
+			/obj/item/reagent_containers/syringe/mulligan = 2,
+			/obj/item/dice/d20/fate/stealth/one_use = 1,
+			/obj/item/clothing/head/chameleon/broken = 3,
+			/obj/item/stack/marker_beacon/ten = 3,
+			/obj/item/grenade/smokebomb = 3,
+			/obj/item/grenade/flashbang = 3
+			)
+		)
+	if(prob(25))
+		r_pocket = pickweight(list(
+			/obj/item/chameleon,
+			/obj/item/dnainjector/chameleonmut = 1,
+			/obj/item/flashlight/flashdark = 1
+			)
+		)
+	if(prob(25))
+		l_pocket = pickweight(list(
+			/obj/item/chameleon,
+			/obj/item/dnainjector/chameleonmut = 1,
+			/obj/item/flashlight/flashdark = 1
+			)
+		)
+
+/datum/outfit/generic/shadow
+	name = "Shadow (Legion)"
+/datum/outfit/generic/shadow/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	. = ..()
+	mob_species = /datum/species/shadow
+	neck = /obj/item/clothing/accessory/medal/plasma/nobel_science
+	uniform = /obj/item/clothing/under/color/black
+	shoes = /obj/item/clothing/shoes/sneakers/black
+	suit = /obj/item/clothing/suit/toggle/labcoat
+	glasses = /obj/item/clothing/glasses/blindfold
+	back = /obj/item/tank/internals/oxygen
+	mask = /obj/item/clothing/mask/breath
+
+/datum/outfit/generic/srm
+	name = "SRM (Legion)"
+/datum/outfit/generic/srm/pre_equip(mob/living/carbon/human/H, visualsOnly)
+	. = ..()
+	uniform = /obj/item/clothing/under/suit/roumain
+	shoes = /obj/item/clothing/shoes/workboots/mining
+	if(prob(50))
+		suit = /obj/item/clothing/suit/armor/roumain/shadow
+		head = /obj/item/clothing/head/cowboy/sec/roumain/shadow
+	else
+		suit = /obj/item/clothing/suit/armor/roumain
+		head = /obj/item/clothing/head/cowboy/sec/roumain
+	if(prob(25))
+		suit_store = /obj/item/gun/ballistic/shotgun/flamingarrow
+		r_pocket = /obj/item/book/manual/trickwines_4_brewers
+		belt = pick(list(/obj/item/melee/knife/hunting = 1, /obj/item/gun/ballistic/derringer = 1))
+		back = /obj/item/storage/backpack/cultpack
+		backpack_contents = list()
+	if(prob(75))
+		backpack_contents += list(/obj/item/ammo_box/c38_box = 1)
+	for(var/i = 1 to 3)
+		if(prob(75))
+			backpack_contents += pickweight(list(
+			/obj/item/reagent_containers/food/drinks/breakawayflask/vintage/ashwine,
+			/obj/item/reagent_containers/food/drinks/breakawayflask/vintage/icewine,
+			/obj/item/reagent_containers/food/drinks/breakawayflask/vintage/shockwine,
+			/obj/item/reagent_containers/food/drinks/breakawayflask/vintage/hearthwine,
+			/obj/item/reagent_containers/food/drinks/breakawayflask/vintage/forcewine,
+			/obj/item/reagent_containers/food/drinks/breakawayflask/vintage/prismwine,) = 2)
+// [/CELADON-ADD]

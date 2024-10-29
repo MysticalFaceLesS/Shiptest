@@ -501,7 +501,18 @@
 		"Doctor" = 5,
 		"Scientist" = 5,
 		"Cargo" = 5,
-		"Security" = 5
+		"Security" = 5,
+		// [CELADON-ADD] - Возвращение старых трупов легионов
+		"Waldo" = 3,
+		"Ashwalker" = 7,
+		"Soldier" = 5,
+		"Oldminer" = 8,
+		"Kobold" = 5,
+		"SRM" = 6,
+		"Operative" = 5,
+		"YeOlde" = 5,
+		"Shadow" = 1
+		// [/CELADON-ADD]
 		)
 	)
 
