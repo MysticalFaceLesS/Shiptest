@@ -256,8 +256,8 @@
 			else
 
 				var/splatter_color = null
-				//if(iscarbon(L)
-				if((iscarbon(L)) && !HAS_TRAIT(L, NOBLOOD)) // [CELADON - EDIT] Lanius
+				if(iscarbon(L))
+				//if((iscarbon(L)) && !HAS_TRAIT(L, NOBLOOD)) // [CELADON - EDIT] Lanius
 					var/mob/living/carbon/carbon_target = L
 					splatter_color = carbon_target.dna.blood_type.color
 					new /obj/effect/temp_visual/dir_setting/bloodsplatter(target_loca, splatter_dir, splatter_color)
@@ -497,12 +497,26 @@
 			return FALSE
 	else
 		var/mob/living/L = target
-		if(direct_target)
+		// [CELADON-EDIT] - CELADON_BALANCE - Делаем шансы на попадания
+		if(iscarbon(L))
+			if(direct_target && !L.density && firer.density && prob(85)) // 85% что пуля попадет в лежащую цель от стоящего стрелка
+				return TRUE
+			if(direct_target && !L.density && !firer.density && prob(70)) // 70% что пуля попадет в лежащую цель от лежащего стрелка
+				return TRUE
+			if(direct_target && L.density && !firer.density && prob(90)) // 90% пуля попадет в стоящую цель от лежачего стрелка
+				return TRUE
+		else if(direct_target)
 			return TRUE
+		// [/CELADON-EDIT]
 		// If target not able to use items, move and stand - or if they're just dead, pass over.
 		if(L.stat || (!hit_stunned_targets && HAS_TRAIT(L, TRAIT_IMMOBILIZED) && HAS_TRAIT(L, TRAIT_FLOORED) && HAS_TRAIT(L, TRAIT_HANDS_BLOCKED)))
 			return FALSE
-	return TRUE
+	// [CELADON-EDIT] - CELADON_BALANCE - Делаем шансы на попадания
+	// return TRUE 	// CELADON-EDIT - ORIGINAL
+	if(prob(25))	// С вероятность 20% шальная пуля зацепит лежащего
+		return TRUE
+	return FALSE
+	// [/CELADON-EDIT]
 
 /**
  * Scan if we should hit something and hit it if we need to

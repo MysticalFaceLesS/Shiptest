@@ -212,7 +212,8 @@
 
 /datum/outfit/debug/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	var/obj/item/card/id/W = H.wear_id
-	W.registered_name = H.real_name
+	// W.registered_name = H.real_name	// CELADON-REMOVE - CELADON_FIXES - Вызывает рантаймы
+	// W.update_label()	// CELADON-REMOVE
 	// [CELADON-ADD] - CELADON_FACTION
 	H.faction |= list(FACTION_PLAYER_SYNDICATE,
 					FACTION_PLAYER_NANOTRASEN,
@@ -229,5 +230,5 @@
 					FACTION_ANTAG_SYNDICATE,
 					FACTION_ANTAG_FRONTIERSMEN
 					)
+	ADD_TRAIT(H, TRAIT_MINDSHIELD, "status_effect")
 	// [/CELADON-ADD]
-	W.update_label()
