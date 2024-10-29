@@ -1,0 +1,260 @@
+/obj/machinery/door/airlock
+	var/multi_tile = FALSE
+	var/width = 1
+	var/obj/airlock_filler_object/filler
+
+/obj/machinery/door/airlock/Move()
+	if(multi_tile)
+		SetBounds()
+	return ..()
+
+/obj/machinery/door/airlock/Destroy()
+	if(filler)
+		qdel(filler)
+		filler = null
+	return ..()
+
+/obj/machinery/door/airlock/proc/SetBounds()
+	if(!multi_tile)
+		return
+	if(dir in list(NORTH, SOUTH, NORTHWEST, SOUTHEAST, NORTHEAST, SOUTHWEST))
+		bound_width = width * world.icon_size
+		bound_height = world.icon_size
+		if(!filler)
+			filler = new(get_step(src,EAST))
+			filler.parent_airlock = src
+		else
+			filler.loc = get_step(src,EAST)
+	else
+		bound_width = world.icon_size
+		bound_height = width * world.icon_size
+		if(!filler)
+			filler = new(get_step(src,NORTH))
+			filler.parent_airlock = src
+		else
+			filler.loc = get_step(src,NORTH)
+	filler.density = density
+	filler.set_opacity(opacity)
+
+/obj/machinery/door/airlock/multi_tile
+	multi_tile = TRUE
+	width = 2
+	//has_environment_lights = FALSE
+
+/*
+	AIRLOCKS
+*/
+
+/obj/machinery/door/airlock/glass_large
+	name = "Large Glass Airlock"
+	icon = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/glass/multi_tile.dmi'
+	overlays_file = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/glass/overlays.dmi'
+	opacity = FALSE
+	airlock_material = "glass"
+	glass = TRUE
+	bound_width = 64 // 2x1
+	assemblytype = /obj/structure/door_assembly/multi_tile/glass
+
+/obj/machinery/door/airlock/multi_tile/metal
+	name = "Large Airlock"
+	icon = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/metal/multi_tile.dmi'
+	overlays_file = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/metal/overlays.dmi'
+	assemblytype = /obj/structure/door_assembly/multi_tile/metal
+	bound_width = 64 // 2x1
+
+/obj/machinery/door/airlock/multi_tile/base
+	name = "Base airlock"
+	icon = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/base/multi_tile.dmi'
+	overlays_file = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/base/overlays.dmi'
+	assemblytype = /obj/structure/door_assembly/multi_tile/base
+	bound_width = 64
+	dir = NORTH
+
+/obj/machinery/door/airlock/multi_tile/base/glass
+	name = "Base Glass airlock"
+	opacity = FALSE
+	airlock_material = "glass"
+	glass = TRUE
+
+// Departments
+
+/obj/machinery/door/airlock/multi_tile/public
+	name = "Public Large Airlock"
+	icon = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/station/public.dmi'
+	overlays_file = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/station/overlays.dmi'
+	assemblytype = /obj/structure/door_assembly/multi_tile/metal
+	bound_width = 64 // 2x1
+
+/obj/machinery/door/airlock/multi_tile/security
+	name = "Security Large Airlock"
+	icon = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/station/security.dmi'
+	overlays_file = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/station/overlays.dmi'
+	assemblytype = /obj/structure/door_assembly/multi_tile/metal
+	bound_width = 64 // 2x1
+
+/obj/machinery/door/airlock/multi_tile/maintenance
+	name = "Maintenance Large Airlock"
+	icon = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/station/maintenance.dmi'
+	overlays_file = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/station/overlays.dmi'
+	assemblytype = /obj/structure/door_assembly/multi_tile/metal
+	bound_width = 64 // 2x1
+
+/obj/machinery/door/airlock/multi_tile/maintenanceexternal
+	name = "Maintenance External Large Airlock"
+	icon = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/station/maintenanceexternal.dmi'
+	overlays_file = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/station/overlays.dmi'
+	assemblytype = /obj/structure/door_assembly/multi_tile/metal
+	bound_width = 64 // 2x1
+
+/obj/machinery/door/airlock/multi_tile/engineering
+	name = "Engineering Large Airlock"
+	icon = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/station/engineering.dmi'
+	overlays_file = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/station/overlays.dmi'
+	assemblytype = /obj/structure/door_assembly/multi_tile/metal
+	bound_width = 64 // 2x1
+
+/obj/machinery/door/airlock/multi_tile/atmos
+	name = "Atmos Large Airlock"
+	icon = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/station/atmos.dmi'
+	overlays_file = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/station/overlays.dmi'
+	assemblytype = /obj/structure/door_assembly/multi_tile/metal
+	bound_width = 64 // 2x1
+
+/obj/machinery/door/airlock/multi_tile/solgov
+	name = "SolGov Large Airlock"
+	icon = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/station/solgov.dmi'
+	overlays_file = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/station/overlays.dmi'
+	assemblytype = /obj/structure/door_assembly/multi_tile/metal
+	bound_width = 64 // 2x1
+
+/obj/machinery/door/airlock/multi_tile/command
+	name = "Command Large Airlock"
+	icon = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/station/command.dmi'
+	overlays_file = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/station/overlays.dmi'
+	assemblytype = /obj/structure/door_assembly/multi_tile/metal
+	bound_width = 64 // 2x1
+
+// Glassed
+
+/obj/machinery/door/airlock/multi_tile/public/glass
+	opacity = FALSE
+	airlock_material = "glass"
+	glass = TRUE
+
+/obj/machinery/door/airlock/multi_tile/security/glass
+	opacity = FALSE
+	airlock_material = "glass"
+	glass = TRUE
+
+/obj/machinery/door/airlock/multi_tile/maintenance/glass
+	opacity = FALSE
+	airlock_material = "glass"
+	glass = TRUE
+
+/obj/machinery/door/airlock/multi_tile/maintenanceexternal/glass
+	opacity = FALSE
+	airlock_material = "glass"
+	glass = TRUE
+
+/obj/machinery/door/airlock/multi_tile/engineering/glass
+	opacity = FALSE
+	airlock_material = "glass"
+	glass = TRUE
+
+/obj/machinery/door/airlock/multi_tile/atmos/glass
+	opacity = FALSE
+	airlock_material = "glass"
+	glass = TRUE
+
+/obj/machinery/door/airlock/multi_tile/solgov/glass
+	opacity = FALSE
+	airlock_material = "glass"
+	glass = TRUE
+
+/obj/machinery/door/airlock/multi_tile/command/glass
+	opacity = FALSE
+	airlock_material = "glass"
+	glass = TRUE
+
+/*
+	FILLERS (not included)
+*/
+
+/obj/airlock_filler_object
+	name = ""
+	density = TRUE
+	opacity = TRUE
+	anchored = TRUE
+	var/parent_airlock
+
+/obj/airlock_filler_object/CanAllowThrough(atom/movable/mover, turf/target)
+	. = ..()
+	if(.)
+		return
+	// Snowflake handling for PASSGLASS.
+	if(istype(mover) && (mover.pass_flags & PASSGLASS))
+		return !opacity
+
+/obj/airlock_filler_object/can_be_pulled(user, grab_state, force)
+	return FALSE
+
+/obj/airlock_filler_object/singularity_act()
+	return
+
+/obj/airlock_filler_object/singularity_pull(S, current_size)
+	return
+
+/obj/airlock_filler_object/Destroy(force)
+	if(parent_airlock)
+		parent_airlock = null
+	return ..()
+
+/*
+	ASSEMBLIES
+*/
+
+/obj/structure/door_assembly/multi_tile
+	dir = EAST
+	var/width = 1
+
+/obj/structure/door_assembly/multi_tile/Initialize(mapload)
+	. = ..()
+	update_dir()
+
+/obj/structure/door_assembly/multi_tile/Move()
+	. = ..()
+	update_dir()
+
+/obj/structure/door_assembly/multi_tile/proc/update_dir()
+	if(dir in list(NORTH, SOUTH))
+		bound_width = width * world.icon_size
+		bound_height = world.icon_size
+	else
+		bound_width = world.icon_size
+		bound_height = width * world.icon_size
+
+/obj/structure/door_assembly/multi_tile/metal
+	name = "Large Airlock Assembly"
+	base_name = "Large Airlock"
+	icon = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/metal/multi_tile.dmi'
+	overlays_file = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/metal/overlays.dmi'
+	airlock_type = /obj/machinery/door/airlock/multi_tile/metal
+	glass_type = /obj/machinery/door/airlock/glass_large
+	bound_width = 64 // 2x1
+
+/obj/structure/door_assembly/multi_tile/glass
+	name = "Large Glass Airlock Assembly"
+	base_name = "Large Glass Airlock"
+	icon = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/glass/multi_tile.dmi'
+	overlays_file = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/glass/overlays.dmi'
+	airlock_type = /obj/machinery/door/airlock/glass_large
+	bound_width = 64 // 2x1
+
+/obj/structure/door_assembly/multi_tile/base
+	name = "Base Airlock Assembly"
+	base_name = "Base Airlock"
+	icon = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/base/multi_tile.dmi'
+	overlays_file = 'mod_celadon/_storge_icons/icons/obj/machinery/airlocks/base/overlays.dmi'
+	airlock_type = /obj/machinery/door/airlock/multi_tile/base
+	glass_type = /obj/machinery/door/airlock/multi_tile/base/glass
+	bound_width = 64 // 2x1
