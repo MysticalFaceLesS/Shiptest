@@ -492,7 +492,7 @@
 	if(prob(95))
 		glasses = /obj/item/clothing/glasses/meson
 	else if (prob(75))
-		glasses = /obj/item/clothing/glasses/meson
+		glasses = /obj/item/clothing/glasses/meson/night
 		suit_store = /obj/item/tank/internals/oxygen
 		gloves = /obj/item/clothing/gloves/explorer/old
 		uniform = /obj/item/clothing/under/rank/cargo/miner/lavaland/old
