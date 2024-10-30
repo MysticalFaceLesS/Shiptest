@@ -14,10 +14,22 @@
 		filler = null
 	return ..()
 
+/obj/machinery/door/airlock/multi_tile/Initialize(mapload)
+	. = ..()
+	update_dir()
+
+/obj/machinery/door/airlock/multi_tile/proc/update_dir()
+	if(dir in list(NORTH, SOUTH))
+		bound_width = width * world.icon_size
+		bound_height = world.icon_size
+	else
+		bound_width = world.icon_size
+		bound_height = width * world.icon_size
+
 /obj/machinery/door/airlock/proc/SetBounds()
 	if(!multi_tile)
 		return
-	if(dir in list(NORTH, SOUTH, NORTHWEST, SOUTHEAST, NORTHEAST, SOUTHWEST))
+	if(dir in list(NORTH, SOUTH))
 		bound_width = width * world.icon_size
 		bound_height = world.icon_size
 		if(!filler)
@@ -39,7 +51,32 @@
 /obj/machinery/door/airlock/multi_tile
 	multi_tile = TRUE
 	width = 2
-	//has_environment_lights = FALSE
+
+/obj/machinery/door/airlock/multi_tile/New()
+	. = ..()
+	apply_opacity_to_my_turfs(opacity)
+
+/obj/machinery/door/airlock/multi_tile/open()
+	if(..())
+		apply_opacity_to_my_turfs(opacity)
+
+
+/obj/machinery/door/airlock/multi_tile/close()
+	if(..())
+		apply_opacity_to_my_turfs(opacity)
+
+/obj/machinery/door/airlock/multi_tile/Destroy()
+	apply_opacity_to_my_turfs(0)
+	return ..()
+
+//Multi-tile poddoors don't turn invisible automatically, so we change the opacity of the turfs below instead one by one.
+/obj/machinery/door/airlock/multi_tile/proc/apply_opacity_to_my_turfs(new_opacity)
+	for(var/turf/T in locs)
+		T.opacity = new_opacity
+		T.directional_opacity = ALL_CARDINALS
+		T.reconsider_lights()
+		T.air_update_turf(1)
+	update_freelook_sight()
 
 /*
 	AIRLOCKS
