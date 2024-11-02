@@ -66,6 +66,19 @@ ID мода: CELADON_FIXES
 
 - EDIT: `code\game\objects\structures.dm` - Исправляет односторониие перила путям отключения одной строчки кода.
 
+- EDIT: `code/modules/research/rdconsole.dm` - Попытка изменить абьюз, когда игрок мог внести семена сколько угодно раз, пересобирая тупо консоль. Сделано через глобальный список.
+
+- ADD: `/obj/machinery/computer/telecomms/server/ui_interact` - Добавляем поддержку UTF-8
+- ADD: `/obj/machinery/computer/telecomms/monitor/ui_interact` - Добавляем поддержку UTF-8
+
+- REMOVE: `code/modules/client/verbs/looc.dm` - Убрано пару проверок. Разрешаем писать в LOOC будучи призраком.
+
+- EDIT: `code/modules/overmap/objects/event_datum.dm` - Выносим в отдельные родители ивенты, для корректной работы миссий на изучение
+
+- REMOVE: `code/modules/clothing/outfits/standard.dm` : `W.registered_name = H.real_name`, `W.update_label()` - Вызывают рантаймы
+
+- EDIT: `code/game/objects/items/devices/taperecorder.dm` - Изменение рекордера, дабы тот более не мог переводить другие языки
+
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -76,7 +89,7 @@ ID мода: CELADON_FIXES
 
 ### Оверрайды
 
-- Отсутствуют
+- `mod_celadon/fixes/code/research_mission.dm` - вроде перезаписывает
 <!--
   Если ты добавлял новый модульный оверрайд, его нужно указать здесь.
   Здесь указываются оверрайды в твоём моде и папке `_master_files`
@@ -108,7 +121,7 @@ ID мода: CELADON_FIXES
 ### Авторы:
 
 
-RalseiDreemuurr, Mirag1993 , Корольный крыс, MrCat15352, MysticalFaceLesS, Burbonchik
+RalseiDreemuurr, Mirag1993 , Корольный крыс, MrCat15352, MysticalFaceLesS, Burbonchik, MrRomainzZ
 
 <!--
   Здесь находится твой никнейм

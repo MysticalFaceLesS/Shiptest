@@ -887,27 +887,58 @@ IF YOU MODIFY THE PRODUCTS LIST OF A MACHINE, MAKE SURE TO UPDATE ITS RESUPPLY C
 	*/
 /obj/machinery/vending/proc/throw_item()
 	var/obj/throw_item = null
-	var/mob/living/target = locate() in view(7,src)
+	// [CELADON-EDIT] - CELADON_BALANCE - Чиним абьюз
+	// var/mob/living/target = locate() in view(7,src)
+	// if(!target)
+	// 	return 0
+	// for(var/datum/data/vending_product/R in shuffle(product_records))
+		// if(R.amount <= 0) //Try to use a record that actually has something to dump.
+			// continue
+		// var/dump_path = R.product_path
+		// if(!dump_path)
+			// continue
+		//
+		// R.amount--
+		// throw_item = new dump_path(loc)
+		// break
+	// if(!throw_item)
+		// return 0		// CELADON-EDIT - ORIGINAL
+	var/mob/living/target = locate() in view(1,src)
 	if(!target)
 		return 0
+	if (prob(10))
+		for(var/datum/data/vending_product/R in shuffle(product_records))
+			if(R.amount <= 0) //Try to use a record that actually has something to dump.
+				continue
+			var/dump_path = R.product_path
+			if(!dump_path)
+				continue
 
-	for(var/datum/data/vending_product/R in shuffle(product_records))
-		if(R.amount <= 0) //Try to use a record that actually has something to dump.
-			continue
-		var/dump_path = R.product_path
-		if(!dump_path)
-			continue
+			R.amount--
+			throw_item = new dump_path(loc)
+			break
+		if(!throw_item)
+			return 0
 
-		R.amount--
-		throw_item = new dump_path(loc)
-		break
-	if(!throw_item)
-		return 0
+		pre_throw(throw_item)
 
-	pre_throw(throw_item)
+		throw_item.throw_at(target, 16, 3)
+		visible_message("<span class='danger'>[src] launches [throw_item] at [target]!</span>")
+	else
+		visible_message("<span class='danger'>Автомат угрожающе жужит...</span>")
 
-	throw_item.throw_at(target, 16, 3)
-	visible_message("<span class='danger'>[src] launches [throw_item] at [target]!</span>")
+	if(tiltable && !tilted)
+		switch(rand(1, 100))
+			if(1 to 70)
+				visible_message("<span class='danger'>Атомат перестал жужать.</span>")
+				return
+			if(71 to 90)
+				visible_message("<span class='danger'>Атомат от сильного жужания кренится и падает на [target]!.</span>")
+				tilt(target)
+			if(91 to 100)
+				visible_message("<span class='danger'>Что-то взрывается внутри атомата и он подпрыгивает падая на [target]!.</span>")
+				tilt(target, crit=TRUE)
+	// [/CELADON-EDIT]
 	return 1
 /**
 	* A callback called before an item is tossed out

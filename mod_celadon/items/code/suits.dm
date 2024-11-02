@@ -25,7 +25,7 @@
 					/obj/item/melee/baton,
 					/obj/item/restraints/handcuffs,
 					/obj/item/tank/internals,
-					/obj/item/kitchen/knife/combat)
+					/obj/item/melee/knife/combat)
 
 /obj/item/clothing/head/helmet/space/hardsuit/tajaran
 	icon = 'mod_celadon/_storge_icons/icons/items/obj/helmet.dmi'

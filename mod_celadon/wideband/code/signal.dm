@@ -13,7 +13,7 @@
 		if("Подтвердить")
 			priority_announce("Наши локаторы получили сигнал бедствия S.O.S., который исходит от судна '" \
 			+ name + "' по координатам: X - " + x + " / Y - " + y + ". " + name + " запрашивает скорейшей помощи!", \
-			sound = 'mod_celadon/sound/announce/sos.ogg', sender_override = "Outpost Distress Beacon System", zlevel = 0)
+			sound = 'mod_celadon/_storge_sounds/sound/announce/sos.ogg', sender_override = "Outpost Distress Beacon System", zlevel = 0)
 
 			COOLDOWN_START(src, sendsos_cooldown, 45 MINUTES)
 			// Отправляем сигнал в Wideband.
@@ -23,9 +23,9 @@
 			GLOB.news_network.SubmitArticle("<b>Получен сигнал S.O.S.</b> <br> Наши локаторы получили сигнал бедствия, который исходит от судна '" + name + "' по координатам: X - " + x + " / Y - " + y + ". <br><b>" + name + " запрашивает скорейшей помощи!</b>", "Outpost Distress Beacon System", "Колониальная сеть объявлений", adminMessage = 0, allow_comments = 1)
 			// Отправляем сообщения в Discord о помощи в чат Shiptest`a.
 			if(CONFIG_GET(string/servername) == "\[RU] Celadon Shiptest: Alpha")
-				send2chat("<:Celadon:1200703387717619814>  \[Shiptest: Alpha] > Внимание! Судно **" + name + "** подаёт сигнал бедствия **S.O.S.** на координатах: **X - " + x + "** / **Y - " + y + "**.", "shiptest-chat")
+				send2chat("<:Celadon:1200703387717619814>  \[Shiptest: Alpha] > Внимание! Судно **`" + name + "`** подаёт сигнал бедствия **S.O.S.** на координатах: **X - " + x + "** / **Y - " + y + "**.", "round-report")
 			if(CONFIG_GET(string/servername) == "\[RU] Celadon Shiptest: Beta")
-				send2chat("<:Celadon:1200703387717619814>  \[Shiptest: Beta] > Внимание! Судно **" + name + "** подаёт сигнал бедствия **S.O.S.** на координатах: **X - " + x + "** / **Y - " + y + "**.", "shiptest-chat")
+				send2chat("<:Celadon:1200703387717619814>  \[Shiptest: Beta] > Внимание! Судно **`" + name + "`** подаёт сигнал бедствия **S.O.S.** на координатах: **X - " + x + "** / **Y - " + y + "**.", "round-report")
 			// Логируем действия.
 			message_admins("[key_name_admin(usr)] send signal S.O.S.")
 			log_admin("[key_name(usr)] - [key_name(src)] send signal S.O.S.")

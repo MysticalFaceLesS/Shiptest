@@ -56,7 +56,7 @@
 	var/owner_check_timer_id
 
 	/// The ship's join mode. Controls whether players can join freely, have to apply, or can't join at all.
-	var/join_mode = SHIP_JOIN_MODE_OPEN
+	var/join_mode = SHIP_JOIN_MODE_CLOSED
 	/// Lazylist of /datum/ship_applications for this ship. Only used if join_mode == SHIP_JOIN_MODE_APPLY
 	var/list/datum/ship_application/applications
 
@@ -259,7 +259,10 @@
 		return
 	avg_fuel_amnt = round(fuel_avg / engine_amnt * 100)
 
-/datum/overmap/ship/controlled/tick_move()
+// [CELADON-EDIT] - OVERMAP PHYSICS - Это вагабонд насрал
+// /datum/overmap/ship/controlled/tick_move()
+/datum/overmap/ship/controlled/not_tick_move(var/xmov, var/ymov)
+// [/CELADON-EDIT]
 	if(avg_fuel_amnt < 1)
 		//Slow down a little when there's no fuel
 		adjust_speed(clamp(-speed_x, max_speed * -0.001, max_speed * 0.001), clamp(-speed_y, max_speed * -0.001, max_speed * 0.001))

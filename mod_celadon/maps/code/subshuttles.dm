@@ -7,7 +7,7 @@
 /datum/map_template/shuttle/subshuttles/syndicate_jet_lancer
 	file_name = "syndicate_jet_lancer"
 	name = "Jet Lancer-class Boarding Vessel"
-	prefix = "DSSV"
+	prefix = "LSSV"
 /datum/map_template/shuttle/subshuttles/independent_module_one
 	file_name = "independent_module_one"
 	name = "Module-Ship-One"
@@ -18,6 +18,11 @@
 	prefix = "IMV"
 /datum/map_template/shuttle/subshuttles/nail
 	prefix = "PIRATE"
+/datum/map_template/shuttle/subshuttles/solfed_feather
+	file_name = "solfed_feather"
+	name = "Feather-class Supply Vessel"
+	prefix = "SSFSV"
+	name_categories = list("GENERAL", "SPACE", "BRITISH_NAVY", "NATURAL")
 //Субшатлы для руинок
 /datum/map_template/shuttle/ruin/ruin_jox
 	file_name = "syndicate_Jox"

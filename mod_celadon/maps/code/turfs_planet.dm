@@ -104,7 +104,8 @@
 
 /turf/open/floor/plating/asteroid/whitesands/earth
 	name = "sand"
-	icon = 'icons/misc/beach.dmi'
+	initial_gas_mix = OPENTURF_DEFAULT_ATMOS
+	icon = 'mod_celadon/_storge_icons/icons/turf/beach.dmi'
 	icon_state = "sand"
 
 // Тюрфы ночи //

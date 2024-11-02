@@ -375,15 +375,17 @@
 			/obj/item/clothing/head/centhat,
 			/obj/item/clothing/head/pirate,
 			/obj/item/clothing/head/santa,
-			/obj/item/clothing/head/hardhat/reindeer,
-			/obj/item/clothing/head/sombrero,
 			/obj/item/clothing/head/kitty,
-			/obj/item/clothing/head/rabbitears,
 			/obj/item/clothing/head/festive,
-			/obj/item/clothing/head/powdered_wig,
 			/obj/item/clothing/head/that,
 			/obj/item/clothing/head/nursehat,
 			/obj/item/clothing/head/chefhat,
+			// [CELADON-ADD] - CELADON_RETURN_CONTENT
+			/obj/item/clothing/head/hardhat/reindeer,
+			/obj/item/clothing/head/sombrero,
+			/obj/item/clothing/head/rabbitears,
+			/obj/item/clothing/head/powdered_wig,
+			// [/CELADON-ADD]
 			/obj/item/clothing/head/papersack,
 			))
 

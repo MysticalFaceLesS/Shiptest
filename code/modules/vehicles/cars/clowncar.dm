@@ -111,8 +111,11 @@
 	var/randomnum = rand(1,6)
 	switch(randomnum)
 		if(1)
+			// [CELADON-EDIT] - CELADON_RETURN_CONTENT - Вот тебе и ЛОЛ
+			// visible_message("<span class='danger'>[user] presses one of the colorful buttons on [src], and doesn't do anything. Oops.</span>")	// CELADON-EDIT - ORIGINAL
 			visible_message("<span class='danger'>[user] presses one of the colorful buttons on [src], and a special banana peel drops out of it.</span>")
 			new /obj/item/grown/bananapeel/specialpeel(loc)
+			// [/CELADON-EDIT]
 		if(2)
 			visible_message("<span class='danger'>[user] presses one of the colorful buttons on [src], and unknown chemicals flood out of it.</span>")
 			var/datum/reagents/R = new/datum/reagents(300)

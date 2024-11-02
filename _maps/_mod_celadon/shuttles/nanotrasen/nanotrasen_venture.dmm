@@ -187,6 +187,9 @@
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
 	},
+/obj/item/radio/intercom/wideband/directional/south{
+	pixel_x = -3
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "pu" = (
@@ -259,7 +262,7 @@
 	pixel_x = -32
 	},
 /obj/item/stock_parts/cell/gun,
-/obj/item/kitchen/knife/combat/survival,
+/obj/item/melee/knife/survival,
 /obj/item/clothing/suit/jacket/miljacket,
 /obj/item/storage/backpack/messenger/com,
 /obj/item/storage/backpack/duffelbag/captain,
@@ -646,7 +649,9 @@
 	id = "venture_front"
 	},
 /obj/docking_port/mobile{
-	dir = 8
+	dir = 4;
+	port_direction = 2;
+	preferred_direction = 4
 	},
 /obj/machinery/power/shieldwallgen/atmos{
 	id = "venture_exit";

@@ -115,6 +115,30 @@
 	. = ..()
 	get_inteq_g_acces(H)
 
+//Главный медик
+
+/datum/outfit/job/inteq/cmo/celadon
+	name = "IRMG - Honorable Corpsman"
+	id_assignment = "Honorable Corpsman"
+	jobtype = /datum/job/cmo
+	job_icon = "chiefmedicalofficer"
+
+	belt = /obj/item/storage/belt/medical/webbing/paramedic
+	ears = /obj/item/radio/headset/inteq/captain
+	uniform = /obj/item/clothing/under/syndicate/inteq/corpsman
+	alt_uniform = /obj/item/clothing/under/syndicate/inteq/skirt/corpsman
+	shoes = /obj/item/clothing/shoes/combat
+	suit = /obj/item/clothing/suit/hooded/wintercoat/security/inteq/alt
+	alt_suit = /obj/item/clothing/suit/armor/inteq/corpsman
+	dcoat = /obj/item/clothing/suit/armor/hos/inteq
+	r_pocket = /obj/item/pda/medical
+
+	chameleon_extras = null
+
+/datum/outfit/job/inteq/cmo/celadon/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	get_inteq_g_acces(H)
+
 //Служба безопасности
 
 /datum/outfit/job/inteq/security/celadon

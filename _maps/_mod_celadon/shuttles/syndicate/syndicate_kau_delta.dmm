@@ -52,14 +52,10 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
 "bl" = (
-/obj/machinery/mineral/ore_redemption{
-	dir = 4;
-	input_dir = 4;
-	output_dir = null
-	},
 /obj/effect/turf_decal/spline/plain/opaque/syndiered{
 	dir = 10
 	},
+/obj/structure/crate_shelf,
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
 "bB" = (
@@ -684,17 +680,13 @@
 "oq" = (
 /obj/effect/turf_decal/industrial/traffic/full,
 /obj/structure/table/reinforced,
-/obj/machinery/recharger{
-	pixel_x = -9;
-	pixel_y = 10
-	},
 /obj/machinery/cell_charger{
-	pixel_y = 10;
-	pixel_x = 6
+	pixel_y = 7;
+	pixel_x = -2
 	},
 /obj/item/stock_parts/cell/high{
-	pixel_y = 11;
-	pixel_x = 7
+	pixel_y = 2;
+	pixel_x = -2
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
@@ -1101,7 +1093,6 @@
 	req_access = list(48)
 	},
 /obj/item/storage/box/emptysandbags,
-/obj/item/kinetic_crusher/syndie_crusher,
 /obj/item/storage/bag/ore,
 /obj/item/mining_scanner,
 /obj/item/clothing/mask/gas/syndicate,
@@ -1112,6 +1103,7 @@
 	dir = 6
 	},
 /obj/item/clothing/glasses/meson/sunglasses,
+/obj/item/pickaxe/mini,
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
 "xG" = (
@@ -1322,7 +1314,7 @@
 	name = "Special Operative Vector";
 	desc = "A carbine based on a pre-Night of Fire SMG design. Chambered in .45 ACP. Has been modified to suit syndicate needs. Has a CyberSun TM";
 	wield_slowdown = 0.25;
-	mag_type = /obj/item/ammo_box/magazine/smgm45
+	mag_type = /obj/item/ammo_box/magazine/m45_cobra
 	},
 /obj/structure/closet/secure_closet/wall{
 	icon_state = "sec_wall";
@@ -1784,7 +1776,6 @@
 	},
 /obj/item/roller,
 /obj/item/modular_computer/laptop/preset/civilian,
-/obj/item/storage/firstaid/regular,
 /obj/structure/table/glass,
 /turf/open/floor/plasteel/dark,
 /area/ship/maintenance/port)
@@ -2107,7 +2098,6 @@
 	req_access = list(48)
 	},
 /obj/item/storage/box/emptysandbags,
-/obj/item/kinetic_crusher/syndie_crusher,
 /obj/item/storage/bag/ore,
 /obj/item/mining_scanner,
 /obj/item/clothing/mask/gas/syndicate,
@@ -2119,6 +2109,7 @@
 	},
 /obj/effect/turf_decal/steeldecal/steel_decals_central7,
 /obj/item/clothing/glasses/meson/sunglasses,
+/obj/item/pickaxe/mini,
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
 "OY" = (
@@ -2169,20 +2160,19 @@
 	},
 /obj/structure/guncloset,
 /obj/effect/turf_decal/industrial/traffic/full,
-/obj/item/gun/energy/ionrifle/carbine,
-/obj/item/gun/ballistic/automatic/marksman/ebr{
+/obj/item/gun/ballistic/automatic/assault/hydra/dmr{
 	name = "Special Operative 92 EBR";
 	desc = "Thats special operative syndicate rifle modified to be more usable in the heat of battle, chambered in .45 ACP. Effective against personnel and armor alike. Has a CyberSun TM";
-	mag_type = /obj/item/ammo_box/magazine/smgm45;
+	mag_type = /obj/item/ammo_box/magazine/m45_cobra;
 	projectile_damage_multiplier = 1.7;
 	wield_delay = 6;
 	wield_slowdown = 0.45;
 	zoom_amt = 8
 	},
-/obj/item/gun/ballistic/automatic/marksman/ebr{
+/obj/item/gun/ballistic/automatic/assault/hydra/dmr{
 	name = "Special Operative 92 EBR";
 	desc = "Thats special operative syndicate rifle modified to be more usable in the heat of battle, chambered in .45 ACP. Effective against personnel and armor alike. Has a CyberSun TM";
-	mag_type = /obj/item/ammo_box/magazine/smgm45;
+	mag_type = /obj/item/ammo_box/magazine/m45_cobra;
 	projectile_damage_multiplier = 1.7;
 	wield_delay = 6;
 	wield_slowdown = 0.45;
@@ -2361,9 +2351,6 @@
 /turf/open/floor/engine/hull/reinforced,
 /area/ship/external)
 "TK" = (
-/obj/structure/table/optable{
-	pixel_y = 9
-	},
 /obj/effect/turf_decal/techfloor{
 	dir = 1
 	},
@@ -2376,6 +2363,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 10
+	},
+/obj/structure/table/optable{
+	pixel_x = 0;
+	pixel_y = 9
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/maintenance/port)
@@ -2615,11 +2606,12 @@
 /obj/effect/turf_decal/corner/opaque/syndiered{
 	dir = 8
 	},
-/obj/item/storage/backpack/duffelbag/sec/surgery{
-	pixel_y = 5
-	},
 /obj/structure/sign/poster/contraband/cybersun_med{
 	pixel_x = 32
+	},
+/obj/item/storage/firstaid/medical{
+	pixel_x = 0;
+	pixel_y = 2
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/maintenance/port)

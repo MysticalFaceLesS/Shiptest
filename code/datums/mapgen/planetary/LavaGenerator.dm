@@ -112,11 +112,6 @@
 	)
 	mob_spawn_chance = 4
 	mob_spawn_list = list(
-		// [CELADON-ADD] - RETURN_TENDRILS
-		/obj/structure/spawner/lavaland/low_threat = 8,
-		/obj/structure/spawner/lavaland/medium_threat = 3,
-		/obj/structure/spawner/lavaland/high_threat = 1,
-		// [/CELADON-ADD]
 		/mob/living/simple_animal/hostile/asteroid/goliath/beast/random = 50,
 		/mob/living/simple_animal/hostile/asteroid/basilisk/watcher/random = 40,
 		/mob/living/simple_animal/hostile/asteroid/hivelord/legion/random = 30,
@@ -241,12 +236,6 @@
 	)
 	mob_spawn_chance = 4
 	mob_spawn_list = list(
-		// [CELADON-ADD] - RETURN_TENDRILS
-		/obj/structure/spawner/lavaland/low_threat = 8,
-		/obj/structure/spawner/lavaland/medium_threat = 3,
-		/obj/structure/spawner/lavaland/high_threat = 2,
-		/obj/structure/spawner/lavaland/extreme_threat = 1,
-		// [/CELADON-ADD]
 		/mob/living/simple_animal/hostile/asteroid/goliath/beast/random = 50,
 		/mob/living/simple_animal/hostile/asteroid/basilisk/watcher/random = 40,
 		/mob/living/simple_animal/hostile/asteroid/hivelord/legion/random = 30,

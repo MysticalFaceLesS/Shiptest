@@ -120,7 +120,7 @@
 /datum/outfit/outpost/maid/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	. = ..()
 	if(GARBAGEDAY in SSevents.holidays)
-		l_pocket = /obj/item/gun/ballistic/revolver/syndicate
+		l_pocket = /obj/item/gun/ballistic/revolver/viper
 		r_pocket = /obj/item/ammo_box/a357
 
 
@@ -148,7 +148,7 @@
 	belt = /obj/item/pda/clown
 	ears = /obj/item/radio/headset/headset_srv
 	uniform = /obj/item/clothing/under/rank/civilian/clown
-	shoes = /obj/item/clothing/shoes/clown_shoes
+	shoes = /obj/item/clothing/shoes/galoshes //  Clown shoes удалены оффами. Отличная замена. Отличная ведь?
 	mask = /obj/item/clothing/mask/gas/clown_hat
 	l_pocket = /obj/item/bikehorn
 	backpack_contents = list(
@@ -160,7 +160,7 @@
 
 	implants = list(/obj/item/implant/sad_trombone)
 
-	back = /obj/item/storage/backpack/clown
+	// back = /obj/item/storage/backpack/clown  - Вырезано оффами.
 
 	box = /obj/item/storage/box/hug/survival
 

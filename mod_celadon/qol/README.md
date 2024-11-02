@@ -31,6 +31,11 @@ ID мода: CELADON_QOL
 - добавлена кнопка refresh TGUI
 - убраны неиспользуемые кнопки со вкладки ООС	
 - перемещены технические кнопки во вкладку Special Verbs
+- обновлён функционал Fit Viewport
+- исправлен зависающий пузырик сообщения над головой куклы
+- /stutter теперь не распространяется на русские гласные
+- /slur теперь заменяет символы кириллицы на "пьяный вариант" и пропускает пробел
+- /check_for_custom_say_emote теперь нормально работает с кириллицей
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
   А также любая полезная информация.
@@ -38,7 +43,7 @@ ID мода: CELADON_QOL
 
 ### Изменения *кор кода*
 
-- ADD `code/game/objects/items/storage/wallets.dm`: `/obj/item/storage/wallet/ComponentInitialize()`: `STR.set_holdable`: `/obj/item/kitchen/knife/letter_opener,`, `/obj/item/key`
+- ADD `code/game/objects/items/storage/wallets.dm`: `/obj/item/storage/wallet/ComponentInitialize()`: `STR.set_holdable`: `/obj/item/melee/knife/letter_opener,`, `/obj/item/key`
 - EDIT `code/modules/mob/dead/new_player/sprite_accessories/hair.dm`: `/datum/sprite_accessory/hair`: `icon` = `mod_celadon/_storge_icons/icons/qol/human_face.dmi`
 - EDIT `code/game/objects/items/binoculars.dm`: `/obj/item/binoculars`: `slot_flags` = `ITEM_SLOT_NECK`
 - EDIT `code/modules/mob/living/silicon/silicon.dm`: `/mob/living/silicon/proc/checklaws()`
@@ -90,6 +95,9 @@ ID мода: CELADON_QOL
 
 - EDIT `code/game/gamemodes/extended/extended.dm` -> меняем начальный репорт
 
+- EDIT `code\modules\mob\mob_helpers.dm`: `/proc/slur`
+- EDIT `code\modules\mob\mob_helpers.dm`: `/proc/stutter`
+
 ООС вкладка	
 - EDIT `code/modules/client/verbs/ooc.dm` -> Убраны неиспользуемые кнопки "Message Of The Day" "Show Policy" со вкладки ООС.Перемещена кнопка "Fit Viewport" со вкладки "ООС" во вкладку "Special Verbs"
 - EDIT `code/datums/keybinding/client.dm` -> Перемещена кнопка "Toggle Fullscreen" со вкладки "ООС" во вкладку "Special Verbs"
@@ -99,6 +107,13 @@ ID мода: CELADON_QOL
 - REMOVE `code/modules/discord/accountlink.dm` -> Убрана неиспользуемая кнопка Verify Discord Account со вкладки ООС
 - REMOVE `code/modules/discord/toggle_notify.dm` Убрана неиспользуемая кнопка "Notify Restart" со вкладки "ООС"
 - REMOVE `code/modules/tgui_panel/external.dm` Убрана кнопка "Fix chat" со вкладки "ООС". Устаревшая функция.
+
+- EDIT `code/modules/clothing/clothing.dm` -> `armor_to_protection_class` -> Замена римских цифр на числовые значения
+
+- ADD `code\modules\mob\dead\new_player\ship_select.dm` -> Добавлено подтягивание short_name для шаблона.
+- ADD `tgui\packages\tgui\interfaces\ShipSelect.js` -> Добавлена подвкладка при покупке корабля с отображением карты.
+
+- EDIT `code\__HELPERS\roundend.dm` -> Изменён вывод гринтекста на более правильный для последующего вывода в Discord.
 
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
@@ -111,6 +126,12 @@ ID мода: CELADON_QOL
 ### Оверрайды
 
 - `/datum/outfit/debug`
+- `/datum/viewData/assertFormat`
+- `/datum/viewData/resetFormat`
+- `/client/fit_viewport`
+- `/mob/verb/me_verb`
+- `/mob/verb/say_verb`
+- `/mob/proc/check_for_custom_say_emote`
 <!--
   Если ты добавлял новый модульный оверрайд, его нужно указать здесь.
   Здесь указываются оверрайды в твоём моде и папке `_master_files`
@@ -141,7 +162,7 @@ ID мода: CELADON_QOL
 
 ### Авторы:
 
-RalseiDreemuurr, MysticalFaceLesS, MrCat15352, Yata9arasu
+RalseiDreemuurr, MysticalFaceLesS, MrCat15352, Yata9arasu, MrRomainzZ
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.

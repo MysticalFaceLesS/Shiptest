@@ -1,5 +1,10 @@
 //5.56x45
 
+/obj/projectile/bullet/a556_45
+	name = "5.56x45mm bullet"
+	damage = 25
+	armour_penetration = 20
+
 /obj/projectile/bullet/a556_45/a856
 	name = "5.56x45mm A856 bullet"
 	damage = 30
@@ -50,3 +55,10 @@
 	damage = 5
 	armour_penetration = -10
 	stamina = 38
+
+//7.62x54mmR
+/obj/projectile/bullet/x762x54
+	name = "crude sniper bullet"
+	speed = 1.1
+	damage = 35
+	armour_penetration = 15

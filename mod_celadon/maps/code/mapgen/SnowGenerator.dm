@@ -101,7 +101,7 @@
 	flora_spawn_chance = 10
 	mob_spawn_chance = 1
 	mob_spawn_list = list(
-		// [CELADON-ADD] - RETURN_TENDRILS
+		// [CELADON-ADD] - RETURN_CONTENT
 		/obj/structure/spawner/ice_moon = 2,
 		/obj/structure/spawner/ice_moon/polarbear = 2,
 		// [/CELADON-ADD]
@@ -116,7 +116,7 @@
 	)
 	feature_spawn_chance = 0.1
 	feature_spawn_list = list(
-		// [CELADON-ADD] - RETURN_TENDRILS
+		// [CELADON-ADD] - RETURN_CONTENT
 		/obj/structure/spawner/ice_moon/demonic_portal/low_threat = 25,
 		/obj/structure/spawner/ice_moon/demonic_portal/medium_threat = 50,
 		/obj/structure/spawner/ice_moon/demonic_portal/high_threat = 13,
@@ -183,7 +183,7 @@
 	)
 	feature_spawn_chance = 0.1
 	feature_spawn_list = list(
-		// [CELADON-ADD] - RETURN_TENDRILS
+		// [CELADON-ADD] - RETURN_CONTENT
 		/obj/structure/spawner/ice_moon = 2,
 		/obj/structure/spawner/ice_moon/polarbear = 2,
 		// [/CELADON-ADD]
@@ -195,7 +195,7 @@
 		/obj/structure/vein/ice/classthree = 1,
 	)
 	mob_spawn_list = list(
-		// [CELADON-ADD] - RETURN_TENDRILS
+		// [CELADON-ADD] - RETURN_CONTENT
 		/obj/structure/spawner/ice_moon = 2,
 		/obj/structure/spawner/ice_moon/polarbear = 2,
 		// [/CELADON-ADD]
@@ -236,7 +236,7 @@
 	)
 	feature_spawn_chance = 0.3
 	feature_spawn_list = list(
-		// [CELADON-ADD] - RETURN_TENDRILS
+		// [CELADON-ADD] - RETURN_CONTENT
 		/obj/structure/spawner/ice_moon/demonic_portal/low_threat = 200,
 		/obj/structure/spawner/ice_moon/demonic_portal/medium_threat = 400,
 		/obj/structure/spawner/ice_moon/demonic_portal/high_threat = 40,
@@ -285,7 +285,7 @@
 	)
 	mob_spawn_chance = 2
 	mob_spawn_list = list(
-		// [CELADON-ADD] - RETURN_TENDRILS
+		// [CELADON-ADD] - RETURN_CONTENT
 		/obj/structure/spawner/ice_moon = 2,
 		/obj/structure/spawner/ice_moon/polarbear = 2,
 		// [/CELADON-ADD]
@@ -300,7 +300,7 @@
 	)
 	feature_spawn_chance = 0.2
 	feature_spawn_list = list(
-		// [CELADON-ADD] - RETURN_TENDRILS
+		// [CELADON-ADD] - RETURN_CONTENT
 		/obj/structure/spawner/ice_moon/demonic_portal/low_threat = 20,
 		/obj/structure/spawner/ice_moon/demonic_portal/medium_threat = 40,
 		/obj/structure/spawner/ice_moon/demonic_portal/high_threat = 5,

@@ -25,13 +25,17 @@
 	new /obj/item/clothing/head/caphat(src)
 	new /obj/item/clothing/head/caphat/parade(src)
 	new /obj/item/clothing/suit/armor/vest/capcarapace/captunic(src)
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	new /obj/item/clothing/head/crown/fancy(src)
+	// [/CELADON-ADD]
 	new /obj/item/cartridge/captain(src)
 	new /obj/item/storage/box/silver_ids(src)
 	new /obj/item/radio/headset/heads/captain/alt(src)
 	new /obj/item/radio/headset/heads/captain(src)
-	new /obj/item/clothing/glasses/sunglasses/gar/supergar(src)
 	new /obj/item/clothing/gloves/color/captain(src)
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
+	new /obj/item/clothing/glasses/sunglasses/gar/supergar(src)
+	// [/CELADON-ADD]
 	new /obj/item/storage/belt/sabre(src)
 	new /obj/item/gun/energy/e_gun(src)
 	new /obj/item/door_remote/captain(src)
@@ -50,7 +54,9 @@
 	new /obj/item/clothing/head/beret/hop(src) //WS edit - More Berets
 	new /obj/item/clothing/under/rank/command/head_of_personnel(src) //WS Edit - Better Command Uniforms
 	new /obj/item/clothing/under/rank/command/head_of_personnel/skirt(src) //WS Edit - Better Command Uniforms
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	new /obj/item/clothing/head/hopcap(src)
+	// [/CELADON-ADD]
 	new /obj/item/cartridge/head_of_personnel(src)
 	new /obj/item/radio/headset/heads/head_of_personnel(src)
 	new /obj/item/clothing/shoes/sneakers/brown(src)
@@ -92,7 +98,9 @@
 	new /obj/item/clothing/under/rank/security/head_of_security/alt/skirt(src)
 	new /obj/item/clothing/head/HoS(src)
 	new /obj/item/clothing/glasses/hud/security/sunglasses/eyepatch(src)
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	new /obj/item/clothing/glasses/hud/security/sunglasses/gars/supergars(src)
+	// [/CELADON-ADD]
 	new /obj/item/clothing/suit/armor/vest/security/hos(src) //WS Edit - Better security jumpsuit sprites
 	new /obj/item/storage/lockbox/medal/sec(src)
 	new /obj/item/megaphone/sec(src)
@@ -259,7 +267,9 @@
 		new /obj/item/paper/fluff/jobs/security/court_judgement (src)
 	new /obj/item/pen (src)
 	new /obj/item/clothing/suit/judgerobe (src)
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	new /obj/item/clothing/head/powdered_wig (src)
+	// [/CELADON-ADD]
 	new /obj/item/storage/briefcase(src)
 
 /obj/structure/closet/secure_closet/contraband/armory

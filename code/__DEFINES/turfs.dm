@@ -14,7 +14,10 @@
 #define IS_OPAQUE_TURF(turf) (turf.directional_opacity == ALL_CARDINALS)
 
 // Integrity of mineral walls.
-#define MINERAL_WALL_INTEGRITY 100
+// [CELADON-EDIT] - CELADON_BALANCE - Делаем из картонного камня скалу!
+// #define MINERAL_WALL_INTEGRITY 100
+#define MINERAL_WALL_INTEGRITY 1200
+// [/CELADON-EDIT]
 
 // how many bullet holes a wall can have at a given time
 #define MAX_DENT_DECALS 15

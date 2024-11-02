@@ -78,3 +78,44 @@
 	desc = "Патроны с резиновой пулей , не смертельны но все еще наносят травмы."
 	icon_state = "308_rub"
 	ammo_type = /obj/item/ammo_casing/a308/a308_rubber
+
+//
+//     8x58
+//
+
+//Стандартные безгильзовые патроны калибра 8x58
+/obj/item/ammo_box/a858_ammo_box
+	name = "Ammo box (8x58mm Caseless)"
+	desc = "A box of standard 8x58mm ammo."
+	icon = 'mod_celadon/_storge_icons/icons/ammo/ammo.dmi'
+	icon_state = "a858box"
+	ammo_type = /obj/item/ammo_casing/caseless/a858
+	max_ammo = 50
+
+//
+//     410x76mm
+//
+/obj/item/ammo_box/a410_ammo_box
+	name = "Ammo box (410x76mm buckshot)"
+	desc = "Дробь он же бакшот 8 металлических шаров, сняражённых в патрон, урон большой по целям в малой броне и без брони, при средних и больших показателях брони урон ниже. В коробке 75 пуль."
+	icon = 'mod_celadon/_storge_icons/icons/weapons/obj/saiga_ammo.dmi'
+	icon_state = "410box_buckshot"
+	ammo_type = /obj/item/ammo_casing/a410
+	max_ammo = 75
+
+/obj/item/ammo_box/a410_slug_ammo_box
+	name = "Ammo box (410x76mm slug)"
+	desc = "Жакан - пулевой патрон - slug, повышенный урон по не бронированным целям и немного пониженный по целям в броне. В коробке 65 пуль."
+	icon = 'mod_celadon/_storge_icons/icons/weapons/obj/saiga_ammo.dmi'
+	icon_state = "410box_slug"
+	ammo_type = /obj/item/ammo_casing/a410/a410_slug
+	max_ammo = 65
+
+/obj/item/ammo_box/a410_flechette_ammo_box
+	name = "Ammo box (410x76mm flechette)"
+	desc = "Флешшет - дротик с повышенной пробиваемостью из-за своей формы, но меньшим уроном, чем пулевой патрон. В коробке 55 пуль."
+	icon = 'mod_celadon/_storge_icons/icons/weapons/obj/saiga_ammo.dmi'
+	icon_state = "410box_flechette"
+	ammo_type = /obj/item/ammo_casing/a410/a410_flechette
+	max_ammo = 55
+

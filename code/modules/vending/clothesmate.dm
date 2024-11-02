@@ -7,6 +7,16 @@
 	product_slogans = "Dress for success!;Prepare to look swagalicious!;Look at all this swag!;Why leave style up to fate? Use the ClothesMate!"
 	vend_reply = "Thank you for using the ClothesMate!"
 	products = list(
+		// [CELADON-ADD] - CELADON_RETURN_CONTENT
+		/obj/item/clothing/head/beanie/christmas = 3,
+		/obj/item/clothing/head/beanie/rasta = 3,
+		/obj/item/clothing/head/kippah = 3,
+		/obj/item/clothing/head/taqiyahred = 3,
+		/obj/item/clothing/glasses/monocle = 1,
+		/obj/item/clothing/head/sombrero = 1,
+		/obj/item/clothing/suit/poncho = 1,
+		/obj/item/clothing/suit/vapeshirt = 1,
+		// [/CELADON-ADD]
 		/obj/item/clothing/head/beanie = 3,
 		/obj/item/clothing/head/beanie/black = 3,
 		/obj/item/clothing/head/beanie/red = 3,
@@ -16,14 +26,10 @@
 		/obj/item/clothing/head/beanie/yellow = 3,
 		/obj/item/clothing/head/beanie/orange = 3,
 		/obj/item/clothing/head/beanie/cyan = 3,
-		/obj/item/clothing/head/beanie/christmas = 3,
 		/obj/item/clothing/head/beanie/striped = 3,
 		/obj/item/clothing/head/beanie/stripedred = 3,
 		/obj/item/clothing/head/beanie/stripedblue = 3,
 		/obj/item/clothing/head/beanie/stripedgreen = 3,
-		/obj/item/clothing/head/beanie/rasta = 3,
-		/obj/item/clothing/head/kippah = 3,
-		/obj/item/clothing/head/taqiyahred = 3,
 		/obj/item/clothing/gloves/fingerless = 2,
 		/obj/item/clothing/neck/scarf/pink = 3,
 		/obj/item/clothing/neck/scarf/red = 3,
@@ -85,9 +91,6 @@
 		/obj/item/clothing/accessory/waistcoat = 1,
 		/obj/item/clothing/head/that = 1,
 		/obj/item/clothing/head/fedora = 1,
-		/obj/item/clothing/glasses/monocle = 1,
-		/obj/item/clothing/head/sombrero = 1,
-		/obj/item/clothing/suit/poncho = 1,
 		/obj/item/clothing/under/costume/kilt = 1,
 		/obj/item/clothing/under/dress/sundress = 1,
 		/obj/item/clothing/under/dress/striped = 1,
@@ -112,12 +115,13 @@
 		/obj/item/storage/belt/fannypack/black = 2,
 		/obj/item/clothing/suit/jacket/letterman_syndie = 1,
 		/obj/item/clothing/under/costume/jabroni = 1,
-		/obj/item/clothing/suit/vapeshirt = 1,
 		/obj/item/clothing/under/costume/geisha = 1)
 	premium = list(
+		// [CELADON-ADD] - CELADON_RETURN_CONTENT
+		/obj/item/clothing/suit/jacket/leather/overcoat = 1,
+		// [/CELADON-ADD]
 		/obj/item/clothing/under/suit/checkered = 1,
 		/obj/item/clothing/suit/jacket/leather = 1,
-		/obj/item/clothing/suit/jacket/leather/overcoat = 1,
 		/obj/item/clothing/neck/necklace/dope = 3,
 		/obj/item/clothing/suit/jacket/letterman_nanotrasen = 1,
 		/obj/item/instrument/piano_synth/headphones/spacepods = 1)

@@ -42,7 +42,7 @@ ID мода: CELADON_ITEMS
 
 ### Оверрайды
 
-- Отсутствуют
+- `/obj/item/ammo_casing/attackby`
 <!--
   Если ты добавлял новый модульный оверрайд, его нужно указать здесь.
   Здесь указываются оверрайды в твоём моде и папке `_master_files`
@@ -70,7 +70,8 @@ ID мода: CELADON_ITEMS
 
 - `mods/_master_files/icons/obj/alien.dmi`
 - `mod_celadon/_storge_icons/icons/items`
-- ``
+- `mod_celadon/_storge_icons/icons/ammo/ammo.dmi`
+- `sound/weapons/gun/shotgun/insert_shell.ogg`
 <!--
   Будь то немодульный файл или модульный файл, который не содержится в папке,
   принадлежащей этому конкретному моду, он должен быть упомянут здесь.
@@ -80,7 +81,7 @@ ID мода: CELADON_ITEMS
 
 ### Авторы:
 
-MrCat15352, MysticalFaceLesS, RalseiDreemuurr
+MrCat15352, MysticalFaceLesS, RalseiDreemuurr, MrRomainzZ
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.

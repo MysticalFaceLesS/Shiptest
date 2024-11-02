@@ -1,9 +1,13 @@
 {
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
-	"map_name": "Darect-class Patrol Vessel ",
-	"faction": "/datum/faction/nt",
-	"prefix": "NTSPSV",
+	"map_name": "Darect-class Patrol Vessel",
+	"map_short_name": "Darect",
 	"description": " 'Darect', передовой патрульный космический корабль, управляемый межзвездным конгломератом, известным как НаноТрейзен, представляет собой элегантный и грозный корабль, который патрулирует обширные просторы галактики, чтобы защитить интересы своих корпоративных повелителей. Знакомое зрелище в бесчисленных звездных системах, является впечатляющим символом доминирования НТ в контролируемых корпорациями регионах космоса.",
+	"map_path": "_maps/_mod_celadon/shuttles/nanotrasen/nanotrasen_darect.dmm",
+	"enabled": true,
+	"limit": 1,
+	"prefix": "NTSPSV",
+	"faction": "/datum/faction/nt",
 	"tags": [
 		"Combat",
 		"Riot"
@@ -11,11 +15,7 @@
 	"namelists": [
 		"NANOTRASEN",
 		"WEAPONS"
-
 	],
-	"map_short_name": "Darect-class",
-	"map_path": "_maps/_mod_celadon/shuttles/nanotrasen/nanotrasen_darect.dmm",
-	"limit": 1,
 	"job_slots": {
 		"Lieutenant": {
 			"outfit": "/datum/outfit/job/nanotrasen/captain/lp",
@@ -33,12 +33,11 @@
 		},
 		"Flight group officer": {
 			"outfit": "/datum/outfit/job/nanotrasen/security/lp",
-			"slots": 3
+			"slots": 2
 		},
 		"Military surgeon": {
 			"outfit": "/datum/outfit/job/nanotrasen/paramedic",
 			"slots": 1
 		}
-	},
-	"enabled": true
+	}
 }

@@ -155,9 +155,6 @@
 	)
 	feature_spawn_chance = 0.5
 	feature_spawn_list = list(
-		// [CELADON-ADD] - RETURN_TENDRILS
-		/obj/structure/spawner/ice_moon/rockplanet = 4,
-		// [/CELADON-ADD]
 		/obj/structure/vein = 3,
 		/obj/structure/geyser/random = 2,
 		/obj/structure/vein/classtwo = 2,

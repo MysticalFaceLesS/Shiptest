@@ -52,10 +52,14 @@
 	color = "#009696"
 	compatible_types = list(/datum/blood_type/lizard)
 
+// [CELADON-REMOVE] - Потому что больше не используется в коде
+/*
 /datum/blood_type/elzuose
 	name = "E"
 	color = "#7fff7f"
 	compatible_types = list(/datum/blood_type/elzuose)
+*/
+// [/CELADON-REMOVE]
 
 /datum/blood_type/synthetic //Blood for synthetic/robotic species
 	name = "Coolant"

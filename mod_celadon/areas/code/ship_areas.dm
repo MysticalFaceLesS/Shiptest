@@ -99,3 +99,17 @@
 /area/ship/general/other/zone_4
 	name = "Other Shuttle 4"
 	icon_state = "osz_4"
+
+/// Hallways ///
+/area/ship/hallway/starboard_fore
+	name = "Starboard Fore Hallway"
+	icon_state = "starforehallway"
+
+/area/ship/hallway/port_fore
+	name = "Port Fore Hallway"
+	icon_state = "portforehallway"
+
+/// Security ///
+/area/ship/security/weapons_control
+	name = "Weapons Control Room"
+	icon_state = "weaponscontrolroom"

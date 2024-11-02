@@ -119,6 +119,12 @@
 	description = "\"First the creature's Flame breathed from beneath the stone, Hot battle-fumes, and the earth rumbled.\""
 	suffix = "icemoon_underground_drakelair.dmm"
 
+/datum/map_template/ruin/icemoon/icemoon_raided_cargobase
+	id = "raided_cargobase"
+	suffix = "icemoon_raided_cargobase.dmm"
+	name = "Raided Cargo Outpost"
+	description = "A cargo outpost that got raided by some space pirates"
+
 //							///
 //		Jungle ruin			///
 //							///
@@ -235,14 +241,6 @@
 	description = "A Solarian frontier research facility created by the Pionierskompanien \
 	This one seems to simulate the wintery climate of the northern provinces, including a sauna!"
 	suffix = "lavaland_surface_sloth.dmm"
-
-/datum/map_template/ruin/lavaland/elephant_graveyard
-	name = "Elephant Graveyard"
-	id = "Graveyard"
-	description = "An abandoned graveyard, calling to those unable to continue."
-	suffix = "lavaland_surface_elephant_graveyard.dmm"
-	allow_duplicates = FALSE
-	cost = 10
 
 /datum/map_template/ruin/lavaland/buried_shrine
 	name = "Buried Shrine"
@@ -614,6 +612,12 @@
 	id = "crash_kitchen"
 	suffix = "wasteplanet_crash_kitchen.dmm"
 
+/datum/map_template/ruin/wasteplanet/crahsed_abductor_ship
+	name = "Crashed Abductor Ship"
+	description = "A crashed abductor ship with something horrible goi'n inside."
+	id = "crash_abductor_ship"
+	suffix = "wasteplanet_ruined_abductor_ship.dmm"
+
 //							///
 //		Whitesand ruin		///
 //							///
@@ -690,6 +694,13 @@
 	description = "The base of an old and experienced miner"
 	suffix = "oldminer.dmm"
 
+/datum/map_template/ruin/plasma_gaint/dragon
+	name = "dragon"
+	id = "ps-dragon"
+	description = "An ancient and terrible dragon that lived for several centuries and ate hundreds of souls."
+	suffix = "dragon.dmm"
+	allow_duplicates = FALSE
+
 //							///
 //		EarthSand ruin		///
 //							///
@@ -699,3 +710,9 @@
 	id = "el_town"
 	description = "Town of Elysium"
 	suffix = "el_town.dmm"
+
+/datum/map_template/ruin/earth_sand/el_citadel
+	name = "elcitadel"
+	id = "el_citadel"
+	description = "Fortress of Elysium"
+	suffix = "el_citadel.dmm"

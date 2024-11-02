@@ -1,9 +1,13 @@
 {
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
-	"map_name": "TearDrop-class Scout Vessel ",
-	"faction": "/datum/faction/nt",
-	"prefix": "NTASV",
+	"map_name": "TearDrop-class Scout Vessel",
+	"map_short_name": "TearDrop",
 	"description": " 'TearDrop', разведывательный космический корабль под управлением NanoTrasen. Был получен НТ от СФ как одно из докозательств союза. Был немного переделан под нужды НТ.  Первостепенная его задача информирование НТ о действиях в секторе, а не война с другими фракциями. Корабль оснащён лазерным вооружением, туррелями, функционирующим медблоком, генератором энергии на алмазах и небольшой зоне отдыха.",
+	"map_path": "_maps/_mod_celadon/shuttles/nanotrasen/nanotrasen_teardrop.dmm",
+	"enabled": true,
+	"limit": 1,
+	"prefix": "NTASV",
+	"faction": "/datum/faction/nt",
 	"tags": [
 		"Combat",
 		"Scout"
@@ -11,11 +15,7 @@
 	"namelists": [
 		"NANOTRASEN",
 		"WEAPONS"
-
 	],
-	"map_short_name": "TearDrop-class",
-	"map_path": "_maps/_mod_celadon/shuttles/nanotrasen/nanotrasen_teardrop.dmm",
-	"limit": 1,
 	"job_slots": {
 		"Lieutenant": {
 			"outfit": "/datum/outfit/job/nanotrasen/captain/lp",
@@ -39,6 +39,5 @@
 			"outfit": "/datum/outfit/job/nanotrasen/paramedic",
 			"slots": 1
 		}
-	},
-	"enabled": true
+	}
 }

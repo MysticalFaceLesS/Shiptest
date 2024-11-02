@@ -78,7 +78,7 @@
 	if(C && crusher_loot && prob((C.total_damage/maxHealth) * crusher_drop_mod)) //on average, you'll need to kill 4 creatures before getting the item
 		spawn_crusher_loot()
 	// [/CELADON-EDIT]
-	// [CELADON-ADD] - RETURN_TENDRILS
+	// [CELADON-ADD] - RETURN_CONTENT
 	..(gibbed)
 	// [/CELADON-ADD]
 

@@ -7,7 +7,7 @@
 	/// List of refs to falling objects -> how many levels deep we've fallen
 	var/static/list/falling_atoms = list()
 	var/static/list/forbidden_types = typecacheof(list(
-		// [CELADON-ADD] - RETURN_TENDRILS
+		// [CELADON-ADD] - RETURN_CONTENT
 		/obj/effect/light_emitter/tendril,
 		/obj/effect/collapse,
 		// [/CELADON-ADD]

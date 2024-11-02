@@ -22,7 +22,9 @@
 		/obj/item/mining_scanner = 2,
 		/obj/item/t_scanner/adv_mining_scanner = 2,
 		/obj/item/hivelordstabilizer = 3,
+		// [CELADON-ADD] - CELADON_RETURN_CONTENT
 		/obj/item/clothing/glasses/meson/gar = 2,
+		// [/CELADON-ADD]
 		/obj/item/kinetic_crusher = 1,
 		/obj/item/gun/energy/kinetic_accelerator = 2,
 		/obj/item/pickaxe/silver = 1,
@@ -121,6 +123,6 @@
 	new /obj/item/clothing/suit/hooded/explorer(src)
 	new /obj/item/clothing/mask/gas/explorer(src)
 	new /obj/item/gun/energy/kinetic_accelerator(src)
-	new /obj/item/kitchen/knife/combat/survival(src)
+	new /obj/item/melee/knife/survival(src)
 	new /obj/item/flashlight/seclite(src)
 	new /obj/item/clothing/gloves/explorer(src)

@@ -44,52 +44,55 @@
 /obj/item/ammo_box/magazine/morita1/drum/empty
 	start_empty = TRUE
 
-/obj/item/ammo_box/magazine/p16/g36sh
+/obj/item/ammo_box/magazine/g36/sh
 	name = "\improper G36-SH magazine"
 	desc = " Polymer 20-round assault rifle magazine 5.56x45mm."
 	icon = 'mod_celadon/_storge_icons/icons/ammo/ammo.dmi'
 	icon_state = "g36sh_mag"
 	base_icon_state = "g36sh_mag"
 	ammo_type = /obj/item/ammo_casing/a556_45
+	caliber = "5.56x45mm"
 	max_ammo = 20
 
-/obj/item/ammo_box/magazine/p16/g36sh/update_icon_state()
+/obj/item/ammo_box/magazine/g36/sh/update_icon_state()
 	. = ..()
 	icon_state = "g36sh_mag-[!!ammo_count()]"
 
-/obj/item/ammo_box/magazine/p16/g36sh/empty
+/obj/item/ammo_box/magazine/g36/sh/empty
 	start_empty = TRUE
 
-/obj/item/ammo_box/magazine/p16/g36
+/obj/item/ammo_box/magazine/g36
 	name = "\improper G36 magazine"
 	desc = "Polymer standart assault rifle magazine 5.56x45mm."
 	icon = 'mod_celadon/_storge_icons/icons/ammo/ammo.dmi'
 	icon_state = "g36_mag"
 	base_icon_state = "g36_mag"
 	ammo_type = /obj/item/ammo_casing/a556_45
+	caliber = "5.56x45mm"
 	max_ammo = 30
 
-/obj/item/ammo_box/magazine/p16/g36/update_icon_state()
+/obj/item/ammo_box/magazine/g36/update_icon_state()
 	. = ..()
 	icon_state = "g36_mag-[!!ammo_count()]"
 
-/obj/item/ammo_box/magazine/p16/g36/empty
+/obj/item/ammo_box/magazine/g36/empty
 	start_empty = TRUE
 
-/obj/item/ammo_box/magazine/p16/g36drum
+/obj/item/ammo_box/magazine/g36/drum
 	name = "\improper G36 drum magazine"
 	desc = "Polymer high-capacyti assault rifle drum 5.56x45mm."
 	icon = 'mod_celadon/_storge_icons/icons/ammo/ammo.dmi'
 	icon_state = "g36drum_mag"
 	base_icon_state = "g36drum_mag"
 	ammo_type = /obj/item/ammo_casing/a556_45
+	caliber = "5.56x45mm"
 	max_ammo = 75
 
-/obj/item/ammo_box/magazine/p16/g36drum/update_icon_state()
+/obj/item/ammo_box/magazine/g36/drum/update_icon_state()
 	. = ..()
 	icon_state = "g36drum_mag-[!!ammo_count()]"
 
-/obj/item/ammo_box/magazine/p16/g36drum/empty
+/obj/item/ammo_box/magazine/g36/drum/empty
 	start_empty = TRUE
 
 /obj/item/ammo_box/magazine/usp45_standart

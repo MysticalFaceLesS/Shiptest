@@ -90,7 +90,7 @@
 	uniform = /obj/item/clothing/under/utility
 	shoes = /obj/item/clothing/shoes/sneakers/black
 	head = /obj/item/clothing/head/helmet/m10_elysium
-	backpack_contents = list(/obj/item/kitchen/knife/switchblade)
+	backpack_contents = list(/obj/item/melee/knife/switchblade)
 	id = /obj/item/card/id/elysium/security
 
 /datum/outfit/job/elysium/security/post_equip(mob/living/carbon/human/H)

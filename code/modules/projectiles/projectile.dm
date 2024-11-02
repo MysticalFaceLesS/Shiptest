@@ -24,6 +24,8 @@
 	resistance_flags = LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	var/def_zone = ""	//Aiming at
 	var/atom/movable/firer = null//Who shot it
+	// if the projectile was the result of a misfire. For logging.
+	var/misfire = FALSE
 	var/atom/fired_from = null // the atom that the projectile was fired from (gun, turret)
 	var/suppressed = FALSE	//Attack message
 	var/yo = null
@@ -252,11 +254,13 @@
 			if(B && !IS_ORGANIC_LIMB(B)) // So if you hit a robotic, it sparks instead of bloodspatters
 				do_sparks(2, FALSE, target.loc)
 			else
+
 				var/splatter_color = null
 				if(iscarbon(L))
+				//if((iscarbon(L)) && !HAS_TRAIT(L, NOBLOOD)) // [CELADON - EDIT] Lanius
 					var/mob/living/carbon/carbon_target = L
 					splatter_color = carbon_target.dna.blood_type.color
-				new /obj/effect/temp_visual/dir_setting/bloodsplatter(target_loca, splatter_dir, splatter_color)
+					new /obj/effect/temp_visual/dir_setting/bloodsplatter(target_loca, splatter_dir, splatter_color)
 			if(prob(33))
 				L.add_splatter_floor(target_loca)
 		else if(impact_effect_type && !hitscan)
@@ -284,7 +288,9 @@
 		for(var/datum/reagent/R in reagents.reagent_list)
 			reagent_note += "[R.name] ([num2text(R.volume)])"
 
-	if(ismob(firer))
+	if(misfire)
+		L.log_message("has been hit by a misfired [src] from \a [fired_from] last touched by [fired_from.fingerprintslast]", LOG_ATTACK, color = "orange")
+	else if(ismob(firer))
 		log_combat(firer, L, "shot", src, reagent_note)
 	else
 		L.log_message("has been shot by [firer] with [src]", LOG_ATTACK, color="orange")
@@ -491,12 +497,26 @@
 			return FALSE
 	else
 		var/mob/living/L = target
-		if(direct_target)
+		// [CELADON-EDIT] - CELADON_BALANCE - Делаем шансы на попадания
+		if(iscarbon(L))
+			if(direct_target && !L.density && firer.density && prob(85)) // 85% что пуля попадет в лежащую цель от стоящего стрелка
+				return TRUE
+			if(direct_target && !L.density && !firer.density && prob(70)) // 70% что пуля попадет в лежащую цель от лежащего стрелка
+				return TRUE
+			if(direct_target && L.density && !firer.density && prob(90)) // 90% пуля попадет в стоящую цель от лежачего стрелка
+				return TRUE
+		else if(direct_target)
 			return TRUE
+		// [/CELADON-EDIT]
 		// If target not able to use items, move and stand - or if they're just dead, pass over.
 		if(L.stat || (!hit_stunned_targets && HAS_TRAIT(L, TRAIT_IMMOBILIZED) && HAS_TRAIT(L, TRAIT_FLOORED) && HAS_TRAIT(L, TRAIT_HANDS_BLOCKED)))
 			return FALSE
-	return TRUE
+	// [CELADON-EDIT] - CELADON_BALANCE - Делаем шансы на попадания
+	// return TRUE 	// CELADON-EDIT - ORIGINAL
+	if(prob(25))	// С вероятность 20% шальная пуля зацепит лежащего
+		return TRUE
+	return FALSE
+	// [/CELADON-EDIT]
 
 /**
  * Scan if we should hit something and hit it if we need to

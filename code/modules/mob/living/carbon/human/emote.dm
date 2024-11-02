@@ -194,6 +194,10 @@
 	var/mob/living/carbon/human/H = user
 	if(!istype(H) || !H.dna || !H.dna.species || !H.dna.species.can_wag_tail(H))
 		return
+	// [CELADON-ADD] - CELADON_FIX_TAIL
+	if(H.wear_suit && (H.wear_suit.flags_inv & HIDETAIL))
+		return
+	// [/CELADON-ADD]
 	if(!H.dna.species.is_wagging_tail())
 		H.dna.species.start_wagging_tail(H)
 	else
