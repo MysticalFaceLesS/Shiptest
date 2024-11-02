@@ -17,19 +17,19 @@ $include atmos_mix.txt
 # There are various options which are hard-locked for security reasons.
 
 ## Server name: This appears at the top of the screen in-game and in the BYOND hub. Uncomment and replace 'Shiptest' with the name of your choice.
-# SERVERNAME Shiptest
+SERVERNAME CheezyTest
 
 ## Server SQL name: This is the name used to identify the server to the SQL DB, distinct from SERVERNAME as it must be at most 32 characters.
 # SERVERSQLNAME shiptest
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.
-STATIONNAME Space Station 13
+STATIONNAME CheezyTest 13
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
 #HUB
 
 ## Lobby time: This is the amount of time between rounds that players have to setup their characters and be ready.
-LOBBY_COUNTDOWN 120
+LOBBY_COUNTDOWN 5
 
 ## Round End Time: This is the amount of time after the round ends that players have to murder death kill each other.
 ROUND_END_COUNTDOWN 90
@@ -77,11 +77,11 @@ ENABLE_LOCALHOST_RANK
 ## The "base" minimum number of minutes as living to spawn a ship from the join menu.
 ## Ships may have differing true values depending on the template's coefficient, defined in JSON.
 ## The ship spawn playtime restriction is the ONLY restriction that applies for ship spawning.
-SHIP_SPAWN_BASE_EXP_MIN 600
+# SHIP_SPAWN_BASE_EXP_MIN 600
 ## The "base" minimum number of minutes as living to spawn into an officer job.
 ## Ships may have differing true values depending on the template's coefficient, defined in JSON.
 ## Once the ship has been spawned, this restriction will apply for any officer job being joined on a ship.
-OFFICER_JOIN_BASE_EXP_MIN 300
+# OFFICER_JOIN_BASE_EXP_MIN 300
 
 ## log OOC channel
 LOG_OOC
