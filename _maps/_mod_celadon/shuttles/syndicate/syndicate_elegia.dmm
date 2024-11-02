@@ -91,6 +91,11 @@
 /area/ship/medical)
 "cx" = (
 /obj/structure/table/wood,
+/obj/item/spacecash/bundle/c1000{
+	pixel_x = 5;
+	pixel_y = 11
+	},
+/obj/item/spacecash/bundle/c1000,
 /obj/item/toy/cards/deck/syndicate{
 	pixel_x = -7;
 	pixel_y = 8
@@ -98,10 +103,6 @@
 /obj/item/spacecash/bundle/c100{
 	pixel_x = 5;
 	pixel_y = 3
-	},
-/obj/item/spacecash/bundle/c50{
-	pixel_x = -5;
-	pixel_y = 0
 	},
 /turf/open/floor/carpet/red,
 /area/ship/crew)
@@ -113,6 +114,10 @@
 	},
 /obj/item/clothing/glasses/night{
 	pixel_y = 6
+	},
+/obj/item/clothing/glasses/night{
+	pixel_x = -2;
+	pixel_y = -4
 	},
 /obj/effect/turf_decal/industrial/traffic/full,
 /obj/machinery/light/small/directional/west,
@@ -181,6 +186,7 @@
 /area/ship/maintenance/starboard)
 "ds" = (
 /obj/structure/table/wood,
+/obj/item/healthanalyzer/advanced,
 /obj/item/clothing/glasses/hud/health/sunglasses,
 /obj/item/clothing/shoes/combat,
 /obj/item/clothing/neck/stripedbluescarf,
@@ -191,8 +197,12 @@
 	name = "lead doctor's jacket"
 	},
 /obj/item/clothing/gloves/color/latex/nitrile,
+/obj/item/clothing/suit/armor/vest/marine/medium{
+	name = "medium medical armor vest"
+	},
 /obj/item/ammo_box/magazine/m10mm_ringneck,
 /obj/item/ammo_box/magazine/m10mm_ringneck,
+/obj/item/defibrillator/compact/combat/loaded,
 /obj/item/clothing/accessory/holster,
 /obj/machinery/light_switch{
 	pixel_x = -20;
@@ -236,6 +246,7 @@
 /obj/item/clothing/suit/armor/vest/capcarapace/syndicate,
 /obj/item/clothing/under/syndicate/combat,
 /obj/item/clothing/gloves/combat,
+/obj/item/book/granter/martial/cqc,
 /turf/open/floor/carpet/red_gold,
 /area/ship/bridge)
 "dV" = (
@@ -322,11 +333,7 @@
 "fw" = (
 /obj/effect/turf_decal/corner/transparent/purple/mono,
 /obj/structure/table/reinforced,
-/obj/machinery/cell_charger{
-	pixel_x = -1;
-	pixel_y = 2
-	},
-/obj/item/stock_parts/cell/high/plus,
+/obj/machinery/cell_charger,
 /turf/open/floor/plasteel/tech,
 /area/ship/science)
 "fH" = (
@@ -443,8 +450,8 @@
 	dir = 4
 	},
 /obj/structure/rack,
+/obj/item/weldingtool/experimental,
 /obj/item/clothing/glasses/hud/diagnostic,
-/obj/item/weldingtool/hugetank,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/science/robotics)
 "io" = (
@@ -491,10 +498,7 @@
 /obj/item/assembly/flash,
 /obj/item/assembly/prox_sensor,
 /obj/machinery/light/directional/west,
-/obj/item/analyzer{
-	pixel_x = -2;
-	pixel_y = 3
-	},
+/obj/item/analyzer,
 /obj/effect/turf_decal/corner/transparent/purple/mono,
 /obj/machinery/button/door{
 	dir = 1;
@@ -502,10 +506,7 @@
 	name = "Windows";
 	pixel_y = -24
 	},
-/obj/item/assembly/signaler{
-	pixel_x = 11;
-	pixel_y = 10
-	},
+/obj/item/stock_parts/cell/high/plus,
 /turf/open/floor/plasteel/tech,
 /area/ship/science)
 "jo" = (
@@ -811,7 +812,9 @@
 "of" = (
 /obj/machinery/light/directional/east,
 /obj/effect/turf_decal/corner/transparent/purple/mono,
-/obj/item/kirbyplants/random,
+/obj/machinery/computer/rdconsole/core{
+	dir = 1
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/science)
 "ok" = (
@@ -885,6 +888,10 @@
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
+"pB" = (
+/obj/machinery/porta_turret/ship/faction/syndicate/ballistic,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/bridge)
 "pH" = (
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -1073,13 +1080,14 @@
 	pixel_x = 5;
 	pixel_y = 3
 	},
+/obj/item/spacecash/bundle/c50{
+	pixel_x = -5
+	},
 /obj/item/reagent_containers/food/drinks/beer{
-	pixel_x = -8;
-	pixel_y = 3
+	pixel_x = -7
 	},
 /obj/item/storage/box/syndie_kit/chameleon/broken{
-	pixel_x = 5;
-	pixel_y = 3
+	pixel_x = 7
 	},
 /turf/open/floor/carpet/red,
 /area/ship/crew)
@@ -1382,7 +1390,7 @@
 /obj/effect/turf_decal/corner/opaque/white/border{
 	dir = 1
 	},
-/obj/machinery/smartfridge/bloodbank/preloaded,
+/obj/machinery/smartfridge/chemistry,
 /turf/open/floor/carpet/black,
 /area/ship/medical)
 "xV" = (
@@ -1501,7 +1509,7 @@
 /area/ship/maintenance/port)
 "yZ" = (
 /obj/effect/turf_decal/corner/transparent/purple/mono,
-/obj/machinery/rnd/production/protolathe/department/cargo,
+/obj/machinery/rnd/production/techfab/department/security,
 /turf/open/floor/plasteel/tech,
 /area/ship/science)
 "zh" = (
@@ -1557,27 +1565,9 @@
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "zZ" = (
-/obj/effect/turf_decal/industrial/outline,
-/obj/item/clothing/shoes/workboots/mining,
-/obj/item/clothing/under/syndicate/gorlex,
-/obj/item/clothing/gloves/explorer,
-/obj/item/clothing/glasses/meson,
-/obj/item/clothing/head/hardhat/orange,
-/obj/structure/closet/secure_closet{
-	anchored = 1;
-	icon_state = "mining";
-	name = "wrecker's locker";
-	req_access = list(48)
-	},
-/obj/effect/turf_decal/industrial/outline,
-/obj/item/clothing/accessory/armband/cargo,
-/obj/item/storage/belt/mining,
-/obj/item/clothing/glasses/welding,
-/obj/item/kinetic_crusher/syndie_crusher,
-/obj/item/clothing/mask/gas/syndicate,
+/obj/structure/tank_dispenser/oxygen,
 /obj/item/radio/intercom/directional/north,
-/obj/item/gps/mining,
-/turf/open/floor/plasteel/tech/grid,
+/turf/open/floor/plasteel/tech,
 /area/ship/cargo)
 "Aa" = (
 /obj/structure/cable{
@@ -1730,13 +1720,13 @@
 	dir = 1
 	},
 /obj/machinery/light/directional/south,
+/obj/item/clothing/suit/space/hardsuit/syndi/hl,
+/obj/item/clothing/mask/gas/syndicate,
+/obj/effect/turf_decal/industrial/traffic/full,
 /obj/machinery/suit_storage_unit/inherit/industrial{
 	req_access = list(11)
 	},
-/obj/item/clothing/mask/gas/syndicate,
-/obj/item/clothing/suit/space/syndicate,
-/obj/item/clothing/head/helmet/space/syndicate,
-/obj/effect/turf_decal/industrial/traffic/full,
+/obj/item/tank/jetpack/carbondioxide,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "CY" = (
@@ -1922,6 +1912,8 @@
 /obj/item/ammo_box/magazine/m12g_bulldog/drum,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
 /obj/effect/turf_decal/industrial/traffic/full,
+/obj/item/stock_parts/cell/gun,
+/obj/item/stock_parts/cell/gun,
 /obj/item/ammo_box/magazine/m556_42_hydra,
 /obj/item/ammo_box/magazine/m556_42_hydra,
 /obj/item/ammo_box/magazine/m556_42_hydra,
@@ -2189,6 +2181,7 @@
 /obj/machinery/airalarm/directional/west,
 /obj/machinery/light/directional/north,
 /obj/effect/turf_decal/industrial/traffic/full,
+/obj/item/gun/energy/ionrifle,
 /obj/item/gun/ballistic/shotgun/automatic/bulldog,
 /obj/item/gun/ballistic/automatic/assault/hydra,
 /turf/open/floor/mineral/plastitanium/red,
@@ -2786,12 +2779,12 @@
 	pixel_x = -7;
 	pixel_y = 23
 	},
+/obj/structure/table/reinforced,
+/obj/item/storage/backpack/duffelbag/syndie/surgery,
 /obj/machinery/newscaster/directional/north{
 	pixel_x = 6
 	},
-/obj/structure/table/reinforced,
-/obj/item/storage/firstaid/medical,
-/turf/open/floor/plasteel/patterned/brushed,
+/turf/open/floor/carpet/black,
 /area/ship/medical)
 "VA" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
@@ -3023,7 +3016,6 @@
 /obj/item/clothing/glasses/welding,
 /obj/item/kinetic_crusher/syndie_crusher,
 /obj/item/clothing/mask/gas/syndicate,
-/obj/item/gps/mining,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/cargo)
 "Yn" = (
@@ -3093,11 +3085,13 @@
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/maintenance/starboard)
 "Zu" = (
+/obj/item/clothing/suit/space/hardsuit/syndi/hl,
 /obj/item/clothing/mask/gas/syndicate,
 /obj/effect/turf_decal/industrial/traffic/full,
 /obj/machinery/suit_storage_unit/inherit/industrial{
 	req_access = list(11)
 	},
+/obj/item/tank/jetpack/carbondioxide,
 /obj/machinery/button/door{
 	dir = 8;
 	id = "Redterror_battle";
@@ -3110,8 +3104,6 @@
 	pixel_x = 19;
 	pixel_y = 9
 	},
-/obj/item/clothing/suit/space/syndicate,
-/obj/item/clothing/head/helmet/space/syndicate,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "ZT" = (
@@ -3142,7 +3134,7 @@ ys
 ys
 pI
 YJ
-QN
+pB
 lm
 lm
 "}
@@ -3244,7 +3236,7 @@ sj
 Ja
 iL
 rc
-QN
+pB
 "}
 (7,1,1) = {"
 lm
@@ -3444,7 +3436,7 @@ SI
 ln
 XS
 rZ
-QN
+pB
 "}
 (17,1,1) = {"
 lm
