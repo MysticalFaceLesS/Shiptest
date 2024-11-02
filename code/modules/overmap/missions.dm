@@ -80,16 +80,7 @@
 		act_str = "Accept"
 	else if(can_complete())
 		act_str = "Turn in"
-	//[CELADON-ADD] - CELADON_FIXES - фиксим ролл
-	if(servant)
-		if(servant.giveup_timeout && !can_complete())
-			if(world.time > servant.giveup_timer)
-				if(servant.giveup_timeout)
-					servant.given_up_missions = 0
-					servant.giveup_timeout = FALSE
-			else
-				act_str = "BLOCKED (Timeout [ceil((servant.giveup_timer-world.time)/600)] minutes)"
-	//[/CELADON-ADD]
+
 	return list(
 		"ref" = REF(src),
 		"name" = src.name,

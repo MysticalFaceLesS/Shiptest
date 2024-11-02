@@ -161,15 +161,6 @@
 		))
 	return data
 
-//[CELADON-ADD] - CELADON_FIXES - Чиним реролл
-
-/datum/overmap/ship/controlled
-	var/given_up_missions = 0
-	var/giveup_timer = - 15 MINUTES
-	var/giveup_timeout = FALSE
-
-//[/CELADON-ADD]
-
 /obj/machinery/computer/cargo/ui_act(action, params, datum/tgui/ui)
 	. = ..()
 	if(.)
@@ -188,23 +179,6 @@
 				playsound(src, 'sound/machines/twobeep_high.ogg', 50, TRUE)
 				src.visible_message("<span class='notice'>[src] dispenses a holochip.</span>")
 			return TRUE
-
-		//[CELADON-ADD] - CELADON_FIXES - чиним реролл
-		if("payFine")
-			var/val = 3000
-			// no giving yourself money
-			if(!charge_account || !val || val <= 0)
-				return
-			if(charge_account.adjust_money(-val))
-				playsound(src, 'sound/machines/twobeep_high.ogg', 50, TRUE)
-				src.visible_message("<span class='notice'>[src] unblocks giving up.</span>")
-				var/obj/docking_port/mobile/D = SSshuttle.get_containing_shuttle(src)
-				var/datum/overmap/ship/controlled/ship = D.current_ship
-				if(ship)
-					ship.given_up_missions = 0
-					ship.giveup_timer = world.time-15 MINUTES
-					ship.giveup_timeout = FALSE
-		//[/CELADON-ADD]
 
 		if("LZCargo")
 			use_beacon = FALSE
@@ -281,29 +255,8 @@
 			else if(mission.servant == ship)
 				if(mission.can_complete())
 					mission.turn_in()
-				//[CELADON-EDIT] - CELADON_FIXES - фиксим ролл миссий
-				//else
-				//	mission.give_up()
-					ship.given_up_missions = 0
-					ship.giveup_timer = world.time-15 MINUTES
-					ship.giveup_timeout = FALSE
 				else
-					if(world.time > ship.giveup_timer)
-						if(ship.giveup_timeout)
-							ship.given_up_missions = 0
-							ship.giveup_timeout = FALSE
-						if(ship.given_up_missions < 3)
-							ship.given_up_missions = ship.given_up_missions+1
-							mission.give_up()
-							if(ship.given_up_missions >= 3)
-								ship.giveup_timer = world.time+15 MINUTES
-								ship.giveup_timeout = TRUE
-								to_chat(usr, "<span class='alert'>Maximum limit of aborted missions reached. Please wait 15 minutes, while we are checking your ship history for any possible frauds. Future attempts to give up a mission might result in a bad reputation.</span>")
-							return TRUE
-					else
-						to_chat(usr, "<span class='alert'>Please wait [ceil((ship.giveup_timer-world.time)/600)] minutes before giving up again.</span>")
-						return TRUE
-				//[/CELADON-EDIT]
+					mission.give_up()
 				return TRUE
 
 /obj/machinery/computer/cargo/connect_to_shuttle(obj/docking_port/mobile/port, obj/docking_port/stationary/dock)
