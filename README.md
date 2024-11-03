@@ -8,9 +8,9 @@
 <table>
 <tr><td align="center" width="2000"><b>
 <a href="https://github.com/shiptest-ss13/Shiptest">Upstream</a> • 
-<a href="https://discord.gg/rxsggTJzY3">Discord</a> • 
-<a href="https://wiki.celadon.pro/">Wiki</a> • 
-<a href="https://boosty.to/celadon">Patreon</a>
+<a href="nope">Discord</a> • 
+<a href="https://shiptest.net/wiki/Main_Page">Wiki</a> • 
+<a href="https://boosty.to/br54ff">Boosty</a>
 </b></td></tr>
 <tr><td align="center" width="2000"><b>
 <a href="#рекомендации-для-контрибьюторов">Коллаборация</a> • 
