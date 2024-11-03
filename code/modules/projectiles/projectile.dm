@@ -507,14 +507,6 @@
 				return TRUE
 		else if(direct_target)
 			return TRUE
-		if(direct_target && !L.density && !firer.density && prob(70)) // 70% что пуля попадет в лежащую цель от лежащего стрелка
-			return TRUE
-		if(direct_target && L.density && !firer.density && prob(90)) // 90% пуля попадет в стоящую цель от лежачего стрелка
-			return TRUE
-		if(direct_target && !L.density && !firer.density && prob(70)) // 70% что пуля попадет в лежащую цель от лежащего стрелка
-			return TRUE
-		if(direct_target && L.density && !firer.density && prob(90)) // 90% пуля попадет в стоящую цель от лежачего стрелка
-			return TRUE
 		// [/CELADON-EDIT]
 		// If target not able to use items, move and stand - or if they're just dead, pass over.
 		if(L.stat || (!hit_stunned_targets && HAS_TRAIT(L, TRAIT_IMMOBILIZED) && HAS_TRAIT(L, TRAIT_FLOORED) && HAS_TRAIT(L, TRAIT_HANDS_BLOCKED)))
