@@ -1,7 +1,7 @@
 //********************
 // 		Suits
 //********************
-/obj/item/clothing/suit/armor/vest/tajaran_replica				// Исключение, засунут в лодаут в таком виде, понравился игрокам
+/obj/item/clothing/suit/armor/vest/tajaran_replica				// Исключение, засунут в лодаут в таком виде, понравился игрокам (пофикшена броня)
 	icon = 'mod_celadon/_storge_icons/icons/items/obj/tajara_items.dmi'
 	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/items/overlay/tajara_items_overlay.dmi'
 	name = "white light tactical armor vest"
@@ -10,7 +10,7 @@
 	item_state = "snowsuit"
 	allowed = list(/obj/item/flashlight, /obj/item/tank/internals/emergency_oxygen, /obj/item/tank/internals/plasmaman, /obj/item/t_scanner, /obj/item/radio)
 	body_parts_covered = CHEST | GROIN | LEGS | FEET | ARMS | HANDS
-	// armor = list("melee" = 20, "bullet" = 20, "laser" = 10, "energy" = 15, "bomb" = 20, "bio" = 20, "fire" = 20, "acid" = 20)
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "fire" = 50, "acid" = 50)
 	cold_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS
 	min_cold_protection_temperature = ARMOR_MIN_TEMP_PROTECT
 	heat_protection = CHEST | GROIN | LEGS | FEET | ARMS | HANDS

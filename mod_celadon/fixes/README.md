@@ -77,6 +77,8 @@ ID мода: CELADON_FIXES
 
 - REMOVE: `code/modules/clothing/outfits/standard.dm` : `W.registered_name = H.real_name`, `W.update_label()` - Вызывают рантаймы
 
+- EDIT: `code/game/objects/items/devices/taperecorder.dm` - Изменение рекордера, дабы тот более не мог переводить другие языки
+
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
