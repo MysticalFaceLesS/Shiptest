@@ -38,6 +38,15 @@
 	time = 2 SECONDS
 	missinghpbonus = 10
 
+// [CELADON-ADD] - CELADON_IPC_SURGERY
+/datum/surgery_step/heal/mechanic/tool_check(mob/user, obj/item/tool)
+	if(istype(tool,/obj/item/weldingtool))
+		var/obj/item/weldingtool/W = tool
+		if(!W.welding)
+			return FALSE
+	return TRUE
+// [/CELADON-ADD]
+
 /datum/surgery_step/heal/mechanic/preop(mob/user, mob/living/carbon/target, target_zone, obj/item/tool, datum/surgery/surgery)
 	var/repairtype
 	if(tool.tool_behaviour == TOOL_WELDER || tool.tool_behaviour == TOOL_CAUTERY || istype(tool, /obj/item/melee/transforming/energy) || istype(tool, /obj/item/gun/energy/laser))
