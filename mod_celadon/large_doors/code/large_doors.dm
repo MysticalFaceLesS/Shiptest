@@ -14,17 +14,29 @@
 		filler = null
 	return ..()
 
-/obj/machinery/door/airlock/multi_tile/Initialize(mapload)
-	. = ..()
+/obj/machinery/door/airlock/multi_tile/New()
 	update_dir()
+	//to_chat(world, "<span class='boldannounce'>New() works</span>")
+	. = ..()
+
+/obj/machinery/door/airlock/multi_tile/Initialize(mapload)
+	update_dir()
+	//to_chat(world, "<span class='boldannounce'>Intialize() works</span>")
+	. = ..()
 
 /obj/machinery/door/airlock/multi_tile/proc/update_dir()
 	if(dir in list(NORTH, SOUTH))
+		//to_chat(world, "<span class='boldannounce'>if works (N and S)</span>")
 		bound_width = width * world.icon_size
+		//to_chat(world, "<span class='boldannounce'>[bound_width]</span>")
 		bound_height = world.icon_size
+		//to_chat(world, "<span class='boldannounce'>[bound_height]</span>")
 	else
+		//to_chat(world, "<span class='boldannounce'>else works (W and E)</span>")
 		bound_width = world.icon_size
+		//to_chat(world, "<span class='boldannounce'>[bound_width]</span>")
 		bound_height = width * world.icon_size
+		//to_chat(world, "<span class='boldannounce'>[bound_height]</span>")
 
 /obj/machinery/door/airlock/proc/SetBounds()
 	if(!multi_tile)
@@ -51,6 +63,7 @@
 /obj/machinery/door/airlock/multi_tile
 	multi_tile = TRUE
 	width = 2
+	dir = NORTH
 
 /obj/machinery/door/airlock/multi_tile/New()
 	. = ..()
@@ -171,6 +184,46 @@
 	assemblytype = /obj/structure/door_assembly/multi_tile/metal
 	bound_width = 64 // 2x1
 
+/obj/machinery/door/airlock/multi_tile/public/v
+	dir = WEST
+	bound_width = 32
+	bound_height = 64 // 1x2
+
+/obj/machinery/door/airlock/multi_tile/security/v
+	dir = WEST
+	bound_width = 32
+	bound_height = 64 // 1x2
+
+/obj/machinery/door/airlock/multi_tile/maintenance/v
+	dir = WEST
+	bound_width = 32
+	bound_height = 64 // 1x2
+
+/obj/machinery/door/airlock/multi_tile/maintenanceexternal/v
+	dir = WEST
+	bound_width = 32
+	bound_height = 64 // 1x2
+
+/obj/machinery/door/airlock/multi_tile/engineering/v
+	dir = WEST
+	bound_width = 32
+	bound_height = 64 // 1x2
+
+/obj/machinery/door/airlock/multi_tile/atmos/v
+	dir = WEST
+	bound_width = 32
+	bound_height = 64 // 1x2
+
+/obj/machinery/door/airlock/multi_tile/solgov/v
+	dir = WEST
+	bound_width = 32
+	bound_height = 64 // 1x2
+
+/obj/machinery/door/airlock/multi_tile/command/v
+	dir = WEST
+	bound_width = 32
+	bound_height = 64 // 1x2
+
 // Glassed
 
 /obj/machinery/door/airlock/multi_tile/public/glass
@@ -212,6 +265,46 @@
 	opacity = FALSE
 	airlock_material = "glass"
 	glass = TRUE
+
+/obj/machinery/door/airlock/multi_tile/public/glass/v
+	dir = WEST
+	bound_width = 32
+	bound_height = 64 // 1x2
+
+/obj/machinery/door/airlock/multi_tile/security/glass/v
+	dir = WEST
+	bound_width = 32
+	bound_height = 64 // 1x2
+
+/obj/machinery/door/airlock/multi_tile/maintenance/glass/v
+	dir = WEST
+	bound_width = 32
+	bound_height = 64 // 1x2
+
+/obj/machinery/door/airlock/multi_tile/maintenanceexternal/glass/v
+	dir = WEST
+	bound_width = 32
+	bound_height = 64 // 1x2
+
+/obj/machinery/door/airlock/multi_tile/engineering/glass/v
+	dir = WEST
+	bound_width = 32
+	bound_height = 64 // 1x2
+
+/obj/machinery/door/airlock/multi_tile/atmos/glass/v
+	dir = WEST
+	bound_width = 32
+	bound_height = 64 // 1x2
+
+/obj/machinery/door/airlock/multi_tile/solgov/glass/v
+	dir = WEST
+	bound_width = 32
+	bound_height = 64 // 1x2
+
+/obj/machinery/door/airlock/multi_tile/command/glass/v
+	dir = WEST
+	bound_width = 32
+	bound_height = 64 // 1x2
 
 /*
 	FILLERS (not included)
