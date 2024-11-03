@@ -498,9 +498,14 @@
 	else
 		var/mob/living/L = target
 		// [CELADON-EDIT] - CELADON_BALANCE - Делаем шансы на попадания
-		// if(direct_target)
-		//		return TRUE 	// CELADON-EDIT - ORIGINAL
-		if(direct_target && !L.density && firer.density && prob(85)) // 85% что пуля попадет в лежащую цель от стоящего стрелка
+		if(iscarbon(L))
+			if(direct_target && !L.density && firer.density && prob(85)) // 85% что пуля попадет в лежащую цель от стоящего стрелка
+				return TRUE
+			if(direct_target && !L.density && !firer.density && prob(70)) // 70% что пуля попадет в лежащую цель от лежащего стрелка
+				return TRUE
+			if(direct_target && L.density && !firer.density && prob(90)) // 90% пуля попадет в стоящую цель от лежачего стрелка
+				return TRUE
+		else if(direct_target)
 			return TRUE
 		if(direct_target && !L.density && !firer.density && prob(70)) // 70% что пуля попадет в лежащую цель от лежащего стрелка
 			return TRUE

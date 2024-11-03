@@ -26,7 +26,7 @@ ID мода: CELADON_LANIUS
 - spawn gibs death.dm
 - on hit projectile.dm
 - getorganzone helpers.dm
-
+- EDIT: `code/modules/surgery/organs/stomach.dm` - Отключает возможность ланиусам блевать
 ### Дефайны
 
 - code/__DEFINES/~mod_celadon/lanius.dm
