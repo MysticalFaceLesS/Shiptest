@@ -256,8 +256,8 @@
 			else
 
 				var/splatter_color = null
-				//if(iscarbon(L)
-				if((iscarbon(L)) && !HAS_TRAIT(L, NOBLOOD)) // [CELADON - EDIT] Lanius
+				if(iscarbon(L))
+				//if((iscarbon(L)) && !HAS_TRAIT(L, NOBLOOD)) // [CELADON - EDIT] Lanius
 					var/mob/living/carbon/carbon_target = L
 					splatter_color = carbon_target.dna.blood_type.color
 					new /obj/effect/temp_visual/dir_setting/bloodsplatter(target_loca, splatter_dir, splatter_color)
