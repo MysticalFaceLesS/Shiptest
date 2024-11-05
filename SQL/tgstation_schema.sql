@@ -609,3 +609,4 @@ CREATE TABLE `mentor_memo` (
   `edits` text,
   PRIMARY KEY (`ckey`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+playerrole_time_logbanbanplayer
