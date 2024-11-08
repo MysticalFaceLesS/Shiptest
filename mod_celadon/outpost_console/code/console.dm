@@ -211,19 +211,20 @@
 	supply_pack_data = list()
 	for(var/pack in SSshuttle.supply_packs)
 		var/datum/supply_pack/P = SSshuttle.supply_packs[pack]
-		if(!supply_pack_data[P.group])
+		if(!supply_pack_data[P.group] && P.faction == "syndicate")
 			supply_pack_data[P.group] = list(
 				"name" = P.group,
 				"packs" = list()
 			)
 		if(P.hidden && (P.faction != "syndicate"))
 			continue
-		supply_pack_data[P.group]["packs"] += list(list(
-			"name" = P.name,
-			"cost" = P.cost,
-			"id" = pack,
-			"desc" = P.desc || P.name // If there is a description, use it. Otherwise use the pack's name.
-		))
+		if(P.faction == "syndicate")
+			supply_pack_data[P.group]["packs"] += list(list(
+				"name" = P.name,
+				"cost" = P.cost,
+				"id" = pack,
+				"desc" = P.desc || P.name // If there is a description, use it. Otherwise use the pack's name.
+			))
 
 /obj/machinery/computer/cargo/faction/syndicate/ui_static_data(mob/user)
 	var/list/data = list()
@@ -276,19 +277,20 @@
 	supply_pack_data = list()
 	for(var/pack in SSshuttle.supply_packs)
 		var/datum/supply_pack/P = SSshuttle.supply_packs[pack]
-		if(!supply_pack_data[P.group])
+		if(!supply_pack_data[P.group] && P.faction == "inteq")
 			supply_pack_data[P.group] = list(
 				"name" = P.group,
 				"packs" = list()
 			)
 		if(P.hidden && (P.faction != "inteq"))
 			continue
-		supply_pack_data[P.group]["packs"] += list(list(
-			"name" = P.name,
-			"cost" = P.cost,
-			"id" = pack,
-			"desc" = P.desc || P.name // If there is a description, use it. Otherwise use the pack's name.
-		))
+		if(P.faction == "inteq")
+			supply_pack_data[P.group]["packs"] += list(list(
+				"name" = P.name,
+				"cost" = P.cost,
+				"id" = pack,
+				"desc" = P.desc || P.name // If there is a description, use it. Otherwise use the pack's name.
+			))
 
 /obj/machinery/computer/cargo/faction/inteq/ui_static_data(mob/user)
 	var/list/data = list()
@@ -341,19 +343,20 @@
 	supply_pack_data = list()
 	for(var/pack in SSshuttle.supply_packs)
 		var/datum/supply_pack/P = SSshuttle.supply_packs[pack]
-		if(!supply_pack_data[P.group])
+		if(!supply_pack_data[P.group] && P.faction == "solfed")
 			supply_pack_data[P.group] = list(
 				"name" = P.group,
 				"packs" = list()
 			)
 		if(P.hidden && (P.faction != "solfed"))
 			continue
-		supply_pack_data[P.group]["packs"] += list(list(
-			"name" = P.name,
-			"cost" = P.cost,
-			"id" = pack,
-			"desc" = P.desc || P.name // If there is a description, use it. Otherwise use the pack's name.
-		))
+		if(P.faction == "solfed")
+			supply_pack_data[P.group]["packs"] += list(list(
+				"name" = P.name,
+				"cost" = P.cost,
+				"id" = pack,
+				"desc" = P.desc || P.name // If there is a description, use it. Otherwise use the pack's name.
+			))
 
 /obj/machinery/computer/cargo/faction/solfed/ui_static_data(mob/user)
 	var/list/data = list()
@@ -406,19 +409,20 @@
 	supply_pack_data = list()
 	for(var/pack in SSshuttle.supply_packs)
 		var/datum/supply_pack/P = SSshuttle.supply_packs[pack]
-		if(!supply_pack_data[P.group])
+		if(!supply_pack_data[P.group] && !P.faction)
 			supply_pack_data[P.group] = list(
 				"name" = P.group,
 				"packs" = list()
 			)
 		if(P.hidden && (P.faction != "independent"))
 			continue
-		supply_pack_data[P.group]["packs"] += list(list(
-			"name" = P.name,
-			"cost" = P.cost,
-			"id" = pack,
-			"desc" = P.desc || P.name // If there is a description, use it. Otherwise use the pack's name.
-		))
+		if(!P.faction)
+			supply_pack_data[P.group]["packs"] += list(list(
+				"name" = P.name,
+				"cost" = P.cost,
+				"id" = pack,
+				"desc" = P.desc || P.name // If there is a description, use it. Otherwise use the pack's name.
+			))
 
 /obj/machinery/computer/cargo/faction/independent/ui_static_data(mob/user)
 	var/list/data = list()
