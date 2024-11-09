@@ -54,7 +54,7 @@
 				I = O
 				break
 		if (I)
-			I.access = list(ACCESS_MAINT_TUNNELS)
+			I.access = list(ACCESS_OUTPOST_FACTION_SEPARATISTS)
 			I.update_label()
 		W.combined_access = list()
 		for (var/obj/item/card/id/card in W.contents)

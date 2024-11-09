@@ -96,6 +96,13 @@
 /obj/effect/turf_decal/trimline/opaque/beige/filled/corner{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4;
+	req_one_access_txt = "101"
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 5
+	},
 /turf/open/floor/plasteel/tech,
 /area/outpost/medical)
 "aC" = (
@@ -270,9 +277,8 @@
 /turf/open/floor/plasteel/dark,
 /area/outpost/operations)
 "bj" = (
-/obj/effect/turf_decal/trimline/opaque/beige/filled/warning{
-	dir = 1;
-	pixel_y = 1
+/obj/effect/turf_decal/trimline/opaque/beige/filled/line{
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /turf/open/floor/plasteel/dark,
@@ -351,9 +357,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 4
-	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2,
 /turf/open/floor/plasteel/dark,
 /area/outpost/cargo)
 "bx" = (
@@ -668,12 +672,9 @@
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/engineering/atmospherics)
 "cF" = (
-/obj/effect/turf_decal/industrial/traffic{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
-/turf/open/floor/plasteel/dark,
-/area/outpost/cargo)
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
+/turf/open/floor/plasteel/tech,
+/area/outpost/medical)
 "cG" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
@@ -1447,6 +1448,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /turf/open/floor/plasteel/dark,
 /area/outpost/cargo)
 "fu" = (
@@ -1621,8 +1623,8 @@
 /turf/open/floor/plating,
 /area/outpost/crew/library)
 "ga" = (
-/turf/open/floor/plasteel/stairs{
-	icon = 'icons/obj/stairs.dmi'
+/turf/open/floor/plasteel/stairs/mid{
+	dir = 1
 	},
 /area/outpost/hallway/fore)
 "gd" = (
@@ -1851,8 +1853,8 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
-/turf/open/floor/plasteel/stairs{
-	icon = 'icons/obj/stairs.dmi'
+/turf/open/floor/plasteel/stairs/left{
+	dir = 1
 	},
 /area/outpost/hallway/fore)
 "gS" = (
@@ -1948,11 +1950,9 @@
 /turf/open/floor/plasteel/patterned/grid,
 /area/outpost/hallway/fore)
 "hi" = (
-/turf/open/floor/plasteel/stairs{
-	barefootstep = "woodbarefoot";
-	color = "#A47449";
-	footstep = "wood";
-	dir = 8
+/turf/open/floor/plasteel/stairs/left{
+	dir = 8;
+	color = "#A47449"
 	},
 /area/outpost/hallway/central)
 "hj" = (
@@ -2951,6 +2951,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /turf/open/floor/plasteel/dark,
 /area/outpost/cargo)
 "kZ" = (
@@ -3538,8 +3539,8 @@
 	pixel_x = 32
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
-/turf/open/floor/plasteel/stairs{
-	icon = 'icons/obj/stairs.dmi'
+/turf/open/floor/plasteel/stairs/right{
+	dir = 1
 	},
 /area/outpost/hallway/fore)
 "nc" = (
@@ -4421,6 +4422,9 @@
 /area/outpost/maintenance/fore)
 "qx" = (
 /obj/effect/turf_decal/trimline/opaque/beige/filled/line,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 5
+	},
 /turf/open/floor/plasteel/tech,
 /area/outpost/medical)
 "qy" = (
@@ -4567,8 +4571,8 @@
 	},
 /obj/item/radio/intercom/directional/west,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
-/turf/open/floor/plasteel/stairs{
-	icon = 'icons/obj/stairs.dmi'
+/turf/open/floor/plasteel/stairs/left{
+	dir = 1
 	},
 /area/outpost/hallway/fore)
 "qW" = (
@@ -4715,7 +4719,15 @@
 /area/outpost/crew/library)
 "rs" = (
 /obj/machinery/door/airlock/multi_tile/maintenance/glass/v{
-	id_tag = "ice_cargo_all"
+	id_tag = "ice_cargo_all";
+	max_integrity = 300000000
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4;
+	req_one_access_txt = "101"
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
 	},
 /turf/open/floor/plasteel/tech,
 /area/outpost/medical)
@@ -4849,9 +4861,7 @@
 /obj/effect/turf_decal/industrial/traffic{
 	dir = 8
 	},
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
-	dir = 8
-	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /turf/open/floor/plasteel/dark,
 /area/outpost/cargo)
 "rO" = (
@@ -4912,6 +4922,7 @@
 /obj/effect/turf_decal/trimline/opaque/beige/filled/line{
 	dir = 8
 	},
+/obj/machinery/airalarm/directional/south,
 /turf/open/floor/plasteel/tech,
 /area/outpost/medical)
 "rV" = (
@@ -5265,8 +5276,8 @@
 /obj/effect/turf_decal/spline/fancy/opaque/black{
 	dir = 8
 	},
-/turf/open/floor/plasteel/stairs{
-	icon = 'icons/obj/stairs.dmi'
+/turf/open/floor/plasteel/stairs/left{
+	dir = 1
 	},
 /area/outpost/hallway/fore)
 "ti" = (
@@ -5672,6 +5683,7 @@
 /obj/effect/turf_decal/industrial/traffic{
 	dir = 8
 	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
 /turf/open/floor/plasteel/dark,
 /area/outpost/cargo)
 "uv" = (
@@ -6472,7 +6484,9 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/cargo)
 "xf" = (
@@ -7566,8 +7580,8 @@
 /obj/effect/turf_decal/spline/fancy/opaque/black{
 	dir = 4
 	},
-/turf/open/floor/plasteel/stairs{
-	icon = 'icons/obj/stairs.dmi'
+/turf/open/floor/plasteel/stairs/right{
+	dir = 1
 	},
 /area/outpost/hallway/fore)
 "AN" = (
@@ -7641,7 +7655,7 @@
 /turf/open/floor/plating,
 /area/outpost/external)
 "Bg" = (
-/obj/effect/turf_decal/industrial/loading/white{
+/obj/effect/turf_decal/industrial/loading{
 	dir = 8
 	},
 /turf/open/floor/plasteel/tech,
@@ -7871,8 +7885,10 @@
 /obj/effect/turf_decal/corner_techfloor_gray/diagonal{
 	layer = 2.030
 	},
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
@@ -8222,7 +8238,6 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /turf/open/floor/plasteel/dark,
 /area/outpost/cargo)
 "Dg" = (
@@ -8633,7 +8648,6 @@
 /obj/effect/turf_decal/industrial/traffic{
 	dir = 4
 	},
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
 /turf/open/floor/plasteel/dark,
 /area/outpost/cargo)
 "EE" = (
@@ -8777,10 +8791,8 @@
 /area/outpost/hallway/central)
 "Fh" = (
 /obj/machinery/light/directional/west,
-/turf/open/floor/plasteel/stairs{
-	barefootstep = "woodbarefoot";
-	color = "#A47449";
-	footstep = "wood"
+/turf/open/floor/plasteel/stairs/left{
+	color = "#A47449"
 	},
 /area/outpost/hallway/fore)
 "Fi" = (
@@ -8837,11 +8849,9 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/open/floor/plasteel/stairs{
-	barefootstep = "woodbarefoot";
-	color = "#A47449";
-	footstep = "wood";
-	dir = 4
+/turf/open/floor/plasteel/stairs/mid{
+	dir = 4;
+	color = "#A47449"
 	},
 /area/outpost/hallway/central)
 "Fs" = (
@@ -8875,12 +8885,10 @@
 /obj/effect/turf_decal/corner_techfloor_gray/diagonal{
 	layer = 2.030
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 10
 	},
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4,
 /turf/open/floor/plasteel/dark,
 /area/outpost/cargo)
 "Fy" = (
@@ -9041,7 +9049,9 @@
 /turf/open/floor/carpet/green,
 /area/outpost/hallway/central)
 "Gj" = (
-/obj/machinery/computer/cargo/faction/independent,
+/obj/machinery/computer/cargo/faction/independent{
+	max_integrity = 200000000
+	},
 /obj/machinery/light/directional/north,
 /turf/open/floor/plasteel/tech,
 /area/outpost/cargo/faction/all)
@@ -9752,6 +9762,12 @@
 	},
 /turf/open/floor/concrete/slab_3,
 /area/outpost/hallway/central)
+"IA" = (
+/turf/open/floor/plasteel/stairs/right{
+	dir = 4;
+	color = "#A47449"
+	},
+/area/outpost/hallway/central)
 "IB" = (
 /obj/machinery/space_heater,
 /obj/structure/railing{
@@ -9871,12 +9887,20 @@
 /obj/machinery/firealarm/directional/east,
 /turf/open/floor/concrete/slab_3,
 /area/outpost/hallway/starboard)
-"IW" = (
-/turf/open/floor/plasteel/stairs{
-	barefootstep = "woodbarefoot";
-	color = "#A47449";
-	footstep = "wood";
+"IV" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4;
+	req_one_access_txt = "101"
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
+	},
+/turf/open/floor/plasteel/tech,
+/area/outpost/medical)
+"IW" = (
+/turf/open/floor/plasteel/stairs/left{
+	dir = 4;
+	color = "#A47449"
 	},
 /area/outpost/hallway/central)
 "IY" = (
@@ -11192,10 +11216,8 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/open/floor/plasteel/stairs{
-	barefootstep = "woodbarefoot";
-	color = "#A47449";
-	footstep = "wood"
+/turf/open/floor/plasteel/stairs/mid{
+	color = "#A47449"
 	},
 /area/outpost/hallway/fore)
 "NH" = (
@@ -11208,11 +11230,9 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/open/floor/plasteel/stairs{
-	barefootstep = "woodbarefoot";
-	color = "#A47449";
-	footstep = "wood";
-	dir = 8
+/turf/open/floor/plasteel/stairs/mid{
+	dir = 8;
+	color = "#A47449"
 	},
 /area/outpost/hallway/central)
 "NI" = (
@@ -11433,8 +11453,8 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
-/turf/open/floor/plasteel/stairs{
-	icon = 'icons/obj/stairs.dmi'
+/turf/open/floor/plasteel/stairs/right{
+	dir = 1
 	},
 /area/outpost/hallway/fore)
 "Ol" = (
@@ -11526,9 +11546,15 @@
 /turf/open/floor/grass,
 /area/outpost/crew/garden)
 "Oy" = (
-/obj/effect/turf_decal/industrial/hatch/yellow,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
-/turf/open/floor/plasteel/mono/dark,
+/obj/effect/turf_decal/industrial/traffic{
+	dir = 4
+	},
+/obj/effect/turf_decal/industrial/traffic{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
+/turf/open/floor/plasteel/dark,
 /area/outpost/cargo)
 "OA" = (
 /obj/machinery/processor,
@@ -11614,6 +11640,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
+"OL" = (
+/turf/open/floor/plasteel/stairs/right{
+	dir = 8;
+	color = "#A47449"
+	},
+/area/outpost/hallway/central)
 "OM" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
@@ -13792,7 +13824,6 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc/auto_name/directional/west,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /turf/open/floor/plasteel/dark,
 /area/outpost/cargo)
 "WS" = (
@@ -14583,10 +14614,8 @@
 /turf/open/floor/concrete/slab_3,
 /area/outpost/hallway/central)
 "ZB" = (
-/turf/open/floor/plasteel/stairs{
-	barefootstep = "woodbarefoot";
-	color = "#A47449";
-	footstep = "wood"
+/turf/open/floor/plasteel/stairs/right{
+	color = "#A47449"
 	},
 /area/outpost/hallway/fore)
 "ZC" = (
@@ -14629,12 +14658,9 @@
 /turf/open/floor/plasteel/tech/grid,
 /area/outpost/engineering)
 "ZF" = (
-/obj/effect/turf_decal/industrial/outline/yellow,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 6
-	},
-/turf/open/floor/plasteel/mono/dark,
-/area/outpost/cargo)
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
+/turf/open/floor/plasteel/tech,
+/area/outpost/medical)
 "ZG" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
@@ -29877,7 +29903,7 @@ Rp
 Rp
 QC
 TJ
-IW
+IA
 Fq
 IW
 Mc
@@ -30627,7 +30653,7 @@ Ta
 ez
 hi
 NH
-hi
+OL
 Xi
 cp
 Qm
@@ -32321,7 +32347,7 @@ QR
 vM
 It
 Gj
-Kd
+ZF
 qx
 nJ
 po
@@ -32508,7 +32534,7 @@ XA
 zM
 It
 cv
-Kd
+cF
 aB
 rU
 po
@@ -32696,7 +32722,7 @@ It
 It
 Ey
 Kd
-Kd
+IV
 oq
 po
 LC
@@ -35124,7 +35150,7 @@ Mt
 Mt
 NR
 EC
-cF
+EC
 WP
 Df
 xe
@@ -36059,9 +36085,9 @@ Zr
 Mt
 WY
 bH
-ZF
-Oy
-bj
+Od
+ZM
+Xo
 BR
 om
 ce
@@ -36245,10 +36271,10 @@ Gw
 FU
 FU
 YX
-ft
+Oy
 rN
-uu
-Wz
+rN
+bj
 Fx
 dd
 VZ
