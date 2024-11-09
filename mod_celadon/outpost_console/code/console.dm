@@ -56,7 +56,7 @@
 				"name" = P.group,
 				"packs" = list()
 			)
-		if(P.hidden && (P.faction != "factionless"))
+		if(P.hidden)
 			continue
 		supply_pack_data[P.group]["packs"] += list(list(
 			"name" = P.name,
@@ -75,7 +75,7 @@
 				"name" = P.group,
 				"packs" = list()
 			)
-		if((P.hidden && !(obj_flags & EMAGGED)) && (P.faction != "factionless"))
+		if((P.hidden && !(obj_flags & EMAGGED)))
 			continue
 		data["supplies"][P.group]["packs"] += list(list(
 			"name" = P.name,
@@ -393,7 +393,7 @@
 	contraband = FALSE
 	self_paid = FALSE
 
-	podType = /obj/structure/closet/supplypod/centcompod
+	podType = /obj/structure/closet/supplypod/elysiumpod
 
 	charge_account = ACCOUNT_IND
 

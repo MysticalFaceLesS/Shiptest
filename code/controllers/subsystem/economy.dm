@@ -60,6 +60,6 @@ SUBSYSTEM_DEF(economy)
 
 /datum/controller/subsystem/economy/Initialize()
 	for(var/dep_id in department_accounts)
-		new /datum/bank_account/department(dep_id, 666, player_account = FALSE)
+		new /datum/bank_account/department(dep_id, 0, player_account = FALSE)
 	return 2
 //[/CELADON-ADD]
