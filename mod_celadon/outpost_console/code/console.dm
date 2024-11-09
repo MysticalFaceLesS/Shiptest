@@ -16,6 +16,8 @@
 
 	podType = /obj/structure/closet/supplypod/centcompod
 
+	flags_1 = NODECONSTRUCT_1
+
 /obj/machinery/computer/cargo/faction/Initialize()
 	. = ..()
 	var/obj/item/circuitboard/computer/cargo/board = circuit
