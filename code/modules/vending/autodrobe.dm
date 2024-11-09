@@ -7,6 +7,43 @@
 	product_slogans = "Dress for success!;Suited and booted!;It's show time!;Why leave style up to fate? Use AutoDrobe!"
 	vend_reply = "Thank you for using AutoDrobe!"
 	products = list(
+		// [CELADON-ADD] - CELADON_RETURN_CONTENT
+		/obj/item/clothing/suit/chickensuit = 1,
+		/obj/item/clothing/head/chicken = 1,
+		/obj/item/clothing/head/beret/vintage = 1,
+		/obj/item/clothing/head/beret/archaic = 1,
+		/obj/item/clothing/glasses/monocle =1,
+		/obj/item/clothing/head/bowler = 1,
+		/obj/item/clothing/head/plaguedoctorhat = 1,
+		/obj/item/clothing/suit/imperium_monk = 1,
+		/obj/item/clothing/suit/chaplainsuit/holidaypriest = 1,
+		/obj/item/clothing/suit/chaplainsuit/whiterobe = 1,
+		/obj/item/clothing/head/wizard/marisa/fake = 1,
+		/obj/item/clothing/suit/wizrobe/marisa/fake = 1,
+		/obj/item/clothing/head/witchwig = 1,
+		/obj/item/clothing/suit/wizrobe/fake = 1,
+		/obj/item/clothing/head/wizard/fake = 1,
+		/obj/item/clothing/head/rabbitears =1,
+		/obj/item/clothing/head/sombrero = 1,
+		/obj/item/clothing/head/sombrero/green = 1,
+		/obj/item/clothing/suit/poncho = 1,
+		/obj/item/clothing/suit/poncho/green = 1,
+		/obj/item/clothing/suit/poncho/red = 1,
+		/obj/item/clothing/suit/whitedress = 1,
+		/obj/item/clothing/head/jester = 1,
+		/obj/item/clothing/suit/hooded/ian_costume = 1,
+		/obj/item/clothing/suit/hooded/bee_costume = 1,
+		/obj/item/clothing/head/cueball = 1,
+		/obj/item/clothing/head/delinquent = 1,
+		/obj/item/clothing/head/shrine_wig = 1,
+		/obj/item/clothing/suit/shrine_maiden = 1,
+		/obj/item/clothing/suit/changshan_red = 1,
+		/obj/item/clothing/suit/changshan_blue = 1,
+		/obj/item/clothing/suit/cheongsam_red = 1,
+		/obj/item/clothing/suit/cheongsam_blue = 1,
+		/obj/item/clothing/head/powdered_wig = 1,
+		/obj/item/clothing/glasses/sunglasses/garb = 2,
+		// [/CELADON-ADD]
 		/obj/item/clothing/under/costume/gladiator = 1,
 		/obj/item/clothing/head/helmet/gladiator = 1,
 		/obj/item/clothing/under/rank/command/captain/suit = 1,
@@ -81,6 +118,10 @@
 		/obj/item/clothing/glasses/blindfold = 1,
 		/obj/item/clothing/mask/muzzle = 2)
 	premium = list(
+		// [CELADON-ADD] - CELADON_RETURN_CONTENT
+		/obj/item/clothing/shoes/roman = 1,
+		/obj/item/clothing/suit/hooded/mysticrobe = 1,
+		// [/CELADON-ADD]
 		/obj/item/clothing/suit/pirate/captain = 2,
 		/obj/item/clothing/head/pirate/captain = 2,
 		/obj/item/clothing/head/helmet/roman/fake = 1,

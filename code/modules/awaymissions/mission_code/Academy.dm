@@ -334,6 +334,10 @@
 			new /obj/item/clothing/suit/wizrobe(drop_location())
 			new /obj/item/clothing/head/wizard(drop_location())
 			new /obj/item/clothing/gloves/combat/wizard(drop_location())
+			// [CELADON-ADD] - CELADON_RETURN_CONTENT
+			new /obj/item/clothing/suit/wizrobe/magusblue(drop_location())
+			new /obj/item/clothing/head/wizard/magus(drop_location())
+			// [/CELADON-ADD]
 			new /obj/item/staff(drop_location())
 			new /obj/structure/mirror/magic(drop_location())
 

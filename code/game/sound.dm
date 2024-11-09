@@ -333,4 +333,8 @@ distance_multiplier - Can be used to multiply the distance at which the sound is
 				soundin = pick('sound/machines/button1.ogg','sound/machines/button2.ogg','sound/machines/button3.ogg','sound/machines/button4.ogg')
 			if("switch")	//stolen from nsv
 				soundin = pick('sound/machines/switch1.ogg','sound/machines/switch2.ogg','sound/machines/switch3.ogg')
+			//[CELADON-ADD] - CELADON_WEAPONS - добавляем рандомизацию звуков при выстреле
+			if("svd_fire")
+				soundin = pick('mod_celadon/_storge_sounds/sound/gun/svd/svd1.ogg', 'mod_celadon/_storge_sounds/sound/gun/svd/svd2.ogg', 'mod_celadon/_storge_sounds/sound/gun/svd/svd3.ogg')
+			//[/CELADON-ADD] - CELADON_WEAPONS
 	return soundin

@@ -25,6 +25,9 @@
 		/obj/item/clothing/suit/hooded/wintercoat = 1,
 		/obj/item/clothing/suit/jacket = 1,
 		/obj/item/clothing/suit/jacket/leather = 1,
+		// [CELADON-ADD] - CELADON_RETURN_CONTENT
+		/obj/item/clothing/suit/jacket/leather/overcoat = 1,
+		// [/CELADON-ADD]
 		/obj/item/clothing/suit/jacket/leather/duster = 1,
 		/obj/item/clothing/suit/jacket/miljacket = 1,
 		/obj/item/clothing/suit/jacket/puffer = 1,
@@ -79,6 +82,9 @@
 			/obj/item/clothing/head/hardhat = 2,
 			/obj/item/clothing/head/hardhat/orange = 2,
 			/obj/item/clothing/head/hardhat/dblue = 2,
+			// [CELADON-ADD] - CELADON_RETURN_CONTENT
+			/obj/item/clothing/head/foilhat = 1,
+			// [/CELADON-ADD]
 			/obj/item/clothing/head/pirate = 1,
 			)
 		)

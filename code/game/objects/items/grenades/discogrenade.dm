@@ -108,6 +108,13 @@
 		target.set_drugginess(5)
 		return
 
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
+	if(istype(target.get_item_by_slot(ITEM_SLOT_HEAD), /obj/item/clothing/head/foilhat))
+		to_chat(target, span_userdanger("BIG DISCO WON'T CORRUPT ME WITH THEIR POST ICW PSY-OP MUSIC!"))
+		target.emote("scream")
+		return
+	// [/CELADON-ADD]
+
 	target.set_drugginess(10)
 	target.show_message(span_warning("You feel a strong rythme and your muscles spasm uncontrollably, you begin dancing and cannot move!"), 2)
 	target.Immobilize(30)

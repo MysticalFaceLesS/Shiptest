@@ -30,3 +30,26 @@
 	achievement_type = /datum/award/achievement/boss/swarmer_beacon_kill
 	crusher_achievement_type = /datum/award/achievement/boss/swarmer_beacon_crusher
 	score_achievement_type = /datum/award/score/swarmer_beacon_score
+
+//goat
+/mob/living/simple_animal/hostile/retaliate/goat
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 4, /obj/item/clothing/head/goatpelt = 1)
+
+//penguin
+/mob/living/simple_animal/pet/penguin/emperor/shamebrero
+	name = "Shamebrero penguin"
+	desc = "Shameful of all he surveys."
+	icon_state = "penguin_shamebrero"
+	icon_living = "penguin_shamebrero"
+	gold_core_spawnable = NO_SPAWN
+	unique_pet = TRUE
+
+
+///////////////////////////////////////////////////////////
+/// HOSTILEs
+///////////////////////////////////////////////////////////
+/mob/living/simple_animal/hostile/human/skeleton/templar
+	loot = list(/obj/effect/decal/remains/human,
+				/obj/item/clothing/suit/armor/witchhunter,
+				/obj/item/clothing/head/witchunter,
+				/obj/item/melee/sword/claymore{name = "holy sword"})

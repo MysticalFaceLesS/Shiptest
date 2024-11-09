@@ -38,8 +38,43 @@
 	/// The icon state the token will be set to on init.
 	var/token_icon_state = "object"
 
+	// [CELADON-ADD] - OVERMAP SENSORS - Это вагабонд насрал
+	var/sensor_range = 4
+	// [/CELADON-ADD]
+
 	/// The current docking ticket of this object, if any
 	var/datum/docking_ticket/current_docking_ticket
+
+// [CELADON-ADD] - OVERMAP STUFF - Это вагабонд насрал
+/obj/overmap
+	var/skip_alarm = 0
+
+/proc/get_pixel_distance(atom/A, atom/B)
+	var/x_dist = 0
+	var/y_dist = 0
+
+	if(A.x < B.x)
+		x_dist = (B.x-A.x)*32-A.pixel_w+B.pixel_w
+	else if(A.x > B.x)
+		x_dist = (A.x-B.x)*32+A.pixel_w-B.pixel_w
+	else
+		if(A.pixel_w < B.pixel_w)
+			x_dist = B.pixel_w-A.pixel_w
+		else if(A.pixel_w > B.pixel_w)
+			x_dist = A.pixel_w-B.pixel_w
+
+	if(A.y < B.y)
+		y_dist = (B.y-A.y)*32-A.pixel_z+B.pixel_z
+	else if(A.y > B.y)
+		y_dist = (A.y-B.y)*32+A.pixel_z-B.pixel_z
+	else
+		if(A.pixel_z < B.pixel_z)
+			y_dist = B.pixel_z-A.pixel_z
+		else if(A.pixel_z > B.pixel_z)
+			y_dist = A.pixel_z-B.pixel_z
+
+	return abs(x_dist)+abs(y_dist)
+// [/CELADON-ADD]
 
 /datum/overmap/New(position, ...)
 	SHOULD_NOT_OVERRIDE(TRUE) // Use [/datum/overmap/proc/Initialize] instead.
@@ -337,6 +372,10 @@
 	while(container && !container.x || !container.y)
 		container = container.docked_to
 	SSovermap.overmap_container[container.x][container.y] += src
+	//[CELADON-ADD] - CELADON_FIXES
+	token.pixel_w = container.token.pixel_w+(pick(6, -6))
+	token.pixel_z = container.token.pixel_z+(pick(6, -6))
+	//[/CELADON-ADD]
 	x = container.x
 	y = container.y
 	docked_to.contents -= src

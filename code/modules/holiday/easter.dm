@@ -109,6 +109,11 @@
 	/obj/item/toy/balloon,
 	/obj/item/toy/gun,
 	/obj/item/toy/sword,
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
+	/obj/item/clothing/head/bunnyhead,
+	/obj/item/clothing/suit/bunnysuit,
+	/obj/item/clothing/head/collectable/rabbitears,
+	// [/CELADON-ADD]
 	/obj/item/toy/talking/AI,
 	/obj/item/toy/talking/owl,
 	/obj/item/toy/talking/griffin,

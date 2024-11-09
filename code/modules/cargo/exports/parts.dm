@@ -20,6 +20,8 @@
 	unit_name = "deactivated alien deconstruction drone"
 	export_types = list(/obj/item/deactivated_swarmer)
 
+//[CELADON-REMOVE] - CELADON_FIXES - говорят экономику ломают
+/*
 //Computer Tablets and Parts
 /datum/export/modular_part
 	cost = 15
@@ -101,3 +103,5 @@
 	unit_name = "computer intellicard slot"
 	export_types = list(/obj/item/computer_hardware/ai_slot)
 	include_subtypes = TRUE
+*/
+//[/CELADON-REMOVE]

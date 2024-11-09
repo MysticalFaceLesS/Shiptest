@@ -163,7 +163,11 @@
 					/obj/item/clothing/head/soft/black = 2,
 					/obj/item/clothing/mask/bandana/skull = 2
 					)
-	contraband = list(/obj/item/organ/tongue/robot = 2)
+	contraband = list(
+		// [CELADON-ADD] - CELADON_RETURN_CONTENT
+		/obj/item/clothing/suit/hooded/enginseer = 2, // WS edit: enginsineer robes
+		// [/CELADON-ADD]
+		/obj/item/organ/tongue/robot = 2)
 	refill_canister = /obj/item/vending_refill/wardrobe/robo_wardrobe
 	extra_price = 300
 /obj/item/vending_refill/wardrobe/robo_wardrobe
@@ -288,6 +292,9 @@
 					/obj/item/storage/box/mousetraps = 2,
 					/obj/item/circuitboard/machine/dish_drive = 1,
 					/obj/item/clothing/suit/toggle/chef = 1,
+					// [CELADON-ADD] - CELADON_RETURN_CONTENT
+					/obj/item/clothing/shoes/cookflops = 2,
+					// [/CELADON-ADD]
 					/obj/item/clothing/under/rank/civilian/chef = 1,
 					/obj/item/clothing/under/rank/civilian/chef/skirt = 2,
 					/obj/item/clothing/head/chefhat = 1,
@@ -374,6 +381,18 @@
 	vend_reply = "Thank you for using the ChapDrobe!"
 	products = list(/obj/item/storage/backpack/cultpack = 1,
 					/obj/item/clothing/head/beret/service = 1, //WS edit - berets
+					// [CELADON-ADD] - CELADON_RETURN_CONTENT
+					/obj/item/clothing/suit/chaplainsuit/nun = 1,
+					/obj/item/clothing/head/nun_hood = 1,
+					/obj/item/clothing/suit/chaplainsuit/holidaypriest = 1,
+					/obj/item/clothing/suit/hooded/chaplainsuit/monkhabit = 1,
+					/obj/item/clothing/head/kippah = 3,
+					/obj/item/clothing/suit/chaplainsuit/whiterobe = 1,
+					/obj/item/clothing/head/taqiyahwhite = 1,
+					/obj/item/clothing/head/taqiyahred = 3,
+					/obj/item/clothing/suit/chaplainsuit/monkrobeeast = 1,
+					/obj/item/clothing/head/beanie/rasta = 1,
+					// [/CELADON-ADD]
 					/obj/item/clothing/accessory/pocketprotector/cosmetology = 1,
 					/obj/item/clothing/under/rank/civilian/chaplain = 1,
 					/obj/item/clothing/under/rank/civilian/chaplain/skirt = 2,
@@ -382,6 +401,10 @@
 					/obj/item/clothing/accessory/armband/med = 4)
 	contraband = list(/obj/item/toy/plush/plushvar = 1,
 					/obj/item/toy/plush/narplush = 1)
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
+	premium = list(/obj/item/clothing/suit/chaplainsuit/bishoprobe = 1,
+					/obj/item/clothing/head/bishopmitre = 1)
+	// [/CELADON-ADD]
 	refill_canister = /obj/item/vending_refill/wardrobe/chap_wardrobe
 /obj/item/vending_refill/wardrobe/chap_wardrobe
 	machine_name = "ChapDrobe"
@@ -438,6 +461,9 @@
 					/obj/item/clothing/accessory/armband/hydro = 4,
 					/obj/item/storage/backpack/satchel/vir = 2)
 	contraband = list(/obj/item/clothing/suit/bio_suit/plaguedoctorsuit = 1,
+					// [CELADON-ADD] - CELADON_RETURN_CONTENT
+					/obj/item/clothing/head/plaguedoctorhat = 1,
+					// [/CELADON-ADD]
 					/obj/item/clothing/mask/gas/plaguedoctor = 1)
 	refill_canister = /obj/item/vending_refill/wardrobe/viro_wardrobe
 /obj/item/vending_refill/wardrobe/viro_wardrobe

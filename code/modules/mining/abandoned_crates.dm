@@ -182,6 +182,9 @@
 			new /obj/item/clothing/shoes/kindleKicks(src)
 		if(65 to 66)
 			new /obj/item/clothing/suit/ianshirt(src)
+			// [CELADON-ADD] - CELADON_RETURN_CONTENT
+			new /obj/item/clothing/suit/hooded/ian_costume(src)
+			// [/CELADON-ADD]
 		if(67 to 68)
 			new /obj/item/toy/plush/awakenedplushie(src)
 		if(69 to 70)

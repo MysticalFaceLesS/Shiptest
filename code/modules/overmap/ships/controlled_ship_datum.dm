@@ -259,7 +259,10 @@
 		return
 	avg_fuel_amnt = round(fuel_avg / engine_amnt * 100)
 
-/datum/overmap/ship/controlled/tick_move()
+// [CELADON-EDIT] - OVERMAP PHYSICS - Это вагабонд насрал
+// /datum/overmap/ship/controlled/tick_move()
+/datum/overmap/ship/controlled/not_tick_move(var/xmov, var/ymov)
+// [/CELADON-EDIT]
 	if(avg_fuel_amnt < 1)
 		//Slow down a little when there's no fuel
 		adjust_speed(clamp(-speed_x, max_speed * -0.001, max_speed * 0.001), clamp(-speed_y, max_speed * -0.001, max_speed * 0.001))

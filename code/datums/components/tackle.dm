@@ -292,6 +292,12 @@
 				defense_mod -= 1
 		// [/CELADON-ADD]
 
+		// [CELADON-ADD] - CELADON_RIOL
+		if(isriol(T))
+			if(!T.getorganslot(ORGAN_SLOT_TAIL))
+				defense_mod -= 1
+		// [/CELADON-ADD]
+
 	// OF-FENSE
 	var/mob/living/carbon/sacker = parent
 

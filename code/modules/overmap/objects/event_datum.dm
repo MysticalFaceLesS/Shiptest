@@ -65,8 +65,10 @@
 /datum/overmap/event/meteor/Initialize(position, ...)
 	. = ..()
 	token.icon_state = "meteor[rand(1, 4)]"
-	token.color = "#a08444"
-	token.light_color = "#a08444"
+// [CELADON-REMOVE] - OVERMAP ICON - спрайты некросивые получаюца
+//	token.color = "#a08444"
+//	token.light_color = "#a08444"
+// [/CELADON-REMOVE]
 	token.update_appearance()
 
 /datum/overmap/event/meteor/apply_effect()
@@ -153,8 +155,10 @@
 /datum/overmap/event/electric/Initialize(position, ...)
 	. = ..()
 	token.icon_state = "electrical[rand(1, 4)]"
-	token.color = "#e8e85c"
-	token.light_color = "#e8e85c"
+// [CELADON-REMOVE] - OVERMAP ICON - спрайты некросивые получаюца
+//	token.color = "#e8e85c"
+//	token.light_color = "#e8e85c"
+// [/CELADON-REMOVE]
 	token.update_appearance()
 
 /datum/overmap/event/electric/affect_ship(datum/overmap/ship/controlled/S)
@@ -183,15 +187,21 @@
 /datum/overmap/event/nebula
 	name = "nebula"
 	desc = "There's coffee in here"
-	token_icon_state = "nebula"
+	// [CELADON-EDIT] - OVERMAP ICON - спрайты некросивые получаюца
+	// token_icon_state = "nebula"
+	token_icon_state = "nebula1"
+	// [/CELADON-EDIT]
 	chain_rate = 8
 	spread_chance = 75
 
 /datum/overmap/event/nebula/Initialize(position, ...)
 	. = ..()
 	token.opacity = TRUE
-	token.color = "#c053f3"
-	token.light_color = "#c053f3"
+// [CELADON-EDIT] - OVERMAP ICON - спрайты некросивые получаюца
+//	token.color = "#c053f3"
+//	token.light_color = "#c053f3"
+	token.icon_state = "nebula[rand(1, 4)]"
+// [/CELADON-EDIT]
 	token.update_appearance()
 
 /datum/overmap/event/wormhole
@@ -210,8 +220,10 @@
 		other_wormhole = _other_wormhole
 	if(!other_wormhole)
 		other_wormhole = new(null, src) //Create a new wormhole at a random location
-	token.color = "#6d80c7"
-	token.light_color = "#6d80c7"
+// [CELADON-REMOVE] - OVERMAP ICON - спрайты некросивые получаюца
+//	token.color = "#6d80c7"
+//	token.light_color = "#6d80c7"
+// [/CELADON-REMOVE]
 	token.update_appearance()
 
 /datum/overmap/event/wormhole/affect_ship(datum/overmap/ship/controlled/S)
@@ -240,8 +252,10 @@
 /datum/overmap/event/meteor/carp/Initialize(position, ...)
 	. = ..()
 	token.icon_state = "carp[rand(1, 4)]"
-	token.color = "#7b1ca8"
-	token.light_color = "#7b1ca8"
+// [CELADON-REMOVE] - OVERMAP ICON - спрайты некросивые получаюца
+//	token.color = "#7b1ca8"
+//	token.light_color = "#7b1ca8"
+// [/CELADON-REMOVE]
 	token.update_icon()
 
 
@@ -284,8 +298,10 @@
 /datum/overmap/event/meteor/dust/Initialize(position, ...)
 	. = ..()
 	token.icon_state = "dust[rand(1, 4)]"
-	token.color = "#506469" //we should make these defines
-	token.light_color = "#506469"
+// [CELADON-REMOVE] - OVERMAP ICON - спрайты некросивые получаюца
+//	token.color = "#506469" //we should make these defines
+//	token.light_color = "#506469"
+// [/CELADON-REMOVE]
 	token.update_icon()
 
 /datum/overmap/event/anomaly
@@ -299,8 +315,10 @@
 /datum/overmap/event/anomaly/Initialize(position, ...)
 	. = ..()
 	token.icon_state = "anomaly[rand(1, 4)]"
-	token.color = "#c46a24"
-	token.light_color = "#c46a24"
+// [CELADON-REMOVE] - OVERMAP ICON - спрайты некросивые получаюца
+//	token.color = "#c46a24"
+//	token.light_color = "#c46a24"
+// [/CELADON-REMOVE]
 	token.update_icon()
 
 /datum/overmap/event/anomaly/affect_ship(datum/overmap/ship/controlled/S)

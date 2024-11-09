@@ -66,3 +66,7 @@
 	box = /obj/item/storage/box/hug/survival
 
 	chameleon_extras = /obj/item/stamp/clown
+
+// DEBUG OUTFIT
+/datum/outfit/debug //Даем изолиррованность перчаткам
+	gloves = /obj/item/clothing/gloves/combat{siemens_coefficient = 0}
