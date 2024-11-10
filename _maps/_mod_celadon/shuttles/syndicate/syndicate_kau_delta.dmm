@@ -243,11 +243,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
-"fl" = (
-/obj/structure/catwalk/over/plated_catwalk/dark,
-/obj/machinery/light/floor,
-/turf/open/floor/engine/hull/reinforced,
-/area/ship/external)
 "fy" = (
 /obj/structure/sign/syndicate,
 /turf/closed/wall/mineral/plastitanium,
@@ -570,6 +565,12 @@
 /obj/effect/turf_decal/spline/plain/opaque/syndiered,
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
+"kz" = (
+/obj/structure/catwalk/over,
+/obj/structure/marker_beacon,
+/obj/item/toy/plush/moth/poison,
+/turf/open/floor/engine/hull/reinforced,
+/area/ship/external)
 "kF" = (
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/maintenance/port)
@@ -1195,10 +1196,21 @@
 	dir = 8
 	},
 /obj/machinery/suit_storage_unit/inherit/industrial,
-/obj/item/clothing/suit/space/hardsuit/syndi,
 /obj/item/tank/internals/oxygen/red,
+/obj/item/clothing/suit/space/syndicate{
+	armor = list("melee" = 30, "bullet" = 40, "laser" = 30, "energy" = 40, "bomb" = 35, "bio" = 100, "rad" = 50, "fire" = 50, "acid" = 90)
+	},
+/obj/item/clothing/head/helmet/space/syndicate/black/red{
+	armor = list("melee" = 30, "bullet" = 40, "laser" = 30, "energy" = 40, "bomb" = 35, "bio" = 100, "rad" = 50, "fire" = 50, "acid" = 90)
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo/port)
+"Ak" = (
+/obj/structure/catwalk/over,
+/obj/structure/marker_beacon,
+/obj/item/toy/plush/moth/firewatch,
+/turf/open/floor/engine/hull/reinforced,
+/area/ship/external)
 "Ar" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -1349,6 +1361,11 @@
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/engineering)
+"Cx" = (
+/obj/structure/catwalk/over/plated_catwalk/dark,
+/obj/machinery/light/floor,
+/turf/open/floor/engine/hull/reinforced,
+/area/ship/external)
 "Cz" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
@@ -1916,12 +1933,6 @@
 /obj/item/toy/plush/celadon/duffmoth,
 /turf/open/floor/engine/hull/reinforced,
 /area/ship/external)
-"Ma" = (
-/obj/structure/catwalk/over,
-/obj/structure/marker_beacon,
-/obj/item/toy/plush/moth/deadhead,
-/turf/open/floor/engine/hull/reinforced,
-/area/ship/external)
 "Mc" = (
 /obj/machinery/door/poddoor{
 	id = "KaUCargoHolders2";
@@ -2256,12 +2267,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
-"QT" = (
-/obj/structure/catwalk/over,
-/obj/structure/marker_beacon,
-/obj/item/toy/plush/moth/poison,
-/turf/open/floor/engine/hull/reinforced,
-/area/ship/external)
 "Rj" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 10
@@ -2364,7 +2369,7 @@
 "SL" = (
 /obj/structure/catwalk/over,
 /obj/structure/marker_beacon,
-/obj/item/toy/plush/moth/firewatch,
+/obj/item/toy/plush/moth/deadhead,
 /turf/open/floor/engine/hull/reinforced,
 /area/ship/external)
 "TK" = (
@@ -2446,8 +2451,13 @@
 	dir = 8
 	},
 /obj/machinery/suit_storage_unit/inherit/industrial,
-/obj/item/clothing/suit/space/hardsuit/syndi,
 /obj/item/tank/internals/oxygen/red,
+/obj/item/clothing/suit/space/syndicate{
+	armor = list("melee" = 30, "bullet" = 40, "laser" = 30, "energy" = 40, "bomb" = 35, "bio" = 100, "rad" = 50, "fire" = 50, "acid" = 90)
+	},
+/obj/item/clothing/head/helmet/space/syndicate/black/red{
+	armor = list("melee" = 30, "bullet" = 40, "laser" = 30, "energy" = 40, "bomb" = 35, "bio" = 100, "rad" = 50, "fire" = 50, "acid" = 90)
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo/port)
 "WE" = (
@@ -2650,10 +2660,10 @@ jv
 jv
 jv
 jv
-QT
+kz
 jv
 jv
-Ma
+SL
 jv
 jv
 jv
@@ -3084,11 +3094,11 @@ jv
 jv
 pf
 pf
-fl
+Cx
 Ov
 Ov
 Ov
-fl
+Cx
 GD
 FU
 Ha
@@ -3204,7 +3214,7 @@ jv
 jv
 jv
 jv
-SL
+Ak
 jv
 jv
 jv
