@@ -3,7 +3,7 @@
 //							///
 
 /proc/get_inteq_acces()
-	return list(ACCESS_INTEQ_GENERAL, ACCESS_INTEQ_SECURITY, ACCESS_INTEQ_CAPTAIN)
+	return list(ACCESS_INTEQ_GENERAL, ACCESS_INTEQ_SECURITY, ACCESS_INTEQ_CAPTAIN, ACCESS_OUTPOST_FACTION_INTEQ)
 
 /datum/outfit/job/inteq/proc/get_inteq_g_acces(mob/living/carbon/human/H)
 	var/obj/item/storage/wallet/W = null
@@ -18,7 +18,7 @@
 				I = O
 				break
 		if (I)
-			I.access += list(ACCESS_INTEQ_GENERAL)
+			I.access += list(ACCESS_INTEQ_GENERAL, ACCESS_OUTPOST_FACTION_INTEQ)
 			I.update_label()
 		W.combined_access = list()
 		for (var/obj/item/card/id/card in W.contents)
@@ -37,7 +37,7 @@
 				I = O
 				break
 		if (I)
-			I.access += list(ACCESS_INTEQ_GENERAL, ACCESS_INTEQ_SECURITY)
+			I.access += list(ACCESS_INTEQ_GENERAL, ACCESS_INTEQ_SECURITY, ACCESS_OUTPOST_FACTION_INTEQ)
 			I.update_label()
 		W.combined_access = list()
 		for (var/obj/item/card/id/card in W.contents)
