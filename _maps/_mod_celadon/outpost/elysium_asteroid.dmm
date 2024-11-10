@@ -2329,8 +2329,14 @@
 /turf/open/floor/concrete/slab_2,
 /area/outpost/hallway/central)
 "iS" = (
-/obj/structure/sign/elysium,
-/turf/closed/indestructible/reinforced,
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/obj/structure/sign/elysium{
+	pixel_x = -32;
+	pixel_y = -32
+	},
+/turf/open/floor/concrete/tiles,
 /area/outpost/hallway/aft)
 "iT" = (
 /obj/effect/turf_decal/siding/white{
@@ -7372,10 +7378,6 @@
 /turf/open/floor/plasteel/dark,
 /area/outpost/operations)
 "Ag" = (
-/obj/machinery/door/airlock{
-	explosion_block = 2;
-	normal_integrity = 1000
-	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
 	},
@@ -7387,6 +7389,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/machinery/door/airlock/glass,
 /turf/open/floor/concrete/slab_1,
 /area/outpost/hallway/aft)
 "Ai" = (
@@ -9995,9 +9998,6 @@
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
-	},
-/obj/item/radio/intercom/directional/north{
-	icon_state = "clip_headset"
 	},
 /turf/open/floor/plasteel/tech,
 /area/outpost/cargo/office)
@@ -32906,7 +32906,7 @@ ep
 vC
 pv
 Ca
-iS
+vC
 po
 Kd
 rs
@@ -33092,7 +33092,7 @@ Dg
 bB
 vC
 mr
-mr
+iS
 mr
 Zm
 la
