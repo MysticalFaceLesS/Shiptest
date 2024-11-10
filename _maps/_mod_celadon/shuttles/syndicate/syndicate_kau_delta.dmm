@@ -243,6 +243,11 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
+"fl" = (
+/obj/structure/catwalk/over/plated_catwalk/dark,
+/obj/machinery/light/floor,
+/turf/open/floor/engine/hull/reinforced,
+/area/ship/external)
 "fy" = (
 /obj/structure/sign/syndicate,
 /turf/closed/wall/mineral/plastitanium,
@@ -520,15 +525,6 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 1
 	},
-/obj/item/storage/belt/military/assault,
-/obj/item/storage/belt/military/assault,
-/obj/item/storage/belt/military/assault,
-/obj/item/storage/belt/military/assault,
-/obj/item/clothing/suit/armor/vest/marine/medium,
-/obj/item/clothing/suit/armor/vest/marine/medium,
-/obj/item/clothing/suit/armor/vest/marine/medium,
-/obj/item/clothing/suit/armor/vest/marine/medium,
-/obj/item/clothing/head/helmet/swat,
 /obj/item/clothing/head/helmet/swat,
 /obj/item/clothing/head/helmet/swat,
 /obj/item/clothing/head/helmet/swat,
@@ -536,6 +532,11 @@
 /obj/item/clothing/mask/gas/syndicate,
 /obj/item/clothing/mask/gas/syndicate,
 /obj/item/clothing/mask/gas/syndicate,
+/obj/item/clothing/suit/armor/vest/syndie,
+/obj/item/clothing/suit/armor/vest/syndie,
+/obj/item/clothing/suit/armor/vest/syndie,
+/obj/item/clothing/suit/armor/vest/syndie,
+/obj/item/clothing/head/caphat/cowboy,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "kc" = (
@@ -607,6 +608,7 @@
 /obj/item/coin/antagtoken{
 	pixel_x = -7
 	},
+/obj/item/binoculars,
 /turf/open/floor/carpet/red_gold,
 /area/ship/bridge)
 "lX" = (
@@ -680,13 +682,13 @@
 "oq" = (
 /obj/effect/turf_decal/industrial/traffic/full,
 /obj/structure/table/reinforced,
-/obj/machinery/cell_charger{
-	pixel_y = 7;
-	pixel_x = -2
+/obj/item/binoculars{
+	pixel_x = -7;
+	pixel_y = 4
 	},
-/obj/item/stock_parts/cell/high{
-	pixel_y = 2;
-	pixel_x = -2
+/obj/item/binoculars{
+	pixel_x = 7;
+	pixel_y = 0
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
@@ -1330,6 +1332,9 @@
 /obj/item/clothing/gloves/combat,
 /obj/item/clothing/head/HoS/beret/syndicate,
 /obj/item/radio/headset/syndicate/alt/captain,
+/obj/item/ammo_box/magazine/m45_cobra,
+/obj/item/ammo_box/magazine/m45_cobra,
+/obj/item/ammo_box/c45,
 /turf/open/floor/carpet/red_gold,
 /area/ship/bridge)
 "BW" = (
@@ -1403,7 +1408,14 @@
 	pixel_y = -29;
 	name = "ammo locker"
 	},
-/obj/item/storage/backpack/duffelbag/syndie/ammo/smg,
+/obj/item/ammo_box/a300,
+/obj/item/ammo_box/a300_box,
+/obj/item/ammo_box/c45,
+/obj/item/ammo_box/c45,
+/obj/item/ammo_box/magazine/m45_cobra,
+/obj/item/ammo_box/magazine/m45_cobra,
+/obj/item/ammo_box/magazine/m45_cobra,
+/obj/item/ammo_box/magazine/m45_cobra,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "Dz" = (
@@ -1901,6 +1913,13 @@
 /obj/machinery/atmospherics/components/unary/outlet_injector/on/layer4{
 	dir = 4
 	},
+/obj/item/toy/plush/celadon/duffmoth,
+/turf/open/floor/engine/hull/reinforced,
+/area/ship/external)
+"Ma" = (
+/obj/structure/catwalk/over,
+/obj/structure/marker_beacon,
+/obj/item/toy/plush/moth/deadhead,
 /turf/open/floor/engine/hull/reinforced,
 /area/ship/external)
 "Mc" = (
@@ -2160,23 +2179,14 @@
 	},
 /obj/structure/guncloset,
 /obj/effect/turf_decal/industrial/traffic/full,
-/obj/item/gun/ballistic/automatic/assault/hydra/dmr{
-	name = "Special Operative 92 EBR";
-	desc = "Thats special operative syndicate rifle modified to be more usable in the heat of battle, chambered in .45 ACP. Effective against personnel and armor alike. Has a CyberSun TM";
-	mag_type = /obj/item/ammo_box/magazine/m45_cobra;
-	projectile_damage_multiplier = 1.7;
-	wield_delay = 6;
-	wield_slowdown = 0.45;
-	zoom_amt = 8
+/obj/item/gun/ballistic/rifle/scout,
+/obj/item/gun/ballistic/automatic/smg/cobra{
+	pixel_x = 3;
+	pixel_y = -1
 	},
-/obj/item/gun/ballistic/automatic/assault/hydra/dmr{
-	name = "Special Operative 92 EBR";
-	desc = "Thats special operative syndicate rifle modified to be more usable in the heat of battle, chambered in .45 ACP. Effective against personnel and armor alike. Has a CyberSun TM";
-	mag_type = /obj/item/ammo_box/magazine/m45_cobra;
-	projectile_damage_multiplier = 1.7;
-	wield_delay = 6;
-	wield_slowdown = 0.45;
-	zoom_amt = 8
+/obj/item/gun/ballistic/automatic/smg/cobra{
+	pixel_x = 3;
+	pixel_y = -1
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
@@ -2246,6 +2256,12 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
+"QT" = (
+/obj/structure/catwalk/over,
+/obj/structure/marker_beacon,
+/obj/item/toy/plush/moth/poison,
+/turf/open/floor/engine/hull/reinforced,
+/area/ship/external)
 "Rj" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 10
@@ -2348,6 +2364,7 @@
 "SL" = (
 /obj/structure/catwalk/over,
 /obj/structure/marker_beacon,
+/obj/item/toy/plush/moth/firewatch,
 /turf/open/floor/engine/hull/reinforced,
 /area/ship/external)
 "TK" = (
@@ -2633,10 +2650,10 @@ jv
 jv
 jv
 jv
-SL
+QT
 jv
 jv
-SL
+Ma
 jv
 jv
 jv
@@ -3067,11 +3084,11 @@ jv
 jv
 pf
 pf
+fl
 Ov
 Ov
 Ov
-Ov
-Ov
+fl
 GD
 FU
 Ha
