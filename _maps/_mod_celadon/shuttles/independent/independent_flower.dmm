@@ -3,6 +3,14 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/machinery/power/solar,
+/obj/effect/turf_decal/solarpanel,
 /turf/open/floor/plating,
 /area/ship/external)
 "aW" = (
@@ -87,9 +95,9 @@
 /turf/open/floor/grass,
 /area/ship/crew/hydroponics)
 "eR" = (
-/obj/structure/cable/yellow{
-	icon_state = "8-10"
-	},
+/obj/structure/cable/yellow,
+/obj/machinery/power/solar,
+/obj/effect/turf_decal/solarpanel,
 /turf/open/floor/plating,
 /area/ship/external)
 "fh" = (
@@ -136,6 +144,12 @@
 	},
 /turf/open/floor/plating,
 /area/ship/engineering)
+"fP" = (
+/obj/structure/cable/yellow,
+/obj/machinery/power/solar,
+/obj/effect/turf_decal/solarpanel,
+/turf/open/floor/plating/rust,
+/area/ship/external)
 "gj" = (
 /obj/machinery/power/terminal{
 	dir = 8
@@ -180,6 +194,8 @@
 	pixel_x = -20;
 	dir = 4
 	},
+/obj/structure/table/wood,
+/obj/machinery/smartfridge/disks,
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/hydroponics)
 "hK" = (
@@ -228,13 +244,26 @@
 	pixel_y = -3;
 	pixel_x = -14
 	},
-/obj/structure/flora/tree/chapel{
+/obj/structure/flora/tree/jungle{
+	icon = 'icons/obj/flora/chapeltree.dmi';
+	icon_state = "churchtree";
+	density = 0;
 	pixel_x = -28;
-	pixel_y = -26;
-	density = 0
+	pixel_y = -26
 	},
 /turf/open/floor/grass,
 /area/ship/crew/hydroponics)
+"kE" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/power/solar,
+/obj/effect/turf_decal/solarpanel,
+/turf/open/floor/plating/rust,
+/area/ship/external)
 "kI" = (
 /obj/structure/flora/ausbushes/leafybush,
 /turf/open/floor/grass,
@@ -327,8 +356,10 @@
 /area/ship/engineering)
 "qc" = (
 /obj/structure/cable/yellow{
-	icon_state = "4-8"
+	icon_state = "0-2"
 	},
+/obj/machinery/power/solar,
+/obj/effect/turf_decal/solarpanel,
 /turf/open/floor/plating/rust,
 /area/ship/external)
 "qS" = (
@@ -348,10 +379,25 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/hydroponics)
+"rg" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/tracker,
+/turf/open/floor/plating/rust,
+/area/ship/external)
 "rw" = (
 /obj/structure/cable/yellow{
-	icon_state = "4-10"
+	icon_state = "0-4"
 	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/machinery/power/solar,
+/obj/effect/turf_decal/solarpanel,
 /turf/open/floor/plating/rust,
 /area/ship/external)
 "rE" = (
@@ -498,6 +544,13 @@
 /obj/effect/turf_decal/corner/opaque/bottlegreen/half,
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/hydroponics)
+"vB" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/tracker,
+/turf/open/floor/plating,
+/area/ship/external)
 "wr" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
 	dir = 4
@@ -546,6 +599,14 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
 	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/machinery/power/solar,
+/obj/effect/turf_decal/solarpanel,
 /turf/open/floor/plating,
 /area/ship/external)
 "yq" = (
@@ -572,6 +633,14 @@
 /obj/machinery/light/directional/west,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
+"yM" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/obj/machinery/power/solar,
+/obj/effect/turf_decal/solarpanel,
+/turf/open/floor/plating,
+/area/ship/external)
 "zn" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -638,6 +707,14 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/machinery/power/solar,
+/obj/effect/turf_decal/solarpanel,
 /turf/open/floor/plating/rust,
 /area/ship/external)
 "CK" = (
@@ -649,26 +726,26 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
+"Dy" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/machinery/power/solar,
+/obj/effect/turf_decal/solarpanel,
+/turf/open/floor/plating,
+/area/ship/external)
 "Ey" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
-	},
-/obj/structure/closet/crate/engineering/electrical,
-/obj/item/solar_assembly,
-/obj/item/solar_assembly,
-/obj/item/solar_assembly,
-/obj/item/solar_assembly,
-/obj/item/solar_assembly,
-/obj/item/solar_assembly,
-/obj/item/solar_assembly,
-/obj/item/solar_assembly,
-/obj/item/solar_assembly,
-/obj/item/solar_assembly,
-/obj/item/stack/sheet/glass{
-	amount = 20
 	},
 /turf/open/floor/plating,
 /area/ship/engineering)
@@ -684,17 +761,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/structure/closet/crate/engineering/electrical,
-/obj/item/solar_assembly,
-/obj/item/solar_assembly,
-/obj/item/solar_assembly,
-/obj/item/solar_assembly,
-/obj/item/solar_assembly,
-/obj/item/solar_assembly,
-/obj/item/solar_assembly,
-/obj/item/solar_assembly,
-/obj/item/solar_assembly,
-/obj/item/solar_assembly,
 /turf/open/floor/plating,
 /area/ship/engineering)
 "Fd" = (
@@ -835,6 +901,17 @@
 /turf/open/floor/plating,
 /area/ship/engineering)
 "Ku" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/machinery/power/solar,
+/obj/effect/turf_decal/solarpanel,
 /turf/open/floor/plating/rust,
 /area/ship/external)
 "KD" = (
@@ -884,9 +961,11 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/hydroponics)
 "Lc" = (
-/obj/machinery/chem_dispenser/mutagensaltpeter,
 /obj/machinery/light/directional/east,
 /obj/effect/turf_decal/corner/opaque/bottlegreen/three_quarters,
+/obj/machinery/vending/hydronutrients{
+	all_items_free = 1
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/hydroponics)
 "Lm" = (
@@ -914,9 +993,8 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/hydroponics)
 "MF" = (
-/obj/structure/table/wood,
-/obj/machinery/smartfridge/disks,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
+/obj/machinery/chem_dispenser/mutagensaltpeter,
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/hydroponics)
 "MZ" = (
@@ -965,6 +1043,14 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/ship/cargo)
+"NR" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/solar,
+/obj/effect/turf_decal/solarpanel,
+/turf/open/floor/plating/rust,
+/area/ship/external)
 "Op" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 8
@@ -983,6 +1069,14 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/hydroponics)
 "ON" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/power/solar,
+/obj/effect/turf_decal/solarpanel,
 /turf/open/floor/plating,
 /area/ship/external)
 "OQ" = (
@@ -1015,6 +1109,14 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/machinery/power/solar,
+/obj/effect/turf_decal/solarpanel,
 /turf/open/floor/plating,
 /area/ship/external)
 "PH" = (
@@ -1041,6 +1143,11 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/machinery/power/solar,
+/obj/effect/turf_decal/solarpanel,
 /turf/open/floor/plating,
 /area/ship/external)
 "Qg" = (
@@ -1142,6 +1249,14 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/machinery/power/solar,
+/obj/effect/turf_decal/solarpanel,
 /turf/open/floor/plating,
 /area/ship/external)
 "Ta" = (
@@ -1226,7 +1341,6 @@
 /obj/item/clothing/head/hardhat/mining,
 /obj/item/gps/mining,
 /obj/item/t_scanner/adv_mining_scanner/lesser,
-/obj/item/gun/energy/kinetic_accelerator,
 /obj/item/storage/bag/ore,
 /obj/structure/closet/wall/directional/north{
 	name = "equipment closet"
@@ -1246,6 +1360,7 @@
 /obj/effect/turf_decal/corner/opaque/brown/border{
 	dir = 9
 	},
+/obj/item/pickaxe/improvised,
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
 "WF" = (
@@ -1330,7 +1445,7 @@
 
 (1,1,1) = {"
 AF
-Ku
+kE
 AF
 Fp
 So
@@ -1342,12 +1457,12 @@ Fp
 So
 Fp
 AF
-Ku
+NR
 AF
 "}
 (2,1,1) = {"
-ON
-ON
+yM
+aS
 Fp
 Fp
 jG
@@ -1360,7 +1475,7 @@ jG
 Fp
 Fp
 SC
-ON
+eR
 "}
 (3,1,1) = {"
 qc
@@ -1380,7 +1495,7 @@ Ku
 eR
 "}
 (4,1,1) = {"
-Pu
+yM
 aS
 AN
 gj
@@ -1393,11 +1508,11 @@ bq
 Qv
 TE
 Rk
-aS
-Ku
+Dy
+fP
 "}
 (5,1,1) = {"
-Ku
+qc
 PX
 St
 rI
@@ -1411,10 +1526,10 @@ Fc
 Ey
 Qo
 xx
-ON
+eR
 "}
 (6,1,1) = {"
-ON
+yM
 Pu
 Fp
 Fp
@@ -1428,7 +1543,7 @@ Fp
 Fp
 Fp
 CG
-Ku
+fP
 "}
 (7,1,1) = {"
 AF
@@ -1449,7 +1564,7 @@ AF
 "}
 (8,1,1) = {"
 AF
-Ku
+rg
 AF
 Ta
 Qg
@@ -1461,7 +1576,7 @@ xc
 UO
 xc
 AF
-Pu
+vB
 AF
 "}
 (9,1,1) = {"
