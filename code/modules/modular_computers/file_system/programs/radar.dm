@@ -211,7 +211,10 @@
 	filedesc = "Lifeline"
 	extended_desc = "This program allows for tracking of crew members via their suit sensors."
 	requires_ntnet = TRUE
-	transfer_access = ACCESS_MEDICAL
+	// [CELADON-EDIT] - CELADON_BALANCE - Временно отключаем доступ и запрашиваем доступ ЦК
+	// transfer_access = ACCESS_MEDICAL	// CELADON-EDIT - ORIGINAL
+	transfer_access = ACCESS_CENT_GENERAL
+	// [/CELADON-EDIT]
 	available_on_ntnet = TRUE
 	program_icon = "heartbeat"
 

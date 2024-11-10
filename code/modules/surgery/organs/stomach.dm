@@ -56,7 +56,16 @@
 				to_chat(H, "<span class='warning'>You feel kind of iffy...</span>")
 			H.jitteriness = max(H.jitteriness - 3, 0)
 		if(H.disgust >= DISGUST_LEVEL_VERYGROSS)
-			if(prob(pukeprob)) //iT hAndLeS mOrE ThaN PukInG
+			// [CELADON - EDIT] - CELADON_LANIUS
+			if(is_species(H, /datum/species/lanius))
+				H.confused += 2.5
+				H.stuttering += 1
+				if (prob(15))
+					to_chat(H, "<span class='warning'>You feel something strange inside your core..</span>")
+					H.adjust_nutrition(-10)
+			// if(prob(pukeprob)) //iT hAndLeS mOrE ThaN PukInG // [CELADON - EDIT] - ORIGANAL
+			else if(prob(pukeprob))
+			// [/CELADON - EDIT]
 				H.confused += 2.5
 				H.stuttering += 1
 				H.vomit(10, 0, 1, 0, 1, 0)

@@ -211,8 +211,8 @@
 		)
 
 /datum/outfit/debug/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	var/obj/item/card/id/W = H.wear_id
-	// W.registered_name = H.real_name	// CELADON-REMOVE - CELADON_FIXES - Вызывает рантаймы
+	// var/obj/item/card/id/W = H.wear_id	// CELADON-REMOVE - CELADON_FIXES - Вызывает рантаймы
+	// W.registered_name = H.real_name
 	// W.update_label()	// CELADON-REMOVE
 	// [CELADON-ADD] - CELADON_FACTION
 	H.faction |= list(FACTION_PLAYER_SYNDICATE,

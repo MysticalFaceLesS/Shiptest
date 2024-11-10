@@ -98,11 +98,18 @@
 	return ..()
 
 
-/obj/item/taperecorder/Hear(message, atom/movable/speaker, message_langs, raw_message, radio_freq, spans, list/message_mods = list())
+//[CELADON - EDIT] - CELADON_FIXES
+// /obj/item/taperecorder/Hear(message, atom/movable/speaker, message_langs, raw_message, radio_freq, spans, list/message_mods = list()) // [/CELADON - EDIT] - ORIGINAL
+// 	. = ..()
+// 	if(mytape && recording)
+// 		mytape.timestamp += mytape.used_capacity
+// 		mytape.storedinfo += "\[[time2text(mytape.used_capacity * 10,"mm:ss")]\] [message]" // [/CELADON - EDIT] - ORIGINAL END
+/obj/item/taperecorder/Hear(message, atom/movable/speaker, message_langs, raw_message, radio_freq, spans, message_mode)
 	. = ..()
 	if(mytape && recording)
 		mytape.timestamp += mytape.used_capacity
-		mytape.storedinfo += "\[[time2text(mytape.used_capacity * 10,"mm:ss")]\] [message]"
+		mytape.storedinfo += "\[[time2text(mytape.used_capacity,"mm:ss")]\] [speaker.GetVoice()] [lang_treat(speaker, message_langs, raw_message, spans, message_mode)]"
+// [/CELADON - EDIT]
 
 /obj/item/taperecorder/verb/record()
 	set name = "Start Recording"
