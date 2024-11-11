@@ -44,3 +44,20 @@
 	courierbag = /obj/item/storage/backpack/messenger/tox
 
 	chameleon_extras = /obj/item/stamp/rd
+
+//лп уборщик
+
+/datum/outfit/job/nanotrasen/janitor/lp
+	name = "ERT - Loss Prevention Janitorial Specialist"
+	jobtype = /datum/job/janitor
+	job_icon = "janitorresponseofficer"
+
+	uniform = /obj/item/clothing/under/nanotrasen/janitor
+	shoes = /obj/item/clothing/shoes/sneakers/black
+	suit = /obj/item/clothing/suit/nanotrasen/suitjacket
+	head = /obj/item/clothing/head/nanotrasen/cap/janitor
+	id = /obj/item/card/id/lpjanitor
+	ears = /obj/item/radio/headset/nanotrasen
+	belt = /obj/item/storage/belt/janitor
+	gloves = /obj/item/clothing/gloves/color/purple
+	back = /obj/item/storage/backpack/ert/janitor
