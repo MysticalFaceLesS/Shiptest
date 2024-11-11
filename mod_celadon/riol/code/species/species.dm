@@ -59,7 +59,7 @@
 
 	heatmod = 1.2
 	coldmod = 0.8
-	speedmod = -0.1
+	speedmod = -0.15
 
 	bodytemp_heat_damage_limit = RIOL_BODYTEMP_NORMAL + 20		//60
 

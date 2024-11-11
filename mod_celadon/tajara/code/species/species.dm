@@ -61,7 +61,7 @@
 
 	heatmod = 1.2
 	coldmod = 0.8
-	staminamod = 0.9
+	staminamod = 0.85
 
 	bodytemp_heat_damage_limit = TAJARAN_BODYTEMP_NORMAL + 20		//60
 
