@@ -126,6 +126,7 @@
 	icon_state = "explorer"
 	resistance_flags = FIRE_PROOF
 
+// [CELADON-ADD] - CELADON_RETURN_CONTENT
 /obj/item/clothing/shoes/cult
 	name = "\improper Nar'Sien invoker boots"
 	desc = "A pair of boots worn by the followers of Nar'Sie."
@@ -148,6 +149,7 @@
 /obj/item/clothing/shoes/cult/alt/ghost/Initialize()
 	. = ..()
 	ADD_TRAIT(src, TRAIT_NODROP, CULT_TRAIT)
+// [/CELADON-ADD]
 
 /obj/item/clothing/shoes/laceup
 	name = "laceup shoes"

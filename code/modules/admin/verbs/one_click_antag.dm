@@ -22,6 +22,7 @@
 		<a href='?src=[REF(src)];[HrefToken()];makeAntag=centcom'>Make Response Team (Requires Ghosts)</a><br>
 		<a href='?src=[REF(src)];[HrefToken()];makeAntag=abductors'>Make Abductor Team (Requires Ghosts)</a><br>
 		<a href='?src=[REF(src)];[HrefToken()];makeAntag=revenant'>Make Revenant (Requires Ghost)</a><br>
+		<a href='?src=[REF(src)];[HrefToken()];makeAntag=cult'>Make Cult</a><br>
 		"}
 
 	var/datum/browser/popup = new(usr, "oneclickantag", "Quick-Create Antagonist", 400, 400)
@@ -113,7 +114,7 @@
 	new_character.mind.make_Wizard()
 	return TRUE
 
-
+// [CELADON-ADD] - CELADON_RETURN_CONTENT
 /datum/admins/proc/makeCult()
 	var/datum/game_mode/cult/temp = new
 	if(CONFIG_GET(flag/protect_roles_from_antagonist))
@@ -142,8 +143,7 @@
 		return 1
 
 	return 0
-
-
+// [/CELADON-ADD]
 
 /datum/admins/proc/makeNukeTeam()
 	var/datum/game_mode/nuclear/temp = new

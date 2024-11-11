@@ -85,6 +85,7 @@
 	desc = "You are being resurrected!"
 	icon_state = "wish_granter"
 
+// [CELADON-ADD] - CELADON_RETURN_CONTENT
 /datum/status_effect/cult_master
 	id = "The Cult Master"
 	duration = -1
@@ -113,6 +114,7 @@
 /datum/status_effect/cult_master/on_remove()
 	deathrattle()
 	. = ..()
+// [/CELADON-ADD]
 
 /datum/status_effect/blooddrunk
 	id = "blooddrunk"

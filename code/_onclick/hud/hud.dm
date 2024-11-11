@@ -32,7 +32,9 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	var/atom/movable/screen/alien_plasma_display
 	var/atom/movable/screen/alien_queen_finder
 
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	var/atom/movable/screen/devil/soul_counter/devilsouldisplay
+	// [/CELADON-ADD]
 	var/atom/movable/screen/combo/combo_display
 
 	var/atom/movable/screen/action_intent
@@ -105,6 +107,9 @@ GLOBAL_LIST_INIT(available_ui_styles, list(
 	throw_icon = null
 	QDEL_LIST(infodisplay)
 
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
+	devilsouldisplay = null
+	// [/CELADON-ADD]
 	healths = null
 	healthdoll = null
 	internals = null

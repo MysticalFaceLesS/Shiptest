@@ -130,6 +130,7 @@ GLOBAL_LIST_EMPTY(active_alternate_appearances)
 /datum/atom_hud/alternate_appearance/basic/observers/mobShouldSee(mob/M)
 	return isobserver(M)
 
+// [CELADON-ADD] - CELADON_RETURN_CONTENT
 /datum/atom_hud/alternate_appearance/basic/noncult
 
 /datum/atom_hud/alternate_appearance/basic/noncult/New()
@@ -155,6 +156,7 @@ GLOBAL_LIST_EMPTY(active_alternate_appearances)
 	if(iscultist(M))
 		return TRUE
 	return FALSE
+// [/CELADON-ADD]
 
 /datum/atom_hud/alternate_appearance/basic/blessedAware
 
@@ -179,6 +181,10 @@ GLOBAL_LIST_EMPTY(active_alternate_appearances)
 /datum/atom_hud/alternate_appearance/basic/onePerson/mobShouldSee(mob/M)
 	if(M == seer)
 		return TRUE
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
+	if (istype(M, /mob/living/simple_animal/hostile/construct/wraith))
+		return TRUE
+	// [/CELADON-ADD]
 	return FALSE
 
 /datum/atom_hud/alternate_appearance/basic/onePerson/New(key, image/I, mob/living/M)

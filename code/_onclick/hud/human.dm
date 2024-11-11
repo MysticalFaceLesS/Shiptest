@@ -33,6 +33,7 @@
 	var/mob/living/carbon/human/H = usr
 	H.quick_equip()
 
+// [CELADON-ADD] - CELADON_RETURN_CONTENT
 /atom/movable/screen/devil
 	icon = 'icons/hud/screen_devil.dmi'
 	invisibility = INVISIBILITY_ABSTRACT
@@ -61,6 +62,7 @@
 
 /atom/movable/screen/devil/soul_counter/proc/clear()
 	invisibility = INVISIBILITY_ABSTRACT
+// [/CELADON-ADD]
 
 /atom/movable/screen/ling
 	icon = 'icons/hud/screen_changeling.dmi'
@@ -338,9 +340,11 @@
 	lingstingdisplay.hud = src
 	infodisplay += lingstingdisplay
 
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	devilsouldisplay = new /atom/movable/screen/devil/soul_counter
 	devilsouldisplay.hud = src
 	infodisplay += devilsouldisplay
+	// [/CELADON-ADD]
 
 	zone_select =  new /atom/movable/screen/zone_sel()
 	zone_select.icon = ui_style

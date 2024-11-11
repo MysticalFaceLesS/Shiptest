@@ -243,10 +243,10 @@
 	return TRUE
 
 /obj/machinery/door/swarmer_act(mob/living/simple_animal/hostile/swarmer/S)
-	var/isonshuttle = istype(get_area(src), /area/shuttle)
+	var/isonshuttle = istype(get_area(src), /area/hyperspace)
 	for(var/turf/T in range(1, src))
 		var/area/A = get_area(T)
-		if(isspaceturf(T) || (!isonshuttle && (istype(A, /area/shuttle) || istype(A, /area/space))) || (isonshuttle && !istype(A, /area/shuttle)))
+		if(isspaceturf(T) || (!isonshuttle && (istype(A, /area/hyperspace) || istype(A, /area/space))) || (isonshuttle && !istype(A, /area/hyperspace)))
 			to_chat(S, "<span class='warning'>Destroying this object has the potential to cause a hull breach. Aborting.</span>")
 			S.LoseTarget()
 			return FALSE
@@ -324,10 +324,10 @@
 	return FALSE
 
 /turf/closed/wall/swarmer_act(mob/living/simple_animal/hostile/swarmer/S)
-	var/isonshuttle = istype(loc, /area/shuttle)
+	var/isonshuttle = istype(loc, /area/hyperspace)
 	for(var/turf/T in range(1, src))
 		var/area/A = get_area(T)
-		if(isspaceturf(T) || (!isonshuttle && (istype(A, /area/shuttle) || istype(A, /area/space))) || (isonshuttle && !istype(A, /area/shuttle)))
+		if(isspaceturf(T) || (!isonshuttle && (istype(A, /area/hyperspace) || istype(A, /area/space))) || (isonshuttle && !istype(A, /area/hyperspace)))
 			to_chat(S, "<span class='warning'>Destroying this object has the potential to cause a hull breach. Aborting.</span>")
 			S.LoseTarget()
 			return TRUE
@@ -338,10 +338,10 @@
 	return ..()
 
 /obj/structure/window/swarmer_act(mob/living/simple_animal/hostile/swarmer/S)
-	var/isonshuttle = istype(get_area(src), /area/shuttle)
+	var/isonshuttle = istype(get_area(src), /area/hyperspace)
 	for(var/turf/T in range(1, src))
 		var/area/A = get_area(T)
-		if(isspaceturf(T) || (!isonshuttle && (istype(A, /area/shuttle) || istype(A, /area/space))) || (isonshuttle && !istype(A, /area/shuttle)))
+		if(isspaceturf(T) || (!isonshuttle && (istype(A, /area/hyperspace) || istype(A, /area/space))) || (isonshuttle && !istype(A, /area/hyperspace)))
 			to_chat(S, "<span class='warning'>Destroying this object has the potential to cause a hull breach. Aborting.</span>")
 			S.LoseTarget()
 			return TRUE

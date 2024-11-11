@@ -392,6 +392,7 @@
 	gib()
 	return 20
 
+// [CELADON-ADD] - CELADON_RETURN_CONTENT
 /mob/living/narsie_act()
 	if(status_flags & GODMODE || QDELETED(src))
 		return
@@ -417,6 +418,7 @@
 	spawn_dust()
 	gib()
 	return TRUE
+// [/CELADON-ADD]
 
 //called when the mob receives a bright flash
 /mob/living/proc/flash_act(intensity = 1, override_blindness_check = 0, affect_silicon = 0, visual = 0, type = /atom/movable/screen/fullscreen/flash)

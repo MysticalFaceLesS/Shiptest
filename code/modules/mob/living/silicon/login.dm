@@ -1,6 +1,8 @@
 /mob/living/silicon/Login()
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	if(mind && SSticker.mode)
 		SSticker.mode.remove_cultist(mind, 0, 0)
+	// [/CELADON-ADD]
 	return ..()
 
 

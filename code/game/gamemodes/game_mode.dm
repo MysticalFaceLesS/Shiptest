@@ -418,8 +418,10 @@
 
 	return max(0, enemy_minimum_age - C.player_age)
 
+// [CELADON-ADD] - CELADON_RETURN_CONTENT
 /datum/game_mode/proc/remove_antag_for_borging(datum/mind/newborgie)
 	SSticker.mode.remove_cultist(newborgie, 0, 0)
+// [/CELADON-ADD]
 
 /datum/game_mode/proc/generate_station_goals()
 	var/list/possible = list()

@@ -37,7 +37,9 @@
 //Middle left indicators
 #define ui_lingchemdisplay "WEST,CENTER-1:15"
 #define ui_lingstingdisplay "WEST:6,CENTER-3:11"
+// [CELADON-ADD] - CELADON_RETURN_CONTENT
 #define ui_devilsouldisplay "WEST:6,CENTER-1:15"
+// [/CELADON-ADD]
 
 //Lower center, persistent menu
 #define ui_sstore1 "CENTER-5:10,SOUTH:5"

@@ -110,7 +110,7 @@
 	revert_cast()
 
 /obj/effect/proc_holder/spell/targeted/infernal_jaunt/proc/valid_location(mob/living/user = usr)
-	if(istype(get_area(user), /area/shuttle/)) // Can always phase in in a shuttle.
+	if(istype(get_area(user), /area/hyperspace)) // Can always phase in in a shuttle.
 		return TRUE
 	else
 		for(var/mob/living/C in orange(2, get_turf(user))) //Can also phase in when nearby a potential buyer.

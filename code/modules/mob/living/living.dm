@@ -1133,6 +1133,7 @@
 /mob/living/carbon/alien/update_stamina()
 	return
 
+// [CELADON-ADD] - CELADON_RETURN_CONTENT
 /mob/living/proc/owns_soul()
 	if(mind)
 		return mind.soulOwner == mind
@@ -1150,6 +1151,7 @@
 	if(mind && mind.has_objective(/datum/objective/sintouched/acedia))
 		return TRUE
 	return FALSE
+// [/CELADON-ADD]
 
 /mob/living/throw_at(atom/target, range, speed, mob/thrower, spin=1, diagonals_first = 0, datum/callback/callback, force, gentle = FALSE, quickstart = TRUE)
 	stop_pulling()

@@ -182,6 +182,7 @@
 	special()
 	screen.icon_state = "summary_malf"
 
+// [CELADON-ADD] - CELADON_RETURN_CONTENT
 /datum/cinematic/cult
 	id = CINEMATIC_CULT
 
@@ -222,6 +223,7 @@
 	cinematic_sound(sound('sound/magic/demon_dies.ogg'))
 	sleep(30)
 	special()
+// [/CELADON-ADD]
 
 /datum/cinematic/nuke_annihilation
 	id = CINEMATIC_ANNIHILATION

@@ -4,6 +4,25 @@
 #include "_return_content.dm"
 
 #include "code/antagonists/wizard.dm"
+#include "code/antagonists/cult/blood_magic.dm"
+#include "code/antagonists/cult/cult.dm"
+#include "code/antagonists/cult/cult_comms.dm"
+#include "code/antagonists/cult/cult_items.dm"
+#include "code/antagonists/cult/cult_structures.dm"
+#include "code/antagonists/cult/cult_turf_overlay.dm"
+#include "code/antagonists/cult/rune_spawn_action.dm"
+#include "code/antagonists/cult/runes.dm"
+#include "code/antagonists/devil/_true_devil.dm"
+#include "code/antagonists/devil/devil.dm"
+#include "code/antagonists/devil/imp.dm"
+#include "code/antagonists/devil/inventory.dm"
+#include "code/antagonists/devil/lib_codex_gigas.dm"
+#include "code/antagonists/devil/objectives.dm"
+#include "code/antagonists/devil/sintouched.dm"
+#include "code/antagonists/swarmer/swarmer.dm"
+#include "code/antagonists/swarmer/swarmer_event.dm"
+#include "code/antagonists/wizard/soulstone.dm"
+#include "code/antagonists/wizard/spellbook.dm"
 
 #include "code/clothing/bananashoes.dm"
 #include "code/clothing/glasses.dm"
@@ -15,10 +34,17 @@
 #include "code/component/crafting.dm"
 #include "code/component/slippery.dm"
 
+#include "code/effects/forcefields.dm"
 #include "code/effects/lootdrop.dm"
 #include "code/effects/spawners.dm"
 
+#include "code/events/devil.dm"
+#include "code/events/major_dust.dm"
+#include "code/events/meateor_wave.dm"
+#include "code/events/meteor_wave.dm"
+
 #include "code/items/blackmarket_item.dm"
+#include "code/items/storage/belt.dm"
 #include "code/items/cult_items.dm"
 #include "code/items/figure.dm"
 #include "code/items/food.dm"
@@ -26,6 +52,13 @@
 #include "code/items/leather.dm"
 #include "code/items/religion.dm"
 #include "code/items/reverse_bear_trap.dm"
+#include "code/items/toys.dm"
+
+#include "code/mobs/simple_animal/dog.dm"
+#include "code/mobs/simple_animal/shade.dm"
+#include "code/mobs/simple_animal/swarmer.dm"
+
+#include "code/paperwork/contract.dm"
 
 #include "code/planetary_generator/asteroid.dm"
 #include "code/planetary_generator/jungle.dm"
@@ -35,10 +68,25 @@
 #include "code/planetary_generator/snow.dm"
 #include "code/planetary_generator/waste.dm"
 
+#include "code/power/narsie.dm"
+
+#include "code/spells/construct_spells.dm"
+#include "code/spells/devil.dm"
+#include "code/spells/devil_boons.dm"
+#include "code/spells/wizard.dm"
+
+#include "code/surgery/bodyparts/head.dm"
+#include "code/surgery/bodyparts/parts.dm"
+
+#include "code/turfs/open/floor.dm"
+#include "code/turfs/open/reinf_floor.dm"
+
 #include "code/action.dm"
+#include "code/airlock_types.dm"
 #include "code/boss_achievements.dm"
 #include "code/boss_scores.dm"
 #include "code/cave_entrance.dm"
+#include "code/drone_dispenser.dm"
 #include "code/clown_ops.dm"
 #include "code/global.dm"
 #include "code/hivebot.dm"
@@ -52,12 +100,16 @@
 #include "code/netherworld.dm"
 #include "code/outfit.dm"
 #include "code/reagents.dm"
+#include "code/shieldgen.dm"
 #include "code/simple_animal.dm"
+#include "code/soulstoned.dm"
 #include "code/spawner.dm"
 #include "code/spells.dm"
 #include "code/structure.dm"
 #include "code/supply_pack.dm"
+#include "code/syndicatebeacon.dm"
 #include "code/uplink_items.dm"
+#include "code/uplink_kits.dm"
 #include "code/weaponry.dm"
 
 #endif

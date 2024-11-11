@@ -16,14 +16,18 @@
 		I.alpha = 64
 		I.appearance_flags = RESET_ALPHA
 		add_alt_appearance(/datum/atom_hud/alternate_appearance/basic/blessedAware, "blessing", I)
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	RegisterSignal(loc, COMSIG_ATOM_INTERCEPT_TELEPORT, PROC_REF(block_cult_teleport))
+	// [/CELADON-ADD]
 
 /obj/effect/blessing/Destroy()
 	UnregisterSignal(loc, COMSIG_ATOM_INTERCEPT_TELEPORT)
 	return ..()
 
+// [CELADON-ADD] - CELADON_RETURN_CONTENT
 /obj/effect/blessing/proc/block_cult_teleport(datum/source, channel, turf/origin, turf/destination)
 	SIGNAL_HANDLER
 
 	if(channel == TELEPORT_CHANNEL_CULT)
 		return COMPONENT_BLOCK_TELEPORT
+// [/CELADON-ADD]

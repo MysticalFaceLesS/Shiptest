@@ -617,8 +617,10 @@
 	if(!MP)
 		return 0	//Sanity, this should never happen.
 
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	if(ispath(MP, /mob/living/simple_animal/hostile/construct))
 		return 0 //Verbs do not appear for players.
+	// [/CELADON-ADD]
 
 //Good mobs!
 	if(ispath(MP, /mob/living/simple_animal/pet/cat))
@@ -631,8 +633,10 @@
 		return 1
 	if(ispath(MP, /mob/living/simple_animal/hostile/mushroom))
 		return 1
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	if(ispath(MP, /mob/living/simple_animal/shade))
 		return 1
+	// [/CELADON-ADD]
 	if(ispath(MP, /mob/living/simple_animal/hostile/killertomato))
 		return 1
 	if(ispath(MP, /mob/living/simple_animal/mouse))

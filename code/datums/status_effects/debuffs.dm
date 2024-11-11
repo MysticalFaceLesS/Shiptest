@@ -253,6 +253,7 @@
 /datum/status_effect/pacify/on_remove()
 	REMOVE_TRAIT(owner, TRAIT_PACIFISM, "status_effect")
 
+// [CELADON-ADD] - CELADON_RETURN_CONTENT
 /datum/status_effect/cultghost //is a cult ghost and can't use manifest runes
 	id = "cult_ghost"
 	duration = -1
@@ -265,6 +266,7 @@
 /datum/status_effect/cultghost/tick()
 	if(owner.reagents)
 		owner.reagents.del_reagent(/datum/reagent/water/holywater) //can't be deconverted
+// [/CELADON-ADD]
 
 /datum/status_effect/crusher_mark
 	id = "crusher_mark"

@@ -1420,7 +1420,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<b>Hide Prayers:</b> <a href = '?_src_=prefs;preference=toggle_prayers'>[(chat_toggles & CHAT_PRAYER)?"Shown":"Hidden"]</a><br>"
 				dat += "<b>Split Admin Tabs:</b> <a href = '?_src_=prefs;preference=toggle_split_admin_tabs'>[(toggles & SPLIT_ADMIN_TABS)?"Enabled":"Disabled"]</a><br>"
 				dat += "<b>Fast MC Refresh:</b> <a href = '?_src_=prefs;preference=toggle_fast_mc_refresh'>[(toggles & FAST_MC_REFRESH)?"Enabled":"Disabled"]</a><br>"
+				// [CELADON-ADD] - CELADON_RETURN_CONTENT
 				dat += "<b>Ignore Being Summoned as Cult Ghost:</b> <a href = '?_src_=prefs;preference=toggle_ignore_cult_ghost'>[(toggles & ADMIN_IGNORE_CULT_GHOST)?"Don't Allow Being Summoned":"Allow Being Summoned"]</a><br>"
+				// [/CELADON-ADD]
 				dat += "<b>Briefing Officer Outfit:</b> <a href = '?_src_=prefs;preference=briefoutfit;task=input'>[brief_outfit]</a><br>"
 				if(CONFIG_GET(flag/allow_admin_asaycolor))
 					dat += "<br>"
@@ -2636,6 +2638,10 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 					toggles ^= DEADMIN_POSITION_HEAD
 				if("toggle_deadmin_security")
 					toggles ^= DEADMIN_POSITION_SECURITY
+				// [CELADON-ADD] - CELADON_RETURN_CONTENT
+				if("toggle_ignore_cult_ghost")
+					toggles ^= ADMIN_IGNORE_CULT_GHOST
+				// [/CELADON-ADD]
 				if("toggle_deadmin_silicon")
 					toggles ^= DEADMIN_POSITION_SILICON
 				if("toggle_ignore_cult_ghost")

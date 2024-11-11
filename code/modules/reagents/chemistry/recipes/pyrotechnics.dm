@@ -151,7 +151,8 @@
 			R.stun(20)
 			R.reveal(100)
 			R.adjustHealth(50)
-		addtimer(CALLBACK(src, PROC_REF(divine_explosion), round(created_volume/48,1),get_turf(holder.my_atom)), 2 SECONDS)
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
+			addtimer(CALLBACK(src, PROC_REF(divine_explosion), round(created_volume/48,1),get_turf(holder.my_atom)), 2 SECONDS)
 	..()
 
 /datum/chemical_reaction/reagent_explosion/potassium_explosion/holyboom/proc/divine_explosion(size, turf/T)
@@ -161,6 +162,7 @@
 			C.Paralyze(40)
 			C.adjust_fire_stacks(5)
 			C.IgniteMob()
+	// [/CELADON-ADD]
 
 /datum/chemical_reaction/gunpowder
 	results = list(/datum/reagent/gunpowder = 3)

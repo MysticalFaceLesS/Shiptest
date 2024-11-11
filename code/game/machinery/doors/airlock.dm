@@ -370,6 +370,7 @@
 	audible_message("<span class='hear'>You hear a click from the bottom of the door.</span>", null, 1)
 	update_appearance()
 
+// [CELADON-ADD] - CELADON_RETURN_CONTENT
 /obj/machinery/door/airlock/narsie_act()
 	var/turf/T = get_turf(src)
 	var/obj/machinery/door/airlock/cult/A
@@ -389,6 +390,7 @@
 	else
 		A = new /obj/machinery/door/airlock/cult/weak(T)
 	qdel(src)
+// [/CELADON-ADD]
 
 /obj/machinery/door/airlock/Destroy()
 	QDEL_NULL(wires)

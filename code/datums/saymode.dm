@@ -100,10 +100,12 @@
 	mode = MODE_BINARY
 
 /datum/saymode/binary/handle_message(mob/living/user, message, datum/language/language)
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	if(isswarmer(user))
 		var/mob/living/simple_animal/hostile/swarmer/S = user
 		S.swarmer_chat(message)
 		return FALSE
+	// [/CELADON-ADD]
 	if(isdrone(user))
 		var/mob/living/simple_animal/drone/D = user
 		D.drone_chat(message)

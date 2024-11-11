@@ -34,6 +34,10 @@
 	var/hackedcheck[1]
 	var/devillawcheck[5]
 
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
+	var/devillawcheck[5]
+	// [/CELADON-ADD]
+
 	var/sensors_on = 0
 	var/med_hud = DATA_HUD_MEDICAL_ADVANCED //Determines the med hud to use
 	var/sec_hud = DATA_HUD_SECURITY_ADVANCED //Determines the sec hud to use
@@ -206,6 +210,7 @@
 				hackedcheck[L] = "Yes"
 		checklaws()
 
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	if (href_list["lawdevil"]) // Toggling whether or not a law gets stated by the State Laws verb --NeoFite
 		var/L = text2num(href_list["lawdevil"])
 		switch(devillawcheck[L])
@@ -214,7 +219,7 @@
 			if ("No")
 				devillawcheck[L] = "Yes"
 		checklaws()
-
+	// [/CELADON-ADD]
 
 	if (href_list["laws"]) // With how my law selection code works, I changed statelaws from a verb to a proc, and call it through my law selection panel. --NeoFite
 		statelaws()
@@ -234,12 +239,13 @@
 	var/number = 1
 	sleep(10)
 
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	if (laws.devillaws && laws.devillaws.len)
 		for(var/index = 1, index <= laws.devillaws.len, index++)
 			if (force || devillawcheck[index] == "Yes")
 				say("[radiomod] 666. [laws.devillaws[index]]")
 				sleep(10)
-
+	// [/CELADON-ADD]
 
 	if (laws.zeroth)
 		if (force || lawcheck[1] == "Yes")
@@ -289,11 +295,13 @@
 	var/list = "<meta http-equiv='X-UA-Compatible' content='IE=edge' charset='UTF-8'/><b>Which laws do you want to include when stating them for the crew?</b><br><br>"
 	// [/CELADON-EDIT]
 
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	if (laws.devillaws && laws.devillaws.len)
 		for(var/index = 1, index <= laws.devillaws.len, index++)
 			if (!devillawcheck[index])
 				devillawcheck[index] = "No"
 			list += {"<A href='byond://?src=[REF(src)];lawdevil=[index]'>[devillawcheck[index]] 666:</A> <font color='#cc5500'>[laws.devillaws[index]]</font><BR>"}
+	// [/CELADON-ADD]
 
 	if (laws.zeroth)
 		if (!lawcheck[1])
