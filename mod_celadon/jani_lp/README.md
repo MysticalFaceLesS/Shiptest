@@ -9,7 +9,7 @@
 -->
 
 <!-- Название мода. Не важно на русском или на английском. -->
-## НАЗВАНИЕ_МОДА CELADON_JANITOR_LP
+## CELADON_JANITOR_LP
 
 ID мода: CELADON_JANITOR_LP
 <!--
