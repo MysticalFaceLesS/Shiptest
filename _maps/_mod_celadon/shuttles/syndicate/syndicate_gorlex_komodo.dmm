@@ -2425,7 +2425,8 @@
 /obj/structure/table/reinforced,
 /obj/machinery/light/directional/east,
 /obj/machinery/chem_dispenser/drinks/beer{
-	dir = 8
+	dir = 8;
+	pixel_x = 6
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/ship/crew/canteen)
@@ -3859,7 +3860,7 @@
 	dir = 1
 	},
 /obj/machinery/microwave{
-	pixel_y = 5
+	pixel_y = 3
 	},
 /obj/effect/turf_decal/trimline/transparent/bar/filled/line{
 	dir = 6
@@ -3912,7 +3913,8 @@
 /obj/item/clothing/under/suit/waiter/syndicate,
 /obj/machinery/vending/boozeomat/syndicate_access{
 	pixel_x = 32;
-	density = 0
+	density = 0;
+	all_items_free = 1
 	},
 /obj/item/gun/ballistic/shotgun/doublebarrel,
 /obj/item/ammo_box/a12g/rubbershot,
@@ -4297,7 +4299,9 @@
 /turf/open/floor/plating,
 /area/ship/engineering)
 "PZ" = (
-/obj/machinery/vending/tool,
+/obj/machinery/vending/tool{
+	all_items_free = 1
+	},
 /obj/effect/turf_decal/industrial/outline/yellow,
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ship/engineering)
@@ -4342,7 +4346,8 @@
 "QC" = (
 /obj/structure/table/reinforced,
 /obj/machinery/chem_dispenser/drinks{
-	dir = 8
+	dir = 8;
+	pixel_x = 6
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/ship/crew/canteen)
