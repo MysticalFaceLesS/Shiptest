@@ -285,6 +285,10 @@
 		var/list/long_job_lists = list("Service" = GLOB.service_positions,
 									"Ghost and Other Roles" = list(ROLE_BRAINWASHED, ROLE_DEATHSQUAD, ROLE_DRONE, ROLE_LAVALAND, ROLE_MIND_TRANSFER, ROLE_POSIBRAIN, ROLE_SENTIENCE),
 									"Antagonist Positions" = list(ROLE_ABDUCTOR, ROLE_ALIEN,
+									// [CELADON-ADD] - CELADON_RETURN_CONTENT
+									ROLE_CULTIST,
+									ROLE_DEVIL,
+									// [/CELADON-ADD]
 									ROLE_BROTHER, ROLE_CHANGELING,
 									ROLE_INTERNAL_AFFAIRS, ROLE_MALF,
 									ROLE_MONKEY, ROLE_NINJA, ROLE_OPERATIVE,

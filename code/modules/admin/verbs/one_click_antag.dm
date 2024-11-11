@@ -21,6 +21,7 @@
 		<a href='?src=[REF(src)];[HrefToken()];makeAntag=centcom'>Make Response Team (Requires Ghosts)</a><br>
 		<a href='?src=[REF(src)];[HrefToken()];makeAntag=abductors'>Make Abductor Team (Requires Ghosts)</a><br>
 		<a href='?src=[REF(src)];[HrefToken()];makeAntag=revenant'>Make Revenant (Requires Ghost)</a><br>
+		<a href='?src=[REF(src)];[HrefToken()];makeAntag=cult'>Make Cult</a><br>
 		"}
 
 	var/datum/browser/popup = new(usr, "oneclickantag", "Quick-Create Antagonist", 400, 400)
@@ -111,6 +112,37 @@
 	var/mob/living/carbon/human/new_character = makeBody(selected)
 	new_character.mind.make_Wizard()
 	return TRUE
+
+// [CELADON-ADD] - CELADON_RETURN_CONTENT
+/datum/admins/proc/makeCult()
+	var/datum/game_mode/cult/temp = new
+	if(CONFIG_GET(flag/protect_roles_from_antagonist))
+		temp.restricted_jobs += temp.protected_jobs
+
+	if(CONFIG_GET(flag/protect_assistant_from_antagonist))
+		temp.restricted_jobs += "Assistant"
+
+	var/list/mob/living/carbon/human/candidates = list()
+	var/mob/living/carbon/human/H = null
+
+	for(var/mob/living/carbon/human/applicant in GLOB.player_list)
+		if(isReadytoRumble(applicant, ROLE_CULTIST))
+			if(temp.age_check(applicant.client))
+				if(!(applicant.job in temp.restricted_jobs))
+					candidates += applicant
+
+	if(candidates.len)
+		var/numCultists = min(candidates.len, 4)
+
+		for(var/i = 0, i<numCultists, i++)
+			H = pick(candidates)
+			H.mind.make_Cultist()
+			candidates.Remove(H)
+
+		return 1
+
+	return 0
+// [/CELADON-ADD]
 
 /datum/admins/proc/makeNukeTeam()
 	var/datum/game_mode/nuclear/temp = new

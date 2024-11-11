@@ -12,6 +12,9 @@
 #define LANGUAGE_APHASIA "aphasia"
 #define LANGUAGE_CULTIST "cultist"
 #define LANGUAGE_CURATOR "curator"
+// [CELADON-ADD] - CELADON_RETURN_CONTENT
+#define LANGUAGE_DEVIL "devil"
+// [/CELADON-ADD]
 #define LANGUAGE_GLAND "gland"
 #define LANGUAGE_HAT "hat"
 #define LANGUAGE_HIGH "high"

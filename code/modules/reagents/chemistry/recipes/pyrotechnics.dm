@@ -151,7 +151,18 @@
 			R.stun(20)
 			R.reveal(100)
 			R.adjustHealth(50)
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
+			addtimer(CALLBACK(src, PROC_REF(divine_explosion), round(created_volume/48,1),get_turf(holder.my_atom)), 2 SECONDS)
 	..()
+
+/datum/chemical_reaction/reagent_explosion/potassium_explosion/holyboom/proc/divine_explosion(size, turf/T)
+	for(var/mob/living/carbon/C in get_hearers_in_view(size,T))
+		if(iscultist(C))
+			to_chat(C, "<span class='userdanger'>The divine explosion sears you!</span>")
+			C.Paralyze(40)
+			C.adjust_fire_stacks(5)
+			C.IgniteMob()
+	// [/CELADON-ADD]
 
 /datum/chemical_reaction/gunpowder
 	results = list(/datum/reagent/gunpowder = 3)

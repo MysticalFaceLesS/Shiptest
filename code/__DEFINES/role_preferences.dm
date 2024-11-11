@@ -18,6 +18,10 @@
 #define ROLE_ALIEN "Xenomorph"
 #define ROLE_PAI "pAI"
 #define ROLE_NINJA "Space Ninja"
+// [CELADON-ADD] - CELADON_RETURN_CONTENT
+#define ROLE_CULTIST "Cultist"
+#define ROLE_DEVIL "Devil"
+// [/CELADON-ADD]
 #define ROLE_MONKEY "Monkey"
 #define ROLE_ABDUCTOR "Abductor"
 #define ROLE_REVENANT "Revenant"
@@ -47,6 +51,10 @@ GLOBAL_LIST_INIT(special_roles, list(
 	ROLE_OPERATIVE = /datum/game_mode/nuclear,
 	ROLE_CHANGELING = /datum/game_mode/changeling,
 	ROLE_WIZARD = /datum/game_mode/wizard,
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
+	ROLE_CULTIST = /datum/game_mode/cult,
+	ROLE_DEVIL = /datum/game_mode/devil,
+	// [/CELADON-ADD]
 	ROLE_MALF,
 	ROLE_ALIEN,
 	ROLE_PAI,

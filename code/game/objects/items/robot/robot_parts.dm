@@ -289,6 +289,9 @@
 				if(M.laws.id == DEFAULT_AI_LAWID)
 					O.make_laws()
 
+			// [CELADON-ADD] - CELADON_RETURN_CONTENT
+			SSticker.mode.remove_antag_for_borging(B.mind)
+			// [/CELADON-ADD]
 			O.job = "Cyborg"
 
 			O.cell = chest.cell

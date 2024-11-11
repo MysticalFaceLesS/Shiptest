@@ -96,5 +96,3 @@
 	unit_name = "computer intellicard slot"
 	export_types = list(/obj/item/computer_hardware/ai_slot)
 	include_subtypes = TRUE
-*/
-//[/CELADON-REMOVE]

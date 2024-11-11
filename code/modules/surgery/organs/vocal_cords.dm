@@ -99,8 +99,12 @@
 
 	var/log_message = uppertext(message)
 	if(!span_list || !span_list.len)
-		span_list = list()
-
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
+		if(iscultist(user))
+			span_list = list("narsiesmall")
+		else
+			span_list = list()
+	// [/CELADON-ADD]
 	user.say(message, spans = span_list, sanitize = FALSE)
 
 	message = lowertext(message)
@@ -132,6 +136,12 @@
 		if(user.mind.assigned_role == "Mime")
 			power_multiplier *= 0.5
 
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
+	//Cultists are closer to their gods and are more powerful, but they'll give themselves away
+	if(iscultist(user))
+		power_multiplier *= 2
+	// [/CELADON-ADD]
+
 	//Try to check if the speaker specified a name or a job to focus on
 	var/list/specific_listeners = list()
 	var/found_string = null
@@ -141,8 +151,18 @@
 
 	for(var/V in listeners)
 		var/mob/living/L = V
-
-		if(findtext(message, L.real_name, 1, length(L.real_name) + 1))
+		// [CELADON-ADD] - CELADON_RETURN_CONTENT
+		// if(findtext(message, L.real_name, 1, length(L.real_name) + 1))
+		var/datum/antagonist/devil/devilinfo = is_devil(L)
+		if(devilinfo && findtext(message, devilinfo.truename))
+			var/start = findtext(message, devilinfo.truename)
+			listeners = list(L) //Devil names are unique.
+			power_multiplier *= 5 //if you're a devil and god himself addressed you, you fucked up
+			//Cut out the name so it doesn't trigger commands
+			message = copytext(message, 1, start) + copytext(message, start + length(devilinfo.truename))
+			break
+		else if(findtext(message, L.real_name, 1, length(L.real_name) + 1))
+		// [/CELADON-ADD]
 			specific_listeners += L //focus on those with the specified name
 			//Cut out the name so it doesn't trigger commands
 			found_string = L.real_name
@@ -317,7 +337,13 @@
 		for(var/V in listeners)
 			var/mob/living/L = V
 			var/text = ""
-			text = L.real_name
+			// [CELADON-ADD] - CELADON_RETURN_CONTENT
+			if(is_devil(L))
+				var/datum/antagonist/devil/devilinfo = is_devil(L)
+				text = devilinfo.truename
+			else
+			// [/CELADON-ADD]
+				text = L.real_name
 			addtimer(CALLBACK(L, TYPE_PROC_REF(/atom/movable, say), text), 5 * i)
 			i++
 

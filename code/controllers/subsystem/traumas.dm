@@ -44,9 +44,18 @@ SUBSYSTEM_DEF(traumas)
 		"skeletons" = typecacheof(list(/mob/living/simple_animal/hostile/human/skeleton)),
 		"snakes"   = typecacheof(list(/mob/living/simple_animal/hostile/retaliate/poison/snake)),
 		"robots"   = typecacheof(list(/mob/living/silicon/robot, /mob/living/silicon/ai,
-		/mob/living/simple_animal/drone, /mob/living/simple_animal/bot)),
+		/mob/living/simple_animal/drone,
+		// [CELADON-ADD] - CELADON_RETURN_CONTENT
+		/mob/living/simple_animal/hostile/swarmer,
+		// [/CELADON-ADD]
+		/mob/living/simple_animal/bot)),
 		"doctors"   = typecacheof(list(/mob/living/simple_animal/bot/medbot)),
-		"the supernatural"   = typecacheof(list(/mob/living/simple_animal/revenant)),
+		"the supernatural"   = typecacheof(list(/mob/living/simple_animal/revenant,
+		// [CELADON-ADD] - CELADON_RETURN_CONTENT
+		/mob/living/simple_animal/hostile/construct,
+		/mob/living/simple_animal/shade
+		// [/CELADON-ADD]
+		)),
 		"aliens" = typecacheof(list(/mob/living/carbon/alien, /mob/living/simple_animal/slime, /mob/living/simple_animal/hostile/facehugger)),
 		"conspiracies" = typecacheof(list(/mob/living/simple_animal/bot/secbot, /mob/living/simple_animal/drone,
 		/mob/living/simple_animal/pet/penguin)),
@@ -102,8 +111,13 @@ SUBSYSTEM_DEF(traumas)
 			/obj/machinery/door/airlock/centcom)),
 
 		"robots"   = typecacheof(list(
-			/obj/machinery/computer/upload, /obj/item/aiModule/, /obj/machinery/recharge_station,
-			/obj/item/aicard)),
+			/obj/machinery/computer/upload, /obj/item/aiModule/, /obj/machinery/recharge_station, /obj/item/aicard,
+			// [CELADON-ADD] - CELADON_RETURN_CONTENT
+			/mob/living/simple_animal/hostile/swarmer,
+			/obj/item/deactivated_swarmer,
+			/obj/effect/mob_spawn/swarmer
+			// [/CELADON-ADD]
+		)),
 
 		"doctors"   = typecacheof(list(
 			/obj/item/clothing/under/rank/medical,
@@ -125,6 +139,12 @@ SUBSYSTEM_DEF(traumas)
 		"the supernatural"  = typecacheof(list(
 			/obj/item/clothing/suit/wizrobe, /obj/item/clothing/head/wizard, /obj/item/spellbook, /obj/item/staff,
 			/obj/item/clothing/suit/space/hardsuit/shielded/wizard, /obj/item/clothing/suit/space/hardsuit/wizard,
+			// [CELADON-ADD] - CELADON_RETURN_CONTENT
+			/obj/structure/destructible/cult, /obj/item/tome,
+			/obj/item/restraints/legcuffs/bola/cult, /obj/item/clothing/suit/space/hardsuit/cult,
+			/obj/effect/rune, /obj/machinery/door/airlock/cult,
+			/obj/singularity/narsie, /obj/item/soulstone,
+			// [/CELADON-ADD]
 			/obj/item/clothing/under/rank/civilian/chaplain)),
 
 		"aliens"   = typecacheof(list(

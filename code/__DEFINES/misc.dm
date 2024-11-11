@@ -28,6 +28,9 @@
 #define LEGCUFF_LAYER 5
 #define HANDS_LAYER 4
 #define BODY_FRONT_LAYER 3
+// [CELADON-ADD] - CELADON_RETURN_CONTENT
+#define HALO_LAYER 2 //blood cult ascended halo, because there's currently no better solution for adding/removing
+// [/CELADON-ADD]
 #define FIRE_LAYER 1 //If you're on fire
 #define TOTAL_LAYERS 31 //KEEP THIS UP-TO-DATE OR SHIT WILL BREAK ;_;
 
@@ -276,6 +279,11 @@ GLOBAL_LIST_INIT(ghost_others_options, list(GHOST_OTHERS_SIMPLE, GHOST_OTHERS_DE
 #define NUKE_SYNDICATE_BASE 3
 #define STATION_DESTROYED_NUKE 4
 #define STATION_EVACUATED 5
+// [CELADON-ADD] - CELADON_RETURN_CONTENT
+#define CULT_ESCAPE 11
+#define CULT_FAILURE 12
+#define CULT_SUMMON 13
+// [/CELADON-ADD]
 #define NUKE_MISS 14
 #define OPERATIVES_KILLED 15
 #define OPERATIVE_SKIRMISH 16
@@ -374,6 +382,9 @@ GLOBAL_LIST_INIT(ghost_others_options, list(GHOST_OTHERS_SIMPLE, GHOST_OTHERS_DE
 #define TELEPORT_CHANNEL_QUANTUM "quantum" //Quantum-based teleportation, requires both sender and receiver, but is free from normal disruption
 #define TELEPORT_CHANNEL_WORMHOLE "wormhole"	//Wormhole teleportation, is not disrupted by bluespace fluctuations but tends to be very random or unsafe
 #define TELEPORT_CHANNEL_MAGIC "magic" //Magic teleportation, does whatever it wants (unless there's antimagic)
+// [CELADON-ADD] - CELADON_RETURN_CONTENT
+#define TELEPORT_CHANNEL_CULT "cult" //Cult teleportation, does whatever it wants (unless there's holiness)
+// [/CELADON-ADD]
 #define TELEPORT_CHANNEL_FREE "free" //Anything else
 
 //Run the world with this parameter to enable a single run though of the game setup and tear down process with unit tests in between

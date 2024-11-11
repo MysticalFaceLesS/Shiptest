@@ -96,6 +96,13 @@
 	mood_change = 3
 	hidden = TRUE
 
+// [CELADON-ADD] - CELADON_RETURN_CONTENT
+/datum/mood_event/cult
+	description = "<span class='nicegreen'>I have seen the truth, praise the almighty one!</span>\n"
+	mood_change = 10 //maybe being a cultist isnt that bad after all
+	hidden = TRUE
+// [/CELADON-ADD]
+
 /datum/mood_event/family_heirloom
 	description = "<span class='nicegreen'>My family heirloom is safe with me.</span>\n"
 	mood_change = 1

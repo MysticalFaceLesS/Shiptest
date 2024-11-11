@@ -265,7 +265,8 @@
 		"rule8" = 'icons/UI_Icons/Achievements/Misc/rule8.png',
 		"snail" = 'icons/UI_Icons/Achievements/Misc/snail.png',
 		"mining" = 'icons/UI_Icons/Achievements/Skills/mining.png',
-		// [CELADON-ADD] - CELADON_ACHIEVEMENTS
+		// [CELADON-ADD] - CELADON_ACHIEVEMENTS & CELADON_RETURN_CONTENT
+		"swarmer" = 'icons/UI_Icons/Achievements/Boss/swarmer.png',
 		"theinnerhell" = 'mod_celadon/_storge_icons/icons/png/theinnerhell.png'
 		// [/CELADON-ADD]
 	)

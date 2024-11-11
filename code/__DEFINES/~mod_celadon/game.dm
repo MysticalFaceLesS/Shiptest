@@ -1,3 +1,5 @@
+#define CULT_POLL_WAIT 2400
+
 // Same as before, but returns null if false
 /proc/get_open_turf_in_dir_null(atom/center, dir)
 	var/turf/open/T = get_step(center, dir)

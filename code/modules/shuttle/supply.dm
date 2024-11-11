@@ -1,5 +1,9 @@
 GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 		/mob/living,
+		// [CELADON-ADD] - CELADON_RETURN_CONTENT
+		/obj/effect/rune,
+		/obj/singularity/narsie,
+		// [/CELADON-ADD]
 		/obj/structure/spider/spiderling,
 		/obj/item/disk/nuclear,
 		/obj/machinery/nuclearbomb,

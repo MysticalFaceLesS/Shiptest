@@ -96,6 +96,15 @@
 	W.update_label()
 	..()
 
+// [CELADON-ADD] - CELADON_RETURN_CONTENT
+/datum/outfit/ghost_cultist
+	name = "Cultist Ghost"
+	// uniform = /obj/item/clothing/under/color/black/ghost - данная форма удалена.
+	uniform = /obj/item/clothing/under/color/black
+	suit = /obj/item/clothing/suit/hooded/cultrobes/alt/ghost
+	shoes = /obj/item/clothing/shoes/cult/alt/ghost
+// [/CELADON-ADD]
+
 /datum/outfit/wizard
 	name = "Blue Wizard"
 

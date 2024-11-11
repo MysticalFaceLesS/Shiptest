@@ -282,6 +282,11 @@
 /datum/reagent/hydrogen_peroxide/expose_turf(turf/open/T, reac_volume)
 	if(!istype(T))
 		return
+	// [CELADON-ADD] - CELADON_RETURN_CONTENT
+	if(reac_volume>=10)
+		for(var/obj/effect/rune/R in T)
+			qdel(R)
+	// [/CELADON-ADD]
 	if(reac_volume >= 5)
 		T.MakeSlippery(TURF_WET_WATER, 10 SECONDS, min(reac_volume*1.5 SECONDS, 60 SECONDS))
 /*

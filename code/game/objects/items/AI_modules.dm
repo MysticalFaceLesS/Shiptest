@@ -49,7 +49,11 @@ AI MODULES
 	//Handle the lawcap
 	if(law_datum)
 		var/tot_laws = 0
-		for(var/lawlist in list(law_datum.inherent, law_datum.supplied, law_datum.ion, law_datum.hacked, laws))
+		for(var/lawlist in list(law_datum.inherent,
+		// [CELADON-ADD] - CELADON_RETURN_CONTENT
+		law_datum.devillaws,
+		// [/CELADON-ADD]
+		law_datum.supplied, law_datum.ion, law_datum.hacked, laws))
 			for(var/mylaw in lawlist)
 				if(mylaw != "")
 					tot_laws++
