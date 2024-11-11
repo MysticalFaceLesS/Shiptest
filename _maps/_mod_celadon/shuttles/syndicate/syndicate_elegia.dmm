@@ -63,10 +63,14 @@
 /turf/open/floor/carpet/black,
 /area/ship/bridge)
 "cd" = (
-/obj/machinery/computer/mech_bay_power_console{
-	dir = 1
+/obj/structure/table/reinforced,
+/obj/item/radio/intercom/wideband/table{
+	dir = 4;
+	pixel_x = 1;
+	pixel_y = 1
 	},
-/turf/open/floor/mineral/plastitanium/red,
+/obj/item/radio/intercom/directional/south,
+/turf/open/floor/circuit,
 /area/ship/science/robotics)
 "ci" = (
 /obj/effect/turf_decal/industrial/warning/fulltile,
@@ -132,9 +136,19 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "cR" = (
-/obj/machinery/mech_bay_recharge_port,
 /obj/machinery/airalarm/directional/south,
-/turf/open/floor/mineral/plastitanium/red,
+/obj/structure/table/reinforced,
+/obj/item/circuitboard/aicore{
+	pixel_x = -1;
+	pixel_y = 5
+	},
+/obj/item/stack/cable_coil/red{
+	pixel_x = 3;
+	pixel_y = -1
+	},
+/obj/item/stack/sheet/rglass,
+/obj/item/stack/sheet/rglass,
+/turf/open/floor/circuit,
 /area/ship/science/robotics)
 "cU" = (
 /obj/structure/cable{
@@ -239,13 +253,9 @@
 /turf/open/floor/carpet/red_gold,
 /area/ship/bridge)
 "dV" = (
-/obj/machinery/mineral/ore_redemption{
-	output_dir = 4;
-	dir = 4;
-	input_dir = 4
-	},
 /obj/machinery/light/directional/west,
-/turf/open/floor/plasteel/tech,
+/obj/machinery/mech_bay_recharge_port,
+/turf/open/floor/mineral/plastitanium/red,
 /area/ship/cargo)
 "ec" = (
 /obj/structure/cable{
@@ -287,7 +297,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 9
 	},
-/obj/effect/turf_decal/corner/transparent/purple/border,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 9
 	},
@@ -321,12 +330,9 @@
 /area/ship/maintenance/port)
 "fw" = (
 /obj/effect/turf_decal/corner/transparent/purple/mono,
-/obj/structure/table/reinforced,
-/obj/machinery/cell_charger{
-	pixel_x = -1;
-	pixel_y = 2
+/obj/machinery/computer/rdconsole{
+	dir = 1
 	},
-/obj/item/stock_parts/cell/high/plus,
 /turf/open/floor/plasteel/tech,
 /area/ship/science)
 "fH" = (
@@ -396,9 +402,12 @@
 /area/ship/medical)
 "hE" = (
 /obj/item/radio/intercom/directional/east,
-/obj/effect/turf_decal/corner/transparent/purple/mono,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 1
+	},
+/obj/effect/turf_decal/corner/transparent/purple/border{
+	icon_state = "bordercolor";
+	dir = 4
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/science)
@@ -442,9 +451,6 @@
 	pixel_y = 12;
 	dir = 4
 	},
-/obj/structure/rack,
-/obj/item/clothing/glasses/hud/diagnostic,
-/obj/item/weldingtool/hugetank,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/science/robotics)
 "io" = (
@@ -487,14 +493,7 @@
 /area/ship/bridge)
 "jb" = (
 /obj/structure/table/reinforced,
-/obj/item/clothing/glasses/hud/diagnostic/sunglasses,
-/obj/item/assembly/flash,
-/obj/item/assembly/prox_sensor,
 /obj/machinery/light/directional/west,
-/obj/item/analyzer{
-	pixel_x = -2;
-	pixel_y = 3
-	},
 /obj/effect/turf_decal/corner/transparent/purple/mono,
 /obj/machinery/button/door{
 	dir = 1;
@@ -502,9 +501,10 @@
 	name = "Windows";
 	pixel_y = -24
 	},
-/obj/item/assembly/signaler{
-	pixel_x = 11;
-	pixel_y = 10
+/obj/item/stock_parts/cell/high/plus,
+/obj/machinery/cell_charger{
+	pixel_x = -1;
+	pixel_y = 2
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/science)
@@ -577,7 +577,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
-/turf/open/floor/plasteel/tech,
+/obj/machinery/computer/mech_bay_power_console{
+	dir = 1
+	},
+/turf/open/floor/mineral/plastitanium/red,
 /area/ship/cargo)
 "kO" = (
 /obj/structure/cable{
@@ -636,18 +639,12 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 8
 	},
-/obj/effect/turf_decal/corner/transparent/purple/border,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/science)
 "lx" = (
-/obj/effect/turf_decal/corner/transparent/purple/border,
-/obj/effect/turf_decal/corner/transparent/purple/border{
-	icon_state = "bordercolor";
-	dir = 4
-	},
 /turf/open/floor/plasteel/tech,
 /area/ship/science)
 "lz" = (
@@ -793,6 +790,7 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
+/obj/effect/turf_decal/industrial/fire,
 /turf/open/floor/plasteel/tech,
 /area/ship/cargo)
 "nS" = (
@@ -811,7 +809,7 @@
 "of" = (
 /obj/machinery/light/directional/east,
 /obj/effect/turf_decal/corner/transparent/purple/mono,
-/obj/item/kirbyplants/random,
+/obj/machinery/rnd/production/circuit_imprinter/department/science,
 /turf/open/floor/plasteel/tech,
 /area/ship/science)
 "ok" = (
@@ -822,11 +820,6 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "op" = (
-/obj/structure/rack,
-/obj/item/storage/bag/ore,
-/obj/item/storage/bag/ore,
-/obj/item/mining_scanner,
-/obj/item/mining_scanner,
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/machinery/light_switch{
 	pixel_x = -20;
@@ -836,6 +829,7 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
+/obj/effect/turf_decal/industrial/fire,
 /turf/open/floor/plasteel/tech,
 /area/ship/cargo)
 "oH" = (
@@ -872,7 +866,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 8
 	},
-/obj/effect/turf_decal/corner/transparent/purple/border,
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
 	dir = 1
 	},
@@ -1027,7 +1020,7 @@
 /obj/structure/extinguisher_cabinet/directional/south{
 	pixel_x = -3
 	},
-/turf/open/floor/plasteel/tech,
+/turf/open/floor/mech_bay_recharge_floor,
 /area/ship/cargo)
 "rC" = (
 /obj/effect/turf_decal/syndicateemblem/bottom/right,
@@ -1037,9 +1030,9 @@
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "rZ" = (
-/obj/structure/mecha_wreckage/gygax/dark,
 /obj/machinery/light/directional/south,
-/turf/open/floor/mech_bay_recharge_floor,
+/obj/structure/AIcore,
+/turf/open/floor/circuit,
 /area/ship/science/robotics)
 "sj" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
@@ -1111,8 +1104,6 @@
 /obj/item/clothing/suit/armor/vest/syndie,
 /obj/item/clothing/suit/armor/vest/syndie,
 /obj/effect/turf_decal/industrial/traffic/full,
-/obj/item/clothing/accessory/holster,
-/obj/item/clothing/accessory/holster,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "tz" = (
@@ -1184,6 +1175,7 @@
 	pixel_x = 7
 	},
 /obj/item/folder/documents/syndicate/red,
+/obj/item/stamp/cybersun,
 /turf/open/floor/carpet/black,
 /area/ship/bridge)
 "vd" = (
@@ -1193,7 +1185,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
-/obj/item/analyzer,
 /obj/machinery/newscaster/directional/south,
 /turf/open/floor/plasteel/tech,
 /area/ship/cargo)
@@ -1295,16 +1286,24 @@
 /area/ship/maintenance/port)
 "xd" = (
 /obj/structure/rack,
-/obj/item/storage/toolbox/syndicate{
-	pixel_x = -5;
-	pixel_y = -5
-	},
 /obj/item/stack/cable_coil/random,
 /obj/item/clothing/head/welding,
 /obj/effect/turf_decal/corner/transparent/purple/mono,
 /obj/item/stack/sheet/metal/twenty,
 /obj/item/stack/sheet/plasteel{
 	amount = 10
+	},
+/obj/item/assembly/signaler{
+	pixel_x = 11;
+	pixel_y = 10
+	},
+/obj/item/analyzer{
+	pixel_x = -2;
+	pixel_y = 3
+	},
+/obj/item/clothing/glasses/hud/diagnostic/sunglasses,
+/obj/structure/sign/poster/syndicate/random{
+	pixel_y = 32
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/science)
@@ -1409,6 +1408,7 @@
 	icon_state = "4-8"
 	},
 /obj/item/trash/syndi_cakes,
+/obj/effect/turf_decal/industrial/fire,
 /turf/open/floor/plasteel/tech,
 /area/ship/cargo)
 "yd" = (
@@ -1501,7 +1501,7 @@
 /area/ship/maintenance/port)
 "yZ" = (
 /obj/effect/turf_decal/corner/transparent/purple/mono,
-/obj/machinery/rnd/production/protolathe/department/cargo,
+/obj/machinery/rnd/production/protolathe/department/science,
 /turf/open/floor/plasteel/tech,
 /area/ship/science)
 "zh" = (
@@ -1573,10 +1573,12 @@
 /obj/item/clothing/accessory/armband/cargo,
 /obj/item/storage/belt/mining,
 /obj/item/clothing/glasses/welding,
-/obj/item/kinetic_crusher/syndie_crusher,
 /obj/item/clothing/mask/gas/syndicate,
 /obj/item/radio/intercom/directional/north,
 /obj/item/gps/mining,
+/obj/item/pickaxe/mini,
+/obj/item/storage/bag/ore,
+/obj/item/mining_scanner,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/cargo)
 "Aa" = (
@@ -1748,7 +1750,7 @@
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 1
 	},
-/obj/item/clothing/suit/space/hardsuit/syndi/hl,
+/obj/item/clothing/suit/space/hardsuit/syndi/cybersun,
 /turf/open/floor/carpet/red_gold,
 /area/ship/bridge)
 "Dg" = (
@@ -1774,6 +1776,34 @@
 /obj/item/stack/sheet/metal/fifty,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
+/obj/item/reagent_containers/food/drinks/waterbottle/large{
+	pixel_x = 1;
+	pixel_y = -3
+	},
+/obj/item/reagent_containers/food/drinks/waterbottle/large{
+	pixel_x = 1;
+	pixel_y = -3
+	},
+/obj/item/reagent_containers/food/drinks/waterbottle/large{
+	pixel_x = 1;
+	pixel_y = -3
+	},
+/obj/item/reagent_containers/food/snacks/canned/beans{
+	pixel_x = -2
+	},
+/obj/item/reagent_containers/food/snacks/canned/beans{
+	pixel_x = -2
+	},
+/obj/item/reagent_containers/food/snacks/canned/beans{
+	pixel_x = -2
+	},
+/obj/item/reagent_containers/food/snacks/canned/beans{
+	pixel_x = -2
+	},
+/obj/item/reagent_containers/food/snacks/canned/peaches,
+/obj/item/reagent_containers/food/snacks/canned/peaches,
+/obj/item/reagent_containers/food/snacks/canned/peaches,
+/obj/item/reagent_containers/food/snacks/canned/peaches,
 /turf/open/floor/plasteel/tech,
 /area/ship/cargo)
 "DM" = (
@@ -1917,14 +1947,11 @@
 /obj/structure/table/reinforced,
 /obj/item/storage/box/lethalshot,
 /obj/item/storage/box/lethalshot,
-/obj/item/storage/backpack/duffelbag/syndie/c4,
-/obj/item/ammo_box/magazine/m12g_bulldog/drum,
-/obj/item/ammo_box/magazine/m12g_bulldog/drum,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
 /obj/effect/turf_decal/industrial/traffic/full,
-/obj/item/ammo_box/magazine/m556_42_hydra,
-/obj/item/ammo_box/magazine/m556_42_hydra,
-/obj/item/ammo_box/magazine/m556_42_hydra,
+/obj/item/ammo_box/c10mm,
+/obj/item/ammo_box/magazine/m10mm_ringneck,
+/obj/item/ammo_box/magazine/m10mm_ringneck,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "Gm" = (
@@ -2001,9 +2028,34 @@
 	pixel_x = -28;
 	name = "Mecha parts locker"
 	},
-/obj/item/mecha_parts/mecha_equipment/thrusters/ion,
-/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/carbine,
-/obj/item/circuitboard/mecha/gygax/main,
+/obj/item/borg/upgrade/ai{
+	pixel_x = 4;
+	pixel_y = 8
+	},
+/obj/item/borg/upgrade/ai{
+	pixel_x = -6;
+	pixel_y = -1
+	},
+/obj/item/mmi/posibrain{
+	pixel_x = 3;
+	pixel_y = 5
+	},
+/obj/item/mmi/posibrain{
+	pixel_x = -6;
+	pixel_y = 2
+	},
+/obj/item/borg/upgrade/transform{
+	desc = "Allows you to to turn a cyborg into a... something.";
+	name = "borg module picker (Unknown)";
+	new_module = /obj/item/robot_module/syndicate_medical
+	},
+/obj/item/storage/toolbox/syndicate{
+	pixel_x = -5;
+	pixel_y = -5
+	},
+/obj/item/clothing/glasses/hud/diagnostic/sunglasses,
+/obj/item/clothing/under/syndicate/cybersun/research,
+/obj/item/clothing/under/syndicate/cybersun/research,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/science/robotics)
 "Hr" = (
@@ -2185,12 +2237,12 @@
 /area/ship/science)
 "Kh" = (
 /obj/structure/guncloset,
-/obj/item/gun/ballistic/shotgun/automatic/combat/compact,
 /obj/machinery/airalarm/directional/west,
 /obj/machinery/light/directional/north,
 /obj/effect/turf_decal/industrial/traffic/full,
-/obj/item/gun/ballistic/shotgun/automatic/bulldog,
-/obj/item/gun/ballistic/automatic/assault/hydra,
+/obj/item/gun/ballistic/automatic/pistol/ringneck,
+/obj/item/gun/ballistic/shotgun/brimstone,
+/obj/item/gun/ballistic/shotgun/brimstone,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "Kw" = (
@@ -2290,44 +2342,11 @@
 /turf/template_noop,
 /area/template_noop)
 "Mw" = (
-/obj/effect/turf_decal/industrial/outline,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
-/obj/structure/closet/crate{
-	name = "food crate"
-	},
-/obj/item/reagent_containers/food/snacks/canned/beans{
-	pixel_x = -2
-	},
-/obj/item/reagent_containers/food/snacks/canned/beans{
-	pixel_x = -2
-	},
-/obj/item/reagent_containers/food/snacks/canned/beans{
-	pixel_x = -2
-	},
-/obj/item/reagent_containers/food/snacks/canned/beans{
-	pixel_x = -2
-	},
-/obj/item/reagent_containers/food/snacks/canned/peaches,
-/obj/item/reagent_containers/food/snacks/canned/peaches,
-/obj/item/reagent_containers/food/snacks/canned/peaches,
-/obj/item/reagent_containers/food/snacks/canned/peaches,
-/obj/item/reagent_containers/food/drinks/waterbottle/large{
-	pixel_x = 1;
-	pixel_y = -3
-	},
-/obj/item/reagent_containers/food/drinks/waterbottle/large{
-	pixel_x = 1;
-	pixel_y = -3
-	},
-/obj/item/reagent_containers/food/drinks/waterbottle/large{
-	pixel_x = 1;
-	pixel_y = -3
-	},
-/obj/item/reagent_containers/food/drinks/waterbottle/large{
-	pixel_x = 1;
-	pixel_y = -3
-	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
+/obj/effect/turf_decal/industrial/fire/corner{
+	dir = 8
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/cargo)
 "MV" = (
@@ -2376,7 +2395,6 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 1
 	},
-/obj/effect/turf_decal/corner/transparent/purple/border,
 /turf/open/floor/plasteel/tech,
 /area/ship/science)
 "OA" = (
@@ -2507,7 +2525,6 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/cargo)
 "Rk" = (
-/obj/item/radio/intercom/directional/east,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 10
 	},
@@ -2708,6 +2725,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/manifold4w/supply/hidden/layer2,
+/obj/effect/turf_decal/industrial/fire{
+	dir = 8
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/cargo)
 "Uv" = (
@@ -2812,7 +2832,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 8
 	},
-/obj/effect/turf_decal/corner/transparent/purple/bordercorner,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 8
 	},
@@ -2978,8 +2997,6 @@
 /obj/item/radio,
 /obj/item/radio,
 /obj/structure/table/wood,
-/obj/item/clothing/under/syndicate/gorlex,
-/obj/item/clothing/under/syndicate/gorlex,
 /obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/head/soft/black,
@@ -2987,6 +3004,10 @@
 /obj/item/radio,
 /obj/item/radio,
 /obj/item/radio/intercom/directional/north,
+/obj/item/clothing/under/syndicate/cybersun,
+/obj/item/clothing/under/syndicate/cybersun,
+/obj/item/clothing/head/soft/cybersun,
+/obj/item/clothing/head/soft/cybersun,
 /turf/open/floor/carpet/blue,
 /area/ship/crew/dorm)
 "Yk" = (
@@ -3021,9 +3042,11 @@
 /obj/item/clothing/accessory/armband/cargo,
 /obj/item/storage/belt/mining,
 /obj/item/clothing/glasses/welding,
-/obj/item/kinetic_crusher/syndie_crusher,
 /obj/item/clothing/mask/gas/syndicate,
 /obj/item/gps/mining,
+/obj/item/pickaxe/mini,
+/obj/item/storage/bag/ore,
+/obj/item/mining_scanner,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/cargo)
 "Yn" = (
