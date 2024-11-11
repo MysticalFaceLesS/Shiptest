@@ -50,7 +50,7 @@
 /datum/outfit/job/nanotrasen/janitor/lp
 	name = "ERT - Loss Prevention Janitorial Specialist"
 	jobtype = /datum/job/janitor
-	job_icon = "janitorresponseofficer"
+	job_icon = "janitor"
 
 	uniform = /obj/item/clothing/under/nanotrasen/janitor
 	shoes = /obj/item/clothing/shoes/sneakers/black
