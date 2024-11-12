@@ -1764,6 +1764,21 @@
 /obj/effect/turf_decal/corner/opaque/grey/full,
 /turf/open/floor/plating,
 /area/outpost/vacant_rooms/shop)
+"bAc" = (
+/obj/effect/turf_decal/corner/opaque/green/mono,
+/obj/machinery/plantgenes{
+	pixel_y = 47;
+	layer = 2.904;
+	pixel_x = 5
+	},
+/obj/structure/table/reinforced/glass,
+/obj/machinery/smartfridge/disks{
+	layer = 2.905;
+	pixel_x = 7;
+	pixel_y = 20
+	},
+/turf/open/floor/plasteel/white,
+/area/outpost/crew/garden)
 "bAd" = (
 /obj/structure/rack,
 /obj/item/toy/plush/carpplushie/ice{
@@ -2121,8 +2136,14 @@
 /area/outpost/security/checkpoint)
 "bPO" = (
 /obj/effect/turf_decal/corner/opaque/green/mono,
-/obj/machinery/hydroponics/constructable,
 /obj/machinery/light/dim/directional/east,
+/obj/machinery/chem_dispenser/mutagensaltpeter{
+	pixel_y = 25;
+	layer = 2.902
+	},
+/obj/structure/table/reinforced/glass{
+	layer = 2.903
+	},
 /turf/open/floor/plasteel/white,
 /area/outpost/crew/garden)
 "bQx" = (
@@ -3376,7 +3397,7 @@
 	},
 /area/outpost/vacant_rooms/trash_factory)
 "cWT" = (
-/turf/closed/mineral/random/snow,
+/turf/closed/mineral/random/volcanic,
 /area/outpost/exterior)
 "cXd" = (
 /obj/structure/closet/emcloset,
@@ -7819,6 +7840,14 @@
 /obj/machinery/airalarm/directional/west,
 /turf/open/floor/carpet/green,
 /area/outpost/crew/bar/vip_elysium_zone)
+"grP" = (
+/obj/effect/turf_decal/corner/opaque/green/mono,
+/obj/machinery/seed_extractor{
+	layer = 2.901;
+	pixel_y = 14
+	},
+/turf/open/floor/plasteel/white,
+/area/outpost/crew/garden)
 "grW" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/siding/white{
@@ -10437,10 +10466,18 @@
 /obj/effect/turf_decal/corner/opaque/green/diagonal,
 /obj/structure/closet/crate/hydroponics,
 /obj/machinery/vending/wallmed{
-	pixel_x = 23;
-	all_items_free = 0
+	pixel_x = 23
 	},
 /obj/item/spacecash/bundle/c10000,
+/obj/item/storage/box/disks_plantgene{
+	pixel_x = 10
+	},
+/obj/item/storage/box/disks_plantgene{
+	pixel_x = 2
+	},
+/obj/item/storage/box/disks_plantgene{
+	pixel_x = -8
+	},
 /turf/open/floor/plasteel/white,
 /area/outpost/crew/garden)
 "iAa" = (
@@ -16404,12 +16441,6 @@
 	desc = "Искусаное тараканами тело клоуна выглядит так как-будто его задушили одноцветным зеленым шарфом. Вы также замечаете что вокруг его шеи обмотан шарф в полосочку запачканый то ли грязью толи блевотиной клоуна. По цветам не скажешь, но кажется он был красно-серого цвета. Хороший был шарф, жаль его."
 	},
 /obj/effect/spawner/lootdrop/plushie,
-/obj/item/clothing/neck/scarf/green{
-	pixel_x = 11;
-	pixel_y = -7;
-	layer = 2;
-	desc = "Искусаное тараканами тело клоуна выглядит так будто его задушили этим одноцветным зеленым шарфом. Вы также замечаете что вокруг шеи клоуна обмотан шарф в полосочку запачканый то ли грязью толи блевотиной клоуна. По цветам не скажешь, но кажется он был красно-серого цвета. Хороший был шарф, жаль его."
-	},
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/plating/asteroid/icerock/temperate,
 /area/outpost/exterior)
@@ -18874,9 +18905,7 @@
 /area/outpost/maintenance/port)
 "pAg" = (
 /obj/effect/turf_decal/corner/opaque/green/mono,
-/obj/machinery/vending/cigarette{
-	all_items_free = 1
-	},
+/obj/machinery/biogenerator,
 /turf/open/floor/plasteel/white,
 /area/outpost/crew/garden)
 "pAB" = (
@@ -20543,6 +20572,12 @@
 /area/outpost/exterior)
 "qRS" = (
 /obj/item/storage/pill_bottle/happy,
+/obj/item/clothing/neck/scarf/syndie{
+	desc = "Искусаное тараканами тело клоуна выглядит так будто его задушили этим шарфом. Вы также замечаете что вокруг шеи клоуна обмотан шарф в полосочку запачканый то ли грязью толи блевотиной клоуна. По цветам не скажешь, но кажется он был красно-серого цвета. Хороший был шарф, жаль его.";
+	pixel_x = -33;
+	pixel_y = -7;
+	name = "Supuscarf"
+	},
 /turf/open/floor/plating/asteroid/icerock/temperate,
 /area/outpost/exterior)
 "qRW" = (
@@ -37120,7 +37155,7 @@ lTt
 iSJ
 vJx
 udk
-tQG
+hQU
 rgY
 rgY
 rgY
@@ -37307,8 +37342,8 @@ rgY
 hQU
 rKQ
 rgY
-tQG
-tQG
+hQU
+hQU
 rgY
 rgY
 rgY
@@ -37682,7 +37717,7 @@ jzA
 jzA
 rgY
 rgY
-tQG
+hQU
 hQU
 rgY
 rgY
@@ -42303,8 +42338,8 @@ rgY
 rgY
 rgY
 rgY
-hQU
-hQU
+rgY
+rgY
 rgY
 rgY
 rgY
@@ -43422,9 +43457,9 @@ eZq
 eWK
 aji
 pAg
-pCc
+grP
 bPO
-pCc
+bAc
 gdM
 bIy
 fFW
