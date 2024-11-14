@@ -8,6 +8,9 @@
 	righthand_file = 'mod_celadon/_storge_icons/icons/mob/sol_fed_banner_righthand.dmi'
 	warcry = "Glory to Solar Federation!"
 
+/obj/item/banner/solfed/mundane
+	inspiration_available = FALSE
+
 /obj/structure/sign/solfed
 	name = "\improper Solar Federation Logo"
 	sign_change_name = "Solar Federation Logo"
