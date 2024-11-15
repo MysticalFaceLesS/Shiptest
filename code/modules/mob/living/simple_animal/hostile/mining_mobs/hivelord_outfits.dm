@@ -480,7 +480,7 @@
 /datum/outfit/generic/security
 	name = "Security Officer (Legion)"
 	box = /obj/item/storage/box/survival/security
-// [CELADON-ADD] - CELADON_RETURN_LEGION_CORPSES
+// [CELADON-ADD] - Возвращение старых трупов легионов
 /datum/outfit/generic/oldminer
 	name = "Old miner (Legion)"
 
@@ -572,14 +572,14 @@
 	if(prob(30))
 		r_pocket = pickweight(list(
 		/obj/item/stack/marker_beacon = 20,
-		/obj/item/spacecash/bundle/mediumrand = 7,
+		/obj/item/spacecash/bundle/smallrand = 7,
 		/obj/item/reagent_containers/hypospray/medipen/survival = 2,
 		/obj/item/borg/upgrade/modkit/damage = 1
 		)
 	)
 	if(prob(30))
-	l_pocket = pickweight(list(
-		/obj/item/spacecash/bundle/mediumrand = 5,
+		l_pocket = pickweight(list(
+		/obj/item/spacecash/bundle/smallrand = 5,
 		/obj/item/reagent_containers/hypospray/medipen/survival = 2,
 		/obj/item/borg/upgrade/modkit/cooldown = 1
 		)
@@ -623,7 +623,7 @@
 		mask = /obj/item/clothing/mask/gas/sechailer
 		head = /obj/item/clothing/head/solgov/sonnensoldner
 		id = /obj/item/card/id/solgov
-	else
+	else if(prob(30))
 		uniform = /obj/item/clothing/under/solgov
 		suit = /obj/item/clothing/suit/space/hardsuit/solgov
 		shoes = /obj/item/clothing/shoes/combat
@@ -643,7 +643,6 @@
 				/obj/item/ammo_box/magazine/pistol556mm = 3,
 				/obj/item/desk_flag/solgov = 3,
 				/obj/item/stack/marker_beacon/ten = 3,
-				/obj/item/detective_scanner = 2,
 				/obj/item/extinguisher/mini = 3,
 				/obj/item/melee/knife/combat = 3,
 				/obj/item/flashlight/seclite=3,
@@ -693,7 +692,7 @@
 	else
 		back = pickweight(list(
 			/obj/item/energyhalberd = 5,
-			/obj/item/gun/ballistic/rocketlauncher = 5
+			/obj/item/gun/ballistic/rocketlauncher/solgov = 1
 			)
 		)
 	if(prob(25))
@@ -701,7 +700,6 @@
 	if(prob(50))
 		r_pocket = pickweight(list(
 			/obj/item/reagent_containers/hypospray/medipen/stimpack = 1,
-			/obj/item/melee/knife/letter_opener = 3,
 			/obj/item/radio = 3,
 			/obj/item/grenade/syndieminibomb/concussion = 1,
 			/obj/item/melee/transforming/energy/ctf/solgov = 1
@@ -727,9 +725,9 @@
 
 /datum/outfit/generic/kobold
 	name = "Kobold (Legion)"
+	mob_species = /datum/species/lizard/ashwalker/kobold
 /datum/outfit/generic/kobold/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	. = ..()
-	mob_species = /datum/species/lizard/ashwalker/kobold
 	uniform = /obj/item/clothing/under/costume/gladiator/ash_walker
 	if(prob(95))
 		head = /obj/item/clothing/head/helmet/gladiator
@@ -754,6 +752,7 @@
 	name = "YeOlde (Legion)"
 /datum/outfit/generic/YeOlde/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	. = ..()
+//	var/mob_gender = null
 	mob_gender = FEMALE
 	uniform = /obj/item/clothing/under/costume/maid
 	gloves = /obj/item/clothing/gloves/color/white
@@ -765,19 +764,10 @@
 	r_pocket = /obj/item/tank/internals/emergency_oxygen
 	mask = /obj/item/clothing/mask/breath
 
-/datum/outfit/generic/operative
-	name = "Operative (Legion)"
-/datum/outfit/generic/operative/pre_equip(mob/living/carbon/human/H, visualsOnly)
-	. = ..()
-	if(prob(40))
-		outfit = /datum/outfit/syndicatecommandocorpse
-	else if(prob(5))
-		outfit = /datum/outfit/syndicatestormtroopercorpse
-	else
-		outfit = /datum/outfit/syndicateramzicorpse
-
 /datum/outfit/generic/waldo
+
 	name = "Waldo (Legion)"
+	mob_species = /datum/species/human
 /datum/outfit/generic/waldo/pre_equip(mob/living/carbon/human/H, visualsOnly)
 	. = ..()
 	name = "Waldo"

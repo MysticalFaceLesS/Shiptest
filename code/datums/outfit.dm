@@ -111,6 +111,12 @@
 	// Used to determine if it should be ignored in unit tests due to being to dynamic to always spawn backpack contents right
 	var/random = FALSE
 
+	// Gender for hivelords
+	var/mob_gender = null
+
+	//Species for hivelords
+	var/mob_species = null
+
 	/**
 	* extra types for chameleon outfit changes, mostly guns
 	*
