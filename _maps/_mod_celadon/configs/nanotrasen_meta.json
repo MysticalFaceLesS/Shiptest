@@ -2,21 +2,22 @@
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
 	"map_name": "Meta-class Freighter",
 	"map_short_name": "Meta",
-	"description": "Судно класса 'Meta' - это небольшое грузовое судно, и еще до появления ICW его часто можно было встретить на Фронтире в качестве бродячего грузового судна, выполняющего независимые контракты между многочисленными форпостами в этом регионе (изредка занимаясь контрабандой или добычей полезных ископаемых). После краха логистической сети Нанотрайзена в Приграничье 'Meta', работающие в этом качестве, стали пользоваться огромной популярностью и, скорее всего, останутся весьма распространенным явлением там, где крупные корпорации, такие как Donk! Co. еще не установили свое господство на рынке.",
+	"description": "Судно класса 'Meta' - это довольно современное и большое грузовое судно, что идеально подходит под длительные перевозки и шахтерские операции. Корабль предоставляет довольно большое пространство под сервисный отдел, имеет отсек грузоперевозок и оснащен продвинутым карго-оборудованием для работы шахтеров. Корабли класса 'Meta' - одна из опор отдела логистики Nanotrasen в космосе, что постоянно создает конкуренцию Donk! Co. ",
 	"map_path": "_maps/_mod_celadon/shuttles/nanotrasen/nanotrasen_meta.dmm",
 	"enabled": true,
 	"limit": 1,
-	"starting_funds": 5000,
+	"starting_funds": 2000,
 	"prefix": "NTSSV",
 	"faction": "/datum/faction/nt",
 	"tags": [
 		"Generalist",
-		"Cargo"
+		"Cargo",
+		"Mining"
 	],
 	"namelists": [
-		"GENERAL",
-		"SPACE",
+		"MERCANTILE",
 		"NANOTRASEN",
+		"SPACE",
 		"HISTORICAL"
 	],
 	"job_slots": {
@@ -25,13 +26,9 @@
 			"officer": true,
 			"slots": 1
 		},
-		"Quartermaster": {
+		"Supply Director": {
 			"outfit": "/datum/outfit/job/nanotrasen/quartermaster",
 			"officer": true,
-			"slots": 1
-		},
-		"Medical Doctor": {
-			"outfit": "/datum/outfit/job/nanotrasen/doctor",
 			"slots": 1
 		},
 		"Ship Engineer": {
@@ -40,11 +37,11 @@
 		},
 		"Shaft Miner": {
 			"outfit": "/datum/outfit/job/nanotrasen/miner",
-			"slots": 1
+			"slots": 2
 		},
-		"Cargo Technician": {
-			"outfit": "/datum/outfit/job/cargo_tech",
-			"slots": 1
+		"Supply Technician": {
+			"outfit": "/datum/outfit/job/nanotrasen/cargo_tech",
+			"slots": 2
 		},
 		"Assistant": {
 			"outfit": "/datum/outfit/job/nanotrasen/assistant",

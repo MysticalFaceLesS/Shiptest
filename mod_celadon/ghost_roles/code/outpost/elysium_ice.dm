@@ -4,7 +4,7 @@
 	random = FALSE
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "cryopod"
-	mob_species = /datum/species/human
+	// mob_species = /datum/species/human
 
 // Cook
 
@@ -23,8 +23,8 @@
 	new /obj/machinery/cryopod/outpost/cook(drop_location())
 	return ..()
 
-/obj/effect/mob_spawn/human/elysium_outpost/cook/special(mob/living/new_spawn)
-	new_spawn.fully_replace_character_name(null, random_unique_name(gender))
+// /obj/effect/mob_spawn/human/elysium_outpost/cook/special(mob/living/new_spawn)
+// 	new_spawn.fully_replace_character_name(null, random_unique_name(gender))
 
 /obj/effect/mob_spawn/human/elysium_outpost/cook/Initialize()
 	. = ..()
@@ -49,8 +49,8 @@
 	new /obj/machinery/cryopod/outpost/bartender(drop_location())
 	return ..()
 
-/obj/effect/mob_spawn/human/elysium_outpost/bartender/special(mob/living/new_spawn)
-	new_spawn.fully_replace_character_name(null, random_unique_name(gender))
+// /obj/effect/mob_spawn/human/elysium_outpost/bartender/special(mob/living/new_spawn)
+// 	new_spawn.fully_replace_character_name(null, random_unique_name(gender))
 
 /obj/effect/mob_spawn/human/elysium_outpost/bartender/Initialize()
 	. = ..()
@@ -75,8 +75,8 @@
 	new /obj/machinery/cryopod/outpost/maid(drop_location())
 	return ..()
 
-/obj/effect/mob_spawn/human/elysium_outpost/maid/special(mob/living/new_spawn)
-	new_spawn.fully_replace_character_name(null, random_unique_name(gender))
+// /obj/effect/mob_spawn/human/elysium_outpost/maid/special(mob/living/new_spawn)
+// 	new_spawn.fully_replace_character_name(null, random_unique_name(gender))
 
 /obj/effect/mob_spawn/human/elysium_outpost/maid/Initialize()
 	. = ..()
@@ -101,8 +101,8 @@
 	new /obj/machinery/cryopod/outpost/artist(drop_location())
 	return ..()
 
-/obj/effect/mob_spawn/human/elysium_outpost/artist/special(mob/living/new_spawn)
-	new_spawn.fully_replace_character_name(null, random_unique_name(gender))
+// /obj/effect/mob_spawn/human/elysium_outpost/artist/special(mob/living/new_spawn)
+// 	new_spawn.fully_replace_character_name(null, random_unique_name(gender))
 
 /obj/effect/mob_spawn/human/elysium_outpost/artist/Initialize()
 	. = ..()
@@ -129,8 +129,8 @@
 	new /obj/structure/bed/outpost/wagabond(drop_location())
 	return ..()
 
-/obj/effect/mob_spawn/human/elysium_outpost/wagabond/special(mob/living/new_spawn)
-	new_spawn.fully_replace_character_name(null, random_unique_name(gender))
+// /obj/effect/mob_spawn/human/elysium_outpost/wagabond/special(mob/living/new_spawn)
+// 	new_spawn.fully_replace_character_name(null, random_unique_name(gender))
 
 /obj/effect/mob_spawn/human/elysium_outpost/wagabond/Initialize()
 	. = ..()

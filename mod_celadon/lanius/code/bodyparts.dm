@@ -4,8 +4,10 @@
 	desc = "Jaw of one of this lanius thing.. Better brought it back to him."
 	icon = 'mod_celadon/_storge_icons/icons/lanius/lanius_organs.dmi'
 	icon_state = "tongue"
+	say_mod = "clicks"
 	decay_factor = 5
 	useable = FALSE
+	modifies_speech = TRUE
 	var/static/list/languages_possible_lanius = typecacheof(list(
 		/datum/language/lanius_rattle
 	))

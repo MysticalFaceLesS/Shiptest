@@ -62,3 +62,8 @@
 
 /mob/living/carbon/human/species/lanius/spawn_gibs()
 		new /obj/effect/gibspawner(drop_location(), src)
+
+/obj/item/clothing/head/wig/mob_can_equip(mob/living/target, mob/living/equipper, slot, disable_warning, bypass_equip_delay_self, swap)
+	if(!islanius(target))
+		return ..()
+	return FALSE
