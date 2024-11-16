@@ -6311,7 +6311,8 @@
 	},
 /obj/machinery/door/airlock{
 	dir = 8;
-	name = "Donk Co Shop"
+	name = "Donk Co Shop";
+	max_integrity = 3000000000000
 	},
 /turf/open/floor/wood/walnut,
 /area/outpost/fraction/syndi/donkco_shop)
@@ -8575,7 +8576,8 @@
 /area/outpost/medical/reseption)
 "gXl" = (
 /obj/machinery/door/airlock/multi_tile/base/glass{
-	req_access_txt = "8133"
+	req_access_txt = "8133";
+	max_integrity = 3000000000000
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/firedoor/border_only{
@@ -9476,7 +9478,8 @@
 /obj/machinery/door/airlock/solgov/glass{
 	dir = 4;
 	name = "SolFed Cargo";
-	req_access_txt = "8132"
+	req_access_txt = "8132";
+	max_integrity = 3000000000000
 	},
 /obj/effect/turf_decal/industrial/warning{
 	dir = 4;
@@ -10578,7 +10581,8 @@
 	dir = 4
 	},
 /obj/structure/falsewall/reinforced{
-	req_one_access_txt = "8131"
+	req_one_access_txt = "8131";
+	max_integrity = 3000000000000
 	},
 /turf/open/floor/plating{
 	light_color = "#1B1D2E";
@@ -11533,7 +11537,8 @@
 /obj/machinery/door/airlock{
 	dir = 4;
 	name = "Storage";
-	req_one_access_txt = "8126"
+	req_one_access_txt = "8126";
+	max_integrity = 3000000000000
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -12294,7 +12299,8 @@
 /area/outpost/fraction/syndi)
 "kfc" = (
 /obj/machinery/door/airlock/multi_tile/base{
-	req_access_txt = "8133"
+	req_access_txt = "8133";
+	max_integrity = 3000000000000
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/firedoor/border_only{
@@ -15619,7 +15625,8 @@
 /area/outpost/cargo)
 "nbd" = (
 /obj/structure/falsewall/reinforced{
-	req_one_access_txt = "8131"
+	req_one_access_txt = "8131";
+	max_integrity = 3000000000000
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 1
@@ -18159,7 +18166,9 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/grunge,
+/obj/machinery/door/airlock/grunge{
+	max_integrity = 3000000000000
+	},
 /turf/open/floor/plasteel/mono,
 /area/outpost/fraction/inteq)
 "paj" = (
@@ -18680,7 +18689,8 @@
 /obj/effect/turf_decal/trimline/opaque/yellow/corner,
 /obj/machinery/door/airlock/grunge{
 	dir = 4;
-	req_access_txt = "8133"
+	req_access_txt = "8133";
+	max_integrity = 3000000000000
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 8
@@ -22172,6 +22182,16 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /turf/open/floor/plasteel/dark,
 /area/outpost/crew/cryo)
+"shU" = (
+/obj/machinery/door/airlock/outpost{
+	dir = 8;
+	req_one_access_txt = "8100";
+	max_integrity = 3000000000000
+	},
+/obj/effect/mapping_helpers/airlock/locked,
+/obj/effect/turf_decal/industrial/warning/fulltile,
+/turf/open/floor/plasteel/tech,
+/area/outpost/external)
 "sih" = (
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced/spawner{
@@ -24481,7 +24501,8 @@
 /obj/machinery/door/airlock/solgov/glass{
 	dir = 4;
 	name = "SolFed Cargo";
-	req_access_txt = "8132"
+	req_access_txt = "8132";
+	max_integrity = 3000000000000
 	},
 /obj/effect/turf_decal/industrial/warning{
 	dir = 4;
@@ -39667,7 +39688,7 @@ dmO
 wUa
 fIy
 fIy
-eto
+shU
 fIy
 fIy
 rgY
