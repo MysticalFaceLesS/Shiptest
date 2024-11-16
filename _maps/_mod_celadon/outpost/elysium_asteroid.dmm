@@ -43,6 +43,7 @@
 	},
 /obj/structure/catwalk/over/plated_catwalk,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /turf/open/floor/plating,
 /area/outpost/vacant_rooms/trash_factory)
 "ak" = (
@@ -2379,6 +2380,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 10
 	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /turf/open/floor/plating,
 /area/outpost/vacant_rooms/trash_factory)
 "ia" = (
@@ -3966,6 +3968,8 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /turf/open/floor/plating,
 /area/outpost/vacant_rooms/trash_factory)
 "nh" = (
@@ -4013,6 +4017,9 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 5
 	},
 /turf/open/floor/plasteel/tech/techmaint,
@@ -5069,6 +5076,7 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
+/obj/machinery/power/apc/auto_name/directional/south,
 /turf/open/floor/plating{
 	light_color = "#1B1D2E";
 	light_range = 2
@@ -5172,6 +5180,9 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
 /turf/open/floor/plasteel/tech/techmaint,
@@ -9340,6 +9351,16 @@
 /obj/structure/reagent_dispensers,
 /turf/open/floor/plasteel/tech,
 /area/outpost/engineering)
+"Do" = (
+/obj/machinery/door/airlock/maintenance_hatch,
+/obj/effect/mapping_helpers/airlock/unres{
+	dir = 1
+	},
+/turf/open/floor/plating{
+	light_color = "#1B1D2E";
+	light_range = 2
+	},
+/area/outpost/vacant_rooms/trash_factory)
 "Dp" = (
 /obj/effect/turf_decal/siding/wood/corner{
 	dir = 4
@@ -10005,13 +10026,15 @@
 	},
 /area/outpost/hallway/central)
 "Fs" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/machinery/door/airlock/maintenance_hatch{
-	dir = 4
+/obj/structure/railing{
+	dir = 2;
+	layer = 4.1
 	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/catwalk/over/plated_catwalk,
+/obj/machinery/airalarm/directional/north,
 /turf/open/floor/plating,
-/area/outpost/maintenance/fore)
+/area/outpost/vacant_rooms/trash_factory)
 "Ft" = (
 /turf/open/floor/plating/asteroid/icerock,
 /area/outpost/external)
@@ -10465,6 +10488,9 @@
 /obj/structure/railing/corner{
 	dir = 1
 	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
+	dir = 4
+	},
 /turf/open/floor/plating{
 	light_color = "#1B1D2E";
 	light_range = 2
@@ -10493,6 +10519,7 @@
 	},
 /obj/structure/catwalk/over/plated_catwalk,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /turf/open/floor/plating,
 /area/outpost/vacant_rooms/trash_factory)
 "GT" = (
@@ -11352,6 +11379,7 @@
 /obj/structure/railing/corner{
 	dir = 1
 	},
+/obj/structure/catwalk/over/plated_catwalk,
 /turf/open/floor/plating{
 	light_color = "#1B1D2E";
 	light_range = 2
@@ -11523,6 +11551,9 @@
 	dir = 1
 	},
 /obj/structure/catwalk/over/plated_catwalk,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 10
+	},
 /turf/open/floor/plating,
 /area/outpost/vacant_rooms/trash_factory)
 "Kd" = (
@@ -15706,7 +15737,6 @@
 /area/outpost/hallway/central)
 "Xt" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/structure/disposalpipe/segment{
 	dir = 10
 	},
@@ -15715,6 +15745,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
+	dir = 4
 	},
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/engineering/atmospherics)
@@ -33491,7 +33524,7 @@ tQ
 Xw
 ly
 Jv
-qe
+Do
 uP
 Yv
 BN
@@ -33671,7 +33704,7 @@ vV
 vV
 Zp
 qe
-lD
+Fs
 ev
 tD
 GO
@@ -33679,7 +33712,7 @@ dF
 IB
 qQ
 qe
-Fs
+wH
 wH
 wH
 hj
