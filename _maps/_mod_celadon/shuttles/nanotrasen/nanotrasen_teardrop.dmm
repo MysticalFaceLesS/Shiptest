@@ -48,15 +48,17 @@
 "aZ" = (
 /obj/machinery/light/directional/south,
 /obj/effect/turf_decal/corner/opaque/blue/mono,
-/obj/structure/closet/crate/secure/weapon{
-	req_access_txt = "1"
+/obj/machinery/suit_storage_unit/inherit,
+/obj/item/clothing/suit/space/syndicate/blue{
+	armor = list("melee" = 30, "bullet" = 40, "laser" = 30, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75)
 	},
-/obj/item/melee/knife/survival,
-/obj/item/melee/knife/survival,
-/obj/item/melee/knife/survival,
-/obj/item/melee/knife/survival,
-/obj/machinery/syndicatebomb/training,
-/mob/living/simple_animal/bot/secbot/beepsky/jr,
+/obj/item/clothing/head/helmet/space/syndicate/black{
+	pixel_x = 0;
+	pixel_y = 7;
+	armor = list("melee" = 30, "bullet" = 40, "laser" = 30, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75)
+	},
+/obj/item/tank/internals/oxygen,
+/obj/item/clothing/mask/breath,
 /turf/open/floor/plasteel/white,
 /area/ship/cargo)
 "bc" = (
@@ -113,7 +115,6 @@
 	name = "\proper captain's locker";
 	req_access_txt = "20"
 	},
-/obj/item/gun/energy/e_gun/hos/brazil/true,
 /obj/item/clothing/suit/armor/laserproof,
 /obj/item/screwdriver/nuke,
 /obj/item/radio/headset/heads/captain/alt,
@@ -122,6 +123,7 @@
 /obj/item/stock_parts/cell/gun/upgraded,
 /obj/item/clothing/glasses/hud/security/sunglasses,
 /obj/item/megaphone/command,
+/obj/item/binoculars,
 /turf/open/floor/carpet/royalblack,
 /area/ship/crew/dorm/dormtwo)
 "bx" = (
@@ -582,7 +584,7 @@
 /obj/effect/turf_decal/techfloor/orange{
 	dir = 4
 	},
-/obj/item/stack/sheet/mineral/plasma/twenty,
+/obj/item/stack/sheet/mineral/diamond/twenty,
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "hh" = (
@@ -784,15 +786,15 @@
 /area/ship/security)
 "jj" = (
 /obj/machinery/suit_storage_unit/inherit,
-/obj/item/clothing/suit/space/hardsuit/security,
-/obj/item/clothing/mask/gas/sechailer,
-/obj/item/tank/jetpack/carbondioxide,
 /obj/machinery/light/directional/west,
 /obj/effect/turf_decal/corner/opaque/solgovblue{
 	dir = 10
 	},
 /obj/effect/turf_decal/techfloor{
 	dir = 1
+	},
+/obj/item/clothing/suit/armor/vest/marine/medium{
+	armor = list("melee" = 40, "bullet" = 60, "laser" = 30, "energy" = 25, "bomb" = 60, "bio" = 100, "fire" = 70, "acid" = 50)
 	},
 /turf/open/floor/plasteel/white,
 /area/ship/security)
@@ -972,11 +974,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/white,
 /area/ship/security)
-"lM" = (
-/obj/effect/spawner/structure/window/shuttle,
-/obj/machinery/door/firedoor/window,
-/turf/open/floor/plating,
-/area/ship/bridge)
 "lN" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/door/poddoor{
@@ -1132,6 +1129,17 @@
 "mK" = (
 /obj/effect/turf_decal/corner/opaque/blue/mono,
 /obj/machinery/newscaster/directional/west,
+/obj/machinery/suit_storage_unit/inherit,
+/obj/item/clothing/suit/space/syndicate/blue{
+	armor = list("melee" = 30, "bullet" = 40, "laser" = 30, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75)
+	},
+/obj/item/clothing/head/helmet/space/syndicate/black{
+	pixel_x = 0;
+	pixel_y = 7;
+	armor = list("melee" = 30, "bullet" = 40, "laser" = 30, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75)
+	},
+/obj/item/tank/internals/oxygen,
+/obj/item/clothing/mask/breath,
 /turf/open/floor/plasteel/white,
 /area/ship/cargo)
 "mO" = (
@@ -1348,6 +1356,9 @@
 /obj/effect/turf_decal/techfloor,
 /obj/item/clothing/under/nanotrasen/officer,
 /obj/item/clothing/head/beret/sec/officer,
+/obj/item/clothing/head/helmet/swat/nanotrasen{
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 80)
+	},
 /turf/open/floor/plasteel/white,
 /area/ship/security)
 "ot" = (
@@ -1549,7 +1560,9 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
 	},
-/obj/item/kirbyplants/random,
+/obj/structure/displaycase/captain{
+	req_access = list(68)
+	},
 /turf/open/floor/wood/walnut,
 /area/ship/crew/dorm/dormtwo)
 "qn" = (
@@ -1614,7 +1627,7 @@
 	dir = 1
 	},
 /obj/machinery/light/floor,
-/obj/item/banner/command,
+/obj/item/banner/command/mundane,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/white,
 /area/ship/hallway/central)
@@ -1759,9 +1772,7 @@
 	},
 /obj/machinery/power/terminal,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/power/port_gen/pacman{
-	anchored = 1
-	},
+/obj/machinery/power/port_gen/pacman/mrs,
 /turf/open/floor/plating,
 /area/ship/engineering)
 "tp" = (
@@ -1982,6 +1993,9 @@
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/item/clothing/under/nanotrasen/officer,
 /obj/item/clothing/head/beret/sec/officer,
+/obj/item/clothing/head/helmet/swat/nanotrasen{
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 80)
+	},
 /turf/open/floor/plasteel/white,
 /area/ship/security)
 "vZ" = (
@@ -2740,12 +2754,13 @@
 /area/ship/hallway/central)
 "Dt" = (
 /obj/machinery/suit_storage_unit/inherit,
-/obj/item/clothing/suit/space/hardsuit/security,
-/obj/item/tank/jetpack/carbondioxide,
 /obj/effect/turf_decal/corner/opaque/solgovblue{
 	dir = 5
 	},
 /obj/effect/turf_decal/techfloor,
+/obj/item/clothing/suit/armor/vest/marine/medium{
+	armor = list("melee" = 40, "bullet" = 60, "laser" = 30, "energy" = 25, "bomb" = 60, "bio" = 100, "fire" = 70, "acid" = 50)
+	},
 /turf/open/floor/plasteel/white,
 /area/ship/security)
 "DD" = (
@@ -2760,14 +2775,14 @@
 /area/ship/medical)
 "DM" = (
 /obj/machinery/suit_storage_unit/inherit,
-/obj/item/clothing/suit/space/hardsuit/security,
-/obj/item/clothing/mask/gas/sechailer,
-/obj/item/tank/jetpack/carbondioxide,
 /obj/effect/turf_decal/corner/opaque/solgovblue{
 	dir = 10
 	},
 /obj/effect/turf_decal/techfloor{
 	dir = 1
+	},
+/obj/item/clothing/suit/armor/vest/marine/medium{
+	armor = list("melee" = 40, "bullet" = 60, "laser" = 30, "energy" = 25, "bomb" = 60, "bio" = 100, "fire" = 70, "acid" = 50)
 	},
 /turf/open/floor/plasteel/white,
 /area/ship/security)
@@ -2828,13 +2843,17 @@
 /area/ship/hallway/central)
 "Eg" = (
 /obj/effect/turf_decal/corner/opaque/blue/mono,
-/obj/item/storage/bag/ore,
-/obj/item/pickaxe/drill,
-/obj/item/pickaxe,
-/obj/item/mining_scanner,
-/obj/item/mining_scanner,
-/obj/item/storage/bag/ore,
-/obj/item/gun/energy/plasmacutter,
+/obj/machinery/suit_storage_unit/inherit,
+/obj/item/clothing/suit/space/syndicate/blue{
+	armor = list("melee" = 30, "bullet" = 40, "laser" = 30, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75)
+	},
+/obj/item/clothing/head/helmet/space/syndicate/black{
+	pixel_x = 0;
+	pixel_y = 7;
+	armor = list("melee" = 30, "bullet" = 40, "laser" = 30, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75)
+	},
+/obj/item/tank/internals/oxygen,
+/obj/item/clothing/mask/breath,
 /turf/open/floor/plasteel/white,
 /area/ship/cargo)
 "Eh" = (
@@ -2979,6 +2998,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/effect/turf_decal/corner/opaque/solgovblue/mono,
+/mob/living/simple_animal/bot/secbot/beepsky/jr,
 /turf/open/floor/plasteel/white,
 /area/ship/cargo)
 "Gk" = (
@@ -3066,7 +3086,7 @@
 	dir = 8
 	},
 /obj/machinery/light/floor,
-/obj/item/banner/solfed,
+/obj/item/banner/solfed/mundane,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/white,
 /area/ship/hallway/central)
@@ -3094,6 +3114,9 @@
 	},
 /obj/item/clothing/under/nanotrasen/security/director,
 /obj/item/clothing/head/beret/sec/hos,
+/obj/item/clothing/head/helmet/swat/nanotrasen{
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 80)
+	},
 /turf/open/floor/plasteel/white,
 /area/ship/security)
 "HL" = (
@@ -3301,6 +3324,7 @@
 	pixel_x = -8;
 	pixel_y = 12
 	},
+/obj/item/binoculars,
 /turf/open/floor/plasteel/white,
 /area/ship/bridge)
 "KE" = (
@@ -3339,10 +3363,6 @@
 /obj/item/ammo_box/magazine/gauss,
 /obj/item/stock_parts/cell/gun,
 /obj/item/stock_parts/cell/gun,
-/obj/item/stock_parts/cell/gun,
-/obj/item/stock_parts/cell/gun,
-/obj/item/stock_parts/cell/gun,
-/obj/item/stock_parts/cell/gun,
 /obj/item/screwdriver/nuke,
 /obj/item/screwdriver,
 /obj/item/screwdriver,
@@ -3353,6 +3373,11 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 1
 	},
+/obj/item/stock_parts/cell/gun,
+/obj/item/stock_parts/cell/gun,
+/obj/item/ammo_box/a300_box,
+/obj/item/ammo_box/a300,
+/obj/item/ammo_box/a300,
 /turf/open/floor/plasteel/white,
 /area/ship/security)
 "KX" = (
@@ -3596,6 +3621,7 @@
 /obj/item/documents/nanotrasen{
 	pixel_y = 6
 	},
+/obj/item/toy/plush/beeplushie,
 /turf/open/floor/carpet/royalblack,
 /area/ship/crew/dorm/dormtwo)
 "NW" = (
@@ -3807,6 +3833,9 @@
 /obj/effect/turf_decal/techfloor,
 /obj/item/clothing/under/nanotrasen/officer,
 /obj/item/clothing/head/beret/sec/officer,
+/obj/item/clothing/head/helmet/swat/nanotrasen{
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 80)
+	},
 /turf/open/floor/plasteel/white,
 /area/ship/security)
 "PZ" = (
@@ -3878,7 +3907,6 @@
 /obj/machinery/suit_storage_unit/inherit,
 /obj/item/clothing/mask/gas/sechailer/swat,
 /obj/item/clothing/suit/space/hardsuit/swat/captain,
-/obj/item/toy/plush/beeplushie,
 /turf/open/floor/carpet/royalblack,
 /area/ship/crew/dorm/dormtwo)
 "QF" = (
@@ -3925,8 +3953,14 @@
 /area/ship/hallway/central)
 "Rc" = (
 /obj/effect/turf_decal/corner/opaque/solgovblue/mono,
+/obj/item/gun/energy/plasmacutter,
+/obj/item/storage/bag/ore,
+/obj/item/mining_scanner,
+/obj/item/mining_scanner,
+/obj/item/pickaxe,
+/obj/item/pickaxe/drill,
+/obj/item/storage/bag/ore,
 /obj/structure/closet/crate/large,
-/obj/mecha/combat/tanklp,
 /turf/open/floor/plasteel/white,
 /area/ship/cargo)
 "Ro" = (
@@ -4183,42 +4217,22 @@
 	anchored = 1;
 	req_access_txt = "1"
 	},
-/obj/item/gun/energy/kalix/pgf{
-	desc = "An advanced variant of the BG-12, the BG-16 is the military-grade beam gun designed and manufactured by NanoTrasen as the standard-issue close-range weapon of the NT.";
-	name = "NanoTrasen BG-16";
-	manufacturer = "the Nanotrasen logo";
-	pixel_y = 12;
-	cell_type = /obj/item/stock_parts/cell/gun
+/obj/item/gun/ballistic/rifle/scout{
+	pixel_x = -5;
+	pixel_y = 8
 	},
-/obj/item/gun/energy/kalix/pgf{
-	desc = "An advanced variant of the BG-12, the BG-16 is the military-grade beam gun designed and manufactured by NanoTrasen as the standard-issue close-range weapon of the NT.";
-	name = "NanoTrasen BG-16";
-	manufacturer = "the Nanotrasen logo";
-	pixel_y = 8;
-	cell_type = /obj/item/stock_parts/cell/gun
+/obj/item/gun/energy/e_gun/dragnet,
+/obj/item/gun/energy/kinetic_accelerator/crossbow/large{
+	pixel_x = 0;
+	pixel_y = -5
 	},
-/obj/item/gun/energy/kalix/pgf{
-	desc = "An advanced variant of the BG-12, the BG-16 is the military-grade beam gun designed and manufactured by NanoTrasen as the standard-issue close-range weapon of the NT.";
-	name = "NanoTrasen BG-16";
-	manufacturer = "the Nanotrasen logo";
-	pixel_y = 4;
-	cell_type = /obj/item/stock_parts/cell/gun
+/obj/item/gun/energy/disabler{
+	pixel_x = 0;
+	pixel_y = -14
 	},
-/obj/item/gun/energy/kalix/pgf{
-	desc = "An advanced variant of the BG-12, the BG-16 is the military-grade beam gun designed and manufactured by NanoTrasen as the standard-issue close-range weapon of the NT.";
-	name = "NanoTrasen BG-16";
-	manufacturer = "the Nanotrasen logo";
-	cell_type = /obj/item/stock_parts/cell/gun
-	},
-/obj/item/gun/energy/ionrifle/carbine{
-	pixel_y = -7
-	},
-/obj/item/gun/energy/kalix/pgf/heavy{
-	cell_type = /obj/item/stock_parts/cell/gun;
-	name = "NanoTrasen HBG-7";
-	desc = "The HBG-7 is the standard-issue rifle weapon of the NanoTrasen. If the stopping power and fire rate isn't enough, it comes with a DMR mode that has greater armor piercing for dealing with armored targets.";
-	manufacturer = "the Nanotrasen logo";
-	pixel_y = -10
+/obj/item/gun/energy/disabler{
+	pixel_x = 0;
+	pixel_y = -9
 	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/security)
@@ -4267,7 +4281,9 @@
 /obj/effect/turf_decal/corner/opaque/solgovblue{
 	dir = 6
 	},
-/obj/machinery/vending/wardrobe/sec_wardrobe,
+/obj/machinery/vending/wardrobe/sec_wardrobe{
+	all_items_free = 1
+	},
 /turf/open/floor/plasteel/white,
 /area/ship/security)
 "UH" = (
@@ -4572,13 +4588,13 @@
 "Yj" = (
 /obj/machinery/light/directional/west,
 /obj/machinery/suit_storage_unit/inherit,
-/obj/item/clothing/mask/gas/clown_hat,
-/obj/item/tank/jetpack/carbondioxide,
-/obj/item/clothing/suit/space/hardsuit/security/hos,
 /obj/effect/turf_decal/corner/opaque/solgovblue{
 	dir = 5
 	},
 /obj/effect/turf_decal/techfloor,
+/obj/item/clothing/suit/armor/vest/marine/medium{
+	armor = list("melee" = 40, "bullet" = 60, "laser" = 30, "energy" = 25, "bomb" = 60, "bio" = 100, "fire" = 70, "acid" = 50)
+	},
 /turf/open/floor/plasteel/white,
 /area/ship/security)
 "Yn" = (
@@ -4657,7 +4673,9 @@
 /turf/open/floor/plating,
 /area/ship/bridge)
 "Zc" = (
-/obj/machinery/vending/security,
+/obj/machinery/vending/security{
+	all_items_free = 1
+	},
 /turf/open/floor/plasteel/white,
 /area/ship/security)
 "Zl" = (
@@ -5507,7 +5525,7 @@ JZ
 cv
 cv
 hw
-lM
+cv
 vZ
 cv
 cv

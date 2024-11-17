@@ -3,5 +3,6 @@
 
 /datum/supply_pack/machinery/grounding_rods
 	cost = 3500
+	desc = "Два заземляющих стержня (grounding rods) гарантированно удержат под контролем молнии любой непокорной Теслы."
 	contains = list(/obj/machinery/power/grounding_rod,
 					/obj/machinery/power/grounding_rod)

@@ -34,7 +34,7 @@
 	var/ghost_usable = TRUE
 	/// Weakref to the mob this spawner created - just if you needed to do something with it.
 	var/datum/weakref/spawned_mob_ref
-	var/can_load_appearance = FALSE // [CELADON-EDIT] - CELADON_LOAD_PREF
+	var/can_load_appearance = TRUE // [CELADON-EDIT] - CELADON_LOAD_PREF
 
 //ATTACK GHOST IGNORING PARENT RETURN VALUE
 /obj/effect/mob_spawn/attack_ghost(mob/user)

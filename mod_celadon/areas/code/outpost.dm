@@ -204,3 +204,29 @@
 	name = "Faction Separatists"
 	icon_state = "faction_separatist"
 	sound_environment = SOUND_AREA_MEDIUM_SOFTFLOOR
+
+// CARGO FACTION
+
+/area/outpost/cargo/faction/all
+	name = "Cargo All"
+	icon_state = "cargo_bay"
+	lighting_colour_tube = "#ffe3cc"
+	lighting_colour_bulb = "#ffdbb8"
+
+/area/outpost/cargo/faction/syndicate
+	name = "Cargo Syndi"
+	icon_state = "cargo_bay"
+	lighting_colour_tube = "#f16464"
+	lighting_colour_bulb = "#f16464"
+
+/area/outpost/cargo/faction/solfed
+	name = "Cargo SolFed"
+	icon_state = "cargo_bay"
+	lighting_colour_tube = "#f7ef7c"
+	lighting_colour_bulb = "#f7ef7c"
+
+/area/outpost/cargo/faction/inteq
+	name = "Cargo InteQ"
+	icon_state = "cargo_bay"
+	lighting_colour_tube = "#c0845d"
+	lighting_colour_bulb = "#c0845d"

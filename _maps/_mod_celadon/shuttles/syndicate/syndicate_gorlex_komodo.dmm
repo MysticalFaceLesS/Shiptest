@@ -1450,9 +1450,7 @@
 /obj/machinery/camera/autoname{
 	dir = 10
 	},
-/obj/machinery/mineral/ore_redemption{
-	dir = 4
-	},
+/obj/machinery/autolathe,
 /turf/open/floor/pod,
 /area/ship/cargo)
 "nv" = (
@@ -1532,7 +1530,6 @@
 /obj/effect/turf_decal/spline/fancy/opaque/black{
 	dir = 1
 	},
-/obj/machinery/autolathe/hacked,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -2019,8 +2016,12 @@
 /obj/item/ammo_box/magazine/m12g_bulldog/drum,
 /obj/item/ammo_box/a12g/slug,
 /obj/item/ammo_box/a12g,
-/obj/item/ammo_box/c45,
-/obj/item/ammo_box/c45,
+/obj/item/ammo_box/magazine/m556_42_hydra,
+/obj/item/ammo_box/magazine/m556_42_hydra,
+/obj/item/ammo_box/magazine/m556_42_hydra,
+/obj/item/ammo_box/magazine/m556_42_hydra,
+/obj/item/ammo_box/a556_42,
+/obj/item/ammo_box/a556_42,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "sY" = (
@@ -2425,7 +2426,8 @@
 /obj/structure/table/reinforced,
 /obj/machinery/light/directional/east,
 /obj/machinery/chem_dispenser/drinks/beer{
-	dir = 8
+	dir = 8;
+	pixel_x = 6
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/ship/crew/canteen)
@@ -2697,13 +2699,9 @@
 /obj/structure/guncloset,
 /obj/structure/railing,
 /obj/machinery/light/directional/east,
-/obj/item/gun/ballistic/automatic/smg/cobra{
-	pixel_x = 14
-	},
-/obj/item/gun/ballistic/automatic/smg/cobra{
-	pixel_x = 14
-	},
 /obj/item/gun/ballistic/shotgun/automatic/bulldog,
+/obj/item/gun/ballistic/automatic/assault/hydra,
+/obj/item/gun/ballistic/automatic/assault/hydra,
 /turf/open/floor/pod/dark,
 /area/ship/security/armory)
 "yJ" = (
@@ -2852,9 +2850,6 @@
 /obj/effect/turf_decal/borderfloor{
 	dir = 1
 	},
-/obj/item/ammo_box/magazine/m10mm_ringneck,
-/obj/item/ammo_box/magazine/m10mm_ringneck,
-/obj/item/ammo_box/c10mm,
 /obj/item/clothing/gloves/tackler/combat/insulated,
 /obj/item/clothing/suit/armor/vest/leather{
 	desc = "Lightly armored leather overcoat meant as casual wear for high-ranking officers. Bears the crest of the Gorlex Marauders."
@@ -2874,7 +2869,12 @@
 /obj/item/clothing/shoes/combat,
 /obj/item/radio/headset/syndicate,
 /obj/item/clothing/glasses/hud/security/sunglasses,
-/obj/item/gun/ballistic/automatic/pistol/ringneck,
+/obj/item/gun/ballistic/automatic/smg/cobra{
+	pixel_x = 3;
+	pixel_y = -1
+	},
+/obj/item/ammo_box/magazine/m45_cobra,
+/obj/item/ammo_box/magazine/m45_cobra,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "AS" = (
@@ -3859,7 +3859,7 @@
 	dir = 1
 	},
 /obj/machinery/microwave{
-	pixel_y = 5
+	pixel_y = 3
 	},
 /obj/effect/turf_decal/trimline/transparent/bar/filled/line{
 	dir = 6
@@ -3912,7 +3912,8 @@
 /obj/item/clothing/under/suit/waiter/syndicate,
 /obj/machinery/vending/boozeomat/syndicate_access{
 	pixel_x = 32;
-	density = 0
+	density = 0;
+	all_items_free = 1
 	},
 /obj/item/gun/ballistic/shotgun/doublebarrel,
 /obj/item/ammo_box/a12g/rubbershot,
@@ -4014,9 +4015,6 @@
 	},
 /obj/item/storage/belt/military/assault,
 /obj/item/storage/belt/military/assault,
-/obj/item/clothing/suit/armor/vest/syndie,
-/obj/item/clothing/suit/armor/vest/syndie,
-/obj/item/clothing/suit/armor/vest/syndie,
 /obj/item/storage/belt/military/assault,
 /obj/item/clothing/head/helmet/swat,
 /obj/item/clothing/head/helmet/swat,
@@ -4024,6 +4022,15 @@
 /obj/item/attachment/silencer,
 /obj/item/attachment/silencer,
 /obj/item/attachment/silencer,
+/obj/item/clothing/suit/armor/vest/marine/medium{
+	armor = list("melee" = 40, "bullet" = 60, "laser" = 30, "energy" = 25, "bomb" = 60, "bio" = 100, "fire" = 70, "acid" = 50)
+	},
+/obj/item/clothing/suit/armor/vest/marine/medium{
+	armor = list("melee" = 40, "bullet" = 60, "laser" = 30, "energy" = 25, "bomb" = 60, "bio" = 100, "fire" = 70, "acid" = 50)
+	},
+/obj/item/clothing/suit/armor/vest/marine/medium{
+	armor = list("melee" = 40, "bullet" = 60, "laser" = 30, "energy" = 25, "bomb" = 60, "bio" = 100, "fire" = 70, "acid" = 50)
+	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "Nj" = (
@@ -4297,7 +4304,9 @@
 /turf/open/floor/plating,
 /area/ship/engineering)
 "PZ" = (
-/obj/machinery/vending/tool,
+/obj/machinery/vending/tool{
+	all_items_free = 1
+	},
 /obj/effect/turf_decal/industrial/outline/yellow,
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ship/engineering)
@@ -4342,7 +4351,8 @@
 "QC" = (
 /obj/structure/table/reinforced,
 /obj/machinery/chem_dispenser/drinks{
-	dir = 8
+	dir = 8;
+	pixel_x = 6
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/ship/crew/canteen)

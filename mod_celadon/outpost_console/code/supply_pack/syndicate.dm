@@ -1,0 +1,53 @@
+/datum/supply_pack/faction/syndicate/gun // Пушки
+	group = "Faction gun"
+
+/datum/supply_pack/faction/syndicate/gun/suns
+	name = "Solar 'GAR' Carbine"
+	desc = "Something on Gauss"
+	contains = list(/obj/item/storage/guncase/gauss/suns)
+	cost = 2500
+
+/datum/supply_pack/faction/syndicate/gun/ringneck
+	name = "PC-76"
+	desc = "Automatic pistol"
+	contains = list(/obj/item/storage/pistolcase/ringneck)
+	cost = 500
+
+// /datum/supply_pack/faction/syndicate/gun/deagle // У нас нет коробок для этой пушки, поэтому пока что так
+// 	name = "Deagle"
+// 	desc = "A true hand cannon"
+// 	contains = list(/obj/item/storage/pistolcase/deagle)
+// 	cost = 2000
+
+/datum/supply_pack/faction/syndicate/gun/bulldog
+	name = "Bulldog Shotgun"
+	desc = "Automatic Shotgun"
+	contains = list(/obj/item/storage/guncase/bulldog)
+	cost = 3000
+
+/datum/supply_pack/faction/syndicate/gun/hydra
+	name = "SMR-80 \"Hydra\""
+	desc = "Scarborough Arms' premier modular assault rifle platform."
+	contains = list(/obj/item/storage/guncase/hydra)
+	cost = 2300
+
+/datum/supply_pack/faction/syndicate/clothing // Одежда
+	group = "Faction clothing"
+
+/datum/supply_pack/faction/syndicate/clothing/hardsuit
+	name = "Syndicate hardsuit"
+	desc = "Made by SYNDICATE"
+	contains = list(/obj/item/clothing/suit/space/hardsuit/syndi)
+	cost = 2000
+
+/datum/supply_pack/faction/syndicate/clothing/hardsuit_cybersun
+	name = "Cybersun hardsuit"
+	desc = "Made by SYNDICATE"
+	contains = list(/obj/item/clothing/suit/space/hardsuit/syndi/cybersun)
+	cost = 2000
+
+/datum/supply_pack/faction/syndicate/clothing/hardsuit_cybersun_paramed
+	name = "Paramedical hardsuit"
+	desc = "Made by SYNDICATE"
+	contains = list(/obj/item/clothing/suit/space/hardsuit/syndi/cybersun/paramed)
+	cost = 2000

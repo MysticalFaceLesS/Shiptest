@@ -88,8 +88,8 @@
 //
 
 /obj/item/ammo_casing/x762
-	name = "7,62x51 Winchester bullet casing"
-	desc = "A 7,62x51 Winchester bullet casing."
+	name = "7,62x54 Winchester bullet casing"
+	desc = "A 7,62x54 Winchester bullet casing."
 	icon_state = "big-steel"
 	caliber = "7.62x54"
 	projectile_type = /obj/projectile/bullet/x762x54
