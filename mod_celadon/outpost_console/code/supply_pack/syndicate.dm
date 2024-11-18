@@ -34,11 +34,11 @@
 /datum/supply_pack/faction/syndicate/clothing // Одежда
 	group = "Faction clothing"
 
-/datum/supply_pack/faction/syndicate/clothing/hardsuit
-	name = "Syndicate hardsuit"
-	desc = "Made by SYNDICATE"
-	contains = list(/obj/item/clothing/suit/space/hardsuit/syndi)
-	cost = 2000
+// /datum/supply_pack/faction/syndicate/clothing/hardsuit // Слишком сильно?
+// 	name = "Syndicate hardsuit"
+// 	desc = "Made by SYNDICATE"
+// 	contains = list(/obj/item/clothing/suit/space/hardsuit/syndi)
+// 	cost = 2000
 
 /datum/supply_pack/faction/syndicate/clothing/hardsuit_cybersun
 	name = "Cybersun hardsuit"
