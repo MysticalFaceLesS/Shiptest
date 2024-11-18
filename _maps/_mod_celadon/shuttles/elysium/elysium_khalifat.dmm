@@ -277,7 +277,7 @@
 /obj/effect/turf_decal/corner/transparent/green/half{
 	dir = 1
 	},
-/obj/item/banner/elysium,
+/obj/item/banner/elysium/mundane,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/bridge)
 "bR" = (
@@ -426,11 +426,9 @@
 /area/ship/engineering/atmospherics)
 "cC" = (
 /obj/structure/table/wood,
-/obj/item/clothing/under/rank/avanpost/elysium_apparel_long,
-/obj/item/clothing/head/turban_elysium,
 /obj/item/elysm_manual{
-	pixel_y = -4;
-	pixel_x = 9
+	pixel_y = 3;
+	pixel_x = 6
 	},
 /obj/item/lighter/clockwork,
 /obj/item/megaphone,
@@ -528,12 +526,14 @@
 /turf/open/floor/plating,
 /area/ship/hallway/port)
 "da" = (
-/obj/machinery/suit_storage_unit/syndicate,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
 /obj/item/clothing/suit/space/elysm/EVA_armored,
 /obj/item/clothing/head/space/elysm/space_helm,
+/obj/machinery/suit_storage_unit/inherit,
+/obj/item/tank/internals/oxygen,
+/obj/item/clothing/mask/breath,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/security)
 "db" = (
@@ -1841,8 +1841,7 @@
 	},
 /obj/machinery/door/airlock/security/glass{
 	dir = 4;
-	name = "Шлюз";
-	req_access_txt = "8134"
+	name = "Шлюз"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
@@ -2245,12 +2244,13 @@
 /turf/closed/wall/r_wall/rust/wasteplanet,
 /area/ship/security)
 "nn" = (
-/obj/machinery/door/window/eastleft{
-	dir = 8
-	},
 /obj/machinery/mass_driver{
 	dir = 4;
 	id = "twinkle_leftmassdriver"
+	},
+/obj/machinery/door/window/brigdoor/westleft{
+	req_ship_access = 1;
+	req_access_txt = null
 	},
 /turf/open/floor/plasteel/elevatorshaft,
 /area/ship/bridge)
@@ -2258,7 +2258,7 @@
 /obj/item/radio/intercom/directional/south,
 /obj/structure/closet/secure_closet/wall/directional/west{
 	name = "spare cards locker";
-	req_access = list(3,150)
+	req_ship_access = 1
 	},
 /obj/effect/turf_decal/corner/transparent/green/half{
 	dir = 8
@@ -3203,8 +3203,7 @@
 /area/ship/engineering/engine)
 "sY" = (
 /obj/machinery/door/firedoor/closed,
-/obj/machinery/door/firedoor/closed,
-/turf/open/space/basic,
+/turf/open/floor/plasteel/dark,
 /area/ship/engineering/atmospherics)
 "tg" = (
 /obj/effect/decal/cleanable/glass,
@@ -4713,6 +4712,13 @@
 	},
 /turf/open/floor/engine/hull/reinforced,
 /area/ship/cargo)
+"BR" = (
+/obj/item/circuitboard/aicore{
+	pixel_x = -4;
+	pixel_y = -8
+	},
+/turf/closed/wall/r_wall/rust/wasteplanet,
+/area/ship/crew/canteen)
 "BS" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/atmos/toxin_input{
 	dir = 4
@@ -5031,6 +5037,9 @@
 /obj/machinery/light_switch{
 	pixel_y = 23;
 	pixel_x = 11
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
 	},
 /turf/open/floor/engine,
 /area/ship/engineering/engine)
@@ -5880,16 +5889,16 @@
 /turf/open/floor/wood/walnut,
 /area/ship/cargo)
 "Ib" = (
-/obj/machinery/door/window/eastright{
-	dir = 8;
-	req_one_access_txt = "150"
-	},
 /obj/machinery/mass_driver{
 	dir = 4;
 	id = "twinkle_rightmassdriver"
 	},
 /obj/item/trash/can/food/peaches/maint,
 /mob/living/carbon/human/species/lizard/ashwalker/kobold,
+/obj/machinery/door/window/brigdoor/westleft{
+	req_ship_access = 1;
+	req_access_txt = null
+	},
 /turf/open/floor/plasteel/elevatorshaft,
 /area/ship/bridge)
 "Id" = (
@@ -5979,7 +5988,6 @@
 /obj/effect/turf_decal/rechargefloor,
 /obj/machinery/light/directional/south,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/mecha/working/ripley/mkii/earth,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
 "Ir" = (
@@ -6100,8 +6108,6 @@
 /obj/structure/closet/emcloset/wall/directional/west,
 /obj/item/clothing/suit/space/syndicate,
 /obj/item/clothing/head/helmet/space/syndicate,
-/obj/item/clothing/head/helmet/space/syndicate,
-/obj/item/clothing/suit/space/syndicate,
 /obj/effect/turf_decal/trimline/opaque/syndiered/warning{
 	dir = 1
 	},
@@ -6512,7 +6518,7 @@
 "LG" = (
 /obj/effect/turf_decal/corner/transparent/bar/diagonal,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/item/banner/elysium,
+/obj/item/banner/elysium/mundane,
 /turf/open/floor/plasteel,
 /area/ship/crew/dorm)
 "LH" = (
@@ -6611,7 +6617,8 @@
 /area/ship/engineering/engine)
 "MK" = (
 /obj/machinery/door/window/brigdoor/westleft{
-	req_access = list(150, 58)
+	req_ship_access = 1;
+	req_access_txt = null
 	},
 /turf/open/floor/plating/wasteplanet/rust,
 /area/ship/security)
@@ -6926,6 +6933,9 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
 	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
 /turf/open/floor/engine,
 /area/ship/engineering/engine)
 "Oz" = (
@@ -6944,8 +6954,8 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
-/obj/item/banner/elysium,
 /obj/effect/decal/cleanable/blood,
+/obj/item/banner/elysium/mundane,
 /turf/open/floor/engine,
 /area/ship/engineering/engine)
 "OK" = (
@@ -7264,7 +7274,7 @@
 /turf/closed/wall/mineral/wood,
 /area/ship/cargo)
 "Qt" = (
-/obj/item/banner/elysium,
+/obj/item/banner/elysium/mundane,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/bridge)
 "Qv" = (
@@ -7557,7 +7567,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/corner/transparent/green/half,
-/obj/item/banner/elysium,
+/obj/item/banner/elysium/mundane,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/bridge)
 "Sg" = (
@@ -8215,7 +8225,6 @@
 /obj/structure/sign/warning/chemdiamond{
 	pixel_x = 30
 	},
-/obj/item/hypospray/mkii/CMO/combat,
 /obj/item/reagent_containers/glass/bottle/vial/large,
 /obj/item/reagent_containers/glass/bottle/vial/large,
 /obj/item/reagent_containers/glass/bottle/vial/large,
@@ -9734,7 +9743,7 @@ uY
 uY
 uY
 uY
-uY
+BR
 uY
 Tn
 WL
@@ -10144,7 +10153,7 @@ OY
 cd
 iI
 iI
-We
+dP
 "}
 (35,1,1) = {"
 mp
