@@ -23,7 +23,7 @@
 	name = "SMR-80 \"Hydra\""
 	desc = "Scarborough Arms' premier modular assault rifle platform."
 	contains = list(/obj/item/storage/guncase/hydra)
-	cost = 2300
+	cost = 3800
 
 /datum/supply_pack/faction/syndicate/clothing // Одежда
 	group = "Faction clothing"
