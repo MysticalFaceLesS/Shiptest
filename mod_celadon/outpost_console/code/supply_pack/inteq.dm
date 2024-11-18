@@ -5,7 +5,7 @@
 	name = "SKM-44v Mongrel"
 	desc = "Inteq SMG"
 	contains = list(/obj/item/storage/guncase/skm_carabine)
-	cost = 1200
+	cost = 3500
 	crate_type = /obj/structure/closet/crate/secure/gear
 
 /datum/supply_pack/faction/inteq/gun/bulldog
