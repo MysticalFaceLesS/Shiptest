@@ -12,7 +12,7 @@
 	name = "Bulldog Shotgun"
 	desc = "Automatic Shotgun"
 	contains = list(/obj/item/storage/guncase/bulldog/inteq)
-	cost = 3000
+	cost = 5000
 
 /datum/supply_pack/faction/inteq/gun/commanders
 	name = "Commander Pistol Crate"

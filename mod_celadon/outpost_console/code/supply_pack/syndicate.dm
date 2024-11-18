@@ -17,7 +17,7 @@
 	name = "Bulldog Shotgun"
 	desc = "Automatic Shotgun"
 	contains = list(/obj/item/storage/guncase/bulldog)
-	cost = 3000
+	cost = 5000
 
 /datum/supply_pack/faction/syndicate/gun/hydra
 	name = "SMR-80 \"Hydra\""
