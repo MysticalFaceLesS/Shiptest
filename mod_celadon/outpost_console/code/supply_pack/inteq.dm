@@ -23,15 +23,15 @@
 /datum/supply_pack/faction/inteq/clothing // Одежда
 	group = "Faction clothing"
 
-// /datum/supply_pack/faction/inteq/clothing/hardsuit // Слишком сильно?
-// 	name = "InteQ hardsuit"
-// 	desc = "Made by InteQ"
-// 	contains = list(/obj/item/clothing/suit/space/hardsuit/syndi/inteq)
-// 	cost = 2000
+/datum/supply_pack/faction/inteq/clothing/hardsuit // Слишком сильно?
+	name = "InteQ hardsuit"
+	desc = "Made by InteQ"
+	contains = list(/obj/item/clothing/suit/space/hardsuit/syndi/inteq)
+	cost = 12000
 
 /datum/supply_pack/faction/inteq/clothing/spacesuit
 	name = "InteQ spacesuit"
 	desc = "Made by InteQ"
 	contains = list(/obj/item/clothing/suit/space/inteq,
 					/obj/item/clothing/head/helmet/space/inteq)
-	cost = 2000
+	cost = 1500

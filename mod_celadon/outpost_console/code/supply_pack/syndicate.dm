@@ -34,20 +34,20 @@
 /datum/supply_pack/faction/syndicate/clothing // Одежда
 	group = "Faction clothing"
 
-// /datum/supply_pack/faction/syndicate/clothing/hardsuit // Слишком сильно?
-// 	name = "Syndicate hardsuit"
+/datum/supply_pack/faction/syndicate/clothing/hardsuit // Слишком сильно?
+	name = "Syndicate hardsuit"
+	desc = "Made by SYNDICATE"
+	contains = list(/obj/item/clothing/suit/space/hardsuit/syndi)
+	cost = 12000
+
+// /datum/supply_pack/faction/syndicate/clothing/hardsuit_cybersun
+// 	name = "Cybersun hardsuit"
 // 	desc = "Made by SYNDICATE"
-// 	contains = list(/obj/item/clothing/suit/space/hardsuit/syndi)
+// 	contains = list(/obj/item/clothing/suit/space/hardsuit/syndi/cybersun)
 // 	cost = 2000
 
-/datum/supply_pack/faction/syndicate/clothing/hardsuit_cybersun
-	name = "Cybersun hardsuit"
-	desc = "Made by SYNDICATE"
-	contains = list(/obj/item/clothing/suit/space/hardsuit/syndi/cybersun)
-	cost = 2000
-
-/datum/supply_pack/faction/syndicate/clothing/hardsuit_cybersun_paramed
-	name = "Paramedical hardsuit"
-	desc = "Made by SYNDICATE"
-	contains = list(/obj/item/clothing/suit/space/hardsuit/syndi/cybersun/paramed)
-	cost = 2000
+// /datum/supply_pack/faction/syndicate/clothing/hardsuit_cybersun_paramed
+// 	name = "Paramedical hardsuit"
+// 	desc = "Made by SYNDICATE"
+// 	contains = list(/obj/item/clothing/suit/space/hardsuit/syndi/cybersun/paramed)
+// 	cost = 2000
