@@ -20,20 +20,3 @@
 	icon_state = "hardsuit0-ert_janitor"
 	item_state = "hardsuit0-ert_janitor"
 	hardsuit_type = "ert_janitor"
-
-/obj/item/card/id/lpjanitor
-	icon_state = "ert_janitor"
-	desc = "The LP Janitor Specialist's ID card."
-	name = "LP Janitor Specialist"
-
-/datum/outfit/job/nanotrasen/janitor/lp
-	name = "ERT - Loss Prevention Janitorial Specialist"
-	jobtype = /datum/job/janitor
-	job_icon = "janitorresponseofficer"
-
-	uniform = /obj/item/clothing/under/nanotrasen/janitor
-	head = /obj/item/clothing/head/nanotrasen/cap/janitor
-	id = /obj/item/card/id/lpjanitor
-	belt = /obj/item/storage/belt/janitor
-	gloves = /obj/item/clothing/gloves/color/purple
-	back = /obj/item/storage/backpack/ert/janitor
