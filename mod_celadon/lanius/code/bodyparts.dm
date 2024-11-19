@@ -53,6 +53,7 @@
 	decay_factor = 0
 	healing_factor = 10
 	organ_flags = ORGAN_FROZEN
+	flash_protect = FLASH_PROTECTION_WELDER
 
 /obj/item/organ/ears/lanius
 	useable = FALSE
@@ -116,3 +117,37 @@
 	limb_id = SPECIES_LANIUS
 	bodytype =  BODYTYPE_HUMANOID | BODYTYPE_ORGANIC
 
+/obj/item/organ/cyberimp/arm/lanius_welder
+	name = "разжиженный нестабильный материал"
+	desc = "Извлеченная субстанция из руки ланиуса, видимо, служащая им подручной сваркой."
+	icon = 'mod_celadon/_storge_icons/icons/lanius/items.dmi'
+	icon_state = "weld"
+	items_to_create = list(/obj/item/weldingtool/lanius)
+
+/obj/item/organ/cyberimp/arm/lanius_welder/emp_act(severity)
+	return
+
+/obj/item/organ/cyberimp/arm/lanius_welder/on_life()
+	if(!islanius(owner))
+		to_chat(owner, "<span class='userdanger'>Субстанция выжигает вашу руку полностью, не оставляя даже костей!</span>")
+		var/obj/item/bodypart/cutmeup = owner.get_bodypart(zone)
+		cutmeup.dismember()
+		qdel(cutmeup)
+		qdel(src)
+
+/obj/item/weldingtool/lanius
+	name = "плавящаяся рука"
+	desc = "Ого! Моя рука теплый, пора варить еда из стена корабля, пока капитан не видит."
+	icon = 'mod_celadon/_storge_icons/icons/lanius/items.dmi'
+	icon_state = "weld"
+	item_state = "weld"
+	lefthand_file = 'mod_celadon/_storge_icons/icons/lanius/inhands_l.dmi'
+	righthand_file = 'mod_celadon/_storge_icons/icons/lanius/inhands_r.dmi'
+	toolspeed = 0.75
+	custom_materials = list()
+	change_icons = 0
+
+/obj/item/weldingtool/lanius/process()
+	if(get_fuel() <= max_fuel)
+		reagents.add_reagent(/datum/reagent/fuel, 1)
+	..()

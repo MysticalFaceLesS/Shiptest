@@ -23,8 +23,8 @@
 	toxic_food = VEGETABLES | DAIRY | CLOTH | GROSS | MEAT | RAW
 	meat = /obj/item/stack/sheet/plasteel{amount = 5}
 	species_language_holder = /datum/language_holder/lanius
-	brutemod = 0.75
-	burnmod = 0.75
+	brutemod = 0.65
+	burnmod = 0.65
 	punchdamagelow = 5
 	punchdamagehigh = 14
 	punchstunthreshold = 25
@@ -38,6 +38,7 @@
 	mutantliver = /obj/item/organ/liver/lanius
 	mutantstomach = /obj/item/organ/stomach/lanius
 	mutantears = /obj/item/organ/ears/lanius
+	mutant_organs = list(/obj/item/organ/cyberimp/arm/lanius_welder)
 	mutantlungs = null
 	mutantappendix = null
 	mutantbrain = /obj/item/organ/brain/lanius
