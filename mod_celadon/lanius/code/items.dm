@@ -89,6 +89,7 @@
 			for(var/obj/item/ammo_box/magazine/internal/lanius_gun/M in contents)
 				M.max_ammo = 5+(5*C.rating)
 			to_chat(user, "<span class='notice'>Вы успешно установили улучшение хранилища, размер магазина увеличен, хранилище израсходовано.</span>")
+			qdel(C)
 		else
 			to_chat(user, "<span class='warning'>Нужно хранилище материи уровнем повыше.</span>")
 			return
