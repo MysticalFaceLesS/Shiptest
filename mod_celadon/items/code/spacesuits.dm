@@ -1,5 +1,5 @@
 //********************
-// 		uits
+// 		Spacesuits
 //********************
 /obj/item/clothing/suit/space/hardsuit/ert/lp/jani
 	name = "Loss Prevention Janitorial Hardsuit"
