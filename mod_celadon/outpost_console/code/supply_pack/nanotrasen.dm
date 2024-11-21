@@ -65,7 +65,7 @@
 	hidden = FALSE
 	name = "NT MK2 Ion carbine"
 	desc = "An improved model on the ion projector, built to be more compact and ergonomic, while keeping the same max charge. Developed by Nanotrasen"
-	contains = list(/obj/item/gun/energy/e_gun/mini)
+	contains = list(/obj/item/gun/energy/ionrifle/carbine)
 	cost = 11000
 	faction = "nanotrasen"
 	crate_type = /obj/structure/closet/crate/secure/weapon
