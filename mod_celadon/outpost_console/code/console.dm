@@ -446,3 +446,69 @@
 			"small_item" = P.small_item,
 		))
 	return data
+
+/*
+Nanotrasen
+*/
+
+/obj/machinery/computer/cargo/faction/nanotrasen
+	name = "Nanotrasen outpost console"
+	desc = "That outpost console belongs to Nanotrasen."
+	icon_screen = "idcentcom"
+	circuit = /obj/item/circuitboard/computer/cargo
+	light_color = LIGHT_COLOR_DARK_BLUE
+
+	contraband = FALSE
+	self_paid = FALSE
+
+	podType = /obj/structure/closet/supplypod/centcompod
+
+	charge_account = ACCOUNT_NTN
+
+/obj/machinery/computer/cargo/faction/nanotrasen/ui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "OutpostCommunicationsFactionNanotrasen", name)
+		ui.open()
+		if(!charge_account)
+			reconnect()
+
+/obj/machinery/computer/cargo/faction/nanotrasen/generate_pack_data()
+	supply_pack_data = list()
+	for(var/pack in SSshuttle.supply_packs)
+		var/datum/supply_pack/P = SSshuttle.supply_packs[pack]
+		if(!supply_pack_data[P.group] && P.faction == "nanotrasen")
+			supply_pack_data[P.group] = list(
+				"name" = P.group,
+				"packs" = list()
+			)
+		if(P.hidden && (P.faction != "nanotrasen"))
+			continue
+		if(P.faction == "nanotrasen")
+			supply_pack_data[P.group]["packs"] += list(list(
+				"name" = P.name,
+				"cost" = P.cost,
+				"id" = pack,
+				"desc" = P.desc || P.name // If there is a description, use it. Otherwise use the pack's name.
+			))
+
+/obj/machinery/computer/cargo/faction/nanotrasen/ui_static_data(mob/user)
+	var/list/data = list()
+	data["supplies"] = list()
+	for(var/pack in SSshuttle.supply_packs)
+		var/datum/supply_pack/P = SSshuttle.supply_packs[pack]
+		if(!data["supplies"][P.group])
+			data["supplies"][P.group] = list(
+				"name" = P.group,
+				"packs" = list()
+			)
+		if((P.hidden && !(obj_flags & EMAGGED)) && (P.faction != "nanotrasen"))
+			continue
+		data["supplies"][P.group]["packs"] += list(list(
+			"name" = P.name,
+			"cost" = P.cost,
+			"id" = pack,
+			"desc" = P.desc || P.name, // If there is a description, use it. Otherwise use the pack's name.
+			"small_item" = P.small_item,
+		))
+	return data
