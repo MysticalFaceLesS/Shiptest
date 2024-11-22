@@ -5,8 +5,8 @@
 	icon = 'mod_celadon/moniq/icons/jukebox.dmi'
 	righthand_file = 'mod_celadon/moniq/icons/inhands/righthand.dmi'
 	lefthand_file = 'mod_celadon/moniq/icons/inhands/lefthand.dmi'
-	item_state = "moniq"
-	icon_state = "moniq"
+	item_state = "moniq-"
+	icon_state = "moniq-"
 	verb_say = "states"
 	density = FALSE
 	var/active = FALSE
@@ -158,7 +158,7 @@
 	name = "Muz-tv"
 	desc = "Самые топовые хиты этого сезона."
 	icon = 'mod_celadon/moniq/icons/jukebox.dmi'
-	icon_state = "moniq_wallmount"
+	icon_state = "moniq_wallmount-"
 	verb_say = "states"
 	verb_say = "states"
 	density = FALSE
