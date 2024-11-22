@@ -567,16 +567,18 @@
 	name = "Smartfridge (Machine Board)"
 	build_path = /obj/machinery/smartfridge
 	req_components = list(/obj/item/stock_parts/matter_bin = 1)
-	var/static/list/fridges_name_paths = list(/obj/machinery/smartfridge = "plant produce",
-		/obj/machinery/smartfridge/food = "food",
-		/obj/machinery/smartfridge/drinks = "drinks",
-		/obj/machinery/smartfridge/extract = "slimes",
-		/obj/machinery/smartfridge/organ = "organs",
+// [CELADON-EDIT] - QoL - Bloodbank circuit added
+	var/static/list/fridges_name_paths = list(/obj/machinery/smartfridge/bloodbank = "blood",
 		/obj/machinery/smartfridge/chemistry = "chems",
-		/obj/machinery/smartfridge/chemistry/virology = "viruses",
-		/obj/machinery/smartfridge/disks = "disks")
+		/obj/machinery/smartfridge/disks = "disks",
+		/obj/machinery/smartfridge/drinks = "drinks",
+		/obj/machinery/smartfridge/food = "food",
+		/obj/machinery/smartfridge/organ = "organs",
+		/obj/machinery/smartfridge = "plant produce",
+		/obj/machinery/smartfridge/extract = "slimes",
+		/obj/machinery/smartfridge/chemistry/virology = "viruses")
 	needs_anchored = FALSE
-
+// [/CELADON-EDIT]
 /obj/item/circuitboard/machine/smartfridge/Initialize(mapload, new_type)
 	if(new_type)
 		build_path = new_type
