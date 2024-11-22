@@ -118,10 +118,6 @@ ID мода: CELADON_QOL
 Смартфридж Bloodbank
 - ADD+EDIT `code\game\objects\items\circuitboards\machine_circuitboards.dm` - Добавление платы bloodbank в пул смартфридж плат, сортировка по алфавиту в меню.
 
-Иконка jetpack_upgrade
-- ADD `icons\obj\tanks.dmi` - Добавлены иконки jetpack_upgrade и jetpack_upgrade-on для отображения в меню
-- EDIT `icons\obj\items.dmi` - Изменена иконка jetpack_upgrade на ту, что были добавлены в tanks.dmi
-
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.

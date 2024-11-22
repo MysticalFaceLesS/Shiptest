@@ -210,7 +210,7 @@
 	if(!istype(loc, /obj/item/clothing/suit/space/hardsuit) || !ishuman(loc.loc) || loc.loc != user)
 		return
 	var/mob/living/carbon/human/H = user
-// [CELADON-ADD] -- QoL
+// [CELADON-ADD] - Fix - добавление иконки активированного джетпака
 	icon = 'icons/obj/tank.dmi'
 	icon_state = "jetpack_upgrade-on"
 // [/CELADON-ADD]
@@ -221,7 +221,7 @@
 	..()
 
 /obj/item/tank/jetpack/suit/turn_off(mob/user)
-// [CELADON-ADD] -- QoL
+// [CELADON-ADD] - Fix
 	icon = 'icons/obj/tank.dmi'
 	icon_state = "jetpack_upgrade"
 // [/CELADON-ADD]

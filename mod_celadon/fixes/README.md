@@ -79,6 +79,10 @@ ID мода: CELADON_FIXES
 
 - EDIT: `code/game/objects/items/devices/taperecorder.dm` - Изменение рекордера, дабы тот более не мог переводить другие языки
 
+Иконка для активированного jetpack_upgrade 
+- ADD `icons\obj\tanks.dmi` - Добавлены иконки jetpack_upgrade и jetpack_upgrade-on для отображения в меню
+- EDIT `icons\obj\items.dmi` - Изменена иконка jetpack_upgrade на ту, что были добавлены в tanks.dmi
+
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
