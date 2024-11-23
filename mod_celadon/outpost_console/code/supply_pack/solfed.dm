@@ -5,7 +5,7 @@
 	name = "Solar 'GAR' Carbine"
 	desc = "Something on Gauss"
 	contains = list(/obj/item/storage/guncase/gauss)
-	cost = 2500
+	cost = 8000
 
 /datum/supply_pack/faction/solfed/gun/commanders
 	name = "Commander Pistol Crate"
@@ -20,11 +20,11 @@
 	name = "SolFed hardsuit"
 	desc = "Made in Solar Federation"
 	contains = list(/obj/item/clothing/suit/space/hardsuit/solgov)
-	cost = 2000
+	cost = 12000
 
 /datum/supply_pack/faction/solfed/clothing/med_hardsuit
 	name = "Medical Hardsuit Crate"
 	desc = "One medical hardsuit, resistant to diseases and useful for retrieving patients in space."
-	cost = 1500
+	cost = 6000
 	contains = list(/obj/item/clothing/suit/space/hardsuit/medical)
 	crate_name = "medical hardsuit crate"

@@ -5,7 +5,7 @@
 	name = "PC-76"
 	desc = "Automatic pistol"
 	contains = list(/obj/item/storage/pistolcase/ringneck)
-	cost = 500
+	cost = 800
 
 // /datum/supply_pack/faction/syndicate/gun/deagle // У нас нет коробок для этой пушки, поэтому пока что так
 // 	name = "Deagle"
@@ -17,13 +17,13 @@
 	name = "Bulldog Shotgun"
 	desc = "Automatic Shotgun"
 	contains = list(/obj/item/storage/guncase/bulldog)
-	cost = 5000
+	cost = 8000
 
 /datum/supply_pack/faction/syndicate/gun/hydra
 	name = "SMR-80 \"Hydra\""
 	desc = "Scarborough Arms' premier modular assault rifle platform."
 	contains = list(/obj/item/storage/guncase/hydra)
-	cost = 3800
+	cost = 6400
 
 /datum/supply_pack/faction/syndicate/clothing // Одежда
 	group = "Faction clothing"
