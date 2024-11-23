@@ -83,7 +83,7 @@
 	name = "NT WT-550 Automatic rifle"
 	desc = "A ballistic PDW produced by Nanotrasen. Quite old, but still is amazing at filling corporation's enemies with lead. Uses 4.6x30mm rounds."
 	contains = list(/obj/item/gun/ballistic/automatic/smg/wt550)
-	cost = 4000
+	cost = 6500
 	faction = "nanotrasen"
 	crate_type = /obj/structure/closet/crate/secure/weapon
 
@@ -96,7 +96,7 @@
 	name = "9mm ammo box"
 	desc = "9mm ammo box for guns like commander. Contains 50 shells"
 	contains = list(/obj/item/ammo_box/c9mm)
-	cost = 200
+	cost = 250
 	faction = "nanotrasen"
 	crate_type = /obj/structure/closet/crate/secure/gear
 
