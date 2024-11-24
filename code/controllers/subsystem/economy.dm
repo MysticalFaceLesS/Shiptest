@@ -8,7 +8,9 @@
 #define ACCOUNT_SLF "SLF"
 #define ACCOUNT_SLF_NAME "SolFed Budget"
 #define ACCOUNT_IND "IND"
-#define ACCOUNT_IND_NAME "Independant Budget"
+#define ACCOUNT_IND_NAME "Independent Budget"
+#define ACCOUNT_IND "NTN"
+#define ACCOUNT_IND_NAME "Nanotrasen Budget"
 //[/CELADON-ADD]
 
 SUBSYSTEM_DEF(economy)
@@ -30,7 +32,8 @@ SUBSYSTEM_DEF(economy)
 										ACCOUNT_SYN = ACCOUNT_SYN_NAME,
 										ACCOUNT_INT = ACCOUNT_INT_NAME,
 										ACCOUNT_SLF = ACCOUNT_SLF_NAME,
-										ACCOUNT_IND = ACCOUNT_IND_NAME)
+										ACCOUNT_IND = ACCOUNT_IND_NAME,
+										ACCOUNT_NTN = ACCOUNT_NTN_NAME)
 	var/list/departmental_accounts = list()
 //[/CELADON-ADD]
 
