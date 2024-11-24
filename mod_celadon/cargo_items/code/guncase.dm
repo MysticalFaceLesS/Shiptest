@@ -68,4 +68,27 @@ EMPTY_GUN_HELPER(automatic/pistol/deagle)
 /obj/item/ammo_box/magazine/m556_42_hydra/empty
 	start_empty = TRUE
 
+/obj/item/storage/guncase/etar_smg
+/obj/item/storage/guncase/etar_smg/PopulateContents()
+	new /obj/item/gun/energy/e_gun/smg(src)
+	new /obj/item/stock_parts/cell/gun/empty(src)
 
+/obj/item/storage/guncase/hades
+/obj/item/storage/guncase/hades/PopulateContents()
+	new /obj/item/gun/energy/e_gun/hades(src)
+	new /obj/item/stock_parts/cell/gun/empty(src)
+
+/obj/item/storage/guncase/egun
+/obj/item/storage/guncase/egun/PopulateContents()
+	new /obj/item/gun/energy/e_gun(src)
+	new /obj/item/stock_parts/cell/gun/empty(src)
+
+/obj/item/storage/guncase/iot
+/obj/item/storage/guncase/iot/PopulateContents()
+	new /obj/item/gun/energy/e_gun/iot(src)
+	new /obj/item/stock_parts/cell/gun/empty(src)
+
+/obj/item/storage/guncase/ion_carbine
+/obj/item/storage/guncase/ion_carbine/PopulateContents()
+	new /obj/item/gun/energy/ionrifle/carbine(src)
+	new /obj/item/stock_parts/cell/gun/empty(src)
