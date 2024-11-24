@@ -38,4 +38,4 @@
 	req_access = list(ACCESS_OUTPOST_FACTION_INTEQ)
 
 /obj/structure/closet/crate/secure/gear/nanotrasen
-	req_access = list(ACCESS_OUTPOST_FACTION_NANOTRASEN)
+	req_access = list(ACCESS_OUTPOST_FACTION_NT)
