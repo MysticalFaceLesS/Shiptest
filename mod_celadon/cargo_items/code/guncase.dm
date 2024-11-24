@@ -68,4 +68,26 @@ EMPTY_GUN_HELPER(automatic/pistol/deagle)
 /obj/item/ammo_box/magazine/m556_42_hydra/empty
 	start_empty = TRUE
 
+/obj/item/storage/guncase/f4_308/inteq
+/obj/item/storage/guncase/f4_308/inteq/PopulateContents()
+	new /obj/item/gun/ballistic/automatic/marksman/f4/inteq/no_mag(src)
+	new /obj/item/ammo_box/magazine/f4_308/epmty(src)
+	new /obj/item/ammo_box/magazine/f4_308/epmty(src)
 
+/obj/item/ammo_box/magazine/f4_308/epmty
+	start_empty = TRUE
+
+/obj/item/storage/guncase/syndicate/cobra
+/obj/item/storage/guncase/syndicate/cobra/PopulateContents()
+	new /obj/item/gun/ballistic/automatic/smg/cobra/no_mag(src)
+	new /obj/item/ammo_box/magazine/m45_cobra/empty(src)
+	new /obj/item/ammo_box/magazine/m45_cobra/empty(src)
+
+/obj/item/storage/guncase/automatic/powered/gauss
+/obj/item/storage/guncase/automatic/powered/gauss/PopulateContents()
+	new /obj/item/gun/ballistic/automatic/powered/gauss/no_mag(src)
+	new /obj/item/ammo_box/magazine/gauss/epmty(src)
+	new /obj/item/ammo_box/magazine/gauss/epmty(src)
+
+/obj/item/ammo_box/magazine/gauss/epmty
+	start_empty = TRUE

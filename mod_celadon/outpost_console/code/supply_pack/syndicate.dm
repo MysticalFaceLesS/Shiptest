@@ -25,6 +25,27 @@
 	contains = list(/obj/item/storage/guncase/hydra)
 	cost = 6400
 
+/datum/supply_pack/faction/syndicate/gun/cobra
+	name = "CR-20 \"Cobra\""
+	desc = "A bullpup submachine gun, heavily used by Syndicate strike teams during the ICW. Still sees widespread use by the descendants of the Gorlex Marauders. Chambered in .45"
+	contains = list(/obj/item/storage/guncase/syndicate/cobra)
+	cost = 5500
+
+/datum/supply_pack/faction/syndicate/ammo // патроны
+	group = "Faction ammo"
+
+/datum/supply_pack/faction/syndicate/ammo/smgm45ammo
+	name = ".45 Cobra Ammo Crate"
+	desc = "Contains a .45 magazine for the Cobra-20, containing 24 rounds."
+	cost = 750
+	contains = list(/obj/item/ammo_box/magazine/m45_cobra)
+
+/datum/supply_pack/faction/syndicate/ammo/c45_ammo_box
+	name = ".45 Ammo Box Crate"
+	desc = "Contains a fifty-round .45"
+	contains = list(/obj/item/ammo_box/c45)
+	cost = 500
+
 /datum/supply_pack/faction/syndicate/clothing // Одежда
 	group = "Faction clothing"
 

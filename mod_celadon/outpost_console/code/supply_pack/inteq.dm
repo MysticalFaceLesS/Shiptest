@@ -20,6 +20,13 @@
 	cost = 750
 	contains = list(/obj/item/storage/pistolcase/commander/inteq)
 
+/datum/supply_pack/faction/inteq/gun/ssg04/inteq
+	name = "SSG-04"
+	desc = "Modified InteQ SSG-04. It have scope, shoots a 308 caliber "
+	contains = list(/obj/item/storage/guncase/f4_308/inteq)
+	cost = 9000
+	crate_type = /obj/structure/closet/crate/secure/gear
+
 /datum/supply_pack/faction/inteq/clothing // Одежда
 	group = "Faction clothing"
 

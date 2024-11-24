@@ -31,3 +31,6 @@
 
 /obj/structure/closet/crate/secure/gear/inteq
 	req_access = list(ACCESS_OUTPOST_FACTION_INTEQ)
+
+/obj/item/ammo_box/magazine/m45_cobra
+	req_access = list(ACCESS_OUTPOST_FACTION_SYNDICATE)
