@@ -9,7 +9,6 @@
 	contains = list(/obj/item/clothing/suit/space/hardsuit/swat/captain)
 	cost = 11500
 	faction = "nanotrasen"
-	crate_type = /obj/structure/closet/crate/secure/gear
 
 /datum/supply_pack/faction/nanotrasen/clothing/hardsuitsec
 	hidden = FALSE
@@ -18,7 +17,6 @@
 	contains = list(/obj/item/clothing/suit/space/hardsuit/security)
 	cost = 3500
 	faction = "nanotrasen"
-	crate_type = /obj/structure/closet/crate/secure/gear
 
 /datum/supply_pack/faction/nanotrasen/clothing/armorsec
 	hidden = FALSE
@@ -29,7 +27,6 @@
 					/obj/item/clothing/suit/armor/nanotrasen)
 	cost = 4000
 	faction = "nanotrasen"
-	crate_type = /obj/structure/closet/crate/secure/gear
 
 /datum/supply_pack/faction/nanotrasen/gun
 
@@ -42,7 +39,6 @@
 	contains = list(/obj/item/storage/guncase/hades)
 	cost = 6000
 	faction = "nanotrasen"
-	crate_type = /obj/structure/closet/crate/secure/gear
 
 /datum/supply_pack/faction/nanotrasen/gun/etar_smg
 	hidden = FALSE
@@ -51,7 +47,6 @@
 	contains = list(/obj/item/storage/guncase/etar_smg)
 	cost = 8000
 	faction = "nanotrasen"
-	crate_type = /obj/structure/closet/crate/secure/gear
 
 /datum/supply_pack/faction/nanotrasen/gun/iot
 	hidden = FALSE
@@ -60,7 +55,6 @@
 	contains = list(/obj/item/storage/guncase/iot)
 	cost = 5000
 	faction = "nanotrasen"
-	crate_type = /obj/structure/closet/crate/secure/gear
 
 /datum/supply_pack/faction/nanotrasen/gun/commander
 	hidden = FALSE
@@ -69,7 +63,6 @@
 	contains = list(/obj/item/storage/pistolcase/commander)
 	cost = 700
 	faction = "nanotrasen"
-	crate_type = /obj/structure/closet/crate/secure/gear
 
 /datum/supply_pack/faction/nanotrasen/gun/egun
 	hidden = FALSE
@@ -78,7 +71,6 @@
 	contains = list(/obj/item/storage/guncase/egun)
 	cost = 1250
 	faction = "nanotrasen"
-	crate_type = /obj/structure/closet/crate/secure/gear
 
 /datum/supply_pack/faction/nanotrasen/gun/mini_egun
 	hidden = FALSE
@@ -87,7 +79,6 @@
 	contains = list(/obj/item/storage/pistolcase/miniegun)
 	cost = 500
 	faction = "nanotrasen"
-	crate_type = /obj/structure/closet/crate/secure/gear
 
 /datum/supply_pack/faction/nanotrasen/gun/ion_carbine
 	hidden = FALSE
@@ -96,7 +87,6 @@
 	contains = list(/obj/item/storage/guncase/ion_carbine)
 	cost = 11000
 	faction = "nanotrasen"
-	crate_type = /obj/structure/closet/crate/secure/gear
 
 /datum/supply_pack/faction/nanotrasen/gun/wt550
 	hidden = FALSE
@@ -105,7 +95,6 @@
 	contains = list(/obj/item/storage/guncase/wt550)
 	cost = 6500
 	faction = "nanotrasen"
-	crate_type = /obj/structure/closet/crate/secure/gear
 
 /datum/supply_pack/faction/nanotrasen/ammo
 
@@ -118,7 +107,6 @@
 	contains = list(/obj/item/ammo_box/c9mm)
 	cost = 250
 	faction = "nanotrasen"
-	crate_type = /obj/structure/closet/crate/secure/gear
 
 /datum/supply_pack/faction/nanotrasen/ammo/wt_ammo_box
 	hidden = FALSE
@@ -127,7 +115,6 @@
 	contains = list(/obj/item/ammo_box/c46x30mm_box)
 	cost = 500
 	faction = "nanotrasen"
-	crate_type = /obj/structure/closet/crate/secure/gear
 
 /datum/supply_pack/faction/nanotrasen/ammo/wt_magazine
 	hidden = FALSE
@@ -136,7 +123,6 @@
 	contains = list(/obj/item/ammo_box/magazine/wt550m9)
 	cost = 700
 	faction = "nanotrasen"
-	crate_type = /obj/structure/closet/crate/secure/gear
 
 /datum/supply_pack/faction/nanotrasen/ammo/commander_magazine
 	hidden = FALSE
@@ -145,4 +131,3 @@
 	contains = list(/obj/item/ammo_box/magazine/co9mm)
 	cost = 600
 	faction = "nanotrasen"
-	crate_type = /obj/structure/closet/crate/secure/gear
