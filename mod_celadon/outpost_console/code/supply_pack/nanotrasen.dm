@@ -1,4 +1,4 @@
-/datum/supply_pack/faction/nanotrasen/clothing
+/datum/supply_pack/faction/nanotrasen/clothing //Одежда
 
 	group = "Faction clothing"
 
@@ -28,7 +28,7 @@
 	cost = 4000
 	faction = "nanotrasen"
 
-/datum/supply_pack/faction/nanotrasen/gun
+/datum/supply_pack/faction/nanotrasen/gun //Пушки
 
 	group = "Faction weapons"
 
@@ -96,7 +96,7 @@
 	cost = 6500
 	faction = "nanotrasen"
 
-/datum/supply_pack/faction/nanotrasen/ammo
+/datum/supply_pack/faction/nanotrasen/ammo //Патроны
 
 	group = "Faction ammo"
 
