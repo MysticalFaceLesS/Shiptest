@@ -9,8 +9,8 @@
 #define ACCOUNT_SLF_NAME "SolFed Budget"
 #define ACCOUNT_IND "IND"
 #define ACCOUNT_IND_NAME "Independent Budget"
-#define ACCOUNT_IND "NTN"
-#define ACCOUNT_IND_NAME "Nanotrasen Budget"
+#define ACCOUNT_NTN "NTN"
+#define ACCOUNT_NTN_NAME "Nanotrasen Budget"
 //[/CELADON-ADD]
 
 SUBSYSTEM_DEF(economy)
