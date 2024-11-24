@@ -5,7 +5,7 @@
 	name = "PC-76"
 	desc = "Automatic pistol"
 	contains = list(/obj/item/storage/pistolcase/ringneck)
-	cost = 800
+	cost = 700
 
 // /datum/supply_pack/faction/syndicate/gun/deagle // У нас нет коробок для этой пушки, поэтому пока что так
 // 	name = "Deagle"
@@ -17,7 +17,7 @@
 	name = "Bulldog Shotgun"
 	desc = "Automatic Shotgun"
 	contains = list(/obj/item/storage/guncase/bulldog)
-	cost = 8000
+	cost = 7000
 
 /datum/supply_pack/faction/syndicate/gun/hydra
 	name = "SMR-80 \"Hydra\""
@@ -27,7 +27,7 @@
 
 /datum/supply_pack/faction/syndicate/gun/cobra
 	name = "CR-20 \"Cobra\""
-	desc = "A bullpup submachine gun, heavily used by Syndicate strike teams during the ICW. Still sees widespread use by the descendants of the Gorlex Marauders. Chambered in .45"
+	desc = "A bullpup submachine gun. Chambered in .45"
 	contains = list(/obj/item/storage/guncase/syndicate/cobra)
 	cost = 5500
 

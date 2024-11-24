@@ -15,7 +15,7 @@
 
 /datum/supply_pack/faction/solfed/gun/gauss/prototype
 	name = "Prototype gauss rifle"
-	desc = "An experimental Nanotrasen rifle with a high capacity. Useful for putting down crowds. Chambered in ferromagnetic pellets"
+	desc = "A high capacity experimental rifle developed by Nanotrasen"
 	contains = list(/obj/item/storage/guncase/automatic/powered/gauss)
 	cost = 6000
 
@@ -42,12 +42,12 @@
 	name = "SolFed hardsuit"
 	desc = "Made in Solar Federation"
 	contains = list(/obj/item/clothing/suit/space/hardsuit/solgov)
-	cost = 12000
+	cost = 11000
 
 /datum/supply_pack/faction/solfed/clothing/med_hardsuit
 	name = "Medical Hardsuit Crate"
 	desc = "One medical hardsuit, resistant to diseases and useful for retrieving patients in space."
-	cost = 6000
+	cost = 4000
 	contains = list(/obj/item/clothing/suit/space/hardsuit/medical)
 	crate_name = "medical hardsuit crate"
 
