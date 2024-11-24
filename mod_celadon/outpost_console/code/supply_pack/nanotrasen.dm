@@ -22,7 +22,7 @@
 	contains = list(/obj/item/storage/guncase/hades)
 	cost = 6000
 	faction = "nanotrasen"
-	crate_type = /obj/structure/closet/crate/secure/weapon
+	crate_type = /obj/structure/closet/crate/secure/gear
 
 /datum/supply_pack/faction/nanotrasen/gun/etar_smg
 	hidden = FALSE
@@ -31,7 +31,7 @@
 	contains = list(/obj/item/storage/guncase/etar_smg)
 	cost = 8000
 	faction = "nanotrasen"
-	crate_type = /obj/structure/closet/crate/secure/weapon
+	crate_type = /obj/structure/closet/crate/secure/gear
 
 /datum/supply_pack/faction/nanotrasen/gun/iot
 	hidden = FALSE
@@ -40,7 +40,7 @@
 	contains = list(/obj/item/storage/guncase/iot)
 	cost = 5000
 	faction = "nanotrasen"
-	crate_type = /obj/structure/closet/crate/secure/weapon
+	crate_type = /obj/structure/closet/crate/secure/gear
 
 /datum/supply_pack/faction/nanotrasen/gun/commander
 	hidden = FALSE
@@ -49,7 +49,7 @@
 	contains = list(/obj/item/storage/pistolcase/commander)
 	cost = 700
 	faction = "nanotrasen"
-	crate_type = /obj/structure/closet/crate/secure/weapon
+	crate_type = /obj/structure/closet/crate/secure/gear
 
 /datum/supply_pack/faction/nanotrasen/gun/egun
 	hidden = FALSE
@@ -58,7 +58,7 @@
 	contains = list(/obj/item/storage/guncase/egun)
 	cost = 1250
 	faction = "nanotrasen"
-	crate_type = /obj/structure/closet/crate/secure/weapon
+	crate_type = /obj/structure/closet/crate/secure/gear
 
 /datum/supply_pack/faction/nanotrasen/gun/mini_egun
 	hidden = FALSE
@@ -67,7 +67,7 @@
 	contains = list(/obj/item/storage/pistolcase/miniegun)
 	cost = 500
 	faction = "nanotrasen"
-	crate_type = /obj/structure/closet/crate/secure/weapon
+	crate_type = /obj/structure/closet/crate/secure/gear
 
 /datum/supply_pack/faction/nanotrasen/gun/ion_carbine
 	hidden = FALSE
@@ -76,7 +76,7 @@
 	contains = list(/obj/item/storage/guncase/ion_carbine)
 	cost = 11000
 	faction = "nanotrasen"
-	crate_type = /obj/structure/closet/crate/secure/weapon
+	crate_type = /obj/structure/closet/crate/secure/gear
 
 /datum/supply_pack/faction/nanotrasen/gun/wt550
 	hidden = FALSE
@@ -85,7 +85,7 @@
 	contains = list(/obj/item/storage/guncase/wt550)
 	cost = 6500
 	faction = "nanotrasen"
-	crate_type = /obj/structure/closet/crate/secure/weapon
+	crate_type = /obj/structure/closet/crate/secure/gear
 
 /datum/supply_pack/faction/nanotrasen/ammo
 
