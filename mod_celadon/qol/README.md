@@ -116,6 +116,9 @@ ID мода: CELADON_QOL
 
 - EDIT `code\__HELPERS\roundend.dm` -> Изменён вывод гринтекста на более правильный для последующего вывода в Discord.
 
+Смартфридж Bloodbank
+- ADD+EDIT `code\game\objects\items\circuitboards\machine_circuitboards.dm` - Добавление платы bloodbank в пул смартфридж плат, сортировка по алфавиту в меню.
+
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
