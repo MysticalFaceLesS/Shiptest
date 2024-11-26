@@ -556,16 +556,10 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	if(species_id == "tajara")
 		hairstyle								= sanitize_inlist(hairstyle, GLOB.tajara_hairs_list)
 		facial_hairstyle						= sanitize_inlist(facial_hairstyle, GLOB.tajara_facial_hairs_list)
-		features["grad_style"]				= sanitize_inlist(features["grad_style"], GLOB.hair_gradients_list)
-		features["grad_color"]				= sanitize_hexcolor(features["grad_color"])
 
-	if(species_id == "riol")
+	else if(species_id == "riol")
 		hairstyle								= sanitize_inlist(hairstyle, GLOB.riol_hairs_list)
 		facial_hairstyle						= sanitize_inlist(facial_hairstyle, GLOB.riol_facial_hairs_list)
-		features["grad_style"]				= sanitize_inlist(features["grad_style"], GLOB.hair_gradients_list)
-		features["grad_color"]				= sanitize_hexcolor(features["grad_color"])
-
-
 
 	// [/CELADON-EDIT]
 	else

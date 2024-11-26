@@ -107,6 +107,9 @@ ID мода: CELADON_QOL
 - REMOVE `code/modules/discord/accountlink.dm` -> Убрана неиспользуемая кнопка Verify Discord Account со вкладки ООС
 - REMOVE `code/modules/discord/toggle_notify.dm` Убрана неиспользуемая кнопка "Notify Restart" со вкладки "ООС"
 - REMOVE `code/modules/tgui_panel/external.dm` Убрана кнопка "Fix chat" со вкладки "ООС". Устаревшая функция.
+Карго
+- REMOVE `code\modules\cargo\packs\machinery.dm` Перемещён Robotics crate в 
+	`mod_celadon\cargo_items\code\space_idea.dm`, на более видное место, дополнил деталями для сборки ботов и инструкции по сборке
 
 - EDIT `code/modules/clothing/clothing.dm` -> `armor_to_protection_class` -> Замена римских цифр на числовые значения
 
