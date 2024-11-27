@@ -230,3 +230,9 @@
 	icon_state = "cargo_bay"
 	lighting_colour_tube = "#c0845d"
 	lighting_colour_bulb = "#c0845d"
+
+/area/outpost/cargo/faction/nanotrasen
+	name = "Cargo Nanotrasen"
+	icon_state = "cargo_bay"
+	lighting_colour_tube = "#384e68"
+	lighting_colour_bulb = "#384e68"
