@@ -116,4 +116,3 @@ EMPTY_GUN_HELPER(automatic/pistol/deagle)
 /obj/item/storage/guncase/ion_carbine/PopulateContents()
 	new /obj/item/gun/energy/ionrifle/carbine(src)
 	new /obj/item/stock_parts/cell/gun/empty(src)
-
