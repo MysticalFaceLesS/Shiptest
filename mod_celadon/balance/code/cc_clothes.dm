@@ -1,24 +1,24 @@
 // UNDER
-/obj/item/clothing/under/rank/centcom/intern
+/obj/item/clothing/under/rank/centcom/intern/admin
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 80, "bomb" = 80, "bio" = 80, "rad" = 80, "fire" = 100, "acid" = 80)
 
-/obj/item/clothing/under/rank/centcom/intern/equipped(mob/user, slot)
+/obj/item/clothing/under/rank/centcom/intern/admin/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_ICLOTHING)
 		ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
 
-/obj/item/clothing/under/rank/centcom/commander
+/obj/item/clothing/under/rank/centcom/commander/admin
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 80, "bomb" = 80, "bio" = 80, "rad" = 80, "fire" = 100, "acid" = 80)
 
-/obj/item/clothing/under/rank/centcom/commander/equipped(mob/user, slot)
+/obj/item/clothing/under/rank/centcom/commander/admin/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_ICLOTHING)
 		ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
 
-/obj/item/clothing/under/rank/centcom/official
+/obj/item/clothing/under/rank/centcom/official/admin
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 80, "bomb" = 80, "bio" = 80, "rad" = 80, "fire" = 100, "acid" = 80)
 
-/obj/item/clothing/under/rank/centcom/official/equipped(mob/user, slot)
+/obj/item/clothing/under/rank/centcom/official/admin/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_ICLOTHING)
 		ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
@@ -26,128 +26,128 @@
 /obj/item/clothing/under/rank/centcom/officer
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 80, "bomb" = 80, "bio" = 80, "rad" = 80, "fire" = 100, "acid" = 80)
 
-/obj/item/clothing/under/rank/centcom/officer/equipped(mob/user, slot)
+/obj/item/clothing/under/rank/centcom/officer/admin/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_ICLOTHING)
 		ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
 
-/obj/item/clothing/under/rank/centcom/officer_skirt
+/obj/item/clothing/under/rank/centcom/officer_skirt/admin
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 80, "bomb" = 80, "bio" = 80, "rad" = 80, "fire" = 100, "acid" = 80)
 
-/obj/item/clothing/under/rank/centcom/officer_skirt/equipped(mob/user, slot)
+/obj/item/clothing/under/rank/centcom/officer_skirt/admin/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_ICLOTHING)
 		ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
 
-/obj/item/clothing/under/rank/centcom/centcom_skirt
+/obj/item/clothing/under/rank/centcom/centcom_skirt/admin
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 80, "bomb" = 80, "bio" = 80, "rad" = 80, "fire" = 100, "acid" = 80)
 
-/obj/item/clothing/under/rank/centcom/centcom_skirt/equipped(mob/user, slot)
+/obj/item/clothing/under/rank/centcom/centcom_skirt/admin/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_ICLOTHING)
 		ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
 
-/obj/item/clothing/under/rank/avanpost/elysium_apparel
+/obj/item/clothing/under/rank/avanpost/elysium_apparel/admin
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 80, "bomb" = 80, "bio" = 80, "rad" = 80, "fire" = 100, "acid" = 80)
 
-/obj/item/clothing/under/rank/avanpost/elysium_apparel/equipped(mob/user, slot)
+/obj/item/clothing/under/rank/avanpost/elysium_apparel/admin/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_ICLOTHING)
 		ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
 
-/obj/item/clothing/under/rank/avanpost/elysium_apparel_long
+/obj/item/clothing/under/rank/avanpost/elysium_apparel_long/admin
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 80, "bomb" = 80, "bio" = 80, "rad" = 80, "fire" = 100, "acid" = 80)
 
-/obj/item/clothing/under/rank/avanpost/elysium_apparel_long/equipped(mob/user, slot)
+/obj/item/clothing/under/rank/avanpost/elysium_apparel_long/admin/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_ICLOTHING)
 		ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
 
 // HEAD
-/obj/item/clothing/head/intern
+/obj/item/clothing/head/intern/admin
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 80, "bomb" = 80, "bio" = 80, "rad" = 80, "fire" = 100, "acid" = 80)
 
-/obj/item/clothing/head/intern/equipped(mob/user, slot)
+/obj/item/clothing/head/intern/admin/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_HEAD)
 		ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
 
-/obj/item/clothing/head/centcom_cap
+/obj/item/clothing/head/centcom_cap/admin
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 80, "bomb" = 80, "bio" = 80, "rad" = 80, "fire" = 100, "acid" = 80)
 
-/obj/item/clothing/head/centcom_cap/equipped(mob/user, slot)
+/obj/item/clothing/head/centcom_cap/admin/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_HEAD)
 		ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
 
-/obj/item/clothing/head/centhat
+/obj/item/clothing/head/centhat/admin
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 80, "bomb" = 80, "bio" = 80, "rad" = 80, "fire" = 100, "acid" = 80)
 
-/obj/item/clothing/head/centhat/equipped(mob/user, slot)
+/obj/item/clothing/head/centhat/admin/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_HEAD)
 		ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
 
-/obj/item/clothing/shoes/combat/swat
+/obj/item/clothing/shoes/combat/swat/admin
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 80, "bomb" = 80, "bio" = 80, "rad" = 80, "fire" = 100, "acid" = 80)
 
-/obj/item/clothing/head/turban_elysium
+/obj/item/clothing/head/turban_elysium/admin
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 80, "bomb" = 80, "bio" = 80, "rad" = 80, "fire" = 100, "acid" = 80)
 
-/obj/item/clothing/head/turban_elysium/equipped(mob/user, slot)
+/obj/item/clothing/head/turban_elysium/admin/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_HEAD)
 		ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
 
-/obj/item/clothing/head/shemag_elysium
+/obj/item/clothing/head/shemag_elysium/admin
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 80, "bomb" = 80, "bio" = 80, "rad" = 80, "fire" = 100, "acid" = 80)
 
-/obj/item/clothing/head/shemag_elysium/equipped(mob/user, slot)
+/obj/item/clothing/head/shemag_elysium/admin/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_HEAD)
 		ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
 
 // FEET
-/obj/item/clothing/shoes/combat/swat/equipped(mob/user, slot)
+/obj/item/clothing/shoes/combat/swat/admin/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_FEET)
 		ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
 
-/obj/item/clothing/shoes/sneakers/sandals_cc
+/obj/item/clothing/shoes/sneakers/sandals_cc/admin
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 80, "energy" = 80, "bomb" = 80, "bio" = 80, "rad" = 80, "fire" = 100, "acid" = 80)
 
-/obj/item/clothing/shoes/sneakers/sandals_cc/equipped(mob/user, slot)
+/obj/item/clothing/shoes/sneakers/sandals_cc/admin/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_FEET)
 		ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
 
 // SUIT
-/obj/item/clothing/suit/space/officer
+/obj/item/clothing/suit/space/officer/admin
 	armor = list("melee" = 100, "bullet" = 100, "laser" = 100, "energy" = 100, "bomb" = 100, "bio" = 100, "rad" = 80, "fire" = 100, "acid" = 100)
 
-/obj/item/clothing/suit/space/officer/equipped(mob/user, slot)
+/obj/item/clothing/suit/space/officer/admin/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_OCLOTHING)
 		ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
 
-/obj/item/clothing/suit/hooded/wintercoat/centcom
+/obj/item/clothing/suit/hooded/wintercoat/centcom/admin
 	armor = list("melee" = 100, "bullet" = 100, "laser" = 100, "energy" = 100, "bomb" = 100, "bio" = 100, "rad" = 80, "fire" = 100, "acid" = 100)
 
-/obj/item/clothing/suit/hooded/wintercoat/centcom/equipped(mob/user, slot)
+/obj/item/clothing/suit/hooded/wintercoat/centcom/admin/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_OCLOTHING)
 		ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
 
-/obj/item/clothing/suit/toggle/armor/vest/centcom_formal
+/obj/item/clothing/suit/toggle/armor/vest/centcom_formal/admin
 	armor = list("melee" = 100, "bullet" = 100, "laser" = 100, "energy" = 100, "bomb" = 100, "bio" = 100, "rad" = 80, "fire" = 100, "acid" = 100)
 
-/obj/item/clothing/suit/toggle/armor/vest/centcom_formal/equipped(mob/user, slot)
+/obj/item/clothing/suit/toggle/armor/vest/centcom_formal/admin/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_OCLOTHING)
 		ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
 
 // HEADSET
-/obj/item/radio/headset/headset_cent/commander/equipped(mob/user, slot)
+/obj/item/radio/headset/headset_cent/commander/admin/equipped(mob/user, slot)
 	. = ..()
 	if(slot == ITEM_SLOT_EARS)
 		ADD_TRAIT(src, TRAIT_NODROP, CURSED_ITEM_TRAIT)
