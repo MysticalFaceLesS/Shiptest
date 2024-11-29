@@ -26,8 +26,14 @@
 				return 0
 	return ..()
 
+/mob/living/carbon/human/magboots_has_gravity()
+	. = ..()
+	if(!.)
+		if(mob_negates_gravity())
+			. = 1
+
 /mob/living/carbon/human/mob_negates_gravity()
-	return dna.species.negates_gravity(src) || ..()
+	return (shoes && shoes.negates_gravity()) || dna.species.negates_gravity(src) || ..()
 
 /mob/living/carbon/human/Move(NewLoc, direct)
 	. = ..()

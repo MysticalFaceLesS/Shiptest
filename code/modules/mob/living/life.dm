@@ -122,7 +122,7 @@
 	return
 
 /mob/living/proc/handle_gravity()
-	var/gravity = has_gravity()
+	var/gravity = magboots_has_gravity()
 	update_gravity(gravity)
 
 	if(gravity > STANDARD_GRAVITY)

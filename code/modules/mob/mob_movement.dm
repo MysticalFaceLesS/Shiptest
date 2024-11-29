@@ -320,6 +320,9 @@
 /mob/proc/mob_has_gravity()
 	return has_gravity()
 
+/mob/proc/magboots_has_gravity()
+	return has_gravity()
+
 /**
  * Does this mob ignore gravity
  */
