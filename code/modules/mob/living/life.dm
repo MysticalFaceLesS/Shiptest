@@ -50,6 +50,7 @@
 			handle_environment(environment)
 
 		handle_gravity()
+		magboots_handle_gravity()
 
 		if(stat != DEAD)
 			handle_traits() // eye, ear, brain damages
@@ -122,6 +123,10 @@
 	return
 
 /mob/living/proc/handle_gravity()
+	var/gravity = has_gravity()
+	update_gravity(gravity)
+
+/mob/living/proc/magboots_handle_gravity()
 	var/gravity = magboots_has_gravity()
 	update_gravity(gravity)
 
