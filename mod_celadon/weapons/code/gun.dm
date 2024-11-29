@@ -5,14 +5,14 @@
 /datum/supply_pack/gun/g36
 	name = "Оружейный ящик G36"
 	desc = "Содержит автоматическую винтовку G36 и 2 запасных пустых обойм."
-	cost = 10000
+	cost = 12000
 	contains = list(/obj/item/storage/guncase/g36)
 	crate_name = "auto rifle crate"
 
 /datum/supply_pack/gun/g36sh
 	name = "Оружейный ящик G36-SH"
 	desc = "Содержит автоматическую винтовку G36-SH и 2 запасных пустых обойм."
-	cost = 10000
+	cost = 12000
 	contains = list(/obj/item/storage/guncase/g36sh)
 	crate_name = "auto rifle crate"
 
