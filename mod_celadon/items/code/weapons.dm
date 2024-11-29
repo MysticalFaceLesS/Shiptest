@@ -34,8 +34,6 @@
 	lefthand_file = 'mod_celadon/_storge_icons/icons/items/overlay/left_hand/left_centcom.dmi'
 	righthand_file = 'mod_celadon/_storge_icons/icons/items/overlay/right_hand/right_centcom.dmi'
 	w_class = WEIGHT_CLASS_SMALL
-	// can_deflect = FALSE
-	// homerun_always_charged = TRUE
 	var/on_bit = FALSE
 	force = 40
 	var/force_on = 60
@@ -71,7 +69,6 @@
 	homerun_able = on_bit
 	homerun_ready = on_bit
 	update_icon(UPDATE_ICON_STATE)
-	// update_equipped_item()
 	playsound(loc, extend_sound, 50, TRUE)
 	add_fingerprint(user)
 	if(on_bit)
@@ -82,9 +79,6 @@
 
 /obj/item/melee/baseball_bat/homerun/central_command/pickup(mob/living/user)
 	if(!HAS_TRAIT(user, TRAIT_MINDSHIELD))
-		// user.Weaken(10 SECONDS)
-		// user.dropItemToGround(src, TRUE)
-		// user.drop_all_held_items()
 		to_chat(user, "<span class='cultlarge'>\"Это - оружие истинного правосудия. Тебе не дано обуздать его мощь.\"</span>")
 		if(ishuman(user))
 			var/mob/living/carbon/human/H = user
@@ -92,7 +86,6 @@
 			H.apply_damage(50, BRAIN, BODY_ZONE_HEAD)
 			H.apply_effect(30, EFFECT_KNOCKDOWN)
 			H.apply_effect(100, EFFECT_STUN)
-			// H.break_random_bone()
 			H.drop_all_held_items()
 			H.dropItemToGround(src, TRUE)
 		else
