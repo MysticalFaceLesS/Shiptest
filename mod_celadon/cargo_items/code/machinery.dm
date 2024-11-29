@@ -1,7 +1,7 @@
 /datum/supply_pack/machinery/rnd_beac
 	name = "R&D Beacon"
 	desc = "A set of specialized platforms for research and production, limited by license. "
-	cost = 9000
+	cost = 16000
 	contains = list(/obj/item/choice_beacon/rnd,
 					/obj/item/circuitboard/machine/rdserver)
 	crate_name = "r&d starter kit"
@@ -10,7 +10,7 @@
 /datum/supply_pack/machinery/selling_pad_pack
 	name = "Cargo teleport"
 	desc = " A set of specialized platforms for building and managing a cargo teleport "
-	cost = 8000
+	cost = 10000
 	contains = list(/obj/item/circuitboard/machine/selling_pad,
 					/obj/item/circuitboard/computer/selling_pad_control)
 	crate_name = "cargo teleport"

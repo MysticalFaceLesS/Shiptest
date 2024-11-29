@@ -126,7 +126,7 @@
 /datum/supply_pack/sec_supply/boarding_kit
 	name = "Boarding Teleporter"
 	desc = "Содержит новый, современный абордажный телепортер, который в мгновение ока переместит вашего храбреца на борт чужого корабля для дальнейшего угона. В действительности, для охранных целей. Мультитул для взлома консоли управления не прилагается."
-	cost = 10000
+	cost = 7000
 	contains = list(/obj/item/circuitboard/machine/boarding_pad)
 	crate_name = "boarding pad crate"
 
