@@ -26,7 +26,7 @@
 	suit = /obj/item/clothing/suit/armor/vest/bulletproof
 	shoes = /obj/item/clothing/shoes/sneakers/sandals_cc/admin
 	head = /obj/item/clothing/head/shemag_elysium/admin
-	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
+	glasses = /obj/item/clothing/glasses/thermal/syndi/admin
 	id = /obj/item/card/id/elysium_com
 	belt = /obj/item/storage/belt/security/webbing/elysium/vest_black
 	l_pocket = /obj/item/restraints/handcuffs
@@ -53,7 +53,7 @@
 	uniform = /obj/item/clothing/under/rank/avanpost/elysium_apparel/admin
 	suit = /obj/item/clothing/suit/armor/vest/bulletproof
 	ears = /obj/item/radio/headset/heads/captain
-	glasses = /obj/item/clothing/glasses/eyepatch
+	glasses = /obj/item/clothing/glasses/thermal/syndi/admin
 	mask = /obj/item/clothing/mask/cigarette/cigar/cohiba
 	head = /obj/item/clothing/head/shemag_elysium/admin
 	gloves = /obj/item/clothing/gloves/tackler/combat
@@ -79,9 +79,9 @@
 	uniform = /obj/item/clothing/under/rank/avanpost/elysium_apparel_long/admin
 	suit = /obj/item/clothing/suit/armor/vest/bulletproof
 	ears = /obj/item/radio/headset/heads/captain
-	glasses = /obj/item/clothing/glasses/eyepatch
+	glasses = /obj/item/clothing/glasses/thermal/syndi/admin
 	mask = /obj/item/clothing/mask/cigarette/cigar/cohiba
-	head = /obj/item/clothing/head/turban_elysium
+	head = /obj/item/clothing/head/turban_elysium/admin
 	gloves = /obj/item/clothing/gloves/tackler/combat
 	shoes = /obj/item/clothing/shoes/sneakers/sandals_cc/admin
 	r_pocket = /obj/item/lighter
@@ -111,7 +111,7 @@
 	uniform = /obj/item/clothing/under/rank/avanpost/elysium_apparel/admin
 	suit = /obj/item/clothing/suit/armor/vest/bulletproof
 	ears = /obj/item/radio/headset/heads/captain
-	glasses = /obj/item/clothing/glasses/eyepatch
+	glasses = /obj/item/clothing/glasses/thermal/syndi/admin
 	mask = /obj/item/clothing/mask/cigarette/cigar/cohiba
 	gloves = /obj/item/clothing/gloves/tackler/combat
 	shoes = /obj/item/clothing/shoes/sneakers/sandals_cc/admin
@@ -131,9 +131,9 @@
 	shoes = /obj/item/clothing/shoes/sneakers/sandals_cc/admin
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
 	ears = /obj/item/radio/headset/headset_cent/commander
-	glasses = /obj/item/clothing/glasses/eyepatch
+	glasses = /obj/item/clothing/glasses/thermal/syndi/admin
 	mask = /obj/item/clothing/mask/cigarette/cigar/cohiba
-	head = /obj/item/clothing/head/turban_elysium
+	head = /obj/item/clothing/head/turban_elysium/admin
 	belt = /obj/item/gun/ballistic/revolver/mateba
 	r_pocket = /obj/item/lighter
 	l_pocket = /obj/item/ammo_box/a357
