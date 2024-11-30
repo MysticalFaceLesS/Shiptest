@@ -25,82 +25,96 @@
 	slowdown = rand(-2, 2)
 
 /obj/item/melee/baseball_bat/homerun/central_command
-	name = "тактическая бита Флота NanoTrasen"
-	desc = "Выдвижная тактическая бита Центрального Командования Nanotrasen. \
-	В официальных документах эта бита проходит под элегантным названием \"Высокоскоростная система доставки СРП\". \
-	Выдаваясь только самым верным и эффективным офицерам NanoTrasen, это оружие является одновременно символом статуса \
+	name = "тактическая бита"
+	desc = "Выдвижная тактическая бита Центрального Командования. \
+	В официальных документах эта бита проходит под элегантным названием \"Высокоскоростная система доставки Наказаний\". \
+	Выдаваясь только самым верным и эффективным офицерам, это оружие является одновременно символом статуса \
 	и инструментом высшего правосудия."
 	icon = 'mod_celadon/_storge_icons/icons/items/obj/centcom.dmi'
 	lefthand_file = 'mod_celadon/_storge_icons/icons/items/overlay/left_hand/left_centcom.dmi'
 	righthand_file = 'mod_celadon/_storge_icons/icons/items/overlay/right_hand/right_centcom.dmi'
 	w_class = WEIGHT_CLASS_SMALL
-
-	// can_deflect = FALSE
-	// homerun_always_charged = TRUE
-	var/on = FALSE
-	/// Force when concealed
-	force = 5
-	/// Force when extended
-	var/force_on = 30
-	/// Item state when concealed
+	var/on_bit = FALSE
+	force = 40
+	var/force_on = 60
 	item_state = "centcom_bat_0"
-	/// Item state when extended
 	var/item_state_on = "centcom_bat_1"
-	/// Icon state when concealed
 	icon_state = "centcom_bat_0"
-	/// Icon state when extended
 	var/icon_state_on = "centcom_bat_1"
-	/// Sound to play when concealing or extending
 	var/extend_sound = 'sound/weapons/batonextend.ogg'
-	/// Attack verbs when concealed (created on Initialize)
 	attack_verb = list("hit", "poked")
-	/// Attack verbs when extended (created on Initialize)
 	var/list/attack_verb_on = list("smacked", "struck", "cracked", "beaten")
 	armour_penetration = 100
-	throwforce = 25
+	throwforce = 35
 
 /obj/item/melee/baseball_bat/homerun/central_command/srt
-	name = "тактическая бита ГСН"
-	desc = "Выдвижная тактическая бита Центрального Командования Nanotrasen. Скорее всего, к этому моменту командование станции уже осознало, что их коленные чашечки не переживут эту встречу."
+	name = "тактическая бита"
+	desc = "Выдвижная тактическая бита Центрального Командования. Скорее всего, к этому моменту капитаны уже осознали, что их коленные чашечки не переживут эту встречу."
 	item_state = "srt_bat_0"
 	item_state_on = "srt_bat_1"
 	icon_state = "srt_bat_0"
 	icon_state_on = "srt_bat_1"
 
 /obj/item/melee/baseball_bat/homerun/central_command/update_icon_state()
-	icon_state = on ? icon_state_on : initial(icon_state)
-	item_state = on ? item_state_on : initial(item_state)
+	icon_state = on_bit ? icon_state_on : initial(icon_state)
+	item_state = on_bit ? item_state_on : initial(item_state)
 	return ..()
 
 /obj/item/melee/baseball_bat/homerun/central_command/proc/toggle(mob/living/user)
-	on = !on
-	slot_flags = on ? NONE : ITEM_SLOT_BELT
-	force = on ? force_on : initial(force)
-	attack_verb = on ? attack_verb_on : initial(attack_verb)
-	w_class = on ? WEIGHT_CLASS_HUGE : WEIGHT_CLASS_SMALL
-	homerun_able = on
-	homerun_ready = on
+	on_bit = !on_bit
+	slot_flags = on_bit ? NONE : ITEM_SLOT_BELT
+	force = on_bit ? force_on : initial(force)
+	attack_verb = on_bit ? attack_verb_on : initial(attack_verb)
+	w_class = on_bit ? WEIGHT_CLASS_HUGE : WEIGHT_CLASS_SMALL
+	homerun_able = on_bit
+	homerun_ready = on_bit
 	update_icon(UPDATE_ICON_STATE)
-	// update_equipped_item()
 	playsound(loc, extend_sound, 50, TRUE)
 	add_fingerprint(user)
-	if(on)
+	if(on_bit)
 		to_chat(user, span_userdanger("Вы активировали [name] - время для правосудия!"))
 	else
 		to_chat(user, span_notice("Вы деактивировали [name]."))
 
+
 /obj/item/melee/baseball_bat/homerun/central_command/pickup(mob/living/user)
 	if(!HAS_TRAIT(user, TRAIT_MINDSHIELD))
-		// user.Weaken(10 SECONDS)
-		user.dropItemToGround(src, force = TRUE)
 		to_chat(user, "<span class='cultlarge'>\"Это - оружие истинного правосудия. Тебе не дано обуздать его мощь.\"</span>")
 		if(ishuman(user))
 			var/mob/living/carbon/human/H = user
-			H.apply_damage(rand(force/2, force), BRUTE, pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM))
+			H.apply_damage(50, BRUTE, pick(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM))
+			H.apply_damage(50, BRAIN, BODY_ZONE_HEAD)
+			H.apply_effect(30, EFFECT_KNOCKDOWN)
+			H.apply_effect(100, EFFECT_STUN)
+			H.drop_all_held_items()
+			H.dropItemToGround(src, TRUE)
 		else
-			user.adjustBruteLoss(rand(force/2, force))
+			user.adjustBruteLoss(100)
 		return FALSE
 	return ..()
 
 /obj/item/melee/baseball_bat/homerun/central_command/attack_self(mob/user)
 	toggle(user)
+
+/obj/item/melee/baseball_bat/homerun/central_command/attack(mob/living/target, mob/living/user)
+	var/atom/throw_target = get_edge_target_turf(target, user.dir)
+	if(homerun_ready)
+		user.visible_message("<span class='userdanger'>С глаз долой!</span>")
+		target.throw_at(throw_target, rand(10,12), 16, user)
+		target.take_bodypart_damage(force_on)
+		target.apply_effect(100, EFFECT_STUN)
+		SSexplosions.medturf += throw_target
+		playsound(get_turf(src), 'sound/weapons/homerun.ogg', 100, TRUE)
+		homerun_ready = 0
+		return
+	else if(!target.anchored)
+		target.throw_at(throw_target, rand(1,2), 2, user, gentle = TRUE)
+		target.take_bodypart_damage(force)
+		target.apply_effect(50, EFFECT_STUN)
+	return ..()
+
+/obj/item/melee/baseball_bat/homerun/central_command/attacked_by(mob/living/user)
+	var/mob/living/carbon/human/H = user
+	H.take_bodypart_damage(force)
+	H.apply_effect(100, EFFECT_STUN)
+	to_chat(user, "<span class='cultlarge'>\"Туда тебя!\"</span>")

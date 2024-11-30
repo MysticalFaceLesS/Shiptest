@@ -29,6 +29,7 @@ import './styles/themes/admin.scss';
 import './styles/themes/solfed.scss';
 import './styles/themes/inteq.scss';
 import './styles/themes/independent.scss';
+import './styles/themes/nt.scss';
 // [/CELADON-ADD]
 
 import { StoreProvider, configureStore } from './store';

@@ -21,6 +21,11 @@
 	faction = "inteq"
 	crate_type = /obj/structure/closet/crate/secure/gear/inteq
 
+/datum/supply_pack/faction/nanotrasen
+	hidden = FALSE
+	faction = "nanotrasen"
+	crate_type = /obj/structure/closet/crate/secure/gear/nanotrasen
+
 // Создаём ещё одну степень защиты от нежелательного доступа в карго
 
 /obj/structure/closet/crate/secure/gear/syndicate
@@ -31,3 +36,6 @@
 
 /obj/structure/closet/crate/secure/gear/inteq
 	req_access = list(ACCESS_OUTPOST_FACTION_INTEQ)
+
+/obj/structure/closet/crate/secure/gear/nanotrasen
+	req_access = list(ACCESS_OUTPOST_FACTION_NT)
