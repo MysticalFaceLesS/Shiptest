@@ -10,7 +10,7 @@
 /datum/supply_pack/machinery/selling_pad_pack
 	name = "Cargo teleport"
 	desc = " A set of specialized platforms for building and managing a cargo teleport "
-	cost = 10000
+	cost = 9000
 	contains = list(/obj/item/circuitboard/machine/selling_pad,
 					/obj/item/circuitboard/computer/selling_pad_control)
 	crate_name = "cargo teleport"
