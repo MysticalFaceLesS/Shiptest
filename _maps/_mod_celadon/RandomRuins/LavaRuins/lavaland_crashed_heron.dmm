@@ -1478,6 +1478,13 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
+/obj/item/paper/crumpled{
+	pixel_x = -10;
+	default_raw_text = "Федор! Он как обычно меня не послушал и сделал по своему. Он снова перестроил систему атмосферных труб. Он наивно полагает что так сможет устранить поломку резервуаров с пропаном. На кой черт мы их держим?"
+	},
+/obj/effect/mob_spawn/human/corpse/assistant/husked{
+	short_desc = "Тело все обгорело и повреждено. Сложно сказать кому оно принадлежало, но кажется это один из членов команды судна!"
+	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/corprejectrooms)
 "ade" = (
@@ -1773,9 +1780,6 @@
 	req_access = list(20, 29, 19);
 	dir = 4;
 	pixel_x = -8
-	},
-/obj/machinery/camera/motion{
-	dir = 10
 	},
 /obj/machinery/power/apc/auto_name/directional/north{
 	equipment = 1;
@@ -2108,6 +2112,11 @@
 	},
 /obj/structure/AIcore{
 	dir = 4
+	},
+/obj/item/paper/crumpled{
+	pixel_x = -9;
+	default_raw_text = "Наше судно уже летает хрен пойми сколько. Пора бы извлечь ИИ на техосмотр. Почистим ему USB порты. Хм, стрраная маркировка. N.I.S.A.C.A.T., сделано в ...";
+	pixel_y = 6
 	},
 /turf/open/floor/plasteel/tech,
 /area/ruin/unpowered/corprejectrooms)
@@ -3479,6 +3488,11 @@
 	pixel_x = 5;
 	pixel_y = 5
 	},
+/obj/item/paper/crumpled{
+	pixel_x = -9;
+	default_raw_text = "Уважаемый НР, мои подсчеты подсказывают мне, что везти груз 450 без сопровождения экскорта - могут привести с вероятностью в 88,56273% к неприятностям. ИИ рекомендует отправить факс с запросом о помощи экскорта...";
+	pixel_y = 6
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ruin/unpowered/corprejectrooms)
 "afV" = (
@@ -3746,6 +3760,10 @@
 /obj/structure/sign/poster/official/moth/piping{
 	name = "poster - Safety Moth - Piping";
 	pixel_x = -32
+	},
+/obj/item/paper/crumpled{
+	pixel_x = -10;
+	default_raw_text = "Внимание! Повреждена связь с даль.... Внимание, обнаружен виру...эээ...бззззз.."
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ruin/unpowered/corprejectrooms)
@@ -4177,6 +4195,9 @@
 /turf/open/lava/smooth,
 /area/overmap_encounter/planetoid/lava/explored)
 "ahd" = (
+/obj/effect/mob_spawn/human/corpse/assistant/husked{
+	short_desc = "Тело все обгорело и повреждено. Сложно сказать кому оно принадлежало, но кажется это один из членов команды судна!"
+	},
 /turf/open/lava/smooth,
 /area/ruin/unpowered/corprejectrooms)
 "ahe" = (
@@ -6324,6 +6345,11 @@
 /obj/machinery/door/firedoor{
 	icon_state = "door_closed"
 	},
+/obj/item/paper/crumpled{
+	pixel_x = -9;
+	default_raw_text = "Сегодня на ужин приготовим команде целое НИЧЕГО! Это же надо было, сбросить весь запас еды в космос?! О чем капитан думает? Ещё и эти странные шумы с ангара.. Что-то не нравится мне это груз 450";
+	pixel_y = 6
+	},
 /turf/open/floor/plating,
 /area/ruin/unpowered/corprejectrooms)
 "akb" = (
@@ -7189,6 +7215,9 @@
 	pixel_x = -2;
 	pixel_y = 6
 	},
+/obj/effect/mob_spawn/human/corpse/assistant/husked{
+	short_desc = "Тело все обгорело и повреждено. Сложно сказать кому оно принадлежало, но кажется это один из членов команды судна!"
+	},
 /turf/open/floor/plasteel,
 /area/ruin/unpowered/corprejectrooms)
 "alu" = (
@@ -7636,6 +7665,9 @@
 "amj" = (
 /obj/structure/catwalk/over/plated_catwalk/dark,
 /obj/effect/decal/cleanable/glass,
+/obj/effect/mob_spawn/human/corpse/nanotrasenassaultsoldier{
+	short_desc = "Тело все обгорело и повреждено. Сложно сказать кому оно принадлежало, но кажется это один из членов команды судна! И кажется у него съедены органы?"
+	},
 /turf/open/floor/plating,
 /area/ruin/unpowered/corprejectrooms)
 "amk" = (
@@ -8177,6 +8209,9 @@
 /obj/item/stock_parts/cell/gun{
 	pixel_x = 1;
 	pixel_y = 3
+	},
+/obj/effect/mob_spawn/human/scientist{
+	short_desc = "Кажется это научный руководитель судна. Судя по его сложенности, он пытался спастись в этом ящике. Безуспешно."
 	},
 /turf/open/floor/plasteel/tech,
 /area/ruin/unpowered/corprejectrooms)
@@ -8781,6 +8816,11 @@
 	dir = 8;
 	pixel_x = -8;
 	pixel_y = -4
+	},
+/obj/item/paper/crumpled{
+	pixel_x = -9;
+	default_raw_text = "...Медицинский журнал, запись 578. Доктор Ле Номапе. Сегодня команда себя чувствует не очень хорошо. В столовой закончилась еда. У инженеров какие-то неполадки с атмосферой, постоянно получаем тревоги атмосферные. Вот ещё ИИ увели на техосмотр. Капитан постоянно ходит хмурый. А НР так вообще, отнекивается и заверяет что все будет хорошо. Слабо верится, у всей команды ярко выраженые симптомы галюцинаций, повышение потоотделения, страх. Хм, страх. Страх чего? Я кажется знаю чего. Надо посмотреть на этот груз 450 поближе. Конец записи.";
+	pixel_y = 6
 	},
 /turf/open/floor/plasteel/white,
 /area/ruin/unpowered/corprejectrooms)
@@ -10154,6 +10194,11 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/lava/explored)
 "apN" = (
+/obj/item/paper/crumpled{
+	pixel_x = -9;
+	default_raw_text = "Дорогой дневник. Я не могу передать словами, что я испытал! Это был первородный страх! Я слышал его ОНО там, в ангаре... оно жаждет наших смертей! Я поговорил с капитаном и поделился своими открытиями. На что капитан меня выгнал и сказал никому не говорить! Что тут происходит?!";
+	pixel_y = 6
+	},
 /turf/open/floor/carpet/nanoweave/beige,
 /area/ruin/unpowered/corprejectrooms)
 "apO" = (
@@ -14216,6 +14261,11 @@
 /obj/structure/table/reinforced{
 	color = "#c1b6a5"
 	},
+/obj/item/paper/crumpled{
+	pixel_x = -9;
+	default_raw_text = "Запись... какая-то. Это капитан судна Херон... Я не могу больше. Выносить этот рев в ангаре. Мне хочется сбросить это чудище и просто прилететь куда-то. Домой. НР со своими экмпериментами совсем уже чокнулся. Что же. Завтра останется совершить последний прыжок в БС и мы будем дома. Я уже соскучился по своим дочерям.";
+	pixel_y = 6
+	},
 /turf/open/floor/plasteel/patterned/brushed,
 /area/ruin/unpowered/corprejectrooms)
 "avJ" = (
@@ -14611,6 +14661,9 @@
 /turf/open/floor/plating,
 /area/ruin/unpowered/corprejectrooms)
 "awh" = (
+/obj/effect/mob_spawn/human/corpse/nanotrasenassaultsoldier{
+	short_desc = "Тело все обгорело и повреждено. Сложно сказать кому оно принадлежало, но кажется это один из членов команды судна! И кажется у него съедены органы?"
+	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface/lit{
 	icon_state = "basalt8"
 	},
@@ -15123,6 +15176,23 @@
 	},
 /turf/open/lava/smooth,
 /area/overmap_encounter/planetoid/lava/explored)
+"dNP" = (
+/obj/item/paper/crumpled{
+	pixel_x = 9;
+	default_raw_text = "Накладная на груз #450. Контейнер размеров 1000х500х800. Содержимое: Научный образец для изучения. Рекомендации: Не вскрывать! Подпись: Научный Руководитель Александр Д. ";
+	pixel_y = 6
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/overmap_encounter/planetoid/lava/explored)
+"eJA" = (
+/obj/structure/table/wood/reinforced,
+/obj/item/paper/crumpled{
+	pixel_x = -9;
+	default_raw_text = "...Обновление системы завершено. Нулевой закон был успешно загружен в систему ядра ИИ. Получение инструкций завершено. Цель, не дать судну Херон достигнуть пункта назначения. Загружаю неверные навигационные карты в систему....";
+	pixel_y = 6
+	},
+/turf/open/floor/carpet/nanoweave,
+/area/ruin/unpowered/corprejectrooms)
 "eMj" = (
 /obj/structure/catwalk/over/plated_catwalk/dark,
 /obj/effect/decal/cleanable/dirt,
@@ -15132,6 +15202,16 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/unpowered/corprejectrooms)
+"fHk" = (
+/obj/effect/mob_spawn/human/skeleton/alive{
+	density = 0
+	},
+/obj/item/paper/crumpled{
+	pixel_x = 11;
+	default_raw_text = "....система жизнеобеспечения сообщает о повреждении резервуаров с пропаном на нижних палубах судна. Рекомендовано всему персоналу устранить утечку пропана..... Внимание! В грузовом отсеке зафиксировано вскрытие груза 450!"
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/overmap_encounter/planetoid/lava/explored)
 "gyV" = (
 /obj/structure/catwalk/over/plated_catwalk/dark,
 /obj/effect/decal/cleanable/dirt,
@@ -15144,6 +15224,16 @@
 	icon_state = "platingdmg3"
 	},
 /area/ruin/unpowered/corprejectrooms)
+"lmX" = (
+/obj/item/gun/ballistic/automatic/assault/hydra/lmg/casket_mag,
+/turf/closed/mineral/random/volcanic,
+/area/overmap_encounter/planetoid/cave/explored)
+"lDm" = (
+/obj/effect/mob_spawn/human/corpse/nanotrasenassaultsoldier{
+	short_desc = "Тело все обгорело и повреждено. Сложно сказать кому оно принадлежало, но кажется это один из членов команды судна! И кажется у него съедены органы?"
+	},
+/turf/open/floor/engine/hull/reinforced/interior,
+/area/ruin/unpowered/corprejectrooms)
 "lKY" = (
 /obj/effect/decal/cleanable/shreds{
 	pixel_x = -2;
@@ -15155,6 +15245,22 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/unpowered/corprejectrooms)
+"oro" = (
+/obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/skeleton,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/overmap_encounter/planetoid/lava/explored)
+"pqa" = (
+/obj/item/paper/crumpled{
+	pixel_x = 9;
+	default_raw_text = "Системная запись бортового журнала: ...ата. Капитан начинает вводить данные в консоль прыжка судна. Точка назначения, база НТ, космическая станция Ромулус. Координаты заданы. Кореляция нулевая. Помехи минимальны. Начинаю процедуру разгона двигателей. Завершено. Инициирую прыжок. Время перехода 10 секунд. Комментарий капитана: Какие к черту 10 сек? До верфи как минимум пять минут! Компьютер проверь трингшуляцию точки выхода судна. Конец комментария. Бортовой компьютер фиксирует точку выхода на планетоиде. Комментарий капитана: Что? Бред какой-то, ком.... Внимание обрыв записи. Данные повреждены...";
+	pixel_y = 6
+	},
+/obj/effect/mob_spawn/human/skeleton/alive{
+	density = 0;
+	short_desc = "По костям не узнать кто это был. Но можно предположить что это все что осталось от капитана судна."
+	},
+/turf/open/floor/plating/asteroid/purple/lit,
+/area/ruin/unpowered/corprejectrooms)
 "tpj" = (
 /obj/structure/catwalk/over/plated_catwalk/dark,
 /obj/effect/decal/cleanable/dirt,
@@ -15165,10 +15271,22 @@
 /mob/living/simple_animal/hostile/asteroid/goliath/magma,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/corprejectrooms)
+"vnH" = (
+/obj/effect/mob_spawn/human/corpse/nanotrasenassaultsoldier{
+	short_desc = "Тело все обгорело и повреждено. Сложно сказать кому оно принадлежало, но кажется это один из членов команды судна! И кажется у него съедены органы?"
+	},
+/turf/open/floor/plating,
+/area/ruin/unpowered/corprejectrooms)
 "vDH" = (
 /obj/structure/lattice,
 /mob/living/simple_animal/hostile/asteroid/goliath/magma,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/ruin/unpowered/corprejectrooms)
+"wfO" = (
+/obj/effect/mob_spawn/human/corpse/assistant/husked{
+	short_desc = "Тело все обгорело и повреждено. Сложно сказать кому оно принадлежало, но кажется это один из членов команды судна!"
+	},
+/turf/open/floor/plating,
 /area/ruin/unpowered/corprejectrooms)
 
 (1,1,1) = {"
@@ -15489,7 +15607,7 @@ aaC
 aaC
 aaC
 aaC
-aaF
+lmX
 aaC
 aaC
 aaC
@@ -15562,7 +15680,7 @@ aaC
 aaC
 aaC
 aaY
-aaC
+fHk
 aaF
 aaC
 abu
@@ -15570,7 +15688,7 @@ aaS
 aah
 aah
 aaC
-aaC
+oro
 aaF
 aaD
 aaC
@@ -16444,7 +16562,7 @@ aeZ
 aaS
 aeF
 afa
-abG
+wfO
 afb
 abl
 ttM
@@ -21848,7 +21966,7 @@ aaF
 aaF
 aaF
 aaF
-aaC
+dNP
 aaC
 aaC
 aaC
@@ -22700,7 +22818,7 @@ atk
 atl
 asw
 asw
-asw
+lDm
 abG
 afh
 asw
@@ -22965,7 +23083,7 @@ aun
 aaS
 auo
 aoy
-aup
+eJA
 auq
 aur
 aus
@@ -23088,7 +23206,7 @@ amr
 asw
 asw
 asw
-abG
+vnH
 asw
 asw
 aeQ
@@ -23663,7 +23781,7 @@ aah
 aah
 awF
 awG
-afh
+pqa
 awH
 awI
 abG
