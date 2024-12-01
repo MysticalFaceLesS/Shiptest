@@ -181,17 +181,17 @@
 	icon_state = "syndie_elite"
 
 /area/outpost/fraction/syndi/donkco_shop
-	name = "Don Co Shop"
+	name = "Donk Co Shop"
 	icon_state = "syndi_shop"
 	sound_environment = SOUND_AREA_SMALL_SOFTFLOOR
 
 /area/outpost/fraction/nanotrasen
-	name = "Faction NanoTrasen"
+	name = "Faction Nanotrasen"
 	icon_state = "faction_nanotrasen"
 	sound_environment = SOUND_AREA_MEDIUM_SOFTFLOOR
 
 /area/outpost/fraction/solfed
-	name = "Faction Solaer Federation"
+	name = "Faction Solar Federation"
 	icon_state = "faction_solfed"
 	sound_environment = SOUND_AREA_MEDIUM_SOFTFLOOR
 
@@ -230,3 +230,9 @@
 	icon_state = "cargo_bay"
 	lighting_colour_tube = "#c0845d"
 	lighting_colour_bulb = "#c0845d"
+
+/area/outpost/cargo/faction/nanotrasen
+	name = "Cargo Nanotrasen"
+	icon_state = "cargo_bay"
+	lighting_colour_tube = "#384e68"
+	lighting_colour_bulb = "#384e68"

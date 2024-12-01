@@ -104,6 +104,8 @@
 	crate_name = "\improper MULEbot Crate"
 	crate_type = /obj/structure/closet/crate/large
 
+	// [CELADON-REMOVE] - CELADON_QoL - Перенос непопулярного и затерявшегося товара в более видное место, дополнение его материалами и инструкциями
+/*
 /datum/supply_pack/machinery/robotics
 	name = "Robotics Assembly Crate"
 	desc = "The tools you need to replace those finicky humans with a loyal robot army! Contains four proximity sensors, four robotic arms, two empty first aid kits, two health analyzers, two red hardhats, two mechanical toolboxes, and two cleanbot assemblies!"
@@ -128,7 +130,8 @@
 					/obj/item/bot_assembly/cleanbot)
 	crate_name = "robotics assembly crate"
 	crate_type = /obj/structure/closet/crate/science
-
+*/
+	// [/CELADON-REMOVE]
 /*
 		Miscellaneous machines
 */

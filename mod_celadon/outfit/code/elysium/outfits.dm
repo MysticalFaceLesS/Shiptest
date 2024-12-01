@@ -22,25 +22,27 @@
 /datum/outfit/elysiumbridgeofficercorpse
 	name = "Avanpost Bridge Officer Elysium"
 	ears = /obj/item/radio/headset/heads/head_of_personnel
-	uniform = /obj/item/clothing/under/rank/avanpost/elysium_apparel
+	uniform = /obj/item/clothing/under/rank/avanpost/elysium_apparel/admin
 	suit = /obj/item/clothing/suit/armor/vest/bulletproof
-	shoes = /obj/item/clothing/shoes/sneakers/sandals_cc
-	head = /obj/item/clothing/head/shemag_elysium
-	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
+	shoes = /obj/item/clothing/shoes/sneakers/sandals_cc/admin
+	head = /obj/item/clothing/head/shemag_elysium/admin
+	glasses = /obj/item/clothing/glasses/thermal/syndi/admin
 	id = /obj/item/card/id/elysium_com
 	belt = /obj/item/storage/belt/security/webbing/elysium/vest_black
 	l_pocket = /obj/item/restraints/handcuffs
-	r_pocket = /obj/item/ammo_box/a357
+	r_pocket = /obj/item/melee/baseball_bat/homerun/central_command
 	box = /obj/item/storage/box/survival/security
 	suit_store = /obj/item/gun/ballistic/revolver/mateba
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
-	back = /obj/item/storage/backpack/security
 
+	back = /obj/item/storage/backpack/security
 	backpack_contents = list(/obj/item/melee/classic_baton,
 							/obj/item/restraints/handcuffs = 4,
 							/obj/item/ammo_box/a357 = 3)
 
-	implants = list(/obj/item/implant/mindshield, /obj/item/implant/krav_maga)
+	implants = list(/obj/item/implant/mindshield,
+					/obj/item/implant/krav_maga,
+					/obj/item/implant/stealth)
 
 /obj/effect/mob_spawn/human/commanderelysium
 	name = "Avanpost Commander Elysium"
@@ -50,23 +52,30 @@
 
 /datum/outfit/elysiumcommandercorpse
 	name = "\improper Avanpost Private Security Commander Elysium"
-	uniform = /obj/item/clothing/under/rank/avanpost/elysium_apparel
+	uniform = /obj/item/clothing/under/rank/avanpost/elysium_apparel/admin
 	suit = /obj/item/clothing/suit/armor/vest/bulletproof
 	ears = /obj/item/radio/headset/heads/captain
-	glasses = /obj/item/clothing/glasses/eyepatch
+	glasses = /obj/item/clothing/glasses/thermal/syndi/admin
 	mask = /obj/item/clothing/mask/cigarette/cigar/cohiba
-	head = /obj/item/clothing/head/shemag_elysium
+	head = /obj/item/clothing/head/shemag_elysium/admin
 	gloves = /obj/item/clothing/gloves/tackler/combat
-	shoes = /obj/item/clothing/shoes/sneakers/sandals_cc
+	shoes = /obj/item/clothing/shoes/sneakers/sandals_cc/admin
 	belt = /obj/item/lighter
 	l_pocket = /obj/item/restraints/handcuffs
-	r_pocket = /obj/item/ammo_box/a357
+	r_pocket = /obj/item/melee/baseball_bat/homerun/central_command
 	box = /obj/item/storage/box/survival/security
 	suit_store = /obj/item/gun/ballistic/revolver/mateba
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
 	id = /obj/item/card/id/elysium_com
 
-	implants = list(/obj/item/implant/mindshield)
+	back = /obj/item/storage/backpack/satchel
+	backpack_contents = list(/obj/item/melee/classic_baton,
+							/obj/item/restraints/handcuffs = 4,
+							/obj/item/ammo_box/a357 = 3)
+
+	implants = list(/obj/item/implant/mindshield,
+					/obj/item/implant/krav_maga,
+					/obj/item/implant/stealth)
 
 /obj/effect/mob_spawn/human/commanderelysium_alt
 	name = "Avanpost Commander Elysium (Alternative)"
@@ -76,16 +85,26 @@
 
 /datum/outfit/elysiumcommandercorpse_alt
 	name = "\improper Avanpost Private Security Commander Elysium"
-	uniform = /obj/item/clothing/under/rank/avanpost/elysium_apparel_long
+	uniform = /obj/item/clothing/under/rank/avanpost/elysium_apparel_long/admin
 	suit = /obj/item/clothing/suit/armor/vest/bulletproof
 	ears = /obj/item/radio/headset/heads/captain
-	glasses = /obj/item/clothing/glasses/eyepatch
+	glasses = /obj/item/clothing/glasses/thermal/syndi/admin
 	mask = /obj/item/clothing/mask/cigarette/cigar/cohiba
-	head = /obj/item/clothing/head/turban_elysium
+	head = /obj/item/clothing/head/turban_elysium/admin
 	gloves = /obj/item/clothing/gloves/tackler/combat
-	shoes = /obj/item/clothing/shoes/sneakers/sandals_cc
+	shoes = /obj/item/clothing/shoes/sneakers/sandals_cc/admin
+	l_pocket = /obj/item/melee/baseball_bat/homerun/central_command
 	r_pocket = /obj/item/lighter
 	id = /obj/item/card/id/elysium_com
+
+	back = /obj/item/storage/backpack/satchel
+	backpack_contents = list(/obj/item/melee/classic_baton,
+							/obj/item/restraints/handcuffs = 4,
+							/obj/item/ammo_box/a357 = 3)
+
+	implants = list(/obj/item/implant/mindshield,
+					/obj/item/implant/krav_maga,
+					/obj/item/implant/stealth)
 
 /obj/effect/mob_spawn/human/commanderelysium/alive
 	death = FALSE
@@ -107,49 +126,78 @@
 	short_desc = "You are a Avanpost Elysium Private Security Officer!"
 
 /datum/outfit/avanpost
-	name = "Avanpost"
-	uniform = /obj/item/clothing/under/rank/avanpost/elysium_apparel
+	name = "Avanpost Elysium"
+	uniform = /obj/item/clothing/under/rank/avanpost/elysium_apparel/admin
 	suit = /obj/item/clothing/suit/armor/vest/bulletproof
 	ears = /obj/item/radio/headset/heads/captain
-	glasses = /obj/item/clothing/glasses/eyepatch
+	glasses = /obj/item/clothing/glasses/thermal/syndi/admin
 	mask = /obj/item/clothing/mask/cigarette/cigar/cohiba
 	gloves = /obj/item/clothing/gloves/tackler/combat
-	shoes = /obj/item/clothing/shoes/sneakers/sandals_cc
+	shoes = /obj/item/clothing/shoes/sneakers/sandals_cc/admin
+	l_pocket = /obj/item/melee/baseball_bat/homerun/central_command
 	r_pocket = /obj/item/lighter
 	id = /obj/item/card/id/elysium_com
 
-	implants = list(/obj/item/implant/mindshield)
+	back = /obj/item/storage/backpack/satchel
+	backpack_contents = list(/obj/item/melee/classic_baton,
+							/obj/item/restraints/handcuffs = 4,
+							/obj/item/ammo_box/a357 = 3)
+
+	implants = list(/obj/item/implant/mindshield,
+					/obj/item/implant/krav_maga,
+					/obj/item/implant/stealth)
 
 /datum/outfit/avanpost/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(visualsOnly)
 		return
 
+	ADD_TRAIT(H, TRAIT_MINDSHIELD, "status_effect")
+	H.faction |= list(FACTION_ELYSIUM)
+
+	var/obj/item/card/id/W = H.wear_id
+	W.access = get_all_accesses()+get_all_accesses_outpost()
+	W.access += get_centcom_access("Avanpost Elysium")
+	W.assignment = "Avanpost Elysium"
+	W.registered_name = H.real_name
+	W.update_label()
+	..()
+
 /datum/outfit/avanpost/commander
 	name = "Avanpost Elysium Commander"
-	uniform = /obj/item/clothing/under/rank/avanpost/elysium_apparel
+	uniform = /obj/item/clothing/under/rank/avanpost/elysium_apparel/admin
 	suit = /obj/item/clothing/suit/armor/vest/bulletproof
-	shoes = /obj/item/clothing/shoes/sneakers/sandals_cc
+	shoes = /obj/item/clothing/shoes/sneakers/sandals_cc/admin
 	gloves = /obj/item/clothing/gloves/tackler/combat/insulated
 	ears = /obj/item/radio/headset/headset_cent/commander
-	glasses = /obj/item/clothing/glasses/eyepatch
+	glasses = /obj/item/clothing/glasses/thermal/syndi/admin
 	mask = /obj/item/clothing/mask/cigarette/cigar/cohiba
-	head = /obj/item/clothing/head/turban_elysium
+	head = /obj/item/clothing/head/turban_elysium/admin
 	belt = /obj/item/gun/ballistic/revolver/mateba
 	r_pocket = /obj/item/lighter
-	l_pocket = /obj/item/ammo_box/a357
+	l_pocket = /obj/item/melee/baseball_bat/homerun/central_command
 	back = /obj/item/storage/backpack/satchel/leather
 	id = /obj/item/card/id/elysium_com
 
-	implants = list(/obj/item/implant/mindshield)
+	back = /obj/item/storage/backpack/satchel
+	backpack_contents = list(/obj/item/melee/classic_baton,
+							/obj/item/restraints/handcuffs = 4,
+							/obj/item/ammo_box/a357 = 3)
+
+	implants = list(/obj/item/implant/mindshield,
+					/obj/item/implant/krav_maga,
+					/obj/item/implant/stealth)
 
 /datum/outfit/avanpost/commander/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(visualsOnly)
 		return
 
+	ADD_TRAIT(H, TRAIT_MINDSHIELD, "status_effect")
+	H.faction |= list(FACTION_ELYSIUM)
+
 	var/obj/item/card/id/W = H.wear_id
 	W.access = get_all_accesses()+get_all_accesses_outpost()
-	W.access += get_centcom_access("CentCom Commander")
-	W.assignment = "CentCom Commander"
+	W.access += get_centcom_access("Avanpost Elysium Commander")
+	W.assignment = "Avanpost Elysium Commander"
 	W.registered_name = H.real_name
 	W.update_label()
 	..()
