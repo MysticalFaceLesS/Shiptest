@@ -362,7 +362,7 @@
 	id = "crashed_heron"
 	description = "A crashed nanotrasen ship Heron-class. It would seem that it's crew died a while ago."
 	suffix = "lavaland_crashed_heron.dmm"
-	cost = 10
+	cost = 5
 	allow_duplicates = FALSE
 
 //							///
