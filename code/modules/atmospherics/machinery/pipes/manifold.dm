@@ -34,11 +34,11 @@
 /obj/machinery/atmospherics/pipe/manifold/SetInitDirections()
 	initialize_directions = ALL_CARDINALS
 	initialize_directions &= ~dir
-
+//[CELADON EDIT]
 /obj/machinery/atmospherics/pipe/manifold/update_icon()
 	. = ..()
 	cut_overlays()
-  
+//[CELADON EDIT]
 	if(!center)
 		center = mutable_appearance(icon, "manifold_center")
 	PIPING_LAYER_DOUBLE_SHIFT(center, piping_layer)

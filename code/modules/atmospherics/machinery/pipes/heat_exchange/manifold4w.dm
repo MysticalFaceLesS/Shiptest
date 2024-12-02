@@ -23,11 +23,11 @@
 
 /obj/machinery/atmospherics/pipe/heat_exchanging/manifold4w/SetInitDirections()
 	initialize_directions = initial(initialize_directions)
-
+//[CELADON EDIT]
 /obj/machinery/atmospherics/pipe/heat_exchanging/manifold4w/update_icon()
 	. = ..()
 	cut_overlays()
-
+//[CELADON EDIT]
 	PIPING_LAYER_DOUBLE_SHIFT(center, piping_layer)
 	add_overlay(center)
 
