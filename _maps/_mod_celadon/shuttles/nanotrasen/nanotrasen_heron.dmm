@@ -358,6 +358,16 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/open/floor/plating,
 /area/ship/engineering/atmospherics)
+"bs" = (
+/obj/effect/turf_decal/siding/thinplating{
+	dir = 1
+	},
+/obj/effect/turf_decal/trimline/opaque/ntblue/line{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/ship/hallway/aft)
 "bu" = (
 /obj/structure/window/reinforced/fulltile/shuttle,
 /obj/structure/grille,
@@ -1007,10 +1017,6 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating,
 /area/ship/hangar)
-"ea" = (
-/obj/structure/grille,
-/turf/open/floor/plating,
-/area/ship/engineering)
 "ec" = (
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -1489,9 +1495,7 @@
 /turf/closed/wall/mineral/titanium,
 /area/ship/hangar)
 "fR" = (
-/obj/effect/mapping_helpers/airlock/cyclelink_helper{
-	dir = 1
-	},
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
 /obj/machinery/door/airlock/engineering/glass/critical{
 	req_access_txt = "10";
 	name = "Supermatter"
@@ -3669,6 +3673,12 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/security)
+"nb" = (
+/obj/machinery/atmospherics/pipe/simple/green/hidden{
+	dir = 4
+	},
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/ship/engineering)
 "ne" = (
 /obj/structure/window/reinforced/spawner/north,
 /obj/machinery/computer/card/minor/hos{
@@ -4477,14 +4487,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plastic,
 /area/ship/crew/canteen)
-"qr" = (
-/obj/effect/mapping_helpers/airlock/cyclelink_helper,
-/obj/machinery/door/airlock/engineering/glass/critical{
-	req_access_txt = "10";
-	name = "Supermatter"
-	},
-/turf/open/floor/plasteel/tech,
-/area/ship/engineering/engine)
 "qx" = (
 /obj/machinery/light_switch{
 	pixel_x = -9;
@@ -5414,6 +5416,16 @@
 	},
 /turf/open/floor/plasteel,
 /area/ship/hallway/fore)
+"tq" = (
+/obj/effect/mapping_helpers/airlock/cyclelink_helper{
+	dir = 1
+	},
+/obj/machinery/door/airlock/engineering/glass/critical{
+	req_access_txt = "10";
+	name = "Supermatter"
+	},
+/turf/open/floor/plasteel/tech,
+/area/ship/engineering/engine)
 "tt" = (
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 10
@@ -5461,6 +5473,10 @@
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/maintenance/central)
+"tz" = (
+/obj/structure/window/reinforced/fulltile/shuttle,
+/turf/open/floor/plating,
+/area/ship/engineering)
 "tA" = (
 /obj/structure/catwalk/over/plated_catwalk/dark,
 /turf/open/floor/plating,
@@ -6881,12 +6897,6 @@
 	},
 /turf/open/floor/plasteel/elevatorshaft,
 /area/ship/science/robotics)
-"yJ" = (
-/obj/machinery/atmospherics/pipe/simple/green/hidden{
-	dir = 4
-	},
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/ship/engineering)
 "yN" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -7318,6 +7328,10 @@
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plasteel/showroomfloor,
 /area/ship/crew/toilet)
+"Af" = (
+/obj/effect/turf_decal/industrial/caution,
+/turf/open/floor/engine,
+/area/ship/engineering/engine)
 "Ag" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
@@ -7814,9 +7828,12 @@
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/science/robotics)
 "BZ" = (
-/obj/structure/sign/nanotrasen,
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/ship/hangar)
+/obj/docking_port/stationary{
+	dir = 4;
+	name = "heron main dock"
+	},
+/turf/template_noop,
+/area/template_noop)
 "Cd" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/on,
 /turf/open/floor/engine/o2,
@@ -9190,10 +9207,10 @@
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/security)
-"GE" = (
-/obj/effect/turf_decal/industrial/caution,
-/turf/open/floor/engine,
-/area/ship/engineering/engine)
+"GA" = (
+/obj/structure/grille,
+/turf/open/floor/plating,
+/area/ship/engineering)
 "GF" = (
 /obj/machinery/cryopod{
 	dir = 4
@@ -10195,6 +10212,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/ship/hallway/fore)
+"KX" = (
+/obj/structure/sign/nanotrasen,
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/ship/hangar)
 "KZ" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
 	dir = 1
@@ -10619,8 +10640,7 @@
 /obj/structure/closet/secure_closet{
 	icon_state = "eng_secure";
 	name = "electrical supplies locker";
-	req_access_txt = "30";
-	icon_door = eng_elec
+	req_access_txt = "30"
 	},
 /obj/item/clothing/gloves/color/yellow,
 /obj/item/clothing/gloves/color/yellow,
@@ -10887,13 +10907,6 @@
 /obj/effect/turf_decal/techfloor,
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/bridge)
-"Nk" = (
-/obj/docking_port/stationary{
-	dir = 4;
-	name = "heron main dock"
-	},
-/turf/template_noop,
-/area/template_noop)
 "Nm" = (
 /obj/machinery/atmospherics/pipe/manifold4w/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/manifold4w/supply/hidden/layer2,
@@ -11835,10 +11848,6 @@
 	},
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/hangar)
-"Rd" = (
-/obj/structure/window/reinforced/fulltile/shuttle,
-/turf/open/floor/plating,
-/area/ship/engineering)
 "Re" = (
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 1
@@ -12698,16 +12707,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/ship/hallway/fore)
-"Uj" = (
-/obj/effect/turf_decal/siding/thinplating{
-	dir = 1
-	},
-/obj/effect/turf_decal/trimline/opaque/ntblue/line{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel,
-/area/ship/hallway/aft)
 "Un" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -14316,8 +14315,8 @@ VN
 Nt
 Mm
 Mm
-ea
-ea
+GA
+GA
 UJ
 WP
 WP
@@ -14504,7 +14503,7 @@ hr
 hr
 hr
 kP
-yJ
+nb
 hr
 hr
 Fu
@@ -14707,7 +14706,7 @@ ed
 tD
 Un
 xU
-Rd
+tz
 NZ
 vx
 fq
@@ -14733,10 +14732,10 @@ Kz
 sn
 Jv
 wk
-GE
-qr
-TD
+Af
 fR
+TD
+tq
 qM
 DS
 cX
@@ -14785,8 +14784,8 @@ eG
 FS
 TB
 Qz
-Rd
-Uj
+tz
+bs
 UO
 vl
 nQ
@@ -16388,7 +16387,7 @@ PP
 Xe
 Ub
 fv
-BZ
+KX
 fv
 PJ
 fv
@@ -16396,7 +16395,7 @@ fv
 En
 fv
 PJ
-BZ
+KX
 fv
 fQ
 Mm
@@ -16431,7 +16430,7 @@ Mm
 Mm
 Mm
 Mm
-Nk
+BZ
 Mm
 Mm
 Mm
