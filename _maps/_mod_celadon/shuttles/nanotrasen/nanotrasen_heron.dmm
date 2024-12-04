@@ -1007,6 +1007,10 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/open/floor/plating,
 /area/ship/hangar)
+"ea" = (
+/obj/structure/grille,
+/turf/open/floor/plating,
+/area/ship/engineering)
 "ec" = (
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -1027,7 +1031,8 @@
 	dir = 4;
 	pixel_x = -25;
 	name = "Supermatter Lockdown";
-	id = "heron_sm_lockdown"
+	id = "heron_sm_lockdown";
+	req_access_txt = "56"
 	},
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/engineering)
@@ -1159,10 +1164,6 @@
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering/electrical)
-"eC" = (
-/obj/effect/turf_decal/industrial/caution,
-/turf/open/floor/engine,
-/area/ship/engineering/engine)
 "eG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/extinguisher_cabinet/directional/east,
@@ -2116,6 +2117,8 @@
 /obj/item/gun/ballistic/shotgun/automatic/combat/compact,
 /obj/item/clothing/under/nanotrasen/security/director,
 /obj/item/clothing/head/nanotrasen/beret/security/command,
+/obj/item/storage/lockbox/medal/sec,
+/obj/item/radio/headset/nanotrasen/alt,
 /turf/open/floor/plasteel/tech,
 /area/ship/security)
 "if" = (
@@ -3426,6 +3429,10 @@
 	pixel_y = 8;
 	dir = 1
 	},
+/obj/item/survey_handheld{
+	pixel_x = -9;
+	pixel_y = -2
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/science/robotics)
 "mo" = (
@@ -3523,11 +3530,7 @@
 	},
 /obj/item/disk/nuclear/fake{
 	pixel_x = 0;
-	pixel_y = 0;
-	icon_state = "nucleardisk";
-	icon = 'icons/obj/module.dmi';
-	color = null;
-	name = "classic nuclear authentication disk"
+	pixel_y = 1
 	},
 /turf/open/floor/wood,
 /area/ship/crew/law_office)
@@ -3979,7 +3982,8 @@
 /obj/item/clothing/mask/gas/atmos,
 /obj/item/clothing/head/hardhat/atmos,
 /obj/structure/closet/wall/directional/east{
-	name = "Atmospheric locker"
+	name = "Atmospheric locker";
+	icon_state = "cargo_wall"
 	},
 /obj/effect/turf_decal/techfloor/orange{
 	dir = 4
@@ -4473,6 +4477,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plastic,
 /area/ship/crew/canteen)
+"qr" = (
+/obj/effect/mapping_helpers/airlock/cyclelink_helper,
+/obj/machinery/door/airlock/engineering/glass/critical{
+	req_access_txt = "10";
+	name = "Supermatter"
+	},
+/turf/open/floor/plasteel/tech,
+/area/ship/engineering/engine)
 "qx" = (
 /obj/machinery/light_switch{
 	pixel_x = -9;
@@ -6339,8 +6351,9 @@
 	pixel_x = 7;
 	pixel_y = -21
 	},
-/obj/structure/displaycase/captain{
-	start_showpiece_type = /obj/item/gun/energy/e_gun/hos/brazil/true
+/obj/structure/displaycase{
+	start_showpiece_type = /obj/item/gun/energy/e_gun/hos/brazil/true;
+	req_access_txt = "20"
 	},
 /turf/open/floor/wood,
 /area/ship/crew/law_office)
@@ -6494,7 +6507,6 @@
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/crew/office)
 "xh" = (
-/obj/structure/closet/secure_closet/head_of_personnel,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 1
 	},
@@ -6504,6 +6516,17 @@
 /obj/item/clothing/head/nanotrasen/officer,
 /obj/item/clothing/under/nanotrasen/officer,
 /obj/item/clothing/under/nanotrasen/officer/skirt,
+/obj/structure/closet/secure_closet{
+	icon_state = "hop";
+	req_access_txt = "57";
+	name = "first officer's locker"
+	},
+/obj/item/radio/headset/nanotrasen/alt,
+/obj/item/storage/box/ids,
+/obj/item/storage/box/PDAs,
+/obj/item/clothing/glasses/sunglasses,
+/obj/item/assembly/flash,
+/obj/item/storage/lockbox/medal/hop,
 /turf/open/floor/carpet/royalblue,
 /area/ship/crew/dorm/dormthree)
 "xi" = (
@@ -6542,14 +6565,6 @@
 	dir = 1
 	},
 /area/ship/crew/office)
-"xu" = (
-/obj/effect/mapping_helpers/airlock/cyclelink_helper,
-/obj/machinery/door/airlock/engineering/glass/critical{
-	req_access_txt = "10";
-	name = "Supermatter"
-	},
-/turf/open/floor/plasteel/tech,
-/area/ship/engineering/engine)
 "xw" = (
 /obj/item/kirbyplants/random,
 /obj/effect/turf_decal/siding/thinplating{
@@ -6614,7 +6629,8 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/displaycase{
-	start_showpiece_type = /obj/item/gun/energy/laser/hitscanpistol
+	start_showpiece_type = /obj/item/gun/energy/laser/hitscanpistol;
+	req_access_txt = "30"
 	},
 /obj/item/toy/prize/seraph{
 	pixel_x = 0;
@@ -6711,7 +6727,7 @@
 	},
 /obj/structure/closet/secure_closet{
 	icon_state = "cap";
-	name = "\proper captain's locker";
+	name = "\proper fleet captain's locker";
 	req_access_txt = "20"
 	},
 /obj/item/storage/backpack/captain,
@@ -6743,6 +6759,8 @@
 /obj/item/gun/energy/e_gun,
 /obj/item/clothing/shoes/combat/swat,
 /obj/item/clothing/glasses/sunglasses,
+/obj/item/radio/headset/nanotrasen/alt/captain,
+/obj/item/storage/lockbox/medal,
 /turf/open/floor/carpet/green,
 /area/ship/crew/dorm/dormtwo)
 "yc" = (
@@ -6863,10 +6881,12 @@
 	},
 /turf/open/floor/plasteel/elevatorshaft,
 /area/ship/science/robotics)
-"yD" = (
-/obj/structure/sign/nanotrasen,
+"yJ" = (
+/obj/machinery/atmospherics/pipe/simple/green/hidden{
+	dir = 4
+	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
-/area/ship/hangar)
+/area/ship/engineering)
 "yN" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -7794,9 +7814,9 @@
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/science/robotics)
 "BZ" = (
-/obj/structure/grille,
-/turf/open/floor/plating,
-/area/ship/engineering)
+/obj/structure/sign/nanotrasen,
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/ship/hangar)
 "Cd" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/on,
 /turf/open/floor/engine/o2,
@@ -9170,6 +9190,10 @@
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/security)
+"GE" = (
+/obj/effect/turf_decal/industrial/caution,
+/turf/open/floor/engine,
+/area/ship/engineering/engine)
 "GF" = (
 /obj/machinery/cryopod{
 	dir = 4
@@ -10161,8 +10185,7 @@
 /obj/effect/turf_decal/trimline/opaque/vired/warning,
 /obj/item/paper/crumpled/muddy{
 	default_raw_text = "uhhh sorry but we took your marauder for maintenance. however, we provide a nanotrasen gygax to you.- your centcom intern";
-	name = "marauder note";
-	stamps = nano_trasen_central_command_stamp
+	name = "marauder note"
 	},
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/science/robotics)
@@ -10208,7 +10231,6 @@
 	pixel_y = -6
 	},
 /obj/item/storage/wallet/random,
-/obj/item/survey_handheld,
 /obj/effect/turf_decal/spline/fancy/opaque/ntblue{
 	dir = 8
 	},
@@ -10249,13 +10271,6 @@
 	dir = 1
 	},
 /area/ship/bridge)
-"Lw" = (
-/obj/docking_port/stationary{
-	dir = 4;
-	name = "heron main dock"
-	},
-/turf/template_noop,
-/area/template_noop)
 "Ly" = (
 /obj/structure/railing/corner,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
@@ -10872,6 +10887,13 @@
 /obj/effect/turf_decal/techfloor,
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/bridge)
+"Nk" = (
+/obj/docking_port/stationary{
+	dir = 4;
+	name = "heron main dock"
+	},
+/turf/template_noop,
+/area/template_noop)
 "Nm" = (
 /obj/machinery/atmospherics/pipe/manifold4w/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/manifold4w/supply/hidden/layer2,
@@ -11813,6 +11835,10 @@
 	},
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/hangar)
+"Rd" = (
+/obj/structure/window/reinforced/fulltile/shuttle,
+/turf/open/floor/plating,
+/area/ship/engineering)
 "Re" = (
 /obj/effect/turf_decal/siding/thinplating{
 	dir = 1
@@ -12672,6 +12698,16 @@
 	},
 /turf/open/floor/plasteel,
 /area/ship/hallway/fore)
+"Uj" = (
+/obj/effect/turf_decal/siding/thinplating{
+	dir = 1
+	},
+/obj/effect/turf_decal/trimline/opaque/ntblue/line{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel,
+/area/ship/hallway/aft)
 "Un" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -13196,12 +13232,6 @@
 	},
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/engineering/communications)
-"Wa" = (
-/obj/machinery/atmospherics/pipe/simple/green/hidden{
-	dir = 4
-	},
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/ship/engineering)
 "Wc" = (
 /obj/effect/spawner/structure/window/shuttle,
 /obj/machinery/door/poddoor{
@@ -13297,16 +13327,6 @@
 /obj/effect/turf_decal/corner/opaque/blue/full,
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
-"Wz" = (
-/obj/effect/turf_decal/siding/thinplating{
-	dir = 1
-	},
-/obj/effect/turf_decal/trimline/opaque/ntblue/line{
-	dir = 1
-	},
-/obj/effect/decal/cleanable/dirt,
-/turf/open/floor/plasteel,
-/area/ship/hallway/aft)
 "WH" = (
 /obj/effect/turf_decal/borderfloorblack{
 	dir = 1
@@ -13689,10 +13709,6 @@
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering/communications)
-"XV" = (
-/obj/structure/window/reinforced/fulltile/shuttle,
-/turf/open/floor/plating,
-/area/ship/engineering)
 "XX" = (
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 4
@@ -14300,8 +14316,8 @@ VN
 Nt
 Mm
 Mm
-BZ
-BZ
+ea
+ea
 UJ
 WP
 WP
@@ -14488,7 +14504,7 @@ hr
 hr
 hr
 kP
-Wa
+yJ
 hr
 hr
 Fu
@@ -14691,7 +14707,7 @@ ed
 tD
 Un
 xU
-XV
+Rd
 NZ
 vx
 fq
@@ -14717,8 +14733,8 @@ Kz
 sn
 Jv
 wk
-eC
-xu
+GE
+qr
 TD
 fR
 qM
@@ -14769,8 +14785,8 @@ eG
 FS
 TB
 Qz
-XV
-Wz
+Rd
+Uj
 UO
 vl
 nQ
@@ -16372,7 +16388,7 @@ PP
 Xe
 Ub
 fv
-yD
+BZ
 fv
 PJ
 fv
@@ -16380,7 +16396,7 @@ fv
 En
 fv
 PJ
-yD
+BZ
 fv
 fQ
 Mm
@@ -16415,7 +16431,7 @@ Mm
 Mm
 Mm
 Mm
-Lw
+Nk
 Mm
 Mm
 Mm
