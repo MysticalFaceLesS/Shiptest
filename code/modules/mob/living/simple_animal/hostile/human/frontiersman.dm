@@ -189,9 +189,6 @@
 				/obj/item/clothing/mask/gas,
 				/obj/item/tank/internals/emergency_oxygen/engi)
 
-/mob/living/simple_animal/hostile/human/frontier/ranged/trooper/heavy/neutered
-	loot = list(/obj/effect/mob_spawn/human/corpse/frontier/ranged/trooper/heavy/gunless)
-
 /mob/living/simple_animal/hostile/human/frontier/ranged/officer
 	name = "Frontiersman Officer"
 	icon_state = "frontiersmanofficer"
