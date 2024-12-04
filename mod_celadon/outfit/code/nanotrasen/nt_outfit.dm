@@ -61,3 +61,20 @@
 	belt = /obj/item/storage/belt/janitor
 	gloves = /obj/item/clothing/gloves/color/purple
 	back = /obj/item/storage/backpack/ert/janitor
+
+//ЕРТ коммандер
+
+/datum/outfit/job/nanotrasen/security/ert/commander
+	name = "Nanotrasen - ERT Сommander"
+
+	uniform = /obj/item/clothing/under/rank/security/officer/blueshirt
+	shoes = /obj/item/clothing/shoes/combat
+	suit = /obj/item/clothing/suit/armor/vest/marine
+	head = /obj/item/clothing/head/nanotrasen/beret
+	backpack = /obj/item/storage/backpack/ert
+	belt = /obj/item/storage/belt/military/assault
+	id = /obj/item/card/id/ert
+	ears = /obj/item/radio/headset/nanotrasen/alt
+	r_pocket = /obj/item/melee/knife/survival
+	backpack_contents = list(/obj/item/radio, /obj/item/flashlight/seclite, /obj/item/gun_voucher/nanotrasen)
+	glasses = /obj/item/clothing/glasses/sunglasses

@@ -2,14 +2,18 @@
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
 	"map_name": "Heron-Class Dreadnaught",
 	"map_short_name": "Heron",
-	"description": "Судно класса 'Heron' - самые крупные судна, имеющиеся в распоряжении пограничных сил Нанотрайзен. Эти корабли служили флагманами многих флотов во время войны, выступая в качестве носителя для оперативной группы или командного судна для корпоративных подразделений. Известно, что капитаны этих суден устанавливали в ангаре артиллерию блюспейса и стреляли из нее прямо во время боя. После окончания войны судно было перепрофилировано для миротворческих миссий в секторах тыла. Хотя возраст конструкции уже дает о себе знать, он является одним из остатков некогда могущественной власти Нанотрайзен над космосом. В щитспавне по причине: Непростой шип, только для опытных игроков!",
+	"description": "Судно класса 'Heron' - самые крупные судна, имеющиеся в распоряжении пограничных сил Нанотрайзен. Эти корабли служат флагманами многих флотов во время войны, выступая в качестве носителя для оперативной группы или командного судна для корпоративных подразделений. Известно, что капитаны этих суден устанавливали в ангаре блюспейс артилерию и стреляли из нее прямо во время боя. Хотя возраст конструкции уже дает о себе знать, он является одним из символов могущественной власти Нанотрейзен над космосом. В щитспавне по причине: Непростой шип, только для опытных игроков!",
 	"map_path": "_maps/_mod_celadon/shuttles/nanotrasen/nanotrasen_heron.dmm",
 	"map_id": "nanotrasen_heron",
 	"enabled": false,
 	"limit": 1,
-	"prefix": "NTSV",
+	"prefix": "NTASV",
 	"faction": "/datum/faction/nt",
-	"namelists": ["WEAPONS"],
+	"namelists": [
+		"NANOTRASEN",
+		"MERCANTILE",
+		"WEAPONS"
+	],
 	"job_slots": {
 		"Fleet Captain": {
 			"outfit": "/datum/outfit/job/nanotrasen/captain/centcom",
@@ -21,23 +25,22 @@
 			"officer": true,
 			"slots": 1
 		},
-		"Head of Security": {
+		"Security Director": {
 			"outfit": "/datum/outfit/job/nanotrasen/hos",
-			"officer": true,
-			"slots": 1
-		},
-		"Pilot": {
-			"outfit": "/datum/outfit/job/nanotrasen/pilot",
 			"officer": true,
 			"slots": 1
 		},
 		"Security Officer": {
 			"outfit": "/datum/outfit/job/nanotrasen/security",
+			"slots": 2
+		},
+		"ERT Commander":{
+			"outfit": "/datum/outfit/job/nanotrasen/security/ert/commander",
 			"slots": 1
 		},
 		"ERT Officer":{
 			"outfit": "/datum/outfit/job/nanotrasen/security/ert",
-			"slots": 4
+			"slots": 3
 		},
 		"ERT Medical Officer":{
 			"outfit": "/datum/outfit/job/nanotrasen/security/ert/med",
@@ -45,6 +48,11 @@
 		},
 		"ERT Engineering Officer":{
 			"outfit": "/datum/outfit/job/nanotrasen/security/ert/engi",
+			"slots": 1
+		},
+		"Pilot": {
+			"outfit": "/datum/outfit/job/nanotrasen/pilot",
+			"officer": true,
 			"slots": 1
 		},
 		"Mech Pilot":{
@@ -55,25 +63,42 @@
 			"outfit": "/datum/outfit/job/nanotrasen/engineer",
 			"slots": 1
 		},
-		"Chief Engineer":{
+		"Engineering Director":{
 			"outfit": "/datum/outfit/job/nanotrasen/ce",
 			"officer": true,
 			"slots": 1
 		},
-		"Roboticist": {
-			"outfit":"/datum/outfit/job/nanotrasen/roboticist",
+		"Science Director": {
+			"outfit":"/datum/outfit/job/nanotrasen/rd",
 			"slots": 1
 		},
 		"Medical Doctor":{
 			"outfit": "/datum/outfit/job/nanotrasen/doctor",
 			"slots": 1
 		},
-
-		"Atmospheric Technician": 1,
-		"Quartermaster": 1,
-		"Cargo Technician": 1,
-		"Cook": 1,
-		"Janitor": 1,
-		"Assistant": 2
+		"Atmospheric Technician":{
+		"outfit": "/datum/outfit/job/nanotrasen/atmos",
+		"slots": 1
+		},
+		"Supply Director":{
+		"outfit": "/datum/outfit/job/nanotrasen/quartermaster",
+		"slots": 1
+		},
+		"Supply Technician":{
+		"outfit": "/datum/outfit/job/nanotrasen/cargo_tech",
+		"slots": 1
+		},
+		"Cook":{
+		"outfit": "/datum/outfit/job/cook",
+		"slots": 1
+		},
+		"Janitor":{
+		"outfit": "/datum/outfit/job/nanotrasen/janitor",
+		"slots": 1
+		},
+		"Deckhand":{
+		"outfit": "/datum/outfit/job/nanotrasen/assistant",
+		"slots": 2
+		}
 	}
 }
