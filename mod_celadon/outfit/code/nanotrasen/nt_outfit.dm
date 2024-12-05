@@ -23,17 +23,17 @@
 	. = ..()
 	get_nt_general_access(H)
 
-// Директор исследований
+// Научный директор - РД
 
 /datum/outfit/job/nanotrasen/rd
-	name = "Nanotrasen - Research Director"
+	name = "Nanotrasen - Science Director"
 	job_icon = "researchdirector"
 	jobtype = /datum/job/rd
 	id = /obj/item/card/id/silver
 	ears = /obj/item/radio/headset/heads/rd
-	uniform = /obj/item/clothing/under/rank/rnd/research_director/turtleneck
+	uniform = /obj/item/clothing/under/nanotrasen/science/director
 	shoes = /obj/item/clothing/shoes/sneakers/brown
-	suit = /obj/item/clothing/suit/toggle/labcoat
+	suit = /obj/item/clothing/suit/toggle/labcoat/nanotrasen/black
 	alt_suit = /obj/item/clothing/suit/toggle/suspenders
 	dcoat = /obj/item/clothing/suit/hooded/wintercoat/science
 	l_hand = /obj/item/clipboard
@@ -44,6 +44,70 @@
 	courierbag = /obj/item/storage/backpack/messenger/tox
 
 	chameleon_extras = /obj/item/stamp/rd
+
+// Медицинский директор - СМО
+
+/datum/outfit/job/nanotrasen/cmo
+	name = "Nanotrasen - Medical Director"
+	job_icon = "chiefmedicalofficer"
+	jobtype = /datum/job/cmo
+	id = /obj/item/card/id/silver
+	ears = /obj/item/radio/headset/heads/cmo
+	head = /obj/item/clothing/head/beret/cmo
+	uniform = /obj/item/clothing/under/nanotrasen/medical/director
+	shoes = /obj/item/clothing/shoes/laceup
+	suit = /obj/item/clothing/suit/toggle/labcoat/nanotrasen/blue
+	alt_suit = /obj/item/clothing/suit/toggle/suspenders
+	dcoat = /obj/item/clothing/suit/hooded/wintercoat/medical
+	backpack_contents = list(/obj/item/melee/classic_baton/telescopic=1, /obj/item/modular_computer/tablet/preset/advanced=1)
+
+	backpack = /obj/item/storage/backpack/medic
+	satchel = /obj/item/storage/backpack/satchel/med
+	courierbag = /obj/item/storage/backpack/messenger/med
+
+	chameleon_extras = /obj/item/stamp/cmo
+
+// Химик
+
+/datum/outfit/job/nanotrasen/chemist
+	name = "Nanotrasen - Chemist"
+	job_icon = "chemist"
+	jobtype = /datum/job/chemist
+
+	belt = /obj/item/pda/chemist
+	ears = /obj/item/radio/headset/headset_med
+	head = /obj/item/clothing/head/beret/chem
+	uniform = /obj/item/clothing/under/rank/medical/chemist
+	shoes = /obj/item/clothing/shoes/sneakers/white
+	suit =  /obj/item/clothing/suit/toggle/labcoat/nanotrasen
+	dcoat = /obj/item/clothing/suit/hooded/wintercoat/medical
+
+	backpack = /obj/item/storage/backpack/chemistry
+	satchel = /obj/item/storage/backpack/satchel/chem
+	duffelbag = /obj/item/storage/backpack/duffelbag/med
+	courierbag = /obj/item/storage/backpack/messenger/chem
+	box = /obj/item/storage/box/survival/medical
+
+// Генетик
+
+/datum/outfit/job/nanotrasen/geneticist
+	name = "Nanotrasen - Genetical Researcher"
+	job_icon = "geneticist"
+	jobtype = /datum/job/geneticist
+
+	belt = /obj/item/pda/geneticist
+	ears = /obj/item/radio/headset/headset_medsci
+	head = /obj/item/clothing/head/beret/sci
+	uniform = /obj/item/clothing/under/rank/medical/geneticist
+	shoes = /obj/item/clothing/shoes/sneakers/white
+	suit =  /obj/item/clothing/suit/toggle/labcoat/nanotrasen
+	dcoat = /obj/item/clothing/suit/hooded/wintercoat/science
+
+	backpack = /obj/item/storage/backpack/genetics
+	satchel = /obj/item/storage/backpack/satchel/tox
+	duffelbag = /obj/item/storage/backpack/duffelbag/med
+	courierbag = /obj/item/storage/backpack/messenger/tox
+	box = /obj/item/storage/box/survival/medical
 
 //лп уборщик
 
