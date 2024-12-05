@@ -39,8 +39,10 @@
 #define EYE_STAB (1<<13) /// Item can be used to eyestab
 #define NO_PIXEL_RANDOM_DROP (1<<14) //if dropped, it wont have a randomized pixel_x/pixel_y
 
+// [CELADON-ADD] - CELADON_STRUCTURES - Барикады
 /// Является ли данный предмет семейной ценностью (family heirloom)
-#define FAMILY_HEIRLOOM	(1<<15) // BLUEMOON ADD - выбор вещей из лодаута как family heirloom
+#define FAMILY_HEIRLOOM	(1<<15) //выбор вещей из лодаута как family heirloom
+// [/CELADON-ADD]
 
 // Flags for the clothing_flags var on /obj/item/clothing
 
