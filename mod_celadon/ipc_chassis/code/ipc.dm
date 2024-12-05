@@ -18,6 +18,10 @@
 	name = "Bishop AC - rook"
 	limbs_id = "bm_rook"
 
+/datum/sprite_accessory/ipc_chassis/cpu4mu
+	name = "CPU 4 MU"
+	limbs_id = "cpu4mu"
+
 /datum/sprite_accessory/ipc_chassis/hephaestus_main
 	name = "Hephaestus AC"
 	limbs_id = "hs"
