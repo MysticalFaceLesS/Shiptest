@@ -210,8 +210,6 @@
 	if(!istype(loc, /obj/item/clothing/suit/space/hardsuit) || !ishuman(loc.loc) || loc.loc != user)
 		return
 	var/mob/living/carbon/human/H = user
-	icon = 'icons/obj/tank.dmi'
-	icon_state = "jetpack_upgrade-on"
 	tank = H.s_store
 	air_contents = tank.air_contents
 	START_PROCESSING(SSobj, src)
@@ -219,8 +217,6 @@
 	..()
 
 /obj/item/tank/jetpack/suit/turn_off(mob/user)
-	icon = 'icons/obj/tank.dmi'
-	icon_state = "jetpack_upgrade"
 	tank = null
 	air_contents = temp_air_contents
 	STOP_PROCESSING(SSobj, src)
