@@ -23,6 +23,7 @@
 	if (!.)
 		. = new /datum/armor(melee, bullet, laser, energy, bomb, bio, rad, fire, acid, magic)
 
+// [CELADON-ADD] - CELADON_STRUCTURES - Барикады
 /// Assosciative list of type -> armor. Used to ensure we always hold a reference to default armor datums
 GLOBAL_LIST_INIT(armor_by_type, generate_armor_type_cache())
 
@@ -37,6 +38,7 @@ GLOBAL_LIST_INIT(armor_by_type, generate_armor_type_cache())
 /datum/armor/proc/GenerateTag()
 	// ..()
 	tag = replacetext("[type]", "/", "-")
+// [/CELADON-ADD]
 
 /datum/armor
 	datum_flags = DF_USE_TAG
