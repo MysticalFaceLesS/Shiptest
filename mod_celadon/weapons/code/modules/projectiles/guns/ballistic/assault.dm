@@ -171,3 +171,9 @@
 	caliber = "7.62x54"
 	w_class = WEIGHT_CLASS_NORMAL
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
+
+/obj/item/gun/ballistic/automatic/marksman/f4/inteq/no_mag
+	spawnwithmagazine = FALSE
+
+/obj/item/gun/ballistic/automatic/powered/gauss/no_mag
+	spawnwithmagazine = FALSE
