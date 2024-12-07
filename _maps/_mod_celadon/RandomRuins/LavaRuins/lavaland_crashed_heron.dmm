@@ -113,7 +113,7 @@
 	},
 /area/overmap_encounter/planetoid/lava/explored)
 "aaV" = (
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "aaW" = (
 /obj/item/paicard{
@@ -188,17 +188,23 @@
 	req_access = list(12);
 	pixel_x = 4
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "abf" = (
-/turf/open/floor/plating/asteroid/airless{
-	icon_state = "asteroid2"
+/obj/item/mine/proximity/spawner/magma_skull/live{
+	spawn_number = 2;
+	alpha = 0
 	},
-/area/overmap_encounter/planetoid/cave/explored)
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
+	icon_state = "basalt4"
+	},
+/area/overmap_encounter/planetoid/lava/explored)
 "abg" = (
-/turf/open/floor/plating/asteroid/airless{
-	icon_state = "asteroid9"
+/obj/item/mine/proximity/spawner/magma_skull/live{
+	spawn_number = 2;
+	alpha = 0
 	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "abh" = (
 /obj/machinery/power/shuttle/engine/fueled/plasma{
@@ -572,10 +578,12 @@
 	},
 /area/overmap_encounter/planetoid/lava/explored)
 "abP" = (
-/turf/open/floor/plating/asteroid/airless{
-	icon_state = "asteroid3"
+/obj/item/mine/proximity/spawner/magma_skull/live{
+	spawn_number = 2;
+	alpha = 0
 	},
-/area/overmap_encounter/planetoid/cave/explored)
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface/lit,
+/area/ruin/unpowered/corprejectrooms)
 "abQ" = (
 /obj/item/stack/rods{
 	icon_state = "rods-1"
@@ -1018,7 +1026,7 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface{
 	icon_state = "basalt4"
 	},
-/area/ruin/unpowered/corprejectrooms)
+/area/overmap_encounter/planetoid/lava/explored)
 "acr" = (
 /obj/item/stock_parts/cell/high/empty{
 	dir = 8;
@@ -1026,7 +1034,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/ruin/unpowered/corprejectrooms)
+/area/overmap_encounter/planetoid/lava/explored)
 "acs" = (
 /obj/item/stack/rods{
 	icon_state = "rods-1";
@@ -1184,6 +1192,10 @@
 	dir = 8;
 	pixel_x = 2;
 	pixel_y = 2
+	},
+/obj/item/stack/sheet/metal{
+	pixel_x = 3;
+	pixel_y = -3
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/lava/explored)
@@ -1372,9 +1384,6 @@
 /obj/effect/decal/cleanable/robot_debris{
 	icon_state = "gib6"
 	},
-/obj/machinery/power/apc/auto_name/directional/south{
-	start_charge = 100
-	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -1384,7 +1393,6 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/terminal,
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ruin/unpowered/corprejectrooms)
 "acU" = (
@@ -1399,7 +1407,7 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface{
 	icon_state = "basalt11"
 	},
-/area/ruin/unpowered/corprejectrooms)
+/area/overmap_encounter/planetoid/lava/explored)
 "acV" = (
 /obj/item/stack/cable_coil{
 	amount = 11;
@@ -1409,7 +1417,7 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface{
 	icon_state = "basalt1"
 	},
-/area/ruin/unpowered/corprejectrooms)
+/area/overmap_encounter/planetoid/lava/explored)
 "acW" = (
 /obj/structure/girder,
 /obj/structure/lattice,
@@ -1431,7 +1439,7 @@
 	pixel_y = -4
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/ruin/unpowered/corprejectrooms)
+/area/overmap_encounter/planetoid/lava/explored)
 "ada" = (
 /obj/item/stack/rods{
 	amount = 2;
@@ -1791,14 +1799,6 @@
 	},
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ruin/unpowered/corprejectrooms)
-"adz" = (
-/obj/item/circuitboard/aicore{
-	dir = 8;
-	pixel_x = -6;
-	pixel_y = 7
-	},
-/turf/open/floor/plasteel/telecomms_floor,
-/area/ruin/unpowered/corprejectrooms)
 "adA" = (
 /obj/item/stock_parts/capacitor{
 	dir = 4;
@@ -1907,7 +1907,7 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface{
 	icon_state = "basalt10"
 	},
-/area/ruin/unpowered/corprejectrooms)
+/area/overmap_encounter/planetoid/lava/explored)
 "adK" = (
 /obj/item/stack/rods{
 	icon_state = "rods-1";
@@ -2024,6 +2024,10 @@
 /obj/item/screwdriver/power{
 	pixel_y = 3
 	},
+/obj/item/mine/proximity/spawner/magma_skull/live{
+	spawn_number = 2;
+	alpha = 0
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/unpowered/corprejectrooms)
 "adQ" = (
@@ -2086,16 +2090,8 @@
 "adS" = (
 /obj/structure/tubes,
 /obj/structure/closet/wall/blue/directional/north,
-/obj/item/aicard{
-	pixel_x = -5
-	},
 /obj/item/aiModule/toyAI,
 /obj/item/borg/upgrade/ai,
-/obj/item/mmi/posibrain{
-	req_access = list(29);
-	pixel_x = 7;
-	pixel_y = 11
-	},
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
@@ -2106,9 +2102,6 @@
 	dir = 8;
 	pixel_x = 24;
 	pixel_y = -10
-	},
-/obj/structure/AIcore{
-	dir = 4
 	},
 /obj/item/paper/crumpled{
 	pixel_x = -9;
@@ -2235,7 +2228,7 @@
 	pixel_y = -4
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/ruin/unpowered/corprejectrooms)
+/area/overmap_encounter/planetoid/lava/explored)
 "adZ" = (
 /obj/item/stack/sheet/mineral/titanium{
 	dir = 8;
@@ -2434,21 +2427,6 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/mecha/combat/marauder{
-	icon_state = "marauder-open";
-	dir = 1;
-	internals_req_access = 0;
-	operation_req_access = 0;
-	mouse_opacity = 0;
-	anchored = 1;
-	color = "#590b29";
-	max_integrity = 5000000;
-	can_be_z_moved = 0;
-	req_access_txt = "6666";
-	req_one_access_txt = "6666";
-	name = "\improper Voice of the Marauder";
-	desc = "You notice that this heavy Durand-based exoskeleton is covered with a strange incomprehensible and unattainable film. You can feel the voices coming from this Marauder. As if it were the Marauder's voice itself."
-	},
 /turf/open/floor/plasteel/stairs{
 	icon = 'icons/obj/stairs.dmi';
 	dir = 1
@@ -2539,7 +2517,7 @@
 	pixel_x = -4;
 	pixel_y = -8
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "aex" = (
 /obj/item/stack/sheet/metal{
@@ -2608,6 +2586,7 @@
 	name = "Engineering";
 	dir = 8
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plasteel/tech,
 /area/ruin/unpowered/corprejectrooms)
 "aeC" = (
@@ -2681,6 +2660,10 @@
 	pixel_y = 5;
 	color = "#ff0000"
 	},
+/obj/item/stack/sheet/metal{
+	pixel_x = 3;
+	pixel_y = -3
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/unpowered/corprejectrooms)
 "aeK" = (
@@ -2714,11 +2697,6 @@
 /area/ruin/unpowered/corprejectrooms)
 "aeO" = (
 /turf/open/floor/plasteel/elevatorshaft,
-/area/ruin/unpowered/corprejectrooms)
-"aeP" = (
-/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
-	icon_state = "basalt5"
-	},
 /area/ruin/unpowered/corprejectrooms)
 "aeQ" = (
 /turf/open/floor/plating{
@@ -2754,11 +2732,15 @@
 /turf/open/floor/plasteel/patterned/ridged,
 /area/ruin/unpowered/corprejectrooms)
 "aeT" = (
-/obj/item/clothing/suit/space/hardsuit/ert/sec{
-	armor = list("melee" = 45, "bullet" = 40, "laser" = 40, "energy" = 40, "bomb" = 40, "bio" = 40, "rad" = 40, "fire" = 90, "acid" = 90)
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
-/turf/closed/mineral/random/volcanic,
-/area/overmap_encounter/planetoid/cave/explored)
+/obj/item/stack/sheet/metal{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/turf/open/floor/plasteel,
+/area/ruin/unpowered/corprejectrooms)
 "aeU" = (
 /obj/item/stack/rods{
 	icon_state = "rods-1";
@@ -2847,6 +2829,7 @@
 	req_access = list(10);
 	req_access_txt = "10"
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plasteel/patterned/grid,
 /area/ruin/unpowered/corprejectrooms)
 "aeY" = (
@@ -2969,6 +2952,10 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/item/stack/sheet/metal{
+	pixel_x = 3;
+	pixel_y = -3
+	},
 /turf/open/floor/plasteel/elevatorshaft,
 /area/ruin/unpowered/corprejectrooms)
 "afj" = (
@@ -2986,6 +2973,10 @@
 	pixel_x = 5;
 	pixel_y = -2;
 	color = "#ff0000"
+	},
+/obj/item/mine/proximity/spawner/magma_skull/live{
+	spawn_number = 2;
+	alpha = 0
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/corprejectrooms)
@@ -3124,6 +3115,7 @@
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plasteel/patterned/grid,
 /area/ruin/unpowered/corprejectrooms)
 "afp" = (
@@ -3137,6 +3129,10 @@
 /obj/machinery/atmospherics/pipe/simple/orange/hidden{
 	icon_state = "pipe10-3";
 	dir = 1
+	},
+/obj/item/stack/sheet/metal{
+	pixel_x = 3;
+	pixel_y = -3
 	},
 /turf/open/floor/plasteel,
 /area/ruin/unpowered/corprejectrooms)
@@ -3177,17 +3173,13 @@
 /obj/machinery/door/airlock/research{
 	name = "Exosuit Bay"
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plasteel/patterned/grid,
 /area/ruin/unpowered/corprejectrooms)
 "afs" = (
 /obj/structure/lattice,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface{
 	icon_state = "basalt3"
-	},
-/area/ruin/unpowered/corprejectrooms)
-"aft" = (
-/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
-	icon_state = "basalt11"
 	},
 /area/ruin/unpowered/corprejectrooms)
 "afu" = (
@@ -3204,7 +3196,7 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface{
 	icon_state = "basalt1"
 	},
-/area/ruin/unpowered/corprejectrooms)
+/area/overmap_encounter/planetoid/lava/explored)
 "afw" = (
 /obj/item/shard{
 	icon_state = "small";
@@ -3275,7 +3267,7 @@
 	pixel_y = 2
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/ruin/unpowered/corprejectrooms)
+/area/overmap_encounter/planetoid/lava/explored)
 "afC" = (
 /obj/structure/fluff/big_chain{
 	pixel_x = 18;
@@ -3303,10 +3295,14 @@
 /turf/open/lava,
 /area/overmap_encounter/planetoid/lava/explored)
 "afH" = (
-/turf/open/floor/plating/asteroid/airless{
-	icon_state = "asteroid8"
+/obj/item/mine/proximity/spawner/magma_skull/live{
+	spawn_number = 2;
+	alpha = 0
 	},
-/area/overmap_encounter/planetoid/cave/explored)
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
+	icon_state = "basalt1"
+	},
+/area/overmap_encounter/planetoid/lava/explored)
 "afI" = (
 /obj/structure/light_construct{
 	dir = 4;
@@ -3352,6 +3348,7 @@
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plasteel/patterned/grid,
 /area/ruin/unpowered/corprejectrooms)
 "afL" = (
@@ -3442,7 +3439,7 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface{
 	icon_state = "basalt2"
 	},
-/area/ruin/unpowered/corprejectrooms)
+/area/overmap_encounter/planetoid/lava/explored)
 "afP" = (
 /obj/item/stack/sheet/mineral/titanium{
 	amount = 2;
@@ -3457,7 +3454,7 @@
 	pixel_y = 2
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/ruin/unpowered/corprejectrooms)
+/area/overmap_encounter/planetoid/lava/explored)
 "afQ" = (
 /obj/machinery/camera{
 	dir = 6
@@ -3484,7 +3481,7 @@
 	pixel_y = -2
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/ruin/unpowered/corprejectrooms)
+/area/overmap_encounter/planetoid/lava/explored)
 "afT" = (
 /obj/structure/window/reinforced/fulltile/shuttle,
 /turf/open/floor/plating,
@@ -3517,6 +3514,10 @@
 	pixel_x = -2;
 	pixel_y = -1
 	},
+/obj/item/stack/sheet/metal{
+	pixel_x = 3;
+	pixel_y = -3
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ruin/unpowered/corprejectrooms)
 "afX" = (
@@ -3531,7 +3532,7 @@
 	pixel_y = 2
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/ruin/unpowered/corprejectrooms)
+/area/overmap_encounter/planetoid/lava/explored)
 "afZ" = (
 /obj/structure/closet/radiation,
 /obj/item/geiger_counter,
@@ -3593,6 +3594,7 @@
 	name = "T-comms";
 	dir = 4
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plasteel/patterned/grid,
 /area/ruin/unpowered/corprejectrooms)
 "agd" = (
@@ -3926,7 +3928,9 @@
 /turf/open/floor/plasteel/tech,
 /area/ruin/unpowered/corprejectrooms)
 "agC" = (
-/obj/machinery/autolathe,
+/obj/structure/frame/machine{
+	icon_state = "box_1"
+	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/unpowered/corprejectrooms)
 "agD" = (
@@ -4129,15 +4133,16 @@
 /area/ruin/unpowered/corprejectrooms)
 "agW" = (
 /obj/structure/table/reinforced,
-/obj/machinery/light/small/directional/east{
-	icon_state = "bulb-broken"
-	},
 /turf/open/floor/plasteel/dark,
 /area/ruin/unpowered/corprejectrooms)
 "agX" = (
-/obj/machinery/firealarm/directional/east,
-/turf/open/floor/plasteel/dark,
-/area/ruin/unpowered/corprejectrooms)
+/obj/item/gun/energy/e_gun/hos{
+	dir = 4;
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/overmap_encounter/planetoid/lava/explored)
 "agY" = (
 /obj/effect/decal/cleanable/shreds{
 	pixel_x = 6;
@@ -4187,7 +4192,7 @@
 	pixel_x = -1;
 	pixel_y = -3
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "ahc" = (
 /obj/item/circuitboard/machine/smes{
@@ -4331,7 +4336,7 @@
 	dir = 1;
 	pixel_y = -8
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "ahp" = (
 /obj/effect/decal/cleanable/glass,
@@ -4401,7 +4406,7 @@
 	pixel_y = -7
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/ruin/unpowered/corprejectrooms)
+/area/overmap_encounter/planetoid/lava/explored)
 "ahw" = (
 /obj/machinery/door/poddoor/shutters,
 /turf/open/floor/plasteel/patterned/grid,
@@ -4436,7 +4441,7 @@
 	dir = 1;
 	pixel_y = 8
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "ahz" = (
 /obj/item/light/bulb{
@@ -4545,7 +4550,7 @@
 	pixel_x = -1;
 	pixel_y = 3
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "ahA" = (
 /obj/item/radio/intercom/directional/west{
@@ -4598,10 +4603,13 @@
 /turf/open/floor/plasteel,
 /area/ruin/unpowered/corprejectrooms)
 "ahB" = (
-/turf/open/floor/plating/asteroid/airless{
-	icon_state = "asteroid5"
+/obj/structure/lattice,
+/obj/item/mine/proximity/spawner/magma_skull/live{
+	spawn_number = 2;
+	alpha = 0
 	},
-/area/overmap_encounter/planetoid/cave/explored)
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/ruin/unpowered/corprejectrooms)
 "ahC" = (
 /obj/item/stack/sheet/glass{
 	dir = 4;
@@ -4613,7 +4621,7 @@
 	pixel_x = 2;
 	pixel_y = 5
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "ahD" = (
 /obj/item/stack/sheet/mineral/titanium{
@@ -4621,9 +4629,7 @@
 	dir = 4;
 	pixel_y = 1
 	},
-/turf/open/floor/plating/asteroid/airless{
-	icon_state = "asteroid8"
-	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "ahE" = (
 /obj/item/stack/rods{
@@ -4646,7 +4652,7 @@
 	pixel_x = 4;
 	pixel_y = -7
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "ahF" = (
 /obj/item/clothing/head/beret/sci{
@@ -4662,9 +4668,7 @@
 	pixel_x = 3;
 	pixel_y = 8
 	},
-/turf/open/floor/plating/asteroid/airless{
-	icon_state = "asteroid9"
-	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "ahG" = (
 /obj/structure/catwalk/over/plated_catwalk,
@@ -4694,6 +4698,7 @@
 /obj/machinery/door/airlock/engineering/glass{
 	req_access_txt = "10"
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plating,
 /area/ruin/unpowered/corprejectrooms)
 "ahH" = (
@@ -4737,7 +4742,7 @@
 	pixel_x = -8;
 	pixel_y = 6
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "ahJ" = (
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface{
@@ -4756,7 +4761,7 @@
 	pixel_x = -2;
 	pixel_y = -5
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "ahM" = (
 /obj/item/stack/rods{
@@ -4862,7 +4867,7 @@
 /obj/item/assembly/mousetrap,
 /obj/item/assembly/mousetrap,
 /obj/item/assembly/mousetrap,
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "ahT" = (
 /obj/item/stack/cable_coil{
@@ -4906,9 +4911,7 @@
 	pixel_x = 5;
 	pixel_y = -6
 	},
-/turf/open/floor/plating/asteroid/airless{
-	icon_state = "asteroid11"
-	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "ahU" = (
 /obj/machinery/shower{
@@ -4947,7 +4950,7 @@
 /turf/open/floor/plasteel,
 /area/ruin/unpowered/corprejectrooms)
 "ahZ" = (
-/mob/living/simple_animal/hostile/megafauna/wendigo,
+/mob/living/simple_animal/hostile/megafauna/claw,
 /turf/open/floor/engine/hull/reinforced/interior,
 /area/ruin/unpowered/corprejectrooms)
 "aia" = (
@@ -5067,6 +5070,7 @@
 	req_access_txt = "10";
 	name = "Engineering"
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plasteel/tech,
 /area/ruin/unpowered/corprejectrooms)
 "aiq" = (
@@ -5217,6 +5221,7 @@
 	req_access_txt = "10";
 	name = "Engineering"
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plasteel/tech,
 /area/ruin/unpowered/corprejectrooms)
 "aiF" = (
@@ -5677,6 +5682,7 @@
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plasteel/showroomfloor,
 /area/ruin/unpowered/corprejectrooms)
 "ajh" = (
@@ -6897,7 +6903,6 @@
 /turf/open/floor/plasteel,
 /area/ruin/unpowered/corprejectrooms)
 "akR" = (
-/obj/structure/extinguisher_cabinet/directional/west,
 /obj/item/shard{
 	icon_state = "small";
 	dir = 8;
@@ -7459,10 +7464,11 @@
 /turf/open/floor/plasteel,
 /area/ruin/unpowered/corprejectrooms)
 "alI" = (
-/turf/open/floor/plating/asteroid/airless{
-	icon_state = "asteroid10"
+/turf/closed/wall/mineral/titanium/nodiagonal{
+	mouse_opacity = 0;
+	max_integrity = 90000
 	},
-/area/overmap_encounter/planetoid/cave/explored)
+/area/ruin/unpowered/corprejectrooms)
 "alJ" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -7823,6 +7829,10 @@
 	pixel_x = 5;
 	pixel_y = -4
 	},
+/obj/item/mine/proximity/spawner/magma_skull/live{
+	spawn_number = 2;
+	alpha = 0
+	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/corprejectrooms)
 "amy" = (
@@ -7850,6 +7860,7 @@
 	icon_state = "pipe00-4";
 	dir = 1
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plasteel/tech,
 /area/ruin/unpowered/corprejectrooms)
 "amz" = (
@@ -7865,6 +7876,10 @@
 	icon_state = "rods-1";
 	dir = 4;
 	pixel_y = -2
+	},
+/obj/item/stack/sheet/metal{
+	pixel_x = 3;
+	pixel_y = -3
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/lava/explored)
@@ -7920,6 +7935,9 @@
 	pixel_x = -4;
 	pixel_y = 1
 	},
+/obj/item/gun/energy/e_gun/smg{
+	pixel_y = 2
+	},
 /turf/open/floor/plating{
 	icon_state = "platingdmg3"
 	},
@@ -7939,6 +7957,10 @@
 	dir = 4;
 	pixel_x = 6;
 	pixel_y = 7
+	},
+/obj/item/stack/sheet/metal{
+	pixel_x = 3;
+	pixel_y = -3
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/lava/explored)
@@ -8022,13 +8044,12 @@
 /turf/open/floor/plasteel/white,
 /area/ruin/unpowered/corprejectrooms)
 "amR" = (
-/obj/item/gun/energy/e_gun/hos{
-	dir = 4;
-	pixel_x = 4;
-	pixel_y = 4
+/obj/item/mine/proximity/spawner/magma_skull/live{
+	spawn_number = 2;
+	alpha = 0
 	},
-/turf/open/lava/smooth,
-/area/overmap_encounter/planetoid/lava/explored)
+/turf/open/floor/plating,
+/area/ruin/unpowered/corprejectrooms)
 "amT" = (
 /obj/structure/girder/reinforced,
 /turf/open/floor/engine/hull/reinforced/interior,
@@ -8273,12 +8294,6 @@
 "anl" = (
 /obj/item/gun/energy/e_gun/smg{
 	pixel_y = 9
-	},
-/obj/item/gun/energy/e_gun/smg{
-	pixel_y = 2
-	},
-/obj/item/gun/ballistic/shotgun/automatic/combat{
-	pixel_y = -3
 	},
 /obj/structure/rack,
 /obj/machinery/airalarm/directional/east{
@@ -8602,13 +8617,18 @@
 /obj/item/radio/intercom/directional/north{
 	icon_state = "intercom-p"
 	},
+/obj/item/mine/proximity/spawner/magma_skull/live{
+	spawn_number = 2;
+	alpha = 0
+	},
 /turf/open/floor/plasteel,
 /area/ruin/unpowered/corprejectrooms)
 "anK" = (
-/turf/open/floor/plating/asteroid/airless{
-	icon_state = "asteroid11"
+/obj/item/gun/ballistic/shotgun/automatic/combat{
+	pixel_y = -3
 	},
-/area/overmap_encounter/planetoid/cave/explored)
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/overmap_encounter/planetoid/lava/explored)
 "anN" = (
 /obj/item/stack/sheet/glass{
 	amount = 2;
@@ -8756,6 +8776,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plasteel/patterned,
 /area/ruin/unpowered/corprejectrooms)
 "anV" = (
@@ -9242,6 +9263,7 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plasteel/tech,
 /area/ruin/unpowered/corprejectrooms)
 "aox" = (
@@ -9441,6 +9463,10 @@
 	dir = 8;
 	pixel_x = 1;
 	pixel_y = -1
+	},
+/obj/item/mine/proximity/spawner/magma_skull/live{
+	spawn_number = 2;
+	alpha = 0
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/corprejectrooms)
@@ -9651,6 +9677,7 @@
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plasteel,
 /area/ruin/unpowered/corprejectrooms)
 "aoW" = (
@@ -9844,13 +9871,11 @@
 	pixel_x = 1;
 	pixel_y = -2
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "api" = (
-/turf/open/floor/plating/asteroid/airless{
-	icon_state = "asteroid0"
-	},
-/area/overmap_encounter/planetoid/cave/explored)
+/turf/closed/mineral/random/volcanic,
+/area/overmap_encounter/planetoid/lava/explored)
 "apj" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	icon_state = "pipe01-4";
@@ -10013,7 +10038,7 @@
 	pixel_y = -2;
 	color = "#ff0000"
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "apw" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
@@ -10179,7 +10204,7 @@
 	pixel_x = 4;
 	pixel_y = 2
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "apL" = (
 /obj/structure/lattice,
@@ -10466,7 +10491,7 @@
 	pixel_x = -7;
 	pixel_y = 4
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "aqo" = (
 /obj/structure/bed,
@@ -10698,7 +10723,7 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "aqA" = (
 /obj/item/dice/d00{
@@ -10732,9 +10757,7 @@
 	pixel_x = -2;
 	pixel_y = 5
 	},
-/turf/open/floor/plating/asteroid/airless{
-	icon_state = "asteroid11"
-	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "aqE" = (
 /obj/item/dice/d20{
@@ -10875,7 +10898,7 @@
 	pixel_x = 4;
 	pixel_y = 2
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "aqP" = (
 /obj/item/stack/sheet/mineral/titanium{
@@ -10919,12 +10942,6 @@
 /area/ruin/unpowered/corprejectrooms)
 "aqS" = (
 /obj/structure/dresser,
-/obj/machinery/power/apc/auto_name/directional/north{
-	equipment = 1;
-	lighting = 1;
-	start_charge = 4.82074;
-	icon_state = "apc-b"
-	},
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
@@ -11052,10 +11069,16 @@
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/ruin/unpowered/corprejectrooms)
 "aqZ" = (
-/turf/open/floor/plating/asteroid/airless{
-	icon_state = "asteroid7"
+/obj/structure/lattice,
+/obj/item/circuitboard/machine/techfab/department/security{
+	dir = 8;
+	pixel_x = 2;
+	pixel_y = 5
 	},
-/area/overmap_encounter/planetoid/cave/explored)
+/turf/open/floor/plating{
+	icon_state = "platingdmg3"
+	},
+/area/ruin/unpowered/corprejectrooms)
 "ara" = (
 /obj/item/stack/rods{
 	icon_state = "rods-1";
@@ -11153,7 +11176,7 @@
 	pixel_x = 3;
 	pixel_y = 4
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "arg" = (
 /obj/item/bedsheet/medical{
@@ -11170,7 +11193,7 @@
 	icon_state = "iv_drip_injectidle";
 	dir = 8
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "arh" = (
 /obj/item/pipe/binary/bendable{
@@ -11181,7 +11204,7 @@
 	pixel_y = -5;
 	color = "#0000ff"
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "ari" = (
 /obj/item/stock_parts/micro_laser{
@@ -11189,9 +11212,7 @@
 	pixel_x = 1;
 	pixel_y = 5
 	},
-/turf/open/floor/plating/asteroid/airless{
-	icon_state = "asteroid1"
-	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "arj" = (
 /obj/item/pipe/binary/bendable{
@@ -11208,7 +11229,7 @@
 	pixel_y = 5;
 	color = "#ff0000"
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "ark" = (
 /obj/item/pipe/binary/bendable{
@@ -11308,7 +11329,7 @@
 	pixel_x = -3;
 	pixel_y = -3
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "ars" = (
 /obj/item/stack/rods{
@@ -11810,11 +11831,6 @@
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ruin/unpowered/corprejectrooms)
 "asd" = (
-/obj/item/stack/sheet/mineral/titanium{
-	amount = 2;
-	pixel_x = 1;
-	pixel_y = 2
-	},
 /obj/item/stack/rods{
 	icon_state = "rods-1";
 	pixel_x = -7;
@@ -11835,11 +11851,6 @@
 	pixel_x = 3;
 	pixel_y = -1
 	},
-/obj/item/circuitboard/machine/techfab/department/security{
-	dir = 8;
-	pixel_x = 2;
-	pixel_y = 5
-	},
 /obj/item/stack/cable_coil{
 	amount = 5;
 	dir = 8;
@@ -11847,15 +11858,14 @@
 	pixel_y = -1;
 	color = "#ff0000"
 	},
+/obj/item/stack/sheet/mineral/titanium{
+	amount = 2;
+	pixel_x = 1;
+	pixel_y = 2
+	},
 /turf/open/floor/plating,
 /area/ruin/unpowered/corprejectrooms)
 "ase" = (
-/obj/machinery/power/apc/auto_name/directional/north{
-	equipment = 1;
-	lighting = 1;
-	start_charge = 4.80474;
-	icon_state = "apc2-b-nocover"
-	},
 /obj/effect/decal/cleanable/shreds{
 	pixel_x = -2;
 	pixel_y = 4
@@ -12043,9 +12053,7 @@
 	pixel_y = 1;
 	color = "#0000ff"
 	},
-/turf/open/floor/plating/asteroid/airless{
-	icon_state = "asteroid12"
-	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "asu" = (
 /obj/structure/door_assembly/door_assembly_hatch{
@@ -12083,6 +12091,10 @@
 /turf/open/floor/engine/hull/reinforced/interior,
 /area/ruin/unpowered/corprejectrooms)
 "asz" = (
+/obj/item/mine/proximity/spawner/magma_skull/live{
+	spawn_number = 2;
+	alpha = 0
+	},
 /turf/open/floor/plating/moss,
 /area/ruin/unpowered/corprejectrooms)
 "asA" = (
@@ -12175,6 +12187,7 @@
 /obj/machinery/door/airlock/security/glass{
 	req_access = list()
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plasteel/dark,
 /area/ruin/unpowered/corprejectrooms)
 "asJ" = (
@@ -12205,6 +12218,7 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plasteel,
 /area/ruin/unpowered/corprejectrooms)
 "asL" = (
@@ -12468,7 +12482,7 @@
 	pixel_x = -7;
 	pixel_y = -8
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "atn" = (
 /obj/machinery/door/airlock/external,
@@ -12648,6 +12662,7 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/security/glass,
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plasteel/dark,
 /area/ruin/unpowered/corprejectrooms)
 "atA" = (
@@ -12701,6 +12716,7 @@
 	name = "Blast Shutters";
 	dir = 4
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plasteel/patterned/grid,
 /area/ruin/unpowered/corprejectrooms)
 "atD" = (
@@ -12742,9 +12758,7 @@
 /obj/item/storage/lockbox/medal/hop{
 	req_access = list(57)
 	},
-/turf/open/floor/plating/asteroid/airless{
-	icon_state = "asteroid0"
-	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "atE" = (
 /obj/machinery/holopad{
@@ -12909,6 +12923,10 @@
 	},
 /obj/machinery/airalarm/directional/north{
 	name = "Pinnace Wreckage Air Alarm"
+	},
+/obj/item/mine/proximity/spawner/magma_skull/live{
+	spawn_number = 2;
+	alpha = 0
 	},
 /turf/open/floor/plasteel,
 /area/ruin/unpowered/corprejectrooms)
@@ -13257,6 +13275,10 @@
 /turf/open/floor/plating,
 /area/ruin/unpowered/corprejectrooms)
 "auj" = (
+/obj/item/mine/proximity/spawner/magma_skull/live{
+	spawn_number = 2;
+	alpha = 0
+	},
 /turf/open/floor/plating/grass/lava,
 /area/ruin/unpowered/corprejectrooms)
 "auk" = (
@@ -13569,7 +13591,7 @@
 	pixel_x = -7;
 	pixel_y = -3
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "auL" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
@@ -13847,6 +13869,7 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plasteel/patterned/grid,
 /area/ruin/unpowered/corprejectrooms)
 "avf" = (
@@ -13883,6 +13906,10 @@
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/mine/proximity/spawner/magma_skull/live{
+	spawn_number = 2;
+	alpha = 0
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ruin/unpowered/corprejectrooms)
 "avj" = (
@@ -13947,6 +13974,7 @@
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
 	},
+/obj/effect/mapping_helpers/airlock/locked,
 /turf/open/floor/plasteel/patterned/grid,
 /area/ruin/unpowered/corprejectrooms)
 "avn" = (
@@ -14470,6 +14498,10 @@
 	pixel_x = -10;
 	pixel_y = -2
 	},
+/obj/item/mine/proximity/spawner/magma_skull/live{
+	spawn_number = 2;
+	alpha = 0
+	},
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/ruin/unpowered/corprejectrooms)
 "avU" = (
@@ -14624,6 +14656,10 @@
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/item/mine/proximity/spawner/magma_skull/live{
+	spawn_number = 2;
+	alpha = 0
 	},
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ruin/unpowered/corprejectrooms)
@@ -14781,7 +14817,7 @@
 	pixel_x = -4;
 	pixel_y = 3
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "awu" = (
 /obj/structure/catwalk/over/plated_catwalk/dark,
@@ -14862,12 +14898,6 @@
 /turf/open/floor/plating,
 /area/ruin/unpowered/corprejectrooms)
 "awz" = (
-/obj/machinery/power/apc/auto_name/directional/north{
-	equipment = 1;
-	lighting = 1;
-	start_charge = 2.94873;
-	icon_state = "apc2-b-nocover"
-	},
 /obj/item/stack/sheet/metal{
 	amount = 5;
 	dir = 8;
@@ -14908,7 +14938,7 @@
 	pixel_x = -5;
 	pixel_y = 2
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "awB" = (
 /obj/effect/decal/cleanable/dirt,
@@ -15057,7 +15087,7 @@
 	pixel_x = -6;
 	pixel_y = 2
 	},
-/turf/open/floor/plating/asteroid/airless,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/cave/explored)
 "awK" = (
 /obj/structure/poddoor_assembly{
@@ -15175,6 +15205,22 @@
 	},
 /turf/open/lava/smooth,
 /area/overmap_encounter/planetoid/lava/explored)
+"cxt" = (
+/obj/item/stack/sheet/metal{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/overmap_encounter/planetoid/lava/explored)
+"cCm" = (
+/obj/item/stack/sheet/metal{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
+	icon_state = "basalt3"
+	},
+/area/overmap_encounter/planetoid/lava/explored)
 "dNP" = (
 /obj/item/paper/crumpled{
 	pixel_x = 9;
@@ -15201,6 +15247,13 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/unpowered/corprejectrooms)
+"fhI" = (
+/obj/item/mine/proximity/spawner/magma_skull/live{
+	spawn_number = 2;
+	alpha = 0
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/overmap_encounter/planetoid/lava/explored)
 "fHk" = (
 /obj/effect/mob_spawn/human/skeleton/alive{
 	density = 0
@@ -15218,6 +15271,33 @@
 /obj/item/shard{
 	pixel_x = 1;
 	pixel_y = -5
+	},
+/turf/open/floor/plating{
+	icon_state = "platingdmg3"
+	},
+/area/ruin/unpowered/corprejectrooms)
+"hTv" = (
+/obj/mecha/combat/marauder{
+	icon_state = "marauder-open";
+	dir = 1;
+	internals_req_access = 0;
+	operation_req_access = 0;
+	mouse_opacity = 0;
+	anchored = 1;
+	color = "#590b29";
+	max_integrity = 5000000;
+	can_be_z_moved = 0;
+	req_access_txt = "6666";
+	req_one_access_txt = "6666";
+	name = "\improper Voice of the Marauder";
+	desc = "You notice that this heavy Durand-based exoskeleton is covered with a strange incomprehensible and unattainable film. You can feel the voices coming from this Marauder. As if it were the Marauder's voice itself."
+	},
+/turf/open/floor/plating,
+/area/ruin/unpowered/corprejectrooms)
+"kIS" = (
+/obj/item/stack/sheet/metal{
+	pixel_x = 3;
+	pixel_y = -3
 	},
 /turf/open/floor/plating{
 	icon_state = "platingdmg3"
@@ -15244,8 +15324,38 @@
 	},
 /turf/open/floor/plating,
 /area/ruin/unpowered/corprejectrooms)
+"nJI" = (
+/obj/item/stack/sheet/metal{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/turf/open/floor/plasteel/tech/grid,
+/area/ruin/unpowered/corprejectrooms)
+"olL" = (
+/obj/item/stack/sheet/metal{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
+	icon_state = "basalt10"
+	},
+/area/overmap_encounter/planetoid/lava/explored)
 "oro" = (
 /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/skeleton,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/overmap_encounter/planetoid/lava/explored)
+"osc" = (
+/mob/living/simple_animal/hostile/asteroid/hivelord/legion/magma,
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/overmap_encounter/planetoid/lava/explored)
+"pob" = (
+/obj/structure/flora/rock{
+	icon_state = "basalt3"
+	},
+/obj/item/stack/sheet/metal{
+	pixel_x = 3;
+	pixel_y = -3
+	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/overmap_encounter/planetoid/lava/explored)
 "pqa" = (
@@ -15260,6 +15370,23 @@
 	},
 /turf/open/floor/plating/asteroid/purple/lit,
 /area/ruin/unpowered/corprejectrooms)
+"swr" = (
+/obj/structure/lattice,
+/obj/item/stack/sheet/metal{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface,
+/area/ruin/unpowered/corprejectrooms)
+"sGY" = (
+/obj/item/stack/sheet/metal{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface{
+	icon_state = "basalt9"
+	},
+/area/overmap_encounter/planetoid/lava/explored)
 "tpj" = (
 /obj/structure/catwalk/over/plated_catwalk/dark,
 /obj/effect/decal/cleanable/dirt,
@@ -15537,8 +15664,8 @@ aaT
 aaF
 aaS
 abb
-aaV
-aaV
+aaC
+aaC
 aaC
 aah
 aah
@@ -15614,8 +15741,8 @@ aaC
 aaC
 aaS
 aaC
-abf
-abg
+aaC
+aaC
 aaS
 aaC
 aaC
@@ -15780,7 +15907,7 @@ aah
 abO
 aaC
 aaC
-abP
+aaV
 aaV
 aaC
 abN
@@ -15850,7 +15977,7 @@ abX
 aaD
 aaC
 aaC
-aaC
+fhI
 aaY
 aah
 aah
@@ -15999,12 +16126,12 @@ aaC
 aaO
 aba
 aaD
-aaV
+aaC
 aaC
 abX
 aaC
 aaF
-aaC
+cxt
 aaZ
 aaC
 aaF
@@ -16014,7 +16141,7 @@ aaC
 aaC
 aaY
 aaC
-aaC
+aas
 aaD
 abG
 aaS
@@ -16026,7 +16153,7 @@ acx
 acy
 acz
 acA
-abl
+aaC
 acB
 ahc
 aah
@@ -16152,10 +16279,10 @@ aaC
 aaC
 aaF
 aah
-abl
 aaC
 aaC
-abb
+aaC
+cCm
 acZ
 abw
 aaD
@@ -16230,10 +16357,10 @@ aaC
 aaF
 aah
 aaS
-abl
+aaC
 aaM
 aaC
-abl
+aaC
 adr
 aaD
 aaC
@@ -16252,7 +16379,7 @@ adw
 adx
 aaS
 ady
-adz
+agk
 aaS
 abG
 adA
@@ -16303,14 +16430,14 @@ aah
 aah
 aaS
 aaV
-aaC
+cxt
 aah
 aaF
 aaS
 adJ
 aaC
-abl
-abl
+aaC
+aaC
 aaS
 aaD
 aaC
@@ -16388,7 +16515,7 @@ aea
 aaC
 aaC
 aaC
-abl
+aaC
 aaO
 aaM
 aaC
@@ -16472,7 +16599,7 @@ aaC
 aaC
 abb
 aey
-aaO
+pob
 abv
 aaC
 abK
@@ -16483,7 +16610,7 @@ aeB
 aaS
 aeC
 aeD
-aeE
+aeT
 aeF
 aeG
 abG
@@ -16496,8 +16623,8 @@ aeL
 aeM
 aeN
 aeO
-aeP
-aeQ
+adI
+kIS
 aeR
 aeS
 aaC
@@ -16533,7 +16660,7 @@ aaF
 aaC
 aaC
 aaF
-aaC
+cxt
 aaC
 aaC
 aaC
@@ -16550,7 +16677,7 @@ aaC
 aaF
 aaC
 aaC
-aaC
+cxt
 aeU
 abl
 aeV
@@ -16563,18 +16690,18 @@ aeF
 afa
 wfO
 afb
-abl
-ttM
+aaC
+aas
 afc
 afd
 afe
 aff
 afg
-aeM
+nJI
 afh
-abG
-abl
-abl
+hTv
+aaC
+aaC
 afi
 afj
 aaC
@@ -16626,7 +16753,7 @@ aaC
 aaC
 aaF
 aah
-aah
+aaN
 aaC
 aaC
 aaC
@@ -16642,19 +16769,19 @@ afq
 afr
 aaD
 afs
-aft
-afu
+aaT
+aaM
 afv
 afw
 afx
 afy
 afz
 afA
-abl
+aaC
 afB
 afC
 afD
-aaC
+fhI
 aaC
 aah
 aah
@@ -16680,7 +16807,7 @@ aaC
 abX
 aaC
 aaC
-aaV
+aaC
 aaC
 aaF
 aaF
@@ -16700,7 +16827,7 @@ aaC
 aaC
 aaF
 aaC
-afH
+aaV
 aaF
 aah
 aaC
@@ -16719,7 +16846,7 @@ afP
 aaS
 afQ
 aaD
-abl
+aaC
 afR
 afS
 afT
@@ -16728,7 +16855,7 @@ afV
 aeM
 afW
 afX
-abl
+aaC
 afY
 aev
 aaC
@@ -16757,8 +16884,8 @@ aaC
 acg
 aaC
 abO
-aaV
-aaV
+aaC
+aaC
 aaC
 aaC
 aaC
@@ -16792,8 +16919,8 @@ aaS
 aaS
 aeF
 afs
-abl
-aaD
+aaC
+swr
 agd
 age
 agf
@@ -16804,12 +16931,12 @@ agi
 agj
 agk
 agl
-abl
+aaC
 agm
 aaS
 aaS
 aaC
-aaC
+cxt
 aaC
 aah
 aah
@@ -16833,7 +16960,7 @@ aaF
 aaF
 agq
 aba
-aaV
+aaC
 aaC
 aaC
 afG
@@ -16916,7 +17043,7 @@ aah
 afG
 afG
 abb
-aaC
+cxt
 aaC
 aah
 aaC
@@ -16955,7 +17082,7 @@ agU
 aaS
 agV
 agW
-agX
+ade
 agY
 agZ
 aha
@@ -17107,7 +17234,7 @@ ahy
 ahz
 ahA
 aaS
-ahB
+aaV
 aaV
 ahC
 ahD
@@ -17177,7 +17304,7 @@ aaS
 aaS
 aeF
 ahH
-abl
+aaC
 aaV
 ahI
 ahJ
@@ -17195,12 +17322,12 @@ aaF
 aaF
 aaF
 aaF
-abb
+cCm
 aaC
 aaC
 abN
 aaC
-aaC
+cxt
 aaC
 aah
 aah
@@ -17254,7 +17381,7 @@ ahP
 aiB
 aeF
 ahR
-abP
+aaV
 ahS
 aaV
 aaF
@@ -17278,7 +17405,7 @@ aaC
 aaC
 aaC
 aaC
-aaC
+fhI
 aah
 aah
 aaF
@@ -17326,7 +17453,7 @@ aaS
 aaS
 ahU
 aaF
-abG
+amR
 ahQ
 ahX
 ahY
@@ -17403,7 +17530,7 @@ aaD
 aaD
 aaD
 aah
-aah
+aaC
 aaS
 aaF
 aaF
@@ -17480,7 +17607,7 @@ aah
 aah
 aaM
 aaC
-aah
+aaC
 aaF
 aaF
 aaF
@@ -17582,7 +17709,7 @@ aaF
 aaC
 aaC
 aaC
-aaC
+cxt
 aaC
 aaC
 aaC
@@ -17805,13 +17932,13 @@ aah
 aaC
 aaC
 acX
-aaC
+fhI
 aaC
 aaF
 aaF
 aaS
 aaT
-aaC
+cxt
 aaF
 aaS
 aiC
@@ -17878,7 +18005,7 @@ aah
 aiF
 aiG
 aaC
-aaC
+fhI
 aaS
 aaS
 aaS
@@ -18029,7 +18156,7 @@ aah
 aaC
 aiX
 aiY
-aaD
+ahB
 aaC
 aah
 aiZ
@@ -18075,7 +18202,7 @@ aah
 aah
 aah
 afG
-afG
+api
 afG
 aah
 afG
@@ -18094,7 +18221,7 @@ aah
 aah
 adI
 aaR
-aaC
+fhI
 aaC
 aaC
 aah
@@ -18195,7 +18322,7 @@ ajA
 aaF
 ajB
 ajC
-aaD
+ahB
 aaS
 aaS
 aaS
@@ -18478,7 +18605,7 @@ aah
 aaC
 aaF
 aaC
-aaC
+osc
 abb
 aaC
 aaS
@@ -18695,7 +18822,7 @@ afG
 afG
 afG
 aah
-abf
+aaV
 aaV
 aaV
 aah
@@ -18705,7 +18832,7 @@ aaC
 akX
 aaC
 aaC
-aaC
+fhI
 aaC
 aaC
 abN
@@ -18891,8 +19018,8 @@ alF
 alG
 alH
 aaV
-alI
-afH
+aaV
+aaV
 alJ
 alK
 alL
@@ -18953,7 +19080,7 @@ abl
 alO
 aaS
 aaD
-aaC
+fhI
 aaC
 aaD
 aaD
@@ -19004,7 +19131,7 @@ aah
 abN
 aah
 aaC
-aaC
+anK
 alW
 aah
 aah
@@ -19025,7 +19152,7 @@ aaF
 aah
 aah
 aaC
-abN
+sGY
 aaC
 abl
 abl
@@ -19270,7 +19397,7 @@ aaF
 aaF
 aaF
 amM
-abu
+afH
 aaF
 aaF
 aaF
@@ -19504,7 +19631,7 @@ adI
 aaC
 aaC
 aaC
-aaC
+fhI
 aaC
 aaC
 aaF
@@ -19583,7 +19710,7 @@ aaF
 aaC
 aaC
 aaC
-aaC
+cxt
 aaC
 aaC
 aaC
@@ -19618,7 +19745,7 @@ amW
 aic
 aah
 aah
-aah
+agX
 aaS
 aaS
 aah
@@ -19766,10 +19893,10 @@ aah
 aah
 aaF
 aaF
-aaS
-aaS
-aaS
-aah
+alI
+alI
+alI
+alI
 aah
 aah
 aah
@@ -19843,7 +19970,7 @@ aah
 aah
 aaF
 aaF
-aaS
+alI
 anb
 anc
 and
@@ -19895,7 +20022,7 @@ abv
 abN
 aaC
 aaC
-abO
+olL
 aaC
 aaY
 aaC
@@ -19920,7 +20047,7 @@ aah
 aah
 aah
 aah
-aaS
+alI
 anf
 aah
 aaN
@@ -19997,8 +20124,8 @@ aah
 aah
 aaF
 akO
-aaS
-aaS
+alI
+alI
 anl
 anm
 aah
@@ -20042,8 +20169,8 @@ aaF
 aaD
 ans
 aaD
-aaC
-aaC
+cxt
+fhI
 adI
 aaC
 aaC
@@ -20074,10 +20201,10 @@ aah
 aah
 aaF
 aaF
-aaS
-aaS
-aaS
-aaS
+alI
+alI
+alI
+alI
 aah
 aah
 aaS
@@ -20151,7 +20278,7 @@ aah
 aah
 aaF
 aaF
-aaS
+alI
 aah
 aah
 aah
@@ -20201,7 +20328,7 @@ aaD
 anQ
 aaF
 aaF
-aaC
+cxt
 aaC
 aaC
 aaF
@@ -20540,7 +20667,7 @@ aaF
 aaF
 aaF
 aaF
-api
+aaV
 aaV
 apj
 apk
@@ -20574,7 +20701,7 @@ abl
 aaS
 aaS
 apv
-abg
+aaV
 aaF
 aaF
 aaF
@@ -20617,7 +20744,7 @@ aaF
 aaF
 aaF
 aaF
-anK
+aaV
 aaV
 apw
 afu
@@ -20926,7 +21053,7 @@ aqt
 aql
 aqu
 adI
-aaC
+fhI
 aaC
 aaF
 aaF
@@ -21018,7 +21145,7 @@ aah
 aaS
 aah
 aah
-amR
+aah
 aaS
 aaS
 aqD
@@ -21275,7 +21402,7 @@ aaF
 aaC
 aaC
 aaC
-aaC
+aah
 aah
 aaF
 aaF
@@ -21425,7 +21552,7 @@ aaF
 aaF
 aaF
 aba
-aaC
+fhI
 aaC
 aaC
 aaF
@@ -21502,7 +21629,7 @@ aaF
 aaF
 aaF
 aaC
-aaC
+osc
 aaF
 aaF
 aaF
@@ -21511,7 +21638,7 @@ aah
 aah
 aah
 aah
-aaN
+aah
 aah
 aah
 aah
@@ -21546,7 +21673,7 @@ aaF
 aaC
 aaC
 aaC
-aaC
+fhI
 aaC
 aaC
 aaC
@@ -21871,7 +21998,7 @@ aaR
 aaC
 aaC
 aaC
-aaC
+fhI
 aaY
 abb
 aaC
@@ -21899,7 +22026,7 @@ aqO
 abl
 aio
 aah
-abf
+aaV
 aah
 aah
 aah
@@ -21967,7 +22094,7 @@ aaF
 aaF
 dNP
 aaC
-aaC
+fhI
 aaC
 aaC
 aaF
@@ -22081,8 +22208,8 @@ aqW
 aqX
 abG
 aqY
-aqZ
-anK
+aaV
+aaV
 aaF
 aaF
 aaF
@@ -22271,7 +22398,7 @@ aah
 aah
 aah
 aaF
-abg
+aaV
 arr
 ars
 art
@@ -22349,7 +22476,7 @@ aah
 aah
 aaF
 aaV
-abP
+aaV
 arB
 arC
 afh
@@ -22501,7 +22628,7 @@ aaF
 aah
 aah
 aah
-aaV
+abg
 aaF
 aaV
 arU
@@ -22580,7 +22707,7 @@ aah
 aaF
 aaV
 aaV
-ahB
+aaV
 asf
 asg
 ash
@@ -22637,7 +22764,7 @@ aaF
 aaF
 aaF
 aaC
-aaC
+fhI
 abb
 aah
 aah
@@ -22732,9 +22859,9 @@ aah
 aah
 aah
 aaF
-afH
 aaV
-anK
+aaV
+aaV
 asQ
 asR
 asS
@@ -22887,7 +23014,7 @@ aah
 aah
 aaF
 aaF
-aeT
+aaF
 aaF
 aaS
 atE
@@ -23124,7 +23251,7 @@ aam
 aux
 aab
 ahp
-auy
+abP
 auz
 asw
 asw
@@ -23336,7 +23463,7 @@ aaF
 aaF
 aaF
 aaC
-aba
+abf
 aaC
 aaF
 aaF
@@ -23514,7 +23641,7 @@ abG
 asw
 abG
 asw
-auy
+abP
 avZ
 aeQ
 aaS
@@ -23663,7 +23790,7 @@ aaS
 awu
 awg
 abG
-auy
+abP
 abG
 abG
 asw
@@ -23768,7 +23895,7 @@ aah
 aah
 aah
 aqL
-aic
+aqZ
 aaS
 awE
 aah
@@ -23787,7 +23914,7 @@ abG
 afh
 afh
 afh
-anK
+aaV
 awJ
 aaF
 aah
