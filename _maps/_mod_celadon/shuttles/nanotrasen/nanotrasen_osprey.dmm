@@ -194,6 +194,7 @@
 	dir = 8
 	},
 /obj/structure/crate_shelf,
+/obj/effect/turf_decal/corner/opaque/brown/half,
 /turf/open/floor/plasteel,
 /area/ship/science/xenobiology{
 	name = "Research Lab"
@@ -241,7 +242,7 @@
 "bT" = (
 /obj/effect/turf_decal/box,
 /obj/effect/turf_decal/box,
-/obj/machinery/portable_atmospherics/canister/stimulum,
+/obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo)
 "cd" = (
@@ -569,6 +570,9 @@
 "eh" = (
 /obj/effect/spawner/structure/window/shuttle,
 /obj/machinery/door/firedoor/window,
+/obj/machinery/door/poddoor/shutters{
+	id = "storage"
+	},
 /turf/open/floor/plating,
 /area/ship/science/xenobiology{
 	name = "Research Lab"
@@ -742,8 +746,6 @@
 /area/ship/cargo)
 "fh" = (
 /obj/machinery/light/small/directional/north,
-/obj/machinery/portable_atmospherics/canister/air,
-/obj/effect/turf_decal/box,
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo)
 "fj" = (
@@ -1271,13 +1273,12 @@
 /obj/structure/chair{
 	dir = 8
 	},
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 8
-	},
-/obj/effect/turf_decal/corner/opaque/brown,
 /obj/machinery/light/directional/south,
 /obj/structure/railing{
 	dir = 4
+	},
+/obj/effect/turf_decal/corner/opaque/mauve{
+	dir = 10
 	},
 /turf/open/floor/plasteel,
 /area/ship/cargo)
@@ -1335,7 +1336,8 @@
 	id = "ospreydoors";
 	name = "Blast Door Control";
 	pixel_x = 25;
-	pixel_y = 5
+	pixel_y = 5;
+	req_ship_access = 1
 	},
 /obj/machinery/button/shieldwallgen{
 	dir = 8;
@@ -1394,7 +1396,8 @@
 "ke" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Infirmary";
-	dir = 4
+	dir = 4;
+	req_ship_access = 1
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -1440,7 +1443,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/border_only{
-	dir = 4
+	dir = 4;
+	req_ship_access = 1
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 8
@@ -1559,12 +1563,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 4
-	},
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 1
-	},
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -1727,7 +1725,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
-/turf/open/floor/plasteel,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/science/xenobiology{
 	name = "Research Lab"
 	})
@@ -1857,15 +1855,12 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 4
-	},
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 1
-	},
 /obj/machinery/door/window/northleft{
 	name = "Chemistry";
 	dir = 4
+	},
+/obj/effect/turf_decal/corner/opaque/mauve{
+	dir = 5
 	},
 /turf/open/floor/plasteel,
 /area/ship/science/xenobiology{
@@ -1965,11 +1960,8 @@
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew/dorm)
 "mW" = (
-/obj/machinery/door/window/northleft{
-	name = "Storage";
-	dir = 8
-	},
-/turf/open/floor/plasteel,
+/obj/machinery/door/firedoor/window,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/science/xenobiology{
 	name = "Research Lab"
 	})
@@ -2083,15 +2075,6 @@
 /turf/open/floor/plasteel,
 /area/ship/medical)
 "nT" = (
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 8
-	},
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 1
-	},
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 8
-	},
 /obj/structure/closet/wall/white/directional/west,
 /obj/structure/table,
 /obj/machinery/reagentgrinder,
@@ -2118,6 +2101,12 @@
 /obj/item/hand_labeler,
 /obj/item/storage/box/beakers,
 /obj/item/storage/box/beakers,
+/obj/effect/turf_decal/corner/opaque/mauve{
+	dir = 9
+	},
+/obj/effect/turf_decal/corner/opaque/mauve{
+	dir = 10
+	},
 /turf/open/floor/plasteel,
 /area/ship/science/xenobiology{
 	name = "Research Lab"
@@ -2125,10 +2114,6 @@
 "nZ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2
-	},
-/obj/effect/turf_decal/corner/opaque/brown,
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
 	dir = 4
@@ -2138,6 +2123,9 @@
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/effect/turf_decal/corner/opaque/mauve{
+	dir = 10
 	},
 /turf/open/floor/plasteel,
 /area/ship/cargo)
@@ -2306,7 +2294,8 @@
 "oX" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Infirmary";
-	dir = 4
+	dir = 4;
+	req_ship_access = 1
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -3320,13 +3309,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 4
-	},
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 1
-	},
-/obj/item/rack_parts/shelf,
 /obj/item/stack/sheet/glass/twenty{
 	pixel_y = 5
 	},
@@ -3334,6 +3316,10 @@
 	pixel_x = 5;
 	pixel_y = 10
 	},
+/obj/effect/turf_decal/corner/opaque/brown/half{
+	dir = 1
+	},
+/obj/structure/rack,
 /turf/open/floor/plasteel,
 /area/ship/science/xenobiology{
 	name = "Research Lab"
@@ -3383,6 +3369,7 @@
 	dir = 8
 	},
 /obj/structure/crate_shelf,
+/obj/effect/turf_decal/corner/opaque/brown/half,
 /turf/open/floor/plasteel,
 /area/ship/science/xenobiology{
 	name = "Research Lab"
@@ -3662,7 +3649,8 @@
 "xB" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Infirmary";
-	dir = 4
+	dir = 4;
+	req_ship_access = 1
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -3711,7 +3699,8 @@
 "xJ" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Infirmary";
-	dir = 4
+	dir = 4;
+	req_ship_access = 1
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -3822,28 +3811,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /turf/open/floor/plasteel,
 /area/ship/crew/cryo)
-"ym" = (
-/obj/structure/closet/crate{
-	name = "Reagents"
-	},
-/obj/item/reagent_containers/glass/chem_jug,
-/obj/item/reagent_containers/glass/chem_jug/aluminium,
-/obj/item/reagent_containers/glass/chem_jug/bromine,
-/obj/item/reagent_containers/glass/chem_jug/carbon,
-/obj/item/reagent_containers/glass/chem_jug/chlorine,
-/obj/item/reagent_containers/glass/chem_jug/copper,
-/obj/item/reagent_containers/glass/chem_jug/hexacrete,
-/obj/item/reagent_containers/glass/chem_jug/hydrogen,
-/obj/item/reagent_containers/glass/chem_jug/iodine,
-/obj/item/reagent_containers/glass/chem_jug/nitrogen,
-/obj/item/reagent_containers/glass/chem_jug/oxygen,
-/obj/item/reagent_containers/glass/chem_jug/potassium,
-/obj/item/reagent_containers/glass/chem_jug/radium,
-/obj/item/reagent_containers/glass/chem_jug/sulfur,
-/turf/open/floor/plasteel,
-/area/ship/science/xenobiology{
-	name = "Research Lab"
-	})
 "yn" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 9
@@ -4032,7 +3999,8 @@
 "zy" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Canteen";
-	dir = 4
+	dir = 4;
+	req_ship_access = 1
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -4098,9 +4066,8 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/effect/turf_decal/corner/opaque/brown/half,
+/obj/structure/crate_shelf,
 /turf/open/floor/plasteel,
 /area/ship/science/xenobiology{
 	name = "Research Lab"
@@ -4260,11 +4227,8 @@
 /obj/structure/disposalpipe/segment{
 	dir = 5
 	},
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 4
-	},
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 1
+/obj/effect/turf_decal/corner/opaque/mauve{
+	dir = 5
 	},
 /turf/open/floor/plasteel,
 /area/ship/science/xenobiology{
@@ -4343,7 +4307,9 @@
 	pixel_x = 32
 	},
 /obj/structure/disposalpipe/segment,
-/obj/structure/closet/crate,
+/obj/effect/turf_decal/corner/opaque/brown/half{
+	dir = 4
+	},
 /turf/open/floor/plasteel,
 /area/ship/science/xenobiology{
 	name = "Research Lab"
@@ -4528,7 +4494,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/border_only{
-	dir = 4
+	dir = 4;
+	req_ship_access = 1
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 8
@@ -4832,15 +4799,14 @@
 /obj/structure/disposalpipe/segment{
 	dir = 10
 	},
-/obj/effect/turf_decal/corner/opaque/brown,
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
+	},
+/obj/effect/turf_decal/corner/opaque/mauve{
+	dir = 10
 	},
 /turf/open/floor/plasteel,
 /area/ship/cargo)
@@ -5027,6 +4993,7 @@
 	},
 /obj/structure/crate_shelf,
 /obj/machinery/light/directional/east,
+/obj/effect/turf_decal/corner/opaque/brown/three_quarters,
 /turf/open/floor/plasteel,
 /area/ship/science/xenobiology{
 	name = "Research Lab"
@@ -5079,6 +5046,10 @@
 	dir = 10
 	},
 /obj/structure/crate_shelf,
+/obj/effect/turf_decal/corner/opaque/brown/three_quarters{
+	dir = 8
+	},
+/obj/structure/closet/crate,
 /turf/open/floor/plasteel,
 /area/ship/science/xenobiology{
 	name = "Research Lab"
@@ -5295,12 +5266,6 @@
 /turf/open/floor/plasteel,
 /area/ship/hallway/central)
 "Ie" = (
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 8
-	},
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 1
-	},
 /obj/structure/table,
 /obj/item/reagent_containers/glass/filter{
 	pixel_x = -8
@@ -5310,6 +5275,16 @@
 	},
 /obj/item/reagent_containers/glass/filter{
 	pixel_x = 10
+	},
+/obj/effect/turf_decal/corner/opaque/mauve{
+	dir = 9
+	},
+/obj/machinery/button/door{
+	dir = 4;
+	pixel_x = -25;
+	pixel_y = 5;
+	name = "Storage Shutters";
+	id = "chemistry"
 	},
 /turf/open/floor/plasteel,
 /area/ship/science/xenobiology{
@@ -6030,24 +6005,14 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 4
-	},
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 1
-	},
 /obj/machinery/camera/autoname{
 	dir = 6
 	},
-/turf/open/floor/plasteel,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/science/xenobiology{
 	name = "Research Lab"
 	})
 "Nv" = (
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 8
-	},
-/obj/effect/turf_decal/corner/opaque/brown,
 /obj/structure/extinguisher_cabinet/directional/south,
 /obj/machinery/light/directional/west,
 /obj/structure/table,
@@ -6065,6 +6030,12 @@
 	},
 /obj/item/stock_parts/scanning_module{
 	pixel_x = 10
+	},
+/obj/effect/turf_decal/corner/opaque/mauve{
+	dir = 10
+	},
+/obj/effect/turf_decal/corner/opaque/mauve{
+	dir = 1
 	},
 /turf/open/floor/plasteel,
 /area/ship/science/xenobiology{
@@ -6262,19 +6233,16 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 4
-	},
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 1
-	},
 /obj/structure/table,
 /obj/item/paper_bin,
 /obj/item/pen/red,
 /obj/item/pen/red,
-/obj/item/clipboard,
-/obj/structure/window/reinforced{
-	dir = 8
+/obj/item/clipboard{
+	pixel_x = 8;
+	pixel_y = 5
+	},
+/obj/effect/turf_decal/corner/opaque/brown/half{
+	dir = 1
 	},
 /turf/open/floor/plasteel,
 /area/ship/science/xenobiology{
@@ -6751,6 +6719,15 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel,
 /area/ship/cargo)
+"RR" = (
+/obj/machinery/door/airlock/research{
+	name = "Storage";
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/ship/science/xenobiology{
+	name = "Research Lab"
+	})
 "RU" = (
 /obj/structure/table/wood,
 /obj/item/toy/plush/carpplushie,
@@ -6857,10 +6834,6 @@
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/engineering)
 "SG" = (
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 8
-	},
-/obj/effect/turf_decal/corner/opaque/brown,
 /obj/structure/disposalpipe/segment{
 	dir = 5
 	},
@@ -6906,19 +6879,19 @@
 	},
 /obj/item/table_bell,
 /obj/machinery/door/firedoor,
+/obj/machinery/door/firedoor/window,
+/obj/machinery/door/poddoor/shutters{
+	id = "chemistry"
+	},
 /turf/open/floor/plating,
 /area/ship/science/xenobiology{
 	name = "Research Lab"
 	})
 "SR" = (
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 8
-	},
-/obj/effect/turf_decal/corner/opaque/brown,
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
-/turf/open/floor/plasteel,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/science/xenobiology{
 	name = "Research Lab"
 	})
@@ -7148,13 +7121,27 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 4
-	},
-/obj/effect/turf_decal/corner/opaque/brown{
+/obj/structure/crate_shelf,
+/obj/effect/turf_decal/corner/opaque/brown/half{
 	dir = 1
 	},
-/obj/structure/crate_shelf,
+/obj/structure/closet/crate{
+	name = "Reagents"
+	},
+/obj/item/reagent_containers/glass/chem_jug/sulfur,
+/obj/item/reagent_containers/glass/chem_jug/radium,
+/obj/item/reagent_containers/glass/chem_jug/potassium,
+/obj/item/reagent_containers/glass/chem_jug/oxygen,
+/obj/item/reagent_containers/glass/chem_jug/nitrogen,
+/obj/item/reagent_containers/glass/chem_jug/iodine,
+/obj/item/reagent_containers/glass/chem_jug/hydrogen,
+/obj/item/reagent_containers/glass/chem_jug/hexacrete,
+/obj/item/reagent_containers/glass/chem_jug/copper,
+/obj/item/reagent_containers/glass/chem_jug/chlorine,
+/obj/item/reagent_containers/glass/chem_jug/carbon,
+/obj/item/reagent_containers/glass/chem_jug/bromine,
+/obj/item/reagent_containers/glass/chem_jug/aluminium,
+/obj/item/reagent_containers/glass/chem_jug,
 /turf/open/floor/plasteel,
 /area/ship/science/xenobiology{
 	name = "Research Lab"
@@ -7268,6 +7255,9 @@
 /area/ship/cargo)
 "Vq" = (
 /obj/structure/disposalpipe/segment,
+/obj/effect/turf_decal/corner/opaque/brown/half{
+	dir = 4
+	},
 /turf/open/floor/plasteel,
 /area/ship/science/xenobiology{
 	name = "Research Lab"
@@ -7434,17 +7424,6 @@
 /area/ship/science/xenobiology{
 	name = "Research Lab"
 	})
-"Wl" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/open/floor/plasteel,
-/area/ship/science/xenobiology{
-	name = "Research Lab"
-	})
 "Wn" = (
 /obj/structure/table/wood,
 /obj/machinery/light/directional/south,
@@ -7509,7 +7488,8 @@
 "WZ" = (
 /obj/machinery/door/airlock/public/glass{
 	name = "Canteen";
-	dir = 4
+	dir = 4;
+	req_ship_access = 1
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 8
@@ -7538,17 +7518,16 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
-/obj/effect/turf_decal/corner/opaque/brown,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 8
-	},
 /obj/machinery/light/directional/south,
+/obj/effect/turf_decal/corner/opaque/mauve{
+	dir = 10
+	},
 /turf/open/floor/plasteel,
 /area/ship/cargo)
 "Xi" = (
@@ -7583,6 +7562,22 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
+"Xn" = (
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
+	},
+/obj/machinery/button/door{
+	dir = 4;
+	pixel_x = -25;
+	pixel_y = 5;
+	name = "Storage Shutters";
+	id = "storage";
+	req_ship_access = 1
+	},
+/turf/open/floor/plasteel,
+/area/ship/science/xenobiology{
+	name = "Research Lab"
+	})
 "Xo" = (
 /obj/docking_port/stationary{
 	dwidth = 15;
@@ -7743,15 +7738,6 @@
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "YF" = (
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 1
-	},
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 4
-	},
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 8
-	},
 /obj/machinery/light/directional/west,
 /obj/structure/table,
 /obj/machinery/cell_charger,
@@ -7763,6 +7749,12 @@
 /obj/item/multitool{
 	pixel_x = 7;
 	pixel_y = 2
+	},
+/obj/effect/turf_decal/corner/opaque/mauve{
+	dir = 5
+	},
+/obj/effect/turf_decal/corner/opaque/mauve{
+	dir = 9
 	},
 /turf/open/floor/plasteel,
 /area/ship/science/xenobiology{
@@ -7857,29 +7849,27 @@
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/medical)
 "Zs" = (
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 8
-	},
-/obj/effect/turf_decal/corner/opaque/brown,
 /obj/machinery/light/directional/south,
 /obj/machinery/chem_master,
 /obj/structure/window/reinforced{
 	dir = 4
+	},
+/obj/effect/turf_decal/corner/opaque/mauve{
+	dir = 10
 	},
 /turf/open/floor/plasteel,
 /area/ship/science/xenobiology{
 	name = "Research Lab"
 	})
 "Zu" = (
-/obj/effect/turf_decal/corner/opaque/brown,
-/obj/effect/turf_decal/corner/opaque/brown{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
+	},
+/obj/effect/turf_decal/corner/opaque/mauve{
+	dir = 10
 	},
 /turf/open/floor/plasteel,
 /area/ship/cargo)
@@ -9435,7 +9425,7 @@ bF
 bF
 fg
 Zu
-eh
+Ll
 mu
 mF
 ZW
@@ -9507,7 +9497,7 @@ PU
 iQ
 Ll
 Nr
-gw
+RR
 lJ
 SR
 Ll
@@ -9540,10 +9530,10 @@ ot
 yd
 yd
 IT
-eh
-OD
 mW
-Wl
+OD
+gw
+Xn
 zM
 DF
 li
@@ -9612,7 +9602,7 @@ yd
 IT
 eh
 TW
-ym
+gw
 gw
 bG
 Wk
