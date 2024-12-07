@@ -567,7 +567,7 @@
 	name = "Smartfridge (Machine Board)"
 	build_path = /obj/machinery/smartfridge
 	req_components = list(/obj/item/stock_parts/matter_bin = 1)
-// [CELADON-EDIT] - QoL - Bloodbank circuit added
+// [CELADON-EDIT] - CELADON_QOL - Bloodbank circuit added
 	var/static/list/fridges_name_paths = list(/obj/machinery/smartfridge/bloodbank = "blood",
 		/obj/machinery/smartfridge/chemistry = "chems",
 		/obj/machinery/smartfridge/disks = "disks",
