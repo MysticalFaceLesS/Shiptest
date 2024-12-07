@@ -3,3 +3,6 @@
 
 #define REVERSE_BEAR_TRAP_TRAIT "reverse-bear-trap"
 #define SHAMEBRERO_TRAIT "shamebrero"
+
+/// This mob heals from carp rifts.
+#define TRAIT_HEALS_FROM_CARP_RIFTS "heals_from_carp_rifts"
