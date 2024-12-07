@@ -833,6 +833,7 @@ GLOBAL_LIST_INIT(onecardinalwest, WEST)
 	crusher_loot = null
 
 /mob/living/simple_animal/hostile/megafauna/claw
+	armor = list("melee" = 80, "bullet" = 80, "laser" = 50, "energy" = 60, "bomb" = 100, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100)
 	crusher_loot = list(/obj/item/card/id/ert/deathsquad,
 						/obj/item/documents/nanotrasen)
 
