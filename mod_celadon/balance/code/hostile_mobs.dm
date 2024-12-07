@@ -75,6 +75,9 @@ GLOBAL_LIST_INIT(onecardinalsouth, SOUTH)
 GLOBAL_LIST_INIT(onecardinaleast, EAST)
 GLOBAL_LIST_INIT(onecardinalwest, WEST)
 
+/mob/living/simple_animal/hostile
+	var/datum/armor/armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+
 /mob/living/simple_animal/hostile/asteroid
 	vision_range = 15
 	aggro_vision_range = 15
@@ -90,18 +93,18 @@ GLOBAL_LIST_INIT(onecardinalwest, WEST)
 	health = 30
 	armor = list("melee" = 0, "bullet" = 5, "laser" = 5, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
-/mob/living/simple_animal/hostile/asteroid/goliath/beast
+// /mob/living/simple_animal/hostile/asteroid/goliath/beast
 
-/mob/living/simple_animal/hostile/asteroid/goliath/beast/ancient
+// /mob/living/simple_animal/hostile/asteroid/goliath/beast/ancient
 
-/mob/living/simple_animal/hostile/asteroid/goliath/beast/ancient/crystal
+// /mob/living/simple_animal/hostile/asteroid/goliath/beast/ancient/crystal
 
-/obj/effect/temp_visual/goliath_tentacle
-	difficulty = rand(3, 4)
+// /obj/effect/temp_visual/goliath_tentacle
+// 	// difficulty = rand(3, 4)
 
-/obj/effect/temp_visual/goliath_tentacle/crystal
+// /obj/effect/temp_visual/goliath_tentacle/crystal
 
-/mob/living/simple_animal/hostile/asteroid/goliath/beast/rockplanet
+// /mob/living/simple_animal/hostile/asteroid/goliath/beast/rockplanet
 
 
 /mob/living/simple_animal/hostile/asteroid/basilisk
@@ -109,9 +112,9 @@ GLOBAL_LIST_INIT(onecardinalwest, WEST)
 	ranged_cooldown_time = 15
 	armor = list("melee" = 10, "bullet" = 35, "laser" = 35, "energy" = 35, "bomb" = 50, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
 
-/mob/living/simple_animal/hostile/asteroid/basilisk/whitesands
+// /mob/living/simple_animal/hostile/asteroid/basilisk/whitesands
 
-/mob/living/simple_animal/hostile/asteroid/basilisk/watcher
+// /mob/living/simple_animal/hostile/asteroid/basilisk/watcher
 
 /mob/living/simple_animal/hostile/asteroid/basilisk/watcher/magmawing
 	armor = list("melee" = 10, "bullet" = 35, "laser" = 35, "energy" = 35, "bomb" = 50, "bio" = 10, "rad" = 10, "fire" = 100, "acid" = 10)
@@ -119,7 +122,7 @@ GLOBAL_LIST_INIT(onecardinalwest, WEST)
 /mob/living/simple_animal/hostile/asteroid/basilisk/watcher/icewing
 	armor = list("melee" = 10, "bullet" = 35, "laser" = 35, "energy" = 35, "bomb" = 50, "bio" = 100, "rad" = 10, "fire" = 0, "acid" = 10)
 
-/mob/living/simple_animal/hostile/asteroid/basilisk/watcher/nest
+// /mob/living/simple_animal/hostile/asteroid/basilisk/watcher/nest
 
 /mob/living/simple_animal/hostile/asteroid/basilisk/watcher/forgotten
 	armor = list("melee" = 30, "bullet" = 25, "laser" = 25, "energy" = 25, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 50, "acid" = 50)
@@ -129,13 +132,13 @@ GLOBAL_LIST_INIT(onecardinalwest, WEST)
 	armor = list("melee" = 0, "bullet" = 20, "laser" = 30, "energy" = 30, "bomb" = 40, "bio" = 20, "rad" = 20, "fire" = 50, "acid" = 20)
 
 
-/mob/living/simple_animal/hostile/asteroid/curseblob
+// /mob/living/simple_animal/hostile/asteroid/curseblob
 
 
-/mob/living/simple_animal/hostile/asteroid/goldgrub
+// /mob/living/simple_animal/hostile/asteroid/goldgrub
 
 
-/mob/living/simple_animal/hostile/asteroid/gutlunch
+// /mob/living/simple_animal/hostile/asteroid/gutlunch
 
 
 /mob/living/simple_animal/hostile/asteroid/hivelord
@@ -143,39 +146,39 @@ GLOBAL_LIST_INIT(onecardinalwest, WEST)
 	armor = list("melee" = -10, "bullet" = 10, "laser" = 10, "energy" = 0, "bomb" = 50, "bio" = 10, "rad" = 10, "fire" = 20, "acid" = 20)
 	deathmessage = "telepathically cries."
 
-/mob/living/simple_animal/hostile/asteroid/hivelord/legion
+// /mob/living/simple_animal/hostile/asteroid/hivelord/legion
 
-/mob/living/simple_animal/hostile/asteroid/hivelord/legion/dwarf
+// /mob/living/simple_animal/hostile/asteroid/hivelord/legion/dwarf
 
-/mob/living/simple_animal/hostile/asteroid/hivelord/legion/nest
+// /mob/living/simple_animal/hostile/asteroid/hivelord/legion/nest
 
-/mob/living/simple_animal/hostile/asteroid/hivelord/legion/dwarf/nest
+// /mob/living/simple_animal/hostile/asteroid/hivelord/legion/dwarf/nest
 
 //Legion skull
 /mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion
 	armor = list("melee" = 0, "bullet" = 70, "laser" = 70, "energy" = 70, "bomb" = 0, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 0)
 
-/mob/living/simple_animal/hostile/asteroid/hivelordbrood
+// /mob/living/simple_animal/hostile/asteroid/hivelordbrood
 
-/mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion/staff
+// /mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion/staff
 
-/mob/living/simple_animal/hostile/asteroid/hivelord/legion/advanced
+// /mob/living/simple_animal/hostile/asteroid/hivelord/legion/advanced
 
-/mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion/advanced
+// /mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion/advanced
 
-/mob/living/simple_animal/hostile/big_legion
+// /mob/living/simple_animal/hostile/big_legion
 
-/mob/living/simple_animal/hostile/asteroid/hivelord/legion/snow
+// /mob/living/simple_animal/hostile/asteroid/hivelord/legion/snow
 
 // Snow Legion skull
 /mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion/snow
 	armor = list("melee" = 0, "bullet" = 70, "laser" = 70, "energy" = 70, "bomb" = 0, "bio" = 100, "rad" = 100, "fire" = 0, "acid" = 0)
 
-/mob/living/simple_animal/hostile/asteroid/hivelord/legion/snow/nest
+// /mob/living/simple_animal/hostile/asteroid/hivelord/legion/snow/nest
 
-/mob/living/simple_animal/hostile/asteroid/hivelord/legion/crystal
+// /mob/living/simple_animal/hostile/asteroid/hivelord/legion/crystal
 
-/mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion/crystal
+// /mob/living/simple_animal/hostile/asteroid/hivelordbrood/legion/crystal
 
 
 /mob/living/simple_animal/hostile/asteroid/ice_demon
@@ -199,14 +202,14 @@ GLOBAL_LIST_INIT(onecardinalwest, WEST)
 	move_to_delay = 5
 	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 50, "bio" = 20, "rad" = 20, "fire" = 20, "acid" = 20)
 
-/mob/living/simple_animal/hostile/asteroid/lobstrosity/beach
+// /mob/living/simple_animal/hostile/asteroid/lobstrosity/beach
 
 
 /mob/living/simple_animal/hostile/asteroid/polarbear
 	move_to_delay = 6
 	armor = list("melee" = 20, "bullet" = 20, "laser" = 10, "energy" = 10, "bomb" = 50, "bio" = 10, "rad" = 10, "fire" = 20, "acid" = 10)
 
-/mob/living/simple_animal/hostile/asteroid/polarbear/lesser
+// /mob/living/simple_animal/hostile/asteroid/polarbear/lesser
 
 /mob/living/simple_animal/hostile/asteroid/polarbear/warrior
 	move_to_delay = 4
@@ -218,250 +221,303 @@ GLOBAL_LIST_INIT(onecardinalwest, WEST)
 /mob/living/simple_animal/hostile/asteroid/wolf
 	move_to_delay = 13
 	ranged_cooldown_time = 45
-	armor = list("melee" = 10, "bullet" = 10, "laser" = 20, "energy" = 10, "bomb" = 50, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
+	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
 
 /mob/living/simple_animal/hostile/asteroid/wolf/alpha
+	move_to_delay = 6
+	ranged_cooldown_time = 22
+	armor = list("melee" = 20, "bullet" = 20, "laser" = 20, "energy" = 20, "bomb" = 20, "bio" = 20, "rad" = 20, "fire" = 20, "acid" = 20)
 
 
 /mob/living/simple_animal/hostile/retaliate
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
-/mob/living/simple_animal/hostile/retaliate/bat
+// /mob/living/simple_animal/hostile/retaliate/bat
 
 /mob/living/simple_animal/hostile/retaliate/clown
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
-/mob/living/simple_animal/hostile/retaliate/clown/lube
+// /mob/living/simple_animal/hostile/retaliate/clown/lube
 
-/mob/living/simple_animal/hostile/retaliate/clown/banana
+// /mob/living/simple_animal/hostile/retaliate/clown/banana
 
-/mob/living/simple_animal/hostile/retaliate/clown/honkling
+// /mob/living/simple_animal/hostile/retaliate/clown/honkling
 
-/mob/living/simple_animal/hostile/retaliate/clown/fleshclown
+// /mob/living/simple_animal/hostile/retaliate/clown/fleshclown
 
-/mob/living/simple_animal/hostile/retaliate/clown/longface
+// /mob/living/simple_animal/hostile/retaliate/clown/longface
 
 /mob/living/simple_animal/hostile/retaliate/clown/clownhulk
+	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 100, "rad" = 30, "fire" = 30, "acid" = 0)
 
 /mob/living/simple_animal/hostile/retaliate/clown/clownhulk/chlown
 
 /mob/living/simple_animal/hostile/retaliate/clown/clownhulk/honcmunculus
+	armor = list("melee" = 10, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 0, "acid" = 0)
 
 /mob/living/simple_animal/hostile/retaliate/clown/clownhulk/destroyer
+	armor = list("melee" = 60, "bullet" = 40, "laser" = 40, "energy" = 30, "bomb" = 90, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 90)
 
 /mob/living/simple_animal/hostile/retaliate/clown/mutant
+	armor = list("melee" = 50, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 50, "bio" = 100, "rad" = 100, "fire" = 20, "acid" = 0)
 
-/mob/living/simple_animal/hostile/retaliate/clown/mutant/blob
+// /mob/living/simple_animal/hostile/retaliate/clown/mutant/blob
 
-/mob/living/simple_animal/hostile/retaliate/frog
+// /mob/living/simple_animal/hostile/retaliate/frog
 
-/mob/living/simple_animal/hostile/retaliate/ghost
+// /mob/living/simple_animal/hostile/retaliate/ghost
 
-/mob/living/simple_animal/hostile/retaliate/spaceman
+// /mob/living/simple_animal/hostile/retaliate/spaceman
 
 /mob/living/simple_animal/hostile/retaliate/nanotrasenpeace
+	armor = list("melee" = 25, "bullet" = 10, "laser" = 10, "energy" = 25, "bomb" = 25, "bio" = 100, "rad" = 10, "fire" = 25, "acid" = 25)
 
 /mob/living/simple_animal/hostile/retaliate/nanotrasenpeace/ranged
+	armor = list("melee" = 10, "bullet" = 25, "laser" = 25, "energy" = 25, "bomb" = 25, "bio" = 100, "rad" = 10, "fire" = 25, "acid" = 25)
 
 
 // Custom
 /mob/living/simple_animal/hostile/abandoned_minebot
+	move_to_delay = 5
 
 
 /mob/living/simple_animal/hostile/alien
+	move_to_delay = 8
+	ranged_cooldown_time = 15
+	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 0, "acid" = 80)
 
-/mob/living/simple_animal/hostile/alien/asteroid
+// /mob/living/simple_animal/hostile/alien/asteroid
 
-/mob/living/simple_animal/hostile/alien/drone
+// /mob/living/simple_animal/hostile/alien/drone
 
 /mob/living/simple_animal/hostile/alien/sentinel
+	armor = list("melee" = 30, "bullet" = 20, "laser" = 10, "energy" = 20, "bomb" = 20, "bio" = 100, "rad" = 100, "fire" = 20, "acid" = 80)
 
 /mob/living/simple_animal/hostile/alien/queen
+	move_to_delay = 6
+	armor = list("melee" = 30, "bullet" = 30, "laser" = 15, "energy" = 30, "bomb" = 30, "bio" = 100, "rad" = 100, "fire" = 20, "acid" = 80)
 
 /mob/living/simple_animal/hostile/alien/queen/large
+	move_to_delay = 4
+	armor = list("melee" = 50, "bullet" = 50, "laser" = 20, "energy" = 50, "bomb" = 50, "bio" = 100, "rad" = 100, "fire" = 20, "acid" = 80)
 
-/mob/living/simple_animal/hostile/alien/maid
+// /mob/living/simple_animal/hostile/alien/maid
 
 
 /mob/living/simple_animal/hostile/bear
+	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
 
 /mob/living/simple_animal/hostile/bear/Hudson
 
 /mob/living/simple_animal/hostile/bear/snow
+	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 10, "fire" = 40, "acid" = 10)
 
 /mob/living/simple_animal/hostile/bear/frontier
+	armor = list("melee" = 15, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 10, "rad" = 15, "fire" = 30, "acid" = 30)
 
-/mob/living/simple_animal/hostile/bear/cave
+// /mob/living/simple_animal/hostile/bear/cave
 
-/mob/living/simple_animal/hostile/bear/butter
+// /mob/living/simple_animal/hostile/bear/butter
 
 
-/mob/living/simple_animal/hostile/poison/bees
+// /mob/living/simple_animal/hostile/poison/bees
 
-/mob/living/simple_animal/hostile/poison/bees/queen
+// /mob/living/simple_animal/hostile/poison/bees/queen
 
-/mob/living/simple_animal/hostile/poison/bees/short
+// /mob/living/simple_animal/hostile/poison/bees/short
 
 
 /mob/living/simple_animal/hostile/carp
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 100, "rad" = 100, "fire" = 0, "acid" = 20)
 
-/mob/living/simple_animal/hostile/carp/holocarp
+// /mob/living/simple_animal/hostile/carp/holocarp
 
 /mob/living/simple_animal/hostile/carp/megacarp
+	armor = list("melee" = 20, "bullet" = 20, "laser" = 20, "energy" = 20, "bomb" = 20, "bio" = 100, "rad" = 100, "fire" = 20, "acid" = 20)
 
 /mob/living/simple_animal/hostile/carp/cayenne
 
 
 /mob/living/simple_animal/hostile/clown
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
-/mob/living/simple_animal/hostile/clown/lube
+// /mob/living/simple_animal/hostile/clown/lube
 
-/mob/living/simple_animal/hostile/clown/banana
+// /mob/living/simple_animal/hostile/clown/banana
 
-/mob/living/simple_animal/hostile/clown/honkling
+// /mob/living/simple_animal/hostile/clown/honkling
 
-/mob/living/simple_animal/hostile/clown/fleshclown
+// /mob/living/simple_animal/hostile/clown/fleshclown
 
-/mob/living/simple_animal/hostile/clown/longface
+// /mob/living/simple_animal/hostile/clown/longface
 
 /mob/living/simple_animal/hostile/clown/clownhulk
+	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 100, "rad" = 30, "fire" = 30, "acid" = 0)
 
-/mob/living/simple_animal/hostile/clown/clownhulk/chlown
+// /mob/living/simple_animal/hostile/clown/clownhulk/chlown
 
 /mob/living/simple_animal/hostile/clown/clownhulk/honcmunculus
+	armor = list("melee" = 10, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 0, "acid" = 0)
 
 /mob/living/simple_animal/hostile/clown/clownhulk/destroyer
+	armor = list("melee" = 60, "bullet" = 40, "laser" = 40, "energy" = 30, "bomb" = 90, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 90)
 
 /mob/living/simple_animal/hostile/clown/mutant
-
-/mob/living/simple_animal/hostile/clown/mutant/blob
-
-/mob/living/simple_animal/hostile/clown/stacked
+	armor = list("melee" = 50, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 50, "bio" = 100, "rad" = 100, "fire" = 20, "acid" = 0)
 
 
-/mob/living/simple_animal/hostile/cockroach
+// /mob/living/simple_animal/hostile/clown/mutant/blob
 
-/mob/living/simple_animal/hostile/cockroach/glockroach
-
-
-/mob/living/simple_animal/hostile/eyeball
+// /mob/living/simple_animal/hostile/clown/stacked
 
 
-/mob/living/simple_animal/hostile/faithless
+// /mob/living/simple_animal/hostile/cockroach
+
+// /mob/living/simple_animal/hostile/cockroach/glockroach
+
+
+// /mob/living/simple_animal/hostile/eyeball
+
+
+// /mob/living/simple_animal/hostile/faithless
 
 
 /mob/living/simple_animal/hostile/poison/giant_spider
+	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 10, "fire" = 10, "acid" = 10)
 
-/mob/living/simple_animal/hostile/poison/giant_spider/nurse
+// /mob/living/simple_animal/hostile/poison/giant_spider/nurse
 
-/mob/living/simple_animal/hostile/poison/giant_spider/nurse/midwife
+// /mob/living/simple_animal/hostile/poison/giant_spider/nurse/midwife
 
 /mob/living/simple_animal/hostile/poison/giant_spider/hunter
+	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 100, "rad" = 30, "fire" = 30, "acid" = 30)
 
 /mob/living/simple_animal/hostile/poison/giant_spider/hunter/viper
+	armor = list("melee" = 15, "bullet" = 15, "laser" = 15, "energy" = 15, "bomb" = 15, "bio" = 100, "rad" = 15, "fire" = 15, "acid" = 15)
 
 /mob/living/simple_animal/hostile/poison/giant_spider/tarantula
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 40, "energy" = 40, "bomb" = 40, "bio" = 100, "rad" = 30, "fire" = 30, "acid" = 30)
 
-/mob/living/simple_animal/hostile/poison/giant_spider/ice
+// /mob/living/simple_animal/hostile/poison/giant_spider/ice
 
-/mob/living/simple_animal/hostile/poison/giant_spider/nurse/ice
+// /mob/living/simple_animal/hostile/poison/giant_spider/nurse/ice
 
 /mob/living/simple_animal/hostile/poison/giant_spider/hunter/ice
+	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 100, "rad" = 30, "fire" = 30, "acid" = 30)
 
 
-/mob/living/simple_animal/hostile/retaliate/goose
+// /mob/living/simple_animal/hostile/retaliate/goose
 
-/mob/living/simple_animal/hostile/retaliate/goose/vomit
+// /mob/living/simple_animal/hostile/retaliate/goose/vomit
 
 
-/mob/living/simple_animal/hostile/headcrab
+// /mob/living/simple_animal/hostile/headcrab
 
 
 /mob/living/simple_animal/hostile/hivebot
+	armor = list("melee" = 20, "bullet" = 5, "laser" = 5, "energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 50, "acid" = 50)
 
 /mob/living/simple_animal/hostile/hivebot/range
+	armor = list("melee" = 5, "bullet" = 20, "laser" = 20, "energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 50, "acid" = 50)
 
 /mob/living/simple_animal/hostile/hivebot/range/rockplanet
 
 /mob/living/simple_animal/hostile/hivebot/rapid
+	armor = list("melee" = 0, "bullet" = 20, "laser" = 20, "energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 50, "acid" = 50)
 
 /mob/living/simple_animal/hostile/hivebot/rapid/rockplanet
 
 /mob/living/simple_animal/hostile/hivebot/strong
+	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 100, "rad" = 100, "fire" = 70, "acid" = 70)
 
-/mob/living/simple_animal/hostile/hivebot/strong/rockplanet
+// /mob/living/simple_animal/hostile/hivebot/strong/rockplanet
 
-/mob/living/simple_animal/hostile/hivebot/mechanic
+// /mob/living/simple_animal/hostile/hivebot/mechanic
 
 /mob/living/simple_animal/hostile/hivebot/wasteplanet
+	armor = list("melee" = 20, "bullet" = 5, "laser" = 5, "energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 50, "acid" = 50)
 
 /mob/living/simple_animal/hostile/hivebot/wasteplanet/ranged
+	armor = list("melee" = 5, "bullet" = 20, "laser" = 20, "energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 50, "acid" = 50)
 
 /mob/living/simple_animal/hostile/hivebot/wasteplanet/ranged/rapid
+	armor = list("melee" = 0, "bullet" = 20, "laser" = 20, "energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 50, "acid" = 50)
 
 /mob/living/simple_animal/hostile/hivebot/wasteplanet/strong
+	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 30, "bio" = 100, "rad" = 100, "fire" = 70, "acid" = 70)
 
 
-/mob/living/simple_animal/hostile/illusion
+// /mob/living/simple_animal/hostile/illusion
 
-/mob/living/simple_animal/hostile/illusion/escape
+// /mob/living/simple_animal/hostile/illusion/escape
 
 
-/mob/living/simple_animal/hostile/killertomato
+// /mob/living/simple_animal/hostile/killertomato
 
 
 /mob/living/simple_animal/hostile/human/syndicate/mecha_pilot
+	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 10, "fire" = 10, "acid" = 10)
 
-/mob/living/simple_animal/hostile/human/syndicate/mecha_pilot/no_mech
+// /mob/living/simple_animal/hostile/human/syndicate/mecha_pilot/no_mech
 
-/mob/living/simple_animal/hostile/human/syndicate/mecha_pilot/nanotrasen
+// /mob/living/simple_animal/hostile/human/syndicate/mecha_pilot/nanotrasen
 
-/mob/living/simple_animal/hostile/human/syndicate/mecha_pilot/no_mech/nanotrasen
+// /mob/living/simple_animal/hostile/human/syndicate/mecha_pilot/no_mech/nanotrasen
 
 
 /mob/living/simple_animal/hostile/mimic
+	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 10, "fire" = 10, "acid" = 10)
 
 /mob/living/simple_animal/hostile/mimic/crate
+	armor = list("melee" = 20, "bullet" = 20, "laser" = 20, "energy" = 20, "bomb" = 30, "bio" = 100, "rad" = 100, "fire" = 30, "acid" = 30)
 
-/mob/living/simple_animal/hostile/mimic/copy
+// /mob/living/simple_animal/hostile/mimic/copy
 
-/mob/living/simple_animal/hostile/mimic/copy/machine
+// /mob/living/simple_animal/hostile/mimic/copy/machine
 
-/mob/living/simple_animal/hostile/mimic/copy/ranged
+// /mob/living/simple_animal/hostile/mimic/copy/ranged
 
-/mob/living/simple_animal/hostile/mimic/xenobio
-
-
-/mob/living/simple_animal/hostile/mushroom
+// /mob/living/simple_animal/hostile/mimic/xenobio
 
 
-/mob/living/simple_animal/hostile/netherworld
+// /mob/living/simple_animal/hostile/mushroom
 
-/mob/living/simple_animal/hostile/netherworld/asteroid
 
-/mob/living/simple_animal/hostile/netherworld/migo
+// /mob/living/simple_animal/hostile/netherworld
 
-/mob/living/simple_animal/hostile/netherworld/migo/asteroid
+// /mob/living/simple_animal/hostile/netherworld/asteroid
 
-/mob/living/simple_animal/hostile/netherworld/blankbody
+// /mob/living/simple_animal/hostile/netherworld/migo
+
+// /mob/living/simple_animal/hostile/netherworld/migo/asteroid
+
+// /mob/living/simple_animal/hostile/netherworld/blankbody
 
 
 /mob/living/simple_animal/hostile/regalrat
+	armor = list("melee" = 15, "bullet" = 15, "laser" = 15, "energy" = 15, "bomb" = 15, "bio" = 100, "rad" = 100, "fire" = 15, "acid" = 30)
 
 
-/mob/living/simple_animal/hostile/rat
+// /mob/living/simple_animal/hostile/rat
 
 
 /mob/living/simple_animal/hostile/space_dragon
+	maxHealth = 777
+	health = 777
+	armor = list("melee" = 15, "bullet" = 15, "laser" = 15, "energy" = 15, "bomb" = 15, "bio" = 100, "rad" = 100, "fire" = 15, "acid" = 30)
 
 
 /mob/living/simple_animal/hostile/statue
+	armor = list("melee" = 90, "bullet" = 90, "laser" = 90, "energy" = 90, "bomb" = 90, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100)
 
 
 /mob/living/simple_animal/hostile/tree
+	armor = list("melee" = 30, "bullet" = 40, "laser" = 20, "energy" = 50, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 0, "acid" = 0)
 
-/mob/living/simple_animal/hostile/tree/festivus
+// /mob/living/simple_animal/hostile/tree/festivus
 
 
-/mob/living/simple_animal/hostile/venus_human_trap
+// /mob/living/simple_animal/hostile/venus_human_trap
 
 
 /mob/living/simple_animal/hostile/asteroid/fugu
@@ -471,215 +527,266 @@ GLOBAL_LIST_INIT(onecardinalwest, WEST)
 	armor = list("melee" = 20, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 40, "bio" = 20, "rad" = 20, "fire" = 35, "acid" = 30)
 
 /mob/living/simple_animal/hostile/construct
+	armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 5, "bio" = 100, "rad" = 100, "fire" = 50, "acid" = 80)
 
 /mob/living/simple_animal/hostile/construct/juggernaut
+	armor = list("melee" = 35, "bullet" = 35, "laser" = 35, "energy" = 35, "bomb" = 35, "bio" = 100, "rad" = 100, "fire" = 50, "acid" = 80)
 
-/mob/living/simple_animal/hostile/construct/juggernaut/hostile
+// /mob/living/simple_animal/hostile/construct/juggernaut/hostile
 
-/mob/living/simple_animal/hostile/construct/juggernaut/angelic
+// /mob/living/simple_animal/hostile/construct/juggernaut/angelic
 
 /mob/living/simple_animal/hostile/construct/wraith
+	armor = list("melee" = 25, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 5, "bio" = 100, "rad" = 100, "fire" = 50, "acid" = 80)
 
-/mob/living/simple_animal/hostile/construct/wraith/hostile
+// /mob/living/simple_animal/hostile/construct/wraith/hostile
 
-/mob/living/simple_animal/hostile/construct/wraith/angelic
+// /mob/living/simple_animal/hostile/construct/wraith/angelic
 
 /mob/living/simple_animal/hostile/construct/artificer
+	armor = list("melee" = 5, "bullet" = 25, "laser" = 25, "energy" = 25, "bomb" = 5, "bio" = 100, "rad" = 100, "fire" = 50, "acid" = 80)
 
-/mob/living/simple_animal/hostile/construct/artificer/hostile
+// /mob/living/simple_animal/hostile/construct/artificer/hostile
 
-/mob/living/simple_animal/hostile/construct/artificer/angelic
+// /mob/living/simple_animal/hostile/construct/artificer/angelic
 
-/mob/living/simple_animal/hostile/construct/artificer/noncult
+// /mob/living/simple_animal/hostile/construct/artificer/noncult
 
 /mob/living/simple_animal/hostile/construct/harvester
+	armor = list("melee" = 15, "bullet" = 15, "laser" = 15, "energy" = 15, "bomb" = 15, "bio" = 100, "rad" = 100, "fire" = 50, "acid" = 80)
 
+/*
+Вынесена в mod_celadon/balance/code/elite.dm
 
 /mob/living/simple_animal/hostile/asteroid/elite
-
 /mob/living/simple_animal/hostile/asteroid/elite/broodmother
-
 /mob/living/simple_animal/hostile/asteroid/elite/broodmother_child
-
 /mob/living/simple_animal/hostile/asteroid/elite/broodmother_child/rockplanet
-
 /mob/living/simple_animal/hostile/asteroid/elite/herald
-
 /mob/living/simple_animal/hostile/asteroid/elite/herald/mirror
-
 /mob/living/simple_animal/hostile/asteroid/elite/legionnaire
-
 /mob/living/simple_animal/hostile/asteroid/elite/legionnairehead
-
 /mob/living/simple_animal/hostile/asteroid/elite/pandora
-
 /mob/living/simple_animal/hostile/asteroid/elite/pandora/dungeon
-
+*/
 
 /mob/living/simple_animal/hostile/gorilla
 	armor = list("melee" = 50, "bullet" = 50, "laser" = 10, "energy" = 10, "bomb" = 50, "bio" = 50, "rad" = 0, "fire" = 20, "acid" = 10)
 
 
-/mob/living/simple_animal/hostile/human
+// /mob/living/simple_animal/hostile/human
 
-/mob/living/simple_animal/hostile/human/cat_butcherer
+// /mob/living/simple_animal/hostile/human/cat_butcherer
 
 /mob/living/simple_animal/hostile/human/frontier
+	armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 5, "bio" = 20, "rad" = 5, "fire" = 5, "acid" = 5)
 
-/mob/living/simple_animal/hostile/human/frontier/internals
+// /mob/living/simple_animal/hostile/human/frontier/internals
 
-/mob/living/simple_animal/hostile/human/frontier/ranged
+// /mob/living/simple_animal/hostile/human/frontier/ranged
 
 /mob/living/simple_animal/hostile/human/frontier/ranged/internals
+	armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 5, "bio" = 100, "rad" = 20, "fire" = 5, "acid" = 5)
 
-/mob/living/simple_animal/hostile/human/frontier/ranged/internals/neutered
+// /mob/living/simple_animal/hostile/human/frontier/ranged/internals/neutered
 
-/mob/living/simple_animal/hostile/human/frontier/ranged/neutered
+// /mob/living/simple_animal/hostile/human/frontier/ranged/neutered
 
-/mob/living/simple_animal/hostile/human/frontier/ranged/mosin
+// /mob/living/simple_animal/hostile/human/frontier/ranged/mosin
 
 /mob/living/simple_animal/hostile/human/frontier/ranged/mosin/internals
+	armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 5, "bio" = 100, "rad" = 20, "fire" = 5, "acid" = 5)
 
-/mob/living/simple_animal/hostile/human/frontier/ranged/mosin/internals/neutered
+// /mob/living/simple_animal/hostile/human/frontier/ranged/mosin/internals/neutered
 
-/mob/living/simple_animal/hostile/human/frontier/ranged/mosin/neutered
+// /mob/living/simple_animal/hostile/human/frontier/ranged/mosin/neutered
 
 /mob/living/simple_animal/hostile/human/frontier/ranged/trooper
+	armor = list("melee" = 15, "bullet" = 25, "laser" = 25, "energy" = 25, "bomb" = 25, "bio" = 20, "rad" = 20, "fire" = 25, "acid" = 25)
 
 /mob/living/simple_animal/hostile/human/frontier/ranged/trooper/internals
+	armor = list("melee" = 15, "bullet" = 25, "laser" = 25, "energy" = 25, "bomb" = 25, "bio" = 100, "rad" = 30, "fire" = 25, "acid" = 25)
 
-/mob/living/simple_animal/hostile/human/frontier/ranged/trooper/internals/neutered
+// /mob/living/simple_animal/hostile/human/frontier/ranged/trooper/internals/neutered
 
-/mob/living/simple_animal/hostile/human/frontier/ranged/trooper/neutered
+// /mob/living/simple_animal/hostile/human/frontier/ranged/trooper/neutered
 
-/mob/living/simple_animal/hostile/human/frontier/ranged/trooper/skm
+// /mob/living/simple_animal/hostile/human/frontier/ranged/trooper/skm
 
 /mob/living/simple_animal/hostile/human/frontier/ranged/trooper/internals
+	armor = list("melee" = 15, "bullet" = 25, "laser" = 25, "energy" = 25, "bomb" = 25, "bio" = 100, "rad" = 30, "fire" = 25, "acid" = 25)
 
-/mob/living/simple_animal/hostile/human/frontier/ranged/trooper/internals/neutered
+// /mob/living/simple_animal/hostile/human/frontier/ranged/trooper/internals/neutered
 
-/mob/living/simple_animal/hostile/human/frontier/ranged/trooper/skm/neutured
+// /mob/living/simple_animal/hostile/human/frontier/ranged/trooper/skm/neutured
 
-/mob/living/simple_animal/hostile/human/frontier/ranged/trooper/rifle
+// /mob/living/simple_animal/hostile/human/frontier/ranged/trooper/rifle
 
 /mob/living/simple_animal/hostile/human/frontier/ranged/trooper/rifle/internals
+	armor = list("melee" = 15, "bullet" = 25, "laser" = 25, "energy" = 25, "bomb" = 25, "bio" = 100, "rad" = 30, "fire" = 25, "acid" = 25)
 
-/mob/living/simple_animal/hostile/human/frontier/ranged/trooper/rifle/internals/neutered
+// /mob/living/simple_animal/hostile/human/frontier/ranged/trooper/rifle/internals/neutered
 
-/mob/living/simple_animal/hostile/human/frontier/ranged/trooper/rifle/neutered
+// /mob/living/simple_animal/hostile/human/frontier/ranged/trooper/rifle/neutered
 
 /mob/living/simple_animal/hostile/human/frontier/ranged/trooper/heavy
+	armor = list("melee" = 45, "bullet" = 55, "laser" = 55, "energy" = 55, "bomb" = 55, "bio" = 30, "rad" = 40, "fire" = 55, "acid" = 55)
 
 /mob/living/simple_animal/hostile/human/frontier/ranged/trooper/heavy/internals
+	armor = list("melee" = 45, "bullet" = 55, "laser" = 55, "energy" = 55, "bomb" = 55, "bio" = 100, "rad" = 50, "fire" = 55, "acid" = 55)
 
-/mob/living/simple_animal/hostile/human/frontier/ranged/trooper/heavy/neutered
+// /mob/living/simple_animal/hostile/human/frontier/ranged/trooper/heavy/neutered
 
 /mob/living/simple_animal/hostile/human/frontier/ranged/officer
+	armor = list("melee" = 5, "bullet" = 15, "laser" = 15, "energy" = 15, "bomb" = 15, "bio" = 5, "rad" = 5, "fire" = 15, "acid" = 5)
 
 /mob/living/simple_animal/hostile/human/frontier/ranged/officer/internals
+	armor = list("melee" = 5, "bullet" = 15, "laser" = 15, "energy" = 15, "bomb" = 15, "bio" = 15, "rad" = 5, "fire" = 15, "acid" = 5)
 
 /mob/living/simple_animal/hostile/human/frontier/ranged/officer/internals/neutered
 
+
 /mob/living/simple_animal/hostile/human/nanotrasen
+	armor = list("melee" = 25, "bullet" = 10, "laser" = 10, "energy" = 20, "bomb" = 10, "bio" = 100, "rad" = 60, "fire" = 20, "acid" = 20)
 
-/mob/living/simple_animal/hostile/human/nanotrasen/screaming
+// /mob/living/simple_animal/hostile/human/nanotrasen/screaming
 
-/mob/living/simple_animal/hostile/human/nanotrasen/ranged
+// /mob/living/simple_animal/hostile/human/nanotrasen/ranged
 
-/mob/living/simple_animal/hostile/human/nanotrasen/ranged/smg
+// /mob/living/simple_animal/hostile/human/nanotrasen/ranged/smg
 
-/mob/living/simple_animal/hostile/human/nanotrasen/ranged/assault
+// /mob/living/simple_animal/hostile/human/nanotrasen/ranged/assault
 
 /mob/living/simple_animal/hostile/human/nanotrasen/elite
+	armor = list("melee" = 65, "bullet" = 50, "laser" = 50, "energy" = 60, "bomb" = 50, "bio" = 100, "rad" = 100, "fire" = 80, "acid" = 80)
+
 
 /mob/living/simple_animal/hostile/human/pirate
+	armor = list("melee" = 25, "bullet" = 10, "laser" = 10, "energy" = 20, "bomb" = 10, "bio" = 100, "rad" = 60, "fire" = 20, "acid" = 20)
 
-/mob/living/simple_animal/hostile/human/pirate/melee
+// /mob/living/simple_animal/hostile/human/pirate/melee
 
 /mob/living/simple_animal/hostile/human/pirate/melee/space
+	armor = list("melee" = 45, "bullet" = 30, "laser" = 30, "energy" = 40, "bomb" = 30, "bio" = 100, "rad" = 100, "fire" = 60, "acid" = 60)
 
-/mob/living/simple_animal/hostile/human/pirate/ranged
+// /mob/living/simple_animal/hostile/human/pirate/ranged
 
 /mob/living/simple_animal/hostile/human/pirate/ranged/space
+	armor = list("melee" = 45, "bullet" = 30, "laser" = 30, "energy" = 40, "bomb" = 30, "bio" = 100, "rad" = 100, "fire" = 60, "acid" = 60)
+
 
 /mob/living/simple_animal/hostile/human/skeleton
+	armor = list("melee" = 5, "bullet" = 0, "laser" = 0, "energy" = 100, "bomb" = 0, "bio" = 100, "rad" = 100, "fire" = 50, "acid" = 5)
 
 /mob/living/simple_animal/hostile/human/skeleton/templar
+	armor = list("melee" = 41, "bullet" = 15, "laser" = 5, "energy" = 5, "bomb" = 5, "bio" = 2, "rad" = 0, "fire" = 0, "acid" = 50)
 
 /mob/living/simple_animal/hostile/human/skeleton/ice
+	armor = list("melee" = 5, "bullet" = 0, "laser" = 0, "energy" = 100, "bomb" = 0, "bio" = 100, "rad" = 100, "fire" = 50, "acid" = 5)
 
 /mob/living/simple_animal/hostile/human/skeleton/plasmaminer
+	armor = list("melee" = 10, "bullet" = 5, "laser" = 10, "energy" = 5, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 50, "acid" = 75)
 
 /mob/living/simple_animal/hostile/human/skeleton/plasmaminer/jackhammer
 
+
 /mob/living/simple_animal/hostile/human/hermit
+	armor = list("melee" = 30, "bullet" = 20, "laser" = 20, "energy" = 20, "bomb" = 50, "bio" = 100, "rad" = 50, "fire" = 50, "acid" = 50)
 
-/mob/living/simple_animal/hostile/human/hermit/survivor
+// /mob/living/simple_animal/hostile/human/hermit/survivor
 
-/mob/living/simple_animal/hostile/human/hermit/ranged
+// /mob/living/simple_animal/hostile/human/hermit/ranged
 
-/mob/living/simple_animal/hostile/human/hermit/ranged/hunter
+// /mob/living/simple_animal/hostile/human/hermit/ranged/hunter
 
-/mob/living/simple_animal/hostile/human/hermit/ranged/gunslinger
+// /mob/living/simple_animal/hostile/human/hermit/ranged/gunslinger
+
 
 /mob/living/simple_animal/hostile/human/syndicate
+	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 20, "fire" = 20, "acid" = 20)
 
 /mob/living/simple_animal/hostile/human/syndicate/space
+	armor = list("melee" = 40, "bullet" = 50, "laser" = 30, "energy" = 15, "bomb" = 35, "bio" = 100, "rad" = 50, "fire" = 50, "acid" = 90)
 
 /mob/living/simple_animal/hostile/human/syndicate/space/stormtrooper
+	armor = list("melee" = 60, "bullet" = 60, "laser" = 50, "energy" = 25, "bomb" = 55, "bio" = 100, "rad" = 70, "fire" = 100, "acid" = 100)
 
 /mob/living/simple_animal/hostile/human/syndicate/melee
+	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 20, "fire" = 20, "acid" = 20)
 
 /mob/living/simple_animal/hostile/human/syndicate/melee/space
+	armor = list("melee" = 40, "bullet" = 50, "laser" = 30, "energy" = 15, "bomb" = 35, "bio" = 100, "rad" = 50, "fire" = 50, "acid" = 90)
 
 /mob/living/simple_animal/hostile/human/syndicate/melee/space/stormtrooper
+	armor = list("melee" = 60, "bullet" = 60, "laser" = 50, "energy" = 25, "bomb" = 55, "bio" = 100, "rad" = 70, "fire" = 100, "acid" = 100)
 
 /mob/living/simple_animal/hostile/human/syndicate/melee/sword
+	armor = list("melee" = 25, "bullet" = 10, "laser" = 100, "energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 20, "fire" = 20, "acid" = 20)
 
 /mob/living/simple_animal/hostile/human/syndicate/melee/sword/space
+	armor = list("melee" = 55, "bullet" = 50, "laser" = 100, "energy" = 15, "bomb" = 35, "bio" = 100, "rad" = 50, "fire" = 50, "acid" = 90)
 
 /mob/living/simple_animal/hostile/human/syndicate/melee/sword/space/stormtrooper
+	armor = list("melee" = 75, "bullet" = 60, "laser" = 100, "energy" = 25, "bomb" = 55, "bio" = 100, "rad" = 70, "fire" = 100, "acid" = 100)
 
 /mob/living/simple_animal/hostile/human/syndicate/ranged
+	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 20, "fire" = 20, "acid" = 20)
 
 /mob/living/simple_animal/hostile/human/syndicate/ranged/infiltrator
 
 /mob/living/simple_animal/hostile/human/syndicate/ranged/space
+	armor = list("melee" = 40, "bullet" = 50, "laser" = 30, "energy" = 15, "bomb" = 35, "bio" = 100, "rad" = 50, "fire" = 50, "acid" = 90)
 
 /mob/living/simple_animal/hostile/human/syndicate/ranged/space/stormtrooper
+	armor = list("melee" = 60, "bullet" = 60, "laser" = 50, "energy" = 25, "bomb" = 55, "bio" = 100, "rad" = 70, "fire" = 100, "acid" = 100)
 
 /mob/living/simple_animal/hostile/human/syndicate/ranged/smg
+	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 20, "fire" = 20, "acid" = 20)
 
 /mob/living/simple_animal/hostile/human/syndicate/ranged/smg/space
+	armor = list("melee" = 40, "bullet" = 50, "laser" = 30, "energy" = 15, "bomb" = 35, "bio" = 100, "rad" = 50, "fire" = 50, "acid" = 90)
 
 /mob/living/simple_animal/hostile/human/syndicate/ranged/smg/space/stormtrooper
+	armor = list("melee" = 60, "bullet" = 60, "laser" = 50, "energy" = 25, "bomb" = 55, "bio" = 100, "rad" = 70, "fire" = 100, "acid" = 100)
 
 /mob/living/simple_animal/hostile/human/syndicate/ranged/shotgun
+	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 20, "fire" = 20, "acid" = 20)
 
 /mob/living/simple_animal/hostile/human/syndicate/ranged/shotgun/space
+	armor = list("melee" = 40, "bullet" = 50, "laser" = 30, "energy" = 15, "bomb" = 35, "bio" = 100, "rad" = 50, "fire" = 50, "acid" = 90)
 
 /mob/living/simple_animal/hostile/human/syndicate/ranged/shotgun/space/stormtrooper
+	armor = list("melee" = 60, "bullet" = 60, "laser" = 50, "energy" = 25, "bomb" = 55, "bio" = 100, "rad" = 70, "fire" = 100, "acid" = 100)
 
 /mob/living/simple_animal/hostile/human/syndicate/civilian
 
-/mob/living/simple_animal/hostile/viscerator
+
+// /mob/living/simple_animal/hostile/viscerator
+
 
 /mob/living/simple_animal/hostile/human/zombie
+	armor = list("melee" = 10, "bullet" = 40, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 0, "acid" = 90)
 
 /mob/living/simple_animal/hostile/human/zombie/kudzu
 
-/mob/living/simple_animal/hostile/jungle
 
-/mob/living/simple_animal/hostile/jungle/leaper
+// /mob/living/simple_animal/hostile/jungle
+
+// /mob/living/simple_animal/hostile/jungle/leaper
 
 /mob/living/simple_animal/hostile/jungle/mega_arachnid
+	move_to_delay = 5
+	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 15, "bomb" = 35, "bio" = 100, "rad" = 50, "fire" = 50, "acid" = 90)
 
 /mob/living/simple_animal/hostile/jungle/mook
+	ranged_cooldown_time = 5
 
 /mob/living/simple_animal/hostile/jungle/seedling
+	move_to_delay = 10
+	ranged_cooldown_time = 5
 
 
-/mob/living/simple_animal/hostile/boss
+// /mob/living/simple_animal/hostile/boss
 
 
 /mob/living/simple_animal/hostile/megafauna
@@ -694,7 +801,7 @@ GLOBAL_LIST_INIT(onecardinalwest, WEST)
 	speed = 1
 	move_to_delay = 2
 	armor = list("melee" = 10, "bullet" = 20, "laser" = 20, "energy" = 20, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 20, "acid" = 20)
-	crusher_loot = crusher_loot = list(/obj/item/melee/transforming/cleaving_saw,
+	crusher_loot = list(/obj/item/melee/transforming/cleaving_saw,
 										/obj/item/gun/energy/kinetic_accelerator,
 										/obj/item/crusher_trophy/miner_eye,
 										/obj/item/disk/design_disk/modkit_disc/mob_and_turf_aoe,
@@ -708,7 +815,7 @@ GLOBAL_LIST_INIT(onecardinalwest, WEST)
 				/obj/item/disk/design_disk/modkit_disc/resonator_blast,
 				/obj/item/disk/design_disk/modkit_disc/rapid_repeater)
 
-/mob/living/simple_animal/hostile/megafauna/blood_drunk_miner/guidance
+// /mob/living/simple_animal/hostile/megafauna/blood_drunk_miner/guidance
 
 /mob/living/simple_animal/hostile/megafauna/blood_drunk_miner/doom
 	ranged_cooldown_time = 8
@@ -739,13 +846,17 @@ GLOBAL_LIST_INIT(onecardinalwest, WEST)
 	crusher_loot = list(/obj/structure/closet/crate/necropolis/colossus/crusher)
 	loot = list(/obj/structure/closet/crate/necropolis/colossus)
 
-/mob/living/simple_animal/hostile/lightgeist
+// /mob/living/simple_animal/hostile/lightgeist
 
 /mob/living/simple_animal/hostile/megafauna/cult_templar
+	move_to_delay = 3
+	ranged_cooldown_time = 10
+	armor = list("melee" = 40, "bullet" = 15, "laser" = 5, "energy" = 20, "bomb" = 30, "bio" = 10, "rad" = 10, "fire" = 40, "acid" = 40)
 
 /mob/living/simple_animal/hostile/cult_demon
+	armor = list("melee" = 10, "bullet" = 25, "laser" = 25, "energy" = 40, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100)
 
-/mob/living/simple_animal/hostile/cult_demon/greater
+// /mob/living/simple_animal/hostile/cult_demon/greater
 
 /mob/living/simple_animal/hostile/megafauna/demonic_frost_miner
 	crusher_loot = list(/obj/effect/decal/remains/plasma,
@@ -773,7 +884,7 @@ GLOBAL_LIST_INIT(onecardinalwest, WEST)
 	health = 800
 	crusher_loot = list()
 
-/mob/living/simple_animal/hostile/megafauna/dragon/icemoon // Отсутствует
+// /mob/living/simple_animal/hostile/megafauna/dragon/icemoon // Отсутствует
 
 /mob/living/simple_animal/hostile/megafauna/hierophant
 	armour_penetration = 75
@@ -788,24 +899,24 @@ GLOBAL_LIST_INIT(onecardinalwest, WEST)
 	speed = 1
 	move_to_delay = 2
 
-/mob/living/simple_animal/hostile/megafauna/swarmer_swarm_beacon
+// /mob/living/simple_animal/hostile/megafauna/swarmer_swarm_beacon
 
 /mob/living/simple_animal/hostile/megafauna/wendigo
 	loot = list(/obj/item/wendigo_blood)
 	crusher_loot = list(/obj/item/wendigo_blood, /obj/item/crusher_trophy/demon_claws)
 
 
-/mob/living/simple_animal
+// /mob/living/simple_animal
 
-/mob/living/simple_animal/parrot
+// /mob/living/simple_animal/parrot
 
-/mob/living/simple_animal/parrot/Polly
+// /mob/living/simple_animal/parrot/Polly
 
-/mob/living/simple_animal/slime
+// /mob/living/simple_animal/slime
 
-/mob/living/simple_animal/slime/pet
+// /mob/living/simple_animal/slime/pet
 
-/mob/living/simple_animal/shade
+// /mob/living/simple_animal/shade
 
 
 
