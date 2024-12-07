@@ -568,8 +568,12 @@
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ship/crew/cryo)
 "eh" = (
+/obj/effect/spawner/structure/window/shuttle,
 /obj/machinery/door/firedoor/window,
-/turf/closed/wall/mineral/titanium/nodiagonal,
+/obj/machinery/door/poddoor/shutters{
+	id = "storage"
+	},
+/turf/open/floor/plating,
 /area/ship/science/xenobiology{
 	name = "Research Lab"
 	})
@@ -1356,22 +1360,6 @@
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/hallway/central)
-"jI" = (
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 4
-	},
-/obj/machinery/button/door{
-	dir = 4;
-	pixel_x = -25;
-	pixel_y = 5;
-	name = "Storage Shutters";
-	id = "storage";
-	req_ship_access = 1
-	},
-/turf/open/floor/plasteel,
-/area/ship/science/xenobiology{
-	name = "Research Lab"
-	})
 "jM" = (
 /obj/structure/disposalpipe/sorting/mail/flip{
 	dir = 4;
@@ -1972,12 +1960,18 @@
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew/dorm)
 "mW" = (
-/obj/effect/spawner/structure/window/shuttle,
-/obj/machinery/door/firedoor/window,
-/obj/machinery/door/poddoor/shutters{
-	id = "storage"
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
 	},
-/turf/open/floor/plating,
+/obj/machinery/button/door{
+	dir = 4;
+	pixel_x = -25;
+	pixel_y = 5;
+	name = "Storage Shutters";
+	id = "storage";
+	req_ship_access = 1
+	},
+/turf/open/floor/plasteel,
 /area/ship/science/xenobiology{
 	name = "Research Lab"
 	})
@@ -2124,6 +2118,12 @@
 	dir = 10
 	},
 /turf/open/floor/plasteel,
+/area/ship/science/xenobiology{
+	name = "Research Lab"
+	})
+"nW" = (
+/obj/machinery/door/firedoor/window,
+/turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/science/xenobiology{
 	name = "Research Lab"
 	})
@@ -5205,7 +5205,7 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
-"HD" = (
+"Hy" = (
 /obj/effect/turf_decal/corner/opaque/purple{
 	dir = 1
 	},
@@ -5225,16 +5225,11 @@
 /obj/item/clothing/shoes/sneakers/brown,
 /obj/item/clothing/head/bio_hood/scientist,
 /obj/item/clothing/suit/bio_suit/scientist,
-/obj/item/clothing/suit/toggle/labcoat/nanotrasen/blue,
 /obj/item/clothing/under/nanotrasen/science/director{
 	name = "Science Director's slacks"
 	},
-/obj/item/clothing/under/rank/rnd/research_director/turtleneck{
-	name = "Science Director's turtleneck"
-	},
-/obj/item/clothing/under/rank/rnd/research_director/turtleneck/skirt{
-	name = "Science Director's turtleneck skirt"
-	},
+/obj/item/clothing/under/rank/rnd/research_director/turtleneck,
+/obj/item/clothing/under/rank/rnd/research_director/turtleneck/skirt,
 /obj/item/clothing/under/rank/rnd/research_director,
 /obj/item/clothing/under/rank/rnd/research_director/skirt,
 /obj/item/clothing/under/rank/rnd/research_director/alt,
@@ -5246,7 +5241,9 @@
 	icon_state = "rd";
 	name = "Research Director's closet";
 	req_access_txt = "30";
+	req_access = ыыыыыыыыыыыыыыыыыв
 	},
+/obj/item/clothing/suit/toggle/labcoat/nanotrasen/black,
 /turf/open/floor/carpet/purple,
 /area/ship/bridge)
 "HE" = (
@@ -7051,6 +7048,15 @@
 	},
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/engineering/atmospherics)
+"TA" = (
+/obj/machinery/door/airlock/research{
+	name = "Storage";
+	dir = 4
+	},
+/turf/open/floor/plasteel,
+/area/ship/science/xenobiology{
+	name = "Research Lab"
+	})
 "TG" = (
 /obj/effect/turf_decal/industrial/warning{
 	dir = 4
@@ -7115,8 +7121,7 @@
 /area/ship/hallway/central)
 "TU" = (
 /obj/machinery/door/airlock/research{
-	name = "Science Lab";
-	req_access_txt = ss
+	name = "Science Lab"
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
@@ -7829,15 +7834,6 @@
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/hallway/central)
-"Zk" = (
-/obj/machinery/door/airlock/research{
-	name = "Storage";
-	dir = 4
-	},
-/turf/open/floor/plasteel,
-/area/ship/science/xenobiology{
-	name = "Research Lab"
-	})
 "Zo" = (
 /obj/effect/turf_decal/corner/opaque/yellow{
 	dir = 4
@@ -9503,7 +9499,7 @@ PU
 iQ
 Ll
 Nr
-Zk
+TA
 lJ
 SR
 Ll
@@ -9536,10 +9532,10 @@ ot
 yd
 yd
 IT
-eh
+nW
 OD
 gw
-jI
+mW
 zM
 DF
 li
@@ -9571,7 +9567,7 @@ AT
 Ig
 DO
 IT
-mW
+eh
 vp
 gw
 QW
@@ -9606,7 +9602,7 @@ sE
 oF
 yd
 IT
-mW
+eh
 TW
 gw
 gw
