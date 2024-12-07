@@ -86,6 +86,9 @@ GLOBAL_LIST_INIT(onecardinalwest, WEST)
 	ranged_cooldown_time = 60
 
 /mob/living/simple_animal/hostile/asteroid/goliath/pup
+	maxHealth = 30
+	health = 30
+	armor = list("melee" = 0, "bullet" = 5, "laser" = 5, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 /mob/living/simple_animal/hostile/asteroid/goliath/beast
 
@@ -123,7 +126,7 @@ GLOBAL_LIST_INIT(onecardinalwest, WEST)
 
 
 /mob/living/simple_animal/hostile/asteroid/brimdemon
-	armor = list("melee" = 10, "bullet" = 30, "laser" = 30, "energy" = 10, "bomb" = 10, "bio" = 10, "rad" = 10, "fire" = 60, "acid" = 10)
+	armor = list("melee" = 0, "bullet" = 20, "laser" = 30, "energy" = 30, "bomb" = 40, "bio" = 20, "rad" = 20, "fire" = 50, "acid" = 20)
 
 
 /mob/living/simple_animal/hostile/asteroid/curseblob
@@ -137,6 +140,8 @@ GLOBAL_LIST_INIT(onecardinalwest, WEST)
 
 /mob/living/simple_animal/hostile/asteroid/hivelord
 	move_to_delay = 7
+	armor = list("melee" = -10, "bullet" = 10, "laser" = 10, "energy" = 0, "bomb" = 50, "bio" = 10, "rad" = 10, "fire" = 20, "acid" = 20)
+	deathmessage = "telepathically cries."
 
 /mob/living/simple_animal/hostile/asteroid/hivelord/legion
 
@@ -176,7 +181,7 @@ GLOBAL_LIST_INIT(onecardinalwest, WEST)
 /mob/living/simple_animal/hostile/asteroid/ice_demon
 	move_to_delay = 4
 	ranged_cooldown_time = 15
-	armor = list("melee" = 20, "bullet" = 25, "laser" = 25, "energy" = 25, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 10, "acid" = 50)
+	armor = list("melee" = 10, "bullet" = 30, "laser" = 20, "energy" = 10, "bomb" = 30, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
 
 
 /mob/living/simple_animal/hostile/asteroid/old_demon
@@ -192,25 +197,28 @@ GLOBAL_LIST_INIT(onecardinalwest, WEST)
 
 /mob/living/simple_animal/hostile/asteroid/lobstrosity
 	move_to_delay = 5
-	armor = list("melee" = 50, "bullet" = 40, "laser" = 40, "energy" = 25, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 10, "acid" = 50)
+	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 50, "bio" = 20, "rad" = 20, "fire" = 20, "acid" = 20)
 
 /mob/living/simple_animal/hostile/asteroid/lobstrosity/beach
 
 
 /mob/living/simple_animal/hostile/asteroid/polarbear
 	move_to_delay = 6
+	armor = list("melee" = 20, "bullet" = 20, "laser" = 10, "energy" = 10, "bomb" = 50, "bio" = 10, "rad" = 10, "fire" = 20, "acid" = 10)
 
 /mob/living/simple_animal/hostile/asteroid/polarbear/lesser
 
 /mob/living/simple_animal/hostile/asteroid/polarbear/warrior
 	move_to_delay = 4
-	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 20, "bio" = 20, "rad" = 10, "fire" = 20, "acid" = 0)
+	maxHealth = 200
+	health = 200
+	armor = list("melee" = 40, "bullet" = 40, "laser" = 25, "energy" = 10, "bomb" = 50, "bio" = 10, "rad" = 10, "fire" = 20, "acid" = 10)
 
 
 /mob/living/simple_animal/hostile/asteroid/wolf
 	move_to_delay = 13
 	ranged_cooldown_time = 45
-	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 10, "acid" = 50)
+	armor = list("melee" = 10, "bullet" = 10, "laser" = 20, "energy" = 10, "bomb" = 50, "bio" = 10, "rad" = 10, "fire" = 10, "acid" = 10)
 
 /mob/living/simple_animal/hostile/asteroid/wolf/alpha
 
@@ -457,7 +465,10 @@ GLOBAL_LIST_INIT(onecardinalwest, WEST)
 
 
 /mob/living/simple_animal/hostile/asteroid/fugu
+	armor = list("melee" = 20, "bullet" = 20, "laser" = 20, "energy" = 30, "bomb" = 40, "bio" = 20, "rad" = 20, "fire" = 20, "acid" = 20)
 
+/mob/living/simple_animal/hostile/asteroid/whitesands
+	armor = list("melee" = 20, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 40, "bio" = 20, "rad" = 20, "fire" = 35, "acid" = 30)
 
 /mob/living/simple_animal/hostile/construct
 
@@ -795,3 +806,8 @@ GLOBAL_LIST_INIT(onecardinalwest, WEST)
 /mob/living/simple_animal/slime/pet
 
 /mob/living/simple_animal/shade
+
+
+
+
+
