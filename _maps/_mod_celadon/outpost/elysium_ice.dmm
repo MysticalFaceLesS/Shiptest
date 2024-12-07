@@ -3671,6 +3671,7 @@
 /obj/item/soap/syndie,
 /obj/structure/closet/crate/wooden,
 /obj/item/reagent_containers/food/drinks/breakawayflask/vintage/forcewine,
+/obj/item/reagent_containers/glass/bottle/antitoxin,
 /turf/open/floor/plating/asteroid/icerock/temperate,
 /area/outpost/exterior)
 "dbG" = (
@@ -4857,7 +4858,8 @@
 	base_pixel_x = -16;
 	pixel_x = -16;
 	name = "Обезумевший кровавый шахтёр";
-	desc = "A miner destined to wander forever, engaged in an endless hunt."
+	desc = "A miner destined to wander forever, engaged in an endless hunt.";
+	faction = list("spiders")
 	},
 /turf/open/floor/wood/walnut,
 /area/outpost/exterior)
@@ -6099,6 +6101,11 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/elevatorshaft,
 /area/outpost/maintenance/port)
+"eFY" = (
+/obj/effect/mob_spawn/human/corpse/pirate,
+/obj/effect/decal/cleanable/blood,
+/turf/open/floor/plating/asteroid/icerock/temperate,
+/area/outpost/exterior)
 "eGH" = (
 /obj/effect/turf_decal/borderfloor{
 	dir = 1
@@ -6894,13 +6901,21 @@
 /turf/open/floor/plasteel/mono/dark,
 /area/outpost/cargo)
 "foo" = (
-/obj/effect/spawner/lootdrop/rnd,
-/obj/structure/window/reinforced/fulltile/unanchored{
+/obj/effect/spawner/lootdrop/rnd{
+	max_integrity = 100000;
+	pixel_x = 0;
+	pixel_y = 31;
+	anchored = 1;
+	resistance_flags = 3
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	max_integrity = 1000000;
 	mouse_opacity = 0;
 	alpha = 0
 	},
 /turf/open/floor/plating/asteroid/icerock/temperate,
-/area/outpost/external)
+/area/outpost/exterior)
 "foG" = (
 /obj/machinery/door/airlock/security/brig{
 	dir = 4;
@@ -8179,7 +8194,9 @@
 /obj/structure/spider/stickyweb{
 	color = "#808080"
 	},
-/mob/living/simple_animal/hostile/poison/giant_spider,
+/mob/living/simple_animal/hostile/poison/giant_spider{
+	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
+	},
 /turf/open/floor/plating/asteroid/icerock/temperate,
 /area/outpost/exterior)
 "glO" = (
@@ -8508,7 +8525,9 @@
 /turf/open/floor/plasteel/dark,
 /area/outpost/cargo)
 "gvS" = (
-/obj/effect/mob_spawn/human/skeleton/alive,
+/obj/effect/mob_spawn/human/skeleton/alive{
+	density = 0
+	},
 /turf/open/floor/plating/asteroid/icerock/cracked,
 /area/outpost/exterior)
 "gvV" = (
@@ -8876,6 +8895,7 @@
 /obj/structure/flora/rock{
 	color = "#6495ED"
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/asteroid/icerock/temperate,
 /area/outpost/exterior)
 "gLJ" = (
@@ -9063,7 +9083,9 @@
 /turf/open/floor/plasteel/mono/dark,
 /area/outpost/cargo)
 "gST" = (
-/mob/living/simple_animal/hostile/poison/giant_spider/tarantula,
+/mob/living/simple_animal/hostile/poison/giant_spider/tarantula{
+	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
+	},
 /obj/structure/spider/stickyweb{
 	color = "#808080"
 	},
@@ -9824,7 +9846,9 @@
 	},
 /area/outpost/crew/bar)
 "hzF" = (
-/obj/effect/mob_spawn/human/skeleton/alive,
+/obj/effect/mob_spawn/human/skeleton/alive{
+	density = 0
+	},
 /turf/open/floor/plating/asteroid/icerock/smooth,
 /area/outpost/exterior)
 "hzJ" = (
@@ -11132,7 +11156,11 @@
 /obj/structure/stone_tile/surrounding/cracked{
 	dir = 4
 	},
-/mob/living/simple_animal/hostile/rat,
+/mob/living/simple_animal/hostile/rat{
+	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0);
+	maxHealth = 50;
+	health = 50
+	},
 /turf/open/floor/plating/asteroid/icerock/smooth,
 /area/outpost/exterior)
 "ixl" = (
@@ -12544,6 +12572,10 @@
 	},
 /turf/open/floor/plating,
 /area/outpost/maintenance/starboard)
+"jwC" = (
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plating/asteroid/icerock/cracked,
+/area/outpost/exterior)
 "jyf" = (
 /obj/structure/window,
 /obj/structure/curtain,
@@ -12578,6 +12610,14 @@
 	light_color = "#1B1D2E";
 	light_range = 2
 	},
+/area/outpost/exterior)
+"jzg" = (
+/obj/item/clothing/suit/wizrobe/marisa/fake,
+/obj/item/clothing/head/wizard/marisa/fake{
+	pixel_y = 12
+	},
+/obj/structure/closet/crate/wooden,
+/turf/open/floor/plating/asteroid/icerock/temperate,
 /area/outpost/exterior)
 "jzA" = (
 /turf/closed/indestructible/reinforced,
@@ -12775,6 +12815,10 @@
 	},
 /obj/structure/table/scrap,
 /obj/effect/spawner/lootdrop/materials,
+/obj/item/paper/crumpled{
+	default_raw_text = "Это снова Энди. Ох, незнаю как вам а это были очень острые ощущения, ходить по мосту который вот вот грохнется в лаву! Но да ладно. Мы открыли вход. Нам удалось раскапать тунель, который судя по всему ведет куда-то глубоко вниз. Ну что ж, будем готовиться к спуску.";
+	pixel_x = 10
+	},
 /turf/open/floor/plating/asteroid/icerock/temperate,
 /area/outpost/exterior)
 "jHw" = (
@@ -13896,6 +13940,12 @@
 	light_range = 2
 	},
 /area/outpost/exterior)
+"kDj" = (
+/obj/item/clothing/suit/armor/heavy/adamantine{
+	anchored = 1
+	},
+/turf/open/floor/plating/abductor,
+/area/outpost/external)
 "kDx" = (
 /obj/effect/turf_decal/trimline/opaque/white/corner{
 	dir = 1
@@ -14636,7 +14686,8 @@
 /obj/item/pickaxe/drill/jackhammer/old{
 	mouse_opacity = 0;
 	pixel_x = -2;
-	pixel_y = 10
+	pixel_y = 10;
+	anchored = 1
 	},
 /obj/item/toy/plush/moth/rainbow{
 	desc = "Кажется эта моль попала в тупик. Она не может вскапнуть камень, потому что в них находится гибтонит!";
@@ -14807,6 +14858,14 @@
 	},
 /turf/open/floor/plating/asteroid/icerock/temperate,
 /area/outpost/exterior)
+"lrS" = (
+/obj/structure/spider/stickyweb{
+	color = "#808080"
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/mob_spawn/human/miner,
+/turf/open/floor/wood/walnut,
+/area/outpost/exterior)
 "lsF" = (
 /obj/effect/decal/cleanable/blood/hitsplatter,
 /turf/open/floor/plating/asteroid/icerock/temperate,
@@ -14923,7 +14982,9 @@
 /turf/open/floor/wood/walnut,
 /area/outpost/fraction/syndi/donkco_shop)
 "lwR" = (
-/mob/living/simple_animal/hostile/poison/giant_spider/hunter,
+/mob/living/simple_animal/hostile/poison/giant_spider/hunter{
+	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
+	},
 /obj/structure/spider/stickyweb{
 	color = "#808080"
 	},
@@ -16116,7 +16177,9 @@
 	color = "#808080"
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/mob_spawn/human/skeleton/alive,
+/obj/effect/mob_spawn/human/skeleton/alive{
+	density = 0
+	},
 /turf/open/floor/wood/walnut,
 /area/outpost/exterior)
 "mrw" = (
@@ -16140,7 +16203,9 @@
 /area/outpost/fraction/nanotrasen)
 "mrZ" = (
 /obj/structure/stone_tile/slab/cracked,
-/obj/effect/mob_spawn/human/skeleton/alive,
+/obj/effect/mob_spawn/human/skeleton/alive{
+	density = 0
+	},
 /turf/open/floor/plating/asteroid/icerock/temperate{
 	color = "#000000"
 	},
@@ -16653,7 +16718,11 @@
 /area/outpost/exterior)
 "mPE" = (
 /obj/structure/stone_tile/slab,
-/mob/living/simple_animal/hostile/rat,
+/mob/living/simple_animal/hostile/rat{
+	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0);
+	maxHealth = 50;
+	health = 50
+	},
 /turf/open/floor/plating/asteroid/icerock/smooth,
 /area/outpost/exterior)
 "mQj" = (
@@ -18171,7 +18240,9 @@
 /area/outpost/cargo)
 "nRQ" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/mob_spawn/human/skeleton/alive,
+/obj/effect/mob_spawn/human/skeleton/alive{
+	density = 0
+	},
 /turf/open/floor/wood/walnut,
 /area/outpost/exterior)
 "nSc" = (
@@ -18700,7 +18771,11 @@
 /obj/structure/flora/rock{
 	color = "#6495ED"
 	},
-/mob/living/simple_animal/hostile/rat,
+/mob/living/simple_animal/hostile/rat{
+	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0);
+	maxHealth = 50;
+	health = 50
+	},
 /turf/open/floor/plating/asteroid/icerock/temperate,
 /area/outpost/exterior)
 "olr" = (
@@ -19535,6 +19610,10 @@
 	pixel_x = -10
 	},
 /obj/structure/fluff,
+/obj/item/reagent_containers/glass/bottle/antitoxin{
+	pixel_y = 7;
+	pixel_x = -6
+	},
 /turf/open/floor/wood/walnut,
 /area/outpost/exterior)
 "oPl" = (
@@ -20166,6 +20245,9 @@
 "prL" = (
 /obj/item/pickaxe/rusted,
 /obj/structure/closet/crate/wooden,
+/obj/item/reagent_containers/glass/bottle/antitoxin,
+/obj/item/storage/ration/pepper_jack_beef_patty,
+/obj/item/storage/ration/pepper_jack_beef_patty,
 /turf/open/floor/plating/asteroid/icerock/temperate,
 /area/outpost/exterior)
 "prZ" = (
@@ -21091,7 +21173,11 @@
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/inteq)
 "pWe" = (
-/mob/living/simple_animal/hostile/rat,
+/mob/living/simple_animal/hostile/rat{
+	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0);
+	maxHealth = 50;
+	health = 50
+	},
 /turf/open/floor/plating/asteroid/icerock/temperate,
 /area/outpost/exterior)
 "pWk" = (
@@ -21489,11 +21575,9 @@
 /turf/open/floor/plasteel/tech,
 /area/outpost/crew/cryo)
 "qon" = (
-/obj/effect/mob_spawn/human/corpse/wizard,
-/obj/effect/decal/cleanable/blood,
-/obj/item/clothing/head/hardhat/pumpkinhead/blumpkin{
-	light_on = 1
-	},
+/obj/item/clothing/suit/wizrobe/fake,
+/obj/structure/closet/crate/wooden,
+/obj/item/clothing/head/wizard/fake,
 /turf/open/floor/plating/asteroid/icerock/temperate,
 /area/outpost/exterior)
 "qoM" = (
@@ -21726,7 +21810,11 @@
 /area/outpost/exterior)
 "qwX" = (
 /obj/structure/stone_tile/slab/cracked,
-/mob/living/simple_animal/hostile/rat,
+/mob/living/simple_animal/hostile/rat{
+	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0);
+	maxHealth = 50;
+	health = 50
+	},
 /turf/open/floor/plating/asteroid/icerock/temperate{
 	color = "#000000"
 	},
@@ -22652,14 +22740,8 @@
 /turf/open/floor/plasteel/tech,
 /area/outpost/crew/dop_zone_2)
 "rgx" = (
-/obj/structure/table/scrap,
-/obj/effect/spawner/lootdrop/materials,
-/obj/item/paper/crumpled{
-	default_raw_text = "Это снова Энди. Ох, незнаю как вам а это были очень острые ощущения, ходить по мосту который вот вот грохнется в лаву! Но да ладно. Мы открыли вход. Нам удалось раскапать тунель, который судя по всему ведет куда-то глубоко вниз. Ну что ж, будем готовиться к спуску.";
-	pixel_x = 10
-	},
-/turf/open/floor/plating/asteroid/icerock/temperate,
-/area/outpost/exterior)
+/turf/closed/indestructible/alien,
+/area/outpost/external)
 "rgC" = (
 /turf/closed/indestructible/reinforced,
 /area/outpost/maintenance/port)
@@ -23136,6 +23218,13 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/patterned,
 /area/outpost/security/hall)
+"rzW" = (
+/obj/structure/flora/rock{
+	color = "#6495ED"
+	},
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plating/asteroid/icerock/temperate,
+/area/outpost/exterior)
 "rAg" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/tech,
@@ -24315,6 +24404,16 @@
 	},
 /turf/open/floor/carpet/blue,
 /area/outpost/fraction/solfed)
+"ssr" = (
+/obj/structure/spider/stickyweb{
+	color = "#808080"
+	},
+/obj/item/reagent_containers/glass/bottle/antitoxin,
+/obj/structure/closet/crate/wooden,
+/obj/item/reagent_containers/glass/bottle/antitoxin,
+/obj/item/reagent_containers/glass/bottle/antitoxin,
+/turf/open/floor/plating/asteroid/icerock/temperate,
+/area/outpost/exterior)
 "ssN" = (
 /obj/effect/turf_decal/trimline/opaque/neutral/warning{
 	dir = 8
@@ -24408,7 +24507,9 @@
 /obj/structure/spider/stickyweb{
 	color = "#808080"
 	},
-/obj/effect/mob_spawn/human/skeleton/alive,
+/obj/effect/mob_spawn/human/skeleton/alive{
+	density = 0
+	},
 /turf/open/floor/plating/asteroid/icerock/smooth,
 /area/outpost/exterior)
 "sxt" = (
@@ -25778,7 +25879,9 @@
 /obj/structure/spider/stickyweb{
 	color = "#808080"
 	},
-/mob/living/simple_animal/hostile/poison/giant_spider,
+/mob/living/simple_animal/hostile/poison/giant_spider{
+	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
+	},
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood/walnut,
 /area/outpost/exterior)
@@ -28335,7 +28438,9 @@
 /obj/structure/spider/stickyweb{
 	color = "#808080"
 	},
-/obj/effect/mob_spawn/human/skeleton/alive,
+/obj/effect/mob_spawn/human/skeleton/alive{
+	density = 0
+	},
 /turf/open/floor/plating/asteroid/icerock/temperate,
 /area/outpost/exterior)
 "vRw" = (
@@ -29592,6 +29697,13 @@
 	},
 /turf/open/floor/wood,
 /area/outpost/medical/cmo)
+"wFz" = (
+/obj/structure/window/reinforced/fulltile/unanchored{
+	mouse_opacity = 0;
+	alpha = 0
+	},
+/turf/open/floor/plating/asteroid/icerock/temperate,
+/area/outpost/exterior)
 "wFE" = (
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -30048,7 +30160,8 @@
 	base_pixel_x = -16;
 	pixel_x = -16;
 	name = "Обезумевший кровавый шахтёр";
-	desc = "A miner destined to wander forever, engaged in an endless hunt."
+	desc = "A miner destined to wander forever, engaged in an endless hunt.";
+	faction = list("spiders")
 	},
 /turf/open/floor/plating/asteroid/icerock/temperate,
 /area/outpost/exterior)
@@ -34203,7 +34316,7 @@ qfP
 qNy
 qNy
 qNy
-qNy
+lrS
 qfP
 rgY
 qfP
@@ -36641,8 +36754,8 @@ rgY
 rgY
 rgY
 rgY
-itc
-lqx
+jwC
+rzW
 rgY
 rgY
 qlM
@@ -38137,7 +38250,7 @@ qfP
 nRQ
 qfP
 hQU
-hQU
+iDK
 hQU
 wZD
 hQU
@@ -38328,8 +38441,8 @@ rgY
 dAp
 kVU
 hQU
-hQU
-hQU
+iDK
+iDK
 rgY
 rgY
 rgY
@@ -38515,7 +38628,7 @@ hQU
 rgY
 rgY
 dAp
-hQU
+iDK
 dAp
 lqx
 rgY
@@ -38702,7 +38815,7 @@ gpy
 rgY
 rgY
 rgY
-hQU
+iDK
 hQU
 ffJ
 rgY
@@ -39270,7 +39383,7 @@ lqx
 hQU
 rgY
 rgY
-vRw
+ssr
 rgY
 rgY
 vRw
@@ -40559,7 +40672,7 @@ uqt
 rgY
 rgY
 rgY
-rgY
+wFz
 foo
 osx
 osx
@@ -41247,7 +41360,7 @@ pyd
 dsZ
 rgY
 qon
-hQU
+eFY
 hQU
 xFM
 hQU
@@ -41684,7 +41797,7 @@ rgY
 osx
 osx
 rgY
-xpt
+jzg
 rgY
 itc
 rgY
@@ -41871,7 +41984,7 @@ rgY
 rgY
 rgY
 rgY
-rgx
+hQU
 itc
 lnj
 rgY
@@ -44883,8 +44996,8 @@ bEz
 ime
 cQh
 cQh
-rgY
-rgY
+rgx
+rgx
 rgY
 rgY
 rgY
@@ -45070,8 +45183,8 @@ duh
 lAd
 iUp
 pFT
-rgY
-rgY
+kDj
+rgx
 rgY
 rgY
 rgY
@@ -45257,8 +45370,8 @@ bEz
 leN
 cQh
 cQh
-rgY
-rgY
+rgx
+rgx
 rgY
 rgY
 rgY
@@ -46931,7 +47044,7 @@ fcK
 mOL
 mOL
 wxC
-ubD
+mOL
 fcK
 rgY
 rgY

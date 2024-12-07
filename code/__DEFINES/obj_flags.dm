@@ -14,7 +14,11 @@
 #define BLOCK_Z_OUT_UP (1<<10) //! Should this object block z uprise from loc?
 #define BLOCK_Z_IN_DOWN (1<<11) //! Should this object block z falling from above?
 #define BLOCK_Z_IN_UP (1<<12) //! Should this object block z uprise from below?
-
+// [CELADON-ADD] - CELADON_STRUCTURES - Барикады
+#define IGNORE_DENSITY (1<<13) 				//! Can we ignore density when building on this object? (for example, directional windows and grilles)
+#define BLOCKS_CONSTRUCTION (1<<14) 				//! Does this object prevent things from being built on it?
+#define BLOCKS_CONSTRUCTION_DIR (1<<15)					//! Does this object prevent same-direction things from being built on it?
+// [/CELADON-ADD]
 
 // If you add new ones, be sure to add them to /obj/Initialize as well for complete mapping support
 
@@ -34,6 +38,11 @@
 #define SURGICAL_TOOL (1<<12)	//Tool commonly used for surgery: won't attack targets in an active surgical operation on help intent (in case of mistakes)
 #define EYE_STAB (1<<13) /// Item can be used to eyestab
 #define NO_PIXEL_RANDOM_DROP (1<<14) //if dropped, it wont have a randomized pixel_x/pixel_y
+
+// [CELADON-ADD] - CELADON_STRUCTURES - Барикады
+/// Является ли данный предмет семейной ценностью (family heirloom)
+#define FAMILY_HEIRLOOM	(1<<15) //выбор вещей из лодаута как family heirloom
+// [/CELADON-ADD]
 
 // Flags for the clothing_flags var on /obj/item/clothing
 
