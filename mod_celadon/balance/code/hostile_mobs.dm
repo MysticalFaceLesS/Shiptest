@@ -838,6 +838,7 @@ GLOBAL_LIST_INIT(onecardinalwest, WEST)
 						/obj/item/documents/nanotrasen)
 
 /mob/living/simple_animal/hostile/megafauna/claw/phase2 //75% of the health this thing has is here
+	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 0, "acid" = 0)
 	crusher_loot = list(/obj/effect/spawner/clawloot)
 	loot = list(/obj/effect/spawner/clawloot/crusher)
 
