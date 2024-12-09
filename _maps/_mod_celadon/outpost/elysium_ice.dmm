@@ -1202,6 +1202,16 @@
 /obj/structure/chair/sofa/brown/left,
 /turf/open/floor/wood/ebony,
 /area/outpost/crew/bar)
+"aTR" = (
+/obj/machinery/light/colored/blue{
+	dir = 8;
+	pixel_x = -9
+	},
+/obj/effect/turf_decal/corner/opaque/ntblue{
+	dir = 9
+	},
+/turf/open/floor/plasteel/dark,
+/area/outpost/fraction/nanotrasen)
 "aTW" = (
 /turf/open/floor/engine/air,
 /area/outpost/engineering/atmospherics)
@@ -4230,10 +4240,6 @@
 /area/outpost/cargo)
 "dxs" = (
 /obj/effect/turf_decal/corner/opaque/ntblue/full,
-/obj/item/radio/intercom/directional/west,
-/obj/machinery/firealarm/directional/west{
-	pixel_y = 18
-	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/nanotrasen)
 "dyA" = (
@@ -5697,14 +5703,14 @@
 	},
 /area/outpost/fraction/nanotrasen)
 "eth" = (
-/obj/machinery/door/airlock/multi_tile/command/v{
-	req_access_txt = "8130"
-	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 8
+	},
+/obj/machinery/door/airlock/multi_tile/command/glass/v{
+	req_access_txt = "8130"
 	},
 /turf/open/floor/marble,
 /area/outpost/fraction/nanotrasen)
@@ -5914,7 +5920,6 @@
 	mouse_opacity = 0;
 	max_integrity = 10000
 	},
-/obj/structure/table/wood/fancy/red,
 /obj/item/clothing/accessory/lawyers_badge{
 	desc = "A badge of upmost glory.";
 	name = "thunderdome badge"
@@ -5924,6 +5929,7 @@
 	name = "Награда Самым крепким мужчинам за выносливость";
 	desc = "Быть стойким - это не действие или образ жизни, а психическое состояние. Только те, у кого достаточно силы воли, чтобы действовать во время кризиса, спасая друга от врага, по-настоящему стойкие. Будьте стойкими, друзья мои."
 	},
+/obj/structure/table/wood/fancy/blue,
 /turf/open/floor/marble/black,
 /area/outpost/fraction/nanotrasen)
 "eBl" = (
@@ -7838,10 +7844,6 @@
 /obj/effect/turf_decal/industrial/loading{
 	color = "#FF7F50";
 	dir = 1
-	},
-/obj/machinery/light/colored/blue{
-	dir = 8;
-	pixel_x = -9
 	},
 /turf/open/floor/plasteel/mono/dark,
 /area/outpost/fraction/nanotrasen)
@@ -11999,15 +12001,8 @@
 /area/outpost/security/checkpoint)
 "jgf" = (
 /obj/effect/turf_decal/corner/opaque/ntblue/full,
-/obj/effect/turf_decal/trimline/opaque/neutral/filled/corner{
-	dir = 8
-	},
-/obj/structure/filingcabinet/employment{
-	dir = 8;
-	pixel_x = 8;
-	opacity = 1
-	},
-/obj/item/radio/intercom/wideband/directional/south,
+/obj/effect/turf_decal/trimline/opaque/neutral/filled/warning,
+/obj/item/radio/intercom/wideband/directional/east,
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/nanotrasen)
 "jgj" = (
@@ -12938,10 +12933,6 @@
 /turf/open/floor/plasteel/white,
 /area/outpost/medical/surgery_2)
 "jTM" = (
-/obj/machinery/door/airlock/multi_tile/command{
-	max_integrity = 3000000000000;
-	req_access_txt = "8130"
-	},
 /obj/effect/turf_decal/trimline/opaque/solgovgold/filled/warning,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
@@ -12954,6 +12945,9 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/multi_tile/command/glass{
+	req_access_txt = "8130"
+	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/nanotrasen)
 "jTY" = (
@@ -17303,16 +17297,19 @@
 /turf/open/floor/plating,
 /area/outpost/maintenance/port)
 "nkm" = (
-/obj/structure/window/reinforced/spawner{
-	dir = 1;
-	pixel_y = 2
+/obj/machinery/light/colored/blue{
+	dir = 8;
+	pixel_x = -9
 	},
 /obj/effect/turf_decal/corner/opaque/ntblue/full,
-/obj/machinery/computer/cargo/faction/nanotrasen{
-	dir = 8
+/obj/structure/filingcabinet/employment{
+	dir = 4;
+	pixel_x = -11;
+	pixel_y = 0
 	},
+/obj/effect/turf_decal/trimline/opaque/neutral/filled/corner,
 /turf/open/floor/plasteel/dark,
-/area/outpost/cargo/faction/nanotrasen)
+/area/outpost/fraction/nanotrasen)
 "nkG" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/siding/white,
@@ -17397,7 +17394,8 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/command/glass{
-	dir = 4
+	dir = 4;
+	req_access_txt = "8130"
 	},
 /turf/open/floor/plasteel/mono,
 /area/outpost/fraction/nanotrasen)
@@ -19938,7 +19936,6 @@
 /obj/effect/turf_decal/corner/opaque/ntblue{
 	dir = 10
 	},
-/obj/machinery/newscaster/directional/west,
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/nanotrasen)
 "pjb" = (
@@ -20654,10 +20651,6 @@
 	},
 /area/outpost/exterior)
 "pFN" = (
-/obj/machinery/door/airlock/multi_tile/command{
-	max_integrity = 3000000000000;
-	req_access_txt = "8130"
-	},
 /obj/effect/turf_decal/trimline/opaque/solgovgold/filled/warning{
 	dir = 1
 	},
@@ -20672,10 +20665,8 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced/spawner{
-	dir = 8;
-	opacity = 1;
-	pixel_x = -8
+/obj/machinery/door/airlock/multi_tile/command/glass{
+	req_access_txt = "8130"
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/nanotrasen)
@@ -21608,14 +21599,16 @@
 	},
 /area/outpost/exterior)
 "qrG" = (
+/obj/item/radio/intercom/directional/west,
+/obj/machinery/firealarm/directional/west{
+	pixel_y = 18
+	},
 /obj/effect/turf_decal/corner/opaque/ntblue/full,
-/obj/effect/turf_decal/trimline/opaque/neutral/filled/warning,
-/obj/machinery/light/colored/blue{
-	dir = 8;
-	pixel_x = -9
+/obj/machinery/computer/cargo/faction/nanotrasen{
+	dir = 4
 	},
 /turf/open/floor/plasteel/dark,
-/area/outpost/fraction/nanotrasen)
+/area/outpost/cargo/faction/nanotrasen)
 "qsC" = (
 /turf/open/floor/plasteel/showroomfloor,
 /area/outpost/medical/hall_1)
@@ -25039,13 +25032,13 @@
 	mouse_opacity = 0;
 	max_integrity = 10000
 	},
-/obj/structure/table/wood/fancy/red,
 /obj/item/reagent_containers/food/drinks/trophy/gold_cup,
 /obj/structure/plaque/static_plaque/golden/captain{
 	pixel_y = -30;
 	desc = "Быть стойким - это не действие или образ жизни, а психическое состояние. По-настоящему стойкими являются только те, у кого достаточно силы воли, чтобы действовать в кризисной ситуации, спасая друга от врага. Будьте стойкими, друзья мои.";
 	name = "Награда Самому надежному капитану за надежность"
 	},
+/obj/structure/table/wood/fancy/blue,
 /turf/open/floor/marble/black,
 /area/outpost/fraction/nanotrasen)
 "sXo" = (
@@ -31351,6 +31344,13 @@
 	},
 /turf/open/floor/carpet/orange,
 /area/outpost/medical/relax_room)
+"ydw" = (
+/obj/machinery/newscaster/directional/west,
+/obj/effect/turf_decal/corner/opaque/ntblue/three_quarters{
+	dir = 1
+	},
+/turf/open/floor/plasteel/dark,
+/area/outpost/fraction/nanotrasen)
 "ydA" = (
 /obj/item/stack/sheet/mineral/uranium/twenty,
 /obj/structure/closet/crate/radiation,
@@ -31454,11 +31454,6 @@
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
-	},
-/obj/structure/window/reinforced/spawner{
-	dir = 8;
-	opacity = 1;
-	pixel_x = -8
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/nanotrasen)
@@ -37654,12 +37649,12 @@ wRG
 fje
 rgY
 rgY
-rgY
-rgY
-rgY
-rgY
-rgY
-rgY
+fIy
+fIy
+fIy
+fIy
+fIy
+fIy
 rgY
 rgY
 rgY
@@ -37842,10 +37837,10 @@ udk
 rgY
 jtU
 jtU
-jtU
-jtU
-jtU
-jtU
+aTR
+ydw
+qrG
+nkm
 jtU
 jtU
 jtU
@@ -38032,7 +38027,7 @@ rUL
 fXj
 piZ
 dxs
-qrG
+uHc
 fNJ
 tCF
 jtU
@@ -38219,7 +38214,7 @@ lvR
 tKF
 ylT
 xrb
-uHc
+jgf
 qRg
 iXB
 jtU
@@ -38405,8 +38400,8 @@ iJU
 bvq
 nSc
 wrr
-nkm
-jgf
+jtU
+jtU
 jtU
 jtU
 jtU
