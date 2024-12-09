@@ -1927,6 +1927,7 @@
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
+/obj/structure/statue/snow/snowman,
 /turf/open/floor/wood/walnut,
 /area/outpost/fraction/syndi/donkco_shop)
 "fN" = (
@@ -2119,7 +2120,8 @@
 /area/outpost/hallway/starboard)
 "gu" = (
 /obj/structure/reagent_dispensers/water_cooler{
-	pixel_y = 14
+	pixel_y = 14;
+	density = 0
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/inteq)
@@ -3180,6 +3182,7 @@
 	pixel_x = 12;
 	pixel_y = 2
 	},
+/obj/structure/statue/snow/snowman,
 /turf/open/floor/grass,
 /area/outpost/hallway/central)
 "jG" = (
@@ -4119,6 +4122,12 @@
 	pixel_y = 32
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/button/door{
+	pixel_y = 8;
+	id = "outpost_ert";
+	req_access_txt = "101";
+	pixel_x = -7
+	},
 /turf/open/floor/wood,
 /area/outpost/operations)
 "mD" = (
@@ -4823,6 +4832,7 @@
 	dir = 4
 	},
 /obj/machinery/firealarm/directional/south,
+/obj/structure/statue/snow/snowman,
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "oX" = (
@@ -4960,6 +4970,7 @@
 	},
 /obj/structure/flora/ausbushes/stalkybush,
 /obj/structure/flora/ausbushes/ywflowers,
+/obj/structure/statue/snow/snowman,
 /turf/open/floor/grass,
 /area/outpost/hallway/aft)
 "px" = (
@@ -5177,6 +5188,13 @@
 "pU" = (
 /turf/closed/indestructible/reinforced,
 /area/outpost/engineering/atmospherics)
+"pW" = (
+/obj/structure/railing/wood{
+	dir = 8
+	},
+/obj/structure/statue/snow/snowman,
+/turf/open/floor/grass,
+/area/outpost/crew/garden)
 "pX" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -7175,7 +7193,10 @@
 /turf/closed/indestructible/reinforced,
 /area/outpost/crew/garden)
 "vx" = (
-/turf/closed/mineral/random/jungle,
+/turf/closed/mineral/random/jungle{
+	mouse_opacity = 0;
+	max_integrity = 120000000
+	},
 /area/outpost/crew/garden)
 "vz" = (
 /obj/structure/grille,
@@ -7274,7 +7295,10 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 5
 	},
-/obj/machinery/computer,
+/obj/structure/statue/snow/snowman{
+	pixel_x = 5;
+	pixel_y = 0
+	},
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "vO" = (
@@ -7508,6 +7532,10 @@
 /obj/structure/elevator_platform,
 /turf/open/floor/plasteel/elevatorshaft,
 /area/outpost/crew/library)
+"ws" = (
+/obj/structure/statue/snow/snowman,
+/turf/open/floor/plasteel/patterned/cargo_one,
+/area/outpost/fraction/solfed)
 "wt" = (
 /obj/structure/railing{
 	layer = 4.1
@@ -8611,6 +8639,14 @@
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/plasteel/tech/grid,
 /area/outpost/engineering)
+"zE" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/statue/snow/snowman,
+/turf/open/floor/concrete/slab_3,
+/area/outpost/hallway/starboard)
 "zF" = (
 /obj/machinery/light/broken/directional/south,
 /obj/structure/table/reinforced,
@@ -8733,16 +8769,25 @@
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/engineering/atmospherics)
 "zX" = (
-/turf/closed/mineral/random/snow,
+/turf/closed/mineral/random/snow{
+	max_integrity = 1200000;
+	mouse_opacity = 0
+	},
 /area/outpost/crew/garden)
 "zY" = (
-/turf/closed/mineral/random/snow,
+/turf/closed/mineral/random/snow{
+	max_integrity = 1200000;
+	mouse_opacity = 0
+	},
 /area/space)
 "zZ" = (
 /obj/effect/turf_decal/techfloor{
 	dir = 9
 	},
-/obj/machinery/computer,
+/obj/structure/statue/snow/snowman{
+	pixel_x = -3;
+	pixel_y = 0
+	},
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "Aa" = (
@@ -8882,6 +8927,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 5
 	},
+/obj/structure/statue/snow/snowman,
 /turf/open/floor/carpet/black,
 /area/outpost/fraction/syndi)
 "As" = (
@@ -9048,6 +9094,7 @@
 	pixel_y = 9;
 	pixel_x = -9
 	},
+/obj/structure/statue/snow/snowman,
 /turf/open/floor/grass,
 /area/outpost/hallway/central)
 "AP" = (
@@ -10243,10 +10290,8 @@
 /area/outpost/engineering/atmospherics)
 "Eh" = (
 /obj/effect/turf_decal/siding/wood,
-/obj/item/kirbyplants{
-	icon_state = "plant-03"
-	},
 /obj/structure/extinguisher_cabinet/directional/east,
+/obj/structure/statue/snow/snowman,
 /turf/open/floor/carpet,
 /area/outpost/crew/library)
 "Ei" = (
@@ -10446,6 +10491,13 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/outpost/fraction/solfed)
+"EI" = (
+/obj/structure/railing/wood{
+	color = "#55391A"
+	},
+/obj/structure/statue/snow/snowman,
+/turf/open/floor/wood,
+/area/outpost/fraction/solfed)
 "EJ" = (
 /obj/structure/chair/sofa/grey/old/left{
 	dir = 4
@@ -10499,6 +10551,10 @@
 	},
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/fraction/inteq)
+"ER" = (
+/obj/structure/statue/snow/snowman,
+/turf/open/floor/wood,
+/area/outpost/fraction/solfed)
 "EU" = (
 /obj/structure/filingcabinet,
 /obj/structure/filingcabinet{
@@ -13259,6 +13315,7 @@
 /obj/structure/sign/warning/coldtemp{
 	pixel_y = 32
 	},
+/obj/structure/statue/snow/snowman,
 /turf/open/floor/plasteel/tech,
 /area/outpost/crew/cryo)
 "Nc" = (
@@ -13362,6 +13419,7 @@
 /obj/structure/sign/nanotrasen{
 	pixel_x = -32
 	},
+/obj/structure/statue/snow/snowman,
 /turf/open/floor/concrete/reinforced,
 /area/outpost/hallway/central)
 "Np" = (
@@ -16140,7 +16198,10 @@
 /obj/structure/flora/rock/jungle{
 	pixel_y = -11
 	},
-/turf/closed/mineral/random/snow,
+/turf/closed/mineral/random/snow{
+	max_integrity = 1200000;
+	mouse_opacity = 0
+	},
 /area/outpost/crew/garden)
 "Vl" = (
 /obj/effect/turf_decal/siding/thinplating/dark{
@@ -16360,7 +16421,10 @@
 /obj/structure/railing/wood{
 	dir = 4
 	},
-/turf/closed/mineral/random/jungle,
+/turf/closed/mineral/random/jungle{
+	mouse_opacity = 0;
+	max_integrity = 120000000
+	},
 /area/outpost/crew/garden)
 "VZ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -16485,7 +16549,10 @@
 /area/outpost/operations)
 "Wq" = (
 /obj/effect/turf_decal/industrial/warning,
-/turf/closed/mineral/random/jungle,
+/turf/closed/mineral/random/jungle{
+	mouse_opacity = 0;
+	max_integrity = 120000000
+	},
 /area/outpost/crew/garden)
 "Wr" = (
 /obj/effect/mob_spawn/human/elysium_outpost/maid{
@@ -16735,7 +16802,10 @@
 /obj/structure/flora/tree/palm{
 	icon_state = "palm2"
 	},
-/turf/closed/mineral/random/jungle,
+/turf/closed/mineral/random/jungle{
+	mouse_opacity = 0;
+	max_integrity = 120000000
+	},
 /area/outpost/crew/garden)
 "Xh" = (
 /obj/effect/turf_decal/corner/opaque/yellow/diagonal,
@@ -16747,6 +16817,10 @@
 	},
 /obj/structure/railing/wood{
 	dir = 9
+	},
+/obj/structure/statue/snow/snowman{
+	pixel_x = 2;
+	pixel_y = -7
 	},
 /turf/open/floor/wood,
 /area/outpost/hallway/central)
@@ -16988,6 +17062,7 @@
 /obj/structure/sign/warning/coldtemp{
 	pixel_y = 32
 	},
+/obj/structure/statue/snow/snowman,
 /turf/open/floor/plasteel/tech,
 /area/outpost/crew/cryo)
 "XW" = (
@@ -17291,6 +17366,7 @@
 	dir = 8
 	},
 /obj/item/radio/intercom/directional/south,
+/obj/structure/statue/snow/snowman,
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "YT" = (
@@ -17667,7 +17743,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/computer,
+/obj/structure/flora/tree/pine/xmas/presents,
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "ZV" = (
@@ -29213,7 +29289,7 @@ Zp
 ef
 KB
 sl
-aw
+ws
 pA
 ef
 AF
@@ -29589,10 +29665,10 @@ Zp
 Zp
 ef
 lF
-uY
+EI
 Fl
 xg
-Eo
+ER
 lF
 ef
 Zp
@@ -33707,7 +33783,7 @@ vw
 sL
 XH
 qz
-et
+pW
 et
 eb
 dC
@@ -39865,7 +39941,7 @@ wI
 DF
 xt
 pK
-KV
+zE
 jP
 jL
 FU

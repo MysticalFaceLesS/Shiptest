@@ -5060,7 +5060,8 @@
 	dir = 1
 	},
 /obj/machinery/washing_machine{
-	pixel_y = 19
+	pixel_y = 19;
+	density = 0
 	},
 /obj/effect/turf_decal/corner/opaque/grey/full,
 /turf/open/floor/plating,
@@ -6447,6 +6448,7 @@
 	network = list("outpostelysium");
 	pixel_y = 12
 	},
+/obj/structure/statue/snow/snowman,
 /turf/open/floor/plating/asteroid/snow/temperatre{
 	light_color = "#1B1D2E";
 	light_range = 2
@@ -13945,7 +13947,7 @@
 	anchored = 1
 	},
 /turf/open/floor/plating/abductor,
-/area/outpost/external)
+/area/outpost/exterior)
 "kDx" = (
 /obj/effect/turf_decal/trimline/opaque/white/corner{
 	dir = 1
@@ -15508,7 +15510,7 @@
 	light_color = "#1B1D2E";
 	light_range = 2
 	},
-/area/outpost/external)
+/area/outpost/exterior)
 "lPs" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/carpet/green,
@@ -22280,7 +22282,8 @@
 /area/outpost/cargo/faction/solfed)
 "qQs" = (
 /obj/machinery/washing_machine{
-	pixel_y = 19
+	pixel_y = 19;
+	density = 0
 	},
 /obj/effect/turf_decal/corner/opaque/grey/full,
 /obj/effect/turf_decal/borderfloorwhite{
@@ -22740,8 +22743,15 @@
 /turf/open/floor/plasteel/tech,
 /area/outpost/crew/dop_zone_2)
 "rgx" = (
-/turf/closed/indestructible/alien,
-/area/outpost/external)
+/obj/structure/sign/departments/cargo{
+	pixel_x = 32
+	},
+/obj/structure/statue/snow/snowman,
+/turf/open/floor/plating/asteroid/snow/temperatre{
+	light_color = "#1B1D2E";
+	light_range = 2
+	},
+/area/outpost/exterior)
 "rgC" = (
 /turf/closed/indestructible/reinforced,
 /area/outpost/maintenance/port)
@@ -28181,6 +28191,16 @@
 	light_range = 2
 	},
 /area/outpost/exterior)
+"vIk" = (
+/obj/structure/barricade/wooden{
+	color = "#696969"
+	},
+/obj/effect/turf_decal/industrial/radiation/fulltile,
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plating{
+	icon_state = "platingdmg3"
+	},
+/area/outpost/exterior)
 "vJo" = (
 /obj/effect/turf_decal/industrial/outline/yellow,
 /obj/machinery/mineral/processing_unit{
@@ -30040,6 +30060,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/turf_decal/elysium_logo,
 /obj/effect/landmark/observer_start,
+/obj/structure/flora/tree/pine/xmas/presents,
 /turf/open/floor/plasteel/mono,
 /area/outpost/exterior)
 "wWL" = (
@@ -30128,6 +30149,7 @@
 /obj/structure/sign/elysium{
 	pixel_x = -32
 	},
+/obj/structure/statue/snow/snowman,
 /turf/open/floor/plating/asteroid/snow/temperatre{
 	light_color = "#1B1D2E";
 	light_range = 2
@@ -41514,7 +41536,7 @@ rgY
 rgY
 rgY
 wUa
-wUa
+hbu
 lEX
 vzm
 xNq
@@ -42080,7 +42102,7 @@ heV
 hNM
 hcB
 wUa
-wUa
+hbu
 txY
 wUa
 hQU
@@ -43570,7 +43592,7 @@ wUa
 wUa
 qjV
 wUa
-wUa
+hbu
 wUa
 heV
 hNM
@@ -43743,11 +43765,11 @@ txY
 wUa
 wUa
 wUa
-wUa
+hbu
 fRk
 hNM
 kct
-wUa
+hbu
 wUa
 wUa
 wUa
@@ -43763,7 +43785,7 @@ heV
 rdP
 hcB
 wUa
-wUa
+hbu
 txY
 wUa
 wUa
@@ -44473,7 +44495,7 @@ rgY
 rgY
 hQU
 wUa
-wUa
+hbu
 wUa
 wUa
 wUa
@@ -44996,8 +45018,8 @@ bEz
 ime
 cQh
 cQh
-rgx
-rgx
+cQh
+cQh
 rgY
 rgY
 rgY
@@ -45049,7 +45071,7 @@ cvd
 bIy
 wUa
 wUa
-wUa
+hbu
 heV
 xvo
 kct
@@ -45184,7 +45206,7 @@ lAd
 iUp
 pFT
 kDj
-rgx
+cQh
 rgY
 rgY
 rgY
@@ -45370,8 +45392,8 @@ bEz
 leN
 cQh
 cQh
-rgx
-rgx
+cQh
+cQh
 rgY
 rgY
 rgY
@@ -45547,7 +45569,7 @@ rgY
 rgY
 tDD
 tDD
-iYL
+vIk
 tDD
 rgY
 cQh
@@ -46918,7 +46940,7 @@ sae
 sTV
 hQU
 wUa
-wUa
+hbu
 wUa
 xWu
 ePa
@@ -48788,7 +48810,7 @@ oRI
 xZj
 wPh
 dmO
-wUa
+hbu
 pZk
 uOV
 mZp
@@ -49363,7 +49385,7 @@ wUa
 wUa
 wUa
 wUa
-wUa
+hbu
 gFU
 rgY
 rgY
@@ -49936,7 +49958,7 @@ wVX
 htE
 cKH
 lPn
-fIy
+rgC
 rgY
 rgY
 fIy
@@ -50259,7 +50281,7 @@ wUa
 wUa
 wUa
 wUa
-wUa
+hbu
 wUa
 wUa
 wUa
@@ -50284,14 +50306,14 @@ qWa
 qjV
 wUa
 wUa
-wUa
+hbu
 wUa
 gaU
 psJ
 lYz
 qqn
 kSq
-wUa
+hbu
 wUa
 wUa
 wUa
@@ -50465,7 +50487,7 @@ dmO
 wUa
 wUa
 wUa
-wUa
+hbu
 wUa
 wUa
 wUa
@@ -50483,13 +50505,13 @@ dmO
 wUa
 xnU
 txY
-wUa
+hbu
 wUa
 wUa
 tDD
 rgY
 rgY
-wUa
+hbu
 heV
 wAP
 taq
@@ -51574,7 +51596,7 @@ wUa
 heV
 hNM
 hcB
-wUa
+hbu
 clN
 ajA
 ejO
@@ -52157,7 +52179,7 @@ fll
 mSX
 sdf
 mae
-wUa
+hbu
 xWu
 lYz
 waQ
@@ -52317,7 +52339,7 @@ qWa
 qjV
 wUa
 wUa
-wUa
+hbu
 wUa
 hyi
 hNM
@@ -52348,7 +52370,7 @@ wUa
 xWu
 lYz
 waQ
-wUa
+hbu
 dmO
 kZI
 uGU
@@ -54374,12 +54396,12 @@ wUa
 wUa
 wUa
 wUa
-wUa
+hbu
 wUa
 heV
 hNM
 hcB
-wUa
+hbu
 wUa
 wUa
 xnU
@@ -54582,7 +54604,7 @@ wUa
 txY
 wUa
 wUa
-wUa
+hbu
 gFU
 wUa
 wUa
@@ -55153,7 +55175,7 @@ kea
 nNQ
 kea
 wqM
-wUa
+hbu
 wUa
 wUa
 rgY
@@ -55324,7 +55346,7 @@ wUa
 wUa
 wUa
 wUa
-wUa
+hbu
 heV
 htu
 hcB
@@ -55515,7 +55537,7 @@ bGp
 vEY
 tOA
 gbK
-bGp
+rgx
 rgY
 rgY
 rgY
