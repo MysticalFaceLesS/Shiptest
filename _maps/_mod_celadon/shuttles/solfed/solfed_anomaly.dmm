@@ -71,16 +71,7 @@
 /turf/open/floor/mineral/plastitanium,
 /area/ship/general/engineering/engineering_1)
 "aG" = (
-/obj/structure/rack,
-/obj/structure/closet/crate{
-	pixel_y = -4
-	},
-/obj/structure/closet/crate{
-	pixel_y = 4
-	},
-/obj/structure/closet/crate{
-	pixel_y = 11
-	},
+/obj/structure/crate_shelf,
 /turf/open/floor/plasteel/darkbrownfull/darkbrown{
 	dir = 1
 	},
@@ -243,7 +234,9 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/closed/wall/r_wall/syndicate,
+/turf/closed/wall/r_wall/syndicate{
+	rad_insulation = 1
+	},
 /area/ship/general/engineering/engineering_1)
 "ct" = (
 /obj/structure/closet/crate/large,
@@ -252,6 +245,10 @@
 /obj/item/storage/box/stockparts/t2,
 /obj/item/storage/box/stockparts/t2,
 /obj/machinery/light/dim/directional/south,
+/obj/item/circuitboard/machine/tesla_coil/research,
+/obj/item/circuitboard/machine/tesla_coil/research,
+/obj/item/circuitboard/machine/tesla_coil/research,
+/obj/item/circuitboard/machine/tesla_coil/research,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/general/engineering)
 "cN" = (
@@ -306,6 +303,9 @@
 "dJ" = (
 /obj/structure/sign/solfed,
 /turf/closed/wall/r_wall/syndicate,
+/area/ship/general/cargo/cargo_bay)
+"dO" = (
+/turf/closed/wall/r_wall/syndicate/nodiagonal,
 /area/ship/general/cargo/cargo_bay)
 "dU" = (
 /obj/machinery/light/dim/directional/south,
@@ -493,6 +493,7 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 5
 	},
+/obj/structure/frame/machine,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/general/engineering)
 "gR" = (
@@ -678,7 +679,7 @@
 /obj/item/clothing/head/helmet/space/solgov{
 	name = "\improper SolFed Vacuum Helmet"
 	},
-/obj/machinery/suit_storage_unit/industrial,
+/obj/machinery/suit_storage_unit/inherit/industrial,
 /turf/open/floor/plasteel/darkbrownfull/darkbrown,
 /area/ship/general/cargo/cargo_bay)
 "lZ" = (
@@ -735,6 +736,12 @@
 /turf/closed/wall/r_wall/syndicate,
 /area/ship/crew/dorm)
 "np" = (
+/turf/open/floor/mineral/plastitanium,
+/area/ship/general/engineering)
+"nB" = (
+/obj/item/paper/crumpled/bloody{
+	default_raw_text = "Будьте осторожны, ни в коем случае НЕ ЗАХОДИТЕ ЗА ОГРАНИЧИТЕЛЬНЫЕ ЛИНИИ. Вы умрёте. Это не шутка. Эта аномалия может использоваться как для выработки энергии, так и для выработки очков науки, главное прикрутите катушки к полу. Если вы услышите странные звуки, значит вы что-то сделали не так."
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/ship/general/engineering)
 "nI" = (
@@ -898,25 +905,8 @@
 	},
 /area/ship/general/cargo/cargo_bay)
 "pR" = (
-/obj/effect/turf_decal/box,
-/obj/structure/closet/secure_closet{
-	icon_state = "eng_secure";
-	anchored = 1;
-	name = "technichian locker"
-	},
-/obj/item/clothing/glasses/meson/engine,
-/obj/item/tank/internals/emergency_oxygen/double,
-/obj/item/clothing/gloves/color/yellow,
-/obj/item/holosign_creator/atmos,
-/obj/item/clothing/glasses/meson/sunglasses,
-/obj/item/clothing/head/hardhat/weldhat/white,
-/obj/item/clothing/suit/hazardvest/solgov{
-	name = "SolFed hazard vest"
-	},
-/obj/machinery/light/dim/directional/south,
-/obj/item/storage/box/lights/mixed,
-/turf/open/floor/mineral/plastitanium,
-/area/ship/general/engineering)
+/turf/closed/wall/r_wall/syndicate/nodiagonal,
+/area/ship/general/engineering/engineering_1)
 "pY" = (
 /obj/structure/window/plasma/reinforced/plastitanium,
 /obj/structure/grille,
@@ -990,6 +980,9 @@
 	},
 /turf/open/floor/wood/ebony,
 /area/ship/crew/dorm)
+"rs" = (
+/turf/closed/wall/r_wall/syndicate/nodiagonal,
+/area/ship/general/engineering)
 "rG" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 4
@@ -1225,6 +1218,13 @@
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/glass/reinforced,
 /area/ship/hallway/central)
+"uN" = (
+/obj/machinery/light/floor,
+/obj/item/paper/carbon{
+	default_raw_text = "Внимание! В следующей комнате находится плазменная аномалия. Для работы с ней необходимо надеть защитный костюм, так как она выбрасывает ядовитые испарения. При этом, чтобы аномалия начала вырабатывать плазму, вам нужно взаимодействовать с ней. Например - коснуться её. Чем больше раз вы её коснётесь, тем больше плазмы она будет вырабатывать. Камера аномалии оборудована иновационным шлюзом, что не пропускает через себя атмосферу. При работе с аномалией не бойтесь смешивания атмосфер. Единственное, из-за чего это может произойти - человеческий фактор"
+	},
+/turf/open/floor/glass/reinforced,
+/area/ship/hallway/central)
 "vd" = (
 /obj/machinery/atmospherics/components/unary/thermomachine/heater{
 	dir = 1
@@ -1316,6 +1316,12 @@
 /area/ship/general/engineering/engineering_1)
 "wP" = (
 /obj/machinery/light/floor,
+/obj/docking_port/mobile{
+	dir = 4;
+	launch_status = 0;
+	preferred_direction = 4;
+	port_direction = 2
+	},
 /turf/open/floor/plasteel/dark_2/airless,
 /area/ship/general/cargo/cargo_bay)
 "xG" = (
@@ -1385,6 +1391,9 @@
 	},
 /turf/closed/wall/r_wall/syndicate,
 /area/ship/general/engineering)
+"yx" = (
+/turf/closed/wall/r_wall/syndicate/nodiagonal,
+/area/ship/crew/dorm)
 "yD" = (
 /turf/closed/wall/r_wall/syndicate,
 /area/ship/science)
@@ -1598,18 +1607,32 @@
 /area/ship/engineering/atmospherics)
 "BJ" = (
 /obj/machinery/light/floor,
-/obj/docking_port/mobile{
-	dir = 2
+/obj/docking_port/stationary{
+	dwidth = 15;
+	height = 15;
+	width = 30;
+	dir = 8
 	},
 /turf/open/floor/plasteel/dark_2/airless,
 /area/ship/general/cargo/cargo_bay)
 "BN" = (
-/obj/structure/closet/crate/large,
-/obj/item/circuitboard/machine/tesla_coil/research,
-/obj/item/circuitboard/machine/tesla_coil/research,
-/obj/item/circuitboard/machine/tesla_coil/research,
-/obj/item/circuitboard/machine/tesla_coil/research,
-/obj/machinery/light/dim/directional/north,
+/obj/structure/closet/secure_closet{
+	icon_state = "eng_secure";
+	anchored = 1;
+	name = "technichian locker"
+	},
+/obj/item/clothing/glasses/meson/engine,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/clothing/gloves/color/yellow,
+/obj/item/holosign_creator/atmos,
+/obj/item/clothing/glasses/meson/sunglasses,
+/obj/item/clothing/head/hardhat/weldhat/white,
+/obj/item/clothing/suit/hazardvest/solgov{
+	name = "SolFed hazard vest"
+	},
+/obj/machinery/light/dim/directional/south,
+/obj/item/storage/box/lights/mixed,
+/obj/effect/turf_decal/box,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/general/engineering)
 "Cx" = (
@@ -1920,7 +1943,9 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/turf/closed/wall/r_wall/syndicate,
+/turf/closed/wall/r_wall/syndicate{
+	rad_insulation = 1
+	},
 /area/ship/general/engineering/engineering_1)
 "Ir" = (
 /obj/structure/dresser{
@@ -1978,6 +2003,7 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 10
 	},
+/obj/structure/frame/machine,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/general/engineering)
 "JO" = (
@@ -2120,6 +2146,7 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 9
 	},
+/obj/structure/frame/machine,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/general/engineering)
 "Nk" = (
@@ -2168,6 +2195,7 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 6
 	},
+/obj/structure/frame/machine,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/general/engineering)
 "OG" = (
@@ -2225,6 +2253,9 @@
 /turf/closed/wall/r_wall/syndicate,
 /area/ship/science)
 "PI" = (
+/obj/structure/closet/crate{
+	pixel_y = 4
+	},
 /turf/open/floor/plasteel/darkbrownfull/darkbrown{
 	dir = 1
 	},
@@ -2344,17 +2375,22 @@
 	},
 /area/ship/general/cargo/cargo_bay)
 "RM" = (
-/obj/structure/fans/tiny/invisible,
-/obj/machinery/door/poddoor/shutters{
-	dir = 4;
-	id = "Hamm_cargo_exit"
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 8
 	},
-/obj/machinery/door/poddoor/shutters{
-	dir = 4;
-	id = 8
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 8
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/ship/general/cargo/cargo_bay)
+/obj/machinery/door/airlock/solgov/glass{
+	rad_insulation = 1
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plasteel/stairs/stairs_pack/dark{
+	dir = 10
+	},
+/area/ship/hallway/central)
 "Sf" = (
 /obj/structure/chair/wood/wings{
 	dir = 4;
@@ -2742,7 +2778,7 @@ ol
 ol
 ol
 Tc
-Tc
+pR
 Nk
 Bq
 Tc
@@ -2754,7 +2790,7 @@ JY
 Pf
 BN
 ct
-Pf
+rs
 Pf
 ol
 ol
@@ -2768,7 +2804,7 @@ ol
 ol
 ol
 Tc
-Tc
+pR
 qv
 vX
 vX
@@ -2782,7 +2818,7 @@ Pf
 np
 np
 EF
-Pf
+rs
 Pf
 ol
 ol
@@ -2794,7 +2830,7 @@ ol
 ol
 ol
 Tc
-Tc
+pR
 IX
 vX
 vX
@@ -2810,7 +2846,7 @@ np
 np
 np
 TG
-Pf
+rs
 Pf
 ol
 ol
@@ -2820,7 +2856,7 @@ ol
 ol
 ol
 Tc
-Tc
+pR
 vX
 vX
 vX
@@ -2838,7 +2874,7 @@ np
 np
 np
 gV
-Pf
+rs
 Pf
 ol
 ol
@@ -2865,7 +2901,7 @@ np
 np
 np
 np
-pR
+np
 Pf
 ol
 ol
@@ -2988,14 +3024,14 @@ tf
 Ri
 NX
 vX
-ot
+RM
 HZ
 cN
-HZ
+uN
 QV
 fi
 Yk
-np
+nB
 gF
 UF
 lZ
@@ -3332,7 +3368,7 @@ ol
 (25,1,1) = {"
 ol
 ZU
-ZU
+dO
 th
 RL
 Is
@@ -3352,7 +3388,7 @@ ys
 ys
 ys
 mn
-nI
+yx
 nI
 ol
 "}
@@ -3360,7 +3396,7 @@ ol
 ol
 ol
 ZU
-ZU
+dO
 aW
 FC
 Is
@@ -3378,7 +3414,7 @@ Ro
 ys
 ys
 rV
-nI
+yx
 nI
 ol
 ol
@@ -3388,7 +3424,7 @@ ol
 ol
 ol
 ZU
-ZU
+dO
 pG
 RL
 Is
@@ -3404,7 +3440,7 @@ Me
 Du
 ys
 AT
-nI
+yx
 nI
 ol
 ol
@@ -3416,7 +3452,7 @@ ol
 ol
 ol
 ZU
-ZU
+dO
 aq
 RL
 eT
@@ -3430,7 +3466,7 @@ NM
 fK
 ys
 ys
-nI
+yx
 nI
 ol
 ol
@@ -3444,7 +3480,7 @@ ol
 ol
 ol
 ZU
-ZU
+dO
 Rc
 EV
 ZU
@@ -3456,7 +3492,7 @@ xG
 nI
 zO
 iX
-nI
+yx
 nI
 ol
 ol
@@ -3473,7 +3509,7 @@ ol
 ol
 Sq
 fY
-RM
+fY
 ZU
 ax
 ax
