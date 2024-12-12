@@ -30,7 +30,7 @@
 	job_icon = "researchdirector"
 	jobtype = /datum/job/rd
 	id = /obj/item/card/id/silver
-	ears = /obj/item/radio/headset/headset/nanotrasen
+	ears = /obj/item/radio/headset/nanotrasen
 	head = /obj/item/clothing/head/beret/rd
 	uniform = /obj/item/clothing/under/nanotrasen/science/director
 	shoes = /obj/item/clothing/shoes/sneakers/brown
@@ -70,14 +70,14 @@
 
 // Медицинский Директор - СМО капитан
 
-/datum/outfit/job/nanotrasen/hos/captain
+/datum/outfit/job/nanotrasen/cmo/captain
 	name = "Nanotrasen - Medical Director (Captain)"
 	job_icon = "chiefmedicalofficer"
 	jobtype = /datum/job/captain
 
 	id = /obj/item/card/id/gold
 	belt = /obj/item/pda/heads/cmo
-	gloves = /obj/item/clothing/gloves/nitrile
+	gloves = /obj/item/clothing/gloves/color/latex/nitrile
 	ears = /obj/item/radio/headset/nanotrasen/captain
 	uniform = /obj/item/clothing/under/nanotrasen/medical/director
 	suit = /obj/item/clothing/suit/toggle/labcoat/nanotrasen/blue
