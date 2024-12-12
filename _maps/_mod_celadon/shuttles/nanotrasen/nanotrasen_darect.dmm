@@ -1,27 +1,31 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aO" = (
-/obj/effect/turf_decal/industrial/warning{
-	color = "#B4696A";
-	dir = 4
-	},
-/obj/effect/turf_decal/industrial/warning{
-	color = "#B4696A";
-	dir = 8
-	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/trimline/opaque/red/warning{
 	dir = 4
 	},
-/obj/effect/turf_decal/trimline/opaque/red/warning{
-	dir = 8
+/obj/structure/closet/secure_closet/wall{
+	icon_state = "sec_wall";
+	req_access_txt = "1";
+	pixel_y = -29;
+	name = "clothing locker"
 	},
-/obj/machinery/vending/wallmed{
-	pixel_y = -28
+/obj/item/clothing/head/helmet/swat/nanotrasen,
+/obj/item/clothing/head/helmet/swat/nanotrasen,
+/obj/item/clothing/head/helmet/swat/nanotrasen,
+/obj/item/clothing/mask/gas/sechailer/swat,
+/obj/item/clothing/mask/gas/sechailer/swat,
+/obj/item/clothing/mask/gas/sechailer,
+/obj/item/clothing/mask/gas/sechailer,
+/obj/item/clothing/suit/armor/nanotrasen,
+/obj/item/clothing/suit/armor/nanotrasen,
+/obj/item/clothing/suit/armor/nanotrasen,
+/obj/item/clothing/suit/armor/nanotrasen,
+/obj/item/clothing/head/fedora/det_hat,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 9
 	},
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
-	dir = 1
-	},
-/turf/open/floor/plasteel/dark,
+/turf/open/floor/mineral/plastitanium,
 /area/ship/security/armory)
 "bf" = (
 /obj/effect/turf_decal/techfloor/orange{
@@ -120,14 +124,18 @@
 	icon_state = "duffel-sec";
 	name = "breaching charges duffel bag"
 	},
-/obj/item/crowbar/power,
 /obj/item/grenade/frag,
 /obj/item/grenade/frag,
 /obj/item/grenade/smokebomb,
 /obj/item/grenade/smokebomb,
-/obj/effect/turf_decal/corner/opaque/red/half,
 /obj/machinery/airalarm/directional/north,
-/turf/open/floor/plasteel/dark,
+/obj/effect/turf_decal/corner/opaque/red/half{
+	dir = 4
+	},
+/obj/effect/turf_decal/trimline/opaque/red/warning{
+	dir = 8
+	},
+/turf/open/floor/mineral/plastitanium,
 /area/ship/security/armory)
 "dI" = (
 /obj/machinery/button/door{
@@ -264,18 +272,11 @@
 /area/ship/hallway/central)
 "eE" = (
 /obj/machinery/airalarm/directional/west,
-/obj/structure/table,
-/obj/item/storage/box/handcuffs{
-	pixel_x = 2;
-	pixel_y = 3
-	},
-/obj/item/gps{
-	gpstag = null;
-	pixel_x = -9;
-	pixel_y = 7
-	},
 /obj/effect/turf_decal/trimline/opaque/brown/filled/arrow_ccw{
 	dir = 8
+	},
+/obj/machinery/computer/cargo{
+	dir = 4
 	},
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo)
@@ -347,25 +348,18 @@
 "fX" = (
 /obj/effect/decal/cleanable/blood/old,
 /obj/machinery/light/directional/east,
-/obj/structure/table,
-/obj/machinery/recharger{
-	pixel_x = 7;
-	pixel_y = 8
-	},
-/obj/machinery/recharger{
-	pixel_x = -7;
-	pixel_y = 8
-	},
-/obj/machinery/recharger{
-	pixel_x = -7;
-	pixel_y = -6
-	},
-/obj/machinery/recharger{
-	pixel_x = 7;
-	pixel_y = -6
-	},
 /obj/effect/turf_decal/trimline/opaque/brown/filled/arrow_ccw{
 	dir = 4
+	},
+/obj/machinery/suit_storage_unit/inherit,
+/obj/item/tank/internals/oxygen,
+/obj/item/clothing/suit/space{
+	desc = "A space suit made of high-grade ballistic fabric with integrated armor plates. More compact than a normal space suit while almost matching powered hardsuits for protection. Almost.";
+	armor = list("melee" = 30, "bullet" = 15, "laser" = 15, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75)
+	},
+/obj/item/clothing/head/helmet/space/light{
+	desc = "A special helmet with solar UV shielding to protect your eyes from harmful rays.""An advanced, lightweight space helmet made of durable composites. Almost matches integrated hardsuit helmets for protection. Almost.";
+	armor = list("melee" = 30, "bullet" = 15, "laser" = 15, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75)
 	},
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo)
@@ -660,6 +654,9 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
+/obj/effect/turf_decal/trimline/opaque/red/line{
+	dir = 4
+	},
 /turf/open/floor/plasteel,
 /area/ship/hallway/central)
 "lM" = (
@@ -676,6 +673,9 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/turf_decal/trimline/opaque/red/line{
+	dir = 4
+	},
 /turf/open/floor/plasteel,
 /area/ship/hallway/central)
 "lX" = (
@@ -794,28 +794,19 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/medical)
 "nW" = (
-/obj/effect/turf_decal/industrial/warning{
-	color = "#B4696A";
-	dir = 4
-	},
-/obj/effect/turf_decal/industrial/warning{
-	color = "#B4696A";
-	dir = 8
-	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/trimline/opaque/red/warning{
 	dir = 4
-	},
-/obj/effect/turf_decal/trimline/opaque/red/warning{
-	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/structure/cable{
-	icon_state = "1-8"
+	icon_state = "1-4"
 	},
-/turf/open/floor/plasteel/dark,
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 9
+	},
+/turf/open/floor/mineral/plastitanium,
 /area/ship/security/armory)
 "of" = (
 /obj/effect/turf_decal/siding/thinplating/dark{
@@ -1103,6 +1094,9 @@
 "st" = (
 /obj/effect/turf_decal/industrial/hatch/blue,
 /obj/machinery/stasis,
+/obj/machinery/vending/wallmed{
+	pixel_y = -28
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/medical)
 "sy" = (
@@ -1212,6 +1206,25 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
+"tX" = (
+/obj/effect/turf_decal/corner/opaque/red/half{
+	dir = 8
+	},
+/obj/structure/rack,
+/obj/item/melee/baton/loaded{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/obj/item/melee/baton/loaded,
+/obj/item/melee/baton/loaded{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/obj/effect/turf_decal/trimline/opaque/red/warning{
+	dir = 4
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/ship/security/armory)
 "uu" = (
 /obj/structure/railing{
 	dir = 4
@@ -1349,104 +1362,59 @@
 /turf/open/floor/plasteel,
 /area/ship/hallway/central)
 "yu" = (
-/obj/structure/guncloset{
-	anchored = 1
+/obj/effect/turf_decal/trimline/opaque/red/warning{
+	dir = 8
 	},
-/obj/item/gun/energy/e_gun{
-	pixel_x = 0;
-	pixel_y = -8;
-	ammo_type = list(/obj/item/ammo_casing/energy/disabler/hitscan,/obj/item/ammo_casing/energy/laser);
-	name = "experimental energy rifle";
-	desc = "A basic hybrid energy gun with two settings: disable and kill. This one has an experimental hitscan disabler mode."
+/obj/structure/closet/secure_closet/wall{
+	icon_state = "sec_wall";
+	req_access_txt = "1";
+	pixel_y = -29;
+	name = "ammo locker"
 	},
-/obj/item/gun/energy/e_gun{
-	pixel_x = 0;
-	pixel_y = -1;
-	ammo_type = list(/obj/item/ammo_casing/energy/disabler/hitscan,/obj/item/ammo_casing/energy/laser);
-	name = "experimental energy rifle";
-	desc = "A basic hybrid energy gun with two settings: disable and kill. This one has an experimental hitscan disabler mode."
+/obj/item/ammo_box/magazine/gauss,
+/obj/item/ammo_box/ferropelletbox,
+/obj/item/ammo_box/c46x30mm_box,
+/obj/item/ammo_box/c46x30mm_box,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/wt550m9,
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
+	dir = 4
 	},
-/obj/item/gun/energy/e_gun{
-	pixel_x = 0;
-	pixel_y = 6;
-	ammo_type = list(/obj/item/ammo_casing/energy/disabler/hitscan,/obj/item/ammo_casing/energy/laser);
-	name = "experimental energy rifle";
-	desc = "A basic hybrid energy gun with two settings: disable and kill. This one has an experimental hitscan disabler mode."
-	},
-/obj/effect/turf_decal/corner/opaque/red/half{
-	dir = 1
-	},
-/turf/open/floor/plasteel/dark,
+/turf/open/floor/mineral/plastitanium,
 /area/ship/security/armory)
 "yE" = (
-/obj/effect/turf_decal/industrial/warning{
-	color = "#B4696A";
-	dir = 8
-	},
-/obj/effect/turf_decal/industrial/warning{
-	color = "#B4696A";
-	dir = 4
-	},
 /obj/effect/turf_decal/trimline/opaque/red/warning{
 	dir = 4
-	},
-/obj/effect/turf_decal/trimline/opaque/red/warning{
-	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 9
+/obj/effect/turf_decal/industrial/caution{
+	dir = 4
 	},
-/turf/open/floor/plasteel/dark,
+/turf/open/floor/mineral/plastitanium,
 /area/ship/security/armory)
 "yI" = (
-/obj/structure/closet/secure_closet{
-	icon_state = "armory";
-	name = "additional tools locker";
-	req_access_txt = "1"
-	},
-/obj/item/attachment/laser_sight,
-/obj/item/attachment/laser_sight{
-	pixel_x = 3;
-	pixel_y = 4
-	},
-/obj/item/attachment/silencer{
-	pixel_x = -2;
-	pixel_y = -4
-	},
-/obj/item/attachment/silencer{
-	pixel_x = -4;
-	pixel_y = -8
-	},
-/obj/item/attachment/foldable_stock{
-	pixel_x = -4;
-	pixel_y = 4
-	},
-/obj/item/attachment/foldable_stock{
-	pixel_x = 6;
-	pixel_y = -2
-	},
 /obj/effect/turf_decal/corner/opaque/red/half{
-	dir = 1
+	dir = 4
 	},
-/obj/item/reagent_containers/spray/pepper,
-/obj/item/reagent_containers/spray/pepper,
-/obj/item/shield/riot/tele,
-/obj/item/shield/riot/tele{
+/obj/structure/table/reinforced,
+/obj/item/binoculars{
 	pixel_x = -7;
 	pixel_y = 4
 	},
-/obj/item/shield/riot/tele{
-	pixel_x = 8;
-	pixel_y = 4
+/obj/item/binoculars{
+	pixel_x = 7;
+	pixel_y = 0
 	},
-/obj/item/restraints/legcuffs/bola/energy,
-/obj/item/restraints/legcuffs/bola/energy,
-/obj/item/restraints/legcuffs/bola/energy,
-/obj/item/restraints/legcuffs/bola/energy,
-/obj/item/restraints/legcuffs/bola/energy,
-/obj/item/restraints/legcuffs/bola/energy,
-/turf/open/floor/plasteel/dark,
+/obj/effect/turf_decal/trimline/opaque/red/warning{
+	dir = 8
+	},
+/obj/structure/sign/poster/official/ion_carbine{
+	pixel_x = -32;
+	pixel_y = 0
+	},
+/turf/open/floor/mineral/plastitanium,
 /area/ship/security/armory)
 "ze" = (
 /obj/structure/chair/plastic{
@@ -1479,9 +1447,8 @@
 	},
 /obj/item/clothing/mask/gas/sechailer/swat,
 /obj/item/clothing/suit/space/hardsuit/security/hos{
-	slowdown = 0.2;
-	desc = "A special bulky suit that protects against hazardous, low pressure environments. Has an additional layer of armor. This one seems to be modified with advanced servos and lightweight materials.";
-	name = "security director's hardsuit"
+	slowdown = 0;
+	desc = "A special bulky suit that protects against hazardous, low pressure environments. Has an additional layer of armor. This one seems to be modified with advanced servos and lightweight materials."
 	},
 /turf/open/floor/wood,
 /area/ship/bridge)
@@ -1507,6 +1474,40 @@
 	},
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/crew)
+"Am" = (
+/obj/effect/turf_decal/corner/opaque/red/half{
+	dir = 8
+	},
+/obj/machinery/power/apc/auto_name/directional/north,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/structure/closet/secure_closet{
+	icon_state = "armory";
+	name = "security tools locker";
+	req_access_txt = "1"
+	},
+/obj/item/restraints/legcuffs/bola/energy,
+/obj/item/restraints/legcuffs/bola/energy,
+/obj/item/restraints/legcuffs/bola/energy,
+/obj/item/restraints/legcuffs/bola/energy,
+/obj/item/restraints/legcuffs/bola/energy,
+/obj/item/shield/riot/tele{
+	pixel_x = 8;
+	pixel_y = 4
+	},
+/obj/item/shield/riot/tele{
+	pixel_x = -7;
+	pixel_y = 4
+	},
+/obj/item/shield/riot/tele,
+/obj/item/reagent_containers/spray/pepper,
+/obj/item/reagent_containers/spray/pepper,
+/obj/effect/turf_decal/trimline/opaque/red/warning{
+	dir = 4
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/ship/security/armory)
 "At" = (
 /obj/structure/chair/plastic,
 /obj/machinery/airalarm/directional/east,
@@ -1571,11 +1572,18 @@
 /obj/structure/sign/nanotrasen{
 	pixel_x = 32
 	},
-/obj/machinery/computer/cargo{
-	dir = 8
-	},
 /obj/effect/turf_decal/trimline/opaque/brown/filled/arrow_ccw{
 	dir = 4
+	},
+/obj/machinery/suit_storage_unit/inherit,
+/obj/item/tank/internals/oxygen,
+/obj/item/clothing/suit/space{
+	desc = "A space suit made of high-grade ballistic fabric with integrated armor plates. More compact than a normal space suit while almost matching powered hardsuits for protection. Almost.";
+	armor = list("melee" = 30, "bullet" = 15, "laser" = 15, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75)
+	},
+/obj/item/clothing/head/helmet/space/light{
+	desc = "An advanced, lightweight space helmet made of durable composites. Almost matches integrated hardsuit helmets for protection. Almost.";
+	armor = list("melee" = 30, "bullet" = 15, "laser" = 15, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75)
 	},
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo)
@@ -1623,26 +1631,13 @@
 /turf/open/floor/wood,
 /area/ship/crew/canteen)
 "Cr" = (
-/obj/item/melee/baton,
-/obj/item/melee/baton{
-	pixel_x = -3;
-	pixel_y = 3
+/obj/effect/turf_decal/trimline/opaque/red/warning{
+	dir = 8
 	},
-/obj/item/melee/baton{
-	pixel_x = 3;
-	pixel_y = -3
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+	dir = 4
 	},
-/obj/effect/turf_decal/corner/opaque/red/half,
-/obj/structure/rack,
-/obj/machinery/light_switch{
-	pixel_x = 12;
-	pixel_y = 23
-	},
-/obj/machinery/power/apc/auto_name/directional/north,
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/turf/open/floor/plasteel/dark,
+/turf/open/floor/mineral/plastitanium,
 /area/ship/security/armory)
 "CA" = (
 /obj/structure/sign/poster/contraband/ntos{
@@ -1658,12 +1653,29 @@
 /turf/open/floor/plating,
 /area/ship/crew)
 "DJ" = (
-/obj/effect/turf_decal/trimline/opaque/red/line,
-/obj/effect/turf_decal/trimline/opaque/red/line{
-	dir = 1
-	},
 /obj/machinery/light/directional/west,
-/turf/open/floor/plasteel/dark,
+/obj/structure/guncloset{
+	anchored = 1
+	},
+/obj/effect/turf_decal/corner/opaque/red/half{
+	dir = 4
+	},
+/obj/item/gun/ballistic/automatic/smg/wt550{
+	pixel_x = 0;
+	pixel_y = -9
+	},
+/obj/item/gun/ballistic/automatic/smg/wt550{
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/obj/item/gun/ballistic/automatic/powered/gauss{
+	pixel_x = 0;
+	pixel_y = 9
+	},
+/obj/effect/turf_decal/trimline/opaque/red/warning{
+	dir = 8
+	},
+/turf/open/floor/mineral/plastitanium,
 /area/ship/security/armory)
 "DS" = (
 /obj/structure/chair/plastic,
@@ -1731,14 +1743,13 @@
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/crew)
 "Es" = (
-/obj/effect/turf_decal/trimline/opaque/red/line,
-/obj/effect/turf_decal/trimline/opaque/red/line{
-	dir = 1
+/obj/effect/turf_decal/trimline/opaque/red/warning{
+	dir = 8
 	},
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
-	dir = 4
+/obj/effect/turf_decal/industrial/caution{
+	dir = 8
 	},
-/turf/open/floor/plasteel/dark,
+/turf/open/floor/mineral/plastitanium,
 /area/ship/security/armory)
 "Ew" = (
 /obj/effect/turf_decal/techfloor{
@@ -1851,6 +1862,10 @@
 /obj/effect/turf_decal/trimline/opaque/red/line{
 	dir = 1
 	},
+/obj/structure/sign/departments/security{
+	pixel_x = 0;
+	pixel_y = -32
+	},
 /turf/open/floor/plasteel,
 /area/ship/hallway/central)
 "FW" = (
@@ -1950,31 +1965,47 @@
 /obj/effect/turf_decal/siding/white/corner{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/decal/cleanable/glass,
-/obj/machinery/door/airlock/security{
-	req_access_txt = "1";
-	name = "Armory"
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/open/floor/plasteel/dark,
+/obj/effect/turf_decal/trimline/opaque/red/warning{
+	dir = 4
+	},
+/obj/machinery/door/poddoor/shutters{
+	id = "darect_armory";
+	name = "Armory"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 1
+	},
+/turf/open/floor/mineral/plastitanium,
 /area/ship/security/armory)
 "Ha" = (
-/obj/machinery/suit_storage_unit/inherit,
 /obj/effect/turf_decal/corner/opaque/red/half{
 	dir = 8
 	},
-/obj/item/tank/jetpack/oxygen,
-/obj/item/clothing/suit/space/hardsuit/security{
-	slowdown = 0.3;
-	desc = "A special suit that protects against hazardous, low pressure environments. Has an additional layer of armor. This one seems to be modified with servos and lightweight materials.";
-	name = "highspeed security hardsuit"
+/obj/structure/table/reinforced,
+/obj/item/clothing/glasses/hud/security/night{
+	pixel_x = 7;
+	pixel_y = 2
 	},
-/obj/item/clothing/mask/gas/sechailer,
-/turf/open/floor/plasteel/dark,
+/obj/item/clothing/glasses/hud/security/night{
+	pixel_x = 0;
+	pixel_y = 2
+	},
+/obj/item/clothing/glasses/hud/security/night{
+	pixel_x = -8;
+	pixel_y = 2
+	},
+/obj/effect/turf_decal/trimline/opaque/red/warning{
+	dir = 4
+	},
+/obj/structure/sign/poster/official/love_ian{
+	pixel_x = 32;
+	pixel_y = 0
+	},
+/turf/open/floor/mineral/plastitanium,
 /area/ship/security/armory)
 "Hl" = (
 /obj/machinery/light/directional/south,
@@ -2302,7 +2333,9 @@
 /obj/item/gun/energy/e_gun/hos,
 /obj/item/clothing/shoes/combat,
 /obj/item/clothing/neck/cloak/hos,
-/obj/item/clothing/suit/toggle/armor/hos_formal,
+/obj/item/clothing/suit/toggle/armor/hos_formal{
+	armor = list("melee" = 50, "bullet" = 40, "laser" = 50, "energy" = 50, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 90)
+	},
 /obj/item/clothing/head/nanotrasen/beret/security/command,
 /obj/item/clothing/suit/armor/nanotrasen/sec_director,
 /obj/item/clothing/under/nanotrasen/security/director,
@@ -2311,6 +2344,9 @@
 /obj/item/clothing/gloves/combat,
 /obj/item/melee/knife/switchblade,
 /obj/machinery/light/directional/east,
+/obj/item/stock_parts/cell/gun/upgraded,
+/obj/item/stock_parts/cell/gun/upgraded,
+/obj/item/radio/headset/nanotrasen/alt/captain,
 /turf/open/floor/wood,
 /area/ship/bridge)
 "OG" = (
@@ -2422,6 +2458,16 @@
 "Sn" = (
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/crew)
+"SA" = (
+/obj/effect/turf_decal/trimline/opaque/red/warning{
+	dir = 8
+	},
+/obj/machinery/door/poddoor/shutters{
+	id = "darect_armory";
+	name = "Armory"
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/ship/security/armory)
 "Tk" = (
 /obj/effect/turf_decal/techfloor/orange,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
@@ -2762,15 +2808,17 @@
 	icon_state = "4-8"
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/structure/sign/departments/security{
-	pixel_x = 0;
-	pixel_y = -32
-	},
 /obj/effect/turf_decal/trimline/opaque/ntblue/line{
 	dir = 10
 	},
 /obj/effect/turf_decal/trimline/opaque/ntblue/corner{
 	dir = 4
+	},
+/obj/machinery/button/door{
+	id = "darect_armory";
+	dir = 1;
+	pixel_y = -21;
+	name = "Armory Shutters"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
@@ -3076,7 +3124,7 @@ Eo
 Sn
 UH
 gb
-tt
+SA
 Cr
 Es
 yu
@@ -3109,8 +3157,8 @@ Sn
 tc
 YO
 tt
-Ha
-Ha
+Am
+tX
 Ha
 tt
 bA
