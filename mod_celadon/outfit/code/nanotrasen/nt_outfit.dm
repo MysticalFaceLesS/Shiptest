@@ -110,6 +110,7 @@
 	box = /obj/item/storage/box/survival/medical
 
 // Директор СБ - ХОС капитан
+
 /datum/outfit/job/nanotrasen/hos/captain
 	name = "Nanotrasen - Security Director (Captain)"
 	job_icon = "headofsecurity"

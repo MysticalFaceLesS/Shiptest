@@ -59,8 +59,9 @@
 
 	default_color = "424242"
 
-	heatmod = 1.2
-	coldmod = 0.8
+	burnmod = 1.1
+	heatmod = 1.3
+	coldmod = 0.7
 	staminamod = 0.85
 
 	bodytemp_heat_damage_limit = TAJARAN_BODYTEMP_NORMAL + 20		//60
