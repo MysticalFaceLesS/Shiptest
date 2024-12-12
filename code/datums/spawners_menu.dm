@@ -54,7 +54,7 @@
 	if(!spawnerlist.len)
 		return
 	var/obj/effect/mob_spawn/MS = pick(spawnerlist)
-	if(!istype(MS) || !(MS in SSpoints_of_interest.other_points_of_interest))
+	if(!istype(MS) || !(MS in GLOB.poi_list)) // [CELADON-EDIT] - if(!istype(MS) || !(MS in SSpoints_of_interest.other_points_of_interest))
 		return
 	switch(action)
 		if("jump")

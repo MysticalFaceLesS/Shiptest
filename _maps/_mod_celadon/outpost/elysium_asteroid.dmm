@@ -342,6 +342,12 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/operations)
+"bh" = (
+/obj/effect/turf_decal/corner/opaque/ntblue/full,
+/obj/effect/turf_decal/trimline/opaque/neutral/filled/warning,
+/obj/item/radio/intercom/wideband/directional/east,
+/turf/open/floor/plasteel/dark,
+/area/outpost/fraction/nanotrasen)
 "bi" = (
 /obj/effect/turf_decal/box/corners{
 	dir = 4
@@ -404,10 +410,6 @@
 /area/outpost/cargo/office)
 "bq" = (
 /obj/effect/turf_decal/corner/opaque/ntblue/full,
-/obj/item/radio/intercom/directional/west,
-/obj/machinery/firealarm/directional/west{
-	pixel_y = 18
-	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/nanotrasen)
 "br" = (
@@ -1041,7 +1043,6 @@
 	mouse_opacity = 0;
 	max_integrity = 10000
 	},
-/obj/structure/table/wood/fancy/red,
 /obj/item/clothing/accessory/lawyers_badge{
 	desc = "A badge of upmost glory.";
 	name = "thunderdome badge"
@@ -1051,6 +1052,7 @@
 	name = "Награда Самым крепким мужчинам за выносливость";
 	desc = "Быть стойким - это не действие или образ жизни, а психическое состояние. Только те, у кого достаточно силы воли, чтобы действовать во время кризиса, спасая друга от врага, по-настоящему стойкие. Будьте стойкими, друзья мои."
 	},
+/obj/structure/table/wood/fancy/blue,
 /turf/open/floor/marble/black,
 /area/outpost/fraction/nanotrasen)
 "dl" = (
@@ -1141,8 +1143,8 @@
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/fraction/inteq)
 "dy" = (
-/turf/open/floor/marble/white_black_border{
-	dir = 8
+/turf/open/floor/marble/black_white_border{
+	dir = 4
 	},
 /area/outpost/fraction/nanotrasen)
 "dA" = (
@@ -1927,6 +1929,7 @@
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
+/obj/structure/statue/snow/snowman,
 /turf/open/floor/wood/walnut,
 /area/outpost/fraction/syndi/donkco_shop)
 "fN" = (
@@ -1973,13 +1976,13 @@
 	mouse_opacity = 0;
 	max_integrity = 10000
 	},
-/obj/structure/table/wood/fancy/red,
 /obj/item/reagent_containers/food/drinks/trophy/gold_cup,
 /obj/structure/plaque/static_plaque/golden/captain{
 	pixel_y = -30;
 	desc = "Быть стойким - это не действие или образ жизни, а психическое состояние. По-настоящему стойкими являются только те, у кого достаточно силы воли, чтобы действовать в кризисной ситуации, спасая друга от врага. Будьте стойкими, друзья мои.";
 	name = "Награда Самому надежному капитану за надежность"
 	},
+/obj/structure/table/wood/fancy/blue,
 /turf/open/floor/marble/black,
 /area/outpost/fraction/nanotrasen)
 "fT" = (
@@ -2004,6 +2007,17 @@
 /obj/structure/bookcase/random,
 /turf/open/floor/wood,
 /area/outpost/maintenance/aft)
+"fW" = (
+/obj/item/radio/intercom/directional/west,
+/obj/machinery/firealarm/directional/west{
+	pixel_y = 18
+	},
+/obj/effect/turf_decal/corner/opaque/ntblue/full,
+/obj/machinery/computer/cargo/faction/nanotrasen{
+	dir = 4
+	},
+/turf/open/floor/plasteel/dark,
+/area/outpost/cargo/faction/nanotrasen)
 "fX" = (
 /obj/structure/railing{
 	dir = 4
@@ -2119,7 +2133,8 @@
 /area/outpost/hallway/starboard)
 "gu" = (
 /obj/structure/reagent_dispensers/water_cooler{
-	pixel_y = 14
+	pixel_y = 14;
+	density = 0
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/inteq)
@@ -3180,6 +3195,7 @@
 	pixel_x = 12;
 	pixel_y = 2
 	},
+/obj/structure/statue/snow/snowman,
 /turf/open/floor/grass,
 /area/outpost/hallway/central)
 "jG" = (
@@ -3629,11 +3645,15 @@
 /turf/open/floor/wood/walnut,
 /area/outpost/fraction/syndi/donkco_shop)
 "kU" = (
-/obj/effect/turf_decal/corner/opaque/ntblue/full,
-/obj/effect/turf_decal/trimline/opaque/neutral/filled/warning,
 /obj/machinery/light/colored/blue{
 	dir = 8;
 	pixel_x = -9
+	},
+/obj/effect/turf_decal/trimline/opaque/solgovgold/warning{
+	dir = 4
+	},
+/obj/effect/turf_decal/corner/opaque/ntblue{
+	dir = 9
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/nanotrasen)
@@ -4119,6 +4139,12 @@
 	pixel_y = 32
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/button/door{
+	pixel_y = 8;
+	id = "outpost_ert";
+	req_access_txt = "101";
+	pixel_x = -7
+	},
 /turf/open/floor/wood,
 /area/outpost/operations)
 "mD" = (
@@ -4632,6 +4658,19 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/plasteel/tech,
 /area/outpost/crew/cryo)
+"oi" = (
+/obj/machinery/light/colored/blue{
+	dir = 8;
+	pixel_x = -9
+	},
+/obj/effect/turf_decal/corner/opaque/ntblue/full,
+/obj/structure/filingcabinet/employment{
+	dir = 4;
+	pixel_x = -11;
+	pixel_y = 0
+	},
+/turf/open/floor/plasteel/dark,
+/area/outpost/fraction/nanotrasen)
 "oj" = (
 /obj/item/storage/fancy/cigarettes/cigpack_syndicate,
 /obj/structure/table/syndi,
@@ -4823,6 +4862,7 @@
 	dir = 4
 	},
 /obj/machinery/firealarm/directional/south,
+/obj/structure/statue/snow/snowman,
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "oX" = (
@@ -4960,6 +5000,7 @@
 	},
 /obj/structure/flora/ausbushes/stalkybush,
 /obj/structure/flora/ausbushes/ywflowers,
+/obj/structure/statue/snow/snowman,
 /turf/open/floor/grass,
 /area/outpost/hallway/aft)
 "px" = (
@@ -5177,6 +5218,13 @@
 "pU" = (
 /turf/closed/indestructible/reinforced,
 /area/outpost/engineering/atmospherics)
+"pW" = (
+/obj/structure/railing/wood{
+	dir = 8
+	},
+/obj/structure/statue/snow/snowman,
+/turf/open/floor/grass,
+/area/outpost/crew/garden)
 "pX" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -7175,7 +7223,10 @@
 /turf/closed/indestructible/reinforced,
 /area/outpost/crew/garden)
 "vx" = (
-/turf/closed/mineral/random/jungle,
+/turf/closed/mineral/random/jungle{
+	mouse_opacity = 0;
+	max_integrity = 120000000
+	},
 /area/outpost/crew/garden)
 "vz" = (
 /obj/structure/grille,
@@ -7274,7 +7325,10 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 5
 	},
-/obj/machinery/computer,
+/obj/structure/statue/snow/snowman{
+	pixel_x = 5;
+	pixel_y = 0
+	},
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "vO" = (
@@ -7342,8 +7396,8 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/open/floor/marble/white_black_border{
-	dir = 4
+/turf/open/floor/marble/black_white_border{
+	dir = 8
 	},
 /area/outpost/fraction/nanotrasen)
 "vV" = (
@@ -7508,6 +7562,10 @@
 /obj/structure/elevator_platform,
 /turf/open/floor/plasteel/elevatorshaft,
 /area/outpost/crew/library)
+"ws" = (
+/obj/structure/statue/snow/snowman,
+/turf/open/floor/plasteel/patterned/cargo_one,
+/area/outpost/fraction/solfed)
 "wt" = (
 /obj/structure/railing{
 	layer = 4.1
@@ -8611,6 +8669,14 @@
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/plasteel/tech/grid,
 /area/outpost/engineering)
+"zE" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/statue/snow/snowman,
+/turf/open/floor/concrete/slab_3,
+/area/outpost/hallway/starboard)
 "zF" = (
 /obj/machinery/light/broken/directional/south,
 /obj/structure/table/reinforced,
@@ -8733,16 +8799,25 @@
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/engineering/atmospherics)
 "zX" = (
-/turf/closed/mineral/random/snow,
+/turf/closed/mineral/random/snow{
+	max_integrity = 1200000;
+	mouse_opacity = 0
+	},
 /area/outpost/crew/garden)
 "zY" = (
-/turf/closed/mineral/random/snow,
+/turf/closed/mineral/random/snow{
+	max_integrity = 1200000;
+	mouse_opacity = 0
+	},
 /area/space)
 "zZ" = (
 /obj/effect/turf_decal/techfloor{
 	dir = 9
 	},
-/obj/machinery/computer,
+/obj/structure/statue/snow/snowman{
+	pixel_x = -3;
+	pixel_y = 0
+	},
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "Aa" = (
@@ -8882,6 +8957,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 5
 	},
+/obj/structure/statue/snow/snowman,
 /turf/open/floor/carpet/black,
 /area/outpost/fraction/syndi)
 "As" = (
@@ -9048,6 +9124,7 @@
 	pixel_y = 9;
 	pixel_x = -9
 	},
+/obj/structure/statue/snow/snowman,
 /turf/open/floor/grass,
 /area/outpost/hallway/central)
 "AP" = (
@@ -10243,10 +10320,8 @@
 /area/outpost/engineering/atmospherics)
 "Eh" = (
 /obj/effect/turf_decal/siding/wood,
-/obj/item/kirbyplants{
-	icon_state = "plant-03"
-	},
 /obj/structure/extinguisher_cabinet/directional/east,
+/obj/structure/statue/snow/snowman,
 /turf/open/floor/carpet,
 /area/outpost/crew/library)
 "Ei" = (
@@ -10446,6 +10521,13 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/outpost/fraction/solfed)
+"EI" = (
+/obj/structure/railing/wood{
+	color = "#55391A"
+	},
+/obj/structure/statue/snow/snowman,
+/turf/open/floor/wood,
+/area/outpost/fraction/solfed)
 "EJ" = (
 /obj/structure/chair/sofa/grey/old/left{
 	dir = 4
@@ -10499,6 +10581,10 @@
 	},
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/fraction/inteq)
+"ER" = (
+/obj/structure/statue/snow/snowman,
+/turf/open/floor/wood,
+/area/outpost/fraction/solfed)
 "EU" = (
 /obj/structure/filingcabinet,
 /obj/structure/filingcabinet{
@@ -12315,11 +12401,6 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/structure/window/reinforced/spawner{
-	dir = 8;
-	opacity = 1;
-	pixel_x = -8
-	},
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/nanotrasen)
@@ -12480,7 +12561,6 @@
 /obj/effect/turf_decal/corner/opaque/ntblue{
 	dir = 10
 	},
-/obj/machinery/newscaster/directional/west,
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/nanotrasen)
 "KJ" = (
@@ -12520,10 +12600,6 @@
 /obj/effect/turf_decal/industrial/loading{
 	color = "#FF7F50";
 	dir = 1
-	},
-/obj/machinery/light/colored/blue{
-	dir = 8;
-	pixel_x = -9
 	},
 /turf/open/floor/plasteel/mono/dark,
 /area/outpost/fraction/nanotrasen)
@@ -12597,10 +12673,6 @@
 /turf/open/floor/concrete/slab_3,
 /area/outpost/hallway/central)
 "Li" = (
-/obj/machinery/door/airlock/multi_tile/command{
-	max_integrity = 3000000000000;
-	req_access_txt = "8130"
-	},
 /obj/effect/turf_decal/trimline/opaque/solgovgold/filled/warning,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
@@ -12614,6 +12686,9 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/multi_tile/command/glass{
+	req_access_txt = "8130"
+	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/nanotrasen)
 "Lj" = (
@@ -12662,10 +12737,6 @@
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/engineering/atmospherics)
 "Lq" = (
-/obj/machinery/door/airlock/multi_tile/command{
-	max_integrity = 3000000000000;
-	req_access_txt = "8130"
-	},
 /obj/effect/turf_decal/trimline/opaque/solgovgold/filled/warning{
 	dir = 1
 	},
@@ -12680,12 +12751,10 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced/spawner{
-	dir = 8;
-	opacity = 1;
-	pixel_x = -8
-	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/multi_tile/command/glass{
+	req_access_txt = "8130"
+	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/nanotrasen)
 "Lr" = (
@@ -13259,6 +13328,7 @@
 /obj/structure/sign/warning/coldtemp{
 	pixel_y = 32
 	},
+/obj/structure/statue/snow/snowman,
 /turf/open/floor/plasteel/tech,
 /area/outpost/crew/cryo)
 "Nc" = (
@@ -13362,6 +13432,7 @@
 /obj/structure/sign/nanotrasen{
 	pixel_x = -32
 	},
+/obj/structure/statue/snow/snowman,
 /turf/open/floor/concrete/reinforced,
 /area/outpost/hallway/central)
 "Np" = (
@@ -13956,6 +14027,16 @@
 "OM" = (
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/fraction/inteq)
+"ON" = (
+/obj/machinery/newscaster/directional/west,
+/obj/effect/turf_decal/trimline/opaque/solgovgold/corner{
+	dir = 4
+	},
+/obj/effect/turf_decal/corner/opaque/ntblue/three_quarters{
+	dir = 1
+	},
+/turf/open/floor/plasteel/dark,
+/area/outpost/fraction/nanotrasen)
 "OP" = (
 /turf/closed/mineral/random/snow,
 /area/outpost/maintenance/fore)
@@ -14263,12 +14344,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 5
 	},
-/obj/effect/turf_decal/corner/opaque/white{
-	dir = 2
-	},
-/turf/open/floor/marble/black_white_border{
-	dir = 9
-	},
+/turf/open/floor/marble/white_black_diagonal,
 /area/outpost/fraction/nanotrasen)
 "PL" = (
 /obj/effect/turf_decal/techfloor/corner{
@@ -14402,16 +14478,9 @@
 /turf/open/floor/plasteel/tech/grid,
 /area/outpost/cargo)
 "Qi" = (
-/obj/structure/window/reinforced/spawner{
-	dir = 1;
-	pixel_y = 2
-	},
 /obj/effect/turf_decal/corner/opaque/ntblue/full,
-/obj/machinery/computer/cargo/faction/nanotrasen{
-	dir = 8
-	},
-/turf/open/floor/plasteel/dark,
-/area/outpost/cargo/faction/nanotrasen)
+/turf/closed/indestructible/reinforced,
+/area/outpost/fraction/nanotrasen)
 "Qj" = (
 /obj/structure/table/wood/reinforced/bar,
 /obj/item/reagent_containers/food/drinks/mug/coco{
@@ -15728,14 +15797,15 @@
 /turf/open/floor/plating/rust,
 /area/outpost/maintenance/fore)
 "Uf" = (
-/obj/machinery/door/airlock/multi_tile/command/v{
-	req_access_txt = "8130"
-	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 8
+	},
+/obj/machinery/door/airlock/multi_tile/command/glass/v{
+	max_integrity = 3000000000000;
+	req_access_txt = "8130"
 	},
 /turf/open/floor/marble,
 /area/outpost/fraction/nanotrasen)
@@ -16140,7 +16210,10 @@
 /obj/structure/flora/rock/jungle{
 	pixel_y = -11
 	},
-/turf/closed/mineral/random/snow,
+/turf/closed/mineral/random/snow{
+	max_integrity = 1200000;
+	mouse_opacity = 0
+	},
 /area/outpost/crew/garden)
 "Vl" = (
 /obj/effect/turf_decal/siding/thinplating/dark{
@@ -16262,13 +16335,7 @@
 /obj/effect/turf_decal/trimline/opaque/neutral/filled/corner{
 	dir = 8
 	},
-/obj/structure/filingcabinet/employment{
-	dir = 8;
-	pixel_x = 8;
-	opacity = 1
-	},
-/obj/item/radio/intercom/wideband/directional/south,
-/turf/open/floor/plasteel/dark,
+/turf/closed/indestructible/reinforced,
 /area/outpost/fraction/nanotrasen)
 "VF" = (
 /obj/effect/turf_decal/siding/wood{
@@ -16360,7 +16427,10 @@
 /obj/structure/railing/wood{
 	dir = 4
 	},
-/turf/closed/mineral/random/jungle,
+/turf/closed/mineral/random/jungle{
+	mouse_opacity = 0;
+	max_integrity = 120000000
+	},
 /area/outpost/crew/garden)
 "VZ" = (
 /obj/effect/decal/cleanable/dirt,
@@ -16485,7 +16555,10 @@
 /area/outpost/operations)
 "Wq" = (
 /obj/effect/turf_decal/industrial/warning,
-/turf/closed/mineral/random/jungle,
+/turf/closed/mineral/random/jungle{
+	mouse_opacity = 0;
+	max_integrity = 120000000
+	},
 /area/outpost/crew/garden)
 "Wr" = (
 /obj/effect/mob_spawn/human/elysium_outpost/maid{
@@ -16735,7 +16808,10 @@
 /obj/structure/flora/tree/palm{
 	icon_state = "palm2"
 	},
-/turf/closed/mineral/random/jungle,
+/turf/closed/mineral/random/jungle{
+	mouse_opacity = 0;
+	max_integrity = 120000000
+	},
 /area/outpost/crew/garden)
 "Xh" = (
 /obj/effect/turf_decal/corner/opaque/yellow/diagonal,
@@ -16747,6 +16823,10 @@
 	},
 /obj/structure/railing/wood{
 	dir = 9
+	},
+/obj/structure/statue/snow/snowman{
+	pixel_x = 2;
+	pixel_y = -7
 	},
 /turf/open/floor/wood,
 /area/outpost/hallway/central)
@@ -16988,6 +17068,7 @@
 /obj/structure/sign/warning/coldtemp{
 	pixel_y = 32
 	},
+/obj/structure/statue/snow/snowman,
 /turf/open/floor/plasteel/tech,
 /area/outpost/crew/cryo)
 "XW" = (
@@ -17291,6 +17372,7 @@
 	dir = 8
 	},
 /obj/item/radio/intercom/directional/south,
+/obj/structure/statue/snow/snowman,
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "YT" = (
@@ -17667,7 +17749,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/computer,
+/obj/structure/flora/tree/pine/xmas/presents,
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "ZV" = (
@@ -29184,12 +29266,12 @@ vV
 vV
 Zp
 Zp
-Zp
-Zp
-Zp
-Zp
-Zp
-Zp
+ak
+ak
+ak
+ak
+ak
+ak
 Zp
 mX
 vV
@@ -29213,7 +29295,7 @@ Zp
 ef
 KB
 sl
-aw
+ws
 pA
 ef
 AF
@@ -29372,10 +29454,10 @@ sN
 Zp
 BU
 BU
-BU
-BU
-BU
-BU
+kU
+ON
+fW
+oi
 BU
 BU
 BU
@@ -29562,7 +29644,7 @@ wX
 KR
 KI
 bq
-kU
+ub
 gD
 tw
 BU
@@ -29589,10 +29671,10 @@ Zp
 Zp
 ef
 lF
-uY
+EI
 Fl
 xg
-Eo
+ER
 lF
 ef
 Zp
@@ -29749,7 +29831,7 @@ ll
 fC
 iw
 sC
-ub
+bh
 br
 Dj
 BU
@@ -33707,7 +33789,7 @@ vw
 sL
 XH
 qz
-et
+pW
 et
 eb
 dC
@@ -39865,7 +39947,7 @@ wI
 DF
 xt
 pK
-KV
+zE
 jP
 jL
 FU

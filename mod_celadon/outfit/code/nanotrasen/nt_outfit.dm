@@ -30,6 +30,7 @@
 	job_icon = "researchdirector"
 	jobtype = /datum/job/rd
 	id = /obj/item/card/id/silver
+  
 	ears = /obj/item/radio/headset/headset/nanotrasen
 	head = /obj/item/clothing/head/beret/rd
 	uniform = /obj/item/clothing/under/nanotrasen/science/director
@@ -53,6 +54,7 @@
 	job_icon = "chiefmedicalofficer"
 	jobtype = /datum/job/cmo
 	id = /obj/item/card/id/silver
+  
 	ears = /obj/item/radio/headset/nanotrasen
 	head = /obj/item/clothing/head/beret/cmo
 	uniform = /obj/item/clothing/under/nanotrasen/medical/director
