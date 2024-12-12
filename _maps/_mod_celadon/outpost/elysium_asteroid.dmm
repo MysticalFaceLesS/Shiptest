@@ -773,6 +773,11 @@
 /obj/effect/turf_decal/spline/fancy/transparent/solgovblue,
 /obj/effect/turf_decal/trimline/opaque/solgovblue/warning,
 /obj/machinery/light/small/directional/north,
+/obj/machinery/camera/autoname{
+	pixel_y = 12;
+	pixel_x = 12;
+	network = list("outpostelysium")
+	},
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/outpost/fraction/solfed)
 "cp" = (
@@ -1567,6 +1572,12 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("outpostelysium");
+	pixel_x = -8;
+	pixel_y = 5
+	},
 /turf/open/floor/wood,
 /area/outpost/fraction/nanotrasen)
 "eK" = (
@@ -1664,6 +1675,11 @@
 "fb" = (
 /obj/effect/turf_decal/box/corners{
 	color = "#0000FF"
+	},
+/obj/machinery/camera/autoname{
+	dir = 10;
+	network = list("outpostelysium");
+	pixel_y = -5
 	},
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/outpost/fraction/inteq)
@@ -6051,6 +6067,12 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/camera/autoname{
+	dir = 8;
+	pixel_x = 8;
+	pixel_y = 17;
+	network = list("outpostelysium")
+	},
 /turf/open/floor/concrete/slab_4,
 /area/outpost/hallway/central)
 "sg" = (
@@ -6243,6 +6265,12 @@
 /obj/effect/turf_decal/corner/opaque/ntblue/full,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 1
+	},
+/obj/machinery/camera/autoname{
+	dir = 8;
+	pixel_x = 8;
+	pixel_y = 7;
+	network = list("outpostelysium")
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/nanotrasen)
@@ -9831,6 +9859,12 @@
 	pixel_y = 11;
 	dir = 8
 	},
+/obj/machinery/camera/autoname{
+	dir = 8;
+	pixel_x = 8;
+	pixel_y = 3;
+	network = list("outpostelysium")
+	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/inteq)
 "CJ" = (
@@ -9867,6 +9901,11 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
 	dir = 1
+	},
+/obj/machinery/camera/autoname{
+	pixel_y = 12;
+	pixel_x = 12;
+	network = list("outpostelysium")
 	},
 /turf/open/floor/wood/ebony,
 /area/outpost/fraction/solfed)
@@ -10526,6 +10565,11 @@
 	color = "#55391A"
 	},
 /obj/structure/statue/snow/snowman,
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("outpostelysium");
+	pixel_x = -8
+	},
 /turf/open/floor/wood,
 /area/outpost/fraction/solfed)
 "EJ" = (
@@ -13223,6 +13267,11 @@
 /turf/open/floor/wood,
 /area/outpost/crew/library)
 "ML" = (
+/obj/machinery/camera/autoname{
+	dir = 10;
+	network = list("outpostelysium");
+	pixel_y = -5
+	},
 /turf/open/floor/marble/black_white_border{
 	dir = 5
 	},
@@ -15179,6 +15228,11 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
+/obj/machinery/camera/autoname{
+	dir = 10;
+	network = list("outpostelysium");
+	pixel_y = -5
+	},
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/fraction/inteq)
 "Sr" = (
@@ -15747,6 +15801,10 @@
 	pixel_x = 26
 	},
 /obj/effect/spawner/lootdrop/plushie,
+/obj/machinery/camera/autoname{
+	pixel_y = 11;
+	network = list("outpostelysium")
+	},
 /turf/open/floor/plating,
 /area/outpost/fraction/syndi/donkco_shop)
 "TV" = (
@@ -16674,6 +16732,17 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plating,
 /area/outpost/maintenance/aft)
+"WK" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 8
+	},
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("outpostelysium");
+	pixel_x = -8
+	},
+/turf/open/floor/concrete/slab_3,
+/area/outpost/hallway/central)
 "WL" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
@@ -31163,7 +31232,7 @@ fK
 NP
 sq
 SL
-Ij
+WK
 RV
 RV
 RV

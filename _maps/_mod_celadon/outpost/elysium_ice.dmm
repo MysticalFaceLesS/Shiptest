@@ -214,6 +214,12 @@
 	dir = 4
 	},
 /obj/item/kirbyplants/random,
+/obj/machinery/camera/autoname{
+	dir = 8;
+	pixel_x = 8;
+	pixel_y = 3;
+	network = list("outpostelysium")
+	},
 /turf/open/floor/plasteel/patterned/grid,
 /area/outpost/fraction/inteq)
 "ajR" = (
@@ -733,8 +739,7 @@
 /area/outpost/crew/dop_zone_2)
 "aCv" = (
 /obj/machinery/computer/secure_data{
-	icon_state = "computer-left";
-	req_one_access_txt = "8100"
+	icon_state = "computer-left"
 	},
 /obj/effect/turf_decal/spline/fancy/opaque/black,
 /turf/open/floor/plasteel/telecomms_floor,
@@ -843,6 +848,17 @@
 /obj/machinery/light/small/broken/directional/west,
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/maintenance/starboard)
+"aHU" = (
+/obj/structure/plasticflaps/opaque{
+	mouse_opacity = 0
+	},
+/obj/machinery/conveyor/auto{
+	dir = 8;
+	id = "outpost3";
+	use_static_power = 1
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/outpost/fraction/syndi)
 "aJI" = (
 /obj/item/radio/intercom/directional/west,
 /obj/structure/table/reinforced,
@@ -1115,22 +1131,9 @@
 /turf/open/floor/plasteel/white,
 /area/outpost/medical/hall_1)
 "aRF" = (
-/obj/item/mine/proximity/explosive/plasma/live,
-/obj/effect/spawner/lootdrop/maintenance,
-/obj/effect/spawner/lootdrop/maintenance{
-	pixel_x = 7;
-	pixel_y = -6
-	},
-/obj/effect/spawner/lootdrop/maintenance{
-	pixel_x = -7;
-	pixel_y = 7
-	},
-/obj/item/reagent_containers/food/snacks/grown/ambrosia{
-	pixel_y = -3;
-	pixel_x = -11
-	},
-/obj/item/reagent_containers/food/snacks/grown/ambrosia{
-	pixel_y = 11
+/obj/effect/portal/permanent/one_way{
+	id = "outpost_joke_endless_22r";
+	alpha = 0
 	},
 /turf/open/floor/plating/rust,
 /area/outpost/fraction/separatist)
@@ -1349,6 +1352,12 @@
 "aXY" = (
 /obj/structure/chair{
 	dir = 1
+	},
+/obj/machinery/camera/autoname{
+	dir = 8;
+	pixel_x = 8;
+	pixel_y = 3;
+	network = list("outpostelysium")
 	},
 /turf/open/floor/carpet/black,
 /area/outpost/fraction/inteq)
@@ -2009,7 +2018,9 @@
 /turf/open/floor/plasteel/patterned,
 /area/outpost/cargo/smeltery)
 "bEz" = (
-/obj/structure/projected_forcefield,
+/obj/structure/projected_forcefield{
+	max_integrity = 900000
+	},
 /turf/open/floor/plating/abductor,
 /area/outpost/exterior)
 "bEK" = (
@@ -2318,6 +2329,17 @@
 	},
 /turf/open/floor/wood/walnut,
 /area/outpost/exterior)
+"bQR" = (
+/obj/structure/plasticflaps/opaque{
+	mouse_opacity = 0
+	},
+/obj/machinery/conveyor/auto{
+	dir = 8;
+	id = "outpost3";
+	use_static_power = 1
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/outpost/fraction/solfed)
 "bRs" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 5
@@ -3664,6 +3686,13 @@
 	},
 /turf/open/floor/wood/walnut,
 /area/outpost/fraction/solfed)
+"dah" = (
+/obj/effect/portal/permanent/one_way{
+	id = "outpost_joke_endless_2r";
+	alpha = 0
+	},
+/turf/open/floor/plating/rust,
+/area/outpost/fraction/separatist)
 "dav" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -3764,6 +3793,14 @@
 	},
 /turf/open/floor/plasteel/tech,
 /area/outpost/crew/dop_zone_2)
+"dep" = (
+/obj/machinery/conveyor/auto{
+	dir = 4;
+	id = "outpost3";
+	use_static_power = 1
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/outpost/fraction/solfed)
 "dfm" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/spawner/lootdrop/maintenance,
@@ -4708,16 +4745,16 @@
 /turf/open/floor/plasteel/tech,
 /area/outpost/crew/cryo)
 "dNt" = (
-/obj/machinery/recycler{
-	mouse_opacity = 0
+/obj/item/reagent_containers/food/snacks/grown/ambrosia{
+	pixel_y = -3;
+	pixel_x = -11
 	},
-/obj/machinery/conveyor/auto{
-	dir = 8;
-	id = "outpost3";
-	use_static_power = 1
+/obj/effect/portal/permanent/one_way{
+	id = "outpost_joke_endless_666";
+	alpha = 0
 	},
-/turf/open/floor/mineral/plastitanium,
-/area/outpost/fraction/syndi)
+/turf/open/floor/plating/rust,
+/area/outpost/fraction/separatist)
 "dNG" = (
 /obj/effect/turf_decal/techfloor{
 	dir = 10
@@ -5221,6 +5258,13 @@
 /obj/structure/stone_tile/slab,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/plasticflaps/opaque{
+	mouse_opacity = 0;
+	icon_state = "rockwall_icemoon-0";
+	icon = 'icons/turf/walls/rockwall_icemoon.dmi';
+	opacity = 0;
+	max_integrity = 9000000
+	},
 /turf/open/floor/plating/asteroid/icerock/temperate,
 /area/outpost/exterior)
 "eeq" = (
@@ -6127,6 +6171,15 @@
 	light_range = 2
 	},
 /area/outpost/exterior)
+"eHV" = (
+/obj/machinery/conveyor/auto{
+	dir = 4;
+	id = "outpost3";
+	use_static_power = 1
+	},
+/obj/machinery/recycler,
+/turf/open/floor/mineral/plastitanium,
+/area/outpost/fraction/solfed)
 "eIp" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 1
@@ -6904,20 +6957,11 @@
 /turf/open/floor/plasteel/mono/dark,
 /area/outpost/cargo)
 "foo" = (
-/obj/effect/spawner/lootdrop/rnd{
-	max_integrity = 100000;
-	pixel_x = 0;
-	pixel_y = 31;
-	anchored = 1;
-	resistance_flags = 3
-	},
-/obj/structure/window/reinforced{
-	dir = 1;
-	max_integrity = 1000000;
-	mouse_opacity = 0;
-	alpha = 0
-	},
-/turf/open/floor/plating/asteroid/icerock/temperate,
+/obj/item/stack/sheet/mineral/uranium/twenty,
+/obj/structure/closet/crate/radiation,
+/obj/effect/radiation/waste/intense,
+/obj/item/mod/paint,
+/turf/open/floor/plating,
 /area/outpost/exterior)
 "foG" = (
 /obj/machinery/door/airlock/security/brig{
@@ -7379,6 +7423,13 @@
 	},
 /turf/open/floor/plasteel/tech,
 /area/outpost/operations/outpost_command)
+"fDQ" = (
+/obj/effect/portal/permanent/one_way{
+	id = "outpost_joke_endless_3l";
+	alpha = 0
+	},
+/turf/open/floor/plating/rust,
+/area/outpost/fraction/separatist)
 "fET" = (
 /obj/structure/flora/grass/both{
 	layer = 3.1
@@ -7992,6 +8043,11 @@
 	dir = 8;
 	color = "#543C30"
 	},
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("outpostelysium");
+	pixel_x = -9
+	},
 /turf/open/floor/wood/walnut,
 /area/outpost/fraction/solfed)
 "gcZ" = (
@@ -8193,9 +8249,7 @@
 /obj/structure/spider/stickyweb{
 	color = "#808080"
 	},
-/mob/living/simple_animal/hostile/poison/giant_spider{
-	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
-	},
+/mob/living/simple_animal/hostile/poison/giant_spider/ice,
 /turf/open/floor/plating/asteroid/icerock/temperate,
 /area/outpost/exterior)
 "glO" = (
@@ -8648,6 +8702,14 @@
 	dir = 4
 	},
 /area/outpost/medical/hall_1)
+"gAu" = (
+/obj/machinery/conveyor/auto{
+	dir = 8;
+	id = "outpost3";
+	use_static_power = 1
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/outpost/fraction/syndi)
 "gAv" = (
 /obj/structure/curtain,
 /obj/structure/toilet{
@@ -9082,12 +9144,10 @@
 /turf/open/floor/plasteel/mono/dark,
 /area/outpost/cargo)
 "gST" = (
-/mob/living/simple_animal/hostile/poison/giant_spider/tarantula{
-	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
-	},
 /obj/structure/spider/stickyweb{
 	color = "#808080"
 	},
+/mob/living/simple_animal/hostile/poison/giant_spider/hunter/viper,
 /turf/open/floor/wood/walnut,
 /area/outpost/exterior)
 "gTh" = (
@@ -9503,6 +9563,12 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("outpostelysium");
+	pixel_x = -8;
+	pixel_y = 5
+	},
 /turf/open/floor/wood,
 /area/outpost/fraction/nanotrasen)
 "hhm" = (
@@ -9701,6 +9767,9 @@
 "htE" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/turf_decal/elysium_logo/three_two,
+/obj/effect/landmark/portal_exit{
+	id = "outpost_joke_endless_666"
+	},
 /turf/open/floor/plasteel/mono,
 /area/outpost/exterior)
 "htH" = (
@@ -9765,6 +9834,12 @@
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
 	dir = 8
+	},
+/obj/machinery/camera/autoname{
+	dir = 8;
+	pixel_x = 8;
+	pixel_y = 3;
+	network = list("outpostelysium")
 	},
 /turf/open/floor/marble/black,
 /area/outpost/fraction/nanotrasen)
@@ -10605,8 +10680,7 @@
 /turf/open/floor/plasteel/white,
 /area/outpost/medical/hall_1)
 "ica" = (
-/obj/structure/sign/warning/explosives,
-/turf/closed/wall/r_wall/rust,
+/turf/closed/indestructible/reinforced,
 /area/outpost/fraction/separatist)
 "icp" = (
 /obj/machinery/light/small/directional/south,
@@ -11158,7 +11232,9 @@
 /mob/living/simple_animal/hostile/rat{
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0);
 	maxHealth = 50;
-	health = 50
+	health = 50;
+	maxbodytemp = 1500;
+	minbodytemp = 0
 	},
 /turf/open/floor/plating/asteroid/icerock/smooth,
 /area/outpost/exterior)
@@ -11819,9 +11895,6 @@
 /turf/open/floor/plating,
 /area/outpost/operations/outpost_command)
 "iUp" = (
-/obj/effect/mob_spawn/human/corpse/wizard{
-	short_desc = "Вы видите тело одетое в робу академии наук. Оно все в ранениях и укусах. А рядом с телом на стене находятся кровоподтеки, которые тянутся к зеленой лампочке. Кажется что оно активировано?"
-	},
 /turf/open/floor/plating/abductor,
 /area/outpost/exterior)
 "iWF" = (
@@ -12057,6 +12130,17 @@
 "jgt" = (
 /obj/structure/stone_tile/slab/cracked,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/closet/crate/wooden{
+	pixel_y = -2
+	},
+/obj/structure/closet/crate/wooden{
+	pixel_x = 3;
+	pixel_y = 7
+	},
+/obj/structure/closet/crate/wooden{
+	pixel_x = -1;
+	pixel_y = 16
+	},
 /turf/open/floor/plating/asteroid/icerock/temperate,
 /area/outpost/exterior)
 "jgu" = (
@@ -12442,6 +12526,19 @@
 	light_range = 2
 	},
 /area/outpost/exterior)
+"jqG" = (
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/window{
+	dir = 1;
+	pixel_y = 4
+	},
+/obj/item/paper/crumpled{
+	default_raw_text = "Всяк кто сюда ступает, послушай меня, Шерегена Абдул Хакима. Этот путь пройдет только избранный. Если ты не достоен окажешься - грех тебе на всю жизнь, жить с позором! Алах милостив, но лишь тем кто истинно верит в него из чистых помыслов!";
+	pixel_x = 10
+	},
+/turf/open/floor/plating/rust,
+/area/outpost/fraction/separatist)
 "jqP" = (
 /obj/structure/table/wood/fancy/purple,
 /obj/effect/turf_decal/siding/wood{
@@ -12476,6 +12573,13 @@
 	pixel_x = -7;
 	pixel_y = 0
 	},
+/obj/effect/portal/permanent/one_way{
+	id = "outpost_joke_endless_1l";
+	alpha = 0
+	},
+/obj/effect/landmark/portal_exit{
+	id = "outpost_joke_endless_333l"
+	},
 /turf/open/floor/plating/rust,
 /area/outpost/fraction/separatist)
 "jtc" = (
@@ -12483,6 +12587,14 @@
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/carpet/cyan,
 /area/outpost/medical/palata_1)
+"jtg" = (
+/obj/effect/spawner/lootdrop/maintenance/two,
+/obj/effect/portal/permanent/one_way{
+	id = "outpost_joke_endless_1l";
+	alpha = 0
+	},
+/turf/open/floor/plating/rust,
+/area/outpost/fraction/separatist)
 "jtk" = (
 /turf/closed/indestructible/reinforced,
 /area/outpost/fraction/syndi)
@@ -12755,6 +12867,11 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 8
 	},
+/obj/machinery/camera/autoname{
+	dir = 10;
+	network = list("outpostelysium");
+	pixel_y = -7
+	},
 /turf/open/floor/wood/ebony,
 /area/outpost/fraction/solfed)
 "jEG" = (
@@ -12808,7 +12925,7 @@
 /obj/structure/table/scrap,
 /obj/effect/spawner/lootdrop/materials,
 /obj/item/paper/crumpled{
-	default_raw_text = "Это снова Энди. Ох, незнаю как вам а это были очень острые ощущения, ходить по мосту который вот вот грохнется в лаву! Но да ладно. Мы открыли вход. Нам удалось раскапать тунель, который судя по всему ведет куда-то глубоко вниз. Ну что ж, будем готовиться к спуску.";
+	default_raw_text = "Это снова Энди. Ох, незнаю как вам а это были очень острые ощущения, ходить по мосту который вот вот грохнется в лаву! Но да ладно. Мы открыли вход. Нам удалось раскапать тунель, который судя по всему ведет куда-то глубоко вниз. Ну что ж, будем готовиться к спуску. К сожалению туннель тут слегка обвалился, приходится ползти ползком. Черт, придется оставить ящики с инструментами, они не пролезут дальше...";
 	pixel_x = 10
 	},
 /turf/open/floor/plating/asteroid/icerock/temperate,
@@ -13687,6 +13804,12 @@
 	dir = 9
 	},
 /obj/machinery/newscaster/directional/north,
+/obj/machinery/camera/autoname{
+	dir = 8;
+	pixel_x = 8;
+	pixel_y = 3;
+	network = list("outpostelysium")
+	},
 /turf/open/floor/marble/black,
 /area/outpost/fraction/nanotrasen)
 "krG" = (
@@ -13935,6 +14058,7 @@
 /obj/item/clothing/suit/armor/heavy/adamantine{
 	anchored = 1
 	},
+/obj/structure/table/abductor,
 /turf/open/floor/plating/abductor,
 /area/outpost/exterior)
 "kDx" = (
@@ -14812,6 +14936,14 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/outpost/crew/canteen)
+"lqe" = (
+/obj/effect/spawner/lootdrop/maintenance/two,
+/obj/effect/portal/permanent/one_way{
+	id = "outpost_joke_endless_105l";
+	alpha = 0
+	},
+/turf/open/floor/plating/rust,
+/area/outpost/fraction/separatist)
 "lqo" = (
 /obj/effect/turf_decal/siding/white/corner{
 	dir = 8
@@ -14858,8 +14990,8 @@
 /turf/open/floor/wood/walnut,
 /area/outpost/exterior)
 "lsF" = (
-/obj/effect/decal/cleanable/blood/hitsplatter,
-/turf/open/floor/plating/asteroid/icerock/temperate,
+/obj/structure/table/abductor,
+/turf/open/floor/plating/abductor,
 /area/outpost/exterior)
 "lug" = (
 /obj/machinery/conveyor/auto{
@@ -14875,6 +15007,13 @@
 "luk" = (
 /turf/open/floor/wood,
 /area/outpost/fraction/solfed)
+"lul" = (
+/obj/machinery/conveyor/auto{
+	id = "outpost3";
+	use_static_power = 1
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/outpost/fraction/syndi)
 "lum" = (
 /obj/machinery/camera/autoname{
 	dir = 8;
@@ -14931,14 +15070,12 @@
 /turf/open/floor/concrete/tiles,
 /area/outpost/crew/lounge/cab_2)
 "lvR" = (
-/obj/machinery/recycler{
-	mouse_opacity = 0
-	},
 /obj/machinery/conveyor/auto{
 	dir = 4;
 	id = "outpost3";
 	use_static_power = 1
 	},
+/obj/machinery/recycler,
 /turf/open/floor/plasteel/mono/dark,
 /area/outpost/fraction/nanotrasen)
 "lwu" = (
@@ -14973,13 +15110,11 @@
 /turf/open/floor/wood/walnut,
 /area/outpost/fraction/syndi/donkco_shop)
 "lwR" = (
-/mob/living/simple_animal/hostile/poison/giant_spider/hunter{
-	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
-	},
 /obj/structure/spider/stickyweb{
 	color = "#808080"
 	},
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/poison/giant_spider/hunter/ice,
 /turf/open/floor/wood/walnut,
 /area/outpost/exterior)
 "lxh" = (
@@ -15174,8 +15309,7 @@
 /area/outpost/fraction/separatist)
 "lBZ" = (
 /obj/machinery/computer/prisoner/management{
-	icon_state = "computer-right";
-	req_one_access_txt = "8100"
+	icon_state = "computer-right"
 	},
 /obj/effect/turf_decal/spline/fancy/opaque/black,
 /obj/item/stamp/hos{
@@ -15294,7 +15428,6 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/computer/bounty{
 	dir = 8;
-	req_one_access_txt = "8100";
 	icon_state = "computer-right"
 	},
 /turf/open/floor/plasteel/tech,
@@ -16010,6 +16143,11 @@
 	dir = 4;
 	pixel_x = -6
 	},
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("outpostelysium");
+	pixel_x = -9
+	},
 /turf/open/floor/wood,
 /area/outpost/fraction/solfed)
 "mlm" = (
@@ -16129,6 +16267,11 @@
 /obj/structure/window/reinforced/spawner{
 	dir = 1;
 	pixel_y = -26
+	},
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("outpostelysium");
+	pixel_x = -9
 	},
 /turf/open/floor/wood/walnut,
 /area/outpost/fraction/syndi/donkco_shop)
@@ -16576,22 +16719,11 @@
 /turf/open/floor/plasteel/white,
 /area/outpost/crew/canteen)
 "mIL" = (
-/obj/structure/table/scrap,
-/obj/item/storage/book/bible/koran{
-	pixel_x = 1;
-	pixel_y = 8
+/obj/item/reagent_containers/food/snacks/grown/ambrosia{
+	pixel_y = 11
 	},
-/obj/item/elysm_manual{
-	pixel_y = 5;
-	pixel_x = -10
-	},
-/obj/structure/curtain/cloth/elysium,
-/obj/item/reagent_containers/food/snacks/grown/ambrosia/deus,
-/obj/item/reagent_containers/food/snacks/grown/ambrosia/gaia,
-/obj/machinery/light/colored/red{
-	dir = 4;
-	pixel_x = 10;
-	pixel_y = 1
+/obj/effect/landmark/portal_exit{
+	id = "outpost_joke_endless_22r"
 	},
 /turf/open/floor/plating/rust,
 /area/outpost/fraction/separatist)
@@ -16683,6 +16815,7 @@
 /obj/item/stack/sheet/mineral/uranium/twenty,
 /obj/structure/closet/crate/radiation,
 /obj/effect/radiation/waste/intense,
+/obj/item/pickaxe/mini,
 /turf/open/floor/plating,
 /area/outpost/exterior)
 "mOL" = (
@@ -16712,7 +16845,9 @@
 /mob/living/simple_animal/hostile/rat{
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0);
 	maxHealth = 50;
-	health = 50
+	health = 50;
+	maxbodytemp = 1500;
+	minbodytemp = 0
 	},
 /turf/open/floor/plating/asteroid/icerock/smooth,
 /area/outpost/exterior)
@@ -18344,9 +18479,7 @@
 /area/outpost/exterior)
 "nUJ" = (
 /obj/machinery/light/directional/north,
-/obj/machinery/modular_computer/console/preset/command{
-	req_one_access_txt = "8100"
-	},
+/obj/machinery/modular_computer/console/preset/command,
 /obj/effect/turf_decal/spline/fancy/opaque/black,
 /turf/open/floor/plasteel/telecomms_floor,
 /area/outpost/operations/outpost_command)
@@ -18769,7 +18902,9 @@
 /mob/living/simple_animal/hostile/rat{
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0);
 	maxHealth = 50;
-	health = 50
+	health = 50;
+	maxbodytemp = 1500;
+	minbodytemp = 0
 	},
 /turf/open/floor/plating/asteroid/icerock/temperate,
 /area/outpost/exterior)
@@ -18842,6 +18977,14 @@
 	light_range = 2
 	},
 /area/outpost/fraction/separatist)
+"omX" = (
+/obj/structure/window/reinforced/fulltile/unanchored{
+	mouse_opacity = 0;
+	alpha = 0;
+	max_integrity = 90000000
+	},
+/turf/open/floor/plating/asteroid/icerock/temperate,
+/area/outpost/exterior)
 "onh" = (
 /obj/structure/curtain/cloth/blacknormal{
 	pixel_x = -32
@@ -19334,6 +19477,41 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/tech,
 /area/outpost/crew/dop_zone_2)
+"oFv" = (
+/obj/structure/table/scrap,
+/obj/item/storage/book/bible/koran{
+	pixel_x = -1;
+	pixel_y = -3
+	},
+/obj/item/elysm_manual{
+	pixel_y = 10;
+	pixel_x = -2
+	},
+/obj/machinery/light/colored/red{
+	dir = 4;
+	pixel_x = 10;
+	pixel_y = 1
+	},
+/obj/item/toy/talking/codex_gigas{
+	pixel_y = 10;
+	pixel_x = 12
+	},
+/obj/item/codespeak_manual/unlimited{
+	pixel_x = 12;
+	pixel_y = -6
+	},
+/obj/item/reagent_containers/food/snacks/grown/ambrosia/deus,
+/obj/item/reagent_containers/food/snacks/grown/ambrosia/gaia{
+	pixel_y = 11;
+	pixel_x = 9
+	},
+/obj/item/reagent_containers/food/snacks/grown/ambrosia{
+	pixel_y = -3;
+	pixel_x = 13
+	},
+/obj/structure/curtain/cloth/elysium,
+/turf/open/floor/plating/rust,
+/area/outpost/fraction/separatist)
 "oFx" = (
 /obj/structure/table/glass,
 /obj/item/paper_bin{
@@ -19775,6 +19953,11 @@
 	},
 /obj/effect/turf_decal/trimline/opaque/solgovblue/corner{
 	dir = 1
+	},
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("outpostelysium");
+	pixel_x = -9
 	},
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/outpost/fraction/solfed)
@@ -20534,6 +20717,13 @@
 	pixel_x = -7;
 	pixel_y = 0
 	},
+/obj/effect/portal/permanent/one_way{
+	id = "outpost_joke_endless_1l";
+	alpha = 0
+	},
+/obj/effect/landmark/portal_exit{
+	id = "outpost_joke_endless_33l"
+	},
 /turf/open/floor/plating/rust,
 /area/outpost/fraction/separatist)
 "pzW" = (
@@ -20779,6 +20969,9 @@
 	pixel_x = -6;
 	pixel_y = -1
 	},
+/obj/effect/landmark/portal_exit{
+	id = "outpost_joke_endless_1l"
+	},
 /turf/open/floor/plating/rust,
 /area/outpost/fraction/separatist)
 "pIa" = (
@@ -20886,6 +21079,28 @@
 /obj/machinery/light/dim/directional/west,
 /turf/open/floor/plasteel/white,
 /area/outpost/crew/garden)
+"pLe" = (
+/obj/effect/spawner/lootdrop/maintenance/two,
+/obj/effect/portal/permanent/one_way{
+	id = "outpost_joke_endless_101l";
+	alpha = 0
+	},
+/turf/open/floor/plating/rust,
+/area/outpost/fraction/separatist)
+"pLK" = (
+/obj/item/reagent_containers/food/snacks/grown/ambrosia{
+	pixel_y = -3;
+	pixel_x = -11
+	},
+/obj/effect/portal/permanent/one_way{
+	id = "outpost_joke_endless_2r";
+	alpha = 0
+	},
+/obj/effect/landmark/portal_exit{
+	id = "outpost_joke_endless_101l"
+	},
+/turf/open/floor/plating/rust,
+/area/outpost/fraction/separatist)
 "pLP" = (
 /obj/structure/sign/barsign,
 /turf/closed/indestructible/reinforced,
@@ -21164,7 +21379,9 @@
 /mob/living/simple_animal/hostile/rat{
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0);
 	maxHealth = 50;
-	health = 50
+	health = 50;
+	maxbodytemp = 1500;
+	minbodytemp = 0
 	},
 /turf/open/floor/plating/asteroid/icerock/temperate,
 /area/outpost/exterior)
@@ -21548,10 +21765,7 @@
 	id = "outpost3";
 	use_static_power = 1
 	},
-/obj/machinery/recycler{
-	mouse_opacity = 0
-	},
-/turf/open/floor/plasteel/mono,
+/turf/open/floor/mineral/plastitanium,
 /area/outpost/fraction/solfed)
 "qnZ" = (
 /obj/effect/turf_decal/techfloor{
@@ -21803,7 +22017,9 @@
 /mob/living/simple_animal/hostile/rat{
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0);
 	maxHealth = 50;
-	health = 50
+	health = 50;
+	maxbodytemp = 1500;
+	minbodytemp = 0
 	},
 /turf/open/floor/plating/asteroid/icerock/temperate{
 	color = "#000000"
@@ -22495,6 +22711,14 @@
 	light_range = 2;
 	layer = 3
 	},
+/area/outpost/exterior)
+"qUB" = (
+/obj/structure/spider/stickyweb{
+	color = "#808080"
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/poison/giant_spider,
+/turf/open/floor/wood/walnut,
 /area/outpost/exterior)
 "qVe" = (
 /obj/effect/turf_decal/siding/wood{
@@ -23386,6 +23610,16 @@
 	light_range = 2
 	},
 /area/outpost/exterior)
+"rGW" = (
+/obj/item/reagent_containers/food/snacks/grown/ambrosia{
+	pixel_y = -3;
+	pixel_x = -11
+	},
+/obj/effect/landmark/portal_exit{
+	id = "outpost_joke_endless_222r"
+	},
+/turf/open/floor/plating/rust,
+/area/outpost/fraction/separatist)
 "rHt" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2,
@@ -24244,6 +24478,12 @@
 /obj/effect/turf_decal/corner_techfloor_gray{
 	dir = 1
 	},
+/obj/machinery/camera/autoname{
+	dir = 8;
+	pixel_x = 8;
+	pixel_y = 3;
+	network = list("outpostelysium")
+	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/cargo)
 "snr" = (
@@ -24486,6 +24726,20 @@
 	},
 /turf/open/floor/plating/rust,
 /area/outpost/maintenance/starboard)
+"suZ" = (
+/obj/effect/spawner/lootdrop/rnd{
+	max_integrity = 100000;
+	pixel_x = 0;
+	anchored = 1;
+	resistance_flags = 3
+	},
+/obj/structure/window/reinforced/fulltile/unanchored{
+	mouse_opacity = 0;
+	alpha = 0;
+	max_integrity = 90000000
+	},
+/turf/open/floor/plating/asteroid/icerock/temperate,
+/area/outpost/exterior)
 "svL" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
 	dir = 8
@@ -24661,6 +24915,13 @@
 	},
 /turf/open/floor/plasteel/mono,
 /area/outpost/cargo/faction/solfed)
+"sDz" = (
+/obj/item/stack/sheet/mineral/uranium/twenty,
+/obj/structure/closet/crate/radiation,
+/obj/effect/radiation/waste/intense,
+/obj/item/mining_scanner,
+/turf/open/floor/plating,
+/area/outpost/exterior)
 "sDN" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -25871,18 +26132,30 @@
 	pixel_y = 5;
 	pixel_x = -5
 	},
+/obj/machinery/camera/autoname{
+	dir = 8;
+	pixel_x = 8;
+	pixel_y = 3;
+	network = list("outpostelysium")
+	},
 /turf/open/floor/plasteel/mono,
 /area/outpost/cargo/faction/inteq)
 "tzM" = (
 /obj/structure/spider/stickyweb{
 	color = "#808080"
 	},
-/mob/living/simple_animal/hostile/poison/giant_spider{
-	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
-	},
 /obj/effect/decal/cleanable/dirt/dust,
+/mob/living/simple_animal/hostile/poison/giant_spider/ice,
 /turf/open/floor/wood/walnut,
 /area/outpost/exterior)
+"tBn" = (
+/obj/effect/spawner/lootdrop/maintenance/two,
+/obj/effect/portal/permanent/one_way{
+	id = "outpost_joke_endless_222r";
+	alpha = 0
+	},
+/turf/open/floor/plating/rust,
+/area/outpost/fraction/separatist)
 "tBE" = (
 /obj/structure/mecha_wreckage/gygax/medgax,
 /turf/open/floor/plating/asteroid/icerock/temperate,
@@ -26497,8 +26770,19 @@
 /turf/open/floor/plasteel/dark,
 /area/outpost/medical/morgue)
 "ubD" = (
-/turf/open/floor/plating/asteroid/wasteplanet/lit,
-/area/outpost/exterior)
+/obj/item/reagent_containers/food/snacks/grown/ambrosia{
+	pixel_y = -3;
+	pixel_x = -11
+	},
+/obj/effect/portal/permanent/one_way{
+	id = "outpost_joke_endless_1l";
+	alpha = 0
+	},
+/obj/effect/landmark/portal_exit{
+	id = "outpost_joke_endless_222r"
+	},
+/turf/open/floor/plating/rust,
+/area/outpost/fraction/separatist)
 "ubF" = (
 /obj/item/clothing/mask/gas/explorer/old,
 /turf/open/floor/plating/asteroid/icerock/temperate,
@@ -27111,6 +27395,14 @@
 /obj/item/candle/tribal_torch,
 /turf/open/floor/plating/asteroid/icerock/smooth,
 /area/outpost/exterior)
+"uGn" = (
+/obj/effect/spawner/lootdrop/maintenance/two,
+/obj/effect/portal/permanent/one_way{
+	id = "outpost_joke_endless_333l";
+	alpha = 0
+	},
+/turf/open/floor/plating/rust,
+/area/outpost/fraction/separatist)
 "uGz" = (
 /obj/effect/turf_decal/siding/wood{
 	color = "#543C30";
@@ -27155,6 +27447,13 @@
 /mob/living/simple_animal/hostile/asteroid/roach,
 /obj/effect/decal/cleanable/blood,
 /turf/open/floor/plating/asteroid/icerock/temperate,
+/area/outpost/exterior)
+"uJm" = (
+/obj/effect/mob_spawn/human/corpse/wizard{
+	short_desc = "Вы видите тело одетое в робу академии наук. Оно все в ранениях и укусах. А рядом с телом на стене находятся кровоподтеки, которые тянутся к зеленой лампочке. Кажется что оно активировано?"
+	},
+/obj/structure/trap/stun,
+/turf/open/floor/plating/abductor,
 /area/outpost/exterior)
 "uJr" = (
 /obj/structure/curtain/cloth/elysium{
@@ -27224,14 +27523,12 @@
 	},
 /area/outpost/vacant_rooms/trash_factory)
 "uKs" = (
-/obj/machinery/computer/security{
-	icon_state = "computer-middle";
-	req_one_access_txt = "8100";
-	network = list("outpostelysium")
-	},
 /obj/effect/turf_decal/spline/fancy/opaque/black,
 /obj/machinery/camera/autoname{
 	pixel_y = 14
+	},
+/obj/machinery/computer/camera_advanced{
+	icon_state = "computer-middle"
 	},
 /turf/open/floor/plasteel/telecomms_floor,
 /area/outpost/operations/outpost_command)
@@ -27831,6 +28128,13 @@
 /obj/structure/stone_tile/slab/cracked,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/structure/plasticflaps/opaque{
+	mouse_opacity = 0;
+	icon_state = "rockwall_icemoon-0";
+	icon = 'icons/turf/walls/rockwall_icemoon.dmi';
+	opacity = 0;
+	max_integrity = 9000000
+	},
 /turf/open/floor/plating/asteroid/icerock/temperate,
 /area/outpost/exterior)
 "vqG" = (
@@ -28627,16 +28931,16 @@
 /turf/open/floor/plasteel/patterned/grid,
 /area/outpost/fraction/inteq)
 "vVQ" = (
-/obj/structure/fans/tiny/invisible,
 /obj/machinery/conveyor/auto{
-	dir = 8;
+	dir = 1;
 	id = "outpost3";
 	use_static_power = 1
 	},
+/obj/structure/fans/tiny/invisible,
 /obj/structure/plasticflaps/opaque{
 	mouse_opacity = 0
 	},
-/turf/open/floor/plasteel/mono,
+/turf/open/floor/mineral/plastitanium,
 /area/outpost/fraction/solfed)
 "vWU" = (
 /obj/structure/table/reinforced,
@@ -29036,14 +29340,12 @@
 	},
 /area/outpost/exterior)
 "wjv" = (
-/obj/machinery/recycler{
-	mouse_opacity = 0
-	},
 /obj/machinery/conveyor/auto{
 	dir = 4;
 	id = "outpost3";
 	use_static_power = 1
 	},
+/obj/machinery/recycler,
 /turf/open/floor/engine/hull/reinforced,
 /area/outpost/fraction/inteq)
 "wkl" = (
@@ -29079,6 +29381,16 @@
 	},
 /turf/open/floor/wood/ebony,
 /area/outpost/crew/bar)
+"wkU" = (
+/obj/item/reagent_containers/food/snacks/grown/ambrosia{
+	pixel_y = -3;
+	pixel_x = -11
+	},
+/obj/effect/landmark/portal_exit{
+	id = "outpost_joke_endless_105l"
+	},
+/turf/open/floor/plating/rust,
+/area/outpost/fraction/separatist)
 "wlf" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -29117,6 +29429,14 @@
 /obj/item/toy/crayon/white,
 /turf/open/floor/wood,
 /area/outpost/security/detective)
+"wlk" = (
+/obj/machinery/conveyor/auto{
+	dir = 4;
+	id = "outpost3";
+	use_static_power = 1
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/outpost/fraction/syndi)
 "wlp" = (
 /obj/effect/turf_decal/siding/green{
 	dir = 5
@@ -29706,12 +30026,12 @@
 /turf/open/floor/wood,
 /area/outpost/medical/cmo)
 "wFz" = (
-/obj/structure/window/reinforced/fulltile/unanchored{
-	mouse_opacity = 0;
-	alpha = 0
+/obj/machinery/conveyor/auto{
+	id = "outpost3";
+	use_static_power = 1
 	},
-/turf/open/floor/plating/asteroid/icerock/temperate,
-/area/outpost/exterior)
+/turf/open/floor/mineral/plastitanium,
+/area/outpost/fraction/solfed)
 "wFE" = (
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -30426,21 +30746,9 @@
 	},
 /area/outpost/exterior)
 "xme" = (
-/obj/item/mine/proximity/explosive/plasma/live,
-/obj/effect/spawner/lootdrop/maintenance,
-/obj/effect/spawner/lootdrop/maintenance{
-	pixel_x = 7;
-	pixel_y = 8
-	},
-/obj/effect/spawner/lootdrop/maintenance{
-	pixel_x = -10
-	},
-/obj/item/reagent_containers/food/snacks/grown/ambrosia{
-	pixel_y = -3;
-	pixel_x = -11
-	},
-/obj/item/reagent_containers/food/snacks/grown/ambrosia{
-	pixel_y = 11
+/obj/effect/portal/permanent/one_way{
+	id = "outpost_joke_endless_33l";
+	alpha = 0
 	},
 /turf/open/floor/plating/rust,
 /area/outpost/fraction/separatist)
@@ -30562,6 +30870,15 @@
 	dir = 10
 	},
 /area/outpost/crew/bar)
+"xrO" = (
+/obj/machinery/conveyor/auto{
+	dir = 4;
+	id = "outpost3";
+	use_static_power = 1
+	},
+/obj/machinery/recycler,
+/turf/open/floor/mineral/plastitanium,
+/area/outpost/fraction/syndi)
 "xtd" = (
 /obj/effect/turf_decal/corner/opaque/yellow/diagonal,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4{
@@ -30849,6 +31166,9 @@
 /obj/item/reagent_containers/food/snacks/grown/ambrosia/vulgaris{
 	pixel_x = -6;
 	pixel_y = 0
+	},
+/obj/effect/landmark/portal_exit{
+	id = "outpost_joke_endless_2r"
 	},
 /turf/open/floor/plating/rust,
 /area/outpost/fraction/separatist)
@@ -31479,13 +31799,19 @@
 /obj/effect/turf_decal/corner/opaque/ntblue/three_quarters{
 	dir = 1
 	},
+/obj/machinery/camera/autoname{
+	dir = 4;
+	network = list("outpostelysium");
+	pixel_x = -8;
+	pixel_y = 10
+	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/nanotrasen)
 "ydA" = (
 /obj/item/stack/sheet/mineral/uranium/twenty,
 /obj/structure/closet/crate/radiation,
 /obj/effect/radiation/waste/intense,
-/obj/item/mod/module/flashlight,
+/obj/item/pizzabox/bomb,
 /turf/open/floor/plating,
 /area/outpost/exterior)
 "yfF" = (
@@ -31589,7 +31915,7 @@
 /area/outpost/fraction/nanotrasen)
 "yiX" = (
 /obj/machinery/conveyor/auto{
-	dir = 8;
+	dir = 1;
 	id = "outpost3";
 	use_static_power = 1
 	},
@@ -35838,7 +36164,7 @@ rgY
 rgY
 rgY
 qfP
-qNy
+qUB
 xbv
 qfP
 rgY
@@ -36872,7 +37198,7 @@ lNl
 cWT
 cWT
 cWT
-lsF
+hQU
 kqB
 rgY
 rgY
@@ -38624,7 +38950,7 @@ rgY
 rgY
 rgY
 rgY
-uqt
+rgY
 rgY
 rgY
 rgY
@@ -38811,7 +39137,7 @@ rgY
 rgY
 rgY
 rgY
-uqt
+rgY
 rgY
 rgY
 rgY
@@ -38998,7 +39324,7 @@ rgY
 rgY
 rgY
 rgY
-uqt
+rgY
 rgY
 rgY
 rgY
@@ -39059,10 +39385,10 @@ rgY
 rgY
 rgY
 rgY
-rgY
-rgY
-rgY
-rgY
+jtk
+jtk
+jtk
+jtk
 rgY
 rgY
 rgY
@@ -39185,12 +39511,12 @@ rgY
 rgY
 rgY
 rgY
-uqt
 rgY
 rgY
 rgY
 rgY
-uqt
+rgY
+rgY
 rgY
 vrr
 hQU
@@ -39233,7 +39559,7 @@ rgY
 rgY
 fIy
 fIy
-jfF
+eto
 fIy
 fIy
 rgY
@@ -39246,9 +39572,9 @@ rgY
 rgY
 rgY
 rgY
-rgY
 jtk
-jtk
+lul
+wlk
 jtk
 rgY
 rgY
@@ -39372,12 +39698,12 @@ rgY
 rgY
 rgY
 rgY
-uqt
 rgY
 rgY
 rgY
-uqt
-uqt
+rgY
+rgY
+rgY
 rgY
 rgY
 gpy
@@ -39433,9 +39759,9 @@ rgY
 rgY
 rgY
 rgY
-rgY
 jtk
-wtC
+gAu
+xrO
 jtk
 rgY
 rgY
@@ -39559,11 +39885,11 @@ rgY
 rgY
 rgY
 rgY
-uqt
-uqt
 rgY
 rgY
-uqt
+rgY
+rgY
+rgY
 rgY
 rgY
 rgY
@@ -39620,9 +39946,9 @@ rgY
 rgY
 rgY
 rgY
-rgY
 jtk
-dNt
+gAu
+wtC
 jtk
 rgY
 rgY
@@ -39634,10 +39960,10 @@ hQU
 hQU
 rgY
 rgY
-rgY
-rgY
-rgY
-rgY
+dTJ
+dTJ
+dTJ
+dTJ
 hQU
 hQU
 xIt
@@ -39747,10 +40073,10 @@ rgY
 rgY
 rgY
 rgY
-uqt
 rgY
-uqt
-uqt
+rgY
+rgY
+rgY
 rgY
 rgY
 gpy
@@ -39807,8 +40133,8 @@ rgY
 rgY
 rgY
 rgY
-rgY
 jtk
+aHU
 yiX
 jtk
 rgY
@@ -39820,10 +40146,10 @@ rgY
 rgY
 hQU
 hQU
-hQU
 rgY
 dTJ
-dTJ
+wFz
+dep
 dTJ
 rgY
 hQU
@@ -39934,9 +40260,9 @@ rgY
 rgY
 rgY
 rgY
-uqt
-uqt
-uqt
+rgY
+rgY
+rgY
 rgY
 rgY
 rgY
@@ -40006,11 +40332,11 @@ jtk
 jtk
 rgY
 rgY
-rgY
 hQU
 rgY
 dTJ
-aTm
+qnW
+eHV
 dTJ
 rgY
 nUq
@@ -40121,8 +40447,8 @@ rgY
 rgY
 rgY
 rgY
-uqt
-uqt
+osx
+osx
 rgY
 rgY
 rgY
@@ -40193,11 +40519,11 @@ pOv
 jtk
 rgY
 rgY
-rgY
 hQU
-rgY
+hQU
 dTJ
 qnW
+aTm
 dTJ
 rgY
 hQU
@@ -40309,7 +40635,7 @@ rgY
 rgY
 rgY
 rgY
-uqt
+osx
 rgY
 osx
 rgY
@@ -40382,8 +40708,8 @@ rgY
 rgY
 rgY
 hQU
-rgY
 dTJ
+bQR
 vVQ
 dTJ
 rgY
@@ -40490,14 +40816,14 @@ rgY
 rgY
 rgY
 rgY
-uqt
-uqt
 rgY
 rgY
 rgY
 rgY
 rgY
-rgY
+osx
+osx
+osx
 osx
 osx
 osx
@@ -40677,15 +41003,15 @@ rgY
 rgY
 rgY
 uqt
-uqt
-uqt
-uqt
-uqt
 rgY
 rgY
 rgY
-wFz
-foo
+suZ
+omX
+osx
+osx
+osx
+osx
 osx
 osx
 osx
@@ -40864,15 +41190,15 @@ rgY
 rgY
 uqt
 uqt
-uqt
-uqt
-uqt
-uqt
-uqt
-uqt
 rgY
 rgY
 rgY
+rgY
+rgY
+osx
+osx
+osx
+osx
 osx
 osx
 xbv
@@ -41052,13 +41378,13 @@ uqt
 uqt
 uqt
 uqt
-uqt
-uqt
 rgY
 rgY
 rgY
 rgY
 rgY
+osx
+osx
 osx
 osx
 qfP
@@ -41244,7 +41570,7 @@ rgY
 rgY
 rgY
 rgY
-rgY
+osx
 osx
 osx
 osx
@@ -41432,7 +41758,7 @@ rgY
 rgY
 rgY
 rgY
-rgY
+osx
 osx
 rgY
 qfP
@@ -44633,10 +44959,10 @@ rgY
 rgY
 rgY
 rgY
-rgY
-rgY
-rgY
-rgY
+cQh
+cQh
+cQh
+cQh
 rgY
 rgY
 rgY
@@ -44820,10 +45146,10 @@ cQh
 rgY
 rgY
 rgY
-rgY
-rgY
-rgY
-rgY
+cQh
+lsF
+iUp
+cQh
 rgY
 rgY
 rgY
@@ -45008,9 +45334,9 @@ bEz
 ime
 cQh
 cQh
+lsF
+iUp
 cQh
-cQh
-rgY
 rgY
 rgY
 rgY
@@ -45194,10 +45520,10 @@ itc
 duh
 lAd
 iUp
-pFT
+uJm
 kDj
-cQh
-rgY
+iUp
+pFT
 rgY
 rgY
 rgY
@@ -45381,10 +45707,10 @@ itc
 bEz
 leN
 cQh
+iUp
+iUp
+iUp
 cQh
-cQh
-cQh
-rgY
 rgY
 rgY
 rgY
@@ -45567,11 +45893,11 @@ rgY
 rgY
 rgY
 rgY
-rgY
-rgY
-rgY
-rgY
-rgY
+cQh
+lsF
+iUp
+cQh
+cQh
 rgY
 rgY
 rgY
@@ -45754,10 +46080,10 @@ rgY
 rgY
 rgY
 rgY
-rgY
-rgY
-rgY
-rgY
+cQh
+lsF
+iUp
+cQh
 rgY
 rgY
 rgY
@@ -45941,10 +46267,10 @@ rgY
 rgY
 rgY
 rgY
-rgY
-rgY
-rgY
-rgY
+cQh
+cQh
+cQh
+cQh
 rgY
 rgY
 rgY
@@ -46119,7 +46445,7 @@ rgY
 rgY
 rgY
 rgY
-ubD
+mOL
 rgY
 rgY
 rgY
@@ -46306,7 +46632,7 @@ rgY
 rgY
 rgY
 rgY
-ubD
+mOL
 rgY
 rgY
 rgY
@@ -46493,7 +46819,7 @@ rgY
 rgY
 rgY
 fcK
-ubD
+mOL
 rgY
 rgY
 rgY
@@ -46679,9 +47005,9 @@ rgY
 rgY
 rgY
 rgY
-ubD
-ubD
-ubD
+mOL
+mOL
+mOL
 rgY
 rgY
 rgY
@@ -46865,10 +47191,10 @@ rgY
 rgY
 rgY
 rgY
-ubD
-ubD
+mOL
+mOL
 fcK
-ubD
+mOL
 fcK
 rgY
 rgY
@@ -47239,13 +47565,13 @@ rgY
 rgY
 rgY
 fcK
-ubD
+mOL
 mOL
 ptJ
 mOL
-ubD
-ubD
-ubD
+mOL
+mOL
+mOL
 rgY
 rgY
 rgY
@@ -47425,15 +47751,15 @@ rgY
 rgY
 rgY
 rgY
-ubD
-ubD
 mOL
 mOL
 mOL
-ubD
-ubD
-ubD
-ubD
+mOL
+mOL
+mOL
+mOL
+mOL
+mOL
 rgY
 rgY
 rgY
@@ -47612,12 +47938,12 @@ rgY
 rgY
 rgY
 irj
-ubD
-ubD
-ubD
-ubD
-ubD
-ubD
+mOL
+mOL
+mOL
+mOL
+mOL
+mOL
 fcK
 rgY
 fcK
@@ -47804,8 +48130,8 @@ mOL
 mOL
 rgY
 irj
-ubD
-ubD
+mOL
+mOL
 rgY
 rgY
 rgY
@@ -47988,10 +48314,10 @@ fcK
 fcK
 tDD
 mNM
-mNM
+foo
 tDD
 rgY
-ubD
+mOL
 rgY
 rgY
 rgY
@@ -48174,7 +48500,7 @@ rgY
 rgY
 rgY
 tDD
-mNM
+sDz
 ydA
 tDD
 rgY
@@ -57749,7 +58075,7 @@ kjg
 vNe
 gCG
 vNe
-ame
+jqG
 dvb
 rgY
 rgY
@@ -58121,11 +58447,11 @@ rgY
 rgY
 rgY
 rgY
-rgY
-giv
+ica
+ica
 woF
-giv
-rgY
+ica
+ica
 rgY
 fIy
 aVC
@@ -58308,11 +58634,11 @@ rgY
 rgY
 rgY
 rgY
-rgY
-giv
+ica
+fDQ
 pGD
-giv
-rgY
+dah
+ica
 rgY
 rgY
 iEd
@@ -58495,11 +58821,11 @@ rgY
 rgY
 rgY
 rgY
-giv
+ica
 ica
 jsY
 ica
-giv
+ica
 rgY
 rgY
 iEd
@@ -58682,11 +59008,11 @@ rgY
 rgY
 rgY
 rgY
-giv
+ica
 aRF
 xEw
 xme
-giv
+ica
 rgY
 fIy
 fel
@@ -58869,11 +59195,11 @@ rgY
 rgY
 rgY
 rgY
-giv
+ica
 ica
 pzG
 ica
-giv
+ica
 rgY
 rgY
 iEd
@@ -59056,11 +59382,11 @@ rgY
 rgY
 rgY
 rgY
-rgY
-giv
+ica
+jtg
 mIL
-giv
-rgY
+jtg
+ica
 rgY
 rgY
 pXm
@@ -59243,11 +59569,11 @@ rgY
 rgY
 rgY
 rgY
-rgY
+ica
 giv
-giv
-giv
-rgY
+ubD
+ica
+ica
 rgY
 fIy
 fIy
@@ -59430,11 +59756,11 @@ uqt
 rgY
 rgY
 rgY
-rgY
-rgY
-rgY
-rgY
-rgY
+ica
+tBn
+wkU
+uGn
+ica
 rgY
 wag
 uqt
@@ -59616,13 +59942,13 @@ uqt
 uqt
 uqt
 rgY
-uqt
-uqt
 rgY
+ica
+ica
+pLK
+ica
+ica
 rgY
-rgY
-uqt
-uqt
 uqt
 uqt
 uqt
@@ -59803,13 +60129,13 @@ rgY
 uqt
 uqt
 uqt
-uqt
-uqt
-uqt
-uqt
-uqt
-uqt
-uqt
+rgY
+ica
+lqe
+rGW
+pLe
+ica
+rgY
 uqt
 uqt
 uqt
@@ -59990,13 +60316,13 @@ rgY
 uqt
 uqt
 uqt
-uqt
-uqt
-uqt
-uqt
-uqt
-uqt
-uqt
+rgY
+ica
+ica
+dNt
+ica
+ica
+rgY
 uqt
 uqt
 uqt
@@ -60177,12 +60503,12 @@ rgY
 uqt
 uqt
 uqt
-uqt
-uqt
-uqt
-uqt
-uqt
-uqt
+rgY
+rgY
+ica
+oFv
+ica
+rgY
 uqt
 uqt
 uqt
@@ -60365,11 +60691,11 @@ rgY
 uqt
 uqt
 uqt
-uqt
-uqt
-uqt
-uqt
-uqt
+rgY
+ica
+ica
+ica
+rgY
 uqt
 uqt
 uqt
@@ -60553,10 +60879,10 @@ uqt
 uqt
 uqt
 uqt
-uqt
-uqt
-uqt
-uqt
+rgY
+rgY
+rgY
+rgY
 uqt
 uqt
 uqt
@@ -60741,8 +61067,8 @@ uqt
 uqt
 uqt
 uqt
-uqt
-uqt
+rgY
+rgY
 uqt
 uqt
 uqt
