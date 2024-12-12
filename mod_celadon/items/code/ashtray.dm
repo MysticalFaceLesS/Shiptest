@@ -1,6 +1,6 @@
 /obj/item/storage/ashtray
-	name = "plastic ashtray"
-	desc = "Cheap plastic ashtray."
+	name = "Пепельница"
+	desc = "Дешёвая пепельница."
 	icon = 'mod_celadon/_storge_icons/icons/items/obj/ashtray.dmi'
 	icon_state = "ashtray_bl"
 	var/icon_half  = "ashtray_half_bl"
@@ -98,8 +98,8 @@
 	category = CAT_MISC
 
 /obj/item/storage/ashtray/bronze
-	name = "bronze ashtray"
-	desc = "Massive bronze ashtray."
+	name = "Пепельница из бронзы"
+	desc = "Массивная бронзовая пепельница."
 	icon_state = "ashtray_br"
 	icon_half  = "ashtray_half_br"
 	icon_full  = "ashtray_full_br"
@@ -115,8 +115,8 @@
 	category = CAT_MISC
 
 /obj/item/storage/ashtray/glass
-	name = "glass ashtray"
-	desc = "Glass ashtray. Looks fragile."
+	name = "Пепельница из стекла"
+	desc = "Пепельница из стекла. Выглядит хрупко и стильно."
 	icon_state = "ashtray_gl"
 	icon_half  = "ashtray_half_gl"
 	icon_full  = "ashtray_full_gl"
