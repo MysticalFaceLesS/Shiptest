@@ -30,7 +30,7 @@
 	job_icon = "researchdirector"
 	jobtype = /datum/job/rd
 	id = /obj/item/card/id/silver
-	ears = /obj/item/radio/headset/heads/rd
+	ears = /obj/item/radio/headset/nanotrasen
 	uniform = /obj/item/clothing/under/nanotrasen/science/director
 	shoes = /obj/item/clothing/shoes/sneakers/brown
 	suit = /obj/item/clothing/suit/toggle/labcoat/nanotrasen/black
@@ -52,18 +52,46 @@
 	job_icon = "chiefmedicalofficer"
 	jobtype = /datum/job/cmo
 	id = /obj/item/card/id/silver
-	ears = /obj/item/radio/headset/heads/cmo
+	ears = /obj/item/radio/headset/nanotrasen
 	head = /obj/item/clothing/head/beret/cmo
 	uniform = /obj/item/clothing/under/nanotrasen/medical/director
 	shoes = /obj/item/clothing/shoes/laceup
 	suit = /obj/item/clothing/suit/toggle/labcoat/nanotrasen/blue
 	alt_suit = /obj/item/clothing/suit/toggle/suspenders
 	dcoat = /obj/item/clothing/suit/hooded/wintercoat/medical
-	backpack_contents = list(/obj/item/melee/classic_baton/telescopic=1, /obj/item/modular_computer/tablet/preset/advanced=1)
+	backpack_contents = list(/obj/item/melee/classic_baton/telescopic=1)
 
 	backpack = /obj/item/storage/backpack/medic
 	satchel = /obj/item/storage/backpack/satchel/med
 	courierbag = /obj/item/storage/backpack/messenger/med
+
+	chameleon_extras = /obj/item/stamp/cmo
+
+// Медицинский Директор - СМО капитан
+
+/datum/outfit/job/nanotrasen/cmo/captain
+	name = "Nanotrasen - Medical Director (Captain)"
+	job_icon = "chiefmedicalofficer"
+	jobtype = /datum/job/captain
+
+	id = /obj/item/card/id/gold
+	belt = /obj/item/pda/heads/cmo
+	gloves = /obj/item/clothing/gloves/color/latex/nitrile
+	ears = /obj/item/radio/headset/nanotrasen/captain
+	uniform = /obj/item/clothing/under/nanotrasen/medical/director
+	suit = /obj/item/clothing/suit/toggle/labcoat/nanotrasen/blue
+	dcoat = /obj/item/clothing/suit/hooded/wintercoat/medical
+	shoes = /obj/item/clothing/shoes/laceup
+	neck = /obj/item/clothing/neck/tie/blue
+	head = /obj/item/clothing/head/beret/cmo
+	backpack_contents = list(/obj/item/melee/classic_baton/telescopic=1)
+
+	backpack = /obj/item/storage/backpack/medic
+	satchel = /obj/item/storage/backpack/satchel/med
+	duffelbag = /obj/item/storage/backpack/duffelbag/med
+	courierbag = /obj/item/storage/backpack/messenger/med
+
+	accessory = /obj/item/clothing/accessory/medal/silver/valor
 
 	chameleon_extras = /obj/item/stamp/cmo
 
