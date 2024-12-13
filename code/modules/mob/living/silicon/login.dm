@@ -1,14 +1,8 @@
 /mob/living/silicon/Login()
-<<<<<<< HEAD
-<<<<<<< HEAD
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	if(mind && SSticker.mode)
 		SSticker.mode.remove_cultist(mind, 0, 0)
 	// [/CELADON-ADD]
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 	return ..()
 
 

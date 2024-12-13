@@ -291,8 +291,6 @@ Key procs
 								/datum/language/slime = list(LANGUAGE_ATOM))
 	spoken_languages = list(/datum/language/slime = list(LANGUAGE_ATOM))
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 /datum/language_holder/swarmer
 	understood_languages = list(/datum/language/swarmer = list(LANGUAGE_ATOM))
@@ -300,10 +298,6 @@ Key procs
 	blocked_languages = list(/datum/language/common = list(LANGUAGE_ATOM))
 // [/CELADON-ADD]
 
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 /datum/language_holder/venus
 	understood_languages = list(/datum/language/sylvan = list(LANGUAGE_ATOM))
 	spoken_languages = list(/datum/language/sylvan = list(LANGUAGE_ATOM))

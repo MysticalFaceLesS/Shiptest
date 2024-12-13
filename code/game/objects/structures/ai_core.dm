@@ -220,16 +220,9 @@
 					to_chat(user, "<span class='notice'>You connect the monitor.</span>")
 					if(brain)
 						var/mob/living/brain/B = brain.brainmob
-<<<<<<< HEAD
-<<<<<<< HEAD
 						// [CELADON-ADD] - CELADON_RETURN_CONTENT
 						SSticker.mode.remove_antag_for_borging(B.mind)
 						// [/CELADON-ADD]
-=======
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
-
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 						var/mob/living/silicon/ai/A = null
 
 						if (brain.overrides_aicore_laws)

@@ -27,8 +27,6 @@
 		prayer_type = "CHAPLAIN PRAYER"
 		if(GLOB.deity)
 			deity = GLOB.deity
-<<<<<<< HEAD
-<<<<<<< HEAD
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	else if(iscultist(usr))
 		cross.icon_state = "tome"
@@ -36,10 +34,6 @@
 		prayer_type = "CULTIST PRAYER"
 		deity = "Nar'Sie"
 	// [/CELADON-ADD]
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 	else if(isliving(usr))
 		var/mob/living/L = usr
 		if(HAS_TRAIT(L, TRAIT_SPIRITUAL))

@@ -383,17 +383,11 @@
 		return FALSE
 	if(M.mind && M.mind.special_role)//If they have a mind and special role, they are some type of traitor or antagonist.
 		switch(SSticker.mode.config_tag)
-<<<<<<< HEAD
-<<<<<<< HEAD
 			// [CELADON-ADD] - CELADON_RETURN_CONTENT
 			if("cult")
 				if(M.mind in SSticker.mode.cult)
 					return 2
 			// [/CELADON-ADD]
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 			if("nuclear")
 				if(M.mind.has_antag_datum(/datum/antagonist/nukeop,TRUE))
 					return 2

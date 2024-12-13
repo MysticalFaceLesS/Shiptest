@@ -96,8 +96,6 @@
 	mood_change = 3
 	hidden = TRUE
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 /datum/mood_event/cult
 	description = "<span class='nicegreen'>I have seen the truth, praise the almighty one!</span>\n"
@@ -105,10 +103,6 @@
 	hidden = TRUE
 // [/CELADON-ADD]
 
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 /datum/mood_event/family_heirloom
 	description = "<span class='nicegreen'>My family heirloom is safe with me.</span>\n"
 	mood_change = 1

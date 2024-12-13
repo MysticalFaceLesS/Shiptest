@@ -130,8 +130,6 @@ GLOBAL_LIST_EMPTY(active_alternate_appearances)
 /datum/atom_hud/alternate_appearance/basic/observers/mobShouldSee(mob/M)
 	return isobserver(M)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 /datum/atom_hud/alternate_appearance/basic/noncult
 
@@ -160,10 +158,6 @@ GLOBAL_LIST_EMPTY(active_alternate_appearances)
 	return FALSE
 // [/CELADON-ADD]
 
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 /datum/atom_hud/alternate_appearance/basic/blessedAware
 
 /datum/atom_hud/alternate_appearance/basic/blessedAware/New()

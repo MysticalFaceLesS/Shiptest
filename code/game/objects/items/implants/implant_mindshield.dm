@@ -28,20 +28,12 @@
 			deconverted = TRUE
 
 		if(!silent)
-<<<<<<< HEAD
-<<<<<<< HEAD
 		// [CELADON-ADD] - CELADON_RETURN_CONTENT
 			if(target.mind in SSticker.mode.cult)
 				to_chat(target, "<span class='warning'>You feel something interfering with your mental conditioning, but you resist it!</span>")
 		// [/CELADON-ADD]
 			else
 				to_chat(target, "<span class='notice'>You feel a sense of peace and security. You are now protected from brainwashing.</span>")
-=======
-			to_chat(target, "<span class='notice'>You feel a sense of peace and security. You are now protected from brainwashing.</span>")
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
-=======
-			to_chat(target, "<span class='notice'>You feel a sense of peace and security. You are now protected from brainwashing.</span>")
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 		ADD_TRAIT(target, TRAIT_MINDSHIELD, "implant")
 		target.sec_hud_set_implants()
 		if(deconverted)

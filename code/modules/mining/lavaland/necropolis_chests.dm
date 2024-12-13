@@ -15,8 +15,12 @@
 /obj/structure/closet/crate/necropolis/tendril/PopulateContents()
 	var/loot = rand(1,29)
 	switch(loot)
-		if(1,2)
+		if(1)
 			new /obj/item/shared_storage/red(src)
+		// [CELADON-ADD] - CELADON_RETURN_CONTENT
+		if(2)
+			new /obj/item/clothing/suit/space/hardsuit/cult(src)
+		// [/CELADON-ADD]
 		if(3)
 			new /obj/item/necromantic_stone/lava(src)
 		if(5)
@@ -1658,9 +1662,11 @@
 	name = "puzzling chest"
 
 /obj/structure/closet/crate/necropolis/puzzle/PopulateContents()
-	var/loot = rand(1,2)
+	var/loot = rand(1,3)
 	switch(loot)
 		if(1)
-			new /obj/item/wisp_lantern(src)
+			new /obj/item/soulstone/anybody(src)
 		if(2)
+			new /obj/item/wisp_lantern(src)
+		if(3)
 			new /obj/item/prisoncube(src)

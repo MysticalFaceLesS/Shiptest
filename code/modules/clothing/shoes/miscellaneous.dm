@@ -126,8 +126,6 @@
 	icon_state = "explorer"
 	resistance_flags = FIRE_PROOF
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 /obj/item/clothing/shoes/cult
 	name = "\improper Nar'Sien invoker boots"
@@ -153,10 +151,6 @@
 	ADD_TRAIT(src, TRAIT_NODROP, CULT_TRAIT)
 // [/CELADON-ADD]
 
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 /obj/item/clothing/shoes/laceup
 	name = "laceup shoes"
 	desc = "The height of fashion, and they're pre-polished!"

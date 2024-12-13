@@ -617,17 +617,11 @@
 	if(!MP)
 		return 0	//Sanity, this should never happen.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	if(ispath(MP, /mob/living/simple_animal/hostile/construct))
 		return 0 //Verbs do not appear for players.
 	// [/CELADON-ADD]
 
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 //Good mobs!
 	if(ispath(MP, /mob/living/simple_animal/pet/cat))
 		return 1
@@ -639,16 +633,10 @@
 		return 1
 	if(ispath(MP, /mob/living/simple_animal/hostile/mushroom))
 		return 1
-<<<<<<< HEAD
-<<<<<<< HEAD
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	if(ispath(MP, /mob/living/simple_animal/shade))
 		return 1
 	// [/CELADON-ADD]
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 	if(ispath(MP, /mob/living/simple_animal/hostile/killertomato))
 		return 1
 	if(ispath(MP, /mob/living/simple_animal/mouse))

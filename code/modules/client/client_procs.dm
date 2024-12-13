@@ -1,7 +1,7 @@
 	////////////
 	//SECURITY//
 	////////////
-#define UPLOAD_LIMIT 8388608	//Restricts client uploads to the server to 1MB //Could probably do with being lower.
+#define UPLOAD_LIMIT 1048576	//Restricts client uploads to the server to 1MB //Could probably do with being lower.
 
 GLOBAL_LIST_INIT(blacklisted_builds, list(
 	"1407" = "bug preventing client display overrides from working leads to clients being able to see things/mobs they shouldn't be able to see",
@@ -203,7 +203,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 //This stops files larger than UPLOAD_LIMIT being sent from client to server via input(), client.Import() etc.
 /client/AllowUpload(filename, filelength)
 	if(filelength > UPLOAD_LIMIT)
-		to_chat(src, "<font color='red'>Error: AllowUpload(): File Upload too large. Upload Limit: [UPLOAD_LIMIT/8192]KiB.</font>")
+		to_chat(src, "<font color='red'>Error: AllowUpload(): File Upload too large. Upload Limit: [UPLOAD_LIMIT/1024]KiB.</font>")
 		return 0
 	return 1
 
@@ -276,6 +276,8 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	prefs.last_ip = address				//these are gonna be used for banning
 	prefs.last_id = computer_id			//these are gonna be used for banning
 	fps = prefs.clientfps == 0 ? 60 : prefs.clientfps //WS Edit - Client FPS Tweak
+
+	donator = GLOB.donators[ckey] || new /datum/donator(src)
 
 	if(fexists(roundend_report_file()))
 		add_verb(src, /client/proc/show_previous_roundend_report)
@@ -433,9 +435,6 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	if (isnum(cached_player_age) && cached_player_age == -1) //first connection
 		if (nnpa >= 0)
 			message_admins("New user: [key_name_admin(src)] is connecting here for the first time.")
-			// [CELADON-EDIT] Добавлено оповещение о новых игроках.
-			send2tgs("Новый пользователь: [key_name(src)] зашёл впервые на [CONFIG_GET(string/servername)]! Аккаунту BYOND [account_age] дней!")
-			// [/CELADON-EDIT]
 			if (CONFIG_GET(flag/irc_first_connection_alert))
 				send2tgs_adminless_only("New-user", "[key_name(src)] is connecting for the first time!")
 	else if (isnum(cached_player_age) && cached_player_age < nnpa)
@@ -455,12 +454,12 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	generate_clickcatcher()
 	apply_clickcatcher()
 
-	if(prefs.lastchangelog != GLOB.changelog_hash) //bolds the changelog button on the interface so we know there are updates.
-		to_chat(src, "<span class='info'>You have unread updates in the changelog.</span>")
-		if(CONFIG_GET(flag/aggressive_changelog))
-			changelog()
-		else
-			winset(src, "infowindow.changelog", "font-style=bold")
+	// if(prefs.lastchangelog != GLOB.changelog_hash) //bolds the changelog button on the interface so we know there are updates.
+	// 	to_chat(src, "<span class='info'>You have unread updates in the changelog.</span>")
+	// 	if(CONFIG_GET(flag/aggressive_changelog))
+	// 		changelog()
+	// 	else
+	// 		winset(src, "infowindow.changelog", "font-style=bold")
 
 	if(ckey in GLOB.clientmessages)
 		for(var/message in GLOB.clientmessages[ckey])
@@ -936,8 +935,11 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	..()
 
 /client/proc/add_verbs_from_config()
-	if (interviewee)
+	if(interviewee)
 		return
+	if(donator.is_donator)
+		add_verb(src, /client/proc/do_donator_redemption)
+	add_verb(src, /client/proc/do_donator_wcir)
 	if(CONFIG_GET(flag/see_own_notes))
 		add_verb(src, /client/proc/self_notes)
 	if(CONFIG_GET(flag/use_exp_tracking))

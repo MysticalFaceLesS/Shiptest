@@ -32,16 +32,10 @@
 	var/lawcheck[1]
 	var/ioncheck[1]
 	var/hackedcheck[1]
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	var/devillawcheck[5]
 	// [/CELADON-ADD]
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 
 	var/sensors_on = 0
 	var/med_hud = DATA_HUD_MEDICAL_ADVANCED //Determines the med hud to use
@@ -215,8 +209,6 @@
 				hackedcheck[L] = "Yes"
 		checklaws()
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	if (href_list["lawdevil"]) // Toggling whether or not a law gets stated by the State Laws verb --NeoFite
 		var/L = text2num(href_list["lawdevil"])
@@ -227,11 +219,6 @@
 				devillawcheck[L] = "Yes"
 		checklaws()
 	// [/CELADON-ADD]
-
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 	if (href_list["laws"]) // With how my law selection code works, I changed statelaws from a verb to a proc, and call it through my law selection panel. --NeoFite
 		statelaws()
 
@@ -249,9 +236,6 @@
 	//laws.show_laws(world)
 	var/number = 1
 	sleep(10)
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	if (laws.devillaws && laws.devillaws.len)
 		for(var/index = 1, index <= laws.devillaws.len, index++)
@@ -260,10 +244,6 @@
 				sleep(10)
 	// [/CELADON-ADD]
 
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 	if (laws.zeroth)
 		if (force || lawcheck[1] == "Yes")
 			say("[radiomod] 0. [laws.zeroth]")
@@ -312,8 +292,6 @@
 	var/list = "<meta http-equiv='X-UA-Compatible' content='IE=edge' charset='UTF-8'/><b>Which laws do you want to include when stating them for the crew?</b><br><br>"
 	// [/CELADON-EDIT]
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	if (laws.devillaws && laws.devillaws.len)
 		for(var/index = 1, index <= laws.devillaws.len, index++)
@@ -322,10 +300,6 @@
 			list += {"<A href='byond://?src=[REF(src)];lawdevil=[index]'>[devillawcheck[index]] 666:</A> <font color='#cc5500'>[laws.devillaws[index]]</font><BR>"}
 	// [/CELADON-ADD]
 
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 	if (laws.zeroth)
 		if (!lawcheck[1])
 			lawcheck[1] = "No" //Given Law 0's usual nature, it defaults to NOT getting reported. --NeoFite

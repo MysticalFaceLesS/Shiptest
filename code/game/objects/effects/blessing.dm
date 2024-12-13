@@ -16,21 +16,13 @@
 		I.alpha = 64
 		I.appearance_flags = RESET_ALPHA
 		add_alt_appearance(/datum/atom_hud/alternate_appearance/basic/blessedAware, "blessing", I)
-<<<<<<< HEAD
-<<<<<<< HEAD
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	RegisterSignal(loc, COMSIG_ATOM_INTERCEPT_TELEPORT, PROC_REF(block_cult_teleport))
 	// [/CELADON-ADD]
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 
 /obj/effect/blessing/Destroy()
 	UnregisterSignal(loc, COMSIG_ATOM_INTERCEPT_TELEPORT)
 	return ..()
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 /obj/effect/blessing/proc/block_cult_teleport(datum/source, channel, turf/origin, turf/destination)
@@ -39,7 +31,3 @@
 	if(channel == TELEPORT_CHANNEL_CULT)
 		return COMPONENT_BLOCK_TELEPORT
 // [/CELADON-ADD]
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))

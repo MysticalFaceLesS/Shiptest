@@ -1,15 +1,9 @@
 GLOBAL_LIST_INIT(blacklisted_cargo_types, typecacheof(list(
 		/mob/living,
-<<<<<<< HEAD
-<<<<<<< HEAD
 		// [CELADON-ADD] - CELADON_RETURN_CONTENT
 		/obj/effect/rune,
 		/obj/singularity/narsie,
 		// [/CELADON-ADD]
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 		/obj/structure/spider/spiderling,
 		/obj/item/disk/nuclear,
 		/obj/machinery/nuclearbomb,

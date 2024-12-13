@@ -182,8 +182,6 @@
 	special()
 	screen.icon_state = "summary_malf"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 // [CELADON-ADD] - CELADON_RETURN_CONTENT
 /datum/cinematic/cult
 	id = CINEMATIC_CULT
@@ -227,10 +225,6 @@
 	special()
 // [/CELADON-ADD]
 
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 /datum/cinematic/nuke_annihilation
 	id = CINEMATIC_ANNIHILATION
 
@@ -282,8 +276,6 @@
 	cinematic_sound(sound('sound/items/airhorn.ogg'))
 	flick("summary_selfdes",screen) //???
 	special()
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 /* Intended usage.
 Nuke.Explosion()
@@ -296,7 +288,3 @@ Narsie()
 	-> Cinematic(CULT,world)
 */
 
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))

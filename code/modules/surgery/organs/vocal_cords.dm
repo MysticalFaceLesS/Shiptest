@@ -99,20 +99,12 @@
 
 	var/log_message = uppertext(message)
 	if(!span_list || !span_list.len)
-<<<<<<< HEAD
-<<<<<<< HEAD
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 		if(iscultist(user))
 			span_list = list("narsiesmall")
 		else
 			span_list = list()
 	// [/CELADON-ADD]
-=======
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
-		span_list = list()
-
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 	user.say(message, spans = span_list, sanitize = FALSE)
 
 	message = lowertext(message)
@@ -144,18 +136,12 @@
 		if(user.mind.assigned_role == "Mime")
 			power_multiplier *= 0.5
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 	// [CELADON-ADD] - CELADON_RETURN_CONTENT
 	//Cultists are closer to their gods and are more powerful, but they'll give themselves away
 	if(iscultist(user))
 		power_multiplier *= 2
 	// [/CELADON-ADD]
 
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
-=======
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 	//Try to check if the speaker specified a name or a job to focus on
 	var/list/specific_listeners = list()
 	var/found_string = null
@@ -165,8 +151,6 @@
 
 	for(var/V in listeners)
 		var/mob/living/L = V
-<<<<<<< HEAD
-<<<<<<< HEAD
 		// [CELADON-ADD] - CELADON_RETURN_CONTENT
 		// if(findtext(message, L.real_name, 1, length(L.real_name) + 1))
 		var/datum/antagonist/devil/devilinfo = is_devil(L)
@@ -179,14 +163,6 @@
 			break
 		else if(findtext(message, L.real_name, 1, length(L.real_name) + 1))
 		// [/CELADON-ADD]
-=======
-
-		if(findtext(message, L.real_name, 1, length(L.real_name) + 1))
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
-=======
-
-		if(findtext(message, L.real_name, 1, length(L.real_name) + 1))
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 			specific_listeners += L //focus on those with the specified name
 			//Cut out the name so it doesn't trigger commands
 			found_string = L.real_name
@@ -361,8 +337,6 @@
 		for(var/V in listeners)
 			var/mob/living/L = V
 			var/text = ""
-<<<<<<< HEAD
-<<<<<<< HEAD
 			// [CELADON-ADD] - CELADON_RETURN_CONTENT
 			if(is_devil(L))
 				var/datum/antagonist/devil/devilinfo = is_devil(L)
@@ -370,12 +344,6 @@
 			else
 			// [/CELADON-ADD]
 				text = L.real_name
-=======
-			text = L.real_name
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
-=======
-			text = L.real_name
->>>>>>> 5cc6a00c47 (Removes A Lot Of Cruft (#3447))
 			addtimer(CALLBACK(L, TYPE_PROC_REF(/atom/movable, say), text), 5 * i)
 			i++
 
