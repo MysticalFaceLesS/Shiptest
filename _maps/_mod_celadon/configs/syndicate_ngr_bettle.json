@@ -1,0 +1,41 @@
+{
+	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
+	"map_name": "Bettle-class Battle Schnau",
+	"map_short_name": "Bettle",
+	"description": "Боевое судно класса Bettle. Специализируется на патруле, рейдах, помощи в крупных наступлениях. Вооружение экипажа данного судна не стандартное для Синдиката - это лазерное вооружение.",
+	"map_path": "_maps/_mod_celadon/shuttles/syndicate/syndicate_ngr_bettle.dmm",
+	"enabled": true,
+	"limit": 1,
+	"prefix": "BSSV",
+	"faction": "/datum/faction/syndicate",
+	"tags": ["Боевой"],
+	"namelists": [
+		"GORLEX",
+		"NATURAL_AGGRESSIVE",
+		"BEASTS",
+		"WEAPONS",
+		"ACLF"
+	],
+	"job_slots": {
+		"Gorlex Squad leader": {
+			"outfit": "/datum/outfit/job/syndicate/captain/ngr",
+			"officer": true,
+			"slots": 1,
+			"name": "Squad leader"
+		},
+		"Gorlex paramedic": {
+			"outfit": "/datum/outfit/job/syndicate/doctor/ngr",
+			"slots": 1,
+			"name": "Paramedic"
+		},
+		"Gorlex mechanic": {
+			"outfit": "/datum/outfit/job/syndicate/engineer/ngr",
+			"slots": 1
+
+		},
+		"Gorlex operative": {
+			"outfit": "/datum/outfit/job/syndicate/security/ngr",
+			"slots": 3
+		}
+	}
+}
