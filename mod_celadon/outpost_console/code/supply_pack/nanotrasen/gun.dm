@@ -1,33 +1,3 @@
-/datum/supply_pack/faction/nanotrasen/clothing //Одежда
-
-	group = "Faction clothing"
-
-/datum/supply_pack/faction/nanotrasen/clothing/hardsuitswat
-	hidden = FALSE
-	name = "Nanotrasen MK2 SWAT hardsuit"
-	desc = "Advanced MK2 SWAT hardsuit used by elite corporate assets. While it is bulky, slow and is missing a built in flashlight, it provides excellent protection against almost any weapon and is great for work in hazardous environments"
-	contains = list(/obj/item/clothing/suit/space/hardsuit/swat/captain)
-	cost = 11500
-	faction = "nanotrasen"
-
-/datum/supply_pack/faction/nanotrasen/clothing/hardsuitsec
-	hidden = FALSE
-	name = "Nanotrasen Security Hardsuit"
-	desc = "A cheap spare security hardsuit used on NT's stations by the sec department. Provides weak protection against most damage types. Using it for combat in the frontier region of space is not recommended"
-	contains = list(/obj/item/clothing/suit/space/hardsuit/security)
-	cost = 3500
-	faction = "nanotrasen"
-
-/datum/supply_pack/faction/nanotrasen/clothing/armorsec
-	hidden = FALSE
-	name = "Nanotrasen Security Vests Kit"
-	desc = "Some security armor vests to protect you. Produced by Nanotrasen"
-	contains = list(/obj/item/clothing/suit/armor/nanotrasen,
-					/obj/item/clothing/suit/armor/nanotrasen,
-					/obj/item/clothing/suit/armor/nanotrasen)
-	cost = 4000
-	faction = "nanotrasen"
-
 /datum/supply_pack/faction/nanotrasen/gun //Пушки
 
 	group = "Faction weapons"
@@ -94,40 +64,4 @@
 	desc = "A ballistic PDW produced by Nanotrasen. Quite old, but still is amazing at filling corporation's enemies with lead. Uses 4.6x30mm rounds."
 	contains = list(/obj/item/storage/guncase/wt550)
 	cost = 6500
-	faction = "nanotrasen"
-
-/datum/supply_pack/faction/nanotrasen/ammo //Патроны
-
-	group = "Faction ammo"
-
-/datum/supply_pack/faction/nanotrasen/ammo/commander_ammo_box
-	hidden = FALSE
-	name = "9mm ammo box"
-	desc = "9mm ammo box for guns like commander. Contains 50 shells"
-	contains = list(/obj/item/ammo_box/c9mm)
-	cost = 250
-	faction = "nanotrasen"
-
-/datum/supply_pack/faction/nanotrasen/ammo/wt_ammo_box
-	hidden = FALSE
-	name = "4.6x30mm ammo box"
-	desc = "4.6x30mm ammo box for guns like WT550. Contains 50 shells"
-	contains = list(/obj/item/ammo_box/c46x30mm_box)
-	cost = 500
-	faction = "nanotrasen"
-
-/datum/supply_pack/faction/nanotrasen/ammo/wt_magazine
-	hidden = FALSE
-	name = "Single WT550 magazine"
-	desc = "A single magazine for the WT550"
-	contains = list(/obj/item/ammo_box/magazine/wt550m9)
-	cost = 700
-	faction = "nanotrasen"
-
-/datum/supply_pack/faction/nanotrasen/ammo/commander_magazine
-	hidden = FALSE
-	name = "Single commander magazine"
-	desc = "A single magazine for the commander"
-	contains = list(/obj/item/ammo_box/magazine/co9mm)
-	cost = 600
 	faction = "nanotrasen"

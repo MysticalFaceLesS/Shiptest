@@ -1,11 +1,7 @@
-/// name - название модпака. Используется для поиска других модпаков в init.
-/// desc - описание для модпака. Может использоваться для списка глаголов модпака в качестве описания.
-/// author - автор(ы) этого модпака.
-
-/datum/modpack/outpost_console
-	name = "Outpost Consoles"
-	desc = "outpost_console rework"
-	author = "FeenieRU"
+/datum/modpack/cargopad
+	name = "Cargopad"
+	desc = @{"Добавляет вещи на продажу в каргопад"}
+	author = "Yata9arasu, Molniz"
 
 /// Эти проки нужны, для того чтобы инициализировать датумы в определенный момент времени
 /// сборки билда. Инициализация обновляет данные в билде повторно, перезаписывая новыми значениями
@@ -15,13 +11,14 @@
 /// (можешь использовать все три, но запуск билда увеличится на 0.1 сек, за каждый датум в модпаке)
 
 // Инициализация ДО
-/datum/modpack/outpost_console/pre_initialize()
+/datum/modpack/cargopad/pre_initialize()
 	. = ..()
 
 // Инициализация ВОВРЕМЯ
-/datum/modpack/outpost_console/initialize()
+/datum/modpack/cargopad/initialize()
 	. = ..()
 
 // Инициализация ПОСЛЕ
-/datum/modpack/outpost_console/post_initialize()
+/datum/modpack/cargopad/post_initialize()
 	. = ..()
+
