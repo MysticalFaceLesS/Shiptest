@@ -94,17 +94,11 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/fraction/inteq)
-"at" = (
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 5
-	},
-/obj/structure/window/reinforced{
-	pixel_y = -5
-	},
+"as" = (
 /obj/effect/spawner/lootdrop/stockparts,
-/turf/open/floor/plating/foam,
-/area/outpost/hallway/central)
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/outpost/external)
 "au" = (
 /obj/effect/portal/permanent/one_way{
 	id = "exit_poligon_outpost";
@@ -464,6 +458,14 @@
 /obj/structure/window/reinforced/spawner/west,
 /turf/open/floor/plasteel/tech,
 /area/outpost/cargo/office)
+"bo" = (
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
+	},
+/turf/open/floor/wood{
+	light_range = 2
+	},
+/area/outpost/hallway/central)
 "bp" = (
 /obj/structure/stone_tile/block,
 /obj/structure/stone_tile/slab,
@@ -584,6 +586,9 @@
 /obj/effect/overlay/holoray,
 /turf/open/floor/plasteel/tech,
 /area/outpost/crew/cryo)
+"bD" = (
+/turf/open/floor/plating/asteroid/icerock/smooth,
+/area/space)
 "bF" = (
 /obj/structure/closet/secure_closet/freezer/meat,
 /obj/item/reagent_containers/food/snacks/meat/slab/monkey,
@@ -665,20 +670,6 @@
 	},
 /turf/open/floor/carpet/nanoweave,
 /area/outpost/crew/canteen)
-"bM" = (
-/obj/effect/mob_spawn/human/corpse/assistant{
-	pixel_x = -3;
-	pixel_y = 13
-	},
-/turf/open/floor/plating/asteroid/rockplanet/lit,
-/area/outpost/hallway/central)
-"bN" = (
-/obj/effect/mob_spawn/human/corpse/assistant{
-	pixel_x = -3;
-	pixel_y = 13
-	},
-/turf/open/floor/plating/grass/jungle/lit,
-/area/outpost/hallway/central)
 "bO" = (
 /obj/effect/turf_decal/techfloor,
 /obj/item/radio/intercom/directional/north{
@@ -745,20 +736,16 @@
 	},
 /turf/open/floor/concrete/slab_3,
 /area/outpost/hallway/central)
+"bZ" = (
+/obj/structure/table/reinforced,
+/turf/open/floor/plasteel/rockvault,
+/area/outpost/hallway/central)
 "ca" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
 /turf/open/floor/carpet,
 /area/outpost/crew/library)
-"cb" = (
-/obj/structure/table/glass,
-/obj/item/reagent_containers/food/snacks/pizza/meat/rinmeat,
-/obj/item/candle/infinite{
-	pixel_y = 2
-	},
-/turf/open/floor/plating/rust,
-/area/outpost/hallway/central)
 "cc" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/industrial/warning{
@@ -844,11 +831,6 @@
 	},
 /turf/open/floor/plating/asteroid/snow/under/lit,
 /area/outpost/external)
-"cl" = (
-/obj/machinery/light/small/directional/north,
-/obj/effect/spawner/lootdrop/plushie,
-/turf/open/floor/plating/foam,
-/area/outpost/hallway/central)
 "cm" = (
 /obj/effect/turf_decal/spline/fancy/transparent/orange{
 	dir = 10
@@ -942,11 +924,7 @@
 	dir = 1;
 	pixel_y = 5
 	},
-/obj/effect/decal/fakelattice{
-	layer = 2.010;
-	opacity = 1
-	},
-/obj/effect/spawner/lootdrop/mine,
+/obj/structure/lattice,
 /turf/open/space/basic,
 /area/outpost/external)
 "cy" = (
@@ -981,10 +959,6 @@
 	},
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/engineering/atmospherics)
-"cD" = (
-/obj/effect/spawner/lootdrop/stockparts,
-/turf/open/floor/plating/rust,
-/area/outpost/hallway/central)
 "cE" = (
 /obj/effect/turf_decal/spline/fancy/transparent/solgovblue,
 /obj/effect/turf_decal/spline/fancy/transparent/solgovblue/corner,
@@ -1036,6 +1010,11 @@
 "cL" = (
 /turf/closed/indestructible/reinforced,
 /area/outpost/maintenance/aft)
+"cM" = (
+/obj/effect/spawner/lootdrop/maintenance/eight,
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/outpost/external)
 "cP" = (
 /obj/effect/turf_decal/spline/fancy/transparent/solgovblue{
 	dir = 4
@@ -1225,13 +1204,6 @@
 "dl" = (
 /turf/open/floor/plating,
 /area/outpost/external)
-"dm" = (
-/obj/item/paper/crumpled{
-	default_raw_text = "Пишет Энди. Буду писать такие заметки вначале чтобы тот кто их найдет мог понять чьи они. Итак, мы откапали очень древний камень с древними письменами. Судя по рисункам это что-то очень древнее. Это своего рода указательный камень. Мы идем по его направлению. Нас ждет успех!";
-	pixel_x = 10
-	},
-/turf/open/floor/plating/rust,
-/area/outpost/hallway/central)
 "do" = (
 /obj/structure/dresser,
 /obj/structure/window/reinforced{
@@ -1458,7 +1430,7 @@
 	},
 /obj/item/card/id/away{
 	access = list(60001);
-	name = "\proper sec 1"
+	name = "sec 1"
 	},
 /turf/open/floor/plating/rust,
 /area/outpost/hallway/central)
@@ -1533,7 +1505,9 @@
 /area/outpost/crew/canteen)
 "dV" = (
 /obj/machinery/light/small/directional/south,
-/turf/open/floor/plating/foam,
+/turf/open/floor/plating/beach/sand{
+	light_range = 2
+	},
 /area/outpost/hallway/central)
 "dX" = (
 /obj/structure/closet/secure_closet/freezer/kitchen,
@@ -1752,6 +1726,19 @@
 	},
 /turf/open/floor/grass,
 /area/outpost/hallway/fore)
+"eA" = (
+/obj/structure/table/glass,
+/obj/item/food/bread/meat{
+	pixel_y = -12
+	},
+/obj/item/reagent_containers/food/snacks/pizza/meat/rinmeat{
+	pixel_y = 12
+	},
+/obj/item/candle/infinite{
+	pixel_y = 13
+	},
+/turf/open/floor/plating/rust,
+/area/outpost/hallway/central)
 "eB" = (
 /obj/structure/chair/office/light{
 	dir = 1
@@ -1790,14 +1777,10 @@
 /turf/open/floor/plasteel/dark,
 /area/outpost/operations)
 "eG" = (
-/obj/structure/chair/stool{
-	dir = 8;
-	pixel_y = 14;
-	pixel_x = 9
+/obj/machinery/door/airlock/hatch{
+	dir = 8
 	},
-/turf/open/floor/wood{
-	light_range = 2
-	},
+/turf/open/floor/plasteel/rockvault,
 /area/outpost/hallway/central)
 "eH" = (
 /obj/structure/railing/wood{
@@ -2022,11 +2005,13 @@
 /turf/open/floor/plasteel/white,
 /area/outpost/crew/library)
 "fm" = (
-/obj/structure/holosign/barrier/atmos/infinite{
-	max_integrity = 500
+/obj/effect/spawner/lootdrop/flora,
+/obj/effect/turf_decal/siding/wood{
+	dir = 1
 	},
-/obj/structure/fans/tiny/invisible,
-/turf/open/floor/plating/foam,
+/turf/open/floor/wood{
+	light_range = 2
+	},
 /area/outpost/hallway/central)
 "fn" = (
 /obj/effect/turf_decal/siding/thinplating/dark{
@@ -2102,11 +2087,6 @@
 	},
 /turf/open/floor/concrete/tiles,
 /area/outpost/crew/garden)
-"fw" = (
-/obj/machinery/light/small/directional/north,
-/obj/structure/deployable_barricade/metal,
-/turf/open/floor/plating/rust,
-/area/outpost/hallway/central)
 "fx" = (
 /obj/structure/spacevine/dense,
 /obj/effect/turf_decal/weather/dirt{
@@ -2158,13 +2138,8 @@
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/nanotrasen)
 "fD" = (
-/obj/effect/spawner/lootdrop/flora,
-/obj/effect/turf_decal/siding/wood{
-	dir = 1
-	},
-/turf/open/floor/wood{
-	light_range = 2
-	},
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/foam,
 /area/outpost/hallway/central)
 "fE" = (
 /obj/structure/fluff/hedge{
@@ -2481,18 +2456,19 @@
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/outpost/fraction/syndi)
+"gr" = (
+/obj/effect/turf_decal/weather/sand{
+	dir = 10
+	},
+/obj/effect/turf_decal/weather/sand{
+	dir = 9
+	},
+/obj/structure/fluff/beach_umbrella/syndi,
+/turf/open/floor/carpet/red_gold,
+/area/outpost/hallway/central)
 "gs" = (
 /turf/closed/indestructible/reinforced,
 /area/outpost/hallway/starboard)
-"gt" = (
-/obj/structure/grille,
-/obj/effect/spawner/structure/window,
-/obj/machinery/door/poddoor/shutters{
-	id = "OutpostPoligonSec_6";
-	dir = 8
-	},
-/turf/open/floor/plating,
-/area/outpost/hallway/central)
 "gu" = (
 /obj/structure/reagent_dispensers/water_cooler{
 	pixel_y = 14;
@@ -2550,6 +2526,10 @@
 	icon_state = "wood-broken4"
 	},
 /area/outpost/crew/dorm)
+"gB" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/rust,
+/area/outpost/hallway/central)
 "gC" = (
 /obj/effect/turf_decal/techfloor/corner{
 	dir = 1
@@ -2576,6 +2556,11 @@
 /obj/machinery/firealarm/directional/south,
 /turf/open/floor/plasteel/sepia,
 /area/outpost/crew/library)
+"gG" = (
+/obj/machinery/light/small/directional/north,
+/obj/structure/deployable_barricade/metal,
+/turf/open/floor/plating/rust,
+/area/outpost/hallway/central)
 "gH" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -2706,10 +2691,11 @@
 /turf/open/floor/concrete/reinforced,
 /area/outpost/hallway/central)
 "gY" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/plasteel/darkgreenfull/darkgreen{
-	dir = 8
+/obj/structure/window/reinforced{
+	pixel_y = -5
 	},
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/rust,
 /area/outpost/hallway/central)
 "gZ" = (
 /obj/structure/window{
@@ -2731,9 +2717,11 @@
 /turf/closed/indestructible/reinforced,
 /area/outpost/fraction/syndi/donkco_shop)
 "hc" = (
-/obj/effect/spawner/lootdrop/waste/salvageable,
-/turf/open/floor/plating/asteroid/wasteplanet,
-/area/outpost/hallway/central)
+/obj/effect/landmark/portal_exit{
+	id = "monolit_poligon_outpost"
+	},
+/turf/open/floor/plating/asteroid/icerock/cracked,
+/area/space)
 "hd" = (
 /obj/structure/railing,
 /obj/effect/decal/fakelattice{
@@ -2747,11 +2735,8 @@
 /turf/open/floor/wood,
 /area/outpost/fraction/nanotrasen)
 "hf" = (
-/obj/effect/spawner/lootdrop/tool_engie_sydnie,
-/obj/effect/spawner/lootdrop/tool_engie_sydnie,
-/obj/structure/closet/crate,
-/obj/item/storage/pistolcase/candor,
-/turf/open/floor/plating,
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/grass,
 /area/outpost/hallway/central)
 "hg" = (
 /obj/effect/turf_decal/techfloor/corner{
@@ -2799,9 +2784,13 @@
 /area/outpost/fraction/inteq)
 "hl" = (
 /obj/structure/closet/crate/goldcrate,
-/obj/item/storage/pistolcase/viper,
+/obj/item/surgical_processor,
 /obj/effect/spawner/lootdrop/plushie,
 /turf/open/floor/concrete,
+/area/outpost/hallway/central)
+"hm" = (
+/obj/structure/flora/junglebush,
+/turf/open/floor/grass/fairy/beach,
 /area/outpost/hallway/central)
 "hn" = (
 /turf/open/water/tar,
@@ -2827,6 +2816,10 @@
 	pixel_x = -5
 	},
 /turf/open/floor/plating/rust,
+/area/outpost/hallway/central)
+"ht" = (
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/grass,
 /area/outpost/hallway/central)
 "hu" = (
 /obj/effect/decal/cleanable/dirt,
@@ -2899,11 +2892,6 @@
 	},
 /turf/open/floor/plasteel/sepia,
 /area/outpost/crew/canteen)
-"hH" = (
-/obj/effect/spawner/lootdrop/ration,
-/obj/structure/closet/crate,
-/turf/open/floor/engine/hull/rockplanet,
-/area/outpost/hallway/central)
 "hI" = (
 /obj/machinery/computer/atmos_alert{
 	dir = 1
@@ -2986,6 +2974,16 @@
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/plasteel/dark,
 /area/outpost/cargo)
+"hR" = (
+/obj/structure/chair/stool{
+	dir = 8;
+	pixel_y = 14;
+	pixel_x = 9
+	},
+/turf/open/floor/wood{
+	light_range = 2
+	},
+/area/outpost/hallway/central)
 "hS" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
@@ -3010,6 +3008,10 @@
 	},
 /turf/open/floor/wood/ebony,
 /area/outpost/fraction/solfed)
+"hU" = (
+/obj/effect/spawner/lootdrop/waste/grille_or_trash,
+/turf/open/floor/plating/asteroid/wasteplanet,
+/area/outpost/hallway/central)
 "hV" = (
 /obj/effect/turf_decal/techfloor{
 	dir = 8
@@ -3028,6 +3030,16 @@
 	},
 /turf/open/floor/plasteel/dark_2,
 /area/outpost/fraction/syndi)
+"hY" = (
+/obj/item/t_scanner,
+/obj/structure/closet/crate,
+/obj/machinery/button/door{
+	pixel_y = 28;
+	id = "OutpostPoligonSec_3";
+	pixel_x = 1
+	},
+/turf/open/floor/plasteel/rockvault,
+/area/outpost/hallway/central)
 "hZ" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/catwalk/over/plated_catwalk,
@@ -3054,17 +3066,6 @@
 	},
 /turf/open/floor/plasteel/patterned/grid,
 /area/outpost/fraction/inteq)
-"ib" = (
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 5
-	},
-/obj/effect/decal/fakelattice{
-	layer = 2.010;
-	opacity = 1
-	},
-/turf/open/space/basic,
-/area/outpost/external)
 "ic" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
@@ -3072,6 +3073,10 @@
 	},
 /turf/open/floor/plasteel/tech,
 /area/outpost/cargo/office)
+"id" = (
+/obj/effect/spawner/lootdrop/ration,
+/turf/open/floor/plating/dirt/rockplanet,
+/area/outpost/hallway/central)
 "ie" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
@@ -3107,9 +3112,6 @@
 	},
 /turf/open/floor/plasteel/mono,
 /area/outpost/fraction/solfed)
-"ii" = (
-/turf/closed/mineral/random/wasteplanet,
-/area/outpost/hallway/central)
 "ik" = (
 /obj/item/reagent_containers/food/snacks/grown/apple{
 	pixel_x = -10;
@@ -3138,21 +3140,27 @@
 /turf/open/floor/plating/foam,
 /area/outpost/hallway/central)
 "io" = (
-/obj/effect/turf_decal/weather/sand{
-	dir = 10
-	},
-/obj/effect/turf_decal/weather/sand{
-	dir = 9
-	},
-/obj/structure/fluff/beach_umbrella/cap,
-/turf/open/floor/carpet/red_gold,
+/obj/effect/spawner/lootdrop/tool_engie_common,
+/obj/structure/closet/crate,
+/turf/open/floor/plasteel/rockvault,
 /area/outpost/hallway/central)
 "ip" = (
-/obj/effect/mob_spawn/human/elysium_outpost/wagabond{
-	layer = 2
+/obj/machinery/vending/wallmed{
+	pixel_x = 27
 	},
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/plating/rust,
+/obj/item/paper/crumpled{
+	default_raw_text = "Сфера по изучению влияния аномалии типа джунгли. Данная аномалия создала из воздуха всю атмосферу планетоида типа джунгли. Невероятно, появилась даже флора... и фауна? Это что мухоловка?"
+	},
+/obj/structure/table/reinforced,
+/obj/machinery/button/door{
+	pixel_y = 28;
+	id = "OutpostPoligonSec_4";
+	pixel_x = 1
+	},
+/obj/item/phone{
+	pixel_y = 12
+	},
+/turf/open/floor/plasteel/rockvault,
 /area/outpost/hallway/central)
 "iq" = (
 /obj/structure/chair/stool{
@@ -3176,6 +3184,10 @@
 	dir = 4
 	},
 /turf/open/floor/concrete/slab_2,
+/area/outpost/hallway/central)
+"is" = (
+/obj/machinery/door/airlock/wood,
+/turf/open/floor/plating/rust,
 /area/outpost/hallway/central)
 "iu" = (
 /obj/structure/chair/stool/bar,
@@ -3442,10 +3454,6 @@
 /obj/structure/table/reinforced,
 /turf/open/floor/plasteel/sepia,
 /area/outpost/crew/canteen)
-"jd" = (
-/obj/structure/flora/junglebush/large,
-/turf/open/floor/grass/fairy/beach,
-/area/outpost/hallway/central)
 "je" = (
 /obj/structure/table,
 /obj/effect/turf_decal/techfloor{
@@ -3516,11 +3524,6 @@
 	},
 /turf/open/floor/plasteel/dark_2,
 /area/outpost/fraction/syndi)
-"jl" = (
-/obj/effect/spawner/lootdrop/waste/trash,
-/obj/structure/closet/crate,
-/turf/open/floor/plasteel/rockvault,
-/area/outpost/hallway/central)
 "jm" = (
 /obj/structure/chair/comfy/orange/directional/east,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
@@ -3586,9 +3589,6 @@
 	},
 /turf/open/floor/marble,
 /area/outpost/fraction/nanotrasen)
-"ju" = (
-/turf/open/floor/plating/asteroid/icerock/smooth,
-/area/space)
 "jv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/siding/white{
@@ -3712,14 +3712,6 @@
 "jG" = (
 /turf/open/floor/engine,
 /area/outpost/maintenance/fore)
-"jH" = (
-/obj/effect/decal/fakelattice{
-	layer = 2.010;
-	opacity = 1
-	},
-/obj/effect/spawner/lootdrop/maintenance/eight,
-/turf/open/space/basic,
-/area/outpost/external)
 "jI" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
@@ -3775,6 +3767,10 @@
 /obj/item/radio/intercom/directional/south,
 /turf/open/floor/concrete/slab_3,
 /area/outpost/hallway/starboard)
+"jM" = (
+/obj/machinery/door/airlock/wood,
+/turf/open/floor/plating,
+/area/outpost/hallway/central)
 "jN" = (
 /obj/item/bot_assembly/firebot,
 /turf/open/floor/plating/asteroid/wasteplanet,
@@ -3945,6 +3941,15 @@
 /obj/item/stack/sheet/bone,
 /turf/open/floor/plating/moss,
 /area/outpost/hallway/central)
+"kk" = (
+/obj/structure/grille,
+/obj/effect/spawner/structure/window,
+/obj/machinery/door/poddoor/shutters{
+	id = "OutpostPoligonSec_3";
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/outpost/hallway/central)
 "kl" = (
 /obj/machinery/door/airlock/outpost{
 	dir = 1;
@@ -3954,6 +3959,11 @@
 	},
 /turf/open/floor/plasteel/tech,
 /area/outpost/cargo/office)
+"km" = (
+/obj/item/weldingtool/hugetank/empty,
+/obj/structure/closet/crate,
+/turf/open/floor/plasteel/rockvault,
+/area/outpost/hallway/central)
 "kn" = (
 /obj/effect/turf_decal/spline/plain/opaque/syndiered{
 	dir = 1
@@ -4072,19 +4082,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/operations)
-"kE" = (
-/obj/structure/table/glass,
-/obj/item/food/bread/meat{
-	pixel_y = -12
-	},
-/obj/item/reagent_containers/food/snacks/pizza/meat/rinmeat{
-	pixel_y = 12
-	},
-/obj/item/candle/infinite{
-	pixel_y = 13
-	},
-/turf/open/floor/plating/rust,
-/area/outpost/hallway/central)
 "kF" = (
 /obj/effect/turf_decal/industrial/warning{
 	dir = 8
@@ -4125,10 +4122,6 @@
 /obj/machinery/suit_storage_unit/inherit/industrial,
 /turf/open/floor/plasteel/dark,
 /area/outpost/cargo)
-"kL" = (
-/obj/item/toy/plush/carpplushie/candy,
-/turf/open/water/beach/deep,
-/area/outpost/hallway/central)
 "kM" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/industrial/warning{
@@ -4175,11 +4168,6 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
 /turf/open/floor/plasteel/dark,
 /area/outpost/operations)
-"kQ" = (
-/obj/item/weldingtool/hugetank/empty,
-/obj/structure/closet/crate,
-/turf/open/floor/plasteel/rockvault,
-/area/outpost/hallway/central)
 "kR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
@@ -4232,6 +4220,15 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/nanotrasen)
+"kW" = (
+/obj/structure/window/reinforced{
+	dir = 1;
+	pixel_y = 5
+	},
+/obj/effect/spawner/lootdrop/mine,
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/outpost/external)
 "kY" = (
 /obj/effect/turf_decal/trimline/opaque/beige/filled/line{
 	dir = 1
@@ -4261,6 +4258,14 @@
 	},
 /turf/open/floor/plating,
 /area/outpost/security)
+"lc" = (
+/obj/structure/grille,
+/obj/effect/spawner/structure/window,
+/obj/machinery/door/poddoor/shutters{
+	id = "OutpostPoligonSec_1"
+	},
+/turf/open/floor/plating,
+/area/outpost/hallway/central)
 "ld" = (
 /obj/machinery/door/airlock/multi_tile/command/glass/v{
 	max_integrity = 3000000000000;
@@ -4344,6 +4349,10 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plating/rust,
 /area/outpost/maintenance/aft)
+"li" = (
+/obj/item/reagent_containers/food/snacks/grown/ghost_chili,
+/turf/open/floor/grass,
+/area/outpost/hallway/central)
 "lk" = (
 /turf/open/chasm,
 /area/outpost/fraction/nanotrasen)
@@ -4365,6 +4374,12 @@
 /obj/structure/fermenting_barrel,
 /turf/open/floor/plating/asteroid/wasteplanet,
 /area/outpost/hallway/central)
+"lp" = (
+/obj/item/paper/crumpled{
+	default_raw_text = "Я слышу его... мой путь завершен... Вознагражден будет ТОЛЬКО ОДИН. И этим стану Я! О МОНОЛИТ! ДАРУЙ МНЕ БЕССМЕРТИЕ!"
+	},
+/turf/open/floor/plating/asteroid/icerock/cracked,
+/area/space)
 "lq" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
@@ -4432,10 +4447,6 @@
 	},
 /turf/open/floor/carpet/red,
 /area/outpost/vacant_rooms/office)
-"lC" = (
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/grass,
-/area/outpost/hallway/central)
 "lD" = (
 /obj/structure/railing{
 	dir = 2;
@@ -4594,7 +4605,7 @@
 "lV" = (
 /obj/item/card/id/away{
 	access = list(60005);
-	name = "\proper sec 5"
+	name = "sec 5"
 	},
 /turf/open/floor/plating/foam,
 /area/outpost/hallway/central)
@@ -4638,37 +4649,18 @@
 	},
 /turf/open/floor/plating/asteroid/snow/under/lit,
 /area/outpost/external)
-"me" = (
-/obj/machinery/light/small/directional/north,
-/obj/structure/table/reinforced,
-/obj/item/reagent_containers/food/snacks/grown/grass/fairy,
+"mf" = (
+/obj/item/wirerod,
+/obj/structure/closet/crate,
 /turf/open/floor/plasteel/rockvault,
 /area/outpost/hallway/central)
-"mf" = (
-/obj/machinery/vending/wallmed{
-	pixel_x = 27
-	},
-/obj/item/paper/crumpled{
-	default_raw_text = "Сфера по изучению влияния аномалии типа джунгли. Данная аномалия создала из воздуха всю атмосферу планетоида типа джунгли. Невероятно, появилась даже флора... и фауна? Это что мухоловка?"
-	},
+"mh" = (
+/obj/effect/spawner/lootdrop/tool_engie_common,
 /obj/structure/table/reinforced,
-/obj/machinery/button/door{
-	pixel_y = 28;
-	id = "OutpostPoligonSec_4";
-	pixel_x = 1
-	},
 /obj/item/phone{
 	pixel_y = 12
 	},
 /turf/open/floor/plasteel/rockvault,
-/area/outpost/hallway/central)
-"mg" = (
-/obj/effect/spawner/lootdrop/gloves,
-/turf/open/floor/plating/foam,
-/area/outpost/hallway/central)
-"mh" = (
-/obj/machinery/door/airlock/wood,
-/turf/open/floor/plating,
 /area/outpost/hallway/central)
 "mj" = (
 /obj/effect/spawner/structure/window/reinforced/indestructable,
@@ -4801,6 +4793,10 @@
 	},
 /turf/open/floor/wood,
 /area/outpost/operations)
+"mC" = (
+/obj/effect/spawner/lootdrop/stockparts,
+/turf/open/floor/plating/rust,
+/area/outpost/hallway/central)
 "mD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
@@ -4871,10 +4867,6 @@
 /obj/effect/landmark/ert_outpost_spawn,
 /turf/open/floor/plasteel/tech,
 /area/outpost/security/armory)
-"mO" = (
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/plasteel/rockvault,
-/area/outpost/hallway/central)
 "mP" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/structure/sign/poster/contraband/smoke{
@@ -4899,6 +4891,13 @@
 	icon_state = "platingdmg2"
 	},
 /area/outpost/maintenance/fore)
+"mT" = (
+/obj/effect/spawner/lootdrop/tool_engie_sydnie,
+/obj/effect/spawner/lootdrop/tool_engie_sydnie,
+/obj/structure/closet/crate,
+/obj/item/storage/pistolcase/candor,
+/turf/open/floor/plating,
+/area/outpost/hallway/central)
 "mU" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 9
@@ -5061,6 +5060,10 @@
 	},
 /turf/open/floor/wood,
 /area/outpost/vacant_rooms/office)
+"nl" = (
+/obj/machinery/light/small/directional/east,
+/turf/open/floor/plating/foam,
+/area/outpost/hallway/central)
 "nn" = (
 /obj/structure/railing,
 /obj/effect/landmark/portal_exit{
@@ -5090,10 +5093,6 @@
 	},
 /turf/open/floor/plating/foam,
 /area/outpost/hallway/central)
-"nr" = (
-/obj/effect/mob_spawn/human/corpse/syndicatestormtrooper,
-/turf/open/floor/plating/asteroid/icerock/smooth,
-/area/space)
 "nt" = (
 /obj/structure/disposalpipe/segment{
 	dir = 5
@@ -5153,15 +5152,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/nanotrasen)
-"nB" = (
-/obj/structure/window/reinforced{
-	dir = 8;
-	pixel_x = -5
-	},
-/obj/machinery/light/small/directional/north,
-/obj/structure/deployable_barricade/metal,
-/turf/open/floor/plating/foam,
-/area/outpost/hallway/central)
 "nC" = (
 /obj/structure/table/wood,
 /obj/item/phone{
@@ -5222,6 +5212,12 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/plasteel/dark,
 /area/outpost/cargo/faction/all)
+"nK" = (
+/obj/structure/closet/crate/goldcrate,
+/obj/item/survey_handheld/elite,
+/obj/effect/spawner/lootdrop/memeorgans,
+/turf/open/floor/concrete,
+/area/outpost/hallway/central)
 "nL" = (
 /obj/item/paper/crumpled{
 	default_raw_text = "Поздравляю тебя заключенный D класса! Ты прошел все испытания и теперь мы аннулируем твои долги, конфисковываем твой дом, кошку-жену, все твои активы. Теперь ты Вагабонд, полноценный член общества. Ты в праве делать что тебе угодно теперь. С уважением администрация Полигона";
@@ -5245,7 +5241,7 @@
 	},
 /turf/open/floor/glass/green,
 /area/outpost/hallway/central)
-"nM" = (
+"nN" = (
 /obj/machinery/button/door{
 	pixel_y = 28;
 	id = "OutpostPoligonSec_6";
@@ -5542,15 +5538,6 @@
 	},
 /turf/open/floor/carpet/royalblack,
 /area/outpost/fraction/syndi)
-"ov" = (
-/obj/effect/mob_spawn/human/corpse/assistant{
-	pixel_x = -3
-	},
-/turf/open/floor/plating/asteroid/snow/temperatre{
-	light_color = "#1B1D2E";
-	light_range = 2
-	},
-/area/outpost/hallway/central)
 "ow" = (
 /obj/effect/turf_decal/trimline/opaque/beige/filled/line,
 /obj/effect/turf_decal/industrial/warning{
@@ -5678,18 +5665,6 @@
 	},
 /turf/open/floor/concrete/slab_2,
 /area/outpost/hallway/starboard)
-"oO" = (
-/obj/structure/deployable_barricade/guardrail{
-	dir = 8
-	},
-/obj/effect/spawner/lootdrop/waste/trash,
-/turf/open/floor/plating/asteroid/wasteplanet,
-/area/outpost/hallway/central)
-"oP" = (
-/obj/effect/spawner/lootdrop/grille_or_trash,
-/obj/structure/table/reinforced,
-/turf/open/floor/plasteel/rockvault,
-/area/outpost/hallway/central)
 "oQ" = (
 /obj/structure/chair/office{
 	dir = 1;
@@ -5713,14 +5688,6 @@
 	},
 /turf/open/floor/plating/foam,
 /area/outpost/hallway/central)
-"oW" = (
-/obj/effect/decal/fakelattice{
-	layer = 2.010;
-	opacity = 1
-	},
-/obj/effect/spawner/lootdrop/stockparts,
-/turf/open/space/basic,
-/area/outpost/external)
 "oX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/trimline/opaque/blue/filled/line{
@@ -5728,6 +5695,11 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/operations)
+"oY" = (
+/obj/machinery/light/small/directional/north,
+/obj/effect/spawner/lootdrop/plushie,
+/turf/open/floor/plating/foam,
+/area/outpost/hallway/central)
 "oZ" = (
 /obj/structure/chair/sofa/brown/right/directional/north,
 /turf/open/floor/plasteel/sepia,
@@ -5750,16 +5722,6 @@
 "pb" = (
 /obj/structure/flora/ash/cacti,
 /turf/open/floor/plating/moss,
-/area/outpost/hallway/central)
-"pc" = (
-/obj/effect/mob_spawn/human/elysium_outpost/wagabond{
-	layer = 2
-	},
-/obj/item/paper/crumpled{
-	default_raw_text = "Пишет Энди. Буду писать такие заметки вначале чтобы тот кто их найдет мог понять чьи они. Итак, мы откапали очень древний камень с древними письменами. Судя по рисункам это что-то очень древнее. Это своего рода указательный камень. Мы идем по его направлению. Нас ждет успех!";
-	pixel_x = 10
-	},
-/turf/open/floor/plating,
 /area/outpost/hallway/central)
 "pe" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
@@ -5794,6 +5756,10 @@
 	light_range = 2
 	},
 /area/outpost/hallway/central)
+"pi" = (
+/obj/effect/mob_spawn/human/corpse/wizard,
+/turf/open/floor/plating/asteroid/icerock/smooth,
+/area/space)
 "pj" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -5830,6 +5796,15 @@
 	},
 /turf/open/floor/plasteel/rockvault,
 /area/outpost/operations)
+"pn" = (
+/obj/structure/grille,
+/obj/effect/spawner/structure/window,
+/obj/machinery/door/poddoor/shutters{
+	id = "OutpostPoligonSec_5";
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/outpost/hallway/central)
 "po" = (
 /turf/closed/indestructible/reinforced,
 /area/outpost/medical)
@@ -5894,7 +5869,7 @@
 /area/outpost/hallway/aft)
 "pw" = (
 /obj/machinery/light/small/directional/east,
-/turf/open/floor/grass,
+/turf/open/floor/plating/rust,
 /area/outpost/hallway/central)
 "px" = (
 /obj/effect/turf_decal/techfloor/orange{
@@ -6009,16 +5984,6 @@
 	},
 /turf/open/floor/grass,
 /area/outpost/crew/garden)
-"pM" = (
-/obj/structure/table/wood/reinforced,
-/obj/machinery/chem_dispenser/drinks/beer{
-	pixel_y = 19
-	},
-/obj/item/reagent_containers/glass/beaker,
-/turf/open/floor/wood{
-	light_range = 2
-	},
-/area/outpost/hallway/central)
 "pN" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
@@ -6034,6 +5999,10 @@
 	},
 /turf/open/floor/carpet,
 /area/outpost/crew/library)
+"pO" = (
+/obj/effect/decal/remains/human/grave,
+/turf/open/floor/plating/asteroid/icerock/smooth,
+/area/space)
 "pP" = (
 /obj/machinery/conveyor/auto{
 	dir = 8;
@@ -6121,6 +6090,10 @@
 "pU" = (
 /turf/closed/indestructible/reinforced,
 /area/outpost/engineering/atmospherics)
+"pV" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/engine/hull/rockplanet,
+/area/outpost/hallway/central)
 "pW" = (
 /obj/structure/railing/wood{
 	dir = 8
@@ -6228,6 +6201,9 @@
 /area/outpost/engineering/atmospherics)
 "qq" = (
 /obj/structure/table/wood/reinforced,
+/obj/machinery/chem_dispenser/drinks/beer{
+	pixel_y = 19
+	},
 /obj/item/reagent_containers/glass/beaker,
 /turf/open/floor/wood{
 	light_range = 2
@@ -6339,10 +6315,6 @@
 	},
 /turf/open/floor/grass,
 /area/outpost/crew/garden)
-"qA" = (
-/mob/living/simple_animal/hostile/asteroid/goliath/beast/rockplanet,
-/turf/open/floor/plating/asteroid/rockplanet/lit,
-/area/outpost/hallway/central)
 "qC" = (
 /obj/machinery/light/directional/north,
 /obj/machinery/status_display/ai{
@@ -6423,6 +6395,11 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/inteq)
+"qJ" = (
+/obj/machinery/light/small/directional/east,
+/obj/effect/spawner/lootdrop/stockparts,
+/turf/open/floor/plating/foam,
+/area/outpost/hallway/central)
 "qK" = (
 /obj/structure/bed,
 /obj/structure/bed{
@@ -6808,11 +6785,8 @@
 	dir = 8;
 	pixel_x = -5
 	},
-/obj/effect/decal/fakelattice{
-	layer = 2.010;
-	opacity = 1
-	},
 /obj/effect/spawner/lootdrop/mine,
+/obj/structure/lattice,
 /turf/open/space/basic,
 /area/outpost/external)
 "rI" = (
@@ -6914,10 +6888,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/concrete/slab_3,
 /area/outpost/hallway/fore)
-"rS" = (
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/plating/foam,
-/area/outpost/hallway/central)
 "rT" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/machinery/light/directional/south,
@@ -7016,20 +6986,6 @@
 	},
 /turf/open/floor/concrete/slab_4,
 /area/outpost/hallway/central)
-"se" = (
-/obj/structure/window/reinforced{
-	dir = 4;
-	pixel_x = 5
-	},
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/plating/foam,
-/area/outpost/hallway/central)
-"sf" = (
-/obj/effect/landmark/portal_exit{
-	id = "monolit_poligon_outpost"
-	},
-/turf/open/floor/plating/asteroid/icerock/cracked,
-/area/space)
 "sg" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
 /turf/open/floor/plasteel/patterned/cargo_one,
@@ -7156,8 +7112,7 @@
 /turf/open/floor/wood,
 /area/outpost/crew/library)
 "sw" = (
-/obj/effect/spawner/lootdrop/mine,
-/turf/open/space/basic,
+/turf/closed/mineral/random/snow,
 /area/space)
 "sx" = (
 /obj/structure/table/glass,
@@ -7176,6 +7131,10 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/operations)
+"sy" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/foam,
+/area/outpost/hallway/central)
 "sz" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -7310,17 +7269,6 @@
 "sN" = (
 /turf/open/floor/plating/asteroid/icerock/smooth,
 /area/outpost/external)
-"sO" = (
-/obj/effect/mob_spawn/human/elysium_outpost/wagabond{
-	layer = 2
-	},
-/obj/machinery/light/small/directional/north,
-/obj/item/paper/crumpled{
-	default_raw_text = "Пишет Энди. Буду писать такие заметки вначале чтобы тот кто их найдет мог понять чьи они. Итак, мы откапали очень древний камень с древними письменами. Судя по рисункам это что-то очень древнее. Это своего рода указательный камень. Мы идем по его направлению. Нас ждет успех!";
-	pixel_x = 10
-	},
-/turf/open/floor/plating,
-/area/outpost/hallway/central)
 "sP" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -7410,10 +7358,6 @@
 	},
 /turf/open/floor/concrete/slab_2,
 /area/outpost/hallway/central)
-"sZ" = (
-/obj/effect/spawner/lootdrop/crate_spawner,
-/turf/open/floor/plating/dirt/jungle,
-/area/outpost/hallway/central)
 "tb" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
@@ -7496,6 +7440,14 @@
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/outpost/crew/canteen)
+"tn" = (
+/obj/structure/window/reinforced{
+	dir = 1;
+	pixel_y = 5
+	},
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plating/foam,
+/area/outpost/hallway/central)
 "to" = (
 /turf/closed/wall/concrete,
 /area/outpost/hallway/central)
@@ -7605,10 +7557,11 @@
 /turf/open/floor/plasteel/sepia,
 /area/outpost/crew/canteen)
 "tB" = (
-/obj/machinery/door/airlock/hatch{
-	dir = 8
+/obj/structure/table/wood/reinforced,
+/obj/item/reagent_containers/glass/beaker,
+/turf/open/floor/wood{
+	light_range = 2
 	},
-/turf/open/floor/plasteel/rockvault,
 /area/outpost/hallway/central)
 "tC" = (
 /obj/effect/turf_decal/trimline/opaque/yellow/filled/line{
@@ -7714,10 +7667,18 @@
 	light_range = 2
 	},
 /area/outpost/vacant_rooms/trash_factory)
+"tS" = (
+/obj/effect/spawner/lootdrop/waste/mechwreck,
+/turf/open/floor/plating/asteroid/wasteplanet,
+/area/outpost/hallway/central)
 "tT" = (
 /obj/structure/chair/stool/bar,
 /turf/open/floor/carpet/red_gold,
 /area/outpost/fraction/syndi)
+"tU" = (
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/grass,
+/area/outpost/hallway/central)
 "tV" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	req_access_txt = "109";
@@ -7842,15 +7803,9 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/concrete/reinforced,
 /area/outpost/crew/garden)
-"um" = (
-/obj/structure/table/wood/reinforced,
-/obj/machinery/chem_dispenser/drinks{
-	dir = 1;
-	pixel_y = -2
-	},
-/turf/open/floor/wood{
-	light_range = 2
-	},
+"ul" = (
+/obj/effect/spawner/lootdrop/gloves,
+/turf/open/floor/plating/foam,
 /area/outpost/hallway/central)
 "un" = (
 /obj/machinery/door/airlock/grunge{
@@ -7978,12 +7933,6 @@
 /obj/structure/stone_tile/slab,
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
 /area/outpost/hallway/central)
-"uy" = (
-/obj/effect/spawner/lootdrop/crate_spawner,
-/turf/open/floor/wood{
-	light_range = 2
-	},
-/area/outpost/hallway/central)
 "uz" = (
 /obj/effect/turf_decal/number/right_one{
 	icon_state = "sec"
@@ -8084,6 +8033,12 @@
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/carpet/red,
 /area/outpost/vacant_rooms/office)
+"uM" = (
+/obj/effect/spawner/lootdrop/tool_surgery_common,
+/turf/open/floor/wood{
+	light_range = 2
+	},
+/area/outpost/hallway/central)
 "uP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
@@ -8380,14 +8335,6 @@
 "vD" = (
 /turf/open/floor/engine/co2,
 /area/outpost/engineering/atmospherics)
-"vF" = (
-/obj/effect/decal/remains/human/grave,
-/turf/open/floor/plating/asteroid/icerock/smooth,
-/area/space)
-"vG" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/engine/hull/rockplanet,
-/area/outpost/hallway/central)
 "vH" = (
 /obj/item/radio/intercom/wideband/table{
 	dir = 1;
@@ -8449,6 +8396,13 @@
 /obj/item/radio/intercom/directional/west,
 /turf/open/floor/carpet/red,
 /area/outpost/vacant_rooms/office)
+"vL" = (
+/obj/effect/mob_spawn/human/elysium_outpost/wagabond{
+	layer = 2
+	},
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/rust,
+/area/outpost/hallway/central)
 "vM" = (
 /obj/item/kirbyplants{
 	icon_state = "plant-21";
@@ -8670,15 +8624,6 @@
 /obj/effect/turf_decal/techfloor/corner,
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
-"wi" = (
-/obj/structure/grille,
-/obj/effect/spawner/structure/window,
-/obj/machinery/door/poddoor/shutters{
-	id = "OutpostPoligonSec_3";
-	dir = 8
-	},
-/turf/open/floor/plating,
-/area/outpost/hallway/central)
 "wj" = (
 /obj/effect/turf_decal/corner_techfloor_gray/diagonal{
 	layer = 2.030
@@ -8805,6 +8750,15 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/inteq)
+"wG" = (
+/obj/structure/window/reinforced{
+	dir = 8;
+	pixel_x = -5
+	},
+/obj/machinery/light/small/directional/north,
+/obj/structure/deployable_barricade/metal,
+/turf/open/floor/plating/foam,
+/area/outpost/hallway/central)
 "wH" = (
 /turf/closed/indestructible/reinforced,
 /area/outpost/maintenance/fore)
@@ -8913,14 +8867,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/operations)
-"wU" = (
-/obj/structure/grille,
-/obj/effect/spawner/structure/window,
-/obj/machinery/door/poddoor/shutters{
-	id = "OutpostPoligonSec_1"
-	},
-/turf/open/floor/plating,
-/area/outpost/hallway/central)
 "wV" = (
 /obj/structure/closet/radiation,
 /obj/effect/turf_decal/industrial/hatch/yellow,
@@ -8980,6 +8926,15 @@
 "xa" = (
 /turf/open/floor/grass,
 /area/outpost/hallway/fore)
+"xb" = (
+/obj/structure/grille,
+/obj/effect/spawner/structure/window,
+/obj/machinery/door/poddoor/shutters{
+	id = "OutpostPoligonSec_6";
+	dir = 8
+	},
+/turf/open/floor/plating,
+/area/outpost/hallway/central)
 "xc" = (
 /obj/item/stack/rods,
 /turf/open/floor/plating/rust,
@@ -9038,6 +8993,15 @@
 	color = "#55391A"
 	},
 /area/outpost/fraction/solfed)
+"xh" = (
+/obj/effect/spawner/lootdrop/ration,
+/obj/structure/closet/crate,
+/turf/open/floor/engine/hull/rockplanet,
+/area/outpost/hallway/central)
+"xi" = (
+/obj/effect/spawner/lootdrop/waste/salvageable,
+/turf/open/floor/plating/asteroid/wasteplanet,
+/area/outpost/hallway/central)
 "xj" = (
 /obj/structure/window/reinforced{
 	pixel_y = -5
@@ -9287,6 +9251,10 @@
 	},
 /turf/open/floor/wood,
 /area/outpost/fraction/nanotrasen)
+"xN" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plasteel/rockvault,
+/area/outpost/hallway/central)
 "xO" = (
 /obj/structure/girder,
 /turf/open/floor/plating/asteroid/icerock/smooth,
@@ -9335,10 +9303,21 @@
 	},
 /turf/open/floor/concrete/slab_3,
 /area/outpost/hallway/central)
+"xU" = (
+/obj/structure/ore_box,
+/turf/open/floor/plating/rust,
+/area/outpost/hallway/central)
 "xV" = (
-/obj/effect/mob_spawn/human/corpse/assistant,
-/turf/open/space/basic,
-/area/space)
+/obj/effect/mob_spawn/human/elysium_outpost/wagabond{
+	layer = 2
+	},
+/obj/machinery/light/small/directional/north,
+/obj/item/paper/crumpled{
+	default_raw_text = "Пишет Энди. Буду писать такие заметки вначале чтобы тот кто их найдет мог понять чьи они. Итак, мы откапали очень древний камень с древними письменами. Судя по рисункам это что-то очень древнее. Это своего рода указательный камень. Мы идем по его направлению. Нас ждет успех!";
+	pixel_x = 10
+	},
+/turf/open/floor/plating,
+/area/outpost/hallway/central)
 "xW" = (
 /obj/effect/turf_decal/techfloor/orange{
 	dir = 10
@@ -9396,6 +9375,13 @@
 /obj/structure/fans/tiny/invisible,
 /turf/open/floor/engine/hull/reinforced,
 /area/outpost/vacant_rooms/trash_factory)
+"yd" = (
+/obj/effect/mob_spawn/human/corpse/assistant{
+	pixel_x = -3;
+	pixel_y = 13
+	},
+/turf/open/floor/plating/grass/jungle/lit,
+/area/outpost/hallway/central)
 "ye" = (
 /obj/effect/turf_decal/techfloor{
 	dir = 1
@@ -9405,10 +9391,8 @@
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/engineering/atmospherics)
 "yf" = (
-/obj/effect/decal/fakelattice{
-	layer = 2.010;
-	opacity = 1
-	},
+/obj/effect/spawner/lootdrop/mine,
+/obj/structure/lattice,
 /turf/open/space/basic,
 /area/outpost/external)
 "yg" = (
@@ -9538,6 +9522,13 @@
 	},
 /turf/open/water/beach,
 /area/outpost/hallway/central)
+"yx" = (
+/obj/effect/spawner/lootdrop/stockparts,
+/turf/open/floor/plating/asteroid/snow/temperatre{
+	light_color = "#1B1D2E";
+	light_range = 2
+	},
+/area/outpost/hallway/central)
 "yy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
@@ -9545,6 +9536,14 @@
 /obj/item/radio/intercom/directional/west,
 /turf/open/floor/wood,
 /area/outpost/operations)
+"yz" = (
+/obj/structure/table/glass,
+/obj/item/reagent_containers/food/snacks/pizza/meat/rinmeat,
+/obj/item/candle/infinite{
+	pixel_y = 2
+	},
+/turf/open/floor/plating/rust,
+/area/outpost/hallway/central)
 "yA" = (
 /obj/structure/closet/secure_closet/ertCom,
 /obj/effect/turf_decal/siding/thinplating/dark{
@@ -9683,6 +9682,14 @@
 	},
 /turf/open/floor/concrete/slab_3,
 /area/outpost/hallway/aft)
+"yY" = (
+/obj/structure/flora/ausbushes/sparsegrass/hell,
+/obj/effect/mob_spawn/human/corpse/assistant{
+	pixel_x = -3;
+	pixel_y = 13
+	},
+/turf/open/floor/plating/moss,
+/area/outpost/hallway/central)
 "yZ" = (
 /obj/structure/punching_bag{
 	desc = "A punching bag. The NT emblem is crossed out on it. Can you get to speed level 4???"
@@ -9890,9 +9897,9 @@
 	},
 /turf/open/floor/concrete/reinforced,
 /area/outpost/hallway/central)
-"zw" = (
-/obj/effect/spawner/lootdrop/waste/grille_or_trash,
-/turf/open/floor/plating/asteroid/wasteplanet,
+"zx" = (
+/obj/item/toy/plush/carpplushie/candy,
+/turf/open/water/beach/deep,
 /area/outpost/hallway/central)
 "zy" = (
 /obj/structure/cable{
@@ -9967,10 +9974,11 @@
 /turf/open/floor/concrete/slab_2,
 /area/outpost/hallway/central)
 "zJ" = (
-/obj/machinery/light/small/directional/east,
-/obj/structure/chair/comfy/blue/corpo/directional/south,
-/obj/effect/spawner/lootdrop/stockparts,
-/turf/open/floor/plating/foam,
+/obj/effect/turf_decal/number/right_one{
+	icon_state = "sec"
+	},
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plasteel/rockvault,
 /area/outpost/hallway/central)
 "zK" = (
 /obj/structure/chair/comfy/orange/directional/west,
@@ -10203,6 +10211,15 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
 /area/outpost/crew/dorm)
+"An" = (
+/obj/effect/turf_decal/weather/sand{
+	dir = 5
+	},
+/obj/effect/turf_decal/weather/sand{
+	dir = 6
+	},
+/turf/open/floor/carpet/red_gold,
+/area/outpost/hallway/central)
 "Ao" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/techfloor{
@@ -10238,6 +10255,16 @@
 /obj/structure/statue/snow/snowman,
 /turf/open/floor/carpet/black,
 /area/outpost/fraction/syndi)
+"Ar" = (
+/obj/effect/mob_spawn/human/elysium_outpost/wagabond{
+	layer = 2
+	},
+/obj/item/paper/crumpled{
+	default_raw_text = "Пишет Энди. Буду писать такие заметки вначале чтобы тот кто их найдет мог понять чьи они. Итак, мы откапали очень древний камень с древними письменами. Судя по рисункам это что-то очень древнее. Это своего рода указательный камень. Мы идем по его направлению. Нас ждет успех!";
+	pixel_x = 10
+	},
+/turf/open/floor/plating,
+/area/outpost/hallway/central)
 "As" = (
 /obj/machinery/computer/med_data,
 /obj/effect/turf_decal/trimline/opaque/green/filled/line,
@@ -10355,6 +10382,10 @@
 	},
 /turf/open/floor/wood/ebony,
 /area/outpost/fraction/solfed)
+"AG" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/grass,
+/area/outpost/hallway/central)
 "AH" = (
 /obj/effect/turf_decal/industrial/fire{
 	dir = 8
@@ -10534,6 +10565,14 @@
 	},
 /turf/open/floor/plasteel/tech,
 /area/outpost/medical)
+"Bh" = (
+/obj/structure/table/reinforced,
+/obj/item/phone{
+	pixel_y = 12
+	},
+/obj/item/clothing/glasses/welding/ghostbuster,
+/turf/open/floor/plasteel/rockvault,
+/area/outpost/hallway/central)
 "Bi" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -10558,16 +10597,8 @@
 /turf/open/floor/wood/ebony,
 /area/outpost/fraction/solfed)
 "Bk" = (
-/obj/effect/turf_decal/number/right_one{
-	icon_state = "5"
-	},
-/obj/machinery/button/door{
-	pixel_y = 28;
-	id = "OutpostPoligonSec_1";
-	pixel_x = 1
-	},
-/turf/open/floor/plasteel/rockvault,
-/area/outpost/hallway/central)
+/turf/open/floor/plating/asteroid/icerock/cracked,
+/area/space)
 "Bl" = (
 /obj/effect/turf_decal/siding/wood,
 /turf/open/floor/concrete/slab_1,
@@ -10586,10 +10617,6 @@
 	},
 /turf/open/floor/carpet/nanoweave,
 /area/outpost/vacant_rooms)
-"Bo" = (
-/obj/machinery/door/airlock/wood,
-/turf/open/floor/plating/rust,
-/area/outpost/hallway/central)
 "Bp" = (
 /obj/structure/table/wood/reinforced,
 /obj/machinery/chem_dispenser/drinks/beer/fullupgrade{
@@ -10668,6 +10695,19 @@
 	},
 /turf/open/floor/plasteel/telecomms_floor,
 /area/outpost/crew/cryo)
+"Bv" = (
+/obj/machinery/power/supermatter_crystal/shard/hugbox/fakecrystal{
+	color = "#0000FF";
+	name = "Monolit"
+	},
+/turf/open/floor/plating/asteroid/icerock/smooth,
+/area/space)
+"Bw" = (
+/obj/item/clothing/suit/armor/hos/trenchcoat,
+/obj/item/toy/figure/hos,
+/obj/item/clothing/head/beret/sec/hos,
+/turf/open/space/basic,
+/area/space)
 "Bx" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
@@ -10906,6 +10946,13 @@
 	},
 /turf/open/floor/carpet/black,
 /area/outpost/fraction/syndi)
+"BZ" = (
+/obj/item/paper/crumpled{
+	default_raw_text = "Пишет Энди. Буду писать такие заметки вначале чтобы тот кто их найдет мог понять чьи они. Итак, мы откапали очень древний камень с древними письменами. Судя по рисункам это что-то очень древнее. Это своего рода указательный камень. Мы идем по его направлению. Нас ждет успех!";
+	pixel_x = 10
+	},
+/turf/open/floor/plating,
+/area/outpost/hallway/central)
 "Ca" = (
 /obj/structure/railing/wood{
 	layer = 3.1;
@@ -10943,6 +10990,14 @@
 "Cf" = (
 /turf/open/floor/plating/rust,
 /area/outpost/external)
+"Ch" = (
+/obj/structure/window/reinforced{
+	dir = 8;
+	pixel_x = -5
+	},
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating/foam,
+/area/outpost/hallway/central)
 "Cj" = (
 /obj/structure/rack,
 /obj/effect/spawner/lootdrop/maintenance,
@@ -10966,14 +11021,6 @@
 	},
 /turf/open/floor/carpet/green,
 /area/outpost/hallway/aft)
-"Cm" = (
-/obj/effect/decal/fakelattice{
-	layer = 2.010;
-	opacity = 1
-	},
-/obj/effect/spawner/lootdrop/maintenance/six,
-/turf/open/space/basic,
-/area/outpost/external)
 "Cn" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/trash/pistachios,
@@ -11028,11 +11075,9 @@
 /turf/open/floor/mineral/plastitanium/red,
 /area/outpost/cargo/faction/syndicate)
 "Cu" = (
-/obj/effect/mob_spawn/human/corpse/nanotrasensoldier{
-	pixel_y = 23
-	},
-/turf/open/floor/plating/asteroid/icerock/smooth,
-/area/space)
+/mob/living/simple_animal/hostile/asteroid/goliath/beast/rockplanet,
+/turf/open/floor/plating/asteroid/rockplanet/lit,
+/area/outpost/hallway/central)
 "Cv" = (
 /obj/structure/railing{
 	dir = 4
@@ -11115,10 +11160,7 @@
 /obj/structure/window/reinforced{
 	pixel_y = -5
 	},
-/obj/effect/decal/fakelattice{
-	layer = 2.010;
-	opacity = 1
-	},
+/obj/structure/lattice,
 /turf/open/space/basic,
 /area/outpost/external)
 "CC" = (
@@ -11182,17 +11224,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/inteq)
-"CI" = (
-/obj/effect/turf_decal/number/right_one{
-	icon_state = "sec"
-	},
-/obj/machinery/button/door{
-	pixel_y = 28;
-	id = "OutpostPoligonSec_5";
-	pixel_x = 1
-	},
-/turf/open/floor/plasteel/rockvault,
-/area/outpost/hallway/central)
 "CJ" = (
 /obj/effect/turf_decal/siding/thinplating/corner,
 /obj/effect/turf_decal/trimline/opaque/yellow/corner,
@@ -11329,11 +11360,8 @@
 /turf/open/floor/carpet/royalblack,
 /area/outpost/fraction/syndi)
 "CZ" = (
-/obj/effect/mob_spawn/human/corpse/assistant{
-	pixel_x = -3;
-	pixel_y = 13
-	},
-/turf/open/floor/concrete,
+/obj/structure/flora/junglebush/large,
+/turf/open/floor/grass/fairy/beach,
 /area/outpost/hallway/central)
 "Da" = (
 /obj/structure/table/syndi,
@@ -11362,10 +11390,9 @@
 /turf/open/floor/concrete/reinforced,
 /area/outpost/hallway/central)
 "De" = (
-/obj/machinery/door/airlock/hatch,
-/obj/structure/fans/tiny/invisible,
-/turf/open/floor/plasteel/rockvault,
-/area/outpost/hallway/central)
+/obj/effect/spawner/lootdrop/mine,
+/turf/open/space/basic,
+/area/space)
 "Df" = (
 /obj/effect/turf_decal/trimline/opaque/beige/filled/line{
 	dir = 1
@@ -11557,6 +11584,10 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/plasteel/dark,
 /area/outpost/operations)
+"DG" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating,
+/area/outpost/hallway/central)
 "DI" = (
 /obj/structure/window/reinforced{
 	dir = 1;
@@ -11633,6 +11664,11 @@
 	},
 /turf/open/floor/plasteel/tech,
 /area/outpost/engineering)
+"DS" = (
+/obj/effect/spawner/lootdrop/plushie,
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/outpost/external)
 "DT" = (
 /obj/machinery/door/airlock/engineering,
 /turf/open/floor/concrete,
@@ -11697,6 +11733,13 @@
 	},
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/outpost/fraction/solfed)
+"Eb" = (
+/obj/effect/mob_spawn/human/corpse/assistant,
+/obj/item/clothing/head/beret/sec/hos,
+/obj/item/clothing/suit/armor/hos,
+/obj/item/clothing/neck/cloak/hos,
+/turf/open/space/basic,
+/area/space)
 "Ec" = (
 /obj/effect/turf_decal/siding/wood/corner,
 /obj/effect/decal/cleanable/dirt,
@@ -11768,9 +11811,8 @@
 /turf/open/floor/plasteel/tech,
 /area/outpost/maintenance/fore)
 "Ej" = (
-/obj/effect/mob_spawn/human/corpse/wizard,
-/turf/open/floor/plating/asteroid/icerock/smooth,
-/area/space)
+/turf/closed/mineral/random/wasteplanet,
+/area/outpost/hallway/central)
 "Ek" = (
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -11872,10 +11914,6 @@
 	},
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/engineering/atmospherics)
-"Eu" = (
-/obj/structure/table/reinforced,
-/turf/open/floor/plasteel/rockvault,
-/area/outpost/hallway/central)
 "Ev" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
@@ -11963,10 +12001,6 @@
 	},
 /turf/open/floor/concrete/slab_3,
 /area/outpost/hallway/starboard)
-"EG" = (
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/grass,
-/area/outpost/hallway/central)
 "EH" = (
 /obj/effect/turf_decal/spline/fancy/transparent/solgovblue,
 /obj/effect/turf_decal/trimline/opaque/solgovblue/warning,
@@ -11992,8 +12026,14 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/inteq)
-"EK" = (
-/obj/machinery/light/small/directional/east,
+"EL" = (
+/obj/effect/mob_spawn/human/elysium_outpost/wagabond{
+	layer = 2
+	},
+/obj/item/paper/crumpled{
+	default_raw_text = "Пишет Энди. Буду писать такие заметки вначале чтобы тот кто их найдет мог понять чьи они. Итак, мы откапали очень древний камень с древними письменами. Судя по рисункам это что-то очень древнее. Это своего рода указательный камень. Мы идем по его направлению. Нас ждет успех!";
+	pixel_x = 10
+	},
 /turf/open/floor/plating/rust,
 /area/outpost/hallway/central)
 "EM" = (
@@ -12043,18 +12083,24 @@
 	},
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/fraction/inteq)
+"EQ" = (
+/obj/effect/spawner/lootdrop/waste/trash,
+/turf/open/floor/plating/asteroid/wasteplanet,
+/area/outpost/hallway/central)
 "ER" = (
 /obj/structure/statue/snow/snowman,
 /turf/open/floor/wood,
 /area/outpost/fraction/solfed)
-"ET" = (
-/obj/structure/grille,
-/obj/effect/spawner/structure/window,
-/obj/machinery/door/poddoor/shutters{
-	id = "OutpostPoligonSec_5";
-	dir = 8
+"ES" = (
+/obj/effect/spawner/lootdrop/gambling,
+/obj/structure/table/reinforced,
+/obj/item/paper/crumpled{
+	default_raw_text = "Сфера по изучению влияния аномалии ракушка. Довольно странное явление, видеть как аномалия повторяет стиль и дизайн пляжного небольшого курорта. Почему именно пляж?"
 	},
-/turf/open/floor/plating,
+/obj/item/phone{
+	pixel_y = 12
+	},
+/turf/open/floor/plasteel/rockvault,
 /area/outpost/hallway/central)
 "EU" = (
 /obj/structure/filingcabinet,
@@ -12121,14 +12167,8 @@
 /obj/machinery/door/airlock/hatch{
 	dir = 1
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plasteel/rockvault,
-/area/outpost/hallway/central)
-"Fc" = (
-/obj/effect/spawner/lootdrop/stockparts,
-/turf/open/floor/plating/asteroid/snow/temperatre{
-	light_color = "#1B1D2E";
-	light_range = 2
-	},
 /area/outpost/hallway/central)
 "Fd" = (
 /obj/machinery/power/emitter{
@@ -12160,6 +12200,9 @@
 /obj/item/chair/wood,
 /turf/open/floor/wood,
 /area/outpost/maintenance/aft)
+"Fg" = (
+/turf/open/floor/grass/fairy/beach,
+/area/outpost/hallway/central)
 "Fh" = (
 /obj/machinery/light/directional/west,
 /turf/open/floor/plasteel/stairs/left{
@@ -12175,12 +12218,6 @@
 	},
 /turf/open/floor/concrete/tiles,
 /area/outpost/hallway/aft)
-"Fj" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/wood{
-	light_range = 2
-	},
-/area/outpost/hallway/central)
 "Fk" = (
 /obj/effect/decal/fakelattice{
 	layer = 2.010;
@@ -12364,10 +12401,8 @@
 /turf/open/floor/engine,
 /area/outpost/crew/cryo)
 "FI" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/plating/beach/sand{
-	light_range = 2
-	},
+/obj/structure/flora/tree/jungle/small,
+/turf/open/floor/grass/fairy/beach,
 /area/outpost/hallway/central)
 "FJ" = (
 /obj/structure/flora/tree/pine,
@@ -12417,7 +12452,7 @@
 /obj/structure/grille,
 /obj/effect/spawner/structure/window,
 /obj/machinery/door/poddoor/shutters{
-	id = "OutpostPoligonSec_5"
+	id = "OutpostPoligonSec_3"
 	},
 /turf/open/floor/plating,
 /area/outpost/hallway/central)
@@ -12428,10 +12463,6 @@
 /obj/machinery/light/directional/south,
 /turf/open/floor/concrete/tiles,
 /area/outpost/crew/garden)
-"FP" = (
-/obj/effect/spawner/lootdrop/waste/mechwreck,
-/turf/open/floor/plating/asteroid/wasteplanet,
-/area/outpost/hallway/central)
 "FQ" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
 	dir = 8
@@ -12493,18 +12524,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /turf/open/floor/plasteel/rockvault,
 /area/outpost/operations)
-"FW" = (
-/obj/structure/table/reinforced,
-/obj/item/paper/crumpled{
-	default_raw_text = "Сфера по изучению влияния аномалии типа снежинка. После активации в считанные секунды замело и образовало снежные скалы и деревья. А через минуту, начали появляться медведи. Стоп, медведи?"
-	},
-/turf/open/floor/plasteel/rockvault,
-/area/outpost/hallway/central)
-"FY" = (
-/obj/effect/spawner/lootdrop/stockparts,
-/obj/structure/chair/comfy/blue/corpo/directional/north,
-/turf/open/floor/plating/foam,
-/area/outpost/hallway/central)
 "FZ" = (
 /turf/open/floor/plating/beach/sand{
 	light_range = 2
@@ -12515,13 +12534,6 @@
 	dir = 1
 	},
 /turf/open/floor/plating/asteroid/basalt/lava_land_surface,
-/area/outpost/hallway/central)
-"Gb" = (
-/obj/item/paper/crumpled{
-	default_raw_text = "Пишет Энди. Буду писать такие заметки вначале чтобы тот кто их найдет мог понять чьи они. Итак, мы откапали очень древний камень с древними письменами. Судя по рисункам это что-то очень древнее. Это своего рода указательный камень. Мы идем по его направлению. Нас ждет успех!";
-	pixel_x = 10
-	},
-/turf/open/floor/plating,
 /area/outpost/hallway/central)
 "Gc" = (
 /obj/effect/turf_decal/siding/wood/corner{
@@ -12857,14 +12869,6 @@
 	light_range = 2
 	},
 /area/outpost/vacant_rooms/trash_factory)
-"GP" = (
-/obj/structure/window/reinforced{
-	dir = 1;
-	pixel_y = 5
-	},
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/plating/foam,
-/area/outpost/hallway/central)
 "GQ" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -12945,14 +12949,6 @@
 /obj/structure/curtain/bounty,
 /turf/open/floor/plating/catwalk_floor,
 /area/outpost/security)
-"GX" = (
-/obj/structure/window/reinforced{
-	dir = 8;
-	pixel_x = -5
-	},
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/plating/foam,
-/area/outpost/hallway/central)
 "GY" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/broken/directional/south,
@@ -12976,9 +12972,9 @@
 /obj/structure/lattice/catwalk,
 /turf/open/space/basic,
 /area/outpost/external)
-"Hd" = (
+"He" = (
 /obj/machinery/light/small/directional/west,
-/turf/open/floor/plating,
+/turf/open/floor/plating/foam,
 /area/outpost/hallway/central)
 "Hf" = (
 /obj/structure/table/wood,
@@ -13020,6 +13016,15 @@
 /obj/structure/disposalpipe/segment,
 /turf/open/floor/concrete/slab_3,
 /area/outpost/hallway/fore)
+"Hk" = (
+/obj/machinery/button/door{
+	pixel_y = 1;
+	id = "OutpostPoligonSec_6";
+	pixel_x = -24;
+	dir = 4
+	},
+/turf/open/floor/plasteel/rockvault,
+/area/outpost/hallway/central)
 "Hl" = (
 /obj/effect/turf_decal/industrial/warning{
 	dir = 8;
@@ -13081,10 +13086,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/operations)
-"Hu" = (
-/obj/effect/spawner/lootdrop/waste/girder,
-/turf/open/floor/plating/asteroid/wasteplanet,
-/area/outpost/hallway/central)
 "Hv" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -13109,6 +13110,13 @@
 	dir = 8
 	},
 /turf/open/floor/concrete/slab_2,
+/area/outpost/hallway/central)
+"Hz" = (
+/obj/item/paper/crumpled{
+	default_raw_text = "Пишет Энди. Буду писать такие заметки вначале чтобы тот кто их найдет мог понять чьи они. Итак, мы откапали очень древний камень с древними письменами. Судя по рисункам это что-то очень древнее. Это своего рода указательный камень. Мы идем по его направлению. Нас ждет успех!";
+	pixel_x = 10
+	},
+/turf/open/floor/plating/rust,
 /area/outpost/hallway/central)
 "HA" = (
 /obj/effect/turf_decal/siding/wood,
@@ -13216,7 +13224,15 @@
 /turf/open/floor/plasteel/tech,
 /area/outpost/crew/cryo)
 "HP" = (
+/obj/effect/spawner/lootdrop/waste/trash,
+/obj/structure/closet/crate,
 /turf/open/floor/plasteel/rockvault,
+/area/outpost/hallway/central)
+"HR" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/wood{
+	light_range = 2
+	},
 /area/outpost/hallway/central)
 "HS" = (
 /obj/structure/chair/comfy/orange/directional/west,
@@ -13295,15 +13311,6 @@
 	},
 /obj/machinery/light/directional/west,
 /turf/open/floor/carpet/nanoweave,
-/area/outpost/hallway/central)
-"Ic" = (
-/obj/machinery/button/door{
-	pixel_y = 1;
-	id = "OutpostPoligonSec_6";
-	pixel_x = -24;
-	dir = 4
-	},
-/turf/open/floor/plasteel/rockvault,
 /area/outpost/hallway/central)
 "Id" = (
 /obj/item/gun/ballistic/automatic/powered/gauss/claris{
@@ -13389,6 +13396,12 @@
 	},
 /turf/open/floor/carpet/donk,
 /area/outpost/fraction/syndi/donkco_shop)
+"Im" = (
+/obj/machinery/light/small/directional/east,
+/obj/structure/chair/comfy/blue/corpo/directional/south,
+/obj/effect/spawner/lootdrop/stockparts,
+/turf/open/floor/plating/foam,
+/area/outpost/hallway/central)
 "In" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
@@ -13443,6 +13456,12 @@
 	},
 /turf/open/floor/plasteel/sepia,
 /area/outpost/crew/canteen)
+"Ir" = (
+/obj/item/clothing/suit/armor/hos/inteq/honorable,
+/obj/item/toy/figure/hos,
+/obj/item/clothing/head/beret/sec/hos,
+/turf/open/space/basic,
+/area/space)
 "Is" = (
 /obj/structure/table/wood/reinforced,
 /obj/machinery/chem_dispenser/drinks/fullupgrade{
@@ -13471,6 +13490,10 @@
 	dir = 1
 	},
 /turf/open/floor/carpet/nanoweave,
+/area/outpost/hallway/central)
+"Ix" = (
+/obj/effect/spawner/lootdrop/crate_spawner,
+/turf/open/floor/plating/dirt/jungle,
 /area/outpost/hallway/central)
 "Iy" = (
 /obj/structure/window/reinforced/spawner/west,
@@ -13520,14 +13543,13 @@
 /turf/open/floor/engine,
 /area/outpost/crew/cryo)
 "ID" = (
-/obj/effect/turf_decal/weather/sand{
-	dir = 10
+/obj/effect/mob_spawn/human/corpse/assistant{
+	pixel_x = -3
 	},
-/obj/effect/turf_decal/weather/sand{
-	dir = 9
+/turf/open/floor/plating/asteroid/snow/temperatre{
+	light_color = "#1B1D2E";
+	light_range = 2
 	},
-/obj/structure/fluff/beach_umbrella/syndi,
-/turf/open/floor/carpet/red_gold,
 /area/outpost/hallway/central)
 "IE" = (
 /obj/effect/turf_decal/siding/thinplating{
@@ -13934,6 +13956,13 @@
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/carpet/red,
 /area/outpost/vacant_rooms/office)
+"Jr" = (
+/obj/effect/turf_decal/number/right_one{
+	icon_state = "5"
+	},
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plasteel/rockvault,
+/area/outpost/hallway/central)
 "Js" = (
 /obj/effect/turf_decal/corner/opaque/yellow{
 	dir = 1
@@ -14037,14 +14066,6 @@
 	icon_state = "foam_plating"
 	},
 /area/outpost/maintenance/fore)
-"JD" = (
-/obj/effect/decal/fakelattice{
-	layer = 2.010;
-	opacity = 1
-	},
-/obj/effect/spawner/lootdrop/mine,
-/turf/open/space/basic,
-/area/outpost/external)
 "JE" = (
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -14080,10 +14101,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/security)
-"JI" = (
-/obj/structure/flora/junglebush,
-/turf/open/floor/grass/fairy/beach,
-/area/outpost/hallway/central)
 "JJ" = (
 /obj/effect/turf_decal/techfloor{
 	dir = 4
@@ -14126,16 +14143,6 @@
 /obj/effect/turf_decal/steeldecal/steel_decals10,
 /turf/open/floor/plasteel/telecomms_floor,
 /area/outpost/crew/cryo)
-"JN" = (
-/obj/item/t_scanner,
-/obj/structure/closet/crate,
-/obj/machinery/button/door{
-	pixel_y = 28;
-	id = "OutpostPoligonSec_3";
-	pixel_x = 1
-	},
-/turf/open/floor/plasteel/rockvault,
-/area/outpost/hallway/central)
 "JO" = (
 /obj/structure/railing{
 	dir = 4
@@ -14159,7 +14166,11 @@
 /obj/effect/turf_decal/number/right_one{
 	icon_state = "sec"
 	},
-/obj/machinery/light/small/directional/north,
+/obj/machinery/button/door{
+	pixel_y = 28;
+	id = "OutpostPoligonSec_5";
+	pixel_x = 1
+	},
 /turf/open/floor/plasteel/rockvault,
 /area/outpost/hallway/central)
 "JR" = (
@@ -14189,6 +14200,12 @@
 	pixel_x = 5
 	},
 /turf/open/floor/plating/rust,
+/area/outpost/hallway/central)
+"JW" = (
+/obj/machinery/vending/wallmed{
+	pixel_x = 27
+	},
+/turf/open/floor/plasteel/rockvault,
 /area/outpost/hallway/central)
 "JX" = (
 /obj/effect/turf_decal/siding/wood{
@@ -14310,11 +14327,6 @@
 	},
 /turf/open/water/beach,
 /area/outpost/hallway/central)
-"Km" = (
-/obj/machinery/light/small/directional/east,
-/obj/effect/spawner/lootdrop/stockparts,
-/turf/open/floor/plating/foam,
-/area/outpost/hallway/central)
 "Kn" = (
 /obj/machinery/telecomms/allinone/indestructable,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
@@ -14338,26 +14350,11 @@
 	color = "#4c535b"
 	},
 /area/outpost/crew/library)
-"Kq" = (
-/obj/machinery/vending/wallmed{
-	pixel_x = 27
+"Kr" = (
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plasteel/darkgreenfull/darkgreen{
+	dir = 8
 	},
-/obj/structure/table/reinforced,
-/obj/item/paper/crumpled{
-	default_raw_text = "Наш инженерный техник, пришел на работу весь пьяный. Ни какущий. И знаете что он сделал? Он перепутал все кнопки открытия створок! Приходится звонить другим биокуполам и просить открыть створки... Что за кринж..."
-	},
-/obj/item/phone{
-	pixel_y = 12
-	},
-/turf/open/floor/engine/hull/rockplanet,
-/area/outpost/hallway/central)
-"Ks" = (
-/obj/effect/spawner/lootdrop/tool_engie_common,
-/obj/structure/table/reinforced,
-/obj/item/phone{
-	pixel_y = 12
-	},
-/turf/open/floor/plasteel/rockvault,
 /area/outpost/hallway/central)
 "Kt" = (
 /obj/structure/bed{
@@ -14449,6 +14446,14 @@
 	},
 /turf/open/floor/plating/rust,
 /area/outpost/maintenance/aft)
+"KE" = (
+/obj/structure/grille,
+/obj/effect/spawner/structure/window,
+/obj/machinery/door/poddoor/shutters{
+	id = "OutpostPoligonSec_5"
+	},
+/turf/open/floor/plating,
+/area/outpost/hallway/central)
 "KF" = (
 /obj/item/paper_bin{
 	pixel_x = 5;
@@ -14503,13 +14508,6 @@
 	},
 /turf/open/floor/plating,
 /area/outpost/fraction/syndi)
-"KK" = (
-/obj/structure/table/reinforced,
-/obj/item/paper/crumpled{
-	default_raw_text = "Сфера по изучению влияния аномалии типа песчаник. После активации ядра аномалии, начал расти камень из песка. Здесь явно не обойтись без кирки. Я её видел в первом биокуполе. Надо расчистить дорогу. Странно, когда я ходил по песку я чувствовал, буд-то что-то или кто-то двигался под ним..."
-	},
-/turf/open/floor/plasteel/rockvault,
-/area/outpost/hallway/central)
 "KL" = (
 /obj/structure/flora/junglebush,
 /turf/open/floor/grass,
@@ -14549,12 +14547,10 @@
 /turf/open/floor/plasteel/mono/dark,
 /area/outpost/fraction/nanotrasen)
 "KS" = (
-/obj/structure/grille,
-/obj/effect/spawner/structure/window,
-/obj/machinery/door/poddoor/shutters{
-	id = "OutpostPoligonSec_3"
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plasteel/darkgreenfull/darkgreen{
+	dir = 4
 	},
-/turf/open/floor/plating,
 /area/outpost/hallway/central)
 "KT" = (
 /obj/machinery/door/window/brigdoor/southright{
@@ -14661,6 +14657,11 @@
 	},
 /turf/open/floor/wood/ebony,
 /area/outpost/fraction/solfed)
+"Lk" = (
+/obj/effect/spawner/lootdrop/maintenance/six,
+/obj/structure/lattice,
+/turf/open/space/basic,
+/area/outpost/external)
 "Ll" = (
 /obj/structure/table,
 /obj/item/flashlight/lamp/green{
@@ -14677,7 +14678,7 @@
 	},
 /obj/item/card/id/away{
 	access = list(60003);
-	name = "\proper sec 3"
+	name = "sec 3"
 	},
 /turf/open/floor/plating/foam,
 /area/outpost/hallway/central)
@@ -15033,17 +15034,6 @@
 	},
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/engineering/atmospherics)
-"Mg" = (
-/obj/effect/spawner/lootdrop/gambling,
-/obj/structure/table/reinforced,
-/obj/item/paper/crumpled{
-	default_raw_text = "Сфера по изучению влияния аномалии ракушка. Довольно странное явление, видеть как аномалия повторяет стиль и дизайн пляжного небольшого курорта. Почему именно пляж?"
-	},
-/obj/item/phone{
-	pixel_y = 12
-	},
-/turf/open/floor/plasteel/rockvault,
-/area/outpost/hallway/central)
 "Mh" = (
 /obj/structure/stone_tile/surrounding_tile{
 	dir = 1
@@ -15083,8 +15073,9 @@
 /turf/open/floor/concrete/slab_1,
 /area/outpost/hallway/central)
 "Mm" = (
-/obj/machinery/vending/wallmed{
-	pixel_x = 27
+/obj/structure/table/reinforced,
+/obj/item/paper/crumpled{
+	default_raw_text = "Сфера по изучению влияния аномалии типа песчаник. После активации ядра аномалии, начал расти камень из песка. Здесь явно не обойтись без кирки. Я её видел в первом биокуполе. Надо расчистить дорогу. Странно, когда я ходил по песку я чувствовал, буд-то что-то или кто-то двигался под ним..."
 	},
 /turf/open/floor/plasteel/rockvault,
 /area/outpost/hallway/central)
@@ -15168,6 +15159,11 @@
 /obj/item/stack/rods,
 /turf/open/space/basic,
 /area/outpost/crew/garden)
+"Mz" = (
+/obj/effect/spawner/lootdrop/grille_or_trash,
+/obj/structure/table/reinforced,
+/turf/open/floor/plasteel/rockvault,
+/area/outpost/hallway/central)
 "MA" = (
 /obj/effect/turf_decal/siding/white,
 /turf/open/floor/plasteel/patterned/grid,
@@ -15327,19 +15323,7 @@
 /turf/open/floor/concrete/tiles,
 /area/outpost/hallway/central)
 "MV" = (
-/obj/structure/table/reinforced,
-/obj/item/phone{
-	pixel_y = 12
-	},
 /turf/open/floor/plasteel/rockvault,
-/area/outpost/hallway/central)
-"MW" = (
-/obj/effect/turf_decal/siding/wood{
-	dir = 1
-	},
-/turf/open/floor/wood{
-	light_range = 2
-	},
 /area/outpost/hallway/central)
 "MX" = (
 /obj/machinery/light/directional/east,
@@ -15348,12 +15332,6 @@
 	},
 /turf/open/floor/plasteel,
 /area/outpost/vacant_rooms)
-"MY" = (
-/obj/item/paper/crumpled{
-	default_raw_text = "Я слышу его... мой путь завершен... Вознагражден будет ТОЛЬКО ОДИН. И этим стану Я! О МОНОЛИТ! ДАРУЙ МНЕ БЕССМЕРТИЕ!"
-	},
-/turf/open/floor/plating/asteroid/icerock/cracked,
-/area/space)
 "MZ" = (
 /obj/effect/turf_decal/techfloor,
 /obj/effect/turf_decal/trimline/transparent/lightgrey/line{
@@ -15411,12 +15389,11 @@
 /turf/open/floor/plasteel/patterned/grid,
 /area/outpost/fraction/inteq)
 "Ne" = (
-/obj/item/towel{
-	pixel_y = 15
+/obj/effect/mob_spawn/human/corpse/assistant{
+	pixel_x = -3;
+	pixel_y = 13
 	},
-/turf/open/floor/plating/beach/sand{
-	light_range = 2
-	},
+/turf/open/floor/concrete,
 /area/outpost/hallway/central)
 "Nf" = (
 /obj/machinery/modular_computer/console/preset/engineering{
@@ -15477,7 +15454,11 @@
 /obj/effect/turf_decal/number/right_one{
 	icon_state = "5"
 	},
-/obj/machinery/light/small/directional/south,
+/obj/machinery/button/door{
+	pixel_y = 28;
+	id = "OutpostPoligonSec_1";
+	pixel_x = 1
+	},
 /turf/open/floor/plasteel/rockvault,
 /area/outpost/hallway/central)
 "Nm" = (
@@ -15551,14 +15532,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/concrete/slab_2,
 /area/outpost/hallway/central)
-"Nv" = (
-/obj/structure/flora/ausbushes/sparsegrass/hell,
-/obj/effect/mob_spawn/human/corpse/assistant{
-	pixel_x = -3;
-	pixel_y = 13
-	},
-/turf/open/floor/plating/moss,
-/area/outpost/hallway/central)
 "Nw" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
@@ -15619,6 +15592,13 @@
 	},
 /turf/open/floor/plasteel/patterned/grid,
 /area/outpost/hallway/fore)
+"NE" = (
+/obj/structure/holosign/barrier/atmos/infinite{
+	max_integrity = 500
+	},
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plating/foam,
+/area/outpost/hallway/central)
 "NF" = (
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 4
@@ -15712,6 +15692,12 @@
 /obj/structure/closet/crate/trashcart,
 /turf/open/floor/plating,
 /area/outpost/maintenance/fore)
+"NN" = (
+/obj/effect/spawner/lootdrop/crate_spawner,
+/turf/open/floor/wood{
+	light_range = 2
+	},
+/area/outpost/hallway/central)
 "NO" = (
 /obj/effect/turf_decal/techfloor/corner{
 	dir = 4;
@@ -16035,24 +16021,10 @@
 /turf/open/floor/plasteel,
 /area/outpost/crew/canteen)
 "OB" = (
-/obj/effect/portal/permanent/one_way{
-	id = "monolit_poligon_outpost";
-	alpha = 150;
-	color = "#FF0000";
-	pixel_y = 16;
-	mouse_opacity = 0
-	},
-/obj/structure/deployable_barricade/guardrail{
-	dir = 8
-	},
-/obj/structure/deployable_barricade/guardrail,
-/obj/structure/deployable_barricade/guardrail{
+/obj/machinery/door/airlock/hatch{
 	dir = 1
 	},
-/obj/structure/deployable_barricade/guardrail{
-	dir = 4
-	},
-/turf/open/floor/plating/asteroid/wasteplanet,
+/turf/open/floor/plasteel/rockvault,
 /area/outpost/hallway/central)
 "OC" = (
 /obj/effect/turf_decal/siding/white{
@@ -16180,6 +16152,12 @@
 /obj/structure/girder,
 /turf/open/floor/concrete/reinforced,
 /area/outpost/hallway/central)
+"OT" = (
+/obj/item/storage/fancy/candle_box,
+/turf/open/floor/plating/beach/sand{
+	light_range = 2
+	},
+/area/outpost/hallway/central)
 "OU" = (
 /obj/machinery/vending/cola{
 	pixel_x = -6
@@ -16214,9 +16192,15 @@
 /obj/machinery/newscaster/directional/south,
 /turf/open/floor/plasteel/dark,
 /area/outpost/cargo)
-"OY" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/plasteel/rockvault,
+"OZ" = (
+/obj/structure/table/wood/reinforced,
+/obj/machinery/chem_dispenser/drinks{
+	dir = 1;
+	pixel_y = -2
+	},
+/turf/open/floor/wood{
+	light_range = 2
+	},
 /area/outpost/hallway/central)
 "Pa" = (
 /obj/effect/decal/cleanable/dirt,
@@ -16359,16 +16343,6 @@
 	},
 /turf/open/floor/plating/foam,
 /area/outpost/hallway/central)
-"Pr" = (
-/obj/effect/mob_spawn/human/elysium_outpost/wagabond{
-	layer = 2
-	},
-/obj/item/paper/crumpled{
-	default_raw_text = "Пишет Энди. Буду писать такие заметки вначале чтобы тот кто их найдет мог понять чьи они. Итак, мы откапали очень древний камень с древними письменами. Судя по рисункам это что-то очень древнее. Это своего рода указательный камень. Мы идем по его направлению. Нас ждет успех!";
-	pixel_x = 10
-	},
-/turf/open/floor/plating/rust,
-/area/outpost/hallway/central)
 "Ps" = (
 /obj/effect/turf_decal/industrial/warning/corner{
 	color = "#808080";
@@ -16428,13 +16402,6 @@
 /area/outpost/hallway/central)
 "Py" = (
 /turf/open/floor/plating/grass/lava,
-/area/outpost/hallway/central)
-"Pz" = (
-/obj/machinery/door/airlock/hatch{
-	dir = 1
-	},
-/obj/structure/fans/tiny/invisible,
-/turf/open/floor/plasteel/rockvault,
 /area/outpost/hallway/central)
 "PA" = (
 /obj/effect/turf_decal/industrial/traffic{
@@ -16551,10 +16518,6 @@
 	},
 /turf/open/floor/plasteel/telecomms_floor,
 /area/outpost/crew/cryo)
-"PM" = (
-/obj/effect/spawner/lootdrop/ration,
-/turf/open/floor/plating/asteroid/rockplanet/lit,
-/area/outpost/hallway/central)
 "PN" = (
 /obj/structure/railing,
 /obj/effect/turf_decal/spline/fancy/opaque/black,
@@ -16566,6 +16529,17 @@
 	},
 /turf/open/floor/plasteel/patterned/grid,
 /area/outpost/hallway/fore)
+"PO" = (
+/obj/structure/window/reinforced{
+	dir = 1;
+	pixel_y = 5
+	},
+/obj/structure/window/reinforced{
+	pixel_y = -5
+	},
+/obj/effect/spawner/lootdrop/stockparts,
+/turf/open/floor/plating/foam,
+/area/outpost/hallway/central)
 "PP" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -16588,8 +16562,11 @@
 /turf/open/floor/carpet/royalblue,
 /area/outpost/operations)
 "PT" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/plating/rust,
+/obj/structure/table/reinforced,
+/obj/item/phone{
+	pixel_y = 12
+	},
+/turf/open/floor/plasteel/rockvault,
 /area/outpost/hallway/central)
 "PV" = (
 /obj/machinery/vending/snack/blue{
@@ -16678,12 +16655,12 @@
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/outpost/cargo)
-"Qg" = (
-/obj/structure/table/reinforced,
-/obj/item/paper/crumpled{
-	default_raw_text = "Сфера по изучению влияния аномалии типа огневик. Очень интересная структура, такого еще не ыбло. Это какие-то древние постройки, найденные совсем недавно. По росписям принад... что за черт!? Я только что видел щупальца.. там.. что-то движет...."
+"Qh" = (
+/obj/structure/deployable_barricade/guardrail{
+	dir = 8
 	},
-/turf/open/floor/plasteel/rockvault,
+/obj/structure/deployable_barricade/guardrail,
+/turf/open/floor/plating/asteroid/wasteplanet,
 /area/outpost/hallway/central)
 "Qi" = (
 /obj/effect/turf_decal/corner/opaque/ntblue/full,
@@ -16975,15 +16952,6 @@
 	},
 /turf/open/floor/grass,
 /area/outpost/hallway/fore)
-"QQ" = (
-/obj/effect/turf_decal/weather/sand{
-	dir = 5
-	},
-/obj/effect/turf_decal/weather/sand{
-	dir = 6
-	},
-/turf/open/floor/carpet/red_gold,
-/area/outpost/hallway/central)
 "QR" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
@@ -17004,8 +16972,10 @@
 /turf/open/floor/engine/o2,
 /area/outpost/engineering/atmospherics)
 "QV" = (
-/turf/closed/mineral/random/snow,
-/area/space)
+/obj/machinery/door/airlock/hatch,
+/obj/structure/fans/tiny/invisible,
+/turf/open/floor/plasteel/rockvault,
+/area/outpost/hallway/central)
 "QW" = (
 /obj/effect/mob_spawn/human/elysium_outpost/wagabond{
 	layer = 2
@@ -17046,9 +17016,10 @@
 /turf/open/floor/concrete/slab_1,
 /area/outpost/hallway/central)
 "QZ" = (
-/obj/structure/closet/crate/coffin,
-/obj/effect/spawner/lootdrop/waste/radiation/more_rads,
-/turf/open/floor/plating/asteroid/wasteplanet,
+/obj/structure/closet/crate/goldcrate,
+/obj/item/storage/pistolcase/viper,
+/obj/effect/spawner/lootdrop/plushie,
+/turf/open/floor/concrete,
 /area/outpost/hallway/central)
 "Ra" = (
 /obj/item/kirbyplants/random,
@@ -17077,6 +17048,13 @@
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/outpost/crew/canteen)
+"Rd" = (
+/obj/effect/mob_spawn/human/corpse/assistant{
+	pixel_x = -3;
+	pixel_y = 13
+	},
+/turf/open/floor/plating/asteroid/rockplanet/lit,
+/area/outpost/hallway/central)
 "Re" = (
 /obj/structure/flora/rock/icy,
 /turf/open/floor/plating/asteroid/snow/airless,
@@ -17184,13 +17162,6 @@
 "Rx" = (
 /turf/closed/indestructible/reinforced,
 /area/outpost/crew/cryo)
-"Ry" = (
-/obj/machinery/power/supermatter_crystal/shard/hugbox/fakecrystal{
-	color = "#0000FF";
-	name = "Monolit"
-	},
-/turf/open/floor/plating/asteroid/icerock/smooth,
-/area/space)
 "Rz" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -17407,13 +17378,6 @@
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/outpost/crew/canteen)
-"Sb" = (
-/obj/structure/window/reinforced{
-	pixel_y = -5
-	},
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/plating/rust,
-/area/outpost/hallway/central)
 "Sd" = (
 /obj/structure/grille/broken,
 /obj/effect/spawner/lootdrop/minor/pirate_or_bandana,
@@ -17437,6 +17401,10 @@
 "Si" = (
 /turf/open/floor/carpet/red,
 /area/outpost/vacant_rooms/office)
+"Sj" = (
+/obj/effect/spawner/lootdrop/ration,
+/turf/open/floor/plating/asteroid/rockplanet/lit,
+/area/outpost/hallway/central)
 "Sk" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
@@ -17499,17 +17467,17 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/nanotrasen)
-"St" = (
-/obj/structure/closet/crate/goldcrate,
-/obj/item/survey_handheld/elite,
-/obj/effect/spawner/lootdrop/memeorgans,
-/turf/open/floor/concrete,
-/area/outpost/hallway/central)
 "Su" = (
 /obj/structure/filingcabinet/chestdrawer/wheeled,
 /obj/effect/turf_decal/industrial/warning,
 /turf/open/floor/plasteel/dark,
 /area/outpost/operations)
+"Sv" = (
+/obj/machinery/light/small/directional/north,
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/food/snacks/grown/grass/fairy,
+/turf/open/floor/plasteel/rockvault,
+/area/outpost/hallway/central)
 "Sw" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4{
@@ -17533,6 +17501,14 @@
 /obj/machinery/power/apc/auto_name/directional/west,
 /turf/open/floor/wood,
 /area/outpost/crew/dorm)
+"Sy" = (
+/obj/item/towel{
+	pixel_y = 15
+	},
+/turf/open/floor/plating/beach/sand{
+	light_range = 2
+	},
+/area/outpost/hallway/central)
 "Sz" = (
 /obj/machinery/jukebox,
 /obj/effect/decal/cleanable/plasma,
@@ -17645,6 +17621,10 @@
 	},
 /turf/open/floor/concrete/slab_3,
 /area/outpost/hallway/central)
+"SM" = (
+/obj/effect/spawner/lootdrop/waste/girder,
+/turf/open/floor/plating/asteroid/wasteplanet,
+/area/outpost/hallway/central)
 "SN" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/chair/pew/left{
@@ -17680,12 +17660,6 @@
 	},
 /turf/open/floor/plasteel/tech,
 /area/outpost/engineering)
-"SQ" = (
-/obj/structure/closet/crate/goldcrate,
-/obj/item/surgical_processor,
-/obj/effect/spawner/lootdrop/plushie,
-/turf/open/floor/concrete,
-/area/outpost/hallway/central)
 "SR" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
@@ -17757,6 +17731,10 @@
 	},
 /turf/open/floor/grass,
 /area/outpost/hallway/fore)
+"Tb" = (
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plasteel/rockvault,
+/area/outpost/hallway/central)
 "Tc" = (
 /obj/effect/turf_decal/spline/fancy/transparent/orange{
 	dir = 6
@@ -18149,10 +18127,22 @@
 /turf/open/lava/smooth/lava_land_surface,
 /area/outpost/hallway/central)
 "TY" = (
+/obj/effect/portal/permanent/one_way{
+	id = "monolit_poligon_outpost";
+	alpha = 150;
+	color = "#FF0000";
+	pixel_y = 16;
+	mouse_opacity = 0
+	},
 /obj/structure/deployable_barricade/guardrail{
 	dir = 8
 	},
-/obj/structure/deployable_barricade/guardrail,
+/obj/structure/deployable_barricade/guardrail{
+	dir = 1
+	},
+/obj/structure/deployable_barricade/guardrail{
+	dir = 4
+	},
 /turf/open/floor/plating/asteroid/wasteplanet,
 /area/outpost/hallway/central)
 "TZ" = (
@@ -18251,10 +18241,6 @@
 	},
 /turf/open/floor/carpet/black,
 /area/outpost/fraction/syndi)
-"Um" = (
-/obj/effect/spawner/lootdrop/waste/trash,
-/turf/open/floor/plating/asteroid/wasteplanet,
-/area/outpost/hallway/central)
 "Un" = (
 /obj/structure/railing{
 	layer = 3.1
@@ -18293,6 +18279,11 @@
 	},
 /turf/open/floor/plasteel/dark_2,
 /area/outpost/fraction/syndi)
+"Ut" = (
+/obj/structure/closet/crate/coffin,
+/obj/effect/spawner/lootdrop/waste/radiation/more_rads,
+/turf/open/floor/plating/asteroid/wasteplanet,
+/area/outpost/hallway/central)
 "Uu" = (
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/inteq)
@@ -18519,6 +18510,14 @@
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /turf/open/floor/grass,
 /area/outpost/hallway/central)
+"UV" = (
+/obj/structure/grille,
+/obj/effect/spawner/structure/window,
+/obj/machinery/door/poddoor/shutters{
+	id = "OutpostPoligonSec_4"
+	},
+/turf/open/floor/plating,
+/area/outpost/hallway/central)
 "UW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/crate/secure/loot,
@@ -18635,10 +18634,6 @@
 	},
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/hallway/fore)
-"Vj" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/grass,
-/area/outpost/hallway/central)
 "Vk" = (
 /obj/structure/flora/rock/jungle{
 	pixel_y = -11
@@ -18658,10 +18653,6 @@
 	},
 /turf/open/floor/plasteel/rockvault,
 /area/outpost/operations)
-"Vm" = (
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/plating/foam,
-/area/outpost/hallway/central)
 "Vn" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 8
@@ -18742,9 +18733,6 @@
 	},
 /turf/open/floor/wood,
 /area/outpost/crew/library)
-"Vw" = (
-/turf/open/floor/plating/asteroid/icerock/cracked,
-/area/space)
 "Vx" = (
 /obj/effect/turf_decal/corner_techfloor_gray/diagonal{
 	layer = 2.030
@@ -18820,7 +18808,9 @@
 /turf/open/floor/carpet/nanoweave,
 /area/outpost/crew/canteen)
 "VH" = (
-/turf/open/floor/grass/fairy/beach,
+/obj/effect/spawner/lootdrop/stockparts,
+/obj/structure/chair/comfy/blue/corpo/directional/north,
+/turf/open/floor/plating/foam,
 /area/outpost/hallway/central)
 "VI" = (
 /obj/machinery/light/small/directional/south,
@@ -18875,14 +18865,6 @@
 	},
 /turf/open/floor/plating/foam,
 /area/outpost/hallway/central)
-"VQ" = (
-/obj/structure/grille,
-/obj/effect/spawner/structure/window,
-/obj/machinery/door/poddoor/shutters{
-	id = "OutpostPoligonSec_4"
-	},
-/turf/open/floor/plating,
-/area/outpost/hallway/central)
 "VR" = (
 /obj/structure/flora/ash/cacti,
 /turf/open/floor/plating/grass/lava,
@@ -18917,12 +18899,11 @@
 /turf/open/floor/plasteel/tech/techmaint,
 /area/outpost/hallway/fore)
 "VX" = (
-/obj/item/reagent_containers/spray/spraytan{
-	pixel_y = -8
+/obj/structure/table/reinforced,
+/obj/item/paper/crumpled{
+	default_raw_text = "Сфера по изучению влияния аномалии типа снежинка. После активации в считанные секунды замело и образовало снежные скалы и деревья. А через минуту, начали появляться медведи. Стоп, медведи?"
 	},
-/turf/open/floor/plating/beach/sand{
-	light_range = 2
-	},
+/turf/open/floor/plasteel/rockvault,
 /area/outpost/hallway/central)
 "VY" = (
 /obj/structure/railing/wood{
@@ -18957,12 +18938,6 @@
 	},
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/outpost/fraction/solfed)
-"Wb" = (
-/obj/machinery/light/small/directional/south,
-/turf/open/floor/plasteel/darkgreenfull/darkgreen{
-	dir = 4
-	},
-/area/outpost/hallway/central)
 "Wc" = (
 /obj/structure/table/wood/reinforced,
 /obj/item/paper_bin{
@@ -19253,8 +19228,17 @@
 /turf/open/floor/plasteel/dark,
 /area/outpost/cargo)
 "WQ" = (
-/obj/structure/flora/tree/jungle/small,
-/turf/open/floor/grass/fairy/beach,
+/obj/machinery/vending/wallmed{
+	pixel_x = 27
+	},
+/obj/structure/table/reinforced,
+/obj/item/paper/crumpled{
+	default_raw_text = "Наш инженерный техник, пришел на работу весь пьяный. Ни какущий. И знаете что он сделал? Он перепутал все кнопки открытия створок! Приходится звонить другим биокуполам и просить открыть створки... Что за кринж..."
+	},
+/obj/item/phone{
+	pixel_y = 12
+	},
+/turf/open/floor/engine/hull/rockplanet,
 /area/outpost/hallway/central)
 "WR" = (
 /obj/structure/table/wood/reinforced/bar,
@@ -19299,6 +19283,12 @@
 	},
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/outpost/fraction/solfed)
+"WW" = (
+/obj/effect/mob_spawn/human/corpse/nanotrasensoldier{
+	pixel_y = 23
+	},
+/turf/open/floor/plating/asteroid/icerock/smooth,
+/area/space)
 "WX" = (
 /obj/structure/railing{
 	dir = 8
@@ -19341,14 +19331,6 @@
 	},
 /turf/open/floor/carpet/black,
 /area/outpost/fraction/syndi)
-"Xc" = (
-/obj/effect/decal/fakelattice{
-	layer = 2.010;
-	opacity = 1
-	},
-/obj/effect/spawner/lootdrop/plushie,
-/turf/open/space/basic,
-/area/outpost/external)
 "Xd" = (
 /obj/structure/railing{
 	dir = 8
@@ -19410,12 +19392,6 @@
 /obj/effect/turf_decal/syndicateemblem/middle/middle,
 /turf/open/floor/mineral/plastitanium/red,
 /area/outpost/cargo/faction/syndicate)
-"Xk" = (
-/obj/item/storage/fancy/candle_box,
-/turf/open/floor/plating/beach/sand{
-	light_range = 2
-	},
-/area/outpost/hallway/central)
 "Xl" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
@@ -19639,30 +19615,23 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/operations)
-"XJ" = (
-/obj/machinery/light/small/directional/east,
-/turf/open/floor/plating/foam,
-/area/outpost/hallway/central)
 "XK" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet,
 /area/outpost/crew/library)
 "XL" = (
-/obj/effect/spawner/lootdrop/tool_surgery_common,
-/turf/open/floor/wood{
-	light_range = 2
+/obj/structure/deployable_barricade/guardrail{
+	dir = 8
 	},
+/obj/effect/spawner/lootdrop/waste/trash,
+/turf/open/floor/plating/asteroid/wasteplanet,
 /area/outpost/hallway/central)
 "XM" = (
 /obj/effect/turf_decal/number/right_one{
 	icon_state = "4"
 	},
 /turf/open/floor/plasteel/rockvault,
-/area/outpost/hallway/central)
-"XO" = (
-/obj/effect/spawner/lootdrop/ration,
-/turf/open/floor/plating/dirt/rockplanet,
 /area/outpost/hallway/central)
 "XP" = (
 /obj/effect/turf_decal/siding/wood{
@@ -19691,6 +19660,14 @@
 /obj/structure/holosign/barrier/atmos/infinite,
 /turf/open/floor/concrete/tiles,
 /area/outpost/crew/garden)
+"XU" = (
+/obj/item/reagent_containers/spray/spraytan{
+	pixel_y = -8
+	},
+/turf/open/floor/plating/beach/sand{
+	light_range = 2
+	},
+/area/outpost/hallway/central)
 "XV" = (
 /obj/effect/turf_decal/techfloor/corner{
 	dir = 8
@@ -19741,6 +19718,14 @@
 	},
 /turf/open/floor/concrete/tiles,
 /area/outpost/hallway/aft)
+"Yc" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	pixel_x = 5
+	},
+/obj/machinery/light/small/directional/south,
+/turf/open/floor/plating/foam,
+/area/outpost/hallway/central)
 "Yd" = (
 /obj/item/mine/proximity/spawner/manhack/live,
 /turf/open/floor/plating/asteroid/wasteplanet,
@@ -19795,10 +19780,6 @@
 /obj/machinery/disposal/bin,
 /turf/open/floor/plasteel/sepia,
 /area/outpost/crew/library)
-"Ym" = (
-/obj/machinery/light/small/directional/north,
-/turf/open/floor/plating,
-/area/outpost/hallway/central)
 "Yn" = (
 /obj/effect/mob_spawn/human/elysium_outpost/wagabond{
 	layer = 2
@@ -19860,6 +19841,13 @@
 	},
 /turf/open/floor/grass,
 /area/outpost/crew/garden)
+"Yu" = (
+/obj/structure/table/reinforced,
+/obj/item/paper/crumpled{
+	default_raw_text = "Сфера по изучению влияния аномалии типа огневик. Очень интересная структура, такого еще не ыбло. Это какие-то древние постройки, найденные совсем недавно. По росписям принад... что за черт!? Я только что видел щупальца.. там.. что-то движет...."
+	},
+/turf/open/floor/plasteel/rockvault,
+/area/outpost/hallway/central)
 "Yv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/storage/bag/tray/cafeteria{
@@ -20068,10 +20056,9 @@
 /turf/open/floor/plating/rust,
 /area/outpost/hallway/central)
 "YW" = (
-/obj/effect/spawner/lootdrop/tool_engie_common,
-/obj/structure/closet/crate,
-/turf/open/floor/plasteel/rockvault,
-/area/outpost/hallway/central)
+/obj/effect/mob_spawn/human/corpse/syndicatestormtrooper,
+/turf/open/floor/plating/asteroid/icerock/smooth,
+/area/space)
 "YX" = (
 /obj/effect/turf_decal/industrial/traffic{
 	dir = 4
@@ -20176,6 +20163,16 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/concrete/tiles,
 /area/outpost/hallway/aft)
+"Zn" = (
+/obj/effect/turf_decal/weather/sand{
+	dir = 10
+	},
+/obj/effect/turf_decal/weather/sand{
+	dir = 9
+	},
+/obj/structure/fluff/beach_umbrella/cap,
+/turf/open/floor/carpet/red_gold,
+/area/outpost/hallway/central)
 "Zp" = (
 /turf/closed/mineral/random/snow,
 /area/outpost/external)
@@ -20202,11 +20199,6 @@
 /obj/machinery/light/directional/south,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
-/area/outpost/hallway/central)
-"Zt" = (
-/obj/item/wirerod,
-/obj/structure/closet/crate,
-/turf/open/floor/plasteel/rockvault,
 /area/outpost/hallway/central)
 "Zu" = (
 /obj/machinery/cryopod{
@@ -20474,6 +20466,10 @@
 /obj/structure/flora/tree/pine/xmas/presents,
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
+"ZU" = (
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plating,
+/area/outpost/hallway/central)
 "ZV" = (
 /obj/structure/table,
 /obj/machinery/light/directional/south,
@@ -41061,7 +41057,7 @@ lv
 lv
 if
 lv
-Fc
+yx
 TJ
 TJ
 TJ
@@ -41069,7 +41065,7 @@ vV
 vV
 vV
 vV
-sw
+De
 vV
 vV
 vV
@@ -41236,7 +41232,7 @@ vV
 vV
 Zp
 TJ
-mg
+ul
 yp
 JA
 lv
@@ -41438,9 +41434,9 @@ FJ
 lv
 TJ
 nH
-HP
+MV
 TJ
-GX
+Ch
 IU
 vV
 vV
@@ -41624,9 +41620,9 @@ if
 lv
 ph
 Ow
-FW
-HP
-De
+VX
+MV
+QV
 tq
 YL
 vV
@@ -41793,7 +41789,7 @@ vV
 vV
 vV
 vV
-sw
+De
 vV
 vV
 Zp
@@ -41811,10 +41807,10 @@ lv
 lv
 lv
 Ow
+Bh
 MV
-HP
 TJ
-Vm
+fD
 JU
 vV
 vV
@@ -41998,8 +41994,8 @@ lv
 if
 lv
 TJ
-JN
-Mm
+hY
+JW
 TJ
 YL
 vV
@@ -42165,7 +42161,7 @@ vV
 vV
 vV
 vV
-sw
+De
 vV
 vV
 vV
@@ -42194,7 +42190,7 @@ vV
 vV
 vV
 vV
-sw
+De
 vV
 vV
 vV
@@ -42367,7 +42363,7 @@ Xs
 pf
 ph
 if
-ov
+ID
 FJ
 pf
 TJ
@@ -42562,9 +42558,9 @@ Zp
 Zp
 vV
 vV
-ib
+cx
 vV
-JD
+yf
 vV
 vV
 vV
@@ -42917,7 +42913,7 @@ TJ
 TJ
 uz
 TJ
-Vm
+fD
 YL
 vV
 vV
@@ -43101,11 +43097,11 @@ TJ
 TJ
 FZ
 FZ
-De
+QV
 eo
 TO
 BW
-EK
+pw
 Uz
 vV
 vV
@@ -43129,7 +43125,7 @@ Zp
 TJ
 TJ
 TJ
-VH
+Fg
 TJ
 TJ
 TJ
@@ -43287,7 +43283,7 @@ TJ
 FS
 Jn
 FZ
-FI
+dV
 TJ
 TJ
 TJ
@@ -43502,8 +43498,8 @@ Zp
 TJ
 TJ
 XZ
-VH
-VH
+Fg
+Fg
 ug
 XZ
 TJ
@@ -43657,7 +43653,7 @@ vV
 Zp
 Zp
 TJ
-sZ
+Ix
 jA
 Uj
 FZ
@@ -43665,7 +43661,7 @@ FZ
 WO
 eJ
 eJ
-Fj
+HR
 fe
 TJ
 YV
@@ -43673,7 +43669,7 @@ vV
 vV
 vV
 vV
-jH
+cM
 vV
 vV
 vV
@@ -43687,13 +43683,13 @@ YE
 tq
 Zp
 TJ
-VH
+Fg
 XZ
 OD
 Ka
-VH
+Fg
 XZ
-VH
+Fg
 TJ
 TJ
 Zp
@@ -43850,18 +43846,18 @@ FZ
 FZ
 FZ
 fe
-pM
 qq
-um
+tB
+OZ
 fe
 TJ
-Sb
+gY
 vV
 vV
 vV
-yf
+EN
 lV
-yf
+EN
 vV
 vV
 vV
@@ -44037,9 +44033,9 @@ FZ
 FZ
 FZ
 sE
-eG
-eG
-uy
+hR
+hR
+NN
 fe
 TJ
 tq
@@ -44047,9 +44043,9 @@ IU
 vV
 vV
 vV
-yf
+EN
 vV
-Cm
+Lk
 vV
 vV
 vV
@@ -44068,7 +44064,7 @@ OD
 XZ
 Wk
 XZ
-bN
+yd
 Ka
 TJ
 TJ
@@ -44213,17 +44209,17 @@ vV
 vV
 vV
 TJ
-VX
+XU
 FZ
-Xk
+OT
 FZ
 FZ
 FZ
-io
+Zn
 FZ
-ID
+gr
 FZ
-MW
+bo
 eJ
 eJ
 eJ
@@ -44246,14 +44242,14 @@ oT
 Zp
 Zp
 TJ
-Zt
+mf
 ud
 TJ
 XZ
 XZ
 XZ
-VH
-VH
+Fg
+Fg
 XZ
 XZ
 XZ
@@ -44406,44 +44402,44 @@ FZ
 FZ
 FZ
 FZ
-QQ
+An
 FZ
-QQ
+An
 FZ
-MW
+bo
 eJ
 eJ
-XL
+uM
 fe
 TJ
 Zp
 tq
 BW
 Vo
-yf
+EN
 vV
 vV
 vV
 vV
-yf
+EN
 gc
 Jz
 Ek
-PT
+gB
 TJ
 TJ
 TJ
-me
-HP
+Sv
+MV
 oy
 OD
-WQ
+FI
 XZ
-JI
+hm
 XZ
 ug
 XZ
-VH
+Fg
 ug
 XZ
 TJ
@@ -44586,20 +44582,20 @@ vV
 vV
 vV
 TJ
-Ym
+DG
 sj
 IT
 FZ
 FZ
 FZ
 FZ
-Ne
+Sy
 FZ
 FZ
-Ne
-MW
+Sy
+bo
 eJ
-XL
+uM
 fe
 TJ
 TJ
@@ -44619,17 +44615,17 @@ oT
 BW
 TO
 XX
-De
-HP
-HP
-wU
+QV
+MV
+MV
+lc
 XZ
 Ma
 XZ
 XZ
 XZ
 XZ
-VH
+Fg
 XZ
 XZ
 TJ
@@ -44773,19 +44769,19 @@ vV
 vV
 vV
 TJ
-hf
+mT
 lw
 TJ
 Xe
 TJ
-wi
-KS
+kk
+FM
 cQ
 Kl
 yw
-Ne
-fD
-XL
+Sy
+fm
+uM
 fe
 TJ
 TJ
@@ -44796,29 +44792,29 @@ vV
 vV
 vV
 vV
-Xc
+DS
 vV
 vV
 vV
 vV
 vV
 DC
-dV
+sy
 TJ
 TJ
 TJ
-me
-HP
-wU
+Sv
+MV
+lc
 Ma
 XZ
-VH
+Fg
 XZ
 XZ
 XZ
 XZ
 Ka
-VH
+Fg
 TJ
 Zp
 vV
@@ -44963,10 +44959,10 @@ TJ
 TJ
 TJ
 TJ
-JQ
-HP
-Mg
-KS
+zJ
+MV
+ES
+FM
 ox
 ox
 nX
@@ -44986,7 +44982,7 @@ vV
 vV
 vV
 vV
-sw
+De
 vV
 vV
 vV
@@ -44994,9 +44990,9 @@ zC
 Zp
 Zp
 TJ
-mf
-HP
-wU
+ip
+MV
+lc
 XZ
 XZ
 XZ
@@ -45148,12 +45144,12 @@ vV
 vV
 vV
 TJ
-HP
-De
+MV
+QV
 eo
-Mm
-HP
-KS
+JW
+MV
+FM
 Uq
 Uq
 ox
@@ -45161,7 +45157,7 @@ nX
 TJ
 TJ
 TJ
-rS
+He
 BK
 xj
 vV
@@ -45182,13 +45178,13 @@ Zp
 Zp
 TJ
 TJ
-kQ
+km
 TJ
 XZ
-VH
+Fg
 XZ
 XZ
-VH
+Fg
 XZ
 ug
 XZ
@@ -45331,16 +45327,16 @@ vV
 vV
 vV
 vV
-sw
+De
 vV
 vV
 TJ
-tB
+eG
 TJ
 TJ
 TJ
-oP
-KS
+Mz
+FM
 Uq
 Uq
 Uq
@@ -45376,7 +45372,7 @@ XZ
 Ka
 pk
 XZ
-jd
+CZ
 TJ
 TJ
 TJ
@@ -45521,9 +45517,9 @@ vV
 vV
 vV
 vV
-GP
+tn
 BW
-rS
+He
 Zp
 TJ
 TJ
@@ -45558,14 +45554,14 @@ Zp
 Zp
 TJ
 TJ
-VH
+Fg
 XZ
 XZ
 XZ
 ho
-VH
+Fg
 Kc
-Hd
+ZU
 TJ
 TJ
 Zp
@@ -45717,7 +45713,7 @@ Zp
 TJ
 TJ
 TJ
-kL
+zx
 TJ
 TJ
 Zp
@@ -45727,7 +45723,7 @@ vV
 vV
 vV
 eD
-VM
+li
 VM
 VM
 mQ
@@ -45888,7 +45884,7 @@ vV
 vV
 vV
 vV
-sw
+De
 vV
 vV
 vV
@@ -45919,7 +45915,7 @@ eD
 VM
 VM
 VM
-pw
+ht
 VM
 VM
 VM
@@ -46098,7 +46094,7 @@ xj
 vV
 vV
 vV
-sw
+De
 vV
 vV
 vV
@@ -46291,10 +46287,10 @@ vV
 vV
 vV
 eD
-Vj
+hf
 SA
 QW
-pc
+Ar
 SA
 SA
 VM
@@ -46480,7 +46476,7 @@ eD
 eD
 VM
 SA
-sO
+xV
 QW
 Yn
 SA
@@ -46656,23 +46652,23 @@ YV
 vV
 vV
 vV
-sw
+De
 vV
 eD
 eD
 VM
 VM
 VM
-pw
+ht
 VM
 VM
-Bo
+is
 sj
 sj
-dm
+Hz
 Yn
 SA
-EG
+AG
 VM
 eD
 eD
@@ -46690,7 +46686,7 @@ vV
 vV
 vV
 vV
-sw
+De
 vV
 vV
 vV
@@ -46821,7 +46817,7 @@ vV
 vV
 vV
 vV
-sw
+De
 vV
 vV
 kS
@@ -46839,7 +46835,7 @@ TJ
 Zp
 Zp
 Zp
-XJ
+nl
 IU
 vV
 vV
@@ -46856,7 +46852,7 @@ TJ
 SA
 QW
 Yn
-Pr
+EL
 SA
 SA
 VM
@@ -47050,11 +47046,11 @@ GF
 GF
 GF
 GF
-Wb
+KS
 TJ
 tq
 sj
-PT
+gB
 TJ
 vV
 vV
@@ -47202,7 +47198,7 @@ DI
 Zp
 TJ
 TJ
-Nv
+yY
 rz
 QJ
 PD
@@ -47221,7 +47217,7 @@ vV
 eD
 VM
 VM
-Vj
+hf
 TJ
 vP
 au
@@ -47238,7 +47234,7 @@ QE
 af
 QE
 af
-fm
+NE
 sj
 ZA
 sj
@@ -47250,10 +47246,10 @@ dM
 rH
 vV
 vV
-xV
 vV
 vV
 vV
+Eb
 vV
 vV
 vV
@@ -47424,11 +47420,11 @@ ZL
 ZL
 ZL
 ZL
-gY
+Kr
 TJ
 tq
 tq
-cD
+mC
 TJ
 vV
 vV
@@ -47604,7 +47600,7 @@ TJ
 SA
 QW
 Yn
-pc
+Ar
 SA
 SA
 VM
@@ -47758,7 +47754,7 @@ vV
 oT
 vV
 vV
-yf
+EN
 Zp
 TJ
 TJ
@@ -47785,16 +47781,16 @@ eD
 VM
 VM
 VM
-lC
+tU
 VM
 VM
-mh
-Gb
+jM
+BZ
 tq
 tq
 QW
 SA
-EG
+AG
 VM
 eD
 eD
@@ -47964,7 +47960,7 @@ TJ
 TJ
 TJ
 TJ
-Vm
+fD
 IU
 vV
 vV
@@ -47976,8 +47972,8 @@ eD
 eD
 VM
 SA
-ip
-pc
+vL
+Ar
 QW
 SA
 SA
@@ -47998,7 +47994,7 @@ vV
 vV
 vV
 vV
-sw
+De
 vV
 vV
 vV
@@ -48127,12 +48123,12 @@ vV
 vV
 vV
 vV
-cx
+kW
 vV
 vV
 vV
 vV
-yf
+EN
 Zp
 TJ
 yq
@@ -48147,10 +48143,10 @@ bI
 Jk
 Jk
 Jk
-VQ
-YW
-HP
-De
+UV
+io
+MV
+QV
 BW
 YL
 vV
@@ -48159,11 +48155,11 @@ vV
 vV
 vV
 vV
-vV
+Ir
 eD
-Vj
+hf
 SA
-pc
+Ar
 QW
 SA
 SA
@@ -48334,11 +48330,11 @@ LU
 Jk
 Jk
 Jk
-VQ
-YW
-HP
+UV
+io
+MV
 TJ
-cl
+oY
 VO
 vV
 vV
@@ -48521,9 +48517,9 @@ Jk
 Jk
 Jk
 Jk
-VQ
-YW
-HP
+UV
+io
+MV
 TJ
 Zp
 vV
@@ -48537,7 +48533,7 @@ eD
 VM
 VM
 VM
-lC
+tU
 VM
 VM
 VM
@@ -48549,7 +48545,7 @@ vV
 vV
 vV
 vV
-yf
+EN
 vV
 vV
 vV
@@ -48708,18 +48704,18 @@ Jk
 Jk
 Jk
 Jk
-VQ
-Ks
-OY
+UV
+mh
+xN
 TJ
 TJ
 Zp
 vV
-sw
+De
 vV
 vV
 eD
-VM
+li
 VM
 VM
 mQ
@@ -48733,10 +48729,10 @@ vV
 vV
 vV
 vV
-sw
+De
 vV
 vV
-yf
+EN
 vV
 vV
 vV
@@ -48896,9 +48892,9 @@ Jk
 Jk
 Jk
 TJ
-CI
-HP
-Qg
+JQ
+MV
+Yu
 TJ
 Zp
 vV
@@ -49067,9 +49063,9 @@ vV
 vV
 vV
 oT
-PT
+gB
 TJ
-mO
+Tb
 Mj
 TJ
 Jk
@@ -49084,8 +49080,8 @@ Jk
 Jk
 TO
 XM
-Mm
-HP
+JW
+MV
 TJ
 Zp
 vV
@@ -49120,7 +49116,7 @@ vV
 vV
 vV
 vV
-sw
+De
 vV
 vV
 vV
@@ -49250,15 +49246,15 @@ vV
 vV
 vV
 vV
-sw
+De
 vV
 vV
 oT
 tq
 TO
-HP
+MV
 XM
-De
+QV
 Jk
 Jk
 Jk
@@ -49272,7 +49268,7 @@ Jk
 TJ
 TJ
 TJ
-tB
+eG
 TJ
 Zp
 vV
@@ -49441,10 +49437,10 @@ vV
 vV
 vV
 DC
-dV
+sy
 TJ
-YW
-YW
+io
+io
 TJ
 Lc
 Lc
@@ -49458,9 +49454,9 @@ TJ
 TJ
 TJ
 TJ
-rS
+He
 BW
-rS
+He
 Zp
 vV
 vV
@@ -49478,7 +49474,7 @@ vV
 vV
 vV
 vV
-sw
+De
 vV
 vV
 vV
@@ -49653,7 +49649,7 @@ vV
 vV
 vV
 vV
-sw
+De
 vV
 vV
 vV
@@ -49669,7 +49665,7 @@ vV
 vV
 vV
 kS
-cD
+mC
 Zp
 Zp
 Zp
@@ -49833,7 +49829,7 @@ vV
 vV
 vV
 vV
-yf
+EN
 vV
 vV
 vV
@@ -49847,7 +49843,7 @@ vV
 vV
 vV
 vV
-sw
+De
 vV
 vV
 vV
@@ -50020,7 +50016,7 @@ vV
 vV
 vV
 vV
-yf
+EN
 vV
 vV
 vV
@@ -50188,7 +50184,7 @@ vV
 vV
 vV
 vV
-sw
+De
 vV
 vV
 Zp
@@ -50234,7 +50230,7 @@ TJ
 TJ
 Pn
 Pn
-ii
+Ej
 TJ
 TJ
 TJ
@@ -50382,7 +50378,7 @@ vV
 Zp
 TJ
 Lc
-tq
+xU
 TJ
 Zp
 vV
@@ -50391,7 +50387,7 @@ vV
 vV
 nq
 cI
-yf
+EN
 cI
 WF
 BW
@@ -50404,7 +50400,7 @@ BW
 Zp
 Zp
 Zp
-Km
+qJ
 Ek
 cI
 IU
@@ -50422,7 +50418,7 @@ Pn
 Up
 Pn
 Pn
-hc
+xi
 Pn
 YU
 qn
@@ -50582,10 +50578,10 @@ Zp
 Zp
 Zp
 Zp
-zJ
-kE
-cb
-FY
+Im
+eA
+yz
+VH
 Zp
 Zp
 TJ
@@ -50596,8 +50592,8 @@ Zp
 Zp
 tq
 gc
-yf
-yf
+EN
+EN
 WF
 tq
 Zp
@@ -50607,7 +50603,7 @@ TJ
 Pn
 Pn
 Yd
-ii
+Ej
 Pn
 Pn
 Pn
@@ -50791,7 +50787,7 @@ TJ
 TJ
 TJ
 Ld
-zw
+hU
 jS
 hn
 hn
@@ -50799,9 +50795,9 @@ hn
 TD
 Pn
 Pn
-Hu
+SM
 to
-SQ
+hl
 qn
 to
 TJ
@@ -50953,9 +50949,9 @@ Zp
 TJ
 TJ
 Dz
-HP
+MV
 TJ
-nM
+nN
 TJ
 TJ
 TJ
@@ -50975,7 +50971,7 @@ vV
 DI
 Zp
 TJ
-Um
+EQ
 Pn
 Pn
 Rh
@@ -50988,7 +50984,7 @@ Pn
 Pn
 Pn
 to
-hl
+QZ
 qn
 to
 TJ
@@ -51139,10 +51135,10 @@ oT
 Zp
 TJ
 Hm
-HP
+MV
 Mj
-De
-HP
+QV
+MV
 TO
 VE
 VE
@@ -51159,11 +51155,11 @@ Zp
 vV
 vV
 vV
-yf
+Vf
 Zp
 TJ
 Pn
-ii
+Ej
 Pn
 hn
 hn
@@ -51326,8 +51322,8 @@ oT
 Zp
 TJ
 Jg
-HP
-Nl
+MV
+Jr
 TJ
 TJ
 TJ
@@ -51342,15 +51338,15 @@ uT
 Zq
 TJ
 TJ
-vV
-vV
-JD
+Bw
 vV
 yf
+vV
+Vf
 Zp
 TJ
 Pn
-ii
+Ej
 TD
 hn
 hn
@@ -51362,7 +51358,7 @@ hn
 Pn
 Pn
 to
-St
+nK
 qn
 to
 TJ
@@ -51505,7 +51501,7 @@ vV
 vV
 vV
 vV
-sw
+De
 vV
 vV
 vV
@@ -51513,16 +51509,16 @@ JE
 BW
 TJ
 TJ
-HP
-Eu
-FM
+MV
+bZ
+KE
 AC
 Tf
 YD
 YD
 YD
 YD
-qA
+Cu
 AO
 GM
 Tf
@@ -51541,16 +51537,16 @@ Pn
 hn
 hn
 hn
-OB
+TY
 Rh
 Pn
-ii
+Ej
 Yd
 Pn
 Pn
 to
 LB
-CZ
+Ne
 to
 TJ
 vV
@@ -51698,11 +51694,11 @@ vV
 vV
 vV
 oT
-dV
+sy
 TJ
-mO
-KK
-FM
+Tb
+Mm
+KE
 AC
 Tf
 YD
@@ -51719,7 +51715,7 @@ Zp
 vV
 vV
 vV
-yf
+EN
 vV
 Zp
 TJ
@@ -51734,7 +51730,7 @@ Pn
 Up
 Pn
 Pn
-FP
+tS
 to
 to
 to
@@ -51887,9 +51883,9 @@ vV
 oT
 tq
 TO
-HP
 MV
-FM
+PT
+KE
 AC
 Tf
 FB
@@ -51904,14 +51900,14 @@ jq
 TJ
 Zp
 vV
-oW
+as
 vV
-at
+PO
 vV
 Zp
 TJ
 Up
-ii
+Ej
 hn
 hn
 hn
@@ -52072,7 +52068,7 @@ vV
 vV
 vV
 zC
-PT
+gB
 TJ
 TJ
 TJ
@@ -52081,7 +52077,7 @@ YD
 YD
 YD
 YD
-XO
+id
 YD
 VE
 YD
@@ -52093,7 +52089,7 @@ Zp
 vV
 vV
 vV
-yf
+EN
 vV
 Zp
 TJ
@@ -52107,7 +52103,7 @@ TD
 EX
 Pn
 Pn
-zw
+hU
 TJ
 Zp
 vV
@@ -52255,7 +52251,7 @@ vV
 vV
 vV
 vV
-sw
+De
 vV
 vV
 Zp
@@ -52281,11 +52277,11 @@ vV
 vV
 vV
 JE
-yf
+EN
 Zp
 TJ
 lo
-hc
+xi
 Pn
 uC
 hn
@@ -52468,18 +52464,18 @@ vV
 vV
 vV
 vV
-yf
+EN
 Zp
 TJ
-oO
+XL
 dt
-oO
+XL
 dt
 dt
-TY
-zw
+Qh
+hU
 Pn
-ii
+Ej
 Pn
 Pn
 TJ
@@ -52658,11 +52654,11 @@ YE
 bc
 Zp
 TJ
-gt
-gt
-gt
+xb
+xb
+xb
 TJ
-tB
+eG
 TJ
 uW
 uW
@@ -52823,11 +52819,11 @@ Zp
 TJ
 TJ
 YD
-PM
+Sj
 YD
 YD
 VE
-XO
+id
 YD
 Ii
 YD
@@ -52839,19 +52835,19 @@ YD
 TJ
 TJ
 TJ
-nB
+wG
 cI
-PT
+gB
 TJ
 TJ
 TJ
 wO
-HP
-HP
-HP
+MV
+MV
+MV
 Mj
 TJ
-QZ
+Ut
 Tm
 TJ
 vV
@@ -53019,23 +53015,23 @@ YD
 FB
 YD
 UH
-XO
+id
 YD
 YD
 VE
-De
+QV
 Mj
 TO
 BW
 tq
 tq
+OB
+Hk
 Fb
-Ic
-Pz
+MV
+MV
+MV
 HP
-HP
-HP
-jl
 lO
 TJ
 TJ
@@ -53197,9 +53193,9 @@ vV
 Zp
 TJ
 TJ
-bM
+Rd
 Tf
-qA
+Cu
 YD
 YD
 YD
@@ -53211,11 +53207,11 @@ YD
 hw
 hw
 TJ
-Bk
+Nl
 TJ
-fw
+gG
 BK
-se
+Yc
 TJ
 TJ
 TJ
@@ -53385,7 +53381,7 @@ Zp
 Zp
 TJ
 YD
-PM
+Sj
 Tf
 Tf
 YD
@@ -53395,10 +53391,10 @@ YD
 YD
 YD
 TJ
-ET
-ET
+pn
+pn
 TJ
-tB
+eG
 TJ
 Zp
 vV
@@ -53427,7 +53423,7 @@ vV
 vV
 vV
 vV
-QV
+sw
 "}
 (177,1,1) = {"
 vV
@@ -53585,7 +53581,7 @@ TJ
 SJ
 oQ
 HK
-vG
+pV
 TJ
 Zp
 vV
@@ -53609,12 +53605,12 @@ vV
 vV
 vV
 vV
-QV
-QV
-QV
-QV
+sw
+sw
+sw
+sw
 vV
-QV
+sw
 "}
 (178,1,1) = {"
 vV
@@ -53771,8 +53767,8 @@ Zp
 TJ
 TJ
 TJ
-hH
-Kq
+xh
+WQ
 TJ
 Zp
 vV
@@ -53792,16 +53788,16 @@ vV
 vV
 vV
 vV
-QV
-QV
+sw
+sw
 vV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
+sw
+sw
+sw
+sw
+sw
+sw
+sw
 "}
 (179,1,1) = {"
 vV
@@ -53978,17 +53974,17 @@ vV
 vV
 vV
 vV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
+sw
+sw
+sw
+sw
+sw
+sw
+sw
+sw
+sw
+sw
+sw
 "}
 (180,1,1) = {"
 vV
@@ -54152,30 +54148,30 @@ vV
 vV
 vV
 vV
+De
+vV
+vV
+vV
+vV
+vV
+vV
+vV
+vV
+vV
+vV
+vV
 sw
-vV
-vV
-vV
-vV
-vV
-vV
-vV
-vV
-vV
-vV
-vV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
+sw
+sw
+sw
+sw
+sw
+sw
+sw
+sw
+sw
+sw
+sw
 "}
 (181,1,1) = {"
 vV
@@ -54336,33 +54332,33 @@ vV
 vV
 vV
 vV
+De
+vV
+vV
+vV
+vV
+vV
+vV
+vV
+vV
+vV
+vV
+vV
+vV
+vV
 sw
-vV
-vV
-vV
-vV
-vV
-vV
-vV
-vV
-vV
-vV
-vV
-vV
-vV
-QV
-QV
-QV
-QV
-vF
-Ej
-ju
-vF
-ju
-vF
-QV
-QV
-QV
+sw
+sw
+sw
+pO
+pi
+bD
+pO
+bD
+pO
+sw
+sw
+sw
 "}
 (182,1,1) = {"
 vV
@@ -54536,20 +54532,20 @@ vV
 vV
 vV
 vV
-QV
-QV
-QV
-QV
-QV
-ju
-Ry
-MY
-Vw
-Vw
-Vw
-sf
-QV
-QV
+sw
+sw
+sw
+sw
+sw
+bD
+Bv
+lp
+Bk
+Bk
+Bk
+hc
+sw
+sw
 "}
 (183,1,1) = {"
 vV
@@ -54723,20 +54719,20 @@ vV
 vV
 vV
 vV
-QV
-QV
-QV
-QV
-QV
-vF
-nr
-Cu
-vF
-ju
-ju
-QV
-QV
-QV
+sw
+sw
+sw
+sw
+sw
+pO
+YW
+WW
+pO
+bD
+bD
+sw
+sw
+sw
 "}
 (184,1,1) = {"
 vV
@@ -54911,19 +54907,19 @@ vV
 vV
 vV
 vV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
+sw
+sw
+sw
+sw
+sw
+sw
+sw
+sw
+sw
+sw
+sw
+sw
+sw
 "}
 (185,1,1) = {"
 vV
@@ -55099,16 +55095,16 @@ vV
 vV
 vV
 vV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
-QV
+sw
+sw
+sw
+sw
+sw
+sw
+sw
+sw
+sw
+sw
+sw
+sw
 "}
