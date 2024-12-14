@@ -253,9 +253,6 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 4
-	},
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/machinery/light_switch{
 	pixel_y = 23;
@@ -267,6 +264,10 @@
 /obj/effect/turf_decal/spline/fancy/transparent/syndiered{
 	dir = 5
 	},
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
+	filter_types = list("n2","co2","bz","water_vapor","miasma","freon","pluox","tritium","n20","no2","nob");
+	dir = 8
+	},
 /turf/open/floor/plasteel/mono/white{
 	color = "#CEB689"
 	},
@@ -274,6 +275,12 @@
 "eF" = (
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/engineering)
+"eJ" = (
+/obj/machinery/porta_turret/ship/faction/syndicate{
+	id = "Bettle_grid"
+	},
+/turf/closed/wall/mineral/plastitanium,
+/area/ship/medical)
 "fi" = (
 /obj/effect/turf_decal/industrial/fire/cee{
 	dir = 4
@@ -364,6 +371,7 @@
 /obj/effect/turf_decal/spline/fancy/transparent/syndiered{
 	dir = 10
 	},
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/plasteel/mono/white{
 	color = "#CEB689"
 	},
@@ -567,10 +575,6 @@
 /obj/structure/sign/poster/syndicate/random{
 	pixel_y = 32
 	},
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
-	filter_types = list("n2","co2","bz","water_vapor","miasma","freon","pluox","tritium","n20","no2","nob");
-	dir = 8
-	},
 /turf/open/floor/carpet/red,
 /area/ship/crew/dorm)
 "lI" = (
@@ -717,7 +721,7 @@
 	},
 /obj/docking_port/mobile{
 	callTime = 250;
-	dir = 8;
+	dir = 4;
 	launch_status = 0;
 	port_direction = 8;
 	preferred_direction = 4
@@ -863,12 +867,6 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/ship/crew)
-"pb" = (
-/obj/machinery/porta_turret/ship/faction/syndicate{
-	id = "Bettle_grid"
-	},
-/turf/closed/wall/mineral/plastitanium,
-/area/ship/engineering)
 "pp" = (
 /obj/effect/turf_decal/corner/opaque/beige/diagonal{
 	dir = 8
@@ -974,12 +972,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /turf/open/floor/plasteel/strongdark,
 /area/ship/cargo)
-"rh" = (
-/obj/machinery/porta_turret/ship/faction/syndicate{
-	id = "Bettle_grid"
-	},
-/turf/closed/wall/mineral/plastitanium,
-/area/ship/bridge)
 "ri" = (
 /obj/effect/turf_decal/corner/opaque/black/three_quarters,
 /obj/effect/turf_decal/spline/fancy/transparent/syndiered{
@@ -1014,6 +1006,12 @@
 	},
 /turf/open/floor/plasteel/strongdark,
 /area/ship/cargo)
+"rN" = (
+/obj/machinery/porta_turret/ship/faction/syndicate{
+	id = "Bettle_grid"
+	},
+/turf/closed/wall/mineral/plastitanium,
+/area/ship/external/dark)
 "so" = (
 /obj/effect/turf_decal/corner/opaque/beige{
 	dir = 10
@@ -1306,6 +1304,7 @@
 /obj/effect/turf_decal/spline/fancy/transparent/syndiered{
 	dir = 5
 	},
+/obj/machinery/light/directional/north,
 /turf/open/floor/plasteel/mono/white{
 	color = "#CEB689"
 	},
@@ -1766,6 +1765,12 @@
 /obj/effect/turf_decal/techfloor,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
+"AQ" = (
+/obj/machinery/porta_turret/ship/faction/syndicate{
+	id = "Bettle_grid"
+	},
+/turf/closed/wall/mineral/plastitanium,
+/area/ship/crew/dorm)
 "AU" = (
 /obj/effect/turf_decal/corner/opaque/syndiered/half{
 	dir = 4
@@ -1944,6 +1949,12 @@
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/ship/crew/toilet)
+"DX" = (
+/obj/machinery/porta_turret/ship/faction/syndicate{
+	id = "Bettle_grid"
+	},
+/turf/closed/wall/mineral/plastitanium,
+/area/ship/bridge)
 "DY" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -2075,12 +2086,6 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/ship/crew)
-"Gh" = (
-/obj/machinery/porta_turret/ship/faction/syndicate{
-	id = "Bettle_grid"
-	},
-/turf/closed/wall/mineral/plastitanium,
-/area/ship/crew/toilet)
 "Go" = (
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -2272,6 +2277,12 @@
 /obj/effect/turf_decal/spline/fancy/transparent/syndiered,
 /turf/open/floor/plasteel/white,
 /area/ship/crew)
+"IL" = (
+/obj/machinery/porta_turret/ship/faction/syndicate{
+	id = "Bettle_grid"
+	},
+/turf/closed/wall/mineral/plastitanium,
+/area/ship/engineering)
 "IR" = (
 /obj/effect/turf_decal/industrial/warning/fulltile,
 /obj/structure/cable{
@@ -2357,14 +2368,14 @@
 /area/ship/hallway/central)
 "Jr" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 9
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 5
 	},
 /obj/structure/cable{
 	icon_state = "1-4"
+	},
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+	dir = 1
 	},
 /turf/open/floor/plasteel/mono/white{
 	color = "#CEB689"
@@ -2402,6 +2413,7 @@
 "KQ" = (
 /obj/effect/spawner/bunk_bed,
 /obj/structure/curtain/bounty,
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/carpet/red,
 /area/ship/crew/dorm)
 "Li" = (
@@ -2506,12 +2518,6 @@
 /obj/effect/turf_decal/techfloor,
 /turf/open/floor/plasteel/strongdark,
 /area/ship/cargo)
-"MU" = (
-/obj/machinery/porta_turret/ship/faction/syndicate{
-	id = "Bettle_grid"
-	},
-/turf/closed/wall/mineral/plastitanium,
-/area/ship/medical)
 "Nl" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2594,12 +2600,6 @@
 	color = "#444547"
 	},
 /area/ship/hallway/central)
-"NV" = (
-/obj/machinery/porta_turret/ship/faction/syndicate{
-	id = "Bettle_grid"
-	},
-/turf/closed/wall/mineral/plastitanium,
-/area/ship/external/dark)
 "NY" = (
 /obj/effect/turf_decal/industrial/fire{
 	dir = 1
@@ -2825,12 +2825,6 @@
 	color = "#444547"
 	},
 /area/ship/bridge)
-"Sa" = (
-/obj/machinery/porta_turret/ship/faction/syndicate{
-	id = "Bettle_grid"
-	},
-/turf/closed/wall/mineral/plastitanium,
-/area/ship/crew/dorm)
 "To" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -2943,6 +2937,12 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/ship/crew)
+"Wa" = (
+/obj/machinery/porta_turret/ship/faction/syndicate{
+	id = "Bettle_grid"
+	},
+/turf/closed/wall/mineral/plastitanium,
+/area/ship/crew/toilet)
 "Wb" = (
 /obj/effect/turf_decal/corner/opaque/syndiered/half{
 	dir = 8
@@ -3081,9 +3081,6 @@
 	pixel_x = 4;
 	pixel_y = 2
 	},
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
-	dir = 4
-	},
 /obj/item/spacecash/bundle/c20,
 /obj/item/spacecash/bundle/c5,
 /obj/item/spacecash/bundle/c1,
@@ -3175,7 +3172,7 @@ ta
 aU
 bH
 ME
-pb
+IL
 Pz
 Pz
 eF
@@ -3184,7 +3181,7 @@ ta
 eF
 Pz
 Pz
-pb
+IL
 ME
 Cv
 aU
@@ -3305,7 +3302,7 @@ ta
 ta
 ta
 hi
-Gh
+Wa
 kU
 fS
 fS
@@ -3318,7 +3315,7 @@ fS
 Gv
 Xc
 UN
-MU
+eJ
 BW
 ta
 ta
@@ -3415,7 +3412,7 @@ ta
 ta
 ta
 ta
-Gh
+Wa
 Go
 gC
 gC
@@ -3428,7 +3425,7 @@ fS
 UN
 UN
 UN
-MU
+eJ
 BW
 ta
 ta
@@ -3481,7 +3478,7 @@ ta
 ta
 ta
 dc
-rh
+DX
 Go
 gC
 xu
@@ -3494,7 +3491,7 @@ JG
 JG
 JG
 JG
-Sa
+AQ
 BW
 ta
 ta
@@ -3544,7 +3541,7 @@ Cv
 aU
 "}
 (18,1,1) = {"
-NV
+rN
 bH
 Go
 TZ
@@ -3563,7 +3560,7 @@ Oy
 mp
 Ic
 Cv
-NV
+rN
 "}
 (19,1,1) = {"
 aU
@@ -3635,7 +3632,7 @@ ta
 ta
 ta
 ta
-rh
+DX
 AU
 AU
 pC
@@ -3648,7 +3645,7 @@ mL
 pC
 tx
 tx
-Sa
+AQ
 ta
 ta
 ta
