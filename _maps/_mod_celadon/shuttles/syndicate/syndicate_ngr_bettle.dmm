@@ -28,7 +28,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
+/area/ship/crew/canteen)
 "aD" = (
 /obj/effect/turf_decal/corner/opaque/beige{
 	dir = 4
@@ -90,7 +90,7 @@
 /turf/open/floor/plasteel/white{
 	color = "#444547"
 	},
-/area/ship/crew/dorm)
+/area/ship/crew)
 "bH" = (
 /obj/effect/turf_decal/corner/opaque/syndiered/half{
 	dir = 1
@@ -236,7 +236,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
+/area/ship/crew/canteen)
 "ev" = (
 /obj/machinery/cryopod{
 	dir = 8
@@ -246,8 +246,8 @@
 	},
 /obj/effect/turf_decal/box/white,
 /obj/structure/curtain,
-/turf/open/floor/plasteel/telecomms_floor,
-/area/ship/crew/dorm)
+/turf/open/floor/plasteel/strongdark,
+/area/ship/crew)
 "ez" = (
 /obj/effect/turf_decal/corner/opaque/black/three_quarters{
 	dir = 8
@@ -271,16 +271,10 @@
 /turf/open/floor/plasteel/mono/white{
 	color = "#CEB689"
 	},
-/area/ship/crew/dorm)
+/area/ship/crew)
 "eF" = (
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/engineering)
-"eJ" = (
-/obj/machinery/porta_turret/ship/faction/syndicate{
-	id = "Bettle_grid"
-	},
-/turf/closed/wall/mineral/plastitanium,
-/area/ship/medical)
 "fi" = (
 /obj/effect/turf_decal/industrial/fire/cee{
 	dir = 4
@@ -375,7 +369,7 @@
 /turf/open/floor/plasteel/mono/white{
 	color = "#CEB689"
 	},
-/area/ship/crew/dorm)
+/area/ship/crew)
 "gC" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
@@ -448,15 +442,13 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
+/area/ship/crew/canteen)
 "iy" = (
-/obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
-/obj/machinery/door/poddoor{
-	id = "Bettle_Shut";
-	dir = 4
+/obj/machinery/porta_turret/ship/faction/syndicate{
+	id = "Bettle_grid"
 	},
-/turf/open/floor/plating,
-/area/ship/crew/dorm)
+/turf/closed/wall/mineral/plastitanium,
+/area/ship/crew/toilet)
 "iD" = (
 /obj/machinery/vending/tool{
 	all_items_free = 1
@@ -504,7 +496,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
+/area/ship/crew/canteen)
 "jO" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -521,6 +513,12 @@
 	},
 /turf/open/floor/plasteel/mono/white,
 /area/ship/medical)
+"jV" = (
+/obj/machinery/porta_turret/ship/faction/syndicate{
+	id = "Bettle_grid"
+	},
+/turf/closed/wall/mineral/plastitanium,
+/area/ship/bridge)
 "ko" = (
 /obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
 /obj/machinery/door/poddoor{
@@ -528,7 +526,13 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/ship/crew/dorm)
+/area/ship/crew)
+"kO" = (
+/obj/machinery/porta_turret/ship/faction/syndicate{
+	id = "Bettle_grid"
+	},
+/turf/closed/wall/mineral/plastitanium,
+/area/ship/external/dark)
 "kU" = (
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/crew)
@@ -550,7 +554,7 @@
 /turf/open/floor/plasteel/mono/white{
 	color = "#CEB689"
 	},
-/area/ship/crew/dorm)
+/area/ship/crew)
 "lz" = (
 /obj/effect/turf_decal/corner/opaque/syndiered{
 	dir = 4
@@ -575,8 +579,8 @@
 /obj/structure/sign/poster/syndicate/random{
 	pixel_y = 32
 	},
-/turf/open/floor/carpet/red,
-/area/ship/crew/dorm)
+/turf/open/floor/plasteel/strongdark,
+/area/ship/crew)
 "lI" = (
 /obj/structure/window/plasma/reinforced,
 /obj/effect/turf_decal/industrial/fire{
@@ -603,7 +607,6 @@
 	},
 /area/ship/hallway/central)
 "mp" = (
-/obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/closet/wall{
 	pixel_y = -28
 	},
@@ -627,8 +630,8 @@
 /obj/item/radio,
 /obj/item/radio,
 /obj/item/radio,
-/turf/open/floor/plasteel/telecomms_floor,
-/area/ship/crew/dorm)
+/turf/open/floor/plasteel/strongdark,
+/area/ship/crew)
 "ms" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/hallway/central)
@@ -788,7 +791,7 @@
 /turf/open/floor/plasteel/white{
 	color = "#444547"
 	},
-/area/ship/crew)
+/area/ship/crew/canteen)
 "or" = (
 /obj/effect/turf_decal/spline/fancy/wood{
 	dir = 9
@@ -845,12 +848,10 @@
 	},
 /obj/machinery/light/small/directional/west,
 /obj/effect/turf_decal/industrial/hatch/yellow,
-/obj/machinery/portable_atmospherics/canister/air{
-	anchored = 1
-	},
 /obj/machinery/atmospherics/components/unary/portables_connector/layer2{
 	dir = 4
 	},
+/obj/machinery/portable_atmospherics/canister/air,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
 "oS" = (
@@ -866,7 +867,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
+/area/ship/crew/canteen)
 "pp" = (
 /obj/effect/turf_decal/corner/opaque/beige/diagonal{
 	dir = 8
@@ -878,7 +879,7 @@
 	dir = 10
 	},
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
+/area/ship/crew/canteen)
 "pz" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
@@ -922,7 +923,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
+/area/ship/crew/canteen)
 "pV" = (
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
 	dir = 4
@@ -980,7 +981,7 @@
 /turf/open/floor/plasteel/mono/white{
 	color = "#CEB689"
 	},
-/area/ship/crew/dorm)
+/area/ship/crew)
 "ro" = (
 /obj/effect/turf_decal/corner/opaque/black/diagonal,
 /obj/effect/turf_decal/corner/opaque/beige/diagonal{
@@ -999,19 +1000,13 @@
 	icon_state = "2-8"
 	},
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
+/area/ship/crew/canteen)
 "ry" = (
 /obj/effect/turf_decal/techfloor{
 	dir = 1
 	},
 /turf/open/floor/plasteel/strongdark,
 /area/ship/cargo)
-"rN" = (
-/obj/machinery/porta_turret/ship/faction/syndicate{
-	id = "Bettle_grid"
-	},
-/turf/closed/wall/mineral/plastitanium,
-/area/ship/external/dark)
 "so" = (
 /obj/effect/turf_decal/corner/opaque/beige{
 	dir = 10
@@ -1086,7 +1081,7 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
+/area/ship/crew/canteen)
 "sV" = (
 /obj/effect/turf_decal/corner/opaque/syndiered/diagonal{
 	dir = 8
@@ -1099,7 +1094,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
+/area/ship/crew/canteen)
 "sZ" = (
 /obj/machinery/door/airlock/external,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
@@ -1114,6 +1109,12 @@
 "ta" = (
 /turf/template_noop,
 /area/template_noop)
+"to" = (
+/obj/machinery/porta_turret/ship/faction/syndicate{
+	id = "Bettle_grid"
+	},
+/turf/closed/wall/mineral/plastitanium,
+/area/ship/medical)
 "tr" = (
 /obj/structure/sign/poster/contraband/atmosia_independence{
 	pixel_x = -32
@@ -1162,7 +1163,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/button/door{
 	dir = 1;
-	id = "Bettle_Shut";
+	id = "Bettle_Windows";
 	name = "Windows shutters";
 	pixel_y = -21;
 	req_access = null
@@ -1308,7 +1309,7 @@
 /turf/open/floor/plasteel/mono/white{
 	color = "#CEB689"
 	},
-/area/ship/crew/dorm)
+/area/ship/crew)
 "vO" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -1382,7 +1383,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
+/area/ship/crew/canteen)
 "wg" = (
 /obj/effect/turf_decal/corner/opaque/beige/diagonal{
 	dir = 8
@@ -1396,7 +1397,7 @@
 	icon_state = "1-8"
 	},
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
+/area/ship/crew/canteen)
 "wk" = (
 /obj/effect/turf_decal/trimline/opaque/syndiered,
 /obj/machinery/holopad/emergency/command{
@@ -1429,7 +1430,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
+/area/ship/crew/canteen)
 "ww" = (
 /obj/effect/turf_decal/corner/opaque/beige{
 	dir = 10
@@ -1490,7 +1491,7 @@
 	dir = 6
 	},
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
+/area/ship/crew/canteen)
 "wN" = (
 /obj/effect/turf_decal/corner/opaque/syndiered/diagonal{
 	dir = 8
@@ -1503,7 +1504,7 @@
 	dir = 9
 	},
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
+/area/ship/crew/canteen)
 "wZ" = (
 /obj/effect/turf_decal/techfloor{
 	dir = 1
@@ -1638,7 +1639,7 @@
 	dir = 5
 	},
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
+/area/ship/crew/canteen)
 "ze" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/mono/white{
@@ -1657,7 +1658,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
+/area/ship/crew/canteen)
 "zw" = (
 /obj/effect/turf_decal/corner/opaque/black/three_quarters{
 	dir = 4
@@ -1679,7 +1680,7 @@
 /turf/open/floor/plasteel/mono/white{
 	color = "#CEB689"
 	},
-/area/ship/crew/dorm)
+/area/ship/crew)
 "zG" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -1765,12 +1766,6 @@
 /obj/effect/turf_decal/techfloor,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
-"AQ" = (
-/obj/machinery/porta_turret/ship/faction/syndicate{
-	id = "Bettle_grid"
-	},
-/turf/closed/wall/mineral/plastitanium,
-/area/ship/crew/dorm)
 "AU" = (
 /obj/effect/turf_decal/corner/opaque/syndiered/half{
 	dir = 4
@@ -1949,12 +1944,6 @@
 	},
 /turf/open/floor/plasteel/showroomfloor,
 /area/ship/crew/toilet)
-"DX" = (
-/obj/machinery/porta_turret/ship/faction/syndicate{
-	id = "Bettle_grid"
-	},
-/turf/closed/wall/mineral/plastitanium,
-/area/ship/bridge)
 "DY" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -1966,6 +1955,7 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 9
 	},
+/obj/machinery/portable_atmospherics/canister/air,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
 "Ep" = (
@@ -2023,7 +2013,7 @@
 /turf/open/floor/plasteel/white{
 	color = "#444547"
 	},
-/area/ship/crew)
+/area/ship/crew/canteen)
 "Fa" = (
 /obj/effect/turf_decal/corner/opaque/beige{
 	dir = 10
@@ -2085,7 +2075,7 @@
 	icon_state = "1-2"
 	},
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
+/area/ship/crew/canteen)
 "Go" = (
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -2224,10 +2214,10 @@
 /obj/machinery/light/directional/south,
 /obj/effect/turf_decal/spline/fancy/transparent/syndiered,
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
+/area/ship/crew/canteen)
 "Ic" = (
 /turf/closed/wall/mineral/plastitanium,
-/area/ship/crew/dorm)
+/area/ship/crew/canteen)
 "Ig" = (
 /obj/effect/turf_decal/corner/opaque/syndiered/diagonal{
 	dir = 8
@@ -2246,7 +2236,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
+/area/ship/crew/canteen)
 "Iv" = (
 /obj/effect/turf_decal/industrial/warning{
 	dir = 1
@@ -2276,13 +2266,7 @@
 	},
 /obj/effect/turf_decal/spline/fancy/transparent/syndiered,
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
-"IL" = (
-/obj/machinery/porta_turret/ship/faction/syndicate{
-	id = "Bettle_grid"
-	},
-/turf/closed/wall/mineral/plastitanium,
-/area/ship/engineering)
+/area/ship/crew/canteen)
 "IR" = (
 /obj/effect/turf_decal/industrial/warning/fulltile,
 /obj/structure/cable{
@@ -2380,10 +2364,16 @@
 /turf/open/floor/plasteel/mono/white{
 	color = "#CEB689"
 	},
-/area/ship/crew/dorm)
+/area/ship/crew)
 "JG" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
-/area/ship/crew/dorm)
+/area/ship/crew/canteen)
+"Kn" = (
+/obj/machinery/porta_turret/ship/faction/syndicate{
+	id = "Bettle_grid"
+	},
+/turf/closed/wall/mineral/plastitanium,
+/area/ship/engineering)
 "Kr" = (
 /obj/effect/turf_decal/corner/opaque/beige{
 	dir = 5
@@ -2414,8 +2404,8 @@
 /obj/effect/spawner/bunk_bed,
 /obj/structure/curtain/bounty,
 /obj/machinery/light/small/directional/south,
-/turf/open/floor/carpet/red,
-/area/ship/crew/dorm)
+/turf/open/floor/plasteel/strongdark,
+/area/ship/crew)
 "Li" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/closet/crate/radiation{
@@ -2451,7 +2441,7 @@
 	dir = 8
 	},
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
+/area/ship/crew/canteen)
 "LF" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -2558,8 +2548,8 @@
 	},
 /obj/effect/turf_decal/box/white,
 /obj/structure/curtain,
-/turf/open/floor/plasteel/telecomms_floor,
-/area/ship/crew/dorm)
+/turf/open/floor/plasteel/strongdark,
+/area/ship/crew)
 "Nw" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -2624,7 +2614,7 @@
 /turf/open/floor/plasteel/mono/white{
 	color = "#CEB689"
 	},
-/area/ship/crew/dorm)
+/area/ship/crew)
 "Ov" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/corner/opaque/black/half{
@@ -2650,7 +2640,7 @@
 /turf/open/floor/plasteel/mono/white{
 	color = "#CEB689"
 	},
-/area/ship/crew/dorm)
+/area/ship/crew)
 "OJ" = (
 /obj/effect/turf_decal/techfloor{
 	dir = 9
@@ -2746,7 +2736,7 @@
 /area/ship/engineering)
 "Qv" = (
 /turf/closed/wall/mineral/plastitanium/interior,
-/area/ship/crew/dorm)
+/area/ship/crew/canteen)
 "QB" = (
 /obj/effect/turf_decal/corner/opaque/black/diagonal,
 /obj/effect/turf_decal/corner/opaque/beige/diagonal{
@@ -2760,6 +2750,12 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/white,
+/area/ship/crew/canteen)
+"Rn" = (
+/obj/machinery/porta_turret/ship/faction/syndicate{
+	id = "Bettle_grid"
+	},
+/turf/closed/wall/mineral/plastitanium,
 /area/ship/crew)
 "Rv" = (
 /obj/effect/turf_decal/industrial/fire/cee,
@@ -2803,7 +2799,7 @@
 	pixel_y = -1
 	},
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
+/area/ship/crew/canteen)
 "RV" = (
 /obj/effect/turf_decal/borderfloorblack/full,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -2936,13 +2932,7 @@
 	dir = 1
 	},
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
-"Wa" = (
-/obj/machinery/porta_turret/ship/faction/syndicate{
-	id = "Bettle_grid"
-	},
-/turf/closed/wall/mineral/plastitanium,
-/area/ship/crew/toilet)
+/area/ship/crew/canteen)
 "Wb" = (
 /obj/effect/turf_decal/corner/opaque/syndiered/half{
 	dir = 8
@@ -3040,7 +3030,7 @@
 /turf/open/floor/plasteel/mono/white{
 	color = "#CEB689"
 	},
-/area/ship/crew/dorm)
+/area/ship/crew)
 "XA" = (
 /obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
@@ -3096,7 +3086,7 @@
 /turf/open/floor/plasteel/mono/white{
 	color = "#CEB689"
 	},
-/area/ship/crew/dorm)
+/area/ship/crew)
 "Zz" = (
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/crew/toilet)
@@ -3140,7 +3130,7 @@
 /obj/item/spacecash/bundle/c100,
 /obj/item/spacecash/bundle/c50,
 /turf/open/floor/plasteel/white,
-/area/ship/crew)
+/area/ship/crew/canteen)
 "ZW" = (
 /turf/closed/wall/mineral/plastitanium/interior,
 /area/ship/crew)
@@ -3172,7 +3162,7 @@ ta
 aU
 bH
 ME
-IL
+Kn
 Pz
 Pz
 eF
@@ -3181,7 +3171,7 @@ ta
 eF
 Pz
 Pz
-IL
+Kn
 ME
 Cv
 aU
@@ -3302,20 +3292,20 @@ ta
 ta
 ta
 hi
-Wa
-kU
-fS
-fS
-fS
-fS
-fS
+iy
+Ic
+JG
+JG
+JG
+JG
+JG
 af
-fS
-fS
+JG
+JG
 Gv
 Xc
 UN
-eJ
+to
 BW
 ta
 ta
@@ -3326,14 +3316,14 @@ ta
 hi
 Zz
 bf
-fS
+JG
 wN
 LA
 pM
 oS
 Ig
 pp
-kU
+Ic
 mJ
 mG
 BX
@@ -3377,7 +3367,7 @@ FL
 zm
 wg
 HR
-fS
+JG
 cj
 yC
 jO
@@ -3399,7 +3389,7 @@ dZ
 QB
 jJ
 wC
-fS
+JG
 wt
 dY
 Uj
@@ -3412,20 +3402,20 @@ ta
 ta
 ta
 ta
-Wa
+iy
 Go
 gC
 gC
 gC
-ZW
-ZW
+Qv
+Qv
 EO
 oj
-fS
+JG
 UN
 UN
 UN
-eJ
+to
 BW
 ta
 ta
@@ -3478,7 +3468,7 @@ ta
 ta
 ta
 dc
-DX
+jV
 Go
 gC
 xu
@@ -3487,11 +3477,11 @@ IY
 vZ
 Hj
 HC
-JG
-JG
-JG
-JG
-AQ
+fS
+fS
+fS
+fS
+Rn
 BW
 ta
 ta
@@ -3509,12 +3499,12 @@ yN
 dH
 Ep
 PS
-Qv
+ZW
 zw
 YX
 gq
-JG
-Ic
+fS
+kU
 Cv
 ta
 "}
@@ -3536,12 +3526,12 @@ la
 Jr
 Op
 Nv
-Ic
+kU
 Cv
 aU
 "}
 (18,1,1) = {"
-rN
+kO
 bH
 Go
 TZ
@@ -3553,14 +3543,14 @@ Bw
 tA
 aD
 ww
-JG
+fS
 vM
 Xe
 Oy
 mp
-Ic
+kU
 Cv
-rN
+kO
 "}
 (19,1,1) = {"
 aU
@@ -3575,12 +3565,12 @@ ED
 ED
 Mp
 uq
-JG
-JG
+fS
+fS
 ez
 ri
 ev
-Ic
+kU
 Cv
 aU
 "}
@@ -3598,11 +3588,11 @@ sw
 oz
 MH
 fR
-JG
+fS
 lG
 KQ
-JG
-Ic
+fS
+kU
 ta
 ta
 "}
@@ -3620,10 +3610,10 @@ Mx
 pz
 uK
 vi
-Ic
+kU
 ko
-iy
-Ic
+ko
+kU
 dc
 ta
 ta
@@ -3632,7 +3622,7 @@ ta
 ta
 ta
 ta
-DX
+jV
 AU
 AU
 pC
@@ -3645,7 +3635,7 @@ mL
 pC
 tx
 tx
-AQ
+Rn
 ta
 ta
 ta
