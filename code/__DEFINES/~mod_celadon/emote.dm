@@ -11,6 +11,11 @@
 /// If passed as message_param, will default to using the message's postfix.
 #define EMOTE_PARAM_USE_POSTFIX 1
 
+/// Regardless of its existing flags, an emote with this flag will not be sent to runechat.
+#define EMOTE_FORCE_NO_RUNECHAT 3
+/// This emote uses the mouth, and so should be blocked if the user is muzzled or can't breathe (for humans).
+#define EMOTE_MOUTH 4
+
 /// General Emotes
 #define EMOTE_FLIP 					"Сделать кувырок"
 #define EMOTE_SPIN 					"Покрутиться"
