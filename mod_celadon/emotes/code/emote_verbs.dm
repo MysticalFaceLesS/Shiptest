@@ -81,11 +81,6 @@ var/timer = 20
 	set category = "Эмоции"
 	emote_with_delay("threat", timer)
 
-/mob/living/carbon/human/proc/emote_whip()
-	set name = "< " + EMOTE_SPECIES_WHIP + " ►"
-	set category = "Эмоции"
-	emote_with_delay("whip", timer)
-
 /mob/living/carbon/human/proc/emote_whips()
 	set name = "< " + EMOTE_SPECIES_WHIPS + " ►"
 	set category = "Эмоции"
@@ -223,6 +218,11 @@ var/timer = 20
 
 /////////////////////////// ЗВУКОВЫЕ ЭМОУТЫ ///////////////////////////
 
+/mob/living/carbon/human/proc/emote_whip()
+	set name = "► " + EMOTE_SPECIES_WHIP + " "
+	set category = "Эмоции"
+	emote_with_delay("whip", timer)
+
 /mob/living/carbon/human/verb/emote_warcray()
 	set name = "► " + EMOTE_SPECIES_WARCRY + " "
 	set category = "Эмоции"
@@ -267,11 +267,6 @@ var/timer = 20
 	set name = "► " + EMOTE_SNORE + " "
 	set category = "Эмоции"
 	emote_with_delay("snore", timer)
-
-/mob/living/carbon/human/verb/emote_spin()
-	set name = "► " + EMOTE_SPECIES_SPIN + " "
-	set category = "Эмоции"
-	emote_with_delay("spin", timer)
 
 /mob/living/carbon/human/verb/emote_yawn()
 	set name = "► " + EMOTE_CARBON_YAWN + " "
@@ -371,6 +366,11 @@ var/timer = 20
 	emote_with_delay("flip", timer)
 
 /////////////////////////// ME ЭМОУТЫ ///////////////////////////
+
+/mob/living/carbon/human/verb/emote_spin()
+	set name = "◦ " + EMOTE_SPECIES_SPIN + " "
+	set category = "Эмоции"
+	emote_with_delay("spin", timer)
 
 /mob/living/carbon/human/verb/emote_shame()
 	set name = "◦ " + EMOTE_SPECIES_SHAME + " "

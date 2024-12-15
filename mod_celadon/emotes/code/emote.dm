@@ -1360,6 +1360,12 @@
 
 	return TRUE
 
+/datum/emote/living/carbon/human/cry
+	key = "spin"
+	key_third_person = "spines"
+	message = "Кружится."
+	emote_type = EMOTE_VISIBLE
+
 // /datum/emote/living/carbon/human/tajara/purr
 // 	key = "purr"
 // 	key_third_person = "purrs"
