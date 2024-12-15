@@ -134,3 +134,11 @@
 	siemens_coefficient = 0.75
 	body_parts_covered = FEET | LEGS
 
+/obj/item/clothing/shoes/magboots/clown
+	name = "clown shoes"
+	desc = "The prankster's standard-issue clowning shoes. Damn they're huge! There's a red light on the side."
+	icon = 'mod_celadon/_storge_icons/icons/clothing/obj/shoes.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/clothing/overlay/feet.dmi'
+	icon_state = "clown_prototype0"
+	magboot_state = "clown_prototype"
+	slowdown_active = SHOES_SLOWDOWN + 1
