@@ -3,3 +3,5 @@
 
 #define REVERSE_BEAR_TRAP_TRAIT "reverse-bear-trap"
 #define SHAMEBRERO_TRAIT "shamebrero"
+
+#define TRAIT_INCREASED_SURVIVAL "increased_survival"
