@@ -4,11 +4,15 @@
 	name = "IDEA assembly Instruction"
 	desc = "Average IDEA boring instructions with bunch of pictures and text"
 
-/datum/supply_pack/idea
+/datum/supply_pack/faction/independent/idea
 	group = "IDEA"
 	crate_type = /obj/structure/closet/crate/large
 
-/datum/supply_pack/idea/silicon/ai
+/datum/supply_pack/faction/independent/idea/silicon
+	name = "This is silicon IDEA"
+	crate_name = "IDEA"
+
+/datum/supply_pack/faction/independent/idea/silicon/ai
 	name = "AI core assembly crate"
 	desc = "Get an AI today! Contains everything for AI assembly, empty shell assembly, law changing circuits."
 	cost = 6500
@@ -44,7 +48,7 @@
 					/obj/item/wallframe/camera)
 	crate_name = "AI core assembly crate"
 
-/datum/supply_pack/idea/silicon/ai_shell
+/datum/supply_pack/faction/independent/idea/silicon/ai_shell
 	name = "Cyborg shell for AI"
 	desc = "Cyborg shell for your AI! Contains cyborg shell assembly kit for an AI and B.O.R.I.S module"
 	cost = 2250
@@ -67,7 +71,7 @@
 					/obj/item/stack/cable_coil/red)
 	crate_name = "AI cyborg shell assembly crate"
 
-/datum/supply_pack/idea/silicon/robot
+/datum/supply_pack/faction/independent/idea/silicon/robot
 	name = "Cyborg assembly crate"
 	desc = "Build your own silicon friend only for 2000 credits! Contains all parts besides law changing circuits and carging station."
 	cost = 3000
@@ -89,7 +93,7 @@
 					/obj/item/stack/cable_coil/red)
 	crate_name = "Cyborg assembly crate"
 
-/datum/supply_pack/idea/robotics
+/datum/supply_pack/faction/independent/idea/robotics
 	name = "Bots Assembly Crate"
 	desc = "Get your own affordable little helpers, cheaper than a gun! Floor-cleaning, tile-placing, wound-tending, fire-extinguishing botters only for 2100 credits!"
 	cost = 2500
