@@ -137,3 +137,28 @@
 	var/area/A = get_area(src)
 	if(A)
 		notify_ghosts("Вы просыпаетесь под собачий холод и запаха тухлых носков. Ваше сознание смутно припоминает, то кем вы были раньше, но вы точно помните что вас зовут \the [A.name]. Пора прожить ещё один жалкий день в этом аду...", source = src, action=NOTIFY_ATTACK, flashwindow = FALSE)
+
+// Medic
+
+/obj/effect/mob_spawn/human/elysium_outpost/medic
+	name = "Elysium Outpost Medic"
+	id_job = "Medic"
+	faction = FACTION_ELYSIUM
+	assignedrole = "Outpost Medic of Elysium"
+	outfit = /datum/outfit/outpost/medic
+	important_info = "Не покидайте свой аванпост без разрешения администрации, кроме тех случаев, когда вас силой забрали! Вы являетесь гражданином республики Элизиум и ваш долг проявить свою гражданскую позицию!"
+	short_desc = "Лечите больных, оказывайте помощь в операциях, вырезайте тайно органы, для дальнейшей перепродажи на черном рынке."
+	flavour_text = "Вы доктор, и по совместительству хирург, гробовщик, как повезет. Вы явно проснулись для того чтобы лечить пациентов. Вы также можете попросить СМО или администрацию аванпоста, чтобы вам выдали доступ к химии и или генетике, но у Вас должна быть хорошая причина для этого."
+
+/obj/effect/mob_spawn/human/elysium_outpost/medic/Destroy()
+	new /obj/machinery/cryopod/outpost/medic(drop_location())
+	return ..()
+
+// /obj/effect/mob_spawn/human/elysium_outpost/medic/special(mob/living/new_spawn)
+// 	new_spawn.fully_replace_character_name(null, random_unique_name(gender))
+
+/obj/effect/mob_spawn/human/elysium_outpost/medic/Initialize()
+	. = ..()
+	var/area/A = get_area(src)
+	if(A)
+		notify_ghosts("Вас вызывают, доктор \the [A.name].", source = src, action=NOTIFY_ATTACK, flashwindow = FALSE)

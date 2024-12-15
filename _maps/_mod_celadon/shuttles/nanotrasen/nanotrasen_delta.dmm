@@ -352,6 +352,10 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/recharge_station,
+/obj/machinery/light_switch{
+	pixel_x = 10;
+	pixel_y = 23
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
 "bH" = (
@@ -1366,6 +1370,11 @@
 /obj/machinery/recharge_station,
 /obj/machinery/camera{
 	dir = 5
+	},
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = 10;
+	pixel_y = -23
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
@@ -2727,13 +2736,13 @@
 	name = "Kirill bed";
 	anchored = 1
 	},
-/mob/living/simple_animal/pet/dog/corgi/Ian{
+/obj/effect/turf_decal/road/line/opaque/white{
+	dir = 1
+	},
+/mob/living/simple_animal/pet/dog/corgi{
 	name = "Yasha";
 	real_name = "Yasha";
 	desc = "It's Science Director's beloved corgi!"
-	},
-/obj/effect/turf_decal/road/line/opaque/white{
-	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)

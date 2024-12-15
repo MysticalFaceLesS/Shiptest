@@ -242,7 +242,7 @@
 /obj/item/tank/internals/anesthetic,
 /obj/machinery/light/directional/east,
 /obj/machinery/firealarm/directional/north,
-/obj/effect/spawner/lootdrop/armory_contraband,
+/obj/effect/spawner/lootdrop/plushie,
 /turf/open/floor/plasteel/white,
 /area/ship/medical/surgery)
 "eE" = (
@@ -426,7 +426,6 @@
 /turf/open/floor/wood,
 /area/ship/crew)
 "go" = (
-/obj/structure/table/reinforced,
 /obj/item/paper_bin{
 	pixel_x = -9;
 	pixel_y = 8
@@ -464,6 +463,7 @@
 /obj/effect/turf_decal/corner/opaque/ntblue{
 	dir = 1
 	},
+/obj/structure/table/reinforced/titaniumglass,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "gx" = (
@@ -496,6 +496,22 @@
 /obj/item/extinguisher/mini{
 	pixel_x = 2;
 	pixel_y = 2
+	},
+/obj/item/disk/data{
+	pixel_x = 9;
+	pixel_y = -1
+	},
+/obj/item/disk/data{
+	pixel_x = 9;
+	pixel_y = -1
+	},
+/obj/item/disk/data{
+	pixel_x = 9;
+	pixel_y = -1
+	},
+/obj/item/disk/data{
+	pixel_x = 9;
+	pixel_y = -1
 	},
 /turf/open/floor/plasteel/white,
 /area/ship/general/science)
@@ -575,9 +591,6 @@
 /turf/open/floor/plasteel/white,
 /area/ship/medical/surgery)
 "hI" = (
-/obj/structure/closet/secure_closet/medical3{
-	name = "Surgery locker"
-	},
 /obj/item/book/manual/wiki/surgery,
 /obj/item/storage/box/gloves,
 /obj/item/clothing/suit/apron/surgical,
@@ -590,6 +603,10 @@
 /obj/machinery/light_switch{
 	pixel_y = 20;
 	pixel_x = 12
+	},
+/obj/structure/closet/secure_closet{
+	icon_state = "med";
+	name = "surgical supplies"
 	},
 /turf/open/floor/plasteel/white,
 /area/ship/medical/surgery)
@@ -619,7 +636,6 @@
 /turf/open/floor/plating,
 /area/ship/engineering/atmospherics)
 "il" = (
-/obj/structure/table/reinforced,
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/computer/med_data/laptop{
 	dir = 1;
@@ -629,6 +645,7 @@
 	dir = 8
 	},
 /obj/machinery/airalarm/directional/south,
+/obj/structure/table/reinforced/titaniumglass,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "in" = (
@@ -694,7 +711,6 @@
 /obj/item/clothing/glasses/hud/health/sunglasses,
 /obj/item/clothing/under/rank/medical/chief_medical_officer,
 /obj/item/door_remote/chief_medical_officer,
-/obj/item/gun/medbeam,
 /obj/item/defibrillator/compact/loaded,
 /obj/item/holosign_creator/medical,
 /obj/item/clothing/gloves/color/latex/nitrile,
@@ -725,7 +741,6 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 4
 	},
-/obj/machinery/iv_drip,
 /turf/open/floor/plasteel/white,
 /area/ship/medical/surgery)
 "jp" = (
@@ -759,7 +774,6 @@
 /turf/open/floor/wood,
 /area/ship/crew)
 "jK" = (
-/obj/structure/table/reinforced,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/turf_decal/corner/opaque/ntblue{
 	dir = 1
@@ -767,6 +781,7 @@
 /obj/machinery/light/directional/west,
 /obj/machinery/firealarm/directional/north,
 /obj/machinery/fax/nanotrasen,
+/obj/structure/table/reinforced/titaniumglass,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "jM" = (
@@ -1008,7 +1023,6 @@
 /obj/structure/railing/corner{
 	dir = 8
 	},
-/obj/structure/table/reinforced,
 /obj/item/toy/plush/celadon/borbplushie{
 	pixel_x = 12;
 	pixel_y = 15
@@ -1019,6 +1033,7 @@
 	},
 /obj/machinery/recharger,
 /obj/machinery/newscaster/directional/south,
+/obj/structure/table/reinforced/titaniumglass,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "mO" = (
@@ -1415,6 +1430,10 @@
 	pixel_y = 7
 	},
 /obj/effect/spawner/lootdrop/ration,
+/obj/item/storage/box/donkpockets{
+	pixel_x = 8;
+	pixel_y = -5
+	},
 /turf/open/floor/plasteel,
 /area/ship/crew/canteen)
 "sr" = (
@@ -1815,7 +1834,9 @@
 "xd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/closet/secure_closet/engineering_welding,
+/obj/structure/closet/secure_closet/engineering_welding{
+	req_access = null
+	},
 /obj/item/clothing/glasses/welding{
 	pixel_y = -1
 	},
@@ -1967,7 +1988,10 @@
 	name = "Engine shutter";
 	pixel_x = -25
 	},
-/obj/structure/closet/secure_closet/engineering_electrical,
+/obj/structure/closet/secure_closet/engineering_electrical{
+	req_access = null;
+	req_access_txt = "10"
+	},
 /obj/machinery/light/directional/south,
 /turf/open/floor/plating,
 /area/ship/engineering/electrical)
@@ -2155,7 +2179,7 @@
 	pixel_y = 31
 	},
 /obj/item/radio/intercom/directional/west,
-/obj/machinery/chem_dispenser/fullupgrade,
+/obj/machinery/chem_dispenser,
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "BA" = (
@@ -3126,11 +3150,11 @@
 	pixel_x = -28;
 	req_access_txt = "19"
 	},
-/obj/structure/table/reinforced,
 /obj/item/coin/titanium{
 	pixel_y = 11;
 	pixel_x = -11
 	},
+/obj/structure/table/reinforced/titaniumglass,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "Qc" = (
@@ -3212,8 +3236,7 @@
 	},
 /obj/machinery/door/airlock/medical{
 	dir = 4;
-	name = "Entrance";
-	req_access_txt = "5"
+	name = "Entrance"
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 8
@@ -3641,7 +3664,10 @@
 /turf/open/floor/plasteel/white,
 /area/ship/crew/canteen)
 "Vr" = (
-/obj/structure/closet/secure_closet/engineering_personal,
+/obj/structure/closet/secure_closet/engineering_personal{
+	req_access = null;
+	req_access_txt = "10"
+	},
 /turf/open/floor/plating,
 /area/ship/engineering/electrical)
 "Vs" = (
@@ -3649,10 +3675,6 @@
 /obj/effect/turf_decal/corner/opaque/red/diagonal,
 /obj/effect/turf_decal/corner/opaque/yellow/diagonal{
 	dir = 4
-	},
-/obj/item/storage/box/donkpockets{
-	pixel_x = 7;
-	pixel_y = 18
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -3873,8 +3895,7 @@
 	},
 /obj/machinery/door/airlock/medical{
 	dir = 4;
-	name = "Entrance";
-	req_access_txt = "5"
+	name = "Entrance"
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 8

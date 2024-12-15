@@ -122,6 +122,10 @@ ID мода: CELADON_QOL
 Смартфридж Bloodbank
 - ADD+EDIT `code\game\objects\items\circuitboards\machine_circuitboards.dm` - Добавление платы bloodbank в пул смартфридж плат, сортировка по алфавиту в меню.
 
+- EDIT `code/game/objects/structures/spirit_board.dm` - Снижаем лимит игроков для спиритической доски с 2 до 1
+
+- ADD, EDIT: `code/game/objects/items/storage/fancy.dm` - Делаем возможным положить обратно в пачку сигарет бычки
+
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
