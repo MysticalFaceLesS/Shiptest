@@ -17,6 +17,8 @@
 
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
 
+	bodyflags = HAS_TAIL | TAIL_WAGGING
+
 	disliked_food = VEGETABLES | FRUIT | GRAIN | GROSS
 	liked_food = MEAT | RAW | DAIRY
 	digitigrade_customization = DIGITIGRADE_OPTIONAL
