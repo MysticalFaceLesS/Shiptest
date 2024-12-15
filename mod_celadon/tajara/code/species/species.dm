@@ -23,6 +23,8 @@
 
 	use_skintonetajara = TRUE
 
+	bodyflags = HAS_TAIL | TAIL_WAGGING
+
 	disliked_food = VEGETABLES | FRUIT | GRAIN | GROSS
 	liked_food = MEAT | RAW | DAIRY
 
