@@ -1,6 +1,5 @@
-/datum/supply_pack/faction/solfed/ammo // патроны
-	group = "Faction ammo"
-
+/datum/supply_pack/faction/solfed/ammo
+	group = "Ammunition"
 
 /datum/supply_pack/faction/solfed/ammo/ferrolancebox
 	name = "Ferromagnetic lance"

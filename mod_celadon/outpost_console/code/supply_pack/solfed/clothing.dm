@@ -1,5 +1,5 @@
-/datum/supply_pack/faction/solfed/clothing // Одежда
-	group = "Faction clothing"
+/datum/supply_pack/faction/solfed/clothing
+	group = "Clothing"
 
 /datum/supply_pack/faction/solfed/clothing/hardsuit
 	name = "SolFed hardsuit"

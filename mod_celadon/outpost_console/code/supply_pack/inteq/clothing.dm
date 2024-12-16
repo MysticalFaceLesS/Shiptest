@@ -1,5 +1,5 @@
-/datum/supply_pack/faction/inteq/clothing // Одежда
-	group = "Faction clothing"
+/datum/supply_pack/faction/inteq/clothing
+	group = "Clothing"
 
 /datum/supply_pack/faction/inteq/clothing/hardsuit // Слишком сильно?
 	name = "InteQ hardsuit"
