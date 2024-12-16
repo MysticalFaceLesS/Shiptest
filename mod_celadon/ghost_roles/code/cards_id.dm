@@ -60,3 +60,27 @@
 
 /obj/item/card/id/elysium_wagabond/Initialize()
 	. = ..()
+
+// Medic
+
+/obj/item/card/id/elysium_medic
+	name = "\improper Elysium Medbay access card"
+	desc = "An access card sourced from Elysium for medic."
+	icon = 'mod_celadon/_storge_icons/icons/obj/elysium_card.dmi'
+	icon_state = "elysium"
+	uses_overlays = FALSE
+
+/obj/item/card/id/elysium_medic/Initialize()
+	access = get_med_accesses_outpost(1)
+	. = ..()
+
+/obj/item/card/id/silver/elysium_cmo
+	name = "\improper Elysium Medbay access card"
+	desc = "An access card sourced from Elysium for CMO."
+	icon = 'mod_celadon/_storge_icons/icons/obj/elysium_card.dmi'
+	icon_state = "elysium_com"
+	uses_overlays = FALSE
+
+/obj/item/card/id/silver/elysium_cmo/Initialize()
+	access = get_med_accesses_outpost(0)
+	. = ..()
