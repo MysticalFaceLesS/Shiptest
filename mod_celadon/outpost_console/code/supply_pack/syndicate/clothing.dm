@@ -1,4 +1,4 @@
-/datum/supply_pack/faction/syndicate/clothing // Одежда
+/datum/supply_pack/faction/syndicate/clothing
 	group = "Clothing"
 
 /datum/supply_pack/faction/syndicate/clothing/hardsuit // Слишком сильно?
