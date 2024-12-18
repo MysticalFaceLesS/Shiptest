@@ -65,7 +65,9 @@
 /obj/item/seeds/replicapod/get_analyzer_text()
 	var/text = ..()
 	if(contains_sample)
-		text += "\n It contains a blood sample with blood DNA (UE) \"sampleDNA\"." //blood DNA (UE) shows in medical records and is readable by forensics scanners
+	// [CELADON EDIT] - CELADON FIXES
+		text += "\n It contains a blood sample with blood DNA (UE) \"[sampleDNA]\"." //blood DNA (UE) shows in medical records and is readable by forensics scanners
+	// [CELADON EDIT]
 	return text
 
 /obj/item/seeds/replicapod/harvest(mob/user) //now that one is fun -- Urist
