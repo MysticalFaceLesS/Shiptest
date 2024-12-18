@@ -6,7 +6,9 @@
 	icon_state = "seed-replicapod"
 	species = "replicapod"
 	plantname = "Replica Pod"
-	product = /mob/living/carbon/human //verrry special -- Urist
+	// [CELADON EDIT] - CELADON FIXES
+	product = null //verrry special -- Urist
+	// [CELADON EDIT]
 	lifespan = 50
 	endurance = 8
 	maturation = 10

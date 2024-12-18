@@ -81,6 +81,8 @@ ID мода: CELADON_FIXES
 
 - EDIT: `code\modules\hydroponics\grown\replicapod.dm` - Исправление отобрежения ДНК на сканере 
 
+- EDIT: `code\modules\hydroponics\grown\replicapod.dm` - Исправлено появление людей из капусты
+
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
