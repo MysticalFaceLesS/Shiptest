@@ -3,7 +3,6 @@
 /datum/job/outpost/cook
 	name = "Outpost Cook"
 	wiki_page = "Food" //WS Edit - Wikilinks/Warning
-	var/cooks = 0 //Counts cooks amount
 
 	outfit = /datum/outfit/outpost/cook
 
@@ -35,7 +34,7 @@
 	var/list/possible_boxes = subtypesof(/obj/item/storage/box/ingredients)
 	var/chosen_box = pick(possible_boxes)
 	var/obj/item/storage/box/I = new chosen_box(src)
-	H.equip_to_slot_or_del(I,ITEM_SLOT_BACKPACK)
+	H.equip_to_slot_or_del(I, ITEM_SLOT_BACKPACK)
 	var/datum/martial_art/cqc/under_siege/justacook = new
 	justacook.teach(H)
 
@@ -201,3 +200,47 @@
 	shoes = /obj/item/clothing/shoes/sneakers/black
 	id = /obj/item/card/id/elysium_wagabond
 	l_pocket = /obj/item/spacecash/bundle/c500
+
+/// MEDIC
+/datum/job/outpost/medic
+	name = "Outpost Medical Doctor"
+	wiki_page = "Medical"
+
+	outfit = /datum/outfit/outpost/medic
+
+	access = list(ACCESS_OUTPOST_MED_GENERAL, ACCESS_OUTPOST_MED_MORGUE, ACCESS_OUTPOST_MED_STORAGE, ACCESS_OUTPOST_MED_HIRURG)
+	minimal_access = list(ACCESS_OUTPOST_MED_GENERAL, ACCESS_OUTPOST_MED_MORGUE, ACCESS_OUTPOST_MED_STORAGE, ACCESS_OUTPOST_MED_HIRURG)
+
+	display_order = JOB_DISPLAY_ORDER_MEDICAL_DOCTOR
+
+/datum/outfit/outpost/medic
+	name = "Outpost Medical Doctor"
+
+	belt = /obj/item/pda/medical
+	ears = /obj/item/radio/headset/headset_med
+	uniform = /obj/item/clothing/under/rank/medical/doctor/blue
+	shoes = /obj/item/clothing/shoes/sneakers/white
+	suit =  /obj/item/clothing/suit/apron/surgical
+	id = /obj/item/card/id/elysium_medic
+	back = /obj/item/storage/backpack/duffelbag/med
+	backpack_contents = list(/obj/item/melee/classic_baton/telescopic = 1,
+							/obj/item/storage/backpack/medic = 1,
+							/obj/item/storage/backpack/satchel/med = 1,
+							/obj/item/storage/backpack/messenger/med = 1,
+							/obj/item/clothing/suit/hooded/wintercoat/medical = 1,
+							/obj/item/clothing/under/rank/medical/doctor/blue = 1,
+							/obj/item/spacecash/bundle/c100 = 3)
+
+	box = /obj/item/storage/box/survival/medical
+
+	chameleon_extras = /obj/item/gun/syringe
+
+/datum/outfit/outpost/medic/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	..()
+	if(visualsOnly)
+		return
+	var/list/possible_boxes = subtypesof(/obj/item/storage/box/ingredients)
+	var/chosen_box = pick(possible_boxes)
+	var/obj/item/storage/box/I = new chosen_box(src)
+	H.equip_to_slot_or_del(I, ITEM_SLOT_BACKPACK)
+

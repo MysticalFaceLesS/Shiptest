@@ -203,7 +203,14 @@
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 6
-	STR.set_holdable(list(/obj/item/clothing/mask/cigarette, /obj/item/lighter))
+	// [CELADON-ADD] - CELADON_QOL
+	STR.max_w_class = WEIGHT_CLASS_TINY
+	// STR.storage_flags = STORAGE_FLAGS_VOLUME_DEFAULT
+	// [/CELADON-ADD]
+	// [CELADON-EDIT] - CELADON_QOL
+	// STR.set_holdable(list(/obj/item/clothing/mask/cigarette, /obj/item/lighter)) // CELADON-EDIT - ORIGINAL
+	STR.set_holdable(list(/obj/item/clothing/mask/cigarette, /obj/item/lighter, /obj/item/cigbutt))
+	// [/CELADON-EDIT]
 
 /obj/item/storage/fancy/cigarettes/examine(mob/user)
 	. = ..()

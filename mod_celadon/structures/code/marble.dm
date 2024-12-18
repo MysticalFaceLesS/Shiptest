@@ -17,6 +17,10 @@
 	icon_state = "marble_border_wb"
 	base_icon_state = "marble_border_wb"
 
+/turf/open/floor/marble/white_black_diagonal
+	icon_state = "marble_border_diagonal"
+	base_icon_state = "marble_border_diagonal"
+
 /turf/open/floor/terrazzo
 	icon = 'mod_celadon/_storge_icons/icons/structures/floors/marble.dmi'
 	icon_state = "terrazzo_beige"

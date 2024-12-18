@@ -1,4 +1,7 @@
-/datum/supply_pack/costumes_toys/wedding
+/datum/supply_pack/faction/independent/costumes_toys
+	group = "Costumes & Toys"
+
+/datum/supply_pack/faction/independent/costumes_toys/wedding
 	name = "Wedding Crate"
 	desc = "Tie the knot IN SPACE! Hold your own extravagant wedding with this crate of suits and bridal gowns. Complete with champagne, cake, and the luxurious cost you would expect for an event to remember."
 	cost = 10000 // weddings are absurdly expensive and so is this crate
