@@ -27,6 +27,7 @@ ID мода: CELADON_IPC_CHASSIS
 - `bishop_android_main`
 - `bishop_android_alternative`
 - `bishop_android_rook`
+- `cpu4mu`
 - `hephaestus_main`
 - `hephaestus_alt`
 - `hephaestus_titan`

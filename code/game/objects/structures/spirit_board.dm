@@ -72,7 +72,10 @@
 			else
 				users_in_range++
 
-	if(users_in_range < 2)
+	// [CELADON-EDIT] - CELADON_QOL - Делаем юзабельную доску для 1 игрока вместо 2
+	// if(users_in_range < 2)	// CELADON-EDIT - ORIGINAL
+	if(users_in_range < 1)
+	// [/CELADON-EDIT]
 		to_chat(M, "<span class='warning'>There aren't enough people to use the [src.name]!</span>")
 		return FALSE
 

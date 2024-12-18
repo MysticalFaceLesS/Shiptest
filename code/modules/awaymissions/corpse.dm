@@ -68,11 +68,11 @@
 	if(instant || (roundstart && (mapload || (SSticker && SSticker.current_state > GAME_STATE_SETTING_UP))))
 		INVOKE_ASYNC(src, PROC_REF(create))
 	else if(ghost_usable)
-		SSpoints_of_interest.make_point_of_interest(src)
+		GLOB.poi_list |= src // [CELADON-EDIT] - old: SSpoints_of_interest.remove_point_of_interest(src)
 		LAZYADD(GLOB.mob_spawners[name], src)
 
 /obj/effect/mob_spawn/Destroy()
-	SSpoints_of_interest.remove_point_of_interest(src)
+	GLOB.poi_list -= src // [CELADON-EDIT] - old: SSpoints_of_interest.remove_point_of_interest(src)
 	var/list/spawners = GLOB.mob_spawners[name]
 	LAZYREMOVE(spawners, src)
 	if(!LAZYLEN(spawners))
