@@ -68,7 +68,7 @@
 /datum/mission/acquire/New(...)
 	num_wanted = rand(num_wanted, num_wanted + 2)
 	// value += num_wanted*100
-	value = num_wanted * value
+	value = num_wanted * value + 500
 	return ..()
 
 /*
@@ -379,12 +379,16 @@ Acquire: Anomaly
 
 /datum/mission/acquire/extraction/plasma
 	name = "Plasma required"
-	duration = 60 MINUTES
-	value = 12500
+	duration = 80 MINUTES
+	value = 100
 	weight = 3
 	container_type = /obj/structure/closet/crate/extraction/plasma
 	objective_type = /obj/item/stack/sheet/mineral/plasma
-	num_wanted = 250
+	num_wanted = 300
+
+/datum/mission/acquire/extraction/plasma/New(...)
+	value -= 8000
+	return ..()
 
 /obj/structure/closet/crate/extraction/plasma
 	name = "crate for plasma"
