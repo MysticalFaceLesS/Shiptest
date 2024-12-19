@@ -41,5 +41,3 @@
 #define PRICES_EXPORT_GENERAL_MIN		0.6
 #define PRICES_EXPORT_GENERAL_MAX		1.1
 
-// МИССИИ НА ИССЛЕДОВАНИЯ
-#define PRICES_MISSION_RESEARCH			1.5
