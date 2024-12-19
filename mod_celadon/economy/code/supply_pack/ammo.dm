@@ -89,9 +89,6 @@
 /datum/supply_pack/ammo/skm_ammo
 	cost = 1000
 
-/datum/supply_pack/ammo/p16_ammo
-	cost = 1000
-
 /datum/supply_pack/ammo/boomslang_ammo
 	cost = 1000
 
@@ -217,3 +214,77 @@
 
 /datum/supply_pack/ammo/a44roum_hp
 	cost = 500
+
+//Магазины для оружия
+
+/datum/supply_pack/ammo/p16_ammo
+	cost = 1950
+
+/datum/supply_pack/ammo/g36_sh
+	cost = 1400
+
+/datum/supply_pack/ammo/g36
+	cost = 1950
+
+/datum/supply_pack/ammo/g36_drum
+	cost = 5000
+
+/datum/supply_pack/ammo/morita_ammo_small
+	cost = 2000
+
+/datum/supply_pack/ammo/morita_ammo
+	cost = 4000
+
+/datum/supply_pack/ammo/morita_ammo_drum
+	cost = 5000
+
+/datum/supply_pack/ammo/usp_magazine
+	cost = 650
+
+/datum/supply_pack/ammo/glock_magazine
+	cost = 500
+
+/datum/supply_pack/ammo/skm762_40_drum
+	cost = 5000
+
+/datum/supply_pack/ammo/skm762_40_extended
+	cost = 2800
+
+//Коробки патронов
+
+//5.56
+
+/datum/supply_pack/ammo/box556_box
+	cost = 500
+
+/datum/supply_pack/ammo/box556/a856_box
+	cost = 650
+
+/datum/supply_pack/ammo/box556/m903_box
+	cost = 1300
+
+//.308
+
+/datum/supply_pack/ammo/a308_box
+	cost = 650
+
+/datum/supply_pack/ammo/a308_rubber_box
+	cost = 300
+
+/datum/supply_pack/ammo/a308_sp_box
+	cost = 800
+
+/datum/supply_pack/ammo/a308_ap_box
+	cost = 1300
+
+// 410x76
+//Магазины для оружия
+
+/datum/supply_pack/ammo/a410_saiga
+	cost = 1800
+
+/datum/supply_pack/ammo/a410_saiga_medium
+    cost = 2800
+
+/datum/supply_pack/ammo/a410_saiga_drum
+    cost = 5000
