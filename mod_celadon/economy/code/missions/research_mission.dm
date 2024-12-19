@@ -66,9 +66,19 @@
 	value = 3500
 	objective_type = /datum/overmap/event/emp
 
+/datum/mission/research/ion/New(...)
+	var/rand_num = rand(1, 1.5)
+	value = value * rand_num
+	return ..()
+
 /datum/mission/research/meteor
 	value = 1000
 	num_wanted = 3
+
+/datum/mission/research/meteor/New(...)
+	num_wanted = rand(2, 5)
+	value = value * num_wanted / 2
+	return ..()
 
 // /datum/mission/research/meteor
 // 	name = "Asteroid field research mission"
@@ -82,6 +92,11 @@
 /datum/mission/research/carp
 	value = 500
 	num_wanted = 3
+
+/datum/mission/research/carp/New(...)
+	num_wanted = rand(2, 5)
+	value = value * num_wanted / 1.5
+	return ..()
 
 // /datum/mission/research/carp
 // 	name = "Carp migration research mission"
@@ -97,6 +112,11 @@
 /datum/mission/research/dust
 	value = 300
 	num_wanted = 3
+
+/datum/mission/research/dust/New(...)
+	num_wanted = rand(2, 5)
+	value = value * num_wanted
+	return ..()
 
 // /datum/mission/research/dust
 // 	name = "dust research mission"
