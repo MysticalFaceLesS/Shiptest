@@ -65,6 +65,12 @@
 // 			target.forceMove(cont_loc)
 // 	recall_bound(container)
 
+/datum/mission/acquire/New(...)
+	num_wanted = rand(num_wanted, num_wanted + 2)
+	// value += num_wanted*100
+	value = num_wanted * value
+	return ..()
+
 /*
 	Acquire: True Love
 */
@@ -226,7 +232,7 @@ Acquire: Anomaly
 /datum/mission/acquire/aquarium
 	name = "Fish needed for my aquarium"
 	weight = 6
-	value = 750
+	value = 800
 	duration = 60 MINUTES
 	val_mod_range = 0.2
 	container_type = /obj/item/storage/fish_case/mission
@@ -252,7 +258,7 @@ Acquire: Anomaly
 /datum/mission/acquire/aquarium/rare
 	name = "Rare fish needed for my aquarium!"
 	weight = 1
-	value = 1500
+	value = 1800
 	val_mod_range = 0.3
 
 // /datum/mission/acquire/aquarium/rare/New(...)
@@ -266,7 +272,7 @@ Acquire: Anomaly
 /datum/mission/acquire/aquarium/sabatoge
 	name = "That bastard has had it good for too long!"
 	weight = 1
-	value = 3000
+	value = 3600
 	duration = 100 MINUTES
 
 // /datum/mission/acquire/aquarium/sabatoge/New(...)
