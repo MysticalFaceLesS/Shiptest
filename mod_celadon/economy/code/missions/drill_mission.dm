@@ -11,7 +11,8 @@
 
 /datum/mission/drill/New(...)
 	num_wanted = rand(num_wanted-2,num_wanted+2)
-	value += num_wanted*100
+	// value += num_wanted*100
+	value = num_wanted * value / 2
 	return ..()
 
 // /datum/mission/drill/accept(datum/overmap/ship/controlled/acceptor, turf/accept_loc)
