@@ -81,6 +81,10 @@ ID мода: CELADON_FIXES
 
 - EDIT: `code\modules\hydroponics\gene_modder.dm` - Добавление удаления мусора а не данных с диска
 
+- EDIT: `code/modules/mob/living/carbon/human/human_movement.dm` - Учитывается влияние обуви на гравитацию
+
+- ADD: `code/modules/mob/living/life.dm` - Добавление magboots_handle_gravity
+
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -123,7 +127,7 @@ ID мода: CELADON_FIXES
 ### Авторы:
 
 
-RalseiDreemuurr, Mirag1993 , Корольный крыс, MrCat15352, MysticalFaceLesS, Burbonchik, MrRomainzZ, Molniz
+RalseiDreemuurr, Mirag1993 , Корольный крыс, MrCat15352, MysticalFaceLesS, Burbonchik, MrRomainzZ, Molniz, Redwizz
 
 <!--
   Здесь находится твой никнейм
