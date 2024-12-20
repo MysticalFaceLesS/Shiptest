@@ -357,6 +357,14 @@
 	description = "A Nanotrasen genetic research facility, abandoned and ripe for looting. Whats that goo over there?"
 	suffix = "lavaland_surface_codelab.dmm"
 
+/datum/map_template/ruin/lavaland/falling_heron
+	name = "Crashed Heron"
+	id = "crashed_heron"
+	description = "A crashed nanotrasen ship Heron-class. It would seem that it's crew died a while ago."
+	suffix = "lavaland_crashed_heron.dmm"
+	cost = 5
+	allow_duplicates = FALSE
+
 //							///
 //		Rockplanet ruin		///
 //							///

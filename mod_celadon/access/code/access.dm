@@ -24,7 +24,7 @@
 		if(4) //Morgue
 			return list(ACCESS_OUTPOST_MED_MORGUE, ACCESS_OUTPOST_MED_GENERAL)
 		if(5) //Storage
-			return list(ACCESS_OUTPOST_MED_STORAGE)
+			return list(ACCESS_OUTPOST_MED_STORAGE, ACCESS_OUTPOST_MED_GENERAL)
 		if(6) //General medbay
 			return list(ACCESS_OUTPOST_MED_GENERAL)
 

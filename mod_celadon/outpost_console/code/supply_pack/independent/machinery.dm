@@ -1,4 +1,8 @@
-/datum/supply_pack/machinery/rnd_beac
+/datum/supply_pack/faction/independent/machinery
+	group = "Machines & Parts"
+	crate_type = /obj/structure/closet/crate/engineering
+
+/datum/supply_pack/faction/independent/machinery/rnd_beac
 	name = "R&D Beacon"
 	desc = "A set of specialized platforms for research and production, limited by license. "
 	cost = 16000
@@ -7,7 +11,7 @@
 	crate_name = "r&d starter kit"
 	crate_type = /obj/structure/closet/crate/science
 
-/datum/supply_pack/machinery/selling_pad_pack
+/datum/supply_pack/faction/independent/machinery/selling_pad_pack
 	name = "Cargo teleport"
 	desc = " A set of specialized platforms for building and managing a cargo teleport "
 	cost = 9000
@@ -16,7 +20,7 @@
 	crate_name = "cargo teleport"
 	crate_type = /obj/structure/closet/crate/science
 
-/datum/supply_pack/machinery/rnd_full
+/datum/supply_pack/faction/independent/machinery/rnd_full
 	name = "Suspicious circuits"
 	desc = "A set of specialized circuits for research and production. An unknown craftsman hacked them, now they are not limited by license. "
 	cost = 89371
@@ -26,16 +30,13 @@
 	crate_name = "hacked r&d kit"
 	crate_type = /obj/structure/closet/crate/science
 
-/datum/supply_pack/food/ration_irp
-	name = "IRP set"
-	desc = "6 expanded IRP sets. Now with warm-up!"
-	cost = 750
-	contains = list(/obj/item/storage/ration/vegan_chili,
-					/obj/item/storage/ration/shredded_beef,
-					/obj/item/storage/ration/pork_spaghetti,
-					/obj/item/storage/ration/fried_fish,
-					/obj/item/storage/ration/beef_strips,
-					/obj/item/storage/ration/chili_macaroni
-	)
-	crate_name = "IRP set"
-	crate_type = /obj/structure/closet/crate/secure/weapon
+/datum/supply_pack/faction/independent/machinery/plasma_thruster
+	name = "Plasma Thruster Crate"
+	desc = "A crate containing a plasma thruster and its heater's electronics. For when you need a lot of extra thrust."
+	cost = 5000
+	contains = list(/obj/item/circuitboard/machine/shuttle/engine/plasma,
+					/obj/item/circuitboard/machine/shuttle/heater,
+					/obj/item/circuitboard/machine/pipedispenser,
+					/obj/machinery/portable_atmospherics/canister/toxins)
+	crate_name = "plasma thruster crate"
+	crate_type = /obj/structure/closet/crate/engineering
