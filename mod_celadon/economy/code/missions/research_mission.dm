@@ -1,4 +1,7 @@
 /datum/mission/research
+	weight = 0
+
+/datum/mission/research/electrical
 	name = "Electrical storm research mission"
 	desc = "We require data on the behavior of electrical storms in the system for an ongoing study. \
 			Please anchor the attached sensor array to your ship and fly it through the storms.\
@@ -12,9 +15,14 @@
 	num_current = 0
 	num_wanted = 5
 
-/datum/mission/research/New(...)
-	num_wanted = rand(num_wanted - 1, num_wanted + 1)
-	value += num_wanted * 150
+// /datum/mission/research/New(...)
+// 	num_wanted = rand(num_wanted - 1, num_wanted + 1)
+// 	value += num_wanted * 150
+// 	return ..()
+
+/datum/mission/research/electrical/New(...)
+	var/rand_num = rand(1, 1.5)
+	value = value * rand_num
 	return ..()
 
 // /datum/mission/research/accept(datum/overmap/ship/controlled/acceptor, turf/accept_loc)

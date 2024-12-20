@@ -65,11 +65,11 @@
 // 			target.forceMove(cont_loc)
 // 	recall_bound(container)
 
-/datum/mission/acquire/New(...)
-	num_wanted = rand(num_wanted, num_wanted + 2)
-	// value += num_wanted*100
-	value = num_wanted * value + 500
-	return ..()
+// /datum/mission/acquire/New(...)
+// 	num_wanted = rand(num_wanted, num_wanted + 2)
+// 	// value += num_wanted*100
+// 	value = num_wanted * value + 500
+// 	return ..()
 
 /*
 	Acquire: True Love
@@ -85,6 +85,11 @@
 	objective_type = /obj/item/stack/sheet/mineral/diamond
 	num_wanted = 1
 
+/datum/mission/acquire/true_love/New(...)
+	num_wanted = rand(num_wanted, num_wanted + 2)
+	// value += num_wanted*100
+	value = num_wanted * value + 500
+	return ..()
 // /datum/mission/acquire/true_love/New(...)
 // 	var/datum/species/beloved = pick(subtypesof(/datum/species))
 
@@ -128,6 +133,12 @@ Acquire: Anomaly
 	objective_type = /obj/item/assembly/signaler/anomaly
 	num_wanted = 1
 
+/datum/mission/acquire/anomaly/New(...)
+	num_wanted = rand(num_wanted, num_wanted + 2)
+	// value += num_wanted*100
+	value = num_wanted * value + 500
+	return ..()
+
 // /datum/mission/acquire/anomaly/New(...)
 // 	var/group = pick(list(
 // 		"Cybersun Industries",
@@ -155,7 +166,7 @@ Acquire: Anomaly
 	name = "Capture a goliath"
 	desc = "I require a live goliath for research purposes. Trap one within the given \
 			Lifeform Containment Unit and return it to me and you will be paid handsomely."
-	value = 1500
+	value = 2500
 	duration = 60 MINUTES
 	weight = 6
 	container_type = /obj/structure/closet/mob_capture
@@ -175,14 +186,14 @@ Acquire: Anomaly
 	name = "Capture a legion"
 	desc = "I require a live legion for research purposes. Trap one within the given \
 			Lifeform Containment Unit and return it to me and you will be paid handsomely."
-	value = 1300
+	value = 2300
 	objective_type = /mob/living/simple_animal/hostile/asteroid/hivelord/legion
 
 /datum/mission/acquire/creature/ice_whelp
 	name = "Capture an ice whelp"
 	desc = "I require a live ice whelp for research purposes. Trap one within the given \
 			Lifeform Containment Unit and return it to me and you will be paid handsomely."
-	value = 1700
+	value = 2700
 	weight = 2
 	objective_type = /mob/living/simple_animal/hostile/asteroid/ice_whelp
 
@@ -190,7 +201,7 @@ Acquire: Anomaly
 	name = "Capture a live mi-go"
 	desc = "I require a live mi-go for research purposes. Trap one within the given \
 			Lifeform Containment Unit and return it to me and you will be paid handsomely."
-	value = 1050
+	value = 2050
 	weight = 2
 	objective_type = /mob/living/simple_animal/hostile/netherworld/migo/asteroid
 
@@ -198,7 +209,7 @@ Acquire: Anomaly
 	name = "Detain a malfunctioning floorbot"
 	desc = "I require a functional abandoned floorbot for \"research\" purposes. Trap one within \
 			the given Lifeform Containment Unit and return it to me and you will be paid handsomely."
-	value = 1450
+	value = 2450
 	weight = 1
 	objective_type = /mob/living/simple_animal/bot/floorbot/rockplanet
 
@@ -206,7 +217,7 @@ Acquire: Anomaly
 	name = "Detain a malfunctioning firebot"
 	desc = "I require a functional abandoned firebot for \"research\" purposes. Trap one within \
 			the given Lifeform Containment Unit and return it to me and you will be paid handsomely."
-	value = 1450
+	value = 2450
 	weight = 1
 	objective_type = /mob/living/simple_animal/bot/firebot/rockplanet
 
@@ -225,6 +236,12 @@ Acquire: Anomaly
 	objective_type = /obj/item/mine/pressure/explosive
 	num_wanted = 2
 
+/datum/mission/acquire/landmine/New(...)
+	num_wanted = rand(num_wanted, num_wanted + 2)
+	// value += num_wanted*100
+	value = num_wanted * value + 500
+	return ..()
+
 /*
 		Acquire: Fishing
 */
@@ -232,7 +249,7 @@ Acquire: Anomaly
 /datum/mission/acquire/aquarium
 	name = "Fish needed for my aquarium"
 	weight = 6
-	value = 800
+	value = 1800
 	duration = 60 MINUTES
 	val_mod_range = 0.2
 	container_type = /obj/item/storage/fish_case/mission
@@ -258,7 +275,7 @@ Acquire: Anomaly
 /datum/mission/acquire/aquarium/rare
 	name = "Rare fish needed for my aquarium!"
 	weight = 1
-	value = 1800
+	value = 2800
 	val_mod_range = 0.3
 
 // /datum/mission/acquire/aquarium/rare/New(...)
@@ -272,7 +289,7 @@ Acquire: Anomaly
 /datum/mission/acquire/aquarium/sabatoge
 	name = "That bastard has had it good for too long!"
 	weight = 1
-	value = 3600
+	value = 4600
 	duration = 100 MINUTES
 
 // /datum/mission/acquire/aquarium/sabatoge/New(...)
@@ -292,7 +309,7 @@ Acquire: Anomaly
 /datum/mission/acquire/fish_cook/New(...)
 	num_wanted = rand(1,3)
 	desc = "I am a chef in need of [num_wanted] fish for my latest dish. Any fish will do, just make sure they're not filleted!"
-	value = (250*num_wanted)
+	value = (250 * num_wanted)
 	. = ..()
 
 // /datum/mission/acquire/fish/alive/atom_effective_count(atom/movable/target)
@@ -374,21 +391,24 @@ Acquire: Anomaly
 
 /datum/mission/acquire/extraction/New(...)
 	. = ..()
+	// num_wanted = rand(num_wanted, num_wanted + 1)
+	// value = num_wanted * value - 5000
 	desc = "[pick("Factions","Corporations","Federations")] require large amounts of plasma sheets \
 	for [pick("base","station","ships")]. You are tasked with extracting them in large quantities in a short period of time."
 
 /datum/mission/acquire/extraction/plasma
 	name = "Plasma required"
-	duration = 80 MINUTES
-	value = 100
-	weight = 3
+	duration = 70 MINUTES
+	value = 15000
+	weight = 30
 	container_type = /obj/structure/closet/crate/extraction/plasma
 	objective_type = /obj/item/stack/sheet/mineral/plasma
 	num_wanted = 300
 
-/datum/mission/acquire/extraction/plasma/New(...)
-	value -= 8000
-	return ..()
+// /datum/mission/acquire/extraction/plasma/New(...)
+// 	num_wanted = rand(num_wanted, num_wanted + 1)
+// 	value = num_wanted * value - 5000
+// 	return ..()
 
 /obj/structure/closet/crate/extraction/plasma
 	name = "crate for plasma"
