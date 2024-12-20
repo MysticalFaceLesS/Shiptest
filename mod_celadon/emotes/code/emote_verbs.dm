@@ -22,201 +22,226 @@ var/timer = 20
 /////////////////////////// РАСОВЫЕ ЭМОУТЫ ///////////////////////////
 
 /mob/living/carbon/human/proc/emote_hiss()
-	set name = "< " + EMOTE_SPECIES_HISS + " ►"
+	set name = "> " + EMOTE_SPECIES_HISS + " ►"
 	set category = "Эмоции"
 	emote_with_delay("hiss", timer)
 
 /mob/living/carbon/human/proc/emote_mothchitter()
-	set name = "< " + EMOTE_SPECIES_CHITTER + " ►"
+	set name = "> " + EMOTE_SPECIES_CHITTER + " ►"
 	set category = "Эмоции"
 	emote_with_delay("mothchitter", timer)
 
 /mob/living/carbon/human/proc/emote_flap()
-	set name = "< " + EMOTE_SPECIES_FLAP + " ►"
+	set name = "> " + EMOTE_SPECIES_FLAP + " ►"
 	set category = "Эмоции"
 	emote_with_delay("flap", timer)
 
 /mob/living/carbon/human/proc/emote_aflap()
-	set name = "< " + EMOTE_SPECIES_AFLAP + " ►"
+	set name = "> " + EMOTE_SPECIES_AFLAP + " ►"
 	set category = "Эмоции"
 	emote_with_delay("aflap", timer)
 
 /mob/living/carbon/human/proc/emote_flutter()
-	set name = "< " + EMOTE_SPECIES_FLUTTER + " ►"
+	set name = "> " + EMOTE_SPECIES_FLUTTER + " ►"
 	set category = "Эмоции"
 	emote_with_delay("flutter", timer)
 
 /mob/living/carbon/human/proc/emote_fpurr()
-	set name = "< " + EMOTE_SPECIES_FPURR + " ►"
+	set name = "> " + EMOTE_SPECIES_FPURR + " ►"
 	set category = "Эмоции"
 	emote_with_delay("fox_purr", timer)
 
 /mob/living/carbon/human/proc/emote_wag() // Lizard, Tajara
-	set name = "< " + EMOTE_SPECIES_WAG + " ►"
+	set name = "> " + EMOTE_SPECIES_WAG + " ►"
 	set category = "Эмоции"
 	emote_with_delay("wag", timer)
 
-/mob/living/carbon/human/proc/emote_swag()
-	set name = "< " + EMOTE_SPECIES_WAG_STOP + " ►"
-	set category = "Эмоции"
-	emote_with_delay("swag", timer)
+// /mob/living/carbon/human/proc/emote_swag()
+// 	set name = "> " + EMOTE_SPECIES_WAG_STOP + " ►"
+// 	set category = "Эмоции"
+// 	emote_with_delay("swag", timer)
 
 /mob/living/carbon/human/proc/emote_growl()
-	set name = "< " + EMOTE_SPECIES_GROWL + " ►"
+	set name = "> " + EMOTE_SPECIES_GROWL + " ►"
 	set category = "Эмоции"
 	emote_with_delay("growl", timer)
 
 /mob/living/carbon/human/proc/emote_howl()
-	set name = "< " + EMOTE_SPECIES_HOWL + " ►"
+	set name = "> " + EMOTE_SPECIES_HOWL + " ►"
 	set category = "Эмоции"
 	emote_with_delay("howl", timer)
 
 /mob/living/carbon/human/proc/emote_roar()
-	set name = "< " + EMOTE_SPECIES_ROAR + " ►"
+	set name = "> " + EMOTE_SPECIES_ROAR + " ►"
 	set category = "Эмоции"
 	emote_with_delay("roar", timer)
 
 /mob/living/carbon/human/proc/emote_threat()
-	set name = "< " + EMOTE_SPECIES_THREAT + " ►"
+	set name = "> " + EMOTE_SPECIES_THREAT + " ►"
 	set category = "Эмоции"
 	emote_with_delay("threat", timer)
 
 /mob/living/carbon/human/proc/emote_whips()
-	set name = "< " + EMOTE_SPECIES_WHIPS + " ►"
+	set name = "> " + EMOTE_SPECIES_WHIPS + " ►"
 	set category = "Эмоции"
 	emote_with_delay("whips", timer)
 
 /mob/living/carbon/human/proc/emote_hum()
-	set name = "< " + EMOTE_SPECIES_HUM + " ►"
+	set name = "> " + EMOTE_SPECIES_HUM + " ►"
 	set category = "Эмоции"
 	emote_with_delay("hum", timer)
 
 /mob/living/carbon/human/proc/emote_rumble()
-	set name = "< " + EMOTE_SPECIES_RUMBLE + " ►"
+	set name = "> " + EMOTE_SPECIES_RUMBLE + " ►"
 	set category = "Эмоции"
 	emote_with_delay("rumble", timer)
 
 /mob/living/carbon/human/proc/emote_quill()
-	set name = "< " + EMOTE_SPECIES_QUILL + " ►"
+	set name = "> " + EMOTE_SPECIES_QUILL + " ►"
 	set category = "Эмоции"
 	emote_with_delay("quill", timer)
 
 /mob/living/carbon/human/proc/emote_creak()
-	set name = "< " + EMOTE_SPECIES_CREAK + " ►"
+	set name = "> " + EMOTE_SPECIES_CREAK + " ►"
 	set category = "Эмоции"
 	emote_with_delay("creak", timer)
 
 /mob/living/carbon/human/proc/emote_warble()
-	set name = "< " + EMOTE_SPECIES_WARBLE + " ►"
+	set name = "> " + EMOTE_SPECIES_WARBLE + " ►"
 	set category = "Эмоции"
 	emote_with_delay("warble", timer)
 
 /mob/living/carbon/human/proc/emote_croak()
-	set name = "< " + EMOTE_SPECIES_CROAK + " ►"
+	set name = "> " + EMOTE_SPECIES_CROAK + " ►"
 	set category = "Эмоции"
 	emote_with_delay("croak", timer)
 
 /mob/living/carbon/human/proc/emote_croak_anger()
-	set name = "< " + EMOTE_SPECIES_CROAK_ANGER + " ►"
+	set name = "> " + EMOTE_SPECIES_CROAK_ANGER + " ►"
 	set category = "Эмоции"
 	emote_with_delay("croak_anger", timer)
 
 /mob/living/carbon/human/proc/emote_click()
-	set name = "< " + EMOTE_SPECIES_CLICK + " ►"
+	set name = "> " + EMOTE_SPECIES_CLICK + " ►"
 	set category = "Эмоции"
 	emote_with_delay("click", timer)
 
 /mob/living/carbon/human/proc/emote_clack()
-	set name = "< " + EMOTE_SPECIES_CLACK + " ►"
+	set name = "> " + EMOTE_SPECIES_CLACK + " ►"
 	set category = "Эмоции"
 	emote_with_delay("clack", timer)
 
 /mob/living/carbon/human/proc/emote_rattle()
-	set name = "< " + EMOTE_SPECIES_RATTLE + " ►"
+	set name = "> " + EMOTE_SPECIES_RATTLE + " ►"
 	set category = "Эмоции"
 	emote_with_delay("rattle", timer)
 
 /mob/living/carbon/human/proc/emote_squish()
-	set name = "< " + EMOTE_SPECIES_SQUISH + " ►"
+	set name = "> " + EMOTE_SPECIES_SQUISH + " ►"
 	set category = "Эмоции"
 	emote_with_delay("squish", timer)
 
 /mob/living/carbon/human/proc/emote_bubble()
-	set name = "< " + EMOTE_SPECIES_BUBBLE + " ►"
+	set name = "> " + EMOTE_SPECIES_BUBBLE + " ►"
 	set category = "Эмоции"
 	emote_with_delay("bubble", timer)
 
 /mob/living/carbon/human/proc/emote_pop()
-	set name = "< " + EMOTE_SPECIES_POP + " ►"
+	set name = "> " + EMOTE_SPECIES_POP + " ►"
 	set category = "Эмоции"
 	emote_with_delay("pop", timer)
 
 /mob/living/carbon/human/proc/emote_ping()
-	set name = "< " + EMOTE_SILICON_PING + " ►"
+	set name = "> " + EMOTE_SILICON_PING + " ►"
 	set category = "Эмоции"
 	emote_with_delay("ping", timer)
 
 /mob/living/carbon/human/proc/emote_beep()
-	set name = "< " + EMOTE_SILICON_BEEP + " ►"
+	set name = "> " + EMOTE_SILICON_BEEP + " ►"
 	set category = "Эмоции"
 	emote_with_delay("beep", timer)
 
 /mob/living/carbon/human/proc/emote_buzz()
-	set name = "< " + EMOTE_SILICON_BUZZ + " ►"
+	set name = "> " + EMOTE_SILICON_BUZZ + " ►"
 	set category = "Эмоции"
 	emote_with_delay("buzz", timer)
 
 /mob/living/carbon/human/proc/emote_buzz2()
-	set name = "< " + EMOTE_SILICON_BUZZ2 + " ►"
+	set name = "> " + EMOTE_SILICON_BUZZ2 + " ►"
 	set category = "Эмоции"
 	emote_with_delay("buzz2", timer)
 
 /mob/living/carbon/human/proc/emote_yes()
-	set name = "< " + EMOTE_SILICON_YES + " ►"
+	set name = "> " + EMOTE_SILICON_YES + " ►"
 	set category = "Эмоции"
 	emote_with_delay("yes", timer)
 
 /mob/living/carbon/human/proc/emote_no()
-	set name = "< " + EMOTE_SILICON_NO + " ►"
+	set name = "> " + EMOTE_SILICON_NO + " ►"
 	set category = "Эмоции"
 	emote_with_delay("no", timer)
 
 /mob/living/carbon/human/proc/emote_waves_k()
-	set name = "< " + EMOTE_SPECIES_WAVES_K + " ►"
+	set name = "> " + EMOTE_SPECIES_WAVES_K + " ►"
 	set category = "Эмоции"
 	emote_with_delay("waves_k", timer)
 
 /mob/living/carbon/human/proc/emote_wiggles()
-	set name = "< " + EMOTE_SPECIES_WIGGLES + " ►"
+	set name = "> " + EMOTE_SPECIES_WIGGLES + " ►"
 	set category = "Эмоции"
 	emote_with_delay("wiggles", timer)
 
 /mob/living/carbon/human/proc/emote_meow()
-	set name = "< " + EMOTE_SPECIES_MEOW + " ►"
+	set name = "> " + EMOTE_SPECIES_MEOW + " ►"
 	set category = "Эмоции"
 	emote_with_delay("meow", timer)
 
 /mob/living/carbon/human/proc/emote_mrow()
-	set name = "< " + EMOTE_SPECIES_MROW + " ►"
+	set name = "> " + EMOTE_SPECIES_MROW + " ►"
 	set category = "Эмоции"
 	emote_with_delay("mrow", timer)
 
 /mob/living/carbon/human/proc/emote_purr()
-	set name = "< " + EMOTE_SPECIES_PURR + " ►"
+	set name = "> " + EMOTE_SPECIES_PURR + " ►"
 	set category = "Эмоции"
 	emote_with_delay("purr", timer)
 
 /mob/living/carbon/human/proc/emote_purrl()
-	set name = "< " + EMOTE_SPECIES_PURRL + " ►"
+	set name = "> " + EMOTE_SPECIES_PURRL + " ►"
 	set category = "Эмоции"
 	emote_with_delay("purrl", timer)
 
 /mob/living/carbon/human/proc/emote_clack_spider() // Spider
-	set name = "< " + EMOTE_SPECIES_CLACK_SPIDER + " ►"
+	set name = "> " + EMOTE_SPECIES_CLACK_SPIDER + " ►"
 	set category = "Эмоции"
 	emote_with_delay("clackspider", timer)
 
 /////////////////////////// ЗВУКОВЫЕ ЭМОУТЫ ///////////////////////////
+
+/mob/living/carbon/human/verb/emote_snuffle()
+	set name = "► " + EMOTE_SPECIES_SNUFFLE + " "
+	set category = "Эмоции"
+	emote_with_delay("snuffle", timer)
+
+/mob/living/carbon/human/verb/emote_fart()
+	set name = "► " + EMOTE_SPECIES_FART + " "
+	set category = "Эмоции"
+	emote_with_delay("fart", timer)
+
+/mob/living/carbon/human/verb/emote_groan()
+	set name = "► " + EMOTE_GROAN + " "
+	set category = "Эмоции"
+	emote_with_delay("groan", timer)
+
+/mob/living/carbon/human/verb/emote_laugh()
+	set name = "► " + EMOTE_CARBON_LAUGH + " "
+	set category = "Эмоции"
+	emote_with_delay("laugh", timer)
+
+/mob/living/carbon/human/verb/emote_laugh_evil()
+	set name = "► " + EMOTE_CARBON_LAUGH_EVIL + " "
+	set category = "Эмоции"
+	emote_with_delay("laugh_evil", timer)
 
 /mob/living/carbon/human/proc/emote_whip()
 	set name = "► " + EMOTE_SPECIES_WHIP + " "
@@ -232,11 +257,6 @@ var/timer = 20
 	set name = "► " + EMOTE_CARBON_GIGGLE + " "
 	set category = "Эмоции"
 	emote_with_delay("giggle", timer)
-
-/mob/living/carbon/human/verb/emote_kiss()
-	set name = "► " + EMOTE_SPECIES_AIRKISS + " "
-	set category = "Эмоции"
-	emote_with_delay("kiss", timer)
 
 /mob/living/carbon/human/verb/emote_clap()
 	set name = "► " + EMOTE_SPECIES_CLAP + " "
@@ -308,15 +328,15 @@ var/timer = 20
 	set category = "Эмоции"
 	emote_with_delay("whistle", timer)
 
-/mob/living/carbon/human/verb/emote_snap()
-	set name = "► " + EMOTE_SPECIES_SNAP + " "
-	set category = "Эмоции"
-	emote_with_delay("snap", timer)
+// /mob/living/carbon/human/verb/emote_snap()
+// 	set name = "► " + EMOTE_SPECIES_SNAP + " "
+// 	set category = "Эмоции"
+// 	emote_with_delay("snap", timer)
 
-/mob/living/carbon/human/proc/emote_ururu()
-	set name = "► " + EMOTE_SPECIES_RUMBLE + " "
-	set category = "Эмоции"
-	emote_with_delay("ururu", timer)
+// /mob/living/carbon/human/proc/emote_ururu()
+// 	set name = "► " + EMOTE_SPECIES_RUMBLE + " "
+// 	set category = "Эмоции"
+// 	emote_with_delay("ururu", timer)
 
 // /mob/living/carbon/human/verb/emote_gasp()	// Пока не вводим
 // 	set name = "► " + EMOTE_SPECIES_GASP + " "
@@ -324,6 +344,11 @@ var/timer = 20
 // 	emote_with_delay("gasp", timer)
 
 /////////////////////////// АКТИВНЫЕ ЭМОУТЫ///////////////////////////
+
+/mob/living/carbon/human/verb/emote_kiss()
+	set name = "▷ " + EMOTE_SPECIES_AIRKISS + " "
+	set category = "Эмоции"
+	emote_with_delay("kiss", timer)
 
 /mob/living/carbon/human/verb/emote_collapse()
 	set name = "▷ " + EMOTE_COLLAPSE + " "
@@ -335,25 +360,30 @@ var/timer = 20
 	set category = "Эмоции"
 	emote_with_delay("slap", timer)
 
-/mob/living/carbon/human/verb/emote_highfive()
-	set name = "▷ " + EMOTE_SPECIES_HIGHFIVE + " "
-	set category = "Эмоции"
-	emote_with_delay("highfive", timer)
+// /mob/living/carbon/human/verb/emote_highfive()
+// 	set name = "▷ " + EMOTE_SPECIES_HIGHFIVE + " "
+// 	set category = "Эмоции"
+// 	emote_with_delay("highfive", timer)
 
-/mob/living/carbon/human/verb/emote_handshake()
-	set name = "▷ " + EMOTE_SPECIES_HANDSHAKE + " "
+// /mob/living/carbon/human/verb/emote_handshake()
+// 	set name = "▷ " + EMOTE_SPECIES_HANDSHAKE + " "
+// 	set category = "Эмоции"
+// 	emote_with_delay("handshake", timer)
+
+/mob/living/carbon/human/verb/emote_spin()
+	set name = "▷ " + EMOTE_SPECIES_SPIN + " "
 	set category = "Эмоции"
-	emote_with_delay("handshake", timer)
+	emote_with_delay("spin", timer)
 
 /mob/living/carbon/human/verb/emote_dance()
 	set name = "▷ " + EMOTE_DANCE + " "
 	set category = "Эмоции"
 	emote_with_delay("dance", timer)
 
-/mob/living/carbon/human/verb/emote_rps()
-	set name = "▷ " + EMOTE_SPECIES_RPS + " "
-	set category = "Эмоции"
-	emote_with_delay("rps", timer)
+// /mob/living/carbon/human/verb/emote_rps()
+// 	set name = "▷ " + EMOTE_SPECIES_RPS + " "
+// 	set category = "Эмоции"
+// 	emote_with_delay("rps", timer)
 
 /mob/living/carbon/human/verb/emote_faint()
 	set name = "▷ " + EMOTE_CARBON_FAINT + " "
@@ -366,11 +396,6 @@ var/timer = 20
 	emote_with_delay("flip", timer)
 
 /////////////////////////// ME ЭМОУТЫ ///////////////////////////
-
-/mob/living/carbon/human/verb/emote_spin()
-	set name = "◦ " + EMOTE_SPECIES_SPIN + " "
-	set category = "Эмоции"
-	emote_with_delay("spin", timer)
 
 /mob/living/carbon/human/verb/emote_shame()
 	set name = "◦ " + EMOTE_SPECIES_SHAME + " "
@@ -407,10 +432,10 @@ var/timer = 20
 	set category = "Эмоции"
 	emote_with_delay("wink", timer)
 
-/mob/living/carbon/human/verb/emote_quiver()
-	set name = "◦ " + EMOTE_QUIVER + " "
-	set category = "Эмоции"
-	emote_with_delay("quiver", timer)
+// /mob/living/carbon/human/verb/emote_quiver()
+// 	set name = "◦ " + EMOTE_QUIVER + " "
+// 	set category = "Эмоции"
+// 	emote_with_delay("quiver", timer)
 
 /mob/living/carbon/human/verb/emote_shudder()
 	set name = "◦ " + EMOTE_SHUDDER + " "
@@ -532,10 +557,6 @@ var/timer = 20
 	set category = "Эмоции"
 	emote_with_delay("grin", timer)
 
-/mob/living/carbon/human/verb/emote_groan()
-	set name = "◦ " + EMOTE_GROAN + " "
-	set category = "Эмоции"
-	emote_with_delay("groan", timer)
 
 /mob/living/carbon/human/verb/emote_grimace()
 	set name = "◦ " + EMOTE_SPECIES_GRIMACE + " "
@@ -547,20 +568,10 @@ var/timer = 20
 	set category = "Эмоции"
 	emote_with_delay("jump", timer)
 
-/mob/living/carbon/human/verb/emote_laugh()
-	set name = "► " + EMOTE_CARBON_LAUGH + " "
-	set category = "Эмоции"
-	emote_with_delay("laugh", timer)
-
 /mob/living/carbon/human/verb/emote_cross()
 	set name = "◦ " + EMOTE_CARBON_CROSS + " "
 	set category = "Эмоции"
 	emote_with_delay("cross", timer)
-
-/mob/living/carbon/human/verb/collapse()
-	set name = "◦ " + EMOTE_SPECIES_COLLAPSE + " "
-	set category = "Эмоции"
-	emote_with_delay("collapse", timer)
 
 /mob/living/carbon/human/verb/emote_drool()
 	set name = "◦ " + EMOTE_DROOL + " "
@@ -616,16 +627,6 @@ var/timer = 20
 	set name = "◦ " + EMOTE_SPECIES_GRUMBLE + " "
 	set category = "Эмоции"
 	emote_with_delay("grumble", timer)
-
-/mob/living/carbon/human/verb/emote_snuffle()
-	set name = "◦ " + EMOTE_SPECIES_SNUFFLE + " "
-	set category = "Эмоции"
-	emote_with_delay("snuffle", timer)
-
-/mob/living/carbon/human/verb/emote_fart()
-	set name = "◦ " + EMOTE_SPECIES_FART + " "
-	set category = "Эмоции"
-	emote_with_delay("fart", timer)
 
 
 

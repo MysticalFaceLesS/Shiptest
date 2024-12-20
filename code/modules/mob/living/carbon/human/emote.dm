@@ -35,8 +35,12 @@
 
 /datum/emote/living/carbon/human/handshake
 	key = "handshake"
-	message = "shakes their own hands."
-	message_param = "shakes hands with %t."
+	// [CELADON-EDIT] - CELADON_COMPONENTS_EMOTE - Эмоции
+	// message = "shakes their own hands."
+	// message_param = "shakes hands with %t." // CELADON-EDIT - ORIGINAL
+	message = "пожимает руку."
+	message_param = "пожимает руку %t."
+	// [/CELADON-EDIT]
 	hands_use_check = TRUE
 	emote_type = EMOTE_AUDIBLE
 
@@ -158,7 +162,7 @@
 	key_third_person = "raises"
 	// [CELADON-EDIT] - CELADON_COMPONENTS_EMOTE - Эмоции
 	// message = "raises a hand." // CELADON-EDIT - ORIGINAL
-	message = "поднимает руки."
+	message = "поднимает руку."
 	// [/CELADON-EDIT]
 	hands_use_check = TRUE
 
@@ -416,13 +420,19 @@
 /datum/emote/living/carbon/human/kepiwhistle
 	key = "whistle"
 	key_third_person = "whistles"
-	message = "whistles!"
+	// [CELADON-EDIT] - CELADON_COMPONENTS_EMOTE - Эмоции
+	// message = "whistles!"	// CELADON-EDIT - ORIGINAL
+	message = "Свистит!"
+	// [/CELADON-EDIT]
 	emote_type = EMOTE_AUDIBLE
 	vary = TRUE
 
 /datum/emote/living/carbon/human/kepiwhistle/get_sound(mob/living/user)
 	if(!ishuman(user))
-		return
+		// [CELADON-EDIT] - CELADON_COMPONENTS_EMOTE - Эмоции
+		// return	// CELADON-EDIT - ORIGINAL
+		return 'mod_celadon/_storge_sounds/sound/emotes/whistle.ogg'
+		// [/CELADON-EDIT]
 	if(iskepori(user))
 		return 'sound/voice/kepori/kepiwhistle.ogg' //https://freesound.org/people/Andreas.Mustola/sounds/338277/
 

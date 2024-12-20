@@ -38,8 +38,8 @@
 /datum/emote/living/drool
 	name = EMOTE_DROOL
 
-/datum/emote/living/quiver
-	name = EMOTE_QUIVER
+// /datum/emote/living/quiver
+// 	name = EMOTE_QUIVER
 
 /datum/emote/living/frown
 	name = EMOTE_FROWN
@@ -160,8 +160,8 @@
 /datum/emote/living/brain/notice
 	name = EMOTE_BRAIN_NOTICE
 
-/datum/emote/living/brain/whistle
-	name = EMOTE_BRAIN_WHISTLE
+// /datum/emote/living/brain/whistle
+// 	name = EMOTE_BRAIN_WHISTLE
 
 /datum/emote/living/brain/beep
 	name = EMOTE_BRAIN_BEEP
@@ -218,6 +218,9 @@
 
 /datum/emote/living/carbon/laugh
 	name = EMOTE_CARBON_LAUGH
+
+/datum/emote/living/carbon/laugh_evil
+	name = EMOTE_CARBON_LAUGH_EVIL
 
 /datum/emote/living/carbon/scowl
 	name = EMOTE_CARBON_SCOWL
@@ -277,11 +280,17 @@
 /datum/emote/living/carbon/human/grumble
 	name = EMOTE_SPECIES_GRUMBLE
 
-/datum/emote/living/carbon/human/highfive/handshake
-	name = EMOTE_SPECIES_HANDSHAKE
+// /datum/emote/living/carbon/human/highfive
+// 	name = EMOTE_SPECIES_HIGHFIVE
 
-/datum/emote/living/carbon/human/highfive/rps
-	name = EMOTE_SPECIES_RPS
+// /datum/emote/living/carbon/human/highfive/dap
+// 	name = EMOTE_SPECIES_DAP
+
+// /datum/emote/living/carbon/human/highfive/handshake
+// 	name = EMOTE_SPECIES_HANDSHAKE
+
+// /datum/emote/living/carbon/human/highfive/rps
+// 	name = EMOTE_SPECIES_RPS
 
 /datum/emote/living/carbon/human/hug
 	name = EMOTE_SPECIES_HUG
@@ -304,8 +313,8 @@
 /datum/emote/living/carbon/human/slap
 	name = EMOTE_SPECIES_SLAP
 
-/datum/emote/living/carbon/human/snap
-	name = EMOTE_SPECIES_SNAP
+// /datum/emote/living/carbon/human/snap
+// 	name = EMOTE_SPECIES_SNAP
 
 /datum/emote/living/carbon/human/fart
 	name = EMOTE_SPECIES_FART
@@ -318,12 +327,6 @@
 
 /datum/emote/living/carbon/human/wink
 	name = EMOTE_SPECIES_WINK
-
-/datum/emote/living/carbon/human/highfive
-	name = EMOTE_SPECIES_HIGHFIVE
-
-/datum/emote/living/carbon/human/highfive/dap
-	name = EMOTE_SPECIES_DAP
 
 /datum/emote/living/carbon/human/pale
 	name = EMOTE_SPECIES_PALE
@@ -352,8 +355,8 @@
 /datum/emote/living/carbon/human/drask_talk/rumble
 	name = EMOTE_SPECIES_RUMBLE
 
-/datum/emote/living/carbon/human/monkey/gnarl
-	name = EMOTE_SPECIES_GNARL
+// /datum/emote/living/carbon/human/monkey/gnarl
+// 	name = EMOTE_SPECIES_GNARL
 
 /datum/emote/living/carbon/human/monkey/roll
 	name = EMOTE_SPECIES_ROLL

@@ -80,6 +80,8 @@
 	vary = TRUE
 
 /datum/emote/living/carbon/mothchitter/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
 	var/mob/living/carbon/human/H = user
 	if(ismoth(H) | (istype(H, /mob/living/simple_animal/pet/mothroach)))
 		return 'mod_celadon/_storge_sounds/sound/voice/moth/mothchitter.ogg'
@@ -87,7 +89,7 @@
 /datum/emote/living/chuckle
 	key = "chuckle"
 	key_third_person = "chuckles"
-	message = "смеётся."
+	message = "усмехается."
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/collapse
@@ -114,6 +116,8 @@
 		return FALSE
 
 /datum/emote/living/cough/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
 	if(ishuman(user))
 		if(user.gender == FEMALE)
 			return pick(
@@ -125,17 +129,19 @@
 			'mod_celadon/_storge_sounds/sound/voice/cough_male_3.ogg')
 	return ..()
 
-/datum/emote/living/carbon/human/cry/get_sound(mob/living/user)
-	if(ishuman(user))
-		if(user.gender == FEMALE)
-			return pick(
-				'mod_celadon/_storge_sounds/sound/voice/cry_female_1.ogg',
-				'mod_celadon/_storge_sounds/sound/voice/cry_female_2.ogg',
-				'mod_celadon/_storge_sounds/sound/voice/cry_female_3.ogg')
-		return pick(
-			'mod_celadon/_storge_sounds/sound/voice/cry_male_1.ogg',
-			'mod_celadon/_storge_sounds/sound/voice/cry_male_1.ogg')
-	return ..()
+// /datum/emote/living/carbon/human/cry/get_sound(mob/living/user)
+// 	if(!ishuman(user))
+// 		return
+// 	if(ishuman(user))
+// 		if(user.gender == FEMALE)
+// 			return pick(
+// 				'mod_celadon/_storge_sounds/sound/voice/cry_female_1.ogg',
+// 				'mod_celadon/_storge_sounds/sound/voice/cry_female_2.ogg',
+// 				'mod_celadon/_storge_sounds/sound/voice/cry_female_3.ogg')
+// 		return pick(
+// 			'mod_celadon/_storge_sounds/sound/voice/cry_male_1.ogg',
+// 			'mod_celadon/_storge_sounds/sound/voice/cry_male_1.ogg')
+// 	return ..()
 
 /datum/emote/living/dance
 	key = "dance"
@@ -223,7 +229,7 @@
 /datum/emote/living/frown
 	key = "frown"
 	key_third_person = "frowns"
-	message = "недовольно смотрит."
+	message = "смотрит в недоумении."
 	emote_type = EMOTE_VISIBLE
 
 /datum/emote/living/gag
@@ -241,6 +247,8 @@
 /datum/emote/living/gag/get_sound(mob/living/user)
 	if(!ishuman(user))
 		return
+	// if(!ishuman(user))
+	// 	return
 	var/mob/living/carbon/human/H = user
 	if(!H.mind || !H.mind.miming)
 		if(user.gender == FEMALE)
@@ -281,6 +289,8 @@
 /datum/emote/living/gasp/get_sound(mob/living/user)
 	if(!ishuman(user))
 		return
+	// if(!ishuman(user))
+	// 	return
 	var/mob/living/carbon/human/H = user
 	if(!H.mind || !H.mind.miming)
 		if(user.gender == FEMALE)
@@ -312,6 +322,8 @@
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/giggle/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
 	if(ishuman(user))
 		if(user.gender == FEMALE)
 			return pick(
@@ -326,24 +338,26 @@
 /datum/emote/living/glare
 	key = "glare"
 	key_third_person = "glares"
-	message = "ослепляет своим взглядом."
-	message_param = "ослепляет своим взглядом %t."
+	message = "смотрит с ненавистью."
+	message_param = "смотрит с ненавистью на %t."
 	emote_type = EMOTE_VISIBLE
 
 /datum/emote/living/grin
 	key = "grin"
 	key_third_person = "grins"
-	message = "ухмыляется."
+	message = "оскаливается в улыбке."
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/groan
 	key = "groan"
 	key_third_person = "groans"
-	message = "стонет!"
-	message_mime = "издаёт тихий стон!"
+	message = "болезненно вздыхает!"
+	message_mime = "издаёт болезненный вздох!"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/groan/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
 	if(ishuman(user))
 		if(user.gender == FEMALE)
 			return pick(
@@ -414,6 +428,8 @@
 /datum/emote/living/laugh/get_sound(mob/living/user)
 	if(!ishuman(user))
 		return
+	// if(!ishuman(user))
+	// 	return
 	var/mob/living/carbon/human/H = user
 	if(!H.mind || !H.mind.miming)
 		if(user.gender == FEMALE)
@@ -424,6 +440,39 @@
 				'mod_celadon/_storge_sounds/sound/voice/human/manlaugh2.ogg')
 	if(ismoth(H))
 		return 'mod_celadon/_storge_sounds/sound/voice/moth/mothlaugh.ogg'
+
+/datum/emote/living/laugh_evil
+	key = "laugh_evil"
+	key_third_person = "laughs_evil"
+	message = "Злорадно смеётся."
+	message_mime = "тихо злорадно смеётся!"
+	emote_type = EMOTE_AUDIBLE
+	vary = TRUE
+
+/datum/emote/living/laugh_evil/can_run_emote(mob/living/user, status_check = TRUE , intentional)
+	. = ..()
+	if(. && iscarbon(user))
+		var/mob/living/carbon/C = user
+		return !C.silent
+
+/datum/emote/living/laugh_evil/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
+	// if(!ishuman(user))
+	// 	return
+	var/mob/living/carbon/human/H = user
+	if(ismoth(H))
+		return 'mod_celadon/_storge_sounds/sound/voice/moth/mothlaugh.ogg'
+	if(!H.mind || !H.mind.miming)
+		if(user.gender == FEMALE)
+			return pick(
+				'mod_celadon/_storge_sounds/sound/emotes/female/laugh_f1.ogg',
+				'mod_celadon/_storge_sounds/sound/emotes/female/laugh_f2.ogg')
+		else
+			return pick(
+				'mod_celadon/_storge_sounds/sound/emotes/male/laugh_m1.ogg',
+				'mod_celadon/_storge_sounds/sound/emotes/male/laugh_m2.ogg')
+
 
 /datum/emote/living/look
 	key = "look"
@@ -447,6 +496,8 @@
 	vary = TRUE
 
 /datum/emote/living/carbon/mothsqueak/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
 	var/mob/living/carbon/human/H = user
 	if(ismoth(H) | (istype(H, /mob/living/simple_animal/pet/mothroach)))
 		return 'mod_celadon/_storge_sounds/sound/voice/moth/mothsqueak.ogg'
@@ -517,7 +568,7 @@
 /datum/emote/living/shiver
 	key = "shiver"
 	key_third_person = "shiver"
-	message = "трепещет!"
+	message = "дрожит!"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/sigh
@@ -527,6 +578,8 @@
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/sigh/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
 	if(ishuman(user))
 		if(user.gender == FEMALE)
 			return pick('mod_celadon/_storge_sounds/sound/voice/sigh_female.ogg')
@@ -558,6 +611,8 @@
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/sneeze/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
 	if(ishuman(user))
 		if(user.gender == FEMALE)
 			return pick('mod_celadon/_storge_sounds/sound/voice/sneeze_female.ogg')
@@ -573,14 +628,22 @@
 /datum/emote/living/sniff
 	key = "sniff"
 	key_third_person = "sniffs"
-	message = "нюхает."
+	message = "Шмыгает."
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/sniff/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
 	if(ishuman(user))
 		if(user.gender == FEMALE)
-			return pick('mod_celadon/_storge_sounds/sound/voice/sniff_female.ogg')
-		return pick('mod_celadon/_storge_sounds/sound/voice/sniff_male.ogg')
+			return pick('mod_celadon/_storge_sounds/sound/emotes/female/sniff_female.ogg')
+		else
+			return pick('mod_celadon/_storge_sounds/sound/emotes/male/male_sniff.ogg')
+
+	// if(ishuman(user))
+	// 	if(user.gender == FEMALE)
+	// 		return pick('mod_celadon/_storge_sounds/sound/voice/sniff_female.ogg')
+	// 	return pick('mod_celadon/_storge_sounds/sound/voice/sniff_male.ogg')
 	return ..()
 
 #define SNORE_DURATION 5.2 SECONDS
@@ -614,6 +677,8 @@
 		living_user.update_body()
 
 /datum/emote/living/snore/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
 	if(ishuman(user))
 		return pick(
 			'mod_celadon/_storge_sounds/sound/voice/snore_1.ogg',
@@ -668,18 +733,18 @@
 /datum/emote/living/tremble
 	key = "tremble"
 	key_third_person = "trembles"
-	message = "дрожит!"
+	message = "дрожит в ужасе!"
 	emote_type = EMOTE_VISIBLE
 
 /datum/emote/living/twitch
 	key = "twitch"
 	key_third_person = "twitches"
-	message = "дёргается."
+	message = "сильно дёргается."
 	emote_type = EMOTE_VISIBLE
 
 /datum/emote/living/twitch_s
 	key = "twitch_s"
-	message = "сильно дёргается."
+	message = "дёргается."
 	emote_type = EMOTE_VISIBLE
 
 /datum/emote/living/wave
@@ -714,6 +779,8 @@
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/yawn/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
 	if(ishuman(user))
 		if(user.gender == FEMALE)
 			return pick(
@@ -833,17 +900,19 @@
 	message = "щёлкает челюстью."
 	emote_type = EMOTE_AUDIBLE
 
-/datum/emote/living/hoot
-	key = "hoot"
-	key_third_person = "hoots"
-	message = "свистит!"
-	message_mime = "издаёт тихий свист!"
-	emote_type = EMOTE_AUDIBLE
+// /datum/emote/living/hoot
+// 	key = "hoot"
+// 	key_third_person = "hoots"
+// 	message = "свистит!"
+// 	message_mime = "издаёт тихий свист!"
+// 	emote_type = EMOTE_AUDIBLE
 
-/datum/emote/living/hoot/get_sound(mob/living/user)
-	if(ishuman(user))
-		return pick('mod_celadon/_storge_sounds/sound/voice/whistle.ogg')
-	return ..()
+// /datum/emote/living/hoot/get_sound(mob/living/user)
+// 	if(!ishuman(user))
+// 		return pick('mod_celadon/_storge_sounds/sound/emotes/whistle.ogg')
+// 	// if(ishuman(user))
+// 	return pick('mod_celadon/_storge_sounds/sound/voice/whistle.ogg')
+// 	// return ..()
 
 /datum/emote/living/warcray
 	key = "warcray"
@@ -860,6 +929,8 @@
 /datum/emote/living/warcray/get_sound(mob/living/user)
 	if(!ishuman(user))
 		return
+	// if(!ishuman(user))
+	// 	return
 	var/mob/living/carbon/human/H = user
 	if(!H.mind || !H.mind.miming)
 		if(user.gender == FEMALE)
@@ -924,7 +995,9 @@
 
 
 /datum/emote/living/choke/get_sound(mob/living/user)
-	. = ..()
+	if(!ishuman(user))
+		return
+	// . = ..()
 	if(user.gender == FEMALE)
 		return pick(
 			'mod_celadon/_storge_sounds/sound/emotes/female/choke_female_1.ogg',
@@ -939,6 +1012,8 @@
 /datum/emote/living/sigh/get_sound(mob/living/user)
 	if(!ishuman(user))
 		return
+	// if(!ishuman(user))
+	// 	return
 	var/mob/living/carbon/human/H = user
 
 	if(H.gender == FEMALE)
@@ -947,23 +1022,25 @@
 		return pick(H.dna.species.male_sigh_sound)
 
 /datum/emote/living/sniff/get_sound(mob/living/user)
-	. = ..()
+	if(!ishuman(user))
+		return
+	// . = ..()
 	if(user.gender == FEMALE)
 		return 'mod_celadon/_storge_sounds/sound/emotes/female/sniff_female.ogg'
 	else
 		return 'mod_celadon/_storge_sounds/sound/emotes/male/sniff_male.ogg'
 
-/datum/emote/living/snore/get_sound(mob/living/user)
-	. = ..()
-	if(iscarbon(user))
-		return pick(
-			'mod_celadon/_storge_sounds/sound/emotes/snore_1.ogg',
-			'mod_celadon/_storge_sounds/sound/emotes/snore_2.ogg',
-			'mod_celadon/_storge_sounds/sound/emotes/snore_3.ogg',
-			'mod_celadon/_storge_sounds/sound/emotes/snore_4.ogg',
-			'mod_celadon/_storge_sounds/sound/emotes/snore_5.ogg',
-			'mod_celadon/_storge_sounds/sound/emotes/snore_6.ogg',
-			'mod_celadon/_storge_sounds/sound/emotes/snore_7.ogg')
+// /datum/emote/living/snore/get_sound(mob/living/user)
+// 	. = ..()
+// 	if(iscarbon(user))
+// 		return pick(
+// 			'mod_celadon/_storge_sounds/sound/emotes/snore_1.ogg',
+// 			'mod_celadon/_storge_sounds/sound/emotes/snore_2.ogg',
+// 			'mod_celadon/_storge_sounds/sound/emotes/snore_3.ogg',
+// 			'mod_celadon/_storge_sounds/sound/emotes/snore_4.ogg',
+// 			'mod_celadon/_storge_sounds/sound/emotes/snore_5.ogg',
+// 			'mod_celadon/_storge_sounds/sound/emotes/snore_6.ogg',
+// 			'mod_celadon/_storge_sounds/sound/emotes/snore_7.ogg')
 
 //////////////////////
 /// Carbon Emotes ///
@@ -972,16 +1049,19 @@
 /datum/emote/living/carbon/moan/get_sound(mob/living/user)
 	if(!ishuman(user))
 		return
+
 	var/mob/living/carbon/human/H = user
 
 	if(H.gender == FEMALE)
-		return pick(H.dna.species.female_moan_sound)
+		return pick(H.dna.species.female_groan_sound)
 	else
-		return pick(H.dna.species.male_moan_sound)
+		return pick(H.dna.species.male_groan_sound)
 
 /datum/emote/living/carbon/giggle/get_sound(mob/living/user)
 	if(!ishuman(user))
 		return
+	// if(!ishuman(user))
+	// 	return
 	var/mob/living/carbon/human/H = user
 
 	if(H.gender == FEMALE)
@@ -990,7 +1070,9 @@
 		return pick(H.dna.species.male_giggle_sound)
 
 /datum/emote/living/carbon/yawn/get_sound(mob/living/user)
-	. = ..()
+	if(!ishuman(user))
+		return
+	// . = ..()
 	if(user.gender == FEMALE)
 		return pick(
 			'mod_celadon/_storge_sounds/sound/emotes/female/yawn_female_1.ogg',
@@ -1025,6 +1107,8 @@
 			return "[H.dna.species?.scream_verb]!"
 
 /datum/emote/living/carbon/human/scream/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
 	var/mob/living/carbon/human/human = user
 	if(human.mind?.miming || !istype(human))
 		return
@@ -1035,6 +1119,8 @@
 /datum/emote/living/carbon/human/gasp/get_sound(mob/user)
 	if(!ishuman(user))
 		return
+	// if(!ishuman(user))
+	// 	return
 	var/mob/living/carbon/human/H = user
 
 	if(H.is_muzzled())
@@ -1053,24 +1139,38 @@
 		return pick(H.dna.species.male_dying_gasp_sounds)
 
 /datum/emote/living/carbon/human/salute/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
 	var/mob/living/carbon/human/H = user
 	if(!is_type_in_list(H.shoes, funny_shoes))
 		return 'mod_celadon/_storge_sounds/sound/emotes/salute.ogg'
 	if(is_type_in_list(H.shoes, funny_shoes))
 		return 'mod_celadon/_storge_sounds/sound/emotes/toysqueak1.ogg'
 
+/datum/emote/living/carbon/human/cry
+	key = "cry"
+	key_third_person = "cries"
+	message = "Плачет."
+	muzzled_noises = list("слабо", "жалко", "грустно")
+	emote_type = EMOTE_AUDIBLE
+
 /datum/emote/living/carbon/human/cry/get_sound(mob/living/user)
 	if(!ishuman(user))
 		return
+	// if(!ishuman(user))
+	// 	return
 	var/mob/living/carbon/human/H = user
 
 	if(H.gender == FEMALE)
 		return pick(H.dna.species.female_cry_sound)
 	else
 		return pick(H.dna.species.male_cry_sound)
+	// return ..()
 
 /datum/emote/living/carbon/human/sniff/get_sound(mob/living/user)
-	. = ..()
+	if(!ishuman(user))
+		return
+	// . = ..()
 	if(user.gender == FEMALE)
 		return 'mod_celadon/_storge_sounds/sound/emotes/female/sniff_female.ogg'
 	else
@@ -1079,6 +1179,8 @@
 /datum/emote/living/carbon/human/sneeze/get_sound(mob/user)
 	if(!ishuman(user))
 		return
+	// if(!ishuman(user))
+	// 	return
 	var/mob/living/carbon/human/H = user
 
 	if(H.gender == FEMALE)
@@ -1105,11 +1207,26 @@
 	emote_type = EMOTE_AUDIBLE | EMOTE_MOUTH | EMOTE_VISIBLE
 	sound = 'mod_celadon/_storge_sounds/sound/emotes/whistle.ogg'
 
+/datum/emote/living/carbon/human/whistle/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return pick('mod_celadon/_storge_sounds/sound/emotes/whistle.ogg')
+	if(ishuman(user))
+		return pick('mod_celadon/_storge_sounds/sound/emotes/whistle.ogg')
+
 /datum/emote/living/carbon/human/snuffle
 	key = "snuffle"
 	key_third_person = "snuffles"
 	message = "нюхает."
 	message_param = "нюхает %t."
+
+/datum/emote/living/carbon/human/snuffle/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
+	if(ishuman(user))
+		if(user.gender == FEMALE)
+			return pick('mod_celadon/_storge_sounds/sound/emotes/female/female_sniff.ogg')
+		else
+			return pick('mod_celadon/_storge_sounds/sound/emotes/male/male_sniff.ogg')
 
 /datum/emote/living/carbon/human/hem
 	key = "hem"
@@ -1136,6 +1253,8 @@
 	age_based = TRUE
 
 /datum/emote/living/carbon/human/roar/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
 	return pick(
 		'mod_celadon/_storge_sounds/sound/emotes/unathi/roar_unathi_1.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/unathi/roar_unathi_2.ogg',
@@ -1153,9 +1272,12 @@
 	muzzled_noises = list("слабо урчащий")
 
 /datum/emote/living/carbon/human/rumble/get_sound(mob/living/user)
-	return pick(
-		'mod_celadon/_storge_sounds/sound/emotes/unathi/rumble_unathi_1.ogg',
-		'mod_celadon/_storge_sounds/sound/emotes/unathi/rumble_unathi_2.ogg')
+	if(!ishuman(user))
+		return
+	if(islizard(user))
+		return pick(
+			'mod_celadon/_storge_sounds/sound/emotes/unathi/rumble_unathi_1.ogg',
+			'mod_celadon/_storge_sounds/sound/emotes/unathi/rumble_unathi_2.ogg')
 
 /datum/emote/living/carbon/human/threat
 	key = "threat"
@@ -1360,11 +1482,84 @@
 
 	return TRUE
 
-/datum/emote/living/carbon/human/cry
+/datum/emote/living/carbon/human/spin
 	key = "spin"
 	key_third_person = "spines"
 	message = "Кружится."
 	emote_type = EMOTE_VISIBLE
+
+/datum/emote/spin
+	message = "кружится."
+
+/datum/emote/living/carbon/moan
+	key = "moan"
+	key_third_person = "moans"
+	message = "стонет!"
+	message_mime = "кажется стонет"
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/carbon/moan/can_run_emote(mob/user, status_check = TRUE , intentional)
+	if(!..())
+		return FALSE
+
+	if (isipc(user) || islanius(user))
+		return FALSE
+
+	return TRUE
+
+/datum/emote/living/carbon/moan/get_sound(mob/living/user)
+	if(!ishuman(user))
+		return
+
+	var/mob/living/carbon/human/H = user
+
+	if(H.gender == FEMALE)
+		return pick(H.dna.species.female_moan_sound)
+	else
+		return pick(H.dna.species.male_moan_sound)
+
+	// return ..()
+
+/datum/emote/living/carbon/human/fart
+	key = "fart"
+	key_third_person = "farts"
+	message = "пёрнул."
+	message_param = "пёрнул по направлению %t."
+	sound = 'mod_celadon/_storge_sounds/sound/emotes/fart.ogg'
+	emote_type = EMOTE_AUDIBLE
+
+/datum/emote/living/carbon/human/fart/run_emote(mob/user, params, type_override, intentional)
+	var/farted_on_something = FALSE
+	for(var/atom/A in get_turf(user))
+		farted_on_something = A.fart_act(user) || farted_on_something
+	if(!farted_on_something)
+		return ..()
+
+/atom/proc/fart_act(mob/living/M)
+	return FALSE
+
+/datum/emote/living/shudder
+	key = "shudder"
+	key_third_person = "shudders"
+	message = "содрагается."
+	emote_type = EMOTE_VISIBLE
+	// unintentional_stat_allowed = UNCONSCIOUS
+
+/datum/emote/living/bshake
+	key = "bshake"
+	key_third_person = "bshakes"
+	message = "трясётся."
+	// unintentional_stat_allowed = UNCONSCIOUS
+
+// /datum/emote/living/carbon/human/cry/get_sound(mob/living/user)
+// 	if(!ishuman(user))
+// 		return
+// 	var/mob/living/carbon/human/H = user
+
+// 	if(H.gender == FEMALE)
+// 		return pick(H.dna.species.female_cry_sound)
+// 	else
+// 		return pick(H.dna.species.male_cry_sound)
 
 // /datum/emote/living/carbon/human/tajara/purr
 // 	key = "purr"
@@ -1385,3 +1580,77 @@
 
 // /datum/emote/living/carbon/human/tajara/purrl/get_sound(mob/living/user)
 // 	return 'mod_celadon/_storge_sounds/sound/purr_long.ogg'
+
+
+// /datum/emote/living/carbon/human/highfive	// Пиздец там порртировать......
+// 	key = "highfive"
+// 	key_third_person = "highfives"
+// 	hands_use_check = TRUE
+// 	cooldown = 5 SECONDS
+// 	/// Status effect to apply when this emote is used. Should be a subtype
+// 	var/status = STATUS_EFFECT_HIGHFIVE
+// 	/// title override, used for the re-use message.
+// 	var/action_name
+
+// /datum/emote/living/carbon/human/highfive/can_run_emote(mob/user, status_check, intentional)
+// 	. = ..()
+// 	// var/mob/living/carbon/user_carbon = user
+// 	// if(user_carbon.hands_use_check())
+// 	// 	return FALSE
+
+// /datum/emote/living/carbon/human/highfive/proc/set_status(mob/living/carbon/user)
+// 	return user.apply_status_effect(status)
+
+// /datum/emote/living/carbon/human/highfive/run_emote(mob/user, params, type_override, intentional)
+// 	var/mob/living/carbon/user_carbon = user
+// 	if(user_carbon.has_status_effect(status))
+// 		user.visible_message("[user.name] shakes [user.p_their()] hand around slightly, impatiently waiting for someone to [!isnull(action_name) ? action_name : key].")
+// 		return TRUE
+// 	var/datum/result = set_status(user)
+// 	if(QDELETED(result))
+// 		return TRUE
+
+// 	return ..()
+
+// /datum/emote/living/carbon/human/highfive/dap
+// 	key = "dap"
+// 	status = STATUS_EFFECT_DAP
+// 	key_third_person = "daps"
+
+// /datum/emote/living/carbon/human/highfive/handshake
+// 	key = "handshake"
+// 	key_third_person = "handshakes"
+// 	status = STATUS_EFFECT_HANDSHAKE
+
+// /datum/emote/living/carbon/human/highfive/rps
+// 	key = "rps"
+// 	param_desc = "r,p,s"
+// 	hands_use_check = TRUE
+// 	status = STATUS_EFFECT_RPS
+// 	action_name = "play rock-paper-scissors with"
+// 	target_behavior = EMOTE_TARGET_BHVR_IGNORE
+// 	/// If the user used parameters, the move that will be made.
+// 	var/move
+
+// /datum/emote/living/carbon/human/highfive/rps/run_emote(mob/user, emote_arg, type_override, intentional)
+// 	switch(lowertext(emote_arg))
+// 		if("r", "rock")
+// 			move = RPS_EMOTE_ROCK
+// 		if("p", "paper")
+// 			move = RPS_EMOTE_PAPER
+// 		if("s", "scissors")
+// 			move = RPS_EMOTE_SCISSORS
+
+// 		// if it's an invalid emote param, just fall through and let them select
+
+// 	return ..()
+
+// /datum/emote/living/carbon/human/highfive/rps/set_status(mob/living/carbon/user)
+// 	if(!isnull(move))
+// 		// if they supplied a valid parameter, use that for the move
+// 		return user.apply_status_effect(status, move)
+// 	return user.apply_status_effect(status)
+
+// /datum/emote/living/carbon/human/highfive/rps/reset_emote()
+// 	..()
+// 	move = initial(move)

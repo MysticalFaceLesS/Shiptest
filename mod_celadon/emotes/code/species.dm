@@ -17,36 +17,85 @@
 	var/male_cry_sound = list(
 		'mod_celadon/_storge_sounds/sound/emotes/male/cry_male_1.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/male/cry_male_2.ogg')
+
 	var/female_cry_sound = list(
 		'mod_celadon/_storge_sounds/sound/emotes/female/cry_female_1.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/female/cry_female_2.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/female/cry_female_3.ogg')
+
 	var/male_giggle_sound = list(
 		'mod_celadon/_storge_sounds/sound/emotes/male/giggle_male_1.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/male/giggle_male_2.ogg')
+
 	var/female_giggle_sound = list(
 		'mod_celadon/_storge_sounds/sound/emotes/female/giggle_female_1.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/female/giggle_female_2.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/female/giggle_female_3.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/female/giggle_female_4.ogg')
+
 	var/male_laugh_sound = list(
 		'mod_celadon/_storge_sounds/sound/emotes/male/laugh_male_1.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/male/laugh_male_2.ogg',
-		'mod_celadon/_storge_sounds/sound/emotes/male/laugh_male_3.ogg')
+		'mod_celadon/_storge_sounds/sound/emotes/male/laugh_male_3.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/male/laugh_male_4.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/male/laugh_male_5.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/male/laugh_male_6.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/male/laugh_male_7.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/male/laugh_male_8.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/male/laugh_male_9.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/male/laugh_male_10.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/male/laugh_male_11.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/male/laugh_male_12.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/male/laugh_male_13.ogg')
+
 	var/female_laugh_sound = list(
 		'mod_celadon/_storge_sounds/sound/emotes/female/laugh_female_1.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/female/laugh_female_2.ogg',
-		'mod_celadon/_storge_sounds/sound/emotes/female/laugh_female_3.ogg')
+		'mod_celadon/_storge_sounds/sound/emotes/female/laugh_female_3.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/female/laugh_female_4.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/female/laugh_female_5.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/female/laugh_female_6.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/female/laugh_female_7.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/female/laugh_female_8.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/female/laugh_female_9.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/female/laugh_female_10.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/female/laugh_female_11.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/female/laugh_female_12.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/female/laugh_female_13.ogg')
+
 	var/male_sigh_sound = list('mod_celadon/_storge_sounds/sound/emotes/male/sigh_male.ogg')
+
 	var/female_sigh_sound = list('mod_celadon/_storge_sounds/sound/emotes/female/sigh_female.ogg')
-	var/male_moan_sound = list(
+
+	var/male_groan_sound = list(
 		'mod_celadon/_storge_sounds/sound/emotes/male/moan_male_1.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/male/moan_male_2.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/male/moan_male_3.ogg')
-	var/female_moan_sound = list(
+
+	var/female_groan_sound = list(
 		'mod_celadon/_storge_sounds/sound/emotes/female/moan_female_1.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/female/moan_female_2.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/female/moan_female_3.ogg')
+
+	var/male_moan_sound = list(
+		'mod_celadon/_storge_sounds/sound/emotes/male/moan_m1.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/male/moan_m2.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/male/moan_m3.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/male/moan_m4.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/male/moan_m5.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/male/moan_m6.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/male/moan_m7.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/male/moan_m8.ogg')
+
+	var/female_moan_sound = list(
+		'mod_celadon/_storge_sounds/sound/emotes/female/moan_f1.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/female/moan_f2.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/female/moan_f3.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/female/moan_f4.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/female/moan_f5.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/female/moan_f6.ogg',
+		'mod_celadon/_storge_sounds/sound/emotes/female/moan_f7.ogg')
+
 	var/female_gasp_sound = list(
 		'mod_celadon/_storge_sounds/sound/emotes/female/gasp_female_1.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/female/gasp_female_2.ogg',
@@ -55,21 +104,25 @@
 		'mod_celadon/_storge_sounds/sound/emotes/female/gasp_female_5.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/female/gasp_female_6.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/female/gasp_female_7.ogg')
+
 	var/list/death_sounds = list(
 		'mod_celadon/_storge_sounds/sound/emotes/voice/deathgasp_1.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/voice/deathgasp_2.ogg')
+
 	var/list/male_dying_gasp_sounds = list(
 		'mod_celadon/_storge_sounds/sound/emotes/voice/male_dying_gasp_1.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/voice/male_dying_gasp_2.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/voice/male_dying_gasp_3.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/voice/male_dying_gasp_4.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/voice/male_dying_gasp_5.ogg')
+
 	var/list/female_dying_gasp_sounds = list(
 		'mod_celadon/_storge_sounds/sound/emotes/voice/female_dying_gasp_1.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/voice/female_dying_gasp_2.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/voice/female_dying_gasp_3.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/voice/female_dying_gasp_4.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/voice/female_dying_gasp_5.ogg')
+
 	var/gasp_sound = list(
 		'mod_celadon/_storge_sounds/sound/emotes/male/gasp_male_1.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/male/gasp_male_2.ogg',
@@ -78,17 +131,23 @@
 		'mod_celadon/_storge_sounds/sound/emotes/male/gasp_male_5.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/male/gasp_male_6.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/male/gasp_male_7.ogg')
+
 	var/male_cough_sounds = list(
 		'mod_celadon/_storge_sounds/sound/emotes/male/cough_male_1.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/male/cough_male_2.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/male/cough_male_3.ogg')
+
 	var/female_cough_sounds = list(
 		'mod_celadon/_storge_sounds/sound/emotes/female/cough_female_1.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/female/cough_female_2.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/female/cough_female_3.ogg')
+
 	var/male_sneeze_sound = 'mod_celadon/_storge_sounds/sound/emotes/mob_effects/sneeze.ogg'
+
 	var/female_sneeze_sound = 'mod_celadon/_storge_sounds/sound/emotes/female/sneeze_female.ogg'
+
 	var/male_scream_sound = 'mod_celadon/_storge_sounds/sound/emotes/voice/male_scream.ogg'
+
 	var/female_scream_sound = 'mod_celadon/_storge_sounds/sound/emotes/voice/female_scream.ogg'
 
 /datum/species/ipc
@@ -168,6 +227,7 @@
 		'mod_celadon/_storge_sounds/sound/emotes/unathi/talk_unathi_1.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/unathi/talk_unathi_2.ogg',
 		'mod_celadon/_storge_sounds/sound/emotes/unathi/talk_unathi_3.ogg')
+
 	speech_chance = 20
 	male_scream_sound = 'mod_celadon/_storge_sounds/sound/emotes/unathi/scream_male.ogg'
 	female_scream_sound = 'mod_celadon/_storge_sounds/sound/emotes/unathi/scream_female.ogg'
