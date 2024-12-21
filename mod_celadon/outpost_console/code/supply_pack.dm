@@ -6,6 +6,10 @@
 
 // Делаем красиво? Наверное? По крайней мере экономим буквы, чтобы не писать в каждом датуме эти вещи!
 
+/datum/supply_pack/faction/independent
+	hidden = FALSE
+	crate_type = /obj/structure/closet/crate
+
 /datum/supply_pack/faction/syndicate
 	hidden = FALSE
 	faction = "syndicate"

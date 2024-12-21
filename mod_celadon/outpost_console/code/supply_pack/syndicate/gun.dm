@@ -1,5 +1,5 @@
-/datum/supply_pack/faction/syndicate/gun // Пушки
-	group = "Faction gun"
+/datum/supply_pack/faction/syndicate/gun
+	group = "Weapons"
 
 /datum/supply_pack/faction/syndicate/gun/ringneck
 	name = "PC-76"

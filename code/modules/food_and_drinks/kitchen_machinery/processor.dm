@@ -156,8 +156,10 @@
 
 /obj/machinery/processor/slime/Initialize()
 	. = ..()
-	var/obj/item/circuitboard/machine/B = new /obj/item/circuitboard/machine/processor/slime(null)
-	B.apply_default_parts(src)
+	// [CELADON-REMOVE] - CELADON_BALANCE - Режем данную механику
+	// var/obj/item/circuitboard/machine/B = new /obj/item/circuitboard/machine/processor/slime(null)
+	// B.apply_default_parts(src)
+	// [/CELADON-REMOVE]
 
 /obj/machinery/processor/slime/adjust_item_drop_location(atom/movable/AM)
 	var/static/list/slimecores = subtypesof(/obj/item/slime_extract)
