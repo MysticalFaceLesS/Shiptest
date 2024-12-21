@@ -9,44 +9,39 @@
 -->
 
 <!-- Название мода. Не важно на русском или на английском. -->
-## Возвращение трофеев крашеров
+## НАЗВАНИЕ_МОДА
 
-ID мода: CRUSHER_TROPHY
+ID мода: CELADON_LIFELINE_MINUS
 <!--
   Название модпака прописными буквами, СОЕДИНЁННЫМИ_ПОДЧЁРКИВАНИЕМ,
   которое ты будешь использовать для обозначения файлов.
   При запуске скрипта выставляется автоматически.
+  Приставка CELADON гарантирует уникальность 
+  модпака. Этот ID будет использоваться для обозначения
+  изменений в кор коде, если того потребуется.
 -->
 
 ### Описание мода
 
-Этот мод отменяет парадигму офов, возвращая в игру легендарные трофеи для крашеров. Теперь можно вешать на крашеры трофеи.
+<- Скрывает старый лайвлайн,подсовывая наш,который работает по радиусу>
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
   А также любая полезная информация.
 -->
 
+### Используется в других проектах?
+- Нет
+<!--
+  ВНИМАНИЕ!
+  Заполняется другими авторами, кто использует этот модпак или
+  его часть в других модпаках! Для Автора модпака внимательно
+  отслеживать данный пункт при изменении своего кода!
+  Пример заполнения: `Используется часть кода для модпака EXAMP_EXAM`
+-->
+
 ### Изменения *кор кода*
 
-- code/modules/mob/living/simple_animal/hostile/mining_mobs/wolf.dm
-- code/modules/mob/living/simple_animal/hostile/mining_mobs/mining_mobs.dm
-- code/modules/mob/living/simple_animal/hostile/mining_mobs/polarbear.dm
-- code/modules/mob/living/simple_animal/hostile/mining_mobs/ice demon.dm
-- code/modules/mob/living/simple_animal/hostile/mining_mobs/hivelord.dm
-- code/modules/mob/living/simple_animal/hostile/mining_mobs/goliath.dm
-- code/modules/mob/living/simple_animal/hostile/mining_mobs/elites/legionnaire.dm
-- code/modules/mob/living/simple_animal/hostile/mining_mobs/basilisk.dm
-- code/modules/mob/living/simple_animal/hostile/megafauna/megafauna.dm
-- code/modules/mob/living/simple_animal/hostile/megafauna/drake.dm
-- code/modules/mob/living/simple_animal/hostile/megafauna/cult_templar.dm
-- code/modules/mob/living/simple_animal/hostile/megafauna/codename_claw.dm
-- code/modules/mob/living/simple_animal/hostile/megafauna/bubblegum.dm
-- code/modules/mob/living/simple_animal/hostile/human/survivors.dm
-- code/modules/mining/equipment/trophies.dm
-- code/modules/mining/lavaland/necropolis_chests.dm
-- code/modules/mining/equipment/kinetic_crusher.dm
-- code/datums/components/crafting/recipes/tribal.dm
-
+- `code\modules\modular_computers\file_system\programs\radar.dm`: `radar/lifeline`
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -78,12 +73,12 @@ ID мода: CRUSHER_TROPHY
   И то же самое, если ты используешь дефайны, определённые другим модом.
 
   Не используешь - напиши "Отсутствуют"
-  Примеры: `code/__defines/~mod_celadon/crusher_trophy.dm`: `CRUSHER_TROPHY_SPEED_MULTIPLIER`, `CRUSHER_TROPHY_SPEED_BASE`
+  Примеры: `code/__defines/~mod_celadon/lifeline_minus.dm`: `LIFELINE_MINUS_SPEED_MULTIPLIER`, `LIFELINE_MINUS_SPEED_BASE`
 -->
 
 ### Используемые файлы, не содержащиеся в модпаке
 
-- `mod_celadon/balance/code/hostile_mobs.dm` : Перенесены туда части трофеев с фауны
+- `tgui\packages\tgui\interfaces\NtosRadar.js`
 <!--
   Будь то немодульный файл или модульный файл, который не содержится в папке,
   принадлежащей этому конкретному моду, он должен быть упомянут здесь.
@@ -94,7 +89,7 @@ ID мода: CRUSHER_TROPHY
 
 ### Авторы
 
-MrCat15352
+CatPainted
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.
