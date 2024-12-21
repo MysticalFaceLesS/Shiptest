@@ -9,3 +9,7 @@
 #define CULT_EYES "cult_eyes"
 /// Trait applied by [/datum/component/soulstoned]
 #define SOULSTONE_TRAIT "soulstone"
+
+/// This mob heals from carp rifts.
+#define TRAIT_HEALS_FROM_CARP_RIFTS "heals_from_carp_rifts"
+
