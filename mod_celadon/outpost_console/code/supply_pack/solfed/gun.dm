@@ -1,5 +1,5 @@
-/datum/supply_pack/faction/solfed/gun // Пушки
-	group = "Faction gun"
+/datum/supply_pack/faction/solfed/gun
+	group = "Weapons"
 
 /datum/supply_pack/faction/solfed/gun/gar
 	name = "Solar 'GAR' Carbine"
