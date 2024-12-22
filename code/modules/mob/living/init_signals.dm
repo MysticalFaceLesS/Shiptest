@@ -132,7 +132,11 @@
 /// Called when [TRAIT_INCAPACITATED] is added to the mob.
 /mob/living/proc/on_incapacitated_trait_gain(datum/source)
 	SIGNAL_HANDLER
-	ADD_TRAIT(src, TRAIT_UI_BLOCKED, TRAIT_INCAPACITATED)
+	// [CELADON-EDIT] - CELADON_QUIRKS
+	// ADD_TRAIT(src, TRAIT_UI_BLOCKED, TRAIT_INCAPACITATED)	// CELADON-EDIT - ORIGINAL
+	if(!HAS_TRAIT(src, TRAIT_LAST_SHANCE))
+		ADD_TRAIT(src, TRAIT_UI_BLOCKED, TRAIT_INCAPACITATED)
+	// [/CELADON-EDIT]
 	ADD_TRAIT(src, TRAIT_PULL_BLOCKED, TRAIT_INCAPACITATED)
 	update_appearance()
 
@@ -147,7 +151,11 @@
 /// Called when [TRAIT_RESTRAINED] is added to the mob.
 /mob/living/proc/on_restrained_trait_gain(datum/source)
 	SIGNAL_HANDLER
-	ADD_TRAIT(src, TRAIT_HANDS_BLOCKED, TRAIT_RESTRAINED)
+	// [CELADON-EDIT] - CELADON_QUIRKS
+	// ADD_TRAIT(src, TRAIT_HANDS_BLOCKED, TRAIT_RESTRAINED)	// CELADON-EDIT - ORIGINAL
+	if(!HAS_TRAIT(src, TRAIT_LAST_SHANCE))
+		ADD_TRAIT(src, TRAIT_HANDS_BLOCKED, TRAIT_RESTRAINED)
+	// [/CELADON-EDIT]
 
 /// Called when [TRAIT_RESTRAINED] is removed from the mob.
 /mob/living/proc/on_restrained_trait_loss(datum/source)

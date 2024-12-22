@@ -10,6 +10,9 @@
 /// Trait applied by [/datum/component/soulstoned]
 #define SOULSTONE_TRAIT "soulstone"
 
+#define TRAIT_INCREASED_SURVIVAL "increased_survival"
+
+
 /// This mob heals from carp rifts.
 #define TRAIT_HEALS_FROM_CARP_RIFTS "heals_from_carp_rifts"
 

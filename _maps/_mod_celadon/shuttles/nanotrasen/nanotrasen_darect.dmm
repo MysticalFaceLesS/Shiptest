@@ -353,13 +353,8 @@
 	},
 /obj/machinery/suit_storage_unit/inherit,
 /obj/item/tank/internals/oxygen,
-/obj/item/clothing/suit/space{
-	desc = "A space suit made of high-grade ballistic fabric with integrated armor plates. More compact than a normal space suit while almost matching powered hardsuits for protection. Almost.";
-	armor = list("melee" = 30, "bullet" = 15, "laser" = 15, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75)
-	},
-/obj/item/clothing/head/helmet/space/light{
-	desc = "A special helmet with solar UV shielding to protect your eyes from harmful rays.""An advanced, lightweight space helmet made of durable composites. Almost matches integrated hardsuit helmets for protection. Almost.";
-	armor = list("melee" = 30, "bullet" = 15, "laser" = 15, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75)
+/obj/item/clothing/suit/space/hardsuit/security{
+	slowdown = 0.2
 	},
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo)
@@ -1223,6 +1218,11 @@
 /obj/effect/turf_decal/trimline/opaque/red/warning{
 	dir = 4
 	},
+/obj/machinery/light_switch{
+	dir = 8;
+	pixel_x = 19;
+	pixel_y = -12
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/ship/security/armory)
 "uu" = (
@@ -1565,6 +1565,11 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 10
 	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -19;
+	pixel_y = 12
+	},
 /turf/open/floor/wood,
 /area/ship/crew/canteen)
 "BE" = (
@@ -1577,13 +1582,8 @@
 	},
 /obj/machinery/suit_storage_unit/inherit,
 /obj/item/tank/internals/oxygen,
-/obj/item/clothing/suit/space{
-	desc = "A space suit made of high-grade ballistic fabric with integrated armor plates. More compact than a normal space suit while almost matching powered hardsuits for protection. Almost.";
-	armor = list("melee" = 30, "bullet" = 15, "laser" = 15, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75)
-	},
-/obj/item/clothing/head/helmet/space/light{
-	desc = "An advanced, lightweight space helmet made of durable composites. Almost matches integrated hardsuit helmets for protection. Almost.";
-	armor = list("melee" = 30, "bullet" = 15, "laser" = 15, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75)
+/obj/item/clothing/suit/space/hardsuit/security{
+	slowdown = 0.2
 	},
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo)
@@ -1733,6 +1733,9 @@
 /obj/effect/turf_decal/siding/wideplating/dark{
 	dir = 1
 	},
+/obj/item/storage/belt/security/webbing,
+/obj/item/storage/belt/security/webbing,
+/obj/item/storage/belt/security/webbing,
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/crew)
 "Eo" = (
