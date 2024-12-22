@@ -1337,7 +1337,6 @@
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/effect/turf_decal/corner/opaque/ntblue/full,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -1345,7 +1344,7 @@
 	dir = 4;
 	name = "Cargo"
 	},
-/turf/open/floor/plasteel/white,
+/turf/open/floor/plasteel/dark,
 /area/ship/cargo/office)
 "dX" = (
 /obj/machinery/camera{
@@ -2383,7 +2382,8 @@
 	color = "#997C4F"
 	},
 /obj/structure/closet/secure_closet{
-	icon_state = "cargo"
+	icon_state = "cargo";
+	name = "supply technician's locker"
 	},
 /obj/item/clothing/suit/nanotrasen/vest,
 /obj/item/clothing/head/nanotrasen/cap/supply,
@@ -4167,7 +4167,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/turf/open/floor/plasteel/white,
+/turf/open/floor/plasteel/patterned,
 /area/ship/cargo/office)
 "GH" = (
 /obj/structure/cable{
@@ -5259,6 +5259,12 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2,
 /turf/open/floor/wood/yew,
 /area/ship/crew)
+"SH" = (
+/obj/structure/closet/secure_closet{
+	icon_state = "cargo"
+	},
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/ship/cargo/office)
 "SJ" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/conveyor{
@@ -6817,8 +6823,8 @@ RQ
 LO
 Fh
 Se
-Fh
-Fh
+SH
+SH
 dW
 jd
 ZZ
