@@ -21,7 +21,9 @@
 	mob_size = MOB_SIZE_LARGE
 	var/icon_aggro = null
 	var/trophy_drop_mod = 25
-	var/datum/armor/armor		//WS edit - Whitesands
+	// [CELADON-REMOVE] - CELADONE_BALANCE - вынесено в родитель hostile и прописано в модуле
+	// var/datum/armor/armor		//WS edit - Whitesands
+	// [/CELADON-REMOVE]
 
 /mob/living/simple_animal/hostile/asteroid/Initialize(mapload)
 	if (islist(armor))		//WS edit begin - Whitesands

@@ -1,5 +1,5 @@
-/datum/supply_pack/faction/inteq/gun // Пушки
-	group = "Faction gun"
+/datum/supply_pack/faction/inteq/gun
+	group = "Weapons"
 
 /datum/supply_pack/faction/inteq/gun/skm_carbine
 	name = "SKM-44v Mongrel"
