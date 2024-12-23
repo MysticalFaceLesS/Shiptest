@@ -268,6 +268,11 @@ GLOBAL_LIST_INIT(cloth_recipes, list ( \
 	new/datum/stack_recipe("23x19 canvas", /obj/item/canvas/twentythreeXnineteen, 4), \
 	new/datum/stack_recipe("23x23 canvas", /obj/item/canvas/twentythreeXtwentythree, 5), \
 	new/datum/stack_recipe("punching bag", /obj/structure/punching_bag, 5, time = 25, one_per_turf = TRUE, on_floor = TRUE), \
+	// [CELADON-ADD] - CELADON_QOL - добавляем рецепты обмоток лап
+	new/datum/stack_recipe("footwraps white", /obj/item/clothing/shoes/footwraps, 2), \
+	new/datum/stack_recipe("footwraps black", /obj/item/clothing/shoes/footwraps/black, 2), \
+	new/datum/stack_recipe("footwraps brown", /obj/item/clothing/shoes/footwraps/brown, 2), \
+	// [/CELADON-ADD]
 	))
 
 /obj/item/stack/sheet/cotton/cloth
