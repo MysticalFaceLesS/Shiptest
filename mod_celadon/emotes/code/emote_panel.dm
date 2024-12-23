@@ -55,10 +55,10 @@
 		ui.open()
 	ui.set_autoupdate(FALSE)
 
-/mob/living/verb/emote_panel()
-	set name = "Панель эмоций"
-	// set category = "IC"	Пока вынесем в категорию дебага
-	set category = "Debug"
+// /mob/living/verb/emote_panel()
+// 	set name = "Панель эмоций"
+// 	// set category = "IC"	Пока вынесем в категорию дебага
+// 	set category = "Debug"
 
-	var/static/datum/emote_panel/emote_panel = new
-	emote_panel.ui_interact(src)
+// 	var/static/datum/emote_panel/emote_panel = new
+// 	emote_panel.ui_interact(src)
