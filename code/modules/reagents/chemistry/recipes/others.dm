@@ -561,7 +561,10 @@
 	mix_message = "The mushroom's insides bubble and pop and it becomes very limp."
 
 /datum/chemical_reaction/slime_extractification
-	required_reagents = list(/datum/reagent/toxin/slimejelly = 30, /datum/reagent/consumable/frostoil = 5, /datum/reagent/toxin/plasma = 5)
+	// [CELADON-EDIT] - CELADON_BALANCE - Меняем кровь слаймоменов
+	// required_reagents = list(/datum/reagent/toxin/slimejelly = 30, /datum/reagent/consumable/frostoil = 5, /datum/reagent/toxin/plasma = 5)	// CELADON-EDIT - ORIGINAL
+	required_reagents = list(/datum/reagent/toxin/acid/fluacid = 20, /datum/reagent/consumable/frostoil = 5, /datum/reagent/toxin/plasma = 5)
+	// [/CELADON-EDIT]
 	mix_message = "The mixture condenses into a ball."
 
 /datum/chemical_reaction/slime_extractification/on_reaction(datum/reagents/holder, created_volume)

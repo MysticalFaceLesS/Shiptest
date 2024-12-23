@@ -848,7 +848,10 @@
 				new /obj/item/circuitboard/computer/xenobiology(loc)
 				new /obj/item/slime_extract/grey(loc)
 				new /mob/living/simple_animal/slime/random(loc)
-			if(prob(45))
+			// [CELADON-EDIT] - CELADON_BALANCE - Понижаем шанс выпададения платы слаймов
+			// if(prob(45))	// CELADON-EDIT - ORIGINAL
+			if(prob(15))
+			// [/CELADON-EDIT]
 				new /obj/item/circuitboard/machine/processor/slime(loc)
 				new /mob/living/simple_animal/slime/random(loc)
 				new /mob/living/simple_animal/slime/random(loc)

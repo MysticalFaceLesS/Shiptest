@@ -531,7 +531,11 @@
 /// Proc to append behavior related to lying down.
 /mob/living/proc/on_lying_down(new_lying_angle)
 	layer = LYING_MOB_LAYER //so mob lying always appear behind standing mobs
-	ADD_TRAIT(src, TRAIT_UI_BLOCKED, LYING_DOWN_TRAIT)
+	// [CELADON-EDIT] - CELADON_QUIRKS
+	// ADD_TRAIT(src, TRAIT_UI_BLOCKED, LYING_DOWN_TRAIT)	// CELADON-EDIT - ORIGINAL
+	if(!HAS_TRAIT(src, TRAIT_INCREASED_SURVIVAL))
+		ADD_TRAIT(src, TRAIT_UI_BLOCKED, LYING_DOWN_TRAIT)
+	// [/CELADON-EDIT]
 	ADD_TRAIT(src, TRAIT_PULL_BLOCKED, LYING_DOWN_TRAIT)
 	density = FALSE // We lose density and stop bumping passable dense things.
 	if(HAS_TRAIT(src, TRAIT_FLOORED) && !(dir & (NORTH|SOUTH)))
@@ -1640,8 +1644,14 @@ GLOBAL_VAR_INIT(ssd_indicator_overlay, mutable_appearance('icons/mob/ssd_indicat
 		if(CONSCIOUS)
 			if(stat >= UNCONSCIOUS)
 				ADD_TRAIT(src, TRAIT_IMMOBILIZED, TRAIT_KNOCKEDOUT)
-			ADD_TRAIT(src, TRAIT_HANDS_BLOCKED, STAT_TRAIT)
-			ADD_TRAIT(src, TRAIT_INCAPACITATED, STAT_TRAIT)
+			// [CELADON-EDIT] - CELADON_QUIRKS
+			// ADD_TRAIT(src, TRAIT_HANDS_BLOCKED, STAT_TRAIT)
+			// ADD_TRAIT(src, TRAIT_INCAPACITATED, STAT_TRAIT)	// CELADON-EDIT - ORIGINAL
+			if(!HAS_TRAIT(src, TRAIT_INCREASED_SURVIVAL))
+				ADD_TRAIT(src, TRAIT_HANDS_BLOCKED, STAT_TRAIT)
+			if(!HAS_TRAIT(src, TRAIT_INCREASED_SURVIVAL))
+				ADD_TRAIT(src, TRAIT_INCAPACITATED, STAT_TRAIT)
+			// [/CELADON-EDIT]
 			ADD_TRAIT(src, TRAIT_FLOORED, STAT_TRAIT)
 		if(SOFT_CRIT)
 			if(stat >= UNCONSCIOUS)
