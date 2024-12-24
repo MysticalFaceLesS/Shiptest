@@ -18,7 +18,6 @@
 	canSmoothWith = list(SMOOTH_GROUP_WALLS, SMOOTH_GROUP_WINDOW_FULLTILE, SMOOTH_GROUP_AIRLOCK)
 
 	breakdown_duration = 25
-	breakdown_duration = 25
 	var/sheet_type = /obj/item/stack/sheet/metal
 	var/sheet_amount = 2
 	var/obj/girder_type = /obj/structure/girder
@@ -29,16 +28,6 @@
 	min_dam = 25
 	max_integrity = 800
 	// [/CELADON-EDIT]
-	brute_mod = 1
-	burn_mod = 1
-	var/repair_amount = 50
-
-	mob_smash_flags = ENVIRONMENT_SMASH_WALLS
-	proj_bonus_damage_flags = PROJECTILE_BONUS_DAMAGE_WALLS
-
-
-	min_dam = 8
-	max_integrity = 400
 	brute_mod = 1
 	burn_mod = 1
 	var/repair_amount = 50
@@ -76,7 +65,6 @@
 	return
 
 /turf/closed/wall/dismantle_wall(devastated = FALSE)
-/turf/closed/wall/dismantle_wall(devastated = FALSE)
 	create_sheets()
 	var/obj/newgirder = create_girder()
 	if(devastated)
@@ -88,7 +76,6 @@
 			transfer_fingerprints_to(newgirder)
 		playsound(src, break_sound, 100, TRUE)
 
-	..()
 	..()
 
 /turf/closed/wall/proc/create_sheets()
@@ -107,29 +94,20 @@
 	if(try_clean(W, user, loc) || try_wallmount(W, user, loc) || try_decon(W, user, loc) || try_destroy(W, user, loc))
 		return
 
-/turf/closed/wall/attack_override(obj/item/W, mob/user, turf/loc)
-	if(try_clean(W, user, loc) || try_wallmount(W, user, loc))
-		return
-	..()
-
 /turf/closed/wall/proc/try_clean(obj/item/W, mob/user, turf/T)
-	if((user.a_intent != INTENT_HELP))
 	if((user.a_intent != INTENT_HELP))
 		return FALSE
 
 	if(W.tool_behaviour == TOOL_WELDER)
 		if(!W.tool_start_check(user, amount=0) || (integrity >= max_integrity))
-		if(!W.tool_start_check(user, amount=0) || (integrity >= max_integrity))
 			return FALSE
 
 		to_chat(user, "<span class='notice'>You begin fixing dents on the wall...</span>")
-		if(W.use_tool(src, user, breakdown_duration, volume=100))
 		if(W.use_tool(src, user, breakdown_duration, volume=100))
 			if(iswallturf(src) && LAZYLEN(dent_decals))
 				to_chat(user, "<span class='notice'>You fix some dents on the wall.</span>")
 				dent_decals = null
 				update_appearance()
-			alter_integrity(repair_amount)
 			alter_integrity(repair_amount)
 			return TRUE
 
@@ -146,19 +124,6 @@
 	else if(istype(W, /obj/item/poster))
 		place_poster(W,user)
 		return TRUE
-
-	return FALSE
-
-/turf/closed/wall/try_decon(obj/item/I, mob/user, turf/T)
-	if(I.tool_behaviour == TOOL_WELDER)
-		if(!I.tool_start_check(user, amount=0))
-			return FALSE
-
-		to_chat(user, "<span class='notice'>You begin slicing through the outer plating...</span>")
-		while(I.use_tool(src, user, breakdown_duration, volume=50))
-			if(iswallturf(src))
-				to_chat(user, "<span class='notice'>You slice through some of the outer plating...</span>")
-				alter_integrity(-(I.wall_decon_damage),FALSE,TRUE)
 
 	return FALSE
 
@@ -204,8 +169,3 @@
 			ScrapeAway()
 			return TRUE
 	return FALSE
-
-
-
-
-
