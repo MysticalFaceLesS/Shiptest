@@ -114,9 +114,7 @@
 		gets_drilled(user, TRUE, slagged)
 	else
 		return FALSE
-		return FALSE
 
-/turf/closed/mineral/proc/gets_drilled(user, give_exp = FALSE, slag_chance = 0)
 /turf/closed/mineral/proc/gets_drilled(user, give_exp = FALSE, slag_chance = 0)
 	if (mineralType && (mineralAmt > 0))
 		//oops, you ruined the ore
