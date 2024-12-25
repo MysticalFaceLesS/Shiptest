@@ -280,6 +280,3 @@
 	ears = /obj/item/radio/headset/nanotrasen/alt
 	backpack_contents = list(/obj/item/radio)
 	box = /obj/item/storage/box/survival/ntert
-
-
-
