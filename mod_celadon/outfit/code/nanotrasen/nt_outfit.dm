@@ -264,7 +264,6 @@
 	backpack_contents = list(/obj/item/radio)
 	box = /obj/item/storage/box/survival/ntert
 
-
 	//Nanotrasen Tactical Assault Team уборщичек
 
 /datum/outfit/job/nanotrasen/ntas/janitor
