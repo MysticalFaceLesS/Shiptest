@@ -51,6 +51,9 @@
 /obj/item/stock_parts/cell/gun/upgraded,
 /obj/item/stock_parts/cell/gun/upgraded,
 /obj/item/stock_parts/cell/gun/upgraded,
+/obj/item/stock_parts/cell/gun,
+/obj/item/stock_parts/cell/gun,
+/obj/item/stock_parts/cell/gun,
 /turf/open/floor/plasteel/tech,
 /area/ship/security/armory)
 "ba" = (
@@ -119,6 +122,10 @@
 	name = "nanotrasen tactical assault squad leader's bedsheet"
 	},
 /obj/structure/curtain/bounty,
+/obj/structure/sign/poster/official/mini_energy_gun{
+	pixel_x = -31;
+	pixel_y = 0
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/dorm/captain)
 "bT" = (
@@ -487,10 +494,10 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 10
 	},
-/obj/machinery/suit_storage_unit/inherit,
 /obj/item/clothing/mask/gas/sechailer/balaclava,
 /obj/item/tank/jetpack/oxygen/security,
 /obj/item/clothing/suit/space/hardsuit/ert/classic/sec,
+/obj/machinery/suit_storage_unit/inherit/industrial,
 /turf/open/floor/plasteel/tech,
 /area/ship/security/armory)
 "gF" = (
@@ -499,7 +506,7 @@
 	dir = 5
 	},
 /obj/structure/closet/secure_closet{
-	name = "nanotrasen assault squad leader's locker";
+	name = "squad leader's locker";
 	icon_state = "blueshield";
 	anchored = 1
 	},
@@ -677,7 +684,8 @@
 	},
 /obj/machinery/light/directional/north,
 /obj/item/banner/command/mundane{
-	anchored = 1
+	anchored = 1;
+	name = "nanotrasen banner"
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/hallway/central)
@@ -893,7 +901,7 @@
 	},
 /obj/item/clothing/head/nanotrasen/beret/security{
 	name = "fancy security operative beret";
-	desc = "A blood-red beret issued to NAT security operatives for formal occasions. Nanotrasen logo is stitched into the side."
+	desc = "A blood-red beret issued to NTAS security operatives for formal occasions. Nanotrasen logo is stitched into the side."
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/security)
@@ -1223,10 +1231,6 @@
 /obj/effect/turf_decal/corner/opaque/orange/border{
 	dir = 9
 	},
-/obj/structure/sign/poster/official/obey{
-	pixel_x = -31;
-	pixel_y = 0
-	},
 /turf/open/floor/plasteel/strongdark,
 /area/ship/security)
 "pQ" = (
@@ -1356,7 +1360,8 @@
 	pixel_y = 11
 	},
 /obj/item/banner/command/mundane{
-	anchored = 1
+	anchored = 1;
+	name = "nanotrasen banner"
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/hallway/central)
@@ -1376,10 +1381,10 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 9
 	},
-/obj/machinery/suit_storage_unit/inherit,
 /obj/item/clothing/mask/gas/sechailer/balaclava,
 /obj/item/tank/jetpack/oxygen/security,
 /obj/item/clothing/suit/space/hardsuit/ert/classic/sec,
+/obj/machinery/suit_storage_unit/inherit/industrial,
 /turf/open/floor/plasteel/tech,
 /area/ship/security/armory)
 "se" = (
@@ -1556,7 +1561,9 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
 	},
-/obj/structure/guncloset,
+/obj/structure/guncloset{
+	anchored = 1
+	},
 /obj/item/gun/energy/e_gun/hades{
 	pixel_x = -1;
 	pixel_y = -9
@@ -2208,7 +2215,7 @@
 	},
 /obj/item/clothing/head/nanotrasen/beret/security{
 	name = "fancy security operative beret";
-	desc = "A blood-red beret issued to NAT security operatives for formal occasions. Nanotrasen logo is stitched into the side."
+	desc = "A blood-red beret issued to NTAS security operatives for formal occasions. Nanotrasen logo is stitched into the side."
 	},
 /obj/machinery/light_switch{
 	pixel_x = -12;
@@ -2248,10 +2255,6 @@
 /obj/item/clothing/under/rank/prisoner,
 /obj/item/clothing/shoes/sneakers/orange,
 /obj/item/card/id/prisoner/two,
-/obj/machinery/flasher{
-	name = "floor-mounted flash";
-	id = "skybreaker_flasher"
-	},
 /turf/open/floor/plasteel/strongdark,
 /area/ship/security)
 "Fu" = (
@@ -2572,10 +2575,10 @@
 	pixel_x = -20;
 	pixel_y = -11
 	},
-/obj/machinery/suit_storage_unit/inherit,
 /obj/item/clothing/mask/gas/sechailer/balaclava,
 /obj/item/tank/jetpack/oxygen/security,
 /obj/item/clothing/suit/space/hardsuit/ert/classic/sec,
+/obj/machinery/suit_storage_unit/inherit/industrial,
 /turf/open/floor/plasteel/tech,
 /area/ship/security/armory)
 "Jk" = (
@@ -2864,10 +2867,6 @@
 /obj/item/stamp/nt/captain{
 	pixel_x = -10;
 	pixel_y = -4
-	},
-/obj/structure/sign/poster/official/mini_energy_gun{
-	pixel_x = -31;
-	pixel_y = 0
 	},
 /obj/item/toy/plush/celadon/hampter/captain/old{
 	pixel_x = 10;
@@ -3344,6 +3343,9 @@
 	},
 /obj/item/storage/belt/utility/full/engi,
 /obj/item/crowbar/power,
+/obj/item/clothing/head/beret/eng{
+	name = "engineering operative beret"
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/security)
 "Tg" = (
@@ -3360,7 +3362,8 @@
 	},
 /obj/machinery/flasher{
 	name = "floor-mounted flash";
-	id = "skybreaker_flasher"
+	id = "skybreaker_flasher";
+	desc = "A floor-mounted flashbulb device."
 	},
 /turf/open/floor/plasteel/strongdark,
 /area/ship/security)
@@ -3391,6 +3394,10 @@
 	dir = 10
 	},
 /obj/machinery/light/directional/south,
+/obj/structure/sign/poster/official/obey{
+	pixel_x = -31;
+	pixel_y = 0
+	},
 /turf/open/floor/plasteel/strongdark,
 /area/ship/security)
 "Uw" = (
@@ -3571,17 +3578,18 @@
 	},
 /obj/machinery/light/directional/south,
 /obj/machinery/autolathe/hacked,
-/obj/item/stack/sheet/metal/fifty{
-	pixel_x = -7
-	},
-/obj/item/stack/sheet/glass/fifty{
-	pixel_x = 7
-	},
 /obj/structure/closet/secure_closet/wall/directional/east{
 	icon_state = "sec_wall";
 	name = "autolathe supplies locker"
 	},
-/obj/item/stack/sheet/plastic/five,
+/obj/item/stack/sheet/metal/five{
+	pixel_x = -6;
+	pixel_y = 0
+	},
+/obj/item/stack/sheet/glass/five{
+	pixel_x = 8;
+	pixel_y = 0
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/security)
 "WK" = (
@@ -3800,6 +3808,10 @@
 /obj/item/crowbar/syndie{
 	name = "elite crowbar"
 	},
+/obj/item/clothing/head/beret/med{
+	name = "medical operative beret"
+	},
+/obj/item/storage/belt/medical/webbing,
 /turf/open/floor/plasteel/tech,
 /area/ship/medical)
 "YV" = (
