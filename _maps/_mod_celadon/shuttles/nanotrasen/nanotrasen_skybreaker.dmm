@@ -305,6 +305,10 @@
 	preferred_direction = 4;
 	port_direction = 2
 	},
+/obj/machinery/door/poddoor/shutters{
+	dir = 4;
+	id = "skybreaker_airlock"
+	},
 /turf/open/floor/plating,
 /area/ship/general/engineering)
 "ep" = (
@@ -647,6 +651,10 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 4
 	},
+/obj/machinery/door/poddoor/shutters{
+	dir = 4;
+	id = "skybreaker_airlock"
+	},
 /turf/open/floor/plating,
 /area/ship/general/engineering)
 "if" = (
@@ -917,6 +925,12 @@
 	},
 /obj/effect/turf_decal/ntspaceworks_small/right{
 	dir = 4
+	},
+/obj/machinery/button/door{
+	id = "skybreaker_eng";
+	name = "engine shutters";
+	pixel_x = 0;
+	pixel_y = 30
 	},
 /turf/open/floor/plating,
 /area/ship/general/engineering)
@@ -1853,7 +1867,7 @@
 	},
 /obj/machinery/door/poddoor/shutters{
 	dir = 4;
-	id = "Ranger_SB_maint_shut"
+	id = "skybreaker_eng"
 	},
 /turf/open/floor/plating,
 /area/ship/general/engineering)
@@ -2355,7 +2369,14 @@
 	},
 /obj/structure/sign/warning/vacuum/external{
 	pixel_x = -32;
-	pixel_y = 0
+	pixel_y = -4
+	},
+/obj/machinery/button/door{
+	dir = 4;
+	pixel_x = -24;
+	pixel_y = 6;
+	id = "skybreaker_airlock";
+	name = "airlock shutters"
 	},
 /turf/open/floor/plating,
 /area/ship/general/engineering)
