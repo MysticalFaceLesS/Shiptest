@@ -22,7 +22,45 @@
 /datum/outfit/job/nanotrasen/post_equip(mob/living/carbon/human/H)
 	. = ..()
 	get_nt_general_access(H)
+// Даёт всем НТшкам брендовый сурвивал бокс
+/datum/outfit/job/nanotrasen
+	box = /obj/item/storage/box/survival/nanotrasen
 
+/datum/outfit/job/nanotrasen/hos
+	box = /obj/item/storage/box/survival/nanotrasen
+	
+/datum/outfit/job/nanotrasen/engineer
+	box = /obj/item/storage/box/survival/nanotrasen
+
+/datum/outfit/job/nanotrasen/security
+	box = /obj/item/storage/box/survival/nanotrasen
+
+/datum/outfit/job/nanotrasen/paramedic
+	box = /obj/item/storage/box/survival/nanotrasen
+
+/datum/outfit/job/nanotrasen/doctor
+	box = /obj/item/storage/box/survival/nanotrasen
+
+/datum/outfit/job/nanotrasen/cmo
+	box = /obj/item/storage/box/survival/nanotrasen
+
+/datum/outfit/job/nanotrasen/warden
+	box = /obj/item/storage/box/survival/nanotrasen
+
+/datum/outfit/job/nanotrasen/ce
+	box = /obj/item/storage/box/survival/nanotrasen
+
+/datum/outfit/job/nanotrasen/atmos
+	box = /obj/item/storage/box/survival/nanotrasen
+
+/datum/outfit/job/nanotrasen/miner
+	box = /obj/item/storage/box/survival/nanotrasen
+
+/datum/outfit/job/nanotrasen/doctor/lp
+	box = /obj/item/storage/box/survival/nanotrasen
+
+/datum/outfit/job/nanotrasen/chemist
+	box = /obj/item/storage/box/survival/nanotrasen
 // Научный директор - РД
 
 /datum/outfit/job/nanotrasen/rd
@@ -199,3 +237,83 @@
 	r_pocket = /obj/item/melee/knife/survival
 	backpack_contents = list(/obj/item/radio, /obj/item/flashlight/seclite, /obj/item/gun_voucher/nanotrasen)
 	glasses = /obj/item/clothing/glasses/sunglasses
+
+	//Nanotrasen Tactical Assault Team лидер
+
+/datum/outfit/job/nanotrasen/ntas/commander
+	name = "NTAS Leader"
+	jobtype = /datum/job/captain
+	job_icon = "captain"
+	implants = list(/obj/item/implant/mindshield, /obj/item/organ/cyberimp/eyes/hud/security)
+	uniform = /obj/item/clothing/under/rank/centcom/official
+	shoes = /obj/item/clothing/shoes/combat
+	gloves = /obj/item/clothing/gloves/combat
+	backpack = /obj/item/storage/backpack/ert
+	id = /obj/item/card/id/ert
+	ears = /obj/item/radio/headset/nanotrasen/alt/captain
+	backpack_contents = list(/obj/item/radio)
+	box = /obj/item/storage/box/survival/nanotrasen
+
+	//Nanotrasen Tactical Assault Team сбуха
+
+/datum/outfit/job/nanotrasen/ntas/operative
+	name = "NTAS Security Operative"
+	jobtype = /datum/job/hos
+	job_icon = "headofsecurity"
+	implants = list(/obj/item/implant/mindshield)
+	uniform = /obj/item/clothing/under/rank/centcom/officer
+	shoes = /obj/item/clothing/shoes/combat
+	gloves = /obj/item/clothing/gloves/combat
+	backpack = /obj/item/storage/backpack/ert/security
+	id = /obj/item/card/id/ert/security
+	ears = /obj/item/radio/headset/nanotrasen/alt
+	backpack_contents = list(/obj/item/radio)
+	box = /obj/item/storage/box/survival/nanotrasen
+
+	//Nanotrasen Tactical Assault Team медик
+
+/datum/outfit/job/nanotrasen/ntas/medic
+	name = "NTAS Medical Operative"
+	jobtype = /datum/job/cmo
+	job_icon = "chiefmedicalofficer"
+	implants = list(/obj/item/implant/mindshield)
+	uniform = /obj/item/clothing/under/rank/centcom/officer
+	shoes = /obj/item/clothing/shoes/combat
+	gloves = /obj/item/clothing/gloves/combat
+	backpack = /obj/item/storage/backpack/ert/medical
+	id = /obj/item/card/id/ert/medical
+	ears = /obj/item/radio/headset/nanotrasen/alt
+	backpack_contents = list(/obj/item/radio)
+	box = /obj/item/storage/box/survival/nanotrasen
+
+	//Nanotrasen Tactical Assault Team инженер
+
+/datum/outfit/job/nanotrasen/ntas/engineer
+	name = "NTAS Medical Operative"
+	jobtype = /datum/job/chief_engineer
+	job_icon = "chiefengineer"
+	implants = list(/obj/item/implant/mindshield)
+	uniform = /obj/item/clothing/under/rank/centcom/officer
+	shoes = /obj/item/clothing/shoes/combat
+	gloves = /obj/item/clothing/gloves/combat
+	backpack = /obj/item/storage/backpack/ert/engineer
+	id = /obj/item/card/id/ert/engineer
+	ears = /obj/item/radio/headset/nanotrasen/alt
+	backpack_contents = list(/obj/item/radio)
+	box = /obj/item/storage/box/survival/nanotrasen
+
+	//Nanotrasen Tactical Assault Team уборщичек
+
+/datum/outfit/job/nanotrasen/ntas/janitor
+	name = "NTAS Custodial Operative"
+	jobtype = /datum/job/janitor
+	job_icon = "janitor"
+	implants = list(/obj/item/implant/mindshield)
+	uniform = /obj/item/clothing/under/rank/centcom/officer
+	shoes = /obj/item/clothing/shoes/combat
+	gloves = /obj/item/clothing/gloves/combat
+	backpack = /obj/item/storage/backpack/ert/janitor
+	id = /obj/item/card/id/ert/janitor
+	ears = /obj/item/radio/headset/nanotrasen/alt
+	backpack_contents = list(/obj/item/radio)
+	box = /obj/item/storage/box/survival/nanotrasen
