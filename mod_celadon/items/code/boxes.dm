@@ -1,3 +1,4 @@
+
 			// nanotrasen survival box
 /obj/item/storage/box/survival/nanotrasen
 	name = "nanotrasen survival box"
@@ -106,3 +107,4 @@
 		/obj/item/radio = 1,\
 		)
 	generate_items_inside(items_inside,src)
+

@@ -254,6 +254,7 @@
 	backpack_contents = list(/obj/item/radio)
 	box = /obj/item/storage/box/survival/nanotrasen
 
+
 	//Nanotrasen Tactical Assault Team сбуха
 
 /datum/outfit/job/nanotrasen/ntas/operative
@@ -268,6 +269,7 @@
 	id = /obj/item/card/id/ert/security
 	ears = /obj/item/radio/headset/nanotrasen/alt
 	backpack_contents = list(/obj/item/radio)
+
 	box = /obj/item/storage/box/survival/nanotrasen
 
 	//Nanotrasen Tactical Assault Team медик
@@ -284,7 +286,9 @@
 	id = /obj/item/card/id/ert/medical
 	ears = /obj/item/radio/headset/nanotrasen/alt
 	backpack_contents = list(/obj/item/radio)
+
 	box = /obj/item/storage/box/survival/nanotrasen
+
 
 	//Nanotrasen Tactical Assault Team инженер
 
@@ -300,6 +304,7 @@
 	id = /obj/item/card/id/ert/engineer
 	ears = /obj/item/radio/headset/nanotrasen/alt
 	backpack_contents = list(/obj/item/radio)
+  
 	box = /obj/item/storage/box/survival/nanotrasen
 
 	//Nanotrasen Tactical Assault Team уборщичек
@@ -316,4 +321,6 @@
 	id = /obj/item/card/id/ert/janitor
 	ears = /obj/item/radio/headset/nanotrasen/alt
 	backpack_contents = list(/obj/item/radio)
+
 	box = /obj/item/storage/box/survival/nanotrasen
+
