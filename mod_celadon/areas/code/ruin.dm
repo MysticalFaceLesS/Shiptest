@@ -73,3 +73,23 @@
 /area/ruin/space/has_grav/ancientstation/hivebot
 	name = "Hivebot Mothership"
 	icon_state = "xenocell1"
+
+/area/ruin/wasteplanet/secure_claw
+	name = "Laboratory"
+	icon_state = "toxlab"
+
+/area/ruin/wasteplanet/secure_claw/contain
+	name = "Contain area"
+	icon_state = "syndie-control"
+
+/area/ruin/wasteplanet/secure_claw/engineering
+	name = "Engineering area"
+	icon_state = "yellow"
+
+/area/ruin/wasteplanet/secure_claw/control
+	name = "Secure Control area"
+	icon_state = "security"
+
+/area/ruin/wasteplanet/secure_claw/dorm
+	name = "Recreation area"
+	icon_state = "yellow"

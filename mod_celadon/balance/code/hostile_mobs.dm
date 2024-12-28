@@ -834,13 +834,12 @@ GLOBAL_LIST_INIT(onecardinalwest, WEST)
 
 /mob/living/simple_animal/hostile/megafauna/claw
 	armor = list("melee" = 80, "bullet" = 80, "laser" = 50, "energy" = 60, "bomb" = 100, "bio" = 100, "rad" = 100, "fire" = 100, "acid" = 100)
-	crusher_loot = list(/obj/item/card/id/ert/deathsquad,
-						/obj/item/documents/nanotrasen)
+	crusher_loot = list(/obj/item/light_eater)
 
 /mob/living/simple_animal/hostile/megafauna/claw/phase2 //75% of the health this thing has is here
 	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 10, "bomb" = 10, "bio" = 100, "rad" = 100, "fire" = 0, "acid" = 0)
-	crusher_loot = list(/obj/effect/spawner/clawloot)
-	loot = list(/obj/effect/spawner/clawloot/crusher)
+	crusher_loot = list(/obj/structure/closet/crate/necropolis/claw_phase_2)
+	loot = list(/obj/structure/closet/crate/necropolis/claw_phase_2)
 
 /mob/living/simple_animal/hostile/megafauna/colossus
 	armor = list("melee" = 0, "bullet" = 30, "laser" = 30, "energy" = 100, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 100, "acid" = 20)

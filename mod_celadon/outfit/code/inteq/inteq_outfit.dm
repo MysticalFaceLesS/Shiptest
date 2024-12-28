@@ -71,6 +71,10 @@
 	. = ..()
 	get_inteq_g_acces(H)
 
+	// Даёт всем интекашкам брендовый сурвивал бокс
+/datum/outfit/job/inteq
+	box = /obj/item/storage/box/survival/inteq
+
 //Капитан
 
 /datum/outfit/job/inteq/captain/celadon
