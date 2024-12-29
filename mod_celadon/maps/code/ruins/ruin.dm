@@ -134,6 +134,12 @@
 	description = "A small bunker owned by the Syndicate."
 	suffix = "jungle_syndicate.dmm"
 
+/datum/map_template/ruin/jungle/vamplab
+	name = "Vampire laboratory"
+	id = "vamp-lab"
+	description = "A Laboratory for the development of the drug 'Vita-Null+X', which will help cure vampirism, or not.."
+	suffix = "jungle_vamplab.dmm"
+
 /datum/map_template/ruin/jungle/interceptor
 	name = "Old Crashed Interceptor"
 	id = "crashedcondor"
