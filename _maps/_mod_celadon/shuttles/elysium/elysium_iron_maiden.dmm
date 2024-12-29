@@ -441,6 +441,10 @@
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
+"qp" = (
+/obj/machinery/porta_turret/ship/elysium,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/bridge)
 "rv" = (
 /obj/effect/turf_decal/industrial/stand_clear{
 	dir = 8
@@ -470,11 +474,6 @@
 /obj/item/storage/pill_bottle/dice{
 	pixel_x = 7;
 	pixel_y = 3
-	},
-/obj/item/reagent_containers/food/snacks/pizzaslice/arnold{
-	pixel_y = -6;
-	pixel_x = 9;
-	name = "pizza slice"
 	},
 /obj/machinery/newscaster/directional/south,
 /turf/open/floor/carpet/green,
@@ -758,7 +757,6 @@
 "yX" = (
 /obj/structure/catwalk,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/porta_turret/ship/faction/elysium/laser/cover,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "zc" = (
@@ -792,6 +790,12 @@
 /obj/item/clothing/mask/bandana/black,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
+"zI" = (
+/obj/machinery/porta_turret/ship/elysium{
+	dir = 1
+	},
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/bridge)
 "Ah" = (
 /turf/closed/wall/r_wall/rust,
 /area/ship/crew/cryo)
@@ -1108,7 +1112,9 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/cryo)
 "MP" = (
-/obj/machinery/porta_turret/ship/faction/elysium/laser/cover,
+/obj/machinery/porta_turret/ship/elysium{
+	dir = 10
+	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "MV" = (
@@ -1804,7 +1810,7 @@ gD
 JU
 "}
 (13,1,1) = {"
-CO
+zI
 yM
 oZ
 Gh
@@ -1814,7 +1820,7 @@ gL
 Sv
 Uj
 uZ
-MP
+qp
 "}
 (14,1,1) = {"
 CO
@@ -1861,7 +1867,7 @@ Cf
 QG
 dB
 CO
-MP
+CO
 CO
 bX
 vg

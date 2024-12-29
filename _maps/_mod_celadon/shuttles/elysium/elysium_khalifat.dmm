@@ -858,7 +858,9 @@
 /turf/open/floor/plasteel/darkgreenfull,
 /area/ship/security)
 "eJ" = (
-/obj/machinery/porta_turret/ship/faction/elysium/laser/cover,
+/obj/machinery/porta_turret/ship/elysium/light{
+	dir = 8
+	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "eL" = (
@@ -873,7 +875,6 @@
 "eN" = (
 /obj/effect/turf_decal/spline/fancy/opaque/syndiered,
 /obj/structure/closet/crate/bin,
-/obj/item/clothing/mask/gas/sechailer/balaclava,
 /turf/open/floor/plasteel/dark,
 /area/ship/security)
 "eQ" = (
@@ -957,7 +958,6 @@
 /obj/structure/table/scrap,
 /obj/item/gun/ballistic/shotgun/brimstone,
 /obj/item/gun/energy/kinetic_accelerator,
-/obj/item/storage/box/ammo/a12g_blanks,
 /turf/open/floor/plasteel/darkgreenfull,
 /area/ship/security)
 "fN" = (
@@ -1019,6 +1019,12 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/medical)
+"fU" = (
+/obj/machinery/porta_turret/ship/elysium/heavy{
+	dir = 5
+	},
+/turf/closed/wall/r_wall/rust/wasteplanet,
+/area/ship/bridge)
 "fV" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -2146,6 +2152,12 @@
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/ship/bridge)
+"mC" = (
+/obj/machinery/porta_turret/ship/elysium{
+	dir = 5
+	},
+/turf/closed/wall/r_wall/rust/wasteplanet,
+/area/ship/bridge)
 "mG" = (
 /obj/effect/turf_decal/spline/fancy/opaque/syndiered,
 /turf/open/floor/plasteel/dark,
@@ -2698,7 +2710,6 @@
 /obj/item/grenade/firecracker,
 /obj/item/grenade/firecracker,
 /obj/item/grenade/firecracker,
-/obj/item/clothing/mask/gas/sechailer/balaclava,
 /obj/item/grenade/c4,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/security)
@@ -2904,6 +2915,12 @@
 "qS" = (
 /turf/closed/wall/mineral/titanium/survival,
 /area/ship/engineering/engine)
+"qW" = (
+/obj/machinery/porta_turret/ship/elysium{
+	dir = 1
+	},
+/turf/closed/wall/r_wall/rust/wasteplanet,
+/area/ship/bridge)
 "qY" = (
 /obj/machinery/light_switch{
 	dir = 1;
@@ -4596,7 +4613,6 @@
 /obj/item/grenade/firecracker,
 /obj/item/grenade/firecracker,
 /obj/item/grenade/firecracker,
-/obj/item/clothing/mask/gas/sechailer/balaclava,
 /obj/item/grenade/c4,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/security)
@@ -5109,6 +5125,12 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel,
 /area/ship/crew/dorm)
+"DJ" = (
+/obj/machinery/porta_turret/ship/elysium/heavy{
+	dir = 6
+	},
+/turf/closed/wall/r_wall/rust/wasteplanet,
+/area/ship/bridge)
 "DK" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/cyan/visible,
@@ -5215,7 +5237,6 @@
 /obj/structure/catwalk,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/glass,
-/obj/item/clothing/mask/gas/sechailer/balaclava,
 /turf/open/floor/plating/wasteplanet/rust,
 /area/ship/security)
 "ED" = (
@@ -5374,11 +5395,6 @@
 /obj/structure/catwalk/over/plated_catwalk/dark,
 /obj/effect/decal/cleanable/oil,
 /obj/effect/decal/cleanable/oil/slippery,
-/obj/item/reagent_containers/food/snacks/pizzaslice/arnold{
-	pixel_y = -6;
-	pixel_x = 9;
-	name = "pizza slice"
-	},
 /turf/open/floor/plating,
 /area/ship/cargo)
 "Fm" = (
@@ -6127,6 +6143,10 @@
 /obj/machinery/firealarm/directional/north,
 /turf/open/floor/plasteel/dark,
 /area/ship/medical)
+"Ji" = (
+/obj/machinery/porta_turret/ship/elysium,
+/turf/closed/wall/r_wall/rust/wasteplanet,
+/area/ship/bridge)
 "Jk" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -6197,6 +6217,10 @@
 /obj/machinery/atmospherics/pipe/simple/green/visible,
 /turf/open/floor/engine,
 /area/ship/engineering/engine)
+"JC" = (
+/obj/machinery/porta_turret/ship/elysium/light,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/bridge)
 "JE" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -6274,7 +6298,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4,
 /obj/effect/decal/cleanable/xenoblood/xgibs,
-/obj/item/clothing/mask/gas/sechailer/balaclava,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "Kk" = (
@@ -6581,8 +6604,8 @@
 /turf/open/floor/plating/grass/jungle/lit,
 /area/ship/engineering/engine)
 "Mr" = (
-/obj/machinery/porta_turret/ship/faction/elysium/ballistic{
-	dir = 10
+/obj/machinery/porta_turret/ship/elysium{
+	dir = 1
 	},
 /turf/closed/wall/r_wall/syndicate/nodiagonal{
 	rad_insulation = 0
@@ -6842,7 +6865,6 @@
 	name = "mot containment box";
 	desc = "WARNING: Contains mot."
 	},
-/obj/item/storage/box/syndimaid,
 /obj/item/trash/cheesie,
 /obj/item/reagent_containers/food/snacks/spacetwinkie{
 	pixel_y = 12;
@@ -8138,6 +8160,14 @@
 /obj/structure/table/wood,
 /turf/open/floor/wood/ebony,
 /area/ship/crew/canteen)
+"Vv" = (
+/obj/machinery/porta_turret/ship/elysium{
+	dir = 6
+	},
+/turf/closed/wall/r_wall/syndicate/nodiagonal{
+	rad_insulation = 0
+	},
+/area/ship/bridge)
 "Vy" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -8292,8 +8322,8 @@
 /turf/closed/wall/r_wall/rust/wasteplanet,
 /area/ship/crew/cryo)
 "We" = (
-/obj/machinery/porta_turret/ship/faction/elysium/ballistic{
-	dir = 10
+/obj/machinery/porta_turret/ship/elysium{
+	dir = 8
 	},
 /turf/closed/wall/r_wall/rust/wasteplanet,
 /area/ship/bridge)
@@ -8838,6 +8868,12 @@
 /obj/structure/crate_shelf,
 /turf/open/floor/plating/wasteplanet/rust,
 /area/ship/hallway/port)
+"Zh" = (
+/obj/machinery/porta_turret/ship/elysium{
+	dir = 10
+	},
+/turf/closed/wall/r_wall/rust/wasteplanet,
+/area/ship/bridge)
 "Zk" = (
 /obj/effect/turf_decal/elysium_logo/three_one{
 	color = "#758967"
@@ -9208,7 +9244,7 @@ wH
 kE
 kE
 sY
-We
+Zh
 "}
 (8,1,1) = {"
 qM
@@ -9281,7 +9317,7 @@ Pn
 Lp
 "}
 (10,1,1) = {"
-We
+qW
 Pz
 Aq
 Aq
@@ -9558,7 +9594,7 @@ kT
 iI
 iI
 iI
-We
+Zh
 "}
 (18,1,1) = {"
 xj
@@ -9833,7 +9869,7 @@ lw
 pw
 ow
 gk
-eJ
+JC
 Nh
 mG
 fJ
@@ -10052,7 +10088,7 @@ mW
 "}
 (32,1,1) = {"
 mp
-We
+qW
 AW
 dY
 dY
@@ -10153,7 +10189,7 @@ OY
 cd
 iI
 iI
-dP
+Ji
 "}
 (35,1,1) = {"
 mp
@@ -10265,7 +10301,7 @@ mp
 mp
 mp
 mp
-We
+mC
 Bw
 Bw
 Bw
@@ -10289,7 +10325,7 @@ lx
 xB
 xB
 xB
-Mr
+Vv
 mp
 mp
 mp
@@ -10623,7 +10659,7 @@ zJ
 oM
 dP
 mp
-We
+dP
 VB
 VB
 VB
@@ -10631,7 +10667,7 @@ VB
 VB
 VB
 VB
-We
+dP
 mp
 dP
 KD
@@ -10652,11 +10688,11 @@ mp
 mp
 mp
 mp
-We
+dP
 dP
 nn
 dP
-dP
+DJ
 mp
 mp
 mp
@@ -10668,11 +10704,11 @@ mp
 mp
 mp
 mp
-dP
+fU
 dP
 Ib
 dP
-We
+dP
 mp
 mp
 mp
