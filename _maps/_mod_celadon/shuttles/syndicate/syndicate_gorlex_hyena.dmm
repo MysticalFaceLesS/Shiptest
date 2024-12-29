@@ -62,9 +62,6 @@
 /obj/item/clothing/glasses/hud/security/sunglasses/eyepatch,
 /obj/item/clothing/head/HoS/syndicate,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/item/storage/box/ammo/a357/match,
-/obj/item/storage/box/ammo/a357/match,
-/obj/item/storage/box/ammo/a357/match,
 /obj/item/pen/edagger,
 /obj/item/gun/ballistic/revolver/viper,
 /turf/open/floor/carpet/black,
@@ -77,8 +74,6 @@
 	},
 /obj/item/clothing/suit/armor/vest/syndie,
 /obj/item/clothing/suit/armor/vest/syndie,
-/obj/item/clothing/head/helmet/operator,
-/obj/item/clothing/head/helmet/operator,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/radio/intercom/directional/west{
 	pixel_y = -5
@@ -1525,6 +1520,10 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/dorm)
+"zt" = (
+/obj/machinery/porta_turret/ship/syndicate/weak,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/bridge)
 "zA" = (
 /obj/machinery/power/smes/engineering,
 /obj/structure/cable{
@@ -1675,7 +1674,7 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/hallway/central)
 "BR" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
+/obj/machinery/porta_turret/ship/syndicate/weak{
 	dir = 1
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
@@ -1976,6 +1975,12 @@
 "HJ" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/security/armory)
+"HK" = (
+/obj/machinery/porta_turret/ship/syndicate/weak{
+	dir = 5
+	},
+/turf/closed/wall/mineral/plastitanium,
+/area/ship/bridge)
 "HT" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2321,7 +2326,9 @@
 /turf/open/floor/carpet/red_gold,
 /area/ship/bridge)
 "NA" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic,
+/obj/machinery/porta_turret/ship/syndicate/weak{
+	dir = 8
+	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "NF" = (
@@ -2488,8 +2495,8 @@
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "Qz" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
-	dir = 6
+/obj/machinery/porta_turret/ship/syndicate/weak{
+	dir = 4
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -2869,8 +2876,8 @@
 /turf/open/floor/carpet/red_gold,
 /area/ship/bridge)
 "Up" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
-	dir = 4
+/obj/machinery/porta_turret/ship/syndicate/weak{
+	dir = 6
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -2885,7 +2892,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/crew)
 "UN" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
+/obj/machinery/porta_turret/ship/syndicate/weak{
 	dir = 1
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -3324,7 +3331,7 @@ sE
 nX
 dU
 pi
-NA
+zt
 "}
 (3,1,1) = {"
 nn
@@ -3574,7 +3581,7 @@ UX
 GV
 GV
 GV
-NA
+zt
 nn
 Zb
 "}
@@ -3832,7 +3839,7 @@ mL
 "}
 (27,1,1) = {"
 nn
-Up
+HK
 Ap
 Jv
 oQ

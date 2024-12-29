@@ -73,7 +73,6 @@
 /obj/item/storage/box/ammo/a357,
 /obj/item/storage/box/ammo/a357,
 /obj/item/clothing/accessory/holster,
-/obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
 /obj/item/clothing/glasses/hud/security/sunglasses/inteq,
 /obj/item/clothing/suit/armor/hos/inteq/honorable,
 /obj/item/clothing/head/beret/sec/hos/inteq/honorable,
@@ -112,6 +111,12 @@
 /obj/machinery/light/small/directional/west,
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew/dorm)
+"aw" = (
+/obj/machinery/porta_turret/ship/inteq{
+	dir = 8
+	},
+/turf/closed/wall/mineral/plastitanium,
+/area/ship/bridge)
 "ax" = (
 /obj/structure/railing{
 	dir = 4
@@ -340,7 +345,6 @@
 	},
 /obj/item/clothing/suit/space/hardsuit/security/independent/inteq,
 /obj/item/clothing/shoes/magboots,
-/obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
 /turf/open/floor/engine{
 	icon_state = "plastitanium";
 	explosion_block = 7
@@ -451,8 +455,8 @@
 "bU" = (
 /obj/machinery/light/directional/north,
 /obj/effect/decal/cleanable/robot_debris,
-/obj/machinery/porta_turret/ship/faction/inteq/laser/cover{
-	density = null
+/obj/machinery/porta_turret/ship/inteq/light{
+	dir = 6
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
@@ -717,7 +721,6 @@
 /obj/structure/catwalk/over/plated_catwalk/dark,
 /obj/item/clothing/under/syndicate/inteq/artificer,
 /obj/item/clothing/under/syndicate/inteq/skirt/artificer,
-/obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
 /obj/structure/closet/secure_closet{
 	icon_state = "eng_secure";
 	anchored = 1;
@@ -940,7 +943,6 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/obj/item/reagent_containers/food/snacks/pizzaslice/arnold,
 /obj/effect/spawner/random/maintenance/eight,
 /obj/effect/spawner/random/clothing/mafia_outfit,
 /obj/structure/closet/crate/wooden{
@@ -1094,7 +1096,9 @@
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/cargo/office)
 "gy" = (
-/obj/machinery/porta_turret/ship/faction/inteq/laser/cover,
+/obj/machinery/porta_turret/ship/inteq{
+	dir = 8
+	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/bridge)
 "gF" = (
@@ -1124,7 +1128,9 @@
 /area/ship/maintenance/central)
 "gG" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/porta_turret/ship/faction/inteq/laser/cover,
+/obj/machinery/porta_turret/ship/inteq{
+	dir = 5
+	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "gJ" = (
@@ -1153,7 +1159,6 @@
 	},
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/suit/space/hardsuit/security/independent/inteq,
-/obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
 /turf/open/floor/engine{
 	icon_state = "plastitanium";
 	explosion_block = 7
@@ -1543,8 +1548,8 @@
 /turf/open/floor/plating,
 /area/ship/engineering/atmospherics)
 "ji" = (
-/obj/machinery/porta_turret/ship/faction/inteq/laser/cover{
-	density = null
+/obj/machinery/porta_turret/ship/inteq/light{
+	dir = 5
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
@@ -2314,8 +2319,8 @@
 /area/ship/security/prison)
 "oN" = (
 /obj/effect/decal/cleanable/squid_ink,
-/obj/machinery/porta_turret/ship/faction/inteq/laser/cover{
-	density = null
+/obj/machinery/porta_turret/ship/inteq/light{
+	dir = 5
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
@@ -2550,9 +2555,6 @@
 	pixel_x = 32
 	},
 /obj/structure/table,
-/obj/item/stamp/artificer{
-	pixel_x = 9
-	},
 /obj/item/storage/photo_album/CE{
 	pixel_y = 5;
 	pixel_x = -5
@@ -3128,7 +3130,6 @@
 /obj/item/clothing/under/syndicate/inteq/skirt/corpsman,
 /obj/item/clothing/head/soft/inteq/corpsman,
 /obj/item/toy/plush/plushvar,
-/obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
 /obj/structure/closet/secure_closet{
 	icon_state = "med_secure";
 	name = "medical doctor's locker";
@@ -3312,7 +3313,9 @@
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew/dorm)
 "vU" = (
-/obj/machinery/porta_turret/ship/faction/inteq/laser/cover,
+/obj/machinery/porta_turret/ship/inteq{
+	dir = 1
+	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "vX" = (
@@ -3700,6 +3703,12 @@
 "yb" = (
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/medical)
+"yh" = (
+/obj/machinery/porta_turret/ship/inteq/heavy{
+	dir = 4
+	},
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/bridge)
 "yj" = (
 /obj/structure/window/plasma/reinforced/spawner/west,
 /obj/structure/window/plasma/reinforced/spawner,
@@ -3756,6 +3765,12 @@
 /obj/machinery/vending/cigarette,
 /turf/open/floor/plasteel/dark,
 /area/ship/security/prison)
+"yu" = (
+/obj/machinery/porta_turret/ship/inteq{
+	dir = 6
+	},
+/turf/closed/wall/mineral/plastitanium,
+/area/ship/bridge)
 "yv" = (
 /obj/structure/catwalk/over/plated_catwalk/dark,
 /obj/machinery/atmospherics/pipe/simple/dark/hidden/layer5{
@@ -3976,7 +3991,6 @@
 /obj/item/clothing/suit/armor/vest/inteq,
 /obj/item/shield/riot/tele,
 /obj/item/clothing/head/helmet/swat/inteq,
-/obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
 /obj/item/clothing/glasses/hud/security/sunglasses/inteq,
 /obj/item/ammo_box/magazine/usp45_standart,
 /obj/item/storage/backpack/ert{
@@ -4114,9 +4128,6 @@
 /obj/item/clothing/head/helmet/inteq,
 /obj/item/clothing/head/helmet/inteq,
 /obj/item/clothing/head/helmet/inteq,
-/obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
-/obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
-/obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
 /turf/open/floor/plating,
 /area/ship/cargo)
 "AA" = (
@@ -4501,7 +4512,6 @@
 /obj/effect/turf_decal/techfloor/orange,
 /obj/item/clothing/glasses/meson/sunglasses,
 /obj/item/clothing/head/hardhat/weldhat/white,
-/obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
 /obj/item/storage/belt/utility/chief/full,
 /obj/item/storage/box/stockparts/t2,
 /obj/item/clothing/under/syndicate/inteq/honorable{
@@ -4797,6 +4807,12 @@
 	},
 /turf/open/floor/plating,
 /area/ship/engineering/atmospherics)
+"DW" = (
+/obj/machinery/porta_turret/ship/inteq{
+	dir = 5
+	},
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/bridge)
 "DY" = (
 /obj/structure/catwalk/over/plated_catwalk/dark,
 /obj/machinery/autolathe/hacked,
@@ -6021,6 +6037,12 @@
 /obj/structure/catwalk/over/plated_catwalk/dark,
 /turf/open/floor/plating,
 /area/ship/engineering/engine)
+"Lj" = (
+/obj/machinery/porta_turret/ship/inteq/heavy{
+	dir = 4
+	},
+/turf/closed/wall/mineral/plastitanium,
+/area/ship/bridge)
 "Ln" = (
 /obj/structure/catwalk/over/plated_catwalk/dark,
 /obj/machinery/atmospherics/components/trinary/mixer{
@@ -6595,7 +6617,7 @@
 /turf/open/floor/mineral/titanium/white,
 /area/ship/medical)
 "PB" = (
-/obj/machinery/porta_turret/ship/faction/inteq/laser/cover,
+/obj/machinery/porta_turret/ship/inteq,
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
 "PC" = (
@@ -6726,7 +6748,6 @@
 	},
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/suit/space/hardsuit/security/independent/inteq,
-/obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
 /turf/open/floor/engine{
 	icon_state = "plastitanium";
 	explosion_block = 7
@@ -6990,8 +7011,8 @@
 /area/ship/cargo/office)
 "SU" = (
 /obj/machinery/light/directional/north,
-/obj/machinery/porta_turret/ship/faction/inteq/laser/cover{
-	density = null
+/obj/machinery/porta_turret/ship/inteq/light{
+	dir = 6
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
@@ -7500,7 +7521,6 @@
 	req_access_txt = "8485"
 	},
 /obj/item/clothing/shoes/magboots,
-/obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
 /turf/open/floor/engine{
 	icon_state = "plastitanium";
 	explosion_block = 7
@@ -7585,7 +7605,6 @@
 /obj/structure/catwalk/over/plated_catwalk/dark,
 /obj/item/clothing/under/syndicate/inteq/artificer,
 /obj/item/clothing/under/syndicate/inteq/skirt/artificer,
-/obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
 /obj/structure/closet/secure_closet{
 	icon_state = "atmos";
 	anchored = 1;
@@ -7657,6 +7676,12 @@
 /obj/item/bedsheet/random,
 /turf/open/floor/plasteel/tech,
 /area/ship/security/prison)
+"Xy" = (
+/obj/machinery/porta_turret/ship/inteq{
+	dir = 1
+	},
+/turf/closed/wall/mineral/plastitanium,
+/area/ship/bridge)
 "XD" = (
 /obj/effect/turf_decal/corner/opaque/brown/border{
 	dir = 1
@@ -8114,11 +8139,11 @@ Vx
 Vx
 fn
 fn
-PB
+aw
 Gf
 fO
 mW
-PB
+aw
 Vx
 Vx
 Vx
@@ -8130,11 +8155,11 @@ Vx
 Vx
 Vx
 Vx
-PB
+aw
 Jy
 wW
 Ok
-PB
+aw
 fn
 fn
 Vx
@@ -8148,7 +8173,7 @@ Vx
 Vx
 Vx
 fn
-PB
+Xy
 fO
 WZ
 qD
@@ -8358,7 +8383,7 @@ Vx
 Vx
 Vx
 fn
-PB
+Xy
 fO
 tH
 tH
@@ -8640,7 +8665,7 @@ Vx
 Vx
 Vx
 fn
-PB
+Xy
 eL
 Bm
 GD
@@ -9131,7 +9156,7 @@ Vx
 Vx
 Vx
 fn
-PB
+Xy
 yb
 fP
 fP
@@ -9466,7 +9491,7 @@ dp
 Sy
 mR
 dp
-PB
+aw
 Gf
 mW
 PB
@@ -9544,7 +9569,7 @@ Vx
 "}
 (43,1,1) = {"
 Vx
-PB
+Xy
 CM
 tH
 tH
@@ -9895,7 +9920,7 @@ Vx
 (53,1,1) = {"
 Vx
 Vx
-vU
+DW
 pD
 IR
 xA
@@ -9923,7 +9948,7 @@ Ig
 kw
 Dg
 Tb
-PB
+yu
 Vx
 Vx
 "}
@@ -9974,7 +9999,7 @@ gG
 tI
 lN
 lN
-vU
+yh
 nS
 VP
 VP
@@ -9984,11 +10009,11 @@ VP
 VP
 VP
 nS
-PB
+Lj
 Tc
 Tc
 Tb
-PB
+yu
 Vx
 Vx
 Vx
