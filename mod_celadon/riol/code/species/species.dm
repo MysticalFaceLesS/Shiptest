@@ -15,7 +15,7 @@
 	id = SPECIES_RIOL
 	loreblurb = "Риолы - это вид гуманоидных лисиц. Риолы родом из -ДАННЫЕ УДАЛЕНЫ-, ныне проживают на частной торговой станции Мирмунвильнир, хотя их первоначальной родиной была -ДАННЫЕ УДАЛЕНЫ-, на текущий момент утеряно местонахождение."
 
-	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
+	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN
 
 	disliked_food = VEGETABLES | FRUIT | GRAIN | GROSS
 	liked_food = MEAT | RAW | DAIRY
@@ -57,9 +57,10 @@
 
 	default_color = "424242"
 
-	heatmod = 1.2
-	coldmod = 0.8
-	speedmod = -0.15
+	burnmod = 1.1
+	heatmod = 1.3
+	coldmod = 0.7
+	speedmod = -0.05
 
 	bodytemp_heat_damage_limit = RIOL_BODYTEMP_NORMAL + 20		//60
 

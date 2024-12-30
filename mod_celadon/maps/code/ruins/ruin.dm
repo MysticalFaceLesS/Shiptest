@@ -357,6 +357,14 @@
 	description = "A Nanotrasen genetic research facility, abandoned and ripe for looting. Whats that goo over there?"
 	suffix = "lavaland_surface_codelab.dmm"
 
+/datum/map_template/ruin/lavaland/falling_heron
+	name = "Crashed Heron"
+	id = "crashed_heron"
+	description = "A crashed nanotrasen ship Heron-class. It would seem that it's crew died a while ago."
+	suffix = "lavaland_crashed_heron.dmm"
+	cost = 5
+	allow_duplicates = FALSE
+
 //							///
 //		Rockplanet ruin		///
 //							///
@@ -617,6 +625,12 @@
 	description = "A crashed abductor ship with something horrible goi'n inside."
 	id = "crash_abductor_ship"
 	suffix = "wasteplanet_ruined_abductor_ship.dmm"
+
+/datum/map_template/ruin/wasteplanet/abondoned_containment
+	name = "Abandoned containment area"
+	description = "A containment zone that contains an unknown creature called 'Claws'. For some unknown reason, there is a crashed ship called 'Dareсt' near the containment zone."
+	id = "claw_waste"
+	suffix = "wasteplanet_claw_ruin.dmm"
 
 //							///
 //		Whitesand ruin		///

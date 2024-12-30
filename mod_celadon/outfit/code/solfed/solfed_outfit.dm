@@ -103,6 +103,25 @@
 	. = ..()
 	get_solfed_general_access(H)
 
+	// Даёт всем СФкам брендовый сурвивал бокс
+/datum/outfit/job/solgov
+	box = /obj/item/storage/box/survival/solfed
+
+/datum/outfit/job/solgov/ert/inspector
+	box = /obj/item/storage/box/survival/solfed
+
+/datum/outfit/job/solgov/sonnensoldner
+	box = /obj/item/storage/box/survival/solfed
+
+/datum/outfit/job/solgov/engineer
+	box = /obj/item/storage/box/survival/solfed
+
+/datum/outfit/job/solgov/doctor
+	box = /obj/item/storage/box/survival/solfed
+
+/datum/outfit/job/solgov/miner
+	box = /obj/item/storage/box/survival/solfed
+
 // Ученые
 /datum/outfit/job/solgov/scientist
 	name = "SolGov - Scientific Officer"

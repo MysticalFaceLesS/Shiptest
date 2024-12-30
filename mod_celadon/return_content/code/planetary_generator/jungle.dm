@@ -3,5 +3,5 @@
 		/obj/item/pickaxe/rusted = 1,
 		/obj/structure/spawner/ice_moon = 1,
 		/obj/structure/spawner/burrow/jungle_planet = 1,
-		/obj/effect/spawner/lootdrop/anomaly/jungle = 1,
+		/obj/effect/spawner/random/anomaly/jungle = 1,
 	)

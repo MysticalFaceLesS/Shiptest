@@ -8,5 +8,5 @@
 		/obj/structure/spawner/burrow/rock_plant = 4,
 		/obj/effect/spawner/minefield = 1,
 		/obj/structure/spawner/ice_moon/rockplanet = 4,
-		/obj/effect/spawner/lootdrop/anomaly/rock/cave = 1,
+		/obj/effect/spawner/random/anomaly/rock/cave = 1,
 	)

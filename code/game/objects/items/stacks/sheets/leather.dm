@@ -11,14 +11,6 @@
 	singular_name = "human skin piece"
 	novariants = FALSE
 
-GLOBAL_LIST_INIT(human_recipes, list( \
-	new/datum/stack_recipe("bloated human costume", /obj/item/clothing/suit/hooded/bloated_human, 5), \
-	))
-
-/obj/item/stack/sheet/animalhide/human/get_main_recipes()
-	. = ..()
-	. += GLOB.human_recipes
-
 /obj/item/stack/sheet/animalhide/generic
 	name = "skin"
 	desc = "A piece of skin."
@@ -31,12 +23,6 @@ GLOBAL_LIST_INIT(human_recipes, list( \
 	singular_name = "corgi hide piece"
 	icon_state = "sheet-corgi"
 	item_state = "sheet-corgi"
-
-
-GLOBAL_LIST_INIT(gondola_recipes, list ( \
-	new/datum/stack_recipe("gondola mask", /obj/item/clothing/mask/gondola, 1), \
-	new/datum/stack_recipe("gondola suit", /obj/item/clothing/under/costume/gondola, 2), \
-	))
 
 /obj/item/stack/sheet/animalhide/mothroach
 	name = "mothroach hide"
@@ -52,10 +38,6 @@ GLOBAL_LIST_INIT(gondola_recipes, list ( \
 	singular_name = "gondola hide piece"
 	icon_state = "sheet-gondola"
 	item_state = "sheet-gondola"
-
-/obj/item/stack/sheet/animalhide/gondola/get_main_recipes()
-	. = ..()
-	. += GLOB.gondola_recipes
 
 /obj/item/stack/sheet/animalhide/cat
 	name = "cat hide"

@@ -21,12 +21,12 @@
 "af" = (
 /obj/structure/railing,
 /obj/structure/closet/crate,
-/obj/effect/spawner/lootdrop/tool_surgery_common,
+/obj/effect/spawner/random/medical/surgery_tool/common,
 /obj/machinery/firealarm/directional/west{
 	pixel_y = 5
 	},
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/maintenance/three,
 /turf/open/floor/plasteel/mono,
 /area/ship/cargo)
 "ag" = (
@@ -118,7 +118,7 @@
 /obj/item/choice_beacon/music,
 /obj/item/spacecash/bundle/c10,
 /obj/structure/extinguisher_cabinet/directional/west,
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/light/directional/north,
 /turf/open/floor/plasteel/dark,
@@ -262,7 +262,9 @@
 /area/ship/cargo)
 "aK" = (
 /obj/effect/turf_decal/corner/opaque/brown/half,
-/obj/structure/crate_shelf,
+/obj/machinery/computer/selling_pad_control{
+	dir = 1
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo/office)
 "aL" = (
@@ -1337,7 +1339,6 @@
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
 	},
-/obj/effect/turf_decal/corner/opaque/ntblue/full,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -1345,7 +1346,7 @@
 	dir = 4;
 	name = "Cargo"
 	},
-/turf/open/floor/plasteel/white,
+/turf/open/floor/plasteel/dark,
 /area/ship/cargo/office)
 "dX" = (
 /obj/machinery/camera{
@@ -1368,7 +1369,7 @@
 	},
 /area/ship/engineering)
 "dZ" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
+/obj/machinery/porta_turret/ship/nt/light{
 	dir = 10
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
@@ -1784,7 +1785,7 @@
 /turf/open/floor/plating,
 /area/ship/cargo)
 "hV" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
+/obj/machinery/porta_turret/ship/nt{
 	dir = 5
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
@@ -2383,7 +2384,8 @@
 	color = "#997C4F"
 	},
 /obj/structure/closet/secure_closet{
-	icon_state = "cargo"
+	icon_state = "cargo";
+	name = "supply technician's locker"
 	},
 /obj/item/clothing/suit/nanotrasen/vest,
 /obj/item/clothing/head/nanotrasen/cap/supply,
@@ -2582,6 +2584,12 @@
 	},
 /turf/open/floor/plating,
 /area/ship/engineering)
+"pX" = (
+/obj/machinery/porta_turret/ship/nt{
+	dir = 6
+	},
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/ship/bridge)
 "qd" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 10
@@ -2947,7 +2955,7 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/crew)
 "tx" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
+/obj/machinery/porta_turret/ship/nt/light{
 	dir = 9
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
@@ -2962,7 +2970,7 @@
 /turf/open/floor/plasteel/stairs/mid,
 /area/ship/cargo)
 "tL" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
+/obj/machinery/porta_turret/ship/nt/light{
 	dir = 6
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
@@ -3004,8 +3012,8 @@
 /obj/item/stamp,
 /obj/item/clothing/accessory/armband/cargo,
 /obj/item/clothing/head/beret/cargo,
-/obj/item/ammo_box/c38_box,
-/obj/item/ammo_box/c38_box,
+/obj/item/storage/box/ammo/c38,
+/obj/item/storage/box/ammo/c38,
 /obj/item/clothing/under/nanotrasen/supply/qm,
 /obj/item/clothing/neck/cloak/qm,
 /obj/item/clothing/suit/nanotrasen/vest,
@@ -4167,7 +4175,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/turf/open/floor/plasteel/white,
+/turf/open/floor/plasteel/patterned,
 /area/ship/cargo/office)
 "GH" = (
 /obj/structure/cable{
@@ -4224,7 +4232,6 @@
 /obj/item/clothing/neck/cloak/nanotrasen,
 /obj/item/clothing/suit/nanotrasen/vest/blue,
 /obj/item/clothing/suit/hooded/wintercoat/captain,
-/obj/item/radio/headset/nanotrasen/alt,
 /obj/item/clothing/glasses/sunglasses,
 /obj/item/megaphone/command,
 /obj/item/gun/energy/e_gun/mini,
@@ -4232,6 +4239,7 @@
 	dir = 2;
 	color = "#332521"
 	},
+/obj/item/radio/headset/nanotrasen/alt/captain,
 /turf/open/floor/wood/ebony,
 /area/ship/crew/dorm/captain)
 "Hk" = (
@@ -4450,6 +4458,12 @@
 	},
 /turf/open/floor/wood/walnut,
 /area/ship/crew/dorm/dormtwo)
+"JO" = (
+/obj/machinery/porta_turret/ship/nt/light{
+	dir = 5
+	},
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/ship/bridge)
 "JR" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -5113,8 +5127,9 @@
 /area/ship/hallway/central)
 "Rw" = (
 /obj/effect/turf_decal/corner/opaque/brown/half,
-/obj/structure/crate_shelf,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/selling_pad,
+/obj/effect/turf_decal/box,
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo/office)
 "RL" = (
@@ -5322,7 +5337,7 @@
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo/office)
 "SR" = (
-/obj/machinery/vending/snack/random,
+/obj/effect/spawner/random/vending/snack,
 /turf/open/floor/plasteel/patterned,
 /area/ship/hallway/central)
 "SZ" = (
@@ -5756,7 +5771,7 @@
 /turf/open/floor/wood/ebony,
 /area/ship/crew/dorm/captain)
 "WZ" = (
-/obj/machinery/vending/cola/random,
+/obj/effect/spawner/random/vending/cola,
 /obj/machinery/firealarm/directional/east,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/disposalpipe/segment{
@@ -5801,7 +5816,7 @@
 /obj/effect/turf_decal/corner/opaque/ntblue/border{
 	dir = 4
 	},
-/obj/item/banner/command{
+/obj/item/banner/command/mundane{
 	name = "nanotrasen banner"
 	},
 /turf/open/floor/plasteel/patterned,
@@ -6570,7 +6585,7 @@ aa
 (20,1,1) = {"
 aa
 aa
-hV
+JO
 YW
 CW
 bC
@@ -7111,13 +7126,13 @@ aa
 aa
 aa
 aa
-hV
+JO
 bA
 bA
 bA
 bA
 bA
-tL
+pX
 aa
 aa
 aa

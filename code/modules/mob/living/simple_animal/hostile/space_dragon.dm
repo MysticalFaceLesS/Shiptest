@@ -44,7 +44,7 @@
 	mouse_opacity = MOUSE_OPACITY_ICON
 	butcher_results = list(/obj/item/stack/ore/diamond = 5, /obj/item/stack/sheet/sinew = 5, /obj/item/stack/sheet/bone = 30)
 	deathmessage = "screeches as its wings turn to dust and it collapses on the floor, life estinguished."
-	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
+	atmos_requirements = IMMUNE_ATMOS_REQS
 	minbodytemp = 0
 	maxbodytemp = 1500
 	faction = list("carp")
@@ -75,6 +75,9 @@
 /mob/living/simple_animal/hostile/space_dragon/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_SPACEWALK, INNATE_TRAIT)
+	// [CELADON-ADD] - CELADON_BALANCE
+	ADD_TRAIT(src, TRAIT_HEALS_FROM_CARP_RIFTS, INNATE_TRAIT)
+	// [/CELADON-ADD]
 	if(small_sprite_type)
 		var/datum/action/small_sprite/small_action = new small_sprite_type()
 		small_action.Grant(src)
@@ -83,6 +86,9 @@
 	rift = new
 	rift.Grant(src)
 	become_hearing_sensitive(ROUNDSTART_TRAIT)
+	// [CELADON-ADD] - CELADON_BALANCE
+	AddSpell(new /obj/effect/proc_holder/spell/targeted/night_vision(src))
+	// [/CELADON-ADD]
 
 /mob/living/simple_animal/hostile/space_dragon/Life(mapload)
 	. = ..()

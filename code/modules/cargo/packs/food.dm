@@ -20,7 +20,7 @@
 					/obj/item/storage/box/donkpockets/donkpockethonk)
 	crate_name = "donk pocket crate"
 	crate_type = /obj/structure/closet/crate/freezer
-	faction = FACTION_SYNDICATE
+	faction = /datum/faction/syndicate
 
 /datum/supply_pack/food/donkpockets/fill(obj/structure/closet/crate/C)
 	for(var/i in 1 to 3)
@@ -53,14 +53,14 @@
 
 /datum/supply_pack/food/ration
 	name = "Ration Crate"
-	desc = "6 standerd issue rations."
+	desc = "6 standard issue rations. For your inner jarhead."
 	cost = 500
-	contains = list(/obj/effect/spawner/lootdrop/ration,
-					/obj/effect/spawner/lootdrop/ration,
-					/obj/effect/spawner/lootdrop/ration,
-					/obj/effect/spawner/lootdrop/ration,
-					/obj/effect/spawner/lootdrop/ration,
-					/obj/effect/spawner/lootdrop/ration)
+	contains = list(/obj/effect/spawner/random/food_or_drink/ration,
+					/obj/effect/spawner/random/food_or_drink/ration,
+					/obj/effect/spawner/random/food_or_drink/ration,
+					/obj/effect/spawner/random/food_or_drink/ration,
+					/obj/effect/spawner/random/food_or_drink/ration,
+					/obj/effect/spawner/random/food_or_drink/ration)
 	crate_name = "ration crate"
 	crate_type = /obj/structure/closet/crate
 
@@ -111,12 +111,8 @@
 
 /datum/supply_pack/food/ingredients_randomized
 	name = "Exotic Meat Crate"
-	desc = "The best cuts in the whole galaxy. Probably."
-// [CELADON-EDIT] - CELADON_BALANCE
-//	cost = 500
-// CELADON-EDIT - ORIGINAL
+	desc = "The best cuts in the whole sector. Probably."
 	cost = 500
-// [/CELADON-EDIT]
 	contains = list(/obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/slime,
 					/obj/item/reagent_containers/food/snacks/meat/slab/killertomato,
 					/obj/item/reagent_containers/food/snacks/meat/slab/bear,
@@ -138,12 +134,8 @@
 
 /datum/supply_pack/food/ingredients_randomized/meat
 	name = "Standard Meat Crate"
-	desc = "Less interesting cuts of meat, but filling nonetheless."
-// [CELADON-EDIT] - CELADON_BALANCE
-//	cost = 300
-// CELADON-EDIT - ORIGINAL
+	desc = "Less interesting, yet filling cuts of meat."
 	cost = 300
-// [/CELADON-EDIT]
 	contains = list(/obj/item/reagent_containers/food/snacks/meat/slab,
 					/obj/item/reagent_containers/food/snacks/meat/slab/chicken,
 					/obj/item/reagent_containers/food/snacks/meat/slab/synthmeat,
@@ -155,12 +147,8 @@
 
 /datum/supply_pack/food/ingredients_randomized/vegetables
 	name = "Vegetables Crate"
-	desc = "Grown in vats."
-// [CELADON-EDIT] - CELADON_BALANCE
-//	cost = 1300
-// CELADON-EDIT - ORIGINAL
+	desc = "Grown in the finest hydroponic vats."
 	cost = 250
-// [/CELADON-EDIT]
 	contains = list(/obj/item/reagent_containers/food/snacks/grown/chili,
 					/obj/item/reagent_containers/food/snacks/grown/corn,
 					/obj/item/reagent_containers/food/snacks/grown/tomato,
@@ -230,6 +218,17 @@
 	crate_name = "food crate"
 	crate_type = /obj/structure/closet/crate/freezer
 
+/datum/supply_pack/food/sugar
+	name = "Sugar Crate"
+	desc = "A crate with a few bags of sugar. Good for cake shops and amateur chemists."
+	cost = 500
+	contains = list(/obj/item/reagent_containers/condiment/sugar,
+					/obj/item/reagent_containers/condiment/sugar,
+					/obj/item/reagent_containers/condiment/sugar
+	)
+	crate_name = "sugar crate"
+	crate_type = /obj/structure/closet/crate
+
 /*
 		Cooking
 */
@@ -294,6 +293,19 @@
 					/obj/item/clothing/gloves/botanic_leather,
 					/obj/item/clothing/suit/apron,
 					/obj/item/storage/box/disks_plantgene)
+	crate_name = "gardening crate"
+	crate_type = /obj/structure/closet/crate/hydroponics
+
+/datum/supply_pack/food/ethanol
+	name = "Ethanol Crate"
+	desc = "Five small bottles of ethanol for the aspiring botanist or amateur chemist."
+	cost = 750
+	contains = list(/obj/item/reagent_containers/glass/bottle/ethanol,
+					/obj/item/reagent_containers/glass/bottle/ethanol,
+					/obj/item/reagent_containers/glass/bottle/ethanol,
+					/obj/item/reagent_containers/glass/bottle/ethanol,
+					/obj/item/reagent_containers/glass/bottle/ethanol
+					)
 	crate_name = "gardening crate"
 	crate_type = /obj/structure/closet/crate/hydroponics
 
@@ -396,20 +408,3 @@
 					/obj/item/melee/flyswatter)
 	crate_name = "beekeeping starter crate"
 	crate_type = /obj/structure/closet/crate/hydroponics
-
-/datum/supply_pack/food/ration
-	name = "Ration Crate"
-	desc = "6 standerd issue rations."
-// [CELADON-EDIT] - CELADON_BALANCE
-//	cost = 2000
-// CELADON-EDIT - ORIGINAL
-	cost = 750
-// [/CELADON-EDIT]
-	contains = list(/obj/effect/spawner/lootdrop/ration,
-					/obj/effect/spawner/lootdrop/ration,
-					/obj/effect/spawner/lootdrop/ration,
-					/obj/effect/spawner/lootdrop/ration,
-					/obj/effect/spawner/lootdrop/ration,
-					/obj/effect/spawner/lootdrop/ration)
-	crate_name = "ration crate"
-	crate_type = /obj/structure/closet/crate
