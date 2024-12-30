@@ -244,8 +244,8 @@
 	locked = 0;
 	name = "fridge"
 	},
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
 /obj/item/storage/cans/sixbeer,
 /obj/effect/turf_decal/corner/opaque/yellow{
 	dir = 1
@@ -720,7 +720,6 @@
 /area/ship/security)
 "hx" = (
 /obj/item/clothing/glasses/hud/security/sunglasses/inteq,
-/obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
 /obj/item/clothing/gloves/tackler/combat/insulated,
 /obj/item/clothing/shoes/combat,
 /obj/item/storage/belt/security/webbing/inteq/alt,
@@ -749,6 +748,7 @@
 /obj/item/reagent_containers/spray/pepper,
 /obj/item/clothing/head/warden/inteq,
 /obj/item/clothing/suit/armor/vest/security/warden/inteq,
+/obj/item/clothing/mask/balaclava/inteq,
 /turf/open/floor/plasteel/dark,
 /area/ship/security)
 "hD" = (
@@ -844,7 +844,7 @@
 /turf/open/floor/plating,
 /area/ship/maintenance/port)
 "iT" = (
-/obj/machinery/vending/snack/random,
+/obj/effect/spawner/random/vending/snack,
 /obj/effect/turf_decal/trimline/opaque/yellow/line,
 /obj/effect/turf_decal/siding/thinplating,
 /obj/structure/cable,
@@ -1431,7 +1431,7 @@
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/crew/cryo)
 "qJ" = (
-/obj/machinery/porta_turret/ship/faction/inteq/ballistic{
+/obj/machinery/porta_turret/ship/inteq{
 	dir = 9
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
@@ -1606,16 +1606,16 @@
 	dir = 1
 	},
 /obj/structure/closet/crate,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
 /obj/item/reagent_containers/food/drinks/waterbottle/large,
 /obj/item/reagent_containers/food/drinks/waterbottle/large,
 /obj/item/reagent_containers/food/drinks/waterbottle/large,
@@ -2133,7 +2133,7 @@
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/hallway/central)
 "xh" = (
-/obj/machinery/porta_turret/ship/faction/inteq/ballistic{
+/obj/machinery/porta_turret/ship/inteq{
 	dir = 5
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -2493,7 +2493,7 @@
 	},
 /obj/structure/closet/cardboard,
 /obj/item/radio/intercom/directional/south,
-/obj/effect/spawner/lootdrop/maintenance/seven,
+/obj/effect/spawner/random/maintenance/seven,
 /obj/effect/turf_decal/corner_techfloor_gray{
 	dir = 4
 	},
@@ -2627,7 +2627,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/item/clothing/glasses/hud/security/sunglasses/inteq,
-/obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
 /obj/item/clothing/gloves/tackler/combat/insulated,
 /obj/item/clothing/shoes/combat,
 /obj/item/storage/belt/security/webbing/inteq/alt,
@@ -2647,9 +2646,10 @@
 /obj/item/storage/belt/security/webbing/inteq,
 /obj/item/storage/belt/military/assault,
 /obj/item/clothing/head/inteq_peaked,
-/obj/item/ammo_box/a357,
-/obj/item/ammo_box/a357,
-/obj/item/ammo_box/a357,
+/obj/item/storage/box/ammo/a357,
+/obj/item/storage/box/ammo/a357,
+/obj/item/storage/box/ammo/a357,
+/obj/item/clothing/mask/balaclava/inteq,
 /turf/open/floor/carpet/orange,
 /area/ship/bridge)
 "Dq" = (
@@ -3002,7 +3002,7 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "Hu" = (
-/obj/machinery/porta_turret/ship/faction/inteq/ballistic{
+/obj/machinery/porta_turret/ship/inteq{
 	dir = 6
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
@@ -3280,7 +3280,7 @@
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/security/armory)
 "Ll" = (
-/obj/machinery/porta_turret/ship/faction/inteq/ballistic{
+/obj/machinery/porta_turret/ship/inteq{
 	dir = 5
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
@@ -3528,7 +3528,7 @@
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo)
 "Oa" = (
-/obj/machinery/porta_turret/ship/faction/inteq/ballistic{
+/obj/machinery/porta_turret/ship/inteq{
 	dir = 6
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -3616,7 +3616,7 @@
 /obj/structure/closet/crate/trashcart,
 /obj/machinery/airalarm/directional/east,
 /obj/machinery/firealarm/directional/south,
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /obj/effect/turf_decal/corner_techfloor_gray{
 	dir = 4
 	},
@@ -3813,7 +3813,7 @@
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/hallway/central)
 "QZ" = (
-/obj/machinery/porta_turret/ship/faction/inteq/ballistic{
+/obj/machinery/porta_turret/ship/inteq{
 	dir = 10
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
@@ -4262,9 +4262,6 @@
 	name = "equipment locker";
 	req_access_txt = "1"
 	},
-/obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
-/obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
-/obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
 /obj/item/storage/belt/security/webbing/inteq,
 /obj/item/storage/belt/security/webbing/inteq,
 /obj/item/storage/belt/security/webbing/inteq,
@@ -4298,6 +4295,9 @@
 /obj/item/melee/knife/survival,
 /obj/item/melee/knife/survival,
 /obj/item/melee/knife/survival,
+/obj/item/clothing/mask/balaclava/inteq,
+/obj/item/clothing/mask/balaclava/inteq,
+/obj/item/clothing/mask/balaclava/inteq,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/security/armory)
 "WG" = (
@@ -4452,7 +4452,7 @@
 /turf/open/floor/carpet/black,
 /area/ship/crew)
 "XS" = (
-/obj/machinery/vending/cola/random,
+/obj/effect/spawner/random/vending/cola,
 /obj/effect/turf_decal/trimline/opaque/yellow/line,
 /obj/effect/turf_decal/siding/thinplating,
 /obj/machinery/airalarm/directional/south,
@@ -5345,7 +5345,7 @@ Ll
 SC
 SC
 SC
-Oa
+It
 XJ
 XJ
 XJ

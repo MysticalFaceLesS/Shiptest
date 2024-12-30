@@ -21,12 +21,12 @@
 "af" = (
 /obj/structure/railing,
 /obj/structure/closet/crate,
-/obj/effect/spawner/lootdrop/tool_surgery_common,
+/obj/effect/spawner/random/medical/surgery_tool/common,
 /obj/machinery/firealarm/directional/west{
 	pixel_y = 5
 	},
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/maintenance/three,
 /turf/open/floor/plasteel/mono,
 /area/ship/cargo)
 "ag" = (
@@ -118,7 +118,7 @@
 /obj/item/choice_beacon/music,
 /obj/item/spacecash/bundle/c10,
 /obj/structure/extinguisher_cabinet/directional/west,
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/light/directional/north,
 /turf/open/floor/plasteel/dark,
@@ -1369,7 +1369,7 @@
 	},
 /area/ship/engineering)
 "dZ" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
+/obj/machinery/porta_turret/ship/nt/light{
 	dir = 10
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
@@ -1785,7 +1785,7 @@
 /turf/open/floor/plating,
 /area/ship/cargo)
 "hV" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
+/obj/machinery/porta_turret/ship/nt{
 	dir = 5
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
@@ -2584,6 +2584,12 @@
 	},
 /turf/open/floor/plating,
 /area/ship/engineering)
+"pX" = (
+/obj/machinery/porta_turret/ship/nt{
+	dir = 6
+	},
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/ship/bridge)
 "qd" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 10
@@ -2949,7 +2955,7 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/crew)
 "tx" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
+/obj/machinery/porta_turret/ship/nt/light{
 	dir = 9
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
@@ -2964,7 +2970,7 @@
 /turf/open/floor/plasteel/stairs/mid,
 /area/ship/cargo)
 "tL" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
+/obj/machinery/porta_turret/ship/nt/light{
 	dir = 6
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
@@ -3006,8 +3012,8 @@
 /obj/item/stamp,
 /obj/item/clothing/accessory/armband/cargo,
 /obj/item/clothing/head/beret/cargo,
-/obj/item/ammo_box/c38_box,
-/obj/item/ammo_box/c38_box,
+/obj/item/storage/box/ammo/c38,
+/obj/item/storage/box/ammo/c38,
 /obj/item/clothing/under/nanotrasen/supply/qm,
 /obj/item/clothing/neck/cloak/qm,
 /obj/item/clothing/suit/nanotrasen/vest,
@@ -4452,6 +4458,12 @@
 	},
 /turf/open/floor/wood/walnut,
 /area/ship/crew/dorm/dormtwo)
+"JO" = (
+/obj/machinery/porta_turret/ship/nt/light{
+	dir = 5
+	},
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/ship/bridge)
 "JR" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -5325,7 +5337,7 @@
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo/office)
 "SR" = (
-/obj/machinery/vending/snack/random,
+/obj/effect/spawner/random/vending/snack,
 /turf/open/floor/plasteel/patterned,
 /area/ship/hallway/central)
 "SZ" = (
@@ -5759,7 +5771,7 @@
 /turf/open/floor/wood/ebony,
 /area/ship/crew/dorm/captain)
 "WZ" = (
-/obj/machinery/vending/cola/random,
+/obj/effect/spawner/random/vending/cola,
 /obj/machinery/firealarm/directional/east,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/disposalpipe/segment{
@@ -6573,7 +6585,7 @@ aa
 (20,1,1) = {"
 aa
 aa
-hV
+JO
 YW
 CW
 bC
@@ -7114,13 +7126,13 @@ aa
 aa
 aa
 aa
-hV
+JO
 bA
 bA
 bA
 bA
 bA
-tL
+pX
 aa
 aa
 aa

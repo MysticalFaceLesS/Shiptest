@@ -86,6 +86,18 @@
 /obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/plating,
 /area/ship/bridge)
+"eQ" = (
+/obj/machinery/porta_turret/ship/inteq{
+	dir = 1
+	},
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/bridge)
+"fF" = (
+/obj/machinery/porta_turret/ship/inteq{
+	dir = 9
+	},
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/bridge)
 "fO" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -429,6 +441,10 @@
 	},
 /turf/open/floor/plasteel/mono/white,
 /area/ship/crew/cryo)
+"rL" = (
+/obj/machinery/porta_turret/ship/inteq,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/bridge)
 "te" = (
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
@@ -576,13 +592,13 @@
 /obj/structure/closet/crate/secure/weapon{
 	req_access_txt = "3"
 	},
+/obj/item/storage/box/ammo/c10mm,
+/obj/item/storage/box/ammo/c10mm,
+/obj/item/storage/box/ammo/c10mm,
 /obj/item/ammo_box/a556_box,
 /obj/item/ammo_box/a556_box,
 /obj/item/ammo_box/a556_box/a856,
 /obj/item/ammo_box/a556_box/m903,
-/obj/item/ammo_box/c10mm,
-/obj/item/ammo_box/c10mm,
-/obj/item/ammo_box/c10mm,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "xk" = (
@@ -701,7 +717,9 @@
 "yX" = (
 /obj/structure/catwalk,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/porta_turret/ship/faction/inteq/laser/cover,
+/obj/machinery/porta_turret/ship/inteq{
+	dir = 5
+	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "zc" = (
@@ -853,6 +871,14 @@
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/crew/cryo)
+"He" = (
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/porta_turret/ship/inteq{
+	dir = 6
+	},
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/bridge)
 "Is" = (
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable{
@@ -884,14 +910,14 @@
 /obj/item/reagent_containers/food/drinks/waterbottle/large,
 /obj/item/reagent_containers/food/drinks/waterbottle/large,
 /obj/item/reagent_containers/food/drinks/waterbottle/large,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "JU" = (
@@ -989,9 +1015,6 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/cryo)
 "LV" = (
-/obj/machinery/porta_turret/ship/faction/inteq/laser/cover{
-	density = 0
-	},
 /obj/structure/catwalk/over/plated_catwalk/dark,
 /turf/open/floor/plating,
 /area/ship/bridge)
@@ -1071,7 +1094,9 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/cryo)
 "MP" = (
-/obj/machinery/porta_turret/ship/faction/inteq/laser/cover,
+/obj/machinery/porta_turret/ship/inteq{
+	dir = 10
+	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "MV" = (
@@ -1246,9 +1271,9 @@
 	req_access_txt = "20"
 	},
 /obj/item/melee/knife/combat,
-/obj/item/ammo_box/a357,
-/obj/item/ammo_box/a357,
-/obj/item/ammo_box/a357,
+/obj/item/storage/box/ammo/a357,
+/obj/item/storage/box/ammo/a357,
+/obj/item/storage/box/ammo/a357,
 /obj/item/melee/baton/loaded,
 /obj/item/storage/belt/military/assault,
 /obj/structure/sign/poster/contraband/inteq{
@@ -1625,14 +1650,14 @@
 /obj/structure/closet/crate/secure/weapon{
 	req_access_txt = "3"
 	},
-/obj/item/ammo_box/c9mm,
-/obj/item/ammo_box/c9mm,
-/obj/item/ammo_box/c9mm,
-/obj/item/ammo_box/c9mm,
-/obj/item/ammo_box/c9mm,
-/obj/item/ammo_box/c9mm,
-/obj/item/ammo_box/c45,
-/obj/item/ammo_box/c45,
+/obj/item/storage/box/ammo/c9mm,
+/obj/item/storage/box/ammo/c9mm,
+/obj/item/storage/box/ammo/c9mm,
+/obj/item/storage/box/ammo/c9mm,
+/obj/item/storage/box/ammo/c9mm,
+/obj/item/storage/box/ammo/c9mm,
+/obj/item/storage/box/ammo/c45,
+/obj/item/storage/box/ammo/c45,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "ZZ" = (
@@ -1675,7 +1700,7 @@ Le
 Kq
 "}
 (2,1,1) = {"
-MP
+fF
 VA
 hb
 WJ
@@ -1818,7 +1843,7 @@ gD
 JU
 "}
 (13,1,1) = {"
-MP
+eQ
 yM
 oZ
 Gh
@@ -1828,7 +1853,7 @@ gL
 Sv
 gd
 uZ
-MP
+rL
 "}
 (14,1,1) = {"
 CO
@@ -1875,10 +1900,10 @@ CO
 QG
 dB
 CO
-MP
+CO
 CO
 bX
 bX
 bX
-yX
+He
 "}

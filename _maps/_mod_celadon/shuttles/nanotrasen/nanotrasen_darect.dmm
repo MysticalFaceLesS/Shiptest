@@ -944,7 +944,7 @@
 /obj/machinery/light/small/directional/north{
 	pixel_x = -9
 	},
-/obj/effect/spawner/lootdrop/glowstick,
+/obj/effect/spawner/random/decoration/glowstick,
 /obj/machinery/shower{
 	pixel_y = 13
 	},
@@ -1235,8 +1235,8 @@
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/medical)
 "uH" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
-	dir = 5
+/obj/machinery/porta_turret/ship/nt/pulse{
+	dir = 4
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -1263,18 +1263,18 @@
 /obj/structure/closet/secure_closet/freezer{
 	name = "emergency donuts locker"
 	},
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
 /obj/item/storage/fancy/donut_box{
 	pixel_x = 0;
 	pixel_y = -4
@@ -1372,9 +1372,6 @@
 	name = "ammo locker"
 	},
 /obj/item/ammo_box/magazine/gauss,
-/obj/item/ammo_box/ferropelletbox,
-/obj/item/ammo_box/c46x30mm_box,
-/obj/item/ammo_box/c46x30mm_box,
 /obj/item/ammo_box/magazine/wt550m9,
 /obj/item/ammo_box/magazine/wt550m9,
 /obj/item/ammo_box/magazine/wt550m9,
@@ -1382,6 +1379,9 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 4
 	},
+/obj/item/storage/box/ammo/c46x30mm,
+/obj/item/storage/box/ammo/c46x30mm,
+/obj/item/storage/box/ammo/ferropellet,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/security/armory)
 "yE" = (
@@ -1815,8 +1815,8 @@
 /turf/open/floor/engine,
 /area/ship/cargo)
 "EW" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
-	dir = 9
+/obj/machinery/porta_turret/ship/nt/heavy{
+	dir = 5
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -1871,6 +1871,12 @@
 	},
 /turf/open/floor/plasteel,
 /area/ship/hallway/central)
+"FR" = (
+/obj/machinery/porta_turret/ship/nt{
+	dir = 9
+	},
+/turf/closed/wall/mineral/titanium,
+/area/ship/bridge)
 "FW" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/on/layer4{
 	dir = 1
@@ -1921,7 +1927,7 @@
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ship/engineering)
 "Gu" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
+/obj/machinery/porta_turret/ship/nt/heavy{
 	dir = 6
 	},
 /turf/closed/wall/mineral/titanium,
@@ -2826,7 +2832,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
 "YT" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
+/obj/machinery/porta_turret/ship/nt{
 	dir = 10
 	},
 /turf/closed/wall/mineral/titanium,
@@ -2882,7 +2888,7 @@ bA
 bA
 bA
 bA
-EW
+FR
 IX
 WY
 iJ
@@ -3168,7 +3174,7 @@ bA
 "}
 (21,1,1) = {"
 bA
-uH
+EW
 Sn
 Sn
 Sn
@@ -3249,7 +3255,7 @@ bA
 (26,1,1) = {"
 bA
 bA
-uH
+EO
 bX
 Ok
 cR

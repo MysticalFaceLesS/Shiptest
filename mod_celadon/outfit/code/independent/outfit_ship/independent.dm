@@ -1,3 +1,58 @@
+//дает всем трупам из легионов(я надеюсь что всем) коробки для выживания исв
+/datum/outfit/generic
+	box = /obj/item/storage/box/survival/independent
+
+/datum/outfit/generic/security
+	box = /obj/item/storage/box/survival/independent
+
+/datum/outfit/generic/miner
+	box = /obj/item/storage/box/survival/independent
+
+/datum/outfit/generic/doctor
+	box = /obj/item/storage/box/survival/independent
+
+/datum/outfit/generic/engineer
+	box = /obj/item/storage/box/survival/independent
+
+
+
+//дает всем нефракционышам коробку для выживания исв
+/datum/outfit/job/independent
+	box = /obj/item/storage/box/survival/independent
+
+/datum/outfit/job/independent/ert/technician
+	box = /obj/item/storage/box/survival/independent
+
+/datum/outfit/job/independent/chemist
+	box = /obj/item/storage/box/survival/independent
+
+/datum/outfit/job/independent/ce
+	box = /obj/item/storage/box/survival/independent
+
+/datum/outfit/job/independent/cmo
+	box = /obj/item/storage/box/survival/independent
+
+/datum/outfit/job/independent/engineer
+	box = /obj/item/storage/box/survival/independent
+
+/datum/outfit/job/independent/hos
+	box = /obj/item/storage/box/survival/independent
+
+/datum/outfit/job/independent/doctor
+	box = /obj/item/storage/box/survival/independent
+
+/datum/outfit/job/independent/miner
+	box = /obj/item/storage/box/survival/independent
+
+/datum/outfit/job/independent/paramedic
+	box = /obj/item/storage/box/survival/independent
+
+/datum/outfit/job/independent/security
+	box = /obj/item/storage/box/survival/independent
+
+/datum/outfit/job/independent/warden
+	box = /obj/item/storage/box/survival/independent
+
 /datum/outfit/job/independent/assistant/fancy/lagoon
 	name = "Independent - Fancy (Formal Uniform)"
 

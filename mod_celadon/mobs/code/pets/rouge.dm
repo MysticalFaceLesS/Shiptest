@@ -25,7 +25,7 @@
 	var/rest = FALSE
 	var/obj/item/inventory_head
 	faction = list("neutral", "syndicate")
-	gold_core_spawnable = NO_SPAWN
+	// gold_core_spawnable = NO_SPAWN
 	// unique_pet = TRUE
 	// can_hide = 1
 	var/icon_resting = ""

@@ -1,6 +1,4 @@
-/obj/effect/spawner/clawloot/crusher/spawn_loot()
-	new /obj/item/nullrod/tribal_knife(get_turf(src)) //idk what to put here, memed is the loot person // Заменено с армблейда на ритуальный нож
-	return ..()
+
 
 /mob/living/simple_animal/hostile/megafauna/cult_templar // Офы выпилили курсед клэймор
 	crusher_loot = list(/obj/item/melee/sword/claymore, /obj/item/clothing/suit/space/hardsuit/cult/enchanted, /obj/item/upgradescroll)

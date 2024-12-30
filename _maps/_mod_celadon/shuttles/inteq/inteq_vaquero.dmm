@@ -916,7 +916,6 @@
 	req_access_txt = "20"
 	},
 /obj/item/clothing/glasses/hud/security/sunglasses/inteq,
-/obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
 /obj/item/clothing/gloves/tackler/combat/insulated,
 /obj/item/clothing/shoes/combat,
 /obj/item/storage/belt/security/webbing/inteq/alt,
@@ -937,9 +936,10 @@
 	dir = 1
 	},
 /obj/item/clothing/head/inteq_peaked,
-/obj/item/ammo_box/a357,
-/obj/item/ammo_box/a357,
-/obj/item/ammo_box/a357,
+/obj/item/storage/box/ammo/a357,
+/obj/item/storage/box/ammo/a357,
+/obj/item/storage/box/ammo/a357,
+/obj/item/clothing/mask/balaclava/inteq,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "mE" = (
@@ -1289,14 +1289,14 @@
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/crew/toilet)
 "vd" = (
-/obj/machinery/porta_turret/ship/faction/inteq{
-	dir = 5
-	},
 /obj/docking_port/mobile{
 	dir = 2;
 	launch_status = 0;
 	port_direction = 8;
 	preferred_direction = 4
+	},
+/obj/machinery/porta_turret/ship/inteq/heavy{
+	dir = 5
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -1436,7 +1436,7 @@
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/cargo)
 "xX" = (
-/obj/machinery/porta_turret/ship/faction/inteq{
+/obj/machinery/porta_turret/ship/inteq{
 	dir = 6
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
@@ -1517,16 +1517,16 @@
 	dir = 1
 	},
 /obj/structure/closet/crate,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
 /obj/item/reagent_containers/food/drinks/waterbottle/large,
 /obj/item/reagent_containers/food/drinks/waterbottle/large,
 /obj/item/reagent_containers/food/drinks/waterbottle/large,
@@ -1594,7 +1594,7 @@
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/bridge)
 "zP" = (
-/obj/machinery/porta_turret/ship/faction/inteq{
+/obj/machinery/porta_turret/ship/inteq/heavy{
 	dir = 6
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -1950,7 +1950,6 @@
 /area/ship/maintenance/starboard)
 "DP" = (
 /obj/item/clothing/glasses/hud/security/sunglasses/inteq,
-/obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
 /obj/item/clothing/gloves/tackler/combat/insulated,
 /obj/item/clothing/shoes/combat,
 /obj/item/storage/belt/security/webbing/inteq/alt,
@@ -1983,6 +1982,7 @@
 /obj/machinery/light/small/directional/south,
 /obj/item/clothing/head/warden/inteq,
 /obj/item/clothing/suit/armor/vest/security/warden/inteq,
+/obj/item/clothing/mask/balaclava/inteq,
 /turf/open/floor/plasteel/dark,
 /area/ship/security)
 "Eh" = (
@@ -2203,7 +2203,6 @@
 /obj/item/clothing/head/helmet/swat/inteq,
 /obj/item/clothing/gloves/combat,
 /obj/item/clothing/glasses/hud/security/sunglasses/inteq,
-/obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
 /obj/item/storage/belt/security/webbing/inteq,
 /obj/item/storage/belt/security/webbing/inteq/alt,
 /obj/item/melee/baton/loaded,
@@ -2216,6 +2215,7 @@
 /obj/item/melee/knife/survival,
 /obj/item/melee/knife/survival,
 /obj/item/melee/knife/survival,
+/obj/item/clothing/mask/balaclava/inteq,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/security)
 "HN" = (
@@ -2883,7 +2883,7 @@
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/ship/cargo)
 "Td" = (
-/obj/machinery/porta_turret/ship/faction/inteq{
+/obj/machinery/porta_turret/ship/inteq{
 	dir = 5
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
@@ -3145,7 +3145,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/vending/snack/random,
+/obj/effect/spawner/random/vending/snack,
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/hallway/central)
 "XG" = (
@@ -3165,8 +3165,8 @@
 	name = "fridge"
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
-/obj/effect/spawner/lootdrop/donkpockets,
-/obj/effect/spawner/lootdrop/donkpockets,
+/obj/effect/spawner/random/food_or_drink/donkpockets,
+/obj/effect/spawner/random/food_or_drink/donkpockets,
 /obj/item/storage/cans/sixbeer,
 /obj/item/reagent_containers/food/snacks/carneburrito,
 /obj/effect/turf_decal/corner/opaque/yellow{

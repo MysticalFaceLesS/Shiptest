@@ -109,8 +109,8 @@
 	pixel_y = 32;
 	dir = 1
 	},
-/obj/item/ammo_box/c9mm,
-/obj/item/ammo_box/c9mm,
+/obj/item/storage/box/ammo/c9mm,
+/obj/item/storage/box/ammo/c9mm,
 /obj/item/gun/ballistic/automatic/pistol/commander,
 /obj/item/ammo_box/magazine/co9mm{
 	pixel_x = 5
@@ -209,8 +209,8 @@
 	id = "venture_belt"
 	},
 /obj/structure/closet/crate/trashcart,
-/obj/effect/spawner/lootdrop/maintenance/five,
-/obj/effect/spawner/lootdrop/maintenance/five,
+/obj/effect/spawner/random/maintenance/five,
+/obj/effect/spawner/random/maintenance/five,
 /turf/open/floor/plating,
 /area/ship/bridge)
 "qp" = (
@@ -251,8 +251,8 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
 "rX" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
-	dir = 8
+/obj/machinery/porta_turret/ship/nt/light{
+	dir = 5
 	},
 /turf/closed/wall/mineral/titanium/exterior,
 /area/ship/bridge)
@@ -288,14 +288,14 @@
 /obj/item/stack/sheet/glass/five,
 /obj/item/stack/sheet/glass/five,
 /obj/item/stack/sheet/metal/ten,
-/obj/effect/spawner/lootdrop/materials,
+/obj/effect/spawner/random/materials,
 /turf/open/floor/plating,
 /area/ship/bridge)
 "vm" = (
 /turf/template_noop,
 /area/template_noop)
 "xx" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
+/obj/machinery/porta_turret/ship/nt/light{
 	dir = 6
 	},
 /turf/closed/wall/mineral/titanium/exterior,
@@ -427,6 +427,12 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/bridge)
+"EV" = (
+/obj/machinery/porta_turret/ship/nt{
+	dir = 4
+	},
+/turf/closed/wall/mineral/titanium/exterior,
+/area/ship/bridge)
 "Fi" = (
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
@@ -450,7 +456,7 @@
 	dir = 8;
 	layer = 4.1
 	},
-/obj/machinery/vending/snack/random,
+/obj/effect/spawner/random/vending/snack,
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
 	},
@@ -463,10 +469,10 @@
 /obj/structure/chair/wood{
 	dir = 4
 	},
-/obj/item/reagent_containers/food/snacks/rationpack,
-/obj/item/reagent_containers/food/snacks/rationpack,
-/obj/item/reagent_containers/food/snacks/rationpack,
-/obj/item/reagent_containers/food/snacks/rationpack,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
 /obj/item/reagent_containers/food/drinks/waterbottle,
 /obj/item/reagent_containers/food/drinks/waterbottle,
 /obj/item/reagent_containers/food/drinks/waterbottle,
@@ -615,10 +621,10 @@
 	id = "venture_belt"
 	},
 /obj/structure/closet/crate/wooden,
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donkpockets,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donkpockets,
 /turf/open/floor/plating,
 /area/ship/bridge)
 "PO" = (
@@ -857,10 +863,10 @@ nl
 rX
 nl
 nl
-Sc
+EV
 vm
 vm
-Sc
+EV
 nl
 nl
 xx

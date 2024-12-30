@@ -10,5 +10,5 @@
 /datum/supply_pack/faction/syndicate/ammo/c45_ammo_box
 	name = ".45 Ammo Box Crate"
 	desc = "Contains a fifty-round .45"
-	contains = list(/obj/item/ammo_box/c45)
+	contains = list(/obj/item/storage/box/ammo/c45)
 	cost = 500

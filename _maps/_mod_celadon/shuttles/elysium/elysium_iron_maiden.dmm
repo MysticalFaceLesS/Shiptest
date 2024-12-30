@@ -158,7 +158,7 @@
 	},
 /obj/machinery/power/terminal,
 /obj/structure/cable,
-/obj/machinery/vending/snack/random,
+/obj/effect/spawner/random/vending/snack,
 /turf/open/floor/carpet/green,
 /area/ship/crew/cryo)
 "gE" = (
@@ -246,7 +246,7 @@
 /obj/effect/turf_decal/trimline/opaque/green/arrow_ccw{
 	dir = 1
 	},
-/obj/effect/spawner/lootdrop/crate_spawner,
+/obj/effect/spawner/random/structure/crate_abandoned,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "kT" = (
@@ -441,6 +441,10 @@
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
+"qp" = (
+/obj/machinery/porta_turret/ship/elysium,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/bridge)
 "rv" = (
 /obj/effect/turf_decal/industrial/stand_clear{
 	dir = 8
@@ -471,12 +475,8 @@
 	pixel_x = 7;
 	pixel_y = 3
 	},
-/obj/item/reagent_containers/food/snacks/pizzaslice/arnold{
-	pixel_y = -6;
-	pixel_x = 9;
-	name = "pizza slice"
-	},
 /obj/machinery/newscaster/directional/south,
+/obj/item/reagent_containers/food/snacks/pizzaslice/meat,
 /turf/open/floor/carpet/green,
 /area/ship/crew/cryo)
 "tb" = (
@@ -637,11 +637,11 @@
 /obj/effect/turf_decal/trimline/opaque/green/arrow_ccw{
 	dir = 1
 	},
-/obj/item/ammo_box/a762_40{
+/obj/item/storage/box/ammo/a762_40{
 	pixel_x = -5;
 	pixel_y = -3
 	},
-/obj/item/ammo_box/a762_40{
+/obj/item/storage/box/ammo/a762_40{
 	pixel_x = -5;
 	pixel_y = -3
 	},
@@ -758,7 +758,6 @@
 "yX" = (
 /obj/structure/catwalk,
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/porta_turret/ship/faction/elysium/laser/cover,
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "zc" = (
@@ -792,6 +791,12 @@
 /obj/item/clothing/mask/bandana/black,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
+"zI" = (
+/obj/machinery/porta_turret/ship/elysium{
+	dir = 1
+	},
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/bridge)
 "Ah" = (
 /turf/closed/wall/r_wall/rust,
 /area/ship/crew/cryo)
@@ -1108,7 +1113,9 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/cryo)
 "MP" = (
-/obj/machinery/porta_turret/ship/faction/elysium/laser/cover,
+/obj/machinery/porta_turret/ship/elysium{
+	dir = 10
+	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "MV" = (
@@ -1804,7 +1811,7 @@ gD
 JU
 "}
 (13,1,1) = {"
-CO
+zI
 yM
 oZ
 Gh
@@ -1814,7 +1821,7 @@ gL
 Sv
 Uj
 uZ
-MP
+qp
 "}
 (14,1,1) = {"
 CO
@@ -1861,7 +1868,7 @@ Cf
 QG
 dB
 CO
-MP
+CO
 CO
 bX
 vg

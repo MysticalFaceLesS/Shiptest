@@ -62,11 +62,11 @@
 /obj/item/clothing/glasses/hud/security/sunglasses/eyepatch,
 /obj/item/clothing/head/HoS/syndicate,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/item/ammo_box/a357/match,
-/obj/item/ammo_box/a357/match,
-/obj/item/ammo_box/a357/match,
 /obj/item/pen/edagger,
 /obj/item/gun/ballistic/revolver/viper,
+/obj/item/ammo_box/a357/match,
+/obj/item/ammo_box/a357/match,
+/obj/item/ammo_box/a357/match,
 /turf/open/floor/carpet/black,
 /area/ship/bridge)
 "bJ" = (
@@ -77,8 +77,6 @@
 	},
 /obj/item/clothing/suit/armor/vest/syndie,
 /obj/item/clothing/suit/armor/vest/syndie,
-/obj/item/clothing/head/helmet/operator,
-/obj/item/clothing/head/helmet/operator,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/radio/intercom/directional/west{
 	pixel_y = -5
@@ -91,6 +89,8 @@
 /obj/machinery/light/small/directional/west{
 	pixel_y = 7
 	},
+/obj/item/clothing/head/helmet/swat,
+/obj/item/clothing/head/helmet/swat,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/security/armory)
 "bN" = (
@@ -220,12 +220,12 @@
 	name = "food crate"
 	},
 /obj/item/storage/cans/sixbeer,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
 /obj/effect/turf_decal/industrial/outline,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
@@ -299,8 +299,8 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/airalarm/directional/north,
 /obj/effect/turf_decal/industrial/outline,
-/obj/item/ammo_box/a12g,
-/obj/item/ammo_box/c10mm,
+/obj/item/storage/box/ammo/a12g_buckshot,
+/obj/item/storage/box/ammo/c10mm,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/security/armory)
 "fC" = (
@@ -1326,8 +1326,8 @@
 /area/ship/security/armory)
 "wO" = (
 /obj/structure/table,
-/obj/effect/spawner/lootdrop/donkpockets,
-/obj/effect/spawner/lootdrop/donkpockets,
+/obj/effect/spawner/random/food_or_drink/donkpockets,
+/obj/effect/spawner/random/food_or_drink/donkpockets,
 /obj/effect/turf_decal/corner/transparent/bar{
 	dir = 1
 	},
@@ -1525,6 +1525,10 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/dorm)
+"zt" = (
+/obj/machinery/porta_turret/ship/syndicate/weak,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/bridge)
 "zA" = (
 /obj/machinery/power/smes/engineering,
 /obj/structure/cable{
@@ -1675,7 +1679,7 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/hallway/central)
 "BR" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
+/obj/machinery/porta_turret/ship/syndicate/weak{
 	dir = 1
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
@@ -1976,6 +1980,12 @@
 "HJ" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/security/armory)
+"HK" = (
+/obj/machinery/porta_turret/ship/syndicate/weak{
+	dir = 5
+	},
+/turf/closed/wall/mineral/plastitanium,
+/area/ship/bridge)
 "HT" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2321,7 +2331,9 @@
 /turf/open/floor/carpet/red_gold,
 /area/ship/bridge)
 "NA" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic,
+/obj/machinery/porta_turret/ship/syndicate/weak{
+	dir = 8
+	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "NF" = (
@@ -2488,8 +2500,8 @@
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "Qz" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
-	dir = 6
+/obj/machinery/porta_turret/ship/syndicate/weak{
+	dir = 4
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -2869,8 +2881,8 @@
 /turf/open/floor/carpet/red_gold,
 /area/ship/bridge)
 "Up" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
-	dir = 4
+/obj/machinery/porta_turret/ship/syndicate/weak{
+	dir = 6
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -2885,7 +2897,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/crew)
 "UN" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
+/obj/machinery/porta_turret/ship/syndicate/weak{
 	dir = 1
 	},
 /turf/closed/wall/mineral/plastitanium,
@@ -3324,7 +3336,7 @@ sE
 nX
 dU
 pi
-NA
+zt
 "}
 (3,1,1) = {"
 nn
@@ -3574,7 +3586,7 @@ UX
 GV
 GV
 GV
-NA
+zt
 nn
 Zb
 "}
@@ -3832,7 +3844,7 @@ mL
 "}
 (27,1,1) = {"
 nn
-Up
+HK
 Ap
 Jv
 oQ

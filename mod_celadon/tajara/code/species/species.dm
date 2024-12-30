@@ -19,7 +19,7 @@
 	of family and politics. They prefer colder environments, and speak a variety of languages, mostly Siik'Maas, \
 	using unique inflections their mouths form."
 
-	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
+	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN
 
 	use_skintonetajara = TRUE
 

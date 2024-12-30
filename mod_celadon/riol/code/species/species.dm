@@ -15,7 +15,7 @@
 	id = SPECIES_RIOL
 	loreblurb = "Риолы - это вид гуманоидных лисиц. Риолы родом из -ДАННЫЕ УДАЛЕНЫ-, ныне проживают на частной торговой станции Мирмунвильнир, хотя их первоначальной родиной была -ДАННЫЕ УДАЛЕНЫ-, на текущий момент утеряно местонахождение."
 
-	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
+	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN
 
 	bodyflags = HAS_TAIL | TAIL_WAGGING
 

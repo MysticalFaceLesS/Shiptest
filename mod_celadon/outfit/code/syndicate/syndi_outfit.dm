@@ -23,6 +23,49 @@
 	. = ..()
 	get_syndi_general_access(H)
 
+	// Даёт всем синдешкам брендовый сурвивал бокс
+/datum/outfit/job/syndicate
+	box = /obj/item/storage/box/survival/syndicate
+
+/datum/outfit/job/syndicate/atmos
+	box = /obj/item/storage/box/survival/syndicate
+
+/datum/outfit/job/syndicate/chemist
+	box = /obj/item/storage/box/survival/syndicate
+
+/datum/outfit/job/syndicate/ce
+	box = /obj/item/storage/box/survival/syndicate
+
+/datum/outfit/job/syndicate/engineer
+	box = /obj/item/storage/box/survival/syndicate
+
+/datum/outfit/job/syndicate/miner
+	box = /obj/item/storage/box/survival/syndicate
+
+/datum/outfit/job/syndicate/miner/twink
+	box = /obj/item/storage/box/survival/syndicate
+
+/datum/outfit/job/syndicate/paramedic
+	box = /obj/item/storage/box/survival/syndicate
+
+/datum/outfit/job/syndicate/doctor
+	box = /obj/item/storage/box/survival/syndicate
+
+/datum/outfit/job/syndicate/cmo
+	box = /obj/item/storage/box/survival/syndicate
+
+/datum/outfit/job/syndicate/security
+	box = /obj/item/storage/box/survival/syndicate
+
+/datum/outfit/job/syndicate/hos
+	box = /obj/item/storage/box/survival/syndicate
+
+/datum/outfit/job/syndicate/assistant
+	box = /obj/item/storage/box/survival/syndicate
+
+/datum/outfit/job/syndicate/assistant/suns
+	box = /obj/item/storage/box/survival/syndicate
+
 /datum/outfit/job/syndicate/science/cybersun
     name = "Syndicate - Scientist"
     jobtype = /datum/job/scientist

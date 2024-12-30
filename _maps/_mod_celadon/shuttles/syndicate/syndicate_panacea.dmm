@@ -34,7 +34,7 @@
 /turf/open/floor/plasteel/sepia,
 /area/ship/crew/ccommons)
 "az" = (
-/obj/machinery/vending/snack/random,
+/obj/effect/spawner/random/vending/snack,
 /turf/open/floor/suns/diagonal{
 	color = "#543C30"
 	},
@@ -909,6 +909,14 @@
 	pixel_x = -10;
 	pixel_y = -6
 	},
+/obj/item/reagent_containers/glass/filter{
+	pixel_y = 4;
+	pixel_x = 3
+	},
+/obj/item/reagent_containers/glass/filter{
+	pixel_y = 4;
+	pixel_x = 12
+	},
 /turf/open/floor/suns/dark/plain,
 /area/ship/medical)
 "fM" = (
@@ -1514,9 +1522,20 @@
 /turf/open/floor/suns/dark/plain,
 /area/ship/crew/office/lobby)
 "iM" = (
-/obj/machinery/smartfridge/chemistry/preloaded,
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/ship/medical)
+/obj/structure/window/reinforced/fulltile,
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 4
+	},
+/obj/machinery/door/poddoor/shutters{
+	dir = 4;
+	id = "Panacea_bridge_shuts"
+	},
+/turf/open/floor/plating,
+/area/ship/bridge)
 "iN" = (
 /obj/structure/table/wood/reinforced,
 /obj/item/toy/plush/blahaj{
@@ -2217,12 +2236,12 @@
 	pixel_y = 6
 	},
 /obj/item/folder/red{
-	pixel_x = 3;
-	pixel_y = -7
+	pixel_x = 4;
+	pixel_y = -9
 	},
 /obj/item/folder/blue{
-	pixel_x = 6;
-	pixel_y = -7
+	pixel_x = 7;
+	pixel_y = -9
 	},
 /obj/item/pen/fountain{
 	pixel_y = 11;
@@ -2232,8 +2251,15 @@
 	dir = 8
 	},
 /obj/item/folder/suns{
-	pixel_y = -7;
-	pixel_x = 9
+	pixel_y = -9;
+	pixel_x = 10
+	},
+/obj/machinery/button/door{
+	id = "Panacea_bridge_shuts";
+	name = "Window Shutters";
+	dir = 4;
+	pixel_y = -8;
+	pixel_x = -7
 	},
 /turf/open/floor/suns/dark,
 /area/ship/bridge)
@@ -2487,6 +2513,11 @@
 	dir = 2;
 	pixel_y = 22;
 	pixel_x = -10
+	},
+/obj/machinery/firealarm/directional/east{
+	pixel_y = 30;
+	dir = 1;
+	pixel_x = 2
 	},
 /turf/open/floor/suns,
 /area/ship/bridge)
@@ -2792,9 +2823,18 @@
 /obj/structure/table/wood/reinforced,
 /obj/machinery/computer/med_data/laptop{
 	dir = 1;
-	pixel_y = 4
+	pixel_y = 4;
+	pixel_x = -1
 	},
 /obj/machinery/light/directional/west,
+/obj/item/spacecash/bundle/c1000{
+	pixel_x = 14;
+	pixel_y = 9
+	},
+/obj/item/spacecash/bundle/c1000{
+	pixel_y = 2;
+	pixel_x = 13
+	},
 /turf/open/floor/suns/diagonal{
 	color = "#543C30"
 	},
@@ -5127,6 +5167,10 @@
 /obj/item/stock_parts/cell/high,
 /obj/machinery/light/directional/west,
 /obj/structure/cable/blue,
+/obj/item/stock_parts/cell/high{
+	pixel_x = -6;
+	pixel_y = 0
+	},
 /turf/open/floor/suns/grid,
 /area/ship/engineering)
 "Es" = (
@@ -5228,6 +5272,12 @@
 	},
 /obj/structure/cable/blue{
 	icon_state = "4-8"
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 4
 	},
 /turf/open/floor/suns/hatch{
 	color = "#543C30"
@@ -5528,16 +5578,16 @@
 "Gx" = (
 /obj/structure/table/chem,
 /obj/machinery/reagentgrinder{
-	pixel_y = 9;
-	pixel_x = -6
+	pixel_y = 17;
+	pixel_x = 4
 	},
-/obj/item/reagent_containers/glass/filter{
-	pixel_y = 4;
-	pixel_x = 3
+/obj/item/reagent_containers/glass/beaker/large{
+	pixel_x = -7;
+	pixel_y = 12
 	},
-/obj/item/reagent_containers/glass/filter{
-	pixel_y = 4;
-	pixel_x = 12
+/obj/item/reagent_containers/glass/beaker/large{
+	pixel_x = -4;
+	pixel_y = 5
 	},
 /turf/open/floor/suns/dark/plain,
 /area/ship/medical)
@@ -5604,17 +5654,6 @@
 	color = "#56342A"
 	},
 /area/ship/crew/dorm/dormfour)
-"GN" = (
-/obj/item/spacecash/bundle/c1000{
-	pixel_x = -39;
-	pixel_y = -35
-	},
-/obj/item/spacecash/bundle/c1000{
-	pixel_y = -30;
-	pixel_x = -38
-	},
-/turf/open/floor/suns/dark,
-/area/ship/bridge)
 "GV" = (
 /obj/structure/railing,
 /obj/machinery/photocopier,
@@ -6127,10 +6166,6 @@
 	pixel_x = 0;
 	pixel_y = 21
 	},
-/obj/item/pinpointer/crew{
-	pixel_y = 4;
-	pixel_x = 7
-	},
 /obj/item/storage/belt/medical{
 	pixel_x = -9;
 	pixel_y = 1
@@ -6542,14 +6577,6 @@
 	pixel_x = 8;
 	pixel_y = 7
 	},
-/obj/item/ammo_box/amagpellet_claris{
-	pixel_x = 4;
-	pixel_y = -4
-	},
-/obj/item/ammo_box/amagpellet_claris{
-	pixel_x = -2;
-	pixel_y = -4
-	},
 /obj/item/gun/energy/disabler{
 	pixel_x = 2;
 	pixel_y = -7
@@ -6565,8 +6592,9 @@
 	req_one_access = list(1, 20);
 	name = "Peacekeeper's locker"
 	},
-/obj/item/ammo_box/ferropelletbox,
 /obj/item/storage/belt/security/military,
+/obj/item/storage/box/ammo/ferropellet,
+/obj/item/ammo_box/amagpellet_claris,
 /turf/open/floor/suns/dark/plain,
 /area/ship/security)
 "Ma" = (
@@ -6747,6 +6775,11 @@
 /area/ship/engineering)
 "Nq" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
+/obj/machinery/smartfridge/chemistry/preloaded{
+	pixel_x = 0;
+	pixel_y = 33;
+	density = 0
+	},
 /turf/open/floor/suns,
 /area/ship/medical)
 "Nr" = (
@@ -7127,7 +7160,7 @@
 /turf/open/floor/carpet/red,
 /area/ship/crew/dorm/dormtwo)
 "Qi" = (
-/obj/machinery/vending/cola/random,
+/obj/effect/spawner/random/vending/cola,
 /turf/open/floor/suns/diagonal{
 	color = "#543C30"
 	},
@@ -7486,14 +7519,6 @@
 	name = "Medical Instructor's Locker";
 	req_access = list(20)
 	},
-/obj/item/clothing/head/suns/cmo{
-	pixel_x = -11;
-	pixel_y = 12
-	},
-/obj/item/clothing/suit/toggle/labcoat/suns/cmo{
-	pixel_x = 4;
-	pixel_y = 7
-	},
 /obj/item/clothing/neck/cloak/suns{
 	pixel_x = -8;
 	pixel_y = 0
@@ -7502,29 +7527,17 @@
 	pixel_x = 3;
 	pixel_y = -1
 	},
-/obj/item/clothing/gloves/color/latex/nitrile/suns{
-	pixel_x = -6;
-	pixel_y = -9
-	},
 /obj/item/clothing/glasses/science/suns{
-	pixel_x = 9;
-	pixel_y = -9
-	},
-/obj/item/clothing/mask/surgical/suns{
-	pixel_x = 10;
-	pixel_y = 4
+	pixel_x = 8;
+	pixel_y = 11
 	},
 /obj/item/hypospray/mkii/CMO,
 /obj/item/clothing/glasses/hud/health/sunglasses,
 /obj/structure/table/wood,
-/obj/item/reagent_containers/glass/beaker/unholywater,
-/obj/item/surgicaldrill/advanced,
 /obj/item/healthanalyzer/advanced,
-/obj/item/retractor/advanced,
 /obj/item/scalpel/advanced,
 /obj/item/clothing/glasses/hud/health/night,
 /obj/item/clothing/head/suns,
-/obj/item/clothing/head/suns/surgery,
 /obj/item/clothing/suit/armor/vest/suns/xo,
 /obj/item/clothing/under/syndicate/suns/sciencejumpsuit,
 /obj/item/clothing/gloves/suns/xo,
@@ -7535,6 +7548,14 @@
 /obj/item/clothing/under/syndicate/suns/xo,
 /obj/item/clothing/mask/surgical/suns,
 /obj/item/clothing/neck/cloak/suns/xo,
+/obj/item/retractor/advanced{
+	pixel_x = 6;
+	pixel_y = 1
+	},
+/obj/item/surgicaldrill/advanced{
+	pixel_x = -5;
+	pixel_y = -1
+	},
 /turf/open/floor/suns/diagonal{
 	color = "#543C30"
 	},
@@ -7550,12 +7571,11 @@
 	dir = 6
 	},
 /obj/machinery/button/door{
-	id = "Panacea_medbay_priv_shut";
-	name = "Privacy Shutters";
-	pixel_x = 0;
-	pixel_y = -21;
+	id = "Panacea_patient_commons_shut";
+	name = "Window Shutters";
 	dir = 1;
-	req_one_access = list(5, 19, 20, 57, 45)
+	pixel_y = 21;
+	pixel_x = -20
 	},
 /turf/open/floor/suns/dark,
 /area/ship/bridge)
@@ -8168,7 +8188,7 @@
 /area/ship/engineering)
 "Wr" = (
 /obj/machinery/light/directional/north,
-/obj/machinery/vending/cola/random,
+/obj/effect/spawner/random/vending/cola,
 /turf/open/floor/suns/dark/plain,
 /area/ship/crew/ccommons)
 "Wu" = (
@@ -9161,7 +9181,7 @@ dy
 DJ
 DJ
 DJ
-iM
+DJ
 Nq
 Zo
 oB
@@ -9456,7 +9476,7 @@ EO
 kW
 zZ
 td
-GN
+Af
 kW
 Sp
 Bc
@@ -9531,7 +9551,7 @@ SO
 SO
 SO
 SO
-SO
+iM
 Dp
 zc
 Pz
