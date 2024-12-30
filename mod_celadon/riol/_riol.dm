@@ -28,5 +28,3 @@
 
 /datum/modpack/riol/initialize()
 	. = ..()
-	GLOB.lawlorify[LORE][BAN_HURTRIOL] = "This devil will not strike a riol first."
-	GLOB.lawlorify[LAW][BAN_HURTRIOL] = "You must never harm a riol outside of self defense."

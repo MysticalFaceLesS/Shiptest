@@ -41,7 +41,7 @@
 	desc = "Shameful of all he surveys."
 	icon_state = "penguin_shamebrero"
 	icon_living = "penguin_shamebrero"
-	gold_core_spawnable = NO_SPAWN
+	// gold_core_spawnable = NO_SPAWN
 	unique_pet = TRUE
 
 

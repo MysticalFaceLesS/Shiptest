@@ -104,6 +104,8 @@
 	crate_name = "\improper MULEbot Crate"
 	crate_type = /obj/structure/closet/crate/large
 
+	// [CELADON-REMOVE] - CELADON_QoL - Перенос непопулярного и затерявшегося товара в более видное место, дополнение его материалами и инструкциями
+/*
 /datum/supply_pack/machinery/robotics
 	name = "Robotics Assembly Crate"
 	desc = "The tools you need to replace those finicky humans with a loyal robot army! Contains four proximity sensors, four robotic arms, two empty first aid kits, two health analyzers, two red hardhats, two mechanical toolboxes, and two cleanbot assemblies!"
@@ -128,7 +130,8 @@
 					/obj/item/bot_assembly/cleanbot)
 	crate_name = "robotics assembly crate"
 	crate_type = /obj/structure/closet/crate/science
-
+*/
+	// [/CELADON-REMOVE]
 /*
 		Miscellaneous machines
 */
@@ -167,18 +170,6 @@
 					/obj/item/circuitboard/machine/shieldwallgen/atmos)
 	crate_name = "holofield generator crate"
 	crate_type = /obj/structure/closet/crate/engineering
-
-/datum/supply_pack/machinery/shuttle_in_a_box
-	name = "Shuttle in a Box"
-	desc = "The bare minimum amount of machine and computer boards required to create a working spacecraft."
-	cost = 8000
-	contains = list(
-		/obj/item/circuitboard/computer/shuttle/helm,
-		/obj/item/circuitboard/machine/shuttle/smes,
-		/obj/item/circuitboard/machine/shuttle/engine/electric,
-		/obj/item/shuttle_creator
-	)
-	crate_name = "Shuttle in a Box"
 
 /datum/supply_pack/machinery/ion_thruster
 	name = "Ion Thruster Crate"

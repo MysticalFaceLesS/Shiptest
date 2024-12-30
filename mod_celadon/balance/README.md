@@ -51,7 +51,7 @@ EDIT: `code\modules\cargo\packs\food.dm` : `/datum/supply_pack/food/`
 Лут с элиток (на данный момент убрано из кода для ребаланса)
 EDIT: `code\modules\mob\living\simple_animal\hostile\mining_mobs\elites\elite.dm`: `/obj/structure/elite_tumor/proc/onEliteLoss()` -> var/obj/structure/closet/crate/necropolis/tendril/lootbox = new /obj/structure/closet/crate/necropolis/tendril(loc)
 
-ADD: `code\modules\projectiles\ammunition\_ammunition.dm` : /obj/item/ammo_casing/attackby(obj/item/I, mob/user, params) -> добавлены звук подбора патрона в магазин с пола и задержка в 1 секунду зависящая от кликанья по патронам. Чем быстрее клики - тем быстрее загрузятся патроны.
+ADD: `code\modules\projectiles\ammunition\_ammunition.dm` : /obj/item/ammo_casing/attackby(obj/item/I, mob/user, params) -> добавлены звук подбора патрона в магазин с пола и задержка в 1 секунду зависящая от кликанья по патронам. Чем быстрее клики - тем быстрее загрузятся патроны. -> перемещено в `mod_celadon/items/code/ammunition.dm`
 Очки с зомби и ксеноморфов
 REMOVE: `D:\1ss\ShiptestYata\code\modules\surgery\experimental_dissection.dm`: `/datum/surgery_step/dissection/preop`
 REMOVE: `code\modules\projectiles\guns\energy.dm`
@@ -88,6 +88,9 @@ EDIT: `code/game/turfs/closed/minerals.dm` - Убираем флаг на мин
 EDIT: `code/modules/projectiles/projectile.dm` : Меняем систему лежания и попадания по лежачим и стоячи
 
 EDIT: `code/modules/modular_computers/file_system/programs/radar.dm` : ставим заглушку, чтобы не пользовались планшетиком с радарчиком, пока кодеры не придумают иной вариант. Главное не забыть
+
+EDIT: `mod_celadon/return_content/code/hivebot.dm` : понизили шанс выпадения ксенобио с 45% до 15% с портала
+EDIT: `code/modules/reagents/chemistry/recipes/others.dm` : Меняем кровь слаймоменов в ядрах слаймов на кислоту
 
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,

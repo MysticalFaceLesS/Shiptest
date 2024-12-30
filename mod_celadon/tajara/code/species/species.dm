@@ -19,7 +19,7 @@
 	of family and politics. They prefer colder environments, and speak a variety of languages, mostly Siik'Maas, \
 	using unique inflections their mouths form."
 
-	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
+	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN
 
 	use_skintonetajara = TRUE
 
@@ -59,8 +59,9 @@
 
 	default_color = "424242"
 
-	heatmod = 1.2
-	coldmod = 0.8
+	burnmod = 1.1
+	heatmod = 1.3
+	coldmod = 0.7
 	staminamod = 0.85
 
 	bodytemp_heat_damage_limit = TAJARAN_BODYTEMP_NORMAL + 20		//60

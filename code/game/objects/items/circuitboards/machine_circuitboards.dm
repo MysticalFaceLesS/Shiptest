@@ -567,15 +567,30 @@
 	name = "Smartfridge (Machine Board)"
 	build_path = /obj/machinery/smartfridge
 	req_components = list(/obj/item/stock_parts/matter_bin = 1)
-	var/static/list/fridges_name_paths = list(/obj/machinery/smartfridge = "plant produce",
+	// [CELADON-EDIT] - CELADON_QOL - Bloodbank circuit added
+	// var/static/list/fridges_name_paths = list(/obj/machinery/smartfridge = "plant produce", // CELADON-EDIT - ORIGINAL
+	// 	/obj/machinery/smartfridge/food = "food", // CELADON-EDIT - ORIGINAL
+	// 	/obj/machinery/smartfridge/drinks = "drinks", // CELADON-EDIT - ORIGINAL
+	// 	/obj/machinery/smartfridge/extract = "slimes", // CELADON-EDIT - ORIGINAL
+	// 	/obj/machinery/smartfridge/organ = "organs", // CELADON-EDIT - ORIGINAL
+	// 	/obj/machinery/smartfridge/chemistry = "chems", // CELADON-EDIT - ORIGINAL
+	// 	/obj/machinery/smartfridge/chemistry/virology = "viruses", // CELADON-EDIT - ORIGINAL
+	// 	/obj/machinery/smartfridge/disks = "disks")*/ // CELADON-EDIT - ORIGINAL
+	var/static/list/fridges_name_paths = list(/obj/machinery/smartfridge/bloodbank = "blood",	// CELADON-EDIT - ORIGINAL
 		/obj/machinery/smartfridge/food = "food",
 		/obj/machinery/smartfridge/drinks = "drinks",
-		/obj/machinery/smartfridge/extract = "slimes",
+		/obj/machinery/smartfridge/bloodbank = "blood",
 		/obj/machinery/smartfridge/organ = "organs",
 		/obj/machinery/smartfridge/chemistry = "chems",
-		/obj/machinery/smartfridge/chemistry/virology = "viruses",
-		/obj/machinery/smartfridge/disks = "disks")
+		/obj/machinery/smartfridge/disks = "disks",
+		/obj/machinery/smartfridge/drinks = "drinks",
+		/obj/machinery/smartfridge/food = "food",
+		/obj/machinery/smartfridge/organ = "organs",
+		/obj/machinery/smartfridge = "plant produce",
+		/obj/machinery/smartfridge/chemistry/virology = "viruses")
+	// [/CELADON-EDIT]
 	needs_anchored = FALSE
+// Original is below because var then becomes not connectede to circutboard and problems appera
 
 /obj/item/circuitboard/machine/smartfridge/Initialize(mapload, new_type)
 	if(new_type)
@@ -985,15 +1000,6 @@
 		/obj/item/airlock_painter = 1,
 		/obj/item/stack/sheet/glass = 1)
 
-/obj/item/circuitboard/machine/monkey_recycler
-	name = "Monkey Recycler (Machine Board)"
-	icon_state = "science"
-	build_path = /obj/machinery/monkey_recycler
-	req_components = list(
-		/obj/item/stock_parts/matter_bin = 1,
-		/obj/item/stock_parts/manipulator = 1)
-	needs_anchored = FALSE
-
 /obj/item/circuitboard/machine/nanite_chamber
 	name = "Nanite Chamber (Machine Board)"
 	icon_state = "science"
@@ -1019,11 +1025,6 @@
 		/obj/item/stock_parts/manipulator = 2,
 		/obj/item/stock_parts/micro_laser = 2,
 		/obj/item/stock_parts/scanning_module = 1)
-
-/obj/item/circuitboard/machine/processor/slime
-	name = "Slime Processor (Machine Board)"
-	icon_state = "science"
-	build_path = /obj/machinery/processor/slime
 
 /obj/item/circuitboard/machine/protolathe/department/science
 	name = "Protolathe (Machine Board) - Science"
@@ -1280,19 +1281,6 @@
 		/obj/item/stock_parts/manipulator = 1)
 	needs_anchored = FALSE
 
-/obj/item/circuitboard/machine/processor/attackby(obj/item/I, mob/user, params)
-	if(I.tool_behaviour == TOOL_SCREWDRIVER)
-		if(build_path == /obj/machinery/processor)
-			name = "Slime Processor (Machine Board)"
-			build_path = /obj/machinery/processor/slime
-			to_chat(user, "<span class='notice'>Name protocols successfully updated.</span>")
-		else
-			name = "Food Processor (Machine Board)"
-			build_path = /obj/machinery/processor
-			to_chat(user, "<span class='notice'>Defaulting name protocols.</span>")
-	else
-		return ..()
-
 /obj/item/circuitboard/machine/protolathe/department/service
 	name = "Protolathe - Service (Machine Board)"
 	icon_state = "service"
@@ -1540,3 +1528,15 @@
 	icon_state = "engineering"
 	build_path = /obj/machinery/suit_storage_unit
 	req_components = list(/obj/item/stock_parts/micro_laser = 4)
+
+/obj/item/circuitboard/machine/turret
+	name = "Turret"
+	icon_state = "security"
+	build_path = /obj/machinery/porta_turret
+	req_components = list(/obj/item/stock_parts/capacitor = 2, /obj/item/stock_parts/scanning_module = 1, /obj/item/assembly/prox_sensor = 1, /obj/item/gun/energy = 1)
+	def_components = list(/obj/item/gun/energy = /obj/item/gun/energy/e_gun/turret)
+
+/obj/item/circuitboard/machine/turret/ship
+	name = "Ship-mounted Turret"
+	//We don't want to let people take the gun out of the turret
+	def_components = list(/obj/item/gun/energy = /obj/item/stack/sheet/metal)
