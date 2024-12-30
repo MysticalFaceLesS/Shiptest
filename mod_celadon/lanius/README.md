@@ -40,7 +40,6 @@ ID мода: CELADON_LANIUS
 - mod_celadon/_storge_sounds/sound/lanius/bp_sfx_RockMan_Thud1_01.ogg
 - mod_celadon/_storge_sounds/sound/lanius/bp_sfx_RockMan_Thud2_01.ogg
 - mod_celadon/_storge_sounds/sound/lanius/bp_sfx_RockMan_Thud2_01.ogg
-- mod_celadon/_storge_sounds/sound/lanius/crossbowshot.ogg
 - mod_celadon/_storge_icons/icons/lanius/items.dmi
 - mod_celadon/_storge_icons/icons/lanius/inhands_l.dmi
 - mod_celadon/_storge_icons/icons/lanius/inhands_r.dmi
@@ -52,4 +51,4 @@ ID мода: CELADON_LANIUS
 
 ### Авторы
 
-Finkrld, grozaandgrom (crossbow + buffs)
+Finkrld, grozaandgrom (buffs)
