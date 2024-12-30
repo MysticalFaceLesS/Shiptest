@@ -425,3 +425,7 @@
 /datum/gear/plushes/carpplushie/void
 	display_name = "carp plushie, void"
 	path = /obj/item/toy/plush/carpplushie/void
+
+/datum/gear/plushes/rimri
+	display_name = "Rimri plushie"
+	path = /obj/item/toy/plush/celadon/rimri
