@@ -250,10 +250,11 @@
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "kT" = (
-/obj/machinery/turretid{
+/obj/machinery/turretid/ship{
 	dir = 8;
 	pixel_x = -32;
-	req_access = null
+	req_access = null;
+	id = "iron_turrets"
 	},
 /obj/machinery/holopad,
 /obj/structure/cable{
@@ -442,7 +443,9 @@
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "qp" = (
-/obj/machinery/porta_turret/ship/elysium,
+/obj/machinery/porta_turret/ship/elysium{
+	id = "iron_turrets"
+	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "rv" = (
@@ -793,7 +796,8 @@
 /area/ship/cargo)
 "zI" = (
 /obj/machinery/porta_turret/ship/elysium{
-	dir = 1
+	dir = 1;
+	id = "iron_turrets"
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
@@ -1114,7 +1118,8 @@
 /area/ship/crew/cryo)
 "MP" = (
 /obj/machinery/porta_turret/ship/elysium{
-	dir = 10
+	dir = 10;
+	id = "iron_turrets"
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)

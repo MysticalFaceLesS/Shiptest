@@ -48,9 +48,6 @@
 	icon_state = "sec_wall";
 	name = "weapon power cell closet"
 	},
-/obj/item/stock_parts/cell/gun/upgraded,
-/obj/item/stock_parts/cell/gun/upgraded,
-/obj/item/stock_parts/cell/gun/upgraded,
 /obj/item/stock_parts/cell/gun,
 /obj/item/stock_parts/cell/gun,
 /obj/item/stock_parts/cell/gun,
@@ -804,9 +801,10 @@
 	dir = 9
 	},
 /obj/machinery/photocopier,
-/obj/machinery/turretid/lethal{
+/obj/machinery/turretid/ship{
 	pixel_x = -29;
-	pixel_y = -6
+	pixel_y = -6;
+	id = "skybreaker_turrets"
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
@@ -1594,15 +1592,15 @@
 	},
 /obj/item/gun/energy/e_gun/hades{
 	pixel_x = -1;
-	pixel_y = -9
-	},
-/obj/item/gun/energy/e_gun/hades{
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/obj/item/gun/energy/e_gun/hades{
-	pixel_x = -1;
 	pixel_y = 11
+	},
+/obj/item/gun/energy/e_gun/smg{
+	pixel_x = 0;
+	pixel_y = 4
+	},
+/obj/item/gun/energy/e_gun/iot{
+	pixel_x = 0;
+	pixel_y = -5
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/security/armory)
@@ -1717,7 +1715,8 @@
 /area/ship/crew/dorm)
 "wx" = (
 /obj/machinery/porta_turret/ship/nt/pulse{
-	dir = 6
+	dir = 6;
+	id = "skybreaker_turrets"
 	},
 /turf/closed/wall/mineral/titanium/exterior,
 /area/ship/bridge)
@@ -2522,7 +2521,8 @@
 /area/ship/hallway/central)
 "Ie" = (
 /obj/machinery/porta_turret/ship/nt/heavy{
-	dir = 10
+	dir = 10;
+	id = "skybreaker_turrets"
 	},
 /turf/closed/wall/mineral/titanium/exterior,
 /area/ship/bridge)
@@ -2589,8 +2589,7 @@
 	dir = 6
 	},
 /obj/structure/displaycase{
-	start_showpieces = list(/obj/item/gun/energy/e_gun/hos/brazil/true);
-	start_showpiece_type = /obj/item/gun/energy/e_gun/hos/brazil/true
+	start_showpiece_type = /obj/item/gun/energy/e_gun/hades
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/dorm/captain)
@@ -3359,7 +3358,8 @@
 /area/ship/security)
 "SZ" = (
 /obj/machinery/porta_turret/ship/nt/pulse{
-	dir = 5
+	dir = 5;
+	id = "skybreaker_turrets"
 	},
 /turf/closed/wall/mineral/titanium/exterior,
 /area/ship/bridge)
@@ -3369,7 +3369,6 @@
 	name = "engineering operative's locker";
 	anchored = 1
 	},
-/obj/item/stock_parts/cell/gun/upgraded,
 /obj/item/melee/knife/combat,
 /obj/item/storage/backpack/ert/engineer,
 /obj/item/clothing/glasses/hud/diagnostic/night,
@@ -3412,7 +3411,8 @@
 /area/ship/security)
 "Tp" = (
 /obj/machinery/porta_turret/ship/nt/heavy{
-	dir = 9
+	dir = 9;
+	id = "skybreaker_turrets"
 	},
 /turf/closed/wall/mineral/titanium/exterior,
 /area/ship/bridge)
@@ -3843,7 +3843,6 @@
 /obj/item/gun/energy/e_gun{
 	cell_type = /obj/item/stock_parts/cell/gun/upgraded
 	},
-/obj/item/stock_parts/cell/gun/upgraded,
 /obj/item/melee/knife/combat,
 /obj/item/defibrillator/compact/combat/loaded/nanotrasen,
 /obj/item/storage/backpack/ert/medical,
