@@ -616,6 +616,7 @@
 /obj/machinery/porta_turret/proc/set_state(on, new_mode, new_flags)
 	if(locked)
 		return
+
 	if(!isnull(new_flags))
 		turret_flags = new_flags
 
