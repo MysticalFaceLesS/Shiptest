@@ -126,10 +126,11 @@
 		if(M.stat == DEAD && M.client && (M.client.prefs.chat_toggles & CHAT_GHOSTSIGHT) && !(M in viewers(T, null)))
 			M.show_message("[FOLLOW_LINK(M, user)] [dchatmsg]")
 
-	if(emote_type == EMOTE_AUDIBLE)	// Да, это определённо слегка забавно.
-		user.audible_message(msg, deaf_message = "<span class='emote'>Ты видишь как <b>[user]</b> [msg]</span>", audible_message_flags = EMOTE_MESSAGE)
-	else
-		user.visible_message(msg, blind_message = "<span class='emote'>Ты замечаешь как <b>[user]</b> [msg]</span>", visible_message_flags = EMOTE_MESSAGE)
+	if(isliving(user))
+		if(emote_type == EMOTE_AUDIBLE)	// Да, это определённо слегка забавно.
+			user.audible_message(msg, deaf_message = "<span class='emote'>Ты видишь как <b>[user]</b> [msg]</span>", audible_message_flags = EMOTE_MESSAGE)
+		else
+			user.visible_message(msg, blind_message = "<span class='emote'>Ты замечаешь как <b>[user]</b> [msg]</span>", visible_message_flags = EMOTE_MESSAGE)
 
 	// [CELADON-ADD] - CELADON_EMOTES
 	if(!((emote_type & EMOTE_FORCE_NO_RUNECHAT) || suppressed) && !isobserver(user))
