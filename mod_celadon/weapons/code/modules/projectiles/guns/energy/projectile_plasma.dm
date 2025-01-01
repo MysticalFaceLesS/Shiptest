@@ -10,17 +10,22 @@
 	temperature = 0
 
 /obj/projectile/temp/cryo/plasmadisable/on_hit(atom/target, blocked = FALSE)
+	var/turf/targets_turf = target.loc
 	if(iscarbon(target))
 		var/mob/living/carbon/M = target
-		M.adjustFireLoss(3)
-		M.adjust_bodytemperature(-25)
-		if(M.bodytemperature > M.get_body_temp_normal() + 20)
-			M.adjustBruteLoss((M.bodytemperature - 310) / 10)
-			M.adjustStaminaLoss((M.bodytemperature - 310) / 10)
-			M.adjust_blurriness(5)
+		if(M.bodytemperature > M.get_body_temp_normal() + 10)
+			M.adjustBruteLoss((M.bodytemperature - 310) / 5)
 			M.bodytemperature = M.get_body_temp_normal()
-			to_chat(src, "<span class='userdanger'>Your flesh feels like it's shrinking!.</span>")
+			to_chat(M, "<span class='userdanger'>Your veins feel like they are exploding!</span>")
+			M.reagents.remove_any(50)
 			M.force_scream()
+			if(M.blood_volume > 0)
+				var/amount_to_drain = 40
+				M.blood_volume = M.blood_volume - amount_to_drain
+			new /obj/effect/decal/cleanable/blood(targets_turf)
+		M.adjust_blurriness(5)
+		M.adjust_bodytemperature(-20)
+		M.adjustFireLoss(3)
 
 /obj/item/ammo_casing/energy/disabler/plasmadisable
 	projectile_type = /obj/projectile/temp/cryo/plasmadisable
@@ -45,16 +50,21 @@
 	temperature = 0
 
 /obj/projectile/temp/cryo/plasmalaserweak/on_hit(atom/target, blocked = FALSE)
+	var/turf/targets_turf = target.loc
 	if(iscarbon(target))
 		var/mob/living/carbon/M = target
-		M.adjust_bodytemperature(-15)
-		if(M.bodytemperature > M.get_body_temp_normal() + 20)
-			M.adjustBruteLoss((M.bodytemperature - 310) / 10)
-			M.adjustStaminaLoss((M.bodytemperature - 310) / 10)
-			M.adjust_blurriness(5)
+		if(M.bodytemperature > M.get_body_temp_normal() + 10)
+			M.adjustBruteLoss((M.bodytemperature - 310) / 5)
 			M.bodytemperature = M.get_body_temp_normal()
-			to_chat(src, "<span class='userdanger'>Your flesh feels like it's shrinking!.</span>")
+			to_chat(M, "<span class='userdanger'>Your veins feel like they are exploding!</span>")
+			M.reagents.remove_any(50)
 			M.force_scream()
+			if(M.blood_volume > 0)
+				var/amount_to_drain = 80
+				M.blood_volume = M.blood_volume - amount_to_drain
+			new /obj/effect/decal/cleanable/blood(targets_turf)
+		M.adjust_blurriness(5)
+		M.adjust_bodytemperature(-25)
 
 /obj/item/ammo_casing/energy/laser/plasmalaserweak
 	projectile_type = /obj/projectile/temp/cryo/plasmalaserweak
@@ -76,20 +86,16 @@
 	temperature = 0
 
 /obj/projectile/temp/hot/burn_plasmalaserweak/on_hit(atom/target)
-	var/turf/targets_turf = target.loc
 	if(iscarbon(target))
 		var/mob/living/carbon/M = target
 		if(M.bodytemperature < M.get_body_temp_normal() - 10)
-			M.adjustBruteLoss((310 - M.bodytemperature) / 5)
+			M.adjustBruteLoss((310 - M.bodytemperature) / 10)
+			M.adjustStaminaLoss((310 - M.bodytemperature) / 10)
+			M.adjust_blurriness(5)
 			M.bodytemperature = M.get_body_temp_normal()
-			to_chat(M, "<span class='userdanger'>Your veins feel like they are exploding!</span>")
-			M.reagents.remove_any(50)
+			to_chat(src, "<span class='userdanger'>Your flesh feels like it's shrinking!.</span>")
 			M.force_scream()
-			if(M.blood_volume > 0)
-				var/amount_to_drain = 40
-				M.blood_volume = M.blood_volume - amount_to_drain
-			new /obj/effect/decal/cleanable/blood(targets_turf)
-		M.adjust_bodytemperature(75)
+	
 
 /obj/item/ammo_casing/energy/laser/burn_plasmalaserweak
 	projectile_type = /obj/projectile/temp/hot/burn_plasmalaserweak
@@ -117,15 +123,12 @@
 	if(iscarbon(target))
 		var/mob/living/carbon/M = target
 		if(M.bodytemperature < M.get_body_temp_normal() - 10)
-			M.adjustBruteLoss((310 - M.bodytemperature) / 5)
+			M.adjustBruteLoss((310 - M.bodytemperature) / 10)
+			M.adjustStaminaLoss((310 - M.bodytemperature) / 10)
+			M.adjust_blurriness(5)
 			M.bodytemperature = M.get_body_temp_normal()
-			to_chat(M, "<span class='userdanger'>Your veins feel like they are exploding!</span>")
-			M.reagents.remove_any(50)
+			to_chat(src, "<span class='userdanger'>Your flesh feels like it's shrinking!.</span>")
 			M.force_scream()
-			if(M.blood_volume > 0)
-				var/amount_to_drain = 80
-				M.blood_volume = M.blood_volume - amount_to_drain
-			new /obj/effect/decal/cleanable/blood(targets_turf)
 		M.adjust_bodytemperature(333)
 		M.adjust_fire_stacks(5)
 		M.IgniteMob()
