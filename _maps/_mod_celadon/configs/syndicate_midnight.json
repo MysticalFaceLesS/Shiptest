@@ -1,0 +1,46 @@
+{
+	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
+	"map_name": "Midnight-class Research and Roboticist Ship",
+	"map_short_name": "Midnight",
+	"description": "Робототехнический корабль 'Midnight' создан RM-Tech в сотрудничестве с Cybersun. Предназначен для научной деятельности а также создания специальных юнитов Синдиката и снабжения ими же своих союзников. Экипаж состоит из пары учёных, медицинского исследователя, робототехника, биомеханического инженера и шахтёра. Корабль имеет при себе научный отдел, ИИ, а также несколько заготовленных оболочек киборга.",
+	"map_path": "_maps/_mod_celadon/shuttles/syndicate/syndicate_midnight.dmm",
+	"enabled": true,
+	"limit": 1,
+	"prefix": "RSSV",
+	"faction": "/datum/faction/syndicate",
+	"tags": ["Исследовательский, Робототехнический"],
+	"namelists": [
+		"SPACE",
+		"NATURAL_AGGRESSIVE"],
+	"job_slots": {
+		"Research Director": {
+			"outfit": "/datum/outfit/job/syndicate/captain",
+			"officer": true,
+			"slots": 1
+		},
+		"Medical Researcher": {
+			"outfit": "/datum/outfit/job/syndicate/doctor",
+			"slots": 1
+		},
+		"Mechanic": {
+			"outfit": "/datum/outfit/job/syndicate/engineer",
+			"slots": 1
+		},
+		"Spelunker": {
+			"outfit": "/datum/outfit/job/syndicate/miner",
+			"slots": 1
+		},
+		"Scientist": {
+			"outfit": "/datum/outfit/job/syndicate/science",
+			"slots": 2
+		},
+		"Roboticist": {
+			"outfit": "/datum/outfit/job/syndicate/science",
+			"slots": 1
+		},
+		"Biomechanical Engineer": {
+			"outfit": "/datum/outfit/job/syndicate/science",
+			"slots": 1
+		}
+	}
+}
