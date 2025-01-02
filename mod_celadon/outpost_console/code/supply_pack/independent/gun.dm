@@ -67,21 +67,6 @@
 	contains = list(/obj/item/storage/guncase/energy/laser)
 	crate_name = "laser crate"
 
-/datum/supply_pack/faction/independent/gun/mini_energy
-	name = "Mini Energy Gun Crate"
-	desc = "Contains a small, versatile energy gun, capable of firing both nonlethal and lethal blasts, but with a limited power cell."
-	cost = 800
-	contains = list(/obj/item/storage/pistolcase)
-	crate_name = "laser crate"
-
-/datum/supply_pack/faction/independent/gun/energy
-	name = "Energy Gun Crate"
-	desc = "Contains a versatile energy gun, capable of firing both nonlethal and lethal blasts of light."
-	cost = 1750
-	contains = list(/obj/item/storage/pistolcase)
-	crate_name = "energy gun crate"
-	crate_type = /obj/structure/closet/crate/secure/plasma
-
 /datum/supply_pack/faction/independent/gun/ion
 	name = "Ion Rifle Crate"
 	desc = "Contains a single Mk.I Ion Projector, a special anti-tank rifle designed to disable electronic threats at range."

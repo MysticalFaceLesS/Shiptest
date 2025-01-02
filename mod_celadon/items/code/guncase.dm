@@ -155,6 +155,11 @@ NO_MAG_GUN_HELPER(automatic/marksman/f4/inteq)
 	new /obj/item/gun/energy/e_gun(src)
 	new /obj/item/stock_parts/cell/gun/empty(src)
 
+/obj/item/storage/pistolcase/miniegun
+/obj/item/storage/pistolcase/miniegun/PopulateContents()
+	new /obj/item/gun/energy/e_gun/mini(src)
+	new /obj/item/stock_parts/cell/gun/mini/empty(src)
+
 /obj/item/storage/guncase/iot
 /obj/item/storage/guncase/iot/PopulateContents()
 	new /obj/item/gun/energy/e_gun/iot(src)
