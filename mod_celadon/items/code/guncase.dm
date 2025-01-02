@@ -32,8 +32,8 @@ NO_MAG_GUN_HELPER(automatic/marksman/f4/inteq)
 /obj/item/ammo_box/magazine/gauss/empty
 	start_empty = TRUE
 
-/obj/item/storage/pistolcase/pistole_c
-/obj/item/storage/pistolcase/pistole_c/PopulateContents()
+/obj/item/storage/guncase/pistole_c
+/obj/item/storage/guncase/pistole_c/PopulateContents()
 	new /obj/item/gun/ballistic/automatic/pistol/solgov/no_mag(src)
 	new /obj/item/ammo_box/magazine/pistol556mm/empty(src)
 	new /obj/item/ammo_box/magazine/pistol556mm/empty(src)
@@ -155,8 +155,8 @@ NO_MAG_GUN_HELPER(automatic/marksman/f4/inteq)
 	new /obj/item/gun/energy/e_gun(src)
 	new /obj/item/stock_parts/cell/gun/empty(src)
 
-/obj/item/storage/pistolcase/miniegun
-/obj/item/storage/pistolcase/miniegun/PopulateContents()
+/obj/item/storage/guncase/miniegun
+/obj/item/storage/guncase/miniegun/PopulateContents()
 	new /obj/item/gun/energy/e_gun/mini(src)
 	new /obj/item/stock_parts/cell/gun/mini/empty(src)
 

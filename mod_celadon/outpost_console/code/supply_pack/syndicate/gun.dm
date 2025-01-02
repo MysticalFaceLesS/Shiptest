@@ -4,7 +4,7 @@
 /datum/supply_pack/faction/syndicate/gun/ringneck
 	name = "PC-76 \"Ringneck\""
 	desc = "A good old 10mm syndicate pistol. Also known as Stechkin"
-	contains = list(/obj/item/storage/pistolcase)
+	contains = list(/obj/item/storage/guncase/pistol/pc76)
 	cost = 900
 
 // /datum/supply_pack/faction/syndicate/gun/deagle // У нас нет коробок для этой пушки, поэтому пока что так

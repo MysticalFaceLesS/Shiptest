@@ -34,7 +34,7 @@
 /datum/supply_pack/faction/nanotrasen/gun/mini_egun
 	name = "NT-SL-X26 Miniature energy pistol"
 	desc = "One of the most basic energy weapons in the universe. Compact but low capacity. Shoots lethal and disabler lasers. A simple, yet an inefficient PDW. Power in a pocket! Produced by Nanotrasen-Sharplite"
-	contains = list(/obj/item/storage/pistolcase/miniegun)
+	contains = list(/obj/item/storage/guncase/miniegun)
 	cost = 500
 
 /datum/supply_pack/faction/nanotrasen/gun/ion_carbine

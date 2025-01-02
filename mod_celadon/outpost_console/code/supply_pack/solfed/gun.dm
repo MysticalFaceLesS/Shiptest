@@ -10,7 +10,7 @@
 /datum/supply_pack/faction/solfed/gun/pistole_c
 	name = "Solar Pistole C"
 	desc = "A powerful solarian 5.56mm pistol, looks classic, is ballistic. Produced by Solar Federation"
-	contains = list(/obj/item/storage/pistolcase/pistole_c)
+	contains = list(/obj/item/storage/guncase/pistole_c)
 	cost = 1100
 
 /datum/supply_pack/faction/solfed/gun/vector
