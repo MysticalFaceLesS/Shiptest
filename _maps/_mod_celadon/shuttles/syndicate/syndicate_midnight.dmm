@@ -254,7 +254,8 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/hatch{
-	dir = 4
+	dir = 4;
+	name = "Central Hall"
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
@@ -460,7 +461,7 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 4
 	},
-/obj/item/aicard,
+/obj/machinery/fax,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "hu" = (
@@ -874,6 +875,10 @@
 "oJ" = (
 /obj/machinery/firealarm/directional/north,
 /obj/item/cigbutt,
+/obj/structure/closet/crate/bin,
+/obj/item/cigbutt,
+/obj/item/cigbutt,
+/obj/effect/spawner/lootdrop/maintenance/two,
 /turf/open/floor/plasteel/patterned/brushed,
 /area/ship/crew/toilet)
 "oO" = (
@@ -2012,6 +2017,10 @@
 /obj/effect/turf_decal/corner/transparent/syndiered/borderfull,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/science/robotics)
+"HL" = (
+/obj/item/cigbutt,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/crew/toilet)
 "Ii" = (
 /obj/machinery/light/directional/south,
 /obj/machinery/shower{
@@ -2422,10 +2431,10 @@
 /obj/effect/turf_decal/spline/plain/opaque/syndiered{
 	dir = 1
 	},
-/obj/machinery/vending/coffee{
+/obj/machinery/light/directional/west,
+/obj/machinery/vending/snack/random{
 	all_items_free = 1
 	},
-/obj/machinery/light/directional/west,
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
 "PL" = (
@@ -2593,7 +2602,7 @@
 "Sd" = (
 /obj/effect/turf_decal/spline/plain/opaque/syndiered,
 /obj/machinery/light/directional/west,
-/obj/machinery/vending/robotics{
+/obj/machinery/vending/coffee{
 	all_items_free = 1
 	},
 /turf/open/floor/plasteel/dark,
@@ -2737,7 +2746,9 @@
 "Wl" = (
 /obj/effect/turf_decal/corner/transparent/syndiered/border,
 /obj/machinery/camera/xray,
-/obj/machinery/vending/boozeomat,
+/obj/machinery/vending/robotics{
+	all_items_free = 1
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/science/robotics)
 "Wq" = (
@@ -2794,6 +2805,7 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 10
 	},
+/obj/item/aicard,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "WP" = (
@@ -2812,7 +2824,8 @@
 /area/ship/general/science)
 "WQ" = (
 /obj/machinery/door/airlock/hatch{
-	dir = 4
+	dir = 4;
+	name = "Aft Hallway"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -3358,7 +3371,7 @@ Jn
 Dg
 ka
 aB
-VN
+HL
 oJ
 Sv
 pX
