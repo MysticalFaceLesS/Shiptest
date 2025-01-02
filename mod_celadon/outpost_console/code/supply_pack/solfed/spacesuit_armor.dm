@@ -3,7 +3,7 @@
 
 /datum/supply_pack/faction/solfed/spacesuit_armor/hardsuit
 	name = "SolFed hardsuit"
-	desc = "An advanced hardsuit that uses exosuit manipulators to be a much more faster, yet an armored hardsuit than any suit you have seen before"
+	desc = "An advanced hardsuit that uses exosuit manipulators to be a much more faster, yet an armored hardsuit"
 	contains = list(/obj/item/clothing/suit/space/hardsuit/solgov)
 	cost = 11000
 
