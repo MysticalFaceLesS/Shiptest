@@ -64,8 +64,8 @@ NO_MAG_GUN_HELPER(automatic/marksman/f4/inteq)
 /obj/item/ammo_box/magazine/smgm10mm/empty
 	start_empty = TRUE
 
-/obj/item/storage/pistolcase/commander/inteq
-/obj/item/storage/pistolcase/commander/inteq/PopulateContents()
+/obj/item/storage/guncase/commander/inteq
+/obj/item/storage/guncase/commander/inteq/PopulateContents()
 	new /obj/item/gun/ballistic/automatic/pistol/commander/inteq/no_mag(src)
 	new /obj/item/ammo_box/magazine/co9mm/empty(src)
 	new /obj/item/ammo_box/magazine/co9mm/empty(src)

@@ -46,7 +46,7 @@
 /datum/supply_pack/faction/nanotrasen/gun/commander
 	name = "Nanotrasen 'Commander' handgun"
 	desc = "A simple 9mm pistol, looks cool, is ballistic. Produced by Nanotrasen Armories"
-	contains = list(/obj/item/storage/pistolcase/commander)
+	contains = list(/obj/item/storage/guncase/pistol/commander)
 	cost = 700
 
 /datum/supply_pack/faction/nanotrasen/gun/wt550

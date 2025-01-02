@@ -18,7 +18,7 @@
 	name = "IRMG 'Commander' handgun"
 	desc = "A simple 9mm pistol, looks cool, is ballistic. Stolen from Nanotrasen Armories and repainted"
 	cost = 750
-	contains = list(/obj/item/storage/pistolcase/commander/inteq)
+	contains = list(/obj/item/storage/guncase/commander/inteq)
 
 /datum/supply_pack/faction/inteq/gun/ssg04/inteq
 	name = "IRMG SSG-04"
