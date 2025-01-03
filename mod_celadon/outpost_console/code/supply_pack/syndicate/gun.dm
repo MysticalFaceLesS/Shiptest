@@ -1,10 +1,10 @@
 /datum/supply_pack/faction/syndicate/gun
 	group = "Weapons"
 
-/datum/supply_pack/faction/syndicate/gun/ringneck
+/datum/supply_pack/faction/syndicate/gun/pc76
 	name = "PC-76"
 	desc = "Automatic pistol"
-	contains = list(/obj/item/storage/pistolcase/ringneck)
+	contains = list(/obj/item/storage/guncase/pistol/pc76)
 	cost = 700
 
 // /datum/supply_pack/faction/syndicate/gun/deagle // У нас нет коробок для этой пушки, поэтому пока что так

@@ -56,10 +56,6 @@
 "bA" = (
 /turf/template_noop,
 /area/template_noop)
-"bX" = (
-/obj/structure/sign/poster/official/ion_carbine,
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/ship/bridge)
 "cq" = (
 /obj/effect/turf_decal/techfloor{
 	dir = 10
@@ -944,7 +940,7 @@
 /obj/machinery/light/small/directional/north{
 	pixel_x = -9
 	},
-/obj/effect/spawner/lootdrop/glowstick,
+/obj/effect/spawner/random/decoration/glowstick,
 /obj/machinery/shower{
 	pixel_y = 13
 	},
@@ -1235,8 +1231,9 @@
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/medical)
 "uH" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
-	dir = 5
+/obj/machinery/porta_turret/ship/nt/pulse{
+	dir = 4;
+	id = "darect_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -1263,18 +1260,18 @@
 /obj/structure/closet/secure_closet/freezer{
 	name = "emergency donuts locker"
 	},
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donut,
-/obj/effect/spawner/lootdrop/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
+/obj/effect/spawner/random/food_or_drink/donut,
 /obj/item/storage/fancy/donut_box{
 	pixel_x = 0;
 	pixel_y = -4
@@ -1372,9 +1369,6 @@
 	name = "ammo locker"
 	},
 /obj/item/ammo_box/magazine/gauss,
-/obj/item/ammo_box/ferropelletbox,
-/obj/item/ammo_box/c46x30mm_box,
-/obj/item/ammo_box/c46x30mm_box,
 /obj/item/ammo_box/magazine/wt550m9,
 /obj/item/ammo_box/magazine/wt550m9,
 /obj/item/ammo_box/magazine/wt550m9,
@@ -1382,6 +1376,9 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 4
 	},
+/obj/item/storage/box/ammo/c46x30mm,
+/obj/item/storage/box/ammo/c46x30mm,
+/obj/item/storage/box/ammo/ferropellet,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/security/armory)
 "yE" = (
@@ -1781,10 +1778,6 @@
 /obj/machinery/light/small/directional/south{
 	pixel_x = 10
 	},
-/obj/item/stamp/hos{
-	pixel_x = -9;
-	pixel_y = -6
-	},
 /obj/item/stamp/nt/captain{
 	pixel_x = 0;
 	pixel_y = -6
@@ -1794,6 +1787,15 @@
 /obj/item/spacecash/bundle/c500{
 	pixel_x = 5;
 	pixel_y = 8
+	},
+/obj/item/stamp/nanotrasen/vigilitas/captain{
+	name = "Patrol Leader's rubber stamp";
+	pixel_x = -9;
+	pixel_y = -6
+	},
+/obj/item/stamp/nanotrasen{
+	pixel_x = 9;
+	pixel_y = -6
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
@@ -1815,8 +1817,9 @@
 /turf/open/floor/engine,
 /area/ship/cargo)
 "EW" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
-	dir = 9
+/obj/machinery/porta_turret/ship/nt/heavy{
+	dir = 5;
+	id = "darect_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -1871,6 +1874,13 @@
 	},
 /turf/open/floor/plasteel,
 /area/ship/hallway/central)
+"FR" = (
+/obj/machinery/porta_turret/ship/nt{
+	dir = 9;
+	id = "darect_turrets"
+	},
+/turf/closed/wall/mineral/titanium,
+/area/ship/bridge)
 "FW" = (
 /obj/machinery/atmospherics/components/unary/outlet_injector/on/layer4{
 	dir = 1
@@ -1921,8 +1931,9 @@
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ship/engineering)
 "Gu" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
-	dir = 6
+/obj/machinery/porta_turret/ship/nt/heavy{
+	dir = 6;
+	id = "darect_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -2350,6 +2361,10 @@
 /obj/item/stock_parts/cell/gun/upgraded,
 /obj/item/stock_parts/cell/gun/upgraded,
 /obj/item/radio/headset/nanotrasen/alt/captain,
+/obj/structure/sign/poster/official/ion_carbine{
+	pixel_x = 0;
+	pixel_y = 31
+	},
 /turf/open/floor/wood,
 /area/ship/bridge)
 "OG" = (
@@ -2703,9 +2718,10 @@
 "Yn" = (
 /obj/machinery/light/directional/north,
 /obj/machinery/holopad/emergency/command,
-/obj/machinery/turretid/lethal{
+/obj/machinery/turretid/ship{
 	pixel_y = 24;
-	pixel_x = 17
+	pixel_x = 17;
+	id = "darect_turrets"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
@@ -2826,8 +2842,9 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
 "YT" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
-	dir = 10
+/obj/machinery/porta_turret/ship/nt{
+	dir = 10;
+	id = "darect_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -2882,7 +2899,7 @@ bA
 bA
 bA
 bA
-EW
+FR
 IX
 WY
 iJ
@@ -3168,7 +3185,7 @@ bA
 "}
 (21,1,1) = {"
 bA
-uH
+EW
 Sn
 Sn
 Sn
@@ -3249,8 +3266,8 @@ bA
 (26,1,1) = {"
 bA
 bA
-uH
-bX
+EO
+cR
 Ok
 cR
 Yn

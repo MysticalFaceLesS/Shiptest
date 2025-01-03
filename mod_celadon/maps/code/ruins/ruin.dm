@@ -626,6 +626,12 @@
 	id = "crash_abductor_ship"
 	suffix = "wasteplanet_ruined_abductor_ship.dmm"
 
+/datum/map_template/ruin/wasteplanet/abondoned_containment
+	name = "Abandoned containment area"
+	description = "A containment zone that contains an unknown creature called 'Claws'. For some unknown reason, there is a crashed ship called 'Dareсt' near the containment zone."
+	id = "claw_waste"
+	suffix = "wasteplanet_claw_ruin.dmm"
+
 //							///
 //		Whitesand ruin		///
 //							///
