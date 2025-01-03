@@ -303,8 +303,9 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/security/armory)
 "cM" = (
-/obj/machinery/porta_turret/ship/faction/inteq/ballistic{
-	dir = 5
+/obj/machinery/porta_turret/ship/inteq/heavy{
+	dir = 5;
+	id = "executer_turrets"
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -461,8 +462,9 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/maintenance/starboard)
 "ej" = (
-/obj/machinery/porta_turret/ship/faction/inteq/ballistic{
-	dir = 6
+/obj/machinery/porta_turret/ship/inteq{
+	dir = 6;
+	id = "executer_turrets"
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -1188,7 +1190,7 @@
 	pixel_x = -20;
 	pixel_y = -10
 	},
-/obj/effect/spawner/lootdrop/maintenance/two,
+/obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/office)
 "mK" = (
@@ -1249,9 +1251,9 @@
 /obj/item/clothing/glasses/hud/security/sunglasses/inteq,
 /obj/item/gun/energy/e_gun/adv_stopping,
 /obj/item/stock_parts/cell/gun/upgraded,
-/obj/item/ammo_box/a357,
-/obj/item/ammo_box/a357,
-/obj/item/ammo_box/a357,
+/obj/item/storage/box/ammo/a357,
+/obj/item/storage/box/ammo/a357,
+/obj/item/storage/box/ammo/a357,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "nB" = (
@@ -2458,6 +2460,13 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
+"DW" = (
+/obj/machinery/porta_turret/ship/inteq/heavy{
+	dir = 6;
+	id = "executer_turrets"
+	},
+/turf/closed/wall/mineral/plastitanium,
+/area/ship/bridge)
 "Ed" = (
 /obj/effect/turf_decal/hardline_small/left{
 	color = "#BA9F6D";
@@ -2539,6 +2548,13 @@
 	},
 /turf/open/floor/plating,
 /area/ship/engineering)
+"EW" = (
+/obj/machinery/porta_turret/ship/inteq{
+	dir = 5;
+	id = "executer_turrets"
+	},
+/turf/closed/wall/mineral/plastitanium,
+/area/ship/bridge)
 "Fe" = (
 /obj/machinery/power/terminal{
 	dir = 8
@@ -2922,8 +2938,8 @@
 /area/ship/crew/office)
 "Ky" = (
 /obj/structure/closet/cardboard,
-/obj/effect/spawner/lootdrop/maintenance/seven,
-/obj/effect/spawner/lootdrop/gloves,
+/obj/effect/spawner/random/maintenance/seven,
+/obj/effect/spawner/random/clothing/gloves,
 /turf/open/floor/plasteel/tech,
 /area/ship/maintenance/starboard)
 "KL" = (
@@ -3457,7 +3473,7 @@
 	dir = 9
 	},
 /obj/machinery/airalarm/directional/east,
-/obj/effect/spawner/lootdrop/maintenance/two,
+/obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "RO" = (
@@ -3592,7 +3608,7 @@
 	pixel_x = -10;
 	pixel_y = -19
 	},
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
 /obj/structure/extinguisher_cabinet/directional/east,
 /obj/machinery/firealarm/directional/south,
 /turf/open/floor/plasteel/dark,
@@ -3651,7 +3667,7 @@
 /area/ship/engineering)
 "TQ" = (
 /obj/structure/closet/crate/trashcart,
-/obj/effect/spawner/lootdrop/maintenance/six,
+/obj/effect/spawner/random/maintenance/six,
 /obj/structure/sign/poster/official/help_others{
 	pixel_x = 32
 	},
@@ -3788,7 +3804,7 @@
 /obj/effect/turf_decal/corner/opaque/yellow/half{
 	dir = 8
 	},
-/obj/machinery/vending/snack/random,
+/obj/effect/spawner/random/vending/snack,
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/office)
 "Wh" = (
@@ -3911,12 +3927,12 @@
 	locked = 0;
 	name = "fridge"
 	},
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
 /obj/effect/turf_decal/corner/opaque/yellow/three_quarters,
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable{
@@ -3966,7 +3982,7 @@
 /obj/structure/closet/crate,
 /obj/item/stack/sheet/metal/fifty,
 /obj/item/stack/sheet/glass/fifty,
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
 /obj/effect/turf_decal/industrial/outline/yellow,
 /obj/structure/cable{
 	icon_state = "2-4";
@@ -4025,8 +4041,9 @@
 	pixel_y = 25;
 	req_access_txt = "8485"
 	},
-/obj/machinery/turretid{
-	pixel_y = 34
+/obj/machinery/turretid/ship{
+	pixel_y = 34;
+	id = "executer_turrets"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
@@ -4413,7 +4430,7 @@ El
 (12,1,1) = {"
 El
 El
-cM
+EW
 YQ
 uo
 tw
@@ -4820,7 +4837,7 @@ Dr
 AT
 Dr
 Dr
-ej
+Dr
 El
 El
 El
@@ -4831,7 +4848,7 @@ El
 El
 El
 El
-cM
+EW
 CI
 xP
 ar
@@ -4915,7 +4932,7 @@ CV
 CV
 CV
 CV
-ej
+DW
 El
 oF
 El

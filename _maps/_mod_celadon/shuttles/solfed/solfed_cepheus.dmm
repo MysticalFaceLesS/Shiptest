@@ -138,12 +138,6 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/ship/science/robotics)
-"cl" = (
-/obj/machinery/porta_turret/ship/faction/solgov{
-	dir = 5
-	},
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/ship/science/robotics)
 "db" = (
 /obj/machinery/door/airlock/external{
 	dir = 4
@@ -623,12 +617,6 @@
 /obj/effect/turf_decal/corner/opaque/solgovblue,
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering/electrical)
-"jl" = (
-/obj/machinery/porta_turret/ship/faction/solgov{
-	dir = 6
-	},
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/ship/security)
 "jp" = (
 /obj/effect/turf_decal/solgov/all/bottom_left,
 /obj/effect/turf_decal/spline/fancy/transparent/solgovblue,
@@ -776,12 +764,6 @@
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering/atmospherics)
-"kU" = (
-/obj/machinery/porta_turret/ship/faction/solgov{
-	dir = 10
-	},
-/turf/closed/wall/mineral/titanium,
-/area/ship/cargo)
 "kZ" = (
 /obj/effect/turf_decal/techfloor/orange{
 	dir = 4
@@ -1306,9 +1288,6 @@
 /turf/open/floor/plasteel/white,
 /area/ship/science/robotics)
 "qK" = (
-/obj/machinery/porta_turret/ship/faction/solgov{
-	dir = 9
-	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/cargo)
 "qT" = (
@@ -1358,7 +1337,7 @@
 /area/ship/hallway/central)
 "rr" = (
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
 /obj/effect/turf_decal/industrial/stand_clear,
 /obj/machinery/light/directional/north,
 /turf/open/floor/plasteel/patterned/cargo_one,
@@ -1920,7 +1899,7 @@
 	pixel_x = -1;
 	pixel_y = 4
 	},
-/obj/effect/spawner/lootdrop/random_machine_circuit_mech,
+/obj/effect/spawner/random/circuit/machine/mech,
 /turf/open/floor/plasteel/white,
 /area/ship/science/robotics)
 "wK" = (
@@ -2305,6 +2284,9 @@
 /turf/open/floor/plating,
 /area/ship/security)
 "BU" = (
+/obj/machinery/porta_turret/ship/solfed{
+	dir = 4
+	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
 "BZ" = (
@@ -3509,7 +3491,7 @@
 /obj/item/trash/waffles,
 /obj/item/trash/chips,
 /obj/item/trash/energybar,
-/obj/effect/spawner/lootdrop/maintenance/two,
+/obj/effect/spawner/random/maintenance/two,
 /obj/item/trash/can,
 /obj/effect/turf_decal/industrial/stand_clear{
 	dir = 1
@@ -3691,9 +3673,8 @@
 	},
 /obj/item/ammo_box/magazine/modelh,
 /obj/item/ammo_box/magazine/modelh,
-/obj/item/ammo_box/ferroslugbox,
-/obj/item/ammo_box/ferroslugbox,
-/obj/item/ammo_box/ferropelletbox,
+/obj/item/storage/box/ammo/ferroslug,
+/obj/item/storage/box/ammo/ferroslug,
 /turf/open/floor/plasteel/white,
 /area/ship/security/armory)
 "RN" = (
@@ -3771,7 +3752,7 @@
 /obj/structure/closet/firecloset/wall{
 	pixel_y = -28
 	},
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /turf/open/floor/plasteel/white,
 /area/ship/hallway/central)
 "TJ" = (
@@ -4347,7 +4328,7 @@ Sd
 JO
 vj
 El
-kU
+qK
 zQ
 zQ
 zQ
@@ -4935,7 +4916,7 @@ zQ
 (27,1,1) = {"
 zQ
 zQ
-cl
+Qr
 Qr
 Qr
 qT
@@ -4953,7 +4934,7 @@ Yy
 lX
 Yy
 Yy
-jl
+TU
 zQ
 zQ
 "}

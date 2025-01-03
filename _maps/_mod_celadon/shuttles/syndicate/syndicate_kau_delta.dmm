@@ -200,7 +200,10 @@
 /turf/open/floor/plating,
 /area/ship/engineering)
 "ee" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic,
+/obj/machinery/porta_turret/ship/syndicate/ballistic/light{
+	dir = 10;
+	id = "kau_turrets"
+	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
 "en" = (
@@ -644,7 +647,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/closet/crate/large,
 /obj/item/trash/can,
-/obj/effect/spawner/lootdrop/glowstick,
+/obj/effect/spawner/random/decoration/glowstick,
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
@@ -860,9 +863,10 @@
 /obj/effect/turf_decal/spline/plain/opaque/syndiered{
 	dir = 8
 	},
-/obj/machinery/turretid{
+/obj/machinery/turretid/ship{
 	pixel_y = 63;
-	pixel_x = -7
+	pixel_x = -7;
+	id = "kau_turrets"
 	},
 /turf/open/floor/carpet/black,
 /area/ship/bridge)
@@ -937,8 +941,9 @@
 /turf/open/floor/mineral/plastitanium,
 /area/ship/hallway/central)
 "ud" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
-	dir = 8
+/obj/machinery/porta_turret/ship/syndicate/ballistic/light{
+	dir = 9;
+	id = "kau_turrets"
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -1345,7 +1350,7 @@
 /obj/item/radio/headset/syndicate/alt/captain,
 /obj/item/ammo_box/magazine/m45_cobra,
 /obj/item/ammo_box/magazine/m45_cobra,
-/obj/item/ammo_box/c45,
+/obj/item/storage/box/ammo/c45,
 /turf/open/floor/carpet/red_gold,
 /area/ship/bridge)
 "BW" = (
@@ -1419,14 +1424,14 @@
 	pixel_y = -29;
 	name = "ammo locker"
 	},
+/obj/item/storage/box/ammo/a300,
+/obj/item/storage/box/ammo/c45,
+/obj/item/storage/box/ammo/c45,
+/obj/item/ammo_box/magazine/m45_cobra,
+/obj/item/ammo_box/magazine/m45_cobra,
+/obj/item/ammo_box/magazine/m45_cobra,
+/obj/item/ammo_box/magazine/m45_cobra,
 /obj/item/ammo_box/a300,
-/obj/item/ammo_box/a300_box,
-/obj/item/ammo_box/c45,
-/obj/item/ammo_box/c45,
-/obj/item/ammo_box/magazine/m45_cobra,
-/obj/item/ammo_box/magazine/m45_cobra,
-/obj/item/ammo_box/magazine/m45_cobra,
-/obj/item/ammo_box/magazine/m45_cobra,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "Dz" = (
@@ -1458,8 +1463,9 @@
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/hallway/central)
 "Ei" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
-	dir = 4
+/obj/machinery/porta_turret/ship/syndicate/ballistic{
+	dir = 6;
+	id = "kau_turrets"
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -1980,7 +1986,7 @@
 /obj/item/clothing/shoes/sneakers/orange,
 /obj/item/clothing/shoes/sneakers/orange,
 /obj/structure/closet/secure_closet/brig/wall/directional/north,
-/obj/effect/spawner/lootdrop/maintenance/two,
+/obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/plasteel/dark,
 /area/ship/maintenance/port)
 "ML" = (
@@ -2496,8 +2502,9 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/maintenance/port)
 "Xk" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
-	dir = 1
+/obj/machinery/porta_turret/ship/syndicate/ballistic{
+	dir = 5;
+	id = "kau_turrets"
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -2685,7 +2692,7 @@ jv
 ri
 jv
 jv
-ud
+ee
 jv
 jv
 jv
@@ -2825,7 +2832,7 @@ jv
 jv
 "}
 (10,1,1) = {"
-Xk
+ud
 kF
 op
 op
@@ -3011,7 +3018,7 @@ uv
 WZ
 lA
 Qb
-ee
+Ei
 jv
 "}
 (20,1,1) = {"
@@ -3274,7 +3281,7 @@ jv
 jv
 jv
 jv
-Ei
+Xk
 jv
 jv
 jv

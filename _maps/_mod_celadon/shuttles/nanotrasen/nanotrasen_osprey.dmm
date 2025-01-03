@@ -623,7 +623,7 @@
 /turf/open/floor/plasteel/white,
 /area/ship/science)
 "eB" = (
-/obj/machinery/vending/cola/random,
+/obj/effect/spawner/random/vending/cola,
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
@@ -1586,7 +1586,7 @@
 /turf/open/floor/plating,
 /area/ship/hallway/central)
 "kZ" = (
-/obj/machinery/vending/snack/random,
+/obj/effect/spawner/random/vending/snack,
 /obj/structure/disposalpipe/segment{
 	dir = 5
 	},
@@ -2906,12 +2906,12 @@
 	name = "food crate"
 	},
 /obj/item/storage/cans/sixbeer,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
@@ -3049,7 +3049,7 @@
 	},
 /obj/structure/closet/crate,
 /obj/item/vending_refill/coffee,
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/ship/cargo)
@@ -3435,12 +3435,20 @@
 	pixel_y = 24
 	},
 /obj/item/stamp/nt/captain{
-	pixel_x = 6;
+	pixel_x = 1;
 	pixel_y = 6
 	},
-/obj/item/stamp/rd{
-	pixel_x = 6;
-	name = "Science Director's rubber stamp"
+/obj/item/stamp/nanotrasen/science{
+	pixel_x = 1;
+	pixel_y = 0
+	},
+/obj/item/stamp/nanotrasen/captain{
+	pixel_x = 10;
+	pixel_y = 6
+	},
+/obj/item/stamp/nanotrasen{
+	pixel_x = 10;
+	pixel_y = 0
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
@@ -3507,7 +3515,7 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/cargo)
 "wC" = (
-/obj/machinery/vending/snack/random,
+/obj/effect/spawner/random/vending/snack,
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
@@ -3888,7 +3896,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/science/ai_chamber)
 "yE" = (
-/obj/machinery/vending/cola/random,
+/obj/effect/spawner/random/vending/cola,
 /obj/structure/disposalpipe/segment{
 	dir = 8
 	},
@@ -4056,7 +4064,7 @@
 /obj/effect/turf_decal/corner/transparent/neutral{
 	dir = 4
 	},
-/obj/machinery/vending/snack/random,
+/obj/effect/spawner/random/vending/snack,
 /obj/machinery/light/directional/east,
 /turf/open/floor/plasteel,
 /area/ship/hallway/central)
@@ -4306,7 +4314,7 @@
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo)
 "Bu" = (
-/obj/machinery/vending/cola/random,
+/obj/effect/spawner/random/vending/cola,
 /obj/effect/turf_decal/corner/opaque/white{
 	dir = 8
 	},
@@ -7427,7 +7435,7 @@
 /obj/structure/window/reinforced,
 /obj/effect/turf_decal/box,
 /obj/effect/turf_decal/box,
-/obj/machinery/portable_atmospherics/canister/nitryl,
+/obj/machinery/portable_atmospherics/canister/freon,
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo)
 "Wk" = (
@@ -7897,7 +7905,7 @@
 /turf/open/floor/circuit,
 /area/ship/science/ai_chamber)
 "ZR" = (
-/obj/machinery/porta_turret/ai,
+/obj/machinery/porta_turret,
 /turf/open/floor/circuit,
 /area/ship/science/ai_chamber)
 "ZW" = (

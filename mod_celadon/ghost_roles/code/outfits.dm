@@ -62,8 +62,8 @@
 	gloves = /obj/item/clothing/gloves/tackler/combat
 	back = /obj/item/storage/backpack
 	backpack_contents = list(/obj/item/storage/box/beanbag,
-							/obj/item/ammo_box/a12g/slug,
-							/obj/item/ammo_box/a12g/rubbershot,
+							/obj/item/storage/box/ammo/a12g_slug,
+							/obj/item/storage/box/ammo/a12g_rubbershot,
 							/obj/item/barcodescanner,
 							/obj/item/barcode = 5,
 							/obj/item/reagent_containers/food/drinks/shaker)
