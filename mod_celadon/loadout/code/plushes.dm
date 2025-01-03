@@ -429,3 +429,7 @@
 /datum/gear/plushes/rimri
 	display_name = "Rimri plushie"
 	path = /obj/item/toy/plush/celadon/rimri
+
+/datum/gear/plushes/rimri/snow
+	display_name = "Rimri snow plushie"
+	path = /obj/item/toy/plush/celadon/rimri/snow

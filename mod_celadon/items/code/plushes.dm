@@ -864,3 +864,20 @@
 	message = "Ррруки убрррал!"
 	user.visible_message(span_boldnotice(message))
 	COOLDOWN_START(src, cooldown, 3 SECONDS)
+
+/obj/item/toy/plush/celadon/rimri/snow
+	name = "Rimri snow plushie"
+	desc = "Эта рыжая морда может и выглядит мило и безобидно, но всегда держи в уме то, что в подарке вполне может быть лимитка."
+	icon_state = "rimri_snow"
+	item_state = "rimri_snow"
+
+/obj/item/toy/plush/celadon/rimri/snow/attack_self(mob/user)
+
+	if(!COOLDOWN_FINISHED(src, cooldown))
+		return
+
+	playsound(loc, 'mod_celadon/_storge_sounds/sound/plushes/emotes/hiss_t.ogg', 50, FALSE)
+	var/message
+	message = "Тик-так, щас взорррву!"
+	user.visible_message(span_boldnotice(message))
+	COOLDOWN_START(src, cooldown, 3 SECONDS)
