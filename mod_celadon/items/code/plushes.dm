@@ -682,7 +682,7 @@
 		return ..()
 
 	playsound(src, 'mod_celadon/_storge_sounds/sound/plushes/axolotl.ogg', 20, 0)
-	visible_message("<span class='danger'>Squeeek!</span>")
+	user.visible_message(span_boldnotice("<span class='danger'>Squeeek!</span>"))
 	cooldown = TRUE
 	addtimer(VARSET_CALLBACK(src, cooldown, FALSE), 3 SECONDS)
 
@@ -720,7 +720,7 @@
 		return ..()
 
 	playsound(loc, pick('mod_celadon/_storge_sounds/sound/plushes/supermatter.ogg', 'mod_celadon/_storge_sounds/sound/plushes/glass_step_sm.ogg'), 10, 1)
-	visible_message("<span class='danger'> DESTABILIZATION!</span>")
+	user.visible_message(span_boldnotice("<span class='danger'> DESTABILIZATION!</span>"))
 	cooldown = TRUE
 	addtimer(VARSET_CALLBACK(src, cooldown, FALSE), 3 SECONDS)
 
@@ -793,7 +793,7 @@
 		return
 
 	playsound(loc, 'mod_celadon/_storge_sounds/sound/plushes/beaver_plushie.ogg', 50, FALSE)
-	visible_message(span_boldnotice("BOBR KURWA!"))
+	user.visible_message(span_boldnotice("BOBR KURWA!"))
 	COOLDOWN_START(src, cooldown, 3 SECONDS)
 
 /obj/item/toy/plush/celadon/rd
@@ -844,3 +844,40 @@
 		return
 
 	desc = "A tired RD cute doll..."
+
+/obj/item/toy/plush/celadon/rimri
+	name = "Rimri plushie"
+	desc = "Эта рыжая морда может и выглядит мило и безобидно, но всегда держи в уме то, что под ее халатом есть кабура со Стечкиным."
+	icon_state = "rimri"
+	item_state = "rimri"
+	w_class = WEIGHT_CLASS_SMALL
+	gender = FEMALE
+	COOLDOWN_DECLARE(cooldown)
+
+/obj/item/toy/plush/celadon/rimri/attack_self(mob/user)
+
+	if(!COOLDOWN_FINISHED(src, cooldown))
+		return
+
+	playsound(loc, 'mod_celadon/_storge_sounds/sound/plushes/emotes/hiss_t.ogg', 50, FALSE)
+	var/message
+	message = "Ррруки убрррал!"
+	user.visible_message(span_boldnotice(message))
+	COOLDOWN_START(src, cooldown, 3 SECONDS)
+
+/obj/item/toy/plush/celadon/rimri/snow
+	name = "Rimri snow plushie"
+	desc = "Эта рыжая морда может и выглядит мило и безобидно, но всегда держи в уме то, что в подарке вполне может быть лимитка."
+	icon_state = "rimri_snow"
+	item_state = "rimri_snow"
+
+/obj/item/toy/plush/celadon/rimri/snow/attack_self(mob/user)
+
+	if(!COOLDOWN_FINISHED(src, cooldown))
+		return
+
+	playsound(loc, 'mod_celadon/_storge_sounds/sound/plushes/emotes/hiss_t.ogg', 50, FALSE)
+	var/message
+	message = "Тик-так, щас взорррву!"
+	user.visible_message(span_boldnotice(message))
+	COOLDOWN_START(src, cooldown, 3 SECONDS)
