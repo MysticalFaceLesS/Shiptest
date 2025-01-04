@@ -118,13 +118,3 @@ EMPTY_GUN_HELPER(automatic/pistol/deagle)
 	new /obj/item/stock_parts/cell/gun/empty(src)
 
 /obj/item/storage/pistolcase/ringneck
-
-/obj/item/storage/guncase/cryogelida
-/obj/item/storage/guncase/cryogelida/PopulateContents()
-	new /obj/item/gun/energy/e_gun/plasmapistol_cryo(src)
-	new /obj/item/stock_parts/cell/gun/empty(src)
-
-/obj/item/storage/guncase/pyrogelida
-/obj/item/storage/guncase/pyrogelida/PopulateContents()
-	new /obj/item/gun/energy/e_gun/plasmapistol_fire(src)
-	new /obj/item/stock_parts/cell/gun/empty(src)
