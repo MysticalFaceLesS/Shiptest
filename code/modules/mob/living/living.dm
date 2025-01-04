@@ -1624,10 +1624,6 @@ GLOBAL_VAR_INIT(ssd_indicator_overlay, mutable_appearance('icons/mob/ssd_indicat
 			// [CELADON-EDIT] - CELADON_QUIRKS
 			// ADD_TRAIT(src, TRAIT_HANDS_BLOCKED, STAT_TRAIT)
 			// ADD_TRAIT(src, TRAIT_INCAPACITATED, STAT_TRAIT)	// CELADON-EDIT - ORIGINAL
-			if(!HAS_TRAIT(src, TRAIT_INCREASED_SURVIVAL))
-				ADD_TRAIT(src, TRAIT_HANDS_BLOCKED, STAT_TRAIT)
-			if(!HAS_TRAIT(src, TRAIT_INCREASED_SURVIVAL))
-				ADD_TRAIT(src, TRAIT_INCAPACITATED, STAT_TRAIT)
 			// [/CELADON-EDIT]
 			ADD_TRAIT(src, TRAIT_FLOORED, STAT_TRAIT)
 		if(SOFT_CRIT)
@@ -1655,6 +1651,14 @@ GLOBAL_VAR_INIT(ssd_indicator_overlay, mutable_appearance('icons/mob/ssd_indicat
 			if(. >= UNCONSCIOUS)
 				REMOVE_TRAIT(src, TRAIT_IMMOBILIZED, TRAIT_KNOCKEDOUT)
 			ADD_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
+			// [CELADON-EDIT] - CELADON_QUIRKS
+			if(HAS_TRAIT(src, TRAIT_INCREASED_SURVIVAL))
+				REMOVE_TRAIT(src, TRAIT_HANDS_BLOCKED, STAT_TRAIT)
+				REMOVE_TRAIT(src, TRAIT_INCAPACITATED, STAT_TRAIT)
+			else
+				ADD_TRAIT(src, TRAIT_HANDS_BLOCKED, STAT_TRAIT)
+				ADD_TRAIT(src, TRAIT_INCAPACITATED, STAT_TRAIT)
+			// [/CELADON-EDIT]
 		if(UNCONSCIOUS)
 			if(. != HARD_CRIT)
 				become_blind(UNCONSCIOUS_TRAIT)
@@ -1662,13 +1666,24 @@ GLOBAL_VAR_INIT(ssd_indicator_overlay, mutable_appearance('icons/mob/ssd_indicat
 				ADD_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
 			else
 				REMOVE_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
+			// [CELADON-EDIT] - CELADON_QUIRKS
+			ADD_TRAIT(src, TRAIT_HANDS_BLOCKED, STAT_TRAIT)
+			ADD_TRAIT(src, TRAIT_INCAPACITATED, STAT_TRAIT)
+			// [/CELADON-EDIT]
 		if(HARD_CRIT)
 			if(. != UNCONSCIOUS)
 				become_blind(UNCONSCIOUS_TRAIT)
 			ADD_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
+			// [CELADON-EDIT] - CELADON_QUIRKS
+			ADD_TRAIT(src, TRAIT_HANDS_BLOCKED, STAT_TRAIT)
+			ADD_TRAIT(src, TRAIT_INCAPACITATED, STAT_TRAIT)
+			// [/CELADON-EDIT]
 		if(DEAD)
 			REMOVE_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
-
+			// [CELADON-EDIT] - CELADON_QUIRKS
+			ADD_TRAIT(src, TRAIT_HANDS_BLOCKED, STAT_TRAIT)
+			ADD_TRAIT(src, TRAIT_INCAPACITATED, STAT_TRAIT)
+			// [/CELADON-EDIT]
 
 ///Reports the event of the change in value of the buckled variable.
 /mob/living/proc/set_buckled(new_buckled)
@@ -1934,8 +1949,10 @@ GLOBAL_VAR_INIT(ssd_indicator_overlay, mutable_appearance('icons/mob/ssd_indicat
  */
 
 /mob/living/carbon/verb/open_close_eyes()
+	// [CELADON-ADD] - CELADON_EMOTES
 	set category = "Эмоции"
-	set name = "> Открыть/Закрыть глаза"
+	set name = "< Открыть/Закрыть глаза"
+	// [/CELADON-ADD]
 
 	if(HAS_TRAIT(src, TRAIT_EYESCLOSED))
 		REMOVE_TRAIT(src, TRAIT_EYESCLOSED, "[type]")
@@ -1946,3 +1963,51 @@ GLOBAL_VAR_INIT(ssd_indicator_overlay, mutable_appearance('icons/mob/ssd_indicat
 	src.become_blind("[type]")
 	src.update_body()
 	return
+
+// [CELADON-ADD] - CELADON_EMOTES
+/**
+  * Sets the mob's direction lock towards a given atom.
+  *
+  * Arguments:
+  * * a - The atom to face towards.
+  * * track - If TRUE, updates our direction relative to the atom when moving.
+  */
+/mob/living/proc/set_forced_look(atom/A, track = FALSE)
+	forced_look = track ? A.UID() : get_cardinal_dir(src, A)
+	to_chat(src, "<span class='userdanger'>You are now facing [track ? A : dir2text(forced_look)]. To cancel this, shift-middleclick yourself.</span>")
+	throw_alert("direction_lock", /atom/movable/screen/alert/direction_lock)
+
+/**
+  * Clears the mob's direction lock if enabled.
+  *
+  * Arguments:
+  * * quiet - Whether to display a chat message.
+  */
+/mob/living/proc/clear_forced_look(quiet = FALSE)
+	if(!forced_look)
+		return
+	forced_look = null
+	if(!quiet)
+		to_chat(src, "<span class='notice'>Cancelled direction lock.</span>")
+	clear_alert("direction_lock")
+
+// /mob/living/setDir(new_dir)
+// 	if(forced_look)
+// 		if(isnum(forced_look))
+// 			dir = forced_look
+// 		else
+// 			var/atom/A = locateUID(forced_look)
+// 			if(istype(A))
+// 				dir = get_cardinal_dir(src, A)
+// 		return
+// 	return ..()
+
+// /mob/living/Moved(OldLoc, Dir, Forced = FALSE)
+// 	. = ..()
+// 	for(var/obj/O in src)
+// 		O.on_mob_move(Dir, src)
+
+/// Can a mob interact with the apc remotely like a pulse demon, cyborg, or AI?
+// /mob/living/proc/can_remote_apc_interface(obj/machinery/power/apc/ourapc)
+// 	return FALSE
+// [/CELADON-ADD]

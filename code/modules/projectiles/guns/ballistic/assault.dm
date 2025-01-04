@@ -178,9 +178,11 @@
 /obj/item/gun/ballistic/automatic/assault/e40/process_fire(atom/target, mob/living/user, message, params, zone_override, bonus_spread)
 	var/current_firemode = gun_firemodes[firemode_index]
 	if(current_firemode != FIREMODE_OTHER)
-		if(!secondary.latch_closed && prob(65))
-			to_chat(user, span_warning("[src]'s cell falls out!"))
-			secondary.eject_cell()
+// [CELADON-REMOVE] - CELADON BALANCE - удаляет пару строк кода от системы люков
+// 		if(!secondary.latch_closed && prob(65))
+// 			to_chat(user, span_warning("[src]'s cell falls out!"))
+// 			secondary.eject_cell()
+// [/CELADON-REMOVE]
 		return ..()
 	return secondary.process_fire(target, user, message, params, zone_override, bonus_spread)
 
@@ -201,39 +203,41 @@
 		return secondary.attackby(attack_obj, user, params)
 	return ..()
 
-/obj/item/gun/ballistic/automatic/assault/e40/attack_hand(mob/user)
-	var/current_firemode = gun_firemodes[firemode_index]
-	if(current_firemode == FIREMODE_OTHER && loc == user && user.is_holding(src) && secondary.cell && !secondary.latch_closed)
-		secondary.eject_cell(user)
-		return
-	if(current_firemode == FIREMODE_OTHER && loc == user && user.is_holding(src) && secondary.cell && secondary.latch_closed)
-		to_chat(user, span_warning("The cell retainment clip is latched!"))
-		return
-	return ..()
-
-/obj/item/gun/ballistic/automatic/assault/e40/AltClick(mob/living/user)
-	var/current_firemode = gun_firemodes[firemode_index]
-	if(current_firemode == FIREMODE_OTHER)
-		if(secondary.latch_closed)
-			to_chat(user, span_notice("You start to unlatch the [src]'s power cell retainment clip..."))
-			if(do_after(user, secondary.latch_toggle_delay, src, IGNORE_USER_LOC_CHANGE))
-				to_chat(user, span_notice("You unlatch [src]'s power cell retainment clip " + "<span class='red'>OPEN</span>" + "."))
-				playsound(src, 'sound/items/taperecorder/taperecorder_play.ogg', 50, FALSE)
-				secondary.tac_reloads = TRUE
-				secondary.latch_closed = FALSE
-				update_appearance()
-				return
-		else
-			to_chat(user, span_warning("You start to latch the [src]'s power cell retainment clip..."))
-			if (do_after(user, secondary.latch_toggle_delay, src, IGNORE_USER_LOC_CHANGE))
-				to_chat(user, span_notice("You latch [src]'s power cell retainment clip " + "<span class='green'>CLOSED</span>" + "."))
-				playsound(src, 'sound/items/taperecorder/taperecorder_close.ogg', 50, FALSE)
-				secondary.tac_reloads = FALSE
-				secondary.latch_closed = TRUE
-				update_appearance()
-				return
-	else
-		return ..()
+// [CELADON-REMOVE] - CELADON BALANCE - опять кусок кода связанный с системой люков оффов, бла бла
+// /obj/item/gun/ballistic/automatic/assault/e40/attack_hand(mob/user)
+// 	var/current_firemode = gun_firemodes[firemode_index]
+// 	if(current_firemode == FIREMODE_OTHER && loc == user && user.is_holding(src) && secondary.cell && !secondary.latch_closed)
+// 		secondary.eject_cell(user)
+// 		return
+// 	if(current_firemode == FIREMODE_OTHER && loc == user && user.is_holding(src) && secondary.cell && secondary.latch_closed)
+// 		to_chat(user, span_warning("The cell retainment clip is latched!"))
+// 		return
+// 	return ..()
+//
+// /obj/item/gun/ballistic/automatic/assault/e40/AltClick(mob/living/user)
+// 	var/current_firemode = gun_firemodes[firemode_index]
+// 	if(current_firemode == FIREMODE_OTHER)
+// 		if(secondary.latch_closed)
+// 			to_chat(user, span_notice("You start to unlatch the [src]'s power cell retainment clip..."))
+// 			if(do_after(user, secondary.latch_toggle_delay, src, IGNORE_USER_LOC_CHANGE))
+// 				to_chat(user, span_notice("You unlatch [src]'s power cell retainment clip " + "<span class='red'>OPEN</span>" + "."))
+// 				playsound(src, 'sound/items/taperecorder/taperecorder_play.ogg', 50, FALSE)
+// 				secondary.tac_reloads = TRUE
+// 				secondary.latch_closed = FALSE
+// 				update_appearance()
+// 				return
+// 		else
+// 			to_chat(user, span_warning("You start to latch the [src]'s power cell retainment clip..."))
+// 			if (do_after(user, secondary.latch_toggle_delay, src, IGNORE_USER_LOC_CHANGE))
+// 				to_chat(user, span_notice("You latch [src]'s power cell retainment clip " + "<span class='green'>CLOSED</span>" + "."))
+// 				playsound(src, 'sound/items/taperecorder/taperecorder_close.ogg', 50, FALSE)
+// 				secondary.tac_reloads = FALSE
+// 				secondary.latch_closed = TRUE
+// 				update_appearance()
+// 				return
+// 	else
+// 		return ..()
+// [/CELADON-REMOVE]
 
 /obj/item/gun/ballistic/automatic/assault/e40/on_wield(obj/item/source, mob/user)
 	wielded = TRUE
@@ -274,21 +278,22 @@
 		. += "[icon_state]_charge[ratio]"
 	if(secondary.cell)
 		. += "[icon_state]_cell"
-	if(ismob(loc))
-		var/mutable_appearance/latch_overlay
-		latch_overlay = mutable_appearance('icons/obj/guns/cell_latch.dmi')
-		if(secondary.latch_closed)
-			if(secondary.cell)
-				latch_overlay.icon_state = "latch-on-full"
-			else
-				latch_overlay.icon_state = "latch-on-empty"
-		else
-			if(secondary.cell)
-				latch_overlay.icon_state = "latch-off-full"
-			else
-				latch_overlay.icon_state = "latch-off-empty"
-		. += latch_overlay
-
+// [CELADON-REMOVE] - CELADON BALANCE - удаляем систему оффов с люками
+// 	if(ismob(loc))
+// 		var/mutable_appearance/latch_overlay
+// 		latch_overlay = mutable_appearance('icons/obj/guns/cell_latch.dmi')
+// 		if(secondary.latch_closed)
+// 			if(secondary.cell)
+// 				latch_overlay.icon_state = "latch-on-full"
+// 			else
+// 				latch_overlay.icon_state = "latch-on-empty"
+// 		else
+// 			if(secondary.cell)
+// 				latch_overlay.icon_state = "latch-off-full"
+// 			else
+// 				latch_overlay.icon_state = "latch-off-empty"
+// 		. += latch_overlay
+// [/CELADON-REMOVE]
 
 /obj/item/gun/ballistic/automatic/assault/e40/toggle_safety(mob/user, silent=FALSE)
 	. = ..()
@@ -304,16 +309,18 @@
 		SEND_SIGNAL(src, COMSIG_GUN_SET_AUTOFIRE_SPEED, fire_delay)
 	SEND_SIGNAL(src, COMSIG_UPDATE_AMMO_HUD)
 
-/obj/item/gun/ballistic/automatic/assault/e40/examine(mob/user)
-	. = ..()
-	if(!secondary.internal_magazine)
-		. += "The cell retainment latch is [secondary.latch_closed ? "<span class='green'>CLOSED</span>" : "<span class='red'>OPEN</span>"]. Alt-Click to toggle the latch."
-	var/obj/item/ammo_casing/energy/shot = secondary.ammo_type[select]
-	if(secondary.cell)
-		. += "\The [name]'s cell has [secondary.cell.percent()]% charge remaining."
-		. += "\The [name] has [round(secondary.cell.charge/shot.e_cost)] shots remaining on <b>[shot.select_name]</b> mode."
-	else
-		. += span_notice("\The [name] doesn't seem to have a cell!")
+// [CELADON-REMOVE] - CELADON BALANCE - удаляет часть системы оффовских люков для Е40
+// /obj/item/gun/ballistic/automatic/assault/e40/examine(mob/user)
+// 	. = ..()
+// 	if(!secondary.internal_magazine)
+// 		. += "The cell retainment latch is [secondary.latch_closed ? "<span class='green'>CLOSED</span>" : "<span class='red'>OPEN</span>"]. Alt-Click to toggle the latch."
+// 	var/obj/item/ammo_casing/energy/shot = secondary.ammo_type[select]
+// 	if(secondary.cell)
+// 		. += "\The [name]'s cell has [secondary.cell.percent()]% charge remaining."
+// 		. += "\The [name] has [round(secondary.cell.charge/shot.e_cost)] shots remaining on <b>[shot.select_name]</b> mode."
+// 	else
+// 		. += span_notice("\The [name] doesn't seem to have a cell!")
+// [/CELADON-REMOVE]
 
 //laser
 
@@ -326,6 +333,7 @@
 	fire_delay = 0.2 SECONDS
 	gun_firemodes = list(FIREMODE_FULLAUTO)
 	default_firemode = FIREMODE_FULLAUTO
-	latch_toggle_delay = 1.2 SECONDS
-
+// [CELADON-REMOVE] - CELADON BALANCE - часть кода системы люков оффов
+// 	latch_toggle_delay = 1.2 SECONDS
+// [/CELADON-REMOVE]
 	spread_unwielded = 20

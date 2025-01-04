@@ -97,12 +97,8 @@
 /datum/emote/living/carbon/moan
 	key = "moan"
 	key_third_person = "moans"
-	// [CELADON-EDIT] - CELADON_COMPONENTS_EMOTE - Эмоции
-	// message = "moans!" // CELADON-EDIT - ORIGINAL
-	// message_mime = "appears to moan!" // CELADON-EDIT - ORIGINAL
-	message = "стонет!"
-	message_mime = "кажется стонет"
-	// [/CELADON-EDIT]
+	message = "moans!"
+	message_mime = "appears to moan!"
 	emote_type = EMOTE_AUDIBLE
 
 /datum/emote/living/carbon/roll
@@ -116,10 +112,10 @@
 	key = "scratch"
 	key_third_person = "scratches"
 	// [CELADON-EDIT] - CELADON_COMPONENTS_EMOTE - Эмоции
+	// mob_type_allowed_typecache = list(/mob/living/carbon/monkey, /mob/living/carbon/alien)
 	// message = "scratches." // CELADON-EDIT - ORIGINAL
-	message = "царапает."
+	message = "чешется."
 	// [/CELADON-EDIT]
-	mob_type_allowed_typecache = list(/mob/living/carbon/monkey, /mob/living/carbon/alien)
 	hands_use_check = TRUE
 
 /datum/emote/living/carbon/screech

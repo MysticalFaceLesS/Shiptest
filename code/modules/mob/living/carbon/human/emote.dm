@@ -35,8 +35,12 @@
 
 /datum/emote/living/carbon/human/handshake
 	key = "handshake"
-	message = "shakes their own hands."
-	message_param = "shakes hands with %t."
+	// [CELADON-EDIT] - CELADON_COMPONENTS_EMOTE - Эмоции
+	// message = "shakes their own hands."
+	// message_param = "shakes hands with %t." // CELADON-EDIT - ORIGINAL
+	message = "пожимает руку."
+	message_param = "пожимает руку %t."
+	// [/CELADON-EDIT]
 	hands_use_check = TRUE
 	emote_type = EMOTE_AUDIBLE
 
@@ -91,21 +95,23 @@
 	else if(islizard(H))
 		return pick('sound/voice/lizard/lizard_scream_1.ogg', 'sound/voice/lizard/lizard_scream_2.ogg', 'sound/voice/lizard/lizard_scream_3.ogg', 'sound/voice/lizard/lizard_scream_4.ogg')
 
-/datum/emote/living/carbon/human/hiss //lizard
-	key = "hiss"
-	key_third_person = "hisses"
-	// [CELADON-EDIT] - CELADON_COMPONENTS_EMOTE - Эмоции
-	// message = "hisses!" // CELADON-EDIT - ORIGINAL
-	message = "шипит!"
-	// [/CELADON-EDIT]
-	emote_type = EMOTE_AUDIBLE
-	vary = TRUE
+// [CELADON-REMOVE] - CELADON_EMOTES - Перемещено в пак Эмоутов
+// /datum/emote/living/carbon/human/hiss //lizard
+// 	key = "hiss"
+// 	key_third_person = "hisses"
+// 	// [CELADON-EDIT] - CELADON_COMPONENTS_EMOTE - Эмоции
+// 	// message = "hisses!" // CELADON-EDIT - ORIGINAL
+// 	message = "шипит!"
+// 	// [/CELADON-EDIT]
+// 	emote_type = EMOTE_AUDIBLE
+// 	vary = TRUE
 
-/datum/emote/living/carbon/human/hiss/get_sound(mob/living/user)
-	if(!ishuman(user))
-		return
-	if(islizard(user))
-		return 'sound/voice/lizard/hiss.ogg'
+// /datum/emote/living/carbon/human/hiss/get_sound(mob/living/user)
+// 	if(!ishuman(user))
+// 		return
+// 	if(islizard(user))
+// 		return 'sound/voice/lizard/hiss.ogg'
+// [/CELADON-REMOVE]
 
 /datum/emote/living/carbon/human/squeal //lizard
 	key = "squeal"
@@ -158,7 +164,7 @@
 	key_third_person = "raises"
 	// [CELADON-EDIT] - CELADON_COMPONENTS_EMOTE - Эмоции
 	// message = "raises a hand." // CELADON-EDIT - ORIGINAL
-	message = "поднимает руки."
+	message = "поднимает руку."
 	// [/CELADON-EDIT]
 	hands_use_check = TRUE
 
@@ -170,6 +176,16 @@
 	// message_param = "salutes to %t." // CELADON-EDIT - ORIGINAL
 	message = "салютует."
 	message_param = "салютует %t."
+	var/list/serious_shoes = list(
+								/obj/item/clothing/shoes/jackboots,
+								/obj/item/clothing/shoes/combat,
+								/obj/item/clothing/shoes/laceup)
+								// /obj/item/clothing/shoes/centcom,
+	var/list/funny_shoes = list(
+								/obj/item/clothing/shoes/magboots/clown,
+								/obj/item/clothing/shoes/clown_shoes)
+								// /obj/item/clothing/shoes/cursedclown,
+								// /obj/item/clothing/shoes/ducky)
 	// [/CELADON-EDIT]
 	hands_use_check = TRUE
 
@@ -188,6 +204,24 @@
 	// message = "wags their tail." // CELADON-EDIT - ORIGINAL
 	message = "начинает махать хвостом."
 	// [/CELADON-EDIT]
+
+// [CELADON-ADD] - CELADON_EMOTES
+/datum/emote/living/carbon/human/proc/can_wag(mob/user)
+	var/mob/living/carbon/human/H = user
+	if(!(H.dna.species.bodyflags & TAIL_WAGGING))
+		return FALSE
+	var/obscured = H.wear_suit && (H.wear_suit.flags_inv & HIDETAIL)
+	if(!istype(H))
+		return FALSE
+	// if(istype(H.sprite, /datum/sprite_accessory/tails)) // Требуется реализовать маркинги хвостов для этого
+	// 	if(!H.body_accessory.try_restrictions(user))
+	// 		return FALSE
+
+	if(H.dna.species.bodyflags & TAIL_WAGGING && obscured)
+		return FALSE
+
+	return TRUE
+// [/CELADON-ADD]
 
 /datum/emote/living/carbon/human/wag/run_emote(mob/user, params, type_override, intentional)
 	. = ..()
@@ -388,13 +422,19 @@
 /datum/emote/living/carbon/human/kepiwhistle
 	key = "whistle"
 	key_third_person = "whistles"
-	message = "whistles!"
+	// [CELADON-EDIT] - CELADON_COMPONENTS_EMOTE - Эмоции
+	// message = "whistles!"	// CELADON-EDIT - ORIGINAL
+	message = "Свистит!"
+	// [/CELADON-EDIT]
 	emote_type = EMOTE_AUDIBLE
 	vary = TRUE
 
 /datum/emote/living/carbon/human/kepiwhistle/get_sound(mob/living/user)
 	if(!ishuman(user))
-		return
+		// [CELADON-EDIT] - CELADON_COMPONENTS_EMOTE - Эмоции
+		// return	// CELADON-EDIT - ORIGINAL
+		return 'mod_celadon/_storge_sounds/sound/emotes/whistle.ogg'
+		// [/CELADON-EDIT]
 	if(iskepori(user))
 		return 'sound/voice/kepori/kepiwhistle.ogg' //https://freesound.org/people/Andreas.Mustola/sounds/338277/
 

@@ -381,13 +381,13 @@
 	pixel_x = -8;
 	pixel_y = 7
 	},
-/obj/item/stamp/head_of_personnel{
-	pixel_x = -7;
-	pixel_y = -3
-	},
 /obj/item/folder/red{
 	pixel_x = -8;
 	pixel_y = 11
+	},
+/obj/item/stamp/nanotrasen/officer{
+	pixel_x = -7;
+	pixel_y = -3
 	},
 /turf/open/floor/wood,
 /area/ship/general/command_crew/hop)
@@ -1795,6 +1795,14 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
+/obj/item/stamp/nanotrasen{
+	pixel_x = 1;
+	pixel_y = -3
+	},
+/obj/item/stamp/nanotrasen/captain{
+	pixel_x = 10;
+	pixel_y = -3
+	},
 /turf/open/floor/wood,
 /area/ship/crew/dorm/captain)
 "ls" = (
@@ -2032,9 +2040,10 @@
 /obj/effect/turf_decal/corner/opaque/ntblue/three_quarters{
 	dir = 8
 	},
-/obj/machinery/turretid/lethal{
+/obj/machinery/turretid/ship{
 	pixel_x = -1;
-	pixel_y = 27
+	pixel_y = 27;
+	id = "skipper_turrets"
 	},
 /obj/machinery/computer/rdconsole{
 	dir = 8;
@@ -4079,7 +4088,8 @@
 	pixel_y = -32
 	},
 /obj/machinery/porta_turret/ship/nt/pulse{
-	dir = 4
+	dir = 4;
+	id = "skipper_turrets"
 	},
 /turf/open/floor/engine/hull/reinforced,
 /area/ship/bridge)
@@ -6189,7 +6199,8 @@
 	pixel_y = 32
 	},
 /obj/machinery/porta_turret/ship/nt/pulse{
-	dir = 4
+	dir = 4;
+	id = "skipper_turrets"
 	},
 /turf/open/floor/engine/hull/reinforced,
 /area/ship/bridge)

@@ -32,7 +32,7 @@
 	e_cost = 1428
 
 /obj/item/gun/energy/e_gun/iot
-	desc = "An advanced semi-automatic dual-mode energy shotgun. This weapon is a big improvement since the last model. It provides excellent fire support for any Nanotrasen security force." //убираем упоминание несуществующего компутера, переписываем
+	desc = "An advanced semi-automatic dual-mode energy shotgun. This weapon is a big improvement since the last model. It provides excellent fire support for all Nanotrasen's security forces." //убираем упоминание несуществующего компутера, переписываем
 
 ////////////
 //etar SMG egun
@@ -91,13 +91,15 @@
 	desc = "Nanotrasen-Sharplite's premium assault energy rifle. This elite energy weapon is focused on heavy fire support. A powerful, but expensive and rare assault rifle." //новое описание без лора оффов
 	ammo_type = list(/obj/item/ammo_casing/energy/disabler/assault, /obj/item/ammo_casing/energy/laser/assault)
 	default_ammo_type = /obj/item/stock_parts/cell/gun //nerfs the power cell to a standart one
-	wield_slowdown = 0.5 //from 0.6 to 0.5 because 0.6 is horrible
 
 //Commander relore - no more Vigilitas Interstellar
 /obj/item/gun/ballistic/automatic/pistol/commander
 	name = "Nanotrasen Commander"
-	desc = "A service pistol produced as Nanotrasen security forces standard sidearm. Has a reputation for being easy to use, due to its light recoil and high magazine capacity. Chambered in 9mm."
+	desc = "A service pistol produced as Nanotrasen's security forces standard sidearm. Has a reputation for being easy to use, due to its light recoil and high magazine capacity. Chambered in 9mm."
 	manufacturer = MANUFACTURER_NANOTRASEN
+
+/obj/item/gun/ballistic/automatic/pistol/commander/inteq
+	desc = "A modified version of the Nanotrasen Commander, issued as standard to Inteq Risk Management Group personnel. Features the same excellent handling and high magazine capacity as the original. Chambered in 9mm."
 
 //Honorable mentions
 
