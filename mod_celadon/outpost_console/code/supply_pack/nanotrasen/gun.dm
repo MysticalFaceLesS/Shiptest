@@ -19,7 +19,7 @@
 	contains = list(/obj/item/storage/guncase/iot)
 	cost = 5000
 
-	/datum/supply_pack/faction/nanotrasen/gun/commander
+/datum/supply_pack/faction/nanotrasen/gun/commander
 	name = "NT 'Commander' handgun"
 	desc = "A simple 9mm pistol, looks cool, is ballistic. Produced by Nanotrasen"
 	contains = list(/obj/item/storage/pistolcase/commander)
@@ -48,4 +48,3 @@
 	desc = "A ballistic PDW produced by Nanotrasen. Quite old, but still is amazing at filling corporation's enemies with lead. Uses 4.6x30mm rounds."
 	contains = list(/obj/item/storage/guncase/wt550)
 	cost = 6500
-
