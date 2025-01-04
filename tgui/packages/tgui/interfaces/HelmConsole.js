@@ -97,12 +97,14 @@ const SharedContent = (_props, context) => {
                 tooltip="Decrease Signal Length"
                 tooltipPosition="right"
                 icon="arrow-left"
+				disabled={data.issubshuttle != null}
                 onClick={() => act('sensor_decrease')}
               />
               <Button
                 tooltip="Increase Signal Length"
                 tooltipPosition="right"
                 icon="arrow-right"
+				disabled={data.issubshuttle != null}
                 onClick={() => act('sensor_increase')}
               />
             </Table.Cell>

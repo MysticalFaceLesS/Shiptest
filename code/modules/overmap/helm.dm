@@ -264,7 +264,10 @@
 		.["engineInfo"] += list(engine_data)
 	// [CELADON-ADD] - subshuttles fix
 	.["motheroutpost"] = null
+	.["issubshuttle"] = null
 	if(current_ship.source_template.parent_type == /datum/map_template/shuttle/subshuttles)
+		.["issubshuttle"] = "true"
+		current_ship.sensor_range = 3
 		if(current_ship.docked_to.docked_to.parent_type == /datum/overmap/outpost)
 			.["motheroutpost"] = "true"
 	// [/CELADON-ADD] - subshuttles fix
