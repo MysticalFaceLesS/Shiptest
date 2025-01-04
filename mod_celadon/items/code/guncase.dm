@@ -183,3 +183,13 @@ NO_MAG_GUN_HELPER(automatic/marksman/f4/inteq)
 
 /obj/item/ammo_box/magazine/smgm9mm/empty
 	start_empty = TRUE
+
+/obj/item/storage/guncase/cryogelida
+/obj/item/storage/guncase/cryogelida/PopulateContents()
+	new /obj/item/gun/energy/e_gun/plasmapistol_cryo(src)
+	new /obj/item/stock_parts/cell/gun/empty(src)
+
+/obj/item/storage/guncase/pyrogelida
+/obj/item/storage/guncase/pyrogelida/PopulateContents()
+	new /obj/item/gun/energy/e_gun/plasmapistol_fire(src)
+	new /obj/item/stock_parts/cell/gun/empty(src)

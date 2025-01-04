@@ -131,8 +131,9 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 9
 	},
-/obj/machinery/turretid/lethal{
-	pixel_y = -24
+/obj/machinery/turretid/ship{
+	pixel_y = -24;
+	id = "hyena_turrets"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
@@ -1526,7 +1527,9 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/dorm)
 "zt" = (
-/obj/machinery/porta_turret/ship/syndicate/weak,
+/obj/machinery/porta_turret/ship/syndicate/weak{
+	id = "hyena_turrets"
+	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "zA" = (
@@ -1680,7 +1683,8 @@
 /area/ship/hallway/central)
 "BR" = (
 /obj/machinery/porta_turret/ship/syndicate/weak{
-	dir = 1
+	dir = 1;
+	id = "hyena_turrets"
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
@@ -1982,7 +1986,8 @@
 /area/ship/security/armory)
 "HK" = (
 /obj/machinery/porta_turret/ship/syndicate/weak{
-	dir = 5
+	dir = 5;
+	id = "hyena_turrets"
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -2332,7 +2337,8 @@
 /area/ship/bridge)
 "NA" = (
 /obj/machinery/porta_turret/ship/syndicate/weak{
-	dir = 8
+	dir = 8;
+	id = "hyena_turrets"
 	},
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
@@ -2501,7 +2507,8 @@
 /area/ship/cargo)
 "Qz" = (
 /obj/machinery/porta_turret/ship/syndicate/weak{
-	dir = 4
+	dir = 4;
+	id = "hyena_turrets"
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -2876,13 +2883,15 @@
 /obj/machinery/turretid{
 	pixel_x = 32;
 	pixel_y = 22;
-	req_access = list(19)
+	req_access = list(19);
+	id = "hyena_turrets"
 	},
 /turf/open/floor/carpet/red_gold,
 /area/ship/bridge)
 "Up" = (
 /obj/machinery/porta_turret/ship/syndicate/weak{
-	dir = 6
+	dir = 6;
+	id = "hyena_turrets"
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -2898,7 +2907,8 @@
 /area/ship/crew)
 "UN" = (
 /obj/machinery/porta_turret/ship/syndicate/weak{
-	dir = 1
+	dir = 1;
+	id = "hyena_turrets"
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
