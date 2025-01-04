@@ -334,7 +334,7 @@ const ShipControlContent = (_props, context) => {
             tooltip="Undock"
             tooltipPosition="left"
             icon="sign-out-alt"
-			// [/CELADON-EDIT] - subshuttles fix
+			// [CELADON-EDIT] - subshuttles fix
             disabled={!data.docked || data.docking || data.motheroutpost != null}
 			// [/CELADON-EDIT] - subshuttles fix
             onClick={() => act('undock')}

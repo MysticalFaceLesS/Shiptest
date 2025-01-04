@@ -262,7 +262,7 @@
 				ref = REF(engine)
 			)
 		.["engineInfo"] += list(engine_data)
-	// [/CELADON-ADD] - subshuttles fix
+	// [CELADON-ADD] - subshuttles fix
 	.["motheroutpost"] = null
 	if(current_ship.source_template.parent_type == /datum/map_template/shuttle/subshuttles)
 		if(current_ship.docked_to.docked_to.parent_type == /datum/overmap/outpost)

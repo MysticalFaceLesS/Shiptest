@@ -1,4 +1,4 @@
-// [/CELADON-EDIT] - subshuttles fix
+// [CELADON-EDIT] - subshuttles fix
 #define SHUTTLE_CREATOR_MAX_SIZE 100
 // [/CELADON-EDIT] - subshuttles fix
 /obj/item/shuttle_creator

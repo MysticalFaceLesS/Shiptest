@@ -164,7 +164,7 @@
 	if(istype(/datum/overmap/ship, docked_to))
 		var/datum/overmap/ship/old_dock = docked_to
 		adjust_speed(old_dock.speed_x, old_dock.speed_y)
-	// [/CELADON-ADD] - subshuttles fix
+	// [CELADON-ADD] - subshuttles fix
 	x = docked_to.x
 	y = docked_to.y
 	position_to_move["x"] = docked_to.x
