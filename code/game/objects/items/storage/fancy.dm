@@ -196,14 +196,21 @@
 	slot_flags = ITEM_SLOT_BELT
 	spawn_type = /obj/item/clothing/mask/cigarette/space_cigarette
 	var/candy = FALSE //for cigarette overlay
-	custom_price = 75
+	custom_price = 10
 	contents_tag = "cigarette"
 
 /obj/item/storage/fancy/cigarettes/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 6
-	STR.set_holdable(list(/obj/item/clothing/mask/cigarette, /obj/item/lighter))
+	// [CELADON-ADD] - CELADON_QOL
+	STR.max_w_class = WEIGHT_CLASS_TINY
+	// STR.storage_flags = STORAGE_FLAGS_VOLUME_DEFAULT
+	// [/CELADON-ADD]
+	// [CELADON-EDIT] - CELADON_QOL
+	// STR.set_holdable(list(/obj/item/clothing/mask/cigarette, /obj/item/lighter)) // CELADON-EDIT - ORIGINAL
+	STR.set_holdable(list(/obj/item/clothing/mask/cigarette, /obj/item/lighter, /obj/item/cigbutt))
+	// [/CELADON-EDIT]
 
 /obj/item/storage/fancy/cigarettes/examine(mob/user)
 	. = ..()
@@ -359,7 +366,7 @@
 	base_icon_state = "cig_paper_pack"
 	contents_tag = "rolling paper"
 	spawn_type = /obj/item/rollingpaper
-	custom_price = 25
+	custom_price = 5
 
 /obj/item/storage/fancy/rollingpapers/ComponentInitialize()
 	. = ..()

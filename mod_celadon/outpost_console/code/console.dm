@@ -1,3 +1,56 @@
+/obj/machinery/computer/cargo/ui_data(mob/user) //чинит фракционное карго после фракционного карго оффов
+	var/canBeacon = beacon && (isturf(beacon.loc) || ismob(beacon.loc))//is the beacon in a valid location?
+	var/list/data = list()
+
+	// not a big fan of get_containing_shuttle
+	var/obj/docking_port/mobile/D = SSshuttle.get_containing_shuttle(src)
+	var/datum/overmap/ship/controlled/ship
+	var/outpost_docked = FALSE
+	if(D)
+		ship = D.current_ship
+		outpost_docked = istype(ship.docked_to, /datum/overmap/outpost)
+
+	data["onShip"] = !isnull(ship)
+	data["numMissions"] = ship ? LAZYLEN(ship.missions) : 0
+	data["maxMissions"] = ship ? ship.max_missions : 0
+	data["outpostDocked"] = outpost_docked
+	data["points"] = charge_account ? charge_account.account_balance : 0
+	data["siliconUser"] = user.has_unlimited_silicon_privilege && check_ship_ai_access(user)
+	data["beaconZone"] = beacon ? get_area(beacon) : ""//where is the beacon located? outputs in the tgui
+	data["usingBeacon"] = use_beacon //is the mode set to deliver to the beacon or the cargobay?
+	data["canBeacon"] = !use_beacon || canBeacon //is the mode set to beacon delivery, and is the beacon in a valid location?
+	data["canBuyBeacon"] = charge_account ? (cooldown <= 0 && charge_account.account_balance >= BEACON_COST) : FALSE
+	data["beaconError"] = use_beacon && !canBeacon ? "(BEACON ERROR)" : ""//changes button text to include an error alert if necessary
+	data["hasBeacon"] = beacon != null//is there a linked beacon?
+	data["beaconName"] = beacon ? beacon.name : "No Beacon Found"
+	data["printMsg"] = cooldown > 0 ? "Print Beacon for [BEACON_COST] credits ([cooldown])" : "Print Beacon for [BEACON_COST] credits"//buttontext for printing beacons
+	data["supplies"] = list()
+	message = "Sales are near-instantaneous - please choose carefully."
+	if(SSshuttle.supplyBlocked)
+		message = blockade_warning
+	if(use_beacon && !beacon)
+		message = "BEACON ERROR: BEACON MISSING"//beacon was destroyed
+	else if (use_beacon && !canBeacon)
+		message = "BEACON ERROR: MUST BE EXPOSED"//beacon's loc/user's loc must be a turf
+	data["message"] = message
+
+	data["supplies"] = supply_pack_data
+	if (cooldown > 0)//cooldown used for printing beacons
+		cooldown--
+
+	data["shipMissions"] = list()
+	data["outpostMissions"] = list()
+
+	if(current_ship)
+		for(var/datum/mission/M as anything in current_ship.missions)
+			data["shipMissions"] += list(M.get_tgui_info())
+		if(outpost_docked)
+			var/datum/overmap/outpost/out = current_ship.docked_to
+			for(var/datum/mission/M as anything in out.missions)
+				data["outpostMissions"] += list(M.get_tgui_info())
+
+	return data
+
 /*
 	Faction-less
 */

@@ -71,6 +71,10 @@
 	. = ..()
 	get_inteq_g_acces(H)
 
+	// Даёт всем интекашкам брендовый сурвивал бокс
+/datum/outfit/job/inteq
+	box = /obj/item/storage/box/survival/inteq
+
 //Капитан
 
 /datum/outfit/job/inteq/captain/celadon
@@ -91,7 +95,7 @@
 /datum/outfit/job/inteq/captain/enfco/celadon
 	name = "Enforcer class One (InteQ)"
 	head = /obj/item/clothing/head/beret/sec/hos/inteq
-	mask = /obj/item/clothing/mask/gas/sechailer/balaclava/inteq
+	mask = /obj/item/clothing/mask/balaclava
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses/inteq
 	suit = /obj/item/clothing/suit/armor/vest/inteq
 	suit_store = /obj/item/gun/ballistic/automatic/pistol/usp45

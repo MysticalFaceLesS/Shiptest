@@ -100,7 +100,7 @@
 	mob_spawn_list = list(
 		/mob/living/carbon/monkey = 10,
 		/mob/living/simple_animal/hostile/retaliate/chicken = 10,
-		/obj/effect/spawner/lootdrop/chicken/jungle/flock = 1
+		/obj/effect/spawner/random/chicken/jungle/flock = 1
 		)
 
 /datum/biome/jungle/dense/night
@@ -123,7 +123,7 @@
 		/mob/living/simple_animal/hostile/gorilla = 1,
 		/mob/living/carbon/monkey = 6,
 		/mob/living/simple_animal/hostile/retaliate/chicken = 4,
-		/obj/effect/spawner/lootdrop/chicken/jungle/flock = 1
+		/obj/effect/spawner/random/chicken/jungle/flock = 1
 		)
 
 /datum/biome/jungle/plains/night
@@ -184,7 +184,7 @@
 		// [/CELADON-ADD]
 		/obj/item/pickaxe/rusted = 1,
 		/obj/structure/spawner/burrow/jungle_planet = 1,
-		/obj/effect/spawner/lootdrop/anomaly/jungle = 1
+		/obj/effect/spawner/random/anomaly/jungle = 1
 	)
 
 /datum/biome/cave/jungle/dirt/night

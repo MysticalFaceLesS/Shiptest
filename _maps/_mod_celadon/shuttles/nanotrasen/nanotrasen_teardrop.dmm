@@ -221,7 +221,7 @@
 /area/ship/security)
 "cK" = (
 /obj/structure/table,
-/obj/effect/spawner/lootdrop/donkpockets,
+/obj/effect/spawner/random/food_or_drink/donkpockets,
 /obj/machinery/light/directional/west{
 	light_color = "#e8eaff"
 	},
@@ -556,11 +556,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/effect/turf_decal/corner/opaque/solgovblue/mono,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
 /obj/structure/closet/crate,
 /turf/open/floor/plasteel/white,
 /area/ship/cargo)
@@ -1402,8 +1402,9 @@
 /turf/open/floor/carpet/blue,
 /area/ship/crew/dorm)
 "oI" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
-	dir = 8
+/obj/machinery/porta_turret/ship/nt{
+	dir = 8;
+	id = "teardrop_turrets"
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/bridge)
@@ -1579,10 +1580,9 @@
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ship/engineering)
 "qq" = (
-/obj/machinery/porta_turret/ship/ballistic{
+/obj/machinery/porta_turret/ship/nt/pulse{
 	dir = 4;
-	faction = list("playerNanotrasen","turret");
-	pixel_x = 3
+	id = "teardrop_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -1900,8 +1900,9 @@
 /turf/open/floor/plasteel/white,
 /area/ship/hallway/central)
 "ve" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
-	dir = 6
+/obj/machinery/porta_turret/ship/nt/heavy{
+	dir = 6;
+	id = "teardrop_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -2550,8 +2551,9 @@
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/hallway/central)
 "BD" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
-	dir = 10
+/obj/machinery/porta_turret/ship/nt{
+	dir = 10;
+	id = "teardrop_turrets"
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/bridge)
@@ -3029,8 +3031,9 @@
 /turf/open/floor/plasteel/white,
 /area/ship/hallway/central)
 "GP" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
-	dir = 1
+/obj/machinery/porta_turret/ship/nt{
+	dir = 1;
+	id = "teardrop_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -3280,8 +3283,9 @@
 /turf/open/floor/plasteel/white,
 /area/ship/cargo)
 "JZ" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
-	dir = 5
+/obj/machinery/porta_turret/ship/nt/heavy{
+	dir = 5;
+	id = "teardrop_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -3300,8 +3304,9 @@
 /turf/open/floor/plating,
 /area/ship/bridge)
 "Kn" = (
-/obj/machinery/turretid/lethal{
-	pixel_y = -24
+/obj/machinery/turretid/ship{
+	pixel_y = -24;
+	id = "teardrop_turrets"
 	},
 /obj/effect/turf_decal/corner/opaque/solgovblue{
 	dir = 5
@@ -3320,11 +3325,15 @@
 	pixel_x = -7;
 	pixel_y = 4
 	},
-/obj/item/stamp/captain{
-	pixel_x = -8;
-	pixel_y = 12
-	},
 /obj/item/binoculars,
+/obj/item/stamp/nanotrasen/captain{
+	pixel_x = 11;
+	pixel_y = -3
+	},
+/obj/item/stamp/nt/captain{
+	pixel_x = 2;
+	pixel_y = -3
+	},
 /turf/open/floor/plasteel/white,
 /area/ship/bridge)
 "KE" = (
@@ -3375,8 +3384,8 @@
 	},
 /obj/item/stock_parts/cell/gun,
 /obj/item/stock_parts/cell/gun,
-/obj/item/ammo_box/a300_box,
-/obj/item/ammo_box/a300,
+/obj/item/storage/box/ammo/a300,
+/obj/item/storage/box/ammo/a300,
 /obj/item/ammo_box/a300,
 /turf/open/floor/plasteel/white,
 /area/ship/security)
@@ -3590,6 +3599,9 @@
 	dir = 9;
 	faction = list("playerNanotrasen","turret")
 	},
+/obj/machinery/porta_turret/ship/nt{
+	id = "teardrop_turrets"
+	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
 "NB" = (
@@ -3690,7 +3702,7 @@
 "Oq" = (
 /obj/structure/table/wood/fancy/royalblue,
 /obj/machinery/recharger,
-/obj/item/gun/ballistic/revolver/shadow/no_mag{
+/obj/item/gun/ballistic/revolver/shadow/empty{
 	name = "\improper Last Exit"
 	},
 /obj/item/ammo_casing/a44roum,
@@ -4181,8 +4193,9 @@
 /turf/open/floor/plasteel/white,
 /area/ship/hallway/central)
 "SZ" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
-	dir = 9
+/obj/machinery/porta_turret/ship/nt{
+	dir = 9;
+	id = "teardrop_turrets"
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/bridge)
@@ -4552,7 +4565,9 @@
 /turf/open/floor/plasteel/white,
 /area/ship/cargo)
 "Xt" = (
-/obj/structure/tank_dispenser/plasma,
+/obj/structure/tank_dispenser/plasma{
+	oxygentanks = 10
+	},
 /turf/open/floor/plasteel/white,
 /area/ship/cargo)
 "XD" = (

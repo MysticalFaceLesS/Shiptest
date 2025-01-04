@@ -165,7 +165,7 @@
 	flora_spawn_chance = 5
 
 	open_turf_types = list(
-		/turf/open/floor/plating/beach/sand = 1
+		/turf/open/floor/plating/asteroid/whitesands = 1
 	)
 
 /datum/biome/cave/earth_sand/rocky
@@ -194,5 +194,5 @@
 	)
 
 	open_turf_types = list(
-		/turf/open/floor/plating/beach/sand = 50
+		/turf/open/floor/plating/asteroid/whitesands = 50
 	)

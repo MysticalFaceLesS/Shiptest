@@ -396,7 +396,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/directional/west,
-/obj/effect/spawner/lootdrop/gambling{
+/obj/effect/spawner/random/entertainment/gambling{
 	pixel_x = -5;
 	pixel_y = 4
 	},
@@ -664,7 +664,7 @@
 /area/ship/medical)
 "dv" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/spawner/lootdrop/grille_or_trash,
+/obj/effect/spawner/random/waste/grille_or_trash,
 /obj/effect/decal/cleanable/robot_debris/old,
 /obj/item/stock_parts/capacitor{
 	pixel_y = -9;
@@ -1274,7 +1274,7 @@
 "ge" = (
 /obj/structure/catwalk/over/plated_catwalk,
 /obj/effect/decal/cleanable/greenglow,
-/obj/machinery/vending/snack/random,
+/obj/effect/spawner/random/vending/snack,
 /turf/open/floor/plating,
 /area/ship/hallway/central)
 "gg" = (
@@ -1836,7 +1836,7 @@
 "jv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/oil,
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
 /turf/open/floor/plating/airless{
 	icon_state = "plating_rust"
 	},
@@ -2034,7 +2034,7 @@
 /area/ship/security/armory)
 "kf" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/lootdrop/salvage_manipulator,
+/obj/effect/spawner/random/salvage_manipulator,
 /turf/open/floor/plating/airless,
 /area/ship/maintenance/port)
 "kk" = (
@@ -2442,11 +2442,11 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 8
 	},
-/obj/item/clothing/suit/armor/vest/bulletproof/frontier,
-/obj/item/clothing/suit/armor/vest/bulletproof/frontier,
-/obj/item/clothing/suit/armor/vest/bulletproof/frontier,
-/obj/item/clothing/suit/armor/vest/bulletproof/frontier,
-/obj/item/clothing/suit/armor/vest/bulletproof/frontier,
+/obj/item/clothing/suit/armor/vest/frontier,
+/obj/item/clothing/suit/armor/vest/frontier,
+/obj/item/clothing/suit/armor/vest/frontier,
+/obj/item/clothing/suit/armor/vest/frontier,
+/obj/item/clothing/suit/armor/vest/frontier,
 /obj/item/clothing/head/helmet/bulletproof/x11/frontier,
 /obj/item/clothing/head/helmet/bulletproof/x11/frontier,
 /obj/item/clothing/head/helmet/bulletproof/x11/frontier,
@@ -4264,7 +4264,7 @@
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 5
 	},
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -4778,7 +4778,6 @@
 	pixel_x = 1;
 	pixel_y = -4
 	},
-/obj/item/clothing/mask/gas/sechailer/balaclava,
 /obj/item/clothing/suit/armor/vest/marine/medium,
 /obj/item/storage/belt/military,
 /obj/item/clothing/shoes/cowboy/black,
@@ -4796,6 +4795,7 @@
 	name = "tactical gas mask";
 	desc = "Improved gas mask utilized by pirates. Still not very good at blocking gas flow, but it's flameproof!"
 	},
+/obj/item/clothing/mask/balaclava/combat,
 /turf/open/floor/carpet/black,
 /area/ship/security)
 "wZ" = (
@@ -5136,7 +5136,7 @@
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/ship/medical)
 "zn" = (
-/obj/effect/spawner/lootdrop/salvage_scanning,
+/obj/effect/spawner/random/salvage_scanning,
 /turf/open/floor/plating/airless{
 	icon_state = "panelscorched"
 	},
@@ -5758,7 +5758,7 @@
 /obj/effect/turf_decal/techfloor/hole{
 	dir = 4
 	},
-/obj/effect/spawner/lootdrop/random_machine_circuit_rare,
+/obj/effect/spawner/random/circuit/machine/rare,
 /obj/item/stack/ore/salvage/scraptitanium/five,
 /turf/open/floor/plating/airless{
 	icon_state = "panelscorched"
@@ -6094,7 +6094,7 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/obj/item/melee/transforming/energy/sword/saber/pirate/red,
+/obj/item/melee/energy/sword/saber/pirate/red,
 /obj/item/clothing/under/frontiersmen/officer,
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/fore)
@@ -7352,7 +7352,7 @@
 "IX" = (
 /obj/effect/turf_decal/techfloor/corner,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/lootdrop/glowstick,
+/obj/effect/spawner/random/decoration/glowstick,
 /obj/item/stack/cable_coil/cut/yellow,
 /obj/item/stack/rods{
 	pixel_x = 7;
@@ -7490,7 +7490,7 @@
 /turf/open/floor/concrete/tiles,
 /area/ship/crew/canteen/kitchen)
 "Jx" = (
-/obj/machinery/vending/cola/random,
+/obj/effect/spawner/random/vending/cola,
 /obj/structure/sign/directions/command{
 	dir = 4;
 	pixel_y = 42
@@ -8158,7 +8158,7 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/obj/item/melee/transforming/energy/sword/saber/pirate/red,
+/obj/item/melee/energy/sword/saber/pirate/red,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 8
 	},
@@ -8315,9 +8315,6 @@
 	pixel_x = 1;
 	pixel_y = -4
 	},
-/obj/item/clothing/mask/gas/sechailer/balaclava,
-/obj/item/clothing/mask/gas/sechailer/balaclava,
-/obj/item/clothing/mask/gas/sechailer/balaclava,
 /obj/item/storage/belt/military,
 /obj/item/storage/belt/military,
 /obj/item/storage/belt/military/army,
@@ -8333,6 +8330,9 @@
 /obj/machinery/light_switch{
 	pixel_y = 24
 	},
+/obj/item/clothing/mask/balaclava/combat,
+/obj/item/clothing/mask/balaclava/combat,
+/obj/item/clothing/mask/balaclava/combat,
 /turf/open/floor/plasteel/dark,
 /area/ship/security/armory)
 "Mo" = (
@@ -8529,7 +8529,7 @@
 	},
 /area/ship/hallway/central)
 "Nr" = (
-/obj/machinery/vending/snack/random,
+/obj/effect/spawner/random/vending/snack,
 /obj/effect/turf_decal/industrial/warning{
 	dir = 1
 	},
@@ -9376,7 +9376,7 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/office)
 "RY" = (
-/obj/effect/spawner/lootdrop/salvage_capacitor,
+/obj/effect/spawner/random/salvage_capacitor,
 /obj/item/stack/cable_coil/cut/yellow,
 /obj/item/stack/rods{
 	pixel_x = 7
@@ -10093,7 +10093,7 @@
 /area/ship/crew/canteen/kitchen)
 "VA" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/lootdrop/mafia_outfit,
+/obj/effect/spawner/random/clothing/mafia_outfit,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -10630,7 +10630,7 @@
 	},
 /area/ship/maintenance/port)
 "Yj" = (
-/obj/effect/spawner/lootdrop/salvage_manipulator,
+/obj/effect/spawner/random/salvage_manipulator,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable{
 	icon_state = "1-8"

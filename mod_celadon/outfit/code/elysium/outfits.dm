@@ -201,3 +201,64 @@
 	W.registered_name = H.real_name
 	W.update_label()
 	..()
+
+
+/datum/outfit/avanpost/cmo
+
+	name = "Avanpost Chief Medical Officer"
+
+	id = /obj/item/card/id/silver/elysium_cmo
+	belt = /obj/item/pda/heads/cmo
+	l_pocket = /obj/item/pinpointer/crew
+	ears = /obj/item/radio/headset/headset_com
+	uniform = /obj/item/clothing/under/rank/medical/chief_medical_officer
+	shoes = /obj/item/clothing/shoes/sneakers/brown
+	suit = /obj/item/clothing/suit/toggle/labcoat/cmo
+	l_hand = /obj/item/storage/firstaid/medical
+	suit_store = /obj/item/flashlight/pen
+	back = /obj/item/storage/backpack/duffelbag/med
+	backpack_contents = list(/obj/item/melee/classic_baton/telescopic = 1,
+							/obj/item/storage/backpack/medic = 1,
+							/obj/item/storage/backpack/satchel/med = 1,
+							/obj/item/storage/backpack/messenger/med = 1,
+							/obj/item/clothing/suit/hooded/wintercoat/medical = 1,
+							/obj/item/clothing/suit/toggle/labcoat/mad = 1,
+							/obj/item/clothing/under/rank/medical/doctor/blue = 1)
+
+	box = /obj/item/storage/box/survival/medical
+
+	chameleon_extras = list(/obj/item/gun/syringe, /obj/item/stamp/cmo)
+
+/datum/outfit/debug/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	H.faction |= list(FACTION_PLAYER_SYNDICATE,
+					FACTION_PLAYER_NANOTRASEN,
+					FACTION_PLAYER_SOLGOV,
+					FACTION_PLAYER_NANOTRASEN,
+					FACTION_PLAYER_INTEQ,
+					FACTION_ELYSIUM,
+					FACTION_PIRATES,
+					FACTION_PLAYER_FRONTIERSMEN,
+					FACTION_PLAYER_MINUTEMAN,
+					FACTION_PLAYER_SOLCON,
+					FACTION_PLAYER_ROUMAIN,
+					FACTION_PLAYER_GEZENA,
+					FACTION_ANTAG_SYNDICATE,
+					FACTION_ANTAG_FRONTIERSMEN
+					)
+	ADD_TRAIT(H, TRAIT_MINDSHIELD, "status_effect")
+
+/datum/job/outpost/cmo
+	name = "Chief Medical Officer"
+	auto_deadmin_role_flags = DEADMIN_POSITION_HEAD
+	minimal_player_age = 7
+	officer = TRUE
+	wiki_page = "Chief_Medical_Officer"
+
+	outfit = /datum/outfit/avanpost/cmo
+
+	access = list(ACCESS_MEDICAL, ACCESS_PSYCHOLOGY, ACCESS_MORGUE, ACCESS_GENETICS, ACCESS_CLONING, ACCESS_PHARMACY, ACCESS_HEADS, ACCESS_MINERAL_STOREROOM, ACCESS_CHEMISTRY, ACCESS_VIROLOGY, ACCESS_CMO, ACCESS_SURGERY, ACCESS_RC_ANNOUNCE, ACCESS_MECH_MEDICAL, ACCESS_KEYCARD_AUTH, ACCESS_SEC_DOORS, ACCESS_MAINT_TUNNELS, ACCESS_OUTPOST_MED_CMO, ACCESS_OUTPOST_MED_HIRURG, ACCESS_OUTPOST_MED_STORAGE, ACCESS_OUTPOST_MED_GENETIC, ACCESS_OUTPOST_MED_CHEMISTRY, ACCESS_OUTPOST_MED_MORGUE, ACCESS_OUTPOST_MED_GENERAL,)
+	minimal_access = list(ACCESS_MEDICAL, ACCESS_PSYCHOLOGY, ACCESS_MORGUE, ACCESS_GENETICS, ACCESS_PHARMACY, ACCESS_HEADS, ACCESS_MINERAL_STOREROOM, //WS edit - Gen/Sci Split
+			ACCESS_CHEMISTRY, ACCESS_VIROLOGY, ACCESS_CMO, ACCESS_SURGERY, ACCESS_RC_ANNOUNCE, ACCESS_MECH_MEDICAL,
+			ACCESS_KEYCARD_AUTH, ACCESS_SEC_DOORS, ACCESS_MAINT_TUNNELS)
+
+	display_order = JOB_DISPLAY_ORDER_CHIEF_MEDICAL_OFFICER

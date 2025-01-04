@@ -1,31 +1,7 @@
-/mob/living/simple_animal/hostile/megafauna/blood_drunk_miner
-	crusher_loot = list(/obj/item/melee/transforming/cleaving_saw, /obj/item/gun/energy/kinetic_accelerator, /obj/item/crusher_trophy/miner_eye)
 
-/mob/living/simple_animal/hostile/megafauna/bubblegum
-	crusher_loot = list(/obj/structure/closet/crate/necropolis/bubblegum/crusher)
-
-/mob/living/simple_animal/hostile/megafauna/bubblegum/hallucination
-	crusher_loot = null
-
-/mob/living/simple_animal/hostile/megafauna/claw
-	crusher_loot = list(/obj/item/card/id/ert/deathsquad, /obj/item/documents/nanotrasen)
-
-/mob/living/simple_animal/hostile/megafauna/claw/phase2 //75% of the health this thing has is here
-	crusher_loot = list(/obj/effect/spawner/clawloot)
-	loot = list(/obj/effect/spawner/clawloot/crusher)
-
-/obj/effect/spawner/clawloot/crusher/spawn_loot()
-	new /obj/item/nullrod/tribal_knife(get_turf(src)) //idk what to put here, memed is the loot person // Заменено с армблейда на ритуальный нож
-	return ..()
-
-/mob/living/simple_animal/hostile/megafauna/colossus
-	crusher_loot = list(/obj/structure/closet/crate/necropolis/colossus/crusher)
 
 /mob/living/simple_animal/hostile/megafauna/cult_templar // Офы выпилили курсед клэймор
 	crusher_loot = list(/obj/item/melee/sword/claymore, /obj/item/clothing/suit/space/hardsuit/cult/enchanted, /obj/item/upgradescroll)
-
-/mob/living/simple_animal/hostile/megafauna/demonic_frost_miner
-	crusher_loot = list(/obj/effect/decal/remains/plasma, /obj/item/crusher_trophy/ice_block_talisman)
 
 /obj/item/crusher_trophy/ice_block_talisman
 	name = "ice block talisman"
@@ -72,24 +48,11 @@
 	owner.cut_overlay(cube)
 	UnregisterSignal(owner, COMSIG_MOVABLE_PRE_MOVE)
 
-/mob/living/simple_animal/hostile/megafauna/dragon
-	crusher_loot = list(/obj/structure/closet/crate/necropolis/dragon/crusher)
-	guaranteed_butcher_results = list(/obj/item/stack/sheet/animalhide/ashdrake = 10, /obj/item/crusher_trophy/ash_spike = 1)
-
-/mob/living/simple_animal/hostile/megafauna/dragon/lesser
-	crusher_loot = list()
-
-/mob/living/simple_animal/hostile/megafauna/hierophant
-	crusher_loot = list(/obj/item/hierophant_club, /obj/item/crusher_trophy/vortex_talisman)
-
 /mob/living/simple_animal/hostile/megafauna
 	var/list/crusher_loot
 
 /mob/living/simple_animal/hostile/megafauna/proc/spawn_crusher_loot()
 	loot = crusher_loot
-
-/mob/living/simple_animal/hostile/megafauna/wendigo
-	crusher_loot = list(/obj/item/crusher_trophy/demon_claws)
 
 /mob/living/simple_animal/hostile/asteroid/basilisk/watcher
 	crusher_loot = /obj/item/crusher_trophy/watcher_wing
