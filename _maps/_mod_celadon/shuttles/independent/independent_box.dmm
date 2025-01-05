@@ -158,7 +158,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet/crate/freezer/surplus_limbs/organs,
-/obj/item/organ/lungs,
 /turf/open/floor/plasteel/white,
 /area/ship/cargo)
 "aN" = (
@@ -649,6 +648,9 @@
 	dir = 8
 	},
 /obj/machinery/suit_storage_unit/cmo,
+/obj/effect/turf_decal/spline/fancy/opaque/black{
+	dir = 8
+	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "cE" = (
@@ -1344,14 +1346,23 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/medical)
 "iV" = (
+/obj/effect/turf_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 1
+	},
+/obj/machinery/door/poddoor{
+	id = "emergencybay_blastdoors"
+	},
 /obj/docking_port/mobile{
 	dir = 8;
 	launch_status = 0;
 	name = "Hospital Ship";
 	preferred_direction = 4
 	},
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/ship/engineering)
+/turf/open/floor/engine,
+/area/ship/cargo)
 "ja" = (
 /obj/structure/sign/poster/official/cleanliness{
 	pixel_x = 32
@@ -1431,12 +1442,8 @@
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "kQ" = (
-/obj/docking_port/stationary{
-	width = 15;
-	height = 15
-	},
-/turf/template_noop,
-/area/template_noop)
+/turf/open/floor/engine/hull,
+/area/ship/external/dark)
 "kZ" = (
 /obj/effect/turf_decal/corner/opaque/lightgrey/diagonal,
 /obj/effect/turf_decal/trimline/opaque/white/filled/corner{
@@ -1610,6 +1617,14 @@
 /obj/effect/turf_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/dark,
 /area/ship/cargo)
+"qw" = (
+/obj/docking_port/stationary{
+	width = 30;
+	height = 15;
+	dwidth = 15
+	},
+/turf/template_noop,
+/area/template_noop)
 "qx" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/poddoor{
@@ -3220,10 +3235,11 @@ aa
 aa
 aa
 aa
+aa
 vk
 at
 aa
-iV
+at
 vk
 aa
 aa
@@ -3233,6 +3249,7 @@ aa
 aa
 "}
 (2,1,1) = {"
+aa
 aa
 aa
 aa
@@ -3259,6 +3276,7 @@ aa
 aa
 aa
 aa
+aa
 at
 cG
 at
@@ -3273,6 +3291,7 @@ aa
 aa
 "}
 (4,1,1) = {"
+aa
 aa
 aa
 aa
@@ -3299,6 +3318,7 @@ aa
 aa
 aa
 aa
+aa
 at
 AH
 at
@@ -3313,6 +3333,7 @@ aa
 aa
 "}
 (6,1,1) = {"
+aa
 aa
 aa
 aa
@@ -3338,6 +3359,7 @@ aa
 aa
 aa
 aa
+aa
 at
 dS
 bk
@@ -3353,6 +3375,7 @@ aa
 aa
 "}
 (8,1,1) = {"
+aa
 aa
 aa
 aa
@@ -3377,6 +3400,7 @@ aa
 aa
 aa
 aa
+aa
 aS
 at
 cJ
@@ -3393,6 +3417,7 @@ aa
 aa
 "}
 (10,1,1) = {"
+aa
 aa
 aa
 aa
@@ -3417,6 +3442,7 @@ aa
 aa
 aa
 aa
+aa
 bq
 Tv
 vj
@@ -3433,6 +3459,7 @@ aa
 aa
 "}
 (12,1,1) = {"
+aa
 aa
 aa
 aa
@@ -3456,6 +3483,7 @@ aa
 aa
 aa
 aa
+aa
 bq
 gC
 aF
@@ -3473,6 +3501,7 @@ aa
 aa
 "}
 (14,1,1) = {"
+aa
 aa
 aa
 ag
@@ -3495,6 +3524,7 @@ aa
 (15,1,1) = {"
 aa
 aa
+aa
 al
 lQ
 gM
@@ -3513,6 +3543,7 @@ cF
 aa
 "}
 (16,1,1) = {"
+aa
 aa
 aa
 wG
@@ -3535,6 +3566,7 @@ aa
 (17,1,1) = {"
 aa
 aa
+aa
 al
 am
 FA
@@ -3553,6 +3585,7 @@ cF
 aa
 "}
 (18,1,1) = {"
+aa
 aa
 ad
 uD
@@ -3574,6 +3607,7 @@ cY
 "}
 (19,1,1) = {"
 aa
+kQ
 cC
 aj
 sl
@@ -3594,6 +3628,7 @@ Rx
 "}
 (20,1,1) = {"
 aa
+kQ
 aN
 dt
 ah
@@ -3613,8 +3648,9 @@ JI
 Rx
 "}
 (21,1,1) = {"
+qw
 kQ
-aN
+iV
 ql
 aB
 az
@@ -3634,6 +3670,7 @@ vq
 "}
 (22,1,1) = {"
 aa
+kQ
 iv
 my
 aA
@@ -3654,6 +3691,7 @@ Rx
 "}
 (23,1,1) = {"
 aa
+kQ
 ae
 aj
 yU
@@ -3673,6 +3711,7 @@ ds
 Rx
 "}
 (24,1,1) = {"
+aa
 aa
 ad
 jr
@@ -3695,6 +3734,7 @@ cY
 (25,1,1) = {"
 aa
 aa
+aa
 ak
 aq
 bc
@@ -3713,6 +3753,7 @@ Rx
 aa
 "}
 (26,1,1) = {"
+aa
 aa
 aa
 ak
@@ -3735,6 +3776,7 @@ aa
 (27,1,1) = {"
 aa
 aa
+aa
 ab
 uD
 uJ
@@ -3753,6 +3795,7 @@ nQ
 aa
 "}
 (28,1,1) = {"
+aa
 aa
 aa
 aa
@@ -3779,6 +3822,7 @@ aa
 aa
 aa
 aa
+aa
 bf
 Tr
 Cn
@@ -3793,6 +3837,7 @@ aa
 aa
 "}
 (30,1,1) = {"
+aa
 aa
 aa
 aa
