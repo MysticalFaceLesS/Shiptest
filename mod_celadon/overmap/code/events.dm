@@ -14,7 +14,7 @@
 /datum/overmap/event/emp
 	name = "ion storm (moderate)"
 	desc = "A heavily ionized area of space, prone to causing electromagnetic pulses in ships"
-	token_icon_state = "ion1"
+	token_icon_state = "ion_moderate1"
 	spread_chance = 10
 	chain_rate = 2
 	chance_to_affect = 10
@@ -34,9 +34,18 @@
 
 /datum/overmap/event/emp/Initialize(position, ...)
 	. = ..()
-	token.icon_state = "ion[rand(1, 4)]"
-	token.color = "#7cb4d4"
-	token.light_color = "#7cb4d4"
+	token.icon_state = "ion_moderate[rand(1, 2)]"
+	switch(type) //woop! this picks one of two icon states for the severity of the storm in overmap.dmi
+		if(/datum/overmap/event/emp/minor)
+			token.icon_state = "ion_minor[rand(1, 2)]"
+		if(/datum/overmap/event/emp)
+			token.icon_state = "ion_moderate[rand(1, 2)]"
+		if(/datum/overmap/event/emp/major)
+			token.icon_state = "ion_major[rand(1, 2)]"
+		else
+			token.icon_state = "ion_moderate1"
+	//token.color = "#7cb4d4"
+	//token.light_color = "#7cb4d4"
 	token.update_appearance()
 
 /datum/overmap/event/emp/affect_ship(datum/overmap/ship/controlled/S)
