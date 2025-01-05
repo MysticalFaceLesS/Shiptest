@@ -3008,12 +3008,7 @@
 /turf/open/floor/plasteel/white,
 /area/ship/science)
 "Ah" = (
-/obj/structure/table/reinforced,
-/obj/item/radio/intercom/wideband/table{
-	dir = 4;
-	pixel_x = 1;
-	pixel_y = 1
-	},
+/obj/machinery/telecomms/relay/preset/nanotrasen,
 /turf/open/floor/circuit,
 /area/ship/science/ai_chamber)
 "Am" = (
@@ -3110,7 +3105,10 @@
 /area/ship/hangar)
 "Bf" = (
 /obj/structure/AIcore,
-/obj/item/radio/intercom/directional/west,
+/obj/item/radio/intercom/directional/west{
+	pixel_x = -31;
+	pixel_y = -5
+	},
 /turf/open/floor/circuit,
 /area/ship/science/ai_chamber)
 "Bj" = (
@@ -3518,7 +3516,11 @@
 	id = "AI";
 	name = "ai shutters control";
 	pixel_x = -22;
-	pixel_y = -8
+	pixel_y = -22
+	},
+/obj/item/radio/intercom/wideband/directional/west{
+	pixel_x = -29;
+	pixel_y = 0
 	},
 /turf/open/floor/circuit,
 /area/ship/science/ai_chamber)
