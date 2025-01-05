@@ -155,10 +155,10 @@
 	. = ..()
 	var/table_dir = check_dir()
 	var/attempted_dir = get_dir(loc, mover)
+	if(closed)
+		return TRUE
 	if(istype(mover, /obj/projectile))
 		if(!anchored)
-			return TRUE
-		if(closed)
 			return TRUE
 		var/obj/projectile/proj = mover
 		if(proj.firer && Adjacent(proj.firer))
@@ -486,7 +486,7 @@
 /obj/structure/deployable_barricade/metal/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/stack/sheet/metal))
 		var/obj/item/stack/sheet/metal/metal_sheets = I
-		if(can_upgrade && obj_integrity > max_integrity * 0.3)
+		if(can_upgrade && obj_integrity < max_integrity)
 			return attempt_barricade_upgrade(I, user, params)
 
 		if(metal_sheets.get_amount() < repair_amount)

@@ -74,6 +74,7 @@
 	. = ..()
 	icon_state = "snowshrub"
 
+// MARK: DARK
 
 /turf/open/floor/plasteel/strongdark
 	icon = 'mod_celadon/_storge_icons/icons/structures/floors/dark.dmi'
@@ -102,7 +103,7 @@
 /turf/open/floor/plasteel/lightdark/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-// yellow
+// MARK:  yellow
 /turf/open/floor/plasteel/darkyellowfull
 	icon = 'mod_celadon/_storge_icons/icons/structures/floors/dark.dmi'
 	icon_state = "darkyellowfull"
@@ -130,7 +131,7 @@
 /turf/open/floor/plasteel/darkyellowfull/darkyellowcorners/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-// green
+// MARK:  green
 /turf/open/floor/plasteel/darkgreenfull
 	icon = 'mod_celadon/_storge_icons/icons/structures/floors/dark.dmi'
 	icon_state = "darkgreenfull"
@@ -158,7 +159,7 @@
 /turf/open/floor/plasteel/darkgreenfull/darkgreencorners/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-// blue
+// MARK:  blue
 /turf/open/floor/plasteel/darkbluefull
 	icon = 'mod_celadon/_storge_icons/icons/structures/floors/dark.dmi'
 	icon_state = "darkbluefull"
@@ -186,7 +187,7 @@
 /turf/open/floor/plasteel/darkbluefull/darkbluecorners/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-// red
+// MARK:  red
 /turf/open/floor/plasteel/darkredfull
 	icon = 'mod_celadon/_storge_icons/icons/structures/floors/dark.dmi'
 	icon_state = "darkredfull"
@@ -214,7 +215,7 @@
 /turf/open/floor/plasteel/darkredfull/darkredcorners/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-// purple
+// MARK:  purple
 /turf/open/floor/plasteel/darkpurplefull
 	icon = 'mod_celadon/_storge_icons/icons/structures/floors/dark.dmi'
 	icon_state = "darkpurplefull"
@@ -242,7 +243,7 @@
 /turf/open/floor/plasteel/darkpurplefull/darkpurplecorners/airless
 	initial_gas_mix = AIRLESS_ATMOS
 
-// brown
+// MARK:  brown
 /turf/open/floor/plasteel/darkbrownfull
 	icon = 'mod_celadon/_storge_icons/icons/structures/floors/dark.dmi'
 	icon_state = "darkbrownfull"
@@ -269,3 +270,36 @@
 
 /turf/open/floor/plasteel/darkbrownfull/darkbrowncorners/airless
 	initial_gas_mix = AIRLESS_ATMOS
+
+// MARK: HEAVY METALL
+
+/turf/open/floor/plasteel/heavymetal
+	icon = 'mod_celadon/_storge_icons/icons/structures/floors/metal_2.dmi'
+	icon_state = "metal_1"
+	base_icon_state = "metal_1"
+	floor_tile = /obj/item/stack/tile/plasteel/heavymetal
+
+/turf/open/floor/plasteel/heavymetal/var1
+	icon_state = "metal_2"
+	base_icon_state = "metal_2"
+	floor_tile = /obj/item/stack/tile/plasteel/heavymetal/var1
+
+/turf/open/floor/plasteel/heavymetal/var2
+	icon_state = "metal_3"
+	base_icon_state = "metal_3"
+	floor_tile = /obj/item/stack/tile/plasteel/heavymetal/var2
+
+/turf/open/floor/plasteel/heavymetal/var3
+	icon_state = "metal_4"
+	base_icon_state = "metal_4"
+	floor_tile = /obj/item/stack/tile/plasteel/heavymetal/var3
+
+/turf/open/floor/plasteel/heavymetal/var4
+	icon_state = "metal_5"
+	base_icon_state = "metal_5"
+	floor_tile = /obj/item/stack/tile/plasteel/heavymetal/var4
+
+/turf/open/floor/plasteel/heavymetal/var5
+	icon_state = "metal_6"
+	base_icon_state = "metal_6"
+	floor_tile = /obj/item/stack/tile/plasteel/heavymetal/var5
