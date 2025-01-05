@@ -777,7 +777,9 @@
 /area/ship/crew/dorm)
 "fN" = (
 /obj/machinery/light/directional/east,
-/obj/structure/closet/crate/engineering,
+/obj/structure/closet/crate/engineering{
+	name = "fuel crate"
+	},
 /obj/item/stack/sheet/mineral/plasma/fifty,
 /obj/item/stack/sheet/mineral/uranium/twenty,
 /obj/item/stack/sheet/mineral/uranium/ten,
@@ -1549,7 +1551,7 @@
 /area/ship/science)
 "nV" = (
 /obj/structure/closet/wall/red{
-	name = "Clothes locker";
+	name = "clothes locker";
 	pixel_y = 28;
 	pixel_x = 1;
 	dir = 1
@@ -1810,7 +1812,8 @@
 	dir = 4
 	},
 /obj/item/bedsheet/rd{
-	dir = 4
+	dir = 4;
+	name = "research head's bedsheet"
 	},
 /turf/open/floor/carpet/purple,
 /area/ship/general/command_crew/rd)
@@ -2087,7 +2090,9 @@
 	dir = 4
 	},
 /obj/structure/curtain/cloth/fancy,
-/obj/item/bedsheet/ce,
+/obj/item/bedsheet/ce{
+	name = "chief engineering specialist's bedsheet"
+	},
 /turf/open/floor/carpet/orange,
 /area/ship/bridge)
 "sj" = (
@@ -2749,6 +2754,15 @@
 /obj/item/clothing/shoes/combat,
 /obj/item/clothing/glasses/welding,
 /obj/item/clothing/glasses/meson,
+/obj/item/gun/ballistic/automatic/pistol/commander/no_mag,
+/obj/item/ammo_box/magazine/co9mm{
+	pixel_y = -1;
+	pixel_x = -2
+	},
+/obj/item/ammo_box/magazine/co9mm{
+	pixel_y = -1;
+	pixel_x = -2
+	},
 /turf/open/floor/plating/ship,
 /area/ship/general/engineering/engineering_1)
 "xL" = (
@@ -3240,7 +3254,6 @@
 /obj/item/reagent_containers/condiment/flour,
 /obj/item/reagent_containers/condiment/flour,
 /obj/item/reagent_containers/condiment/flour,
-/obj/item/gun/ballistic/shotgun/doublebarrel,
 /obj/effect/turf_decal/siding/wood{
 	dir = 10
 	},
@@ -4456,7 +4469,9 @@
 /obj/effect/turf_decal/corner/opaque/mauve{
 	dir = 8
 	},
-/obj/structure/closet/wall/directional/west,
+/obj/structure/closet/wall/directional/west{
+	name = "ship scientist's locker"
+	},
 /obj/item/clothing/gloves/color/latex,
 /obj/item/clothing/suit/toggle/labcoat/science,
 /obj/item/clothing/under/rank/rnd/scientist,
@@ -4674,7 +4689,7 @@
 "MY" = (
 /obj/structure/closet/secure_closet{
 	icon_state = "brig_phys";
-	name = "Field surgeon locker"
+	name = "medical specialist's locker"
 	},
 /obj/item/clothing/under/rank/medical/paramedic/emt,
 /obj/item/clothing/under/rank/medical/paramedic/emt/skirt,
@@ -5109,7 +5124,7 @@
 /obj/structure/closet/secure_closet{
 	anchored = 1;
 	icon_state = "ce";
-	name = "operations chief's locker";
+	name = "medical specialist's locker";
 	req_one_access_txt = list(50, 10, 5, 1, 20)
 	},
 /obj/item/pipe_dispenser,
@@ -5616,7 +5631,7 @@
 /area/ship/general/engineering/engineering_1)
 "UF" = (
 /obj/machinery/door/airlock/command{
-	name = "Engineering Head's Quarters";
+	name = "Chief Engineering Specialist's Quarters";
 	dir = 2;
 	req_one_access_txt = list(50, 10, 5, 1, 20)
 	},
@@ -5797,7 +5812,9 @@
 /obj/item/clothing/under/rank/prisoner,
 /obj/item/card/id/prisoner/two,
 /obj/item/clothing/under/rank/prisoner,
-/obj/structure/closet/secure_closet/empty/warden,
+/obj/structure/closet/secure_closet/empty/warden{
+	name = "prison equipment locker"
+	},
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/hangar/plasteel,
 /area/ship/security/prison)
