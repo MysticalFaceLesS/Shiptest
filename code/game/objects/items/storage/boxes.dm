@@ -478,12 +478,7 @@
 	name = "box of paper cups"
 	desc = "It has pictures of paper cups on the front."
 	illustration = "cup"
-// [CELADON-EDIT]
-/obj/item/storage/box/donkpockets/ComponentInitialize()
-	. = ..()
-	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.set_holdable(list(/obj/item/reagent_containers/food/snacks/donkpocket))
-// [/CELADON-EDIT]
+
 /obj/item/storage/box/cups/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/reagent_containers/food/drinks/sillycup(src)
@@ -494,7 +489,12 @@
 	icon_state = "donkpocketbox"
 	illustration=null
 	var/donktype = /obj/item/reagent_containers/food/snacks/donkpocket
-
+// [CELADON-EDIT]
+/obj/item/storage/box/donkpockets/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.set_holdable(list(/obj/item/reagent_containers/food/snacks/donkpocket))
+// [/CELADON-EDIT]
 /obj/item/storage/box/donkpockets/PopulateContents()
 	for(var/i in 1 to 6)
 		new donktype(src)
