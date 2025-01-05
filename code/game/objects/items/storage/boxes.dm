@@ -41,9 +41,11 @@
 /obj/item/storage/box/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.storage_flags = STORAGE_FLAGS_VOLUME_DEFAULT
-	STR.max_volume = STORAGE_VOLUME_CONTAINER_S
-	STR.max_w_class = WEIGHT_CLASS_SMALL
+	// [CELADON-EDIT]
+	//STR.storage_flags = STORAGE_FLAGS_VOLUME_DEFAULT
+	//STR.max_volume = STORAGE_VOLUME_CONTAINER_S
+	//STR.max_w_class = WEIGHT_CLASS_SMALL
+	// [/CELADON-EDIT]
 	STR.use_sound = 'sound/items/storage/briefcase.ogg'
 
 /obj/item/storage/box/update_overlays()
@@ -476,7 +478,12 @@
 	name = "box of paper cups"
 	desc = "It has pictures of paper cups on the front."
 	illustration = "cup"
-
+// [CELADON-EDIT]
+/obj/item/storage/box/donkpockets/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.set_holdable(list(/obj/item/reagent_containers/food/snacks/donkpocket))
+// [/CELADON-EDIT]
 /obj/item/storage/box/cups/PopulateContents()
 	for(var/i in 1 to 7)
 		new /obj/item/reagent_containers/food/drinks/sillycup(src)
@@ -511,7 +518,13 @@
 	name = "box of gondola-flavoured donk-pockets"
 	icon_state = "donkpocketboxgondola"
 	donktype = /obj/item/reagent_containers/food/snacks/donkpocket/gondola
-
+// [CELADON-EDIT]
+/obj/item/storage/box/monkeycubes/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 7
+	STR.set_holdable(list(/obj/item/reagent_containers/food/snacks/monkeycube))
+// [/CELADON-EDIT]
 /obj/item/storage/box/donkpockets/donkpocketberry
 	name = "box of berry-flavoured donk-pockets"
 	icon_state = "donkpocketboxberry"
@@ -528,7 +541,13 @@
 	icon_state = "monkeycubebox"
 	illustration = null
 	var/cube_type = /obj/item/reagent_containers/food/snacks/monkeycube
-
+// [CELADON-EDIT]
+/obj/item/storage/box/gorillacubes/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 3
+	STR.set_holdable(list(/obj/item/reagent_containers/food/snacks/monkeycube))
+// [/CELADON-EDIT]
 /obj/item/storage/box/monkeycubes/PopulateContents()
 	for(var/i in 1 to 5)
 		new cube_type(src)
@@ -673,7 +692,13 @@
 	desc = "Eight wrappers of fun! Ages 8 and up. Not suitable for children."
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "spbox"
-
+	// [CELADON-EDIT]
+/obj/item/storage/box/snappops/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.set_holdable(list(/obj/item/toy/snappop))
+	STR.max_items = 8
+// [/CELADON-EDIT]
 /obj/item/storage/box/snappops/PopulateContents()
 	SEND_SIGNAL(src, COMSIG_TRY_STORAGE_FILL_TYPE, /obj/item/toy/snappop)
 
@@ -688,7 +713,13 @@
 	drop_sound = 'sound/items/handling/matchbox_drop.ogg'
 	pickup_sound =  'sound/items/handling/matchbox_pickup.ogg'
 	custom_price = 2
-
+// [CELADON-EDIT]
+/obj/item/storage/box/matches/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 10
+	STR.set_holdable(list(/obj/item/match))
+// [/CELADON-EDIT]
 /obj/item/storage/box/matches/PopulateContents()
 	SEND_SIGNAL(src, COMSIG_TRY_STORAGE_FILL_TYPE, /obj/item/match)
 
@@ -1464,8 +1495,10 @@
 /obj/item/storage/box/gum/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_volume = (STORAGE_VOLUME_CONTAINER_S / 2)
-
+// [CELADON-EDIT]
+	STR.set_holdable(list(/obj/item/reagent_containers/food/snacks/chewable/bubblegum))
+	STR.max_items = 4
+// [/CELADON-EDIT]
 /obj/item/storage/box/gum/PopulateContents()
 	for(var/i in 1 to 4)
 		new/obj/item/reagent_containers/food/snacks/chewable/bubblegum(src)
