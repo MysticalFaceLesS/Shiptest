@@ -1,10 +1,5 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "b" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 1;
-	pixel_x = 0;
-	pixel_y = 5
-	},
 /obj/effect/turf_decal/siding/red{
 	dir = 2;
 	color = "#212d60"
@@ -14,6 +9,9 @@
 	},
 /obj/effect/turf_decal/trimline/opaque/ntblue,
 /obj/machinery/power/apc/auto_name/directional/south,
+/obj/structure/chair/comfy/shuttle{
+	dir = 1
+	},
 /turf/open/floor/plasteel/lightdark,
 /area/ship/bridge)
 "c" = (
@@ -27,12 +25,6 @@
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
 "f" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 4;
-	pixel_x = 0;
-	pixel_y = 6;
-	name = "Kovrik"
-	},
 /obj/structure/closet/secure_closet/wall/directional/north{
 	icon_state = "sec_wall";
 	pixel_x = 0;
@@ -52,9 +44,13 @@
 	pixel_y = 24
 	},
 /obj/effect/turf_decal/trimline/opaque/ntblue,
-/obj/item/reagent_containers/hypospray/medipen,
-/obj/item/reagent_containers/hypospray/medipen,
-/obj/item/reagent_containers/hypospray/medipen,
+/obj/structure/chair/comfy/shuttle{
+	dir = 4;
+	name = "subshuttle kovrik"
+	},
+/obj/item/storage/firstaid,
+/obj/item/reagent_containers/hypospray/medipen/anti_rad,
+/obj/item/reagent_containers/hypospray/medipen/anti_rad,
 /turf/open/floor/plasteel/lightdark,
 /area/ship/bridge)
 "h" = (
@@ -211,7 +207,6 @@
 	dir = 8;
 	color = "#212d60"
 	},
-/obj/structure/closet/emcloset/wall/directional/west,
 /obj/effect/turf_decal/trimline/opaque/ntblue,
 /obj/item/tank/internals/emergency_oxygen/double,
 /obj/item/tank/internals/emergency_oxygen/double,
@@ -219,21 +214,9 @@
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/mask/breath,
-/turf/open/floor/plasteel/lightdark,
-/area/ship/bridge)
-"A" = (
-/obj/effect/turf_decal/siding/red{
-	dir = 1;
-	color = "#212d60"
-	},
-/obj/effect/turf_decal/trimline/opaque/ntblue,
-/obj/structure/chair/comfy/shuttle{
-	dir = 2;
-	pixel_x = 0;
-	pixel_y = 7
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
+/obj/structure/closet/wall/chem/directional/west{
+	icon_state = "emergency_wall";
+	name = "internals closet"
 	},
 /turf/open/floor/plasteel/lightdark,
 /area/ship/bridge)
@@ -271,20 +254,13 @@
 	dir = 2;
 	color = "#212d60"
 	},
-/obj/structure/chair/comfy/shuttle{
-	dir = 1;
-	pixel_x = 0;
-	pixel_y = 5
-	},
 /obj/effect/turf_decal/trimline/opaque/ntblue,
+/obj/structure/chair/comfy/shuttle{
+	dir = 1
+	},
 /turf/open/floor/plasteel/lightdark,
 /area/ship/bridge)
 "H" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 2;
-	pixel_x = 0;
-	pixel_y = 7
-	},
 /obj/effect/turf_decal/siding/red{
 	dir = 1;
 	color = "#212d60"
@@ -296,6 +272,11 @@
 /obj/effect/turf_decal/trimline/opaque/ntblue,
 /obj/structure/cable{
 	icon_state = "4-8"
+	},
+/obj/structure/chair/comfy/shuttle{
+	dir = 2;
+	pixel_x = 1;
+	pixel_y = 6
 	},
 /turf/open/floor/plasteel/lightdark,
 /area/ship/bridge)
@@ -399,9 +380,7 @@
 	},
 /obj/effect/turf_decal/trimline/opaque/ntblue,
 /obj/structure/chair/comfy/shuttle{
-	dir = 1;
-	pixel_x = 0;
-	pixel_y = 5
+	dir = 1
 	},
 /turf/open/floor/plasteel/lightdark,
 /area/ship/bridge)
@@ -409,11 +388,6 @@
 /turf/template_noop,
 /area/template_noop)
 "S" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 2;
-	pixel_x = 1;
-	pixel_y = 6
-	},
 /obj/effect/turf_decal/siding/red{
 	dir = 1;
 	color = "#212d60"
@@ -421,6 +395,11 @@
 /obj/effect/turf_decal/trimline/opaque/ntblue,
 /obj/structure/cable{
 	icon_state = "4-8"
+	},
+/obj/structure/chair/comfy/shuttle{
+	dir = 2;
+	pixel_x = 1;
+	pixel_y = 6
 	},
 /turf/open/floor/plasteel/lightdark,
 /area/ship/bridge)
@@ -471,11 +450,6 @@
 /turf/open/floor/plasteel/lightdark,
 /area/ship/bridge)
 "W" = (
-/obj/structure/chair/comfy/shuttle{
-	dir = 4;
-	pixel_x = 0;
-	pixel_y = 7
-	},
 /obj/effect/turf_decal/siding/red{
 	dir = 2;
 	color = "#212d60";
@@ -498,6 +472,9 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/trimline/opaque/ntblue,
+/obj/structure/chair/comfy/shuttle{
+	dir = 4
+	},
 /turf/open/floor/plasteel/lightdark,
 /area/ship/bridge)
 
@@ -528,7 +505,7 @@ c
 (4,1,1) = {"
 c
 h
-A
+S
 F
 h
 c
