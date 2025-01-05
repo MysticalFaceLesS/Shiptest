@@ -5110,7 +5110,7 @@
 	anchored = 1;
 	icon_state = "ce";
 	name = "operations chief's locker";
-	req_access_txt = "56"
+	req_one_access_txt = list(50, 10, 5, 1, 20)
 	},
 /obj/item/pipe_dispenser,
 /obj/item/construction/rcd,
@@ -5349,8 +5349,8 @@
 	},
 /obj/machinery/door/airlock/command{
 	name = "Bridge";
-	req_access_txt = "19";
-	dir = 4
+	dir = 4;
+	req_one_access_txt = list(50, 10, 5, 1, 20)
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
@@ -5617,8 +5617,8 @@
 "UF" = (
 /obj/machinery/door/airlock/command{
 	name = "Engineering Head's Quarters";
-	req_access_txt = "19";
-	dir = 2
+	dir = 2;
+	req_one_access_txt = list(50, 10, 5, 1, 20)
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
