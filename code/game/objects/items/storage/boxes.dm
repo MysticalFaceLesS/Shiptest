@@ -518,13 +518,7 @@
 	name = "box of gondola-flavoured donk-pockets"
 	icon_state = "donkpocketboxgondola"
 	donktype = /obj/item/reagent_containers/food/snacks/donkpocket/gondola
-// [CELADON-EDIT]
-/obj/item/storage/box/monkeycubes/ComponentInitialize()
-	. = ..()
-	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 7
-	STR.set_holdable(list(/obj/item/reagent_containers/food/snacks/monkeycube))
-// [/CELADON-EDIT]
+
 /obj/item/storage/box/donkpockets/donkpocketberry
 	name = "box of berry-flavoured donk-pockets"
 	icon_state = "donkpocketboxberry"
@@ -542,10 +536,10 @@
 	illustration = null
 	var/cube_type = /obj/item/reagent_containers/food/snacks/monkeycube
 // [CELADON-EDIT]
-/obj/item/storage/box/gorillacubes/ComponentInitialize()
+/obj/item/storage/box/monkeycubes/ComponentInitialize()
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
-	STR.max_items = 3
+	STR.max_items = 7
 	STR.set_holdable(list(/obj/item/reagent_containers/food/snacks/monkeycube))
 // [/CELADON-EDIT]
 /obj/item/storage/box/monkeycubes/PopulateContents()
@@ -561,6 +555,13 @@
 	desc = "Waffle Co. brand gorilla cubes. Do not taunt."
 	icon_state = "monkeycubebox"
 	illustration = null
+// [CELADON-EDIT]
+/obj/item/storage/box/gorillacubes/ComponentInitialize()
+	. = ..()
+	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
+	STR.max_items = 3
+	STR.set_holdable(list(/obj/item/reagent_containers/food/snacks/monkeycube))
+// [/CELADON-EDIT]
 
 /obj/item/storage/box/gorillacubes/PopulateContents()
 	for(var/i in 1 to 3)
