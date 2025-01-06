@@ -12,11 +12,12 @@
 	gun_firemodes = list(FIREMODE_FULLAUTO)
 	default_firemode = FIREMODE_FULLAUTO
 
+	wield_slowdown = HMG_SLOWDOWN
+
 	spread = 4
 	spread_unwielded = 80
 	recoil = 1
 	recoil_unwielded = 4
-	wield_slowdown = 3
 
 	gunslinger_recoil_bonus = 2
 	gunslinger_spread_bonus = 20
@@ -64,6 +65,22 @@
 	else
 		retract_bipod(user=user)
 
+/obj/item/gun/ballistic/automatic/hmg/calculate_recoil(mob/user, recoil_bonus = 0)
+	var/total_recoil = recoil_bonus
+
+	if(bipod_deployed)
+		total_recoil += deploy_recoil_bonus
+
+	return ..(user, total_recoil)
+
+/obj/item/gun/ballistic/automatic/hmg/calculate_spread(mob/user, bonus_spread)
+	var/total_spread = bonus_spread
+
+	if(bipod_deployed)
+		total_spread += deploy_spread_bonus
+
+	return ..(user, total_spread)
+
 /obj/item/gun/ballistic/automatic/hmg/proc/deploy_bipod(mob/user)
 	//we check if we can actually deploy the thing
 	var/can_deploy = TRUE
@@ -91,7 +108,7 @@
 	if(!can_deploy)
 		to_chat(user, "<span class='warning'>You need to brace against something to deploy [src]'s bipod! Either lie on the floor or stand next to a waist high object like a table!</span>")
 		return
-	if(!do_after(user, deploy_time, src, FALSE, TRUE, CALLBACK(src, PROC_REF(is_wielded))))
+	if(!do_after(user, deploy_time, src, NONE, TRUE, CALLBACK(src, PROC_REF(is_wielded))))
 		to_chat(user, "<span class='warning'>You need to hold still to deploy [src]'s bipod!</span>")
 		return
 	playsound(src, 'sound/machines/click.ogg', 75, TRUE)
@@ -139,7 +156,10 @@
 	icon_state = "solar"
 
 	fire_sound = 'sound/weapons/gun/l6/shot.ogg'
-	mag_type = /obj/item/ammo_box/magazine/rifle47x33mm
+	default_ammo_type = /obj/item/ammo_box/magazine/rifle47x33mm
+	allowed_ammo_types = list(
+		/obj/item/ammo_box/magazine/rifle47x33mm,
+	)
 	spread = 7
 
 	fire_delay = 0.1 SECONDS
@@ -178,7 +198,10 @@
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	manufacturer = MANUFACTURER_IMPORT
-	mag_type = /obj/item/ammo_box/magazine/skm_762_40
+	default_ammo_type = /obj/item/ammo_box/magazine/skm_762_40
+	allowed_ammo_types = list(
+		/obj/item/ammo_box/magazine/skm_762_40,
+	)
 
 	fire_delay = 0.13 SECONDS
 
@@ -188,7 +211,7 @@
 	recoil = 1 //identical to other LMGS
 	recoil_unwielded = 4 //same as skm
 
-	wield_slowdown = 1 //not as severe as other lmgs, but worse than the normal skm
+	wield_slowdown = SAW_SLOWDOWN //not as severe as other lmgs, but worse than the normal skm
 	wield_delay = 0.85 SECONDS //faster than normal lmgs, slower than stock skm
 
 	has_bipod = TRUE
@@ -198,17 +221,7 @@
 	AddElement(/datum/element/update_icon_updates_onmob)
 
 /obj/item/gun/ballistic/automatic/hmg/skm_lmg/extended //spawns with the proper extended magazine, for erts
-	spawnwithmagazine = FALSE
-
-/obj/item/gun/ballistic/automatic/hmg/skm_lmg/extended/Initialize()
-	. = ..()
-	magazine = new /obj/item/ammo_box/magazine/skm_762_40/extended(src)
-	chamber_round()
+	default_ammo_type = /obj/item/ammo_box/magazine/skm_762_40/extended
 
 /obj/item/gun/ballistic/automatic/hmg/skm_lmg/drum_mag //spawns with a drum, maybe not for erts but admin enhanced ERTS? when things really go to shit
-	spawnwithmagazine = FALSE
-
-/obj/item/gun/ballistic/automatic/hmg/skm_lmg/drum_mag/Initialize()
-	. = ..()
-	magazine = new /obj/item/ammo_box/magazine/skm_762_40/drum(src)
-	chamber_round()
+	default_ammo_type = /obj/item/ammo_box/magazine/skm_762_40/drum

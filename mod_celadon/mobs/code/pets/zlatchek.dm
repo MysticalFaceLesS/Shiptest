@@ -3,7 +3,7 @@
 	real_name = "Zlat"
 	gender = MALE
 	desc = "A happy coyote, in a green officer's cap with the name Zlat written on the back."
-	gold_core_spawnable = NO_SPAWN
+	// gold_core_spawnable = NO_SPAWN
 	unique_pet = TRUE
 	icon_state = "zlat"
 	icon_living = "zlat"

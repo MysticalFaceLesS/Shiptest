@@ -81,3 +81,8 @@
 	var/obj/effect/abstract/particle_holder/blood_particle
 
 	COOLDOWN_DECLARE(bloodloss_message)
+
+// [CELADON-ADD] - CELADON_EMOTES
+/mob/living/carbon/human/proc/get_age_pitch(species_pitch = 85)
+	return 1.0 + 0.5 * ((species_pitch * 0.35) - age) / (0.94 * species_pitch)
+// [/CELADON-ADD]

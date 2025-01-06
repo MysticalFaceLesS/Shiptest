@@ -10,9 +10,15 @@
 
 	weapon_weight = WEAPON_HEAVY
 	slot_flags = ITEM_SLOT_BACK
-	mag_type = /obj/item/ammo_box/magazine/saiga
+
+	default_ammo_type = /obj/item/ammo_box/magazine/saiga
+	allowed_ammo_types = list(
+		/obj/item/ammo_box/magazine/zip_ammo_9mm,
+	)
+
 	fire_sound = 'sound/weapons/gun/shotgun/bulldog.ogg'
 	show_magazine_on_sprite = TRUE
+	unique_mag_sprites_for_variants = TRUE
 	show_ammo_capacity_on_magazine_sprite = FALSE
 	internal_magazine = FALSE
 	casing_ejector = TRUE
@@ -47,7 +53,7 @@
 /obj/item/gun/ballistic/automatic/assault/saiga/Initialize()
 	. = ..()
 
-/obj/item/gun/ballistic/automatic/assault/saiga/no_mag
-	spawnwithmagazine = FALSE
+// /obj/item/gun/ballistic/automatic/assault/saiga/no_mag
+// 	spawnwithmagazine = FALSE
 
 EMPTY_GUN_HELPER(automatic/assault/saiga)

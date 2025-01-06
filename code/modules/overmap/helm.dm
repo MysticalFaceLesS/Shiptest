@@ -262,7 +262,15 @@
 				ref = REF(engine)
 			)
 		.["engineInfo"] += list(engine_data)
-
+	// [CELADON-ADD] - subshuttles fix
+	.["motheroutpost"] = null
+	.["issubshuttle"] = null
+	if(current_ship.source_template.parent_type == /datum/map_template/shuttle/subshuttles)
+		.["issubshuttle"] = "true"
+		current_ship.sensor_range = 3
+		if(current_ship.docked_to.docked_to.parent_type == /datum/overmap/outpost)
+			.["motheroutpost"] = "true"
+	// [/CELADON-ADD] - subshuttles fix
 /obj/machinery/computer/helm/ui_static_data(mob/user)
 	. = list()
 	.["isViewer"] = viewer || (!allow_ai_control && issilicon(user))
@@ -424,7 +432,7 @@
 	// Unregister map objects
 	if(current_ship)
 		user.client?.clear_map(current_ship.token.map_name)
-		if(current_ship.burn_direction > BURN_NONE && !length(concurrent_users) && !viewer) // If accelerating with nobody else to stop it
+		if(current_ship.burn_direction > BURN_NONE && !length(concurrent_users) && !viewer && is_living) // If accelerating with nobody else to stop it
 			say("Pilot absence detected, engaging acceleration safeties.")
 			current_ship.change_heading(BURN_NONE)
 

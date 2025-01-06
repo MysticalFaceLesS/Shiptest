@@ -23,10 +23,10 @@
 /area/ruin/unpowered)
 "e" = (
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/donkpockets,
-/obj/effect/spawner/lootdrop/donkpockets,
-/obj/effect/spawner/lootdrop/donkpockets,
-/obj/effect/spawner/lootdrop/donkpockets,
+/obj/effect/spawner/random/food_or_drink/donkpockets,
+/obj/effect/spawner/random/food_or_drink/donkpockets,
+/obj/effect/spawner/random/food_or_drink/donkpockets,
+/obj/effect/spawner/random/food_or_drink/donkpockets,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
 /area/ruin/unpowered)
@@ -126,14 +126,21 @@
 /area/ruin/unpowered)
 "t" = (
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/minor/kittyears_or_rabbitears,
-/obj/effect/spawner/lootdrop/minor/kittyears_or_rabbitears,
+/obj/effect/spawner/random/clothing/kittyears_or_rabbitears,
+/obj/effect/spawner/random/clothing/kittyears_or_rabbitears,
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "u" = (
 /obj/structure/table/reinforced,
 /obj/effect/decal/cleanable/dirt,
 /turf/open/floor/wood,
+/area/ruin/unpowered)
+"v" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/human/hermit/ranged,
+/turf/open/floor/wood{
+	icon_state = "wood-broken7"
+	},
 /area/ruin/unpowered)
 "w" = (
 /obj/structure/window,
@@ -156,6 +163,7 @@
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "z" = (
+/mob/living/simple_animal/hostile/human/hermit/ranged,
 /turf/open/floor/wood{
 	icon_state = "wood-broken5"
 	},
@@ -176,8 +184,8 @@
 	},
 /area/ruin/unpowered)
 "E" = (
-/obj/effect/spawner/lootdrop/costume,
-/obj/effect/spawner/lootdrop/gloves,
+/obj/effect/spawner/random/clothing/costume,
+/obj/effect/spawner/random/clothing/gloves,
 /obj/structure/window,
 /obj/structure/rack,
 /turf/open/floor/wood,
@@ -195,7 +203,7 @@
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "G" = (
-/obj/effect/spawner/lootdrop/costume,
+/obj/effect/spawner/random/clothing/costume,
 /obj/structure/window,
 /obj/structure/rack,
 /turf/open/floor/wood,
@@ -231,8 +239,8 @@
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "M" = (
-/obj/effect/spawner/lootdrop/costume,
-/obj/effect/spawner/lootdrop/gloves,
+/obj/effect/spawner/random/clothing/costume,
+/obj/effect/spawner/random/clothing/gloves,
 /obj/item/shard{
 	icon_state = "tiny"
 	},
@@ -244,6 +252,7 @@
 "N" = (
 /obj/structure/bed,
 /obj/item/bedsheet/dorms,
+/mob/living/simple_animal/hostile/human/hermit/ranged,
 /turf/open/floor/wood,
 /area/ruin/unpowered)
 "O" = (
@@ -275,7 +284,7 @@
 /turf/template_noop,
 /area/template_noop)
 "T" = (
-/obj/machinery/vending/cola/random,
+/obj/effect/spawner/random/vending/cola,
 /obj/machinery/light/directional/west,
 /turf/open/floor/wood,
 /area/ruin/unpowered)
@@ -359,7 +368,7 @@ G
 (7,1,1) = {"
 s
 F
-H
+v
 V
 b
 e

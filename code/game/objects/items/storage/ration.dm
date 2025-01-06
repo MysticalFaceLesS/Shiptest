@@ -28,10 +28,9 @@
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 7
-	// [CELADON-EDIT] - CELADON_QOL
-	// STR.set_holdable(list(/obj/item/reagent_containers/food)) // CELADON-EDIT - ORIGINAL
-	STR.set_holdable(list(/obj/item/reagent_containers/food, /obj/item/ration_heater))
-	// [/CELADON-EDIT]
+	STR.set_holdable(list(
+		/obj/item/reagent_containers/food,
+		/obj/item/ration_heater))
 	STR.locked = TRUE
 	STR.locked_flavor = "sealed closed"
 

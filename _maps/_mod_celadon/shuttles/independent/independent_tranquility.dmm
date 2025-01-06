@@ -1149,12 +1149,17 @@
 /area/ship/hallway/starboard)
 "ld" = (
 /obj/structure/closet/crate/hydroponics,
-/obj/effect/spawner/lootdrop/seeded,
-/obj/effect/spawner/lootdrop/seeded,
-/obj/effect/spawner/lootdrop/seeded,
-/obj/effect/spawner/lootdrop/seeded,
 /obj/item/seeds/random,
 /obj/machinery/light/directional/east,
+/obj/item/seeds/whitebeet,
+/obj/item/seeds/wheat/rice,
+/obj/item/seeds/wheat/oat,
+/obj/item/seeds/wheat,
+/obj/item/seeds/watermelon,
+/obj/item/seeds/tomato,
+/obj/item/seeds/potato,
+/obj/item/seeds/pumpkin,
+/obj/item/seeds/lemon,
 /turf/open/floor/grass,
 /area/ship/crew/hydroponics)
 "lf" = (
@@ -2494,7 +2499,9 @@
 /turf/open/floor/plating,
 /area/ship/crew)
 "vj" = (
-/obj/machinery/vending/boozeomat,
+/obj/machinery/vending/boozeomat{
+	all_items_free = 1
+	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/crew/canteen)
 "vl" = (
@@ -2907,7 +2914,9 @@
 /turf/open/floor/plasteel/white,
 /area/ship/crew)
 "yC" = (
-/obj/machinery/vending/hydronutrients,
+/obj/machinery/vending/hydronutrients{
+	all_items_free = 1
+	},
 /obj/machinery/light/directional/east,
 /turf/open/floor/grass,
 /area/ship/crew/hydroponics)
@@ -3329,9 +3338,6 @@
 	pixel_x = -7;
 	pixel_y = 1
 	},
-/obj/machinery/light/dim/directional/north{
-	dir = 4
-	},
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/crew/crewfour)
@@ -3606,7 +3612,9 @@
 /turf/open/floor/carpet,
 /area/ship/crew/dorm)
 "DC" = (
-/obj/machinery/vending/autodrobe,
+/obj/machinery/vending/autodrobe{
+	all_items_free = 1
+	},
 /obj/item/reagent_containers/food/snacks/customizable/cheesewheel,
 /obj/effect/turf_decal/siding/wood/end{
 	dir = 1
@@ -3768,7 +3776,9 @@
 /obj/effect/turf_decal/corner/transparent/bar{
 	dir = 8
 	},
-/obj/machinery/vending/dinnerware,
+/obj/machinery/vending/dinnerware{
+	all_items_free = 1
+	},
 /turf/open/floor/plasteel/white,
 /area/ship/crew/canteen)
 "EI" = (
@@ -4313,7 +4323,7 @@
 /obj/item/clothing/head/beret,
 /obj/item/clothing/under/color/jumpskirt/random,
 /obj/item/clothing/under/color/random,
-/obj/item/clothing/under/dress/skirt/red,
+/obj/item/clothing/under/dress/skirt/color/red,
 /obj/item/clothing/suit/longcoat,
 /obj/item/clothing/suit/jacket/letterman_red,
 /obj/item/clothing/head/wizard/marisa,
@@ -5195,7 +5205,9 @@
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ship/engineering/engine)
 "OS" = (
-/obj/machinery/vending/clothing,
+/obj/machinery/vending/clothing{
+	all_items_free = 1
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/cryo)
 "Pf" = (

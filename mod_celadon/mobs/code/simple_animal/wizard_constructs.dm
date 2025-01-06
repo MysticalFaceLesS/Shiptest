@@ -27,11 +27,11 @@
 	mob_size = MOB_SIZE_LARGE
 	force_threshold = 10
 	glowtheme = "wizard"
-	construct_spells = list(/obj/effect/proc_holder/spell/targeted/forcewall/,
-							/obj/effect/proc_holder/spell/targeted/projectile/dumbfire/juggernaut)
-	runetype = /datum/action/innate/cult/create_rune/wall
-	playstyle_string = "<b>You are a Juggernaut. Though slow, your shell can withstand heavy punishment, \
-						create shield walls, rip apart enemies and walls alike, and even deflect energy weapons.</b>"
+	// construct_spells = list(/obj/effect/proc_holder/spell/targeted/forcewall/,
+	// 						/obj/effect/proc_holder/spell/targeted/projectile/dumbfire/juggernaut)
+	// runetype = /datum/action/innate/cult/create_rune/wall
+	// playstyle_string = "<b>You are a Juggernaut. Though slow, your shell can withstand heavy punishment,
+						// create shield walls, rip apart enemies and walls alike, and even deflect energy weapons.</b>"
 
 /mob/living/simple_animal/hostile/construct/juggernaut/wizard/Initialize()
 	. = ..()
@@ -64,34 +64,34 @@
 	attack_verb_continuous = "slashes"
 	attack_verb_simple = "slash"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
-	construct_spells = list(/obj/effect/proc_holder/spell/targeted/ethereal_jaunt/shift)
-	runetype = /datum/action/innate/cult/create_rune/tele
-	playstyle_string = "<b>You are a Wraith. Though relatively fragile, you are fast, deadly, can phase through walls, and your attacks will lower the cooldown on phasing.</b>"
+	// construct_spells = list(/obj/effect/proc_holder/spell/targeted/ethereal_jaunt/shift)
+	// runetype = /datum/action/innate/cult/create_rune/tele
+	// playstyle_string = "<b>You are a Wraith. Though relatively fragile, you are fast, deadly, can phase through walls, and your attacks will lower the cooldown on phasing.</b>"
 	glowtheme = "wizard"
 
 /mob/living/simple_animal/hostile/construct/wraith/wizard/Initialize()
 	. = ..()
 	addtimer(CALLBACK(src, PROC_REF(death)), 100)
 
-/mob/living/simple_animal/hostile/construct/wraith/wizard/AttackingTarget() //refund jaunt cooldown when attacking living targets
-	var/prev_stat
-	if(isliving(target) && !iscultist(target))
-		var/mob/living/L = target
-		prev_stat = L.stat
+// /mob/living/simple_animal/hostile/construct/wraith/wizard/AttackingTarget() //refund jaunt cooldown when attacking living targets
+// 	var/prev_stat
+// 	if(isliving(target) && !iscultist(target))
+// 		var/mob/living/L = target
+// 		prev_stat = L.stat
 
-	. = ..()
+// 	. = ..()
 
-	if(. && isnum(prev_stat))
-		var/mob/living/L = target
-		var/refund = 0
-		if(QDELETED(L) || (L.stat == DEAD && prev_stat != DEAD)) //they're dead, you killed them
-			refund += kill_refund
-		else if(HAS_TRAIT(L, TRAIT_CRITICAL_CONDITION) && prev_stat == CONSCIOUS) //you knocked them into critical
-			refund += crit_refund
-		if(L.stat != DEAD && prev_stat != DEAD)
-			refund += attack_refund
-		for(var/obj/effect/proc_holder/spell/targeted/ethereal_jaunt/shift/S in mob_spell_list)
-			S.charge_counter = min(S.charge_counter + refund, S.charge_max)
+// 	if(. && isnum(prev_stat))
+// 		var/mob/living/L = target
+// 		var/refund = 0
+// 		if(QDELETED(L) || (L.stat == DEAD && prev_stat != DEAD)) //they're dead, you killed them
+// 			refund += kill_refund
+// 		else if(HAS_TRAIT(L, TRAIT_CRITICAL_CONDITION) && prev_stat == CONSCIOUS) //you knocked them into critical
+// 			refund += crit_refund
+// 		if(L.stat != DEAD && prev_stat != DEAD)
+// 			refund += attack_refund
+// 		for(var/obj/effect/proc_holder/spell/targeted/ethereal_jaunt/shift/S in mob_spell_list)
+// 			S.charge_counter = min(S.charge_counter + refund, S.charge_max)
 
 /mob/living/simple_animal/hostile/construct/wraith/wizard/hostile //actually hostile, will move around, hit things
 	AIStatus = AI_ON
@@ -150,18 +150,18 @@
 	environment_smash = ENVIRONMENT_SMASH_WALLS
 	attack_sound = 'sound/weapons/punch2.ogg'
 	glowtheme = "wizard"
-	construct_spells = list(/obj/effect/proc_holder/spell/aoe_turf/conjure/wall,
-							/obj/effect/proc_holder/spell/aoe_turf/conjure/floor,
-							/obj/effect/proc_holder/spell/aoe_turf/conjure/soulstone,
-							/obj/effect/proc_holder/spell/aoe_turf/conjure/construct/lesser,
-							/obj/effect/proc_holder/spell/targeted/projectile/magic_missile/lesser)
-	runetype = /datum/action/innate/cult/create_rune/revive
-	playstyle_string = "<b>You are an Artificer. You are incredibly weak and fragile, but you are able to construct fortifications, \
-						use magic missile, repair allied constructs, shades, and yourself (by clicking on them), \
-						<i>and, most important of all,</i> create new constructs by producing soulstones to capture souls, \
-						and shells to place those soulstones into.</b>"
-	can_repair_constructs = TRUE
-	can_repair_self = TRUE
+	// construct_spells = list(/obj/effect/proc_holder/spell/aoe_turf/conjure/wall,
+	// 						/obj/effect/proc_holder/spell/aoe_turf/conjure/floor,
+	// 						/obj/effect/proc_holder/spell/aoe_turf/conjure/soulstone,
+	// 						/obj/effect/proc_holder/spell/aoe_turf/conjure/construct/lesser,
+	// 						/obj/effect/proc_holder/spell/targeted/projectile/magic_missile/lesser)
+	// runetype = /datum/action/innate/cult/create_rune/revive
+	// playstyle_string = "<b>You are an Artificer. You are incredibly weak and fragile, but you are able to construct fortifications,
+						// use magic missile, repair allied constructs, shades, and yourself (by clicking on them),
+						// <i>and, most important of all,</i> create new constructs by producing soulstones to capture souls,
+						// and shells to place those soulstones into.</b>"
+	// can_repair_constructs = TRUE
+	// can_repair_self = TRUE
 
 /mob/living/simple_animal/hostile/construct/artificer/wizard/hostile //actually hostile, will move around, hit things, heal other constructs
 	AIStatus = AI_ON
@@ -186,8 +186,8 @@
 	attack_verb_simple = "butcher"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	glowtheme = "wizard"
-	construct_spells = list(/obj/effect/proc_holder/spell/aoe_turf/area_conversion,
-							/obj/effect/proc_holder/spell/targeted/forcewall/cult)
-	playstyle_string = "<B>You are a Harvester. You are incapable of directly killing humans, but your attacks will remove their limbs: \
-						Bring those who still cling to this world of illusion back to the Geometer so they may know Truth. Your form and any you are pulling can pass through runed walls effortlessly.</B>"
-	can_repair_constructs = TRUE
+	// construct_spells = list(/obj/effect/proc_holder/spell/aoe_turf/area_conversion,
+	// 						/obj/effect/proc_holder/spell/targeted/forcewall/cult)
+	// playstyle_string = "<B>You are a Harvester. You are incapable of directly killing humans, but your attacks will remove their limbs:
+	// 					Bring those who still cling to this world of illusion back to the Geometer so they may know Truth. Your form and any you are pulling can pass through runed walls effortlessly.</B>"
+	// can_repair_constructs = TRUE

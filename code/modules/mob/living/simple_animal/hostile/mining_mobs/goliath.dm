@@ -226,7 +226,6 @@
 			D.set_vehicle_dir_layer(NORTH, OBJ_LAYER)
 			D.set_vehicle_dir_layer(EAST, OBJ_LAYER)
 			D.set_vehicle_dir_layer(WEST, OBJ_LAYER)
-			D.keytype = /obj/item/key/lasso
 			D.drive_verb = "ride"
 		else
 			user.visible_message("<span class='warning'>[src] is rocking around! You can't put the saddle on!</span>")
@@ -318,7 +317,24 @@
 			new type(T, spawner)
 
 /obj/effect/temp_visual/goliath_tentacle/proc/get_directions()
-	return GLOB.cardinals.Copy()
+	// [CELADON-EDIT] - CELADON_BALANCE - Поднимаем разнообразие мобам
+	// return GLOB.cardinals.Copy()	// CELADON-EDIT - ORIGINAL
+	switch(rand(1,10))
+		if(1 to 2)
+			return GLOB.diagonals.Copy()
+		if(3 to 4)
+			return GLOB.cardinals.Copy()
+		if(5 to 6)
+			return GLOB.cardinals_multiz.Copy()
+		if(7)
+			return GLOB.onecardinalnorth.Copy()
+		if(8)
+			return GLOB.onecardinalsouth.Copy()
+		if(9)
+			return GLOB.onecardinaleast.Copy()
+		if(10)
+			return GLOB.onecardinalwest.Copy()
+	// [/CELADON-EDIT]
 
 /obj/effect/temp_visual/goliath_tentacle/proc/tripanim()
 	deltimer(timerid)

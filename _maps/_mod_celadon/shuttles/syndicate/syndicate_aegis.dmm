@@ -40,7 +40,6 @@
 	req_access_txt = "20"
 	},
 /obj/item/storage/belt/sabre,
-/obj/item/reagent_containers/glass/beaker/unholywater,
 /obj/item/clothing/mask/breath/suns,
 /obj/item/clothing/gloves/suns/captain,
 /obj/item/clothing/neck/cloak/suns/cap,
@@ -742,7 +741,7 @@
 /obj/item/stack/sheet/mineral/uranium/five{
 	pixel_x = 2
 	},
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
 /obj/structure/catwalk/over,
 /obj/effect/decal/cleanable/oil,
 /obj/item/stack/sheet/mineral/plasma/five,
@@ -869,9 +868,9 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 1
 	},
-/obj/effect/spawner/lootdrop/donkpockets,
-/obj/effect/spawner/lootdrop/donkpockets,
-/obj/effect/spawner/lootdrop/donkpockets,
+/obj/effect/spawner/random/food_or_drink/donkpockets,
+/obj/effect/spawner/random/food_or_drink/donkpockets,
+/obj/effect/spawner/random/food_or_drink/donkpockets,
 /obj/effect/turf_decal/trimline/opaque/brown/filled/line,
 /obj/structure/table/wood/reinforced,
 /obj/item/food/cake/bscc{
@@ -1971,8 +1970,8 @@
 /area/ship/engineering)
 "qA" = (
 /obj/structure/closet/crate,
-/obj/effect/spawner/lootdrop/maintenance/three,
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
 /obj/effect/decal/cleanable/plasma,
 /obj/effect/decal/cleanable/glass,
 /obj/item/circuitboard/machine/techfab/department/service,
@@ -2107,7 +2106,6 @@
 /obj/item/clothing/shoes/laceup/suns,
 /obj/item/clothing/mask/surgical,
 /obj/item/clothing/head/suns/surgery,
-/obj/item/storage/backpack/duffelbag/med/surgery,
 /obj/item/hypospray/mkii,
 /obj/item/storage/firstaid/regular,
 /obj/item/clothing/shoes/sneakers/suns,
@@ -2122,6 +2120,7 @@
 /obj/item/clothing/suit/toggle/labcoat/suns/doctorlabcoat,
 /obj/item/defibrillator/loaded,
 /obj/item/flashlight/pen,
+/obj/item/storage/case/surgery,
 /turf/open/floor/plasteel/dark,
 /area/ship/medical)
 "rO" = (
@@ -3186,7 +3185,7 @@
 	pixel_x = 6
 	},
 /obj/item/stack/sheet/metal/fifty,
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
 /obj/structure/catwalk/over,
 /obj/item/circuitboard/machine/pacman,
 /obj/item/circuitboard/machine/pacman/super,
@@ -3612,7 +3611,6 @@
 	},
 /obj/item/hypospray/mkii,
 /obj/item/clothing/mask/surgical,
-/obj/item/storage/backpack/duffelbag/med/surgery,
 /obj/item/storage/firstaid/regular,
 /obj/item/clothing/glasses/hud/health/suns,
 /obj/item/clothing/head/suns/surgery,
@@ -3629,6 +3627,7 @@
 /obj/item/defibrillator/loaded,
 /obj/item/flashlight/pen,
 /obj/item/flashlight/pen,
+/obj/item/storage/case/surgery,
 /turf/open/floor/plasteel/dark,
 /area/ship/medical)
 "JY" = (
@@ -3747,8 +3746,8 @@
 /area/ship/crew/janitor)
 "KR" = (
 /obj/structure/closet/crate,
-/obj/effect/spawner/lootdrop/maintenance/three,
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
 /obj/effect/decal/cleanable/plasma,
 /obj/effect/decal/cleanable/glass,
 /obj/item/poster/random_contraband,
@@ -4402,7 +4401,7 @@
 /area/ship/engineering)
 "QN" = (
 /obj/machinery/airalarm/directional/north,
-/obj/machinery/vending/snack/random,
+/obj/effect/spawner/random/vending/snack,
 /obj/effect/turf_decal/box,
 /obj/machinery/light/directional/west,
 /turf/open/floor/mineral/plastitanium/red,
@@ -4545,9 +4544,9 @@
 	},
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/costume,
-/obj/effect/spawner/lootdrop/costume,
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/clothing/costume,
+/obj/effect/spawner/random/clothing/costume,
+/obj/effect/spawner/random/maintenance/three,
 /obj/effect/turf_decal/corner_techfloor_grid/diagonal{
 	dir = 4
 	},
@@ -4647,7 +4646,7 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/medical)
 "Tw" = (
-/obj/machinery/vending/snack/random,
+/obj/effect/spawner/random/vending/snack,
 /obj/effect/turf_decal/box,
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -4750,7 +4749,9 @@
 /turf/open/floor/wood/walnut,
 /area/ship/bridge)
 "Uu" = (
-/obj/machinery/vending/dinnerware,
+/obj/machinery/vending/dinnerware{
+	all_items_free = 1
+	},
 /obj/machinery/light/small/directional/south,
 /obj/effect/turf_decal/trimline/opaque/brown/filled/line,
 /turf/open/floor/plasteel/tech,

@@ -97,12 +97,18 @@ const SharedContent = (_props, context) => {
                 tooltip="Decrease Signal Length"
                 tooltipPosition="right"
                 icon="arrow-left"
+				// [CELADON-ADD] - subshuttle fix
+				disabled={data.issubshuttle != null}
+				// [/CELADON-ADD] - subshuttle fix
                 onClick={() => act('sensor_decrease')}
               />
               <Button
                 tooltip="Increase Signal Length"
                 tooltipPosition="right"
                 icon="arrow-right"
+				// [CELADON-ADD] - subshuttle fix
+				disabled={data.issubshuttle != null}
+				// [/CELADON-ADD] - subshuttle fix
                 onClick={() => act('sensor_increase')}
               />
             </Table.Cell>
@@ -334,7 +340,9 @@ const ShipControlContent = (_props, context) => {
             tooltip="Undock"
             tooltipPosition="left"
             icon="sign-out-alt"
-            disabled={!data.docked || data.docking}
+			// [CELADON-EDIT] - subshuttles fix
+            disabled={!data.docked || data.docking || data.motheroutpost != null}
+			// [/CELADON-EDIT] - subshuttles fix
             onClick={() => act('undock')}
           />
           <Button

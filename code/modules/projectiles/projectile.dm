@@ -73,7 +73,10 @@
 	/// number of times we've pierced something. Incremented BEFORE bullet_act and on_hit proc!
 	var/pierces = 0
 
-	var/speed = 0.8			//Amount of deciseconds it takes for projectile to travel
+	///Amount of deciseconds it takes for projectile to travel
+	var/speed = 0.8
+	///plus/minus modifier to projectile speed
+	var/speed_mod = 0
 	var/Angle = 0
 	var/original_angle = 0		//Angle at firing
 	var/nondirectional_sprite = FALSE //Set TRUE to prevent projectiles from having their sprites rotated based on firing angle
@@ -141,6 +144,7 @@
 	var/decayedRange			//stores original range
 	var/reflect_range_decrease = 5			//amount of original range that falls off when reflecting, so it doesn't go forever
 	var/reflectable = NONE // Can it be reflected or not?
+
 		//Effects
 	var/stun = 0
 	var/knockdown = 0
@@ -164,6 +168,7 @@
 
 	///If defined, on hit we create an item of this type then call hitby() on the hit target with this, mainly used for embedding items (bullets) in targets
 	var/shrapnel_type
+
 	///If TRUE, hit mobs even if they're on the floor and not our target
 	var/hit_stunned_targets = FALSE
 	/// If true directly targeted turfs can be hit
@@ -176,6 +181,7 @@
 /obj/projectile/Initialize()
 	. = ..()
 	decayedRange = range
+	speed = speed + speed_mod
 	AddElement(/datum/element/connect_loc, projectile_connections)
 
 /obj/projectile/proc/Range()
@@ -256,8 +262,8 @@
 			else
 
 				var/splatter_color = null
-				//if(iscarbon(L)
-				if((iscarbon(L)) && !HAS_TRAIT(L, NOBLOOD)) // [CELADON - EDIT] Lanius
+				if(iscarbon(L))
+				//if((iscarbon(L)) && !HAS_TRAIT(L, NOBLOOD)) // [CELADON - EDIT] Lanius
 					var/mob/living/carbon/carbon_target = L
 					splatter_color = carbon_target.dna.blood_type.color
 					new /obj/effect/temp_visual/dir_setting/bloodsplatter(target_loca, splatter_dir, splatter_color)
@@ -497,12 +503,26 @@
 			return FALSE
 	else
 		var/mob/living/L = target
-		if(direct_target)
+		// [CELADON-EDIT] - CELADON_BALANCE - Делаем шансы на попадания
+		if(iscarbon(L))
+			if(direct_target && !L.density && firer.density && prob(85)) // 85% что пуля попадет в лежащую цель от стоящего стрелка
+				return TRUE
+			if(direct_target && !L.density && !firer.density && prob(70)) // 70% что пуля попадет в лежащую цель от лежащего стрелка
+				return TRUE
+			if(direct_target && L.density && !firer.density && prob(90)) // 90% пуля попадет в стоящую цель от лежачего стрелка
+				return TRUE
+		else if(direct_target)
 			return TRUE
+		// [/CELADON-EDIT]
 		// If target not able to use items, move and stand - or if they're just dead, pass over.
 		if(L.stat || (!hit_stunned_targets && HAS_TRAIT(L, TRAIT_IMMOBILIZED) && HAS_TRAIT(L, TRAIT_FLOORED) && HAS_TRAIT(L, TRAIT_HANDS_BLOCKED)))
 			return FALSE
-	return TRUE
+	// [CELADON-EDIT] - CELADON_BALANCE - Делаем шансы на попадания
+	// return TRUE 	// CELADON-EDIT - ORIGINAL
+	if(prob(25))	// С вероятность 20% шальная пуля зацепит лежащего
+		return TRUE
+	return FALSE
+	// [/CELADON-EDIT]
 
 /**
  * Scan if we should hit something and hit it if we need to

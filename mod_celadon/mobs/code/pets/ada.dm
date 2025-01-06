@@ -3,7 +3,7 @@
 	real_name = "Ada"
 	gender = FEMALE
 	desc = "She will bite your throat till you die."
-	gold_core_spawnable = NO_SPAWN
+	// gold_core_spawnable = NO_SPAWN
 	unique_pet = TRUE
 	icon_state = "ada"
 	icon_living = "ada"

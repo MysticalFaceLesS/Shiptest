@@ -1009,6 +1009,13 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo)
+"gQ" = (
+/obj/machinery/porta_turret/ship/solfed/light{
+	dir = 6;
+	id = "inkwell_turrets"
+	},
+/turf/closed/wall/mineral/titanium,
+/area/ship/bridge)
 "gS" = (
 /obj/machinery/suit_storage_unit/solgov,
 /turf/open/floor/wood/walnut,
@@ -1096,8 +1103,9 @@
 /turf/open/floor/plasteel/mono,
 /area/ship/cargo)
 "hE" = (
-/obj/machinery/porta_turret/ship/faction/solgov{
-	dir = 6
+/obj/machinery/porta_turret/ship/solfed{
+	dir = 6;
+	id = "inkwell_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -1481,7 +1489,7 @@
 /area/ship/cargo)
 "jM" = (
 /obj/structure/closet/cardboard,
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
 /obj/effect/turf_decal/industrial/stand_clear,
 /turf/open/floor/plasteel/mono,
 /area/ship/cargo)
@@ -1747,9 +1755,10 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/turretid/lethal{
+/obj/machinery/turretid/ship{
 	pixel_y = 0;
-	pixel_x = -26
+	pixel_x = -26;
+	id = "inkwell_turrets"
 	},
 /obj/machinery/newscaster/directional/west{
 	pixel_y = -16
@@ -2535,7 +2544,7 @@
 /obj/effect/turf_decal/industrial/stand_clear{
 	dir = 1
 	},
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
 /turf/open/floor/plasteel/mono,
 /area/ship/cargo)
 "qw" = (
@@ -2634,7 +2643,7 @@
 /turf/open/floor/plasteel/mono,
 /area/ship/cargo)
 "rm" = (
-/obj/effect/spawner/lootdrop/crate_spawner,
+/obj/effect/spawner/random/structure/crate_abandoned,
 /turf/open/floor/plasteel/mono,
 /area/ship/cargo)
 "rz" = (
@@ -3633,8 +3642,9 @@
 /turf/open/floor/plasteel/white,
 /area/ship/engineering)
 "wT" = (
-/obj/machinery/porta_turret/ship/faction/solgov{
-	dir = 5
+/obj/machinery/porta_turret/ship/solfed/light{
+	dir = 5;
+	id = "inkwell_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -3966,7 +3976,9 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/maintenance/port)
 "zs" = (
-/obj/machinery/vending/boozeomat,
+/obj/machinery/vending/boozeomat{
+	all_items_free = 1
+	},
 /turf/open/floor/wood,
 /area/ship/crew/canteen)
 "zu" = (
@@ -4065,8 +4077,9 @@
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/ship/cargo)
 "zN" = (
-/obj/machinery/porta_turret/ship/faction/solgov{
-	dir = 10
+/obj/machinery/porta_turret/ship/solfed/light{
+	dir = 10;
+	id = "inkwell_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -5108,7 +5121,7 @@
 /obj/structure/closet/crate,
 /obj/effect/turf_decal/techfloor,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/storage)
 "GO" = (
@@ -5331,7 +5344,7 @@
 /turf/open/floor/plasteel/mono,
 /area/ship/cargo)
 "IC" = (
-/obj/effect/spawner/lootdrop/crate_spawner,
+/obj/effect/spawner/random/structure/crate_abandoned,
 /obj/machinery/light/small/directional/east,
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/tech/grid,
@@ -6010,7 +6023,7 @@
 /area/ship/crew/canteen/kitchen)
 "Nj" = (
 /obj/structure/closet/crate,
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
 /turf/open/floor/plasteel/mono,
 /area/ship/cargo)
 "Np" = (
@@ -7002,6 +7015,13 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/wood,
 /area/ship/crew/canteen/kitchen)
+"US" = (
+/obj/machinery/porta_turret/ship/solfed{
+	dir = 5;
+	id = "inkwell_turrets"
+	},
+/turf/closed/wall/mineral/titanium,
+/area/ship/bridge)
 "Ve" = (
 /obj/structure/fluff/hedge,
 /turf/open/floor/wood/maple,
@@ -7226,8 +7246,9 @@
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo)
 "WH" = (
-/obj/machinery/porta_turret/ship/faction/solgov{
-	dir = 9
+/obj/machinery/porta_turret/ship/solfed/light{
+	dir = 9;
+	id = "inkwell_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -8421,7 +8442,7 @@ MT
 sJ
 IC
 PV
-hE
+gQ
 iG
 "}
 (21,1,1) = {"
@@ -8930,7 +8951,7 @@ FE
 nA
 yE
 AA
-hE
+gQ
 iG
 iG
 "}
@@ -8960,7 +8981,7 @@ iG
 iG
 iG
 iG
-wT
+US
 qc
 qc
 FE

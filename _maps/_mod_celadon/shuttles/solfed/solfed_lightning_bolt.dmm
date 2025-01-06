@@ -93,8 +93,9 @@
 /turf/open/floor/wood,
 /area/ship/hallway/central)
 "aZ" = (
-/obj/machinery/porta_turret/ship/faction/solgov{
-	dir = 6
+/obj/machinery/porta_turret/ship/solfed{
+	dir = 6;
+	id = "bolt_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -219,8 +220,9 @@
 /turf/open/floor/engine/hull,
 /area/ship/external)
 "cQ" = (
-/obj/machinery/porta_turret/ship/faction/solgov{
-	dir = 9
+/obj/machinery/porta_turret/ship/solfed/heavy{
+	dir = 5;
+	id = "bolt_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -291,24 +293,12 @@
 	req_access = null;
 	req_one_access = list(1,10)
 	},
-/obj/item/ammo_box/ferrolancebox,
-/obj/item/ammo_box/ferrolancebox,
-/obj/item/ammo_box/ferrolancebox,
-/obj/item/ammo_box/ferrolancebox,
-/obj/item/ammo_box/a300_box,
-/obj/item/ammo_box/a300_box,
-/obj/item/ammo_box/a300_box,
-/obj/item/ammo_box/a300_box,
 /obj/item/ammo_box/magazine/p16,
 /obj/item/ammo_box/magazine/p16,
 /obj/item/ammo_box/magazine/p16,
 /obj/item/ammo_box/magazine/p16,
 /obj/item/ammo_box/magazine/p16,
 /obj/item/ammo_box/magazine/p16,
-/obj/item/ammo_box/ferropelletbox,
-/obj/item/ammo_box/ferropelletbox,
-/obj/item/ammo_box/ferropelletbox,
-/obj/item/ammo_box/ferropelletbox,
 /obj/item/ammo_box/magazine/p16,
 /obj/item/ammo_box/magazine/p16,
 /obj/effect/turf_decal/siding/thinplating/dark/end{
@@ -416,8 +406,9 @@
 /turf/open/floor/plasteel/mono,
 /area/ship/cargo)
 "eU" = (
-/obj/machinery/porta_turret/ship/faction/solgov{
-	dir = 1
+/obj/machinery/porta_turret/ship/solfed{
+	dir = 9;
+	id = "bolt_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -429,8 +420,9 @@
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/ship/cargo)
 "fj" = (
-/obj/machinery/porta_turret/ship/faction/solgov{
-	dir = 9
+/obj/machinery/porta_turret/ship/solfed{
+	dir = 9;
+	id = "bolt_turrets"
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/bridge)
@@ -778,12 +770,6 @@
 /obj/item/clothing/suit/armor/vest/bulletproof,
 /obj/item/clothing/head/helmet/solfedm11,
 /obj/item/gun/ballistic/automatic/powered/gauss/claris,
-/obj/item/ammo_box/ferropelletbox,
-/obj/item/ammo_box/amagpellet_claris,
-/obj/item/ammo_box/amagpellet_claris,
-/obj/item/ammo_box/amagpellet_claris,
-/obj/item/ammo_box/amagpellet_claris,
-/obj/item/ammo_box/amagpellet_claris,
 /obj/item/grenade/c4/x4,
 /obj/item/grenade/c4/x4,
 /obj/item/grenade/syndieminibomb{
@@ -810,6 +796,11 @@
 	pixel_x = -7;
 	pixel_y = 3
 	},
+/obj/item/storage/box/ammo/ferropellet,
+/obj/item/ammo_box/amagpellet_claris,
+/obj/item/ammo_box/amagpellet_claris,
+/obj/item/ammo_box/amagpellet_claris,
+/obj/item/ammo_box/amagpellet_claris,
 /turf/open/floor/plasteel/white,
 /area/ship/security/prison)
 "ky" = (
@@ -908,6 +899,13 @@
 /obj/item/tank/internals/oxygen,
 /turf/open/floor/plasteel/white,
 /area/ship/storage)
+"ls" = (
+/obj/machinery/porta_turret/ship/solfed/heavy{
+	dir = 6;
+	id = "bolt_turrets"
+	},
+/turf/closed/wall/mineral/titanium,
+/area/ship/bridge)
 "ly" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 8
@@ -1420,7 +1418,7 @@
 	req_access_txt = "5";
 	name = "Stormtrooper door"
 	},
-/obj/item/gun/ballistic/automatic/assault/p16,
+/obj/item/gun/ballistic/automatic/assault/cm82,
 /obj/item/ammo_box/magazine/p16,
 /obj/item/ammo_box/magazine/p16,
 /obj/item/ammo_box/magazine/p16,
@@ -1452,7 +1450,7 @@
 	req_access_txt = "5";
 	name = "Stormtrooper door"
 	},
-/obj/item/gun/ballistic/automatic/assault/p16,
+/obj/item/gun/ballistic/automatic/assault/cm82,
 /obj/item/ammo_box/magazine/p16,
 /obj/item/ammo_box/magazine/p16,
 /obj/item/ammo_box/magazine/p16,
@@ -1770,7 +1768,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/effect/spawner/lootdrop/glowstick,
+/obj/effect/spawner/random/decoration/glowstick,
 /obj/machinery/atmospherics/pipe/manifold/orange/hidden{
 	dir = 4
 	},
@@ -1935,10 +1933,11 @@
 /obj/item/ammo_box/magazine/gar,
 /obj/item/ammo_box/magazine/gar,
 /obj/item/ammo_box/magazine/gar,
-/obj/item/ammo_box/ferrolancebox,
-/obj/item/ammo_box/ferrolancebox,
-/obj/item/ammo_box/ferrolancebox,
-/obj/item/ammo_box/ferrolancebox,
+/obj/item/storage/box/ammo/ferrolance,
+/obj/item/storage/box/ammo/ferrolance,
+/obj/item/storage/box/ammo/ferrolance,
+/obj/item/storage/box/ammo/ferrolance,
+/obj/item/storage/box/ammo/ferrolance,
 /turf/open/floor/plasteel/white,
 /area/ship/security/prison)
 "wM" = (
@@ -2381,7 +2380,6 @@
 /obj/item/clothing/neck/cloak/solgovcap,
 /obj/item/binoculars,
 /obj/item/ammo_box/magazine/gar,
-/obj/item/ammo_box/ferrolancebox,
 /obj/item/hatchet/wooden{
 	name = "Tomahawk";
 	force = 20;
@@ -2394,8 +2392,7 @@
 	icon_state = "captainpack";
 	item_state = "captainpack"
 	},
-/obj/item/gun/ballistic/automatic/powered/gauss/gar{
-	},
+/obj/item/gun/ballistic/automatic/powered/gauss/gar,
 /turf/open/floor/carpet/royalblue,
 /area/ship/crew/office)
 "BJ" = (
@@ -2511,7 +2508,7 @@
 /obj/effect/turf_decal/corner/opaque/solgovblue{
 	dir = 1
 	},
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /obj/effect/decal/cleanable/ash,
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
@@ -2892,8 +2889,9 @@
 /turf/open/floor/wood/ebony,
 /area/ship/hallway/central)
 "HD" = (
-/obj/machinery/porta_turret/ship/faction/solgov{
-	dir = 10
+/obj/machinery/porta_turret/ship/solfed{
+	dir = 10;
+	id = "bolt_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -3188,7 +3186,7 @@
 /turf/open/floor/plasteel/freezer,
 /area/ship/crew)
 "LG" = (
-/obj/item/banner/solfed{
+/obj/item/banner/solfed/mundane{
 	anchored = 1
 	},
 /obj/effect/turf_decal/siding/thinplating/dark/end{
@@ -3582,8 +3580,9 @@
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/crew/janitor)
 "Re" = (
-/obj/machinery/porta_turret/ship/faction/solgov{
-	dir = 5
+/obj/machinery/porta_turret/ship/solfed{
+	dir = 5;
+	id = "bolt_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -4155,8 +4154,9 @@
 /turf/open/floor/plasteel/white,
 /area/ship/crew/janitor)
 "VD" = (
-/obj/machinery/porta_turret/ship/faction/solgov{
-	dir = 10
+/obj/machinery/porta_turret/ship/solfed{
+	dir = 10;
+	id = "bolt_turrets"
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/bridge)
@@ -4475,8 +4475,9 @@
 	name = "Operations"
 	},
 /obj/effect/turf_decal/siding/wood,
-/obj/machinery/turretid/lethal{
-	pixel_y = -27
+/obj/machinery/turretid/ship{
+	pixel_y = -27;
+	id = "bolt_turrets"
 	},
 /turf/open/floor/wood,
 /area/ship/bridge)
@@ -4596,12 +4597,12 @@
 /obj/item/clothing/suit/armor/vest/bulletproof,
 /obj/item/clothing/head/helmet/solfedm11,
 /obj/item/gun/ballistic/rifle/scout,
-/obj/item/ammo_box/a300_box,
-/obj/item/ammo_box/a300_box,
-/obj/item/ammo_box/a300,
-/obj/item/ammo_box/a300,
-/obj/item/ammo_box/a300,
-/obj/item/ammo_box/a300,
+/obj/item/storage/box/ammo/a300,
+/obj/item/storage/box/ammo/a300,
+/obj/item/storage/box/ammo/a300,
+/obj/item/storage/box/ammo/a300,
+/obj/item/storage/box/ammo/a300,
+/obj/item/storage/box/ammo/a300,
 /obj/item/ammo_box/a300,
 /obj/item/ammo_box/a300,
 /turf/open/floor/plasteel/white,
@@ -4824,7 +4825,7 @@ Gw
 (9,1,1) = {"
 PX
 PX
-cQ
+eU
 az
 ly
 hT
@@ -5299,7 +5300,7 @@ mt
 (34,1,1) = {"
 PX
 PX
-Re
+cQ
 GC
 GC
 Os
@@ -5313,7 +5314,7 @@ bD
 iD
 MJ
 bD
-aZ
+ls
 "}
 (35,1,1) = {"
 PX
@@ -5435,7 +5436,7 @@ PX
 PX
 PX
 PX
-Re
+cQ
 GC
 GC
 PX
@@ -5443,7 +5444,7 @@ PX
 PX
 bD
 bD
-aZ
+ls
 PX
 PX
 PX

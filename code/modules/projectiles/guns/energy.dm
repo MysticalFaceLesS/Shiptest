@@ -3,6 +3,7 @@
 	desc = "A basic energy-based gun."
 	icon = 'icons/obj/guns/energy.dmi'
 	icon_state = "laser"
+	item_state = "spur"
 
 	muzzleflash_iconstate = "muzzle_flash_laser"
 	muzzle_flash_color = COLOR_SOFT_RED
@@ -18,13 +19,25 @@
 
 	fire_select_icon_state_prefix = "laser_"
 
+	default_ammo_type = /obj/item/stock_parts/cell/gun
+	allowed_ammo_types = list(
+		/obj/item/stock_parts/cell/gun,
+		/obj/item/stock_parts/cell/gun/upgraded,
+		/obj/item/stock_parts/cell/gun/empty,
+		/obj/item/stock_parts/cell/gun/upgraded/empty,
+	)
+
 	tac_reloads = FALSE
 	tactical_reload_delay = 1.2 SECONDS
-
+// [CELADON_REMOVE] - CELADON BALANCE - часть ненужной системы оффов
+// 	var/latch_closed = TRUE
+// 	var/latch_toggle_delay = 1.0 SECONDS
+// [/CELADON_REMOVE]
 	valid_attachments = list(
 		/obj/item/attachment/laser_sight,
 		/obj/item/attachment/rail_light,
-		/obj/item/attachment/bayonet
+		/obj/item/attachment/bayonet,
+		/obj/item/attachment/sling
 	)
 	slot_available = list(
 		ATTACHMENT_SLOT_RAIL = 1
@@ -49,14 +62,16 @@
 /obj/item/gun/energy/get_cell()
 	return cell
 
-/obj/item/gun/energy/Initialize()
+/obj/item/gun/energy/Initialize(mapload, spawn_empty)
 	. = ..()
-	if(cell_type)
-		cell = new cell_type(src)
-	else
-		cell = new(src)
-	if(dead_cell)
-		cell.use(cell.maxcharge)
+	if(spawn_empty)
+		if(internal_magazine)
+			spawn_no_ammo = TRUE
+		else
+			default_ammo_type = FALSE
+
+	if(default_ammo_type)
+		cell = new default_ammo_type(src, spawn_no_ammo)
 	update_ammo_types()
 	recharge_newshot(TRUE)
 	if(selfcharge)
@@ -103,7 +118,7 @@
 
 //ATTACK HAND IGNORING PARENT RETURN VALUE
 /obj/item/gun/energy/attack_hand(mob/user)
-	if(!internal_cell && loc == user && user.is_holding(src) && cell && tac_reloads)
+	if(!internal_magazine && loc == user && user.is_holding(src) && cell && tac_reloads)
 		eject_cell(user)
 		return
 	return ..()
@@ -114,10 +129,13 @@
 		update_appearance()
 
 /obj/item/gun/energy/attackby(obj/item/A, mob/user, params)
-	if (!internal_cell && istype(A, /obj/item/stock_parts/cell/gun))
+	if (!internal_magazine && (A.type in (allowed_ammo_types - blacklisted_ammo_types)))
 		var/obj/item/stock_parts/cell/gun/C = A
 		if (!cell)
+// [CELADON-EDIT] - CELADON BALANCE - продолжаем убирать систему люков оффов
+// 			return insert_cell(user, C) CELADON-EDIT -> ORIGINAL
 			insert_cell(user, C)
+// [/CELADON-EDIT]
 		else
 			if (tac_reloads)
 				eject_cell(user, C)
@@ -125,12 +143,19 @@
 	return ..()
 
 /obj/item/gun/energy/proc/insert_cell(mob/user, obj/item/stock_parts/cell/gun/C)
-	if(mag_size == MAG_SIZE_SMALL && !istype(C, /obj/item/stock_parts/cell/gun/mini))
-		to_chat(user, span_warning("\The [C] doesn't seem to fit into \the [src]..."))
-		return FALSE
-	if(mag_size == MAG_SIZE_LARGE && !istype(C, /obj/item/stock_parts/cell/gun/large))
-		to_chat(user, span_warning("\The [C] doesn't seem to fit into \the [src]..."))
-		return FALSE
+// [CELADON-EDIT] - CELADON BALANCE - возвращает старый код для перезарядки батареек, убирает новый код люков
+// 	if(!latch_closed)
+// 		if(user.transferItemToLoc(C, src))
+// 			cell = C
+// 			to_chat(user, span_notice("You load the [C] into \the [src]."))
+// 			playsound(src, load_sound, load_sound_volume, load_sound_vary)
+// 			update_appearance()
+// 			return TRUE
+// 		else
+// 			to_chat(user, span_warning("You cannot seem to get \the [src] out of your hands!"))
+// 			return FALSE
+// 		else
+// 			to_chat(user, span_warning("The [src]'s cell retainment clip is latched!")) // CELADON-EDIT -> ORIGINAL
 	if(user.transferItemToLoc(C, src))
 		cell = C
 		to_chat(user, span_notice("You load the [C] into \the [src]."))
@@ -140,6 +165,7 @@
 	else
 		to_chat(user, span_warning("You cannot seem to get \the [src] out of your hands!"))
 		return FALSE
+// [/CELADON-EDIT]
 
 /obj/item/gun/energy/proc/eject_cell(mob/user, obj/item/stock_parts/cell/gun/tac_load = null)
 	playsound(src, load_sound, load_sound_volume, load_sound_vary)
@@ -170,8 +196,37 @@
 // 			to_chat(user, span_notice("You remove the power cell."))
 // 			eject_cell(user)
 // 	return ..()
-// [/CELADON-REMOVE]
+// [/CELADON-REMOVE] // ЕСЛИ БУДЕТ РАНТАЙМИТЬ, СНЕСТИ СНИЗУ
 
+// [CELADON-REMOVE] - CELADON BALANCE - часть новой бесполезной системы люков от оффов
+// //special is_type_in_list method to counteract problem with current method
+// /obj/item/gun/energy/proc/is_attachment_in_contents_list()
+// 	for(var/content_item in contents)
+// 		if(istype(content_item, /obj/item/attachment/))
+// 			return TRUE
+// return FALSE
+//
+// /obj/item/gun/energy/AltClick(mob/living/user)
+// 	if(!internal_magazine && latch_closed)
+// 		to_chat(user, span_notice("You start to unlatch the [src]'s power cell retainment clip..."))
+// 		if(do_after(user, latch_toggle_delay, src, IGNORE_USER_LOC_CHANGE))
+// 			to_chat(user, span_notice("You unlatch the [src]'s power cell retainment clip " + "<span class='red'>OPEN</span>" + "."))
+// 			playsound(src, 'sound/items/taperecorder/taperecorder_play.ogg', 50, FALSE)
+// 			tac_reloads = TRUE
+// 			latch_closed = FALSE
+// 			update_appearance()
+// 	else if(!internal_magazine && !latch_closed)
+// 		if(!cell && is_attachment_in_contents_list())
+// 			return ..() //should bring up the attachment menu if attachments are added. If none are added, it just does leaves the latch open
+// 		to_chat(user, span_warning("You start to latch the [src]'s power cell retainment clip..."))
+// 		if (do_after(user, latch_toggle_delay, src, IGNORE_USER_LOC_CHANGE))
+// 			to_chat(user, span_notice("You latch the [src]'s power cell retainment clip " + "<span class='green'>CLOSED</span>" + "."))
+// 			playsound(src, 'sound/items/taperecorder/taperecorder_close.ogg', 50, FALSE)
+// 			tac_reloads = FALSE
+// 			latch_closed = TRUE
+// 			update_appearance()
+// 	return
+// [/CELADON_REMOVE]
 /obj/item/gun/energy/can_shoot(visuals)
 	if(safety && !visuals)
 		return FALSE
@@ -210,7 +265,17 @@
 /obj/item/gun/energy/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
 	if(!chambered && can_shoot())
 		process_chamber()	// If the gun was drained and then recharged, load a new shot.
+// [CELADON-REMOVE] - CELADON BALANCE - очередная часть системы оффов
+// 	..() //process the gunshot as normal
+// 	if(!latch_closed && prob(65)) //make the cell slide out if it's fired while the retainment clip is unlatched, with a 65% probability
+// 		to_chat(user, span_warning("The [src]'s cell falls out!"))
+// 		eject_cell()
+// [/CELADON-REMOVE]
+
+// [CELADON-EDIT]
+// return // CELADON-EDIT -> ORIGINAL
 	return ..()
+// [/CELADON-EDIT]
 
 /obj/item/gun/energy/proc/select_fire(mob/living/user)
 	select++
@@ -249,6 +314,22 @@
 	var/overlay_icon_state = "[icon_state]_charge"
 	var/obj/item/ammo_casing/energy/shot = ammo_type[modifystate ? select : 1]
 	var/ratio = get_charge_ratio()
+// [CELADON-REMOVE] - CELADON-BALANCE - очередная система люков оффов
+// 	if(ismob(loc) && !internal_magazine)
+// 		var/mutable_appearance/latch_overlay
+// 		latch_overlay = mutable_appearance('icons/obj/guns/cell_latch.dmi')
+// 		if(latch_closed)
+// 			if(cell)
+// 				latch_overlay.icon_state = "latch-on-full"
+// 			else
+// 				latch_overlay.icon_state = "latch-on-empty"
+// 		else
+// 			if(cell)
+// 				latch_overlay.icon_state = "latch-off-full"
+// 			else
+// 				latch_overlay.icon_state = "latch-off-empty"
+// 		. += latch_overlay
+// [/CELADON-REMOVE]
 	if(cell)
 		. += "[icon_state]_cell"
 		if(ratio == 0)
@@ -319,6 +400,10 @@
 
 /obj/item/gun/energy/examine(mob/user)
 	. = ..()
+// [CELADON-REMOVE] - CELADON BALANCE - часть плохой системы оффов
+// 	if(!internal_magazine)
+// 		. += "The cell retainment latch is [latch_closed ? "<span class='green'>CLOSED</span>" : "<span class='red'>OPEN</span>"]. Alt-Click to toggle the latch."
+// [CELADON-REMOVE]
 	var/obj/item/ammo_casing/energy/shot = ammo_type[select]
 	if(ammo_type.len > 1)
 		. += "You can switch firemodes by pressing the <b>unique action</b> key. By default, this is <b>space</b>"

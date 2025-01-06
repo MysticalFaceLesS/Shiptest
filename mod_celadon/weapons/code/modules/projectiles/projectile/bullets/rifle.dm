@@ -55,3 +55,10 @@
 	damage = 5
 	armour_penetration = -10
 	stamina = 38
+
+//7.62x54mmR
+/obj/projectile/bullet/x762x54
+	name = "crude sniper bullet"
+	speed = 1.1
+	damage = 35
+	armour_penetration = 15
