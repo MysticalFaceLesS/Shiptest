@@ -91,6 +91,37 @@
 	. = ..()
 	get_inteq_all_acces(H)
 
+//Командир
+
+/datum/outfit/job/inteq/captain/honorable/celadon
+	name = "Honorable Vanguard (InteQ)"
+	head = /obj/item/clothing/head/beret/sec/hos/inteq/honorable
+	mask = /obj/item/clothing/mask/gas/sechailer/swat
+	glasses = /obj/item/clothing/glasses/hud/security/sunglasses/inteq
+	uniform = /obj/item/clothing/under/syndicate/inteq/honorable
+	suit = /obj/item/clothing/suit/armor/hos/inteq/honorable
+	suit_store = /obj/item/gun/ballistic/revolver/horizonx
+	gloves = /obj/item/clothing/gloves/combat
+	id = /obj/item/card/id/inteq/vanguard
+
+/datum/outfit/job/inteq/captain/honorable/celadon/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	get_inteq_all_acces(H)
+
+//Арьергард. Rearguard
+
+/datum/outfit/job/inteq/captain/rearguard/celadon
+	name = "Rearguard (InteQ)"
+	head = /obj/item/clothing/head/beret/sec/hos/inteq
+	glasses = /obj/item/clothing/glasses/hud/security/sunglasses/inteq
+	suit = /obj/item/clothing/suit/armor/vest/inteq
+	gloves = /obj/item/clothing/gloves/combat
+	id = /obj/item/card/id/inteq/rearguard
+
+/datum/outfit/job/inteq/captain/rearguard/celadon/post_equip(mob/living/carbon/human/H)
+	. = ..()
+	get_inteq_all_acces(H)
+
 // Лейтенант первого класса
 /datum/outfit/job/inteq/captain/enfco/celadon
 	name = "Enforcer class One (InteQ)"
