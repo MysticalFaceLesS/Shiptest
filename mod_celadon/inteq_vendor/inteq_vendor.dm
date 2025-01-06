@@ -3,9 +3,9 @@
 /// author - автор(ы) этого модпака.
 
 /datum/modpack/example
-	name = "ОСМЫСЛЕННОЕ_ПОНЯТНОЕ_НАЗВАНИЕ"
-	desc = "КОРОТКОЕ_ОПИСАНИЕ_МОДПАКА"
-	author = "АВТОР(Ы)"
+	name = "InteQ vendor and MOD suits"
+	desc = "Adds MOD suits, space equipment vendor and a degraded turbine."
+	author = "Chituka09, Erring"
 
 /// Эти проки нужны, для того чтобы инициализировать датумы в определенный момент времени
 /// сборки билда. Инициализация обновляет данные в билде повторно, перезаписывая новыми значениями

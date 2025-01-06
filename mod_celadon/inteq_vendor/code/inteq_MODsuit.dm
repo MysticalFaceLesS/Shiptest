@@ -11,7 +11,6 @@
 	slowdown_inactive = 1
 	slowdown_active = 0.3
 	ui_theme = "inteq"
-	inbuilt_modules = list(/obj/item/mod/module/armor_booster)
 	allowed_suit_storage = list(
 		/obj/item/flashlight,
 		/obj/item/tank/internals,
