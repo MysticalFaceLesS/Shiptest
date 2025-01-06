@@ -225,10 +225,16 @@
 	id = "piratejungle"
 	description = "A group of pirates on a small ship in the jungle."
 	suffix = "jungle_pirate.dmm"
-
 //							///
 //		Lavaland ruin		///
 //							///
+
+/datum/map_template/ruin/lavaland/bubble_outpost
+	name = "Distress Outpost"
+	id = "bubble-outpost"
+	description = "This mining outpost started transfering distress signal just a moment ago."
+	suffix = "lavaland_surface_bubbleOutpost.dmm"
+
 /datum/map_template/ruin/lavaland/biodome/winter
 	name = "Solarian Winter Biodome"
 	id = "biodome-winter"
