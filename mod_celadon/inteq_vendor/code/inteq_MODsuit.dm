@@ -1,3 +1,115 @@
+/obj/item/mod
+	name = "Base MOD"
+	desc = "You should not see this, yell at a coder!"
+
+	icon = 'mod_celadon/_storge_icons/icons/obj/modsuit/mod_clothing.dmi'
+
+/obj/item/mod/control
+	name = "MOD control unit"
+	desc = "The control unit of a Modular Outerwear Device, a powered, back-mounted suit that protects against various environments."
+	icon_state = "control"
+	base_icon_state = "control"
+	item_state = "mod_control"
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/mob/modsuit/mod_clothing.dmi'
+
+
+/obj/item/mod/control/proc/set_mod_skin(new_skin)
+	if(active)
+		CRASH("[src] tried to set skin while active!")
+	skin = new_skin
+	var/list/used_skin = theme.skins[new_skin]
+	if(used_skin[CONTROL_LAYER])
+		alternate_worn_layer = used_skin[CONTROL_LAYER]
+	var/list/skin_updating = mod_parts + src
+	for(var/obj/item/part as anything in skin_updating)
+		part.icon = used_skin[MOD_ICON_OVERRIDE] || 'mod_celadon/_storge_icons/icons/obj/modsuit/mod_clothing.dmi'
+		//part.mob_overlay_icon = used_skin[MOD_WORN_ICON_OVERRIDE] || 'icons/mob/clothing/modsuit/mod_clothing.dmi'
+		part.icon_state = "[skin]-[part.base_icon_state]"
+	for(var/obj/item/clothing/part as anything in mod_parts)
+		var/used_category
+		if(part == helmet)
+			used_category = HELMET_FLAGS
+		if(part == chestplate)
+			used_category = CHESTPLATE_FLAGS
+		if(part == gauntlets)
+			used_category = GAUNTLETS_FLAGS
+		if(part == boots)
+			used_category = BOOTS_FLAGS
+		var/list/category = used_skin[used_category]
+		part.clothing_flags = category[UNSEALED_CLOTHING] || NONE
+		part.visor_flags = category[SEALED_CLOTHING] || NONE
+		part.flags_inv = category[UNSEALED_INVISIBILITY] || NONE
+		part.visor_flags_inv = category[SEALED_INVISIBILITY] || NONE
+		part.flags_cover = category[UNSEALED_COVER] || NONE
+		part.visor_flags_cover = category[SEALED_COVER] || NONE
+		part.alternate_worn_layer = category[UNSEALED_LAYER]
+		mod_parts[part] = part.alternate_worn_layer
+		if(!category[CAN_OVERSLOT])
+			if(overslotting_parts[part])
+				var/obj/item/overslot = overslotting_parts[part]
+				overslot.forceMove(drop_location())
+			overslotting_parts -= part
+			continue
+		overslotting_parts |= part
+	wearer?.regenerate_icons()
+
+
+/obj/item/clothing/head/mod
+	name = "MOD helmet"
+	desc = "A helmet for a MODsuit."
+	icon = 'mod_celadon/_storge_icons/icons/obj/modsuit/mod_clothing.dmi'
+	icon_state = "standart-helmet"
+	base_icon_state = "helmet"
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/mob/modsuit/mod_clothing.dmi'
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	body_parts_covered = HEAD
+	heat_protection = HEAD
+	cold_protection = HEAD
+	obj_flags = IMMUTABLE_SLOW
+	visor_flags = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|ALLOWINTERNALS
+
+/obj/item/clothing/suit/mod
+	name = "MOD chestplate"
+	desc = "A chestplate for a MODsuit."
+	icon = 'mod_celadon/_storge_icons/icons/obj/modsuit/mod_clothing.dmi'
+	icon_state = "standart-chestplate"
+	base_icon_state = "chestplate"
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/mob/modsuit/mod_clothing.dmi'
+	blood_overlay_type = "armor"
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	body_parts_covered = CHEST|GROIN
+	heat_protection = CHEST|GROIN
+	cold_protection = CHEST|GROIN
+	obj_flags = IMMUTABLE_SLOW
+
+/obj/item/clothing/gloves/mod
+	name = "MOD gauntlets"
+	desc = "A pair of gauntlets for a MODsuit."
+	icon = 'mod_celadon/_storge_icons/icons/obj/modsuit/mod_clothing.dmi'
+	icon_state = "standart-gauntlets"
+	base_icon_state = "gauntlets"
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/mob/modsuit/mod_clothing.dmi'
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	body_parts_covered = HANDS|ARMS
+	heat_protection = HANDS|ARMS
+	cold_protection = HANDS|ARMS
+	obj_flags = IMMUTABLE_SLOW
+
+/obj/item/clothing/shoes/mod
+	name = "MOD boots"
+	desc = "A pair of boots for a MODsuit."
+	icon = 'mod_celadon/_storge_icons/icons/obj/modsuit/mod_clothing.dmi'
+	icon_state = "standart-boots"
+	base_icon_state = "boots"
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/mob/modsuit/mod_clothing.dmi'
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	body_parts_covered = FEET|LEGS
+	heat_protection = FEET|LEGS
+	cold_protection = FEET|LEGS
+	obj_flags = IMMUTABLE_SLOW
+	supports_variations = DIGITIGRADE_VARIATION
+	can_be_tied = FALSE
+	visor_flags_inv = HIDESHOES
 
 /datum/mod_theme/inteq
 	name = "InteQ"
@@ -122,6 +234,12 @@
 		/obj/item/mod/module/dna_lock,
 		/obj/item/mod/module/power_kick
 	)
+
+/obj/item/mod/module
+	name = "MOD module"
+	icon = 'mod_celadon/_storge_icons/icons/obj/modsuit/mod_modules.dmi'
+	icon_state = "module"
+	overlay_icon_file = 'mod_celadon/_storge_icons/icons/mob/modsuit/mod_modules.dmi'
 
 /obj/item/mod/module/flashlight_inteq
 	name = "InteQ MOD flashlight module"
