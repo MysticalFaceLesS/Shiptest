@@ -48,14 +48,14 @@
 	name = "Оружейный ящик Glock"
 	desc = "Содержит пустой пистолет Glock, калибра 9mm."
 	cost = 1300
-	contains = list(/obj/item/storage/pistolcase/glock)
+	contains = list(/obj/item/storage/guncase/glock)
 	crate_name = "auto rifle crate"
 
 /datum/supply_pack/gun/usp
 	name = "Оружейный ящик USP"
 	desc = "Содержит пустой пистолет USP, калибра .45"
 	cost = 1350
-	contains = list(/obj/item/storage/pistolcase/usp)
+	contains = list(/obj/item/storage/guncase/usp)
 	crate_name = "auto rifle crate"
 
 // ПР от Ганзы. Добавляет дробь для дробовиков
