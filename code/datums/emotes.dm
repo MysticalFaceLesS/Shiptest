@@ -27,6 +27,21 @@
 	var/only_forced_audio = FALSE //can only code call this event instead of the player.
 	var/cooldown = 0.8 SECONDS
 	var/static/regex/stop_bad_mime = regex(@"says|exclaims|yells|asks")
+	// [CELADON-ADD] - CELADON_EMOTES
+	/// Message with %t at the end to allow adding params to the message, like for mobs doing an emote relatively to something else.
+	/// Set this to EMOTE_PARAM_USE_POSTFIX to just use the postfix.
+	/// Message postfix with %t used when we don't want to use message_param for our targeting. Used for things like message_monkey or message_mime.
+	/// Punctuation from the message will be stripped when this is applied, so make sure it's punctuated as well.
+	var/message_postfix = ""
+	/// Sounds emitted when the user is muzzled. Generally used like "[user] makes a pick(muzzled_noises) noise!"
+	var/muzzled_noises = list("strong", "weak")
+	/// If true, an emote will completely bypass any cooldown when called unintentionally. Necessary for things like deathgasp.
+	var/bypass_unintentional_cooldown = FALSE
+	/// Whether or not to adjust the frequency of the emote sound based on age.
+	var/age_based = FALSE
+	/// How loud is the audio emote?
+	var/volume = 50
+	// [/CELADON-ADD]
 
 /datum/emote/New()
 	if (ispath(mob_type_allowed_typecache))
@@ -48,9 +63,39 @@
 		return FALSE
 	var/msg = select_message_type(user, intentional)
 	if(params && message_param)
-		msg = select_param(user, params)
+		// [CELADON-EDIT] - CELADON_EMOTES
+		// msg = select_param(user, params)	// CELADON-EDIT - ORIGINAL
+		// In this case, we did make some changes to the message that will be used, and we want to add the postfix on with the new parameters.
+		// This is applicable to things like mimes, who this lets have a target on their canned emote responses.
+		// Note that we only do this if we would otherwise have a message param, meaning there should be some target by default.
+		// If we're using EMOTE_PARAM_USE_POSTFIX, we don't want to bother specifying a message_param and just want to use the postfix for everything.
+		if(message_param == EMOTE_PARAM_USE_POSTFIX || (msg != message && message_postfix))
+			if(!message_postfix)
+				CRASH("Emote was specified to use postfix but message_postfix is empty.")
+			msg = select_param(user, params, "[remove_ending_punctuation(msg)] [message_postfix]", msg)
+		else if(msg == message)
+			// In this case, we're not making any substitutions in select_message_type, but we do have some params we want to sub in.
+			msg = select_param(user, params, message_param, message)
 
+		// If this got propogated up, jump out.
+		if(msg == EMOTE_ACT_STOP_EXECUTION)
+			return TRUE
+
+		if(isnull(msg))
+			to_chat(user, "<span class='warning'>'[params]' isn't a valid parameter for [key].</span>")
+			return TRUE
+		// [/CELADON-EDIT]
 	msg = replace_pronoun(user, msg)
+
+	// [CELADON-ADD] - CELADON_EMOTES
+	var/suppressed = FALSE
+
+	// Keep em quiet if they can't speak
+	if(!can_vocalize_emotes(user) && (emote_type & (EMOTE_MOUTH | EMOTE_AUDIBLE)))
+		var/noise_emitted = pick(muzzled_noises)
+		suppressed = TRUE
+		msg = "makes \a [noise_emitted] noise."
+	// [/CELADON-ADD]
 
 	if(isliving(user))
 		var/mob/living/L = user
@@ -64,9 +109,15 @@
 	var/space = should_have_space_before_emote(html_encode(msg)[1]) ? " " : ""
 	var/dchatmsg = "<b>[user]</b>[space][msg]"
 
+	// [CELADON-ADD] - CELADON_EMOTES
+	var/sound_volume = get_volume(user)
+	// [/CELADON-ADD]
 	var/tmp_sound = get_sound(user)
 	if(tmp_sound && (!only_forced_audio || !intentional))
-		playsound(user, tmp_sound, 50, vary)
+		// [CELADON-EDIT] - CELADON_EMOTES
+		// playsound(user, tmp_sound, 50, vary)	// CELADON-EDIT - ORIGINAL
+		playsound(user, tmp_sound, sound_volume, vary)
+		// [/CELADON-EDIT]
 
 	for(var/mob/M in GLOB.dead_mob_list)
 		if(!M.client || isnewplayer(M))
@@ -75,10 +126,18 @@
 		if(M.stat == DEAD && M.client && (M.client.prefs.chat_toggles & CHAT_GHOSTSIGHT) && !(M in viewers(T, null)))
 			M.show_message("[FOLLOW_LINK(M, user)] [dchatmsg]")
 
-	if(emote_type == EMOTE_AUDIBLE)	// Да, это определённо слегка забавно.
-		user.audible_message(msg, deaf_message = "<span class='emote'>Ты видишь как <b>[user]</b> [msg]</span>", audible_message_flags = EMOTE_MESSAGE)
-	else
-		user.visible_message(msg, blind_message = "<span class='emote'>Ты замечаешь как <b>[user]</b> [msg]</span>", visible_message_flags = EMOTE_MESSAGE)
+	// [CELADON-ADD] - CELADON_EMOTES
+	if(isliving(user))
+	// [/CELADON-EDIT]
+		if(emote_type == EMOTE_AUDIBLE)	// Да, это определённо слегка забавно.
+			user.audible_message(msg, deaf_message = "<span class='emote'>Ты видишь как <b>[user]</b> [msg]</span>", audible_message_flags = EMOTE_MESSAGE)
+		else
+			user.visible_message(msg, blind_message = "<span class='emote'>Ты замечаешь как <b>[user]</b> [msg]</span>", visible_message_flags = EMOTE_MESSAGE)
+
+	// [CELADON-ADD] - CELADON_EMOTES
+	if(!((emote_type & EMOTE_FORCE_NO_RUNECHAT) || suppressed) && !isobserver(user))
+		to_chat(user, msg)
+	// [/CELADON-ADD]
 
 /// For handling emote cooldown, return true to allow the emote to happen
 /datum/emote/proc/check_cooldown(mob/user, intentional)
@@ -201,3 +260,49 @@
 /proc/should_have_space_before_emote(string)
 	var/static/regex/no_spacing_emote_characters = regex(@"(,|')")
 	return no_spacing_emote_characters.Find(string) ? FALSE : TRUE
+
+// [CELADON-ADD] - CELADON_EMOTES
+/**
+ * Play the sound effect in an emote.
+ * If you want to change the way the playsound call works, override this.
+ * Note! If you want age_based to work, you need to force vary to TRUE.
+ * * user - The user of the emote.
+ * * intentional - Whether or not the emote was triggered intentionally.
+ * * sound_path - Filesystem path to the audio clip to play.
+ * * sound_volume - Volume at which to play the audio clip.
+ */
+/datum/emote/proc/play_sound_effect(mob/user, intentional, sound_path, sound_volume)
+	if(age_based && ishuman(user))
+		var/mob/living/carbon/human/H = user
+		// Vary needs to be true as otherwise frequency changes get ignored deep within playsound_local :(
+		playsound(user.loc, sound_path, sound_volume, TRUE, frequency = H.get_age_pitch(H.dna.species.species_age_max) * alter_emote_pitch(user))
+	else
+		playsound(user.loc, sound_path, sound_volume, TRUE, frequency = alter_emote_pitch(user, FALSE))
+
+/datum/emote/proc/alter_emote_pitch(mob/user, multiplicative = TRUE)
+	if(HAS_TRAIT(user, TRAIT_ALCOHOL_TOLERANCE))
+		return 0.7
+	return multiplicative
+
+/datum/emote/proc/get_volume(mob/living/user)
+	return volume
+
+/**
+ * Return whether a user should be able to vocalize emotes or not, due to a mask or inability to speak.
+ * If this returns false, any mouth emotes will be replaced with muzzled noises.
+ */
+/datum/emote/proc/can_vocalize_emotes(mob/user)
+	if(user.mind?.miming)
+		// mimes get special treatment; though they can't really "vocalize" we don't want to replace their message.
+		return TRUE
+	if(!muzzle_ignore && !user.can_speak())
+		return FALSE
+
+	return TRUE
+
+/datum/emote/proc/remove_ending_punctuation(msg)
+	var/static/list/end_punctuation = list(".", "?", "!")
+	if(copytext(msg, -1) in end_punctuation)
+		msg = copytext(msg, 1, -1)
+	return msg
+// [/CELADON-ADD]

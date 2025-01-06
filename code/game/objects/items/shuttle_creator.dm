@@ -1,5 +1,6 @@
-#define SHUTTLE_CREATOR_MAX_SIZE CONFIG_GET(number/max_shuttle_size)
-
+// [CELADON-EDIT] - subshuttles fix
+#define SHUTTLE_CREATOR_MAX_SIZE 100
+// [/CELADON-EDIT] - subshuttles fix
 /obj/item/shuttle_creator
 	name = "Rapid Shuttle Designator"
 	icon = 'icons/obj/tools.dmi'
@@ -218,7 +219,6 @@
 /obj/item/shuttle_creator/proc/check_current_area(mob/user)
 	var/static/area_or_turf_fail_types = typecacheof(list(
 		/turf/open/space,
-		/area/shuttle
 		))
 	//Check to see if the user can make a new area to prevent spamming
 	if(user)

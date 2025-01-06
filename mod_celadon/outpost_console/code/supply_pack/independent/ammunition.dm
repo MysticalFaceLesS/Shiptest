@@ -1,3 +1,4 @@
+
 /datum/supply_pack/faction/independent/ammo
 	group = "Ammunition"
 	crate_type = /obj/structure/closet/crate/secure/gear

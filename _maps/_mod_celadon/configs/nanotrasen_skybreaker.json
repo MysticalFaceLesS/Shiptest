@@ -1,0 +1,41 @@
+{
+	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
+	"map_name": "Skybreaker-class Assault Vessel",
+	"map_short_name": "Skybreaker",
+	"description": "'Skybreaker', передовое боевое судно Нанотрейзен, создано для достижения превосходства в оспариваемых регионах космоса. Название судно получило за свою обтекаемую форму и инновационное расположение стыковочного шлюза, позволяющее с максимальной тягой отдаляться от стремительно разрушающихся объектов Синдиката. Корабль полностью оснащен энергетическим оружием. Конкретно эта версия судна принадлежит Тактическому Штурмовому Отряду Нанотрейзен.",
+	"map_path": "_maps/_mod_celadon/shuttles/nanotrasen/nanotrasen_skybreaker.dmm",
+	"enabled": true,
+	"limit": 1,
+	"prefix": "NTBSV",
+	"faction": "/datum/faction/nt",
+	"tags": [
+		"Combat",
+		"Riot",
+		"Medical",
+		"Assault"
+	],
+	"namelists": [
+		"NANOTRASEN",
+		"WEAPONS",
+		"BRITISH_NAVY"
+	],
+	"job_slots": {
+		"NTAS Leader": {
+			"outfit": "/datum/outfit/job/nanotrasen/ntas/commander",
+			"officer": true,
+			"slots": 1
+		},
+		"NTAS Security Operative": {
+			"outfit": "/datum/outfit/job/nanotrasen/ntas/operative",
+			"slots": 3
+		},
+		"NTAS Medical Operative": {
+			"outfit": "/datum/outfit/job/nanotrasen/ntas/medic",
+			"slots": 1
+		},
+		"NTAS Engineering Operative": {
+			"outfit": "/datum/outfit/job/nanotrasen/ntas/engineer",
+			"slots": 1
+		}
+	}
+}

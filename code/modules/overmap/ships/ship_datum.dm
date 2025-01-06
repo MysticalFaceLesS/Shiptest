@@ -164,7 +164,20 @@
 	if(istype(/datum/overmap/ship, docked_to))
 		var/datum/overmap/ship/old_dock = docked_to
 		adjust_speed(old_dock.speed_x, old_dock.speed_y)
-
+	// [CELADON-ADD] - subshuttles fix
+	x = docked_to.x
+	y = docked_to.y
+	position_to_move["x"] = docked_to.x
+	position_to_move["y"] = docked_to.y
+	if(docked_to.x == null || docked_to.y == null)
+		x = docked_to.docked_to.x
+		y = docked_to.docked_to.y
+		position_to_move["x"] = docked_to.docked_to.x
+		position_to_move["y"] = docked_to.docked_to.y
+	var/datum/overmap/ship/old_dock = docked_to
+	x_pixels_moved = old_dock.x_pixels_moved+(pick(6, -6))
+	y_pixels_moved = old_dock.y_pixels_moved+(pick(6, -6))
+	// [/CELADON-ADD] - subshuttles fix
 /datum/overmap/ship/proc/on_docked_to_moved()
 	token.update_screen()
 

@@ -381,6 +381,10 @@
 	display_name = "hampter the major"
 	path = /obj/item/toy/plush/celadon/hampter/ert_squad
 
+/datum/gear/plushes/hampter/cute
+	display_name = "cute hampter"
+	path = /obj/item/toy/plush/celadon/hampter/cute
+
 // Carpps
 
 /datum/gear/plushes/carpplushie
@@ -425,3 +429,11 @@
 /datum/gear/plushes/carpplushie/void
 	display_name = "carp plushie, void"
 	path = /obj/item/toy/plush/carpplushie/void
+
+/datum/gear/plushes/rimri
+	display_name = "Rimri plushie"
+	path = /obj/item/toy/plush/celadon/rimri
+
+/datum/gear/plushes/rimri/snow
+	display_name = "Rimri snow plushie"
+	path = /obj/item/toy/plush/celadon/rimri/snow

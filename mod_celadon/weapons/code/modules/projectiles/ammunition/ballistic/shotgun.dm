@@ -6,7 +6,7 @@
 	icon_state = "backshot_410"
 	caliber = "410x76mm"
 	projectile_type = /obj/projectile/bullet/pellet/a410
-	bullet_per_box = 75
+	// bullet_per_box = 75
 
 /obj/item/ammo_casing/a410/a410_slug
 	name = "410mm bullet casing"
@@ -15,7 +15,7 @@
 	icon_state = "slug_410"
 	caliber = "410x76mm"
 	projectile_type = /obj/projectile/bullet/slug/a410
-	bullet_per_box = 65
+	// bullet_per_box = 65
 
 /obj/item/ammo_casing/a410/a410_flechette
 	name = "410mm bullet casing"
@@ -24,4 +24,4 @@
 	icon_state = "flechette_410"
 	caliber = "410x76mm"
 	projectile_type = /obj/projectile/bullet/flechette/a410
-	bullet_per_box = 55
+	// bullet_per_box = 55

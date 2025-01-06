@@ -12,8 +12,8 @@
 		/mob/living/simple_animal/hostile/asteroid/lobstrosity = 10,
 	)
 	feature_spawn_list = list(
-		/obj/effect/spawner/lootdrop/anomaly/ice = 12,
-		/obj/effect/spawner/lootdrop/anomaly/big = 1,
+		/obj/effect/spawner/random/anomaly/ice = 12,
+		/obj/effect/spawner/random/anomaly/big = 1,
 		/obj/structure/spawner/ice_moon/demonic_portal/low_threat = 25,
 		/obj/structure/spawner/ice_moon/demonic_portal/medium_threat = 50,
 		/obj/structure/spawner/ice_moon/demonic_portal/high_threat = 13,
@@ -50,8 +50,8 @@
 
 /datum/biome/iceberg
 	feature_spawn_list = list(
-		/obj/effect/spawner/lootdrop/anomaly/ice = 100,
-		/obj/effect/spawner/lootdrop/anomaly/big = 1,
+		/obj/effect/spawner/random/anomaly/ice = 100,
+		/obj/effect/spawner/random/anomaly/big = 1,
 		/obj/structure/spawner/ice_moon/demonic_portal/low_threat = 200,
 		/obj/structure/spawner/ice_moon/demonic_portal/medium_threat = 400,
 		/obj/structure/spawner/ice_moon/demonic_portal/high_threat = 40,
@@ -84,7 +84,7 @@
 		/obj/structure/spawner/ice_moon/polarbear = 20,
 		/obj/structure/spawner/burrow/ice_planet = 60,
 		/obj/structure/spawner/burrow/ice_planet = 40,
-		/obj/effect/spawner/lootdrop/anomaly/ice/cave = 10,
+		/obj/effect/spawner/random/anomaly/ice/cave = 10,
 		/obj/structure/vein/ice = 30,
 		/obj/structure/vein/ice/classtwo = 50,
 		/obj/structure/vein/ice/classthree = 6,

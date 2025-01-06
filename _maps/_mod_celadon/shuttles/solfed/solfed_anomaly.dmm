@@ -589,9 +589,16 @@
 /obj/effect/turf_decal/box,
 /turf/open/floor/plasteel/dark_2,
 /area/ship/general/cargo/cargo_bay)
+"iM" = (
+/obj/machinery/space_heater,
+/turf/open/floor/mineral/plastitanium,
+/area/ship/science)
 "iX" = (
 /obj/structure/table/wood/fancy/royalblack,
 /obj/machinery/light/dim/directional/south,
+/obj/machinery/chem_dispenser/drinks{
+	dir = 8
+	},
 /turf/open/floor/wood/ebony,
 /area/ship/crew/dorm)
 "jj" = (
@@ -647,12 +654,13 @@
 /turf/open/floor/mineral/plastitanium,
 /area/ship/general/engineering/engineering_1)
 "km" = (
-/obj/structure/closet/crate/large,
-/mob/living/simple_animal/bot/honkbot{
-	emagged = 1
+/obj/machinery/shower{
+	dir = 4
 	},
-/obj/effect/turf_decal/box,
-/turf/open/floor/plasteel/dark_2,
+/obj/effect/turf_decal/atmos,
+/turf/open/floor/plasteel/darkbrownfull/darkbrown{
+	dir = 8
+	},
 /area/ship/general/cargo/cargo_bay)
 "kG" = (
 /obj/machinery/rnd/production/techfab/department/science,
@@ -668,11 +676,18 @@
 /turf/open/floor/plasteel/mono/white,
 /area/ship/hallway/central)
 "lj" = (
-/obj/structure/bed/dogbed,
-/mob/living/simple_animal/borer/sterile{
-	name = "Quill";
-	real_name = "Quill";
-	desc = "A small, quivering, slug-like creature. Ew.."
+/obj/structure/table/wood/fancy/royalblack,
+/obj/item/paper_bin/carbon{
+	pixel_y = 3;
+	pixel_x = 7
+	},
+/obj/item/pen/fountain/solgov{
+	pixel_y = 2;
+	pixel_x = 6
+	},
+/obj/machinery/recharger{
+	pixel_y = 9;
+	pixel_x = -6
 	},
 /turf/open/floor/marble/white_black_border{
 	dir = 5
@@ -806,11 +821,11 @@
 /area/ship/science)
 "nT" = (
 /obj/structure/closet/crate/large,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
 /obj/effect/turf_decal/box,
 /turf/open/floor/plasteel/dark_2,
 /area/ship/general/cargo/cargo_bay)
@@ -1028,7 +1043,7 @@
 /area/ship/general/cargo/cargo_bay)
 "rq" = (
 /obj/structure/chair/comfy/red/old/alt/directional/east{
-	pixel_x = 12
+	pixel_x = 10
 	},
 /turf/open/floor/wood/ebony,
 /area/ship/crew/dorm)
@@ -1194,7 +1209,7 @@
 /area/ship/engineering/atmospherics)
 "ts" = (
 /obj/structure/chair/comfy/red/old/alt/directional/east{
-	pixel_x = 12
+	pixel_x = 10
 	},
 /obj/machinery/light_switch{
 	pixel_y = 25;
@@ -1270,6 +1285,11 @@
 "uz" = (
 /turf/open/floor/mineral/plastitanium,
 /area/ship/science)
+"uC" = (
+/turf/open/floor/plasteel/stairs/stairs_pack/dark{
+	dir = 8
+	},
+/area/ship/bridge)
 "uE" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 8
@@ -1285,12 +1305,11 @@
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/central)
 "uN" = (
-/obj/machinery/light/floor,
-/obj/item/paper/carbon{
-	default_raw_text = "Внимание! В следующей комнате находится плазменная аномалия. Для работы с ней необходимо надеть защитный костюм, так как она выбрасывает ядовитые испарения. При этом, чтобы аномалия начала вырабатывать плазму, вам нужно взаимодействовать с ней. Например - коснуться её. Чем больше раз вы её коснётесь, тем больше плазмы она будет вырабатывать. Камера аномалии оборудована иновационным шлюзом, что не пропускает через себя атмосферу. При работе с аномалией не бойтесь смешивания атмосфер. Единственное, из-за чего это может произойти - человеческий фактор"
+/obj/structure/railing{
+	dir = 5
 	},
-/turf/open/floor/plasteel/mono/dark,
-/area/ship/hallway/central)
+/turf/open/floor/marble/black,
+/area/ship/bridge)
 "vd" = (
 /obj/machinery/atmospherics/components/unary/thermomachine/heater{
 	dir = 1
@@ -1308,6 +1327,14 @@
 	},
 /turf/open/floor/engine,
 /area/ship/general/engineering)
+"vs" = (
+/obj/effect/turf_decal/box,
+/obj/structure/closet/crate/large,
+/mob/living/simple_animal/bot/honkbot{
+	emagged = 1
+	},
+/turf/open/floor/plasteel/dark_2,
+/area/ship/general/cargo/cargo_bay)
 "vB" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -1373,11 +1400,8 @@
 /turf/closed/wall/r_wall/syndicate,
 /area/ship/science)
 "wF" = (
-/obj/machinery/fax/solgov{
-	pixel_y = 6
-	},
-/obj/structure/table/wood/fancy/royalblack,
 /obj/machinery/light/dim/directional/south,
+/obj/structure/bookcase,
 /turf/open/floor/marble/white_black_border{
 	dir = 1
 	},
@@ -1492,7 +1516,8 @@
 /area/ship/general/engineering/engineering_1)
 "yU" = (
 /obj/effect/anomaly/heartbeat/planetary{
-	pulse_delay = 20
+	pulse_delay = 20;
+	effectrange = 1
 	},
 /turf/open/floor/engine,
 /area/ship/general/engineering/engineering_1)
@@ -1520,6 +1545,7 @@
 /obj/machinery/light/dim/directional/north{
 	pixel_y = 50
 	},
+/obj/item/storage/box/drinkingglasses,
 /turf/open/floor/wood/ebony,
 /area/ship/crew/dorm)
 "Af" = (
@@ -1572,6 +1598,12 @@
 	pixel_x = 10
 	},
 /obj/machinery/light/dim/directional/north,
+/turf/open/floor/wood/ebony,
+/area/ship/crew/dorm)
+"AF" = (
+/obj/machinery/vending/cigarette/syndicate{
+	all_items_free = 1
+	},
 /turf/open/floor/wood/ebony,
 /area/ship/crew/dorm)
 "AQ" = (
@@ -1670,6 +1702,9 @@
 /obj/item/megaphone/command,
 /obj/item/melee/chainofcommand,
 /obj/item/clothing/gloves/tackler/combat/insulated,
+/obj/structure/railing{
+	dir = 4
+	},
 /turf/open/floor/marble/white_black_border,
 /area/ship/bridge)
 "Bq" = (
@@ -1729,11 +1764,9 @@
 /turf/open/floor/mineral/plastitanium,
 /area/ship/general/engineering)
 "BQ" = (
-/obj/machinery/shower{
-	dir = 1
-	},
-/turf/open/floor/mineral/plastitanium,
-/area/ship/general/engineering/engineering_1)
+/obj/machinery/holopad/emergency/command,
+/turf/open/floor/marble/black,
+/area/ship/bridge)
 "Cx" = (
 /obj/structure/window/plasma/reinforced{
 	dir = 4;
@@ -1743,9 +1776,9 @@
 /turf/open/floor/engine,
 /area/ship/general/engineering)
 "CB" = (
+/obj/effect/turf_decal/box,
 /obj/structure/closet/crate/large,
 /obj/structure/reagent_dispensers/watertank/high,
-/obj/effect/turf_decal/box,
 /turf/open/floor/plasteel/dark_2,
 /area/ship/general/cargo/cargo_bay)
 "CP" = (
@@ -1770,7 +1803,7 @@
 /area/ship/engineering/engine)
 "Du" = (
 /obj/structure/chair/comfy/red/old/alt/directional/west{
-	pixel_x = -12
+	pixel_x = -10
 	},
 /turf/open/floor/wood/ebony,
 /area/ship/crew/dorm)
@@ -1800,6 +1833,7 @@
 /area/ship/general/cargo/cargo_bay)
 "Eb" = (
 /obj/machinery/computer/helm/viewscreen/directional/south,
+/obj/machinery/suit_storage_unit/radsuit,
 /turf/open/floor/plasteel/darkbrownfull/darkbrown,
 /area/ship/general/cargo/cargo_bay)
 "Ee" = (
@@ -1886,16 +1920,13 @@
 /turf/open/floor/plasteel/dark_2,
 /area/ship/general/cargo/cargo_bay)
 "FI" = (
-/obj/structure/table/wood/fancy/royalblack,
-/obj/machinery/recharger{
-	pixel_y = 9;
-	pixel_x = 7
+/obj/item/documents/solgov,
+/obj/structure/filingcabinet/double{
+	dir = 1
 	},
-/obj/item/paper_bin/carbon{
-	pixel_y = 6;
-	pixel_x = -6
+/obj/structure/railing{
+	dir = 4
 	},
-/obj/item/pen/fountain/solgov,
 /turf/open/floor/marble/white_black_border{
 	dir = 1
 	},
@@ -2084,9 +2115,15 @@
 /turf/open/floor/mineral/plastitanium,
 /area/ship/general/engineering/engineering_1)
 "IX" = (
-/obj/machinery/suit_storage_unit/radsuit,
-/turf/open/floor/mineral/plastitanium,
-/area/ship/general/engineering/engineering_1)
+/obj/item/banner/solfed/mundane,
+/obj/item/paper/carbon{
+	default_raw_text = "Внимание! В следующей комнате находится плазменная аномалия. Для работы с ней необходимо надеть защитный костюм, так как она выбрасывает ядовитые испарения. При этом, чтобы аномалия начала вырабатывать плазму, вам нужно взаимодействовать с ней. Например - коснуться её. Чем больше раз вы её коснётесь, тем больше плазмы она будет вырабатывать. Камера аномалии оборудована иновационным шлюзом, что не пропускает через себя атмосферу. При работе с аномалией не бойтесь смешивания атмосфер. Единственное, из-за чего это может произойти - человеческий фактор";
+	pixel_y = 4;
+	pixel_x = -23;
+	anchored = 1
+	},
+/turf/open/floor/plasteel/mono/dark,
+/area/ship/hallway/central)
 "Jk" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 4
@@ -2158,6 +2195,12 @@
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/ship/engineering/engine)
+"Lj" = (
+/obj/structure/railing{
+	dir = 6
+	},
+/turf/open/floor/marble/black,
+/area/ship/bridge)
 "Lk" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 6
@@ -2229,7 +2272,7 @@
 "Me" = (
 /obj/machinery/computer/helm/viewscreen/directional/north,
 /obj/structure/chair/comfy/red/old/alt/directional/west{
-	pixel_x = -12
+	pixel_x = -10
 	},
 /turf/open/floor/wood/ebony,
 /area/ship/crew/dorm)
@@ -2319,9 +2362,10 @@
 /turf/open/floor/mineral/plastitanium,
 /area/ship/general/engineering)
 "OG" = (
-/obj/structure/filingcabinet/double,
-/obj/item/documents/solgov,
 /obj/machinery/light/dim/directional/north,
+/obj/machinery/vending/boozeomat/syndicate_access{
+	all_items_free = 1
+	},
 /turf/open/floor/marble/white_black_border,
 /area/ship/bridge)
 "OU" = (
@@ -2516,9 +2560,9 @@
 	},
 /area/ship/hallway/central)
 "Sf" = (
-/obj/structure/chair/wood/wings{
-	dir = 4;
-	pixel_x = 13
+/obj/structure/chair/comfy/blue/corpo/directional/west{
+	pixel_x = -6;
+	pixel_y = 4
 	},
 /turf/open/floor/marble/white_black_border{
 	dir = 1
@@ -2597,6 +2641,12 @@
 "Ui" = (
 /obj/machinery/power/apc/auto_name/directional/north,
 /obj/structure/cable,
+/obj/structure/bed/dogbed,
+/mob/living/simple_animal/borer/sterile{
+	name = "Quill";
+	real_name = "Quill";
+	desc = "A small, quivering, slug-like creature. Ew.."
+	},
 /turf/open/floor/marble/white_black_border,
 /area/ship/bridge)
 "UF" = (
@@ -2624,6 +2674,10 @@
 "Vn" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 8
+	},
+/obj/structure/table/wood/fancy/royalblack,
+/obj/machinery/fax/solgov{
+	pixel_y = 6
 	},
 /turf/open/floor/marble/white_black_border{
 	dir = 4
@@ -2987,7 +3041,7 @@ pR
 xy
 IE
 vX
-IX
+vX
 NB
 aX
 aX
@@ -3014,7 +3068,7 @@ vX
 vX
 vX
 vX
-BQ
+vX
 Tc
 aX
 Dm
@@ -3180,8 +3234,8 @@ vX
 RM
 HZ
 cN
-uN
-QV
+HZ
+IX
 fi
 Yk
 nB
@@ -3269,7 +3323,7 @@ YY
 cS
 LL
 IO
-uz
+iM
 Sr
 WB
 pY
@@ -3415,7 +3469,7 @@ ol
 ZU
 zy
 iA
-iA
+km
 JO
 Ml
 Ml
@@ -3442,7 +3496,7 @@ ol
 dl
 PI
 Is
-km
+iE
 iE
 FG
 Is
@@ -3496,7 +3550,7 @@ ol
 ZU
 el
 RL
-iE
+vs
 Gm
 nT
 Is
@@ -3557,9 +3611,9 @@ Is
 lV
 vB
 Bl
-qH
-qH
-qH
+Lj
+uC
+uN
 FI
 Yw
 Ro
@@ -3585,7 +3639,7 @@ Eb
 DS
 OG
 qH
-qH
+BQ
 qH
 wF
 Yw
@@ -3618,7 +3672,7 @@ ZV
 NM
 fK
 ys
-ys
+AF
 yx
 nI
 ol

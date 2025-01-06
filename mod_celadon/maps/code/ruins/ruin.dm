@@ -232,6 +232,14 @@
 	description = "A group of pirates on a small ship in the jungle."
 	suffix = "jungle_pirate.dmm"
 
+/datum/map_template/ruin/jungle/vamplab
+	name = "Vampire laboratory"
+	id = "vamp-lab"
+	description = "A Laboratory for the development of the drug 'Vita-Null+X', which will help cure vampirism, or not.."
+	suffix = "jungle_vamplab.dmm"
+	allow_duplicates = FALSE
+	cost = 10
+
 //							///
 //		Lavaland ruin		///
 //							///
@@ -625,6 +633,12 @@
 	description = "A crashed abductor ship with something horrible goi'n inside."
 	id = "crash_abductor_ship"
 	suffix = "wasteplanet_ruined_abductor_ship.dmm"
+
+/datum/map_template/ruin/wasteplanet/abondoned_containment
+	name = "Abandoned containment area"
+	description = "A containment zone that contains an unknown creature called 'Claws'. For some unknown reason, there is a crashed ship called 'Dareсt' near the containment zone."
+	id = "claw_waste"
+	suffix = "wasteplanet_claw_ruin.dmm"
 
 //							///
 //		Whitesand ruin		///

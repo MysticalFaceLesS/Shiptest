@@ -52,8 +52,9 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
 "bX" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
-	dir = 10
+/obj/machinery/porta_turret/ship/syndicate/ballistic/light{
+	dir = 10;
+	id = "kansatsu_turrets"
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -474,8 +475,9 @@
 	dir = 4;
 	name = "Captain's Chair"
 	},
-/obj/machinery/turretid{
-	pixel_y = 24
+/obj/machinery/turretid/ship{
+	pixel_y = 24;
+	id = "kansatsu_turrets"
 	},
 /obj/effect/turf_decal/trimline/opaque/bar,
 /turf/open/floor/plasteel/dark,
@@ -501,8 +503,9 @@
 /turf/open/floor/plating,
 /area/ship/cargo)
 "lg" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
-	dir = 9
+/obj/machinery/porta_turret/ship/syndicate/ballistic/light{
+	dir = 9;
+	id = "kansatsu_turrets"
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -1001,10 +1004,9 @@
 /turf/template_noop,
 /area/template_noop)
 "xc" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
-	pixel_x = 7;
-	dir = 4;
-	pixel_y = 4
+/obj/machinery/porta_turret/ship/syndicate/ballistic{
+	dir = 6;
+	id = "kansatsu_turrets"
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -1040,12 +1042,12 @@
 	pixel_y = 1
 	},
 /obj/structure/closet/crate/wooden,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/cargo)
 "xF" = (
@@ -1289,12 +1291,6 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/crew)
-"Do" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
-	dir = 6
-	},
-/turf/closed/wall/mineral/plastitanium,
-/area/ship/bridge)
 "DG" = (
 /obj/machinery/advanced_airlock_controller{
 	pixel_x = -27
@@ -1333,6 +1329,7 @@
 /obj/item/clothing/glasses/thermal/syndi,
 /obj/item/clothing/glasses/thermal/syndi,
 /obj/item/card/emag/limited,
+/obj/item/gun/energy/plasmacutter/adv,
 /obj/item/toy/plush/goatplushie/angry{
 	name = "goat plushie"
 	},
@@ -1571,14 +1568,6 @@
 /obj/machinery/power/ship_gravity,
 /turf/open/floor/plating,
 /area/ship/engineering)
-"KS" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
-	pixel_x = 7;
-	dir = 4;
-	pixel_y = 5
-	},
-/turf/closed/wall/mineral/plastitanium,
-/area/ship/bridge)
 "Lm" = (
 /obj/machinery/atmospherics/pipe/layer_manifold,
 /turf/closed/wall/mineral/plastitanium,
@@ -1985,8 +1974,9 @@
 /turf/open/floor/carpet/red_gold,
 /area/ship/crew)
 "WB" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
-	dir = 5
+/obj/machinery/porta_turret/ship/syndicate/ballistic{
+	dir = 5;
+	id = "kansatsu_turrets"
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -2031,7 +2021,6 @@
 	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/binoculars,
-/obj/item/camera_bug,
 /obj/item/melee/classic_baton/telescopic,
 /obj/item/melee/classic_baton/telescopic,
 /obj/item/melee/classic_baton,
@@ -2039,11 +2028,12 @@
 /obj/item/gun/energy/disabler,
 /obj/item/gun/energy/disabler,
 /obj/item/gun/ballistic/automatic/pistol/ringneck/no_mag,
-/obj/item/ammo_box/c10mm/rubbershot,
+/obj/item/storage/box/ammo/c10mm_rubber,
 /obj/item/ammo_box/magazine/m10mm_ringneck,
-/obj/item/ammo_box/c10mm/ap,
+/obj/item/storage/box/ammo/c10mm_ap,
 /obj/item/ammo_box/magazine/m10mm_ringneck,
 /obj/item/book/granter/martial/cqc,
+/obj/item/camera_bug,
 /turf/open/floor/plasteel/stairs{
 	dir = 4
 	},
@@ -2096,7 +2086,7 @@
 "Yp" = (
 /obj/structure/window/reinforced/spawner,
 /obj/structure/rack,
-/obj/effect/spawner/lootdrop/maintenance/five,
+/obj/effect/spawner/random/maintenance/five,
 /obj/item/stack/marker_beacon/thirty,
 /obj/effect/turf_decal/box,
 /obj/item/stack/sheet/metal/twenty{
@@ -2117,6 +2107,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/item/storage/backpack/satchel/flat/cthonian,
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ship/cargo)
 "YX" = (
@@ -2278,7 +2269,7 @@ Ur
 DN
 DN
 DN
-Do
+xc
 wQ
 "}
 (8,1,1) = {"
@@ -2485,7 +2476,7 @@ wQ
 wQ
 wQ
 wQ
-KS
+WB
 YX
 YX
 YX

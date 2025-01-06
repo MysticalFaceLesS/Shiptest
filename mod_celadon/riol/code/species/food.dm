@@ -1,5 +1,5 @@
 /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/riol
-	icon_state = "riol meat"
+	icon_state = "meat"
 	desc = "Delicious riol damage."
 	cooked_type = /obj/item/reagent_containers/food/snacks/meat/steak/plain/human/riol
 	filling_color = "#8e2323"

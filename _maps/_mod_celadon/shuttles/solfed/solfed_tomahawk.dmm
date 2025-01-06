@@ -89,8 +89,9 @@
 /turf/open/floor/wood,
 /area/ship/hallway/central)
 "aZ" = (
-/obj/machinery/porta_turret/ship/faction/solgov{
-	dir = 6
+/obj/machinery/porta_turret/ship/solfed/heavy{
+	dir = 6;
+	id = "tomahawk_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -221,8 +222,9 @@
 /turf/open/floor/engine/hull,
 /area/ship/external)
 "cQ" = (
-/obj/machinery/porta_turret/ship/faction/solgov{
-	dir = 9
+/obj/machinery/porta_turret/ship/solfed{
+	dir = 9;
+	id = "tomahawk_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -418,8 +420,9 @@
 /turf/open/floor/plasteel/mono,
 /area/ship/cargo)
 "eU" = (
-/obj/machinery/porta_turret/ship/faction/solgov{
-	dir = 1
+/obj/machinery/porta_turret/ship/solfed/heavy{
+	dir = 5;
+	id = "tomahawk_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -431,8 +434,9 @@
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/ship/cargo)
 "fj" = (
-/obj/machinery/porta_turret/ship/faction/solgov{
-	dir = 9
+/obj/machinery/porta_turret/ship/solfed{
+	dir = 9;
+	id = "tomahawk_turrets"
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/bridge)
@@ -459,9 +463,9 @@
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "fO" = (
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
 /obj/effect/turf_decal/box/corners,
-/obj/effect/spawner/lootdrop/maintenance/five,
+/obj/effect/spawner/random/maintenance/five,
 /obj/structure/closet/crate/trashcart,
 /turf/open/floor/plasteel/mono,
 /area/ship/cargo)
@@ -474,8 +478,8 @@
 /obj/structure/sink{
 	pixel_y = 13
 	},
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
 /turf/open/floor/plasteel/white,
 /area/ship/security/prison)
 "fY" = (
@@ -800,14 +804,15 @@
 	pixel_y = 32
 	},
 /obj/structure/table,
-/obj/item/storage/backpack/duffelbag/med/surgery{
-	pixel_y = 13
-	},
-/obj/item/clothing/suit/apron/surgical,
-/obj/item/clothing/mask/surgical,
 /obj/effect/turf_decal/trimline/opaque/solgovblue/filled/line{
 	dir = 1
 	},
+/obj/item/storage/case/surgery{
+	pixel_x = 5;
+	pixel_y = 10
+	},
+/obj/item/clothing/mask/surgical,
+/obj/item/clothing/suit/apron/surgical,
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "kM" = (
@@ -1702,7 +1707,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/effect/spawner/lootdrop/glowstick,
+/obj/effect/spawner/random/decoration/glowstick,
 /obj/machinery/atmospherics/pipe/manifold/orange/hidden{
 	dir = 4
 	},
@@ -2364,7 +2369,6 @@
 /obj/item/clothing/neck/cloak/solgovcap,
 /obj/item/binoculars,
 /obj/item/ammo_box/magazine/gar,
-/obj/item/ammo_box/ferrolancebox,
 /obj/item/hatchet/wooden{
 	name = "Tomahawk";
 	force = 20;
@@ -2378,6 +2382,7 @@
 	item_state = "captainpack"
 	},
 /obj/item/gun/ballistic/automatic/powered/gauss/gar,
+/obj/item/storage/box/ammo/ferrolance,
 /turf/open/floor/carpet/royalblue,
 /area/ship/crew/office)
 "BJ" = (
@@ -2478,7 +2483,7 @@
 /obj/effect/turf_decal/corner/opaque/solgovblue{
 	dir = 1
 	},
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /obj/effect/decal/cleanable/ash,
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
@@ -2895,8 +2900,8 @@
 	},
 /obj/item/ammo_box/magazine/gar,
 /obj/item/ammo_box/magazine/gar,
-/obj/item/ammo_box/ferrolancebox,
-/obj/item/ammo_box/ferrolancebox,
+/obj/item/storage/box/ammo/ferrolance,
+/obj/item/storage/box/ammo/ferrolance,
 /turf/open/floor/plasteel/white,
 /area/ship/security/prison)
 "Gw" = (
@@ -2950,8 +2955,9 @@
 /turf/open/floor/wood/ebony,
 /area/ship/hallway/central)
 "HD" = (
-/obj/machinery/porta_turret/ship/faction/solgov{
-	dir = 10
+/obj/machinery/porta_turret/ship/solfed{
+	dir = 10;
+	id = "tomahawk_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -3036,6 +3042,13 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
 /turf/open/floor/plasteel/white,
 /area/ship/security/prison)
+"Jf" = (
+/obj/machinery/porta_turret/ship/solfed{
+	dir = 6;
+	id = "tomahawk_turrets"
+	},
+/turf/closed/wall/mineral/titanium,
+/area/ship/bridge)
 "Jk" = (
 /obj/structure/table/reinforced,
 /obj/item/gps{
@@ -3678,8 +3691,9 @@
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/crew/janitor)
 "Re" = (
-/obj/machinery/porta_turret/ship/faction/solgov{
-	dir = 5
+/obj/machinery/porta_turret/ship/solfed{
+	dir = 5;
+	id = "tomahawk_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -4340,8 +4354,9 @@
 /turf/open/floor/plasteel/white,
 /area/ship/crew/janitor)
 "VD" = (
-/obj/machinery/porta_turret/ship/faction/solgov{
-	dir = 10
+/obj/machinery/porta_turret/ship/solfed{
+	dir = 10;
+	id = "tomahawk_turrets"
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/bridge)
@@ -4684,8 +4699,9 @@
 	name = "Operations"
 	},
 /obj/effect/turf_decal/siding/wood,
-/obj/machinery/turretid/lethal{
-	pixel_y = -27
+/obj/machinery/turretid/ship{
+	pixel_y = -27;
+	id = "tomahawk_turrets"
 	},
 /turf/open/floor/wood,
 /area/ship/bridge)
@@ -5221,7 +5237,7 @@ rf
 FB
 rf
 rf
-aZ
+Jf
 "}
 (18,1,1) = {"
 PX
@@ -5378,7 +5394,7 @@ PX
 (26,1,1) = {"
 PX
 PX
-eU
+cQ
 bC
 aP
 hR
@@ -5530,7 +5546,7 @@ mt
 (34,1,1) = {"
 PX
 PX
-Re
+eU
 GC
 GC
 Os
@@ -5666,7 +5682,7 @@ PX
 PX
 PX
 PX
-Re
+eU
 Qz
 GC
 PX

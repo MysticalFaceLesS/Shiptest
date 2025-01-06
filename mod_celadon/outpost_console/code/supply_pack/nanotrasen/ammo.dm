@@ -1,35 +1,56 @@
-/datum/supply_pack/faction/nanotrasen/ammo //Патроны
+/datum/supply_pack/faction/nanotrasen/ammo
+	group = "Ammunition"
 
-	group = "Faction ammo"
-
-/datum/supply_pack/faction/nanotrasen/ammo/commander_ammo_box
-	hidden = FALSE
+/datum/supply_pack/faction/nanotrasen/ammo/c9mm_ammo_box
 	name = "9mm ammo box"
-	desc = "9mm ammo box for guns like commander. Contains 50 shells"
-	contains = list(/obj/item/ammo_box/c9mm)
+	desc = "9mm ammo box for guns like the commander or the saber SMG. Contains 50 shells"
+	contains = list(/obj/item/storage/box/ammo/c9mm)
 	cost = 250
-	faction = "nanotrasen"
+
+/datum/supply_pack/faction/nanotrasen/ammo/c9mm_ammo_box_ap
+	name = "9mm AP ammo box"
+	desc = "9mm AP ammo box for guns like the commander or the saber SMG. Contains 50 shells"
+	contains = list(/obj/item/storage/box/ammo/c9mm_ap)
+	cost = 450
+
+/datum/supply_pack/faction/nanotrasen/ammo/c9mm_ammo_box_hp
+	name = "9mm HP ammo box"
+	desc = "9mm HP ammo box for guns like the commander or the saber SMG. Contains 50 shells"
+	contains = list(/obj/item/storage/box/ammo/c9mm_hp)
+	cost = 350
 
 /datum/supply_pack/faction/nanotrasen/ammo/wt_ammo_box
-	hidden = FALSE
 	name = "4.6x30mm ammo box"
-	desc = "4.6x30mm ammo box for guns like WT550. Contains 50 shells"
-	contains = list(/obj/item/ammo_box/c46x30mm_box)
+	desc = "4.6x30mm ammo box for guns like the WT550. Contains 50 shells"
+	contains = list(/obj/item/storage/box/ammo/c46x30mm)
 	cost = 500
-	faction = "nanotrasen"
+
+/datum/supply_pack/faction/nanotrasen/ammo/wt_ammo_box_ap
+	name = "4.6x30mm AP ammo box"
+	desc = "4.6x30mm AP ammo box for guns like the WT550. Contains 50 shells"
+	contains = list(/obj/item/storage/box/ammo/c46x30mm/ap)
+	cost = 1000
+
+/datum/supply_pack/faction/nanotrasen/ammo/wt_ammo_box_hp
+	name = "4.6x30mm HP ammo box"
+	desc = "4.6x30mm HP ammo box for guns like the WT550. Contains 50 shells"
+	contains = list(/obj/item/storage/box/ammo/c46x30mm/hp)
+	cost = 700
 
 /datum/supply_pack/faction/nanotrasen/ammo/wt_magazine
-	hidden = FALSE
 	name = "Single WT550 magazine"
 	desc = "A single magazine for the WT550"
 	contains = list(/obj/item/ammo_box/magazine/wt550m9)
 	cost = 700
-	faction = "nanotrasen"
+
+/datum/supply_pack/faction/nanotrasen/ammo/saber_magazine
+	name = "Single saber SMG magazine"
+	desc = "A single magazine for the saber SMG"
+	contains = list(/obj/item/ammo_box/magazine/smgm9mm)
+	cost = 600
 
 /datum/supply_pack/faction/nanotrasen/ammo/commander_magazine
-	hidden = FALSE
 	name = "Single commander magazine"
 	desc = "A single magazine for the commander"
 	contains = list(/obj/item/ammo_box/magazine/co9mm)
-	cost = 600
-	faction = "nanotrasen"
+	cost = 400
