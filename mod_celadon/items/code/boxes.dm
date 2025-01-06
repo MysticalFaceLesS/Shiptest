@@ -54,11 +54,11 @@
 	radio_type = null
 /obj/item/storage/box/survival/inteq/PopulateContents()
 	var/static/items_inside = list(
-		/obj/item/clothing/mask/gas/sechailer/balaclava/inteq = 1,\
+		/obj/item/clothing/mask/balaclava = 1,\
 		/obj/item/tank/internals/emergency_oxygen/engi = 1,\
 		/obj/item/reagent_containers/hypospray/medipen/atropine = 1,\
 		/obj/item/reagent_containers/pill/penacid = 1,\
-		/obj/item/reagent_containers/food/snacks/rationpack = 1,\
+		/obj/item/storage/ration = 1,\
 		/obj/item/radio = 1,\
 		/obj/item/crowbar/red = 1,\
 		)

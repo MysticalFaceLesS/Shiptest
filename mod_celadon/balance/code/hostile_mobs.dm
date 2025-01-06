@@ -76,7 +76,7 @@ GLOBAL_LIST_INIT(onecardinaleast, EAST)
 GLOBAL_LIST_INIT(onecardinalwest, WEST)
 
 /mob/living/simple_animal/hostile
-	var/datum/armor/armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 /mob/living/simple_animal/hostile/asteroid
 	vision_range = 15
@@ -801,20 +801,18 @@ GLOBAL_LIST_INIT(onecardinalwest, WEST)
 	speed = 1
 	move_to_delay = 2
 	armor = list("melee" = 10, "bullet" = 20, "laser" = 20, "energy" = 20, "bomb" = 50, "bio" = 50, "rad" = 50, "fire" = 20, "acid" = 20)
-	crusher_loot = list(/obj/item/melee/transforming/cleaving_saw,
-										/obj/item/gun/energy/kinetic_accelerator,
-										/obj/item/crusher_trophy/miner_eye,
-										/obj/item/disk/design_disk/modkit_disc/mob_and_turf_aoe,
-										/obj/item/disk/design_disk/modkit_disc/bounty,
-										/obj/item/disk/design_disk/modkit_disc/resonator_blast,
-										/obj/item/disk/design_disk/modkit_disc/rapid_repeater)
-	loot = list(/obj/item/melee/transforming/cleaving_saw,
-				/obj/item/gun/energy/kinetic_accelerator,
+	crusher_loot = list(/obj/item/gun/energy/kinetic_accelerator,
+						/obj/item/crusher_trophy/miner_eye,
+						/obj/item/disk/design_disk/modkit_disc/mob_and_turf_aoe,
+						/obj/item/disk/design_disk/modkit_disc/bounty,
+						/obj/item/disk/design_disk/modkit_disc/resonator_blast,
+						/obj/item/disk/design_disk/modkit_disc/rapid_repeater)
+	loot = list(/obj/item/gun/energy/kinetic_accelerator,
 				/obj/item/disk/design_disk/modkit_disc/mob_and_turf_aoe,
 				/obj/item/disk/design_disk/modkit_disc/bounty,
 				/obj/item/disk/design_disk/modkit_disc/resonator_blast,
 				/obj/item/disk/design_disk/modkit_disc/rapid_repeater)
-
+// /obj/item/melee/transforming/cleaving_saw,
 // /mob/living/simple_animal/hostile/megafauna/blood_drunk_miner/guidance
 
 /mob/living/simple_animal/hostile/megafauna/blood_drunk_miner/doom

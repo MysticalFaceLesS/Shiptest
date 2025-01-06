@@ -381,13 +381,13 @@
 	pixel_x = -8;
 	pixel_y = 7
 	},
-/obj/item/stamp/head_of_personnel{
-	pixel_x = -7;
-	pixel_y = -3
-	},
 /obj/item/folder/red{
 	pixel_x = -8;
 	pixel_y = 11
+	},
+/obj/item/stamp/nanotrasen/officer{
+	pixel_x = -7;
+	pixel_y = -3
 	},
 /turf/open/floor/wood,
 /area/ship/general/command_crew/hop)
@@ -558,8 +558,8 @@
 /obj/item/stock_parts/cell/gun,
 /obj/item/stock_parts/cell/gun,
 /obj/item/stock_parts/cell/gun,
-/obj/item/ammo_box/c9mm/rubbershot,
-/obj/item/ammo_box/c9mm,
+/obj/item/storage/box/ammo/c9mm_rubber,
+/obj/item/storage/box/ammo/c9mm,
 /obj/item/ammo_box/magazine/co9mm,
 /obj/item/ammo_box/magazine/co9mm,
 /obj/item/ammo_box/magazine/co9mm/rubber,
@@ -1455,8 +1455,8 @@
 /obj/item/stamp,
 /obj/item/clothing/accessory/armband/cargo,
 /obj/item/clothing/head/beret/cargo,
-/obj/item/ammo_box/c38_box,
-/obj/item/ammo_box/c38_box,
+/obj/item/storage/box/ammo/c38,
+/obj/item/storage/box/ammo/c38,
 /obj/item/clothing/under/nanotrasen/supply/qm,
 /obj/item/clothing/neck/cloak/qm,
 /obj/item/clothing/suit/nanotrasen/vest,
@@ -1795,6 +1795,14 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
+/obj/item/stamp/nanotrasen{
+	pixel_x = 1;
+	pixel_y = -3
+	},
+/obj/item/stamp/nanotrasen/captain{
+	pixel_x = 10;
+	pixel_y = -3
+	},
 /turf/open/floor/wood,
 /area/ship/crew/dorm/captain)
 "ls" = (
@@ -2032,9 +2040,10 @@
 /obj/effect/turf_decal/corner/opaque/ntblue/three_quarters{
 	dir = 8
 	},
-/obj/machinery/turretid/lethal{
+/obj/machinery/turretid/ship{
 	pixel_x = -1;
-	pixel_y = 27
+	pixel_y = 27;
+	id = "skipper_turrets"
 	},
 /obj/machinery/computer/rdconsole{
 	dir = 8;
@@ -4074,12 +4083,13 @@
 /area/ship/engineering/engine)
 "Cc" = (
 /obj/structure/catwalk/over,
-/obj/machinery/porta_turret/ship/faction/nanotrasen/ballistic{
-	dir = 4
-	},
 /obj/structure/sign/poster/official/nanotrasen_logo{
 	pixel_x = 0;
 	pixel_y = -32
+	},
+/obj/machinery/porta_turret/ship/nt/pulse{
+	dir = 4;
+	id = "skipper_turrets"
 	},
 /turf/open/floor/engine/hull/reinforced,
 /area/ship/bridge)
@@ -4783,7 +4793,7 @@
 /turf/open/floor/wood,
 /area/ship/crew/dorm)
 "Hb" = (
-/obj/machinery/vending/cola/random,
+/obj/effect/spawner/random/vending/cola,
 /turf/open/floor/carpet/nanoweave,
 /area/ship/hallway/central)
 "Hf" = (
@@ -5786,11 +5796,8 @@
 /obj/effect/turf_decal/borderfloorwhite/full,
 /obj/machinery/light/directional/north,
 /obj/structure/table/optable,
-/obj/item/storage/backpack/duffelbag/med/surgery{
-	pixel_y = 3;
-	pixel_x = 0
-	},
 /obj/effect/decal/cleanable/blood/old,
+/obj/item/storage/case/surgery,
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "Pl" = (
@@ -6184,12 +6191,13 @@
 /area/ship/crew/canteen/kitchen)
 "SK" = (
 /obj/structure/catwalk/over,
-/obj/machinery/porta_turret/ship/faction/nanotrasen/ballistic{
-	dir = 4
-	},
 /obj/structure/sign/poster/official/nanotrasen_logo{
 	pixel_x = 0;
 	pixel_y = 32
+	},
+/obj/machinery/porta_turret/ship/nt/pulse{
+	dir = 4;
+	id = "skipper_turrets"
 	},
 /turf/open/floor/engine/hull/reinforced,
 /area/ship/bridge)
@@ -6285,7 +6293,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "Tz" = (
-/obj/machinery/vending/snack/random,
+/obj/effect/spawner/random/vending/snack,
 /turf/open/floor/carpet/nanoweave,
 /area/ship/hallway/central)
 "TF" = (

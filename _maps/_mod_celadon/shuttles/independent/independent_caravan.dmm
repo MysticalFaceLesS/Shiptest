@@ -579,7 +579,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating,
 /area/ship/engineering/atmospherics)
 "kY" = (
@@ -587,7 +587,7 @@
 	dir = 4
 	},
 /obj/structure/closet/crate,
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
 /turf/open/floor/plasteel/tech,
 /area/ship/cargo)
 "ll" = (
@@ -832,8 +832,8 @@
 /area/ship/crew)
 "oA" = (
 /obj/structure/table/reinforced,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
 /obj/item/melee/knife/kitchen,
 /obj/item/kitchen/rollingpin,
 /turf/open/floor/carpet/royalblue,
@@ -1096,7 +1096,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/fore)
 "tQ" = (
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /obj/effect/decal/cleanable/oil,
 /obj/effect/turf_decal/number/five{
 	dir = 8
@@ -1125,8 +1125,14 @@
 	},
 /obj/machinery/airalarm/directional/north,
 /obj/structure/table/glass,
-/obj/item/reagent_containers/spray/cleaner,
-/obj/item/storage/backpack/duffelbag/med/surgery,
+/obj/item/storage/case/surgery{
+	pixel_x = 4;
+	pixel_y = 7
+	},
+/obj/item/reagent_containers/spray/cleaner{
+	pixel_x = -5;
+	pixel_y = 4
+	},
 /turf/open/floor/plasteel/white,
 /area/ship/science)
 "uZ" = (
@@ -1270,7 +1276,7 @@
 /area/ship/bridge)
 "xF" = (
 /obj/machinery/atmospherics/pipe/simple/violet/visible,
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating,
 /area/ship/engineering/atmospherics)
 "xI" = (
@@ -1509,7 +1515,7 @@
 /area/ship/bridge)
 "BV" = (
 /obj/structure/closet/crate,
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
 /turf/open/floor/plasteel/tech,
 /area/ship/cargo)
 "Ca" = (
@@ -2012,7 +2018,7 @@
 "Ko" = (
 /obj/effect/turf_decal/box/corners,
 /obj/structure/closet/cardboard,
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
 /turf/open/floor/plasteel/tech,
 /area/ship/cargo)
 "Kx" = (
@@ -2890,8 +2896,8 @@
 /obj/item/reagent_containers/food/drinks/flask/gold,
 /obj/item/gun/ballistic/revolver/detective,
 /obj/item/gun/ballistic/derringer,
-/obj/item/ammo_box/c38,
-/obj/item/ammo_box/c38,
+/obj/item/storage/box/ammo/c38,
+/obj/item/storage/box/ammo/c38,
 /turf/open/floor/carpet/red_gold,
 /area/ship/bridge)
 "ZM" = (

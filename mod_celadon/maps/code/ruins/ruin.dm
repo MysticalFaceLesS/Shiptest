@@ -232,6 +232,14 @@
 	description = "A group of pirates on a small ship in the jungle."
 	suffix = "jungle_pirate.dmm"
 
+/datum/map_template/ruin/jungle/vamplab
+	name = "Vampire laboratory"
+	id = "vamp-lab"
+	description = "A Laboratory for the development of the drug 'Vita-Null+X', which will help cure vampirism, or not.."
+	suffix = "jungle_vamplab.dmm"
+	allow_duplicates = FALSE
+	cost = 10
+
 //							///
 //		Lavaland ruin		///
 //							///

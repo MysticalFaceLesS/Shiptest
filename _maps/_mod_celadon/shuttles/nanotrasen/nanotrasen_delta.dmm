@@ -1309,8 +1309,9 @@
 /turf/open/floor/plating,
 /area/ship/engineering)
 "jH" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
-	dir = 9
+/obj/machinery/porta_turret/ship/nt/light{
+	dir = 9;
+	id = "delta_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -1627,10 +1628,8 @@
 	dir = 8
 	},
 /obj/item/storage/firstaid/medical,
-/obj/item/storage/backpack/duffelbag/med/surgery{
-	pixel_y = 4
-	},
 /obj/structure/table/reinforced/glass,
+/obj/item/storage/case/surgery,
 /turf/open/floor/plasteel/white,
 /area/ship/crew)
 "rs" = (
@@ -2489,9 +2488,10 @@
 	dir = 4;
 	name = "Helm"
 	},
-/obj/machinery/turretid{
+/obj/machinery/turretid/ship{
 	pixel_x = 27;
-	pixel_y = 25
+	pixel_y = 25;
+	id = "delta_turrets"
 	},
 /obj/effect/turf_decal/road/line/opaque/white{
 	dir = 8
@@ -2851,8 +2851,9 @@
 /turf/open/floor/plasteel/patterned/grid,
 /area/ship/cargo)
 "WG" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
-	dir = 6
+/obj/machinery/porta_turret/ship/nt{
+	dir = 6;
+	id = "delta_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
@@ -2931,17 +2932,25 @@
 /obj/structure/table/reinforced/titaniumglass,
 /obj/item/folder/blue,
 /obj/item/paper_bin,
-/obj/item/stamp/rd{
-	pixel_x = 9;
-	pixel_y = 0
-	},
 /obj/item/pen/fountain/captain,
 /obj/item/radio/intercom/directional/north,
+/obj/effect/turf_decal/road/line/opaque/white,
+/obj/item/stamp/nanotrasen/science{
+	pixel_x = 9;
+	pixel_y = -1
+	},
+/obj/item/stamp/nanotrasen/captain{
+	pixel_x = -8;
+	pixel_y = -1
+	},
 /obj/item/stamp/nt/captain{
 	pixel_x = -8;
-	pixel_y = 0
+	pixel_y = 8
 	},
-/obj/effect/turf_decal/road/line/opaque/white,
+/obj/item/stamp/nanotrasen{
+	pixel_x = 9;
+	pixel_y = 8
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "XZ" = (
@@ -3003,14 +3012,16 @@
 /turf/open/floor/plasteel,
 /area/ship/cargo)
 "YY" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
-	dir = 5
+/obj/machinery/porta_turret/ship/nt{
+	dir = 5;
+	id = "delta_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)
 "YZ" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
-	dir = 10
+/obj/machinery/porta_turret/ship/nt/light{
+	dir = 10;
+	id = "delta_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
 /area/ship/bridge)

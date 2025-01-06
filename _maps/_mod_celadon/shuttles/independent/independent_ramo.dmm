@@ -17,12 +17,12 @@
 /area/ship/medical/surgery)
 "ad" = (
 /obj/structure/table,
-/obj/item/storage/backpack/duffelbag/med/surgery,
 /obj/effect/decal/cleanable/cobweb,
 /obj/machinery/light_switch{
 	pixel_y = 21;
 	pixel_x = 13
 	},
+/obj/item/storage/case/surgery,
 /turf/open/floor/plasteel/white,
 /area/ship/medical/surgery)
 "ae" = (
@@ -72,7 +72,7 @@
 	pixel_y = 26;
 	id = 51321
 	},
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /obj/machinery/ore_silo,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
@@ -87,7 +87,7 @@
 "am" = (
 /obj/effect/turf_decal/siding/thinplating/light,
 /obj/item/radio/intercom/directional/west,
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /obj/machinery/holopad,
 /turf/open/floor/plasteel/white,
 /area/ship/medical/surgery)
@@ -512,7 +512,7 @@
 	icon_state = "vent_map_on-2";
 	dir = 4
 	},
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew/cryo)
 "aZ" = (
@@ -641,7 +641,7 @@
 	icon_state = "borderfloor_black";
 	dir = 10
 	},
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /obj/machinery/holopad,
 /turf/open/floor/plasteel/dark,
 /area/ship/engineering)
@@ -744,7 +744,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew/cryo)
 "bq" = (
@@ -1029,7 +1029,7 @@
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "bG" = (
-/obj/machinery/vending/cola/random,
+/obj/effect/spawner/random/vending/cola,
 /obj/effect/turf_decal/borderfloorblack{
 	icon_state = "borderfloor_black";
 	dir = 4
@@ -1046,7 +1046,7 @@
 /obj/effect/turf_decal/box/corners,
 /obj/machinery/power/apc/auto_name/directional/south,
 /obj/structure/cable,
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/cargo)
 "bI" = (
@@ -1125,9 +1125,9 @@
 /obj/item/storage/cans/sixsoda,
 /obj/item/storage/cans/sixsoda,
 /obj/item/storage/cans/sixbeer,
-/obj/effect/spawner/lootdrop/donkpockets,
-/obj/effect/spawner/lootdrop/donkpockets,
-/obj/effect/spawner/lootdrop/donkpockets,
+/obj/effect/spawner/random/food_or_drink/donkpockets,
+/obj/effect/spawner/random/food_or_drink/donkpockets,
+/obj/effect/spawner/random/food_or_drink/donkpockets,
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
 	},
@@ -1498,7 +1498,7 @@
 	icon_state = "siding_wood_line";
 	dir = 9
 	},
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /obj/machinery/holopad,
 /turf/open/floor/wood/walnut,
 /area/ship/crew/canteen)
@@ -1526,7 +1526,7 @@
 /turf/open/floor/carpet/orange,
 /area/ship/engineering)
 "cz" = (
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /obj/machinery/light/small/directional/south,
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
@@ -1592,7 +1592,7 @@
 /obj/structure/closet/crate/bin,
 /obj/item/clothing/head/wizard/marisa/fake,
 /obj/item/clothing/suit/wizrobe/marisa/fake,
-/obj/effect/spawner/lootdrop/maintenance/four,
+/obj/effect/spawner/random/maintenance/four,
 /obj/effect/decal/cleanable/cobweb,
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew/canteen)
@@ -1601,7 +1601,7 @@
 	icon_state = "pipe11-2";
 	dir = 10
 	},
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /obj/machinery/holopad/emergency/command,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
@@ -1680,7 +1680,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /turf/open/floor/plasteel/tech,
 /area/ship/maintenance/external)
 "cO" = (
@@ -1958,7 +1958,7 @@
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew/canteen)
 "dg" = (
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/machinery/atmospherics/components/binary/dp_vent_pump{
 	icon_state = "dpvent_map-3";
@@ -1980,7 +1980,7 @@
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
 "di" = (
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /obj/machinery/firealarm/directional/south{
 	pixel_x = 5
 	},
@@ -2164,7 +2164,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /turf/open/floor/plasteel/tech,
 /area/ship/maintenance/external)
 "du" = (
@@ -2205,7 +2205,7 @@
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew/canteen)
 "dz" = (
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
@@ -2310,9 +2310,9 @@
 /obj/effect/turf_decal/box/corners,
 /obj/structure/closet/crate/trashcart,
 /obj/item/clothing/head/kitty,
-/obj/effect/spawner/lootdrop/costume,
-/obj/effect/spawner/lootdrop/armory_contraband,
-/obj/effect/spawner/lootdrop/maintenance/eight,
+/obj/effect/spawner/random/clothing/costume,
+/obj/effect/spawner/random/exotic/armory,
+/obj/effect/spawner/random/maintenance/eight,
 /obj/effect/decal/cleanable/wrapping,
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
@@ -2468,7 +2468,7 @@
 /turf/open/floor/plating,
 /area/ship/external)
 "dZ" = (
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /obj/machinery/advanced_airlock_controller{
 	pixel_x = -28;
 	pixel_y = -5

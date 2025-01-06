@@ -666,8 +666,9 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/security/armory)
 "fD" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
-	dir = 9
+/obj/machinery/porta_turret/ship/nt/heavy{
+	dir = 9;
+	id = "ranger_turrets"
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/bridge)
@@ -803,22 +804,17 @@
 	pixel_x = -1;
 	pixel_y = -31
 	},
-/obj/item/gun/energy/e_gun/hades{
-	pixel_x = -1;
-	pixel_y = -9;
-	cell_type = /obj/item/stock_parts/cell/gun
-	},
-/obj/item/gun/ballistic/automatic/smg/wt550{
-	pixel_x = 0;
-	pixel_y = -3
-	},
-/obj/item/gun/ballistic/automatic/smg/wt550{
-	pixel_x = 0;
-	pixel_y = 5
-	},
 /obj/item/gun/energy/e_gun/iot{
 	pixel_x = 0;
-	pixel_y = 13
+	pixel_y = 12
+	},
+/obj/item/gun/ballistic/automatic/smg/skm_carbine/saber{
+	pixel_x = -4;
+	pixel_y = -8
+	},
+/obj/item/gun/ballistic/automatic/smg/skm_carbine/saber{
+	pixel_x = -4;
+	pixel_y = 1
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/security/armory)
@@ -932,12 +928,12 @@
 /turf/open/floor/wood,
 /area/ship/crew/dorm/captain)
 "hz" = (
+/obj/machinery/camera/autoname,
 /obj/docking_port/mobile{
 	dir = 2;
 	preferred_direction = 4;
 	port_direction = 8
 	},
-/obj/machinery/camera/autoname,
 /obj/machinery/light/floor,
 /turf/open/floor/engine/hull,
 /area/ship/external)
@@ -1109,11 +1105,11 @@
 	},
 /obj/effect/turf_decal/steeldecal/steel_decals4,
 /obj/effect/turf_decal/steeldecal/steel_decals9,
-/obj/effect/spawner/lootdrop/lpaid{
+/obj/effect/spawner/random/lpaid{
 	pixel_x = -5;
 	pixel_y = 10
 	},
-/obj/effect/spawner/lootdrop/lpretrieval{
+/obj/effect/spawner/random/lpretrieval{
 	pixel_x = 3;
 	pixel_y = 1
 	},
@@ -1569,7 +1565,6 @@
 /obj/item/clothing/gloves/color/purple,
 /obj/item/clothing/gloves/fingerless,
 /obj/item/clothing/head/maidheadband,
-/obj/item/clothing/gloves/maid/white,
 /obj/item/clothing/accessory/maidapron,
 /obj/item/clothing/under/costume/maid,
 /obj/item/clothing/under/rank/civilian/janitor/maid,
@@ -2289,6 +2284,10 @@
 	pixel_y = -19
 	},
 /obj/machinery/photocopier,
+/obj/item/stamp/nanotrasen{
+	pixel_x = -4;
+	pixel_y = 9
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "tK" = (
@@ -2393,8 +2392,9 @@
 /turf/open/floor/circuit,
 /area/ship/engineering/communications)
 "uD" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
-	dir = 5
+/obj/machinery/porta_turret/ship/nt{
+	dir = 5;
+	id = "ranger_turrets"
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/bridge)
@@ -2513,12 +2513,11 @@
 /obj/item/stock_parts/cell/gun,
 /obj/item/stock_parts/cell/gun,
 /obj/item/stock_parts/cell/gun,
-/obj/item/ammo_box/c46x30mm_box,
-/obj/item/ammo_box/c46x30mm_box,
-/obj/item/ammo_box/magazine/wt550m9,
-/obj/item/ammo_box/magazine/wt550m9,
-/obj/item/ammo_box/magazine/wt550m9,
-/obj/item/ammo_box/magazine/wt550m9,
+/obj/item/ammo_box/magazine/smgm9mm,
+/obj/item/ammo_box/magazine/smgm9mm,
+/obj/item/ammo_box/magazine/smgm9mm,
+/obj/item/storage/box/ammo/c9mm_ap,
+/obj/item/storage/box/ammo/c9mm,
 /turf/open/floor/plasteel/dark,
 /area/ship/security/armory)
 "vB" = (
@@ -2528,8 +2527,8 @@
 /area/ship/crew/cryo)
 "vF" = (
 /obj/effect/turf_decal/siding/blue,
-/obj/item/storage/backpack/duffelbag/med/surgery,
 /obj/structure/table/optable,
+/obj/item/storage/case/surgery,
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "vO" = (
@@ -2819,8 +2818,9 @@
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/bridge)
 "xL" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
-	dir = 6
+/obj/machinery/porta_turret/ship/nt{
+	dir = 6;
+	id = "ranger_turrets"
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/bridge)
@@ -2893,8 +2893,9 @@
 /turf/open/floor/plasteel,
 /area/ship/crew/janitor)
 "yQ" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
-	dir = 10
+/obj/machinery/porta_turret/ship/nt{
+	dir = 10;
+	id = "ranger_turrets"
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/bridge)
@@ -2962,8 +2963,9 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
 "zt" = (
-/obj/machinery/porta_turret/ship/faction/nanotrasen{
-	dir = 4
+/obj/machinery/porta_turret/ship/nt/pulse{
+	dir = 4;
+	id = "ranger_turrets"
 	},
 /turf/open/floor/engine/hull,
 /area/ship/bridge)
@@ -3419,10 +3421,8 @@
 /obj/effect/turf_decal/corner/opaque/ntblue/half{
 	dir = 1
 	},
-/obj/item/clothing/suit/space/hardsuit/ert{
-	desc = "The middlemanagement of the ERT world, the Lieutenant of the LP team is given this slightly downgraded version of the ERT Commander hardsuit. But wait, this one isnt downgraded!"
-	},
 /obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/clothing/suit/space/hardsuit/ert/lp,
 /obj/item/clothing/mask/gas/sechailer/swat,
 /turf/open/floor/plasteel/dark,
 /area/ship/security/armory)
@@ -3437,9 +3437,10 @@
 /obj/effect/turf_decal/corner/opaque/ntblue/border{
 	dir = 1
 	},
-/obj/machinery/turretid/lethal{
-	pixel_x = -1;
-	pixel_y = 25
+/obj/machinery/turretid/ship{
+	pixel_x = 0;
+	pixel_y = 25;
+	id = "ranger_turrets"
 	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/bridge)
@@ -3784,6 +3785,13 @@
 	},
 /turf/open/floor/plasteel,
 /area/ship/hallway/port)
+"HX" = (
+/obj/machinery/porta_turret/ship/nt/heavy{
+	dir = 10;
+	id = "ranger_turrets"
+	},
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/ship/bridge)
 "HZ" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	dir = 8
@@ -4004,13 +4012,23 @@
 	pixel_y = 8;
 	pixel_x = 5
 	},
-/obj/item/pen/fountain{
-	pixel_x = -4;
-	pixel_y = 7
-	},
 /obj/item/stamp/nt/captain{
 	pixel_x = -5;
+	pixel_y = 9
+	},
+/obj/item/stamp/nanotrasen/vigilitas/captain{
+	name = "Lieutenant's rubber stamp";
+	pixel_x = -5;
 	pixel_y = -1
+	},
+/obj/item/stamp/nanotrasen/vigilitas/loss_prevention{
+	name = "NT Loss Prevention rubber stamp";
+	pixel_x = 4;
+	pixel_y = -1
+	},
+/obj/item/pen/fountain{
+	pixel_x = 6;
+	pixel_y = 8
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
@@ -4848,6 +4866,13 @@
 /obj/structure/sign/nanotrasen,
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/engineering)
+"TK" = (
+/obj/machinery/porta_turret/ship/nt{
+	dir = 9;
+	id = "ranger_turrets"
+	},
+/turf/closed/wall/mineral/titanium/nodiagonal,
+/area/ship/bridge)
 "TL" = (
 /obj/machinery/suit_storage_unit/inherit,
 /obj/machinery/door/window/brigdoor,
@@ -5462,12 +5487,12 @@
 	dir = 1
 	},
 /obj/structure/closet/crate,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration{
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration{
 	pixel_x = 10;
 	pixel_y = -1
 	},
-/obj/effect/spawner/lootdrop/ration{
+/obj/effect/spawner/random/food_or_drink/ration{
 	pixel_x = -10;
 	pixel_y = 0
 	},
@@ -5490,7 +5515,6 @@
 /area/ship/hallway/central)
 
 (1,1,1) = {"
-zW
 zW
 zW
 zW
@@ -5531,7 +5555,6 @@ zW
 zW
 zW
 zW
-zW
 LV
 LV
 oI
@@ -5564,7 +5587,6 @@ zW
 zW
 "}
 (3,1,1) = {"
-zW
 zW
 zW
 zW
@@ -5604,8 +5626,7 @@ zW
 zW
 zW
 zW
-zW
-fD
+TK
 LV
 qS
 Tg
@@ -5638,7 +5659,6 @@ zW
 zW
 "}
 (5,1,1) = {"
-zW
 zW
 zW
 zW
@@ -5678,7 +5698,6 @@ zW
 zW
 zW
 zW
-zW
 iq
 iq
 iq
@@ -5714,7 +5733,6 @@ zW
 (7,1,1) = {"
 zW
 zW
-zW
 iq
 iq
 vm
@@ -5733,7 +5751,7 @@ gh
 Md
 pL
 Kg
-yQ
+HX
 zW
 zW
 zW
@@ -5749,7 +5767,6 @@ vv
 zW
 "}
 (8,1,1) = {"
-zW
 zW
 hN
 iq
@@ -5787,7 +5804,6 @@ cT
 "}
 (9,1,1) = {"
 zW
-zW
 Tc
 iq
 YK
@@ -5823,7 +5839,6 @@ vv
 CT
 "}
 (10,1,1) = {"
-zW
 zW
 iq
 sF
@@ -5861,7 +5876,6 @@ vv
 "}
 (11,1,1) = {"
 zW
-zW
 iq
 ix
 Kt
@@ -5897,7 +5911,6 @@ VP
 vv
 "}
 (12,1,1) = {"
-zW
 zW
 iq
 vV
@@ -5935,7 +5948,6 @@ vv
 "}
 (13,1,1) = {"
 zW
-zW
 iq
 GE
 vh
@@ -5971,7 +5983,6 @@ iH
 vv
 "}
 (14,1,1) = {"
-zW
 zW
 iq
 XS
@@ -6009,7 +6020,6 @@ vv
 "}
 (15,1,1) = {"
 zW
-zW
 Vt
 Vt
 Vt
@@ -6045,7 +6055,6 @@ xv
 gg
 "}
 (16,1,1) = {"
-zW
 zW
 Vt
 js
@@ -6083,7 +6092,6 @@ gg
 "}
 (17,1,1) = {"
 zW
-zW
 Vt
 Iy
 ym
@@ -6119,7 +6127,6 @@ BA
 NH
 "}
 (18,1,1) = {"
-zW
 zW
 Vt
 vB
@@ -6157,7 +6164,6 @@ NH
 "}
 (19,1,1) = {"
 zW
-zW
 Vt
 tb
 mQ
@@ -6193,7 +6199,6 @@ yC
 NH
 "}
 (20,1,1) = {"
-zW
 zW
 Vt
 IQ
@@ -6231,7 +6236,6 @@ NH
 "}
 (21,1,1) = {"
 zW
-zW
 ES
 Vt
 Vt
@@ -6268,8 +6272,7 @@ th
 "}
 (22,1,1) = {"
 zW
-zW
-zW
+wq
 QV
 jA
 KQ
@@ -6301,12 +6304,11 @@ uk
 xA
 Vp
 iV
-zW
+wq
 "}
 (23,1,1) = {"
-zW
-zW
-zW
+ef
+wq
 wq
 HA
 TZ
@@ -6338,10 +6340,9 @@ rM
 Mg
 wh
 Gf
-zW
+wq
 "}
 (24,1,1) = {"
-zW
 zW
 zW
 wq
@@ -6380,7 +6381,6 @@ zW
 (25,1,1) = {"
 zW
 zW
-zW
 hN
 jA
 Po
@@ -6415,7 +6415,6 @@ hz
 zW
 "}
 (26,1,1) = {"
-ef
 zW
 zW
 zW
@@ -6455,7 +6454,6 @@ zW
 zW
 zW
 zW
-zW
 XT
 Rn
 mJ
@@ -6492,7 +6490,6 @@ zW
 zW
 zW
 zW
-zW
 XT
 ZS
 rg
@@ -6526,7 +6523,6 @@ zW
 zW
 "}
 (29,1,1) = {"
-zW
 zW
 zW
 zW
@@ -6567,7 +6563,6 @@ zW
 zW
 zW
 zW
-zW
 XT
 XT
 DE
@@ -6600,7 +6595,6 @@ zW
 zW
 "}
 (31,1,1) = {"
-zW
 zW
 zW
 zW
@@ -6646,7 +6640,6 @@ zW
 zW
 zW
 zW
-zW
 fl
 zW
 zW
@@ -6683,7 +6676,6 @@ zW
 zW
 zW
 zW
-zW
 wq
 zW
 zW
@@ -6711,7 +6703,6 @@ zW
 zW
 "}
 (34,1,1) = {"
-zW
 zW
 zW
 zW
@@ -6761,7 +6752,6 @@ zW
 zW
 zW
 zW
-zW
 zt
 zW
 Lk
@@ -6785,7 +6775,6 @@ zW
 zW
 "}
 (36,1,1) = {"
-zW
 zW
 zW
 zW

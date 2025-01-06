@@ -112,15 +112,11 @@
 /turf/open/floor/plasteel/white,
 /area/ship/hallway/central)
 "bT" = (
-/obj/machinery/smartfridge/bloodbank/preloaded{
-	density = 0;
-	pixel_y = 0;
-	pixel_x = 32
-	},
 /obj/effect/turf_decal/industrial/outline/red,
 /obj/machinery/stasis{
 	dir = 8
 	},
+/obj/machinery/firealarm/directional/east,
 /turf/open/floor/plasteel/tech,
 /area/ship/medical)
 "cd" = (
@@ -266,7 +262,7 @@
 /turf/open/floor/plasteel/patterned/brushed,
 /area/ship/medical)
 "fX" = (
-/obj/machinery/vending/snack/random,
+/obj/effect/spawner/random/vending/snack,
 /obj/effect/turf_decal/trimline/opaque/red/filled/line{
 	dir = 8
 	},
@@ -280,7 +276,6 @@
 /obj/structure/closet/crate/freezer/surplus_limbs,
 /obj/machinery/airalarm/directional/south,
 /obj/machinery/firealarm/directional/east,
-/obj/machinery/iv_drip,
 /turf/open/floor/plasteel/tech,
 /area/ship/storage)
 "gL" = (
@@ -397,8 +392,8 @@
 /area/ship/crew)
 "jh" = (
 /obj/structure/table,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
 /obj/item/radio/intercom/directional/west,
 /turf/open/floor/wood/ebony,
 /area/ship/crew)
@@ -531,6 +526,11 @@
 /obj/effect/turf_decal/industrial/outline/red,
 /obj/machinery/autolathe,
 /obj/machinery/firealarm/directional/south,
+/obj/item/stack/sheet/glass/fifty,
+/obj/item/stack/sheet/metal/fifty{
+	pixel_x = 5;
+	pixel_y = 0
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/science)
 "mP" = (
@@ -538,7 +538,7 @@
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/maintenance/port)
 "na" = (
-/obj/machinery/vending/cola/random,
+/obj/effect/spawner/random/vending/cola,
 /obj/effect/turf_decal/trimline/opaque/red/filled/line{
 	dir = 8
 	},
@@ -686,8 +686,6 @@
 	pixel_y = -22
 	},
 /obj/item/storage/box/bodybags,
-/obj/item/storage/box/bodybags,
-/obj/item/storage/box/masks,
 /obj/item/storage/box/masks,
 /obj/item/storage/box/pillbottles,
 /obj/structure/closet/wall/white/chem{
@@ -695,6 +693,10 @@
 	name = "Medical Supplies Locker";
 	pixel_x = -28
 	},
+/obj/item/roller,
+/obj/item/roller,
+/obj/item/roller,
+/obj/item/storage/box/syringes,
 /turf/open/floor/plasteel/tech,
 /area/ship/storage)
 "qA" = (
@@ -810,7 +812,7 @@
 	},
 /obj/effect/turf_decal/industrial/outline/red,
 /obj/machinery/light/directional/north,
-/obj/machinery/firealarm/directional/east,
+/obj/machinery/airalarm/directional/east,
 /turf/open/floor/plasteel/tech,
 /area/ship/medical)
 "sx" = (
@@ -890,6 +892,11 @@
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/machinery/iv_drip{
+	pixel_x = 31;
+	pixel_y = 20;
+	layer = 5
 	},
 /turf/open/floor/plasteel/patterned/brushed,
 /area/ship/medical)
@@ -1032,24 +1039,30 @@
 	name = "firearms locker";
 	req_access_txt = "5"
 	},
-/obj/item/ammo_box/magazine/m10mm_ringneck,
-/obj/item/ammo_box/magazine/m10mm_ringneck,
-/obj/item/ammo_box/magazine/m10mm_ringneck,
-/obj/item/ammo_box/magazine/m10mm_ringneck,
-/obj/item/ammo_box/magazine/m10mm_ringneck,
-/obj/item/ammo_box/magazine/m10mm_ringneck,
 /obj/machinery/light/small/directional/east,
+/obj/item/storage/box/ammo/c10mm{
+	pixel_x = -6;
+	pixel_y = 10
+	},
+/obj/item/storage/box/ammo/c10mm_hp{
+	pixel_x = -7;
+	pixel_y = 2
+	},
+/obj/item/ammo_box/magazine/m10mm_ringneck,
+/obj/item/ammo_box/magazine/m10mm_ringneck,
+/obj/item/ammo_box/magazine/m10mm_ringneck,
 /obj/item/gun/ballistic/automatic/pistol/ringneck,
 /obj/item/gun/ballistic/automatic/pistol/ringneck,
 /obj/item/gun/ballistic/automatic/pistol/ringneck,
 /turf/open/floor/plasteel/tech,
 /area/ship/crew)
 "vn" = (
-/obj/machinery/smartfridge/organ{
-	density = 0;
-	pixel_x = 32
-	},
 /obj/structure/table/glass,
+/obj/machinery/smartfridge/bloodbank/preloaded{
+	density = 0;
+	pixel_y = 0;
+	pixel_x = 29
+	},
 /obj/machinery/cell_charger,
 /turf/open/floor/plasteel/tech,
 /area/ship/medical)
@@ -1089,6 +1102,7 @@
 "wp" = (
 /obj/effect/turf_decal/industrial/outline/red,
 /obj/machinery/rnd/server,
+/obj/item/multitool,
 /turf/open/floor/plasteel/tech,
 /area/ship/science)
 "wr" = (
@@ -1244,7 +1258,11 @@
 	pixel_y = 8
 	},
 /obj/item/reagent_containers/syringe,
-/obj/machinery/airalarm/directional/east,
+/obj/machinery/smartfridge/organ{
+	density = 0;
+	pixel_x = 29;
+	pixel_y = 0
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/medical)
 "zl" = (
@@ -1380,6 +1398,11 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
+/obj/machinery/iv_drip{
+	pixel_x = 31;
+	pixel_y = 20;
+	layer = 5
+	},
 /turf/open/floor/plasteel/patterned/brushed,
 /area/ship/medical)
 "zT" = (
@@ -1507,7 +1530,6 @@
 /obj/item/clothing/shoes/combat,
 /obj/item/clothing/head/beret/cmo/cybersun,
 /obj/item/clothing/under/rank/medical/chief_medical_officer/cybersun,
-/obj/item/gun/ballistic/automatic/pistol/ringneck,
 /turf/open/floor/carpet/cyan,
 /area/ship/bridge)
 "BU" = (
@@ -1654,15 +1676,23 @@
 /turf/open/floor/plating,
 /area/ship/maintenance/port)
 "DX" = (
-/obj/structure/closet/crate/medical,
-/obj/item/roller,
-/obj/item/roller,
-/obj/item/roller,
-/obj/item/roller,
-/obj/item/roller,
-/obj/item/clothing/mask/breath/medical,
 /obj/effect/turf_decal/industrial/outline/red,
-/obj/machinery/iv_drip,
+/obj/item/tank/internals/anesthetic,
+/obj/item/tank/internals/anesthetic{
+	pixel_x = 4;
+	pixel_y = -2
+	},
+/obj/structure/closet/crate/medical{
+	name = "anesthetics crate"
+	},
+/obj/item/clothing/mask/breath/medical{
+	pixel_x = -2;
+	pixel_y = 0
+	},
+/obj/item/clothing/mask/breath/medical{
+	pixel_x = -5;
+	pixel_y = -3
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/storage)
 "Eb" = (
@@ -1856,20 +1886,31 @@
 /obj/effect/turf_decal/industrial/outline/red,
 /obj/structure/crate_shelf,
 /obj/machinery/light/small/directional/west,
+/obj/structure/closet/crate/medical,
+/obj/item/reagent_containers/blood,
+/obj/item/reagent_containers/blood,
+/obj/item/reagent_containers/blood,
+/obj/item/reagent_containers/blood,
+/obj/item/reagent_containers/blood,
+/obj/item/reagent_containers/blood,
 /turf/open/floor/plasteel/tech,
 /area/ship/storage/eva)
-"Hl" = (
-/obj/structure/sign/poster/contraband/random,
-/turf/closed/wall/mineral/titanium/nodiagonal,
-/area/ship/crew)
 "HE" = (
-/obj/structure/rack,
 /obj/effect/turf_decal/industrial/outline/red,
-/obj/item/stack/sheet/glass/fifty,
-/obj/item/stack/sheet/metal/fifty,
 /obj/item/radio/intercom/directional/west,
-/obj/item/multitool,
-/obj/machinery/iv_drip,
+/obj/structure/rack,
+/obj/item/storage/toolbox/electrical{
+	pixel_x = -4;
+	pixel_y = 6
+	},
+/obj/item/storage/toolbox/syndicate{
+	pixel_x = -4;
+	pixel_y = 1
+	},
+/obj/item/storage/box/stockparts/t2{
+	pixel_x = 5;
+	pixel_y = 4
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/storage/eva)
 "HI" = (
@@ -2009,23 +2050,21 @@
 	},
 /obj/item/stack/marker_beacon/thirty,
 /obj/item/stack/marker_beacon/thirty,
-/obj/item/stack/marker_beacon/thirty,
-/obj/item/stack/marker_beacon/thirty,
 /obj/structure/rack,
-/obj/item/pickaxe/emergency{
-	desc = "For extracting yourself from rough landings, and getting to the even rougher ones";
-	name = "Medical Retrieval Tool"
-	},
-/obj/item/pickaxe/emergency{
-	desc = "For extracting yourself from rough landings, and getting to the even rougher ones";
-	name = "Medical Retrieval Tool"
-	},
-/obj/item/pickaxe/emergency{
-	desc = "For extracting yourself from rough landings, and getting to the even rougher ones";
-	name = "Medical Retrieval Tool"
-	},
 /obj/effect/turf_decal/industrial/outline/red,
 /obj/machinery/firealarm/directional/east,
+/obj/item/mining_scanner,
+/obj/item/mining_scanner,
+/obj/item/storage/bag/ore,
+/obj/item/storage/bag/ore,
+/obj/item/pickaxe/emergency{
+	desc = "For extracting yourself from rough landings, and getting to the even rougher ones";
+	name = "Medical Retrieval Tool"
+	},
+/obj/item/pickaxe/emergency{
+	desc = "For extracting yourself from rough landings, and getting to the even rougher ones";
+	name = "Medical Retrieval Tool"
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/storage/eva)
 "Kc" = (
@@ -2125,6 +2164,10 @@
 /obj/structure/curtain/bounty,
 /obj/item/bedsheet/blue{
 	dir = 8
+	},
+/obj/structure/sign/poster/contraband/random{
+	pixel_x = 32;
+	pixel_y = 1
 	},
 /turf/open/floor/carpet/cyan,
 /area/ship/crew)
@@ -2263,9 +2306,6 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/structure/closet/secure_closet/medical2,
-/obj/item/reagent_containers/glass/bottle/morphine,
-/obj/item/reagent_containers/glass/bottle/morphine,
 /obj/machinery/firealarm/directional/south,
 /turf/open/floor/plating,
 /area/ship/maintenance/starboard)
@@ -2352,21 +2392,27 @@
 /area/ship/storage/eva)
 "Pg" = (
 /obj/structure/table/glass,
-/obj/item/clothing/mask/surgical{
-	pixel_y = 6
+/obj/machinery/light/directional/south,
+/obj/item/storage/case/surgery{
+	pixel_x = 1;
+	pixel_y = 9
 	},
-/obj/item/storage/backpack/duffelbag/med/surgery{
-	pixel_y = 10
-	},
-/obj/item/clothing/suit/apron/surgical{
-	pixel_y = 6
-	},
-/obj/item/reagent_containers/spray/cleaner{
-	pixel_x = 5;
+/obj/item/reagent_containers/glass/bottle/morphine{
+	pixel_x = -9;
 	pixel_y = -1
 	},
-/obj/item/reagent_containers/medigel/sterilizine,
-/obj/machinery/light/directional/south,
+/obj/item/reagent_containers/glass/bottle/morphine{
+	pixel_x = -4;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/medigel/sterilizine{
+	pixel_x = 3;
+	pixel_y = 2
+	},
+/obj/item/reagent_containers/spray/cleaner{
+	pixel_x = 11;
+	pixel_y = 1
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/medical/surgery)
 "Pm" = (
@@ -2554,13 +2600,12 @@
 /obj/item/storage/firstaid/o2,
 /obj/item/storage/firstaid/toxin,
 /obj/item/storage/box/medipens,
-/obj/item/storage/box/syringes,
-/obj/item/storage/firstaid/regular,
-/obj/item/storage/firstaid/regular,
 /obj/structure/closet/secure_closet{
 	icon_state = "med";
 	name = "medicine locker"
 	},
+/obj/item/storage/firstaid/radiation,
+/obj/item/storage/firstaid/regular,
 /turf/open/floor/plasteel/tech,
 /area/ship/storage)
 "SR" = (
@@ -2797,6 +2842,7 @@
 /area/ship/science)
 "VN" = (
 /obj/machinery/light/small/directional/north,
+/obj/effect/spawner/random/maintenance/two,
 /turf/open/floor/plating,
 /area/ship/maintenance/starboard)
 "WB" = (
@@ -2822,13 +2868,7 @@
 	dir = 8
 	},
 /obj/machinery/airalarm/directional/east,
-/obj/structure/rack,
-/obj/item/tank/internals/plasmaman/full,
-/obj/item/tank/internals/plasmaman/full,
-/obj/item/tank/internals/plasmaman/full,
-/obj/item/tank/internals/emergency_oxygen/engi,
-/obj/item/tank/internals/emergency_oxygen/engi,
-/obj/item/tank/internals/emergency_oxygen/engi,
+/obj/structure/ore_box,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/storage/eva)
 "WX" = (
@@ -2898,7 +2938,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
-/obj/item/wrench/crescent,
 /obj/item/radio/intercom/directional/north,
 /turf/open/floor/plating,
 /area/ship/maintenance/port)
@@ -2927,7 +2966,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
-/obj/item/storage/toolbox/electrical,
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
@@ -3544,7 +3582,7 @@ Ev
 Pp
 CF
 Ev
-Hl
+Ev
 CZ
 iA
 UG

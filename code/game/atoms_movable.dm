@@ -540,7 +540,7 @@
 
 	var/previous_virtual_z = OldLoc?.virtual_z() || 0
 	var/current_virtual_z = virtual_z()
-	if(current_virtual_z && current_virtual_z != previous_virtual_z)
+	if(current_virtual_z != previous_virtual_z)
 		on_virtual_z_change(current_virtual_z, previous_virtual_z)
 
 	SEND_SIGNAL(src, COMSIG_MOVABLE_MOVED, OldLoc, Dir, Forced, old_locs)
@@ -580,9 +580,14 @@
 	return CanPass(AM, get_dir(src, AM))
 
 ///default byond proc that is deprecated for us in lieu of signals. do not call
-/atom/movable/Crossed(atom/movable/crossed_atom, oldloc)
-	SHOULD_NOT_OVERRIDE(TRUE)
-	CRASH("atom/movable/Crossed() was called!")
+// [CELADON-EDIT] - CELADON_EMOTES
+// /atom/movable/Crossed(atom/movable/crossed_atom, oldloc)
+// 	SHOULD_NOT_OVERRIDE(TRUE)
+// 	CRASH("atom/movable/Crossed() was called!")	// CELADON-EDIT - ORIGINAL
+/atom/movable/Crossed(atom/movable/AM, oldloc)
+	SEND_SIGNAL(src, COMSIG_MOVABLE_CROSSED, AM)
+	SEND_SIGNAL(AM, COMSIG_CROSSED_MOVABLE, src)
+// [/CELADON-EDIT]
 
 /**
  * `Uncross()` is a default BYOND proc that is called when something is *going*
@@ -1221,7 +1226,7 @@
 
 //Returns an atom's power cell, if it has one. Overload for individual items.
 /atom/movable/proc/get_cell()
-	return
+	return null
 
 /atom/movable/proc/can_be_pulled(user, grab_state, force)
 	if(src == user || !isturf(loc))
