@@ -17,7 +17,22 @@
 	pixel_x = -21;
 	pixel_y = -2
 	},
-/obj/machinery/washing_machine,
+/obj/structure/closet/crate,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/donkpockets,
+/obj/effect/spawner/random/food_or_drink/donkpockets,
+/obj/effect/spawner/random/food_or_drink/donkpockets,
+/obj/item/reagent_containers/food/drinks/waterbottle,
+/obj/item/reagent_containers/food/drinks/waterbottle,
+/obj/item/reagent_containers/food/drinks/waterbottle,
+/obj/item/reagent_containers/food/drinks/waterbottle,
+/obj/item/reagent_containers/food/drinks/waterbottle,
+/obj/item/reagent_containers/food/drinks/waterbottle,
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
 "ag" = (
@@ -27,7 +42,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/turf/open/floor/plasteel/tech/grid,
+/turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "ak" = (
 /obj/structure/table,
@@ -51,20 +66,14 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "ap" = (
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 10
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 9
+	dir = 4
 	},
-/obj/effect/turf_decal/industrial/fire{
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
 /obj/structure/cable{
-	icon_state = "2-8"
-	},
-/obj/effect/turf_decal/industrial/caution{
-	dir = 8
+	icon_state = "4-8"
 	},
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
@@ -83,10 +92,6 @@
 	dir = 1
 	},
 /obj/machinery/air_sensor/atmos/incinerator_tank,
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer1{
-	dir = 4;
-	filter_types = list()
-	},
 /turf/open/floor/engine/airless,
 /area/ship/engineering/engine)
 "au" = (
@@ -129,6 +134,7 @@
 /obj/machinery/light_switch{
 	pixel_y = 23
 	},
+/obj/structure/frame/machine,
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
 "aV" = (
@@ -151,24 +157,17 @@
 /area/ship/hallway/port_fore)
 "bx" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
+/obj/effect/turf_decal/siding/thinplating/dark{
+	dir = 8
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "bF" = (
 /obj/effect/turf_decal/techfloor,
-/obj/effect/turf_decal/industrial/fire/corner{
-	dir = 4
-	},
-/obj/machinery/power/apc/auto_name/directional/south,
-/obj/structure/cable{
-	icon_state = "0-1"
-	},
-/obj/machinery/light_switch{
-	dir = 1;
-	pixel_x = 10;
-	pixel_y = -17
-	},
-/obj/structure/bedsheetbin/empty,
-/obj/structure/table,
+/obj/structure/closet/crate/medical,
+/obj/item/circuitboard/machine/chem_dispenser,
+/obj/item/circuitboard/machine/chem_heater,
+/obj/item/circuitboard/machine/chem_master,
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
 "bI" = (
@@ -202,9 +201,15 @@
 	},
 /area/ship/hangar)
 "bU" = (
-/obj/structure/rack,
-/obj/item/storage/box/smart_metal_foam,
 /obj/machinery/airalarm/directional/east,
+/obj/structure/closet/secure_closet/engineering_welding{
+	req_access = null;
+	req_access_txt = "11";
+	req_one_access = null
+	},
+/obj/effect/turf_decal/techfloor{
+	dir = 4
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
 "bX" = (
@@ -248,6 +253,17 @@
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/dorm)
+"cy" = (
+/obj/effect/turf_decal/techfloor{
+	dir = 1
+	},
+/obj/effect/turf_decal/industrial/fire,
+/obj/machinery/door/firedoor/border_only{
+	dir = 8
+	},
+/obj/structure/reagent_dispensers/watertank,
+/turf/open/floor/pod,
+/area/ship/security/weapons_control)
 "cz" = (
 /obj/machinery/atmospherics/components/binary/valve,
 /obj/machinery/atmospherics/components/binary/pump/layer2{
@@ -310,7 +326,8 @@
 "dh" = (
 /obj/structure/chair/comfy/shuttle{
 	dir = 4;
-	name = "Helm"
+	name = "Helm";
+	desc = "A comfortable, secure seat. It has a more sturdy looking buckling system, for smoother flights. It looks like this seat had built-in hyposprays for injecting anti-overload “juice”. A mix of drugs to combat the effects of high-G. Nowadays the button on the pillow does not work and the juice supply has run out."
 	},
 /obj/structure/railing{
 	layer = 3.8;
@@ -446,11 +463,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
-/obj/structure/closet/secure_closet/engineering_welding{
-	req_access = null;
-	req_access_txt = "11";
-	req_one_access = null
-	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
 "eK" = (
@@ -463,6 +475,10 @@
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/effect/turf_decal/trimline/opaque/yellow/warning,
+/obj/effect/turf_decal/trimline/opaque/yellow/corner{
+	dir = 4
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
@@ -575,23 +591,9 @@
 /obj/effect/turf_decal/industrial/fire{
 	dir = 1
 	},
-/obj/structure/crate_shelf/built,
-/obj/structure/closet/crate,
-/obj/effect/spawner/random/food_or_drink/ration,
-/obj/effect/spawner/random/food_or_drink/ration,
-/obj/effect/spawner/random/food_or_drink/ration,
-/obj/effect/spawner/random/food_or_drink/ration,
-/obj/effect/spawner/random/food_or_drink/ration,
-/obj/effect/spawner/random/food_or_drink/ration,
-/obj/item/reagent_containers/food/drinks/waterbottle,
-/obj/item/reagent_containers/food/drinks/waterbottle,
-/obj/item/reagent_containers/food/drinks/waterbottle,
-/obj/item/reagent_containers/food/drinks/waterbottle,
-/obj/item/reagent_containers/food/drinks/waterbottle,
-/obj/item/reagent_containers/food/drinks/waterbottle,
-/obj/effect/spawner/random/food_or_drink/donkpockets,
-/obj/effect/spawner/random/food_or_drink/donkpockets,
-/obj/effect/spawner/random/food_or_drink/donkpockets,
+/obj/machinery/door/firedoor/border_only{
+	dir = 4
+	},
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
 "fK" = (
@@ -678,6 +680,9 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
+/obj/effect/turf_decal/trimline/opaque/yellow/line{
+	dir = 4
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "gm" = (
@@ -715,11 +720,40 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/effect/turf_decal/trimline/opaque/yellow/line{
+	dir = 4
+	},
+/turf/open/floor/plasteel/tech,
+/area/ship/engineering)
+"gw" = (
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/turf_decal/trimline/opaque/yellow/line{
+	layer = 2.040
+	},
+/obj/effect/turf_decal/trimline/opaque/yellow/line{
+	dir = 1
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "gz" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
+	},
+/obj/effect/turf_decal/trimline/opaque/vired/warning{
+	dir = 8;
+	pixel_x = -4;
+	layer = 2.061
+	},
+/obj/effect/turf_decal/techfloor{
+	dir = 5
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
@@ -759,7 +793,8 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/trimline/opaque/yellow/corner{
-	dir = 4
+	dir = 4;
+	layer = 2.061
 	},
 /obj/effect/turf_decal/trimline/opaque/yellow/corner{
 	dir = 1
@@ -771,7 +806,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/siphon/on/layer2{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/green/visible/layer4{
+/obj/machinery/atmospherics/pipe/simple/green/hidden/layer4{
 	dir = 4
 	},
 /turf/open/floor/engine/hull/reinforced,
@@ -806,6 +841,9 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/portable_atmospherics/scrubber,
+/obj/effect/turf_decal/trimline/opaque/vired/warning{
+	layer = 2.462
+	},
 /turf/open/floor/plating,
 /area/ship/engineering)
 "hg" = (
@@ -922,7 +960,8 @@
 /area/ship/hallway/port_fore)
 "hM" = (
 /obj/machinery/computer/helm{
-	dir = 8
+	dir = 8;
+	icon_state = "computer-right"
 	},
 /obj/structure/railing{
 	layer = 3.8;
@@ -990,6 +1029,9 @@
 /obj/effect/turf_decal/industrial/traffic/corner{
 	dir = 8
 	},
+/obj/structure/frame/machine{
+	anchored = 1
+	},
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
 "iu" = (
@@ -1044,13 +1086,15 @@
 	},
 /obj/machinery/light/directional/north,
 /obj/effect/turf_decal/trimline/opaque/yellow/corner{
-	dir = 4
+	dir = 4;
+	layer = 2.061
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/canteen)
 "iM" = (
 /obj/structure/chair/comfy/shuttle{
-	dir = 4
+	dir = 4;
+	desc = "A comfortable, secure seat. It has a more sturdy looking buckling system, for smoother flights. It looks like this seat had built-in hyposprays for injecting anti-overload “juice”. A mix of drugs to combat the effects of high-G. Nowadays the button on the pillow does not work and the juice supply has run out."
 	},
 /obj/structure/railing{
 	layer = 2.81;
@@ -1094,6 +1138,9 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/effect/turf_decal/trimline/opaque/yellow/line{
+	dir = 4
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
@@ -1148,7 +1195,6 @@
 	name = "corpsman's locker";
 	req_access = list(5)
 	},
-/obj/item/storage/firstaid/regular,
 /obj/item/storage/belt/medical/webbing,
 /obj/item/pinpointer/crew,
 /obj/item/storage/backpack/medic,
@@ -1292,6 +1338,18 @@
 /obj/item/flashlight,
 /turf/open/floor/carpet/red,
 /area/ship/crew/cryo)
+"kr" = (
+/obj/machinery/porta_turret/ship/inteq/light{
+	name = "Point Defence Turret";
+	shot_delay = 0.5;
+	lethal_projectile = /obj/projectile/bullet/c22lr/rubber;
+	stun_projectile = /obj/projectile/bullet/c22lr/rubber;
+	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
+	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
+	dir = 9
+	},
+/turf/closed/wall/r_wall/syndicate,
+/area/ship/hallway/port_fore)
 "ks" = (
 /obj/structure/chair/office,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
@@ -1366,22 +1424,34 @@
 /obj/machinery/door/poddoor{
 	dir = 4;
 	id = "Caliban_exhaustion_vent";
-	name = "Exhaustion Chamber Vent"
+	name = "Railgun Blast Protection"
 	},
 /turf/open/floor/engine/hull/reinforced,
 /area/ship/engineering/engine)
 "lw" = (
-/obj/machinery/porta_turret/ship/inteq/light{
-	name = "Point Defence Turret";
-	shot_delay = 0.5;
-	lethal_projectile = /obj/projectile/bullet/c22lr/rubber;
-	stun_projectile = /obj/projectile/bullet/c22lr/rubber;
-	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
-	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
-	dir = 10
+/obj/effect/turf_decal/arrows/white{
+	dir = 4
 	},
-/turf/closed/wall/r_wall/syndicate/nodiagonal,
-/area/ship/medical)
+/obj/effect/turf_decal/arrows/white{
+	dir = 4;
+	pixel_x = -16
+	},
+/obj/effect/turf_decal/trimline/opaque/vired/warning{
+	dir = 8;
+	pixel_x = -4
+	},
+/obj/machinery/power/shieldwallgen/atmos{
+	anchored = 1;
+	id = "Caliban_railgun_exit_holo";
+	locked = 1
+	},
+/obj/machinery/door/poddoor{
+	dir = 4;
+	id = "Caliban_railgun_exit";
+	name = "Railgun Blast Protection"
+	},
+/turf/open/floor/engine/hull/reinforced,
+/area/ship/security/weapons_control)
 "lA" = (
 /obj/structure/catwalk,
 /turf/open/floor/engine/hull/reinforced,
@@ -1618,6 +1688,9 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/effect/turf_decal/trimline/opaque/yellow/line{
+	dir = 4
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "mI" = (
@@ -1780,6 +1853,9 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
 /obj/structure/cable{
 	icon_state = "2-4"
+	},
+/obj/effect/turf_decal/trimline/opaque/yellow/line{
+	dir = 4
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
@@ -1948,7 +2024,6 @@
 	color = "#808080";
 	dir = 5
 	},
-/obj/machinery/light/small/directional/south,
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/hangar)
 "oY" = (
@@ -1982,14 +2057,29 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/security/armory)
 "pq" = (
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
-/obj/effect/turf_decal/industrial/fire{
+/obj/effect/turf_decal/arrows/white{
 	dir = 4
 	},
-/obj/structure/chair/comfy/shuttle{
+/obj/effect/turf_decal/arrows/white{
+	dir = 4;
+	pixel_x = -16
+	},
+/obj/effect/turf_decal/trimline/opaque/vired/warning{
+	dir = 8;
+	pixel_x = -4
+	},
+/obj/machinery/power/shieldwallgen/atmos{
+	anchored = 1;
+	id = "Caliban_railgun_exit_holo";
+	locked = 1;
 	dir = 1
 	},
-/turf/open/floor/pod,
+/obj/machinery/door/poddoor{
+	dir = 4;
+	id = "Caliban_railgun_exit";
+	name = "Railgun Blast Protection"
+	},
+/turf/open/floor/engine/hull/reinforced,
 /area/ship/security/weapons_control)
 "pu" = (
 /obj/structure/window/plasma/reinforced/spawner/west,
@@ -2011,10 +2101,19 @@
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
 /area/ship/crew/office)
 "pL" = (
-/obj/machinery/door/firedoor/border_only{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 10
 	},
-/obj/effect/turf_decal/industrial/traffic/cee{
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 9
+	},
+/obj/effect/turf_decal/industrial/fire{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/effect/turf_decal/industrial/stand_clear{
 	dir = 8
 	},
 /turf/open/floor/pod,
@@ -2022,6 +2121,28 @@
 "pU" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/engineering/engine)
+"pW" = (
+/obj/effect/turf_decal/arrows/white{
+	dir = 4;
+	layer = 2.041
+	},
+/obj/effect/turf_decal/trimline/opaque/vired/warning{
+	dir = 8;
+	pixel_x = -4
+	},
+/obj/effect/turf_decal/industrial/traffic/fulltile,
+/obj/effect/turf_decal/arrows/white{
+	dir = 4;
+	pixel_x = -16;
+	layer = 2.041
+	},
+/obj/machinery/door/poddoor{
+	dir = 4;
+	id = "Caliban_railgun_exit";
+	name = "Railgun Blast Protection"
+	},
+/turf/open/floor/engine/hull/reinforced,
+/area/ship/security/weapons_control)
 "pX" = (
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/structure/cable{
@@ -2038,6 +2159,9 @@
 	req_one_access = null
 	},
 /obj/item/rcl/pre_loaded,
+/obj/effect/turf_decal/techfloor{
+	dir = 4
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
 "pZ" = (
@@ -2050,6 +2174,10 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/effect/turf_decal/trimline/opaque/vired/warning{
+	dir = 8;
+	pixel_x = -4
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "qc" = (
@@ -2060,6 +2188,10 @@
 "qh" = (
 /obj/effect/turf_decal/industrial/traffic{
 	dir = 6
+	},
+/obj/structure/frame/machine{
+	anchored = 1;
+	state = 2
 	},
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
@@ -2073,6 +2205,9 @@
 	},
 /obj/structure/cable{
 	icon_state = "1-4"
+	},
+/obj/effect/turf_decal/trimline/opaque/yellow/line{
+	dir = 4
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
@@ -2158,7 +2293,8 @@
 /area/ship/engineering/engine)
 "qD" = (
 /obj/effect/turf_decal/trimline/opaque/yellow/corner{
-	dir = 4
+	dir = 4;
+	layer = 2.061
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 8
@@ -2296,14 +2432,21 @@
 /obj/item/tank/internals/emergency_oxygen/engi,
 /obj/item/flashlight,
 /obj/item/analyzer,
-/turf/open/floor/plasteel/tech/grid,
+/obj/effect/turf_decal/trimline/opaque/yellow/line{
+	dir = 1;
+	layer = 2.061
+	},
+/obj/effect/turf_decal/siding/thinplating/dark{
+	dir = 8
+	},
+/turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "rw" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/button/door{
 	dir = 8;
-	id = "Caliban_railgun_inside";
+	id = "Caliban_railgun_exit";
 	name = "Shutter Control";
 	pixel_x = 21;
 	pixel_y = -2
@@ -2466,14 +2609,14 @@
 	dir = 4;
 	layer = 2.461
 	},
-/obj/effect/turf_decal/techfloor{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
 	dir = 1
 	},
 /obj/structure/cable{
 	icon_state = "2-8"
+	},
+/obj/effect/turf_decal/techfloor{
+	dir = 4
 	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/fore)
@@ -2621,6 +2764,10 @@
 /obj/effect/turf_decal/techfloor/corner{
 	dir = 1
 	},
+/obj/item/paper/fluff{
+	default_raw_text = "Artificer team: BE CAUTIOUS. THE SHIP IS LOW ON POWER due to lack of F P.A.C.M.A.N. and worn-out SMESes. THE SHIP SHOULD TAKE OFF OF OUTPOST AND START ITS TURBINE NOW.";
+	name = "WARNING"
+	},
 /turf/open/floor/carpet/red,
 /area/ship/crew/cryo)
 "tF" = (
@@ -2665,13 +2812,82 @@
 /area/ship/security/armory)
 "tM" = (
 /obj/effect/turf_decal/techfloor,
-/obj/effect/turf_decal/industrial/fire{
-	dir = 1
+/obj/effect/turf_decal/industrial/fire/corner{
+	dir = 4
 	},
-/obj/machinery/door/firedoor/border_only{
-	dir = 8
+/obj/machinery/power/apc/auto_name/directional/south,
+/obj/structure/cable{
+	icon_state = "0-1"
 	},
-/obj/structure/reagent_dispensers/watertank,
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = 10;
+	pixel_y = -17
+	},
+/obj/item/trash/tray{
+	icon = 'icons/obj/ammunition/ammo_bullets.dmi';
+	icon_state = "84mm-hedp";
+	name = "84 mm hybrid railgun sabot";
+	desc = "A railgun sabot with propellant inside. Now this is rubbish."
+	},
+/obj/item/trash/tray{
+	icon = 'icons/obj/ammunition/ammo_bullets.dmi';
+	icon_state = "84mm-hedp";
+	name = "84 mm hybrid railgun sabot";
+	desc = "A railgun sabot with propellant inside. Now this is rubbish."
+	},
+/obj/item/trash/tray{
+	icon = 'icons/obj/ammunition/ammo_bullets.dmi';
+	icon_state = "84mm-hedp";
+	name = "84 mm hybrid railgun sabot";
+	desc = "A railgun sabot with propellant inside. Now this is rubbish."
+	},
+/obj/item/trash/tray{
+	icon = 'icons/obj/ammunition/ammo_bullets.dmi';
+	icon_state = "84mm-hedp";
+	name = "84 mm hybrid railgun sabot";
+	desc = "A railgun sabot with propellant inside. Now this is rubbish."
+	},
+/obj/item/trash/tray{
+	icon = 'icons/obj/ammunition/ammo_bullets.dmi';
+	icon_state = "84mm-hedp";
+	name = "84 mm hybrid railgun sabot";
+	desc = "A railgun sabot with propellant inside. Now this is rubbish."
+	},
+/obj/item/trash/tray{
+	icon = 'icons/obj/ammunition/ammo_bullets.dmi';
+	icon_state = "84mm-hedp";
+	name = "84 mm hybrid railgun sabot";
+	desc = "A railgun sabot with propellant inside. Now this is rubbish."
+	},
+/obj/item/trash/tray{
+	icon = 'icons/obj/ammunition/ammo_bullets.dmi';
+	icon_state = "84mm-hedp";
+	name = "84 mm hybrid railgun sabot";
+	desc = "A railgun sabot with propellant inside. Now this is rubbish."
+	},
+/obj/item/trash/tray{
+	icon = 'icons/obj/ammunition/ammo_bullets.dmi';
+	icon_state = "84mm-hedp";
+	name = "84 mm hybrid railgun sabot";
+	desc = "A railgun sabot with propellant inside. Now this is rubbish."
+	},
+/obj/item/trash/tray{
+	icon = 'icons/obj/ammunition/ammo_bullets.dmi';
+	icon_state = "84mm-hedp";
+	name = "84 mm hybrid railgun sabot";
+	desc = "A railgun sabot with propellant inside. Now this is rubbish."
+	},
+/obj/item/trash/tray{
+	icon = 'icons/obj/ammunition/ammo_bullets.dmi';
+	icon_state = "84mm-hedp";
+	name = "84 mm hybrid railgun sabot";
+	desc = "A railgun sabot with propellant inside. Now this is rubbish."
+	},
+/obj/structure/crate_shelf/built,
+/obj/structure/closet/crate{
+	name = "Railgun ammo crate"
+	},
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
 "tO" = (
@@ -2697,6 +2913,9 @@
 "tT" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 5
+	},
+/obj/effect/turf_decal/siding/thinplating/dark{
+	dir = 8
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
@@ -2900,6 +3119,10 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
+/obj/effect/turf_decal/trimline/opaque/vired/warning{
+	dir = 8;
+	pixel_x = -4
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "vT" = (
@@ -2908,7 +3131,7 @@
 	},
 /obj/structure/catwalk/over,
 /obj/machinery/power/smes/engineering{
-	charge = 2e+006
+	charge = 2.5e+006
 	},
 /turf/open/floor/plating,
 /area/ship/engineering)
@@ -2922,9 +3145,8 @@
 "wc" = (
 /obj/structure/catwalk/over,
 /obj/structure/rack,
-/obj/machinery/power/shieldwallgen/atmos,
-/obj/machinery/power/shieldwallgen/atmos,
 /obj/machinery/light/directional/north,
+/obj/item/storage/box/smart_metal_foam,
 /turf/open/floor/plating,
 /area/ship/engineering)
 "wp" = (
@@ -2976,6 +3198,10 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/industrial/traffic,
+/obj/structure/frame/machine{
+	anchored = 1;
+	state = 2
+	},
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
 "wD" = (
@@ -3028,7 +3254,14 @@
 /obj/item/tank/internals/emergency_oxygen/engi,
 /obj/item/flashlight,
 /obj/item/analyzer,
-/turf/open/floor/plasteel/tech/grid,
+/obj/effect/turf_decal/trimline/opaque/yellow/line{
+	layer = 2.040;
+	dir = 5
+	},
+/obj/effect/turf_decal/techfloor/corner{
+	dir = 4
+	},
+/turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "xc" = (
 /obj/effect/turf_decal/siding/thinplating/dark{
@@ -3059,12 +3292,19 @@
 	dir = 1
 	},
 /obj/machinery/vending/inteq/space_vendor,
+/obj/item/paper/fluff{
+	default_raw_text = "Due to highly experimental nature, modsuits are not possible to wear for vox and kepori. Be cautious!";
+	name = "WARNING"
+	},
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/security/armory)
 "xz" = (
 /obj/structure/railing,
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/reagent_dispensers/watertank,
+/obj/effect/turf_decal/techfloor{
+	dir = 1
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
 "xB" = (
@@ -3110,6 +3350,9 @@
 "xK" = (
 /obj/machinery/vending/engivend,
 /obj/machinery/light/directional/north,
+/obj/effect/turf_decal/techfloor{
+	dir = 5
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
 "xV" = (
@@ -3196,7 +3439,11 @@
 	},
 /obj/structure/catwalk/over,
 /obj/machinery/power/smes/engineering{
-	charge = 2e+006
+	charge = 2.5e+006
+	},
+/obj/effect/turf_decal/trimline/opaque/vired/warning{
+	layer = 2.462;
+	dir = 1
 	},
 /turf/open/floor/plating,
 /area/ship/engineering)
@@ -3243,21 +3490,9 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/security/armory)
 "zh" = (
+/obj/machinery/washing_machine,
 /obj/effect/turf_decal/techfloor{
 	dir = 1
-	},
-/obj/machinery/computer{
-	desc = "Some kind of machine. Used to be a railgun control console. Now it only shows errors. Wonder why they left it here."
-	},
-/obj/effect/turf_decal/industrial/fire/corner,
-/obj/structure/extinguisher_cabinet/directional/north{
-	pixel_x = 6
-	},
-/obj/machinery/firealarm/directional/north{
-	pixel_x = -7
-	},
-/obj/item/paper/fluff{
-	default_raw_text = "Artificer team: The railgun mount stayed here and now it is free to change it. The armour of this ship is heavy and impenetrable."
 	},
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
@@ -3316,6 +3551,19 @@
 "Aa" = (
 /obj/effect/turf_decal/industrial/traffic{
 	dir = 10
+	},
+/obj/machinery/computer{
+	desc = "Some kind of machine. Used to be a railgun control console. Now it only shows errors. Wonder why they left it here.";
+	dir = 8
+	},
+/obj/item/paper/fluff{
+	default_raw_text = "Artificer team: The relativistic railgun mount stayed here and now it is free to change it. The armour of this ship is heavy and impenetrable."
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 1
 	},
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
@@ -3467,10 +3715,10 @@
 "Bm" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/components/unary/vent_pump/siphon/on,
-/obj/machinery/atmospherics/pipe/simple/green/visible/layer2{
+/obj/machinery/atmospherics/pipe/simple/green/hidden/layer4{
 	dir = 10
 	},
-/obj/machinery/atmospherics/pipe/simple/green/visible/layer4{
+/obj/machinery/atmospherics/pipe/simple/green/hidden/layer2{
 	dir = 10
 	},
 /turf/open/floor/engine/hull/reinforced,
@@ -3542,6 +3790,14 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "BY" = (
+/obj/effect/turf_decal/trimline/opaque/vired/corner{
+	dir = 8;
+	pixel_x = -4;
+	layer = 2.041
+	},
+/obj/effect/turf_decal/siding/thinplating/dark{
+	dir = 8
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "Cs" = (
@@ -3692,12 +3948,10 @@
 "Dd" = (
 /obj/structure/frame/machine,
 /obj/machinery/light/directional/south,
-/obj/item/circuitboard/machine/chem_dispenser,
 /obj/item/reagent_containers/glass/beaker/large,
 /obj/item/reagent_containers/glass/beaker/large,
 /obj/item/reagent_containers/glass/beaker,
 /obj/item/reagent_containers/glass/beaker,
-/obj/item/stack/sheet/bluespace_crystal,
 /turf/open/floor/pod/dark,
 /area/ship/medical)
 "Dg" = (
@@ -3721,7 +3975,8 @@
 	dir = 5
 	},
 /obj/machinery/computer/cargo{
-	dir = 8
+	dir = 8;
+	icon_state = "computer-left"
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
@@ -3737,6 +3992,10 @@
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/effect/turf_decal/trimline/opaque/yellow/corner,
+/obj/effect/turf_decal/trimline/opaque/yellow/corner{
+	dir = 4
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
@@ -3771,6 +4030,7 @@
 /area/ship/security/weapons_control)
 "DQ" = (
 /obj/structure/catwalk/over/plated_catwalk/dark,
+/obj/machinery/light/small/directional/south,
 /turf/open/floor/plating,
 /area/ship/hangar)
 "DY" = (
@@ -3791,7 +4051,7 @@
 	dir = 4
 	},
 /obj/machinery/space_heater,
-/turf/open/floor/plasteel/tech,
+/turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering/engine)
 "Ev" = (
 /obj/effect/turf_decal/techfloor{
@@ -3863,7 +4123,6 @@
 /area/ship/hangar)
 "Ff" = (
 /obj/structure/frame/machine,
-/obj/item/circuitboard/machine/chem_heater,
 /turf/open/floor/pod/dark,
 /area/ship/medical)
 "Fh" = (
@@ -3879,69 +4138,32 @@
 /obj/effect/turf_decal/industrial/fire{
 	dir = 1
 	},
-/obj/structure/crate_shelf/built,
-/obj/structure/closet/crate{
-	name = "Railgun ammo crate"
+/obj/machinery/door/firedoor/border_only{
+	dir = 8
 	},
-/obj/item/trash/tray{
-	icon = 'icons/obj/ammunition/ammo_bullets.dmi';
-	icon_state = "84mm-hedp";
-	name = "84 mm hybrid railgun sabot";
-	desc = "A railgun sabot with propellant inside. Now this is rubbish."
+/obj/machinery/firealarm/directional/south{
+	pixel_x = -11
 	},
-/obj/item/trash/tray{
-	icon = 'icons/obj/ammunition/ammo_bullets.dmi';
-	icon_state = "84mm-hedp";
-	name = "84 mm hybrid railgun sabot";
-	desc = "A railgun sabot with propellant inside. Now this is rubbish."
+/obj/machinery/computer{
+	desc = "Some kind of machine. Used to be a railgun control console. Now it only shows errors. Wonder why they left it here.";
+	icon = 'icons/obj/machines/particle_accelerator.dmi';
+	icon_state = "control_boxp";
+	name = "TAC-COM IFF computer"
 	},
-/obj/item/trash/tray{
-	icon = 'icons/obj/ammunition/ammo_bullets.dmi';
-	icon_state = "84mm-hedp";
-	name = "84 mm hybrid railgun sabot";
-	desc = "A railgun sabot with propellant inside. Now this is rubbish."
+/obj/machinery/button/door{
+	dir = 1;
+	id = "Caliban_railgun_exit";
+	name = "Railgun Blast Protection";
+	pixel_y = -20;
+	pixel_x = 10;
+	color = "orange"
 	},
-/obj/item/trash/tray{
-	icon = 'icons/obj/ammunition/ammo_bullets.dmi';
-	icon_state = "84mm-hedp";
-	name = "84 mm hybrid railgun sabot";
-	desc = "A railgun sabot with propellant inside. Now this is rubbish."
-	},
-/obj/item/trash/tray{
-	icon = 'icons/obj/ammunition/ammo_bullets.dmi';
-	icon_state = "84mm-hedp";
-	name = "84 mm hybrid railgun sabot";
-	desc = "A railgun sabot with propellant inside. Now this is rubbish."
-	},
-/obj/item/trash/tray{
-	icon = 'icons/obj/ammunition/ammo_bullets.dmi';
-	icon_state = "84mm-hedp";
-	name = "84 mm hybrid railgun sabot";
-	desc = "A railgun sabot with propellant inside. Now this is rubbish."
-	},
-/obj/item/trash/tray{
-	icon = 'icons/obj/ammunition/ammo_bullets.dmi';
-	icon_state = "84mm-hedp";
-	name = "84 mm hybrid railgun sabot";
-	desc = "A railgun sabot with propellant inside. Now this is rubbish."
-	},
-/obj/item/trash/tray{
-	icon = 'icons/obj/ammunition/ammo_bullets.dmi';
-	icon_state = "84mm-hedp";
-	name = "84 mm hybrid railgun sabot";
-	desc = "A railgun sabot with propellant inside. Now this is rubbish."
-	},
-/obj/item/trash/tray{
-	icon = 'icons/obj/ammunition/ammo_bullets.dmi';
-	icon_state = "84mm-hedp";
-	name = "84 mm hybrid railgun sabot";
-	desc = "A railgun sabot with propellant inside. Now this is rubbish."
-	},
-/obj/item/trash/tray{
-	icon = 'icons/obj/ammunition/ammo_bullets.dmi';
-	icon_state = "84mm-hedp";
-	name = "84 mm hybrid railgun sabot";
-	desc = "A railgun sabot with propellant inside. Now this is rubbish."
+/obj/machinery/button/shieldwallgen{
+	dir = 1;
+	id = "Caliban_railgun_exit_holo";
+	pixel_y = -19;
+	req_access_txt = "56";
+	color = "orange"
 	},
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
@@ -3953,6 +4175,13 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+	dir = 4
+	},
+/obj/effect/turf_decal/trimline/opaque/vired/corner{
+	dir = 1;
+	pixel_x = -4
+	},
+/obj/effect/turf_decal/techfloor{
 	dir = 4
 	},
 /turf/open/floor/plasteel/tech/grid,
@@ -4042,6 +4271,9 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/effect/turf_decal/trimline/opaque/vired/warning{
+	layer = 2.462
+	},
 /turf/open/floor/plating,
 /area/ship/engineering)
 "Ga" = (
@@ -4088,7 +4320,6 @@
 	color = "#808080";
 	dir = 6
 	},
-/obj/machinery/light/small/directional/north,
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/hangar)
 "Gu" = (
@@ -4318,10 +4549,6 @@
 	dir = 4;
 	pixel_x = -16
 	},
-/obj/effect/turf_decal/trimline/opaque/vired/warning{
-	dir = 8;
-	pixel_x = -4
-	},
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
 "IB" = (
@@ -4347,10 +4574,10 @@
 	stun_projectile = /obj/projectile/bullet/c22lr/rubber;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
-	dir = 9
+	dir = 10
 	},
-/turf/closed/wall/r_wall/syndicate/nodiagonal,
-/area/ship/crew/dorm/dormtwo)
+/turf/closed/wall/r_wall/syndicate,
+/area/ship/medical)
 "IF" = (
 /obj/effect/turf_decal/trimline/opaque/yellow/line{
 	layer = 2.040;
@@ -4516,17 +4743,25 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/industrial/traffic/corner,
+/obj/structure/frame/machine{
+	anchored = 1;
+	state = 2
+	},
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
 "KB" = (
 /obj/effect/turf_decal/techfloor{
 	dir = 1
 	},
-/obj/effect/turf_decal/industrial/fire,
-/obj/machinery/door/firedoor/border_only{
-	dir = 8
+/obj/effect/turf_decal/industrial/fire/corner,
+/obj/structure/extinguisher_cabinet/directional/north{
+	pixel_x = 6
 	},
-/obj/structure/frame/machine,
+/obj/machinery/firealarm/directional/north{
+	pixel_x = -7
+	},
+/obj/structure/table,
+/obj/structure/bedsheetbin/empty,
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
 "KQ" = (
@@ -4564,6 +4799,11 @@
 /obj/effect/turf_decal/borderfloorwhite,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/starboard_fore)
+"KV" = (
+/obj/structure/catwalk/over/plated_catwalk/dark,
+/obj/machinery/light/small/directional/north,
+/turf/open/floor/plating,
+/area/ship/hangar)
 "KW" = (
 /obj/structure/catwalk,
 /obj/structure/marker_beacon{
@@ -4654,6 +4894,10 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
+/obj/effect/turf_decal/trimline/opaque/vired/warning{
+	dir = 8;
+	pixel_x = -4
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "Ma" = (
@@ -4721,8 +4965,8 @@
 	layer = 4.1;
 	color = "#808080"
 	},
-/obj/machinery/light/small/directional/north,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
+/obj/machinery/light/small/directional/north,
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/hangar)
 "MV" = (
@@ -4877,6 +5121,9 @@
 /obj/structure/railing,
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/reagent_dispensers/fueltank,
+/obj/effect/turf_decal/techfloor{
+	dir = 1
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
 "OD" = (
@@ -4995,6 +5242,12 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 4
 	},
+/obj/effect/turf_decal/trimline/opaque/yellow/line{
+	layer = 2.040
+	},
+/obj/effect/turf_decal/techfloor{
+	dir = 4
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
 "PF" = (
@@ -5013,7 +5266,17 @@
 /turf/open/floor/plating,
 /area/ship/crew/dorm/dormfive)
 "PP" = (
-/obj/effect/turf_decal/box,
+/obj/machinery/door/firedoor/border_only{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 1
+	},
+/obj/structure/chair/comfy/shuttle{
+	dir = 4;
+	desc = "A comfortable, secure seat. It has a more sturdy looking buckling system, for smoother flights. It looks like this seat had built-in hyposprays for injecting anti-overload “juice”. A mix of drugs to combat the effects of high-G. Nowadays the button on the pillow does not work and the juice supply has run out."
+	},
+/obj/effect/turf_decal/industrial/outline/yellow,
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
 "PY" = (
@@ -5103,7 +5366,8 @@
 /area/ship/medical)
 "QU" = (
 /obj/structure/chair/comfy/shuttle{
-	dir = 8
+	dir = 8;
+	desc = "A comfortable, secure seat. It has a more sturdy looking buckling system, for smoother flights. It looks like this seat had built-in hyposprays for injecting anti-overload “juice”. A mix of drugs to combat the effects of high-G. Nowadays the button on the pillow does not work and the juice supply has run out."
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
@@ -5198,6 +5462,20 @@
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/security/armory)
+"Rk" = (
+/obj/machinery/door/firedoor/border_only{
+	dir = 8
+	},
+/obj/effect/turf_decal/industrial/traffic/cee{
+	dir = 8
+	},
+/obj/structure/frame/machine{
+	anchored = 1;
+	state = 2;
+	name = "Autoloader machine frame"
+	},
+/turf/open/floor/pod,
+/area/ship/security/weapons_control)
 "Rp" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/firedoor/border_only{
@@ -5224,7 +5502,7 @@
 "RC" = (
 /obj/machinery/power/shieldwallgen/atmos{
 	anchored = 1;
-	id = "Caliban_exhaustion_vent_holo";
+	id = "Caliban_railgun_exit";
 	locked = 1;
 	dir = 1
 	},
@@ -5289,6 +5567,15 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/effect/turf_decal/trimline/opaque/yellow/line{
+	layer = 2.040
+	},
+/obj/effect/turf_decal/trimline/opaque/yellow/line{
+	dir = 1
+	},
+/obj/effect/turf_decal/techfloor/corner{
+	dir = 4
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "SC" = (
@@ -5298,6 +5585,9 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/effect/turf_decal/trimline/opaque/yellow/line{
+	dir = 4
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
@@ -5334,7 +5624,7 @@
 	dir = 6
 	},
 /obj/machinery/light/directional/south,
-/obj/effect/turf_decal/industrial/fire/corner{
+/obj/effect/turf_decal/industrial/fire{
 	dir = 1
 	},
 /turf/open/floor/pod,
@@ -5424,6 +5714,10 @@
 "TD" = (
 /obj/machinery/computer/turbine_computer,
 /obj/machinery/airalarm/directional/north,
+/obj/item/paper/fluff{
+	default_raw_text = "Artificer team: BE CAREFUL. DO NOT RUN THE TURBINE AT THE OUTPOST. IT WILL CAUSE THE HANGAR TO BURN DOWN COMPLETELY. DON'T DO IT AT ALL.";
+	name = "WARNING"
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering/engine)
 "TE" = (
@@ -5496,15 +5790,15 @@
 	dir = 4;
 	layer = 2.041
 	},
-/obj/effect/turf_decal/trimline/opaque/vired/warning{
-	dir = 8;
-	pixel_x = -4
-	},
 /obj/effect/turf_decal/industrial/traffic/fulltile,
 /obj/effect/turf_decal/arrows/white{
 	dir = 4;
 	pixel_x = -16;
 	layer = 2.041
+	},
+/obj/structure/frame/machine{
+	anchored = 1;
+	state = 2
 	},
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
@@ -5527,9 +5821,7 @@
 	dir = 5
 	},
 /obj/machinery/light/directional/north,
-/obj/effect/turf_decal/industrial/fire/corner{
-	dir = 8
-	},
+/obj/effect/turf_decal/industrial/fire,
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
 "Ug" = (
@@ -5563,6 +5855,10 @@
 /obj/structure/catwalk/over,
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
+	},
+/obj/effect/turf_decal/trimline/opaque/vired/warning{
+	layer = 2.462;
+	dir = 1
 	},
 /turf/open/floor/plating,
 /area/ship/engineering)
@@ -5657,7 +5953,8 @@
 	icon_state = "4-8"
 	},
 /obj/item/paper/fluff{
-	default_raw_text = "The ship's previous owners had used the ship continuously, fighting and warring constantly. The previous crew used this ship in a very unique way, leaving no time to rest for their enemies. Now the ship had been modified for boarding parties, but the changes left over from the previous crew remained."
+	default_raw_text = "Due to highly experimental nature, modsuits are not possible to wear for vox and kepori. Be cautious!";
+	name = "WARNING"
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/canteen)
@@ -5806,6 +6103,13 @@
 /obj/effect/turf_decal/borderfloorwhite,
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
+"WD" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
+/obj/effect/turf_decal/industrial/fire{
+	dir = 4
+	},
+/turf/open/floor/pod,
+/area/ship/security/weapons_control)
 "WF" = (
 /obj/machinery/door/airlock/external,
 /turf/open/floor/circuit/off,
@@ -5824,7 +6128,6 @@
 /obj/structure/sign/warning/nosmoking{
 	pixel_y = -28
 	},
-/obj/item/circuitboard/machine/chem_master,
 /turf/open/floor/pod/dark,
 /area/ship/medical)
 "WH" = (
@@ -6681,7 +6984,7 @@ gN
 CF
 gN
 mz
-Si
+gw
 PN
 hT
 wx
@@ -7010,11 +7313,11 @@ sw
 sw
 MV
 sw
-ID
 AL
 AL
 AL
-DQ
+AL
+KV
 xV
 XH
 Nk
@@ -7028,7 +7331,7 @@ DQ
 vP
 vP
 vP
-lw
+vP
 sw
 sw
 sw
@@ -7040,7 +7343,7 @@ sw
 sw
 sw
 MV
-Bz
+kr
 AL
 Cu
 dk
@@ -7060,7 +7363,7 @@ hz
 Jq
 MK
 vP
-Rf
+ID
 sw
 sw
 sw
@@ -7545,9 +7848,9 @@ Hq
 zL
 oG
 zh
-pq
+on
 ap
-xG
+on
 bF
 oG
 xI
@@ -7576,9 +7879,9 @@ wD
 zL
 oG
 KB
-DO
+WD
 pL
-DO
+xG
 tM
 oG
 ef
@@ -7606,9 +7909,9 @@ OP
 wu
 zL
 oG
-bM
-on
-wB
+cy
+DO
+Rk
 PP
 Fl
 dD
@@ -7699,7 +8002,7 @@ zL
 sw
 sw
 oG
-Zd
+bM
 on
 wB
 on
@@ -7793,9 +8096,9 @@ sw
 sw
 oG
 oG
-oG
-oG
-oG
+lw
+pW
+pq
 oG
 oG
 sw

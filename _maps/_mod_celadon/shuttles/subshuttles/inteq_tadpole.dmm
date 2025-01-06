@@ -19,6 +19,7 @@
 /obj/structure/chair/comfy/shuttle{
 	dir = 4
 	},
+/obj/effect/turf_decal/industrial/outline/yellow,
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "d" = (
@@ -53,7 +54,7 @@
 	pixel_y = 5;
 	name = "Port Holo switch"
 	},
-/turf/open/floor/plasteel/tech,
+/turf/open/floor/plasteel/telecomms_floor,
 /area/ship/bridge)
 "e" = (
 /obj/effect/turf_decal/industrial/warning/fulltile,
@@ -72,6 +73,10 @@
 /obj/machinery/door/poddoor{
 	id = "Caliban_subshuttle_port"
 	},
+/obj/effect/turf_decal/industrial/warning/fulltile,
+/obj/effect/turf_decal/industrial/stand_clear/red{
+	pixel_y = 32
+	},
 /turf/open/floor/plating,
 /area/ship/bridge)
 "f" = (
@@ -84,6 +89,7 @@
 	pixel_x = -12;
 	pixel_y = 23
 	},
+/obj/effect/turf_decal/industrial/outline/yellow,
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "h" = (
@@ -94,7 +100,11 @@
 /area/ship/bridge)
 "j" = (
 /obj/structure/table/reinforced,
-/turf/open/floor/plasteel/tech,
+/obj/item/paper/fluff{
+	default_raw_text = "Artificer team: The subshuttle turrets target computers count everything as enemy except you for we do not know who your enemy will be.";
+	color = "red"
+	},
+/turf/open/floor/plasteel/telecomms_floor,
 /area/ship/bridge)
 "k" = (
 /obj/structure/cable{
@@ -103,6 +113,7 @@
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
 	dir = 4
 	},
+/obj/effect/turf_decal/trimline/opaque/yellow/warning,
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "l" = (
@@ -134,6 +145,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-9"
 	},
+/obj/effect/turf_decal/trimline/opaque/yellow/warning,
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "r" = (
@@ -148,6 +160,7 @@
 	icon_state = "0-1"
 	},
 /obj/machinery/firealarm/directional/south,
+/obj/effect/turf_decal/trimline/opaque/yellow/corner,
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "s" = (
@@ -162,6 +175,9 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "t" = (
+/obj/effect/turf_decal/trimline/opaque/yellow/warning{
+	dir = 1
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "u" = (
@@ -181,7 +197,10 @@
 	pixel_y = -27;
 	dir = 1
 	},
-/turf/open/floor/plasteel/tech,
+/obj/effect/turf_decal/trimline/opaque/yellow/corner{
+	dir = 8
+	},
+/turf/open/floor/plasteel/telecomms_floor,
 /area/ship/bridge)
 "v" = (
 /obj/machinery/computer/helm{
@@ -189,9 +208,10 @@
 	},
 /obj/machinery/light/directional/south,
 /obj/item/paper/fluff{
-	default_raw_text = "Artificer team: The subshuttle is low on power after its retrofitting and SMES has lower maximal capacity. Be cautious."
+	default_raw_text = "Artificer team: The subshuttle is low on power after its retrofitting and SMES has lower maximal capacity. Be cautious.";
+	color = "orange"
 	},
-/turf/open/floor/plasteel/tech,
+/turf/open/floor/plasteel/telecomms_floor,
 /area/ship/bridge)
 "w" = (
 /obj/effect/turf_decal/industrial/warning/fulltile,
@@ -206,6 +226,10 @@
 	},
 /obj/machinery/door/poddoor{
 	id = "Caliban_subshuttle_port"
+	},
+/obj/effect/turf_decal/industrial/warning/fulltile,
+/obj/effect/turf_decal/industrial/stand_clear/red{
+	pixel_y = 32
 	},
 /turf/open/floor/plating,
 /area/ship/bridge)
@@ -228,6 +252,11 @@
 	id = "Caliban_subshuttle_starboard"
 	},
 /obj/structure/holosign/barrier/atmos,
+/obj/effect/turf_decal/industrial/warning/fulltile,
+/obj/effect/turf_decal/industrial/stand_clear/red{
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "C" = (
@@ -256,6 +285,15 @@
 	id = "Caliban_subshuttle_starboard"
 	},
 /obj/structure/holosign/barrier/atmos,
+/obj/docking_port/mobile{
+	port_direction = 4;
+	preferred_direction = 4
+	},
+/obj/effect/turf_decal/industrial/warning/fulltile,
+/obj/effect/turf_decal/industrial/stand_clear/red{
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "G" = (
@@ -285,6 +323,9 @@
 "J" = (
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/effect/turf_decal/trimline/opaque/yellow/warning{
+	dir = 1
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
@@ -322,17 +363,25 @@
 "N" = (
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
+"P" = (
+/obj/effect/turf_decal/industrial/stand_clear/red{
+	layer = 2.6;
+	dir = 1
+	},
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
+/area/ship/bridge)
 "T" = (
 /obj/structure/cable{
 	icon_state = "0-5"
 	},
-/obj/docking_port/mobile{
-	dir = 8;
-	name = "Inteq tadpole dock";
-	preferred_direction = 4
-	},
 /obj/machinery/power/shuttle/engine/electric/bad,
 /turf/open/floor/plating,
+/area/ship/bridge)
+"V" = (
+/obj/effect/turf_decal/industrial/stand_clear/red{
+	layer = 2.6
+	},
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "W" = (
 /obj/structure/cable{
@@ -344,6 +393,11 @@
 "X" = (
 /obj/structure/chair/comfy/shuttle,
 /obj/structure/closet/firecloset/wall/directional/north,
+/obj/effect/turf_decal/industrial/outline/yellow,
+/obj/effect/turf_decal/trimline/opaque/yellow/corner{
+	dir = 1;
+	layer = 2.040
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "Z" = (
@@ -368,11 +422,11 @@ W
 H
 "}
 (2,1,1) = {"
-N
+P
 G
 L
 M
-N
+V
 "}
 (3,1,1) = {"
 N
@@ -403,11 +457,11 @@ u
 N
 "}
 (7,1,1) = {"
-N
+P
 f
 j
 v
-N
+V
 "}
 (8,1,1) = {"
 h
