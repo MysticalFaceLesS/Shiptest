@@ -35,7 +35,7 @@
 			CHESTPLATE_FLAGS = list(
 				UNSEALED_CLOTHING = THICKMATERIAL,
 				SEALED_CLOTHING = STOPSPRESSUREDAMAGE,
-				SEALED_INVISIBILITY = HIDEJUMPSUIT,
+				SEALED_INVISIBILITY = HIDEJUMPSUIT|HIDETAIL,
 			),
 			GAUNTLETS_FLAGS = list(
 				UNSEALED_CLOTHING = THICKMATERIAL,
@@ -49,16 +49,6 @@
 			),
 		),
 	)
-
-/obj/item/mod/control/pre_equipped/inteq
-	theme = /datum/mod_theme/inteq
-	applied_cell = /obj/item/stock_parts/cell
-	initial_modules = list(
-		/obj/item/mod/module/storage/syndicate,
-		/obj/item/mod/module/magnetic_harness,
-		/obj/item/mod/module/flashlight_inteq,
-	)
-
 
 /datum/mod_theme/inteq/elite
 	name = "Elite InteQ"
@@ -97,7 +87,7 @@
 			CHESTPLATE_FLAGS = list(
 				UNSEALED_CLOTHING = THICKMATERIAL,
 				SEALED_CLOTHING = STOPSPRESSUREDAMAGE,
-				SEALED_INVISIBILITY = HIDEJUMPSUIT,
+				SEALED_INVISIBILITY = HIDEJUMPSUIT|HIDETAIL,
 			),
 			GAUNTLETS_FLAGS = list(
 				UNSEALED_CLOTHING = THICKMATERIAL,
@@ -110,6 +100,16 @@
 				CAN_OVERSLOT = TRUE,
 			),
 		),
+	)
+
+/obj/item/mod/control/pre_equipped/inteq
+	theme = /datum/mod_theme/inteq
+	applied_cell = /obj/item/stock_parts/cell
+	restricted_bodytypes = list(BODYTYPE_VOX, BODYTYPE_KEPORI)
+	initial_modules = list(
+		/obj/item/mod/module/storage/syndicate,
+		/obj/item/mod/module/magnetic_harness,
+		/obj/item/mod/module/flashlight_inteq,
 	)
 
 /obj/item/mod/control/pre_equipped/inteq/elite
