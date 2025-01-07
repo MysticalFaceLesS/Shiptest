@@ -52,6 +52,14 @@
 	icon_state = "nt-captain-stamp"
 	dye_color = DYE_BLUE
 
+/obj/item/stamp/nanotrasen/engineering
+	name = "NE Engineering Director's rubber stamp"
+	icon_state = "stamp-ce"
+
+/obj/item/stamp/nanotrasen/medical
+	name = "DF Medical Director's rubber stamp"
+	icon_state = "stamp-cmo"
+
 /obj/item/stamp/syndicate/captain
 	name = "Syndicate Captain stamp"
 	icon = 'mod_celadon/_storge_icons/icons/stamps.dmi'
