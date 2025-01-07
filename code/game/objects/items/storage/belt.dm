@@ -143,6 +143,9 @@
 	new /obj/item/inducer/syndicate(src)
 
 /obj/item/storage/belt/utility/full/ert/PopulateContents()
+	// [CELADON-EDIT] - experimental welder issues
+	new /obj/item/weldingtool/electric(src)
+	// [/CELADON-EDIT] - experimental welder issues
 	new /obj/item/screwdriver/power(src)
 	new /obj/item/crowbar/power(src)
 	new /obj/item/multitool(src)
