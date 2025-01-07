@@ -31,7 +31,7 @@
 	contains = list(/obj/item/ammo_box/c38)
 	cost = 250
 	faction_discount = 20
-	faction = /datum/faction/srm
+	faction = /datum/faction/srm  
 
 /datum/supply_pack/magazine/c38match
 	name = ".38 Match Grade Speedloader"

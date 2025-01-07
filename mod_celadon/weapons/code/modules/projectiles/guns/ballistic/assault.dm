@@ -24,7 +24,7 @@
 	)
 //Прочее
 	var/obj/item/ammo_box/magazine/g36/sh/alternate_magazine
-
+NO_MAG_GUN_HELPER(automatic/assault/g36sh)
 /obj/item/gun/ballistic/automatic/assault/g36sh/Initialize()
 	. = ..()
 	if (!alternate_magazine)
@@ -32,7 +32,7 @@
 	// spawnwithmagazine = FALSE
 	default_ammo_type = /obj/item/ammo_box/magazine/g36
 	allowed_ammo_types = list(
-		/obj/item/ammo_box/magazine/g36,
+		/obj/item/ammo_box/magazine/g36, /obj/item/ammo_box/magazine/g36/sh, /obj/item/ammo_box/magazine/g36/drum
 	)
 
 /obj/item/gun/ballistic/automatic/assault/g36sh/inteq
@@ -44,7 +44,7 @@
 	empty_indicator = TRUE
 	empty_alarm = TRUE
 	zoomable = TRUE
-
+NO_MAG_GUN_HELPER(automatic/assault/g36sh/inteq)
 // /obj/item/gun/ballistic/automatic/assault/g36sh/no_mag
 // 	spawnwithmagazine = FALSE
 
@@ -64,10 +64,10 @@
 	unique_mag_sprites_for_variants = TRUE
 	default_ammo_type = /obj/item/ammo_box/magazine/g36
 	allowed_ammo_types = list(
-		/obj/item/ammo_box/magazine/g36,
+		/obj/item/ammo_box/magazine/g36, /obj/item/ammo_box/magazine/g36/sh, /obj/item/ammo_box/magazine/g36/drum
 	)
 	var/obj/item/ammo_box/magazine/g36/alternate_magazine
-
+NO_MAG_GUN_HELPER(automatic/assault/g36)
 /obj/item/gun/ballistic/automatic/assault/g36/Initialize()
 	. = ..()
 	if (!alternate_magazine)
@@ -90,7 +90,7 @@
 	empty_indicator = TRUE
 	empty_alarm = TRUE
 	zoomable = TRUE
-
+NO_MAG_GUN_HELPER(automatic/assault/g36/inteq)
 /obj/item/gun/ballistic/automatic/assault/morita1
 	name = "\improper Morita MK.I"
 	desc = "Стандартная пехотная автоматическая винтовка под калибр .308. Широко применяется армейскими корпусами в Союзе Человечества. Популярность в гражданских кругах заслужила после сьемок в фильме Starboat Troopes."
@@ -110,9 +110,9 @@
 	unique_mag_sprites_for_variants = TRUE
 	default_ammo_type = /obj/item/ammo_box/magazine/morita1
 	allowed_ammo_types = list(
-		/obj/item/ammo_box/magazine/morita1,
+		/obj/item/ammo_box/magazine/morita1, /obj/item/ammo_box/magazine/morita1/small,  /obj/item/ammo_box/magazine/morita1/drum
 	)
-
+NO_MAG_GUN_HELPER(automatic/assault/morita1)
 // /obj/item/gun/ballistic/automatic/assault/morita1/no_mag
 // 	spawnwithmagazine = FALSE
 
@@ -124,13 +124,13 @@
 
 // /obj/item/gun/ballistic/automatic/assault/morita1/desert/no_mag
 // 	spawnwithmagazine = FALSE
-
+NO_MAG_GUN_HELPER(automatic/assault/morita1/desert)
 /obj/item/gun/ballistic/automatic/assault/morita1/forest
 	name = "\improper Morita MK.I(forest)"
 	desc = "Стандартная пехотная автоматическая винтовка под калибр .308. Широко применяется армейскими корпусами в Союзе Человечества. Популярность в гражданских кругах заслужила после сьемок в фильме Starboat Troopes./Модификация с лесным камуфляжем"
 	icon_state = "morita1_forest"
 	item_state = "morita1_forest"
-
+NO_MAG_GUN_HELPER(automatic/assault/morita1/forest)
 // /obj/item/gun/ballistic/automatic/assault/morita1/forest/no_mag
 // 	spawnwithmagazine = FALSE
 
@@ -139,7 +139,7 @@
 	desc = "Стандартная пехотная автоматическая винтовка под калибр .308. Широко применяется армейскими корпусами в Союзе Человечества. Популярность в гражданских кругах заслужила после сьемок в фильме Starboat Troopes./Модификация с болотным камуфляжем"
 	icon_state = "morita1_swamp"
 	item_state = "morita1_swamp"
-
+NO_MAG_GUN_HELPER(automatic/assault/morita1/swamp)
 // /obj/item/gun/ballistic/automatic/assault/morita1/swamp/no_mag
 // 	spawnwithmagazine = FALSE
 
@@ -178,7 +178,7 @@
 	recoil = 0
 	recoil_unwielded = 4
 	wield_slowdown = 0.75
-
+NO_MAG_GUN_HELPER(automatic/marksman/svd)
 /obj/item/ammo_box/magazine/svd_rounds
 	name = "\improper SVD magazine (7.62x54mmR)"
 	desc = "A large caliber magazine for the SVD sniper rifle."

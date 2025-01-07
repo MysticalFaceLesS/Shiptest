@@ -17,7 +17,7 @@
 	eject_sound = 'sound/weapons/gun/pistol/candor_unload.ogg' //На будущее заменить
 	eject_empty_sound = 'sound/weapons/gun/pistol/candor_unload.ogg' //На будущее заменить
 	recoil = -2
-
+NO_MAG_GUN_HELPER(automatic/pistol/usp45)
 /obj/item/gun/ballistic/automatic/pistol/usp45/Initialize()
 	return ..()
 
@@ -39,6 +39,6 @@
 	load_empty_sound = 'sound/weapons/gun/pistol/mag_insert.ogg'//На будущее заменить
 	eject_sound = 'sound/weapons/gun/pistol/mag_release.ogg'//На будущее заменить
 	eject_empty_sound = 'sound/weapons/gun/pistol/mag_release.ogg'//На будущее заменить
-
+NO_MAG_GUN_HELPER(automatic/pistol/glock)
 // /obj/item/gun/ballistic/automatic/pistol/glock/no_mag
 // 	spawnwithmagazine = FALSE

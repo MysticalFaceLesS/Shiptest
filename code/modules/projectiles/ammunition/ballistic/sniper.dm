@@ -34,7 +34,7 @@
 	name = ".300 Magnum Trac bullet casing"
 	desc = "A .300 Magnum Tracker casing."
 	projectile_type = /obj/projectile/bullet/a300/trac
-	bullet_skin = "trac"
+	//[CELADON-DELETE] - iconstate fix
 
 //6.5 CLIP
 
