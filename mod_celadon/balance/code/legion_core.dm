@@ -25,7 +25,7 @@
 /datum/reagent/medicine/soulus/on_mob_life(mob/living/carbon/M)
 	M.adjustFireLoss(-0.15*REM, 0)
 	M.adjustBruteLoss(-0.15*REM, 0)
-	M.adjustToxLoss(clone_dam*REM, 0)
+	M.adjustToxLoss(tox_dam*REM, 0)
 	..()
 
 /datum/reagent/medicine/soulus/overdose_process(mob/living/M)
