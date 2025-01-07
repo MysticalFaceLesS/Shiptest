@@ -30,6 +30,7 @@ ID мода: inteq_vendor
 Добавление самих МОД сьютов. Обычный и Элитный. Разница в резистах, скорости и емкости для модулей (их иконки лежат в оригинальном файле, т.к. того требовал код)
 Добавление нового фонарика для МОДов интеков (косметика)
 Добавление отдельной профессии Honorable Vanguard и Rearguard
+Починил отсутствующие флаги для Этереалов, которые прячут их рога, хвосты и т.п.
 
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
@@ -48,12 +49,8 @@ ID мода: inteq_vendor
 
 ### Изменения *кор кода*
 
-Новые спрайты модсьютов в оригинальных файлах
-icons\mob\clothing\modsuit\mod_clothing
-icons\mob\clothing\modsuit\mod_modules
-
-icons\obj\clothing\modsuit\mod_clothing
-icons\obj\clothing\modsuit\mod_modules
+code/modules/mob/living/carbon/human/species : /datum/species/proc/handle_mutant_bodyparts
+Починил отсутствующие флаги для Этереалов
 
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
@@ -91,12 +88,11 @@ icons\obj\clothing\modsuit\mod_modules
 
 ### Используемые файлы, не содержащиеся в модпаке
 
-Новые спрайты модсьютов в оригинальных файлах
-icons\mob\clothing\modsuit\mod_clothing
-icons\mob\clothing\modsuit\mod_modules
+_storge_icons\mob\modsuit\mod_clothing
+_storge_icons\mob\modsuit\mod_modules
 
-icons\obj\clothing\modsuit\mod_clothing
-icons\obj\clothing\modsuit\mod_modules
+_storge_icons\obj\modsuit\mod_clothing
+_storge_icons\obj\modsuit\mod_modules
 
 <!--
   Будь то немодульный файл или модульный файл, который не содержится в папке,

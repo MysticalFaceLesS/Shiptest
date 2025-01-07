@@ -991,6 +991,16 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			bodyparts_to_add -= "riol_ears"
 	// [/CELADON-ADD]
 
+	// [CELADON-ADD] - CELADON_ELZUOZE
+	if("tail_elzu" in mutant_bodyparts)
+		if(!H.dna.features["tail_elzu"] || H.dna.features["tail_elzu"] == "None" || H.wear_suit && (H.wear_suit.flags_inv & HIDEJUMPSUIT))
+			bodyparts_to_add -= "tail_elzu"
+
+	if("elzu_horns" in mutant_bodyparts)
+		if(!H.dna.features["elzu_horns"] || H.dna.features["elzu_horns"] == "None" || H.head && (H.head.flags_inv & HIDEHORNS) || (H.wear_mask && (H.wear_mask.flags_inv & HIDEHORNS)) || !HD)
+			bodyparts_to_add -= "elzu_horns"
+	// [/CELADON_ADD]
+
 	////PUT ALL YOUR WEIRD ASS REAL-LIMB HANDLING HERE
 
 	///Digi handling
