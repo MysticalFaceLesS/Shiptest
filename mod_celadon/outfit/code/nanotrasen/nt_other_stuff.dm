@@ -1,3 +1,4 @@
+//signs
 /obj/structure/sign/nanotrasen
 	name = "\improper Nanotrasen logo sign"
 	sign_change_name = "Corporate Logo - Nanotrasen"
@@ -19,3 +20,7 @@
 	desc = "A sign with the Nakamura Engineering hieroglyphs on it."
 	icon_state = "nakamura"
 	is_editable = TRUE
+
+//clothing reflavor
+/obj/item/clothing/under/nanotrasen/engineering/director
+	desc = "Thick black overalls over a blue office shirt. Unlike most managerial staff, Nakamura Engineering directors still need to get hands-on with their work."

@@ -107,6 +107,9 @@
 		"nt-cent-command-stamp" = 'mod_celadon/_storge_icons/icons/png/nano_trasen_central_command_stamp.png',
 		"nt-captain-stamp" = 'mod_celadon/_storge_icons/icons/png/nano_trasen_captain_stamp.png',
 		"syndicate-captain-stamp" = 'mod_celadon/_storge_icons/icons/png/syndicate_captain_stamp.png',
+		"stamp-df" = 'mod_celadon/_storge_icons/icons/png/large_stamp-df_generic.png',
+		"stamp-df_captain" = 'mod_celadon/_storge_icons/icons/png/large_stamp-df_captain.png',
+		"stamp-df_meddir" = 'mod_celadon/_storge_icons/icons/png/large_stamp-df_med_dir.png',
 		// [/CELADON-ADD]
 		"stamp-clown" = 'icons/stamp_icons/large_stamp-clown.png',
 		"stamp-deny" = 'icons/stamp_icons/large_stamp-deny.png',
