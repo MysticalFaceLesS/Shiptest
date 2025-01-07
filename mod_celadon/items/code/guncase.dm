@@ -100,7 +100,7 @@ NO_MAG_GUN_HELPER(automatic/marksman/f4/inteq)
 	start_empty = TRUE
 
 /obj/item/storage/guncase/deagle //why this even exists
-/obj/item/storage/guncasedeagle/PopulateContents()
+/obj/item/storage/guncase/deagle/PopulateContents()
 	new /obj/item/gun/ballistic/automatic/pistol/deagle/no_mag(src)
 	new /obj/item/ammo_box/magazine/m50/empty(src)
 	new /obj/item/ammo_box/magazine/m50/empty(src)
