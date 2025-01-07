@@ -278,6 +278,7 @@
 /obj/structure/closet/body_bag,
 /obj/effect/mob_spawn/human/corpse/assistant,
 /obj/item/circuitboard/machine/techfab/department/medical,
+/obj/effect/decal/cleanable/vomit/old,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/medical/morgue)
 "bm" = (
@@ -765,6 +766,7 @@
 	dir = 4
 	},
 /obj/machinery/firealarm/directional/south,
+/obj/structure/crate_shelf,
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "cT" = (
@@ -811,6 +813,7 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
+/obj/structure/chair/greyscale,
 /turf/open/floor/plasteel/showroomfloor,
 /area/ship/crew/toilet)
 "da" = (
@@ -1137,17 +1140,13 @@
 	pixel_x = -3;
 	pixel_y = 7
 	},
-/obj/item/storage/firstaid/o2{
+/obj/item/storage/firstaid/toxin{
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/item/storage/firstaid/toxin{
-	pixel_x = -3;
-	pixel_y = -1
-	},
 /obj/item/storage/firstaid/regular{
 	pixel_x = -3;
-	pixel_y = -5
+	pixel_y = -1
 	},
 /obj/item/reagent_containers/glass/bottle{
 	list_reagents = list(/datum/reagent/medicine/thializid=30);
@@ -1212,6 +1211,7 @@
 /obj/item/fish_feed{
 	layer = 2
 	},
+/obj/item/reagent_containers/glass/bottle/vial/large/preloaded/CMO,
 /turf/open/floor/plasteel/dark,
 /area/ship/crew)
 "gE" = (
@@ -1352,14 +1352,14 @@
 /obj/machinery/door/firedoor/border_only{
 	dir = 1
 	},
-/obj/machinery/door/poddoor{
-	id = "emergencybay_blastdoors"
-	},
 /obj/docking_port/mobile{
 	dir = 8;
 	launch_status = 0;
 	name = "Hospital Ship";
 	preferred_direction = 4
+	},
+/obj/machinery/door/poddoor{
+	id = "emergencybay_blastdoors"
 	},
 /turf/open/floor/engine,
 /area/ship/cargo)
@@ -1371,7 +1371,7 @@
 	dir = 1
 	},
 /obj/machinery/airalarm/directional/south,
-/obj/machinery/chem_master,
+/obj/machinery/chem_dispenser,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/crew/toilet)
 "jg" = (
@@ -1453,7 +1453,6 @@
 /area/ship/cargo)
 "lp" = (
 /obj/structure/table,
-/obj/machinery/light/built/directional/north,
 /obj/item/reagent_containers/spray/cleaner{
 	pixel_x = -8;
 	pixel_y = 4
@@ -1462,6 +1461,7 @@
 	pixel_x = 5;
 	pixel_y = 10
 	},
+/obj/machinery/light/small/built/directional/north,
 /turf/open/floor/plasteel/dark,
 /area/ship/medical)
 "lI" = (
@@ -2178,11 +2178,6 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/ship/cargo)
-"zl" = (
-/obj/effect/turf_decal/corner/opaque/lightgrey/diagonal,
-/obj/structure/crate_shelf/built,
-/turf/open/floor/plasteel/dark,
-/area/ship/cargo)
 "zy" = (
 /obj/structure/railing{
 	dir = 1
@@ -2413,6 +2408,7 @@
 	dir = 6
 	},
 /obj/machinery/light/small/broken/directional/north,
+/obj/effect/decal/cleanable/oil/slippery,
 /turf/open/floor/plating,
 /area/ship/engineering)
 "ED" = (
@@ -2557,23 +2553,17 @@
 /area/ship/engineering)
 "Ic" = (
 /obj/structure/table,
-/obj/item/reagent_containers/glass/beaker/cryoxadone{
-	pixel_x = 7;
-	pixel_y = 1
-	},
-/obj/item/wrench/medical,
-/obj/item/reagent_containers/glass/beaker/cryoxadone{
-	pixel_x = -6;
-	pixel_y = 6
-	},
-/obj/machinery/cell_charger,
-/obj/item/stock_parts/cell/high{
-	pixel_x = -8;
-	pixel_y = -8
-	},
 /obj/item/radio/intercom/directional/west,
 /obj/structure/sign/poster/official/safety_internals{
 	pixel_y = -32
+	},
+/obj/item/reagent_containers/glass/beaker/cryoxadone{
+	pixel_x = -8;
+	pixel_y = 12
+	},
+/obj/item/reagent_containers/glass/beaker/cryoxadone{
+	pixel_x = -6;
+	pixel_y = 5
 	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/medical)
@@ -2727,6 +2717,14 @@
 	dir = 5
 	},
 /obj/structure/table/chem,
+/obj/machinery/cell_charger{
+	pixel_x = -1;
+	pixel_y = 8
+	},
+/obj/item/stock_parts/cell/high{
+	pixel_x = 0;
+	pixel_y = 2
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/crew/toilet)
 "Mi" = (
@@ -2765,7 +2763,8 @@
 	},
 /obj/structure/table/chem,
 /obj/machinery/reagentgrinder{
-	pixel_y = 14
+	pixel_y = 11;
+	pixel_x = -5
 	},
 /obj/structure/sign/poster/official/moth/meth{
 	pixel_y = -32
@@ -3739,7 +3738,7 @@ ak
 aq
 bc
 jI
-zl
+jI
 al
 gB
 fJ
