@@ -92,14 +92,28 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/disabler/assault, /obj/item/ammo_casing/energy/laser/assault)
 	default_ammo_type = /obj/item/stock_parts/cell/gun //nerfs the power cell to a standart one
 
-//Commander relore - no more Vigilitas Interstellar
+//NT ballistics relore - MORE Vigilitas Interstellar!
 /obj/item/gun/ballistic/automatic/pistol/commander
-	name = "Nanotrasen Commander"
-	desc = "A service pistol produced as Nanotrasen's security forces standard sidearm. Has a reputation for being easy to use, due to its light recoil and high magazine capacity. Chambered in 9mm."
-	manufacturer = MANUFACTURER_NANOTRASEN
+	name = "VI Commander"
+	desc = "A service pistol produced as Vigilitas Interstellar's standard sidearm. Has a reputation for being easy to use, due to its light recoil and high magazine capacity. Chambered in 9mm."
+	manufacturer = MANUFACTURER_VIGILITAS
 
 /obj/item/gun/ballistic/automatic/pistol/commander/inteq
-	desc = "A modified version of the Nanotrasen Commander, issued as standard to Inteq Risk Management Group personnel. Features the same excellent handling and high magazine capacity as the original. Chambered in 9mm."
+	desc = "A modified version of the VI Commander, issued as standard to Inteq Risk Management Group personnel. Features the same excellent handling and high magazine capacity as the original. Chambered in 9mm."
+
+/obj/item/gun/ballistic/automatic/smg/wt550
+	name = "\improper VI WT-550 Automatic Rifle"
+	desc = "A classic ballistic PDW developed decades ago and produced by Viglitas Interstellar. Uses 4.6x30mm rounds."
+	manufacturer = MANUFACTURER_VIGILITAS
+
+/obj/item/gun/ballistic/automatic/smg/vector
+	desc = "A police carbine based on an old design originating from earth, Solar Federation. Modified by Vigilitas Interstellar and used as a common security SMG. Chambered in 9mm."
+	manufacturer = MANUFACTURER_VIGILITAS
+
+/obj/item/gun/ballistic/automatic/smg/skm_carbine/saber
+	name = "\improper VI Saber SMG"
+	desc = "A full-auto 9mm submachine gun, designated 'VI SABR'. Has a threaded barrel for suppressors and a folding stock."
+	manufacturer = MANUFACTURER_VIGILITAS
 
 //Honorable mentions
 

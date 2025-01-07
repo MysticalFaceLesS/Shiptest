@@ -58,20 +58,20 @@
 	cost = 11000
 
 /datum/supply_pack/faction/nanotrasen/gun/commander
-	name = "Nanotrasen 'Commander' handgun"
-	desc = "A simple 9mm pistol, looks cool, is ballistic. Produced by Nanotrasen Armories"
+	name = "VI 'Commander' handgun"
+	desc = "A simple 9mm pistol, looks cool, is ballistic. Produced by Vigilitas Interstellar"
 	contains = list(/obj/item/storage/guncase/pistol/commander)
 	cost = 700
 
 /datum/supply_pack/faction/nanotrasen/gun/wt550
-	name = "Nanotrasen WT-550 Automatic rifle"
-	desc = "A ballistic PDW produced by Nanotrasen. Quite old, but still is amazing at filling corporation's enemies with lead. Uses 4.6x30mm rounds"
+	name = "VI WT-550 Automatic rifle"
+	desc = "A ballistic PDW produced by Vigilitas Interstellar. Quite old, but still is amazing at filling corporation's enemies with lead. Uses 4.6x30mm rounds"
 	contains = list(/obj/item/storage/guncase/wt550)
 	cost = 5500
 
 /datum/supply_pack/faction/nanotrasen/gun/sabersmg
-	name = "Nanotrasen Saber SMG"
-	desc = "An experimental ballistic weapon produced by Nanotrasen. Uses 9mm rounds"
+	name = "VI Saber SMG"
+	desc = "An experimental ballistic weapon produced by Vigilitas Interstellar. Uses 9mm rounds"
 	contains = list(/obj/item/storage/guncase/sabersmg)
 	cost = 3500
 
