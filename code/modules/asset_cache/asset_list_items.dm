@@ -110,6 +110,9 @@
 		"stamp-df" = 'mod_celadon/_storge_icons/icons/png/large_stamp-df_generic.png',
 		"stamp-df_captain" = 'mod_celadon/_storge_icons/icons/png/large_stamp-df_captain.png',
 		"stamp-df_meddir" = 'mod_celadon/_storge_icons/icons/png/large_stamp-df_med_dir.png',
+		"stamp-ne" = 'mod_celadon/_storge_icons/icons/png/large_stamp-ne_generic.png',
+		"stamp-ne_captain" = 'mod_celadon/_storge_icons/icons/png/large_stamp-ne_captain.png',
+		"stamp-ne_engdir" = 'mod_celadon/_storge_icons/icons/png/large_stamp-ne_eng_dir.png',
 		// [/CELADON-ADD]
 		"stamp-clown" = 'icons/stamp_icons/large_stamp-clown.png',
 		"stamp-deny" = 'icons/stamp_icons/large_stamp-deny.png',
