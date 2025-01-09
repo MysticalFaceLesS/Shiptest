@@ -105,3 +105,8 @@
 	file_name = "syndicate_Jox"
 	name = "Jox Drop Ship"
 	prefix = "sSSV"
+
+/datum/map_template/shuttle/subshuttles/solfed_vespa
+	file_name = "solfed_vespa"
+	name = "Vespa Expeditionary Dropship"
+	prefix = "sSFSV"
