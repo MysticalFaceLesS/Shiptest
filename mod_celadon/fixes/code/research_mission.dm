@@ -16,7 +16,7 @@
 /datum/overmap/event/carp
 	name = "carp migration (moderate)"
 	desc = "A migratory school of space carp. They travel at high speeds, and flying through them may cause them to impact your ship"
-	token_icon_state = "carp1"
+	token_icon_state = "carp_moderate1"
 	chance_to_affect = 15
 	spread_chance = 50
 	chain_rate = 4
@@ -28,9 +28,19 @@
 
 /datum/overmap/event/carp/Initialize(position, ...)
 	. = ..()
-	token.icon_state = "carp[rand(1, 4)]"
-	token.color = "#7b1ca8"
-	token.light_color = "#7b1ca8"
+	token.icon_state = "carp_moderate[rand(1, 2)]"
+	switch(type) //woop! this picks one of two icon states for the severity of the storm in overmap.dmi
+		if(/datum/overmap/event/carp/minor)
+			token.icon_state = "carp_minor[rand(1, 2)]"
+		if(/datum/overmap/event/carp)
+			token.icon_state = "carp_moderate[rand(1, 2)]"
+		if(/datum/overmap/event/carp/major)
+			token.icon_state = "carp_major[rand(1, 2)]"
+		else
+			token.icon_state = "carp_moderate1"
+	//token.icon_state = "carp[rand(1, 4)]"
+	//token.color = "#7b1ca8"
+	//token.light_color = "#7b1ca8"
 	token.update_icon()
 
 /datum/overmap/event/carp/apply_effect()
@@ -45,7 +55,6 @@
 
 /datum/overmap/event/carp/minor
 	name = "carp migration (minor)"
-	token_icon_state = "carp1"
 	chance_to_affect = 5
 	spread_chance = 25
 	chain_rate = 4
@@ -56,7 +65,6 @@
 
 /datum/overmap/event/carp/major
 	name = "carp migration (major)"
-	token_icon_state = "carp1"
 	chance_to_affect = 25
 	spread_chance = 25
 	chain_rate = 4
