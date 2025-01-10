@@ -10,7 +10,7 @@
 
 <!-- Название мода. Не важно на русском или на английском. -->
 ## Щитспавн
-/obj/item/circuitboard/machine/selling_pad
+
 ID мода: CELADON_SHIT_SPAWN
 <!--
   Название модпака прописными буквами, СОЕДИНЁННЫМИ_ПОДЧЁРКИВАНИЕМ,
@@ -45,6 +45,7 @@ ID мода: CELADON_SHIT_SPAWN
 - REMOVE: `code/game/objects/effects/spawners/random/boards.dm` : вырезаем каргопад, требуется переработка
 - REMOVE: `code/modules/research/designs/machine_designs.dm` : вырезаем каргопад, требуется переработка
 - REMOVE: `mod_celadon/outpost_console/code/supply_pack/independent/machinery.dm` : вырезаем каргопад, требуется переработка
+- REMOVE: `code/modules/economy/selling_pad.dm` : вырезаем каргопад, требуется переработка
 
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,

@@ -3,7 +3,9 @@
 	name = "cargo hold pad"
 	icon = 'icons/obj/telescience.dmi'
 	icon_state = "lpad-idle-o"
-	circuit = /obj/item/circuitboard/machine/selling_pad
+	// [CELADON-REMOVE] - CELADON_SHIT_SPAWN
+	// circuit = /obj/item/circuitboard/machine/selling_pad
+	// [/CELADON-REMOVE]
 
 /obj/machinery/selling_pad/multitool_act(mob/living/user, obj/item/multitool/I)
 	. = ..()
