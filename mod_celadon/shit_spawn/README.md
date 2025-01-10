@@ -46,6 +46,7 @@ ID мода: CELADON_SHIT_SPAWN
 - REMOVE: `code/modules/research/designs/machine_designs.dm` : вырезаем каргопад, требуется переработка
 - REMOVE: `mod_celadon/outpost_console/code/supply_pack/independent/machinery.dm` : вырезаем каргопад, требуется переработка
 - REMOVE: `code/modules/economy/selling_pad.dm` : вырезаем каргопад, требуется переработка
+- REMOVE: `code/modules/research/designs/comp_board_designs.dm` : вырезаем консоль каргопада с изучения и с шипов
 
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
