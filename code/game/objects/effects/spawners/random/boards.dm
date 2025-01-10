@@ -179,7 +179,9 @@
 			/obj/item/circuitboard/machine/reagentgrinder = 5,
 			/obj/item/circuitboard/machine/recharger = 5,
 			/obj/item/circuitboard/machine/seed_extractor = 5,
-			/obj/item/circuitboard/machine/selling_pad = 5,
+			// [CELADON-REMOVE] - CELADON_SHIT_SPAWN - Нуждается в переработке
+			// /obj/item/circuitboard/machine/selling_pad = 5,
+			// [/CELADON-REMOVE]
 			/obj/item/circuitboard/machine/emitter = 5,
 		)
 

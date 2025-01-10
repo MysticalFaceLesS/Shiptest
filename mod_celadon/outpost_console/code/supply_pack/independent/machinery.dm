@@ -11,14 +11,16 @@
 	crate_name = "r&d starter kit"
 	crate_type = /obj/structure/closet/crate/science
 
-/datum/supply_pack/faction/independent/machinery/selling_pad_pack
-	name = "Cargo teleport"
-	desc = " A set of specialized platforms for building and managing a cargo teleport "
-	cost = 9000
-	contains = list(/obj/item/circuitboard/machine/selling_pad,
-					/obj/item/circuitboard/computer/selling_pad_control)
-	crate_name = "cargo teleport"
-	crate_type = /obj/structure/closet/crate/science
+// [CELADON-REMOVE] - CELADON_SHIT_SPAWN - Нуждается в переработке
+// /datum/supply_pack/faction/independent/machinery/selling_pad_pack
+// 	name = "Cargo teleport"
+// 	desc = " A set of specialized platforms for building and managing a cargo teleport "
+// 	cost = 9000
+// 	contains = list(/obj/item/circuitboard/machine/selling_pad,
+// 					/obj/item/circuitboard/computer/selling_pad_control)
+// 	crate_name = "cargo teleport"
+// 	crate_type = /obj/structure/closet/crate/science
+// [/CELADON-REMOVE]
 
 /datum/supply_pack/faction/independent/machinery/rnd_full
 	name = "Suspicious circuits"
