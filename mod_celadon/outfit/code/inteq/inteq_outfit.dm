@@ -62,6 +62,10 @@
 		for (var/obj/item/card/id/card in W.contents)
 			W.combined_access |= card.access
 
+	// Даём Интекам свой дюфель взятый с Блюмуна, не имеет никаких отличающих стат
+/datum/outfit/job/inteq
+	duffelbag = /obj/item/storage/backpack/duffelbag/inteq
+
 //рекрут
 /datum/outfit/job/inteq/assistant/celadon
 	name = "Recruit (InteQ)"
