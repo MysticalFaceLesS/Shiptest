@@ -99,10 +99,7 @@
 	var/worth = 10
 
 	worth += C.air_contents.get_moles(GAS_BZ)*0.02
-	worth += C.air_contents.get_moles(GAS_STIMULUM)*1
-	worth += C.air_contents.get_moles(GAS_HYPERNOB)*10
 	worth += C.air_contents.get_moles(GAS_TRITIUM)*0.04
-	worth += C.air_contents.get_moles(GAS_PLUOXIUM)*0.05
 	return worth
 
 /* Было от офов

@@ -23,27 +23,6 @@
 	contains = list(/obj/item/storage/guncase/morita1)
 	crate_name = "auto rifle crate"
 
-/datum/supply_pack/gun/morita1/forest
-	name = "Morita forest Mk.I Rifle crate"
-	desc = "Содержит Morita/forest Mk.I. и дополнительный пустой барабанный магазин."
-	cost = 12850
-	contains = list(/obj/item/storage/guncase/morita1/forest)
-	crate_name = "auto rifle crate"
-
-/datum/supply_pack/gun/morita1/desert
-	name = "Morita desert Mk.I Rifle crate"
-	desc = "Содержит Morita/desert Mk.I. и дополнительный пустой барабанный магазин."
-	cost = 12850
-	contains = list(/obj/item/storage/guncase/morita1/desert)
-	crate_name = "auto rifle crate"
-
-/datum/supply_pack/gun/morita1/swamp
-	name = "Morita swamp Mk.I Rifle crate"
-	desc = "Содержит Morita/swamp Mk.I. и дополнительный пустой барабанный магазин."
-	cost = 12850
-	contains = list(/obj/item/storage/guncase/morita1/swamp)
-	crate_name = "auto rifle crate"
-
 /datum/supply_pack/gun/glock
 	name = "Оружейный ящик Glock"
 	desc = "Содержит пустой пистолет Glock, калибра 9mm."
