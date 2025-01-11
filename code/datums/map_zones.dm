@@ -674,3 +674,6 @@
 
 /turf/closed/indestructible/edge/is_transition_turf()
 	return TRUE
+
+/turf/closed/indestructible/edge/attackby(obj/item/W, mob/user, params)
+	return FALSE
