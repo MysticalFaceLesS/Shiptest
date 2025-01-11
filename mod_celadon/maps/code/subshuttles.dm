@@ -59,9 +59,9 @@
 	prefix = "sSV"
 
 /datum/map_template/shuttle/subshuttles/brawler
-	file_name = "frontiersmen_brawler"
+	file_name = "pirate_brawler"
 	name = "Brawler-class Dropship"
-	prefix = "sSV"
+	prefix = "sPGF"
 
 /datum/map_template/shuttle/subshuttles/skink
 	file_name = "nanotrasen_skink"

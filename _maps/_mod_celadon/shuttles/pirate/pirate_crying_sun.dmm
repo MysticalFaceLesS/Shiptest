@@ -159,6 +159,10 @@
 /obj/structure/window/plasma/reinforced{
 	dir = 8
 	},
+/obj/machinery/door/poddoor{
+	dir = 4;
+	id = "lib_engine_blast"
+	},
 /turf/open/floor/plating,
 /area/ship/engineering/engines/starboard)
 "bD" = (
@@ -238,14 +242,6 @@
 	},
 /obj/item/screwdriver{
 	pixel_x = 1;
-	pixel_y = -5
-	},
-/obj/item/screwdriver{
-	pixel_x = 4;
-	pixel_y = -5
-	},
-/obj/item/screwdriver{
-	pixel_x = 7;
 	pixel_y = -5
 	},
 /obj/structure/closet/secure_closet/wall/directional/west{
@@ -440,15 +436,6 @@
 /obj/effect/decal/cleanable/sprayweb,
 /turf/open/floor/plating,
 /area/ship/engineering/engines/starboard)
-"du" = (
-/obj/machinery/porta_turret/ship/weak{
-	dir = 6
-	},
-/obj/structure/cable{
-	icon_state = "0-8"
-	},
-/turf/open/floor/engine/hull,
-/area/ship/bridge)
 "dx" = (
 /obj/effect/turf_decal/siding/wood{
 	dir = 4
@@ -697,9 +684,6 @@
 /obj/effect/decal/cleanable/glass,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/central)
-"fG" = (
-/turf/closed/wall/mineral/titanium/exterior,
-/area/ship/security/armory)
 "fN" = (
 /obj/machinery/power/shuttle/engine/electric{
 	dir = 4
@@ -708,10 +692,6 @@
 	icon_state = "0-4"
 	},
 /obj/structure/catwalk/over/plated_catwalk/dark,
-/obj/machinery/door/poddoor{
-	dir = 4;
-	id = "lib_engine_blast"
-	},
 /turf/open/floor/plating,
 /area/ship/engineering/engines/starboard)
 "fV" = (
@@ -798,11 +778,19 @@
 "gx" = (
 /obj/structure/rack,
 /obj/machinery/light/directional/west,
-/obj/item/gun/energy/kalix/pgf/heavy/sniper{
-	pixel_x = -3;
-	pixel_y = 2
-	},
 /obj/effect/turf_decal/corner/opaque/neutral/full,
+/obj/item/stock_parts/cell/gun/kalix{
+	pixel_x = -6;
+	pixel_y = 8
+	},
+/obj/item/stock_parts/cell/gun/kalix{
+	pixel_x = -5;
+	pixel_y = 4
+	},
+/obj/item/gun/energy/kalix{
+	pixel_x = -1;
+	pixel_y = -1
+	},
 /turf/open/floor/vault,
 /area/ship/security/armory)
 "gz" = (
@@ -998,10 +986,6 @@
 	icon_state = "0-4"
 	},
 /obj/structure/catwalk/over/plated_catwalk/dark,
-/obj/machinery/door/poddoor{
-	dir = 4;
-	id = "lib_engine_blast"
-	},
 /turf/open/floor/plating,
 /area/ship/engineering/engines/port)
 "hK" = (
@@ -1077,10 +1061,8 @@
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
-/obj/machinery/porta_turret/ship/weak{
-	dir = 4
-	},
 /obj/structure/catwalk/over/plated_catwalk/dark,
+/obj/machinery/porta_turret/ship/frontiersmen/light,
 /turf/open/floor/plating/airless,
 /area/ship/bridge)
 "ih" = (
@@ -1116,10 +1098,6 @@
 	dir = 4
 	},
 /obj/structure/catwalk/over/plated_catwalk/dark,
-/obj/machinery/door/poddoor{
-	dir = 4;
-	id = "lib_engine_blast"
-	},
 /turf/open/floor/plating,
 /area/ship/engineering/engines/port)
 "it" = (
@@ -1354,12 +1332,6 @@
 /obj/machinery/atmospherics/pipe/layer_manifold/visible,
 /turf/open/floor/engine/hull/reinforced/interior,
 /area/ship/construction)
-"kB" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/turf/open/floor/engine/hull,
-/area/ship/external/dark)
 "kD" = (
 /obj/effect/turf_decal/industrial/traffic{
 	dir = 8
@@ -1466,6 +1438,14 @@
 	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 5
+	},
+/obj/item/blackmarket_uplink{
+	pixel_x = 5;
+	pixel_y = 3
+	},
+/obj/item/clothing/mask/whistle{
+	pixel_x = -4;
+	pixel_y = 4
 	},
 /turf/open/floor/plasteel/sepia,
 /area/ship/crew/dorm/dormthree)
@@ -1863,9 +1843,6 @@
 	pixel_y = 1;
 	pixel_x = -6
 	},
-/obj/item/desk_flag/trans{
-	pixel_x = 9
-	},
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/bridge)
 "qm" = (
@@ -2229,12 +2206,10 @@
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/bridge)
 "tU" = (
-/obj/machinery/porta_turret/ship/weak{
-	dir = 5
-	},
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
+/obj/machinery/porta_turret/ship/frontiersmen/heavy,
 /turf/open/floor/engine/hull,
 /area/ship/bridge)
 "uh" = (
@@ -2248,6 +2223,16 @@
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/bridge)
 "uo" = (
+/obj/structure/closet/secure_closet/wall/directional/west{
+	icon_state = "sec_wall";
+	name = "equipment locker"
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/effect/turf_decal/corner/opaque/purple{
+	dir = 10
+	},
 /obj/item/grenade/frag{
 	pixel_x = -8;
 	pixel_y = -1
@@ -2258,25 +2243,23 @@
 	},
 /obj/item/grenade/smokebomb{
 	pixel_y = 3;
+	pixel_x = 5
+	},
+/obj/item/grenade/smokebomb{
+	pixel_y = 3;
 	pixel_x = 13
 	},
 /obj/item/grenade/smokebomb{
-	pixel_y = 1;
-	pixel_x = 7
+	pixel_y = -4;
+	pixel_x = 3
 	},
 /obj/item/grenade/smokebomb{
-	pixel_x = 11;
-	pixel_y = -5
+	pixel_y = -5;
+	pixel_x = 13
 	},
-/obj/structure/closet/secure_closet/wall/directional/west{
-	icon_state = "sec_wall";
-	name = "equipment locker"
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/effect/turf_decal/corner/opaque/purple{
-	dir = 10
+/obj/item/grenade/smokebomb{
+	pixel_x = 8;
+	pixel_y = -6
 	},
 /turf/open/floor/vault,
 /area/ship/security/armory)
@@ -2425,6 +2408,10 @@
 	},
 /obj/machinery/recharger{
 	pixel_x = 8;
+	pixel_y = 0
+	},
+/obj/machinery/recharger{
+	pixel_x = -4;
 	pixel_y = 0
 	},
 /turf/open/floor/vault,
@@ -3304,6 +3291,10 @@
 /obj/structure/window/plasma/reinforced{
 	dir = 8
 	},
+/obj/machinery/door/poddoor{
+	dir = 4;
+	id = "lib_engine_blast"
+	},
 /turf/open/floor/plating,
 /area/ship/engineering/engines/port)
 "CD" = (
@@ -3311,13 +3302,8 @@
 /turf/open/floor/plasteel/white,
 /area/ship/crew/canteen)
 "CF" = (
-/obj/machinery/porta_turret/ship/weak{
-	dir = 10
-	},
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/turf/open/floor/engine/hull,
+/obj/machinery/porta_turret/ship/frontiersmen/light,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "CO" = (
 /obj/machinery/vending/coffee,
@@ -3368,9 +3354,6 @@
 /area/ship/crew/toilet)
 "Dg" = (
 /obj/structure/window/plasma/reinforced/plastitanium,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
 /obj/machinery/door/poddoor/shutters{
 	id = "lib_engineering_shut";
 	dir = 8
@@ -3393,8 +3376,9 @@
 /turf/open/floor/plating/rust,
 /area/ship/engineering/engines/starboard)
 "Dq" = (
+/obj/machinery/porta_turret/ship/frontiersmen/light,
 /turf/closed/wall/mineral/titanium/exterior,
-/area/ship/hangar/starboard)
+/area/ship/bridge)
 "Du" = (
 /obj/effect/turf_decal/siding/wood,
 /obj/effect/turf_decal/siding/wood/corner{
@@ -3437,12 +3421,12 @@
 /obj/structure/sign/warning/electricshock{
 	pixel_y = -26
 	},
+/obj/effect/turf_decal/corner_steel_grid{
+	dir = 9
+	},
 /obj/machinery/computer/bsa_control{
 	name = "SUPERNOVA - Controller Console";
 	desc = "A decommissioned controller console for a SUPERNOVA type Rail Cannon."
-	},
-/obj/effect/turf_decal/corner_steel_grid{
-	dir = 9
 	},
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/construction)
@@ -3586,10 +3570,8 @@
 /turf/open/floor/plasteel,
 /area/ship/hallway/central)
 "Eu" = (
-/obj/machinery/porta_turret/ship/weak{
-	dir = 5
-	},
 /obj/structure/cable,
+/obj/machinery/porta_turret/ship/frontiersmen/light,
 /turf/open/floor/engine/hull,
 /area/ship/bridge)
 "EA" = (
@@ -3708,9 +3690,6 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
 /turf/open/floor/plating,
 /area/ship/engineering)
 "Ff" = (
@@ -3804,12 +3783,10 @@
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/central)
 "FJ" = (
-/obj/machinery/porta_turret/ship/weak{
-	dir = 5
-	},
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
+/obj/machinery/porta_turret/ship/frontiersmen/light,
 /turf/open/floor/engine/hull,
 /area/ship/bridge)
 "FL" = (
@@ -3820,21 +3797,8 @@
 	dir = 4
 	},
 /obj/structure/catwalk/over/plated_catwalk/dark,
-/obj/machinery/door/poddoor{
-	dir = 4;
-	id = "lib_engine_blast"
-	},
 /turf/open/floor/plating,
 /area/ship/engineering/engines/starboard)
-"FO" = (
-/obj/machinery/porta_turret/ship/weak{
-	dir = 8
-	},
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/turf/open/floor/engine/hull/reinforced,
-/area/ship/bridge)
 "FU" = (
 /obj/effect/turf_decal/corner_steel_grid{
 	dir = 10
@@ -4013,56 +3977,58 @@
 /area/ship/crew/office)
 "GW" = (
 /obj/structure/rack,
-/obj/item/stock_parts/cell/gun/pgf{
-	pixel_y = 12;
-	pixel_x = -3
-	},
-/obj/item/stock_parts/cell/gun/pgf{
-	pixel_y = 10;
-	pixel_x = 2
-	},
-/obj/item/stock_parts/cell/gun/pgf{
-	pixel_y = 8;
-	pixel_x = 8
-	},
-/obj/item/stock_parts/cell/gun/pgf{
-	pixel_y = 6;
-	pixel_x = -9
-	},
-/obj/item/stock_parts/cell/gun/pgf{
-	pixel_y = 4;
-	pixel_x = -3
-	},
-/obj/item/stock_parts/cell/gun/pgf{
-	pixel_y = 2;
-	pixel_x = 3
-	},
 /obj/effect/turf_decal/corner/opaque/neutral/full,
+/obj/item/stock_parts/cell/gun{
+	pixel_x = 8;
+	pixel_y = -2
+	},
+/obj/item/stock_parts/cell/gun{
+	pixel_x = 4;
+	pixel_y = -4
+	},
+/obj/item/gun/energy/disabler{
+	pixel_x = -6;
+	pixel_y = 7
+	},
+/obj/item/stock_parts/cell/gun{
+	pixel_x = 0;
+	pixel_y = -7
+	},
+/obj/item/gun/energy/disabler{
+	pixel_x = -4;
+	pixel_y = 3
+	},
+/obj/item/gun/energy/e_gun/dragnet/snare{
+	pixel_x = 0;
+	pixel_y = -1
+	},
 /turf/open/floor/vault,
 /area/ship/security/armory)
 "Ha" = (
 /obj/structure/rack,
-/obj/item/gun/energy/kalix/pgf{
-	pixel_y = 10
-	},
-/obj/item/gun/energy/kalix/pgf{
-	pixel_y = 5
-	},
-/obj/item/gun/energy/kalix/pgf{
-	pixel_y = 0
-	},
 /obj/effect/turf_decal/corner/opaque/neutral/full,
+/obj/item/melee/baton/boomerang/loaded{
+	pixel_x = -4;
+	pixel_y = 3
+	},
+/obj/item/melee/baton/loaded{
+	pixel_x = -1;
+	pixel_y = 3
+	},
+/obj/item/melee/baton/loaded{
+	pixel_x = -7;
+	pixel_y = 4
+	},
+/obj/item/shield/riot{
+	pixel_x = 4;
+	pixel_y = 1
+	},
+/obj/item/shield/riot{
+	pixel_x = -2;
+	pixel_y = -4
+	},
 /turf/open/floor/vault,
 /area/ship/security/armory)
-"Hb" = (
-/obj/machinery/porta_turret/ship/weak{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "0-2"
-	},
-/turf/open/floor/engine/hull,
-/area/ship/bridge)
 "Hf" = (
 /obj/structure/railing,
 /obj/effect/turf_decal/corner_steel_grid{
@@ -4880,59 +4846,18 @@
 /obj/structure/railing,
 /obj/machinery/light/directional/west,
 /obj/structure/table,
-/obj/item/radio{
-	pixel_y = 11;
-	pixel_x = -10
-	},
-/obj/item/radio{
-	pixel_y = 11;
-	pixel_x = -7
-	},
-/obj/item/radio{
-	pixel_y = 11;
-	pixel_x = -4
-	},
-/obj/item/radio{
-	pixel_y = 11
-	},
-/obj/item/radio{
-	pixel_y = 11;
-	pixel_x = 4
-	},
-/obj/item/radio{
-	pixel_y = 11;
-	pixel_x = 10
-	},
-/obj/item/radio{
-	pixel_y = 4;
-	pixel_x = -10
-	},
-/obj/item/radio{
-	pixel_y = 4;
-	pixel_x = -6
-	},
-/obj/item/radio{
-	pixel_y = 4;
-	pixel_x = -2
-	},
-/obj/item/radio{
-	pixel_y = 4;
-	pixel_x = 2
-	},
-/obj/item/radio{
-	pixel_y = 4;
-	pixel_x = 6
-	},
-/obj/item/radio{
-	pixel_y = 4;
-	pixel_x = 10
-	},
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/cryo)
 "OK" = (
-/obj/effect/decal/cleanable/glass,
-/turf/open/floor/engine/hull,
-/area/ship/external/dark)
+/obj/docking_port/stationary{
+	height = 15;
+	width = 30;
+	name = "liberty south exterior dock";
+	dwidth = 15;
+	dir = 2
+	},
+/turf/template_noop,
+/area/template_noop)
 "OQ" = (
 /obj/effect/turf_decal/corner_steel_grid{
 	dir = 5
@@ -5000,12 +4925,15 @@
 /obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/suit/armor/vest/marine/medium,
 /obj/item/clothing/suit/armor/vest/marine/medium,
-/obj/item/clothing/suit/armor/vest/marine/medium,
-/obj/item/clothing/suit/armor/vest/marine/medium,
 /obj/item/clothing/head/helmet/bulletproof/m10,
 /obj/item/clothing/head/helmet/bulletproof/m10,
 /obj/item/clothing/head/helmet/bulletproof/m10,
 /obj/item/clothing/head/helmet/bulletproof/m10,
+/obj/item/clothing/suit/armor/vest,
+/obj/item/clothing/suit/armor/vest,
+/obj/item/clothing/suit/armor/riot,
+/obj/item/clothing/suit/armor/riot,
+/obj/item/clothing/suit/hooded/ablative,
 /turf/open/floor/vault,
 /area/ship/security/armory)
 "OY" = (
@@ -5266,17 +5194,34 @@
 "Qq" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/corner/opaque/neutral/full,
-/obj/item/melee/energy/sword/saber/pirate{
-	pixel_x = -3
+/obj/item/storage/box/ammo/a8_50r{
+	pixel_x = -7;
+	pixel_y = 11
 	},
-/obj/item/melee/energy/sword/saber/pirate{
-	pixel_x = 1
+/obj/item/storage/box/ammo/a8_50r{
+	pixel_x = -7;
+	pixel_y = 7
 	},
-/obj/item/melee/energy/sword/saber/pirate{
-	pixel_x = 5
+/obj/item/storage/box/ammo/c38{
+	pixel_x = -9;
+	pixel_y = 4
 	},
-/obj/item/melee/energy/sword/saber/pirate{
-	pixel_x = 9
+/obj/item/storage/box/ammo/c38{
+	pixel_x = -9;
+	pixel_y = 0
+	},
+/obj/item/gun/ballistic/shotgun/flamingarrow{
+	pixel_x = -5;
+	pixel_y = 11
+	},
+/obj/item/gun/ballistic/rifle/illestren,
+/obj/item/ammo_box/magazine/illestren_a850r{
+	pixel_x = 6;
+	pixel_y = -4
+	},
+/obj/item/ammo_box/magazine/illestren_a850r{
+	pixel_x = 1;
+	pixel_y = -7
 	},
 /turf/open/floor/vault,
 /area/ship/security/armory)
@@ -5559,7 +5504,7 @@
 /obj/docking_port/stationary{
 	height = 15;
 	width = 15;
-	name = "liberty exterior dock";
+	name = "liberty north exterior dock";
 	dwidth = 7
 	},
 /turf/template_noop,
@@ -5784,15 +5729,22 @@
 	name = "\proper captain's locker";
 	req_access_txt = "20"
 	},
-/obj/item/storage/belt/sabre,
 /obj/item/radio/headset/pirate/captain,
-/obj/item/clothing/suit/armor/vest/marine/medium,
 /obj/item/clothing/shoes/combat,
 /obj/item/clothing/head/soft/black,
 /obj/item/clothing/glasses/thermal/eyepatch,
 /obj/item/clothing/gloves/combat,
 /obj/structure/sign/poster/contraband/lusty_xenomorph{
 	pixel_x = -32
+	},
+/obj/item/storage/box/ammo/a4570{
+	pixel_x = 2;
+	pixel_y = -4
+	},
+/obj/item/gun/ballistic/revolver/ashhand,
+/obj/item/melee/energy/sword/saber/pirate{
+	pixel_x = 5;
+	pixel_y = 0
 	},
 /turf/open/floor/plasteel/sepia,
 /area/ship/crew/dorm/dormthree)
@@ -5825,6 +5777,10 @@
 	},
 /obj/structure/window/plasma/reinforced{
 	dir = 8
+	},
+/obj/machinery/door/poddoor{
+	dir = 4;
+	id = "lib_engine_blast"
 	},
 /turf/open/floor/plating,
 /area/ship/engineering/engines/port)
@@ -5999,6 +5955,10 @@
 	},
 /obj/structure/window/plasma/reinforced{
 	dir = 8
+	},
+/obj/machinery/door/poddoor{
+	dir = 4;
+	id = "lib_engine_blast"
 	},
 /turf/open/floor/plating,
 /area/ship/engineering/engines/starboard)
@@ -6589,7 +6549,7 @@ xz
 xz
 xz
 xz
-lc
+CF
 hJ
 hJ
 is
@@ -6600,7 +6560,7 @@ TV
 FN
 fN
 fN
-TV
+CF
 xz
 xz
 xz
@@ -6622,7 +6582,7 @@ CB
 CB
 UM
 SN
-FO
+Sp
 LD
 UO
 bB
@@ -6773,7 +6733,7 @@ uo
 Qq
 gx
 At
-fG
+Dq
 JO
 xz
 "}
@@ -7054,7 +7014,7 @@ xK
 zz
 DT
 SB
-CF
+cR
 xz
 "}
 (18,1,1) = {"
@@ -7082,7 +7042,7 @@ Mw
 Bv
 yF
 TS
-KB
+cR
 xz
 "}
 (19,1,1) = {"
@@ -7110,7 +7070,7 @@ LO
 cA
 cG
 qy
-kB
+cR
 xz
 "}
 (20,1,1) = {"
@@ -7138,7 +7098,7 @@ BH
 Mw
 eM
 HN
-xz
+cR
 xz
 "}
 (21,1,1) = {"
@@ -7166,7 +7126,7 @@ UL
 Mw
 jd
 HN
-xz
+cR
 xz
 "}
 (22,1,1) = {"
@@ -7194,8 +7154,8 @@ LO
 LO
 AJ
 HN
-xz
-xz
+cR
+OK
 "}
 (23,1,1) = {"
 xz
@@ -7222,7 +7182,7 @@ UL
 cA
 jd
 HN
-xz
+cR
 xz
 "}
 (24,1,1) = {"
@@ -7250,7 +7210,7 @@ Mw
 cA
 eM
 HN
-xz
+cR
 xz
 "}
 (25,1,1) = {"
@@ -7278,7 +7238,7 @@ UL
 aR
 Yb
 HN
-xz
+cR
 xz
 "}
 (26,1,1) = {"
@@ -7306,7 +7266,7 @@ Mw
 Mw
 rW
 qy
-Ps
+cR
 xz
 "}
 (27,1,1) = {"
@@ -7334,7 +7294,7 @@ LO
 qF
 jh
 YI
-KB
+cR
 xz
 "}
 (28,1,1) = {"
@@ -7362,7 +7322,7 @@ Bq
 oR
 Ne
 SB
-du
+cR
 xz
 "}
 (29,1,1) = {"
@@ -7595,7 +7555,7 @@ xz
 xz
 xz
 xz
-OK
+xz
 GB
 mk
 ca
@@ -7848,7 +7808,7 @@ xz
 xz
 xz
 xz
-Hb
+tU
 vr
 dK
 Gb
