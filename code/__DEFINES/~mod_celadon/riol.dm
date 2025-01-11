@@ -34,3 +34,6 @@
 
 /// The natural temperature for a body
 #define RIOL_BODYTEMP_NORMAL 313.15
+
+// Делает снифф риолов риольскими
+#define OLFACTION_RIOL /datum/mutation/human/olfaction/riol

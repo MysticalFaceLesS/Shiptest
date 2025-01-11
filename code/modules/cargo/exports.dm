@@ -35,6 +35,12 @@ then the player gets the profit from selling his own wasted time.
 
 	var/list/contents = AM.GetAllContents()
 
+	// [CELADON_EDIT] — PRINTED_ITEMS_SELLING_VITO
+	for(var/obj/item/I in contents)
+		if(I.autolathe_printed)
+			I -= contents
+	// [/CELADON_EDIT]
+
 	var/datum/export_report/report = external_report
 
 	if(!report) //If we don't have any longer transaction going on

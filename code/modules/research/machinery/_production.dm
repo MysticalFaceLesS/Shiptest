@@ -106,6 +106,9 @@
 		if(efficient_with(I.type))
 			I.material_flags |= MATERIAL_NO_EFFECTS //Find a better way to do this.
 			I.set_custom_materials(matlist.Copy())
+		// [CELADON_EDIT] — PRINTED_ITEMS_SELLING_VITO
+		I.autolathe_crafted(src) // this proc because i dont want touch core code much
+		// [/CELADON_EDIT]
 	SSblackbox.record_feedback("nested tally", "item_printed", amount, list("[type]", "[path]"))
 
 /obj/machinery/rnd/production/proc/check_mat(datum/design/being_built, mat)	// now returns how many times the item can be built with the material
