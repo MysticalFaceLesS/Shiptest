@@ -2785,6 +2785,15 @@
 /obj/structure/grille/broken,
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo)
+"nC" = (
+/obj/docking_port/stationary{
+	height = 15;
+	width = 15;
+	dwidth = 7;
+	name = "extra ember dock"
+	},
+/turf/template_noop,
+/area/template_noop)
 "nD" = (
 /obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
 /obj/machinery/door/poddoor{
@@ -4026,15 +4035,29 @@
 /area/ship/crew/canteen)
 "ul" = (
 /obj/structure/rack,
-/obj/item/storage/box/zipties{
-	pixel_y = 7;
-	pixel_x = 4
-	},
-/obj/item/storage/box/syndie_kit/throwing_weapons,
 /obj/machinery/light/directional/south,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/poster/contraband/stechkin{
 	pixel_y = -32
+	},
+/obj/item/gun/ballistic/shotgun/doublebarrel{
+	pixel_y = -4
+	},
+/obj/item/gun/ballistic/shotgun/automatic/dual_tube{
+	pixel_y = 2
+	},
+/obj/item/ammo_casing/shotgun/laserscatter{
+	pixel_x = -4;
+	pixel_y = -6
+	},
+/obj/item/ammo_casing/shotgun/laserscatter{
+	pixel_x = -7;
+	pixel_y = -8
+	},
+/obj/item/ammo_casing/shotgun/stunslug,
+/obj/item/ammo_casing/shotgun/stunslug{
+	pixel_x = 3;
+	pixel_y = -4
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/security/armory)
@@ -4389,35 +4412,19 @@
 /obj/structure/sign/poster/official/mini_energy_gun{
 	pixel_x = -32
 	},
-/obj/item/grenade/frag{
-	pixel_x = 6;
-	pixel_y = -3
-	},
-/obj/item/grenade/frag{
-	pixel_x = 1;
-	pixel_y = -8
-	},
-/obj/item/grenade/firecracker,
-/obj/item/grenade/firecracker{
-	pixel_x = 2;
-	pixel_y = -3
-	},
-/obj/item/grenade/flashbang{
-	pixel_y = -4;
-	pixel_x = -10
-	},
-/obj/item/grenade/flashbang{
-	pixel_y = -5;
-	pixel_x = -7
-	},
-/obj/item/grenade/flashbang{
-	pixel_y = -9;
-	pixel_x = -8
-	},
 /obj/machinery/light_switch{
 	pixel_x = -12;
 	dir = 1;
 	pixel_y = -22
+	},
+/obj/item/storage/box/handcuffs{
+	pixel_x = -5;
+	pixel_y = 2
+	},
+/obj/item/storage/box/flashes,
+/obj/item/storage/box/flashbangs{
+	pixel_x = 5;
+	pixel_y = 5
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/security/armory)
@@ -7084,11 +7091,11 @@
 	req_access_txt = "3"
 	},
 /obj/effect/turf_decal/techfloor,
-/obj/item/storage/backpack/duffelbag/syndie/x4,
 /obj/item/crowbar/power{
 	pixel_y = -4
 	},
 /obj/item/radio/intercom/directional/north,
+/obj/item/storage/backpack/duffelbag/syndie/c4,
 /turf/open/floor/plasteel/dark,
 /area/ship/security/armory)
 "HN" = (
@@ -7400,22 +7407,18 @@
 	pixel_x = -6;
 	pixel_y = 3
 	},
-/obj/item/grenade/syndieminibomb{
-	pixel_x = 7;
-	pixel_y = -6
-	},
-/obj/item/grenade/syndieminibomb{
-	pixel_x = 2;
-	pixel_y = -1
-	},
 /obj/structure/rack,
-/obj/item/grenade/spawnergrenade/manhacks{
-	pixel_y = -5;
-	pixel_x = -1
-	},
 /obj/machinery/light/directional/south,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 1
+	},
+/obj/item/grenade/frag{
+	pixel_x = 1;
+	pixel_y = -8
+	},
+/obj/item/grenade/frag{
+	pixel_x = 6;
+	pixel_y = 1
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/security/range)
@@ -8223,9 +8226,10 @@
 "Mb" = (
 /obj/docking_port/stationary{
 	height = 15;
-	width = 15;
-	dwidth = 7;
-	name = "main ember dock"
+	width = 30;
+	dwidth = 15;
+	name = "main ember dock";
+	dir = 2
 	},
 /turf/template_noop,
 /area/template_noop)
@@ -9100,26 +9104,12 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 4
 	},
-/obj/item/ammo_casing/shotgun/laserscatter{
-	pixel_x = -7;
-	pixel_y = -8
-	},
-/obj/item/ammo_casing/shotgun/laserscatter{
-	pixel_x = -4;
-	pixel_y = -6
-	},
-/obj/item/ammo_casing/shotgun/stunslug,
-/obj/item/ammo_casing/shotgun/stunslug{
-	pixel_x = 3;
-	pixel_y = -4
-	},
-/obj/item/gun/ballistic/shotgun/automatic/dual_tube{
-	pixel_y = 2
-	},
-/obj/item/gun/ballistic/shotgun/doublebarrel{
-	pixel_y = -4
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/storage/box/rubbershot,
+/obj/item/storage/box/rubbershot{
+	pixel_x = 4;
+	pixel_y = -2
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/security/armory)
 "Qk" = (
@@ -9787,6 +9777,14 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
+	},
+/obj/item/blackmarket_uplink{
+	pixel_x = -5;
+	pixel_y = 4
+	},
+/obj/item/clothing/mask/whistle{
+	pixel_x = -4;
+	pixel_y = 4
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/office)
@@ -11054,6 +11052,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (2,1,1) = {"
 ws
@@ -11086,6 +11085,7 @@ Yv
 LZ
 qU
 fH
+ws
 ws
 ws
 ws
@@ -11128,6 +11128,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (4,1,1) = {"
 ws
@@ -11161,6 +11162,7 @@ Xm
 zw
 fH
 fH
+ws
 ws
 ws
 ws
@@ -11202,6 +11204,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (6,1,1) = {"
 ws
@@ -11235,6 +11238,7 @@ zw
 zw
 GH
 fH
+ws
 ws
 ws
 ws
@@ -11276,6 +11280,7 @@ fH
 ws
 ws
 ws
+ws
 "}
 (8,1,1) = {"
 ws
@@ -11310,6 +11315,7 @@ vh
 wN
 QH
 LT
+ws
 ws
 ws
 ws
@@ -11350,6 +11356,7 @@ fH
 ws
 ws
 ws
+ws
 "}
 (10,1,1) = {"
 ws
@@ -11385,6 +11392,7 @@ ed
 ed
 EG
 EG
+ws
 ws
 ws
 "}
@@ -11424,6 +11432,7 @@ Xz
 EG
 ws
 ws
+ws
 "}
 (12,1,1) = {"
 ws
@@ -11459,6 +11468,7 @@ ed
 JQ
 rJ
 EG
+ws
 ws
 ws
 "}
@@ -11498,6 +11508,7 @@ ed
 EG
 ws
 ws
+ws
 "}
 (14,1,1) = {"
 ws
@@ -11533,6 +11544,7 @@ On
 cb
 Hi
 Ik
+ws
 ws
 ws
 "}
@@ -11572,6 +11584,7 @@ pn
 Ik
 ws
 ws
+ws
 "}
 (16,1,1) = {"
 ws
@@ -11607,6 +11620,7 @@ lz
 Ak
 ZK
 EG
+ws
 ws
 ws
 "}
@@ -11646,6 +11660,7 @@ ZY
 EG
 EG
 ws
+ws
 "}
 (18,1,1) = {"
 ws
@@ -11682,6 +11697,7 @@ sH
 kx
 ZK
 EG
+ws
 ws
 "}
 (19,1,1) = {"
@@ -11720,6 +11736,7 @@ xk
 xk
 Eb
 ws
+ws
 "}
 (20,1,1) = {"
 df
@@ -11757,6 +11774,7 @@ GV
 fb
 Eb
 Eb
+ws
 "}
 (21,1,1) = {"
 Pf
@@ -11794,6 +11812,7 @@ HW
 Mo
 MW
 Eb
+ws
 "}
 (22,1,1) = {"
 df
@@ -11831,6 +11850,7 @@ Ny
 HN
 CI
 fQ
+Mb
 "}
 (23,1,1) = {"
 Dw
@@ -11868,6 +11888,7 @@ UC
 It
 YX
 mE
+ws
 "}
 (24,1,1) = {"
 ws
@@ -11905,6 +11926,7 @@ zY
 oN
 nB
 Eb
+ws
 "}
 (25,1,1) = {"
 ws
@@ -11942,6 +11964,7 @@ wZ
 SA
 Eb
 mI
+ws
 "}
 (26,1,1) = {"
 ws
@@ -11978,6 +12001,7 @@ Kb
 Eb
 Eb
 mI
+ws
 ws
 "}
 (27,1,1) = {"
@@ -12016,6 +12040,7 @@ mI
 ws
 ws
 ws
+ws
 "}
 (28,1,1) = {"
 ws
@@ -12049,6 +12074,7 @@ jI
 vs
 Au
 To
+ws
 ws
 ws
 ws
@@ -12090,6 +12116,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (30,1,1) = {"
 ws
@@ -12127,6 +12154,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (31,1,1) = {"
 ws
@@ -12156,6 +12184,7 @@ mi
 Pn
 vw
 sy
+ws
 ws
 ws
 ws
@@ -12201,6 +12230,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (33,1,1) = {"
 ws
@@ -12238,6 +12268,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (34,1,1) = {"
 ws
@@ -12266,6 +12297,7 @@ JK
 JK
 JK
 sy
+ws
 ws
 ws
 ws
@@ -12312,6 +12344,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (36,1,1) = {"
 ws
@@ -12340,6 +12373,7 @@ OP
 iJ
 zh
 sy
+ws
 ws
 ws
 ws
@@ -12386,6 +12420,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (38,1,1) = {"
 ws
@@ -12414,6 +12449,7 @@ Qs
 JK
 JK
 sy
+ws
 ws
 ws
 ws
@@ -12460,6 +12496,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (40,1,1) = {"
 ws
@@ -12488,6 +12525,7 @@ AA
 ar
 JK
 pR
+ws
 ws
 ws
 ws
@@ -12534,6 +12572,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (42,1,1) = {"
 ws
@@ -12562,6 +12601,7 @@ yv
 ss
 ft
 xK
+ws
 ws
 ws
 ws
@@ -12608,6 +12648,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (44,1,1) = {"
 ws
@@ -12645,6 +12686,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (45,1,1) = {"
 ws
@@ -12654,7 +12696,7 @@ ws
 ws
 ws
 ws
-Mb
+nC
 zv
 aw
 NW
@@ -12673,6 +12715,7 @@ Sq
 Er
 Nr
 IM
+ws
 ws
 ws
 ws
@@ -12719,6 +12762,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (47,1,1) = {"
 ws
@@ -12747,6 +12791,7 @@ fL
 mw
 fL
 fC
+ws
 ws
 ws
 ws
@@ -12793,6 +12838,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (49,1,1) = {"
 ws
@@ -12821,6 +12867,7 @@ Zb
 Yj
 gi
 fC
+ws
 ws
 ws
 ws
@@ -12867,6 +12914,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (51,1,1) = {"
 ws
@@ -12895,6 +12943,7 @@ RP
 fU
 co
 fC
+ws
 ws
 ws
 ws
@@ -12941,6 +12990,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (53,1,1) = {"
 ws
@@ -12978,6 +13028,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (54,1,1) = {"
 ws
@@ -13005,6 +13056,7 @@ fC
 tl
 FR
 fC
+ws
 ws
 ws
 ws

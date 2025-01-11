@@ -2,85 +2,71 @@
 	name = "Iriska"
 	desc = "The captain's own cat. Fat and lazy."
 	icon = 'mod_celadon/_storge_icons/icons/mobs/iriska.dmi'
-	desc = "Its said that the cat has bluespace powers, cursing anyone whom it has been angered by upon death."
 	icon_state = "iriska"
 	icon_dead = "iriska_dead"
 	health = 80
 	maxHealth = 80
 	wander = FALSE
-//	canmove = FALSE
 	turns_per_move = 0
 	speak_emote = list("purrs.", "meows.")
 	emote_see = list("shakes her head.", "shivers.")
 	speak_chance = 0.75
-//	meat_amount = 6
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab = 6)
-//	meat_type = /obj/item/reagent_containers/food/snacks/meat
 	response_help_simple = "pets"
 	response_disarm_simple = "rubs"
 	response_harm_simple = "makes terrible mistake by kicking"
 	atmos_requirements = list("min_oxy" = 16, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
-	minbodytemp = 223
-	maxbodytemp = 323
 	mob_size = MOB_SIZE_HUGE
 	harm_intent_damage = 20
 	melee_damage_lower = 10
 	melee_damage_upper = 30
 	attack_verb_simple = "slashed"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
-	density = TRUE
-	// bite_factor = 0.8
-	// stomach_size_mult = 10
 
-	// autoseek_food = FALSE // Original code for seeking food doesn't fit, Iriska will use slightly modified version
-	// beg_for_food = FALSE
-	// max_scan_interval = 10
-	// eat_from_hand = FALSE
+	var/obj/item/reagent_containers/food/snacks/snack = null
 
-var/atom/snack = null
+	var/list/tolerated = list()
+	var/list/despised = list()
 
-var/list/tolerated = list()
-var/list/despised = list()
+	var/min_scan_interval = 1//Minimum and maximum number of procs between a foodscan. Animals will slow down if there's no food around for a while
+	var/max_scan_interval = 10
+	var/scan_interval = 5		//current scan interval, clamped between min and max
+								//It gradually increases up to max when its left alone, to save performance
+								//It will drop back to 1 if it spies any food.
+								//This short time makes animals more responsive to interactions and more fun to play with
 
-var/min_scan_interval = 1//Minimum and maximum number of procs between a foodscan. Animals will slow down if there's no food around for a while
-var/max_scan_interval = 10
-var/scan_interval = 5//current scan interval, clamped between min and max
-//It gradually increases up to max when its left alone, to save performance
-//It will drop back to 1 if it spies any food.
-//This short time makes animals more responsive to interactions and more fun to play with
+	var/foodtarget = 0
+	var/turns_since_scan = 0
+	var/hunger_enabled = 1 //ignores hunger if 0
+	var/nutrition_tick = 0
 
-var/seek_speed = 2//How many tiles per second the animal will move towards food
-var/seek_move_delay
-var/scan_range = 6//How far around the animal will look for food
-var/foodtarget = 0
-var/turns_since_scan = 0
-var/eat_from_hand = TRUE
-//Used to control how often ian scans for nearby food
-var/hunger_enabled = 1//If set to 0, a creature ignores hunger
-var/max_nutrition = 50
-var/nutrition = 400 // carbon
-// /mob/living/simple_animal/iriska/fall_asleep()
-// 	return
-
-// /mob/living/simple_animal/iriska/wake_up()
-// 	return
+/mob/living/simple_animal/iriska/Initialize(mapload)
+	. = ..()
+	nutrition = 50
 
 /mob/living/simple_animal/iriska/proc/can_eat()
-	if (!hunger_enabled || nutrition > max_nutrition * 0.9)
-		return 0//full
+	if (!hunger_enabled || nutrition > 45)
+		return 0	//full
 
-	else if (nutrition > max_nutrition * 0.8)
-		return 1//content
+	else if (nutrition > 40)
+		return 1	//content
 
-	else return 2//hungry
+	else return 2	//hungry
 
 /mob/living/simple_animal/iriska/Life()
 	.=..()
 
-	if(check_should_sleep())
-
+	if(AIStatus == AI_ON)
+		handle_nutrition()
 		seek_food()
 		react_to_mob()
+
+/mob/living/simple_animal/iriska/proc/handle_nutrition()
+	if(nutrition_tick < 2)
+		nutrition_tick++
+	else
+		nutrition--
+		nutrition_tick = 0
 
 /mob/living/simple_animal/iriska/proc/seek_food()
 	turns_since_scan++
@@ -100,27 +86,38 @@ var/nutrition = 400 // carbon
 							foodtarget = 1
 							break
 
-		if(snack)
+		if(snack) // once she starts eating she will not stop until food is eaten, even if she exceeds  50 nutrition. Fat bitch
 			scan_interval = min_scan_interval
 
-			// if (snack.loc.x < src.x)
-			// 	set_dir(WEST)
-			// else if (snack.loc.x > src.x)
-			// 	set_dir(EAST)
-			// else if (snack.loc.y < src.y)
-			// 	set_dir(SOUTH)
-			// else if (snack.loc.y > src.y)
-			// 	set_dir(NORTH)
-			// else
-			// 	set_dir(SOUTH)
+			if (snack.loc.x < src.x)
+				setDir(WEST)
+			else if (snack.loc.x > src.x)
+				setDir(EAST)
+			else if (snack.loc.y < src.y)
+				setDir(SOUTH)
+			else if (snack.loc.y > src.y)
+				setDir(NORTH)
+			else
+				setDir(SOUTH)
 
 			if(isturf(snack.loc) && Adjacent(get_turf(snack), src))
 				var/mob/mob = get_mob_by_key(snack.fingerprintslast)
-				UnarmedAttack(snack)
+				bite_targeted_food(snack)
 				if(!(mob in despised))
 					tolerate(mob)
 	else
 		scan_interval = max(min_scan_interval, min(scan_interval+1, max_scan_interval))
+
+/mob/living/simple_animal/iriska/proc/bite_targeted_food()
+	if(snack) //sanity
+		if(snack.bitecount == 0 || prob(25))
+			manual_emote("nibbles away at \the [snack]")
+		snack.bitecount++
+		var/satur = snack.list_reagents[/datum/reagent/consumable/nutriment]
+		if(satur)
+			nutrition += satur
+		if(snack.bitecount >= 5)
+			qdel(snack)
 
 /mob/living/simple_animal/iriska/proc/react_to_mob()
 	for(var/mob/living/M in oview(src, 1))
@@ -155,10 +152,6 @@ var/nutrition = 400 // carbon
 	if(isliving(target_mob))
 		CanAttack(target_mob)
 		return target_mob
-	// if(istype(target_mob, /obj/machinery/bot))
-	// 	var/obj/machinery/bot/B = target_mob
-	// 	B.CanAttack(src,rand(melee_damage_lower,melee_damage_upper),attacktext)
-	// 	return B
 
 /mob/living/simple_animal/iriska/proc/despise(mob/living/carbon/human/M as mob)
 	if(istype(M))
@@ -184,30 +177,8 @@ var/nutrition = 400 // carbon
 	if((M.a_intent == INTENT_HELP) && (M in tolerated))
 		if(prob(15)) say("PRRRR")
 
-// /mob/living/simple_animal/iriska/bullet_act(var/obj/item/projectile/proj)
-// 	. = ..()
-// 	despise(proj.firer)
-
-// /mob/living/simple_animal/iriska/hitby(atom/movable/AM)
-// 	. = ..()
-// 	despise(AM.thrower)
-
 /mob/living/simple_animal/iriska/death(gibbed, deathmessage = "dies!")
-//	destroy_lifes()
 	.=..()
 
 	snack = null
 	return ..(gibbed,deathmessage)
-
-// /mob/living/simple_animal/iriska/proc/destroy_lifes()
-// 	for(var/mob/living/carbon/human/H in GLOB.human_mob_list)
-// 		if(H.real_name in despised)
-// 			H.sanity.insight = 0
-// 			H.sanity.environment_cap_coeff = 0
-// 			H.sanity.negative_prob += 30
-// 			H.sanity.positive_prob = 0
-// 			H.sanity.level = 0
-// 			H.max_style = MIN_HUMAN_STYLE
-// 			for(var/stat in ALL_STATS)
-// 				H.stats.changeStat(stat, -10)
-// 			to_chat(H, SPAN_DANGER("The shadows seem to lengthen, the walls are closing in. The ship itself wants you dead."))

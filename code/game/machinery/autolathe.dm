@@ -448,4 +448,10 @@
 //Called when the object is constructed by an autolathe
 //Has a reference to the autolathe so you can do !!FUN!! things with hacked lathes
 /obj/item/proc/autolathe_crafted(obj/machinery/autolathe/lathe)
+	// [CELADON_EDIT] — PRINTED_ITEMS_SELLING_VITO
+	autolathe_printed = TRUE
+	var/list/allcontents = GetAllContents()
+	for(var/obj/item/I in allcontents)
+		I.autolathe_printed = TRUE
+	// [/CELADON_EDIT]
 	return

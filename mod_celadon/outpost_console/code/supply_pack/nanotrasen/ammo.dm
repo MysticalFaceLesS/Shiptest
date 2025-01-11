@@ -54,3 +54,9 @@
 	desc = "A single magazine for the commander"
 	contains = list(/obj/item/ammo_box/magazine/co9mm)
 	cost = 400
+
+/datum/supply_pack/faction/nanotrasen/ammo/powercells
+	name = "NT Energy weapon basic power cell supply pack"
+	desc = "Ящик содержит кейс с тремя базовыми батарейками для энергетического оружия."
+	contains = list(/obj/item/storage/guncase/guncells_basic)
+	cost = 800

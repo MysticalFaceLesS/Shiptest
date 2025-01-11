@@ -1179,7 +1179,9 @@
 /turf/open/floor/wood,
 /area/ship/hallway/starboard)
 "kw" = (
-/obj/structure/closet/secure_closet/personal/cabinet,
+/obj/structure/closet/secure_closet/personal/cabinet{
+	req_access = null
+	},
 /obj/item/gun/ballistic/shotgun/doublebarrel,
 /obj/item/key/displaycase,
 /obj/item/megaphone,
@@ -1349,6 +1351,7 @@
 	dir = 8
 	},
 /obj/structure/fluff/divine/convertaltar,
+/obj/item/storage/book/bible,
 /turf/open/floor/wood,
 /area/ship/crew/chapel)
 "md" = (
@@ -3925,7 +3928,11 @@
 	color = "#332521";
 	dir = 5
 	},
-/obj/item/radio/intercom/wideband/directional/east,
+/obj/item/radio/intercom/wideband/table{
+	dir = 4;
+	pixel_y = 2;
+	pixel_x = 5
+	},
 /turf/open/floor/wood/ebony,
 /area/ship/bridge)
 "JV" = (

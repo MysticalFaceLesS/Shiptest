@@ -122,6 +122,12 @@
 #endif
 	SSovermap.controlled_ships += src
 
+	if(get_faction() == "Pirates") //Проверка шипа на принадлежность к пиратской фракции
+		radio = new(src.token)
+		radio.name = "Outpost Security System" //Имя, что показывается в вайдбанде
+		radio.talk_into(radio, "На датчиках дальнего действия обнаружена неавторизированная деятельность! Всем кораблям быть в боевой готовности!", FREQ_WIDEBAND) //Сообщение и путь в вайдбанд
+		qdel(radio)
+
 /datum/overmap/ship/controlled/Destroy()
 	//SHOULD be called first
 	. = ..()

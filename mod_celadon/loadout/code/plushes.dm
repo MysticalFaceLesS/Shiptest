@@ -381,9 +381,9 @@
 	display_name = "hampter the major"
 	path = /obj/item/toy/plush/celadon/hampter/ert_squad
 
-/datum/gear/plushes/hampter/cute
-	display_name = "cute hampter"
-	path = /obj/item/toy/plush/celadon/hampter/cute
+// /datum/gear/plushes/hampter/cute
+// 	display_name = "cute hampter"
+// 	path = /obj/item/toy/plush/celadon/hampter/cute
 
 // Carpps
 

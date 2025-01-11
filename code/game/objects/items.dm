@@ -223,6 +223,11 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 
 	var/canMouseDown = FALSE
 
+		// [CELADON_EDIT] — PRINTED_ITEMS_SELLING_VITO
+	///Is item printed on any lathe. Sets TRUE in autolathe_crafted()
+	var/autolathe_printed = FALSE
+		// [/CELADON_EDIT]
+
 /obj/item/Initialize()
 
 	if(attack_verb)

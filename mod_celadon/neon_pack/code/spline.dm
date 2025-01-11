@@ -8,10 +8,6 @@
 	anchored = TRUE
 	blocks_emissive = FALSE
 
-/obj/structure/neon_spline/Initialize()
-	. = ..()
-	add_overlay(emissive_appearance(icon, icon_state))
-
 #define NEON_SPLINE(id, col) /obj/structure/neon_spline/##id {color = col ; light_color = col }
 #define NEON_SPLINE_CORNER(id) /obj/structure/neon_spline/##id/corner { icon_state = "spline_fancy_corner" ; }
 #define NEON_SPLINE_CEE(id) /obj/structure/neon_spline/##id/cee { icon_state = "spline_fancy_cee" ; }
