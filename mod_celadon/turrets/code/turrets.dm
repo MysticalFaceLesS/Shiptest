@@ -275,3 +275,5 @@
 
 /obj/machinery/porta_turret/ship/frontiersmen
 	faction = list(FACTION_PIRATES, "Turret")
+	icon_state = "syndie_off"
+	base_icon_state = "syndie"

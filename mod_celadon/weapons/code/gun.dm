@@ -48,15 +48,15 @@
 	name = "Оружейный ящик Glock"
 	desc = "Содержит пистолет Glock калибра 9mm и одну дополнительную обойму к нему."
 	cost = 1300
-	contains = list(/obj/item/storage/pistolcase/glock)
-	crate_name = "pistol crate"
+	contains = list(/obj/item/storage/guncase/glock)
+	crate_name = "auto rifle crate"
 
 /datum/supply_pack/gun/usp
 	name = "Оружейный ящик USP"
 	desc = "Содержит пистолет USP калибра .45 и одну дополнительную обойму к нему."
 	cost = 1350
-	contains = list(/obj/item/storage/pistolcase/usp)
-	crate_name = "pistol crate"
+	contains = list(/obj/item/storage/guncase/usp)
+	crate_name = "auto rifle crate"
 
 // ПР от Ганзы. Добавляет дробь для дробовиков
 // /datum/supply_pack/gun/riot_shotgun // Вроде есть уже ящик с таким оружием, и ценник там 5000

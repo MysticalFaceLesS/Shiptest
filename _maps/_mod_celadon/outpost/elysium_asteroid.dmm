@@ -4741,11 +4741,11 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 4
 	},
-/obj/machinery/door/airlock/outpost{
-	assemblytype = /obj/structure/door_assembly/door_assembly_com;
-	icon = 'icons/obj/doors/airlocks/station/command.dmi';
-	overlays_file = 'icons/obj/doors/airlocks/station/overlays.dmi';
-	req_one_access_txt = "109"
+/obj/machinery/door/airlock/command{
+	name = "Council Chamber";
+	req_access_txt = "19";
+	security_level = 6;
+	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/operations)
@@ -5528,16 +5528,14 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/outpost{
-	assemblytype = /obj/structure/door_assembly/door_assembly_com;
-	icon = 'icons/obj/doors/airlocks/station/command.dmi';
-	glass = 1;
-	overlays_file = 'icons/obj/doors/airlocks/station/overlays.dmi';
-	name = "Bridge Access";
-	req_one_access_txt = "109"
-	},
 /obj/machinery/door/poddoor/preopen{
 	id = "outpost_bridge_lockdown"
+	},
+/obj/machinery/door/airlock/command{
+	name = "Council Chamber";
+	req_access_txt = "19";
+	security_level = 6;
+	dir = 1
 	},
 /turf/open/floor/plasteel,
 /area/outpost/operations)
@@ -17603,13 +17601,11 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/outpost{
-	assemblytype = /obj/structure/door_assembly/door_assembly_com;
-	icon = 'icons/obj/doors/airlocks/station/command.dmi';
-	glass = 1;
-	overlays_file = 'icons/obj/doors/airlocks/station/overlays.dmi';
-	name = "Bridge Access";
-	req_one_access_txt = "109"
+/obj/machinery/door/airlock/command{
+	name = "Council Chamber";
+	req_access_txt = "19";
+	security_level = 6;
+	dir = 1
 	},
 /turf/open/floor/plasteel,
 /area/outpost/operations)

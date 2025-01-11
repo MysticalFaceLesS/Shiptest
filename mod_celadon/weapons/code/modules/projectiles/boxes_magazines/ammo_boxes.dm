@@ -203,3 +203,9 @@
 		/obj/item/ammo_box/magazine/ammo_stack/prefilled/a410/flechette = 4)
 	generate_items_inside(items_inside,src)	
 
+/obj/item/storage/guncase/guncells_basic
+/obj/item/storage/guncase/guncells_basic/PopulateContents()
+	new /obj/item/stock_parts/cell/gun/empty(src)
+	new /obj/item/stock_parts/cell/gun/empty(src)
+	new /obj/item/stock_parts/cell/gun/empty(src)
+
