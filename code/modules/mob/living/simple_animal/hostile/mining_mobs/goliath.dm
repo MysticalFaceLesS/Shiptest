@@ -319,21 +319,7 @@
 /obj/effect/temp_visual/goliath_tentacle/proc/get_directions()
 	// [CELADON-EDIT] - CELADON_BALANCE - Поднимаем разнообразие мобам
 	// return GLOB.cardinals.Copy()	// CELADON-EDIT - ORIGINAL
-	switch(rand(1,10))
-		if(1 to 2)
-			return GLOB.diagonals.Copy()
-		if(3 to 4)
-			return GLOB.cardinals.Copy()
-		if(5 to 6)
-			return GLOB.cardinals_multiz.Copy()
-		if(7)
-			return GLOB.onecardinalnorth.Copy()
-		if(8)
-			return GLOB.onecardinalsouth.Copy()
-		if(9)
-			return GLOB.onecardinaleast.Copy()
-		if(10)
-			return GLOB.onecardinalwest.Copy()
+	return GLOB.alldirs_multiz.Copy()
 	// [/CELADON-EDIT]
 
 /obj/effect/temp_visual/goliath_tentacle/proc/tripanim()
