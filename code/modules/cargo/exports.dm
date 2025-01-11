@@ -66,7 +66,10 @@ then the player gets the profit from selling his own wasted time.
 			if(ismob(thing))
 				thing.investigate_log("deleted through cargo export",INVESTIGATE_CARGO)
 	if(!dry_run)
-		qdel(AM)
+	// [CELADON_EDIT]
+		for(var/atom/A in contents)
+			qdel(A)
+	// [/CELADON_EDIT]
 
 	return report
 
