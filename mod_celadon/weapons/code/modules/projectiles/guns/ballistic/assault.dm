@@ -40,7 +40,7 @@
 	desc = "Обширная модификация G36-SH, которая входит в стандартную комплектацию вооружения InteQ. Калибр 5,56x45 мм."
 	icon_state = "g36shinteq"
 	item_state = "g36shinteq"
-	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/guns/back_inteq.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/guns/back.dmi'
 	empty_indicator = TRUE
 	empty_alarm = TRUE
 	zoomable = TRUE
@@ -86,7 +86,7 @@
 	desc = "Обширная модификация G36, которая входит в стандартную комплектацию вооружения InteQ. Калибр 5,56x45 мм."
 	icon_state = "g36inteq"
 	item_state = "g36inteq"
-	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/guns/back_inteq.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/guns/back.dmi'
 	empty_indicator = TRUE
 	empty_alarm = TRUE
 	zoomable = TRUE

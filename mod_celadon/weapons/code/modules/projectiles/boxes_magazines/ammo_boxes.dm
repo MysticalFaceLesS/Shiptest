@@ -119,3 +119,9 @@
 	ammo_type = /obj/item/ammo_casing/a410/a410_flechette
 	max_ammo = 55
 
+/obj/item/storage/guncase/guncells_basic
+/obj/item/storage/guncase/guncells_basic/PopulateContents()
+	new /obj/item/stock_parts/cell/gun/empty(src)
+	new /obj/item/stock_parts/cell/gun/empty(src)
+	new /obj/item/stock_parts/cell/gun/empty(src)
+
