@@ -537,20 +537,6 @@ There are several things that need to be remembered:
 			else
 				handled_by_bodytype = TRUE
 
-		// [CELADON-ADD] - TAJARA, CELADON_RIOL
-		else if(dna.species.bodytype & BODYTYPE_TAJARA)
-			if(icon_exists(SARATHI_SNOUTED_HELM_PATH, RESOLVE_ICON_STATE(I)))
-				icon_file = SARATHI_SNOUTED_HELM_PATH
-			else
-				handled_by_bodytype = TRUE
-
-		else if(dna.species.bodytype & BODYTYPE_RIOL)
-			if(icon_exists(SARATHI_SNOUTED_HELM_PATH, RESOLVE_ICON_STATE(I)))
-				icon_file = SARATHI_SNOUTED_HELM_PATH
-			else
-				handled_by_bodytype = TRUE
-		// [/CELADON-ADD]
-
 		if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(I))))
 			handled_by_bodytype = TRUE
 			icon_file = DEFAULT_HEAD_PATH
@@ -643,14 +629,18 @@ There are several things that need to be remembered:
 		// 	if((I.supports_variations & DIGITIGRADE_VARIATION_SAME_ICON_FILE))
 		// 		icon_file = I.mob_overlay_icon
 		// 		target_overlay = "[target_overlay]_digi" [/CELADON - EDIT] - ORIGINAL
-		// [/CELADON - EDIT] - RESPRITE
 		if(dna.species.bodytype & BODYTYPE_DIGITIGRADE)
-			if(icon_exists(SARATHI_DIGITIGRADE_SUIT_PATH, RESOLVE_ICON_STATE(I)))
-				icon_file = SARATHI_DIGITIGRADE_SUIT_PATH
-				if(I.snout_override_icon)
-					icon_file = I.snout_override_icon
-			else
-				handled_by_bodytype = TRUE
+			if(ITEM_SLOT_OCLOTHING)
+				if(icon_exists(SARATHI_DIGITIGRADE_SUIT_PATH, RESOLVE_ICON_STATE(I)) )
+					icon_file = SARATHI_DIGITIGRADE_SUIT_PATH
+				else
+					handled_by_bodytype = TRUE
+			else if(ITEM_SLOT_ICLOTHING)
+				if(icon_exists(SARATHI_DIGITIGRADE_UNDER_PATH, RESOLVE_ICON_STATE(I)) )
+					icon_file = SARATHI_DIGITIGRADE_UNDER_PATH
+				else
+					handled_by_bodytype = TRUE
+		// [/CELADON - EDIT] - RESPRITE
 
 		else if(dna.species.bodytype & BODYTYPE_VOX)
 			if(I.supports_variations & VOX_VARIATION)
@@ -739,8 +729,6 @@ There are several things that need to be remembered:
 			if(head_bodypart.bodytype & BODYTYPE_SNOUT)
 				if(icon_exists(SARATHI_SNOUTED_MASK_PATH, RESOLVE_ICON_STATE(I)))
 					icon_file = SARATHI_SNOUTED_MASK_PATH
-					if(I.snout_override_icon)
-						icon_file = I.snout_override_icon
 				else
 					handled_by_bodytype = TRUE
 			// [CELADON-EDIT]
@@ -763,21 +751,6 @@ There are several things that need to be remembered:
 						icon_file = I.kepori_override_icon
 				else
 					handled_by_bodytype = TRUE
-
-			// [CELADON-ADD] - TAJARA, CELADON_RIOL
-			else if(dna.species.bodytype & BODYTYPE_TAJARA)
-				if(icon_exists(SARATHI_SNOUTED_MASK_PATH, RESOLVE_ICON_STATE(I)))
-					icon_file = SARATHI_SNOUTED_MASK_PATH
-				else
-					handled_by_bodytype = TRUE
-
-			else if(dna.species.bodytype & BODYTYPE_RIOL)
-				if(icon_exists(SARATHI_SNOUTED_MASK_PATH, RESOLVE_ICON_STATE(I)))
-					icon_file = SARATHI_SNOUTED_MASK_PATH
-				else
-					handled_by_bodytype = TRUE
-			// [/CELADON-ADD]
-
 
 			if(!(icon_exists(icon_file, RESOLVE_ICON_STATE(I))))
 				icon_file = DEFAULT_MASK_PATH
