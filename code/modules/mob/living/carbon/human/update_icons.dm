@@ -409,6 +409,7 @@ There are several things that need to be remembered:
 					icon_file = I.snout_override_icon
 			else
 				handled_by_bodytype = TRUE
+		// [CELADON-EDIT] - RESPRITES
 
 		else if(dna.species.bodytype & BODYTYPE_VOX)
 			if(I.supports_variations & VOX_VARIATION)
