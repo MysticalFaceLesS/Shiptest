@@ -624,7 +624,8 @@
 		part.remove_atom_colour(WASHABLE_COLOUR_PRIORITY)
 		part.add_atom_colour(new_color, FIXED_COLOUR_PRIORITY)
 	wearer?.regenerate_icons()
-/*
+
+/* [CELADON-EDIT] - REASSIGNING ICON DERICTORY
 /obj/item/mod/control/proc/set_mod_skin(new_skin)
 	if(active)
 		CRASH("[src] tried to set skin while active!")
@@ -664,7 +665,8 @@
 			continue
 		overslotting_parts |= part
 	wearer?.regenerate_icons()
-*/
+[CELADON-EDIT] - REASSIGNING ICON DERICTORY */
+
 /obj/item/mod/control/proc/on_exit(datum/source, atom/movable/part, direction)
 	SIGNAL_HANDLER
 
