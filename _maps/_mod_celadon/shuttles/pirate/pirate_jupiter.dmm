@@ -1595,9 +1595,6 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/security/armory)
 "yh" = (
-/obj/machinery/camera/emp_proof{
-	dir = 4
-	},
 /obj/effect/turf_decal/spline/fancy/opaque/black,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
 /obj/machinery/turretid{
@@ -1611,6 +1608,9 @@
 	dir = 4;
 	pixel_x = -20;
 	pixel_y = 10
+	},
+/obj/machinery/camera/xray{
+	dir = 4
 	},
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/bridge)
@@ -2207,7 +2207,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 8
 	},
-/obj/machinery/camera/emp_proof{
+/obj/machinery/camera/xray{
 	dir = 1
 	},
 /turf/open/floor/plasteel/tech,
