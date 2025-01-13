@@ -625,7 +625,6 @@
 		part.add_atom_colour(new_color, FIXED_COLOUR_PRIORITY)
 	wearer?.regenerate_icons()
 
-/* [CELADON-EDIT] - REASSIGNING ICON DERICTORY
 /obj/item/mod/control/proc/set_mod_skin(new_skin)
 	if(active)
 		CRASH("[src] tried to set skin while active!")
@@ -635,7 +634,10 @@
 		alternate_worn_layer = used_skin[CONTROL_LAYER]
 	var/list/skin_updating = mod_parts + src
 	for(var/obj/item/part as anything in skin_updating)
-		part.icon = used_skin[MOD_ICON_OVERRIDE] || 'icons/obj/clothing/modsuit/mod_clothing.dmi'
+		// [CELADON-EDIT] REASSIGNING ICONS DIRECTORY
+		//part.icon = used_skin[MOD_ICON_OVERRIDE] || 'icons/obj/clothing/modsuit/mod_clothing.dmi'
+		part.icon = used_skin[MOD_ICON_OVERRIDE] || 'mod_celadon/_storge_icons/icons/obj/modsuit/mod_clothing.dmi'
+		// [CELADON-EDIT] REASSIGNING ICONS DIRECTORY
 		//part.mob_overlay_icon = used_skin[MOD_WORN_ICON_OVERRIDE] || 'icons/mob/clothing/modsuit/mod_clothing.dmi'
 		part.icon_state = "[skin]-[part.base_icon_state]"
 	for(var/obj/item/clothing/part as anything in mod_parts)
@@ -665,7 +667,6 @@
 			continue
 		overslotting_parts |= part
 	wearer?.regenerate_icons()
-[CELADON-EDIT] - REASSIGNING ICON DERICTORY */
 
 /obj/item/mod/control/proc/on_exit(datum/source, atom/movable/part, direction)
 	SIGNAL_HANDLER

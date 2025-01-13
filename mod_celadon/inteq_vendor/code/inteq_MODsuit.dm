@@ -12,48 +12,6 @@
 	item_state = "mod_control"
 	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/mob/modsuit/mod_clothing.dmi'
 
-
-/obj/item/mod/control/proc/set_mod_skin(new_skin)
-	if(active)
-		CRASH("[src] tried to set skin while active!")
-	skin = new_skin
-	var/list/used_skin = theme.skins[new_skin]
-	if(used_skin[CONTROL_LAYER])
-		alternate_worn_layer = used_skin[CONTROL_LAYER]
-	var/list/skin_updating = mod_parts + src
-	for(var/obj/item/part as anything in skin_updating)
-		part.icon = used_skin[MOD_ICON_OVERRIDE] || 'mod_celadon/_storge_icons/icons/obj/modsuit/mod_clothing.dmi'
-		//part.mob_overlay_icon = used_skin[MOD_WORN_ICON_OVERRIDE] || 'icons/mob/clothing/modsuit/mod_clothing.dmi'
-		part.icon_state = "[skin]-[part.base_icon_state]"
-	for(var/obj/item/clothing/part as anything in mod_parts)
-		var/used_category
-		if(part == helmet)
-			used_category = HELMET_FLAGS
-		if(part == chestplate)
-			used_category = CHESTPLATE_FLAGS
-		if(part == gauntlets)
-			used_category = GAUNTLETS_FLAGS
-		if(part == boots)
-			used_category = BOOTS_FLAGS
-		var/list/category = used_skin[used_category]
-		part.clothing_flags = category[UNSEALED_CLOTHING] || NONE
-		part.visor_flags = category[SEALED_CLOTHING] || NONE
-		part.flags_inv = category[UNSEALED_INVISIBILITY] || NONE
-		part.visor_flags_inv = category[SEALED_INVISIBILITY] || NONE
-		part.flags_cover = category[UNSEALED_COVER] || NONE
-		part.visor_flags_cover = category[SEALED_COVER] || NONE
-		part.alternate_worn_layer = category[UNSEALED_LAYER]
-		mod_parts[part] = part.alternate_worn_layer
-		if(!category[CAN_OVERSLOT])
-			if(overslotting_parts[part])
-				var/obj/item/overslot = overslotting_parts[part]
-				overslot.forceMove(drop_location())
-			overslotting_parts -= part
-			continue
-		overslotting_parts |= part
-	wearer?.regenerate_icons()
-
-
 /obj/item/clothing/head/mod
 	name = "MOD helmet"
 	desc = "A helmet for a MODsuit."
