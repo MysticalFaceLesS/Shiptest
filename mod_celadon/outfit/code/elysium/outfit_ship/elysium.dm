@@ -89,13 +89,11 @@
 	job_icon = "securityofficer"
 	jobtype = /datum/job/officer
 
-	suit = /obj/item/clothing/suit/armor/vest/elysium
 	gloves = /obj/item/clothing/gloves/fingerless
 	mask = /obj/item/clothing/mask/bandana/green
 	backpack = /obj/item/storage/backpack/satchel/sec
 	uniform = /obj/item/clothing/under/utility
 	shoes = /obj/item/clothing/shoes/sneakers/black
-	head = /obj/item/clothing/head/helmet/m10_elysium
 	backpack_contents = list(/obj/item/melee/knife/switchblade)
 	id = /obj/item/card/id/elysium/security
 
