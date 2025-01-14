@@ -276,7 +276,6 @@
 /area/ship/crew/canteen)
 "cn" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/bed,
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/dorm)
@@ -422,8 +421,8 @@
 /obj/machinery/porta_turret/ship/inteq/light{
 	name = "Point Defence Turret";
 	shot_delay = 0.5;
-	lethal_projectile = /obj/projectile/bullet/c22lr/rubber;
-	stun_projectile = /obj/projectile/bullet/c22lr/rubber;
+	lethal_projectile = /obj/projectile/bullet/pellet/bof;
+	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	dir = 6
@@ -669,8 +668,8 @@
 /obj/machinery/porta_turret/ship/inteq/light{
 	name = "Point Defence Turret";
 	shot_delay = 0.5;
-	lethal_projectile = /obj/projectile/bullet/c22lr/rubber;
-	stun_projectile = /obj/projectile/bullet/c22lr/rubber;
+	lethal_projectile = /obj/projectile/bullet/pellet/bof;
+	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	dir = 6
@@ -681,8 +680,8 @@
 /obj/machinery/porta_turret/ship/inteq/light{
 	name = "Point Defence Turret";
 	shot_delay = 0.5;
-	lethal_projectile = /obj/projectile/bullet/c22lr/rubber;
-	stun_projectile = /obj/projectile/bullet/c22lr/rubber;
+	lethal_projectile = /obj/projectile/bullet/pellet/bof;
+	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	dir = 9
@@ -706,12 +705,15 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "gm" = (
-/obj/structure/bed{
-	dir = 1
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 4
+	},
+/obj/structure/bed/bunk{
+	dir = 1
+	},
+/obj/structure/bed/bunk/top{
+	dir = 1
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/dorm)
@@ -1044,7 +1046,9 @@
 	dir = 8
 	},
 /obj/structure/frame/machine{
-	anchored = 1
+	anchored = 1;
+	state = 2;
+	name = "Autoloader machine frame"
 	},
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
@@ -1220,7 +1224,6 @@
 /obj/item/storage/backpack/messenger/med,
 /obj/item/clothing/head/soft/inteq/corpsman,
 /obj/item/clothing/suit/armor/inteq/corpsman,
-/obj/item/clothing/under/syndicate/inteq/skirt/corpsman,
 /obj/item/clothing/under/syndicate/inteq/corpsman,
 /obj/machinery/light/directional/east,
 /obj/effect/turf_decal/borderfloorwhite{
@@ -1266,8 +1269,8 @@
 /obj/machinery/porta_turret/ship/inteq/light{
 	name = "Point Defence Turret";
 	shot_delay = 0.5;
-	lethal_projectile = /obj/projectile/bullet/c22lr/rubber;
-	stun_projectile = /obj/projectile/bullet/c22lr/rubber;
+	lethal_projectile = /obj/projectile/bullet/pellet/bof;
+	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	dir = 10
@@ -1543,7 +1546,6 @@
 /turf/open/floor/plasteel/patterned/brushed,
 /area/ship/crew/toilet)
 "lO" = (
-/obj/structure/bed,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 5
 	},
@@ -1587,8 +1589,8 @@
 /obj/machinery/porta_turret/ship/inteq/light{
 	name = "Point Defence Turret";
 	shot_delay = 0.5;
-	lethal_projectile = /obj/projectile/bullet/c22lr/rubber;
-	stun_projectile = /obj/projectile/bullet/c22lr/rubber;
+	lethal_projectile = /obj/projectile/bullet/pellet/bof;
+	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	dir = 5
@@ -2304,12 +2306,12 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/corner/opaque/brown/full,
-/obj/effect/turf_decal/corner/opaque/inteqbrown/border{
-	layer = 2.041
-	},
 /obj/effect/turf_decal/corner/opaque/inteqbrown/half{
 	dir = 8;
 	pixel_x = 8;
+	layer = 2.041
+	},
+/obj/effect/turf_decal/corner/opaque/inteqbrown/border{
 	layer = 2.041
 	},
 /turf/open/floor/plasteel/tech,
@@ -2394,7 +2396,6 @@
 	req_access_txt = "56"
 	},
 /obj/item/clothing/under/syndicate/inteq/artificer,
-/obj/item/clothing/under/syndicate/inteq/skirt/artificer,
 /obj/item/storage/backpack/industrial,
 /obj/item/clothing/suit/toggle/industrial,
 /obj/item/clothing/head/hardhat/white,
@@ -2433,7 +2434,6 @@
 /obj/item/clothing/suit/hazardvest,
 /obj/item/clothing/gloves/color/yellow,
 /obj/item/clothing/under/syndicate/inteq/artificer,
-/obj/item/clothing/under/syndicate/inteq/skirt/artificer,
 /obj/item/clothing/head/soft/inteq,
 /obj/item/clothing/head/hardhat,
 /obj/item/clothing/shoes/combat,
@@ -2633,10 +2633,6 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/effect/turf_decal/industrial/warning{
-	dir = 4;
-	layer = 2.461
-	},
 /obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
 	dir = 1
 	},
@@ -2645,6 +2641,10 @@
 	},
 /obj/effect/turf_decal/techfloor{
 	dir = 4
+	},
+/obj/effect/turf_decal/industrial/warning{
+	dir = 4;
+	layer = 2.070
 	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/fore)
@@ -2998,12 +2998,12 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/effect/turf_decal/industrial/warning{
-	dir = 4;
-	layer = 2.461
-	},
 /obj/effect/turf_decal/techfloor{
 	dir = 4
+	},
+/obj/effect/turf_decal/industrial/warning{
+	dir = 4;
+	layer = 2.070
 	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/fore)
@@ -3192,8 +3192,8 @@
 /obj/machinery/porta_turret/ship/inteq/light{
 	name = "Point Defence Turret";
 	shot_delay = 0.5;
-	lethal_projectile = /obj/projectile/bullet/c22lr/rubber;
-	stun_projectile = /obj/projectile/bullet/c22lr/rubber;
+	lethal_projectile = /obj/projectile/bullet/pellet/bof;
+	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	dir = 10
@@ -3243,10 +3243,11 @@
 /obj/effect/turf_decal/industrial/traffic/cee{
 	dir = 8
 	},
-/obj/structure/frame/machine{
-	anchored = 1;
-	state = 2;
-	name = "Autoloader machine frame"
+/obj/machinery/computer{
+	desc = "Some kind of machine. Used to be a railgun control console. Now it only shows errors. Wonder why they left it here.";
+	icon = 'icons/obj/machines/particle_accelerator.dmi';
+	icon_state = "control_boxp";
+	name = "TAC-COM IFF computer"
 	},
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
@@ -3269,8 +3270,8 @@
 /obj/machinery/porta_turret/ship/inteq/light{
 	name = "Point Defence Turret";
 	shot_delay = 0.5;
-	lethal_projectile = /obj/projectile/bullet/c22lr/rubber;
-	stun_projectile = /obj/projectile/bullet/c22lr/rubber;
+	lethal_projectile = /obj/projectile/bullet/pellet/bof;
+	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	dir = 9
@@ -3282,7 +3283,6 @@
 /obj/item/clothing/suit/hazardvest,
 /obj/item/clothing/gloves/color/yellow,
 /obj/item/clothing/under/syndicate/inteq/artificer,
-/obj/item/clothing/under/syndicate/inteq/skirt/artificer,
 /obj/item/clothing/head/soft/inteq,
 /obj/item/clothing/head/hardhat,
 /obj/item/clothing/shoes/combat,
@@ -3356,15 +3356,18 @@
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
 "xB" = (
-/obj/structure/bed{
-	dir = 1
-	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/firealarm/directional/west{
 	pixel_y = -5
 	},
 /obj/structure/extinguisher_cabinet/directional/west{
 	pixel_y = 8
+	},
+/obj/structure/bed/bunk{
+	dir = 1
+	},
+/obj/structure/bed/bunk/top{
+	dir = 1
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/dorm)
@@ -3731,8 +3734,8 @@
 /obj/machinery/porta_turret/ship/inteq/light{
 	name = "Point Defence Turret";
 	shot_delay = 0.5;
-	lethal_projectile = /obj/projectile/bullet/c22lr/rubber;
-	stun_projectile = /obj/projectile/bullet/c22lr/rubber;
+	lethal_projectile = /obj/projectile/bullet/pellet/bof;
+	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	dir = 10
@@ -3783,8 +3786,8 @@
 /obj/machinery/porta_turret/ship/inteq/light{
 	name = "Point Defence Turret";
 	shot_delay = 0.5;
-	lethal_projectile = /obj/projectile/bullet/c22lr/rubber;
-	stun_projectile = /obj/projectile/bullet/c22lr/rubber;
+	lethal_projectile = /obj/projectile/bullet/pellet/bof;
+	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	dir = 9
@@ -4070,8 +4073,8 @@
 /obj/machinery/porta_turret/ship/inteq/light{
 	name = "Point Defence Turret";
 	shot_delay = 0.5;
-	lethal_projectile = /obj/projectile/bullet/c22lr/rubber;
-	stun_projectile = /obj/projectile/bullet/c22lr/rubber;
+	lethal_projectile = /obj/projectile/bullet/pellet/bof;
+	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	dir = 6
@@ -4159,7 +4162,6 @@
 /area/ship/crew/dorm/captain)
 "EC" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/bed,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/structure/cable{
@@ -4228,12 +4230,6 @@
 	},
 /obj/machinery/firealarm/directional/south{
 	pixel_x = -11
-	},
-/obj/machinery/computer{
-	desc = "Some kind of machine. Used to be a railgun control console. Now it only shows errors. Wonder why they left it here.";
-	icon = 'icons/obj/machines/particle_accelerator.dmi';
-	icon_state = "control_boxp";
-	name = "TAC-COM IFF computer"
 	},
 /obj/machinery/button/door{
 	dir = 1;
@@ -4525,8 +4521,8 @@
 /obj/machinery/porta_turret/ship/inteq/light{
 	name = "Point Defence Turret";
 	shot_delay = 0.5;
-	lethal_projectile = /obj/projectile/bullet/c22lr/rubber;
-	stun_projectile = /obj/projectile/bullet/c22lr/rubber;
+	lethal_projectile = /obj/projectile/bullet/pellet/bof;
+	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	dir = 6
@@ -4727,8 +4723,8 @@
 /obj/machinery/porta_turret/ship/inteq/light{
 	name = "Point Defence Turret";
 	shot_delay = 0.5;
-	lethal_projectile = /obj/projectile/bullet/c22lr/rubber;
-	stun_projectile = /obj/projectile/bullet/c22lr/rubber;
+	lethal_projectile = /obj/projectile/bullet/pellet/bof;
+	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	dir = 6
@@ -5061,11 +5057,14 @@
 /area/ship/hallway/starboard_fore)
 "My" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/bed{
-	dir = 1
-	},
 /obj/structure/sign/poster/official/no_erp{
 	pixel_x = -32
+	},
+/obj/structure/bed/bunk{
+	dir = 1
+	},
+/obj/structure/bed/bunk/top{
+	dir = 1
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/dorm)
@@ -5099,13 +5098,13 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 4
 	},
-/obj/effect/turf_decal/industrial/warning{
-	dir = 4;
-	layer = 2.461
-	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/effect/turf_decal/industrial/warning{
+	dir = 4;
+	layer = 2.070
 	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/fore)
@@ -5249,7 +5248,6 @@
 "OD" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/bed,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 10
 	},
@@ -5836,10 +5834,11 @@
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 6
 	},
-/obj/machinery/suit_storage_unit/inherit,
+/obj/machinery/suit_storage_unit/inherit{
+	mod_type = "/obj/item/mod/control/pre_equipped/inteq/elite"
+	},
 /obj/item/clothing/mask/gas/sechailer,
 /obj/item/tank/internals/oxygen,
-/obj/item/mod/control/pre_equipped/inteq/elite,
 /turf/open/floor/carpet/orange,
 /area/ship/crew/dorm/captain)
 "TH" = (
@@ -6022,10 +6021,6 @@
 	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/starboard_fore)
-"UO" = (
-/obj/machinery/light/directional/south,
-/turf/template_noop,
-/area/template_noop)
 "UP" = (
 /obj/structure/catwalk/over/plated_catwalk/dark,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
@@ -6163,8 +6158,8 @@
 /obj/machinery/porta_turret/ship/inteq/light{
 	name = "Point Defence Turret";
 	shot_delay = 0.5;
-	lethal_projectile = /obj/projectile/bullet/c22lr/rubber;
-	stun_projectile = /obj/projectile/bullet/c22lr/rubber;
+	lethal_projectile = /obj/projectile/bullet/pellet/bof;
+	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	dir = 5
@@ -6282,8 +6277,8 @@
 /obj/machinery/porta_turret/ship/inteq/light{
 	name = "Point Defence Turret";
 	shot_delay = 0.5;
-	lethal_projectile = /obj/projectile/bullet/c22lr/rubber;
-	stun_projectile = /obj/projectile/bullet/c22lr/rubber;
+	lethal_projectile = /obj/projectile/bullet/pellet/bof;
+	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	dir = 5
@@ -6324,8 +6319,8 @@
 /obj/machinery/porta_turret/ship/inteq/light{
 	name = "Point Defence Turret";
 	shot_delay = 0.5;
-	lethal_projectile = /obj/projectile/bullet/c22lr/rubber;
-	stun_projectile = /obj/projectile/bullet/c22lr/rubber;
+	lethal_projectile = /obj/projectile/bullet/pellet/bof;
+	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	dir = 5
@@ -6354,11 +6349,11 @@
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/security/armory)
 "YI" = (
-/obj/structure/bed{
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/bunk{
 	dir = 1
 	},
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
 /obj/machinery/vending/coffee,
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/dorm)
@@ -6414,7 +6409,6 @@
 /obj/item/storage/backpack/messenger/med,
 /obj/item/clothing/head/soft/inteq/corpsman,
 /obj/item/clothing/suit/armor/inteq/corpsman,
-/obj/item/clothing/under/syndicate/inteq/skirt/corpsman,
 /obj/item/clothing/under/syndicate/inteq/corpsman,
 /obj/effect/turf_decal/borderfloorwhite{
 	dir = 4
@@ -7921,7 +7915,7 @@ sw
 sw
 Pi
 sw
-UO
+sw
 zL
 yU
 Vj
