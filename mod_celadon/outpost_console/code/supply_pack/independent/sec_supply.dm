@@ -2,6 +2,7 @@
 	group = "Security Supplies"
 	crate_type = /obj/structure/closet/crate/secure/gear
 
+
 /datum/supply_pack/faction/independent/sec_supply/machete
 	name = "Stampted Steel Machete Crate"
 	desc = "Contains five mass produced machetes. A perfect choice for crews on a budget."
