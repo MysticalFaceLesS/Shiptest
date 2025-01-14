@@ -52,6 +52,34 @@
 	icon_state = "nt-captain-stamp"
 	dye_color = DYE_BLUE
 
+/obj/item/stamp/nanotrasen/nakamura
+	name = "Nakamura Engineering rubber stamp"
+	icon = 'mod_celadon/_storge_icons/icons/stamps.dmi'
+	icon_state = "stamp-ne"
+	dye_color = DYE_CE
+
+/obj/item/stamp/nanotrasen/nakamura/captain
+	name = "NE Captain's rubber stamp"
+	icon_state = "stamp-ne_captain"
+
+/obj/item/stamp/nanotrasen/nakamura/engineering
+	name = "NE Engineering Director's rubber stamp"
+	icon_state = "stamp-ne_engdir"
+
+/obj/item/stamp/nanotrasen/deforest
+	name = "DeForest Medical rubber stamp"
+	icon = 'mod_celadon/_storge_icons/icons/stamps.dmi'
+	icon_state = "stamp-df"
+	dye_color = DYE_CMO
+
+/obj/item/stamp/nanotrasen/deforest/captain
+	name = "DF Captain's rubber stamp"
+	icon_state = "stamp-df_captain"
+
+/obj/item/stamp/nanotrasen/deforest/medical
+	name = "DF Medical Director's rubber stamp"
+	icon_state = "stamp-df_meddir"
+
 /obj/item/stamp/syndicate/captain
 	name = "Syndicate Captain stamp"
 	icon = 'mod_celadon/_storge_icons/icons/stamps.dmi'

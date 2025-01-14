@@ -10,7 +10,7 @@
 // /datum/supply_pack/faction/syndicate/gun/deagle // У нас нет коробок для этой пушки, поэтому пока что так
 // 	name = "Deagle"
 // 	desc = "A true hand cannon"
-// 	contains = list(/obj/item/storage/pistolcase/deagle)
+// 	contains = list(/obj/item/storage/guncase/deagle)
 // 	cost = 2000
 
 /datum/supply_pack/faction/syndicate/gun/bulldog

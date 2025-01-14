@@ -249,6 +249,8 @@
 /obj/structure/guncloset,
 /obj/effect/turf_decal/industrial/traffic/full,
 /obj/item/gun/ballistic/automatic/pistol/ringneck,
+/obj/item/gun/ballistic/automatic/pistol/ringneck,
+/obj/item/gun/ballistic/automatic/pistol/ringneck,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "cl" = (
@@ -694,14 +696,20 @@
 	dir = 1
 	},
 /obj/item/shield/riot/tele{
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 6
 	},
 /obj/item/shield/riot/tele{
-	pixel_x = 7
+	pixel_x = -7;
+	pixel_y = -1
 	},
-/obj/item/shield/riot/tele{
-	pixel_x = 1;
-	pixel_y = 4
+/obj/item/melee/energy/sword/saber/red{
+	pixel_x = 15;
+	pixel_y = 7
+	},
+/obj/item/melee/energy/sword/saber/red{
+	pixel_x = 15;
+	pixel_y = 13
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
@@ -2955,7 +2963,8 @@
 /obj/effect/turf_decal/industrial/traffic,
 /obj/structure/table/reinforced,
 /obj/item/storage/toolbox/ammo/c10mm{
-	pixel_y = 6
+	pixel_y = 12;
+	pixel_x = 8
 	},
 /obj/effect/turf_decal/industrial/traffic/corner{
 	dir = 1
@@ -2964,7 +2973,20 @@
 	pixel_x = -4
 	},
 /obj/item/ammo_box/magazine/m10mm_ringneck{
-	pixel_x = -7
+	pixel_x = -8;
+	pixel_y = 0
+	},
+/obj/item/ammo_box/magazine/m10mm_ringneck{
+	pixel_x = -12;
+	pixel_y = 0
+	},
+/obj/item/storage/box/ammo/c10mm_hp{
+	pixel_x = 7;
+	pixel_y = 5
+	},
+/obj/item/storage/box/ammo/c10mm_ap{
+	pixel_x = 7;
+	pixel_y = 0
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
@@ -3202,17 +3224,13 @@
 "AH" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/industrial/traffic/full,
-/obj/item/holo/esword/red{
+/obj/item/melee/axe/sledgehammer{
 	pixel_x = 3;
-	pixel_y = 6
+	pixel_y = 2
 	},
-/obj/item/holo/esword{
-	pixel_x = 2;
-	pixel_y = 13
-	},
-/obj/item/holo/esword{
-	pixel_x = 12;
-	pixel_y = 12
+/obj/item/melee/axe/sledgehammer{
+	pixel_x = -4;
+	pixel_y = 1
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)

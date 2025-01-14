@@ -2,29 +2,29 @@
 	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
 	"map_name": "Santiana-class Contrabandist",
 	"map_short_name": "Santiana",
-	"description": "Боевая шхуна контрабандистов пиратов. Часто эта модель замечается на окраинах космоса в качестве котрабандиста, благодаря своему медленному ходу и невзрачности. Также он популярен у чёрных трансплантологов благодаря достаточно хорошо укопмлектованому мед-отсеку (по меркам контрабандистов). Экипаж доступный на этом корабле: Капитан, Мичман, Моторщик, Буканьер, Сепаратист Терры, Корабельный врач, Повар. В щитспавне по причине: Пираты!! Крайне не рекомендуеться спавнить без причины!",
+	"description": "Боевая шхуна контрабандистов - пиратов. Собранная на скорую руку за самую низкую плату на рынке - эта модель замечается на окраинах космоса в качестве манёвренной и быстрой посудины для доставки и получения контрабанды от разных поставщиков. Благодаря некоторым махинациям, данное судно обзавелось каргопадом и маяком черного рынка, блягодаря чему они стали незаменимыми помощниками для других любителей незаконной деятельсности у которых нет доступа на общественный рынок. Также он популярен у чёрных трансплантологов благодаря достаточно хорошо укопмлектованому мед-отсеку (по меркам контрабандистов).",
 	"map_path": "_maps/_mod_celadon/shuttles/pirate/pirate_santiana.dmm",
-	"enabled": false,
+	"enabled": true,
 	"limit": 1,
-	"prefix": "PIRATE",
+	"space_spawn": true,
+	"prefix": "RSV",
 	"faction": "/datum/faction/pirate",
-	"tags": ["Combat"],
+	"tags": [
+		"Specialist",
+		"Trading",
+		"RP Focus"
+	],
 	"namelists": [
 		"PIRATES",
 		"NATURAL_AGGRESSIVE"
 	],
 	"job_slots": {
-		"Captain": {
+		"Kapitan": {
 			"outfit": "/datum/outfit/job/independent/captain/pirate",
 			"officer": true,
 			"slots": 1
 		},
-		"Michman": {
-			"outfit": "/datum/outfit/job/independent/hop/pirate",
-			"officer": true,
-			"slots": 1
-		},
-		"Buccaneer": {
+		"Abordagnik": {
 			"outfit": "/datum/outfit/job/independent/security/pirate",
 			"slots": 2
 		},
@@ -40,7 +40,7 @@
 			"outfit": "/datum/outfit/job/independent/doctor/pirate",
 			"slots": 1
 		},
-		"TerraGov Separatist": {
+		"Yunga": {
 			"outfit": "/datum/outfit/job/independent/assistant/pirate",
 			"slots": 1
 		}
