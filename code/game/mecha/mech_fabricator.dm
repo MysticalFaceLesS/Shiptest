@@ -36,7 +36,7 @@
 								"Cyborg Upgrade Modules",
 								"IPC Components",
 								"Misc"
-								// [CELADON-ADD] - CELADON_MODSUITS
+								// [CELADON-REMOVE] - CELADON_MODSUITS
 								/*
 								"MOD Suits",
 								"Chassis",
@@ -50,7 +50,7 @@
 								"Supply Modules",
 								"Service Modules"
 								*/
-								// [/CELADON-ADD]
+								// [/CELADON-REMOVE]
 								)
 
 /obj/machinery/mecha_part_fabricator/Initialize(mapload)
