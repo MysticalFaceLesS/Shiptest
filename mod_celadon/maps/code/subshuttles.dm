@@ -110,3 +110,8 @@
 	file_name = "solfed_vespa"
 	name = "Vespa Expeditionary Dropship"
 	prefix = "sSFSV"
+
+/datum/map_template/shuttle/subshuttles/elysium_felon
+	file_name = "elysium_felon"
+	name = "Felon Drug Carrier"
+	prefix = "sEUSV"
