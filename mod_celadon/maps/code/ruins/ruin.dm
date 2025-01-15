@@ -126,7 +126,7 @@
 	description = "A cargo outpost that got raided by some space pirates"
 
 /datum/map_template/ruin/icemoon/icemoon_solfed
-	name = "Solar Federation Priosn"
+	name = "Solar Federation Prison"
 	id = "solfed_prison"
 	suffix = "icemoon_underground_solfed_prison.dmm"
 	description = "The prison is a temporary detention outpost for criminals awaiting sentencing or transfer to the main prison."
