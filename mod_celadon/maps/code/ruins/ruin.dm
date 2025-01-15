@@ -419,6 +419,11 @@
 	description = "A mining operation gone wrong."
 	suffix = "rockplanet_miningexpedition.dmm"
 
+/datum/map_template/ruin/rockplanet/mining_base
+	name = "N+S Mining Installation"
+	description = "A N+S mining installation recently fallen prey to a band of Ramzi pirates."
+	id = "rockplanet_mining_base"
+	suffix = "rockplanet_mining_installation.dmm"
 
 /datum/map_template/ruin/rockplanet/boxsci
 	name = "Abandoned science wing"
@@ -712,6 +717,13 @@
 	id = "ws-drugstore"
 	description = "A store that once sold a variety of items and equipment."
 	suffix = "whitesands_surface_camp_drugstore.dmm"
+
+/datum/map_template/ruin/whitesands/e11_manufactory
+	name = "E-11 Manufacturing Plant"
+	id = "ws-e11manufactory"
+	description = "An old Eoehoma Firearms manufacturing plant dedicated to assembly of the beloved-by-many E-11 rifle."
+	suffix = "whitesands_surface_e11_manufactory.dmm"
+	ruin_tags = list(RUIN_TAG_MEDIUM_COMBAT, RUIN_TAG_MEDIUM_LOOT, RUIN_TAG_HAZARDOUS)
 
 //							///
 //		Plasma	 ruin		///
