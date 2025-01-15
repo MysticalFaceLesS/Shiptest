@@ -46,6 +46,10 @@ SUBSYSTEM_DEF(garbage)
 
 	var/list/items = list() // Holds our qdel_item statistics datums
 
+	// [CELADON_ADD] — SSGarbage Item List Cleanup
+	var/allow_clearing = TRUE
+	// [/CELADON_ADD]
+
 	//Queue
 	var/list/queues
 	#ifdef REFERENCE_TRACKING
@@ -71,6 +75,7 @@ SUBSYSTEM_DEF(garbage)
 
 /datum/controller/subsystem/garbage/PreInit()
 	InitQueues()
+	addtimer(CALLBACK(src, PROC_REF(ClearItemsList)), 1 HOURS)
 
 /datum/controller/subsystem/garbage/stat_entry(msg)
 	var/list/counts = list()
@@ -331,6 +336,17 @@ SUBSYSTEM_DEF(garbage)
 	if (istype(SSgarbage.queues))
 		for (var/i in 1 to SSgarbage.queues.len)
 			queues[i] |= SSgarbage.queues[i]
+
+// [CELADON_ADD] — SSGarbage Item List Cleanup
+/datum/controller/subsystem/garbage/proc/ClearItemsList()
+	addtimer(CALLBACK(src, PROC_REF(ClearItemsList)), 1 HOURS)
+	if(!allow_clearing)
+		message_admins("SSGarbage has attempted a clear proc but 'allow_clearing' set to FALSE!")
+		return
+	var/listlen = items.len
+	items = list()
+	message_admins("SSGarbage has been cleared of [listlen] items and now contains [items.len] datums!")
+// [/CELADON_ADD]
 
 /// Qdel Item: Holds statistics on each type that passes thru qdel
 /datum/qdel_item
