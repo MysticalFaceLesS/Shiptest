@@ -41,3 +41,22 @@
 
 /obj/item/clothing/under/nanotrasen/medical
 	desc = "A crisp white shirt with blue stripes on the arms, identifying the owner as trained DeForest medical staff. The faint smell of antiseptic won't wash out."
+
+//desk flag
+/obj/item/desk_flag/nanotrasen
+	name = "nanotrasen desk flag"
+	desc = "A blue flag with a small Nanotrasen Corporation logo on it."
+	icon = 'mod_celadon/_storge_icons/icons/obj/deskflags.dmi'
+	icon_state = "nanotrasen"
+
+//bureaucracy
+/obj/item/folder/nanotrasen
+	desc = "A dark-blue folder with a Nanotrasen logo."
+	icon = 'mod_celadon/_storge_icons/icons/obj/bureaucracy.dmi'
+	icon_state = "folder_nanotrasen"
+
+/obj/item/folder/documents/nanotrasen
+	icon = 'mod_celadon/_storge_icons/icons/obj/bureaucracy.dmi'
+	icon_state = "folder_nanotrasen"
+	name = "folder- 'TOP SECRET'"
+	desc = "A folder stamped \"Top Secret - Property of Nanotrasen Corporation. Unauthorized distribution is punishable by death.\""

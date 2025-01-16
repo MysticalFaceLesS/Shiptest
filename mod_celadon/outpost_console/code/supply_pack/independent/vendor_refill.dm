@@ -2,6 +2,7 @@
 	group = "Vendor Refills"
 	crate_type = /obj/structure/closet/crate
 
+
 /datum/supply_pack/faction/independent/vendor_refill/vend_circ
 	name = "Vendor circuit board "
 	desc = "Circuit board for building vendors."

@@ -210,7 +210,8 @@
 "aG" = (
 /obj/machinery/light/directional/north,
 /obj/machinery/computer/rdconsole{
-	dir = 8
+	dir = 8;
+	req_access = null
 	},
 /obj/effect/turf_decal/trimline/opaque/purple/filled/line{
 	dir = 1
@@ -515,8 +516,8 @@
 	pixel_x = -28;
 	pixel_y = 6;
 	id = "outpost_security";
-	req_access_txt = "101";
-	name = "Security Lockdown"
+	name = "Security Lockdown";
+	req_one_access_txt = "8100"
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/security)
@@ -1107,7 +1108,7 @@
 	icon = 'icons/obj/doors/airlocks/station/security.dmi';
 	overlays_file = 'icons/obj/doors/airlocks/station/overlays.dmi';
 	assemblytype = /obj/structure/door_assembly/door_assembly_sec;
-	req_one_access_txt = "101"
+	req_one_access_txt = "8100"
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/security)
@@ -2653,7 +2654,9 @@
 /turf/open/floor/plasteel/sepia,
 /area/outpost/crew/library)
 "gU" = (
-/obj/machinery/computer/prisoner/management,
+/obj/machinery/computer/prisoner/management{
+	req_access = null
+	},
 /obj/effect/turf_decal/trimline/opaque/red/filled/line,
 /obj/effect/turf_decal/techfloor{
 	dir = 1
@@ -3320,9 +3323,9 @@
 "iK" = (
 /obj/machinery/door/airlock/command{
 	name = "Council Chamber";
-	req_access_txt = "19";
 	security_level = 6;
-	dir = 8
+	dir = 8;
+	req_one_access_txt = "8100"
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/operations)
@@ -3767,6 +3770,7 @@
 /area/outpost/hallway/central)
 "jN" = (
 /obj/item/bot_assembly/firebot,
+/obj/effect/radiation,
 /turf/open/floor/plating/asteroid/wasteplanet,
 /area/outpost/hallway/central)
 "jP" = (
@@ -3824,7 +3828,7 @@
 	dir = 4;
 	icon_state = "rightsecure";
 	name = "Head of Personnel's Desk";
-	req_access_txt = "101"
+	req_one_access_txt = "8100"
 	},
 /obj/machinery/door/window/northleft{
 	dir = 8;
@@ -4135,7 +4139,8 @@
 /area/outpost/operations)
 "kN" = (
 /obj/machinery/computer/secure_data{
-	dir = 8
+	dir = 8;
+	req_one_access = null
 	},
 /obj/structure/railing{
 	dir = 6
@@ -4722,8 +4727,13 @@
 /turf/open/floor/concrete/slab_2,
 /area/outpost/hallway/central)
 "mu" = (
-/turf/open/chasm,
-/area/outpost/crew/garden)
+/obj/machinery/conveyor/auto{
+	dir = 8;
+	id = "outpost3";
+	use_static_power = 1
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/outpost/medical)
 "mv" = (
 /obj/machinery/conveyor/auto{
 	dir = 5;
@@ -4743,9 +4753,9 @@
 	},
 /obj/machinery/door/airlock/command{
 	name = "Council Chamber";
-	req_access_txt = "19";
 	security_level = 6;
-	dir = 1
+	dir = 1;
+	req_one_access_txt = "8100"
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/operations)
@@ -4782,8 +4792,8 @@
 /obj/machinery/button/door{
 	pixel_y = 8;
 	id = "outpost_ert";
-	req_access_txt = "101";
-	pixel_x = -7
+	pixel_x = -7;
+	req_one_access_txt = "8100"
 	},
 /turf/open/floor/wood,
 /area/outpost/operations)
@@ -4863,8 +4873,8 @@
 /obj/machinery/button/door{
 	pixel_y = 28;
 	id = "outpost_ert";
-	req_access_txt = "101";
-	pixel_x = -3
+	pixel_x = -3;
+	req_one_access_txt = "8100"
 	},
 /obj/effect/landmark/ert_outpost_spawn,
 /turf/open/floor/plasteel/tech,
@@ -5533,9 +5543,9 @@
 	},
 /obj/machinery/door/airlock/command{
 	name = "Council Chamber";
-	req_access_txt = "19";
 	security_level = 6;
-	dir = 1
+	dir = 1;
+	req_one_access_txt = "8100"
 	},
 /turf/open/floor/plasteel,
 /area/outpost/operations)
@@ -5708,7 +5718,6 @@
 	dir = 4
 	},
 /obj/machinery/firealarm/directional/south,
-/obj/structure/statue/snow/snowman,
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "oT" = (
@@ -6650,6 +6659,7 @@
 /obj/effect/turf_decal/techfloor/corner{
 	dir = 8
 	},
+/obj/effect/turf_decal/elysium_logo/three_one,
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "rk" = (
@@ -7864,7 +7874,6 @@
 /turf/open/floor/plasteel/dark,
 /area/outpost/fraction/inteq)
 "up" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/structure/cable{
@@ -7873,6 +7882,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 1
 	},
+/obj/effect/turf_decal/elysium_logo/three_two,
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "uq" = (
@@ -8169,6 +8179,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/turf_decal/elysium_logo/one_one,
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "va" = (
@@ -8316,6 +8327,9 @@
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/operations)
+"vt" = (
+/turf/open/chasm,
+/area/outpost/medical)
 "vu" = (
 /obj/effect/turf_decal/industrial/warning{
 	dir = 2;
@@ -8432,9 +8446,6 @@
 /turf/open/floor/carpet/red,
 /area/outpost/vacant_rooms/office)
 "vL" = (
-/obj/effect/mob_spawn/human/elysium_outpost/wagabond{
-	layer = 2
-	},
 /obj/machinery/light/small/directional/north,
 /turf/open/floor/plating/rust,
 /area/outpost/hallway/central)
@@ -8452,9 +8463,9 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 5
 	},
-/obj/structure/statue/snow/snowman{
-	pixel_x = 5;
-	pixel_y = 0
+/obj/item/banner/elysium/mundane{
+	pixel_x = 6;
+	anchored = 1
 	},
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
@@ -8640,11 +8651,14 @@
 /turf/open/floor/grass,
 /area/outpost/crew/garden)
 "wf" = (
-/obj/structure/flora/rock/jungle{
-	pixel_x = 12
+/obj/machinery/conveyor/auto{
+	dir = 4;
+	id = "outpost3";
+	use_static_power = 1
 	},
-/turf/open/floor/grass,
-/area/outpost/crew/garden)
+/obj/machinery/recycler,
+/turf/open/floor/mineral/plastitanium,
+/area/outpost/medical)
 "wg" = (
 /obj/effect/turf_decal/techfloor/orange{
 	dir = 4
@@ -8657,6 +8671,7 @@
 	dir = 4
 	},
 /obj/effect/turf_decal/techfloor/corner,
+/obj/effect/turf_decal/elysium_logo/three_three,
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "wj" = (
@@ -9347,9 +9362,6 @@
 /turf/open/floor/plating/rust,
 /area/outpost/hallway/central)
 "xV" = (
-/obj/effect/mob_spawn/human/elysium_outpost/wagabond{
-	layer = 2
-	},
 /obj/machinery/light/small/directional/north,
 /obj/item/paper/crumpled{
 	default_raw_text = "Пишет Энди. Буду писать такие заметки вначале чтобы тот кто их найдет мог понять чьи они. Итак, мы откапали очень древний камень с древними письменами. Судя по рисункам это что-то очень древнее. Это своего рода указательный камень. Мы идем по его направлению. Нас ждет успех!";
@@ -10142,9 +10154,9 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 9
 	},
-/obj/structure/statue/snow/snowman{
-	pixel_x = -3;
-	pixel_y = 0
+/obj/item/banner/elysium/mundane{
+	pixel_x = 6;
+	anchored = 1
 	},
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
@@ -10169,8 +10181,13 @@
 /turf/open/floor/plasteel,
 /area/outpost/vacant_rooms)
 "Ad" = (
-/turf/closed/mineral/random/snow,
-/area/outpost/operations)
+/obj/machinery/conveyor/auto{
+	dir = 4;
+	id = "outpost3";
+	use_static_power = 1
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/outpost/medical)
 "Af" = (
 /obj/effect/turf_decal/industrial/warning{
 	dir = 8
@@ -10308,7 +10325,9 @@
 /turf/open/floor/plating,
 /area/outpost/hallway/central)
 "As" = (
-/obj/machinery/computer/med_data,
+/obj/machinery/computer/med_data{
+	req_one_access = null
+	},
 /obj/effect/turf_decal/trimline/opaque/green/filled/line,
 /obj/effect/turf_decal/techfloor{
 	dir = 1
@@ -11491,7 +11510,9 @@
 /turf/open/floor/marble/black,
 /area/outpost/fraction/nanotrasen)
 "Dl" = (
-/obj/machinery/computer/card,
+/obj/machinery/computer/card{
+	req_one_access = null
+	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/operations)
 "Dm" = (
@@ -11735,7 +11756,8 @@
 /obj/machinery/computer/med_data/laptop{
 	dir = 4;
 	pixel_x = -1;
-	pixel_y = 3
+	pixel_y = 3;
+	req_one_access = null
 	},
 /obj/effect/turf_decal/trimline/opaque/blue/filled/line{
 	dir = 8
@@ -11970,9 +11992,12 @@
 /turf/open/floor/concrete/slab_3,
 /area/outpost/hallway/central)
 "Ew" = (
-/obj/structure/flora/grass/jungle,
-/turf/open/floor/grass,
-/area/outpost/crew/garden)
+/obj/machinery/conveyor/auto{
+	id = "outpost3";
+	use_static_power = 1
+	},
+/turf/open/floor/mineral/plastitanium,
+/area/outpost/medical)
 "Ex" = (
 /turf/open/floor/plating/ice/smooth,
 /area/outpost/hallway/fore)
@@ -12070,7 +12095,7 @@
 /area/outpost/fraction/inteq)
 "EK" = (
 /obj/item/paper/crumpled{
-	default_raw_text = "Конечно я верен в этом Ливси! Это не просто бомжи выловленые с подворотни Элизиума, это клоны бомжи! Каждый раз когда один покибает, знание переносится коллективно на всех!"
+	default_raw_text = "Конечно я уверен в этом Ливси! Это не просто бомжи выловленные с подворотни Элизиума, это клоны бомжи! Каждый раз когда один погибает, знание переносится коллективно на всех! Мы вывели первый осознаный коллективный разум бомжа! Это ЭВРИКА!"
 	},
 /turf/open/floor/plating/foam,
 /area/outpost/hallway/central)
@@ -12760,7 +12785,8 @@
 	},
 /obj/machinery/door/airlock/outpost{
 	dir = 4;
-	name = "Briefing Room"
+	name = "Briefing Room";
+	req_one_access_txt = "8100"
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/security/armory)
@@ -13198,7 +13224,9 @@
 	},
 /area/outpost/engineering/atmospherics)
 "HF" = (
-/obj/machinery/computer/card,
+/obj/machinery/computer/card{
+	req_one_access = null
+	},
 /obj/effect/turf_decal/trimline/opaque/green/filled/line,
 /obj/effect/turf_decal/techfloor{
 	dir = 1
@@ -14138,7 +14166,7 @@
 	dir = 4;
 	pixel_x = 3
 	},
-/obj/effect/spawner/random/entertainment/plushie,
+/obj/item/toy/plush/celadon/rimri,
 /turf/open/floor/wood/walnut,
 /area/outpost/fraction/syndi/donkco_shop)
 "JH" = (
@@ -14307,7 +14335,8 @@
 /area/outpost/medical)
 "Ke" = (
 /obj/machinery/computer/aifixer{
-	dir = 8
+	dir = 8;
+	req_access = null
 	},
 /obj/effect/turf_decal/trimline/opaque/purple/filled/line,
 /turf/open/floor/plasteel/dark,
@@ -14514,17 +14543,17 @@
 /obj/machinery/light/directional/north,
 /obj/machinery/button/door{
 	id = "outpost_bridge_lockdown";
-	req_access_txt = "101";
 	pixel_x = -8;
 	pixel_y = 8;
-	name = "Bridge Lockdown"
+	name = "Bridge Lockdown";
+	req_one_access_txt = "8100"
 	},
 /obj/structure/table/wood/reinforced,
 /obj/machinery/button/door{
 	id = "outpost_office_lockdown";
-	req_access_txt = "101";
 	pixel_x = -8;
-	name = "Office Lockdown"
+	name = "Office Lockdown";
+	req_one_access_txt = "8100"
 	},
 /turf/open/floor/plasteel/dark,
 /area/outpost/operations)
@@ -16132,6 +16161,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
+/obj/effect/turf_decal/elysium_logo/one_three,
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "OI" = (
@@ -16155,7 +16185,7 @@
 /obj/effect/turf_decal/steeldecal/steel_decals10{
 	dir = 8
 	},
-/obj/effect/decal/cleanable/dirt,
+/obj/effect/turf_decal/elysium_logo/two_one,
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "OL" = (
@@ -16993,16 +17023,15 @@
 /turf/open/floor/wood,
 /area/outpost/crew/library)
 "QN" = (
+/obj/structure/plasticflaps/opaque{
+	mouse_opacity = 0
+	},
 /obj/machinery/conveyor/auto{
 	dir = 8;
 	id = "outpost3";
 	use_static_power = 1
 	},
-/obj/structure/fans/tiny/invisible,
-/obj/structure/plasticflaps/opaque{
-	mouse_opacity = 0
-	},
-/turf/open/floor/plasteel/tech,
+/turf/open/floor/mineral/plastitanium,
 /area/outpost/medical)
 "QO" = (
 /obj/effect/turf_decal/techfloor/orange,
@@ -17305,6 +17334,7 @@
 /obj/effect/turf_decal/steeldecal/steel_decals10{
 	dir = 4
 	},
+/obj/effect/turf_decal/elysium_logo/two_three,
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "RJ" = (
@@ -17603,9 +17633,9 @@
 	},
 /obj/machinery/door/airlock/command{
 	name = "Council Chamber";
-	req_access_txt = "19";
 	security_level = 6;
-	dir = 1
+	dir = 1;
+	req_one_access_txt = "8100"
 	},
 /turf/open/floor/plasteel,
 /area/outpost/operations)
@@ -17763,6 +17793,15 @@
 	},
 /turf/open/floor/plasteel/sepia,
 /area/outpost/crew/canteen)
+"SU" = (
+/obj/structure/railing/wood{
+	dir = 8
+	},
+/turf/closed/mineral/random/jungle{
+	mouse_opacity = 0;
+	max_integrity = 120000000
+	},
+/area/outpost/crew/garden)
 "SW" = (
 /obj/structure/chair/sofa/brown/left/directional/north,
 /obj/effect/decal/cleanable/robot_debris/gib{
@@ -18094,8 +18133,8 @@
 	},
 /obj/effect/turf_decal/trimline/opaque/red/line,
 /obj/machinery/door/airlock/security/glass{
-	req_access_txt = "109";
-	dir = 8
+	dir = 8;
+	req_one_access_txt = "8100"
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
@@ -18340,6 +18379,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 10
 	},
+/obj/effect/turf_decal/elysium_logo/one_two,
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "Up" = (
@@ -19139,6 +19179,10 @@
 /obj/structure/chair,
 /turf/open/space/basic,
 /area/outpost/crew/garden)
+"Wt" = (
+/obj/effect/radiation,
+/turf/open/floor/plating/asteroid/wasteplanet,
+/area/outpost/hallway/central)
 "Wu" = (
 /obj/effect/turf_decal/siding/white{
 	dir = 6
@@ -19336,6 +19380,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 1
 	},
+/obj/effect/turf_decal/elysium_logo/two_two,
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "WT" = (
@@ -19691,7 +19736,9 @@
 /turf/open/floor/grass,
 /area/outpost/crew/garden)
 "XI" = (
-/obj/machinery/computer/secure_data,
+/obj/machinery/computer/secure_data{
+	req_one_access = null
+	},
 /obj/effect/turf_decal/trimline/opaque/red/filled/line,
 /obj/effect/turf_decal/techfloor{
 	dir = 1
@@ -19919,10 +19966,10 @@
 /obj/structure/railing/corner/wood{
 	dir = 8
 	},
-/obj/structure/flora/tree/palm{
-	pixel_x = 16
+/turf/closed/mineral/random/jungle{
+	mouse_opacity = 0;
+	max_integrity = 120000000
 	},
-/turf/open/floor/grass,
 /area/outpost/crew/garden)
 "Yu" = (
 /obj/structure/table/reinforced,
@@ -20116,7 +20163,6 @@
 	dir = 8
 	},
 /obj/item/radio/intercom/directional/south,
-/obj/structure/statue/snow/snowman,
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "YT" = (
@@ -20546,7 +20592,6 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/structure/flora/tree/pine/xmas/presents,
 /turf/open/floor/plasteel/tech,
 /area/outpost/hallway/fore)
 "ZU" = (
@@ -36780,8 +36825,8 @@ cr
 zO
 cr
 Yt
-et
-XH
+SU
+SU
 Rx
 bO
 LF
@@ -36966,9 +37011,9 @@ Qu
 cr
 na
 KL
-wf
-Ew
 vx
+Ew
+Ad
 Rx
 Pl
 Oe
@@ -37152,10 +37197,10 @@ vw
 vx
 vx
 cr
-cr
 vx
 vx
-vx
+mu
+wf
 Rx
 xp
 PL
@@ -37342,7 +37387,7 @@ vx
 vx
 vx
 mu
-vx
+vt
 Rx
 qO
 Se
@@ -41238,7 +41283,7 @@ NZ
 bd
 bd
 pU
-Ad
+Zp
 gP
 vr
 Sa
@@ -41425,7 +41470,7 @@ wk
 bd
 bd
 pU
-Ad
+Zp
 gP
 fO
 hE
@@ -41801,17 +41846,17 @@ Nf
 iv
 Jt
 wS
-Ad
-Ad
-Ad
+Zp
+Zp
+wS
 Kn
-Ad
-Ad
-Ad
-Ad
-Ad
-Ad
-Ad
+wS
+Zp
+Zp
+Zp
+Zp
+Zp
+Zp
 wS
 oc
 Tp
@@ -41997,8 +42042,8 @@ wS
 wS
 wS
 wS
-Ad
-Ad
+Zp
+Zp
 wS
 OQ
 MP
@@ -46560,7 +46605,7 @@ eD
 xB
 SA
 xV
-QW
+tq
 Yn
 SA
 SA
@@ -48056,7 +48101,7 @@ eD
 VM
 SA
 vL
-Ar
+BZ
 QW
 SA
 SA
@@ -51243,7 +51288,7 @@ ME
 TJ
 Pn
 Ej
-Pn
+Wt
 hn
 hn
 hn
