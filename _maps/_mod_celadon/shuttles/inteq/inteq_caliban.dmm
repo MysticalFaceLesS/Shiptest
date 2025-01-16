@@ -141,14 +141,13 @@
 	dir = 1
 	},
 /obj/effect/turf_decal/industrial/fire,
-/obj/machinery/light_switch{
-	pixel_y = 23
-	},
 /obj/structure/frame/machine,
+/obj/machinery/light/directional/north,
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
 "aV" = (
-/obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
+/obj/structure/grille,
+/obj/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/plating,
 /area/ship/bridge)
 "bb" = (
@@ -333,9 +332,11 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 1
 	},
-/obj/machinery/light/directional/north,
 /obj/effect/turf_decal/industrial/fire,
 /obj/structure/frame/machine,
+/obj/machinery/light_switch{
+	pixel_y = 23
+	},
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
 "dh" = (
@@ -363,7 +364,8 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "di" = (
-/obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
+/obj/structure/grille,
+/obj/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/plating,
 /area/ship/crew/office)
 "dk" = (
@@ -414,6 +416,9 @@
 	dir = 4;
 	pixel_x = -19;
 	pixel_y = 13
+	},
+/obj/structure/cable{
+	icon_state = "0-2"
 	},
 /turf/open/floor/plasteel/patterned/brushed,
 /area/ship/crew/toilet)
@@ -502,6 +507,7 @@
 	dir = 1
 	},
 /obj/structure/chair/office,
+/obj/machinery/computer/helm/viewscreen/directional/north,
 /turf/open/floor/carpet/red,
 /area/ship/crew/dorm/dormfive)
 "ff" = (
@@ -606,13 +612,13 @@
 /area/ship/hallway/port_fore)
 "fF" = (
 /obj/effect/turf_decal/techfloor,
-/obj/machinery/light/directional/south,
 /obj/effect/turf_decal/industrial/fire{
 	dir = 1
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
 	},
+/obj/machinery/computer/helm/viewscreen/directional/south,
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
 "fK" = (
@@ -786,6 +792,9 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/light/floor,
+/obj/machinery/door/firedoor/border_only{
+	dir = 4
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering/engine)
 "gT" = (
@@ -1320,18 +1329,30 @@
 /area/ship/crew/canteen)
 "jZ" = (
 /obj/structure/rack,
-/obj/item/ammo_box/magazine/g36,
-/obj/item/ammo_box/magazine/g36,
-/obj/item/ammo_box/magazine/g36,
-/obj/item/ammo_box/magazine/g36,
-/obj/item/ammo_box/magazine/g36,
-/obj/item/ammo_box/magazine/g36,
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 9
 	},
 /obj/effect/turf_decal/trimline/opaque/yellow/line{
 	layer = 2.040;
 	dir = 9
+	},
+/obj/item/ammo_box/magazine/boomslang{
+	pixel_x = -6
+	},
+/obj/item/ammo_box/magazine/boomslang{
+	pixel_x = -6
+	},
+/obj/item/ammo_box/magazine/boomslang{
+	pixel_x = -6
+	},
+/obj/item/ammo_box/magazine/g36{
+	pixel_x = 9
+	},
+/obj/item/ammo_box/magazine/g36{
+	pixel_x = 9
+	},
+/obj/item/ammo_box/magazine/g36{
+	pixel_x = 9
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/security/armory)
@@ -1371,6 +1392,9 @@
 /obj/effect/turf_decal/corner/opaque/brown/full,
 /obj/effect/turf_decal/corner/opaque/inteqbrown/border{
 	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/canteen)
@@ -1543,6 +1567,9 @@
 /obj/machinery/firealarm/directional/south{
 	pixel_x = 7
 	},
+/obj/structure/cable{
+	icon_state = "1-8"
+	},
 /turf/open/floor/plasteel/patterned/brushed,
 /area/ship/crew/toilet)
 "lO" = (
@@ -1707,6 +1734,10 @@
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
+"mF" = (
+/obj/item/gun/ballistic/automatic/marksman/f4/inteq,
+/turf/template_noop,
+/area/template_noop)
 "mI" = (
 /obj/effect/turf_decal/corner/opaque/brown{
 	dir = 8
@@ -2546,6 +2577,14 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
+"se" = (
+/obj/structure/platform/military{
+	dir = 8
+	},
+/turf/open/floor/plasteel/elevatorshaft{
+	color = "#808080"
+	},
+/area/ship/hangar)
 "si" = (
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 1
@@ -2613,6 +2652,7 @@
 /obj/effect/turf_decal/trimline/opaque/yellow/corner{
 	dir = 1
 	},
+/obj/machinery/computer/helm/viewscreen/directional/north,
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/canteen)
 "sT" = (
@@ -3061,13 +3101,13 @@
 /turf/open/floor/engine/hull/reinforced,
 /area/ship/external/dark)
 "vn" = (
-/obj/machinery/atmospherics/components/binary/pump/layer2{
-	dir = 4;
-	name = "From chamber to distro pump"
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/visible,
 /obj/machinery/atmospherics/components/binary/valve/on/layer4,
 /obj/structure/catwalk/over,
+/obj/machinery/atmospherics/components/binary/pump/on/layer2{
+	dir = 4;
+	name = "From chamber to distro pump"
+	},
 /turf/open/floor/plating,
 /area/ship/engineering)
 "vv" = (
@@ -3256,7 +3296,6 @@
 /obj/item/storage/toolbox/ammo/c9mm,
 /obj/item/storage/box/ammo/a762_40/inteq,
 /obj/item/ammo_box/a556_box,
-/obj/item/ammo_box/a556_box,
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 10
 	},
@@ -3264,6 +3303,7 @@
 	layer = 2.040;
 	dir = 10
 	},
+/obj/item/storage/box/ammo/a65clip,
 /turf/open/floor/plasteel/tech,
 /area/ship/security/armory)
 "wU" = (
@@ -3309,6 +3349,7 @@
 /obj/effect/turf_decal/techfloor/corner{
 	dir = 4
 	},
+/obj/machinery/computer/helm/viewscreen/directional/north,
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "xc" = (
@@ -3380,6 +3421,10 @@
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/firedoor/border_only{
+	dir = 1
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/dorm/dormfive)
@@ -3516,6 +3561,10 @@
 /obj/effect/turf_decal/corner/opaque/inteqbrown/border{
 	dir = 1
 	},
+/obj/structure/cable{
+	icon_state = "2-4";
+	tag = null
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/canteen)
 "yU" = (
@@ -3556,9 +3605,6 @@
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
 "zu" = (
-/obj/structure/railing{
-	layer = 4.1
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
@@ -3568,6 +3614,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/structure/railing/corner,
 /turf/open/floor/plating,
 /area/ship/hangar)
 "zw" = (
@@ -3669,7 +3716,6 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "Ar" = (
-/obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
 /obj/machinery/atmospherics/pipe/simple/green/visible/layer4{
 	dir = 10
 	},
@@ -3683,6 +3729,8 @@
 	id = "Caliban_window_engine_shutters";
 	name = "Blast Shutters"
 	},
+/obj/structure/grille,
+/obj/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/plating/airless,
 /area/ship/engineering/engine)
 "AB" = (
@@ -3923,6 +3971,9 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk/over,
+/obj/machinery/door/firedoor/border_only{
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/ship/engineering/engine)
 "CF" = (
@@ -4126,6 +4177,9 @@
 	dir = 4
 	},
 /obj/machinery/space_heater,
+/obj/machinery/door/firedoor/border_only{
+	dir = 4
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering/engine)
 "Ev" = (
@@ -4148,6 +4202,9 @@
 	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/canteen)
@@ -4729,6 +4786,7 @@
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	dir = 6
 	},
+/obj/item/storage/guncase/boomslangmilitary,
 /turf/closed/wall/r_wall/syndicate,
 /area/ship/security/armory)
 "IT" = (
@@ -4789,11 +4847,12 @@
 /obj/machinery/atmospherics/pipe/simple/dark/hidden/layer2{
 	dir = 9
 	},
-/obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
 /obj/machinery/door/poddoor/shutters{
 	id = "Caliban_window_engine_shutters";
 	name = "Blast Shutters"
 	},
+/obj/structure/grille,
+/obj/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/plating/airless,
 /area/ship/engineering/engine)
 "Kd" = (
@@ -4879,7 +4938,7 @@
 	pixel_x = -7
 	},
 /obj/structure/table,
-/obj/structure/bedsheetbin/empty,
+/obj/structure/bedsheetbin,
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
 "KQ" = (
@@ -4933,6 +4992,21 @@
 	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/fore)
+"Lb" = (
+/obj/structure/railing{
+	dir = 8;
+	layer = 4.1
+	},
+/obj/structure/platform/ship/corner,
+/obj/structure/sign/warning{
+	pixel_x = 23;
+	pixel_y = -5
+	},
+/turf/open/floor/plasteel/stairs{
+	icon = 'icons/obj/stairs.dmi';
+	dir = 1
+	},
+/area/ship/hangar)
 "Lc" = (
 /obj/effect/turf_decal/techfloor/orange,
 /obj/structure/railing{
@@ -4961,6 +5035,12 @@
 	},
 /obj/effect/turf_decal/trimline/opaque/yellow/line{
 	dir = 1
+	},
+/obj/structure/extinguisher_cabinet/directional/north{
+	pixel_x = 6
+	},
+/obj/machinery/firealarm/directional/north{
+	pixel_x = -7
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/security/armory)
@@ -5027,11 +5107,12 @@
 /obj/machinery/atmospherics/pipe/simple/green/visible/layer4{
 	dir = 5
 	},
-/obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
 /obj/machinery/door/poddoor/shutters{
 	id = "Caliban_window_engine_shutters";
 	name = "Blast Shutters"
 	},
+/obj/structure/grille,
+/obj/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/plating/airless,
 /area/ship/engineering/engine)
 "Mf" = (
@@ -5323,13 +5404,10 @@
 /obj/effect/turf_decal/industrial/fire{
 	dir = 8
 	},
-/obj/item/gun/ballistic/automatic/assault/g36sh/inteq{
-	spawnwithmagazine = 0;
-	spawn_no_ammo = 1
-	},
 /obj/structure/guncloset{
 	anchored = 1
 	},
+/obj/item/gun/ballistic/automatic/marksman/boomslang/indie/no_mag,
 /obj/item/gun/ballistic/automatic/assault/g36sh/inteq{
 	spawnwithmagazine = 0;
 	pixel_y = -8;
@@ -5377,10 +5455,11 @@
 /turf/open/floor/carpet/red,
 /area/ship/crew/cryo)
 "PN" = (
-/obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
 /obj/machinery/door/poddoor/shutters/preopen{
 	id = "Caliban_CE_room"
 	},
+/obj/structure/grille,
+/obj/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/plating,
 /area/ship/crew/dorm/dormfive)
 "PP" = (
@@ -5425,15 +5504,17 @@
 /obj/machinery/atmospherics/pipe/simple/dark/hidden/layer2{
 	dir = 6
 	},
-/obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
 /obj/machinery/door/poddoor/shutters{
 	id = "Caliban_window_engine_shutters";
 	name = "Blast Shutters"
 	},
+/obj/structure/grille,
+/obj/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/plating/airless,
 /area/ship/engineering/engine)
 "Qx" = (
-/obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
+/obj/structure/grille,
+/obj/structure/window/plasma/reinforced/plastitanium,
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering/engine)
 "Qy" = (
@@ -5602,6 +5683,9 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/canteen)
 "RC" = (
@@ -5640,9 +5724,13 @@
 /area/ship/hallway/port_fore)
 "RV" = (
 /obj/structure/rack,
+/obj/item/ammo_box/magazine/skm_762_40{
+	pixel_x = 5
+	},
 /obj/item/ammo_box/magazine/skm_762_40,
-/obj/item/ammo_box/magazine/skm_762_40,
-/obj/item/ammo_box/magazine/skm_762_40,
+/obj/item/ammo_box/magazine/skm_762_40{
+	pixel_x = -5
+	},
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 8
 	},
@@ -5716,14 +5804,11 @@
 /obj/effect/turf_decal/industrial/fire{
 	dir = 8
 	},
-/obj/item/gun/ballistic/automatic/assault/skm/inteq{
-	spawnwithmagazine = 0;
-	spawn_no_ammo = 1
-	},
 /obj/structure/guncloset{
 	anchored = 1
 	},
 /obj/machinery/light/directional/east,
+/obj/item/gun/ballistic/automatic/assault/skm/inteq/no_mag,
 /turf/open/floor/pod/dark,
 /area/ship/security/armory)
 "SK" = (
@@ -5743,6 +5828,14 @@
 /obj/structure/railing{
 	dir = 8;
 	layer = 4.1
+	},
+/obj/structure/platform/ship_three/corner{
+	dir = 8;
+	color = "769887"
+	},
+/obj/structure/sign/warning{
+	pixel_x = 23;
+	pixel_y = 5
 	},
 /turf/open/floor/plasteel/stairs{
 	icon = 'icons/obj/stairs.dmi'
@@ -5989,9 +6082,6 @@
 /turf/open/floor/carpet/red,
 /area/ship/crew/dorm/dormfive)
 "Ul" = (
-/obj/structure/railing{
-	layer = 4.1
-	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
@@ -6001,6 +6091,10 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/structure/railing/corner{
+	layer = 4.1;
+	dir = 8
+	},
 /turf/open/floor/plating,
 /area/ship/hangar)
 "Um" = (
@@ -6010,6 +6104,16 @@
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/office)
+"Up" = (
+/obj/structure/railing{
+	dir = 4;
+	layer = 4.1
+	},
+/turf/open/floor/plasteel/stairs{
+	icon = 'icons/obj/stairs.dmi';
+	dir = 1
+	},
+/area/ship/hangar)
 "Uq" = (
 /obj/effect/turf_decal/techfloor{
 	dir = 1
@@ -6330,6 +6434,10 @@
 "Yt" = (
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
 /area/ship/engineering/engine)
+"Yv" = (
+/obj/item/storage/guncase/boomslangmilitary,
+/turf/template_noop,
+/area/template_noop)
 "Yz" = (
 /turf/closed/wall/r_wall/syndicate,
 /area/ship/engineering)
@@ -6357,6 +6465,14 @@
 /obj/machinery/vending/coffee,
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/dorm)
+"YY" = (
+/obj/effect/turf_decal/techfloor,
+/obj/effect/turf_decal/industrial/fire{
+	dir = 1
+	},
+/obj/machinery/light/directional/south,
+/turf/open/floor/pod,
+/area/ship/security/weapons_control)
 "YZ" = (
 /obj/structure/chair{
 	dir = 8;
@@ -6460,6 +6576,14 @@
 	},
 /turf/open/floor/engine/airless,
 /area/ship/engineering/engine)
+"ZK" = (
+/obj/structure/platform/military{
+	dir = 4
+	},
+/turf/open/floor/plasteel/elevatorshaft{
+	color = "#808080"
+	},
+/area/ship/hangar)
 "ZU" = (
 /obj/machinery/light/directional/south,
 /obj/effect/turf_decal/trimline/opaque/yellow/line{
@@ -7150,9 +7274,9 @@ mX
 CS
 Tq
 ob
-Nk
-Nk
-Nk
+se
+se
+se
 xn
 UP
 TC
@@ -7272,7 +7396,7 @@ sw
 TK
 Lc
 Ul
-Nk
+XH
 Nk
 Nk
 Nk
@@ -7303,7 +7427,7 @@ sw
 TK
 MR
 zu
-Nk
+Up
 Nk
 Nk
 Nk
@@ -7427,12 +7551,12 @@ AL
 AL
 pq
 xV
-XH
-Nk
-Nk
-Nk
-Nk
-Nk
+Lb
+ZK
+ZK
+ZK
+ZK
+ZK
 SN
 nz
 DQ
@@ -8077,13 +8201,13 @@ zL
 zL
 zL
 IR
-sw
+mF
 oG
 aI
 mV
 Kz
 qh
-yx
+YY
 oG
 sw
 mh
@@ -8107,7 +8231,7 @@ XJ
 XJ
 zL
 zL
-sw
+Yv
 sw
 oG
 bM
