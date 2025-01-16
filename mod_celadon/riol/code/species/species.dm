@@ -15,7 +15,9 @@
 	id = SPECIES_RIOL
 	loreblurb = "Риолы - это вид гуманоидных лисиц. Риолы родом из -ДАННЫЕ УДАЛЕНЫ-, ныне проживают на частной торговой станции Мирмунвильнир, хотя их первоначальной родиной была -ДАННЫЕ УДАЛЕНЫ-, на текущий момент утеряно местонахождение."
 
-	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
+	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN
+
+	bodyflags = HAS_TAIL | TAIL_WAGGING
 
 	disliked_food = VEGETABLES | FRUIT | GRAIN | GROSS
 	liked_food = MEAT | RAW | DAIRY
@@ -57,11 +59,20 @@
 
 	default_color = "424242"
 
-	heatmod = 0.8
-	coldmod = 1.2
-	bodytemp_normal = HUMAN_BODYTEMP_NORMAL + 30
-	bodytemp_heat_damage_limit = (HUMAN_BODYTEMP_NORMAL + 30) + 10
-	bodytemp_cold_damage_limit = (HUMAN_BODYTEMP_NORMAL + 30) - 40
+	burnmod = 1.1
+	heatmod = 1.3
+	coldmod = 0.7
+	speedmod = -0.05
+
+	bodytemp_heat_damage_limit = RIOL_BODYTEMP_NORMAL + 20		//60
+
+	max_temp_comfortable = RIOL_BODYTEMP_NORMAL + 10				//50
+
+	bodytemp_normal = RIOL_BODYTEMP_NORMAL						//40
+
+	min_temp_comfortable = RIOL_BODYTEMP_NORMAL - 50				//-10
+
+	bodytemp_cold_damage_limit = RIOL_BODYTEMP_NORMAL - 70		//-30
 
 	meat = /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/riol 	//нарисовать/спиздить спрайт к нему
 	//skinned_type = /obj/item/stack/sheet/animalhide/riol						//нужно сделать кожу из таяран и нарисовать/спиздить спрайт к нему
@@ -122,4 +133,11 @@
 
 /datum/species/riol/on_species_gain(mob/living/carbon/C, datum/species/old_species, pref_load)
 	. = ..() //call everything from species/on_species_gain()
-	C.dna.add_mutation(OLFACTION)
+	C.dna.add_mutation(OLFACTION_RIOL)
+
+/obj/effect/proc_holder/spell/targeted/olfaction/riol //Риольсик снифф + меняет иконку расовой способности у риолов на красивую
+	action_icon = 'mod_celadon/_storge_icons/icons/riol/riol_skills.dmi'
+	action_icon_state = "sniff"
+
+/datum/mutation/human/olfaction/riol //Создает ген риольсокго сниффа
+	power = /obj/effect/proc_holder/spell/targeted/olfaction/riol

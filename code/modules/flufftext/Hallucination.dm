@@ -34,12 +34,14 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 	if(world.time < next_hallucination)
 		return
 
-	var/halpick = pickweight(GLOB.hallucination_list)
+	var/halpick = pick_weight(GLOB.hallucination_list)
 	new halpick(src, FALSE)
 
 	next_hallucination = world.time + rand(100, 600)
 
 /mob/living/carbon/proc/set_screwyhud(hud_type)
+	if(HAS_TRAIT(src, TRAIT_ANALGESIA))
+		hud_type = SCREWYHUD_HEALTHY
 	hal_screwyhud = hud_type
 	update_health_hud()
 
@@ -1263,7 +1265,7 @@ GLOBAL_LIST_INIT(hallucination_list, list(
 	target.playsound_local(get_turf(src), "sparks", 100, 1)
 	target.staminaloss += 50
 	target.Stun(40)
-	target.jitteriness += 1000
+	target.adjust_jitter(1000, max = 1500)
 	target.do_jitter_animation(target.jitteriness)
 	addtimer(CALLBACK(src, PROC_REF(shock_drop)), 20)
 

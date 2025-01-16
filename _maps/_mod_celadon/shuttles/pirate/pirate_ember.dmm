@@ -33,7 +33,9 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 8
 	},
-/obj/machinery/vending/tool,
+/obj/machinery/vending/tool{
+	all_items_free = 1
+	},
 /obj/effect/decal/cleanable/wrapping{
 	pixel_y = -4
 	},
@@ -394,7 +396,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light/directional/west,
-/obj/effect/spawner/lootdrop/gambling{
+/obj/effect/spawner/random/entertainment/gambling{
 	pixel_x = -5;
 	pixel_y = 4
 	},
@@ -662,7 +664,7 @@
 /area/ship/medical)
 "dv" = (
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/effect/spawner/lootdrop/grille_or_trash,
+/obj/effect/spawner/random/waste/grille_or_trash,
 /obj/effect/decal/cleanable/robot_debris/old,
 /obj/item/stock_parts/capacitor{
 	pixel_y = -9;
@@ -1272,7 +1274,7 @@
 "ge" = (
 /obj/structure/catwalk/over/plated_catwalk,
 /obj/effect/decal/cleanable/greenglow,
-/obj/machinery/vending/snack/random,
+/obj/effect/spawner/random/vending/snack,
 /turf/open/floor/plating,
 /area/ship/hallway/central)
 "gg" = (
@@ -1834,7 +1836,7 @@
 "jv" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/oil,
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
 /turf/open/floor/plating/airless{
 	icon_state = "plating_rust"
 	},
@@ -2032,7 +2034,7 @@
 /area/ship/security/armory)
 "kf" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/lootdrop/salvage_manipulator,
+/obj/effect/spawner/random/salvage_manipulator,
 /turf/open/floor/plating/airless,
 /area/ship/maintenance/port)
 "kk" = (
@@ -2440,11 +2442,11 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 8
 	},
-/obj/item/clothing/suit/armor/vest/bulletproof/frontier,
-/obj/item/clothing/suit/armor/vest/bulletproof/frontier,
-/obj/item/clothing/suit/armor/vest/bulletproof/frontier,
-/obj/item/clothing/suit/armor/vest/bulletproof/frontier,
-/obj/item/clothing/suit/armor/vest/bulletproof/frontier,
+/obj/item/clothing/suit/armor/vest/frontier,
+/obj/item/clothing/suit/armor/vest/frontier,
+/obj/item/clothing/suit/armor/vest/frontier,
+/obj/item/clothing/suit/armor/vest/frontier,
+/obj/item/clothing/suit/armor/vest/frontier,
 /obj/item/clothing/head/helmet/bulletproof/x11/frontier,
 /obj/item/clothing/head/helmet/bulletproof/x11/frontier,
 /obj/item/clothing/head/helmet/bulletproof/x11/frontier,
@@ -2783,6 +2785,15 @@
 /obj/structure/grille/broken,
 /turf/open/floor/plasteel/patterned,
 /area/ship/cargo)
+"nC" = (
+/obj/docking_port/stationary{
+	height = 15;
+	width = 15;
+	dwidth = 7;
+	name = "extra ember dock"
+	},
+/turf/template_noop,
+/area/template_noop)
 "nD" = (
 /obj/effect/spawner/structure/window/plasma/reinforced/plastitanium,
 /obj/machinery/door/poddoor{
@@ -3789,7 +3800,9 @@
 	},
 /area/ship/bridge)
 "sR" = (
-/obj/machinery/vending/dinnerware,
+/obj/machinery/vending/dinnerware{
+	all_items_free = 1
+	},
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
@@ -4022,15 +4035,29 @@
 /area/ship/crew/canteen)
 "ul" = (
 /obj/structure/rack,
-/obj/item/storage/box/zipties{
-	pixel_y = 7;
-	pixel_x = 4
-	},
-/obj/item/storage/box/syndie_kit/throwing_weapons,
 /obj/machinery/light/directional/south,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/sign/poster/contraband/stechkin{
 	pixel_y = -32
+	},
+/obj/item/gun/ballistic/shotgun/doublebarrel{
+	pixel_y = -4
+	},
+/obj/item/gun/ballistic/shotgun/automatic/dual_tube{
+	pixel_y = 2
+	},
+/obj/item/ammo_casing/shotgun/laserscatter{
+	pixel_x = -4;
+	pixel_y = -6
+	},
+/obj/item/ammo_casing/shotgun/laserscatter{
+	pixel_x = -7;
+	pixel_y = -8
+	},
+/obj/item/ammo_casing/shotgun/stunslug,
+/obj/item/ammo_casing/shotgun/stunslug{
+	pixel_x = 3;
+	pixel_y = -4
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/security/armory)
@@ -4260,7 +4287,7 @@
 /obj/effect/decal/cleanable/blood/tracks{
 	dir = 5
 	},
-/obj/effect/spawner/lootdrop/maintenance/three,
+/obj/effect/spawner/random/maintenance/three,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -4385,35 +4412,19 @@
 /obj/structure/sign/poster/official/mini_energy_gun{
 	pixel_x = -32
 	},
-/obj/item/grenade/frag{
-	pixel_x = 6;
-	pixel_y = -3
-	},
-/obj/item/grenade/frag{
-	pixel_x = 1;
-	pixel_y = -8
-	},
-/obj/item/grenade/firecracker,
-/obj/item/grenade/firecracker{
-	pixel_x = 2;
-	pixel_y = -3
-	},
-/obj/item/grenade/flashbang{
-	pixel_y = -4;
-	pixel_x = -10
-	},
-/obj/item/grenade/flashbang{
-	pixel_y = -5;
-	pixel_x = -7
-	},
-/obj/item/grenade/flashbang{
-	pixel_y = -9;
-	pixel_x = -8
-	},
 /obj/machinery/light_switch{
 	pixel_x = -12;
 	dir = 1;
 	pixel_y = -22
+	},
+/obj/item/storage/box/handcuffs{
+	pixel_x = -5;
+	pixel_y = 2
+	},
+/obj/item/storage/box/flashes,
+/obj/item/storage/box/flashbangs{
+	pixel_x = 5;
+	pixel_y = 5
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/security/armory)
@@ -4774,7 +4785,6 @@
 	pixel_x = 1;
 	pixel_y = -4
 	},
-/obj/item/clothing/mask/gas/sechailer/balaclava,
 /obj/item/clothing/suit/armor/vest/marine/medium,
 /obj/item/storage/belt/military,
 /obj/item/clothing/shoes/cowboy/black,
@@ -4792,6 +4802,7 @@
 	name = "tactical gas mask";
 	desc = "Improved gas mask utilized by pirates. Still not very good at blocking gas flow, but it's flameproof!"
 	},
+/obj/item/clothing/mask/balaclava/combat,
 /turf/open/floor/carpet/black,
 /area/ship/security)
 "wZ" = (
@@ -5132,7 +5143,7 @@
 /turf/open/floor/plasteel/patterned/cargo_one,
 /area/ship/medical)
 "zn" = (
-/obj/effect/spawner/lootdrop/salvage_scanning,
+/obj/effect/spawner/random/salvage_scanning,
 /turf/open/floor/plating/airless{
 	icon_state = "panelscorched"
 	},
@@ -5754,7 +5765,7 @@
 /obj/effect/turf_decal/techfloor/hole{
 	dir = 4
 	},
-/obj/effect/spawner/lootdrop/random_machine_circuit_rare,
+/obj/effect/spawner/random/circuit/machine/rare,
 /obj/item/stack/ore/salvage/scraptitanium/five,
 /turf/open/floor/plating/airless{
 	icon_state = "panelscorched"
@@ -6090,7 +6101,7 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/obj/item/melee/transforming/energy/sword/saber/pirate/red,
+/obj/item/melee/energy/sword/saber/pirate/red,
 /obj/item/clothing/under/frontiersmen/officer,
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/fore)
@@ -7080,11 +7091,11 @@
 	req_access_txt = "3"
 	},
 /obj/effect/turf_decal/techfloor,
-/obj/item/storage/backpack/duffelbag/syndie/x4,
 /obj/item/crowbar/power{
 	pixel_y = -4
 	},
 /obj/item/radio/intercom/directional/north,
+/obj/item/storage/backpack/duffelbag/syndie/c4,
 /turf/open/floor/plasteel/dark,
 /area/ship/security/armory)
 "HN" = (
@@ -7348,7 +7359,7 @@
 "IX" = (
 /obj/effect/turf_decal/techfloor/corner,
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/lootdrop/glowstick,
+/obj/effect/spawner/random/decoration/glowstick,
 /obj/item/stack/cable_coil/cut/yellow,
 /obj/item/stack/rods{
 	pixel_x = 7;
@@ -7396,22 +7407,18 @@
 	pixel_x = -6;
 	pixel_y = 3
 	},
-/obj/item/grenade/syndieminibomb{
-	pixel_x = 7;
-	pixel_y = -6
-	},
-/obj/item/grenade/syndieminibomb{
-	pixel_x = 2;
-	pixel_y = -1
-	},
 /obj/structure/rack,
-/obj/item/grenade/spawnergrenade/manhacks{
-	pixel_y = -5;
-	pixel_x = -1
-	},
 /obj/machinery/light/directional/south,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 1
+	},
+/obj/item/grenade/frag{
+	pixel_x = 1;
+	pixel_y = -8
+	},
+/obj/item/grenade/frag{
+	pixel_x = 6;
+	pixel_y = 1
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/security/range)
@@ -7486,7 +7493,7 @@
 /turf/open/floor/concrete/tiles,
 /area/ship/crew/canteen/kitchen)
 "Jx" = (
-/obj/machinery/vending/cola/random,
+/obj/effect/spawner/random/vending/cola,
 /obj/structure/sign/directions/command{
 	dir = 4;
 	pixel_y = 42
@@ -8154,7 +8161,7 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/obj/item/melee/transforming/energy/sword/saber/pirate/red,
+/obj/item/melee/energy/sword/saber/pirate/red,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 8
 	},
@@ -8219,9 +8226,10 @@
 "Mb" = (
 /obj/docking_port/stationary{
 	height = 15;
-	width = 15;
-	dwidth = 7;
-	name = "main ember dock"
+	width = 30;
+	dwidth = 15;
+	name = "main ember dock";
+	dir = 2
 	},
 /turf/template_noop,
 /area/template_noop)
@@ -8311,9 +8319,6 @@
 	pixel_x = 1;
 	pixel_y = -4
 	},
-/obj/item/clothing/mask/gas/sechailer/balaclava,
-/obj/item/clothing/mask/gas/sechailer/balaclava,
-/obj/item/clothing/mask/gas/sechailer/balaclava,
 /obj/item/storage/belt/military,
 /obj/item/storage/belt/military,
 /obj/item/storage/belt/military/army,
@@ -8329,6 +8334,9 @@
 /obj/machinery/light_switch{
 	pixel_y = 24
 	},
+/obj/item/clothing/mask/balaclava/combat,
+/obj/item/clothing/mask/balaclava/combat,
+/obj/item/clothing/mask/balaclava/combat,
 /turf/open/floor/plasteel/dark,
 /area/ship/security/armory)
 "Mo" = (
@@ -8525,7 +8533,7 @@
 	},
 /area/ship/hallway/central)
 "Nr" = (
-/obj/machinery/vending/snack/random,
+/obj/effect/spawner/random/vending/snack,
 /obj/effect/turf_decal/industrial/warning{
 	dir = 1
 	},
@@ -9096,26 +9104,12 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 4
 	},
-/obj/item/ammo_casing/shotgun/laserscatter{
-	pixel_x = -7;
-	pixel_y = -8
-	},
-/obj/item/ammo_casing/shotgun/laserscatter{
-	pixel_x = -4;
-	pixel_y = -6
-	},
-/obj/item/ammo_casing/shotgun/stunslug,
-/obj/item/ammo_casing/shotgun/stunslug{
-	pixel_x = 3;
-	pixel_y = -4
-	},
-/obj/item/gun/ballistic/shotgun/automatic/dual_tube{
-	pixel_y = 2
-	},
-/obj/item/gun/ballistic/shotgun/doublebarrel{
-	pixel_y = -4
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/storage/box/rubbershot,
+/obj/item/storage/box/rubbershot{
+	pixel_x = 4;
+	pixel_y = -2
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/security/armory)
 "Qk" = (
@@ -9372,7 +9366,7 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/office)
 "RY" = (
-/obj/effect/spawner/lootdrop/salvage_capacitor,
+/obj/effect/spawner/random/salvage_capacitor,
 /obj/item/stack/cable_coil/cut/yellow,
 /obj/item/stack/rods{
 	pixel_x = 7
@@ -9784,6 +9778,14 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
 	},
+/obj/item/blackmarket_uplink{
+	pixel_x = -5;
+	pixel_y = 4
+	},
+/obj/item/clothing/mask/whistle{
+	pixel_x = -4;
+	pixel_y = 4
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/office)
 "Uk" = (
@@ -10089,7 +10091,7 @@
 /area/ship/crew/canteen/kitchen)
 "VA" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/effect/spawner/lootdrop/mafia_outfit,
+/obj/effect/spawner/random/clothing/mafia_outfit,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -10626,7 +10628,7 @@
 	},
 /area/ship/maintenance/port)
 "Yj" = (
-/obj/effect/spawner/lootdrop/salvage_manipulator,
+/obj/effect/spawner/random/salvage_manipulator,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -11050,6 +11052,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (2,1,1) = {"
 ws
@@ -11082,6 +11085,7 @@ Yv
 LZ
 qU
 fH
+ws
 ws
 ws
 ws
@@ -11124,6 +11128,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (4,1,1) = {"
 ws
@@ -11157,6 +11162,7 @@ Xm
 zw
 fH
 fH
+ws
 ws
 ws
 ws
@@ -11198,6 +11204,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (6,1,1) = {"
 ws
@@ -11231,6 +11238,7 @@ zw
 zw
 GH
 fH
+ws
 ws
 ws
 ws
@@ -11272,6 +11280,7 @@ fH
 ws
 ws
 ws
+ws
 "}
 (8,1,1) = {"
 ws
@@ -11306,6 +11315,7 @@ vh
 wN
 QH
 LT
+ws
 ws
 ws
 ws
@@ -11346,6 +11356,7 @@ fH
 ws
 ws
 ws
+ws
 "}
 (10,1,1) = {"
 ws
@@ -11381,6 +11392,7 @@ ed
 ed
 EG
 EG
+ws
 ws
 ws
 "}
@@ -11420,6 +11432,7 @@ Xz
 EG
 ws
 ws
+ws
 "}
 (12,1,1) = {"
 ws
@@ -11455,6 +11468,7 @@ ed
 JQ
 rJ
 EG
+ws
 ws
 ws
 "}
@@ -11494,6 +11508,7 @@ ed
 EG
 ws
 ws
+ws
 "}
 (14,1,1) = {"
 ws
@@ -11529,6 +11544,7 @@ On
 cb
 Hi
 Ik
+ws
 ws
 ws
 "}
@@ -11568,6 +11584,7 @@ pn
 Ik
 ws
 ws
+ws
 "}
 (16,1,1) = {"
 ws
@@ -11603,6 +11620,7 @@ lz
 Ak
 ZK
 EG
+ws
 ws
 ws
 "}
@@ -11642,6 +11660,7 @@ ZY
 EG
 EG
 ws
+ws
 "}
 (18,1,1) = {"
 ws
@@ -11678,6 +11697,7 @@ sH
 kx
 ZK
 EG
+ws
 ws
 "}
 (19,1,1) = {"
@@ -11716,6 +11736,7 @@ xk
 xk
 Eb
 ws
+ws
 "}
 (20,1,1) = {"
 df
@@ -11753,6 +11774,7 @@ GV
 fb
 Eb
 Eb
+ws
 "}
 (21,1,1) = {"
 Pf
@@ -11790,6 +11812,7 @@ HW
 Mo
 MW
 Eb
+ws
 "}
 (22,1,1) = {"
 df
@@ -11827,6 +11850,7 @@ Ny
 HN
 CI
 fQ
+Mb
 "}
 (23,1,1) = {"
 Dw
@@ -11864,6 +11888,7 @@ UC
 It
 YX
 mE
+ws
 "}
 (24,1,1) = {"
 ws
@@ -11901,6 +11926,7 @@ zY
 oN
 nB
 Eb
+ws
 "}
 (25,1,1) = {"
 ws
@@ -11938,6 +11964,7 @@ wZ
 SA
 Eb
 mI
+ws
 "}
 (26,1,1) = {"
 ws
@@ -11974,6 +12001,7 @@ Kb
 Eb
 Eb
 mI
+ws
 ws
 "}
 (27,1,1) = {"
@@ -12012,6 +12040,7 @@ mI
 ws
 ws
 ws
+ws
 "}
 (28,1,1) = {"
 ws
@@ -12045,6 +12074,7 @@ jI
 vs
 Au
 To
+ws
 ws
 ws
 ws
@@ -12086,6 +12116,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (30,1,1) = {"
 ws
@@ -12123,6 +12154,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (31,1,1) = {"
 ws
@@ -12152,6 +12184,7 @@ mi
 Pn
 vw
 sy
+ws
 ws
 ws
 ws
@@ -12197,6 +12230,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (33,1,1) = {"
 ws
@@ -12234,6 +12268,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (34,1,1) = {"
 ws
@@ -12262,6 +12297,7 @@ JK
 JK
 JK
 sy
+ws
 ws
 ws
 ws
@@ -12308,6 +12344,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (36,1,1) = {"
 ws
@@ -12336,6 +12373,7 @@ OP
 iJ
 zh
 sy
+ws
 ws
 ws
 ws
@@ -12382,6 +12420,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (38,1,1) = {"
 ws
@@ -12410,6 +12449,7 @@ Qs
 JK
 JK
 sy
+ws
 ws
 ws
 ws
@@ -12456,6 +12496,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (40,1,1) = {"
 ws
@@ -12484,6 +12525,7 @@ AA
 ar
 JK
 pR
+ws
 ws
 ws
 ws
@@ -12530,6 +12572,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (42,1,1) = {"
 ws
@@ -12558,6 +12601,7 @@ yv
 ss
 ft
 xK
+ws
 ws
 ws
 ws
@@ -12604,6 +12648,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (44,1,1) = {"
 ws
@@ -12641,6 +12686,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (45,1,1) = {"
 ws
@@ -12650,7 +12696,7 @@ ws
 ws
 ws
 ws
-Mb
+nC
 zv
 aw
 NW
@@ -12669,6 +12715,7 @@ Sq
 Er
 Nr
 IM
+ws
 ws
 ws
 ws
@@ -12715,6 +12762,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (47,1,1) = {"
 ws
@@ -12743,6 +12791,7 @@ fL
 mw
 fL
 fC
+ws
 ws
 ws
 ws
@@ -12789,6 +12838,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (49,1,1) = {"
 ws
@@ -12817,6 +12867,7 @@ Zb
 Yj
 gi
 fC
+ws
 ws
 ws
 ws
@@ -12863,6 +12914,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (51,1,1) = {"
 ws
@@ -12891,6 +12943,7 @@ RP
 fU
 co
 fC
+ws
 ws
 ws
 ws
@@ -12937,6 +12990,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (53,1,1) = {"
 ws
@@ -12974,6 +13028,7 @@ ws
 ws
 ws
 ws
+ws
 "}
 (54,1,1) = {"
 ws
@@ -13001,6 +13056,7 @@ fC
 tl
 FR
 fC
+ws
 ws
 ws
 ws

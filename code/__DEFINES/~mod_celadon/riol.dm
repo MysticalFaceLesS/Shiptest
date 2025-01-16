@@ -31,3 +31,9 @@
 #define RIOL_MASK_PATH 'mod_celadon/_storge_icons/icons/clothing/onmob_mask_riol.dmi'
 #define RIOL_HEAD_PATH 'mod_celadon/_storge_icons/icons/clothing/onmob_head_riol.dmi'
 #define RIOL_SUIT_PATH 'mod_celadon/_storge_icons/icons/clothing/onmob_suit_riol.dmi'
+
+/// The natural temperature for a body
+#define RIOL_BODYTEMP_NORMAL 313.15
+
+// Делает снифф риолов риольскими
+#define OLFACTION_RIOL /datum/mutation/human/olfaction/riol

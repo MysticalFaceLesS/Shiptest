@@ -16,6 +16,13 @@
 	lace_time = 12 SECONDS
 	greyscale_icon_state = "boots"
 
+	equip_sound = 'sound/items/equip/armor_equip.ogg'
+	equipping_sound = EQUIP_SOUND_SHORT_GENERIC
+	unequipping_sound = UNEQUIP_SOUND_SHORT_GENERIC
+	equip_delay_self = EQUIP_DELAY_BOOTS
+	equip_delay_other = EQUIP_DELAY_BOOTS * 1.5
+	strip_delay = EQUIP_DELAY_BOOTS * 1.5
+
 /obj/item/clothing/shoes/combat/swat //overpowered boots for death squads
 	name = "\improper SWAT boots"
 	desc = "High speed, no drag combat boots."
@@ -67,6 +74,12 @@
 	can_be_tied = FALSE
 	greyscale_icon_state = "boots"
 
+	equipping_sound = EQUIP_SOUND_SHORT_GENERIC
+	unequipping_sound = UNEQUIP_SOUND_SHORT_GENERIC
+	equip_delay_self = EQUIP_DELAY_BOOTS
+	equip_delay_other = EQUIP_DELAY_BOOTS * 1.5
+	strip_delay = EQUIP_DELAY_BOOTS * 1.5
+
 /obj/item/clothing/shoes/jackboots
 	name = "jackboots"
 	desc = "Ankle-high combat boots for combat scenarios or combat situations. All combat, all the time."
@@ -81,6 +94,13 @@
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/shoes
 	can_be_tied = FALSE
 	greyscale_icon_state = "boots"
+
+	equip_sound = 'sound/items/equip/straps_equip.ogg'
+	equipping_sound = EQUIP_SOUND_SHORT_GENERIC
+	unequipping_sound = UNEQUIP_SOUND_SHORT_GENERIC
+	equip_delay_self = EQUIP_DELAY_BOOTS
+	equip_delay_other = EQUIP_DELAY_BOOTS * 1.5
+	strip_delay = EQUIP_DELAY_BOOTS * 1.5
 
 /obj/item/clothing/shoes/jackboots/fast
 	slowdown = -1
@@ -99,6 +119,13 @@
 	lace_time = 8 SECONDS
 	greyscale_icon_state = "boots"
 
+	equip_sound = 'sound/items/equip/straps_equip.ogg'
+	equipping_sound = EQUIP_SOUND_SHORT_GENERIC
+	unequipping_sound = UNEQUIP_SOUND_SHORT_GENERIC
+	equip_delay_self = EQUIP_DELAY_BOOTS
+	equip_delay_other = EQUIP_DELAY_BOOTS * 1.5
+	strip_delay = EQUIP_DELAY_BOOTS * 1.5
+
 /obj/item/clothing/shoes/workboots
 	name = "work boots"
 	desc = "Nanotrasen-issue Engineering lace-up work boots for the especially blue-collar."
@@ -113,6 +140,12 @@
 	lace_time = 8 SECONDS
 	greyscale_icon_state = "boots"
 
+	equipping_sound = EQUIP_SOUND_SHORT_GENERIC
+	unequipping_sound = UNEQUIP_SOUND_SHORT_GENERIC
+	equip_delay_self = EQUIP_DELAY_BOOTS
+	equip_delay_other = EQUIP_DELAY_BOOTS * 1.5
+	strip_delay = EQUIP_DELAY_BOOTS * 1.5
+
 /obj/item/clothing/shoes/winterboots/ice_boots
 	name = "ice hiking boots"
 	desc = "A pair of winter boots with special grips on the bottom, designed to prevent slipping on frozen surfaces."
@@ -125,29 +158,6 @@
 	desc = "Steel-toed mining boots for motility in hazardous environments. Very good at keeping toes uncrushed."
 	icon_state = "explorer"
 	resistance_flags = FIRE_PROOF
-
-/obj/item/clothing/shoes/cult
-	name = "\improper Nar'Sien invoker boots"
-	desc = "A pair of boots worn by the followers of Nar'Sie."
-	icon_state = "cult"
-	item_state = "cult"
-	cold_protection = FEET
-	min_cold_protection_temperature = SHOES_MIN_TEMP_PROTECT
-	heat_protection = FEET
-	max_heat_protection_temperature = SHOES_MAX_TEMP_PROTECT
-	lace_time = 10 SECONDS
-	greyscale_icon_state = "boots"
-
-/obj/item/clothing/shoes/cult/alt
-	name = "cultist boots"
-	icon_state = "cultalt"
-
-/obj/item/clothing/shoes/cult/alt/ghost
-	item_flags = DROPDEL
-
-/obj/item/clothing/shoes/cult/alt/ghost/Initialize()
-	. = ..()
-	ADD_TRAIT(src, TRAIT_NODROP, CULT_TRAIT)
 
 /obj/item/clothing/shoes/laceup
 	name = "laceup shoes"
@@ -173,6 +183,13 @@
 	var/recharging_rate = 60 //default 6 seconds between each dash
 	var/recharging_time = 0 //time until next dash
 	greyscale_icon_state = "boots"
+
+	equip_sound = 'sound/items/equip/armor_equip.ogg'
+	equipping_sound = EQUIP_SOUND_SHORT_GENERIC
+	unequipping_sound = UNEQUIP_SOUND_SHORT_GENERIC
+	equip_delay_self = EQUIP_DELAY_BOOTS
+	equip_delay_other = EQUIP_DELAY_BOOTS * 1.5
+	strip_delay = EQUIP_DELAY_BOOTS * 1.5
 
 /obj/item/clothing/shoes/bhop/ui_action_click(mob/user, action)
 	if(!isliving(user))
@@ -234,12 +251,22 @@
 	can_be_tied = FALSE
 	greyscale_icon_state = "boots"
 
+	equip_sound = 'sound/items/equip/straps_equip.ogg'
+	equipping_sound = EQUIP_SOUND_SHORT_GENERIC
+	unequipping_sound = UNEQUIP_SOUND_SHORT_GENERIC
+	equip_delay_self = EQUIP_DELAY_BOOTS
+	equip_delay_other = EQUIP_DELAY_BOOTS * 1.5
+	strip_delay = EQUIP_DELAY_BOOTS * 1.5
+
 /obj/item/clothing/shoes/cowboy/Initialize()
 	. = ..()
 	if(prob(2))
 		var/mob/living/simple_animal/hostile/retaliate/poison/snake/bootsnake = new/mob/living/simple_animal/hostile/retaliate/poison/snake(src)
 		occupants += bootsnake
 
+/obj/item/clothing/shoes/cowboy/Destroy()
+	QDEL_LIST(occupants)
+	return ..()
 
 /obj/item/clothing/shoes/cowboy/equipped(mob/living/carbon/user, slot)
 	. = ..()

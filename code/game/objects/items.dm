@@ -26,6 +26,14 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 	///Icon file for right inhand overlays
 	var/righthand_file = 'icons/mob/inhands/items_righthand.dmi'
 
+	///If set it will add a world icon using item_state
+	var/world_file
+
+	///Handled by world_icon element
+	var/world_state
+	///Handled by world_icon element
+	var/inventory_state
+
 	///This is a bitfield that defines what variations exist for bodyparts like Digi legs.
 	var/supports_variations = null
 
@@ -76,12 +84,20 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 	var/usesound
 	///Used when yate into a mob
 	var/mob_throw_hit_sound
-	///Sound used when equipping the item into a valid slot
+	///Sound used when an item has been equipped into a valid slot
 	var/equip_sound
 	///Sound uses when picking the item up (into your hands)
 	var/pickup_sound
 	///Sound uses when dropping the item, or when its thrown.
 	var/drop_sound
+	///Sound used when an item is being equipped with equip_delay
+	var/equipping_sound
+	///Sound used when an item is being unequipped with equip_delay
+	var/unequipping_sound
+
+	///flags used for equip_delay
+	var/equip_self_flags = NONE
+
 	///Whether or not we use stealthy audio levels for this item's attack sounds
 	var/stealthy_audio = FALSE
 
@@ -144,6 +160,8 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 	var/strip_delay = 40
 	///How long it takes to resist out of the item (cuffs and such)
 	var/breakouttime = 0
+	///How much power would this item use?
+	var/power_use_amount = POWER_CELL_USE_NORMAL
 
 	/// Used in attackby() to say how something was attacked "[x] has been [z.attack_verb] by [y] with [z]"
 	var/list/attack_verb
@@ -213,9 +231,10 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 
 	var/canMouseDown = FALSE
 
-	//for setting world icons on the go
-	var/inventory_state
-	var/world_state
+		// [CELADON_EDIT] — PRINTED_ITEMS_SELLING_VITO
+	///Is item printed on any lathe. Sets TRUE in autolathe_crafted()
+	var/autolathe_printed = FALSE
+		// [/CELADON_EDIT]
 
 /obj/item/Initialize()
 
@@ -315,6 +334,9 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 
 	updateEmbedding()
 
+	if(world_file)
+		AddElement(/datum/element/world_icon, null, world_file, icon)
+
 	if(GLOB.rpg_loot_items)
 		AddComponent(/datum/component/fantasy)
 
@@ -410,6 +432,14 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 	if(anchored)
 		return
 
+	//check if the item is inside another item's storage
+	if(istype(loc, /obj/item/storage))
+		//if so, can we actually access it?
+		var/datum/component/storage/ourstorage = loc.GetComponent(/datum/component/storage)
+		if(!ourstorage.access_check())
+			SEND_SIGNAL(loc, COMSIG_TRY_STORAGE_HIDE_FROM, user)//you're not supposed to be in here right now, punk!
+			return
+
 	if(resistance_flags & ON_FIRE)
 		var/mob/living/carbon/C = user
 		var/can_handle_hot = FALSE
@@ -459,7 +489,7 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 	if(throwing)
 		throwing.finalize(FALSE)
 	if(loc == user)
-		if(!allow_attack_hand_drop(user) || !user.temporarilyRemoveItemFromInventory(src))
+		if(!allow_attack_hand_drop(user) || !user.temporarilyRemoveItemFromInventory(src, use_unequip_delay = TRUE))
 			return
 
 	remove_outline()
@@ -522,8 +552,8 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 		playsound(src, 'sound/weapons/effects/deflect.ogg', 100)
 		if(!istype(src, /obj/item/shield))
 			COOLDOWN_START(src, block_cooldown, block_cooldown_time)
-		return 1
-	return 0
+		return TRUE
+	return FALSE
 
 /obj/item/proc/talk_into(mob/M, input, channel, spans, datum/language/language, list/message_mods)
 	return ITALICS | REDUCE_RANGE
@@ -964,6 +994,11 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 /obj/item/proc/remove_outline()
 	remove_filter(HOVER_OUTLINE_FILTER)
 
+/// Use the power of an attached component that posesses power handling, will return the signal bitflag.
+/obj/item/proc/item_use_power(use_amount, mob/user, check_only)
+	SHOULD_CALL_PARENT(TRUE)
+	return SEND_SIGNAL(src, COMSIG_ITEM_POWER_USE, use_amount, user, check_only)
+
 /// Called when a mob tries to use the item as a tool.Handles most checks.
 /obj/item/proc/use_tool(atom/target, mob/living/user, delay, amount=0, volume=0, datum/callback/extra_checks)
 	// we have no target, why are we even doing this?
@@ -1186,8 +1221,12 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 
 ///Intended for interactions with guns, like racking
 /obj/item/proc/unique_action(mob/living/user)
-	return
 
+///Called before unique action, if any other associated items should do a unique action or override it.
+/obj/item/proc/pre_unique_action(mob/living/user)
+	if(SEND_SIGNAL(src,COMSIG_CLICK_UNIQUE_ACTION,user) & OVERIDE_UNIQUE_ACTION)
+		return TRUE
+	return FALSE //return true if the proc should end here
 /**
  * Returns null if this object cannot be used to interact with physical writing mediums such as paper.
  * Returns a list of key attributes for this object interacting with paper otherwise.
@@ -1203,6 +1242,18 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
 /// Whether or not this item can be put into a storage item through attackby
 /obj/item/proc/attackby_storage_insert(datum/storage, atom/storage_holder, mob/user)
 	return TRUE
+
+/obj/item/proc/update_weight_class(new_w_class)
+	if(w_class == new_w_class)
+		return FALSE
+
+	var/old_w_class = w_class
+	w_class = new_w_class
+	SEND_SIGNAL(src, COMSIG_ITEM_WEIGHT_CLASS_CHANGED, old_w_class, new_w_class)
+	if(!isnull(loc))
+		SEND_SIGNAL(loc, COMSIG_ATOM_CONTENTS_WEIGHT_CLASS_CHANGED, src, old_w_class, new_w_class)
+	return TRUE
+
 /// How many different types of mats will be counted in a bite?
 #define MAX_MATS_PER_BITE 2
 
@@ -1225,7 +1276,7 @@ GLOBAL_VAR_INIT(embedpocalypse, FALSE) // if true, all items will be able to emb
  */
 /obj/item/proc/on_accidental_consumption(mob/living/carbon/victim, mob/living/carbon/user, obj/item/source_item, discover_after = TRUE)
 	if(get_sharpness() && force >= 5) //if we've got something sharp with a decent force (ie, not plastic)
-		INVOKE_ASYNC(victim, TYPE_PROC_REF(/mob, emote), "scream")
+		INVOKE_ASYNC(victim, TYPE_PROC_REF(/mob, force_scream))
 		victim.visible_message("<span class='warning'>[victim] looks like [victim.p_theyve()] just bit something they shouldn't have!</span>", \
 							"<span class='boldwarning'>OH GOD! Was that a crunch? That didn't feel good at all!!</span>")
 

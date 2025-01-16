@@ -123,7 +123,7 @@
 		if(H.dna.species.special_step_sounds)
 			//[CELADON - EDIT] - CELADON_LANIUS
 			//playsound(T, pick(H.dna.species.special_step_sounds), 50, TRUE, falloff_distance = 1) //[CELADON - EDIT] - ORIGINAL
-			playsound(T, pick(H.dna.species.special_step_sounds), 10, TRUE, falloff_distance = 1) 
+			playsound(T, pick(H.dna.species.special_step_sounds), 10, TRUE, falloff_distance = 1)
 			//[/CELADON - EDIT]
 		else
 			playsound(T, pick(GLOB.barefootstep[T.barefootstep][1]),

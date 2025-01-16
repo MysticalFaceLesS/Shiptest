@@ -1038,7 +1038,7 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/obj/effect/spawner/lootdrop/techstorage/tcomms,
+/obj/effect/spawner/random/techstorage/tcomms,
 /obj/structure/closet/crate,
 /obj/item/stock_parts/subspace/filter,
 /obj/item/stock_parts/subspace/filter,
@@ -1709,8 +1709,8 @@
 /obj/structure/rack,
 /obj/item/ammo_box/magazine/m10mm_ringneck,
 /obj/item/ammo_box/magazine/m10mm_ringneck,
-/obj/item/gun/ballistic/automatic/surplus,
-/obj/item/gun/ballistic/automatic/surplus,
+/obj/item/gun/ballistic/automatic/pistol/ringneck,
+/obj/item/gun/ballistic/automatic/pistol/ringneck,
 /turf/open/floor/pod,
 /area/ship/hallway/central)
 "xW" = (
@@ -2241,8 +2241,8 @@
 	},
 /obj/item/melee/knife/hunting,
 /obj/item/gun/ballistic/shotgun/doublebarrel/beacon,
-/obj/item/ammo_box/a4570,
-/obj/item/ammo_box/a4570,
+/obj/item/storage/box/ammo/a4570,
+/obj/item/storage/box/ammo/a4570,
 /turf/open/floor/carpet/black,
 /area/ship/bridge)
 "FT" = (
@@ -2792,10 +2792,7 @@
 "Oc" = (
 /obj/structure/table/optable,
 /obj/effect/turf_decal/siding/blue,
-/obj/item/storage/backpack/duffelbag/med/surgery{
-	pixel_x = -3;
-	pixel_y = 3
-	},
+/obj/item/storage/case/surgery,
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "Oe" = (
@@ -2936,7 +2933,7 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating,
 /area/ship/maintenance/starboard)
 "Qj" = (
@@ -3295,7 +3292,9 @@
 /turf/open/floor/engine,
 /area/ship/engineering/atmospherics)
 "VF" = (
-/obj/machinery/vending/clothing,
+/obj/machinery/vending/clothing{
+	all_items_free = 1
+	},
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 1
 	},

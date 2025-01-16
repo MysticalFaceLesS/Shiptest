@@ -121,8 +121,8 @@
 		/obj/structure/spawner/ice_moon/demonic_portal/medium_threat = 50,
 		/obj/structure/spawner/ice_moon/demonic_portal/high_threat = 13,
 		// [/CELADON-ADD]
-		/obj/effect/spawner/lootdrop/anomaly/ice = 12,
-		/obj/effect/spawner/lootdrop/anomaly/big = 1,
+		/obj/effect/spawner/random/anomaly/ice = 12,
+		/obj/effect/spawner/random/anomaly/big = 1,
 		/obj/structure/spawner/burrow/ice_planet = 80,
 		/obj/structure/vein/ice = 25,
 		/obj/effect/spawner/minefield = 2,
@@ -242,8 +242,8 @@
 		/obj/structure/spawner/ice_moon/demonic_portal/high_threat = 40,
 		/obj/structure/spawner/ice_moon/demonic_portal/extreme_threat = 1,
 		// [/CELADON-ADD]
-		/obj/effect/spawner/lootdrop/anomaly/ice = 100,
-		/obj/effect/spawner/lootdrop/anomaly/big = 1,
+		/obj/effect/spawner/random/anomaly/ice = 100,
+		/obj/effect/spawner/random/anomaly/big = 1,
 		/obj/structure/spawner/burrow/ice_planet/hard = 600,
 		/obj/structure/vein/ice = 300,
 		/obj/structure/vein/ice/classtwo = 500,
@@ -310,7 +310,7 @@
 		// [/CELADON-ADD]
 		/obj/structure/spawner/burrow/ice_planet = 60,
 		/obj/structure/spawner/burrow/ice_planet = 40,
-		/obj/effect/spawner/lootdrop/anomaly/ice/cave = 10,
+		/obj/effect/spawner/random/anomaly/ice/cave = 10,
 		/obj/structure/vein/ice = 30,
 		/obj/structure/vein/ice/classtwo = 50,
 		/obj/structure/vein/ice/classthree = 6,

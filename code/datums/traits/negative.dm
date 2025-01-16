@@ -490,7 +490,7 @@
 
 	switch(rand(1,3))
 		if(1)
-			quirk_holder.Jitter(10)
+			quirk_holder.set_jitter(10)
 			msg += "causing you to start fidgeting!"
 		if(2)
 			quirk_holder.stuttering = max(3, quirk_holder.stuttering)
@@ -641,6 +641,25 @@
 			SEND_SIGNAL(quirk_holder, COMSIG_CLEAR_MOOD_EVENT, "wrong_cigs")
 			return
 		SEND_SIGNAL(quirk_holder, COMSIG_ADD_MOOD_EVENT, "wrong_cigs", /datum/mood_event/wrong_brand)
+
+/datum/quirk/congenital_analgesia
+	name = "Congenital Analgesia"
+	desc = "Due to a rare condition, you have never felt pain. Physical pain, at least. That breakup still hurt."
+	value = -1
+	mob_traits = list(TRAIT_ANALGESIA)
+	gain_text = "<span class='danger'>You've never really felt pain.</span>"
+	lose_text = "<span class='notice'>...Oh god, you're sore.</span>"
+	medical_record_text = "Patient is unable to process pain"
+
+/datum/quirk/congenital_analgesia/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.set_screwyhud(SCREWYHUD_HEALTHY)
+
+/datum/quirk/congenital_analgesia/remove()
+	if(quirk_holder)
+		var/mob/living/carbon/human/H = quirk_holder
+		H.set_screwyhud(SCREWYHUD_NONE)
+
 
 /datum/quirk/unstable
 	name = "Unstable"

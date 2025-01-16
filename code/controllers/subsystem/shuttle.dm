@@ -34,7 +34,6 @@ SUBSYSTEM_DEF(shuttle)
 	var/ordernum = 1
 	/// List of all singleton supply pack instances
 	var/list/supply_packs = list()
-
 	/// Stops ALL shuttles from being able to move
 	var/lockdown = FALSE
 
@@ -91,6 +90,8 @@ SUBSYSTEM_DEF(shuttle)
 
 	jump_timer = addtimer(VARSET_CALLBACK(src, jump_mode, BS_JUMP_COMPLETED), jump_completion_time, TIMER_STOPPABLE)
 	priority_announce("Jump initiated. ETA: [jump_completion_time / (1 MINUTES)] minutes.", null, null, "Priority")
+
+	INVOKE_ASYNC(SSticker, TYPE_PROC_REF(/datum/controller/subsystem/ticker,poll_hearts))
 
 /datum/controller/subsystem/shuttle/proc/request_transit_dock(obj/docking_port/mobile/M)
 	if(!istype(M))
@@ -151,7 +152,7 @@ SUBSYSTEM_DEF(shuttle)
 
 	mapzone.parallax_movedir = travel_dir
 
-	var/area/shuttle/transit/transit_area = new()
+	var/area/hyperspace/transit_area = new()
 
 	vlevel.fill_in(transit_path, transit_area)
 
@@ -198,6 +199,7 @@ SUBSYSTEM_DEF(shuttle)
 		supply_packs = SSshuttle.supply_packs
 
 	ordernum = SSshuttle.ordernum
+
 	lockdown = SSshuttle.lockdown
 
 /datum/controller/subsystem/shuttle/proc/is_in_shuttle_bounds(atom/A)
@@ -491,7 +493,7 @@ SUBSYSTEM_DEF(shuttle)
 					user.forceMove(new_ship.get_jump_to_turf())
 					message_admins("[key_name_admin(user)] loaded [new_ship] ([S]) with the shuttle manipulator.")
 					log_admin("[key_name(user)] loaded [new_ship] ([S]) with the shuttle manipulator.</span>")
-					SSblackbox.record_feedback("text", "shuttle_manipulator", 1, "[S]")
+					SSblackbox.record_feedback("tally", "shuttle_manipulator_spawned", 1, "[S]")
 
 		if("edit_template")
 			if(S)

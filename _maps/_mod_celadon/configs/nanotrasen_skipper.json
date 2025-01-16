@@ -4,7 +4,7 @@
 	"map_short_name": "Skipper",
 	"description": "Пример одного из крейсеров Нанотрасена 'стандартного образца'. По меркам Фронтира судно класса 'Skipper' хорошо оснащено: достаточно места для инженерного оборудования, хорошо оборудованные места для экипажа и приличный запас оборонительного вооружения. Примечательно, что на 'Skipper' больше, чем в среднем, командный отсек, а офицеры на 'Skipper', как правило, лучше оснащены, чем их коллеги. Хотя должность на борту 'Osprey' не так престижна, как на 'Нанотрайзене', мало кто из капитанов откажется от командования 'Skipper'.",
 	"map_path": "_maps/_mod_celadon/shuttles/nanotrasen/nanotrasen_skipper.dmm",
-	"enabled": true,
+	"enabled": false,
 	"limit": 1,
 	"starting_funds": 4500,
 	"prefix": "NTSV",
@@ -31,12 +31,25 @@
 			"officer": true,
 			"slots": 1
 		},
-		"Internal Affairs Agent": {
-			"outfit": "/datum/outfit/job/nanotrasen/lawyer/corporaterepresentative",
+		"Supply Director": {
+			"outfit": "/datum/outfit/job/nanotrasen/quartermaster",
+			"officer": true,
+			"slots": 1
+		},
+		"Security Director": {
+			"outfit": "/datum/outfit/job/nanotrasen/hos",
+			"officer": true,
 			"slots" : 1
 		},
-		"Medical Doctor": 1,
-		"Engineer": {
+		"Security Officer": {
+			"outfit": "/datum/outfit/job/nanotrasen/security",
+			"slots": 2
+		},
+		"Medical Specialist": {
+			"outfit": "/datum/outfit/job/nanotrasen/doctor",
+			"slots": 1
+		},
+		"Ship's Engineer": {
 			"outfit": "/datum/outfit/job/nanotrasen/engineer",
 			"slots": 1
 		},
@@ -44,22 +57,21 @@
 			"outfit": "/datum/outfit/job/nanotrasen/atmos",
 			"slots": 1
 		},
-		"Shaft Miner": 2,
-		"Cargo Technician": {
-		"outfit": "/datum/outfit/job/nanotrasen/cargo_tech",
-		"slots": 1
-		},
-		"Security Officer": {
-			"outfit": "/datum/outfit/job/nanotrasen/security",
-			"slots": 1
+		"Shaft Miner": {
+			"outfit": "/datum/outfit/job/nanotrasen/miner",
+			"slots": 2
 		},
 		"Cook": {
 			"outfit": "/datum/outfit/job/cook",
 			"slots": 1
 		},
+		"Bartender": {
+			"outfit": "/datum/outfit/job/bartender",
+			"slots": 1
+		},
 		"Assistant": {
-			"outfit": "/datum/outfit/job/assistant",
-			"slots": 3
+			"outfit": "/datum/outfit/job/nanotrasen/assistant",
+			"slots": 2
 		}
 	}
 }

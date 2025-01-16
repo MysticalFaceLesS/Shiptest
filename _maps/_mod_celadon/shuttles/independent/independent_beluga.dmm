@@ -1087,10 +1087,11 @@
 "kD" = (
 /obj/structure/table,
 /obj/machinery/vending/boozeomat/all_access{
-	pixel_y = -32
+	pixel_y = -32;
+	all_items_free = 1
 	},
 /obj/item/storage/bag/tray,
-/obj/effect/spawner/lootdrop/ration{
+/obj/effect/spawner/random/food_or_drink/ration{
 	pixel_x = 6;
 	pixel_y = 6
 	},
@@ -4962,7 +4963,6 @@
 /obj/item/storage/belt/security/webbing/inteq,
 /obj/item/clothing/glasses/hud/security/sunglasses/inteq,
 /obj/item/clothing/glasses/hud/security/sunglasses/eyepatch,
-/obj/item/clothing/mask/gas/sechailer/balaclava/inteq,
 /obj/item/clothing/under/syndicate/inteq/skirt,
 /obj/item/clothing/under/syndicate/inteq,
 /obj/item/clothing/head/beret/sec/inteq,
@@ -4972,6 +4972,7 @@
 	pixel_y = -3
 	},
 /obj/effect/turf_decal/trimline/opaque/yellow/line,
+/obj/item/clothing/mask/balaclava/inteq,
 /turf/open/floor/plasteel/dark,
 /area/ship/security)
 "WS" = (

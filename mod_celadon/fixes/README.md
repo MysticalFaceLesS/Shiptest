@@ -79,6 +79,17 @@ ID мода: CELADON_FIXES
 
 - EDIT: `code/game/objects/items/devices/taperecorder.dm` - Изменение рекордера, дабы тот более не мог переводить другие языки
 
+- EDIT: `code\modules\hydroponics\gene_modder.dm` - Добавление удаления мусора а не данных с диска
+
+- EDIT: `code\modules\hydroponics\grown\replicapod.dm` - Исправление отобрежения ДНК на сканере 
+
+- EDIT: `code\modules\hydroponics\grown\replicapod.dm` - Исправлено появление людей из капусты
+
+- EDIT: `code/modules/mob/living/carbon/human/human_movement.dm` - Учитывается влияние обуви на гравитацию
+
+- ADD: `code/modules/mob/living/life.dm` - Добавление magboots_handle_gravity
+
+
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -121,7 +132,7 @@ ID мода: CELADON_FIXES
 ### Авторы:
 
 
-RalseiDreemuurr, Mirag1993 , Корольный крыс, MrCat15352, MysticalFaceLesS, Burbonchik, MrRomainzZ
+RalseiDreemuurr, Mirag1993 , Корольный крыс, MrCat15352, MysticalFaceLesS, Burbonchik, MrRomainzZ, Molniz, Redwizz
 
 <!--
   Здесь находится твой никнейм

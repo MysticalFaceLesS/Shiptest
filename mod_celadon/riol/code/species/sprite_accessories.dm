@@ -1,8 +1,8 @@
 ////////////////////////////////////////////
-///////////		MARKINGS		////////////
+/////////// MARK:	MARKINGS
 ////////////////////////////////////////////
 
-// CHEST MARKINGS
+// MARK: CHEST MARKINGS
 
 /datum/sprite_accessory/riol_chest_markings
 	icon = 'mod_celadon/_storge_icons/icons/riol/riol_markings.dmi'
@@ -28,7 +28,7 @@
 	icon_state = "bellycrest"
 	gender_specific = TRUE
 
-// BODY MARKINGS
+// MARK: BODY MARKINGS
 
 /datum/sprite_accessory/riol_body_markings
 	icon = 'mod_celadon/_storge_icons/icons/riol/riol_markings.dmi'
@@ -65,7 +65,7 @@
 	icon_state = "altpointsfadebelly"
 	gender_specific = TRUE
 
-// HALF BODY
+// MARK: HALF BODY
 
 /datum/sprite_accessory/riol_body_markings/alt_points_riol
 	name = "Riol Points Alt"
@@ -90,7 +90,7 @@
 	icon_state = "altpointsfadebelly-alt"
 	gender_specific = TRUE
 
-// BODY (DIGI)
+// MARK: BODY (DIGI)
 
 /datum/sprite_accessory/riol_body_markings/points_fade_riol
 	name = "Riol Points (digitigrade)"
@@ -115,7 +115,7 @@
 	icon_state = "altpointsfadebellydigi"
 	gender_specific = TRUE
 
-// NOSE MARKINGS
+// MARK: NOSE MARKINGS
 
 /datum/sprite_accessory/riol_nose_markings
 	icon = 'mod_celadon/_storge_icons/icons/riol/riol_markings.dmi'
@@ -137,7 +137,7 @@
 	icon_state = "nose_alt"
 	secondary_color = FALSE
 
-// EARS MARKINGS
+// MARK: EARS MARKINGS
 
 /datum/sprite_accessory/riol_ears_markings
 	icon = 'mod_celadon/_storge_icons/icons/riol/riol_markings.dmi'
@@ -152,7 +152,7 @@
 	name = "Earfluff"
 	icon_state = "earfluff"
 
-// HEAD MARKINGS
+// MARK: HEAD MARKINGS
 
 /datum/sprite_accessory/riol_head_markings
 	icon = 'mod_celadon/_storge_icons/icons/riol/riol_markings.dmi'
@@ -197,7 +197,8 @@
 	name = "Riol Points Head 2"
 	icon_state = "points_sharp"
 
-// TAIL MARKINGS	- У нас нету маркингов хвостов. Надо подумать что делать с этим
+// MARK: TAIL MARKINGS
+//	- У нас нету маркингов хвостов. Надо подумать что делать с этим
 
 /datum/sprite_accessory/riol_tail_markings
 	icon = 'mod_celadon/_storge_icons/icons/riol/riol_tail_markings.dmi'
@@ -217,7 +218,7 @@
 	color_src = "riol_tail_markings_color"
 	var/tails_allowed = list()
 	// body_zone = BODY_ZONE_CHEST
-	// secondary_color = TRUE
+	//secondary_color = TRUE
 
 /datum/sprite_accessory/riol_tail_markings/none
 	name = "None"
@@ -271,7 +272,7 @@
 ///////////		NO MARKINGS		////////////
 ////////////////////////////////////////////
 
-// TAIL
+// MARK: TAIL
 
 /datum/sprite_accessory/tails/riol
 	icon = 'mod_celadon/_storge_icons/icons/riol/riol_tail.dmi'
@@ -315,7 +316,7 @@
 	name = "Straight bushy"
 	icon_state = "straightbushy"
 
-// FACIAL HAIRS
+// MARK: FACIAL HAIRS
 
 /datum/sprite_accessory/riol_facial_hairs
 	icon = 'mod_celadon/_storge_icons/icons/riol/riol_facial_hairs.dmi'
@@ -379,7 +380,7 @@
 	name = "Riol Earfluff"
 	icon_state = "facial_hair_earfluff"
 
-// HAIRS
+// MARK: HAIRS
 
 /datum/sprite_accessory/riol_hairs
 	icon = 'mod_celadon/_storge_icons/icons/riol/riol_hairs.dmi'
@@ -489,7 +490,37 @@
 	name = "Clean cut"
 	icon_state = "hairs_clean_cut"
 
-// EARS
+/datum/sprite_accessory/riol_hairs/bedheadlong
+	name = "Long Bedhead"
+	icon = 'mod_celadon/_storge_icons/icons/qol/human_face.dmi'
+	icon_state = "hair_long_bedhead"
+
+/datum/sprite_accessory/riol_hairs/longemo
+	name = "Long Emo"
+	icon = 'mod_celadon/_storge_icons/icons/qol/human_face.dmi'
+	icon_state = "hair_longemo"
+
+/datum/sprite_accessory/riol_hairs/highponytail
+	name = "Ponytail (High)"
+	icon = 'mod_celadon/_storge_icons/icons/qol/human_face.dmi'
+	icon_state = "hair_highponytail"
+
+/datum/sprite_accessory/riol_hairs/longponytail
+	name = "Ponytail (Long)"
+	icon = 'mod_celadon/_storge_icons/icons/qol/human_face.dmi'
+	icon_state = "hair_longstraightponytail"
+
+/datum/sprite_accessory/riol_hairs/long_over_eye
+	name = "Long Over Eye"
+	icon = 'mod_celadon/_storge_icons/icons/qol/human_face.dmi'
+	icon_state = "hair_longovereye"
+
+/datum/sprite_accessory/riol_hairs/modern
+	name = "Modern"
+	icon = 'mod_celadon/_storge_icons/icons/qol/human_face.dmi'
+	icon_state = "hair_modern"
+
+// MARK: EARS
 
 /datum/sprite_accessory/riol_ears
 	icon = 'mod_celadon/_storge_icons/icons/riol/riol_ears.dmi'
@@ -504,7 +535,7 @@
 	name = "Plain Alt"
 	icon_state = "plain2"
 
-// LEGS
+// MARK: LEGS
 
 /datum/sprite_accessory/riol_legs 	//legs are a special case, they aren't actually sprite_accessories but are updated with them.
 	icon = null					//These datums exist for selecting legs on preference, and little else

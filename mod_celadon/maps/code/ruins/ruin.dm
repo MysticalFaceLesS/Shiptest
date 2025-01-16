@@ -125,6 +125,12 @@
 	name = "Raided Cargo Outpost"
 	description = "A cargo outpost that got raided by some space pirates"
 
+/datum/map_template/ruin/icemoon/icemoon_solfed
+	name = "Solar Federation Prison"
+	id = "solfed_prison"
+	suffix = "icemoon_underground_solfed_prison.dmm"
+	description = "The prison is a temporary detention outpost for criminals awaiting sentencing or transfer to the main prison."
+
 //							///
 //		Jungle ruin			///
 //							///
@@ -232,9 +238,24 @@
 	description = "A group of pirates on a small ship in the jungle."
 	suffix = "jungle_pirate.dmm"
 
+/datum/map_template/ruin/jungle/vamplab
+	name = "Vampire laboratory"
+	id = "vamp-lab"
+	description = "A Laboratory for the development of the drug 'Vita-Null+X', which will help cure vampirism, or not.."
+	suffix = "jungle_vamplab.dmm"
+	allow_duplicates = FALSE
+	cost = 10
+
 //							///
 //		Lavaland ruin		///
 //							///
+
+/datum/map_template/ruin/lavaland/bubble_outpost
+	name = "Distress Outpost"
+	id = "bubble-outpost"
+	description = "This mining outpost started transfering distress signal just a moment ago."
+	suffix = "lavaland_surface_bubbleOutpost.dmm"
+
 /datum/map_template/ruin/lavaland/biodome/winter
 	name = "Solarian Winter Biodome"
 	id = "biodome-winter"
@@ -357,6 +378,14 @@
 	description = "A Nanotrasen genetic research facility, abandoned and ripe for looting. Whats that goo over there?"
 	suffix = "lavaland_surface_codelab.dmm"
 
+/datum/map_template/ruin/lavaland/falling_heron
+	name = "Crashed Heron"
+	id = "crashed_heron"
+	description = "A crashed nanotrasen ship Heron-class. It would seem that it's crew died a while ago."
+	suffix = "lavaland_crashed_heron.dmm"
+	cost = 5
+	allow_duplicates = FALSE
+
 //							///
 //		Rockplanet ruin		///
 //							///
@@ -396,6 +425,11 @@
 	description = "A mining operation gone wrong."
 	suffix = "rockplanet_miningexpedition.dmm"
 
+/datum/map_template/ruin/rockplanet/mining_base
+	name = "N+S Mining Installation"
+	description = "A N+S mining installation recently fallen prey to a band of Ramzi pirates."
+	id = "rockplanet_mining_base"
+	suffix = "rockplanet_mining_installation.dmm"
 
 /datum/map_template/ruin/rockplanet/boxsci
 	name = "Abandoned science wing"
@@ -618,6 +652,12 @@
 	id = "crash_abductor_ship"
 	suffix = "wasteplanet_ruined_abductor_ship.dmm"
 
+/datum/map_template/ruin/wasteplanet/abondoned_containment
+	name = "Abandoned containment area"
+	description = "A containment zone that contains an unknown creature called 'Claws'. For some unknown reason, there is a crashed ship called 'Dareсt' near the containment zone."
+	id = "claw_waste"
+	suffix = "wasteplanet_claw_ruin.dmm"
+
 //							///
 //		Whitesand ruin		///
 //							///
@@ -683,6 +723,13 @@
 	id = "ws-drugstore"
 	description = "A store that once sold a variety of items and equipment."
 	suffix = "whitesands_surface_camp_drugstore.dmm"
+
+/datum/map_template/ruin/whitesands/e11_manufactory
+	name = "E-11 Manufacturing Plant"
+	id = "ws-e11manufactory"
+	description = "An old Eoehoma Firearms manufacturing plant dedicated to assembly of the beloved-by-many E-11 rifle."
+	suffix = "whitesands_surface_e11_manufactory.dmm"
+	ruin_tags = list(RUIN_TAG_MEDIUM_COMBAT, RUIN_TAG_MEDIUM_LOOT, RUIN_TAG_HAZARDOUS)
 
 //							///
 //		Plasma	 ruin		///

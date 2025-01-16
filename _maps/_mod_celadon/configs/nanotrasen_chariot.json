@@ -1,0 +1,56 @@
+{
+	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
+	"map_name": "Chariot-class Assault Vessel",
+	"map_short_name": "Chariot",
+	"description": "NTBSV ''Chariot'' - это боевое судно Нанотрейзен, которое сделано в ответ на боевой корабль синдиката ''Krait''. На борту имеется свой десантный корабль, оборудование для работы с генетическим кодом живых существ и искусственный интеллект. Боевое инновационное судно ''Chariot'' предназначен для долгих перелётов. Это позволяет множество особенностей: продвинутая система жизнеобеспечения, искусственный интеллект, который способен управлять кораблем, свой бар и небольшая кухня. Штурмовой отряд оснащен как лазерным вооружением, так и баллистическим. Корабль оснащен камерой содержания заключённых. Предназначен для относительно большого количества экипажа.",
+	"map_path": "_maps/_mod_celadon/shuttles/nanotrasen/nanotrasen_chariot.dmm",
+	"enabled": false,
+	"limit": 1,
+	"starting_funds": 2000,
+	"prefix": "NTBSV",
+	"faction": "/datum/faction/nt",
+	"tags": [
+		"Combat",
+		"Riot",
+		"Genetics",
+		"Subshuttle"
+	],
+	"namelists": [
+		"NANOTRASEN",
+		"WEAPONS"
+	],
+	"job_slots": {
+		"LP Lieutenant": {
+			"outfit": "/datum/outfit/job/nanotrasen/captain/lp",
+			"officer": true,
+			"slots": 1
+		},
+		"Research Head": {
+			"outfit": "/datum/outfit/job/nanotrasen/rd",
+			"officer": true,
+			"slots": 1
+		},
+		"LP Chief Engineering Specialist": {
+			"outfit": "/datum/outfit/job/nanotrasen/engineer/lp",
+			"officer": true,
+			"slots": 1
+		},
+		"LP Security Operative": {
+			"outfit": "/datum/outfit/job/nanotrasen/security/lp",
+			"slots": 3
+		},
+		"LP Medical Specialist": {
+			"outfit": "/datum/outfit/job/nanotrasen/doctor/lp",
+			"slots": 1
+		},
+		"Ship Scientist": {
+			"outfit": "/datum/outfit/job/nanotrasen/scientist",
+			"slots": 1
+		},
+		"Ship Engineer": {
+			"outfit": "/datum/outfit/job/nanotrasen/engineer",
+			"slots": 1
+		}
+
+	}
+}

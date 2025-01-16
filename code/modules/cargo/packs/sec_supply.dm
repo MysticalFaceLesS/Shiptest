@@ -5,29 +5,21 @@
 /*
 		Standard supplies
 */
-
-/datum/supply_pack/sec_supply/chemimp
-	name = "Chemical Implants Crate"
-	desc = "Contains five remote chemical implants."
-	cost = 1000
-	contains = list(/obj/item/storage/box/chemimp)
-	crate_name = "chemical implant crate"
-
-/datum/supply_pack/sec_supply/trackingimp
-	name = "Tracking Implants Crate"
-	desc = "Contains four tracking implants."
-	cost = 2000
-	contains = list(/obj/item/storage/box/trackimp)
-	crate_name = "tracking implant crate"
+/datum/supply_pack/sec_supply/holster
+	name = "Shoulder Holster Crate"
+	desc = "Contains a shoulder holster, capable of holding a single pistol or revolver and your ammo."
+	cost = 600
+	contains = list(/obj/item/clothing/accessory/holster)
+	crate_name = "holster crate"
 
 /datum/supply_pack/sec_supply/securitybarriers
 	name = "Security Barrier Grenades"
-	desc = "Stem the tide with four Security Barrier grenades."
+	desc = "Halt the opposition with four Security Barrier grenades."
 	contains = list(/obj/item/grenade/barrier,
 					/obj/item/grenade/barrier,
 					/obj/item/grenade/barrier,
 					/obj/item/grenade/barrier)
-	cost = 2000
+	cost = 500
 	crate_name = "security barriers crate"
 
 /datum/supply_pack/sec_supply/empty_sandbags
@@ -37,25 +29,26 @@
 	cost = 150
 	crate_name = "sandbag crate"
 
-/datum/supply_pack/sec_supply/wall_flash
-	name = "Wall-Mounted Flash Crate"
-	desc = "Contains four wall-mounted flashes."
-	cost = 3000
-	contains = list(/obj/item/storage/box/wall_flash,
-					/obj/item/storage/box/wall_flash,
-					/obj/item/storage/box/wall_flash,
-					/obj/item/storage/box/wall_flash)
-	crate_name = "wall-mounted flash crate"
+/datum/supply_pack/sec_supply/flashbangs
+	name = "Flashbangs Crate"
+	desc = "Contains seven flashbangs for use in door breaching and riot control."
+	cost = 750
+	contains = list(/obj/item/storage/box/flashbangs)
+	crate_name = "flashbangs crate"
 
-/datum/supply_pack/sec_supply/supplies
-	name = "Security Supplies Crate"
-	desc = "Contains seven flashbangs, seven teargas grenades, six flashes, and seven handcuffs."
-	cost = 5000
-	contains = list(/obj/item/storage/box/flashbangs,
-					/obj/item/storage/box/teargas,
-					/obj/item/storage/box/flashes,
-					/obj/item/storage/box/handcuffs)
-	crate_name = "security supply crate"
+/datum/supply_pack/sec_supply/teargas
+	name = "Teargas Grenades Crate"
+	desc = "Contains seven teargas grenades for use in crowd dispersion and riot control."
+	cost = 750
+	contains = list(/obj/item/storage/box/teargas)
+	crate_name = "teargas grenades crate"
+
+/datum/supply_pack/sec_supply/camera_console
+	name = "Camera Console Crate"
+	desc = "Contains a camera console circuit board, for a comprehensive surveillance system and peace of mind."
+	cost = 500
+	contains = list(/obj/item/circuitboard/computer/security)
+	crate_name = "camera console crate"
 
 /*
 		Misc. weapons / protection
@@ -77,34 +70,54 @@
 					/obj/item/melee/knife/survival)
 	crate_name = "combat knife crate"
 
-/*
 /datum/supply_pack/sec_supply/machete
 	name = "Stampted Steel Machete Crate"
 	desc = "Contains five mass produced machetes. A perfect choice for crews on a budget."
 	cost = 500
 	contains = list(/obj/item/melee/sword/mass,
-					/obj/item/melee/sword/mass,
-					/obj/item/melee/sword/mass,
-					/obj/item/melee/sword/mass,
 					/obj/item/melee/sword/mass)
 	crate_name = "combat knife crate"
-*/
 
-/datum/supply_pack/sec_supply/fire
-	name = "Incendiary Weapons Crate"
-	desc = "Burn, baby burn. Contains three incendiary grenades and three prebuilt flamethrowers."
-	cost = 5000
-	contains = list(
-		/obj/item/flamethrower/full,
-		/obj/item/flamethrower/full,
-		/obj/item/flamethrower/full,
-		/obj/item/grenade/chem_grenade/incendiary,
-		/obj/item/grenade/chem_grenade/incendiary,
-		/obj/item/grenade/chem_grenade/incendiary,
-	)
-	crate_name = "incendiary weapons crate"
+/datum/supply_pack/sec_supply/flamethrower
+	name = "Flamethrower Crate"
+	desc = "Contains one flamethrower. Point the nozzle away from anything important."
+	cost = 1250
+	contains = list(/obj/item/flamethrower/full)
+	crate_name = "flamethrower crate"
+	crate_type = /obj/structure/closet/crate/secure/weapon
+
+	faction = /datum/faction/syndicate/ngr
+	faction_discount = 20
+
+/datum/supply_pack/sec_supply/incendiary_grenade
+	name = "Incendiary Grenade Crate"
+	desc = "Contains one incendiary grenade. Better not let it go off in your hands."
+	cost = 750
+	contains = list(/obj/item/grenade/chem_grenade/incendiary)
+	crate_name = "incendiary grenade crate"
 	crate_type = /obj/structure/closet/crate/secure/plasma
-	faction = FACTION_NGR
+	faction = /datum/faction/syndicate/ngr
+	faction_discount = 20
+
+/datum/supply_pack/sec_supply/halberd
+	name = "Energy Halberd Crate"
+	desc = "Contains one Solarian Energy Halberd, for issue to your local Sonnensoldner battalion."
+	cost = 1500
+	contains = list(/obj/item/energyhalberd)
+	crate_name = "energy halberd crate"
+	faction = /datum/faction/solgov
+	faction_discount = 0
+	faction_locked = TRUE
+
+/datum/supply_pack/sec_supply/pepper_spray
+	name = "Pepper Spray Crate"
+	desc = "Contains four pepper spray cans, for self defense on a budget."
+	cost = 250
+	contains = list(/obj/item/reagent_containers/spray/pepper,
+					/obj/item/reagent_containers/spray/pepper,
+					/obj/item/reagent_containers/spray/pepper,
+					/obj/item/reagent_containers/spray/pepper)
+	crate_name = "pepper spray crate"
 
 /*
 		Stamina / PVP weapons (intentionally overpriced due to odd balance position of stamina weapons)
@@ -113,48 +126,38 @@
 /datum/supply_pack/sec_supply/stingpack
 	name = "Stingbang Grenade Pack"
 	desc = "Contains five \"stingbang\" grenades, perfect for stopping riots and playing morally unthinkable pranks."
-	cost = 7500
+	cost = 1500
 	contains = list(/obj/item/storage/box/stingbangs)
 	crate_name = "stingbang grenade pack crate"
 
-/datum/supply_pack/sec_supply/syringegun
-	name = "Syringe Gun Crate"
-	desc = "Contains a single syringe gun."
-	cost = 8000
-	contains = list(/obj/item/gun/syringe)
-	crate_name = "syringe gun crate"
-
 /datum/supply_pack/sec_supply/baton
-	name = "Stun Batons Crate"
-	desc = "Arm the Civil Protection Forces with three stun batons. Batteries included."
-	cost = 9000
-	contains = list(/obj/item/melee/baton/loaded,
-					/obj/item/melee/baton/loaded,
-					/obj/item/melee/baton/loaded)
+	name = "Stun Baton Crate"
+	desc = "Arm your vessel security with a stun baton. Batteries included."
+	cost = 2500
+	contains = list(/obj/item/melee/baton/loaded)
 	crate_name = "stun baton crate"
 
-/datum/supply_pack/sec_supply/disabler
-	name = "Disabler Crate"
-	desc = "Three stamina-draining disabler weapons."
-	cost = 9000
-	contains = list(/obj/item/gun/energy/disabler,
-					/obj/item/gun/energy/disabler,
-					/obj/item/gun/energy/disabler)
-	crate_name = "disabler crate"
+/datum/supply_pack/sec_supply/claymore
+	name = "C-10 Claymore Crate"
+	desc = "Four motion-activated directional mines, perfect for ambushing enemy infantry. Still debatably legal to sell!"
+	cost = 3000
+	contains = list(/obj/item/paper/fluff/claymore,
+					/obj/item/mine/directional/claymore,
+					/obj/item/mine/directional/claymore,
+					/obj/item/mine/directional/claymore,
+					/obj/item/mine/directional/claymore)
+	crate_name = "C-10 Claymore crate"
 
-/datum/supply_pack/sec_supply/dragnet
-	name = "DRAGnet Crate"
-	desc = "Contains three \"Dynamic Rapid-Apprehension of the Guilty\" netting devices, a recent breakthrough in law enforcement prisoner management technology."
-	cost = 10000
-	contains = list(/obj/item/gun/energy/e_gun/dragnet,
-					/obj/item/gun/energy/e_gun/dragnet,
-					/obj/item/gun/energy/e_gun/dragnet)
-	crate_name = "\improper DRAGnet crate"
-
-/datum/supply_pack/sec_supply/taser
-	name = "Hybrid Taser Crate"
-	desc = "Two disabler-taser hybrid weapons."
-	cost = 12000
-	contains = list(/obj/item/gun/energy/e_gun/advtaser,
-					/obj/item/gun/energy/e_gun/advtaser)
-	crate_name = "hybrid taser crate"
+/obj/item/paper/fluff/claymore
+	name = "PRODUCT USAGE GUIDE"
+	desc = "A dusty memo stamped with the Scarborough Arms logo."
+	default_raw_text = "<b>ASSEMBLY:</b><br><br>\
+	-Deploy mounting legs and emplace device. Front should be placed in direction of enemy egress, no more then three meters from intended target area.<br><br> \
+	-<b>INFORM ALLIES OF PLACEMENT LOCATION.</b><br><br> \
+	-Wait for arming sequence to complete.<br><br> \
+	-Enjoy hands-free area denial, courtesy of Scarborough Arms.<br><br><br> \
+	<b>DISASSEMBLY & STORAGE:</b><br><br>\
+	-Insert screwdriver into arming pin access and turn 180 degrees. There will be considerable resistance. <b>DO NOT Step onto or in front of device.</b><br><br> \
+	-When pressure releases, reach below device and lift via underside in one clean motion. Mounting legs will automatically retract. <br><br> \
+	-The device is now safe to handle. <br><br> \
+	-Safely stow device in secure, moisture-free location, away from fire and blunt force. "

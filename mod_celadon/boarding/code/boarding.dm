@@ -26,7 +26,7 @@
 	req_components = list(/obj/item/stock_parts/capacitor = 2, /obj/item/stack/ore/bluespace_crystal = 5)
 
 /obj/machinery/boarding_pad // mantis B or nothing
-	name = "фазовый абордажный телепортер"
+	name = "phasic boarding telepad"
 	desc = "Устройство для абордажа вражеских шаттлов, один человек на пад. Инструкции? Запросто! Подберитесь к шаттлу в упор, встаньте на телепортер и инициируйте транслокацию."
 	icon = 'mod_celadon/_storge_icons/icons/boarding.dmi'
 	icon_state = "boarding_pad"
@@ -34,9 +34,11 @@
 	var/datum/overmap/ship/controlled/current_ship
 	var/obj/effect/overlay/vis/self_overlay
 	var/cooldown = 120
+	var/datum/map_template/shuttle/shuttletype
 
 /obj/machinery/boarding_pad/connect_to_shuttle(obj/docking_port/mobile/port, obj/docking_port/stationary/dock)
 	current_ship = port.current_ship
+	shuttletype = current_ship.source_template
 
 /obj/machinery/boarding_pad/Initialize()
 	. = ..()
@@ -67,6 +69,9 @@
 	var/mob/living/carbon/M = locate(/mob/living/carbon) in loc // if mobs more than 1, picks random to teleport
 	if(!current_ship)
 		visible_message("<span class='warning'>Пад не находится на шаттле.</span>")
+		return
+	if(shuttletype.parent_type == /datum/map_template/shuttle/subshuttles || null)
+		visible_message("<span class='warning'>Производитель запрещает использование абордажного телепада на субшаттлах, установите его на материнском корабле.</span>")
 		return
 	if(cooldown > 0)
 		visible_message("<span class='warning'>Устройство заряжается, подождите [cooldown] секунд.</span>")
@@ -126,7 +131,7 @@
 /datum/supply_pack/sec_supply/boarding_kit
 	name = "Boarding Teleporter"
 	desc = "Содержит новый, современный абордажный телепортер, который в мгновение ока переместит вашего храбреца на борт чужого корабля для дальнейшего угона. В действительности, для охранных целей. Мультитул для взлома консоли управления не прилагается."
-	cost = 10000
+	cost = 2400
 	contains = list(/obj/item/circuitboard/machine/boarding_pad)
 	crate_name = "boarding pad crate"
 

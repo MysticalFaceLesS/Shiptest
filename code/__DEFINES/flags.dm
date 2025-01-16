@@ -46,8 +46,6 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 #define SHOW_BEHIND_LARGE_ICONS_1 (1<<12)
 /// Should we use the initial icon for display? Mostly used by overlay only objects
 #define HTML_USE_INITAL_ICON_1 (1<<20)
-// Whether or not this atom is storing contents for a disassociated storage object
-#define HAS_DISASSOCIATED_STORAGE_1 (1<<24)
 
 // Update flags for [/atom/proc/update_appearance]
 /// Update the atom's name
@@ -97,8 +95,6 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 #define HIDDEN_AREA (1<<6)
 /// If false, loading multiple maps with this area type will create multiple instances.
 #define UNIQUE_AREA (1<<7)
-/// Can the Xenobio management console transverse this area by default?
-#define XENOBIOLOGY_COMPATIBLE (1<<8)
 
 /*
 	These defines are used specifically with the atom/pass_flags bitmask
@@ -114,6 +110,10 @@ GLOBAL_LIST_INIT(bitflags, list(1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 204
 #define LETPASSTHROW (1<<6)
 #define PASSDOORHATCH (1<<7)
 #define PASSPLATFORM (1<<8)
+// [CELADON-ADD] - CELADON_STRUCTURES - Барикады
+#define PASSSTRUCTURE (1<<9)
+#define	PASSMACHINE (1<<10)
+// [/CELADON-ADD]
 
 //Movement Types
 #define GROUND (1<<0)

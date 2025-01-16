@@ -184,7 +184,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 8
 	},
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /turf/open/floor/plating/rust,
 /area/ship/maintenance/starboard)
 "dD" = (
@@ -313,8 +313,9 @@
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/hallway/central)
 "ea" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
-	dir = 6
+/obj/machinery/porta_turret/ship/syndicate/ballistic/heavy{
+	dir = 6;
+	id = "komodo_turrets"
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -394,8 +395,9 @@
 	pixel_x = -2
 	},
 /obj/item/clothing/glasses/sunglasses,
-/obj/machinery/turretid{
-	pixel_y = 35
+/obj/machinery/turretid/ship{
+	pixel_y = 35;
+	id = "komodo_turrets"
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
@@ -472,8 +474,7 @@
 	dir = 1
 	},
 /obj/item/tank/internals/oxygen,
-/obj/item/clothing/mask/gas/syndicate,
-/obj/item/clothing/suit/space/hardsuit/syndi/ngr,
+/obj/item/clothing/suit/space/hardsuit/syndi,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/security/armory)
 "fd" = (
@@ -970,7 +971,7 @@
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/cargo)
 "jD" = (
-/obj/effect/spawner/lootdrop/salvage_capacitor,
+/obj/effect/spawner/random/salvage_capacitor,
 /obj/effect/decal/cleanable/shreds,
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -1026,20 +1027,20 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable,
 /obj/machinery/power/apc/auto_name/directional/south,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration{
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration{
 	pixel_x = -6
 	},
-/obj/effect/spawner/lootdrop/ration{
+/obj/effect/spawner/random/food_or_drink/ration{
 	pixel_x = -6
 	},
-/obj/effect/spawner/lootdrop/ration{
+/obj/effect/spawner/random/food_or_drink/ration{
 	pixel_x = -6
 	},
-/obj/effect/spawner/lootdrop/ration{
+/obj/effect/spawner/random/food_or_drink/ration{
 	pixel_x = -6
 	},
 /obj/structure/closet/crate{
@@ -1056,8 +1057,7 @@
 /obj/item/clothing/mask/gas/syndicate,
 /obj/machinery/power/apc/auto_name/directional/west,
 /obj/item/tank/internals/oxygen,
-/obj/item/clothing/mask/gas/syndicate,
-/obj/item/clothing/suit/space/hardsuit/syndi/ngr,
+/obj/item/clothing/suit/space/hardsuit/syndi,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/security/armory)
 "ko" = (
@@ -1094,8 +1094,9 @@
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/crew/canteen)
 "kG" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
-	dir = 1
+/obj/machinery/porta_turret/ship/syndicate/ballistic{
+	dir = 1;
+	id = "komodo_turrets"
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -1450,9 +1451,7 @@
 /obj/machinery/camera/autoname{
 	dir = 10
 	},
-/obj/machinery/mineral/ore_redemption{
-	dir = 4
-	},
+/obj/machinery/autolathe,
 /turf/open/floor/pod,
 /area/ship/cargo)
 "nv" = (
@@ -1532,7 +1531,6 @@
 /obj/effect/turf_decal/spline/fancy/opaque/black{
 	dir = 1
 	},
-/obj/machinery/autolathe/hacked,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -1671,8 +1669,9 @@
 /turf/open/floor/plating,
 /area/ship/engineering)
 "pN" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
-	dir = 9
+/obj/machinery/porta_turret/ship/syndicate/ballistic{
+	dir = 9;
+	id = "komodo_turrets"
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -1790,9 +1789,13 @@
 /area/ship/crew/dorm)
 "rg" = (
 /obj/structure/table/reinforced,
-/obj/item/defibrillator/loaded,
 /obj/structure/window/reinforced{
 	dir = 4
+	},
+/obj/item/defibrillator/compact/combat/loaded,
+/obj/item/clothing/glasses/hud/health/night{
+	pixel_x = -8;
+	pixel_y = 9
 	},
 /turf/open/floor/pod/dark,
 /area/ship/medical)
@@ -1871,8 +1874,9 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "rS" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
-	dir = 5
+/obj/machinery/porta_turret/ship/syndicate/ballistic/heavy{
+	dir = 5;
+	id = "komodo_turrets"
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -2017,10 +2021,14 @@
 /obj/item/ammo_box/magazine/m45_cobra,
 /obj/item/ammo_box/magazine/m12g_bulldog/drum,
 /obj/item/ammo_box/magazine/m12g_bulldog/drum,
-/obj/item/ammo_box/a12g/slug,
-/obj/item/ammo_box/a12g,
-/obj/item/ammo_box/c45,
-/obj/item/ammo_box/c45,
+/obj/item/storage/box/ammo/a12g_slug,
+/obj/item/storage/box/ammo/a12g_buckshot,
+/obj/item/ammo_box/magazine/m556_42_hydra,
+/obj/item/ammo_box/magazine/m556_42_hydra,
+/obj/item/ammo_box/magazine/m556_42_hydra,
+/obj/item/ammo_box/magazine/m556_42_hydra,
+/obj/item/storage/box/ammo/a556_42,
+/obj/item/storage/box/ammo/a556_42,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "sY" = (
@@ -2048,9 +2056,9 @@
 	dir = 10
 	},
 /obj/structure/closet/crate,
-/obj/effect/spawner/lootdrop/costume,
+/obj/effect/spawner/random/clothing/costume,
 /obj/item/storage/box/emptysandbags,
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /obj/machinery/button/door{
 	dir = 4;
 	id = "syndie_mechbay";
@@ -2124,11 +2132,6 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/obj/item/clothing/under/syndicate/skirt/maid,
-/obj/item/clothing/gloves/combat/maid,
-/obj/item/clothing/head/maidheadband/syndicate,
-/obj/item/clothing/accessory/maidapron/syndicate,
-/obj/structure/closet/crate/secure/loot,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 10
 	},
@@ -2262,6 +2265,13 @@
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/cargo)
+"uX" = (
+/obj/machinery/porta_turret/ship/syndicate/ballistic/light{
+	dir = 8;
+	id = "komodo_turrets"
+	},
+/turf/closed/wall/mineral/plastitanium,
+/area/ship/bridge)
 "vd" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
@@ -2425,7 +2435,8 @@
 /obj/structure/table/reinforced,
 /obj/machinery/light/directional/east,
 /obj/machinery/chem_dispenser/drinks/beer{
-	dir = 8
+	dir = 8;
+	pixel_x = 6
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/ship/crew/canteen)
@@ -2568,6 +2579,13 @@
 	},
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ship/engineering)
+"xT" = (
+/obj/machinery/porta_turret/ship/syndicate/ballistic/light{
+	dir = 10;
+	id = "komodo_turrets"
+	},
+/turf/closed/wall/mineral/plastitanium,
+/area/ship/bridge)
 "xV" = (
 /obj/structure/cable{
 	icon_state = "0-8"
@@ -2697,13 +2715,9 @@
 /obj/structure/guncloset,
 /obj/structure/railing,
 /obj/machinery/light/directional/east,
-/obj/item/gun/ballistic/automatic/smg/cobra{
-	pixel_x = 14
-	},
-/obj/item/gun/ballistic/automatic/smg/cobra{
-	pixel_x = 14
-	},
 /obj/item/gun/ballistic/shotgun/automatic/bulldog,
+/obj/item/gun/ballistic/automatic/assault/hydra,
+/obj/item/gun/ballistic/automatic/assault/hydra,
 /turf/open/floor/pod/dark,
 /area/ship/security/armory)
 "yJ" = (
@@ -2852,9 +2866,6 @@
 /obj/effect/turf_decal/borderfloor{
 	dir = 1
 	},
-/obj/item/ammo_box/magazine/m10mm_ringneck,
-/obj/item/ammo_box/magazine/m10mm_ringneck,
-/obj/item/ammo_box/c10mm,
 /obj/item/clothing/gloves/tackler/combat/insulated,
 /obj/item/clothing/suit/armor/vest/leather{
 	desc = "Lightly armored leather overcoat meant as casual wear for high-ranking officers. Bears the crest of the Gorlex Marauders."
@@ -2874,7 +2885,12 @@
 /obj/item/clothing/shoes/combat,
 /obj/item/radio/headset/syndicate,
 /obj/item/clothing/glasses/hud/security/sunglasses,
-/obj/item/gun/ballistic/automatic/pistol/ringneck,
+/obj/item/gun/ballistic/automatic/smg/cobra{
+	pixel_x = 3;
+	pixel_y = -1
+	},
+/obj/item/ammo_box/magazine/m45_cobra,
+/obj/item/ammo_box/magazine/m45_cobra,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "AS" = (
@@ -2915,7 +2931,9 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "Bx" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic,
+/obj/machinery/porta_turret/ship/syndicate/ballistic{
+	id = "komodo_turrets"
+	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
 "BK" = (
@@ -3098,8 +3116,8 @@
 /obj/item/clothing/head/HoS/beret/syndicate,
 /obj/item/clothing/head/HoS/syndicate,
 /obj/item/clothing/under/syndicate/sniper,
-/obj/item/ammo_box/a357,
-/obj/item/ammo_box/a357,
+/obj/item/storage/box/ammo/a357,
+/obj/item/storage/box/ammo/a357,
 /obj/item/radio/headset/syndicate/alt/leader,
 /obj/item/gun/ballistic/derringer/traitor,
 /obj/item/clothing/shoes/combat,
@@ -3229,7 +3247,7 @@
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ship/engineering)
 "FV" = (
-/obj/effect/spawner/lootdrop/salvage_scanning,
+/obj/effect/spawner/random/salvage_scanning,
 /obj/effect/decal/cleanable/shreds{
 	pixel_y = 14
 	},
@@ -3507,8 +3525,7 @@
 /obj/item/clothing/mask/gas/syndicate,
 /obj/machinery/light/directional/south,
 /obj/item/tank/internals/oxygen,
-/obj/item/clothing/mask/gas/syndicate,
-/obj/item/clothing/suit/space/hardsuit/syndi/ngr,
+/obj/item/clothing/suit/space/hardsuit/syndi,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/security/armory)
 "If" = (
@@ -3798,10 +3815,10 @@
 "Lj" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light/directional/west,
-/obj/effect/spawner/lootdrop/random_prosthetic{
+/obj/effect/spawner/random/medical/prosthetic{
 	pixel_x = 6
 	},
-/obj/effect/spawner/lootdrop/random_prosthetic{
+/obj/effect/spawner/random/medical/prosthetic{
 	pixel_x = -6
 	},
 /turf/open/floor/pod/dark,
@@ -3859,7 +3876,7 @@
 	dir = 1
 	},
 /obj/machinery/microwave{
-	pixel_y = 5
+	pixel_y = 3
 	},
 /obj/effect/turf_decal/trimline/transparent/bar/filled/line{
 	dir = 6
@@ -3912,10 +3929,11 @@
 /obj/item/clothing/under/suit/waiter/syndicate,
 /obj/machinery/vending/boozeomat/syndicate_access{
 	pixel_x = 32;
-	density = 0
+	density = 0;
+	all_items_free = 1
 	},
 /obj/item/gun/ballistic/shotgun/doublebarrel,
-/obj/item/ammo_box/a12g/rubbershot,
+/obj/item/storage/box/ammo/a12g_rubbershot,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/crew/canteen)
 "MG" = (
@@ -4014,9 +4032,6 @@
 	},
 /obj/item/storage/belt/military/assault,
 /obj/item/storage/belt/military/assault,
-/obj/item/clothing/suit/armor/vest/syndie,
-/obj/item/clothing/suit/armor/vest/syndie,
-/obj/item/clothing/suit/armor/vest/syndie,
 /obj/item/storage/belt/military/assault,
 /obj/item/clothing/head/helmet/swat,
 /obj/item/clothing/head/helmet/swat,
@@ -4024,6 +4039,15 @@
 /obj/item/attachment/silencer,
 /obj/item/attachment/silencer,
 /obj/item/attachment/silencer,
+/obj/item/clothing/suit/armor/vest/marine/medium{
+	armor = list("melee" = 40, "bullet" = 60, "laser" = 30, "energy" = 25, "bomb" = 60, "bio" = 100, "fire" = 70, "acid" = 50)
+	},
+/obj/item/clothing/suit/armor/vest/marine/medium{
+	armor = list("melee" = 40, "bullet" = 60, "laser" = 30, "energy" = 25, "bomb" = 60, "bio" = 100, "fire" = 70, "acid" = 50)
+	},
+/obj/item/clothing/suit/armor/vest/marine/medium{
+	armor = list("melee" = 40, "bullet" = 60, "laser" = 30, "energy" = 25, "bomb" = 60, "bio" = 100, "fire" = 70, "acid" = 50)
+	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
 "Nj" = (
@@ -4123,9 +4147,23 @@
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/hallway/central)
+"Or" = (
+/obj/machinery/porta_turret/ship/syndicate/ballistic/light{
+	id = "komodo_turrets"
+	},
+/turf/closed/wall/mineral/plastitanium,
+/area/ship/bridge)
+"OG" = (
+/obj/machinery/porta_turret/ship/syndicate/ballistic/light{
+	dir = 1;
+	id = "komodo_turrets"
+	},
+/turf/closed/wall/mineral/plastitanium,
+/area/ship/bridge)
 "OP" = (
-/obj/machinery/porta_turret/ship/faction/syndicate/ballistic{
-	dir = 10
+/obj/machinery/porta_turret/ship/syndicate/ballistic{
+	dir = 10;
+	id = "komodo_turrets"
 	},
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/bridge)
@@ -4297,7 +4335,9 @@
 /turf/open/floor/plating,
 /area/ship/engineering)
 "PZ" = (
-/obj/machinery/vending/tool,
+/obj/machinery/vending/tool{
+	all_items_free = 1
+	},
 /obj/effect/turf_decal/industrial/outline/yellow,
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ship/engineering)
@@ -4342,7 +4382,8 @@
 "QC" = (
 /obj/structure/table/reinforced,
 /obj/machinery/chem_dispenser/drinks{
-	dir = 8
+	dir = 8;
+	pixel_x = 6
 	},
 /turf/open/floor/mineral/plastitanium,
 /area/ship/crew/canteen)
@@ -4366,7 +4407,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/obj/effect/spawner/lootdrop/salvage_manipulator,
+/obj/effect/spawner/random/salvage_manipulator,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/industrial/warning{
 	dir = 1
@@ -4842,6 +4883,13 @@
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
+"VY" = (
+/obj/machinery/porta_turret/ship/syndicate/ballistic/light{
+	dir = 9;
+	id = "komodo_turrets"
+	},
+/turf/closed/wall/mineral/plastitanium,
+/area/ship/bridge)
 "VZ" = (
 /obj/structure/railing,
 /obj/effect/decal/cleanable/oil{
@@ -5231,7 +5279,7 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "YT" = (
-/obj/effect/spawner/lootdrop/salvage_manipulator,
+/obj/effect/spawner/random/salvage_manipulator,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -5288,7 +5336,7 @@
 	},
 /area/ship/cargo)
 "Zf" = (
-/obj/effect/spawner/lootdrop/salvage_matter_bin,
+/obj/effect/spawner/random/salvage_matter_bin,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/industrial/warning{
@@ -5304,7 +5352,7 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 8
 	},
-/obj/effect/spawner/lootdrop/maintenance/two,
+/obj/effect/spawner/random/maintenance/two,
 /obj/machinery/button/door{
 	dir = 1;
 	id = "Artillery2shutter";
@@ -5346,7 +5394,7 @@
 	pixel_x = -3;
 	pixel_y = 3
 	},
-/obj/item/storage/backpack/duffelbag/med/surgery,
+/obj/item/storage/case/surgery,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/medical)
 "Zy" = (
@@ -5439,11 +5487,11 @@ CM
 CM
 CM
 CM
-pN
+uX
 Yb
 Yb
 Yb
-OP
+uX
 CM
 CM
 CM
@@ -5473,7 +5521,7 @@ CM
 "}
 (3,1,1) = {"
 CM
-pN
+VY
 Yn
 yB
 sq
@@ -5489,7 +5537,7 @@ qF
 sq
 sq
 Yn
-OP
+xT
 "}
 (4,1,1) = {"
 CM
@@ -5649,11 +5697,11 @@ CL
 CL
 CL
 CL
-Bx
+Or
 "}
 (12,1,1) = {"
 CM
-kG
+OG
 Ep
 jA
 jA

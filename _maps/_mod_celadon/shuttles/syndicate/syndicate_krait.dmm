@@ -50,7 +50,7 @@
 	icon_state = "bordercolor";
 	dir = 8
 	},
-/obj/machinery/vending/snack/random,
+/obj/effect/spawner/random/vending/snack,
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
 "aG" = (
@@ -248,6 +248,8 @@
 "ck" = (
 /obj/structure/guncloset,
 /obj/effect/turf_decal/industrial/traffic/full,
+/obj/item/gun/ballistic/automatic/pistol/ringneck,
+/obj/item/gun/ballistic/automatic/pistol/ringneck,
 /obj/item/gun/ballistic/automatic/pistol/ringneck,
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
@@ -536,8 +538,8 @@
 	pixel_y = 1
 	},
 /obj/item/gun/ballistic/derringer/traitor,
-/obj/item/ammo_box/a357,
-/obj/item/ammo_box/a357,
+/obj/item/storage/box/ammo/a357,
+/obj/item/storage/box/ammo/a357,
 /obj/item/melee/classic_baton/telescopic/contractor_baton{
 	name = "SnD baton";
 	pixel_y = 8
@@ -589,7 +591,7 @@
 /area/ship/engineering)
 "fi" = (
 /obj/structure/closet/crate/large,
-/obj/effect/spawner/lootdrop/glowstick,
+/obj/effect/spawner/random/decoration/glowstick,
 /obj/item/trash/can/food/beans,
 /obj/item/trash/energybar,
 /obj/item/trash/can,
@@ -694,14 +696,20 @@
 	dir = 1
 	},
 /obj/item/shield/riot/tele{
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 6
 	},
 /obj/item/shield/riot/tele{
-	pixel_x = 7
+	pixel_x = -7;
+	pixel_y = -1
 	},
-/obj/item/shield/riot/tele{
-	pixel_x = 1;
-	pixel_y = 4
+/obj/item/melee/energy/sword/saber/red{
+	pixel_x = 15;
+	pixel_y = 7
+	},
+/obj/item/melee/energy/sword/saber/red{
+	pixel_x = 15;
+	pixel_y = 13
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
@@ -810,7 +818,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 1
 	},
-/obj/effect/spawner/lootdrop/donkpockets{
+/obj/effect/spawner/random/food_or_drink/donkpockets{
 	pixel_y = 7
 	},
 /obj/structure/table/wood,
@@ -966,7 +974,7 @@
 	name = "recreation package"
 	},
 /obj/effect/turf_decal/spline/plain/opaque/syndiered,
-/obj/item/reagent_containers/food/snacks/rationpack,
+/obj/effect/spawner/random/food_or_drink/ration,
 /turf/open/floor/plasteel/tech,
 /area/ship/cargo/port)
 "hp" = (
@@ -2392,6 +2400,15 @@
 /obj/structure/table/wood,
 /turf/open/floor/wood/walnut,
 /area/ship/crew/canteen)
+"tu" = (
+/obj/docking_port/stationary{
+	dwidth = 15;
+	width = 30;
+	height = 15;
+	dir = 2
+	},
+/turf/template_noop,
+/area/template_noop)
 "tx" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 1
@@ -2946,7 +2963,8 @@
 /obj/effect/turf_decal/industrial/traffic,
 /obj/structure/table/reinforced,
 /obj/item/storage/toolbox/ammo/c10mm{
-	pixel_y = 6
+	pixel_y = 12;
+	pixel_x = 8
 	},
 /obj/effect/turf_decal/industrial/traffic/corner{
 	dir = 1
@@ -2955,7 +2973,20 @@
 	pixel_x = -4
 	},
 /obj/item/ammo_box/magazine/m10mm_ringneck{
-	pixel_x = -7
+	pixel_x = -8;
+	pixel_y = 0
+	},
+/obj/item/ammo_box/magazine/m10mm_ringneck{
+	pixel_x = -12;
+	pixel_y = 0
+	},
+/obj/item/storage/box/ammo/c10mm_hp{
+	pixel_x = 7;
+	pixel_y = 5
+	},
+/obj/item/storage/box/ammo/c10mm_ap{
+	pixel_x = 7;
+	pixel_y = 0
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
@@ -3140,6 +3171,14 @@
 /obj/machinery/light/small/directional/east,
 /turf/open/floor/wood/walnut,
 /area/ship/crew/canteen)
+"Ak" = (
+/obj/docking_port/stationary{
+	dwidth = 15;
+	width = 30;
+	height = 15
+	},
+/turf/template_noop,
+/area/template_noop)
 "An" = (
 /obj/effect/turf_decal/corner/opaque/syndiered/border{
 	dir = 4
@@ -3185,17 +3224,13 @@
 "AH" = (
 /obj/structure/rack,
 /obj/effect/turf_decal/industrial/traffic/full,
-/obj/item/melee/transforming/energy/sword/saber/red{
-	pixel_y = 10;
-	pixel_x = 14
+/obj/item/melee/axe/sledgehammer{
+	pixel_x = 3;
+	pixel_y = 2
 	},
-/obj/item/melee/transforming/energy/sword/saber/red{
-	pixel_y = 10;
-	pixel_x = 8
-	},
-/obj/item/melee/transforming/energy/sword/saber/red{
-	pixel_y = 10;
-	pixel_x = 2
+/obj/item/melee/axe/sledgehammer{
+	pixel_x = -4;
+	pixel_y = 1
 	},
 /turf/open/floor/mineral/plastitanium/red,
 /area/ship/security/armory)
@@ -3600,7 +3635,6 @@
 	},
 /obj/structure/closet/crate/bin,
 /obj/machinery/airalarm/directional/north,
-/obj/item/storage/box/syndimaid,
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/central)
 "Fg" = (
@@ -6163,7 +6197,7 @@ Mn
 ae
 "}
 (9,1,1) = {"
-ae
+Ak
 as
 Ww
 zx
@@ -6194,7 +6228,7 @@ Dx
 pA
 je
 Mn
-ae
+tu
 "}
 (10,1,1) = {"
 ae

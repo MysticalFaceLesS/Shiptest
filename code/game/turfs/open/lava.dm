@@ -162,14 +162,14 @@
 				O.resistance_flags |= FLAMMABLE //Even fireproof things burn up in lava
 			if(O.resistance_flags & FIRE_PROOF)
 				O.resistance_flags &= ~FIRE_PROOF
-			if(O.armor.fire > 50) //obj with 100% fire armor still get slowly burned away.
+			if(O.armor?.fire > 50) //obj with 100% fire armor still get slowly burned away.
 				O.armor = O.armor.setRating(fire = 50)
 			O.fire_act(10000, 1000)
 
 		else if (isliving(thing))
 			. = 1
 			var/mob/living/L = thing
-			if(L.movement_type & FLYING)
+			if(L.movement_type & FLYING || L.throwing)
 				continue	//YOU'RE FLYING OVER IT
 			var/buckle_check = L.buckling
 			if(!buckle_check)

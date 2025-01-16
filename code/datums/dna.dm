@@ -351,6 +351,9 @@
 			var/species_holder = initial(mrace.species_language_holder)
 			language_holder = new species_holder(src)
 		update_atom_languages()
+		// [CELADON-ADD] - CELADON_EMOTES
+		client?.init_verbs()
+		// [/CELADON-ADD]
 
 /mob/living/carbon/human/set_species(datum/species/mrace, icon_update = TRUE, pref_load = FALSE, robotic = FALSE)
 	robotic ||= fbp
@@ -358,7 +361,7 @@
 	if(icon_update)
 		update_hair()
 		update_mutations_overlay()// no lizard with human hulk overlay please.
-
+	AddComponent(/datum/component/bloodysoles/feet)
 
 /mob/proc/has_dna()
 	return

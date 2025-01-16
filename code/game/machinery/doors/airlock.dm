@@ -50,10 +50,12 @@
 	autoclose = TRUE
 	secondsElectrified = MACHINE_NOT_ELECTRIFIED //How many seconds remain until the door is no longer electrified. -1/MACHINE_ELECTRIFIED_PERMANENT = permanently electrified until someone fixes it.
 	assemblytype = /obj/structure/door_assembly
-	normalspeed = 1
+	fast_close = FALSE
 	explosion_block = 1
 	hud_possible = list(DIAG_AIRLOCK_HUD)
 	req_ship_access = TRUE
+
+	close_speed = 150
 
 	smoothing_groups = list(SMOOTH_GROUP_AIRLOCK)
 
@@ -167,16 +169,7 @@
 	if(abandoned)
 		var/outcome = rand(1,100)
 		switch(outcome)
-			if(1 to 9)
-				var/turf/here = get_turf(src)
-				for(var/turf/closed/T in range(2, src))
-					here.PlaceOnTop(T.type)
-					qdel(src)
-					return
-				here.PlaceOnTop(/turf/closed/wall)
-				qdel(src)
-				return
-			if(9 to 11)
+			if(1 to 11)
 				lights = FALSE
 				locked = TRUE
 			if(12 to 15)
@@ -185,6 +178,19 @@
 				welded = TRUE
 			if(24 to 30)
 				panel_open = TRUE
+			if(31 to 40)
+				panel_open = TRUE
+				set_electrified(MACHINE_ELECTRIFIED_PERMANENT)
+			if(41 to 50)
+				seal = new /obj/item/door_seal(src)
+				modify_max_integrity(max_integrity * AIRLOCK_SEAL_MULTIPLIER)
+			if(51 to 60)
+				new previous_airlock(loc)
+				qdel(src)
+			if(69)
+				new /obj/effect/decal/cleanable/oil/slippery(loc)
+
+
 	update_appearance()
 
 /obj/machinery/door/airlock/ComponentInitialize()
@@ -369,26 +375,6 @@
 	playsound(src, boltUp, 30, FALSE, 3, mono_adj = TRUE)
 	audible_message("<span class='hear'>You hear a click from the bottom of the door.</span>", null, 1)
 	update_appearance()
-
-/obj/machinery/door/airlock/narsie_act()
-	var/turf/T = get_turf(src)
-	var/obj/machinery/door/airlock/cult/A
-	if(GLOB.cult_narsie)
-		var/runed = prob(20)
-		if(glass)
-			if(runed)
-				A = new/obj/machinery/door/airlock/cult/glass(T)
-			else
-				A = new/obj/machinery/door/airlock/cult/unruned/glass(T)
-		else
-			if(runed)
-				A = new/obj/machinery/door/airlock/cult(T)
-			else
-				A = new/obj/machinery/door/airlock/cult/unruned(T)
-		A.name = name
-	else
-		A = new /obj/machinery/door/airlock/cult/weak(T)
-	qdel(src)
 
 /obj/machinery/door/airlock/Destroy()
 	QDEL_NULL(wires)
@@ -1276,7 +1262,7 @@
 		playsound(src, pry_open_sound, 30, TRUE, mono_adj = TRUE)
 
 	if(autoclose)
-		autoclose_in(normalspeed ? 150 : 15)
+		autoclose_in(fast_close ? clamp(close_speed/10, 10, 300) : close_speed)
 
 	if(!density)
 		return TRUE
@@ -1581,7 +1567,7 @@
 	data["locked"] = locked // bolted
 	data["lights"] = lights // bolt lights
 	data["safe"] = safe // safeties
-	data["speed"] = normalspeed // safe speed
+	data["operation speed"] = fast_close // safe speed
 	data["welded"] = welded // welded
 	data["opened"] = !density // opened
 
@@ -1649,7 +1635,7 @@
 			safe = !safe
 			. = TRUE
 		if("speed-toggle")
-			normalspeed = !normalspeed
+			fast_close = !fast_close
 			. = TRUE
 		if("open-close")
 			user_toggle_open(usr)

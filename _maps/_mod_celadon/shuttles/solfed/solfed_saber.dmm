@@ -123,7 +123,6 @@
 	},
 /obj/item/toy/plush/lizardplushie,
 /obj/effect/gibspawner/generic,
-/obj/item/paper/fluff/awaymissions/moonoutpost19/goodbye_note,
 /obj/item/clothing/head/solgov_surgery,
 /turf/open/floor/plasteel/mono/white,
 /area/ship/medical/surgery)
@@ -468,13 +467,13 @@
 /obj/item/clothing/head/solfed/elysium/turban,
 /obj/item/clothing/gloves/combat,
 /obj/item/storage/belt/military/solfed/elysium,
-/obj/item/clothing/mask/gas/sechailer/balaclava,
 /obj/item/clothing/suit/armor/solfed/elysium/jacket,
 /obj/item/storage/backpack/messenger/sec,
 /obj/item/clothing/accessory/armband/deputy,
 /obj/item/clothing/shoes/combat,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/item/clothing/suit/armor/vest,
+/obj/item/clothing/mask/balaclava/combat,
 /turf/open/floor/carpet/green,
 /area/ship/security/range)
 "dI" = (
@@ -638,7 +637,6 @@
 	},
 /obj/item/ammo_box/magazine/pistol556mm,
 /obj/item/ammo_box/magazine/pistol556mm,
-/obj/item/clothing/mask/gas/sechailer/balaclava,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/box/red,
 /obj/item/clothing/gloves/combat,
@@ -655,6 +653,7 @@
 	},
 /obj/item/clothing/head/helmet/solfedm11/elysium_wraps,
 /obj/item/clothing/suit/armor/vest,
+/obj/item/clothing/mask/balaclava/combat,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/security)
 "ex" = (
@@ -750,8 +749,8 @@
 /obj/machinery/microwave{
 	pixel_y = 2
 	},
-/obj/effect/spawner/lootdrop/ration,
-/obj/effect/spawner/lootdrop/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
+/obj/effect/spawner/random/food_or_drink/ration,
 /obj/structure/table/reinforced{
 	color = "#c1b6a5"
 	},
@@ -1686,15 +1685,15 @@
 /obj/effect/turf_decal/corner/opaque/bar{
 	dir = 9
 	},
-/obj/item/storage/book/bible/koran{
-	pixel_y = -1
-	},
 /obj/structure/guncloset{
 	desc = "A locker that holds weapons.";
 	name = "secure Koran case";
 	req_one_access_txt = "90"
 	},
 /obj/effect/turf_decal/box/red,
+/obj/item/storage/book/bible/koran{
+	name = "Терик-аль-Шаед"
+	},
 /turf/open/floor/wood/ebony,
 /area/ship/security/armory)
 "mI" = (
@@ -1855,19 +1854,19 @@
 	dir = 2;
 	req_one_access_txt = "2"
 	},
-/obj/item/gun/ballistic/automatic/assault/p16{
+/obj/item/gun/ballistic/automatic/assault/cm82{
 	pixel_x = -11;
 	pixel_y = 9
 	},
-/obj/item/gun/ballistic/automatic/assault/p16{
+/obj/item/gun/ballistic/automatic/assault/cm82{
 	pixel_x = 4;
 	pixel_y = -6
 	},
-/obj/item/gun/ballistic/automatic/assault/p16{
+/obj/item/gun/ballistic/automatic/assault/cm82{
 	pixel_x = -2;
 	pixel_y = -1
 	},
-/obj/item/gun/ballistic/automatic/assault/p16{
+/obj/item/gun/ballistic/automatic/assault/cm82{
 	pixel_x = -7;
 	pixel_y = 5
 	},
@@ -1907,7 +1906,6 @@
 	},
 /obj/item/ammo_box/magazine/pistol556mm,
 /obj/item/ammo_box/magazine/pistol556mm,
-/obj/item/clothing/mask/gas/sechailer/balaclava,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/box/red,
 /obj/item/clothing/gloves/combat,
@@ -1921,6 +1919,7 @@
 	},
 /obj/item/clothing/head/helmet/solfedm11/elysium_wraps,
 /obj/item/clothing/suit/armor/vest,
+/obj/item/clothing/mask/balaclava/combat,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/security)
 "oQ" = (
@@ -2012,7 +2011,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /turf/open/floor/wood/walnut,
 /area/ship/engineering)
 "ps" = (
@@ -2065,7 +2064,9 @@
 	pixel_y = 9
 	},
 /obj/item/storage/book/bible/koran{
-	pixel_x = 10
+	name = "Терик-аль-Шаед";
+	pixel_x = 9;
+	pixel_y = 1
 	},
 /turf/open/floor/carpet/green,
 /area/ship/crew/chapel)
@@ -2090,7 +2091,7 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/closet/crate/trashcart,
 /obj/item/paper/pamphlet,
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /turf/open/floor/wood/yew,
 /area/ship/crew/office)
 "qi" = (
@@ -2225,7 +2226,7 @@
 	dir = 4
 	},
 /obj/machinery/airalarm/directional/west,
-/obj/item/banner/solfed{
+/obj/item/banner/solfed/mundane{
 	morale_cooldown = 50000
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
@@ -2324,7 +2325,7 @@
 	pixel_y = -28;
 	pixel_x = -5
 	},
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /obj/effect/turf_decal/trimline/opaque/blue/warning{
 	dir = 10
 	},
@@ -3007,9 +3008,9 @@
 	dir = 2;
 	req_one_access_txt = "2"
 	},
-/obj/item/ammo_box/a556_42,
-/obj/item/ammo_box/a556_42,
-/obj/item/ammo_box/a556_42,
+/obj/item/storage/box/ammo/a556_42,
+/obj/item/storage/box/ammo/a556_42,
+/obj/item/storage/box/ammo/a556_42,
 /turf/open/floor/wood/ebony,
 /area/ship/security/armory)
 "xH" = (
@@ -3162,7 +3163,6 @@
 	},
 /obj/item/ammo_box/magazine/pistol556mm,
 /obj/item/ammo_box/magazine/pistol556mm,
-/obj/item/clothing/mask/gas/sechailer/balaclava,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/box/red,
 /obj/item/clothing/gloves/combat,
@@ -3177,6 +3177,7 @@
 /obj/item/clothing/head/helmet/solfedm11/elysium_wraps,
 /obj/item/clothing/suit/armor/vest,
 /obj/machinery/light/directional/north,
+/obj/item/clothing/mask/balaclava/combat,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/security)
 "yH" = (
@@ -3421,7 +3422,6 @@
 /obj/item/clothing/head/solfed/elysium/beret,
 /obj/item/clothing/head/shemag/green,
 /obj/item/melee/classic_baton/telescopic,
-/obj/item/clothing/mask/gas/sechailer/balaclava,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/closet/secure_closet{
 	icon_state = "cap";
@@ -3439,6 +3439,7 @@
 	},
 /obj/item/clothing/suit/armor/vest,
 /obj/item/clothing/shoes/combat,
+/obj/item/clothing/mask/balaclava/combat,
 /turf/open/floor/carpet/green,
 /area/ship/crew/solgov)
 "Bb" = (
@@ -3458,7 +3459,7 @@
 /obj/structure/closet/firecloset/wall{
 	pixel_y = -28
 	},
-/obj/effect/spawner/lootdrop/maintenance,
+/obj/effect/spawner/random/maintenance,
 /obj/effect/turf_decal/corner/opaque/solgovgold{
 	dir = 10
 	},
@@ -3477,7 +3478,7 @@
 /area/ship/security/prison)
 "Bs" = (
 /obj/effect/turf_decal/industrial/outline/yellow,
-/obj/item/banner/solfed{
+/obj/item/banner/solfed/mundane{
 	morale_cooldown = 50000;
 	anchored = 1
 	},
@@ -3564,7 +3565,6 @@
 	},
 /obj/item/ammo_box/magazine/pistol556mm,
 /obj/item/ammo_box/magazine/pistol556mm,
-/obj/item/clothing/mask/gas/sechailer/balaclava,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/turf_decal/box/red,
 /obj/item/clothing/gloves/combat,
@@ -3573,6 +3573,7 @@
 	},
 /obj/item/clothing/head/helmet/solfedm11/elysium_wraps,
 /obj/item/clothing/suit/armor/vest,
+/obj/item/clothing/mask/balaclava/combat,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/security)
 "BX" = (
@@ -3897,15 +3898,15 @@
 /obj/item/ammo_box/magazine/p16,
 /obj/item/ammo_box/magazine/p16,
 /obj/effect/turf_decal/box/red,
-/obj/item/ammo_box/a858{
+/obj/item/storage/box/ammo/a858{
 	pixel_x = 6;
 	pixel_y = -8
 	},
-/obj/item/ammo_box/a858{
+/obj/item/storage/box/ammo/a858{
 	pixel_x = 3;
 	pixel_y = -4
 	},
-/obj/item/ammo_box/a858,
+/obj/item/storage/box/ammo/a858,
 /turf/open/floor/wood/ebony,
 /area/ship/security/armory)
 "DW" = (
@@ -4015,7 +4016,7 @@
 	dir = 1
 	},
 /obj/machinery/light/directional/north,
-/obj/item/banner/solfed{
+/obj/item/banner/solfed/mundane{
 	morale_cooldown = 50000;
 	anchored = 1
 	},
@@ -4574,7 +4575,7 @@
 /obj/effect/turf_decal/corner/opaque/bar{
 	dir = 9
 	},
-/obj/item/banner/solfed{
+/obj/item/banner/solfed/mundane{
 	morale_cooldown = 50000
 	},
 /turf/open/floor/wood/ebony,
@@ -4683,22 +4684,22 @@
 /obj/machinery/airalarm/directional/north,
 /obj/structure/rack,
 /obj/structure/rack,
-/obj/item/ammo_box/c556mmHITP/rubbershot{
-	pixel_x = -7;
-	pixel_y = 10
-	},
-/obj/item/ammo_box/c556mmHITP{
-	pixel_x = -1;
-	pixel_y = 6
-	},
-/obj/item/ammo_box/c556mmHITP{
-	pixel_x = 6;
-	pixel_y = 1
-	},
 /obj/effect/decal/cleanable/cobweb,
-/obj/item/ammo_box/c556mmHITP{
-	pixel_x = 6;
-	pixel_y = 1
+/obj/item/storage/box/ammo/c556mm_rubber{
+	pixel_x = 4;
+	pixel_y = 7
+	},
+/obj/item/storage/box/ammo/c556mm{
+	pixel_x = -6;
+	pixel_y = -2
+	},
+/obj/item/storage/box/ammo/c556mm{
+	pixel_x = -6;
+	pixel_y = 2
+	},
+/obj/item/storage/box/ammo/c556mm{
+	pixel_x = -6;
+	pixel_y = 7
 	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/security)
@@ -4734,10 +4735,6 @@
 /obj/structure/table/reinforced{
 	color = "#c1b6a5"
 	},
-/obj/item/storage/book/bible/koran{
-	pixel_x = -8;
-	pixel_y = 6
-	},
 /obj/effect/turf_decal/box/red/corners{
 	dir = 1
 	},
@@ -4749,6 +4746,11 @@
 	pixel_x = 6
 	},
 /obj/effect/decal/cleanable/cobweb,
+/obj/item/storage/book/bible/koran{
+	name = "Терик-аль-Шаед";
+	pixel_x = -7;
+	pixel_y = 4
+	},
 /turf/open/floor/plasteel/mono/white,
 /area/ship/security/prison)
 "JT" = (
@@ -4778,7 +4780,7 @@
 /obj/effect/turf_decal/siding/wood{
 	dir = 5
 	},
-/obj/item/banner/solfed{
+/obj/item/banner/solfed/mundane{
 	morale_cooldown = 50000;
 	anchored = 1
 	},
@@ -5201,14 +5203,14 @@
 /obj/structure/table/reinforced{
 	color = "#c1b6a5"
 	},
-/obj/item/reagent_containers/food/snacks/rationpack{
+/obj/effect/spawner/random/food_or_drink/ration{
 	pixel_x = -4;
 	pixel_y = 7
 	},
-/obj/item/reagent_containers/food/snacks/rationpack{
+/obj/effect/spawner/random/food_or_drink/ration{
 	pixel_y = 11
 	},
-/obj/item/reagent_containers/food/snacks/rationpack{
+/obj/effect/spawner/random/food_or_drink/ration{
 	pixel_x = -1;
 	pixel_y = 1
 	},
@@ -5310,7 +5312,7 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/effect/spawner/lootdrop/glowstick{
+/obj/effect/spawner/random/decoration/glowstick{
 	pixel_x = 5;
 	pixel_y = 9
 	},
@@ -5667,7 +5669,7 @@
 /area/ship/engineering)
 "SP" = (
 /obj/effect/turf_decal/solgov/all/bottom_left,
-/obj/item/banner/solfed{
+/obj/item/banner/solfed/mundane{
 	morale_cooldown = 50000;
 	anchored = 1
 	},
@@ -6046,7 +6048,7 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 4
 	},
-/obj/item/banner/solfed{
+/obj/item/banner/solfed/mundane{
 	morale_cooldown = 50000;
 	anchored = 1
 	},

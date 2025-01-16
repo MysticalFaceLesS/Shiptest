@@ -317,7 +317,10 @@
 			new type(T, spawner)
 
 /obj/effect/temp_visual/goliath_tentacle/proc/get_directions()
-	return GLOB.cardinals.Copy()
+	// [CELADON-EDIT] - CELADON_BALANCE - Поднимаем разнообразие мобам
+	// return GLOB.cardinals.Copy()	// CELADON-EDIT - ORIGINAL
+	return GLOB.alldirs_multiz.Copy()
+	// [/CELADON-EDIT]
 
 /obj/effect/temp_visual/goliath_tentacle/proc/tripanim()
 	deltimer(timerid)

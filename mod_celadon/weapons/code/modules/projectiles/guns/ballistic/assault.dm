@@ -18,29 +18,35 @@
 	weapon_weight = WEAPON_MEDIUM
 	w_class = WEIGHT_CLASS_NORMAL
 	unique_mag_sprites_for_variants = TRUE
-	mag_type = /obj/item/ammo_box/magazine/g36/sh
+	default_ammo_type = /obj/item/ammo_box/magazine/g36/sh
+	allowed_ammo_types = list(
+		/obj/item/ammo_box/magazine/g36/sh,
+	)
 //Прочее
 	var/obj/item/ammo_box/magazine/g36/sh/alternate_magazine
 
 /obj/item/gun/ballistic/automatic/assault/g36sh/Initialize()
 	. = ..()
 	if (!alternate_magazine)
-		alternate_magazine = new mag_type(src)
-	spawnwithmagazine = FALSE
-	mag_type = /obj/item/ammo_box/magazine/g36
+		alternate_magazine = new default_ammo_type(src)
+	// spawnwithmagazine = FALSE
+	default_ammo_type = /obj/item/ammo_box/magazine/g36
+	allowed_ammo_types = list(
+		/obj/item/ammo_box/magazine/g36,
+	)
 
 /obj/item/gun/ballistic/automatic/assault/g36sh/inteq
 	name = "\improper Moded G36-SH"
 	desc = "Обширная модификация G36-SH, которая входит в стандартную комплектацию вооружения InteQ. Калибр 5,56x45 мм."
 	icon_state = "g36shinteq"
 	item_state = "g36shinteq"
-	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/guns/back_inteq.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/guns/back.dmi'
 	empty_indicator = TRUE
 	empty_alarm = TRUE
 	zoomable = TRUE
 
-/obj/item/gun/ballistic/automatic/assault/g36sh/no_mag
-	spawnwithmagazine = FALSE
+// /obj/item/gun/ballistic/automatic/assault/g36sh/no_mag
+// 	spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/automatic/assault/g36
 	name = "\improper G36"
@@ -56,25 +62,31 @@
 	wield_delay = 0.5 SECONDS
 	fire_delay = 0.14 SECONDS
 	unique_mag_sprites_for_variants = TRUE
-	mag_type = /obj/item/ammo_box/magazine/g36
+	default_ammo_type = /obj/item/ammo_box/magazine/g36
+	allowed_ammo_types = list(
+		/obj/item/ammo_box/magazine/g36,
+	)
 	var/obj/item/ammo_box/magazine/g36/alternate_magazine
 
 /obj/item/gun/ballistic/automatic/assault/g36/Initialize()
 	. = ..()
 	if (!alternate_magazine)
-		alternate_magazine = new mag_type(src)
-	spawnwithmagazine = FALSE
-	mag_type = /obj/item/ammo_box/magazine/g36
+		alternate_magazine = new default_ammo_type(src)
+	// spawnwithmagazine = FALSE
+	default_ammo_type = /obj/item/ammo_box/magazine/g36
+	allowed_ammo_types = list(
+		/obj/item/ammo_box/magazine/g36,
+	)
 
-/obj/item/gun/ballistic/automatic/assault/g36/no_mag
-		spawnwithmagazine = FALSE
+// /obj/item/gun/ballistic/automatic/assault/g36/no_mag
+// 		spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/automatic/assault/g36/inteq
 	name = "\improper Moded G36"
 	desc = "Обширная модификация G36, которая входит в стандартную комплектацию вооружения InteQ. Калибр 5,56x45 мм."
 	icon_state = "g36inteq"
 	item_state = "g36inteq"
-	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/guns/back_inteq.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/guns/back.dmi'
 	empty_indicator = TRUE
 	empty_alarm = TRUE
 	zoomable = TRUE
@@ -96,10 +108,13 @@
 	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 	unique_mag_sprites_for_variants = TRUE
-	mag_type = /obj/item/ammo_box/magazine/morita1
+	default_ammo_type = /obj/item/ammo_box/magazine/morita1
+	allowed_ammo_types = list(
+		/obj/item/ammo_box/magazine/morita1,
+	)
 
-/obj/item/gun/ballistic/automatic/assault/morita1/no_mag
-	spawnwithmagazine = FALSE
+// /obj/item/gun/ballistic/automatic/assault/morita1/no_mag
+// 	spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/automatic/assault/morita1/desert
 	name = "\improper Morita MK.I(desert)"
@@ -107,8 +122,8 @@
 	icon_state = "morita1_desert"
 	item_state = "morita1_desert"
 
-/obj/item/gun/ballistic/automatic/assault/morita1/desert/no_mag
-	spawnwithmagazine = FALSE
+// /obj/item/gun/ballistic/automatic/assault/morita1/desert/no_mag
+// 	spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/automatic/assault/morita1/forest
 	name = "\improper Morita MK.I(forest)"
@@ -116,8 +131,8 @@
 	icon_state = "morita1_forest"
 	item_state = "morita1_forest"
 
-/obj/item/gun/ballistic/automatic/assault/morita1/forest/no_mag
-	spawnwithmagazine = FALSE
+// /obj/item/gun/ballistic/automatic/assault/morita1/forest/no_mag
+// 	spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/automatic/assault/morita1/swamp
 	name = "\improper Morita MK.I(swamp)"
@@ -125,8 +140,8 @@
 	icon_state = "morita1_swamp"
 	item_state = "morita1_swamp"
 
-/obj/item/gun/ballistic/automatic/assault/morita1/swamp/no_mag
-	spawnwithmagazine = FALSE
+// /obj/item/gun/ballistic/automatic/assault/morita1/swamp/no_mag
+// 	spawnwithmagazine = FALSE
 
 // СВД 7.62x54mmR
 /obj/item/gun/ballistic/automatic/marksman/svd
@@ -146,7 +161,11 @@
 	w_class = WEIGHT_CLASS_BULKY
 	internal_magazine = FALSE
 	show_magazine_on_sprite = TRUE
-	mag_type = /obj/item/ammo_box/magazine/svd_rounds
+	default_ammo_type = /obj/item/ammo_box/magazine/svd_rounds
+	allowed_ammo_types = list(
+		/obj/item/ammo_box/magazine/svd_rounds,
+	)
+
 
 	manufacturer = MANUFACTURER_NONE
 	zoomable = FALSE
@@ -171,3 +190,9 @@
 	caliber = "7.62x54"
 	w_class = WEIGHT_CLASS_NORMAL
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
+
+// /obj/item/gun/ballistic/automatic/marksman/f4/inteq/no_mag
+// 	spawnwithmagazine = FALSE
+
+// /obj/item/gun/ballistic/automatic/powered/gauss/no_mag
+// 	spawnwithmagazine = FALSE

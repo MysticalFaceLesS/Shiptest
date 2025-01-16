@@ -43,6 +43,12 @@
 	var/max_missions = 15
 	/// List of missions that can be accepted at this outpost. Missions which have been accepted are removed from this list.
 	var/list/datum/mission/missions
+	/// List of all of the things this outpost offers
+	var/list/supply_packs = list()
+	/// our 'Order number'
+	var/ordernum = 1
+	/// Our faction of the outpost
+	var/datum/faction/faction
 
 /datum/overmap/outpost/Initialize(position, ...)
 	. = ..()
@@ -66,6 +72,7 @@
 	Rename(gen_outpost_name())
 
 	fill_missions()
+	populate_cargo()
 	addtimer(CALLBACK(src, PROC_REF(fill_missions)), 10 MINUTES, TIMER_STOPPABLE|TIMER_LOOP|TIMER_DELETE_ME)
 
 /datum/overmap/outpost/Destroy(...)
@@ -141,6 +148,17 @@
 		var/datum/mission/M = new mission_type(src)
 		LAZYADD(missions, M)
 
+/datum/overmap/outpost/proc/populate_cargo()
+	ordernum = rand(1, 99000)
+
+	for(var/datum/supply_pack/current_pack as anything in subtypesof(/datum/supply_pack))
+		current_pack = new current_pack()
+		if(current_pack.faction)
+			current_pack.faction = new current_pack.faction()
+		if(!current_pack.contains)
+			continue
+		supply_packs += current_pack
+
 /datum/overmap/outpost/proc/load_main_level()
 	if(!main_template)
 		CRASH("[src] ([src.type]) tried to load without a template!")
@@ -212,6 +230,11 @@
 			"for ship [dock_requester] (template [dock_requester.source_template])!"
 		)
 		return FALSE
+
+	// [CELADON-EDIT] - Pirates Update
+	if(dock_requester.get_faction() == "Pirates") //Проверка шипа на пиратскую фракцию
+		return new /datum/docking_ticket(_docking_error = "Неавторизованным лицам отказано в стыковке с аванпостом.") //Запрет пиратам на стыковку с аванпостом
+	// [/CELADON-EDIT]
 
 	if(src in dock_requester.blacklisted)
 		return new /datum/docking_ticket(_docking_error = "Docking request denied: [dock_requester.blacklisted[src]]")

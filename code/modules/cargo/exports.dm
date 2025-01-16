@@ -35,6 +35,12 @@ then the player gets the profit from selling his own wasted time.
 
 	var/list/contents = AM.GetAllContents()
 
+	// [CELADON_EDIT] — PRINTED_ITEMS_SELLING_VITO
+	for(var/obj/item/I in contents)
+		if(I.autolathe_printed)
+			I -= contents
+	// [/CELADON_EDIT]
+
 	var/datum/export_report/report = external_report
 
 	if(!report) //If we don't have any longer transaction going on
@@ -59,7 +65,11 @@ then the player gets the profit from selling his own wasted time.
 		if(!dry_run && (sold || delete_unsold))
 			if(ismob(thing))
 				thing.investigate_log("deleted through cargo export",INVESTIGATE_CARGO)
-			qdel(thing)
+	if(!dry_run)
+	// [CELADON_EDIT]
+		for(var/atom/A in contents)
+			qdel(A)
+	// [/CELADON_EDIT]
 
 	return report
 

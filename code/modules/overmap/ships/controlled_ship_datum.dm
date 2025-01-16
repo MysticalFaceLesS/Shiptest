@@ -78,6 +78,7 @@
 		return FALSE
 	message_admins("[key_name_admin(usr)] renamed vessel '[oldname]' to '[new_name]'")
 	log_admin("[key_name(src)] has renamed vessel '[oldname]' to '[new_name]'")
+	SSblackbox.record_feedback("text", "ship_renames", 1, new_name)
 	shuttle_port?.name = new_name
 	ship_account.account_holder = new_name
 	if(shipkey)
@@ -120,6 +121,12 @@
 	Rename("[source_template.prefix] [pick_list_replacements(SHIP_NAMES_FILE, pick(source_template.name_categories))]", TRUE)
 #endif
 	SSovermap.controlled_ships += src
+
+	if(get_faction() == "Pirates") //Проверка шипа на принадлежность к пиратской фракции
+		radio = new(src.token)
+		radio.name = "Outpost Security System" //Имя, что показывается в вайдбанде
+		radio.talk_into(radio, "На датчиках дальнего действия обнаружена неавторизированная деятельность! Всем кораблям быть в боевой готовности!", FREQ_WIDEBAND) //Сообщение и путь в вайдбанд
+		qdel(radio)
 
 /datum/overmap/ship/controlled/Destroy()
 	//SHOULD be called first
