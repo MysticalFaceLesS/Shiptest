@@ -1973,9 +1973,11 @@
 /turf/open/floor/engine/hull/reinforced,
 /area/ship/external/dark)
 "nc" = (
-/obj/machinery/power/shuttle/engine/electric,
 /obj/structure/cable{
 	icon_state = "0-4"
+	},
+/obj/machinery/power/shuttle/engine/electric/bad{
+	name = "ion Thruster"
 	},
 /turf/open/floor/plating,
 /area/ship/engineering/engines/starboard)
@@ -3667,6 +3669,10 @@
 /obj/item/folder/blue,
 /obj/item/melee/chainofcommand,
 /obj/machinery/light/directional/north,
+/obj/item/desk_flag/nanotrasen{
+	pixel_x = -10;
+	pixel_y = 11
+	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "wT" = (
@@ -3839,6 +3845,9 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
 /turf/open/floor/plasteel/patterned,
 /area/ship/engineering/engine)
 "xz" = (
@@ -3924,6 +3933,19 @@
 	id = "celestis_teg"
 	},
 /turf/open/floor/engine/airless,
+/area/ship/engineering/engine)
+"yx" = (
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/door/poddoor/shutters{
+	id = "celestis_centralengines";
+	dir = 4
+	},
+/obj/machinery/power/smes/shuttle/precharged{
+	dir = 4
+	},
+/turf/open/floor/plating,
 /area/ship/engineering/engine)
 "yD" = (
 /obj/structure/table/reinforced,
@@ -4480,14 +4502,14 @@
 /turf/open/floor/plasteel/patterned,
 /area/ship/engineering/engines/starboard)
 "BY" = (
-/obj/machinery/atmospherics/pipe/manifold/purple/visible{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/orange/visible/layer5{
 	dir = 5
 	},
 /obj/effect/turf_decal/spline/fancy/opaque/black,
 /obj/machinery/light/directional/south,
+/obj/machinery/atmospherics/pipe/simple/purple/visible{
+	dir = 10
+	},
 /turf/open/floor/plasteel/patterned,
 /area/ship/engineering/engine)
 "BZ" = (
@@ -4955,6 +4977,9 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
 /turf/open/floor/plasteel/patterned,
 /area/ship/engineering/engine)
 "Ev" = (
@@ -5203,8 +5228,13 @@
 "GA" = (
 /obj/structure/table/glass,
 /obj/machinery/recharger,
-/obj/item/documents/nanotrasen{
-	icon_state = "docs_blue"
+/obj/item/folder/documents/nanotrasen{
+	pixel_x = -8;
+	pixel_y = -2
+	},
+/obj/item/folder/nanotrasen{
+	pixel_x = 6;
+	pixel_y = 5
 	},
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
@@ -5616,9 +5646,11 @@
 /turf/open/floor/plasteel,
 /area/ship/crew/canteen/kitchen)
 "JI" = (
-/obj/machinery/power/shuttle/engine/electric,
 /obj/structure/cable{
 	icon_state = "0-4"
+	},
+/obj/machinery/power/shuttle/engine/electric/bad{
+	name = "ion Thruster"
 	},
 /turf/open/floor/plating,
 /area/ship/engineering/engines/port)
@@ -6301,6 +6333,15 @@
 	},
 /turf/open/floor/plasteel/patterned,
 /area/ship/engineering/engines/port)
+"OF" = (
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/shuttle/engine/electric{
+	name = "tuned ion thruster"
+	},
+/turf/open/floor/plating,
+/area/ship/engineering/engine)
 "OI" = (
 /obj/structure/railing,
 /obj/structure/table,
@@ -6508,6 +6549,22 @@
 	},
 /turf/open/floor/plasteel,
 /area/ship/engineering/engines/port)
+"PH" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/obj/machinery/door/poddoor/shutters{
+	id = "celestis_centralengines";
+	dir = 4
+	},
+/obj/machinery/power/smes/shuttle/precharged{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/ship/engineering/engine)
 "PI" = (
 /obj/item/kirbyplants/random,
 /obj/machinery/light_switch{
@@ -7295,8 +7352,14 @@
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "TY" = (
-/obj/machinery/atmospherics/pipe/manifold/purple/visible{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/purple/visible{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/terminal{
+	dir = 8
 	},
 /turf/open/floor/plasteel/patterned,
 /area/ship/engineering/engine)
@@ -7359,10 +7422,13 @@
 /obj/machinery/atmospherics/pipe/simple/brown/visible/layer1{
 	dir = 5
 	},
-/obj/machinery/atmospherics/pipe/simple/purple/visible{
-	dir = 10
-	},
 /obj/machinery/atmospherics/pipe/simple/orange/visible/layer5,
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/terminal{
+	dir = 8
+	},
 /turf/open/floor/plasteel/patterned,
 /area/ship/engineering/engine)
 "UP" = (
@@ -8133,7 +8199,7 @@ Pl
 WX
 dv
 WX
-Ct
+OF
 Ct
 WX
 pD
@@ -8141,7 +8207,7 @@ pD
 pD
 WX
 Ct
-Ct
+OF
 WX
 Yk
 WX
@@ -8168,7 +8234,7 @@ sh
 WX
 BR
 WX
-Oa
+yx
 Oa
 WX
 Sl
@@ -8176,7 +8242,7 @@ pD
 Sl
 WX
 Oa
-Oa
+PH
 WX
 CK
 WX

@@ -8,6 +8,7 @@
 
 /datum/supply_pack/faction/independent
 	hidden = FALSE
+	faction = ""
 	crate_type = /obj/structure/closet/crate
 
 /datum/supply_pack/faction/syndicate

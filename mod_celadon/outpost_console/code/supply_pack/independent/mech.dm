@@ -2,6 +2,7 @@
 	group = "Exosuit Construction"
 	crate_type = /obj/structure/closet/crate/large
 
+
 /datum/supply_pack/faction/independent/mech/equipment
 	name = "Exosuit equipment crate"
 	crate_type = /obj/structure/closet/crate/secure/gear
