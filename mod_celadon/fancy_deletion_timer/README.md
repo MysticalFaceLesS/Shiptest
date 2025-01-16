@@ -9,9 +9,9 @@
 -->
 
 <!-- Название мода. Не важно на русском или на английском. -->
-## Outpost consoles
+## Fancy Deletion Timer
 
-ID мода: CELADON_OUTPOST_CONSOLE
+ID мода: CELADON_FANCY_DELETION_TIMER
 <!--
   Название модпака прописными буквами, СОЕДИНЁННЫМИ_ПОДЧЁРКИВАНИЕМ,
   которое ты будешь использовать для обозначения файлов.
@@ -23,13 +23,7 @@ ID мода: CELADON_OUTPOST_CONSOLE
 
 ### Описание мода
 
-Данная модификация убирает вкладку карго из консолей на кораблях и добавляет отдельные фракционные консоли с возможностью покупки
-
-Этот мод добавляет новую продукцию в карго различных направленностей для разнообразия игры. Machinery.dm: платы РнД полные, Карго телепорт для продажи, РнД маяк, набор для создания плазменного двигателя, набор ИРП. Vendor_refill.dm: вендор плат, шахты, сектех, секДроб.
-- `vendor_refill.dm`
-- `machinery.dm`
-- `gun.dm`
-- `ammo.dm`
+Добавляет компонент, отвечающий за удаление атомов.
 <!--
   Что он делает, что добавляет: что, куда, зачем и почему - всё здесь.
   А также любая полезная информация.
@@ -47,9 +41,7 @@ ID мода: CELADON_OUTPOST_CONSOLE
 
 ### Изменения *кор кода*
 
-- `code/controllers/subsystem/economy.dm`
-- `code/modules/cargo/packs/spacesuit_armor.dm` 
-- `code/modules/cargo/packs/machinery.dm`
+- Отсутствуют
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.
@@ -81,7 +73,7 @@ ID мода: CELADON_OUTPOST_CONSOLE
   И то же самое, если ты используешь дефайны, определённые другим модом.
 
   Не используешь - напиши "Отсутствуют"
-  Примеры: `code/__defines/~mod_celadon/outpost_console.dm`: `OUTPOST_CONSOLE_SPEED_MULTIPLIER`, `OUTPOST_CONSOLE_SPEED_BASE`
+  Примеры: `code/__defines/~mod_celadon/fancy_deletion_timer.dm`: `FANCY_DELETION_TIMER_SPEED_MULTIPLIER`, `FANCY_DELETION_TIMER_SPEED_BASE`
 -->
 
 ### Используемые файлы, не содержащиеся в модпаке
@@ -97,7 +89,7 @@ ID мода: CELADON_OUTPOST_CONSOLE
 
 ### Авторы
 
-FeenieRU
+Ganza9991
 <!--
   Здесь находится твой никнейм
   Если работал совместно - никнеймы тех, кто помогал.

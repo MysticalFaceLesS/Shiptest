@@ -2,7 +2,7 @@
 	group = "Materials & Sheets"
 
 /*
-		Basic construction materials
+MARK:		Basic construction materials
 */
 
 /datum/supply_pack/faction/independent/material/glass50
@@ -27,7 +27,7 @@
 	crate_name = "plasteel sheets crate"
 
 /*
-		Fuel sheets (plasma / uranium)
+MARK:		Fuel sheets (plasma / uranium)
 */
 
 /datum/supply_pack/faction/independent/material/plasma20
@@ -47,7 +47,7 @@
 	crate_type = /obj/structure/closet/crate/radiation
 
 /*
-		Misc. mineral sheets
+MARK:		Misc. mineral sheets
 */
 
 /datum/supply_pack/faction/independent/material/titanium20
@@ -79,7 +79,7 @@
 	crate_name = "diamond sheet crate"
 
 /*
-		Misc. materials
+MARK:		Misc. materials
 */
 
 /datum/supply_pack/faction/independent/material/sandstone30
