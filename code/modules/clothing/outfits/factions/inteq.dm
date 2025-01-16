@@ -7,11 +7,9 @@
 
 	backpack = /obj/item/storage/backpack
 	satchel = /obj/item/storage/backpack/satchel
-	/*
-	[CELADON-REMOVE] - CELADON_OUTFIT
-	duffelbag = /obj/item/storage/backpack/duffelbag
-	[/CELADON-REMOVE] -
-	*/
+	//[CELADON-REMOVE] - CELADON_OUTFIT
+	//duffelbag = /obj/item/storage/backpack/duffelbag
+	//[/CELADON-REMOVE]
 	courierbag = /obj/item/storage/backpack/messenger/inteq
 
 /datum/outfit/job/inteq/post_equip(mob/living/carbon/human/H, visualsOnly)
