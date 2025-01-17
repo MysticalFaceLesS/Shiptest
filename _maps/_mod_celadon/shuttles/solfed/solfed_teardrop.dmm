@@ -49,16 +49,10 @@
 /obj/machinery/light/directional/south,
 /obj/effect/turf_decal/corner/opaque/blue/mono,
 /obj/machinery/suit_storage_unit/inherit,
-/obj/item/clothing/suit/space/syndicate/blue{
-	armor = list("melee" = 30, "bullet" = 40, "laser" = 30, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75)
-	},
-/obj/item/clothing/head/helmet/space/syndicate/black{
-	pixel_x = 0;
-	pixel_y = 7;
-	armor = list("melee" = 30, "bullet" = 40, "laser" = 30, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75)
-	},
 /obj/item/tank/internals/oxygen,
 /obj/item/clothing/mask/breath,
+/obj/item/clothing/suit/space/solgov,
+/obj/item/clothing/head/helmet/space/solgov,
 /turf/open/floor/plasteel/white,
 /area/ship/cargo)
 "bc" = (
@@ -111,7 +105,7 @@
 "bq" = (
 /obj/machinery/firealarm/directional/north,
 /obj/structure/closet/secure_closet{
-	icon_state = "cap";
+	icon_state = "solgov";
 	name = "\proper captain's locker";
 	req_access_txt = "20"
 	},
@@ -331,11 +325,10 @@
 /obj/effect/turf_decal/siding/wood{
 	color = "#E6D2BA"
 	},
-/obj/item/clothing/under/nanotrasen/affairs,
-/obj/item/clothing/under/nanotrasen/affairs,
-/obj/item/clothing/under/nanotrasen/affairs,
-/obj/item/clothing/under/nanotrasen/affairs,
-/obj/item/clothing/under/nanotrasen/affairs,
+/obj/item/clothing/under/solgov/formal,
+/obj/item/clothing/under/solgov/formal,
+/obj/item/clothing/under/solgov/formal,
+/obj/item/clothing/under/solgov/formal,
 /turf/open/floor/wood/bamboo,
 /area/ship/crew/dorm)
 "dK" = (
@@ -544,10 +537,6 @@
 /obj/item/clothing/under/rank/medical/paramedic/skirt,
 /obj/item/clothing/under/rank/medical/paramedic,
 /obj/item/clothing/head/soft/paramedic,
-/obj/item/clothing/neck/cloak/gezena/med{
-	name = "medical NanoTrasen";
-	desc = "Cloak of the Forgotten State. This variant displays the wearer's rank as an officer with a medical specialization."
-	},
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "hc" = (
@@ -793,9 +782,7 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 1
 	},
-/obj/item/clothing/suit/armor/vest/marine/medium{
-	armor = list("melee" = 40, "bullet" = 60, "laser" = 30, "energy" = 25, "bomb" = 60, "bio" = 100, "fire" = 70, "acid" = 50)
-	},
+/obj/item/clothing/suit/space/hardsuit/solgov,
 /turf/open/floor/plasteel/white,
 /area/ship/security)
 "jn" = (
@@ -1130,16 +1117,10 @@
 /obj/effect/turf_decal/corner/opaque/blue/mono,
 /obj/machinery/newscaster/directional/west,
 /obj/machinery/suit_storage_unit/inherit,
-/obj/item/clothing/suit/space/syndicate/blue{
-	armor = list("melee" = 30, "bullet" = 40, "laser" = 30, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75)
-	},
-/obj/item/clothing/head/helmet/space/syndicate/black{
-	pixel_x = 0;
-	pixel_y = 7;
-	armor = list("melee" = 30, "bullet" = 40, "laser" = 30, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75)
-	},
 /obj/item/tank/internals/oxygen,
 /obj/item/clothing/mask/breath,
+/obj/item/clothing/suit/space/solgov,
+/obj/item/clothing/head/helmet/space/solgov,
 /turf/open/floor/plasteel/white,
 /area/ship/cargo)
 "mO" = (
@@ -1180,7 +1161,7 @@
 /turf/open/floor/plasteel/white,
 /area/ship/hallway/central)
 "nm" = (
-/obj/structure/sign/nanotrasen,
+/obj/structure/sign/solfed,
 /turf/closed/wall/mineral/titanium,
 /area/ship/cargo)
 "no" = (
@@ -1345,20 +1326,12 @@
 /obj/item/clothing/suit/armor/vest/bulletproof,
 /obj/item/storage/belt/military,
 /obj/machinery/light/directional/east,
-/obj/item/clothing/neck/cloak/gezena/command{
-	name = "officer's NanoTrasen";
-	color = "#3f4869";
-	desc = "Cloak of the Forgotten State. This variant displays the wearer's officer rank."
-	},
 /obj/effect/turf_decal/corner/opaque/solgovblue{
 	dir = 5
 	},
 /obj/effect/turf_decal/techfloor,
-/obj/item/clothing/under/nanotrasen/officer,
 /obj/item/clothing/head/beret/sec/officer,
-/obj/item/clothing/head/helmet/swat/nanotrasen{
-	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 80)
-	},
+/obj/item/clothing/under/solgov/formal/terragov,
 /turf/open/floor/plasteel/white,
 /area/ship/security)
 "ot" = (
@@ -1402,7 +1375,7 @@
 /turf/open/floor/carpet/blue,
 /area/ship/crew/dorm)
 "oI" = (
-/obj/machinery/porta_turret/ship/nt{
+/obj/machinery/porta_turret/ship/solfed/light{
 	dir = 8;
 	id = "teardrop_turrets"
 	},
@@ -1562,7 +1535,8 @@
 	dir = 4
 	},
 /obj/structure/displaycase/captain{
-	req_access = list(68)
+	req_access = list(68);
+	start_showpiece_type = /obj/item/gun/ballistic/automatic/powered/gauss/modelh
 	},
 /turf/open/floor/wood/walnut,
 /area/ship/crew/dorm/dormtwo)
@@ -1580,7 +1554,7 @@
 /turf/open/floor/plasteel/tech/techmaint,
 /area/ship/engineering)
 "qq" = (
-/obj/machinery/porta_turret/ship/nt/pulse{
+/obj/machinery/porta_turret/ship/solfed/heavy{
 	dir = 4;
 	id = "teardrop_turrets"
 	},
@@ -1627,8 +1601,8 @@
 	dir = 1
 	},
 /obj/machinery/light/floor,
-/obj/item/banner/command/mundane,
 /obj/effect/decal/cleanable/dirt,
+/obj/item/banner/solfed/mundane,
 /turf/open/floor/plasteel/white,
 /area/ship/hallway/central)
 "rk" = (
@@ -1806,12 +1780,7 @@
 	},
 /obj/item/disk/design_disk/ammo_c9mm,
 /obj/structure/safe/floor,
-/obj/item/sign/flag/gezena,
 /obj/item/energyhalberd/blue,
-/obj/item/clothing/neck/cloak/overseer{
-	name = "NanoTrasen overseer's cloak"
-	},
-/obj/item/desk_flag/gezena,
 /obj/effect/turf_decal/techfloor{
 	dir = 5
 	},
@@ -1900,7 +1869,7 @@
 /turf/open/floor/plasteel/white,
 /area/ship/hallway/central)
 "ve" = (
-/obj/machinery/porta_turret/ship/nt/heavy{
+/obj/machinery/porta_turret/ship/solfed/heavy{
 	dir = 6;
 	id = "teardrop_turrets"
 	},
@@ -1945,7 +1914,7 @@
 /turf/open/floor/wood/walnut,
 /area/ship/crew/dorm)
 "vJ" = (
-/obj/structure/sign/nanotrasen,
+/obj/structure/sign/solfed,
 /turf/closed/wall/mineral/titanium,
 /area/ship/medical)
 "vS" = (
@@ -1980,11 +1949,6 @@
 /obj/item/clothing/suit/armor/vest/bulletproof,
 /obj/item/storage/belt/military,
 /obj/machinery/light/directional/east,
-/obj/item/clothing/neck/cloak/gezena/command{
-	name = "officer's NanoTrasen";
-	color = "#3f4869";
-	desc = "Cloak of the Forgotten State. This variant displays the wearer's officer rank."
-	},
 /obj/effect/turf_decal/corner/opaque/solgovblue{
 	dir = 10
 	},
@@ -1992,11 +1956,8 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/cobweb/cobweb2,
-/obj/item/clothing/under/nanotrasen/officer,
 /obj/item/clothing/head/beret/sec/officer,
-/obj/item/clothing/head/helmet/swat/nanotrasen{
-	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 80)
-	},
+/obj/item/clothing/under/solgov/formal/terragov,
 /turf/open/floor/plasteel/white,
 /area/ship/security)
 "vZ" = (
@@ -2235,14 +2196,10 @@
 /obj/structure/bed/double{
 	dir = 1
 	},
-/obj/item/bedsheet/double/captain{
-	dir = 1
-	},
-/obj/item/disk/nuclear{
-	pixel_x = -9;
-	pixel_y = 8
-	},
 /obj/machinery/newscaster/directional/north,
+/obj/item/bedsheet/double/solgov{
+	dir = 4
+	},
 /turf/open/floor/carpet/royalblack,
 /area/ship/crew/dorm/dormtwo)
 "yd" = (
@@ -2551,7 +2508,7 @@
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/hallway/central)
 "BD" = (
-/obj/machinery/porta_turret/ship/nt{
+/obj/machinery/porta_turret/ship/solfed/light{
 	dir = 10;
 	id = "teardrop_turrets"
 	},
@@ -2846,16 +2803,10 @@
 "Eg" = (
 /obj/effect/turf_decal/corner/opaque/blue/mono,
 /obj/machinery/suit_storage_unit/inherit,
-/obj/item/clothing/suit/space/syndicate/blue{
-	armor = list("melee" = 30, "bullet" = 40, "laser" = 30, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75)
-	},
-/obj/item/clothing/head/helmet/space/syndicate/black{
-	pixel_x = 0;
-	pixel_y = 7;
-	armor = list("melee" = 30, "bullet" = 40, "laser" = 30, "energy" = 40, "bomb" = 20, "bio" = 100, "rad" = 30, "fire" = 75, "acid" = 75)
-	},
 /obj/item/tank/internals/oxygen,
 /obj/item/clothing/mask/breath,
+/obj/item/clothing/suit/space/solgov,
+/obj/item/clothing/head/helmet/space/solgov,
 /turf/open/floor/plasteel/white,
 /area/ship/cargo)
 "Eh" = (
@@ -3031,7 +2982,7 @@
 /turf/open/floor/plasteel/white,
 /area/ship/hallway/central)
 "GP" = (
-/obj/machinery/porta_turret/ship/nt{
+/obj/machinery/porta_turret/ship/solfed{
 	dir = 1;
 	id = "teardrop_turrets"
 	},
@@ -3053,10 +3004,6 @@
 /area/ship/medical)
 "Hh" = (
 /obj/structure/closet/cabinet,
-/obj/item/clothing/neck/cloak/gezena/captain{
-	desc = "Cloak of the Forgotten State. This variant displays the wearer's rank as a high ranking officer.";
-	name = "captain's NanoTrasen"
-	},
 /obj/item/storage/backpack/satchel/cap,
 /obj/item/clothing/head/beret/captain,
 /obj/item/storage/backpack/captain,
@@ -3066,8 +3013,6 @@
 /obj/item/clothing/suit/jacket/miljacket,
 /obj/item/clothing/shoes/jackboots,
 /obj/item/clothing/suit/armor/vest/capcarapace/captunic,
-/obj/item/clothing/under/rank/security/head_of_security/alt/skirt/lp,
-/obj/item/clothing/under/rank/security/head_of_security/alt/lp,
 /turf/open/floor/carpet/royalblack,
 /area/ship/crew/dorm/dormtwo)
 "Hi" = (
@@ -3104,10 +3049,6 @@
 /obj/item/clothing/glasses/hud/security/sunglasses,
 /obj/item/clothing/suit/armor/vest/bulletproof,
 /obj/item/storage/belt/military,
-/obj/item/clothing/neck/cloak/gezena/lead{
-	desc = "Cloak of the Forgotten State. This variant displays the wearer's rank as a squad commander.";
-	name = "sergeant's NanoTrasen"
-	},
 /obj/structure/closet/secure_closet/security,
 /obj/effect/turf_decal/corner/opaque/solgovblue{
 	dir = 10
@@ -3115,11 +3056,8 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 1
 	},
-/obj/item/clothing/under/nanotrasen/security/director,
 /obj/item/clothing/head/beret/sec/hos,
-/obj/item/clothing/head/helmet/swat/nanotrasen{
-	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 80)
-	},
+/obj/item/clothing/under/solgov/formal/terragov,
 /turf/open/floor/plasteel/white,
 /area/ship/security)
 "HL" = (
@@ -3283,7 +3221,7 @@
 /turf/open/floor/plasteel/white,
 /area/ship/cargo)
 "JZ" = (
-/obj/machinery/porta_turret/ship/nt/heavy{
+/obj/machinery/porta_turret/ship/solfed/heavy{
 	dir = 5;
 	id = "teardrop_turrets"
 	},
@@ -3326,12 +3264,8 @@
 	pixel_y = 4
 	},
 /obj/item/binoculars,
-/obj/item/stamp/nanotrasen/captain{
-	pixel_x = 11;
-	pixel_y = -3
-	},
-/obj/item/stamp/nt/captain{
-	pixel_x = 2;
+/obj/item/stamp/solfed/captain{
+	pixel_x = 7;
 	pixel_y = -3
 	},
 /turf/open/floor/plasteel/white,
@@ -3593,11 +3527,7 @@
 /turf/open/floor/plasteel/white,
 /area/ship/hallway/central)
 "Nt" = (
-/obj/machinery/porta_turret/ship/ballistic{
-	dir = 9;
-	faction = list("playerNanotrasen","turret")
-	},
-/obj/machinery/porta_turret/ship/nt{
+/obj/machinery/porta_turret/ship/solfed{
 	id = "teardrop_turrets"
 	},
 /turf/closed/wall/mineral/titanium,
@@ -3832,20 +3762,12 @@
 /obj/item/clothing/glasses/hud/security/sunglasses,
 /obj/item/clothing/suit/armor/vest/bulletproof,
 /obj/item/storage/belt/military,
-/obj/item/clothing/neck/cloak/gezena/command{
-	name = "officer's NanoTrasen";
-	color = "#3f4869";
-	desc = "Cloak of the Forgotten State. This variant displays the wearer's officer rank."
-	},
 /obj/effect/turf_decal/corner/opaque/solgovblue{
 	dir = 5
 	},
 /obj/effect/turf_decal/techfloor,
-/obj/item/clothing/under/nanotrasen/officer,
 /obj/item/clothing/head/beret/sec/officer,
-/obj/item/clothing/head/helmet/swat/nanotrasen{
-	armor = list("melee" = 50, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 30, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 80)
-	},
+/obj/item/clothing/under/solgov/formal/terragov,
 /turf/open/floor/plasteel/white,
 /area/ship/security)
 "PZ" = (
@@ -3916,7 +3838,7 @@
 /obj/effect/decal/cleanable/cobweb/cobweb2,
 /obj/machinery/suit_storage_unit/inherit,
 /obj/item/clothing/mask/gas/sechailer/swat,
-/obj/item/clothing/suit/space/hardsuit/swat/captain,
+/obj/item/clothing/suit/space/hardsuit/solgov,
 /turf/open/floor/carpet/royalblack,
 /area/ship/crew/dorm/dormtwo)
 "QF" = (
@@ -4191,7 +4113,7 @@
 /turf/open/floor/plasteel/white,
 /area/ship/hallway/central)
 "SZ" = (
-/obj/machinery/porta_turret/ship/nt{
+/obj/machinery/porta_turret/ship/solfed/light{
 	dir = 9;
 	id = "teardrop_turrets"
 	},
@@ -4228,22 +4150,21 @@
 	anchored = 1;
 	req_access_txt = "1"
 	},
-/obj/item/gun/ballistic/rifle/scout{
-	pixel_x = -5;
-	pixel_y = 8
+/obj/item/gun/ballistic/automatic/powered/gauss/gar{
+	pixel_x = -8;
+	pixel_y = 5
 	},
-/obj/item/gun/energy/e_gun/dragnet,
-/obj/item/gun/energy/kinetic_accelerator/crossbow/large{
-	pixel_x = 0;
+/obj/item/gun/ballistic/automatic/powered/gauss/claris{
+	pixel_x = -10;
+	pixel_y = -1
+	},
+/obj/item/gun/ballistic/automatic/powered/gauss/claris{
+	pixel_x = -10;
+	pixel_y = -10
+	},
+/obj/item/gun/ballistic/automatic/powered/gauss/claris{
+	pixel_x = -11;
 	pixel_y = -5
-	},
-/obj/item/gun/energy/disabler{
-	pixel_x = 0;
-	pixel_y = -14
-	},
-/obj/item/gun/energy/disabler{
-	pixel_x = 0;
-	pixel_y = -9
 	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/security)
@@ -4383,14 +4304,6 @@
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
-	},
-/obj/item/clothing/neck/cloak/gezena/engi{
-	desc = "Cloak of the Forgotten State. This variant displays the wearer's rank as an officer with an engineering specialization.";
-	name = "engineering NanoTrasen"
-	},
-/obj/item/clothing/neck/cloak/gezena/engi{
-	desc = "Cloak of the Forgotten State. This variant displays the wearer's rank as an officer with an engineering specialization.";
-	name = "engineering NanoTrasen"
 	},
 /obj/effect/turf_decal/techfloor/orange{
 	dir = 4
@@ -4605,9 +4518,7 @@
 	dir = 5
 	},
 /obj/effect/turf_decal/techfloor,
-/obj/item/clothing/suit/armor/vest/marine/medium{
-	armor = list("melee" = 40, "bullet" = 60, "laser" = 30, "energy" = 25, "bomb" = 60, "bio" = 100, "fire" = 70, "acid" = 50)
-	},
+/obj/item/clothing/suit/space/hardsuit/solgov,
 /turf/open/floor/plasteel/white,
 /area/ship/security)
 "Yn" = (
