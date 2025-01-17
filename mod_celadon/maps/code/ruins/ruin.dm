@@ -458,6 +458,13 @@
 //							///
 //		Space ruin			///
 //							///
+
+/datum/map_template/ruin/space/abandoned_remora
+	id = "abandoned_remora"
+	suffix = "abandoned_remora.dmm"
+	name = "Destroyed Remora Ship"
+	description = "A very old syndie ship, abandoned and destroyed by Nanotrasen."
+
 /datum/map_template/ruin/space/corporate_mining
 	id = "corporate_mining"
 	suffix = "corporate_mining.dmm"
