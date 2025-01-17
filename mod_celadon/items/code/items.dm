@@ -45,7 +45,7 @@
 	icon = 'mod_celadon/_storge_icons/icons/items/obj/flags.dmi'
 	name = "\improper folded InteQ flag"
 	desc = "Brown folded flag with InteQ logo on it.. Stop thinking about selling it. Seriously."
-	icon_state = "dolded_InteQ"
+	icon_state = "folded_InteQ"
 	sign_path = /obj/structure/sign/flag/inteq
 
 /obj/item/sign/flag/separatist
