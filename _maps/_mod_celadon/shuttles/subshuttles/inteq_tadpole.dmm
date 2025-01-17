@@ -226,6 +226,13 @@
 	},
 /obj/machinery/firealarm/directional/south,
 /obj/effect/turf_decal/trimline/opaque/yellow/corner,
+/obj/machinery/button/door{
+	id = "Caliban_subshuttle_window";
+	name = "Engine Shutters Control";
+	pixel_x = -13;
+	pixel_y = -20;
+	dir = 1
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "s" = (
@@ -252,13 +259,12 @@
 	},
 /obj/item/radio/intercom/wideband/directional/south,
 /obj/machinery/turretid/lethal{
-	pixel_y = -28;
-	pixel_x = 10
+	pixel_y = -28
 	},
 /obj/machinery/button/door{
-	id = "Caliban_subshuttle_starboard";
-	name = "Starboard Control";
-	pixel_x = -4;
+	id = "Caliban_subshuttle_window";
+	name = "Window Shutters Control";
+	pixel_x = 20;
 	pixel_y = -27;
 	dir = 1
 	},
@@ -422,9 +428,6 @@
 /area/ship/bridge)
 "G" = (
 /obj/structure/cable{
-	icon_state = "0-10"
-	},
-/obj/structure/cable{
 	icon_state = "0-8"
 	},
 /obj/machinery/power/smes/shuttle/precharged{
@@ -435,6 +438,10 @@
 	},
 /obj/machinery/door/window/eastleft{
 	name = "Engine Access"
+	},
+/obj/machinery/door/poddoor/shutters{
+	id = "Caliban_subshuttle_engines";
+	dir = 4
 	},
 /turf/open/floor/plating,
 /area/ship/bridge)
@@ -493,6 +500,10 @@
 /obj/machinery/door/window/eastright{
 	name = "Engine Access"
 	},
+/obj/machinery/door/poddoor/shutters{
+	id = "Caliban_subshuttle_engines";
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/ship/bridge)
 "N" = (
@@ -525,17 +536,18 @@
 /turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "T" = (
-/obj/structure/cable{
-	icon_state = "0-5"
+/obj/machinery/porta_turret/ship/inteq/heavy{
+	dir = 4
 	},
-/obj/machinery/power/shuttle/engine/electric/bad,
-/turf/open/floor/plating,
+/turf/closed/wall/mineral/plastitanium/nodiagonal,
 /area/ship/bridge)
 "W" = (
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/shuttle/engine/electric/bad,
+/obj/machinery/power/shuttle/engine/electric/bad{
+	thrust = 2
+	},
 /turf/open/floor/plating,
 /area/ship/bridge)
 "X" = (

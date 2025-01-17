@@ -3,6 +3,7 @@
 /obj/machinery/light/small/directional/west,
 /obj/machinery/atmospherics/components/binary/dp_vent_pump/high_volume/layer2,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/tech,
 /area/ship/medical)
 "ae" = (
@@ -131,6 +132,7 @@
 /area/ship/hallway/port_fore)
 "aD" = (
 /obj/machinery/atmospherics/pipe/layer_manifold,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/tech,
 /area/ship/medical)
 "aH" = (
@@ -145,6 +147,15 @@
 /obj/machinery/light/directional/north,
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
+"aP" = (
+/obj/effect/turf_decal/techfloor/orange,
+/obj/structure/railing{
+	layer = 4.1;
+	color = "#808080"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/telecomms_floor,
+/area/ship/hangar)
 "aV" = (
 /obj/structure/grille,
 /obj/structure/window/plasma/reinforced/plastitanium,
@@ -177,6 +188,9 @@
 /obj/item/circuitboard/machine/chem_dispenser,
 /obj/item/circuitboard/machine/chem_heater,
 /obj/item/circuitboard/machine/chem_master,
+/obj/structure/sign/warning/explosives/alt{
+	pixel_y = -32
+	},
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
 "bI" = (
@@ -271,6 +285,8 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/canteen)
 "cn" = (
@@ -278,6 +294,12 @@
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/dorm)
+"cs" = (
+/obj/structure/sign/warning/fire{
+	pixel_y = 12
+	},
+/turf/closed/wall/r_wall/syndicate/nodiagonal,
+/area/ship/engineering/engine)
 "cz" = (
 /obj/machinery/atmospherics/components/binary/valve,
 /obj/machinery/atmospherics/components/binary/pump/layer2{
@@ -291,6 +313,7 @@
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/red,
 /area/ship/crew/cryo)
 "cD" = (
@@ -306,6 +329,7 @@
 	dir = 1
 	},
 /obj/structure/barricade/wooden,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/red,
 /area/ship/crew/dorm/dormfive)
 "cR" = (
@@ -369,6 +393,34 @@
 /turf/open/floor/plating,
 /area/ship/crew/office)
 "dk" = (
+/obj/structure/closet/secure_closet{
+	icon_state = "warden";
+	anchored = 1;
+	req_access_txt = "3";
+	name = "Rearguard  locker"
+	},
+/obj/item/radio/headset/inteq/alt,
+/obj/item/clothing/under/syndicate/inteq,
+/obj/item/clothing/head/beret/sec/hos/inteq{
+	name = "inteq beret";
+	desc = "A comfortable looking brown beret. The padding inside feels thicker."
+	},
+/obj/item/clothing/suit/armor/vest/inteq,
+/obj/item/melee/classic_baton,
+/obj/item/clothing/under/rank/security/detective/grey{
+	name = "Honored Rearguard uniform";
+	desc = "A hard-boiled worn grey suit, complete with tie clip."
+	},
+/obj/item/storage/backpack/messenger/inteq,
+/obj/item/clothing/head/warden/inteq{
+	name = "Rearguard hat";
+	desc = "A special brown campaign hat with the IRMG insignia emblazoned on it. For yelling at clueless crew in style."
+	},
+/obj/item/clothing/head/frontier/peaked{
+	desc = "An intimidating  peaked cap, meant for Rearguard of the InteQ Risk Management Group.";
+	name = "\improper Rearguard cap"
+	},
+/obj/item/clothing/under/syndicate/inteq/skirt,
 /obj/effect/turf_decal/trimline/opaque/yellow/line{
 	dir = 10
 	},
@@ -376,7 +428,8 @@
 	dir = 10;
 	layer = 2.030
 	},
-/obj/structure/table/reinforced,
+/obj/item/reagent_containers/food/drinks/bottle/triplesec,
+/obj/item/pen/fountain/captain,
 /turf/open/floor/plasteel/mono,
 /area/ship/crew/dorm/dormtwo)
 "dl" = (
@@ -430,7 +483,8 @@
 	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
-	dir = 6
+	dir = 6;
+	id = "Caliban_turret_control"
 	},
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
 /area/ship/crew/cryo)
@@ -555,6 +609,7 @@
 	dir = 1
 	},
 /obj/machinery/recharge_station,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/tech,
 /area/ship/security/armory)
 "fr" = (
@@ -631,6 +686,8 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/canteen)
 "fN" = (
@@ -668,6 +725,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/port_fore)
 "fY" = (
@@ -678,7 +736,8 @@
 	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
-	dir = 6
+	dir = 6;
+	id = "Caliban_turret_control"
 	},
 /turf/closed/wall/r_wall/syndicate,
 /area/ship/crew/canteen)
@@ -690,7 +749,8 @@
 	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
-	dir = 9
+	dir = 9;
+	id = "Caliban_turret_control"
 	},
 /turf/closed/wall/r_wall/syndicate,
 /area/ship/engineering/engine)
@@ -950,6 +1010,7 @@
 /obj/machinery/microwave{
 	pixel_y = 5
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/canteen)
 "hK" = (
@@ -1010,6 +1071,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/port_fore)
 "hT" = (
@@ -1034,13 +1096,22 @@
 	icon_state = "0-5"
 	},
 /obj/structure/catwalk/over,
-/obj/effect/turf_decal/techfloor{
+/obj/machinery/door/firedoor/border_only{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/sign/warning/electricshock{
+	pixel_y = -20
+	},
+/obj/effect/decal/fakelattice{
+	name = "low platform";
+	desc = "A small platform that connects to the catwolk.";
+	icon = 'icons/turf/decals/decals.dmi';
+	icon_state = "techfloor_edges";
 	dir = 8;
 	layer = 2.460;
 	pixel_x = 16
-	},
-/obj/machinery/door/firedoor/border_only{
-	dir = 4
 	},
 /turf/open/floor/plating,
 /area/ship/engineering)
@@ -1209,6 +1280,44 @@
 	},
 /turf/open/floor/engine/n2,
 /area/ship/engineering/engine)
+"jr" = (
+/obj/structure/closet/secure_closet{
+	icon_state = "warden";
+	anchored = 1;
+	req_access_txt = "3";
+	name = "Rearguard  locker"
+	},
+/obj/item/radio/headset/inteq/alt,
+/obj/item/clothing/under/syndicate/inteq,
+/obj/item/clothing/head/beret/sec/hos/inteq{
+	name = "inteq beret";
+	desc = "A comfortable looking brown beret. The padding inside feels thicker."
+	},
+/obj/item/clothing/suit/armor/vest/inteq,
+/obj/effect/turf_decal/trimline/opaque/yellow/line{
+	dir = 9
+	},
+/obj/effect/turf_decal/siding/thinplating/dark{
+	dir = 9
+	},
+/obj/item/melee/classic_baton,
+/obj/item/clothing/under/rank/security/detective/grey{
+	name = "Honored Rearguard uniform";
+	desc = "A hard-boiled worn grey suit, complete with tie clip."
+	},
+/obj/item/storage/backpack/messenger/inteq,
+/obj/item/clothing/head/warden/inteq{
+	name = "Rearguard hat";
+	desc = "A special brown campaign hat with the IRMG insignia emblazoned on it. For yelling at clueless crew in style."
+	},
+/obj/item/clothing/head/frontier/peaked{
+	desc = "An intimidating  peaked cap, meant for Rearguard of the InteQ Risk Management Group.";
+	name = "\improper Rearguard cap"
+	},
+/obj/item/clothing/under/syndicate/inteq/skirt,
+/obj/machinery/light/small/directional/west,
+/turf/open/floor/plasteel/mono,
+/area/template_noop)
 "jt" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
@@ -1219,6 +1328,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/tech,
 /area/ship/hallway/port_fore)
 "jH" = (
@@ -1272,6 +1382,7 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/port_fore)
 "jT" = (
@@ -1282,19 +1393,24 @@
 	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
-	dir = 10
+	dir = 10;
+	id = "Caliban_turret_control"
 	},
 /turf/closed/wall/r_wall/syndicate,
 /area/ship/engineering/engine)
 "jU" = (
 /obj/structure/catwalk/over,
-/obj/effect/turf_decal/techfloor{
+/obj/machinery/door/firedoor/border_only{
+	dir = 4
+	},
+/obj/effect/decal/fakelattice{
+	name = "low platform";
+	desc = "A small platform that connects to the catwolk.";
+	icon = 'icons/turf/decals/decals.dmi';
+	icon_state = "techfloor_edges";
 	dir = 8;
 	layer = 2.460;
 	pixel_x = 16
-	},
-/obj/machinery/door/firedoor/border_only{
-	dir = 4
 	},
 /turf/open/floor/plating,
 /area/ship/engineering)
@@ -1325,6 +1441,7 @@
 /obj/item/reagent_containers/food/drinks/coffee{
 	list_reagents = list(/datum/reagent/consumable/coffee=0)
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/canteen)
 "jZ" = (
@@ -1379,6 +1496,7 @@
 /obj/item/flashlight,
 /obj/item/flashlight,
 /obj/item/flashlight,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/red,
 /area/ship/crew/cryo)
 "ks" = (
@@ -1620,7 +1738,8 @@
 	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
-	dir = 5
+	dir = 5;
+	id = "Caliban_turret_control"
 	},
 /turf/closed/wall/r_wall/syndicate,
 /area/ship/crew/toilet)
@@ -1735,9 +1854,14 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/engineering)
 "mF" = (
-/obj/item/gun/ballistic/automatic/marksman/f4/inteq,
-/turf/template_noop,
-/area/template_noop)
+/obj/machinery/light/floor/hangar,
+/obj/structure/platform{
+	dir = 1
+	},
+/turf/open/floor/plasteel/elevatorshaft{
+	color = "#808080"
+	},
+/area/ship/hangar)
 "mI" = (
 /obj/effect/turf_decal/corner/opaque/brown{
 	dir = 8
@@ -1753,6 +1877,7 @@
 /obj/machinery/reagentgrinder{
 	pixel_y = 8
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/canteen)
 "mK" = (
@@ -1868,6 +1993,7 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 5
 	},
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/hallway/port_fore)
 "nE" = (
@@ -1914,6 +2040,7 @@
 /obj/effect/turf_decal/techfloor/corner{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/hallway/port_fore)
 "nJ" = (
@@ -1953,6 +2080,14 @@
 	layer = 4.1
 	},
 /obj/structure/catwalk/over/plated_catwalk/dark,
+/obj/structure/sign/warning/fire{
+	pixel_x = -22;
+	pixel_y = -4
+	},
+/obj/structure/sign/warning/docking{
+	pixel_y = 8;
+	pixel_x = -24
+	},
 /turf/open/floor/plasteel/elevatorshaft{
 	color = "#808080"
 	},
@@ -2015,6 +2150,9 @@
 /obj/effect/turf_decal/borderfloorwhite/corner{
 	dir = 8
 	},
+/obj/structure/sign/departments/medbay/alt{
+	pixel_y = -30
+	},
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/starboard_fore)
 "ou" = (
@@ -2050,6 +2188,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/effect/turf_decal/industrial/loading/white,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/starboard_fore)
 "oG" = (
@@ -2308,6 +2447,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/port_fore)
 "qt" = (
@@ -2452,6 +2592,7 @@
 /obj/item/tank/internals/emergency_oxygen/double,
 /obj/item/flashlight,
 /obj/item/analyzer,
+/obj/item/gear_pack/anglegrinder/energy,
 /turf/open/floor/carpet/red,
 /area/ship/crew/dorm/dormfive)
 "rk" = (
@@ -2566,6 +2707,21 @@
 /obj/machinery/airalarm/directional/west,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/fore)
+"sb" = (
+/obj/effect/turf_decal/trimline/opaque/yellow/line{
+	dir = 10
+	},
+/obj/effect/turf_decal/siding/thinplating/dark{
+	dir = 10;
+	layer = 2.030
+	},
+/obj/structure/table/reinforced,
+/obj/item/flashlight/lamp/green{
+	pixel_y = 3;
+	pixel_x = 7
+	},
+/turf/open/floor/plasteel/mono,
+/area/template_noop)
 "sc" = (
 /obj/effect/turf_decal/techfloor{
 	dir = 1
@@ -2580,6 +2736,13 @@
 "se" = (
 /obj/structure/platform/military{
 	dir = 8
+	},
+/obj/structure{
+	desc = "A huge bundle of double insulated cabling which seems to run up into the ceiling.";
+	icon = 'icons/obj/power.dmi';
+	icon_state = "cablerelay-off";
+	name = "Multi-deck power adapter";
+	pixel_x = -10
 	},
 /turf/open/floor/plasteel/elevatorshaft{
 	color = "#808080"
@@ -2786,17 +2949,23 @@
 	},
 /obj/machinery/light/directional/south,
 /obj/structure/flippedtable{
-	desc = "A flipped table. It has been flipped for an unidentified amount of time. You have to break them or take them apart to put them back."
+	desc = "A flipped table. It has been flipped for an unidentified amount of time. You have to break them or take them apart to put them back... Or simply move it!";
+	anchored = 0
 	},
 /obj/structure/flippedtable{
 	pixel_y = 7;
-	desc = "A flipped table. It has been flipped for an unidentified amount of time. You have to break them or take them apart to put them back."
+	desc = "A flipped table. It has been flipped for an unidentified amount of time. You have to break them or take them apart to put them back... Or simply move it!";
+	anchored = 0
 	},
 /obj/structure/flippedtable{
-	desc = "A flipped table. It has been flipped for an unidentified amount of time. You have to break them or take them apart to put them back.";
-	pixel_y = 14
+	desc = "A flipped table. It has been flipped for an unidentified amount of time. You have to break them or take them apart to put them back... Or simply move it!";
+	pixel_y = 14;
+	anchored = 0
 	},
 /obj/machinery/airalarm/directional/east,
+/obj/machinery/firealarm/directional/east{
+	pixel_y = 9
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/office)
 "tu" = (
@@ -3204,6 +3373,7 @@
 	charge = 2.5e+006
 	},
 /obj/machinery/light/directional/south,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/ship/engineering)
 "vX" = (
@@ -3211,6 +3381,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/port_fore)
 "wc" = (
@@ -3236,7 +3407,8 @@
 	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
-	dir = 10
+	dir = 10;
+	id = "Caliban_turret_control"
 	},
 /turf/closed/wall/r_wall/syndicate,
 /area/ship/medical)
@@ -3314,7 +3486,8 @@
 	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
-	dir = 9
+	dir = 9;
+	id = "Caliban_turret_control"
 	},
 /turf/closed/wall/r_wall/syndicate,
 /area/ship/hallway/port_fore)
@@ -3372,6 +3545,14 @@
 	layer = 4.1
 	},
 /obj/structure/catwalk/over/plated_catwalk/dark,
+/obj/structure/sign/warning/fire{
+	pixel_x = -22;
+	pixel_y = 4
+	},
+/obj/structure/sign/warning/docking{
+	pixel_y = -6;
+	pixel_x = -24
+	},
 /turf/open/floor/plasteel/elevatorshaft{
 	color = "#808080"
 	},
@@ -3541,6 +3722,7 @@
 	layer = 2.462;
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plating,
 /area/ship/engineering)
 "yP" = (
@@ -3601,6 +3783,9 @@
 /obj/machinery/washing_machine,
 /obj/effect/turf_decal/techfloor{
 	dir = 1
+	},
+/obj/structure/sign/warning/explosives/alt{
+	pixel_y = 32
 	},
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
@@ -3673,6 +3858,14 @@
 	},
 /turf/open/floor/pod,
 /area/ship/security/weapons_control)
+"Ac" = (
+/obj/structure/platform{
+	dir = 1
+	},
+/turf/open/floor/plasteel/elevatorshaft{
+	color = "#808080"
+	},
+/area/ship/hangar)
 "Ah" = (
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 1
@@ -3786,7 +3979,8 @@
 	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
-	dir = 10
+	dir = 10;
+	id = "Caliban_turret_control"
 	},
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
 /area/ship/crew/dorm/dormfive)
@@ -3800,6 +3994,7 @@
 /obj/effect/turf_decal/trimline/opaque/yellow/end{
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/mono,
 /area/ship/crew/dorm/dormtwo)
 "Ba" = (
@@ -3838,7 +4033,8 @@
 	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
-	dir = 9
+	dir = 9;
+	id = "Caliban_turret_control"
 	},
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
 /area/ship/engineering)
@@ -3922,41 +4118,18 @@
 /turf/open/floor/engine/hull/reinforced,
 /area/ship/engineering/engine)
 "Cu" = (
-/obj/structure/closet/secure_closet{
-	icon_state = "warden";
-	anchored = 1;
-	req_access_txt = "3";
-	name = "Rearguard  locker"
-	},
-/obj/item/radio/headset/inteq/alt,
-/obj/item/clothing/under/syndicate/inteq,
-/obj/item/clothing/head/beret/sec/hos/inteq{
-	name = "inteq beret";
-	desc = "A comfortable looking brown beret. The padding inside feels thicker."
-	},
-/obj/item/clothing/suit/armor/vest/inteq,
-/obj/effect/turf_decal/trimline/opaque/yellow/line{
-	dir = 9
+/obj/structure/table/reinforced,
+/obj/item/flashlight/lamp/green{
+	pixel_y = 3;
+	pixel_x = 7
 	},
 /obj/effect/turf_decal/siding/thinplating/dark{
 	dir = 9
 	},
-/obj/item/melee/classic_baton,
-/obj/item/clothing/under/rank/security/detective/grey{
-	name = "Honored Rearguard uniform";
-	desc = "A hard-boiled worn grey suit, complete with tie clip."
+/obj/effect/turf_decal/trimline/opaque/yellow/line{
+	dir = 9
 	},
-/obj/item/storage/backpack/messenger/inteq,
-/obj/item/clothing/head/warden/inteq{
-	name = "Rearguard hat";
-	desc = "A special brown campaign hat with the IRMG insignia emblazoned on it. For yelling at clueless crew in style."
-	},
-/obj/item/clothing/head/frontier/peaked{
-	desc = "An intimidating  peaked cap, meant for Rearguard of the InteQ Risk Management Group.";
-	name = "\improper Rearguard cap"
-	},
-/obj/item/clothing/under/syndicate/inteq/skirt,
-/obj/machinery/light/small/directional/west,
+/obj/item/reagent_containers/food/drinks/flask,
 /turf/open/floor/plasteel/mono,
 /area/ship/crew/dorm/dormtwo)
 "CA" = (
@@ -4128,7 +4301,8 @@
 	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
-	dir = 6
+	dir = 6;
+	id = "Caliban_turret_control"
 	},
 /turf/closed/wall/r_wall/syndicate,
 /area/ship/crew/dorm)
@@ -4263,10 +4437,14 @@
 	color = "#808080"
 	},
 /obj/machinery/light/small/directional/south,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/hangar)
 "Ff" = (
 /obj/structure/frame/machine,
+/obj/structure/sign/warning/explosives/alt{
+	pixel_x = 31
+	},
 /turf/open/floor/pod/dark,
 /area/ship/medical)
 "Fh" = (
@@ -4400,17 +4578,21 @@
 	layer = 4.1
 	},
 /obj/structure/catwalk/over,
-/obj/effect/turf_decal/techfloor{
-	dir = 8;
-	layer = 2.460;
-	pixel_x = 16
-	},
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/turf_decal/trimline/opaque/vired/warning{
 	layer = 2.462
+	},
+/obj/effect/decal/fakelattice{
+	name = "low platform";
+	desc = "A small platform that connects to the catwolk.";
+	icon = 'icons/turf/decals/decals.dmi';
+	icon_state = "techfloor_edges";
+	dir = 8;
+	layer = 2.460;
+	pixel_x = 16
 	},
 /turf/open/floor/plating,
 /area/ship/engineering)
@@ -4421,6 +4603,7 @@
 	color = "#808080"
 	},
 /obj/machinery/light/small/directional/north,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/telecomms_floor,
 /area/ship/hangar)
 "Gq" = (
@@ -4582,7 +4765,8 @@
 	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
-	dir = 6
+	dir = 6;
+	id = "Caliban_turret_control"
 	},
 /turf/closed/wall/r_wall/syndicate,
 /area/ship/crew/cryo)
@@ -4676,8 +4860,15 @@
 /obj/effect/turf_decal/corner/opaque/inteqbrown/border,
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/canteen)
+"HT" = (
+/obj/structure/sign/warning/fire{
+	pixel_y = -8
+	},
+/turf/closed/wall/r_wall/syndicate/nodiagonal,
+/area/ship/engineering/engine)
 "Ic" = (
 /obj/machinery/light/floor/hangar,
+/obj/structure/platform,
 /turf/open/floor/plasteel/elevatorshaft{
 	color = "#808080"
 	},
@@ -4784,9 +4975,9 @@
 	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
-	dir = 6
+	dir = 6;
+	id = "Caliban_turret_control"
 	},
-/obj/item/storage/guncase/boomslangmilitary,
 /turf/closed/wall/r_wall/syndicate,
 /area/ship/security/armory)
 "IT" = (
@@ -4795,6 +4986,7 @@
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
 /obj/machinery/light/directional/north,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/port_fore)
 "Jk" = (
@@ -4837,6 +5029,8 @@
 	color = "#FFFACD"
 	},
 /obj/structure/curtain/bounty,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/carpet/orange,
 /area/ship/crew/dorm/captain)
 "JP" = (
@@ -4970,10 +5164,12 @@
 	pixel_y = -25;
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/canteen)
 "KT" = (
 /obj/effect/turf_decal/borderfloorwhite,
+/obj/effect/turf_decal/industrial/loading/white,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/starboard_fore)
 "KW" = (
@@ -5027,6 +5223,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/port_fore)
 "LF" = (
@@ -5158,6 +5355,9 @@
 /obj/structure/sign/warning{
 	pixel_y = -23
 	},
+/obj/structure/chair/handrail{
+	dir = 1
+	},
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "MR" = (
@@ -5241,6 +5441,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/canteen)
 "Nk" = (
@@ -5444,6 +5645,7 @@
 /obj/effect/turf_decal/techfloor{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering)
 "PF" = (
@@ -5498,6 +5700,7 @@
 /obj/effect/decal/cleanable/ash/large{
 	layer = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/canteen)
 "Qu" = (
@@ -5561,6 +5764,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/tank_dispenser,
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/medical)
 "QU" = (
@@ -5571,9 +5775,9 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /obj/machinery/turretid/ship{
-	pixel_y = -24;
+	pixel_y = -20;
 	id = "Caliban_turret_control";
-	pixel_x = -28
+	pixel_x = -32
 	},
 /obj/effect/turf_decal/corner/opaque/brown/full,
 /turf/open/floor/plasteel/tech,
@@ -5663,16 +5867,17 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/security/armory)
 "Rp" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/firedoor/border_only{
+/obj/effect/turf_decal/techfloor/orange{
 	dir = 1
 	},
-/obj/structure/sign/warning/explosives/alt{
-	pixel_x = 31
+/obj/structure/railing{
+	dir = 1;
+	layer = 4.1;
+	color = "#808080"
 	},
-/obj/structure/curtain/cloth,
-/turf/open/floor/plasteel/white,
-/area/ship/medical)
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/plasteel/telecomms_floor,
+/area/ship/hangar)
 "Rs" = (
 /obj/effect/turf_decal/corner/opaque/brown{
 	dir = 4
@@ -5715,6 +5920,9 @@
 /obj/effect/turf_decal/corner/opaque/inteqbrown/border{
 	layer = 2.041
 	},
+/obj/machinery/firealarm/directional/west{
+	pixel_y = -3
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "RT" = (
@@ -5753,6 +5961,7 @@
 /obj/effect/turf_decal/techfloor/corner{
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/hallway/port_fore)
 "Si" = (
@@ -5862,6 +6071,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/dorm)
 "SY" = (
@@ -5870,6 +6080,12 @@
 /obj/machinery/air_sensor/atmos/nitrogen_tank,
 /turf/open/floor/engine/n2,
 /area/ship/engineering/engine)
+"Tl" = (
+/obj/structure/platform,
+/turf/open/floor/plasteel/elevatorshaft{
+	color = "#808080"
+	},
+/area/ship/hangar)
 "Tq" = (
 /obj/structure/catwalk/over/plated_catwalk/dark,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
@@ -5905,7 +6121,6 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 5
 	},
-/obj/machinery/power/apc/auto_name/directional/west,
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
@@ -6056,11 +6271,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
-/obj/effect/turf_decal/techfloor{
-	dir = 8;
-	layer = 2.460;
-	pixel_x = 16
-	},
 /obj/structure/catwalk/over,
 /obj/machinery/door/firedoor/border_only{
 	dir = 4
@@ -6068,6 +6278,16 @@
 /obj/effect/turf_decal/trimline/opaque/vired/warning{
 	layer = 2.462;
 	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt/dust,
+/obj/effect/decal/fakelattice{
+	name = "low platform";
+	desc = "A small platform that connects to the catwolk.";
+	icon = 'icons/turf/decals/decals.dmi';
+	icon_state = "techfloor_edges";
+	dir = 8;
+	layer = 2.460;
+	pixel_x = 16
 	},
 /turf/open/floor/plating,
 /area/ship/engineering)
@@ -6256,6 +6476,7 @@
 /obj/effect/turf_decal/techfloor/corner{
 	dir = 1
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/port_fore)
 "Wd" = (
@@ -6266,7 +6487,8 @@
 	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
-	dir = 5
+	dir = 5;
+	id = "Caliban_turret_control"
 	},
 /turf/closed/wall/r_wall/syndicate,
 /area/ship/security/armory)
@@ -6375,6 +6597,7 @@
 	icon_state = "2-4";
 	tag = null
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/tech,
 /area/ship/crew/canteen)
 "Xn" = (
@@ -6385,7 +6608,8 @@
 	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
-	dir = 5
+	dir = 5;
+	id = "Caliban_turret_control"
 	},
 /turf/closed/wall/r_wall/syndicate,
 /area/ship/crew/dorm/captain)
@@ -6411,6 +6635,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/port_fore)
 "Yp" = (
@@ -6427,7 +6652,8 @@
 	stun_projectile = /obj/projectile/bullet/pellet/rubbershot;
 	lethal_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
 	stun_projectile_sound = 'sound/weapons/gun/smg/uzi.ogg';
-	dir = 5
+	dir = 5;
+	id = "Caliban_turret_control"
 	},
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
 /area/ship/security/armory)
@@ -6435,9 +6661,14 @@
 /turf/closed/wall/r_wall/syndicate/nodiagonal,
 /area/ship/engineering/engine)
 "Yv" = (
-/obj/item/storage/guncase/boomslangmilitary,
-/turf/template_noop,
-/area/template_noop)
+/obj/effect/turf_decal/trimline/opaque/yellow/warning{
+	dir = 1
+	},
+/obj/machinery/recharge_station,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt/dust,
+/turf/open/floor/plasteel/tech,
+/area/ship/security/armory)
 "Yz" = (
 /turf/closed/wall/r_wall/syndicate,
 /area/ship/engineering)
@@ -6454,6 +6685,7 @@
 	pixel_y = -5
 	},
 /obj/item/shield/riot/tele,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/security/armory)
 "YI" = (
@@ -6580,6 +6812,13 @@
 /obj/structure/platform/military{
 	dir = 4
 	},
+/obj/structure{
+	desc = "A huge bundle of double insulated cabling which seems to run up into the ceiling.";
+	icon = 'icons/obj/power.dmi';
+	icon_state = "cablerelay-on";
+	name = "Multi-deck power adapter";
+	pixel_x = 10
+	},
 /turf/open/floor/plasteel/elevatorshaft{
 	color = "#808080"
 	},
@@ -6598,6 +6837,7 @@
 /obj/item/storage/box/flares,
 /obj/item/storage/box/flares,
 /obj/item/storage/box/teargas,
+/obj/effect/decal/cleanable/dirt,
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/security/armory)
 "ZV" = (
@@ -6653,11 +6893,11 @@ sw
 sw
 sw
 sw
-Yt
+cs
 Cs
 Io
 Cs
-Yt
+HT
 sw
 sw
 sw
@@ -7280,7 +7520,7 @@ se
 xn
 UP
 TC
-mK
+Rp
 TK
 XJ
 sw
@@ -7303,7 +7543,7 @@ XJ
 TK
 Ga
 ca
-Ic
+mF
 Nk
 Nk
 Nk
@@ -7332,17 +7572,17 @@ sw
 yb
 sw
 TK
-mX
+aP
 oi
+Ac
 Nk
 Nk
 Nk
 Nk
 Nk
-Nk
-Nk
+Tl
 TS
-mK
+Rp
 TK
 sw
 yb
@@ -7365,13 +7605,13 @@ sw
 TK
 mX
 oi
+Ac
 Nk
 Nk
 Nk
 Nk
 Nk
-Nk
-Nk
+Tl
 TS
 ta
 TK
@@ -7458,13 +7698,13 @@ sw
 TK
 mX
 oi
+Ac
 Nk
 Nk
 Nk
 Nk
 Nk
-Nk
-Nk
+Tl
 TS
 cR
 TK
@@ -7489,13 +7729,13 @@ XJ
 TK
 mX
 oi
+Ac
 Nk
 Nk
 Nk
 Nk
 Nk
-Nk
-Nk
+Tl
 TS
 mK
 TK
@@ -7514,13 +7754,13 @@ sw
 sw
 Pi
 sw
-sw
-sw
+sb
+jr
 XJ
 TK
 Gt
 oi
-Ic
+mF
 Nk
 Nk
 Nk
@@ -7777,7 +8017,7 @@ aV
 ik
 hm
 KT
-Rp
+TO
 jH
 Zk
 hz
@@ -7981,7 +8221,7 @@ sw
 zL
 xo
 JP
-fj
+Yv
 pm
 WH
 vF
@@ -8201,7 +8441,7 @@ zL
 zL
 zL
 IR
-mF
+sw
 oG
 aI
 mV
@@ -8231,7 +8471,7 @@ XJ
 XJ
 zL
 zL
-Yv
+sw
 sw
 oG
 bM
