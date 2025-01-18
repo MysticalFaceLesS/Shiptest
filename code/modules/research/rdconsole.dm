@@ -638,16 +638,22 @@ Nothing else in the console has ID requirements.
 /obj/machinery/computer/rdconsole/proc/ui_designdisk()		//Legacy code
 	RDSCREEN_UI_DDISK_CHECK
 	var/list/l = list()
+	// [CELADON_EDIT]
+	var/N = 1 // thank you generalthrax
+	// [/CELADON_EDIT]
 	l += "Disk Operations: <A href='?src=[REF(src)];clear_design=0'>Clear Disk</A><A href='?src=[REF(src)];updt_design=0'>Upload All</A><A href='?src=[REF(src)];eject_design=1'>Eject Disk</A>"
 	for(var/i in d_disk.blueprints)
 		l += "<div class='statusDisplay'>"
 		if(istype(i, /datum/design))
 			var/datum/design/D = i
 			l += "[D.icon_html(usr)] <A href='?src=[REF(src)];view_design=[D.id]'>[D.name]</A>"
-			l += "Operations: <A href='?src=[REF(src)];updt_design=[i]'>Upload to database</A> <A href='?src=[REF(src)];clear_design=[i]'>Clear Slot</A>"
+			l += "Operations: <A href='?src=[REF(src)];updt_design=[i]'>Upload to database</A> <A href='?src=[REF(src)];clear_design=[N]'>Clear Slot</A>"
 		else
-			l += "Empty Slot Operations: <A href='?src=[REF(src)];switch_screen=[RDSCREEN_DESIGNDISK_UPLOAD];disk_slot=[i]'>Load Design to Slot</A>"
+			l += "Empty Slot Operations: <A href='?src=[REF(src)];switch_screen=[RDSCREEN_DESIGNDISK_UPLOAD];disk_slot=[N]'>Load Design to Slot</A>"
 		l += "</div>"
+		// [CELADON_EDIT]
+		N++
+		// [/CELADON_EDIT]
 	return l
 
 /obj/machinery/computer/rdconsole/proc/ui_designdisk_upload()	//Legacy code

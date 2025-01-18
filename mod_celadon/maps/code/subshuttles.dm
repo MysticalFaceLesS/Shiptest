@@ -59,9 +59,9 @@
 	prefix = "sSV"
 
 /datum/map_template/shuttle/subshuttles/brawler
-	file_name = "frontiersmen_brawler"
+	file_name = "pirate_brawler"
 	name = "Brawler-class Dropship"
-	prefix = "sSV"
+	prefix = "sRSV"
 
 /datum/map_template/shuttle/subshuttles/skink
 	file_name = "nanotrasen_skink"
@@ -88,7 +88,7 @@
 	name = "Module-Ship-two"
 	prefix = "sIMV"
 /datum/map_template/shuttle/subshuttles/nail
-	prefix = "sFBV"
+	prefix = "sRSV"
 /datum/map_template/shuttle/subshuttles/solfed_feather
 	file_name = "solfed_feather"
 	name = "Feather-class Supply Vessel"
@@ -105,3 +105,13 @@
 	file_name = "syndicate_Jox"
 	name = "Jox Drop Ship"
 	prefix = "sSSV"
+
+/datum/map_template/shuttle/subshuttles/solfed_vespa
+	file_name = "solfed_vespa"
+	name = "Vespa Expeditionary Dropship"
+	prefix = "sSFSV"
+
+/datum/map_template/shuttle/subshuttles/elysium_felon
+	file_name = "elysium_felon"
+	name = "Felon Drug Carrier"
+	prefix = "sEUSV"

@@ -3,7 +3,7 @@
 	crate_type = /obj/structure/closet/crate/secure/weapon
 
 /*
-		Pistols
+MARK:		Pistols
 */
 
 /datum/supply_pack/faction/independent/gun/disposable
@@ -57,7 +57,7 @@
 	contains = list(/obj/item/storage/guncase/pistol/viper)
 
 /*
-		Energy
+MARK:		Energy
 */
 
 /datum/supply_pack/faction/independent/gun/laser
@@ -90,7 +90,7 @@
 	crate_name = "beam rifle crate"
 
 /*
-		Shotguns
+MARK:		Shotguns
 */
 
 /datum/supply_pack/faction/independent/gun/doublebarrel_shotgun
@@ -122,7 +122,7 @@
 	crate_name = "shotgun crate"
 
 /*
-		Rifles
+MARK:		Rifles
 */
 
 /datum/supply_pack/faction/independent/gun/winchester

@@ -28,7 +28,7 @@
 
 /datum/outfit/job/nanotrasen/hos
 	box = /obj/item/storage/box/survival/nanotrasen
-	
+
 /datum/outfit/job/nanotrasen/engineer
 	box = /obj/item/storage/box/survival/nanotrasen
 
@@ -132,6 +132,31 @@
 	accessory = /obj/item/clothing/accessory/medal/silver/valor
 
 	chameleon_extras = /obj/item/stamp/cmo
+
+//Инженерный Директор - СЕ капитан
+
+/datum/outfit/job/nanotrasen/ce/captain
+	name = "Nanotrasen - Engineering Director (Captain)"
+
+	id = /obj/item/card/id/gold
+	belt = /obj/item/pda/heads/ce
+	gloves = /obj/item/clothing/gloves/color/yellow
+	ears = /obj/item/radio/headset/nanotrasen/captain
+	uniform = /obj/item/clothing/under/nanotrasen/engineering/director
+	dcoat = /obj/item/clothing/suit/hooded/wintercoat/engineering
+	shoes = /obj/item/clothing/shoes/laceup
+	neck = /obj/item/clothing/neck/tie/orange
+	head = /obj/item/clothing/head/hardhat/nanotrasen/white
+	backpack_contents = list(/obj/item/melee/classic_baton/telescopic=1)
+
+	backpack = /obj/item/storage/backpack/industrial
+	satchel = /obj/item/storage/backpack/satchel/eng
+	duffelbag = /obj/item/storage/backpack/duffelbag/engineering
+	courierbag = /obj/item/storage/backpack/messenger/engi
+
+	accessory = /obj/item/clothing/accessory/medal/plasma/nobel_science
+
+	chameleon_extras = /obj/item/stamp/ce
 
 // Химик
 
@@ -304,7 +329,7 @@
 	id = /obj/item/card/id/ert/engineer
 	ears = /obj/item/radio/headset/nanotrasen/alt
 	backpack_contents = list(/obj/item/radio)
-  
+
 	box = /obj/item/storage/box/survival/nanotrasen
 
 	//Nanotrasen Tactical Assault Team уборщичек

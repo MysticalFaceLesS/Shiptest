@@ -32,3 +32,14 @@
 	desc = "Флешшет - дротик с повышенной пробиваемостью из-за своей формы, но меньшим уроном, чем пулевой патрон. В коробке 55 пуль."
 	contains = list(/obj/item/ammo_box/a410_flechette_ammo_box)
 	cost = 1500
+/datum/supply_pack/faction/independent/ammo/a410_flechette
+	name = "410x76mm Flechette Clip"
+	desc = "Флешшет - дротик с повышенной пробиваемостью из-за своей формы, но меньшим уроном, чем пулевой патрон. В коробке 55 пуль."
+	contains = list(/obj/item/ammo_box/a410_flechette_ammo_box)
+	cost = 1500
+
+/datum/supply_pack/faction/independent/ammo/powercells
+	name = "Energy weapon basic power cell supply pack"
+	desc = "Ящик содержит кейс с тремя базовыми батарейками для энергетического оружия."
+	contains = list(/obj/item/storage/guncase/guncells_basic)
+	cost = 1000

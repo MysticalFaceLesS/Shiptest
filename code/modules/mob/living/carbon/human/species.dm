@@ -1322,7 +1322,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				return FALSE
 			if(!H.get_bodypart(BODY_ZONE_HEAD))
 				return FALSE
-			return equip_delay_self_check(I, H, bypass_equip_delay_self)
+			return H.equip_delay_self_check(I, bypass_equip_delay_self)
 		if(ITEM_SLOT_NECK)
 			if(H.wear_neck && !swap)
 				return FALSE
@@ -1334,13 +1334,13 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				return FALSE
 			if(!(I.slot_flags & ITEM_SLOT_BACK))
 				return FALSE
-			return equip_delay_self_check(I, H, bypass_equip_delay_self)
+			return H.equip_delay_self_check(I, bypass_equip_delay_self)
 		if(ITEM_SLOT_OCLOTHING)
 			if(H.wear_suit && !swap)
 				return FALSE
 			if(!(I.slot_flags & ITEM_SLOT_OCLOTHING))
 				return FALSE
-			return equip_delay_self_check(I, H, bypass_equip_delay_self)
+			return H.equip_delay_self_check(I, bypass_equip_delay_self)
 		if(ITEM_SLOT_GLOVES)
 			if(H.gloves && !swap)
 				return FALSE
@@ -1348,7 +1348,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				return FALSE
 			if(H.num_hands < 2)
 				return FALSE
-			return equip_delay_self_check(I, H, bypass_equip_delay_self)
+			return H.equip_delay_self_check(I, bypass_equip_delay_self)
 		if(ITEM_SLOT_FEET)
 			if(H.shoes && !swap)
 				return FALSE
@@ -1360,7 +1360,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				if(!disable_warning)
 					to_chat(H, "<span class='warning'>This footwear isn't compatible with your feet!</span>")
 				return FALSE
-			return equip_delay_self_check(I, H, bypass_equip_delay_self)
+			return H.equip_delay_self_check(I, bypass_equip_delay_self)
 		if(ITEM_SLOT_BELT)
 			if(H.belt && !swap)
 				return FALSE
@@ -1373,7 +1373,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				return FALSE
 			if(!(I.slot_flags & ITEM_SLOT_BELT))
 				return
-			return equip_delay_self_check(I, H, bypass_equip_delay_self)
+			return H.equip_delay_self_check(I, bypass_equip_delay_self)
 		if(ITEM_SLOT_EYES)
 			if(H.glasses && !swap)
 				return FALSE
@@ -1384,7 +1384,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			var/obj/item/organ/eyes/E = H.getorganslot(ORGAN_SLOT_EYES)
 			if(E?.no_glasses)
 				return FALSE
-			return equip_delay_self_check(I, H, bypass_equip_delay_self)
+			return H.equip_delay_self_check(I, bypass_equip_delay_self)
 		if(ITEM_SLOT_HEAD)
 			if(H.head && !swap)
 				return FALSE
@@ -1392,7 +1392,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				return FALSE
 			if(!H.get_bodypart(BODY_ZONE_HEAD))
 				return FALSE
-			return equip_delay_self_check(I, H, bypass_equip_delay_self)
+			return H.equip_delay_self_check(I, bypass_equip_delay_self)
 		if(ITEM_SLOT_EARS)
 			if(H.ears && !swap)
 				return FALSE
@@ -1400,13 +1400,13 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				return FALSE
 			if(!H.get_bodypart(BODY_ZONE_HEAD))
 				return FALSE
-			return equip_delay_self_check(I, H, bypass_equip_delay_self)
+			return H.equip_delay_self_check(I, bypass_equip_delay_self)
 		if(ITEM_SLOT_ICLOTHING)
 			if(H.w_uniform && !swap)
 				return FALSE
 			if(!(I.slot_flags & ITEM_SLOT_ICLOTHING))
 				return FALSE
-			return equip_delay_self_check(I, H, bypass_equip_delay_self)
+			return H.equip_delay_self_check(I, bypass_equip_delay_self)
 		if(ITEM_SLOT_ID)
 			if(H.wear_id)
 				if(SEND_SIGNAL(H.wear_id, COMSIG_TRY_STORAGE_CAN_INSERT, I, H, TRUE))
@@ -1420,7 +1420,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				return FALSE
 			if(!(I.slot_flags & ITEM_SLOT_ID))
 				return FALSE
-			return equip_delay_self_check(I, H, bypass_equip_delay_self)
+			return H.equip_delay_self_check(I, bypass_equip_delay_self)
 		if(ITEM_SLOT_LPOCKET)
 			if(HAS_TRAIT(I, TRAIT_NODROP)) //Pockets aren't visible, so you can't move TRAIT_NODROP items into them.
 				return FALSE
@@ -1490,16 +1490,27 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 			return TRUE
 		if(ITEM_SLOT_BACKPACK)
 			if(H.back)
-				if(SEND_SIGNAL(H.back, COMSIG_TRY_STORAGE_CAN_INSERT, I, H, TRUE))
+				if(SEND_SIGNAL(H.back, COMSIG_TRY_STORAGE_CAN_INSERT, I, H, TRUE, TRUE))
 					return TRUE
 			return FALSE
 	return FALSE //Unsupported slot
 
-/datum/species/proc/equip_delay_self_check(obj/item/I, mob/living/carbon/human/H, bypass_equip_delay_self)
-	if(!I.equip_delay_self || bypass_equip_delay_self)
+/datum/species/proc/equip_delay_self_check(obj/item/to_equip, mob/living/carbon/human/ourhuman, bypass_equip_delay_self)
+	if(!to_equip.equip_delay_self || bypass_equip_delay_self)
 		return TRUE
-	H.visible_message("<span class='notice'>[H] start putting on [I]...</span>", "<span class='notice'>You start putting on [I]...</span>")
-	return do_after(H, I.equip_delay_self, target = H)
+
+	ourhuman.visible_message(
+	span_notice("[ourhuman] start putting on [to_equip]..."),
+	span_notice("You start putting on [to_equip]...")
+	)
+
+	. = to_equip.do_equip_wait(ourhuman, to_equip.equipping_sound)
+
+	if(.)
+		ourhuman.visible_message(
+			span_notice("[src] puts on [to_equip]."),
+			span_notice("You puts on [to_equip].")
+		)
 
 /datum/species/proc/before_equip_job(datum/job/J, mob/living/carbon/human/H)
 	return
@@ -1569,7 +1580,7 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 		else if(H.satiety < 0)
 			H.satiety++
 			if(prob(round(-H.satiety/40)))
-				H.Jitter(5)
+				H.adjust_jitter(5, max = 100)
 			hunger_rate = 3 * HUNGER_FACTOR
 		hunger_rate *= H.physiology.hunger_mod
 		H.adjust_nutrition(-hunger_rate)

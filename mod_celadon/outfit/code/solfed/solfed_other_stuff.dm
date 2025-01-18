@@ -1,16 +1,3 @@
-/obj/item/banner/solfed
-	name = "Solar Federation baner"
-	desc = "This is the Solar Federation banner, it looks quite democratic"
-	icon = 'mod_celadon/_storge_icons/icons/sol_fed_patriots.dmi'
-	icon_state = "solfed_baner"
-	item_state = "solfed_baner"
-	lefthand_file = 'mod_celadon/_storge_icons/icons/mob/sol_fed_banner_lefthand.dmi'
-	righthand_file = 'mod_celadon/_storge_icons/icons/mob/sol_fed_banner_righthand.dmi'
-	warcry = "Glory to Solar Federation!"
-
-/obj/item/banner/solfed/mundane
-	inspiration_available = FALSE
-
 /obj/structure/sign/solfed
 	name = "\improper Solar Federation Logo"
 	sign_change_name = "Solar Federation Logo"

@@ -394,3 +394,6 @@
 	min_val = 0.05
 	config_entry_value = 191
 	min_val = 191
+
+/datum/config_entry/number/commendation_percent_poll
+	integer = FALSE

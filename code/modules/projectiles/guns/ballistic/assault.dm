@@ -333,7 +333,11 @@
 	fire_delay = 0.2 SECONDS
 	gun_firemodes = list(FIREMODE_FULLAUTO)
 	default_firemode = FIREMODE_FULLAUTO
+
 // [CELADON-REMOVE] - CELADON BALANCE - часть кода системы люков оффов
 // 	latch_toggle_delay = 1.2 SECONDS
 // [/CELADON-REMOVE]
+
+	valid_attachments = list()
+
 	spread_unwielded = 20
