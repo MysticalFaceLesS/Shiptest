@@ -127,8 +127,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/elysium, (-32))
 	inspiration_available = FALSE
 
 /obj/item/banner/nanotrasen
-	name = "NanoTrasen banner"
-	desc = "Light blue banner with Nano-Trasen logo on it, with some golden stripes.. No, you don't need any shipment manifest to hold it on your shuttle."
+	name = "Nanotrasen banner"
+	desc = "Light blue banner with Nanotrasen logo on it, with some golden stripes.. No, you don't need any shipment manifest to hold it on your shuttle."
 	icon = 'mod_celadon/_storge_icons/icons/items/obj/flags.dmi'
 	icon_state = "banner_NT"
 	item_state = "banner_NT"
@@ -147,7 +147,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/elysium, (-32))
 	item_state = "banner_Syndie"
 	lefthand_file = 'mod_celadon/_storge_icons/icons/mob/hands/banners_lefthand.dmi'
 	righthand_file = 'mod_celadon/_storge_icons/icons/mob/hands/banners_righthand.dmi'
-	warcry = "Whiskey.. Echo.. Whiskey.. Lima.. Alfa.. Delta.."
+	warcry = "Whiskey.. Echo.. Whiskey.. Lima.. Alpha.. Delta.."
 
 /obj/item/banner/syndie/mundane
 	inspiration_available = FALSE
@@ -173,7 +173,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/elysium, (-32))
 	item_state = "banner_InteQ"
 	lefthand_file = 'mod_celadon/_storge_icons/icons/mob/hands/banners_lefthand.dmi'
 	righthand_file = 'mod_celadon/_storge_icons/icons/mob/hands/banners_righthand.dmi'
-	warcry = "For the company. For the mercenary!"
+	warcry = "For the company. For the mercenaries!"
 
 /obj/item/banner/inteq/mundane
 	inspiration_available = FALSE
@@ -186,7 +186,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/elysium, (-32))
 	item_state = "banner_Separ"
 	lefthand_file = 'mod_celadon/_storge_icons/icons/mob/hands/banners_lefthand.dmi'
 	righthand_file = 'mod_celadon/_storge_icons/icons/mob/hands/banners_righthand.dmi'
-	warcry = "We will clear our home from xenos.. For the purity!"
+	warcry = "We will clean our home from xenos.. For the purity of our Nation!"
 
 /obj/item/banner/separatist/mundane
 	inspiration_available = FALSE
