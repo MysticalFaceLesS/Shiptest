@@ -641,14 +641,14 @@
 	icon_state = "0-1"
 	},
 /obj/machinery/power/apc/auto_name/directional/south,
-/obj/structure/extinguisher_cabinet/directional/south{
-	pixel_x = -15;
-	pixel_y = -25
-	},
 /obj/machinery/light_switch{
 	dir = 1;
 	pixel_x = 10;
 	pixel_y = -17
+	},
+/obj/machinery/firealarm/directional/south{
+	pixel_x = -15;
+	pixel_y = -30
 	},
 /turf/open/floor/plasteel/white,
 /area/ship/hangar)
@@ -1280,44 +1280,6 @@
 	},
 /turf/open/floor/engine/n2,
 /area/ship/engineering/engine)
-"jr" = (
-/obj/structure/closet/secure_closet{
-	icon_state = "warden";
-	anchored = 1;
-	req_access_txt = "3";
-	name = "Rearguard  locker"
-	},
-/obj/item/radio/headset/inteq/alt,
-/obj/item/clothing/under/syndicate/inteq,
-/obj/item/clothing/head/beret/sec/hos/inteq{
-	name = "inteq beret";
-	desc = "A comfortable looking brown beret. The padding inside feels thicker."
-	},
-/obj/item/clothing/suit/armor/vest/inteq,
-/obj/effect/turf_decal/trimline/opaque/yellow/line{
-	dir = 9
-	},
-/obj/effect/turf_decal/siding/thinplating/dark{
-	dir = 9
-	},
-/obj/item/melee/classic_baton,
-/obj/item/clothing/under/rank/security/detective/grey{
-	name = "Honored Rearguard uniform";
-	desc = "A hard-boiled worn grey suit, complete with tie clip."
-	},
-/obj/item/storage/backpack/messenger/inteq,
-/obj/item/clothing/head/warden/inteq{
-	name = "Rearguard hat";
-	desc = "A special brown campaign hat with the IRMG insignia emblazoned on it. For yelling at clueless crew in style."
-	},
-/obj/item/clothing/head/frontier/peaked{
-	desc = "An intimidating  peaked cap, meant for Rearguard of the InteQ Risk Management Group.";
-	name = "\improper Rearguard cap"
-	},
-/obj/item/clothing/under/syndicate/inteq/skirt,
-/obj/machinery/light/small/directional/west,
-/turf/open/floor/plasteel/mono,
-/area/template_noop)
 "jt" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 4
@@ -2707,21 +2669,6 @@
 /obj/machinery/airalarm/directional/west,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/hallway/fore)
-"sb" = (
-/obj/effect/turf_decal/trimline/opaque/yellow/line{
-	dir = 10
-	},
-/obj/effect/turf_decal/siding/thinplating/dark{
-	dir = 10;
-	layer = 2.030
-	},
-/obj/structure/table/reinforced,
-/obj/item/flashlight/lamp/green{
-	pixel_y = 3;
-	pixel_x = 7
-	},
-/turf/open/floor/plasteel/mono,
-/area/template_noop)
 "sc" = (
 /obj/effect/turf_decal/techfloor{
 	dir = 1
@@ -7754,8 +7701,8 @@ sw
 sw
 Pi
 sw
-sb
-jr
+sw
+sw
 XJ
 TK
 Gt
