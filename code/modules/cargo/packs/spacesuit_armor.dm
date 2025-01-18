@@ -22,13 +22,15 @@
 					/obj/item/clothing/head/helmet/space/pilot/random)
 	crate_name = "pilot space suit crate"
 
-/datum/supply_pack/spacesuit_armor/mining_hardsuits_indie
-	name = "Mining Hardsuit Crate"
-	desc = "One independent-manufactured mining hardsuit, for when explorer suits just dont cut it."
-	cost = 1500
-	contains = list(/obj/item/clothing/suit/space/hardsuit/mining/independent)
-	crate_name = "mining hardsuit crate"
-	crate_type = /obj/structure/closet/crate/secure/plasma
+// [CELADON-REMOVE] - CELADON_OUTPOST_CONSOLE - Удаляем дубликат двигателей
+// /datum/supply_pack/spacesuit_armor/mining_hardsuits_indie
+// 	name = "Mining Hardsuit Crate"
+// 	desc = "One independent-manufactured mining hardsuit, for when explorer suits just dont cut it."
+// 	cost = 1500
+// 	contains = list(/obj/item/clothing/suit/space/hardsuit/mining/independent)
+// 	crate_name = "mining hardsuit crate"
+// 	crate_type = /obj/structure/closet/crate/secure/plasma
+// [/CELADON-REMOVE]
 
 /datum/supply_pack/spacesuit_armor/med_hardsuit
 	name = "Medical Hardsuit Crate"

@@ -761,7 +761,7 @@
 				new /obj/item/reagent_containers/food/drinks/drinkingglass/filled/cola(loc)
 				new /mob/living/simple_animal/hostile/cockroach/glockroach(loc)
 			if(prob(50))
-				new /obj/structure/radioactive/stack(loc)
+				new /obj/structure/hazard/radioactive/stack(loc)
 				new /mob/living/simple_animal/hostile/cockroach/glockroach(loc)
 			if(prob(45))
 				new /obj/item/stack/sheet/mineral/uranium/twenty(loc)
