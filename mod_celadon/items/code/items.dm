@@ -64,7 +64,7 @@
 	icon_state = "flag_SF"
 	item_flag = /obj/item/sign/flag/solfed
 
-MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/solfed, 32)
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/solfed, -32)
 
 /obj/structure/sign/flag/nanotrasen
 	icon = 'mod_celadon/_storge_icons/icons/items/obj/flags.dmi'
@@ -73,7 +73,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/solfed, 32)
 	icon_state = "flag_NT"
 	item_flag = /obj/item/sign/flag/nanotrasen
 
-MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/nanotrasen, 32)
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/nanotrasen, -32)
 
 /obj/structure/sign/flag/syndie
 	icon = 'mod_celadon/_storge_icons/icons/items/obj/flags.dmi'
@@ -82,7 +82,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/nanotrasen, 32)
 	icon_state = "flag_Syndie"
 	item_flag = /obj/item/sign/flag/syndie
 
-MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/syndie, 32)
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/syndie, -32)
 
 /obj/structure/sign/flag/inteq
 	icon = 'mod_celadon/_storge_icons/icons/items/obj/flags.dmi'
@@ -91,7 +91,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/syndie, 32)
 	icon_state = "flag_InteQ"
 	item_flag = /obj/item/sign/flag/inteq
 
-MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/inteq, 32)
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/inteq, -32)
 
 /obj/structure/sign/flag/separatist
 	icon = 'mod_celadon/_storge_icons/icons/items/obj/flags.dmi'
@@ -100,7 +100,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/inteq, 32)
 	icon_state = "flag_Separ"
 	item_flag = /obj/item/sign/flag/separatist
 
-MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/separatist, 32)
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/separatist, -32)
 
 /obj/structure/sign/flag/elysium
 	icon = 'mod_celadon/_storge_icons/icons/items/obj/flags.dmi'
@@ -109,7 +109,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/separatist, 32)
 	icon_state = "flag_Elysium"
 	item_flag = /obj/item/sign/flag/elysium
 
-MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/elysium, 32)
+MAPPING_DIRECTIONAL_HELPERS(/obj/structure/sign/flag/elysium, -32)
 
 // Баннеры
 
