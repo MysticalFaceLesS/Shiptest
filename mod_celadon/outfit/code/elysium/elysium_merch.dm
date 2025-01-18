@@ -5,19 +5,6 @@
 	icon_type = "elysium_fancy"
 	icon_state = "elysium_fancy-open"
 
-/obj/item/banner/elysium
-	name = "elysium banner"
-	desc = "The banner of elysium, Strengthens the faith of those who deserve."
-	icon = 'mod_celadon/_storge_icons/icons/obj/elysium_patriots.dmi'
-	icon_state = "banner_elysium"
-	item_state = "banner_elysium"
-	lefthand_file = 'mod_celadon/_storge_icons/icons/mob/elysium_banner_left.dmi'
-	righthand_file = 'mod_celadon/_storge_icons/icons/mob/elysium_banner_right.dmi'
-	warcry = "Glory to the nation!"
-
-/obj/item/banner/elysium/mundane
-	inspiration_available = FALSE	//Отключаем лечение людей флагом
-
 /obj/item/storage/book/bible/koran
 	name = "Koran"
 	icon_state = "koran"
