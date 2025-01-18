@@ -124,3 +124,35 @@
 					/obj/item/bot_assembly/cleanbot,
 					/obj/item/bot_assembly/cleanbot)
 	crate_name = "Bots assembly crate"
+
+/datum/supply_pack/faction/independent/idea/nika_niko
+
+	name = "Niko, Nika cyborg bodies"
+	desc = "Get your own affordable little helpers, cheaper than a gun! Floor-cleaning, tile-placing, wound-tending, fire-extinguishing botters only for 2100 credits!"
+	cost = 750
+	contains = list(/obj/item/paper/idea{
+					default_raw_text = "<center><h1 style='background-color:red;'>Thank you for shopping Space IDEA!</h1></center><h2 align='center'>Instructions for inserting circuit in YOUR Cyborg</h2><p>Its very simple and takes a couple steps!:</p><p>1. Swipe a card with robotics access on operating cyborg or operating AI shell or ask silicon friend to open it yourself </p><p>2.Open shell with a crowbar</p><p>3. Insert circuit inside cyborg into the slot marked with large white word ''UPDATES''.  Circuit will install hardware by itself right in the shell systems! </p><i><p><center> Note: Warranty void if exposed to: High Humidity, High Temperatures, Grass, Mud, The Jungle, lonely Robotists.</center></p></i>"
+					},
+					/obj/item/borg/upgrade/transform/meka/janitor,
+					/obj/item/borg/upgrade/transform/meka/security,
+					/obj/item/borg/upgrade/transform/meka/engineering,
+					/obj/item/borg/upgrade/transform/meka/medical,
+					/obj/item/borg/upgrade/transform/meka/peacekeeper,
+					/obj/item/borg/upgrade/transform/meka/miner)
+	crate_name = "Niko-Nika Body circuits"
+
+/datum/supply_pack/faction/independent/idea/nika_niko
+
+	name = "Drake cyborg Hologram"
+	desc = "Get your own affordable little helpers, cheaper than a gun! Floor-cleaning, tile-placing, wound-tending, fire-extinguishing botters only for 2100 credits!"
+	cost = 750
+	contains = list(/obj/item/paper/idea{
+					default_raw_text = "<center><h1 style='background-color:red;'>Thank you for shopping Space IDEA!</h1></center><h2 align='center'>Instructions for inserting circuit in YOUR Cyborg</h2><p>Its very simple and takes a couple steps!:</p><p>1. Swipe a card with robotics access on operating cyborg or operating AI shell or ask silicon friend to open it yourself </p><p>2.Open shell with a crowbar</p><p>3. Insert circuit inside cyborg into the slot marked with large white word ''UPDATES''.  Circuit will install hardware by itself right in the shell systems! </p><i><p><center> Note: Warranty void if exposed to: High Humidity, High Temperatures, Grass, Mud, The Jungle, lonely Robotists.</center></p></i>"
+					},
+					/obj/item/borg/upgrade/transform/drake/med,
+					/obj/item/borg/upgrade/transform/drake/engi,
+					/obj/item/borg/upgrade/transform/drake/sec,
+					/obj/item/borg/upgrade/transform/drake/jani,
+					/obj/item/borg/upgrade/transform/drake/peace,
+					/obj/item/borg/upgrade/transform/drake/mine)
+	crate_name = "Drake Hologramm circuits"
