@@ -1554,7 +1554,7 @@
 /datum/emote/living/carbon/human/snap
 	key = "snap"
 	key_third_person = "snaps"
-	message = "snaps their fingers."
+	message = "щёлкает пальцами."
 	message_param = "snaps their fingers at %t."
 	sound = 'mod_celadon/_storge_sounds/sound/emotes/fingersnap.ogg'
 	emote_type = EMOTE_AUDIBLE
