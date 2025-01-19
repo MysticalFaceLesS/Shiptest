@@ -137,6 +137,8 @@
 
 /datum/outfit/job/nanotrasen/ce/captain
 	name = "Nanotrasen - Engineering Director (Captain)"
+	job_icon = "chiefengineer"
+	jobtype = /datum/job/captain
 
 	id = /obj/item/card/id/gold
 	belt = /obj/item/pda/heads/ce

@@ -16,7 +16,7 @@
 	crate_type = /obj/structure/closet/crate/secure/weapon
 
 /*
-		Ready-to-eat
+MARK:	Ready-to-eat
 */
 
 /datum/supply_pack/faction/independent/food/donkpockets
@@ -30,4 +30,3 @@
 					/obj/item/storage/box/donkpockets/donkpockethonk)
 	crate_name = "donk pocket crate"
 	crate_type = /obj/structure/closet/crate/freezer
-	faction = ""

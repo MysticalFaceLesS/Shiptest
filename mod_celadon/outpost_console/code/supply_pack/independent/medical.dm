@@ -2,6 +2,7 @@
 	group = "Medical"
 	crate_type = /obj/structure/closet/crate/medical
 
+
 /datum/supply_pack/faction/independent/medical/surplus
 	name = "Medical Surplus Crate"
 	desc = "Contains an assortment of medical supplies haphazardly pulled from storage. German doctor not included."

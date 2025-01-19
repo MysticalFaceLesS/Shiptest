@@ -328,10 +328,10 @@ var/timer = 20
 	set category = "Эмоции"
 	emote_with_delay("whistle", timer)
 
-// /mob/living/carbon/human/verb/emote_snap()
-// 	set name = "► " + EMOTE_SPECIES_SNAP + " "
-// 	set category = "Эмоции"
-// 	emote_with_delay("snap", timer)
+/mob/living/carbon/human/verb/emote_snap()
+	set name = "► " + EMOTE_SPECIES_SNAP + " "
+	set category = "Эмоции"
+	emote_with_delay("snap", timer)
 
 // /mob/living/carbon/human/proc/emote_ururu()
 // 	set name = "► " + EMOTE_SPECIES_RUMBLE + " "

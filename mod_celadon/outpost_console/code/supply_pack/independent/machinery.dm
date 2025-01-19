@@ -6,8 +6,7 @@
 	name = "R&D Beacon"
 	desc = "A set of specialized platforms for research and production, limited by license. "
 	cost = 16000
-	contains = list(/obj/item/choice_beacon/rnd,
-					/obj/item/circuitboard/machine/rdserver)
+	contains = list(/obj/item/choice_beacon/rnd)
 	crate_name = "r&d starter kit"
 	crate_type = /obj/structure/closet/crate/science
 
@@ -26,7 +25,8 @@
 	cost = 89371
 	contains = list(/obj/item/circuitboard/machine/circuit_imprinter,
 					/obj/item/circuitboard/machine/protolathe,
-					/obj/item/circuitboard/machine/rdserver)
+					/obj/item/circuitboard/machine/rdserver,
+					/obj/item/circuitboard/computer/rdconsole)
 	crate_name = "hacked r&d kit"
 	crate_type = /obj/structure/closet/crate/science
 

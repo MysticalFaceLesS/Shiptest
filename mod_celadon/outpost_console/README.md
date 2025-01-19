@@ -48,6 +48,8 @@ ID мода: CELADON_OUTPOST_CONSOLE
 ### Изменения *кор кода*
 
 - `code/controllers/subsystem/economy.dm`
+- `code/modules/cargo/packs/spacesuit_armor.dm` 
+- `code/modules/cargo/packs/machinery.dm`
 <!--
   Если вы редактировали какие-либо процедуры или переменные в кор коде,
   они должны быть указаны здесь.

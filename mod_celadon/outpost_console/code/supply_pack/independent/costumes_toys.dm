@@ -33,7 +33,7 @@
 					/obj/item/clothing/gloves/ring/silver) //diamond rings cost the same price as this crate via cargo so we're not giving you two for free. Wedding rings are traditionally less valuable anyway.
 	crate_name = "wedding crate"
 
-/datum/supply_pack/costumes_toys/formalwear
+/datum/supply_pack/faction/independent/costumes_toys/formalwear
 	name = "Formalwear Crate"
 	desc = "You're gonna like the way you look, I guaranteed it. Contains an asston of fancy clothing."
 	cost = 3000 //Lots of very expensive items. You gotta pay up to look good!
@@ -64,4 +64,3 @@
 					/obj/item/lipstick/random)
 	crate_name = "formalwear crate"
 	crate_type = /obj/structure/closet/crate/wooden
-	faction = ""

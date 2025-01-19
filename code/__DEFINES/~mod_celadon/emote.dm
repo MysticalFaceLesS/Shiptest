@@ -159,6 +159,7 @@
 #define EMOTE_SPECIES_SURRENDER		"Сдаться"
 #define EMOTE_SPECIES_WSMILE		"Слегка улыбнуться"
 #define EMOTE_SPECIES_CLACK_SPIDER	"Щёлкнуть жвалами"
+#define EMOTE_SPECIES_SNAP			"Щёлкнуть пальцами"
 
 
 /// Carbon Emotes
