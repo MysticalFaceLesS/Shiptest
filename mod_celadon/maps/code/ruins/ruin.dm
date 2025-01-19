@@ -131,6 +131,13 @@
 	suffix = "icemoon_underground_solfed_prison.dmm"
 	description = "The prison is a temporary detention outpost for criminals awaiting sentencing or transfer to the main prison."
 
+/datum/map_template/ruin/icemoon/hydroponicsla
+	name = "Tesla Lab"
+	id = "teslalab"
+	suffix = "icemoon_tesla_lab.dmm"
+	description = "The destroyed SolFed laboratory for the development of a new type of engine."
+
+
 //							///
 //		Jungle ruin			///
 //							///
