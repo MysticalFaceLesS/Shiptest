@@ -100,6 +100,11 @@
 	name = "Rider Dropship"
 	prefix = "sNTSV"
 
+/datum/map_template/shuttle/subshuttles/inteq_tadpole
+	file_name = "inteq_tadpole"
+	name = "Tadpole"
+	prefix = "sIQSV"
+
 //Субшатлы для руинок
 /datum/map_template/shuttle/ruin/ruin_jox
 	file_name = "syndicate_Jox"
