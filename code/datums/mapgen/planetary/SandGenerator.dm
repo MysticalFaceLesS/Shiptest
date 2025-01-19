@@ -94,7 +94,9 @@
 		/obj/structure/geyser/random = 8,
 		/obj/structure/vein = 8,
 		/obj/structure/vein/classtwo = 4,
+		// [CELADON - ADD] - CELADON_RETURN_CONTENT
 		/obj/structure/elite_tumor = 4,
+		// [/CELADON - ADD]
 		/obj/structure/vein/classthree = 2,
 		/obj/effect/spawner/random/anomaly/sand = 1,
 	)
