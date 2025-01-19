@@ -45,7 +45,7 @@
 	name = "ice blast"
 	damage = 5
 	nodamage = FALSE
-	temperature = -2
+	temperature = -40
 
 // [CELADON-EDIT] - CELADON_BALANCE_MOBS
 // /mob/living/simple_animal/hostile/asteroid/ice_demon/OpenFire()
