@@ -635,10 +635,12 @@
 	var/list/skin_updating = mod_parts + src
 	for(var/obj/item/part as anything in skin_updating)
 		// [CELADON-EDIT] - inteq_vendor - REASSIGNING ICONS DIRECTORY
-		//part.icon = used_skin[MOD_ICON_OVERRIDE] || 'icons/obj/clothing/modsuit/mod_clothing.dmi' //CELADON-EDIT - ORIGINAL
+		//part.icon = used_skin[MOD_ICON_OVERRIDE] || 'icons/obj/clothing/modsuit/mod_clothing.dmi' // [CELADON-EDIT] - ORIGINAL
+		//part.mob_overlay_icon = used_skin[MOD_WORN_ICON_OVERRIDE] || 'icons/mob/clothing/modsuit/mod_clothing.dmi' // [CELADON-EDIT] - ORIGINAL
 		part.icon = used_skin[MOD_ICON_OVERRIDE] || 'mod_celadon/_storge_icons/icons/obj/modsuit/mod_clothing.dmi'
+		part.mob_overlay_icon = used_skin[MOD_WORN_ICON_OVERRIDE] || 'mod_celadon/_storge_icons/icons/mob/modsuit/mod_clothing.dmi'
 		// [CELADON-EDIT]
-		//part.mob_overlay_icon = used_skin[MOD_WORN_ICON_OVERRIDE] || 'icons/mob/clothing/modsuit/mod_clothing.dmi'
+
 		part.icon_state = "[skin]-[part.base_icon_state]"
 	for(var/obj/item/clothing/part as anything in mod_parts)
 		var/used_category
