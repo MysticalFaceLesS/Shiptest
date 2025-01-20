@@ -71,6 +71,12 @@
 //							///
 //		Icemoon ruin		///
 //							///
+/datum/map_template/ruin/icemoon/cultbaroncrash
+	name = "Cult Baron Crashsite"
+	id = "cultbaroncrash"
+	description = "Crashed shuttle of occult nobility"
+	suffix = "icemoon_cultbaroncrash.dmm"
+
 /datum/map_template/ruin/icemoon/hydroponicslab
 	name = "Hydroponics Lab"
 	id = "hydroponicslab"
@@ -141,6 +147,12 @@
 //							///
 //		Jungle ruin			///
 //							///
+/datum/map_template/ruin/jungle/oldntobservatory
+	name = "Elysium Reclaimed Observatory"
+	id = "oldntobservatory"
+	description = "Old NT Observatory, not owned by Elysium Pseudoscientists."
+	suffix = "jungle_observatory.dmm"
+
 /datum/map_template/ruin/jungle/syndicate
 	name = "Jungle Syndicate Bunker"
 	id = "syndicatebunkerjungle"
