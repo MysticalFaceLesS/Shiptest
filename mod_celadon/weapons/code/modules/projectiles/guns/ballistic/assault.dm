@@ -1,7 +1,7 @@
 /obj/item/gun/ballistic/automatic/assault/g36sh
 //Описание
 	name = "\improper G36-SH"
-	desc = "Наследие огненной эры Союза Человечества, укороченная версия,  калибра 5.56x45. Технология производства восстановлена минитменами, но ввиду усложненной конструкции продана корпорации InteQ. Используется сотрудниками InteQ по сей день, как оружие для элитных наемников."
+	desc = "Solar Federation's elite assault rifle. This version is shortened. Originally developed on preUnited earth, the design was later picked by Scarborough, and modified by Solar Armories after Scarborough switched it's focus. Uses 5.56x45 rounds."
 //Иконки
 	icon = 'mod_celadon/_storge_icons/icons/guns/48x32guns.dmi'
 	lefthand_file = 'mod_celadon/_storge_icons/icons/guns/guns_lefthand.dmi'
@@ -12,6 +12,7 @@
 //Звуки
 	fire_sound = 'mod_celadon/_storge_sounds/sound/gun/g36sh.ogg'
 //Характеристики
+	manufacturer = MANUFACTURER_SOLARARMORIES
 	spread = 4
 	wield_delay = 0.2 SECONDS
 	fire_delay = 0.14 SECONDS
@@ -36,11 +37,12 @@
 	)
 
 /obj/item/gun/ballistic/automatic/assault/g36sh/inteq
-	name = "\improper Moded G36-SH"
-	desc = "Обширная модификация G36-SH, которая входит в стандартную комплектацию вооружения InteQ. Калибр 5,56x45 мм."
+	name = "\improper G36m-SH"
+	desc = "A SolFed G36-SH, modified to IRMG standarts. Used by elite mercenaries. Uses 5.56x45."
 	icon_state = "g36shinteq"
 	item_state = "g36shinteq"
 	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/guns/back.dmi'
+	manufacturer = MANUFACTURER_INTEQ
 	empty_indicator = TRUE
 	empty_alarm = TRUE
 	zoomable = TRUE
@@ -50,7 +52,7 @@
 
 /obj/item/gun/ballistic/automatic/assault/g36
 	name = "\improper G36"
-	desc = "Наследие огненной эры Союза Человечества , калибра 5.56x45 . Технология производства восстановлена минитменами , но ввиду усложненной конструкции продана корпорации InteQ. Используется сотрудниками InteQ по сей день , как оружие для элитных наемников. "
+	desc = "Solar Federation's elite assault rifle. Originally developed on preUnited earth, the design was later picked by Scarborough, and modified by Solar Armories after Scarborough switched it's focus. Uses 5.56x45 rounds."
 	icon = 'mod_celadon/_storge_icons/icons/guns/48x32guns.dmi'
 	lefthand_file = 'mod_celadon/_storge_icons/icons/guns/guns_lefthand.dmi'
 	righthand_file = 'mod_celadon/_storge_icons/icons/guns/guns_righthand.dmi'
@@ -58,6 +60,7 @@
 	fire_sound = 'mod_celadon/_storge_sounds/sound/gun/g36.ogg'
 	icon_state = "g36"
 	item_state = "g36"
+	manufacturer = MANUFACTURER_SOLARARMORIES
 	spread = 2
 	wield_delay = 0.5 SECONDS
 	fire_delay = 0.14 SECONDS
@@ -82,11 +85,12 @@
 // 		spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/automatic/assault/g36/inteq
-	name = "\improper Moded G36"
-	desc = "Обширная модификация G36, которая входит в стандартную комплектацию вооружения InteQ. Калибр 5,56x45 мм."
+	name = "\improper G36m"
+	desc = "A SolFed G36, modified to IRMG standarts. Used by elite mercenaries. Uses 5.56x45."
 	icon_state = "g36inteq"
 	item_state = "g36inteq"
 	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/guns/back.dmi'
+	manufacturer = MANUFACTURER_INTEQ
 	empty_indicator = TRUE
 	empty_alarm = TRUE
 	zoomable = TRUE
