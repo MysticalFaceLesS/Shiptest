@@ -106,3 +106,21 @@
 	weather_controller_type = /datum/weather_controller/lush
 	ruin_type = RUINTYPE_BEACH
 	landing_sound = 'sound/effects/planet_landing_1.ogg'
+
+//Для работы модульной планеты Anima
+/datum/planet_type/anima
+	name = "???"
+	desc = "Some sort of ugly shaped planet with an energy field arond it. There's no identification of what this is."
+	planet = DYNAMIC_WORLD_ANIMA
+	icon_state = "anima"
+	//	color = COLOR_YELLOW
+	mapgen = /datum/map_generator/planet_generator/anima
+	gravity = STANDARD_GRAVITY
+	default_baseturf = /turf/open/space/anima
+	weather_controller_type = null
+	weight = 2
+	ruin_type = RUINTYPE_ANIMA
+
+//Оверрайд астероидов, что бы там были руины из списка космо руин
+/datum/planet_type/asteroid
+	ruin_type = RUINTYPE_SPACE
