@@ -1,8 +1,11 @@
 /obj/item/gun/ballistic/automatic/pistol/usp45
 	name = "\improper USP .45"
-	desc = "USP .45."
+	desc = "USP, a really dark sidearm mostly used by syndicate's special agents. Feel like a secret agent! Chambered in .45."
 	icon = 'mod_celadon/_storge_icons/icons/guns/usp.dmi'
 	icon_state = "usp"
+	manufacturer = MANUFACTURER_SCARBOROUGH
+	mag_display = TRUE
+	show_magazine_on_sprite = TRUE
 	w_class = WEIGHT_CLASS_NORMAL
 	default_ammo_type = /obj/item/ammo_box/magazine/usp45_standart
 	allowed_ammo_types = list(
@@ -26,9 +29,12 @@
 
 /obj/item/gun/ballistic/automatic/pistol/glock
 	name = "\improper Glock 17"
-	desc = "Glock 17"
+	desc = "A really old SolFed 9mm pistol. Still used by some solarian police forces. It is also popular as a civilian firearm."
 	icon = 'mod_celadon/_storge_icons/icons/guns/glock.dmi'
 	icon_state = "glock"
+	manufacturer = MANUFACTURER_SOLARARMORIES
+	mag_display = TRUE
+	show_magazine_on_sprite = TRUE
 	w_class = WEIGHT_CLASS_NORMAL
 	default_ammo_type = /obj/item/ammo_box/magazine/glock_standart
 	allowed_ammo_types = list(

@@ -313,8 +313,8 @@
 /datum/emote/living/carbon/human/slap
 	name = EMOTE_SPECIES_SLAP
 
-// /datum/emote/living/carbon/human/snap
-// 	name = EMOTE_SPECIES_SNAP
+/datum/emote/living/carbon/human/snap
+	name = EMOTE_SPECIES_SNAP
 
 /datum/emote/living/carbon/human/fart
 	name = EMOTE_SPECIES_FART

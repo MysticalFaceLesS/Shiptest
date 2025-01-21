@@ -26,8 +26,8 @@
 								"Cyborg",
 								"Ripley",
 								"Firefighter",
-								"Odysseus",
-								"Gygax",
+								"200 Series",
+								"500 Series",
 								"Durand",
 								"H.O.N.K",
 								"Phazon",
@@ -36,6 +36,21 @@
 								"Cyborg Upgrade Modules",
 								"IPC Components",
 								"Misc"
+								// [CELADON-REMOVE] - CELADON_MODSUITS
+								/*
+								"MOD Suits",
+								"Chassis",
+								"Plating",
+								"MOD Modules",
+								"General Modules",
+								"Engineering Modules",
+								"Medical Modules",
+								"Science Modules",
+								"Security Modules",
+								"Supply Modules",
+								"Service Modules"
+								*/
+								// [/CELADON-REMOVE]
 								)
 
 /obj/machinery/mecha_part_fabricator/Initialize(mapload)

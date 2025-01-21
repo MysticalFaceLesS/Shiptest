@@ -125,6 +125,19 @@
 	name = "Raided Cargo Outpost"
 	description = "A cargo outpost that got raided by some space pirates"
 
+/datum/map_template/ruin/icemoon/icemoon_solfed
+	name = "Solar Federation Prison"
+	id = "solfed_prison"
+	suffix = "icemoon_underground_solfed_prison.dmm"
+	description = "The prison is a temporary detention outpost for criminals awaiting sentencing or transfer to the main prison."
+
+/datum/map_template/ruin/icemoon/hydroponicsla
+	name = "Tesla Lab"
+	id = "teslalab"
+	suffix = "icemoon_tesla_lab.dmm"
+	description = "The destroyed SolFed laboratory for the development of a new type of engine."
+
+
 //							///
 //		Jungle ruin			///
 //							///
@@ -419,6 +432,11 @@
 	description = "A mining operation gone wrong."
 	suffix = "rockplanet_miningexpedition.dmm"
 
+/datum/map_template/ruin/rockplanet/mining_base
+	name = "N+S Mining Installation"
+	description = "A N+S mining installation recently fallen prey to a band of Ramzi pirates."
+	id = "rockplanet_mining_base"
+	suffix = "rockplanet_mining_installation.dmm"
 
 /datum/map_template/ruin/rockplanet/boxsci
 	name = "Abandoned science wing"
@@ -447,6 +465,13 @@
 //							///
 //		Space ruin			///
 //							///
+
+/datum/map_template/ruin/space/abandoned_remora
+	id = "abandoned_remora"
+	suffix = "abandoned_remora.dmm"
+	name = "Destroyed Remora Ship"
+	description = "A very old syndie ship, abandoned and destroyed by Nanotrasen."
+
 /datum/map_template/ruin/space/corporate_mining
 	id = "corporate_mining"
 	suffix = "corporate_mining.dmm"
@@ -712,6 +737,13 @@
 	id = "ws-drugstore"
 	description = "A store that once sold a variety of items and equipment."
 	suffix = "whitesands_surface_camp_drugstore.dmm"
+
+/datum/map_template/ruin/whitesands/e11_manufactory
+	name = "E-11 Manufacturing Plant"
+	id = "ws-e11manufactory"
+	description = "An old Eoehoma Firearms manufacturing plant dedicated to assembly of the beloved-by-many E-11 rifle."
+	suffix = "whitesands_surface_e11_manufactory.dmm"
+	ruin_tags = list(RUIN_TAG_MEDIUM_COMBAT, RUIN_TAG_MEDIUM_LOOT, RUIN_TAG_HAZARDOUS)
 
 //							///
 //		Plasma	 ruin		///

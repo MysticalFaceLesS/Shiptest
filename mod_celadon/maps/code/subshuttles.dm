@@ -100,6 +100,11 @@
 	name = "Rider Dropship"
 	prefix = "sNTSV"
 
+/datum/map_template/shuttle/subshuttles/inteq_tadpole
+	file_name = "inteq_tadpole"
+	name = "Tadpole"
+	prefix = "sIQSV"
+
 //Субшатлы для руинок
 /datum/map_template/shuttle/ruin/ruin_jox
 	file_name = "syndicate_Jox"
@@ -110,3 +115,8 @@
 	file_name = "solfed_vespa"
 	name = "Vespa Expeditionary Dropship"
 	prefix = "sSFSV"
+
+/datum/map_template/shuttle/subshuttles/elysium_felon
+	file_name = "elysium_felon"
+	name = "Felon Drug Carrier"
+	prefix = "sEUSV"

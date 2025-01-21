@@ -22,6 +22,20 @@
 
 /obj/item/banner/attack_self(mob/living/carbon/human/user)
 	if(!inspiration_available)
+		// [CELADON - ADD] - CELADON_ITEMS (Делает возможным подняие флагов типа mundane, раньше этого сделать было нельзя. Отхил у таких флагов отсутствует)
+		if(morale_time > world.time)
+			to_chat(user, "<span class='warning'>You aren't feeling inspired enough to flourish [src] again yet.</span>")
+			return
+		user.visible_message("<span class='big notice'>[user] flourishes [src]!</span>", \
+		"<span class='notice'>You raise [src] skywards, inspiring your allies!</span>")
+		playsound(src, "rustle", 100, FALSE)
+		if(warcry)
+			user.say("[warcry]", forced="banner")
+		var/old_transform = user.transform
+		user.transform *= 1.2
+		animate(user, transform = old_transform, time = 10)
+		morale_time = world.time + morale_cooldown
+		// [/CELADON - ADD] - CELADON_ITEMS
 		return
 	if(morale_time > world.time)
 		to_chat(user, "<span class='warning'>You aren't feeling inspired enough to flourish [src] again yet.</span>")
