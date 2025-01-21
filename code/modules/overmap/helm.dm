@@ -302,9 +302,9 @@
 	switch(action) // Universal topics
 		// [CELADON-ADD] - OVERMAP STUFF - Это вагабонд насрал
 		if("sensor_increase")
-			// [CELADON-EDIT] - OVERMAP SENSORS
+			//овермап сенсорс максимальная дальность апдейт
 			current_ship.sensor_range = min(current_ship.default_sensor_range, current_ship.sensor_range+1)
-			// [/CELADON-EDIT]
+			//овермап сенсорс максимальная дальность апдейт конец
 			update_static_data(usr, ui)
 			current_ship.token.update_screen()
 			return
