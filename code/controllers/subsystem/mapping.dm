@@ -210,6 +210,11 @@ SUBSYSTEM_DEF(mapping)
 		else
 			S.short_name = copytext(S.name, 1, 20)
 
+		// [CELADON-ADD] - OVERMAP SENSORS
+		if(isnum(data["sensor_range"]))
+			S.def_sensor_range = data["sensor_range"]
+		// [/CELADON-ADD]
+
 		if(istext(data["prefix"]))
 			S.prefix = data["prefix"]
 
