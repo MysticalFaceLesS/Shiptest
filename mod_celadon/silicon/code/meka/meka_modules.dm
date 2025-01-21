@@ -279,24 +279,24 @@
 	hat_offset = 0
 	var/obj/item/t_scanner/adv_mining_scanner/cyborg/mining_scanner
 
-/obj/item/robot_module/mining/be_transformed_to(obj/item/robot_module/old_module)
+/obj/item/robot_module/meka/miner/be_transformed_to(obj/item/robot_module/old_module)
 	var/mob/living/silicon/robot/R = loc
-	var/static/list/meka_mining_icons
-	if(meka_mining_icons)
-		meka_mining_icons = list(
+	var/static/list/meka_miner_icons
+	if(!meka_miner_icons)
+		meka_miner_icons = list(
 		"Niko" = image(icon = 'mod_celadon/_storge_icons/icons/mekaborg.dmi', icon_state = "mmekamine"),
 		"Nika" = image(icon = 'mod_celadon/_storge_icons/icons/mekaborg.dmi', icon_state = "fmekamine")
 		)
-		meka_mining_icons = sortList(meka_mining_icons)
-	var/meka_mining_borg_icon = show_radial_menu(R, R , meka_mining_icons, custom_check = CALLBACK(src, PROC_REF(check_menu), R), radius = 42, require_near = TRUE)
-	switch(meka_mining_borg_icon)
+		meka_miner_icons = sortList(meka_miner_icons)
+	var/meka_miner_robot_icon = show_radial_menu(R, R , meka_miner_icons, custom_check = CALLBACK(src, PROC_REF(check_menu), R), radius = 42, require_near = TRUE)
+	switch(meka_miner_robot_icon)
 		if("Niko")
 			cyborg_base_icon = "mmekamine"
 			cyborg_icon_override = 'mod_celadon/_storge_icons/icons/mekaborg.dmi'
 			hat_offset = 3
 			special_light_key = "mmekamine"
 		if("Nika")
-			cyborg_base_icon = "fmekamed"
+			cyborg_base_icon = "fmekamine"
 			cyborg_icon_override = 'mod_celadon/_storge_icons/icons/mekaborg.dmi'
 			hat_offset = 3
 			special_light_key = "fmekamine"
