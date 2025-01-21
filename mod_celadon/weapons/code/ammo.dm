@@ -168,13 +168,13 @@
 /datum/supply_pack/magazine/skm762_40_extended
 	name = "SKM Extended Magazine Crate"
 	desc = "Contains a 7.62x40mm magazine for the SKM rifles, containing fourty rounds."
-	contains = list(/obj/item/ammo_box/magazine/skm_762_40/extended)
+	contains = list(/obj/item/ammo_box/magazine/skm_762_40/extended/empty)
 	cost = 2800
 
 /datum/supply_pack/magazine/skm762_40_drum
 	name = "SKM Drum Magazine Crate"
 	desc = "Contains a 7.62x40mm magazine for the SKM rifles, containing seventy-five rounds."
-	contains = list(/obj/item/ammo_box/magazine/skm_762_40/drum)
+	contains = list(/obj/item/ammo_box/magazine/skm_762_40/drum/empty)
 	cost = 5000
 
 
@@ -188,59 +188,59 @@
 /datum/supply_pack/magazine/a357_mag_independent
 	name = ".357 Speedloader Crate"
 	desc = "Contains a .357 speedloader for revolvers, containing seven rounds."
-	contains = list(/obj/item/ammo_box/a357)
+	contains = list(/obj/item/ammo_box/a357/empty)
 	cost = 1000
 
 /datum/supply_pack/magazine/usp_magazine
 	name = "USP Pistol Magazine Crate"
 	desc = "Contains .45 caliber magazine for the USP pistol, containing twelve rounds."
-	contains = list(/obj/item/ammo_box/magazine/usp45_standart)
+	contains = list(/obj/item/ammo_box/magazine/usp45_standart/empty)
 	cost = 650
 
 /datum/supply_pack/magazine/glock_magazine
 	name = "Glock Pistol Magazine Crate"
 	desc = "Contains 9mm magazine for the Glock pistol family, containing seventeen rounds."
-	contains = list(/obj/item/ammo_box/magazine/glock_standart)
+	contains = list(/obj/item/ammo_box/magazine/glock_standart/empty)
 	cost = 500
 
 /datum/supply_pack/magazine/g36_sh
 	name = "G36 Short Magazine Double Pack Crate"
 	desc = "Contains two 5.56x45mm magazines for the G36 family rifles, containing twenty rounds each."
-	contains = list(/obj/item/ammo_box/magazine/g36/sh,
-					/obj/item/ammo_box/magazine/g36/sh)
+	contains = list(/obj/item/ammo_box/magazine/g36/sh/empty,
+					/obj/item/ammo_box/magazine/g36/sh/empty)
 	cost = 1400
 
 /datum/supply_pack/magazine/g36
 	name = "G36 Standard Magazine Double Pack Crate"
 	desc = "Contains two 5.56x45mm magazines for the G36 family rifles, containing thirty rounds each."
-	contains = list(/obj/item/ammo_box/magazine/g36,
-					/obj/item/ammo_box/magazine/g36)
+	contains = list(/obj/item/ammo_box/magazine/g36/empty,
+					/obj/item/ammo_box/magazine/g36/empty)
 	cost = 1950
 
 /datum/supply_pack/magazine/g36_drum
 	name = "G36 Drum Magazine Crate"
 	desc = "Contains 5.56x45mm drum magazine for the G36 family rifles, containing seventy-five rounds."
-	contains = list(/obj/item/ammo_box/magazine/g36/drum)
+	contains = list(/obj/item/ammo_box/magazine/g36/drum/empty)
 	cost = 5000
 
 /datum/supply_pack/magazine/morita_ammo_small
 	name = "Morita MK1 Short Magazine Double Pack Crate"
 	desc = "Contains two .310 caliber magazines for the Morita family rifles, containing ten rounds each."
-	contains = list(/obj/item/ammo_box/magazine/morita1/small,
-					/obj/item/ammo_box/magazine/morita1/small)
+	contains = list(/obj/item/ammo_box/magazine/morita1/small/empty,
+					/obj/item/ammo_box/magazine/morita1/small/empty)
 	cost = 2000
 
 /datum/supply_pack/magazine/morita_ammo
 	name = "Morita MK1 Standard Magazine Double Pack Crate"
 	desc = "Contains two .310 caliber magazines for the Morita family rifles, containing twenty-five rounds each."
-	contains = list(/obj/item/ammo_box/magazine/morita1,
-					/obj/item/ammo_box/magazine/morita1)
+	contains = list(/obj/item/ammo_box/magazine/morita1/empty,
+					/obj/item/ammo_box/magazine/morita1/empty)
 	cost = 4000
 
 /datum/supply_pack/magazine/morita_ammo_drum
 	name = "Morita MK1 Drum Magazine Crate"
 	desc = "Contains .310 caliber drum magazine for the Morita family rifles, containing fifty rounds."
-	contains = list(/obj/item/ammo_box/magazine/morita1/drum)
+	contains = list(/obj/item/ammo_box/magazine/morita1/drum/empty)
 	cost = 5000
 
 //Магазины для оружия
@@ -248,18 +248,18 @@
 /datum/supply_pack/magazine/a410_saiga
 	name = "Saiga-410 Short Magazine Double Pack Crate"
 	desc = "Contains two .410 caliber short magazines for the Saiga-410 shotgun, containing six rounds each."
-	contains = list(/obj/item/ammo_box/magazine/saiga,
-					/obj/item/ammo_box/magazine/saiga)
+	contains = list(/obj/item/ammo_box/magazine/saiga/empty,
+					/obj/item/ammo_box/magazine/saiga/empty)
 	cost = 1800
 
 /datum/supply_pack/magazine/a410_saiga_medium
     name = "Saiga-410 Standard Magazine Crate"
     desc = "Contains .410 caliber magazine for the Saiga-410 shotgun, containing nine rounds."
-    contains = list(/obj/item/ammo_box/magazine/saiga/medium)
+    contains = list(/obj/item/ammo_box/magazine/saiga/medium/empty)
     cost = 2800
 
 /datum/supply_pack/magazine/a410_saiga_drum
     name = "Saiga-410 Drum Magazine Crate"
     desc = "Contains .410 caliber drum magazine for the Saiga-410 shotgun, containing fourteen rounds."
-    contains = list (/obj/item/ammo_box/magazine/saiga/drum)
+    contains = list (/obj/item/ammo_box/magazine/saiga/drum/empty)
     cost = 5000
