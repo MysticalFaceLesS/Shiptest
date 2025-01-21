@@ -9,6 +9,10 @@
 	token_type = /obj/overmap/rendered
 	dock_time = 10 SECONDS
 
+	// [CELADON-ADD] - OVERMAP SENSORS
+	var/default_sensor_range = 4
+	// [/CELADON-ADD]
+
 	///Vessel estimated thrust per full burn
 	var/est_thrust
 	///Average fuel fullness percentage
@@ -112,6 +116,7 @@
 				Dock(position, TRUE)
 
 			refresh_engines()
+		default_sensor_range = source_template.def_sensor_range
 		ship_account = new(name, source_template.starting_funds)
 		faction_datum = source_template.faction_datum
 

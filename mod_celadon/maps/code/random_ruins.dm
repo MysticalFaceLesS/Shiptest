@@ -34,3 +34,7 @@
 /datum/map_template/ruin/earth_sand
 	prefix = "_maps/_mod_celadon/RandomRuins/EarthSandRuins/"
 	ruin_type = RUINTYPE_EARTH_SAND
+
+/datum/map_template/ruin/anima
+	prefix = "_maps/_mod_celadon/RandomRuins/AnimaRuins/"
+	ruin_type = RUINTYPE_ANIMA

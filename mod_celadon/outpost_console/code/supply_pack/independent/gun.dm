@@ -173,13 +173,13 @@ MARK:		Rifles
 	cost = 3000
 	contains = list(/obj/item/storage/guncase/cobra)
 	crate_name = "SMG crate"
-/datum/supply_pack/faction/independent/gun/skm
-	name = "SKM-24 Rifle Crate"
-	desc = "Contains a high-powered, automatic rifle chambered in 7.62x40mm CLIP."
-	cost = 5000
-	contains = list(/obj/item/storage/guncase/skm)
-	crate_name = "auto rifle crate"
-
+///datum/supply_pack/faction/independent/gun/skm
+	//name = "SKM-24 Rifle Crate"
+	//desc = "Contains a high-powered, automatic rifle chambered in 7.62x40mm CLIP."
+	//cost = 5000
+	//contains = list(/obj/item/storage/guncase/skm)
+	//crate_name = "auto rifle crate"
+	//Оффы такой же ящик в игру ввели лол
 /datum/supply_pack/faction/independent/gun/attachment/rail_light
 	name = "Tactical Rail Light Crate"
 	desc = "Contains a single rail light to be mounted on a firearm."
