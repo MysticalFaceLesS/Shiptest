@@ -1,3 +1,10 @@
+/datum/mod_theme
+	desc = null
+	extended_desc = null
+
+/datum/mod_theme/magnate
+	armor = list("melee" = 40, "bullet" = 35, "laser" = 35, "energy" = 35, "bomb" = 50, "bio" = 100, "fire" = 100, "acid" = 100)
+
 /obj/item/mod
 	name = "Base MOD"
 	desc = "You should not see this, yell at a coder!"
