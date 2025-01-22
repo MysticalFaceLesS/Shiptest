@@ -78,11 +78,14 @@ GLOBAL_LIST_INIT(default_weight_class_to_volume, list(
 //
 #define MAX_WEIGHT_CLASS_S_CONTAINER WEIGHT_CLASS_SMALL
 #define MAX_WEIGHT_CLASS_M_CONTAINER WEIGHT_CLASS_NORMAL
-#define MAX_WEIGHT_CLASS_BACKPACK WEIGHT_CLASS_BULKY
+// [CELADON-EDIT] - Making backpacks great again - Возвращает стандартный объем рюкзакам и дюффелям
+// #define MAX_WEIGHT_CLASS_BACKPACK WEIGHT_CLASS_BULKY
+#define MAX_WEIGHT_CLASS_BACKPACK WEIGHT_CLASS_NORMAL
+// [CELADON-EDIT]
 #define MAX_WEIGHT_CLASS_DUFFEL WEIGHT_CLASS_BULKY
 
 // max_volume for storages
-// [CELADON-EDIT]
+// [CELADON-EDIT] - Making backpacks great again - Возвращает стандартный объем рюкзакам и дюффелям
 // #define STORAGE_VOLUME_CONTAINER_S DEFAULT_VOLUME_NORMAL //4 small items
 // #define STORAGE_VOLUME_CONTAINER_M (DEFAULT_VOLUME_NORMAL * 2) //8 small items
 // #define STORAGE_VOLUME_SATCHEL (DEFAULT_VOLUME_NORMAL * 4) //4 normal items
@@ -91,10 +94,9 @@ GLOBAL_LIST_INIT(default_weight_class_to_volume, list(
 #define STORAGE_VOLUME_CONTAINER_M (DEFAULT_VOLUME_NORMAL * 2) //6 small items
 #define STORAGE_VOLUME_SATCHEL (DEFAULT_VOLUME_NORMAL * 6) //6 normal items, or 3 bulky items
 #define STORAGE_VOLUME_BACKPACK (DEFAULT_VOLUME_NORMAL * 6) //6 normal items, or 3 bulky items
+#define STORAGE_VOLUME_DUFFLEBAG (DEFAULT_VOLUME_NORMAL * 8) //2 huge items or 4 bulky items
+#define STORAGE_VOLUME_BAG_OF_HOLDING (DEFAULT_VOLUME_NORMAL * 9) //1.5x backpack
 // [/CELADON-EDIT]
-#define STORAGE_VOLUME_DUFFLEBAG (DEFAULT_VOLUME_NORMAL * 10) //~1.4X backpack, 5 bulky items
-#define STORAGE_VOLUME_BAG_OF_HOLDING (DEFAULT_VOLUME_NORMAL * 10)
-
 //Whitelist for the suit storage slot on medical suits
 #define MEDICAL_SUIT_ALLOWED_ITEMS list(	\
 	/obj/item/scalpel,	\

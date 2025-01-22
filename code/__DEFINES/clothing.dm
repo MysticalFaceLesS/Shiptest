@@ -40,6 +40,9 @@
 
 // Base equipment delays
 /// Delay base for full-body coverage suit slot items. (hardsuits, spacesuits, radsuits, etc.)
+// [CELADON-EDIT] - Delay Removal - Снижает все делеи до 0
+//ORIGINAL
+/*
 #define EQUIP_DELAY_OVERSUIT (6 SECONDS)
 
 /// Delay base for suit slot items
@@ -68,6 +71,36 @@
 #define EQUIP_DELAY_GLOVES (1 SECONDS)
 /// Delay base for glasses.
 #define EQUIP_DELAY_EYEWEAR (1 SECONDS)
+*/
+#define EQUIP_DELAY_OVERSUIT (0 SECONDS)
+
+/// Delay base for suit slot items
+#define EQUIP_DELAY_SUIT (0 SECONDS)
+
+/// Delay base for hard-body shoes and boots.
+#define EQUIP_DELAY_BOOTS (0 SECONDS)
+/// Delay base for hard-body, strapped, or otherwise head-covering hats.
+#define EQUIP_DELAY_HELMET (0 SECONDS)
+/// Delay base for shoes.
+#define EQUIP_DELAY_SHOES (0 SECONDS)
+/// Delay base for suit and cloak slot items that are trivially removed or put on. (Coats, Jackets, Ponchos, etc.)
+#define EQUIP_DELAY_COAT (0 SECONDS)
+/// Delay base for Undersuits.
+#define EQUIP_DELAY_UNDERSUIT (0 SECONDS)
+
+/// Delay base for masks.
+#define EQUIP_DELAY_MASK (0 SECONDS)
+/// Delay base for back-worn objects.
+#define EQUIP_DELAY_BACK (0 SECONDS)
+/// Delay base for belts.
+#define EQUIP_DELAY_BELT (0 SECONDS)
+/// Delay base for hats.
+#define EQUIP_DELAY_HAT (0 SECONDS)
+/// Delay base for gloves.
+#define EQUIP_DELAY_GLOVES (0 SECONDS)
+/// Delay base for glasses.
+#define EQUIP_DELAY_EYEWEAR (0 SECONDS)
+// [CELADON-EDIT]
 
 // Flags for self equipping items
 /// Allow movement during equip/unequip

@@ -876,7 +876,8 @@
 
 	if(ismob(ourparent.loc))
 		var/mob/holder = ourparent.loc
-
+//[CELADON-REMOVE] - Making backpacks great again - удаляет проверку на это говно
+/*
 		if(otherstorage? !otherstorage.carry_access : !carry_access)
 			if(message)
 				to_chat(holder, span_warning( "[ourparent] is too cumbersome to open inhand, you're going to have to set it down!"))
@@ -886,4 +887,6 @@
 			if(message)
 				to_chat(holder, span_warning( "Your arms aren't long enough to reach [ourparent] while it's on your back!"))
 			return FALSE
+*/
+//[CELADON-REMOVE]
 	return TRUE
