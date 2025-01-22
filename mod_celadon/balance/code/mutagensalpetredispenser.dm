@@ -16,7 +16,7 @@
 	desc = "The circuit board for a portable botanical chem dispenser."
 	id = "botan_dispenser"
 	build_path = /obj/item/circuitboard/machine/chem_dispenser/mutagensaltpeter
-	departmental_flags = DEPARTMENTAL_FLAG_SERVICE | DEPARTMENTAL_FLAG_MEDICAL
+	departmental_flags = DEPARTMENTAL_FLAG_SERVICE
 	category = list ("Service Machinery")
 
 /datum/techweb_node/botany
