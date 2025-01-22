@@ -2045,12 +2045,6 @@
 	},
 /turf/open/floor/marble/black,
 /area/ship/crew/dorm)
-"rO" = (
-/obj/docking_port/stationary{
-	dir = 8
-	},
-/turf/open/floor/engine/hull/reinforced,
-/area/ship/external)
 "sa" = (
 /obj/structure/bed{
 	dir = 8
@@ -3429,21 +3423,6 @@
 	},
 /turf/open/floor/marble/black,
 /area/ship/crew/dorm/captain)
-"Er" = (
-/obj/machinery/power/floodlight{
-	anchored = 1
-	},
-/obj/structure/cable{
-	icon_state = "0-1"
-	},
-/obj/docking_port/mobile{
-	dir = 4;
-	name = "hunter shuttle";
-	port_direction = 2;
-	preferred_direction = 4
-	},
-/turf/open/floor/engine/hull/reinforced,
-/area/ship/external)
 "Ev" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -3634,7 +3613,10 @@
 /area/ship/hangar)
 "GA" = (
 /obj/structure/cable{
-	icon_state = "1-4"
+	icon_state = "0-4"
+	},
+/obj/machinery/power/floodlight{
+	anchored = 1
 	},
 /turf/open/floor/engine/hull/reinforced,
 /area/ship/external)
@@ -4377,11 +4359,14 @@
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/engineering/electrical)
 "Oc" = (
-/obj/structure/cable{
-	icon_state = "2-4"
+/obj/docking_port/stationary{
+	dir = 8;
+	dwidth = 15;
+	width = 30;
+	height = 15
 	},
-/turf/open/floor/engine/hull/reinforced,
-/area/ship/external)
+/turf/template_noop,
+/area/template_noop)
 "On" = (
 /obj/effect/turf_decal/trimline/opaque/solgovblue/filled/line{
 	dir = 1
@@ -4403,13 +4388,11 @@
 /turf/open/floor/plasteel/tech,
 /area/ship/hallway/central)
 "Os" = (
-/obj/machinery/power/floodlight{
-	anchored = 1
-	},
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2";
-	pixel_y = 1
+/obj/docking_port/mobile{
+	dir = 4;
+	name = "hunter shuttle";
+	port_direction = 2;
+	preferred_direction = 4
 	},
 /turf/open/floor/engine/hull/reinforced,
 /area/ship/external)
@@ -5912,18 +5895,18 @@ aF
 aF
 aF
 aF
-Os
-GA
-Ef
-Ef
-Ef
-Ef
-Ef
-rO
-Ef
-Ef
+aF
+aF
+aF
+aF
+aF
 Oc
-Er
+aF
+aF
+aF
+aF
+aF
+aF
 aF
 aF
 aF
@@ -5955,16 +5938,16 @@ LS
 fj
 fj
 cY
-Mr
+GA
+Ef
+Ef
+Ef
+Os
 Ef
 Ef
 Ef
 Ef
-Ef
-Ef
-Ef
-Ef
-Mr
+GA
 cb
 uM
 uM
