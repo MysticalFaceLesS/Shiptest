@@ -35,7 +35,7 @@
 								"Exosuit Ammunition",
 								"Cyborg Upgrade Modules",
 								"IPC Components",
-								"Misc"
+								"Misc",
 								// [CELADON-ADD] - CELADON_MODSUITS
 								"MOD Suits",
 								"Chassis",
