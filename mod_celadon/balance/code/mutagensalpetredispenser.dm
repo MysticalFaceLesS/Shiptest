@@ -48,5 +48,6 @@
 	component_parts += new /obj/item/stock_parts/capacitor(null)
 	component_parts += new /obj/item/stock_parts/manipulator(null)
 	component_parts += new /obj/item/stack/sheet/glass(null)
+	component_parts += new /obj/item/stack/ore/bluespace_crystal/refined(null)
 	component_parts += new /obj/item/stock_parts/cell/upgraded(null)
 	RefreshParts()
