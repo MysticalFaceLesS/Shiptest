@@ -375,24 +375,25 @@
 
 /* .308 */
 
-/datum/supply_pack/ammo/a308_ammo_box
-	name = "308 Ammo Box Crate"
-	desc = "Contains a thirty-round .308 box for DMRs such as the SsG-04 and CM-GAL-S."
-	contains = list(/obj/item/storage/box/ammo/a308)
-	cost = 500
+// [CELADON-DELETE] - cargo ammo fix
+///datum/supply_pack/ammo/a308_ammo_box
+	//name = "308 Ammo Box Crate"
+	//desc = "Contains a thirty-round .308 box for DMRs such as the SsG-04 and CM-GAL-S."
+	//contains = list(/obj/item/storage/box/ammo/a308)
+	//cost = 500
 
-/datum/supply_pack/ammo/a308_ap
-	name = "308 Armour Piercing Ammo Box Crate"
-	desc = "Contains a thirty-round .308 armour piercing box for DMRs such as the SsG-04 and CM-GAL-S."
-	contains = list(/obj/item/storage/box/ammo/a308/ap)
-	cost = 500
+///datum/supply_pack/ammo/a308_ap
+	//name = "308 Armour Piercing Ammo Box Crate"
+	//desc = "Contains a thirty-round .308 armour piercing box for DMRs such as the SsG-04 and CM-GAL-S."
+	//contains = list(/obj/item/storage/box/ammo/a308/ap)
+	//cost = 500
 
-/datum/supply_pack/ammo/a308_hp
-	name = "308 Hollow Point Ammo Box Crate"
-	desc = "Contains a thirty-round .308 hollow point box for DMRs such as the SsG-04 and CM-GAL-S."
-	contains = list(/obj/item/storage/box/ammo/a308/hp)
-	cost = 500
-
+///datum/supply_pack/ammo/a308_hp
+	//name = "308 Hollow Point Ammo Box Crate"
+	//desc = "Contains a thirty-round .308 hollow point box for DMRs such as the SsG-04 and CM-GAL-S."
+	//contains = list(/obj/item/storage/box/ammo/a308/hp)
+	//cost = 500
+// [/CELADON-DELETE] - cargo ammo fix
 /* 6.5 */
 
 /datum/supply_pack/ammo/a65clip_box

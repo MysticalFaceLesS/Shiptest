@@ -1,64 +1,3 @@
-/obj/item/mod
-	name = "Base MOD"
-	desc = "You should not see this, yell at a coder!"
-	icon = 'mod_celadon/_storge_icons/icons/obj/modsuit/mod_clothing.dmi'
-
-/obj/item/mod/control
-	name = "MOD control unit"
-	desc = "The control unit of a Modular Outerwear Device, a powered, back-mounted suit that protects against various environments."
-	icon_state = "control"
-	base_icon_state = "control"
-	item_state = "mod_control"
-	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/mob/modsuit/mod_clothing.dmi'
-
-/obj/item/clothing/head/mod
-	name = "MOD helmet"
-	desc = "A helmet for a MODsuit."
-	icon_state = "standart-helmet"
-	base_icon_state = "helmet"
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	body_parts_covered = HEAD
-	heat_protection = HEAD
-	cold_protection = HEAD
-	obj_flags = IMMUTABLE_SLOW
-	visor_flags = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|ALLOWINTERNALS
-
-/obj/item/clothing/suit/mod
-	name = "MOD chestplate"
-	desc = "A chestplate for a MODsuit."
-	icon_state = "standart-chestplate"
-	base_icon_state = "chestplate"
-	blood_overlay_type = "armor"
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	body_parts_covered = CHEST|GROIN
-	heat_protection = CHEST|GROIN
-	cold_protection = CHEST|GROIN
-	obj_flags = IMMUTABLE_SLOW
-
-/obj/item/clothing/gloves/mod
-	name = "MOD gauntlets"
-	desc = "A pair of gauntlets for a MODsuit."
-	icon_state = "standart-gauntlets"
-	base_icon_state = "gauntlets"
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	body_parts_covered = HANDS|ARMS
-	heat_protection = HANDS|ARMS
-	cold_protection = HANDS|ARMS
-	obj_flags = IMMUTABLE_SLOW
-
-/obj/item/clothing/shoes/mod
-	name = "MOD boots"
-	desc = "A pair of boots for a MODsuit."
-	icon_state = "standart-boots"
-	base_icon_state = "boots"
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
-	body_parts_covered = FEET|LEGS
-	heat_protection = FEET|LEGS
-	cold_protection = FEET|LEGS
-	obj_flags = IMMUTABLE_SLOW
-	can_be_tied = FALSE
-	visor_flags_inv = HIDESHOES
-
 /datum/mod_theme/inteq
 	name = "InteQ"
 	desc = "This one is made by InteQ."
@@ -165,11 +104,10 @@
 /obj/item/mod/control/pre_equipped/inteq
 	theme = /datum/mod_theme/inteq
 	applied_cell = /obj/item/stock_parts/cell
-	restricted_bodytypes = BODYTYPE_KEPORI|BODYTYPE_VOX
 	initial_modules = list(
 		/obj/item/mod/module/storage/syndicate,
+		/obj/item/mod/module/flashlight/inteq,
 		/obj/item/mod/module/magnetic_harness,
-		/obj/item/mod/module/flashlight_inteq,
 	)
 
 /obj/item/mod/control/pre_equipped/inteq/elite
@@ -177,60 +115,9 @@
 	applied_cell = /obj/item/stock_parts/cell
 	initial_modules = list(
 		/obj/item/mod/module/storage/syndicate,
-		/obj/item/mod/module/flashlight_inteq,
 		/obj/item/mod/module/magnetic_harness,
+		/obj/item/mod/module/flashlight/inteq,
 		/obj/item/mod/module/dna_lock,
 		/obj/item/mod/module/power_kick
 	)
 
-/obj/item/mod/module
-	name = "MOD module"
-	icon = 'mod_celadon/_storge_icons/icons/obj/modsuit/mod_modules.dmi'
-	icon_state = "module"
-	overlay_icon_file = 'mod_celadon/_storge_icons/icons/mob/modsuit/mod_modules.dmi'
-
-/obj/item/mod/module/flashlight_inteq
-	name = "InteQ MOD flashlight module"
-	desc = "A single, yet powerful flashlight installed on the right side of the helmet."
-	icon_state = "inteq_flashlight"
-	module_type = MODULE_TOGGLE
-	complexity = 1
-	active_power_cost = DEFAULT_CHARGE_DRAIN * 0.3
-	incompatible_modules = list(/obj/item/mod/module/flashlight)
-	cooldown_time = 0.5 SECONDS
-	overlay_state_inactive = "inteq_module_light"
-	light_system = MOVABLE_LIGHT_DIRECTIONAL
-	light_color = COLOR_WHITE
-	light_range = 5
-	light_power = 1
-	light_on = FALSE
-	/// Charge drain per range amount.
-	var/base_power = DEFAULT_CHARGE_DRAIN * 0.1
-
-/obj/item/mod/module/flashlight_inteq/on_activation()
-	. = ..()
-	if(!.)
-		return
-	set_light_flags(light_flags | LIGHT_ATTACHED)
-	set_light_on(active)
-	active_power_cost = base_power * light_range
-
-/obj/item/mod/module/flashlight_inteq/on_deactivation(display_message = TRUE, deleting = FALSE)
-	. = ..()
-	if(!.)
-		return
-	set_light_flags(light_flags & ~LIGHT_ATTACHED)
-	set_light_on(active)
-
-/obj/item/mod/module/flashlight_inteq/on_process(delta_time)
-	active_power_cost = base_power * light_range
-	return ..()
-
-/obj/item/mod/module/flashlight_inteq/generate_worn_overlay(mutable_appearance/standing)
-	. = ..()
-	if(!active)
-		return
-	var/mutable_appearance/light_icon = mutable_appearance(overlay_icon_file, "inteq_module_light_on", layer = standing + 0.2)
-	light_icon.appearance_flags = RESET_COLOR
-	light_icon.color = light_color
-	. += light_icon

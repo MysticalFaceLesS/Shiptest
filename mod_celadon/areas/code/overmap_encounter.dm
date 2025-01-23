@@ -21,3 +21,8 @@
 
 /area/overmap_encounter/planetoid/earth_sand/explored
 	area_flags = VALID_TERRITORY
+
+/area/overmap_encounter/planetoid/anima
+	name = "\improper Anima"
+	sound_environment = SOUND_ENVIRONMENT_MOUNTAINS
+	ambientsounds = REEBE

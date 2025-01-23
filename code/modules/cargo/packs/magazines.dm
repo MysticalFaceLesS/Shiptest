@@ -32,7 +32,7 @@
 	contains = list(/obj/item/ammo_box/c38/empty)
 	cost = 100
 	faction_discount = 20
-	faction = /datum/faction/srm
+	faction = /datum/faction/srm  
 
 /datum/supply_pack/magazine/m45_mag
 	name = ".45 ACP Candor Magazine Crate"
