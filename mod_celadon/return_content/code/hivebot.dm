@@ -947,7 +947,7 @@
 			if(prob(35))
 				new /obj/item/circuitboard/computer/scan_consolenew(loc)
 			if(prob(25))
-				new /obj/item/reagent_containers/hypospray/medipen/magillitis(loc)
+				// new /obj/item/reagent_containers/hypospray/medipen/magillitis(loc) - Удалено оффами.
 				new /mob/living/simple_animal/hostile/gorilla(loc)
 			if(prob(35))
 				new /obj/item/dnainjector/thermal(loc)

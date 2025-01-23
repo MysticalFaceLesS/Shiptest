@@ -130,3 +130,75 @@
 	light_power = 0
 	light_system = 0
 	dynamic_lighting = 0
+
+// Тюрфы для модульной anima //
+
+#define ANIMA_DEFAULT_ATMOS "n2=100;TEMP=100.00"
+
+//Базовый турф - родитель/
+/turf/open/space/anima
+	planetary_atmos = FALSE
+	initial_gas_mix = ANIMA_DEFAULT_ATMOS
+	CanAtmosPass = ATMOS_PASS_NO
+	footstep = null
+	light_range = 2
+	light_power = 2
+	light_color = COLOR_VERY_LIGHT_GRAY
+
+//Снежные турфы/
+/turf/open/floor/plating/asteroid/snow/anima
+	initial_gas_mix = ANIMA_DEFAULT_ATMOS
+	planetary_atmos = FALSE
+	light_range = 2
+	light_power = 0.8
+	light_color = COLOR_VERY_LIGHT_GRAY
+
+/turf/open/floor/plating/asteroid/icerock/anima
+	initial_gas_mix = ANIMA_DEFAULT_ATMOS
+	planetary_atmos = FALSE
+	light_range = 1
+	light_power = 0.8
+	light_color = COLOR_VERY_LIGHT_GRAY
+
+//Мусорные турфы/
+/turf/open/floor/plating/asteroid/wasteplanet/lit/anima
+	initial_gas_mix = ANIMA_DEFAULT_ATMOS
+	planetary_atmos = FALSE
+
+/turf/open/floor/plating/wasteplanet/rust/lit/anima
+	initial_gas_mix = ANIMA_DEFAULT_ATMOS
+	planetary_atmos = FALSE
+
+/turf/open/floor/plating/wasteplanet/lit/anima
+	initial_gas_mix = ANIMA_DEFAULT_ATMOS
+	planetary_atmos = FALSE
+
+//Джунглиевый турф
+/turf/open/floor/plating/grass/jungle/lit/anima
+	initial_gas_mix = ANIMA_DEFAULT_ATMOS
+	planetary_atmos = FALSE
+
+//Лавовый турф
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface/lit/anima
+	initial_gas_mix = ANIMA_DEFAULT_ATMOS
+	planetary_atmos = FALSE
+
+/turf/open/lava/smooth/lava_land_surface/anima
+	initial_gas_mix = ANIMA_DEFAULT_ATMOS
+	planetary_atmos = FALSE
+	light_range = 2
+	light_power = 0.5
+	light_color = COLOR_VERY_LIGHT_GRAY
+
+/turf/open/floor/plating/asteroid/purple/lit/anima
+	initial_gas_mix = ANIMA_DEFAULT_ATMOS
+	planetary_atmos = FALSE
+
+//Песчанный турф
+/turf/open/floor/plating/asteroid/whitesands/lit/anima
+	initial_gas_mix = ANIMA_DEFAULT_ATMOS
+	planetary_atmos = FALSE
+
+/turf/open/floor/plating/asteroid/whitesands/grass/lit/anima
+	initial_gas_mix = ANIMA_DEFAULT_ATMOS
+	planetary_atmos = FALSE

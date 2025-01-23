@@ -71,6 +71,12 @@
 //							///
 //		Icemoon ruin		///
 //							///
+/datum/map_template/ruin/icemoon/cultbaroncrash
+	name = "Cult Baron Crashsite"
+	id = "cultbaroncrash"
+	description = "Crashed shuttle of occult nobility"
+	suffix = "icemoon_cultbaroncrash.dmm"
+
 /datum/map_template/ruin/icemoon/hydroponicslab
 	name = "Hydroponics Lab"
 	id = "hydroponicslab"
@@ -131,9 +137,22 @@
 	suffix = "icemoon_underground_solfed_prison.dmm"
 	description = "The prison is a temporary detention outpost for criminals awaiting sentencing or transfer to the main prison."
 
+/datum/map_template/ruin/icemoon/hydroponicsla
+	name = "Tesla Lab"
+	id = "teslalab"
+	suffix = "icemoon_tesla_lab.dmm"
+	description = "The destroyed SolFed laboratory for the development of a new type of engine."
+
+
 //							///
 //		Jungle ruin			///
 //							///
+/datum/map_template/ruin/jungle/oldntobservatory
+	name = "Elysium Reclaimed Observatory"
+	id = "oldntobservatory"
+	description = "Old NT Observatory, not owned by Elysium Pseudoscientists."
+	suffix = "jungle_observatory.dmm"
+
 /datum/map_template/ruin/jungle/syndicate
 	name = "Jungle Syndicate Bunker"
 	id = "syndicatebunkerjungle"
@@ -770,3 +789,54 @@
 	id = "el_citadel"
 	description = "Fortress of Elysium"
 	suffix = "el_citadel.dmm"
+
+//							///
+//		Anima ruin			///
+//							///
+
+/datum/map_template/ruin/anima
+	prefix = "_maps/_mod_celadon/RandomRuins/AnimaRuins/"
+	ruin_type = RUINTYPE_ANIMA
+
+/datum/map_template/ruin/anima/abondoned_containment
+	name = "Abandoned containment area"
+	description = "A containment zone that contains an unknown creature called 'Claws'. For some unknown reason, there is a crashed ship called 'Dareсt' near the containment zone."
+	id = "claw_anima"
+	suffix = "anima_claw_ruin.dmm"
+
+/datum/map_template/ruin/anima/ice_drake
+	name = "Dragon's Lair"
+	id = "ice_drake_anima"
+	description = "\"First the creature's Flame breathed from beneath the stone, Hot battle-fumes, and the earth rumbled.\""
+	suffix = "anima_dragon_ice.dmm"
+
+/datum/map_template/ruin/anima/plasma_drake
+	name = "Large Dragon's Lair"
+	id = "plasma_dragon_anima"
+	description = "An ancient and terrible dragon that lived for several centuries and ate hundreds of souls."
+	suffix = "anima_dragon_plasma.dmm"
+	allow_duplicates = FALSE
+
+/datum/map_template/ruin/anima/heirophant
+	name = "Ancient Heirophant"
+	id = "heirophant_anima"
+	description = "something dangerous"
+	suffix = "anima_heirophant.dmm"
+
+/datum/map_template/ruin/anima/old_miner
+	name = "Old Miner"
+	id = "old_miner_anima"
+	description = "The base of an old and experienced miner"
+	suffix = "anima_oldminer.dmm"
+
+/datum/map_template/ruin/anima/pandora
+	name = "Pandora Arena"
+	id = "pandora_arena_anima"
+	description = "Some... thing has settled here."
+	suffix = "anima_pandora.dmm"
+
+/datum/map_template/ruin/anima/crahsed_abductor_ship
+	name = "Crashed Abductor Ship"
+	id = "crash_abductor_ship_anima"
+	description = "A crashed abductor ship with something horrible goi'n inside."
+	suffix = "anima_ruined_abductor_ship.dmm"

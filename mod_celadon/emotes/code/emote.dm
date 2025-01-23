@@ -1303,6 +1303,7 @@
 	// species_type_whitelist_typecache = list(/datum/species/tajaran)
 	emote_type = EMOTE_VISIBLE | EMOTE_AUDIBLE
 	age_based = TRUE
+	vary = TRUE
 	sound = 'mod_celadon/_storge_sounds/sound/emotes/tajaran/purr_tajaran.ogg'
 	volume = 80
 	muzzled_noises = list("слабо")
@@ -1325,6 +1326,7 @@
 	// species_type_whitelist_typecache = list(/datum/species/tajaran)
 	emote_type = EMOTE_VISIBLE | EMOTE_AUDIBLE
 	age_based = TRUE
+	vary = TRUE
 	sound = 'mod_celadon/_storge_sounds/sound/emotes/tajaran/purr_tajaran_long.ogg'
 	volume = 80
 	muzzled_noises = list("слабо")
@@ -1338,6 +1340,27 @@
 
 	return TRUE
 
+/datum/emote/living/carbon/human/mrowss
+	key = "mrowss"
+	key_third_person = "mrowss"
+	message = "мурчит коротко."
+	message_param = "коротко мурчит на %t."
+	sound = 'mod_celadon/_storge_sounds/sound/emotes/tajaran/mrowss.ogg'
+	// species_type_whitelist_typecache = list(/datum/species/tajaran)
+	emote_type = EMOTE_VISIBLE | EMOTE_AUDIBLE
+	vary = TRUE
+	cooldown = 5 SECONDS
+	volume = 50
+	muzzled_noises = list("слабо")
+
+/datum/emote/living/carbon/human/mrowss/can_run_emote(mob/user, status_check = TRUE , intentional)
+	if(!..())
+		return FALSE
+
+	if (!istajara(user))
+		return FALSE
+
+	return TRUE
 
 /datum/emote/living/carbon/human/hiss/tajara
 	message_mime = "hisses silently."
@@ -1550,6 +1573,36 @@
 	key_third_person = "bshakes"
 	message = "трясётся."
 	// unintentional_stat_allowed = UNCONSCIOUS
+
+/datum/emote/living/carbon/human/snap
+	key = "snap"
+	key_third_person = "snaps"
+	message = "щёлкает пальцами."
+	message_param = "snaps their fingers at %t."
+	sound = 'mod_celadon/_storge_sounds/sound/emotes/fingersnap.ogg'
+	emote_type = EMOTE_AUDIBLE
+
+// /datum/emote/living/carbon/human/snap/run_emote(mob/user, params, type_override, intentional)
+
+// 	var/mob/living/carbon/human/H = user
+// 	var/obj/item/organ/external/LH = H.get_organ("l_hand")
+// 	var/obj/item/organ/external/RH = H.get_organ("r_hand")
+// 	var/left_hand_good = FALSE
+// 	var/right_hand_good = FALSE
+// 	if(LH && !(LH.status & ORGAN_SPLINTED) && !(LH.status & ORGAN_BROKEN))
+// 		left_hand_good = TRUE
+// 	if(RH && !(RH.status & ORGAN_SPLINTED) && !(RH.status & ORGAN_BROKEN))
+// 		right_hand_good = TRUE
+
+// 	if(!left_hand_good && !right_hand_good)
+// 		to_chat(user, "You need at least one hand in good working order to snap your fingers.")
+// 		return TRUE
+
+// 	if(prob(5))
+// 		user.visible_message("<span class='danger'><b>[user]</b> snaps [user.p_their()] fingers right off!</span>")
+// 		playsound(user.loc, 'sound/effects/snap.ogg', 50, 1)
+// 		return TRUE
+// 	return ..()
 
 // /datum/emote/living/carbon/human/cry/get_sound(mob/living/user)
 // 	if(!ishuman(user))
