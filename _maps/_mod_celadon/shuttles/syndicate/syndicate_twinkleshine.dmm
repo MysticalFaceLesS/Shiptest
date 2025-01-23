@@ -123,6 +123,9 @@
 /obj/item/clothing/head/helmet/ngr,
 /obj/item/clothing/suit/armor/ngr,
 /obj/item/clothing/glasses/hud/security/sunglasses/ngr,
+/obj/item/gun/ballistic/automatic/pistol/asp/no_mag,
+/obj/item/ammo_box/magazine/m57_39_asp,
+/obj/item/ammo_box/magazine/m57_39_asp,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/security)
 "aE" = (
@@ -611,6 +614,7 @@
 "dm" = (
 /obj/structure/rack,
 /obj/machinery/light/directional/north,
+/obj/item/storage/toolbox/syndicate,
 /obj/item/melee/axe/sledgehammer{
 	pixel_x = 7
 	},
@@ -1161,6 +1165,7 @@
 /obj/item/clothing/head/safety_helmet/suns,
 /obj/item/clothing/suit/toggle/suns/workervest,
 /obj/item/clothing/gloves/suns,
+/obj/item/mining_voucher,
 /turf/open/floor/pod/dark,
 /area/ship/cargo)
 "gI" = (
@@ -2383,34 +2388,6 @@
 "np" = (
 /obj/structure/table/reinforced,
 /obj/item/radio/intercom/directional/south,
-/obj/item/card/id/syndicate_command/crew_id{
-	name = "operative ID card"
-	},
-/obj/item/card/id/syndicate_command/crew_id{
-	name = "operative ID card"
-	},
-/obj/item/card/id/syndicate_command/crew_id{
-	name = "operative ID card"
-	},
-/obj/item/card/id/syndicate_command/crew_id/engi{
-	name = "engineer ID card"
-	},
-/obj/item/card/id/syndicate_command/crew_id/engi{
-	name = "engineer ID card"
-	},
-/obj/item/card/id/syndicate_command/crew_id/med{
-	name = "medic ID card"
-	},
-/obj/item/card/id/syndicate_command/crew_id/med{
-	name = "medic ID card"
-	},
-/obj/item/card/id/syndicate_command/lieutenant{
-	name = "lieutenant ID card"
-	},
-/obj/structure/closet/secure_closet/wall/directional/west{
-	name = "spare cards locker";
-	req_access = list(3,150)
-	},
 /obj/effect/turf_decal/corner/opaque/syndiered/half{
 	dir = 8
 	},
@@ -5577,9 +5554,29 @@
 /area/ship/bridge)
 "Fr" = (
 /obj/structure/rack,
-/obj/item/ammo_box/magazine/m556_42_hydra/small,
-/obj/item/ammo_box/magazine/m556_42_hydra/small,
-/obj/item/ammo_box/magazine/m556_42_hydra/small,
+/obj/item/gun/ballistic/automatic/pistol/ringneck{
+	pixel_y = 7;
+	pixel_x = 9
+	},
+/obj/item/gun/ballistic/automatic/pistol/ringneck{
+	pixel_x = 9
+	},
+/obj/item/gun/ballistic/automatic/pistol/ringneck{
+	pixel_x = 9;
+	pixel_y = -7
+	},
+/obj/item/ammo_box/magazine/m10mm_ringneck{
+	pixel_x = -7
+	},
+/obj/item/ammo_box/magazine/m10mm_ringneck{
+	pixel_x = -7
+	},
+/obj/item/ammo_box/magazine/m10mm_ringneck{
+	pixel_x = -7
+	},
+/obj/item/attachment/silencer,
+/obj/item/attachment/silencer,
+/obj/item/attachment/silencer,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/security/armory)
 "Fs" = (
@@ -5807,6 +5804,29 @@
 	},
 /turf/open/floor/plating,
 /area/ship/hallway/starboard)
+"GB" = (
+/obj/effect/turf_decal/corner/opaque/syndiered{
+	dir = 9
+	},
+/obj/structure/chair{
+	dir = 1
+	},
+/obj/structure/closet/wall/red/directional/west{
+	req_access = list(3,150);
+	name = "emergency armory"
+	},
+/obj/item/storage/box/ammo/c22lr,
+/obj/item/ammo_box/magazine/m22lr_himehabu,
+/obj/item/ammo_box/magazine/m22lr_himehabu,
+/obj/item/ammo_box/magazine/m22lr_himehabu,
+/obj/item/gun/ballistic/automatic/pistol/himehabu,
+/obj/item/gun/ballistic/automatic/pistol/himehabu,
+/obj/item/gun/ballistic/automatic/pistol/himehabu,
+/obj/item/clothing/accessory/armband,
+/obj/item/clothing/accessory/armband,
+/obj/item/clothing/accessory/armband,
+/turf/open/floor/mineral/plastitanium,
+/area/ship/crew/office)
 "GC" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 8
@@ -6958,6 +6978,15 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /turf/open/floor/plasteel,
 /area/ship/crew/dorm)
+"Nt" = (
+/obj/item/storage/box/ammo/c57x39,
+/obj/item/storage/box/ammo/c57x39,
+/obj/item/storage/box/ammo/c57x39,
+/obj/item/storage/box/ammo/a556_42,
+/obj/item/storage/toolbox/ammo/c10mm,
+/obj/structure/closet/syndicate,
+/turf/open/floor/mineral/plastitanium,
+/area/ship/security/armory)
 "NC" = (
 /obj/effect/turf_decal/corner/opaque/syndiered{
 	dir = 5
@@ -7650,9 +7679,9 @@
 "Rv" = (
 /obj/structure/rack,
 /obj/machinery/light/directional/north,
-/obj/item/ammo_box/magazine/m57_39_asp,
-/obj/item/ammo_box/magazine/m57_39_asp,
-/obj/item/gun/ballistic/automatic/pistol/asp/no_mag,
+/obj/item/ammo_box/magazine/m556_42_hydra/small,
+/obj/item/ammo_box/magazine/m556_42_hydra/small,
+/obj/item/ammo_box/magazine/m556_42_hydra/small,
 /turf/open/floor/mineral/plastitanium,
 /area/ship/security/armory)
 "Ry" = (
@@ -8493,6 +8522,7 @@
 	req_access = list(150, 48);
 	populate = 0
 	},
+/obj/item/mining_voucher,
 /turf/open/floor/pod/dark,
 /area/ship/cargo)
 "VZ" = (
@@ -9808,7 +9838,7 @@ TT
 PL
 Gm
 Si
-Sg
+Nt
 PL
 Fu
 sd
@@ -10078,7 +10108,7 @@ cC
 ir
 mm
 Ls
-Ls
+GB
 AQ
 oJ
 NC
