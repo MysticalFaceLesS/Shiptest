@@ -195,3 +195,18 @@ GLOBAL_LIST_INIT(tendrils, list())
 	)
 	max_mobs = 6
 	spawn_time = 120
+
+/obj/structure/vein/classtwo/plasma_gaint
+	mob_types = list(
+		/mob/living/simple_animal/hostile/asteroid/hivelord/legion/crystal_plasma = 60,
+		/mob/living/simple_animal/hostile/asteroid/brimdemon = 20,
+		/mob/living/simple_animal/hostile/asteroid/goliath = 15
+		)
+
+/obj/structure/vein/classthree/plasma_gaint
+	mob_types = list(
+		/mob/living/simple_animal/hostile/asteroid/hivelord/legion/crystal_plasma = 60,
+		/mob/living/simple_animal/hostile/asteroid/goliath = 40,
+		/mob/living/simple_animal/hostile/asteroid/brimdemon = 20,
+		/mob/living/simple_animal/hostile/big_plasma = 5
+		)

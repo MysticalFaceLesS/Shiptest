@@ -26,13 +26,13 @@
 	pixel_z = -8
 	// [/CELADON-EDIT]
 	mapgen = /datum/map_generator/planet_generator/plasma_gaint
-	gravity = GRAVITY_DAMAGE_TRESHOLD
+	gravity = STANDARD_GRAVITY
 	default_baseturf = /turf/open/floor/plating/asteroid/plasma_gaint
 	icon_state = "planet-plasma"
 	preserve_level = FALSE
 	weight = 20
 	ruin_type = RUINTYPE_PLASMA
-	landing_sound = 'sound/effects/planet_landing_2.ogg'
+	landing_sound = 'mod_celadon/_storge_sounds/sound/events/planet_landing_3.mp3'
 
 
 /datum/planet_type/earthsand
