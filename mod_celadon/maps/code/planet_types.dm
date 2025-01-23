@@ -110,7 +110,7 @@
 //Для работы модульной планеты Anima
 /datum/planet_type/anima
 	name = "???"
-	desc = "Some sort of ugly shaped planet with an energy field arond it. There's no identification of what this is."
+	desc = "Some sort of ugly shaped planet with an energy field around it. There's no identification of what this is."
 	planet = DYNAMIC_WORLD_ANIMA
 	icon_state = "anima"
 	//	color = COLOR_YELLOW
