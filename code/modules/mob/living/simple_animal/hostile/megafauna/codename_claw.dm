@@ -313,6 +313,7 @@
 
 /mob/living/simple_animal/hostile/megafauna/claw/proc/phase2_dramatic()
 	// [CELADON-EDIT] - CELADON_BALANCE_MOBS
+	// explosion(src, 0, 5, 10) // CELADON-EDIT - ORIGINAL
 	explosion(src, 0, 0, 5)
 	// [/CELADON-EDIT]
 	empulse(src, 5, 8)
