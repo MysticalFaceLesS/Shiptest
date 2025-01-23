@@ -1,7 +1,7 @@
 /datum/map_generator/planet_generator/anima
 
 	mountain_height = 1
-	perlin_zoom = 28
+	perlin_zoom = 30
 
 	initial_closed_chance = 45
 	smoothing_iterations = 20
@@ -42,7 +42,7 @@
 		BIOME_HOT = list(
 			BIOME_LOWEST_HUMIDITY = /datum/biome/anima/sand,
 			BIOME_LOW_HUMIDITY = /datum/biome/anima/jungle,
-			BIOME_MEDIUM_HUMIDITY = /datum/biome/anima/waste/crater,
+			BIOME_MEDIUM_HUMIDITY = /datum/biome/anima/waste,
 			BIOME_HIGH_HUMIDITY = /datum/biome/anima/snow,
 			BIOME_HIGHEST_HUMIDITY = /datum/biome/anima/lavaland/forest
 		),
@@ -63,8 +63,8 @@
 	)
 	mob_spawn_chance = 5
 	mob_spawn_list = list(
-		/mob/living/simple_animal/hostile/asteroid/old_demon = 1,
-		/mob/living/simple_animal/hostile/asteroid/basilisk/watcher/forgotten = 5
+		/mob/living/simple_animal/hostile/asteroid/old_demon/anima = 1,
+		/mob/living/simple_animal/hostile/asteroid/basilisk/watcher/forgotten/anima = 5
 	)
 	feature_spawn_list = list(
 		/obj/effect/spawner/random/anomaly = 1
@@ -87,14 +87,14 @@
 	)
 	mob_spawn_chance = 25
 	mob_spawn_list = list(
-		/mob/living/simple_animal/hostile/poison/giant_spider/ice = 20,
-		/mob/living/simple_animal/hostile/poison/giant_spider/hunter/ice = 10,
-		/mob/living/simple_animal/hostile/asteroid/basilisk/watcher/icewing = 15,
+		/mob/living/simple_animal/hostile/poison/giant_spider/ice/anima = 20,
+		/mob/living/simple_animal/hostile/poison/giant_spider/hunter/ice/anima = 10,
+		/mob/living/simple_animal/hostile/asteroid/basilisk/watcher/icewing/anima = 15,
 		/mob/living/simple_animal/hostile/asteroid/old_demon = 5
 	)
 	feature_spawn_chance = 1
 	feature_spawn_list = list(
-		/obj/effect/spawner/random/anomaly = 10,
+		/obj/effect/spawner/random/anomaly = 20,
 		/obj/effect/spawner/minefield = 0.1,
 		/obj/structure/trap/chill = 1
 	)
@@ -103,7 +103,7 @@
 	open_turf_types = list(
 		/turf/open/floor/plating/asteroid/icerock/anima = 1
 	)
-	flora_spawn_chance = 40
+	flora_spawn_chance = 35
 	flora_spawn_list = list(
 		/obj/structure/flora/ausbushes/fullgrass = 1,
 		/obj/structure/flora/ausbushes/sparsegrass = 1,
@@ -112,25 +112,26 @@
 		/obj/structure/flora/ausbushes/lavendergrass = 1,
 		/obj/structure/flora/ash/garden/frigid = 1,
 	)
+	mob_spawn_chance = 30
 	feature_spawn_chance = 1
 	feature_spawn_list = list(
-		/obj/effect/spawner/random/anomaly = 10,
+		/obj/effect/spawner/random/anomaly = 20,
 		/obj/effect/spawner/minefield = 0.1,
 		/obj/structure/trap/chill = 1
 	)
 
 /datum/biome/anima/snow/forest
-	flora_spawn_chance = 30
+	flora_spawn_chance = 25
 	flora_spawn_list = list(
 		/obj/structure/flora/tree/pine = 15,
 		/obj/structure/flora/tree/dead = 7,
 		/obj/structure/flora/grass/both = 8,
 		/obj/item/mine/pressure/explosive/rusty/live = 1,
 	)
-	mob_spawn_chance = 25
+	mob_spawn_chance = 30
 	feature_spawn_chance = 1
 	feature_spawn_list = list(
-		/obj/effect/spawner/random/anomaly = 10,
+		/obj/effect/spawner/random/anomaly = 20,
 		/obj/effect/spawner/minefield = 0.1,
 		/obj/structure/trap/chill = 1
 	)
@@ -165,26 +166,25 @@
 		/obj/structure/flora/ash/glowshroom = 200,
 		/obj/item/mine/pressure/explosive/shrapnel/live = 20,
 		/obj/effect/spawner/random/mine = 6,
-		/obj/effect/spawner/minefield = 1
+		/obj/effect/spawner/minefield = 0.5
 	)
 	feature_spawn_chance = 1
 	feature_spawn_list = list(
 		/obj/effect/radiation/waste = 30,
 		/obj/effect/radiation/waste/intense = 10,
 		/obj/structure/geyser/random = 1,
-		/obj/effect/spawner/random/anomaly = 5,
+		/obj/effect/spawner/random/anomaly = 10,
 		/obj/structure/trap/damage = 1
 	)
 	mob_spawn_chance = 30
 	mob_spawn_list = list(
-		/mob/living/simple_animal/hostile/hivebot/strong = 20,
-		/mob/living/simple_animal/hostile/hivebot/ranged = 20,
-		/mob/living/simple_animal/hostile/hivebot/ranged/rapid = 30,
-		/mob/living/simple_animal/hostile/mimic = 40,
-		/mob/living/simple_animal/bot/firebot/rockplanet = 15,
-		/mob/living/simple_animal/bot/secbot/ed209/rockplanet = 3,
-		/mob/living/simple_animal/hostile/abandoned_minebot = 15,
-		/mob/living/simple_animal/bot/floorbot/rockplanet = 15
+		/mob/living/simple_animal/hostile/hivebot/strong/anima = 30,
+		/mob/living/simple_animal/hostile/hivebot/ranged/anima = 15,
+		/mob/living/simple_animal/hostile/hivebot/ranged/rapid/anima = 15,
+		/mob/living/simple_animal/hostile/mimic/anima = 40,
+		/mob/living/simple_animal/bot/firebot/rockplanet/anima = 15,
+		/mob/living/simple_animal/bot/secbot/ed209/rockplanet/anima = 3,
+		/mob/living/simple_animal/hostile/abandoned_minebot/anima = 15,
 	)
 
 /datum/biome/anima/waste/crater
@@ -202,7 +202,7 @@
 	)
 	feature_spawn_chance = 1
 	feature_spawn_list = list(
-		/obj/effect/spawner/random/anomaly = 5,
+		/obj/effect/spawner/random/anomaly = 10,
 		/obj/structure/trap/damage = 1
 	)
 
@@ -227,12 +227,12 @@
 	)
 	mob_spawn_chance = 30
 	mob_spawn_list = list(
-		/mob/living/simple_animal/hostile/jungle/leaper = 5,
-		/mob/living/simple_animal/hostile/jungle/seedling = 25
+		/mob/living/simple_animal/hostile/jungle/leaper/anima = 5,
+		/mob/living/simple_animal/hostile/jungle/seedling/anima = 25
 		)
 	feature_spawn_chance = 1
 	feature_spawn_list = list(
-		/obj/effect/spawner/random/anomaly = 8,
+		/obj/effect/spawner/random/anomaly = 7,
 		/obj/structure/trap/damage = 1
 	)
 
@@ -256,15 +256,15 @@
 		/obj/structure/geyser/random = 4,
 		/obj/structure/flora/rock/hell = 14,
 		/obj/effect/spawner/minefield = 0.1,
-		/obj/effect/spawner/random/anomaly = 10,
+		/obj/effect/spawner/random/anomaly = 15,
 		/obj/structure/trap/fire = 1
 	)
-	mob_spawn_chance = 30
+	mob_spawn_chance = 38
 	mob_spawn_list = list(
-		/mob/living/simple_animal/hostile/asteroid/brimdemon = 5,
-		/mob/living/simple_animal/hostile/asteroid/goliath/magma = 15,
-		/mob/living/simple_animal/hostile/asteroid/basilisk/watcher/magmawing = 20,
-		/mob/living/simple_animal/hostile/asteroid/hivelord/legion/magma = 15
+		/mob/living/simple_animal/hostile/asteroid/brimdemon/anima = 5,
+		/mob/living/simple_animal/hostile/asteroid/goliath/magma/anima = 15,
+		/mob/living/simple_animal/hostile/asteroid/basilisk/watcher/magmawing/anima = 20,
+		/mob/living/simple_animal/hostile/asteroid/hivelord/legion/magma/anima = 15
 	)
 
 /datum/biome/anima/lavaland/forest
@@ -280,12 +280,12 @@
 		/obj/structure/flora/ausbushes/sparsegrass/hell = 20,
 		/obj/structure/flora/ausbushes/hell = 2
 	)
-	mob_spawn_chance = 30
+	mob_spawn_chance = 35
 	mob_spawn_list = list(
-		/mob/living/simple_animal/hostile/asteroid/brimdemon = 5,
-		/mob/living/simple_animal/hostile/asteroid/goliath/magma = 15,
-		/mob/living/simple_animal/hostile/asteroid/basilisk/watcher/magmawing = 20,
-		/mob/living/simple_animal/hostile/asteroid/hivelord/legion/magma = 15
+		/mob/living/simple_animal/hostile/asteroid/brimdemon/anima = 5,
+		/mob/living/simple_animal/hostile/asteroid/goliath/magma/anima = 15,
+		/mob/living/simple_animal/hostile/asteroid/basilisk/watcher/magmawing/anima = 20,
+		/mob/living/simple_animal/hostile/asteroid/hivelord/legion/magma/anima = 15
 	)
 	feature_spawn_chance = 1
 	feature_spawn_list = list(
@@ -312,8 +312,8 @@
 	)
 	mob_spawn_chance = 30
 	mob_spawn_list = list(
-		/mob/living/simple_animal/hostile/jungle/mook = 20,
-		/mob/living/simple_animal/hostile/jungle/mega_arachnid = 5
+		/mob/living/simple_animal/hostile/jungle/mook/anima = 25,
+		/mob/living/simple_animal/hostile/jungle/mega_arachnid/anima = 5
 	)
 
 /datum/biome/anima/sand/grass
@@ -333,10 +333,10 @@
 		/obj/effect/spawner/random/anomaly = 5,
 		/obj/structure/trap/stun = 1
 	)
-	mob_spawn_chance = 20
+	mob_spawn_chance = 25
 	mob_spawn_list = list(
-		/mob/living/simple_animal/hostile/jungle/mook = 20,
-		/mob/living/simple_animal/hostile/jungle/mega_arachnid = 5
+		/mob/living/simple_animal/hostile/jungle/mook/anima = 20,
+		/mob/living/simple_animal/hostile/jungle/mega_arachnid/anima = 5
 	)
 
 /area/ruin/anima

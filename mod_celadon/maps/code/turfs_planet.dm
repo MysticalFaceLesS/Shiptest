@@ -131,7 +131,7 @@
 	light_system = 0
 	dynamic_lighting = 0
 
-// Тюрф для модульной anima //
+// Тюрфы для модульной anima //
 
 #define ANIMA_DEFAULT_ATMOS "n2=100;TEMP=100.00"
 
@@ -139,7 +139,7 @@
 /turf/open/space/anima
 	planetary_atmos = FALSE
 	initial_gas_mix = ANIMA_DEFAULT_ATMOS
-	CanAtmosPassVertical = ATMOS_PASS_NO
+	CanAtmosPass = ATMOS_PASS_NO
 	footstep = null
 	light_range = 2
 	light_power = 2
