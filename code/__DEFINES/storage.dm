@@ -78,10 +78,10 @@ GLOBAL_LIST_INIT(default_weight_class_to_volume, list(
 //
 #define MAX_WEIGHT_CLASS_S_CONTAINER WEIGHT_CLASS_SMALL
 #define MAX_WEIGHT_CLASS_M_CONTAINER WEIGHT_CLASS_NORMAL
-// [CELADON-EDIT] - Making backpacks great again - Возвращает стандартный объем рюкзакам и дюффелям
+// [CELADON-EDIT] - Making backpacks great again
 // #define MAX_WEIGHT_CLASS_BACKPACK WEIGHT_CLASS_BULKY
 #define MAX_WEIGHT_CLASS_BACKPACK WEIGHT_CLASS_NORMAL
-// [CELADON-EDIT]
+// [/CELADON-EDIT] - Возвращает стандартный объем рюкзакам и дюффелям
 #define MAX_WEIGHT_CLASS_DUFFEL WEIGHT_CLASS_BULKY
 
 // max_volume for storages

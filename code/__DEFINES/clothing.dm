@@ -40,7 +40,7 @@
 
 // Base equipment delays
 /// Delay base for full-body coverage suit slot items. (hardsuits, spacesuits, radsuits, etc.)
-// [CELADON-EDIT] - Delay Removal - Снижает все делеи до 0
+// [CELADON-EDIT] - Making backpacks great again - Снижает все делеи до 0
 //ORIGINAL
 /*
 #define EQUIP_DELAY_OVERSUIT (6 SECONDS)
@@ -100,7 +100,7 @@
 #define EQUIP_DELAY_GLOVES (0 SECONDS)
 /// Delay base for glasses.
 #define EQUIP_DELAY_EYEWEAR (0 SECONDS)
-// [CELADON-EDIT]
+// [/CELADON-EDIT]
 
 // Flags for self equipping items
 /// Allow movement during equip/unequip

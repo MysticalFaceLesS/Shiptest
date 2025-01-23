@@ -888,5 +888,5 @@
 				to_chat(holder, span_warning( "Your arms aren't long enough to reach [ourparent] while it's on your back!"))
 			return FALSE
 */
-//[CELADON-REMOVE]
+//[/CELADON-REMOVE]
 	return TRUE
