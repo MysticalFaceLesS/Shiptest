@@ -60,11 +60,6 @@
 	pixel_y = 28;
 	dir = 1
 	},
-/obj/item/gun/ballistic/automatic/pistol/glock,
-/obj/item/ammo_box/magazine/smgm10mm,
-/obj/item/ammo_box/magazine/smgm10mm,
-/obj/item/ammo_box/magazine/smgm10mm,
-/obj/item/gun/ballistic/automatic/smg/skm_carbine/inteq,
 /obj/machinery/power/apc/auto_name/directional/east,
 /obj/machinery/power/terminal{
 	dir = 4
@@ -72,6 +67,14 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
+/obj/item/clothing/suit/armor/vest/inteq,
+/obj/item/storage/belt/security/webbing/inteq/alt,
+/obj/item/clothing/head/beret/sec/inteq,
+/obj/item/clothing/shoes/combat,
+/obj/item/clothing/suit/space/inteq,
+/obj/item/clothing/suit/space/inteq,
+/obj/item/tank/internals/emergency_oxygen/double,
+/obj/item/tank/internals/emergency_oxygen/double,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/bridge)
 "e" = (
@@ -136,6 +139,22 @@
 	req_ship_access = 1
 	},
 /obj/machinery/holopad,
+/obj/structure/closet/secure_closet/wall{
+	icon_state = "generic_wall";
+	name = "equipment locker";
+	pixel_y = -28
+	},
+/obj/item/storage/ration/fish_stew,
+/obj/item/storage/ration/fried_fish,
+/obj/item/storage/ration/pepperoni_pizza_slice,
+/obj/item/storage/ration/elbow_macaroni,
+/obj/item/storage/ration/crayons,
+/obj/item/storage/ration/cheese_pizza_slice,
+/obj/item/storage/ration/blackened_calamari,
+/obj/item/storage/ration/beef_strips,
+/obj/item/storage/ration/beef_goulash,
+/obj/item/storage/ration/assorted_salted_offal,
+/obj/item/storage/ration/shredded_beef,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/bridge)
 "k" = (
@@ -295,6 +314,7 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
+/obj/item/stack/cable_coil/red,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/bridge)
 "t" = (
@@ -386,11 +406,9 @@
 	},
 /obj/effect/turf_decal/corner/opaque/yellow,
 /obj/machinery/light/directional/south,
-/obj/item/gun/ballistic/automatic/pistol/usp45,
 /obj/item/storage/box/ammo/a357,
 /obj/item/melee/baton/loaded,
 /obj/item/clothing/head/warden/inteq,
-/obj/item/clothing/suit/armor/vest/security/warden/inteq,
 /obj/item/clothing/suit/armor/vest/security/warden/inteq,
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
@@ -417,7 +435,10 @@
 /obj/machinery/power/terminal{
 	dir = 1
 	},
-/turf/open/floor/plasteel/tech/grid,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/open/floor/plating,
 /area/ship/bridge)
 "C" = (
 /obj/structure/grille,
@@ -540,27 +561,20 @@
 "N" = (
 /obj/effect/turf_decal/siding/brown,
 /obj/item/flashlight/seclite,
-/obj/item/clothing/head/beret/sec/inteq,
-/obj/item/clothing/head/helmet/swat/inteq,
-/obj/item/clothing/suit/armor/vest/inteq,
-/obj/item/clothing/shoes/combat,
-/obj/item/storage/belt/security/webbing/inteq/alt,
-/obj/item/clothing/gloves/combat,
-/obj/item/storage/belt/security/webbing/inteq,
 /obj/item/clothing/glasses/hud/security/sunglasses/inteq,
-/obj/item/storage/backpack/messenger/inteq,
-/obj/item/radio/headset/inteq,
-/obj/structure/closet/secure_closet/wall{
-	icon_state = "generic_wall";
-	name = "equipment locker";
-	pixel_y = -28
-	},
 /obj/item/gun/ballistic/automatic/pistol/glock,
 /obj/item/gun/ballistic/automatic/assault/g36/inteq,
 /obj/item/ammo_box/magazine/g36,
 /obj/item/ammo_box/magazine/g36,
 /obj/item/ammo_box/magazine/g36,
 /obj/item/ammo_box/magazine/g36,
+/obj/structure/closet/secure_closet/lethalshots,
+/obj/item/gun/ballistic/automatic/smg/skm_carbine/inteq,
+/obj/item/ammo_box/magazine/smgm10mm,
+/obj/item/ammo_box/magazine/smgm10mm,
+/obj/item/ammo_box/magazine/smgm10mm,
+/obj/item/gun/ballistic/automatic/pistol/glock,
+/obj/item/gun/ballistic/automatic/pistol/usp45,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/bridge)
 "O" = (
@@ -594,6 +608,7 @@
 	pixel_y = -32
 	},
 /obj/machinery/light/directional/south,
+/obj/item/tank/internals/emergency_oxygen/double,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/bridge)
 "S" = (
@@ -622,10 +637,12 @@
 /obj/effect/turf_decal/siding/brown{
 	dir = 1
 	},
-/obj/structure/sign/poster/contraband/inteq{
-	pixel_y = 32
-	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
+/obj/structure/sign/poster/contraband/inteq_gec{
+	pixel_x = 1;
+	pixel_y = 30
+	},
+/obj/item/tank/internals/emergency_oxygen/double,
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/bridge)
 "V" = (
