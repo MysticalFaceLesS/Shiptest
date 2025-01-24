@@ -303,3 +303,55 @@
 		else
 			return FALSE
 	return ..()
+
+/obj/item/robot_module/meka/syndicate_medical
+	name = "Meka Syndicate Medical"
+	basic_modules = list(
+		/obj/item/assembly/flash/cyborg,
+		/obj/item/reagent_containers/borghypo/syndicate,
+		/obj/item/shockpaddles/syndicate/cyborg,
+		/obj/item/healthanalyzer,
+		/obj/item/retractor,
+		/obj/item/hemostat,
+		/obj/item/cautery,
+		/obj/item/surgicaldrill,
+		/obj/item/scalpel,
+		/obj/item/melee/energy/sword/cyborg/saw,
+		/obj/item/roller/robo,
+		/obj/item/card/emag/borg,
+		/obj/item/crowbar/cyborg,
+		/obj/item/extinguisher/mini,
+		/obj/item/pinpointer/syndicate_cyborg,
+		/obj/item/stack/medical/gauze/cyborg,
+		/obj/item/gun/medbeam,
+		/obj/item/organ_storage)
+
+	cyborg_base_icon = "mmekasyndi-med"
+	moduleselect_icon = "malf"
+	can_be_pushed = FALSE
+	hat_offset = 3
+
+/obj/item/robot_module/meka/syndicate_medical/be_transformed_to(obj/item/robot_module/old_module)
+	var/mob/living/silicon/robot/R = loc
+	var/static/list/meka_syndicate_medical_icons
+	if(!meka_syndicate_medical_icons)
+		meka_syndicate_medical_icons = list(
+		"Niko" = image(icon = 'mod_celadon/_storge_icons/icons/mekaborg.dmi', icon_state = "mmekasyndi-med"),
+		"Nika" = image(icon = 'mod_celadon/_storge_icons/icons/mekaborg.dmi', icon_state = "fmekasyndi-med")
+		)
+		meka_syndicate_medical_icons = sortList(meka_syndicate_medical_icons)
+	var/meka_syndicate_medical_robot_icon = show_radial_menu(R, R , meka_syndicate_medical_icons, custom_check = CALLBACK(src, PROC_REF(check_menu), R), radius = 42, require_near = TRUE)
+	switch(meka_syndicate_medical_robot_icon)
+		if("Niko")
+			cyborg_base_icon = "mmekasyndi-med"
+			cyborg_icon_override = 'mod_celadon/_storge_icons/icons/mekaborg.dmi'
+			hat_offset = 3
+			special_light_key = "mmekasyndi"
+		if("Nika")
+			cyborg_base_icon = "fmekasyndi-med"
+			cyborg_icon_override = 'mod_celadon/_storge_icons/icons/mekaborg.dmi'
+			hat_offset = 3
+			special_light_key = "fmekasyndi"
+		else
+			return FALSE
+	return ..()
