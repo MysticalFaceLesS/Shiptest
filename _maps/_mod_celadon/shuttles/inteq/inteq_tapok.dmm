@@ -284,6 +284,7 @@
 	id = "iron_maiden_eng";
 	name = "Engine Blast Door"
 	},
+/obj/structure/fans/tiny/invisible,
 /turf/open/floor/plating/ship,
 /area/ship/bridge)
 "q" = (
@@ -672,6 +673,9 @@
 	icon_state = "1-4"
 	},
 /obj/structure/cable,
+/obj/machinery/power/terminal{
+	dir = 1
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
 "X" = (
@@ -697,7 +701,9 @@
 /turf/open/floor/plasteel/mono/dark,
 /area/ship/bridge)
 "Y" = (
-/obj/machinery/power/smes/shuttle/precharged,
+/obj/machinery/power/smes/shuttle/precharged{
+	dir = 2
+	},
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
