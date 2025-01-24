@@ -35,8 +35,9 @@
 								"Exosuit Ammunition",
 								"Cyborg Upgrade Modules",
 								"IPC Components",
-								"Misc",
-								// [CELADON-ADD] - CELADON_MODSUITS
+								"Misc"
+								// [CELADON-REMOVE] - CELADON_MODSUITS
+								/*
 								"MOD Suits",
 								"Chassis",
 								"Plating",
@@ -48,7 +49,8 @@
 								"Security Modules",
 								"Supply Modules",
 								"Service Modules"
-								// [/CELADON-ADD]
+								*/
+								// [/CELADON-REMOVE]
 								)
 
 /obj/machinery/mecha_part_fabricator/Initialize(mapload)
