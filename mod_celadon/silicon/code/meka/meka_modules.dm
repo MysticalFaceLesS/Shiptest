@@ -324,7 +324,8 @@
 		/obj/item/pinpointer/syndicate_cyborg,
 		/obj/item/stack/medical/gauze/cyborg,
 		/obj/item/gun/medbeam,
-		/obj/item/organ_storage)
+		/obj/item/organ_storage,
+		/obj/item/weldingtool/mini)
 
 	cyborg_base_icon = "mmekasyndi-med"
 	moduleselect_icon = "malf"

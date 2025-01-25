@@ -21,7 +21,7 @@
 		/obj/item/borg/lollipop,
 		/obj/item/gps/cyborg, // QoL
 		/obj/item/crowbar/cyborg,
-		/obj/item/weldingtool)
+		/obj/item/weldingtool/mini)
 	emag_modules = list(/obj/item/reagent_containers/borghypo/hacked)
 	cyborg_base_icon = "medical"
 	moduleselect_icon = "medical"
@@ -97,7 +97,7 @@
 		/obj/item/reagent_containers/spray/cyborg_drying,
 		/obj/item/gps/cyborg, // QoL
 		/obj/item/crowbar/cyborg,
-		/obj/item/weldingtool/largetank)
+		/obj/item/weldingtool/mini)
 	emag_modules = list(/obj/item/reagent_containers/spray/cyborg_lube)
 	cyborg_base_icon = "janitor"
 	moduleselect_icon = "janitor"
@@ -126,7 +126,7 @@
 		/obj/item/extinguisher/mini, // QoL
 		/obj/item/gps/cyborg,
 		/obj/item/crowbar/cyborg,
-		/obj/item/weldingtool)
+		/obj/item/weldingtool/mini)
 	emag_modules = list(
 		/obj/item/reagent_containers/borghypo/clown/hacked,
 		/obj/item/reagent_containers/spray/waterflower/cyborg/hacked)
@@ -157,7 +157,7 @@
 		/obj/item/borg/apparatus/beaker/service,
 		/obj/item/gps/cyborg, // QoL
 		/obj/item/crowbar/cyborg,
-		/obj/item/weldingtool)
+		/obj/item/weldingtool/mini)
 	emag_modules = list(/obj/item/reagent_containers/borghypo/borgshaker/hacked)
 	cyborg_base_icon = "service_m" // display as butlerborg for radial model selection
 	moduleselect_icon = "service"
@@ -181,7 +181,7 @@
 		/obj/item/stack/marker_beacon,
 		/obj/item/gps/cyborg, // QoL
 		/obj/item/crowbar/cyborg,
-		/obj/item/weldingtool)
+		/obj/item/weldingtool/mini)
 	emag_modules = list(/obj/item/borg/stun)
 	cyborg_base_icon = "miner"
 	moduleselect_icon = "miner"
@@ -245,7 +245,7 @@
 		/obj/item/gun/medbeam,
 		/obj/item/organ_storage,
 		/obj/item/gps/cyborg, // QoL
-		/obj/item/weldingtool)
+		/obj/item/weldingtool/mini)
 
 /obj/item/robot_module/saboteur
 	name = "Syndicate Saboteur"
