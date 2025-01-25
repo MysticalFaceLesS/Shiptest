@@ -73,7 +73,7 @@
 	mob_overlay_state = "space_elysium"
 	armor = list("melee" = 30, "bullet" = 20, "laser" = 30, "energy" = 30, "bomb" = 20, "bio" = 50, "rad" = 60, "fire" = 60, "acid" = 75)
 	slowdown = 0.5
-	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/melee/skimitar, /obj/item/gun)
+	allowed = list(/obj/item/flashlight, /obj/item/tank/internals, /obj/item/gun)
 
 /obj/item/clothing/under/rank/avanpost
 	icon = 'mod_celadon/_storge_icons/icons/obj/elysium_commander.dmi'
