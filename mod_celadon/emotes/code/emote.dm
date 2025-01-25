@@ -151,33 +151,33 @@
 	hands_use_check = TRUE
 	cooldown = 5 SECONDS
 
-/datum/emote/living/deathgasp
-	key = "deathgasp"
-	key_third_person = "deathgasps"
-	message = "seizes up and falls limp, their eyes dead and lifeless..."
-	message_robot = "shudders violently for a moment before falling still, its eyes slowly darkening."
-	message_AI = "screeches, its screen flickering as its systems slowly halt."
-	message_alien = "lets out a waning guttural screech, and collapses onto the floor..."
-	message_larva = "lets out a sickly hiss of air and falls limply to the floor..."
-	message_monkey = "lets out a faint chimper as it collapses and stops moving..."
-	message_ipc = "gives one shrill beep before falling limp, their monitor flashing blue before completely shutting off..."
-	message_simple =  "stops moving..."
-	cooldown = (15 SECONDS)
-	stat_allowed = HARD_CRIT
+// /datum/emote/living/deathgasp	- Отключаем предсмертный вздох
+// 	key = "deathgasp"
+// 	key_third_person = "deathgasps"
+// 	message = "seizes up and falls limp, their eyes dead and lifeless..."
+// 	message_robot = "shudders violently for a moment before falling still, its eyes slowly darkening."
+// 	message_AI = "screeches, its screen flickering as its systems slowly halt."
+// 	message_alien = "lets out a waning guttural screech, and collapses onto the floor..."
+// 	message_larva = "lets out a sickly hiss of air and falls limply to the floor..."
+// 	message_monkey = "lets out a faint chimper as it collapses and stops moving..."
+// 	message_ipc = "gives one shrill beep before falling limp, their monitor flashing blue before completely shutting off..."
+// 	message_simple =  "stops moving..."
+// 	cooldown = (15 SECONDS)
+// 	stat_allowed = HARD_CRIT
 
-/datum/emote/living/deathgasp/run_emote(mob/user, params, type_override, intentional)
-	var/mob/living/simple_animal/S = user
-	if(istype(S) && S.deathmessage)
-		message_simple = S.deathmessage
-	. = ..()
-	message_simple = initial(message_simple)
+// /datum/emote/living/deathgasp/run_emote(mob/user, params, type_override, intentional)
+// 	var/mob/living/simple_animal/S = user
+// 	if(istype(S) && S.deathmessage)
+// 		message_simple = S.deathmessage
+// 	. = ..()
+// 	message_simple = initial(message_simple)
 
-	if(. && user.deathsound)
-		if(isliving(user))
-			var/mob/living/L = user
-			if(!L.can_speak_vocal() || L.oxyloss >= 50)
-				return //stop the sound if oxyloss too high/cant speak
-		playsound(user, user.deathsound, 200, TRUE, TRUE)
+// 	if(. && user.deathsound)
+// 		if(isliving(user))
+// 			var/mob/living/L = user
+// 			if(!L.can_speak_vocal() || L.oxyloss >= 50)
+// 				return //stop the sound if oxyloss too high/cant speak
+// 		playsound(user, user.deathsound, 200, TRUE, TRUE)
 
 /datum/emote/living/drool
 	key = "drool"
