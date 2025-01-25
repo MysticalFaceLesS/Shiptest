@@ -1,10 +1,10 @@
-/datum/quirk/ignore_incapacitated
-	name = "increased_survival"
-	desc = "Allows you to interact with objects on and around you while in critical condition."
-	value = 6
-	mob_traits = list(TRAIT_INCREASED_SURVIVAL)
-	gain_text = "<span class='notice'>You are sure that you will survive even alone!</span>"
-	lose_text = "<span class='danger'>You are afraid for your life!</span>"
+// /datum/quirk/ignore_incapacitated	// УДАЛЕН, по причине не сбалансированности перка
+// 	name = "increased_survival"
+// 	desc = "Allows you to interact with objects on and around you while in critical condition."
+// 	value = 6
+// 	mob_traits = list(TRAIT_INCREASED_SURVIVAL)
+// 	gain_text = "<span class='notice'>You are sure that you will survive even alone!</span>"
+// 	lose_text = "<span class='danger'>You are afraid for your life!</span>"
 
 // /datum/quirk/dwarfism
 // 	name = "dwarfism"

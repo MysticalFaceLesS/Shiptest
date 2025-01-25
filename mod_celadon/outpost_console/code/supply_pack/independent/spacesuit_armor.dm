@@ -51,3 +51,11 @@
 	contains = list(/obj/item/clothing/suit/space/hardsuit/engine/atmos)
 	crate_name = "atmospherics hardsuit crate"
 	crate_type = /obj/structure/closet/crate/secure/engineering
+
+/datum/supply_pack/science/mod_core
+	name = "MOD Core Crate"
+	desc = "One MODsuit core used in MOD construction."
+	cost = 5000
+	contains = list(/obj/item/mod/core/standard)
+	crate_name = "MOD core crate"
+	crate_type = /obj/structure/closet/crate/secure/science
