@@ -205,9 +205,7 @@
 		/obj/item/pipe_dispenser,
 		/obj/item/construction/rcd,
 		/obj/item/storage/bag/construction,
-		// [CELADON-REMOVE] - CELADON_BALANCE - Убираем телескопички
-		// /obj/item/melee/classic_baton/telescopic,
-		// [/CELADON-REMOVE]
+		/obj/item/melee/classic_baton/telescopic,
 	)
 	skins = list(
 		"advanced" = list(
@@ -450,9 +448,7 @@
 		/obj/item/storage/pill_bottle,
 		/obj/item/storage/bag/chemistry,
 		/obj/item/storage/bag/bio,
-		// [CELADON-REMOVE] - CELADON_BALANCE - Убираем телескопички
-		// /obj/item/melee/classic_baton/telescopic,
-		// [/CELADON-REMOVE]
+		/obj/item/melee/classic_baton/telescopic,
 	)
 	skins = list(
 		"rescue" = list(
@@ -499,9 +495,7 @@
 		/obj/item/analyzer,
 		/obj/item/dnainjector,
 		/obj/item/storage/bag/bio,
-		// [CELADON-REMOVE] - CELADON_BALANCE - Убираем телескопички
-		// /obj/item/melee/classic_baton/telescopic,
-		// [/CELADON-REMOVE]
+		/obj/item/melee/classic_baton/telescopic,
 	)
 	skins = list(
 		"research" = list(
