@@ -551,6 +551,7 @@
 	dir = 4
 	},
 /obj/structure/table/optable,
+/obj/machinery/iv_drip,
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "gS" = (
@@ -3812,8 +3813,13 @@
 /obj/effect/turf_decal/corner/opaque/ntblue/border{
 	dir = 6
 	},
-/obj/structure/table/reinforced/titaniumglass,
-/obj/machinery/recharger,
+/obj/machinery/telecomms/relay{
+	freq_listening = list(1351);
+	id = "Nanotrasen Relay";
+	name = "Nanotrasen relay";
+	network = "nt_commnet";
+	layer = 3.1
+	},
 /turf/open/floor/plasteel/tech,
 /area/ship/bridge)
 "YE" = (

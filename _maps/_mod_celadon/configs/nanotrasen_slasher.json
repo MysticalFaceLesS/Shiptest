@@ -1,0 +1,40 @@
+{
+	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
+	"map_name": "Slasher-class ESW Vessel",
+	"map_short_name": "Slasher",
+	"description": "'Skybreaker', передовое боевое судно Нанотрейзен, создано для достижения превосходства в оспариваемых регионах космоса. Название судно получило за свою обтекаемую форму и инновационное расположение стыковочного шлюза, позволяющее с максимальной тягой отдаляться от стремительно разрушающихся объектов Синдиката. Корабль полностью оснащен энергетическим оружием. Конкретно эта версия судна принадлежит Тактическому Штурмовому Отряду Нанотрейзен.",
+	"map_path": "_maps/_mod_celadon/shuttles/nanotrasen/nanotrasen_slasher.dmm",
+	"sensor_range": 8,
+	"enabled": true,
+	"limit": 1,
+	"prefix": "NTBSV",
+	"faction": "/datum/faction/nt",
+	"tags": [
+		"Early Space Warning",
+		"Command",
+		"Engineering"
+	],
+	"namelists": [
+		"NANOTRASEN",
+		"BRITISH_NAVY"
+	],
+	"job_slots": {
+		"Intelligence Officer": {
+			"outfit": "/datum/outfit/job/nanotrasen/intel/captain",
+			"officer": true,
+			"slots": 1
+		},
+		"Security Operative": {
+			"outfit": "/datum/outfit/job/nanotrasen/intel/operative",
+			"slots": 1
+		},
+		"Medical Technician": {
+			"outfit": "/datum/outfit/job/nanotrasen/intel/medic",
+			"slots": 1
+		},
+		"Engineering Technician": {
+			"outfit": "/datum/outfit/job/nanotrasen/intel/engineer",
+			"slots": 1
+		}
+	}
+}
