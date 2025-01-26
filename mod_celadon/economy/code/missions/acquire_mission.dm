@@ -146,6 +146,7 @@ Acquire: Anomaly
 	STR.max_combined_w_class = WEIGHT_CLASS_NORMAL
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 	STR.max_items = 10
+	STR.display_numerical_stacking = TRUE
 
 
 // /datum/mission/acquire/anomaly/New(...)
@@ -435,6 +436,7 @@ Acquire: Anomaly
 	STR.max_combined_w_class = WEIGHT_CLASS_NORMAL
 	STR.max_w_class = WEIGHT_CLASS_NORMAL
 	STR.max_items = 5
+	STR.display_numerical_stacking = TRUE
 
 // /obj/item/storage/box/true_love/ComponentInitialize()
 // 	. = ..()
@@ -455,6 +457,7 @@ Acquire: Anomaly
 	. = ..()
 	var/datum/component/storage/STR = GetComponent(/datum/component/storage)
 	STR.max_items = 6
+	STR.display_numerical_stacking = TRUE
 
 // /obj/item/storage/box/anomaly
 // 	name = "anomaly case"

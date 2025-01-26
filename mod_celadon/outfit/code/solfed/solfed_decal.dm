@@ -79,3 +79,15 @@
 
 /obj/effect/turf_decal/solgov/all/bottom_right
 	icon_state = "33"
+
+//TSSC
+/obj/effect/turf_decal/tssc_small
+	name = "small tssc logo"
+	icon = 'mod_celadon/_storge_icons/icons/structures/manufacturer_decals.dmi'
+	icon_state = "tssc-center"
+
+/obj/effect/turf_decal/tssc_small/left
+	icon_state = "tssc-left"
+
+/obj/effect/turf_decal/tssc_small/right
+	icon_state = "tssc-right"
