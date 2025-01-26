@@ -217,29 +217,3 @@
 	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 40, "bio" = 100, "rad" = 75, "fire" = 75, "acid" = 75)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/solfed/elysium
 	resistance_flags = FIRE_PROOF
-
-/obj/item/clothing/head/helmet/space/hardsuit/solfed
-	name = "Peacemaker hardsuit helmet"
-	desc = "A heavy military hardsuit helmet used by Solar Federation's marines. Colored in dark-blue and looks very power-armory."
-	icon = 'mod_celadon/_storge_icons/icons/solfed/obj/obj_sol_head.dmi'
-	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/solfed/mob/mob_sol_head.dmi'
-	icon_state = "hardsuit0-solfed-marine"
-	item_state = "hardsuit0-solfed-marine"
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 40, "energy" = 50, "bomb" = 40, "bio" = 100, "rad" = 75, "fire" = 75, "acid" = 75)
-	actions_types = list()
-	hardsuit_type = "elysium"
-	resistance_flags = FIRE_PROOF
-
-/obj/item/clothing/suit/space/hardsuit/solfed
-	name = "Peacemaker hardsuit"
-	desc = "A heavy military hardsuit used by Solar Federation's marines. Colored in dark-blue and has a SolFed flag on it's back."
-	icon = 'mod_celadon/_storge_icons/icons/solfed/obj/obj_sol.dmi'
-	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/solfed/mob/sf_suit.dmi'
-	icon_state = "hardsuit0-solfed-marine"
-	item_state = "hardsuit0-solfed-marine"
-	hardsuit_type = "elysium"
-	slowdown = 0.3
-	armor = list("melee" = 40, "bullet" = 40, "laser" = 40, "energy" = 50, "bomb" = 40, "bio" = 100, "rad" = 75, "fire" = 75, "acid" = 75)
-	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/solfed
-	resistance_flags = FIRE_PROOF
-
