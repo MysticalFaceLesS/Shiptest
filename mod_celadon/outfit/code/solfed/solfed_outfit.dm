@@ -235,16 +235,16 @@
 	get_solfed_engineer_access(H)
 
 //							///
-//		Elysium on solgov	///
+//		Elysium Brigade 	///
 //							///
 
 //	Капитан	//
 /datum/outfit/job/solgov/captain/elysium_celadon
-	name = "SolGov - Elysium Musharif"
+	name = "SolFed - Elysium Musharif"
 
-	head = /obj/item/clothing/head/solfed/elysium/beret
-	uniform = /obj/item/clothing/under/solgov/elysium
-	suit = /obj/item/clothing/suit/armor/solfed/elysium/jacket
+	head = /obj/item/clothing/head/solfed/beret/elysium
+	uniform = /obj/item/clothing/under/solfed/elysium/formal
+	suit = /obj/item/clothing/suit/armor/solfed/elysium/formal
 	shoes = /obj/item/clothing/shoes/combat
 	ears = /obj/item/radio/headset/solgov/alt/captain
 	id = /obj/item/card/id/solgov
@@ -257,11 +257,11 @@
 
 //	Хос	//
 /datum/outfit/job/solgov/overseer/elysium_celadon
-	name = "SolGov - Elysium Mulazim"
+	name = "SolFed - Elysium Mulazim"
 
-	head = /obj/item/clothing/head/solfed/elysium/beret
-	uniform = /obj/item/clothing/under/solgov/elysium
-	suit = /obj/item/clothing/suit/armor/solfed/elysium/jacket
+	head = /obj/item/clothing/head/solfed/beret/elysium
+	uniform = /obj/item/clothing/under/solfed/elysium
+	suit = /obj/item/clothing/suit/armor/solfed/elysium/formal
 	shoes = /obj/item/clothing/shoes/combat
 	ears = /obj/item/radio/headset/solgov/alt
 	id = /obj/item/card/id/solgov
@@ -273,7 +273,7 @@
 
 //	Офицер	//
 /datum/outfit/job/solgov/sonnensoldner/elysium_celadon
-	name = "SolGov - Elysium Haris"
+	name = "SolFed - Elysium Haris"
 
 	id = /obj/item/card/id/solgov/elysium
 	head = null
@@ -288,7 +288,7 @@
 
 //	медик	//
 /datum/outfit/job/solgov/doctor/elysium_celadon
-	name = "SolGov - Elysium Shafi"
+	name = "SolFed - Elysium Shafi"
 
 	id = /obj/item/card/id/solgov/elysium
 	head = null
@@ -303,7 +303,7 @@
 
 //	Инженер	//
 /datum/outfit/job/solgov/engineer/elysium_celadon
-	name = "SolGov - Elysium Khabeer Fanni"
+	name = "SolFed - Elysium Khabeer Fanni"
 
 	id = /obj/item/card/id/solgov/elysium
 	head = null
