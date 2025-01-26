@@ -180,6 +180,21 @@
 	resistance_flags = NONE
 	armor = list("melee" = 30, "bullet" = 25, "laser" = 25, "energy" = 30, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
 
+/obj/item/clothing/gloves/combat/solfed
+	name = "SolFed marine gloves"
+	desc = "These comfy gloves provide protection to SolFed's marines and keep their hands warm. They are dark-blue colored."
+	icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/obj/hands.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/mob/hands.dmi'
+	icon_state = "sfmarinegloves"
+	item_state = "sfmarinegloves"
+	armor = list("melee" = 15, "bullet" = 10, "laser" = 15, "energy" = 15, "bomb" = 65, "bio" = 100, "rad" = 75, "fire" = 75, "acid" = 75)
+
+/obj/item/clothing/gloves/combat/solfed/captain
+	name = "SolFed captain gloves"
+	desc = "These fancy gloves provide protection to SolFed's high-ranking officers and keep their hands warm. Wow! They really are fancy!."
+	icon_state = "sfcaptaingloves"
+	item_state = "sfcaptaingloves"
+
 /obj/item/clothing/head/helmet/space/hardsuit/solfed/elysium
 	name = "Elysium Brigade hardsuit helmet"
 	desc = "This is the hardsuit helmet of the Solar Federation Elysium Brigade. It's a dark green color, and its panes glow green."
