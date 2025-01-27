@@ -276,7 +276,6 @@
 	ears = /obj/item/radio/headset/nanotrasen/alt/captain
 	box = /obj/item/storage/box/survival/nanotrasen
 
-
 	//Nanotrasen Tactical Assault Team сбуха
 
 /datum/outfit/job/nanotrasen/ntas/operative
@@ -310,7 +309,6 @@
 
 	box = /obj/item/storage/box/survival/nanotrasen
 
-
 	//Nanotrasen Tactical Assault Team инженер
 
 /datum/outfit/job/nanotrasen/ntas/engineer
@@ -343,6 +341,7 @@
 
 	box = /obj/item/storage/box/survival/nanotrasen
 
+	//слешер капитан
 
 /datum/outfit/job/nanotrasen/intel/captain
 	name = "Intelligence Officer"
@@ -362,6 +361,8 @@
 	backpack_contents = list(/obj/item/ammo_box/a357, /obj/item/ammo_box/a357, /obj/item/melee/classic_baton/telescopic)
 	box = /obj/item/storage/box/survival/nanotrasen
 
+	//слешер сбуха
+
 /datum/outfit/job/nanotrasen/intel/operative
 	name = "Security Operative"
 	jobtype = /datum/job/hos
@@ -380,6 +381,8 @@
 
 	box = /obj/item/storage/box/survival/nanotrasen
 
+	//слешер медик
+
 /datum/outfit/job/nanotrasen/intel/medic
 	name = "Medical Technician"
 	jobtype = /datum/job/cmo
@@ -396,6 +399,8 @@
 	backpack_contents = list(/obj/item/storage/firstaid/medical)
 
 	box = /obj/item/storage/box/survival/nanotrasen
+
+	//слешер инженер
 
 /datum/outfit/job/nanotrasen/intel/engineer
 	name = "Engineering Technician"
