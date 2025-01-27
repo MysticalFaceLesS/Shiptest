@@ -2925,6 +2925,11 @@
 /obj/machinery/computer/crew{
 	dir = 8
 	},
+/obj/item/radio/intercom/wideband/table{
+	dir = 4;
+	pixel_x = 0;
+	pixel_y = -17
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
 "rS" = (
@@ -3250,7 +3255,14 @@
 /area/ship/hallway/central)
 "tA" = (
 /obj/machinery/modular_computer/console/preset/command{
-	dir = 8
+	dir = 8;
+	layer = 3.3
+	},
+/obj/item/radio/intercom/table{
+	dir = 4;
+	pixel_x = 0;
+	pixel_y = 15;
+	layer = 3.2
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
@@ -3450,7 +3462,8 @@
 /area/ship/crew/cryo)
 "uZ" = (
 /obj/machinery/computer/helm{
-	dir = 8
+	dir = 8;
+	layer = 3.1
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
@@ -4582,6 +4595,9 @@
 "Cj" = (
 /obj/machinery/disposal/bin,
 /obj/structure/disposalpipe/trunk,
+/obj/machinery/computer/helm{
+	dir = 8
+	},
 /turf/open/floor/plasteel/mono,
 /area/ship/hallway/central)
 "Co" = (
