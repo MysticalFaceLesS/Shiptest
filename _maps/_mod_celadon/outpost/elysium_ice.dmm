@@ -7938,6 +7938,7 @@
 /area/outpost/exterior)
 "fxz" = (
 /obj/structure/table/wood/reinforced,
+/obj/item/paper_bin/construction,
 /turf/open/floor/plasteel/tech,
 /area/outpost/operations/outpost_command)
 "fxF" = (
@@ -10757,6 +10758,10 @@
 "hyp" = (
 /obj/machinery/light/floor,
 /obj/structure/table/wood/reinforced,
+/obj/item/pen/solgov,
+/obj/item/pen/uplink{
+	pixel_y = 13
+	},
 /turf/open/floor/plasteel/tech,
 /area/outpost/operations/outpost_command)
 "hyv" = (
@@ -15311,6 +15316,11 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/outpost/crew/garden)
+"kCU" = (
+/obj/structure/table/reinforced,
+/obj/item/binoculars,
+/turf/open/floor/plasteel/tech,
+/area/outpost/operations/outpost_command)
 "kDh" = (
 /mob/living/simple_animal/pet/penguin/emperor,
 /turf/open/floor/plating/asteroid/snow/temperatre{
@@ -25218,6 +25228,12 @@
 /area/outpost/operations/outpost_command)
 "rto" = (
 /obj/structure/table/reinforced,
+/obj/machinery/button/door{
+	id = "outpost_command_podpilot";
+	name = "Medbay Chemestry";
+	pixel_x = -6;
+	req_one_access_txt = "8117"
+	},
 /turf/open/floor/plasteel/tech,
 /area/outpost/operations/outpost_command)
 "rtE" = (
@@ -29250,6 +29266,11 @@
 	},
 /turf/open/floor/plasteel/white,
 /area/outpost/medical/hall_1)
+"ulk" = (
+/obj/structure/table/wood/reinforced,
+/obj/machinery/fax/admin,
+/turf/open/floor/plasteel/tech,
+/area/outpost/operations/outpost_command)
 "ulo" = (
 /obj/effect/spawner/random/food_or_drink/seed,
 /turf/open/floor/plating/asteroid/icerock/temperate,
@@ -29911,6 +29932,11 @@
 	light_range = 2
 	},
 /area/outpost/exterior)
+"uOb" = (
+/obj/structure/table/wood/reinforced,
+/obj/machinery/fax/admin/outpost,
+/turf/open/floor/plasteel/tech,
+/area/outpost/operations/outpost_command)
 "uOI" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -31563,6 +31589,23 @@
 "wes" = (
 /turf/closed/indestructible/titanium/nodiagnonal,
 /area/outpost/medical/genetic)
+"weC" = (
+/obj/structure/table/wood/reinforced,
+/obj/item/paper_bin{
+	pixel_x = 7
+	},
+/obj/item/pen{
+	pixel_x = 7
+	},
+/obj/item/pen/blue{
+	pixel_y = 7
+	},
+/obj/item/pen/red,
+/obj/item/paper_bin/carbon{
+	pixel_x = -8
+	},
+/turf/open/floor/plasteel/tech,
+/area/outpost/operations/outpost_command)
 "weL" = (
 /obj/effect/turf_decal/techfloor{
 	dir = 1
@@ -32247,6 +32290,10 @@
 /area/outpost/security/hall)
 "wzS" = (
 /obj/effect/spawner/structure/window/reinforced/indestructable,
+/obj/machinery/door/poddoor/ert{
+	id = "outpost_command_podpilot";
+	dir = 4
+	},
 /turf/open/floor/plating,
 /area/outpost/security/bay)
 "wAc" = (
@@ -33018,6 +33065,9 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer4,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/poddoor/ert{
+	id = "outpost_command_podpilot"
+	},
 /turf/open/floor/mineral/plastitanium,
 /area/outpost/security/bay)
 "xex" = (
@@ -51813,7 +51863,7 @@ oII
 oII
 foT
 oII
-fxz
+ulk
 oII
 oII
 wMX
@@ -52000,7 +52050,7 @@ ubx
 oII
 qzN
 sXG
-fxz
+uOb
 oII
 oII
 wMX
@@ -52187,7 +52237,7 @@ oII
 nqz
 fxz
 hyp
-fxz
+weC
 oII
 oII
 wMX
@@ -52561,8 +52611,8 @@ idX
 ifp
 jjg
 rto
-oII
-oII
+kCU
+kCU
 eOO
 eOO
 uqt
