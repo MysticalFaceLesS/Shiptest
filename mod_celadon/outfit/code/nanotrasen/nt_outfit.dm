@@ -358,7 +358,7 @@
 	id = /obj/item/card/id/centcom
 	glasses = /obj/item/clothing/glasses/sunglasses
 	ears = /obj/item/radio/headset/nanotrasen/alt/captain
-	backpack_contents = list(/obj/item/ammo_box/a357, /obj/item/ammo_box/a357, /obj/item/melee/classic_baton/telescopic)
+	backpack_contents = list(/obj/item/ammo_box/a357, /obj/item/ammo_box/a357)
 	box = /obj/item/storage/box/survival/nanotrasen
 
 	//слешер сбуха
@@ -377,7 +377,6 @@
 	id = /obj/item/card/id/lpsec
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses
 	ears = /obj/item/radio/headset/nanotrasen/alt
-	backpack_contents = list(/obj/item/melee/classic_baton/telescopic)
 
 	box = /obj/item/storage/box/survival/nanotrasen
 
