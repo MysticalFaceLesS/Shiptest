@@ -160,12 +160,33 @@
 	glasses = /obj/item/clothing/glasses/sunglasses
 	suit = /obj/item/clothing/suit/jacket/leather
 
-//										//
-//	SOLAR FEDERATION - LIGHTNING BOLT	//
-//										//
+//						//
+//	SOLAR FEDERATION	//
+//						//
+/datum/outfit/job/solgov/fleet_admiral
+	name = "SolFed - Fleet Admiral"
+	jobtype = /datum/job/captain
+	job_icon = "solgovrepresentative" // idk
 
-/datum/outfit/job/solgov/bolt/captain
-	name = "SolFed Bolt - Captain"
+	id = /obj/item/card/id/gold
+	gloves = /obj/item/clothing/gloves/combat
+	ears = /obj/item/radio/headset/solgov/alt/captain
+	uniform =  /obj/item/clothing/under/solgov/formal/captain
+	suit = /obj/item/clothing/suit/armor/vest/solgov/captain
+	shoes = /obj/item/clothing/shoes/laceup
+	head = /obj/item/clothing/head/solgov/captain
+	backpack_contents = list(/obj/item/melee/classic_baton/telescopic=1)
+
+	backpack = /obj/item/storage/backpack/captain
+	satchel = /obj/item/storage/backpack/satchel/cap
+	duffelbag = /obj/item/storage/backpack/duffelbag/captain
+	courierbag = /obj/item/storage/backpack/messenger/com
+
+	accessory = /obj/item/clothing/accessory/medal/gold/captain
+
+	chameleon_extras = list(/obj/item/gun/energy/e_gun, /obj/item/stamp/captain)
+/datum/outfit/job/solgov/sergeant
+	name = "SolFed - Sergeant"
 	jobtype = /datum/job/captain
 	job_icon = "solgovrepresentative"
 
@@ -174,7 +195,7 @@
 	backpack = /obj/item/storage/backpack/ert/engineer
 	id = /obj/item/card/id/solgov
 
-/datum/outfit/job/solgov/bolt/captain/post_equip(mob/living/carbon/human/H)
+/datum/outfit/job/solgov/sergeant/post_equip(mob/living/carbon/human/H)
 	. = ..()
 	get_solfed_captain_access(H)
 
@@ -192,8 +213,8 @@
 	. = ..()
 	get_solfed_overseer_access(H)
 
-/datum/outfit/job/solgov/bolt/security
-	name = "SolFed Bolt - Security"
+/datum/outfit/job/solgov/marine
+	name = "SolFed - Marine"
 	jobtype = /datum/job/officer
 	job_icon = "security"
 
@@ -202,7 +223,7 @@
 	backpack = /obj/item/storage/backpack/ert/engineer
 	id = /obj/item/card/id/solgov
 
-/datum/outfit/job/solgov/bolt/security/post_equip(mob/living/carbon/human/H)
+/datum/outfit/job/solgov/marine/post_equip(mob/living/carbon/human/H)
 	. = ..()
 	get_solfed_sonnensoldner_access(H)
 

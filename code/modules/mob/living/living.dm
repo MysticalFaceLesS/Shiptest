@@ -533,11 +533,7 @@
 /// Proc to append behavior related to lying down.
 /mob/living/proc/on_lying_down(new_lying_angle)
 	layer = LYING_MOB_LAYER //so mob lying always appear behind standing mobs
-	// [CELADON-EDIT] - CELADON_QUIRKS
-	// ADD_TRAIT(src, TRAIT_UI_BLOCKED, LYING_DOWN_TRAIT)	// CELADON-EDIT - ORIGINAL
-	if(!HAS_TRAIT(src, TRAIT_INCREASED_SURVIVAL))
-		ADD_TRAIT(src, TRAIT_UI_BLOCKED, LYING_DOWN_TRAIT)
-	// [/CELADON-EDIT]
+	ADD_TRAIT(src, TRAIT_UI_BLOCKED, LYING_DOWN_TRAIT)
 	ADD_TRAIT(src, TRAIT_PULL_BLOCKED, LYING_DOWN_TRAIT)
 	density = FALSE // We lose density and stop bumping passable dense things.
 	if(HAS_TRAIT(src, TRAIT_FLOORED) && !(dir & (NORTH|SOUTH)))
@@ -710,6 +706,7 @@
 	cure_blind()
 	cure_husk()
 	hallucination = 0
+	heal_overall_integrity(INFINITY, null, TRUE) //heal all limb integrity, so that you can...
 	heal_overall_damage(INFINITY, INFINITY, INFINITY, null, TRUE) //heal brute and burn dmg on both organic and robotic limbs, and update health right away.
 	ExtinguishMob()
 	fire_stacks = 0
@@ -1621,10 +1618,8 @@ GLOBAL_VAR_INIT(ssd_indicator_overlay, mutable_appearance('icons/mob/ssd_indicat
 		if(CONSCIOUS)
 			if(stat >= UNCONSCIOUS)
 				ADD_TRAIT(src, TRAIT_IMMOBILIZED, TRAIT_KNOCKEDOUT)
-			// [CELADON-EDIT] - CELADON_QUIRKS
-			// ADD_TRAIT(src, TRAIT_HANDS_BLOCKED, STAT_TRAIT)
-			// ADD_TRAIT(src, TRAIT_INCAPACITATED, STAT_TRAIT)	// CELADON-EDIT - ORIGINAL
-			// [/CELADON-EDIT]
+			ADD_TRAIT(src, TRAIT_HANDS_BLOCKED, STAT_TRAIT)
+			ADD_TRAIT(src, TRAIT_INCAPACITATED, STAT_TRAIT)
 			ADD_TRAIT(src, TRAIT_FLOORED, STAT_TRAIT)
 		if(SOFT_CRIT)
 			if(stat >= UNCONSCIOUS)
@@ -1651,14 +1646,6 @@ GLOBAL_VAR_INIT(ssd_indicator_overlay, mutable_appearance('icons/mob/ssd_indicat
 			if(. >= UNCONSCIOUS)
 				REMOVE_TRAIT(src, TRAIT_IMMOBILIZED, TRAIT_KNOCKEDOUT)
 			ADD_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
-			// [CELADON-EDIT] - CELADON_QUIRKS
-			if(HAS_TRAIT(src, TRAIT_INCREASED_SURVIVAL))
-				REMOVE_TRAIT(src, TRAIT_HANDS_BLOCKED, STAT_TRAIT)
-				REMOVE_TRAIT(src, TRAIT_INCAPACITATED, STAT_TRAIT)
-			else
-				ADD_TRAIT(src, TRAIT_HANDS_BLOCKED, STAT_TRAIT)
-				ADD_TRAIT(src, TRAIT_INCAPACITATED, STAT_TRAIT)
-			// [/CELADON-EDIT]
 		if(UNCONSCIOUS)
 			if(. != HARD_CRIT)
 				become_blind(UNCONSCIOUS_TRAIT)
@@ -1666,24 +1653,12 @@ GLOBAL_VAR_INIT(ssd_indicator_overlay, mutable_appearance('icons/mob/ssd_indicat
 				ADD_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
 			else
 				REMOVE_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
-			// [CELADON-EDIT] - CELADON_QUIRKS
-			ADD_TRAIT(src, TRAIT_HANDS_BLOCKED, STAT_TRAIT)
-			ADD_TRAIT(src, TRAIT_INCAPACITATED, STAT_TRAIT)
-			// [/CELADON-EDIT]
 		if(HARD_CRIT)
 			if(. != UNCONSCIOUS)
 				become_blind(UNCONSCIOUS_TRAIT)
 			ADD_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
-			// [CELADON-EDIT] - CELADON_QUIRKS
-			ADD_TRAIT(src, TRAIT_HANDS_BLOCKED, STAT_TRAIT)
-			ADD_TRAIT(src, TRAIT_INCAPACITATED, STAT_TRAIT)
-			// [/CELADON-EDIT]
 		if(DEAD)
 			REMOVE_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
-			// [CELADON-EDIT] - CELADON_QUIRKS
-			ADD_TRAIT(src, TRAIT_HANDS_BLOCKED, STAT_TRAIT)
-			ADD_TRAIT(src, TRAIT_INCAPACITATED, STAT_TRAIT)
-			// [/CELADON-EDIT]
 
 ///Reports the event of the change in value of the buckled variable.
 /mob/living/proc/set_buckled(new_buckled)

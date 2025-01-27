@@ -87,6 +87,9 @@
 	feature_spawn_list = list(
 		/obj/structure/geyser/random = 80,
 		/obj/structure/vein = 60,
+		// [CELADON - ADD] - CELADON_RETURN_CONTENT
+		/obj/structure/elite_tumor = 40,
+		// [/CELADON - ADD]
 		/obj/structure/vein/classtwo = 40,
 		/obj/effect/spawner/random/anomaly/rock = 10,
 		/obj/structure/vein/classthree = 10,
@@ -157,6 +160,9 @@
 		/obj/structure/vein = 3,
 		/obj/structure/geyser/random = 2,
 		/obj/structure/vein/classtwo = 2,
+		// [CELADON - ADD] - CELADON_RETURN_CONTENT
+		/obj/structure/elite_tumor = 1,
+		// [/CELADON - ADD]
 		/obj/structure/vein/classthree = 1,
 		/obj/structure/spawner/burrow/rock_plant = 4,
 		/obj/effect/spawner/minefield = 1,

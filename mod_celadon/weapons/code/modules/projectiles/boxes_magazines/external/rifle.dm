@@ -28,6 +28,9 @@
 	. = ..()
 	icon_state = "morita1_small_mag-[!!ammo_count()]"
 
+/obj/item/ammo_box/magazine/morita1/small/empty
+	start_empty = TRUE
+
 /obj/item/ammo_box/magazine/morita1/drum
 	name = "\improper drum assault rifle magazine (7.62x51mm)"
 	desc = "A simple assault rifle magazine designed to chamber 7.62x51mm."
@@ -128,3 +131,9 @@
 
 /obj/item/ammo_box/magazine/glock_standart/empty
 		start_empty = TRUE
+
+/obj/item/ammo_box/magazine/skm_762_40/extended/empty
+	start_empty = TRUE
+
+/obj/item/ammo_box/magazine/skm_762_40/drum/empty
+	start_empty = TRUE

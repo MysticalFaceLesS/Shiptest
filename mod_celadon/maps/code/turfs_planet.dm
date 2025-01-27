@@ -5,9 +5,8 @@
 	desc = "Sand, tinted by the chemicals in the atmosphere to an uncanny shade of purple."
 	icon = 'icons/turf/lavaland_purple.dmi'
 	baseturfs = /turf/open/floor/plating/asteroid/plasma_gaint
-	turf_type = /turf/open/floor/plating/asteroid/purple/lit
+	turf_type = /turf/open/floor/plating/asteroid/plasma_gaint
 	initial_gas_mix = PLASMA_GIANT_ATMOS
-	color = COLOR_DARK_MODERATE_ORANGE
 
 /turf/open/floor/plating/asteroid/plasma_gaint/lit
 	light_range = 2
@@ -44,10 +43,16 @@
 /turf/open/lava/plasma_gaint
 	name = "liquid plasma"
 	desc = "A flowing stream of chilled liquid plasma. You probably shouldn't get in."
-	icon_state = "liquidplasma"
+	icon = 'mod_celadon/_storge_icons/icons/turf/lava_plasma.dmi'
+	icon_state = "lava-255"
 	initial_gas_mix = PLASMA_GIANT_ATMOS
 	baseturfs = /turf/open/lava/plasma
 	slowdown = 2
+
+	base_icon_state = "lava"
+	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
+	smoothing_groups = list(SMOOTH_GROUP_TURF_OPEN, SMOOTH_GROUP_FLOOR_LAVA)
+	canSmoothWith = list(SMOOTH_GROUP_FLOOR_LAVA)
 
 	light_range = 3
 	light_power = 0.75
@@ -58,7 +63,6 @@
 	initial_gas_mix = PLASMA_GIANT_ATMOS
 
 /turf/closed/mineral/random/plasma_gaint
-	var/gravity = GRAVITY_DAMAGE_TRESHOLD
 	name = "basalt"
 	desc = "Eruptions stack like layer-cake, forming vast oceans of dried magma."
 	icon_state = "smoothrocks-0"
@@ -87,12 +91,15 @@
 
 /turf/open/chasm/plasma
 	baseturfs = /turf/open/chasm
-	icon = 'icons/turf/floors/chasms.dmi'
+	icon = 'mod_celadon/_storge_icons/icons/turf/chasms_plasma.dmi'
 	icon_state = "chasms-255"
 	base_icon_state = "chasms"
 	light_color = COLOR_PURPLE
 	color = null
 	initial_gas_mix = PLASMA_GIANT_ATMOS
+
+	light_range = 3
+	light_power = 0.75
 
 // Тюрфы пустынной планеты //
 
@@ -130,3 +137,75 @@
 	light_power = 0
 	light_system = 0
 	dynamic_lighting = 0
+
+// Тюрфы для модульной anima //
+
+#define ANIMA_DEFAULT_ATMOS "n2=100;TEMP=100.00"
+
+//Базовый турф - родитель/
+/turf/open/space/anima
+	planetary_atmos = FALSE
+	initial_gas_mix = ANIMA_DEFAULT_ATMOS
+	CanAtmosPass = ATMOS_PASS_NO
+	footstep = null
+	light_range = 2
+	light_power = 2
+	light_color = COLOR_VERY_LIGHT_GRAY
+
+//Снежные турфы/
+/turf/open/floor/plating/asteroid/snow/anima
+	initial_gas_mix = ANIMA_DEFAULT_ATMOS
+	planetary_atmos = FALSE
+	light_range = 2
+	light_power = 0.8
+	light_color = COLOR_VERY_LIGHT_GRAY
+
+/turf/open/floor/plating/asteroid/icerock/anima
+	initial_gas_mix = ANIMA_DEFAULT_ATMOS
+	planetary_atmos = FALSE
+	light_range = 1
+	light_power = 0.8
+	light_color = COLOR_VERY_LIGHT_GRAY
+
+//Мусорные турфы/
+/turf/open/floor/plating/asteroid/wasteplanet/lit/anima
+	initial_gas_mix = ANIMA_DEFAULT_ATMOS
+	planetary_atmos = FALSE
+
+/turf/open/floor/plating/wasteplanet/rust/lit/anima
+	initial_gas_mix = ANIMA_DEFAULT_ATMOS
+	planetary_atmos = FALSE
+
+/turf/open/floor/plating/wasteplanet/lit/anima
+	initial_gas_mix = ANIMA_DEFAULT_ATMOS
+	planetary_atmos = FALSE
+
+//Джунглиевый турф
+/turf/open/floor/plating/grass/jungle/lit/anima
+	initial_gas_mix = ANIMA_DEFAULT_ATMOS
+	planetary_atmos = FALSE
+
+//Лавовый турф
+/turf/open/floor/plating/asteroid/basalt/lava_land_surface/lit/anima
+	initial_gas_mix = ANIMA_DEFAULT_ATMOS
+	planetary_atmos = FALSE
+
+/turf/open/lava/smooth/lava_land_surface/anima
+	initial_gas_mix = ANIMA_DEFAULT_ATMOS
+	planetary_atmos = FALSE
+	light_range = 2
+	light_power = 0.5
+	light_color = COLOR_VERY_LIGHT_GRAY
+
+/turf/open/floor/plating/asteroid/purple/lit/anima
+	initial_gas_mix = ANIMA_DEFAULT_ATMOS
+	planetary_atmos = FALSE
+
+//Песчанный турф
+/turf/open/floor/plating/asteroid/whitesands/lit/anima
+	initial_gas_mix = ANIMA_DEFAULT_ATMOS
+	planetary_atmos = FALSE
+
+/turf/open/floor/plating/asteroid/whitesands/grass/lit/anima
+	initial_gas_mix = ANIMA_DEFAULT_ATMOS
+	planetary_atmos = FALSE

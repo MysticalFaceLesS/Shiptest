@@ -1303,6 +1303,7 @@
 	// species_type_whitelist_typecache = list(/datum/species/tajaran)
 	emote_type = EMOTE_VISIBLE | EMOTE_AUDIBLE
 	age_based = TRUE
+	vary = TRUE
 	sound = 'mod_celadon/_storge_sounds/sound/emotes/tajaran/purr_tajaran.ogg'
 	volume = 80
 	muzzled_noises = list("слабо")
@@ -1325,6 +1326,7 @@
 	// species_type_whitelist_typecache = list(/datum/species/tajaran)
 	emote_type = EMOTE_VISIBLE | EMOTE_AUDIBLE
 	age_based = TRUE
+	vary = TRUE
 	sound = 'mod_celadon/_storge_sounds/sound/emotes/tajaran/purr_tajaran_long.ogg'
 	volume = 80
 	muzzled_noises = list("слабо")
@@ -1338,6 +1340,27 @@
 
 	return TRUE
 
+/datum/emote/living/carbon/human/mrowss
+	key = "mrowss"
+	key_third_person = "mrowss"
+	message = "мурчит коротко."
+	message_param = "коротко мурчит на %t."
+	sound = 'mod_celadon/_storge_sounds/sound/emotes/tajaran/mrowss.ogg'
+	// species_type_whitelist_typecache = list(/datum/species/tajaran)
+	emote_type = EMOTE_VISIBLE | EMOTE_AUDIBLE
+	vary = TRUE
+	cooldown = 5 SECONDS
+	volume = 50
+	muzzled_noises = list("слабо")
+
+/datum/emote/living/carbon/human/mrowss/can_run_emote(mob/user, status_check = TRUE , intentional)
+	if(!..())
+		return FALSE
+
+	if (!istajara(user))
+		return FALSE
+
+	return TRUE
 
 /datum/emote/living/carbon/human/hiss/tajara
 	message_mime = "hisses silently."
@@ -1554,7 +1577,7 @@
 /datum/emote/living/carbon/human/snap
 	key = "snap"
 	key_third_person = "snaps"
-	message = "snaps their fingers."
+	message = "щёлкает пальцами."
 	message_param = "snaps their fingers at %t."
 	sound = 'mod_celadon/_storge_sounds/sound/emotes/fingersnap.ogg'
 	emote_type = EMOTE_AUDIBLE
