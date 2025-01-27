@@ -274,7 +274,6 @@
 	backpack = /obj/item/storage/backpack/ert
 	id = /obj/item/card/id/ert
 	ears = /obj/item/radio/headset/nanotrasen/alt/captain
-	backpack_contents = list(/obj/item/melee/classic_baton/telescopic)
 	box = /obj/item/storage/box/survival/nanotrasen
 
 
@@ -291,7 +290,6 @@
 	backpack = /obj/item/storage/backpack/ert/security
 	id = /obj/item/card/id/ert/security
 	ears = /obj/item/radio/headset/nanotrasen/alt
-	backpack_contents = list(/obj/item/melee/classic_baton/telescopic)
 
 	box = /obj/item/storage/box/survival/nanotrasen
 
