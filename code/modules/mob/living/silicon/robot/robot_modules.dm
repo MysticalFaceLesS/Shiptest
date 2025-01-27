@@ -35,7 +35,7 @@
 
 	var/icon/cyborg_icon_override //WS Addition, need this shit to use VG icons
 
-// [CELADON-DELETE] - Silicon QoL
+// [CELADON-DELETE] - Silicon QoL - mod_celadon\qol\code\silicon.dm
 /*/obj/item/robot_module/Initialize()
 	. = ..()
 	for(var/i in basic_modules)
