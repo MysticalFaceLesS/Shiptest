@@ -243,8 +243,8 @@
 	name = "SolFed - Elysium Musharif"
 
 	head = /obj/item/clothing/head/solfed/beret/elysium
-	uniform = /obj/item/clothing/under/solfed/elysium/formal
-	suit = /obj/item/clothing/suit/armor/solfed/elysium/formal
+	uniform = /obj/item/clothing/under/solfed/formal/elysium
+	suit = /obj/item/clothing/suit/armor/solfed/formal/elysium
 	shoes = /obj/item/clothing/shoes/combat
 	ears = /obj/item/radio/headset/solgov/alt/captain
 	id = /obj/item/card/id/solgov
@@ -260,8 +260,8 @@
 	name = "SolFed - Elysium Mulazim"
 
 	head = /obj/item/clothing/head/solfed/beret/elysium
-	uniform = /obj/item/clothing/under/solfed/elysium
-	suit = /obj/item/clothing/suit/armor/solfed/elysium/formal
+	uniform = /obj/item/clothing/under/solfed/camo/elysium
+	suit = /obj/item/clothing/suit/armor/solfed/formal/elysium
 	shoes = /obj/item/clothing/shoes/combat
 	ears = /obj/item/radio/headset/solgov/alt
 	id = /obj/item/card/id/solgov
@@ -280,7 +280,7 @@
 	suit = null
 	gloves = null
 	shoes = /obj/item/clothing/shoes/combat
-	uniform = /obj/item/clothing/under/solfed/elysium
+	uniform = /obj/item/clothing/under/solfed/camo/elysium
 
 /datum/outfit/job/solgov/sonnensoldner/elysium_celadon/post_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -295,7 +295,7 @@
 	suit = null
 	gloves = null
 	shoes = /obj/item/clothing/shoes/combat
-	uniform = /obj/item/clothing/under/solfed/elysium
+	uniform = /obj/item/clothing/under/solfed/camo/elysium
 
 /datum/outfit/job/solgov/doctor/elysium_celadon/post_equip(mob/living/carbon/human/H)
 	. = ..()
@@ -310,7 +310,7 @@
 	suit = null
 	gloves = null
 	shoes = /obj/item/clothing/shoes/combat
-	uniform = /obj/item/clothing/under/solfed/elysium
+	uniform = /obj/item/clothing/under/solfed/camo/elysium
 
 /datum/outfit/job/solgov/engineer/elysium_celadon/post_equip(mob/living/carbon/human/H)
 	. = ..()
