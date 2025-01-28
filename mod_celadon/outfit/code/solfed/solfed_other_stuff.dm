@@ -240,3 +240,78 @@
 	armor = list("melee" = 30, "bullet" = 30, "laser" = 30, "energy" = 30, "bomb" = 40, "bio" = 100, "rad" = 75, "fire" = 75, "acid" = 75)
 	helmettype = /obj/item/clothing/head/helmet/space/hardsuit/solfed/elysium
 	resistance_flags = FIRE_PROOF
+
+//backpacks
+/obj/item/storage/backpack/satchel/solfed
+
+	name = "solfed satchel"
+	desc = "A democratic-looking satchel with extra pockets."
+	icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/obj/backpacks.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/mob/backpacks.dmi'
+	icon_state = "satchel-sf"
+	item_state = "satchel-sf"
+
+/obj/item/storage/backpack/solfed
+	name = "solfed backpack"
+	desc = "A militaristic looking backpack. Has a stylish sol star on it."
+	icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/obj/backpacks.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/mob/backpacks.dmi'
+	icon_state = "solfedpack"
+	item_state = "solfedpack"
+
+/obj/item/storage/backpack/duffelbag/solfed
+	name = "solfed duffel bag"
+	desc = "A large duffel bag for holding extra freedom-enforcing supplies."
+	icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/obj/backpacks.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/mob/backpacks.dmi'
+	icon_state = "duffel-solfed"
+	item_state = "duffel-solfed"
+
+//idcards
+/obj/item/card/id/solfed
+	name = "\improper SolFed keycard"
+	desc = "A SolFed keycard with no proper access to speak of."
+	assignment = "Navy member"
+	icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/obj/card.dmi'
+	icon_state = "solfed"
+	uses_overlays = FALSE
+
+/obj/item/card/id/solfed/commander
+	name = "\improper SolFed high-ranking keycard"
+	desc = "A SolFed keycard with no proper access to speak of. This one indicates an Official."
+	assignment = "Official"
+
+//Fancy eknifes!!
+
+/obj/item/melee/energy/sword/saber/knife
+	name = "energy kampfmesser"
+	desc = "Nanotrasen eswords are failing to properly deliver solarian freedom? Try this!"
+	icon = 'mod_celadon/_storge_icons/icons/solfed/obj/energy.dmi'
+	icon_state = "eknife"
+	base_icon_state = "eknife"
+	lefthand_file = 'mod_celadon/_storge_icons/icons/solfed/mob/eknifes_lefthand.dmi'
+	righthand_file = 'mod_celadon/_storge_icons/icons/solfed/mob/eknifes_righthand.dmi'
+	armour_penetration = 80 //great armorpen
+	block_chance = 0 //no block chances
+	active_force = 25 //lower damage
+
+/obj/item/melee/energy/sword/saber/knife/red
+	possible_colors = list("red" = COLOR_SOFT_RED)
+
+/obj/item/melee/energy/sword/saber/knife/blue
+	possible_colors = list("blue" = LIGHT_COLOR_LIGHT_CYAN)
+
+/obj/item/melee/energy/sword/saber/knife/green
+	possible_colors = list("green" = LIGHT_COLOR_GREEN)
+
+/obj/item/melee/energy/sword/saber/knife/purple
+	possible_colors = list("purple" = LIGHT_COLOR_LAVENDER)
+
+/obj/item/melee/energy/sword/saber/knife/yellow
+	possible_colors = list("yellow" = COLOR_YELLOW)
+
+/obj/item/melee/energy/sword/saber/knife/on_transform(obj/item/source, mob/user, active)
+	. = ..()
+	playsound(user, active ? 'sound/weapons/SolGov_sword_arm.ogg' : 'sound/weapons/saberoff.ogg', 35, TRUE)
+	to_chat(user, "<span class='notice'>[src] [active ? "is now active":"can now be concealed"].</span>")
+	return COMPONENT_NO_DEFAULT_MESSAGE
