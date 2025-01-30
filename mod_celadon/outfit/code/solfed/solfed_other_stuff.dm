@@ -72,6 +72,14 @@
 	icon_state = "sfmarine"
 	item_state = "sfmarine"
 
+/obj/item/clothing/under/solfed/assistant
+	name = "SolFed deckhand uniform"
+	desc = "A casual SolFed uniform issued to low ranking personnel."
+	icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/obj/uniforms.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/mob/uniforms.dmi'
+	icon_state = "solfed_assistant"
+	item_state = "solfed_assistant"
+
 /obj/item/clothing/under/solfed/camo
 	name = "Solar Federation's camouflaged uniform"
 	desc = "This is a special uniform providing camouflage to SolFed's marines. Im not sure why would they need blue camo in space tho."
@@ -291,9 +299,10 @@
 	base_icon_state = "eknife"
 	lefthand_file = 'mod_celadon/_storge_icons/icons/solfed/mob/eknifes_lefthand.dmi'
 	righthand_file = 'mod_celadon/_storge_icons/icons/solfed/mob/eknifes_righthand.dmi'
-	armour_penetration = 80 //great armorpen
+	armour_penetration = 20 //good armorpen
 	block_chance = 0 //no block chances
-	active_force = 25 //lower damage
+	active_force = 15 //lower damage
+	light_range = 1
 
 /obj/item/melee/energy/sword/saber/knife/red
 	possible_colors = list("red" = COLOR_SOFT_RED)
@@ -315,3 +324,7 @@
 	playsound(user, active ? 'sound/weapons/SolGov_sword_arm.ogg' : 'sound/weapons/saberoff.ogg', 35, TRUE)
 	to_chat(user, "<span class='notice'>[src] [active ? "is now active":"can now be concealed"].</span>")
 	return COMPONENT_NO_DEFAULT_MESSAGE
+
+/obj/item/melee/energy/sword/saber/knife/melee_attack_chain(mob/user, atom/target, params)
+	. = ..()
+	user.changeNext_move(CLICK_CD_RANGE)
