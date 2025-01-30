@@ -39,6 +39,24 @@
 	desc = "This poster shows Mars, the 4th planet in SF-2345."
 	icon_state = "mars_poster"
 
+/obj/structure/sign/poster/solfed/earth
+	name = "Poster - Terra"
+	desc = "This poster shows Terra, the 3th planet in SF-2345."
+	icon_state = "earth_poster"
+	never_random = TRUE
+
+/obj/structure/sign/poster/solfed/earth
+	name = "Poster - Luna"
+	desc = "This poster shows Luna, Terra's humble moon."
+	icon_state = "luna_poster"
+	never_random = TRUE
+
+/obj/structure/sign/poster/solfed/venus
+	name = "Poster - Venus"
+	desc = "This poster shows Venus, the 2nd planet in SF-2345."
+	icon_state = "venus_poster"
+	never_random = TRUE
+
 /obj/structure/sign/poster/solfed/protect
 	name = "Poster - Protect"
 	desc = "This Solar Federation poster has “Protect” written all over it. The m11 helmet is common among their armed forces."
@@ -69,16 +87,32 @@
 	desc = "This is the standard uniform of the Solar Federation Marines. It's colored dark blue."
 	icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/obj/uniforms.dmi'
 	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/mob/uniforms.dmi'
-	icon_state = "sfmarine"
-	item_state = "sfmarine"
+	icon_state = "solfed_marine"
+	item_state = "solfed_marine"
 
 /obj/item/clothing/under/solfed/assistant
-	name = "SolFed deckhand uniform"
+	name = "SolFed basic uniform"
 	desc = "A casual SolFed uniform issued to low ranking personnel."
 	icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/obj/uniforms.dmi'
 	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/mob/uniforms.dmi'
 	icon_state = "solfed_assistant"
 	item_state = "solfed_assistant"
+
+/obj/item/clothing/under/solfed/medical
+	name = "SolFed medical uniform"
+	desc = "A clean-white shirt with some blue pants for SolFed's finest doctors."
+	icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/obj/uniforms.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/mob/uniforms.dmi'
+	icon_state = "solfed_medical"
+	item_state = "solfed_medical"
+
+/obj/item/clothing/under/solfed/industrial
+	name = "SolFed industrial uniform"
+	desc = "Gray pants, blue shirt and some solar golden sprayed on top for SolFed's engineers and alike. For some folk its even hard to consider this 'Industrial'"
+	icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/obj/uniforms.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/mob/uniforms.dmi'
+	icon_state = "solfed_engineer"
+	item_state = "solfed_engineer"
 
 /obj/item/clothing/under/solfed/camo
 	name = "Solar Federation's camouflaged uniform"
@@ -155,6 +189,29 @@
 	icon_state = "elysium_brigade_turban"
 	item_state = "elysium_brigade_turban"
 
+/obj/item/clothing/head/solfed/cap
+	name = "SolFed softcap"
+	desc = "A soft cap with some SolFed symbolics on it, marking the person wearing it as a part of federation's navy."
+	icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/obj/head.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/mob/head.dmi'
+	icon_state = "cap_solfed"
+	item_state = "cap_solfed"
+
+/obj/item/clothing/head/solfed/surgical
+	name = "SolFed surgical cap"
+	desc = "A perhaps unnecessarily fancy surgical cap issued to almost every certified doctor aboard SolFed's navy vessels."
+	icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/obj/head.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/mob/head.dmi'
+	icon_state = "surgical_solfed"
+	item_state = "surgical_solfed"
+
+/obj/item/clothing/head/hardhat/solfed
+	name = "SolFed industrial hardhat"
+	desc = "A neat hardhat used by SolFed's engineers and alike. Provides good protection against darkness and head impacts."
+	icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/obj/head.dmi'
+	mob_overlay_icon = 'mod_celadon/_storge_icons/icons/solfed/clothing/mob/head.dmi'
+	icon_state = "hardhat_solfed"
+	item_state = "hardhat_solfed"
 
 /obj/item/clothing/head/helmet/solfed/m11
 	name = "Solar Federation M11 helmet"
@@ -289,6 +346,36 @@
 	desc = "A SolFed keycard with no proper access to speak of. This one indicates an Official."
 	assignment = "Official"
 
+//bureaucracy and stuff
+/obj/item/desk_flag/solfed
+	name = "SolFed desk flag"
+	desc = "A white-blue flag with a SolFed flag on it."
+	icon = 'mod_celadon/_storge_icons/icons/solfed/obj/bureaucracy.dmi'
+	icon_state = "solfed"
+
+/obj/item/folder/solfed
+	desc = "A blue folder with a SolFed coat of arms emblem."
+	icon = 'mod_celadon/_storge_icons/icons/solfed/obj/bureaucracy.dmi'
+	icon_state = "folder_solfed"
+
+/obj/item/folder/documents/solfed
+	document = /obj/item/documents/solfed
+	icon = 'mod_celadon/_storge_icons/icons/solfed/obj/bureaucracy.dmi'
+	icon_state = "folder_solfed"
+	name = "folder- 'TOP SECRET'"
+	desc = "A folder stamped \"Top Secret - Property of the Solar Federation. Unauthorized distribution is punishable by death.\""
+
+/obj/item/documents/solfed
+	desc = "\"TOP SECRET\" SolFed documents, filled with complex logistical diagrams withing the republics, terraforming projects and navy routes."
+	icon = 'mod_celadon/_storge_icons/icons/solfed/obj/bureaucracy.dmi'
+	icon_state = "docs_gold"
+
+/obj/item/pen/solfed
+	name = "\improper SolFed pen"
+	desc = "A fancy gold-blue pen used by SolFed's bureaucrats."
+	icon = 'mod_celadon/_storge_icons/icons/solfed/obj/bureaucracy.dmi'
+	icon_state = "pen-sf"
+
 //Fancy eknifes!!
 
 /obj/item/melee/energy/sword/saber/knife
@@ -327,4 +414,4 @@
 
 /obj/item/melee/energy/sword/saber/knife/melee_attack_chain(mob/user, atom/target, params)
 	. = ..()
-	user.changeNext_move(CLICK_CD_RANGE)
+	user.changeNext_move(CLICK_CD_RANGE) //double the attack speed
