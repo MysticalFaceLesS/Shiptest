@@ -59,3 +59,19 @@
 	contains = list(/obj/item/mod/core/standard)
 	crate_name = "MOD core crate"
 	crate_type = /obj/structure/closet/crate/secure/science
+
+/datum/supply_pack/science/mod_core_plasma
+	name = "MOD Plasma Core Crate"
+	desc = "One MODsuit core specialized plasmamen, used when creating mods."
+	cost = 6000
+	contains = list(/obj/item/mod/core/plasma)
+	crate_name = "MOD core crate"
+	crate_type = /obj/structure/closet/crate/secure/science
+
+/datum/supply_pack/science/mod_core_ethereal
+	name = "MOD Ethereal Core Crate"
+	desc = "One MODsuit core specialized for etherials, used when creating mods."
+	cost = 6000
+	contains = list(/obj/item/mod/core/ethereal)
+	crate_name = "MOD core crate"
+	crate_type = /obj/structure/closet/crate/secure/science
