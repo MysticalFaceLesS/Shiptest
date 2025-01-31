@@ -19,7 +19,7 @@
 /datum/supply_pack/faction/solfed
 	hidden = FALSE
 	faction = "solfed"
-	crate_type = /obj/structure/closet/crate/secure/gear/solFed
+	crate_type = /obj/structure/closet/crate/secure/gear/solfed
 
 /datum/supply_pack/faction/inteq
 	hidden = FALSE
@@ -36,7 +36,7 @@
 /obj/structure/closet/crate/secure/gear/syndicate
 	req_access = list(ACCESS_OUTPOST_FACTION_SYNDICATE)
 
-/obj/structure/closet/crate/secure/gear/solFed
+/obj/structure/closet/crate/secure/gear/solfed
 	req_access = list(ACCESS_OUTPOST_FACTION_SOLFED)
 
 /obj/structure/closet/crate/secure/gear/inteq

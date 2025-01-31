@@ -100,6 +100,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/crew/cryo)
 "bg" = (
+/obj/machinery/holopad/emergency/science,
 /turf/open/floor/plasteel/dark,
 /area/ship/general/science)
 "bi" = (
@@ -2951,6 +2952,11 @@
 /obj/machinery/computer/crew{
 	dir = 8
 	},
+/obj/item/radio/intercom/wideband/table{
+	dir = 4;
+	pixel_x = 0;
+	pixel_y = -17
+	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
 "rS" = (
@@ -3276,7 +3282,14 @@
 /area/ship/hallway/central)
 "tA" = (
 /obj/machinery/modular_computer/console/preset/command{
-	dir = 8
+	dir = 8;
+	layer = 3.3
+	},
+/obj/item/radio/intercom/table{
+	dir = 4;
+	pixel_x = 0;
+	pixel_y = 15;
+	layer = 3.2
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
@@ -3476,7 +3489,8 @@
 /area/ship/crew/cryo)
 "uZ" = (
 /obj/machinery/computer/helm{
-	dir = 8
+	dir = 8;
+	layer = 3.1
 	},
 /turf/open/floor/plasteel/tech/grid,
 /area/ship/bridge)
@@ -3602,6 +3616,7 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
+/obj/machinery/holopad/emergency/medical,
 /turf/open/floor/plasteel/white,
 /area/ship/medical)
 "vF" = (
@@ -3747,9 +3762,9 @@
 /turf/open/floor/plating,
 /area/ship/engineering/engines/starboard)
 "wW" = (
-/obj/machinery/rnd/production/circuit_imprinter/department/sec,
 /obj/effect/turf_decal/industrial/outline/yellow,
 /obj/machinery/light/directional/south,
+/obj/machinery/rnd/production/circuit_imprinter/department/science,
 /turf/open/floor/plasteel/dark,
 /area/ship/general/science)
 "wX" = (
@@ -4417,6 +4432,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/engineering/engine)
 "AM" = (
+/obj/machinery/holopad/emergency/curator,
 /turf/open/floor/carpet/executive,
 /area/ship/crew/law_office)
 "AT" = (
@@ -4955,6 +4971,10 @@
 	},
 /turf/open/floor/plasteel,
 /area/ship/engineering/engines/starboard)
+"Ep" = (
+/obj/machinery/holopad/emergency/security,
+/turf/open/floor/plasteel/dark,
+/area/ship/security)
 "Eq" = (
 /obj/effect/turf_decal/trimline/opaque/ntblue/line{
 	dir = 8
@@ -7770,6 +7790,13 @@
 	},
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/engineering/engine)
+"Xa" = (
+/obj/effect/turf_decal/trimline/opaque/ntblue/line{
+	dir = 8
+	},
+/obj/machinery/holopad/emergency/command,
+/turf/open/floor/plasteel/dark,
+/area/ship/bridge)
 "Xe" = (
 /obj/structure/table/glass,
 /obj/item/storage/fancy/donut_box{
@@ -9017,7 +9044,7 @@ WP
 mC
 mC
 mC
-mC
+Xa
 mC
 mC
 mC
@@ -9687,7 +9714,7 @@ pk
 qt
 jp
 GO
-xk
+Ep
 Md
 jp
 pD
