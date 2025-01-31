@@ -356,3 +356,60 @@
 		else
 			return FALSE
 	return ..()
+
+/obj/item/robot_module/meka/butler
+	name = "Meka Service"
+	basic_modules = list(
+		/obj/item/assembly/flash/cyborg,
+		/obj/item/reagent_containers/glass/beaker/large, //I know a shaker is more appropiate but this is for ease of identification
+		/obj/item/reagent_containers/condiment/enzyme,
+		/obj/item/pen,
+		/obj/item/toy/crayon/spraycan/borg,
+		/obj/item/extinguisher/mini,
+		/obj/item/hand_labeler/borg,
+		/obj/item/razor,
+		/obj/item/rsf,
+		/obj/item/instrument/guitar,
+		/obj/item/instrument/piano_synth,
+		/obj/item/reagent_containers/dropper,
+		/obj/item/lighter,
+		/obj/item/storage/bag/tray,
+		/obj/item/reagent_containers/borghypo/borgshaker,
+		/obj/item/borg/lollipop,
+		/obj/item/stack/cable_coil/cyborg,
+		/obj/item/borg/apparatus/beaker/service)
+	emag_modules = list(/obj/item/reagent_containers/borghypo/borgshaker/hacked)
+	cyborg_base_icon = "mmekaserv"
+	moduleselect_icon = "service"
+	hat_offset = 3
+
+/obj/item/robot_module/meka/butler/respawn_consumable(mob/living/silicon/robot/R, coeff = 1)
+	..()
+	var/obj/item/reagent_containers/O = locate(/obj/item/reagent_containers/condiment/enzyme) in basic_modules
+	if(O)
+		O.reagents.add_reagent(/datum/reagent/consumable/enzyme, 2 * coeff)
+
+/obj/item/robot_module/meka/butler/be_transformed_to(obj/item/robot_module/old_module)
+	var/mob/living/silicon/robot/R = loc
+	var/static/list/meka_butler_icons
+	if(!meka_butler_icons)
+		meka_butler_icons = list(
+		"Niko" = image(icon = 'mod_celadon/_storge_icons/icons/mekaborg.dmi', icon_state = "mmekaserv"),
+		"Nika" = image(icon = 'mod_celadon/_storge_icons/icons/mekaborg.dmi', icon_state = "fmekaserv")
+		)
+		meka_butler_icons = sortList(meka_butler_icons)
+	var/meka_butler_robot_icon = show_radial_menu(R, R , meka_butler_icons, custom_check = CALLBACK(src, PROC_REF(check_menu), R), radius = 42, require_near = TRUE)
+	switch(meka_butler_robot_icon)
+		if("Niko")
+			cyborg_base_icon = "mmekaserv"
+			cyborg_icon_override = 'mod_celadon/_storge_icons/icons/mekaborg.dmi'
+			hat_offset = 3
+			special_light_key = "mmekaserv"
+		if("Nika")
+			cyborg_base_icon = "fmekaserv"
+			cyborg_icon_override = 'mod_celadon/_storge_icons/icons/mekaborg.dmi'
+			hat_offset = 3
+			special_light_key = "fmekaserv"
+		else
+			return FALSE
+	return ..()
