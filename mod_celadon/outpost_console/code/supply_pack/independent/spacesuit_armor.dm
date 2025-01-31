@@ -62,8 +62,8 @@
 
 /datum/supply_pack/science/mod_core_plasma
 	name = "MOD Plasma Core Crate"
-	desc = "One MODsuit core specialized plasmamen, used when creating mods."
-	cost = 6000
+	desc = "One MODsuit core used in MOD construction. This core is designed to be charged from solid plasma."
+	cost = 5000
 	contains = list(/obj/item/mod/core/plasma)
 	crate_name = "MOD core crate"
 	crate_type = /obj/structure/closet/crate/secure/science
