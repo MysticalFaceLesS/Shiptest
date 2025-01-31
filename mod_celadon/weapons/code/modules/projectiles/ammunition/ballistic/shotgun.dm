@@ -6,6 +6,8 @@
 	icon_state = "backshot_410"
 	caliber = "410x76mm"
 	projectile_type = /obj/projectile/bullet/pellet/a410
+	pellets = 8
+	variance = 25
 	// bullet_per_box = 75
 
 /obj/item/ammo_casing/a410/a410_slug
