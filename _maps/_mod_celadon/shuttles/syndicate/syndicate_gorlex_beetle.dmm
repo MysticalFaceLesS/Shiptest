@@ -246,6 +246,11 @@
 	},
 /obj/effect/turf_decal/box/white,
 /obj/structure/curtain,
+/obj/machinery/computer/cryopod/directional/east{
+	dir = 2;
+	pixel_x = 0;
+	pixel_y = -22
+	},
 /turf/open/floor/plasteel/strongdark,
 /area/ship/crew)
 "ez" = (
@@ -265,7 +270,6 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
-	filter_types = list("n2","co2","bz","water_vapor","miasma","freon","pluox","tritium","n20","no2","nob");
 	dir = 8
 	},
 /turf/open/floor/plasteel/mono/white{
@@ -592,10 +596,10 @@
 	name = "ammunition locker";
 	req_one_access_txt = "1"
 	},
-/obj/item/stock_parts/cell/gun/kalix,
-/obj/item/stock_parts/cell/gun/kalix,
-/obj/item/stock_parts/cell/gun/kalix,
-/obj/item/stock_parts/cell/gun/kalix,
+/obj/item/stock_parts/cell/gun/empty,
+/obj/item/stock_parts/cell/gun/empty,
+/obj/item/stock_parts/cell/gun/empty,
+/obj/item/stock_parts/cell/gun/empty,
 /turf/open/floor/plasteel/patterned/grid{
 	color = "#777777"
 	},
@@ -1812,10 +1816,14 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/item/gun/energy/laser/e10,
-/obj/item/gun/energy/laser/e10,
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 4
+	},
+/obj/item/gun/energy/laser{
+	manufacturer = "the CyberSun logo"
+	},
+/obj/item/gun/energy/laser{
+	manufacturer = "the CyberSun logo"
 	},
 /obj/item/gun/energy/laser{
 	manufacturer = "the CyberSun logo"
@@ -2640,6 +2648,11 @@
 	},
 /obj/effect/turf_decal/box/white,
 /obj/structure/curtain,
+/obj/machinery/computer/cryopod/directional/east{
+	dir = 2;
+	pixel_x = 0;
+	pixel_y = -22
+	},
 /turf/open/floor/plasteel/strongdark,
 /area/ship/crew)
 "Nw" = (
@@ -2880,8 +2893,10 @@
 /obj/item/storage/backpack/industrial,
 /obj/item/spacecash/bundle/c200,
 /obj/item/spacecash/bundle/c50,
-/obj/item/gun/energy/e_gun/e11,
 /obj/item/clothing/shoes/magboots/syndie,
+/obj/item/gun/energy/laser{
+	manufacturer = "the CyberSun logo"
+	},
 /turf/open/floor/plasteel/patterned/grid{
 	color = "#777777"
 	},
