@@ -503,9 +503,22 @@
 		"Doctor" = 5,
 		"Scientist" = 5,
 		"Cargo" = 5,
-		"Security" = 5
+		"Security" = 5,
+		// [CELADON-ADD] - Возвращение старых трупов легионов
+		"Waldo" = 3,
+//		"Ashwalker" = 7,
+		"Soldier" = 5,
+		"Oldminer" = 8,
+//		"Kobold" = 5,
+		"SRM" = 6,
+		"Operative Ramzi" = 1,
+		"Operative Blood-red" = 1,
+//		pick("Shadow", "YeOlde") = 1 Требуется написать выбор расы ПОСЛЕ основного эффекта моб спавна
+		"YeOlde" = 1
+		// [/CELADON-ADD]
 		)
 	)
+
 
 	var/outfit_map = list(
 			"Miner" = /datum/outfit/generic/miner,
@@ -514,8 +527,31 @@
 			"Doctor" = /datum/outfit/generic/doctor,
 			"Scientist" = /datum/outfit/generic/science,
 			"Cargo" = /datum/outfit/generic/cargo,
-			"Security" = /datum/outfit/generic/security
+			"Security" = /datum/outfit/generic/security,
+			// [CELADON-ADD] - Возвращение старых трупов легионов
+			"Operative Ramzi" = /datum/outfit/syndicateramzicorpse,
+			"Operative Blood-red" = /datum/outfit/syndicatecommandocorpse,
+			"Waldo" = /datum/outfit/waldo,
+			"Ashwalker" = /datum/outfit/generic/ashwalker,
+			"Soldier" = /datum/outfit/generic/soldier,
+			"Oldminer" = /datum/outfit/generic/oldminer,
+			"Kobold" = /datum/outfit/generic/kobold,
+			"SRM" = /datum/outfit/generic/srm,
+			"YeOlde" = /datum/outfit/generic/YeOlde,
+			"Shadow" = /datum/outfit/generic/shadow
+			// [/CELADON-ADD]
 		)
+/*	switch(type)
+		if("Ashwalker")
+			mob_species = /datum/species/plasmaman
+		if("Kobold")
+			mob_species = /datum/species/lizard/ashwalker/kobold
+		if("YeOlde")
+			mob_gender = FEMALE
+		if("Shadow")
+			mob_species = /datum/species/shadow
+		if("Waldo")
+			mob_species= /datum/species/human*/
 
 	outfit = outfit_map[type]  // Access outfit directly
 
