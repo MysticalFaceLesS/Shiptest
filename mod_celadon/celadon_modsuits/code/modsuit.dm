@@ -88,6 +88,7 @@
 		not alive. The user will also find narrow doorframes nigh-impossible to surmount."
 
 /datum/mod_theme/security
+	armor = list("melee" = 20, "bullet" = 25, "laser" = 30, "energy" = 20, "bomb" = 25, "bio" = 100, "fire" = 75, "acid" = 75)
 	desc = "A Vigilitas Interstellar security suit, offering quicker speed at the cost of carrying capacity."
 	extended_desc = "A Vigilitas Interstellar classic, this model of MODsuit has been designed for quick response to \
 		hostile situations. These suits have been layered with plating worthy enough for fires or corrosive environments, \
@@ -97,6 +98,7 @@
 		a few years out of date, leading to an overall lower capacity for modules."
 
 /datum/mod_theme/safeguard
+	armor = list("melee" = 30, "bullet" = 35, "laser" = 40, "energy" = 30, "bomb" = 40, "bio" = 100, "fire" = 100, "acid" = 95)
 	desc = "A Vigilitas Interstellar advanced security suit, offering greater speed and fire protection than the standard security model."
 	extended_desc = "A Vigilitas Interstellar advanced security suit, and their latest model. This variant has \
 		ditched the presence of a reinforced glass visor entirely, replacing it with a 'blast visor' utilizing a \
@@ -216,6 +218,27 @@
 		fun and engaging for the players- instead, most were sitting out, dead or gibbed, while the lucky few got to \
 		have all the fun. If this continues to be a pattern for your \"events\" (Admin Abuse) \
 		there will be an admin complaint. You have been warned."
+
+/obj/item/mod/control/pre_equipped/responsory
+	req_access = list(ACCESS_OUTPOST_FACTION_NT)
+
+/obj/item/mod/control/pre_equipped/magnate
+	req_access = list(ACCESS_OUTPOST_FACTION_NT)
+
+/obj/item/mod/control/pre_equipped/safeguard
+	req_access = list(ACCESS_OUTPOST_FACTION_NT)
+
+/obj/item/mod/control/pre_equipped/traitor
+	req_access = list(ACCESS_OUTPOST_FACTION_SYNDICATE)
+
+/obj/item/mod/control/pre_equipped/traitor_elite
+	req_access = list(ACCESS_OUTPOST_FACTION_SYNDICATE)
+
+/obj/item/mod/control/pre_equipped/nuclear
+	req_access = list(ACCESS_OUTPOST_FACTION_SYNDICATE)
+
+/obj/item/mod/control/pre_equipped/elite
+	req_access = list(ACCESS_OUTPOST_FACTION_SYNDICATE)
 
 /obj/item/mod
 	name = "Base MOD"
