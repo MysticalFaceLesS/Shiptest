@@ -98,7 +98,7 @@
 
 /datum/mod_theme/safeguard
 	desc = "A Vigilitas Interstellar advanced security suit, offering greater speed and fire protection than the standard security model."
-	extended_desc = "An Vigilitas Interstellar advanced security suit, and their latest model. This variant has \
+	extended_desc = "A Vigilitas Interstellar advanced security suit, and their latest model. This variant has \
 		ditched the presence of a reinforced glass visor entirely, replacing it with a 'blast visor' utilizing a \
 		small camera on the left side to display the outside to the user. The plating on the suit has been \
 		dramatically increased, especially in the pauldrons, giving the wearer an imposing silhouette. \
