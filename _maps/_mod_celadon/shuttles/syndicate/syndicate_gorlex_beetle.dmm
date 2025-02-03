@@ -232,8 +232,8 @@
 /obj/effect/turf_decal/spline/fancy/transparent/syndiered{
 	dir = 4
 	},
-/obj/item/pizzabox/meat{
-	pixel_y = 17
+/obj/item/reagent_containers/food/snacks/pizza/meat{
+	pixel_y = 6
 	},
 /turf/open/floor/plasteel/white,
 /area/ship/crew/canteen)
@@ -289,11 +289,11 @@
 /obj/structure/sign/poster/syndicate/random{
 	pixel_y = 32
 	},
-/obj/structure/ore_box,
 /obj/effect/turf_decal/industrial/outline{
 	color = "#791500"
 	},
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/machinery/recharge_station,
 /turf/open/floor/plasteel/patterned/grid{
 	color = "#777777"
 	},
@@ -346,8 +346,10 @@
 /obj/effect/turf_decal/industrial/outline/yellow,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
+/obj/item/clothing/mask/balaclava/ngr{
+	name = "gorlex combat balaclava"
+	},
 /obj/item/mod/control/pre_equipped/traitor,
-/obj/item/clothing/mask/balaclava,
 /turf/open/floor/plasteel/patterned/grid{
 	color = "#777777"
 	},
@@ -588,12 +590,12 @@
 	name = "ammunition locker";
 	req_one_access_txt = "1"
 	},
-/obj/item/ammo_box/magazine/m57_39_sidewinder,
-/obj/item/ammo_box/magazine/m57_39_sidewinder,
-/obj/item/ammo_box/magazine/m57_39_sidewinder,
-/obj/item/ammo_box/magazine/m57_39_sidewinder,
-/obj/item/ammo_box/magazine/m57_39_asp,
-/obj/item/ammo_box/magazine/m57_39_asp,
+/obj/item/stock_parts/cell/gun/empty,
+/obj/item/stock_parts/cell/gun/empty,
+/obj/item/stock_parts/cell/gun/empty,
+/obj/item/stock_parts/cell/gun/empty,
+/obj/item/stock_parts/cell/gun/upgraded,
+/obj/item/stock_parts/cell/gun/upgraded,
 /turf/open/floor/plasteel/patterned/grid{
 	color = "#777777"
 	},
@@ -682,6 +684,7 @@
 	},
 /area/ship/medical)
 "mL" = (
+/obj/machinery/suit_storage_unit/inherit,
 /obj/effect/turf_decal/industrial/fire/cee{
 	dir = 4
 	},
@@ -692,7 +695,10 @@
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/recharge_station,
+/obj/item/clothing/mask/balaclava/ngr{
+	name = "gorlex combat balaclava"
+	},
+/obj/item/mod/control/pre_equipped/traitor,
 /turf/open/floor/plasteel/patterned/grid{
 	color = "#777777"
 	},
@@ -784,14 +790,14 @@
 	},
 /obj/item/storage/backpack/duffelbag/syndie,
 /obj/item/clothing/glasses/thermal/syndi,
-/obj/item/melee/energy/sword/saber/red{
-	pixel_x = 15;
-	pixel_y = 7
+/obj/item/gun/energy/kalix/pgf/heavy/sniper{
+	fire_delay = 15;
+	gun_firemodes = list("auto");
+	default_firemode = "auto"
 	},
-/obj/item/shield/riot/tele{
-	pixel_x = -7;
-	pixel_y = -1
-	},
+/obj/item/stock_parts/cell/gun/pgf,
+/obj/item/stock_parts/cell/gun/pgf,
+/obj/item/stock_parts/cell/gun/pgf,
 /turf/open/floor/plasteel/patterned/grid{
 	color = "#777777"
 	},
@@ -1070,15 +1076,18 @@
 	pixel_y = 12;
 	dir = 4
 	},
-/obj/structure/table/reinforced/plastitaniumglass,
-/obj/item/toy/plush/nukeplushie{
-	pixel_x = 5;
-	pixel_y = 13
+/obj/machinery/recharger{
+	pixel_y = 11
 	},
 /obj/machinery/recharger{
-	pixel_y = 9;
-	pixel_x = -9
+	pixel_x = 9;
+	pixel_y = 11
 	},
+/obj/machinery/recharger{
+	pixel_x = -9;
+	pixel_y = 11
+	},
+/obj/structure/table/reinforced/plastitaniumglass,
 /turf/open/floor/plasteel/strongdark,
 /area/ship/cargo)
 "sJ" = (
@@ -1287,8 +1296,10 @@
 /obj/effect/turf_decal/industrial/outline/yellow,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/light/directional/south,
+/obj/item/clothing/mask/balaclava/ngr{
+	name = "gorlex combat balaclava"
+	},
 /obj/item/mod/control/pre_equipped/traitor,
-/obj/item/clothing/mask/balaclava,
 /turf/open/floor/plasteel/patterned/grid{
 	color = "#777777"
 	},
@@ -1660,9 +1671,6 @@
 	},
 /obj/effect/turf_decal/industrial/outline/yellow,
 /obj/machinery/suit_storage_unit/inherit/industrial,
-/obj/item/clothing/suit/space/hardsuit/syndi/ngr{
-	armor = list("melee" = 40, "bullet" = 30, "laser" = 40, "energy" = 40, "bomb" = 35, "bio" = 100, "rad" = 50, "fire" = 50, "acid" = 90)
-	},
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -1673,6 +1681,7 @@
 /obj/item/clothing/mask/balaclava/ngr{
 	name = "gorlex combat balaclava"
 	},
+/obj/item/mod/control/pre_equipped/traitor,
 /turf/open/floor/plasteel/patterned/grid{
 	color = "#777777"
 	},
@@ -1720,15 +1729,17 @@
 /obj/effect/turf_decal/spline/fancy/transparent/syndiered{
 	dir = 5
 	},
-/obj/item/reagent_containers/food/snacks/meat/slab,
-/obj/item/reagent_containers/food/snacks/meat/slab,
-/obj/item/reagent_containers/condiment/flour,
-/obj/item/reagent_containers/condiment/flour,
-/obj/item/reagent_containers/condiment/milk,
-/obj/item/reagent_containers/condiment/milk,
 /obj/item/storage/fancy/egg_box,
+/obj/item/reagent_containers/condiment/milk,
+/obj/item/reagent_containers/condiment/milk,
+/obj/item/reagent_containers/condiment/flour,
+/obj/item/reagent_containers/condiment/flour,
 /obj/item/reagent_containers/condiment/rice,
 /obj/item/reagent_containers/condiment/rice,
+/obj/item/reagent_containers/food/snacks/meat/slab,
+/obj/item/reagent_containers/food/snacks/meat/slab,
+/obj/item/reagent_containers/food/snacks/meat/slab,
+/obj/item/reagent_containers/food/snacks/meat/slab,
 /turf/open/floor/plasteel/white,
 /area/ship/crew/canteen)
 "ze" = (
@@ -1804,9 +1815,15 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 4
 	},
-/obj/item/gun/ballistic/automatic/smg/sidewinder,
-/obj/item/gun/ballistic/automatic/smg/sidewinder,
-/obj/item/gun/ballistic/automatic/pistol/asp,
+/obj/item/gun/energy/laser{
+	manufacturer = "the CyberSun logo"
+	},
+/obj/item/gun/energy/laser{
+	manufacturer = "the CyberSun logo"
+	},
+/obj/item/gun/energy/laser{
+	manufacturer = "the CyberSun logo"
+	},
 /turf/open/floor/plasteel/patterned/grid{
 	color = "#777777"
 	},
@@ -2867,6 +2884,8 @@
 /obj/item/clothing/accessory/armband/engine,
 /obj/item/storage/backpack/satchel/eng,
 /obj/item/storage/backpack/industrial,
+/obj/item/spacecash/bundle/c200,
+/obj/item/spacecash/bundle/c50,
 /obj/item/clothing/shoes/magboots/syndie,
 /obj/item/gun/energy/e_gun/e11,
 /turf/open/floor/plasteel/patterned/grid{
@@ -3072,6 +3091,8 @@
 	req_access_txt = "5"
 	},
 /obj/machinery/light/small/directional/west,
+/obj/item/gun/energy/kalix/pistol,
+/obj/item/stock_parts/cell/gun/kalix,
 /obj/item/clothing/suit/ngr/smock{
 	desc = "A blood-red surgical smock typically worn by field medics of the  Gorlex. It hides red blood really well!"
 	},
@@ -3101,10 +3122,8 @@
 	},
 /obj/item/storage/backpack/medic,
 /obj/item/storage/backpack/satchel/med,
-/obj/item/defibrillator/loaded,
-/obj/item/gun/ballistic/automatic/pistol/himehabu,
-/obj/item/ammo_box/magazine/m22lr_himehabu,
-/obj/item/ammo_box/magazine/m22lr_himehabu,
+/obj/item/spacecash/bundle/c200,
+/obj/item/spacecash/bundle/c50,
 /turf/open/floor/plasteel/patterned/grid{
 	color = "#777777"
 	},
